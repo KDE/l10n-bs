@@ -1,40 +1,48 @@
+# translation of kdesktop.po to Bosnian
 # Bosnian translation of kdesktop
-# Copyright (C) 1999 Free Software Foundation, Inc.
-# Vedran Ljubovic <vljubovic@smartnet.ba>, 2002.
+# Copyright (C) 1999,2004 Free Software Foundation, Inc.
+# Vedran Ljubovic <vljubovic@smartnet.ba>, 2002,2004.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdesktop\n"
-"POT-Creation-Date: 2003-05-02 01:49+0200\n"
-"PO-Revision-Date: 2002-11-03 12:26+0100\n"
+"POT-Creation-Date: 2004-01-12 01:57+0100\n"
+"PO-Revision-Date: 2004-01-13 20:15+0100\n"
 "Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.6\n"
+"X-Generator: KBabel 1.0.1\n"
 
-#: lock/lockdlg.cc:90
-#, fuzzy
-msgid "Enter the password for user %1 (%2)"
-msgstr "Unesite traženu šifru ovdje."
+#: lock/lockdlg.cc:75
+msgid "<nobr><b>The screen is locked</b><br>"
+msgstr "<nobr><b>Ekran je zaključan</b><br>"
 
-#: lock/lockdlg.cc:99
+#: lock/lockdlg.cc:76
+msgid "<nobr><b>The screen is locked by %1</b><br>"
+msgstr "<nobr><b>Ekran je zaključao %1</b><br>"
+
+#: lock/lockdlg.cc:86
+msgid "&Start New Session"
+msgstr "&Započni novu sesiju"
+
+#: lock/lockdlg.cc:186
 msgid "<b>Unlocking failed</b>"
-msgstr ""
+msgstr "<b>Otključavanje nije uspjelo</b>"
 
-#: lock/lockdlg.cc:105
+#: lock/lockdlg.cc:192
 msgid "<b>Warning: Caps Lock on</b>"
-msgstr ""
+msgstr "<b>Upozorenje: Caps Lock je uključen</b>"
 
-#: lock/lockdlg.cc:213 lock/lockdlg.cc:256
+#: lock/lockdlg.cc:416
 msgid ""
-"Verification failed\n"
-"Kill kdesktop_lock"
+"Cannot unlock the screen, as the authentication system fails to work.\n"
+"You must kill kdesktop_lock (pid %1) manually."
 msgstr ""
-"Provjera nije uspjela\n"
-"Ubijam kdesktop_lock"
+"Ne mogu otključati ekran, pošto sistem autorizacije ne radi.\n"
+"Morate ručno ubiti proces kdesktop_lock (pid %1)."
 
-#: lock/lockdlg.cc:300
+#: lock/lockdlg.cc:489
 msgid ""
 "You have chosen to open another desktop session instead of resuming the "
 "current one."
@@ -51,36 +59,67 @@ msgstr ""
 "sesiji, F%2 drugoj itd. Možete prebacivati između sesija pritiščući "
 "Ctrl, Alt i odgovarajuću F-tipku u isto vrijeme."
 
-#: lock/main.cc:31
+#: lock/lockprocess.cc:651
+msgid "Will not lock the screen, as unlocking would be impossible:\n"
+msgstr "Ne mogu zaključati ekran, pošto bi otključavanje bilo nemoguće:\n"
+
+#: lock/lockprocess.cc:655
+msgid "Cannot start <i>kcheckpass</i>."
+msgstr "Ne mogu pokrenuti <i>kcheckpass</i>."
+
+#: lock/lockprocess.cc:656
+msgid "<i>kcheckpass</i> is unable to operate. Possibly it is not SetUID root."
+msgstr "<i>kcheckpass</i> ne može raditi. Vjerovatno nije podešen SetUID root."
+
+#: lock/lockprocess.cc:700
+msgid "No appropriate greeter plugin configured."
+msgstr "Nije podešen odgovarajući dodatak za pozdrav."
+
+#: lock/main.cc:51
 msgid "Force screen locking"
 msgstr "Prinudno zaključavanje ekrana"
 
-#: lock/main.cc:32
+#: lock/main.cc:52
 msgid "Only start screensaver"
 msgstr "Samo pokreni screensaver"
 
-#: lock/main.cc:33
-#, fuzzy
+#: lock/main.cc:53
 msgid "Only use the blank screensaver"
-msgstr "Samo pokreni screensaver"
+msgstr "Koristi samo prazan screensaver"
 
-#: lock/main.cc:111
+#: lock/main.cc:63
+msgid "KDesktop Locker"
+msgstr "KDesktop zaključavanje"
+
+#: lock/main.cc:63
 msgid "Screen Locker for KDesktop"
 msgstr "Zaključavanje ekrana za KDesktop"
 
-#: desktop.cc:628
+#: desktop.cc:661
 msgid "Set as Primary Background Color"
 msgstr "Podesi kao osnovnu boju pozadine"
 
-#: desktop.cc:629
+#: desktop.cc:662
 msgid "Set as Secondary Background Color"
 msgstr "Podesi kao drugu boju pozadine"
 
-#: desktop.cc:645
+#: desktop.cc:678
+msgid "&Save to Desktop..."
+msgstr "&Snimi na desktop..."
+
+#: desktop.cc:680
 msgid "Set as &Wallpaper"
 msgstr "Postavi za &tapetu"
 
-#: desktop.cc:680
+#: desktop.cc:688
+msgid "Enter a name for the image below:"
+msgstr "Unesite naziv za sliku ispod:"
+
+#: desktop.cc:697
+msgid "image.png"
+msgstr "image.png"
+
+#: desktop.cc:745
 msgid ""
 "Could not logout properly.\n"
 "The session manager cannot be contacted. You can try to force a shutdown by "
@@ -92,115 +131,111 @@ msgstr ""
 "računar pritiskom na Ctrl+Alt+Backspace. Ipak, obratite pažnju da vaša "
 "trenutna sesija u tom slučaju neće biti snimljena."
 
-#: kdiconview.cc:283
+#: kdiconview.cc:380
 msgid "&Rename"
 msgstr "&Promjeni ime"
 
-#: kdiconview.cc:284
+#: kdiconview.cc:381
 msgid "&Move to Trash"
 msgstr "Baci u s&meće"
 
-#: kdiconview.cc:287
+#: kdiconview.cc:384
 msgid "&Shred"
 msgstr "&Uništi"
 
-#: krootwm.cc:92 krootwm.cc:432
-msgid "Bookmarks"
-msgstr "Zabilješka"
-
-#: krootwm.cc:128
+#: krootwm.cc:129
 msgid "Run Command..."
 msgstr "Izvrši naredbu..."
 
-#: krootwm.cc:132
+#: krootwm.cc:133
 msgid "Configure Desktop..."
 msgstr "Podesi radnu površinu..."
 
-#: krootwm.cc:134 krootwm.cc:336
+#: krootwm.cc:135 krootwm.cc:332
 msgid "Disable Desktop Menu"
 msgstr "Onemogući meni na radnoj površini"
 
-#: krootwm.cc:138
+#: krootwm.cc:139
 msgid "Unclutter Windows"
 msgstr "Rasporedi prozore"
 
-#: krootwm.cc:140
+#: krootwm.cc:141
 msgid "Cascade Windows"
 msgstr "Kaskadiraj prozore"
 
-#: krootwm.cc:146
+#: krootwm.cc:147
 msgid "By Name"
 msgstr "Po imenu"
 
-#: krootwm.cc:148
+#: krootwm.cc:149
 msgid "By Size"
 msgstr "Po veličini"
 
-#: krootwm.cc:150
+#: krootwm.cc:151
 msgid "By Type"
 msgstr "Po tipu"
 
-#: krootwm.cc:153
+#: krootwm.cc:154
 msgid "Directories First"
 msgstr "Prvo direkotoriji"
 
-#: krootwm.cc:156
+#: krootwm.cc:157
 msgid "Line Up Horizontally"
 msgstr "Poravnaj vodoravno"
 
-#: krootwm.cc:159
+#: krootwm.cc:160
 msgid "Line Up Vertically"
 msgstr "Poravnaj uspravno"
 
-#: krootwm.cc:162
+#: krootwm.cc:163
 msgid "Align to Grid"
 msgstr "Poravnaj sa rešetkom"
 
-#: krootwm.cc:168
+#: krootwm.cc:169
 msgid "Refresh Desktop"
 msgstr "Osvježi radnu površinu"
 
-#: kdesktopbindings.cpp:30 krootwm.cc:174
+#: kdesktopbindings.cpp:30 krootwm.cc:175
 msgid "Lock Screen"
 msgstr "Zaključaj ekran"
 
-#: krootwm.cc:183
+#: krootwm.cc:180
 msgid "Logout \"%1\"..."
 msgstr "Odjava \"%1\"..."
 
-#: krootwm.cc:194
+#: krootwm.cc:191
 msgid "Start New Session"
 msgstr "Započni novu sesiju"
 
-#: krootwm.cc:314 krootwm.cc:380
+#: krootwm.cc:310 krootwm.cc:388
 msgid "Sort Icons"
 msgstr "Složi ikone"
 
-#: krootwm.cc:316
+#: krootwm.cc:312
 msgid "Line Up Icons"
 msgstr "Poravnaj ikone"
 
-#: krootwm.cc:343
+#: krootwm.cc:339
 msgid "Enable Desktop Menu"
 msgstr "Uključi meni radne površine"
 
-#: krootwm.cc:387
+#: krootwm.cc:395
 msgid "Icons"
 msgstr "Ikone"
 
-#: krootwm.cc:393 krootwm.cc:435
+#: krootwm.cc:401 krootwm.cc:458
 msgid "Windows"
 msgstr "Prozori"
 
-#: krootwm.cc:428
+#: krootwm.cc:451
 msgid "New"
 msgstr "Novi"
 
-#: kdesktopbindings.cpp:14 krootwm.cc:434 krootwm.cc:596
+#: kdesktopbindings.cpp:14 krootwm.cc:457 krootwm.cc:628
 msgid "Desktop"
 msgstr "Radna površina"
 
-#: krootwm.cc:661
+#: krootwm.cc:693
 msgid ""
 "<p>You have chosen to open another desktop session."
 "<br>The current session will be hidden and a new login screen will be "
@@ -216,23 +251,23 @@ msgstr ""
 "sesiji, F%2 drugoj itd. Možete prebacivati između sesija pritiščući "
 "Ctrl, Alt i odgovarajuću F-tipku u isto vrijeme.</p>"
 
-#: main.cc:42
+#: main.cc:40
 msgid "The KDE Desktop."
 msgstr "KDE radna površina."
 
-#: main.cc:48
+#: main.cc:46
 msgid "Use this if the desktop window appears as a real window"
 msgstr "Koristite ovo ako radna površina izgleda kao pravi prozor"
 
-#: main.cc:49
+#: main.cc:47
 msgid "Use this to disable the Autostart folder"
 msgstr "Izaberite ovo ako želite onemogućiti Autostart direktorij"
 
-#: main.cc:50
+#: main.cc:48
 msgid "Wait for kded to finish building database"
 msgstr "Pričekajte dok kded završi sa izgradnjom baze podataka"
 
-#: main.cc:142
+#: main.cc:140
 msgid "KDesktop"
 msgstr "KDesktop"
 
@@ -248,7 +283,7 @@ msgid ""
 "Your emails"
 msgstr "vljubovic@smartnet.ba"
 
-#: kdesktopbindings.cpp:20 minicli.cpp:77
+#: kdesktopbindings.cpp:20 minicli.cpp:76
 msgid "Run Command"
 msgstr "Izvrši naredbu"
 
@@ -269,140 +304,34 @@ msgid "Logout without Confirmation"
 msgstr "Odjavi se bez potvrde"
 
 #: kdesktopbindings.cpp:38
-msgid "Halt Computer"
-msgstr "Ugasi računar"
-
-#: kdesktopbindings.cpp:39
 msgid "Halt without Confirmation"
 msgstr "Ugasi bez potvrde"
 
-#: kdesktopbindings.cpp:40
-msgid "Reboot Computer"
-msgstr "Restartuj računar"
-
-#: kdesktopbindings.cpp:41
+#: kdesktopbindings.cpp:39
 msgid "Reboot without Confirmation"
 msgstr "Restartuj bez potvrde"
 
-#: minicli.cpp:95
-msgid ""
-"Enter the command you wish to execute or the address of the resource you "
-"want to open. This can be a remote URL like \"www.kde.org\" or a local one "
-"like \"~/.kderc\""
-msgstr ""
-"Unesite naredbu koji želite izvršiti ili adresu resursa koji želite "
-"otvoriti. To može biti udaljeni URL kao npr. \"www.linux.org.ba\" ili "
-"lokalni URL kao \"~/.kderc\""
-
-#: minicli.cpp:102 minicli.cpp:649
+#: minicli.cpp:90 minicli.cpp:617
 msgid "&Options >>"
 msgstr "&Postavke >>"
 
-#: minicli.cpp:105
+#: minicli.cpp:93
 msgid "&Run"
 msgstr "&Pokreni"
 
-#: minicli.cpp:116
-msgid ""
-"Check this option if the application you want to run is a text mode "
-"application. The application will then be run in a terminal emulator window."
-msgstr ""
-"Uključite ovu opciju ako program koji želite pokrenuti radi u tekstualnom "
-"modu. Tada će program biti pokrenut u prozoru koji simulira rad terminala."
-
-#: minicli.cpp:123
-msgid ""
-"Check this option if you want to run the application with a different user "
-"id. Every process has a user id associated with it. This id code determines "
-"file access and other permissions. The password of the user is required to "
-"do this."
-msgstr ""
-"Odaberite ovu mogućnost ako želite pokrenuti program sa drugim "
-"korisničkim ID-om. Svaki proces ima pridružen korisnički ID. Taj ID broj "
-"određuje pristup datotekama i druge ovlasti. Stoga je nužna šifra tog "
-"korisnika kako bi mogli koristiti njegove ovlasti."
-
-#: minicli.cpp:131
-msgid "Enter the user here who you want to run the application as."
-msgstr "Unesite korisnika pod čijim imenom želite pokrenuti program."
-
-#: minicli.cpp:134
-msgid ""
-"Check this option if you want to run the application with a different "
-"priority. A higher priority tells the operating system to give more "
-"processing time to your application."
-msgstr ""
-"Odaberite ovo ako želite pokrenuti program sa drugačijim prioritetom. "
-"Viši prioritet znači da će operativni sistem dati više vremena za "
-"izvođenje programa."
-
-#: minicli.cpp:140
-msgid ""
-"The priority can be set here. From left to right, it goes from low to high. "
-"The center position is the default value. For priorities higher than the "
-"default, you will need root's password."
-msgstr ""
-"Ovdje se može odrediti prioritet. Slijeva nadesno, on se kreće od nižeg "
-"prema višem, dok je u sredini uobičajena vrijednost. Za prioritete više "
-"od uobičajenog će vam biti potrebna administratorska šifra."
-
-#: minicli.cpp:147
-#, fuzzy
-msgid ""
-"Select which scheduler to use for the application. The scheduler governs "
-"which process will run and which will have to wait. Two schedulers are "
-"available:"
-"<ul>"
-"<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
-"divide fairly the available processing time between all "
-"processes.</li>"
-"<li><em>Realtime:</em>"
-"This scheduler will run your application uninterrupted until it gives up the "
-"processor. This can be dangerous. An application that does not give up the "
-"processor might hang the system. You need root's password to use the "
-"scheduler.</li>"
-msgstr ""
-"Ovdje možete odabrati koji raspoređivač želite koristiti za program. "
-"Raspoređivač je dio operativnog sistema koji odlučuje koji će proces "
-"biti pokrenut a koji će morati na čekanje. Dostupna su dva "
-"raspoređivača: "
-"<ul>"
-"<li><em>Obični</em> Uobičajeni, raspoređivač koji radi na "
-"\"timesharing\" principu. On će pravedno podjeliti vrijeme koje je na "
-"raspolaganju na sve procese.</li>"
-"<li><em>U realnom vremenu</em> Ovaj raspoređivač će izvršavati vaš "
-"program sve dok on ne prepusti procesor drugim procesima, što može bti "
-"vrlo opasno. Program koji nije dobro napisan, pa predugo zadržava procesor "
-"može uzrokovati rušenje sistema. Zbog toga trebate administratorsku (root) "
-"šifru za korištenje ovog raspoređivača."
-
-#: minicli.cpp:162
-msgid "Enter the requested password here."
-msgstr "Unesite traženu šifru ovdje."
-
-#: minicli.cpp:238
-msgid "Normal"
-msgstr "Obični"
-
-#: minicli.cpp:239
-msgid "Realtime"
-msgstr "U realnom vremenu"
-
-#: minicli.cpp:404
+#: minicli.cpp:385
 msgid "<qt>The user <b>%1</b> does not exist on this system.</qt>"
 msgstr "<qt>Korisnik <b>%1</b> ne postoji na ovom sistemu.</qt>"
 
-#: minicli.cpp:417
-msgid ""
-"You don't exist!\n"
-msgstr ""
-"Vi ne postojite!\n"
+#: minicli.cpp:395
+msgid "You don't exist!\n"
+msgstr "Vi ne postojite!\n"
 
-#: minicli.cpp:445
+#: minicli.cpp:420
 msgid "Incorrect password! Please try again."
 msgstr "Pogrešna šifra! Molim pokušajte ponovo."
 
-#: minicli.cpp:559
+#: minicli.cpp:531
 msgid ""
 "<center><b>%1</b></center>\n"
 "You do not have permission to execute this command!"
@@ -410,7 +339,7 @@ msgstr ""
 "<center><b>%1</b></center>\n"
 "Nemate privilegije da izvršite ovu naredbu!"
 
-#: minicli.cpp:587
+#: minicli.cpp:556
 msgid ""
 "<center><b>%1</b></center>\n"
 "Could not run the specified command!"
@@ -418,7 +347,7 @@ msgstr ""
 "<center><b>%1</b></center>\n"
 "Ne mogu izvršiti zadatu naredbu!"
 
-#: minicli.cpp:602
+#: minicli.cpp:568
 msgid ""
 "<center><b>%1</b></center>\n"
 "The specified command does not exist!"
@@ -426,18 +355,9 @@ msgstr ""
 "<center><b>%1</b></center>\n"
 "Zadata naredba ne postoji!"
 
-#: minicli.cpp:637
+#: minicli.cpp:605
 msgid "&Options <<"
 msgstr "&Postavke <<"
-
-#: minicli.cpp:739
-msgid "none"
-msgstr "nijedan"
-
-#: minicli.cpp:744
-#, c-format
-msgid "Password required: %1"
-msgstr "Potrebna je šifra za korisnika: %1"
 
 #: minicli.cpp:813
 msgid ""
@@ -452,6 +372,184 @@ msgstr ""
 #: minicli.cpp:816
 msgid "Warning - Run Command"
 msgstr "Upozorenje - Izvrši naredbu"
+
+#: rc.cpp:2
+msgid "Enter the name of the application you want to run or the URL you want to view"
+msgstr "Unesite ime programa koji želite pokrenuti ili URL koji želite vidjeti"
+
+#: rc.cpp:3
+msgid "Com&mand:"
+msgstr "&Naredba:"
+
+#: rc.cpp:4 rc.cpp:29
+msgid ""
+"Enter the command you wish to execute or the address of the resource you "
+"want to open. This can be a remote URL like \"www.kde.org\" or a local one "
+"like \"~/.kderc\"."
+msgstr ""
+"Unesite naredbu koji želite izvršiti ili adresu resursa koji želite "
+"otvoriti. To može biti udaljeni URL kao npr. \"www.linux.org.ba\" ili "
+"lokalni URL kao \"~/.kderc\""
+
+#: rc.cpp:8
+msgid "Run with realtime &scheduling"
+msgstr "Pokreni u &realnom vremenu"
+
+#: rc.cpp:9
+msgid ""
+"<qt>Select whether realtime scheduling should be enabled for the "
+"application. The scheduler governs which process will run and which will "
+"have to wait. Two schedulers are available:\n"
+"<ul>\n"
+"<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+"divide fairly the available processing time between all processes.</li>\n"
+"<li><em>Realtime:</em>"
+"This scheduler will run your application uninterrupted until it gives up the "
+"processor. This can be dangerous. An application that does not give up the "
+"processor might hang the system. You need root's password to use the "
+"scheduler.</li>\n"
+"</ul>\n"
+"</qt>"
+msgstr ""
+"<qt>Ovdje možete odabrati koji raspoređivač želite koristiti za program. "
+"Raspoređivač je dio operativnog sistema koji odlučuje koji će proces "
+"biti pokrenut a koji će morati na čekanje. Dostupna su dva "
+"raspoređivača: "
+"<ul>\n"
+"<li><em>Obični:</em> Uobičajeni raspoređivač koji radi na "
+"\"timesharing\" principu. On će pravedno podijeliti vrijeme koje je na "
+"raspolaganju na sve procese.</li>\n"
+"<li><em>U realnom vremenu:</em>Ovaj raspoređivač će izvršavati vaš "
+"program sve dok on ne prepusti procesor drugim procesima, što može bti "
+"vrlo opasno. Program koji nije dobro napisan, pa predugo zadržava procesor "
+"može uzrokovati rušenje sistema. Zbog toga trebate administratorsku (root) "
+"šifru za korištenje ovog raspoređivača.</li>\n"
+"</ul>\n"
+"</qt>"
+
+#: rc.cpp:10
+msgid "User&name:"
+msgstr "&Korisničko ime:"
+
+#: rc.cpp:11 rc.cpp:21
+msgid "Enter the user you want to run the application as here."
+msgstr "Unesite korisnika pod čijim imenom želite pokrenuti program."
+
+#: rc.cpp:12 rc.cpp:14
+msgid "Enter the password here for the user you specified above."
+msgstr "Unesite šifru za korisnika kojeg ste naveli iznad."
+
+#: rc.cpp:13
+msgid "Pass&word:"
+msgstr "Šif&ra:"
+
+#: rc.cpp:15
+msgid "Run in &terminal window"
+msgstr "Pokreni u prozoru &terminala"
+
+#: rc.cpp:16
+msgid ""
+"Check this option if the application you want to run is a text mode "
+"application. The application will then be run in a terminal emulator window."
+msgstr ""
+"Uključite ovu opciju ako program koji želite pokrenuti radi u tekstualnom "
+"modu. Tada će program biti pokrenut u prozoru koji simulira rad terminala."
+
+#: rc.cpp:17
+msgid "&Priority:"
+msgstr "&Prioritet:"
+
+#: rc.cpp:18 rc.cpp:23 rc.cpp:25 rc.cpp:26
+msgid ""
+"The priority that the command will be run with can be set here. From left to "
+"right, it goes from low to high. The center position is the default value. "
+"For priorities higher than the default, you will need to provide the root "
+"password."
+msgstr ""
+"Ovdje se može odrediti prioritet za izvršavanje naredbe. Slijeva nadesno, "
+"on se kreće od nižeg prema višem, dok je u sredini uobičajena vrijednost. "
+"Za prioritete više od uobičajenog će vam biti potrebna administratorska šifra."
+
+#: rc.cpp:19
+msgid "Run with a &different priority"
+msgstr "Pokreni sa &drugačijim prioritetom"
+
+#: rc.cpp:20
+msgid ""
+"Check this option if you want to run the application with a different "
+"priority. A higher priority tells the operating system to give more "
+"processing time to your application."
+msgstr ""
+"Odaberite ovo ako želite pokrenuti program sa drugačijim prioritetom. "
+"Viši prioritet znači da će operativni sistem dati više vremena za "
+"izvođenje programa."
+
+#: rc.cpp:22
+msgid "Low"
+msgstr "Nizak"
+
+#: rc.cpp:24
+msgid "High"
+msgstr "Visok"
+
+#: rc.cpp:27
+msgid "Run as a different &user"
+msgstr "Pokreni kao &drugi korisnik"
+
+#: rc.cpp:28
+msgid ""
+"Check this option if you want to run the application with a different user "
+"id. Every process has a user id associated with it. This id code determines "
+"file access and other permissions. The password of the user is required to "
+"do this."
+msgstr ""
+"Odaberite ovu mogućnost ako želite pokrenuti program sa drugim "
+"korisničkim ID-om. Svaki proces ima pridružen korisnički ID. Taj ID broj "
+"određuje pristup datotekama i druge ovlasti. Stoga je nužna šifra tog "
+"korisnika kako bi mogli koristiti njegove ovlasti."
+
+#~ msgid "Bookmarks"
+#~ msgstr "Zabilješka"
+
+#, fuzzy
+#~ msgid "Enter the password for user %1 (%2)"
+#~ msgstr "Unesite traženu šifru ovdje."
+
+#~ msgid ""
+#~ "Verification failed\n"
+#~ "Kill kdesktop_lock"
+#~ msgstr ""
+#~ "Provjera nije uspjela\n"
+#~ "Ubijam kdesktop_lock"
+
+#, fuzzy
+#~ msgid "&Password:"
+#~ msgstr "Šif&ra:"
+
+#, fuzzy
+#~ msgid "Enter the password for the user specified above here."
+#~ msgstr "Unesite traženu šifru ovdje."
+
+#~ msgid "Halt Computer"
+#~ msgstr "Ugasi računar"
+
+#~ msgid "Reboot Computer"
+#~ msgstr "Restartuj računar"
+
+#~ msgid "Enter the requested password here."
+#~ msgstr "Unesite traženu šifru ovdje."
+
+#~ msgid "Normal"
+#~ msgstr "Obični"
+
+#~ msgid "Realtime"
+#~ msgstr "U realnom vremenu"
+
+#~ msgid "none"
+#~ msgstr "nijedan"
+
+#~ msgid "Password required: %1"
+#~ msgstr "Potrebna je šifra za korisnika: %1"
 
 #~ msgid "Failed"
 #~ msgstr "Neuspjeh"
@@ -470,41 +568,11 @@ msgstr "Upozorenje - Izvrši naredbu"
 #~ msgid "Enter Password"
 #~ msgstr "Upišite šifru"
 
-#~ msgid ""
-#~ "Enter the name of the application you want to run or the URL you want to "
-#~ "view."
-#~ msgstr ""
-#~ "Unesite ime programa koji želite pokrenuti ili URL koji želite vidjeti."
-
-#~ msgid "Co&mmand:"
-#~ msgstr "&Naredba:"
-
 #~ msgid "Advanced Settings"
 #~ msgstr "Napredne postavke"
 
-#~ msgid "Run in &terminal"
-#~ msgstr "Pokreni u &terminalu"
-
-#~ msgid "Run as a different &user"
-#~ msgstr "Pokreni kao &drugi korisnik"
-
-#~ msgid "User&name:"
-#~ msgstr "&Korisničko ime:"
-
-#~ msgid "Run with a different &priority"
-#~ msgstr "Pokreni sa drugačijim &prioritetom"
-
-#~ msgid "Low"
-#~ msgstr "Nizak"
-
-#~ msgid "High"
-#~ msgstr "Visok"
-
 #~ msgid "&Scheduler:"
 #~ msgstr "&Raspoređivač poslova:"
-
-#~ msgid "Pass&word:"
-#~ msgstr "Šif&ra:"
 
 #~ msgid ""
 #~ "<h1>Screen Locking Failed!</h1>Your screen was not locked because the "
@@ -522,9 +590,6 @@ msgstr "Upozorenje - Izvrši naredbu"
 #~ msgid "Screen Locking Failed"
 #~ msgstr "Zaključavanje ekrana nije uspjelo"
 
-#~ msgid "Pr&iority:"
-#~ msgstr "Pr&ioritet:"
-
 #~ msgid "Fancy desktop background for kdm"
 #~ msgstr "Kičasta pozadina radne površi za kdm"
 
@@ -534,8 +599,6 @@ msgstr "Upozorenje - Izvrši naredbu"
 #~ msgid "By Name (Case Insensitive)"
 #~ msgstr "Po imenu (bez obzira na veličinu slova)"
 
-#~ msgid "Help on Desktop"
-#~ msgstr "Pomoć o radnoj površini"
-
 #~ msgid "Execute Command"
 #~ msgstr "Izvrši naredbu"
+
