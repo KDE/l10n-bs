@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kio_smtp\n"
-"POT-Creation-Date: 2002-09-11 03:01+0200\n"
+"POT-Creation-Date: 2003-04-29 01:35+0200\n"
 "PO-Revision-Date: 2002-11-10 08:29+0100\n"
 "Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -15,75 +15,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.6\n"
 
-#: smtp.cc:262 smtp.cc:331
-msgid "The sender address is missing."
-msgstr "Nedostaje adresa pošiljaoca."
-
-#: smtp.cc:273
-msgid "SMTPProtocol::smtp_open failed (%1)"
-msgstr "SMTPProtocol::smtp_open nije uspio (%1)"
-
-#: smtp.cc:282
+#: command.cc:124
 msgid ""
-"The server did not accept the sender address.\n"
-"The server responded: \"%1\""
+"The server rejected both EHLO and HELO commands as unknown or "
+"unimplemented.\n"
+"Please contact the server's system administrator."
 msgstr ""
-"Server nije prihvatio adresu pošiljaoca.\n"
-"Server kaže: \"%1\""
 
-#: smtp.cc:305
+#: command.cc:138
 msgid ""
-"The attempt to start sending the message content failed.\n"
-"The server responded: \"%1\""
+"Unexpected server response to %1 command.\n"
+"%2"
 msgstr ""
-"Pokušaj slanja sadržaja poruke nije uspio.\n"
-"Server kaže: \"%1\""
 
-#: smtp.cc:379
-msgid ""
-"The message content was not accepted.\n"
-"The server responded: \"%1\""
-msgstr ""
-"Sadržaj poruke nije prihvaćen.\n"
-"Server kaže: \"%1\""
-
-#: smtp.cc:396
-msgid ""
-"One of the recipients was not accepted.\n"
-"The server responded: \"%1\""
-msgstr ""
-"Jedan od primalaca poruke nije prihvaćen.\n"
-"Server kaže: \"%1\""
-
-#: smtp.cc:464 smtp.cc:487
-msgid "Invalid SMTP response received."
-msgstr "Primljen je neispravan SMTP odgovor."
-
-#: smtp.cc:520
-msgid "Invalid SMTP response received: \"%1\""
-msgstr "Primljen je neispravan SMTP odgovor: \"%1\""
-
-#: smtp.cc:571
-msgid "The server did not accept the connection: \"%1\""
-msgstr "Server nije prihvatio vezu: \"%1\""
-
-#: smtp.cc:609 smtp.cc:657
-msgid "The server responded: \"%1\""
-msgstr "Server je rekao: \"%1\""
-
-#: smtp.cc:633
-msgid ""
-"Your SMTP server claims to support TLS, but negotiation was unsuccessful.\n"
-"You can disable TLS in KDE using the crypto settings module."
-msgstr ""
-"Vaš SMTP server tvrdi da podržava TLS, ali dogovaranje nije uspjelo.\n"
-"Možete isključiti TLS u KDE-u koristeći kripto konfiguracijski modul."
-
-#: smtp.cc:638
-msgid "Connection Failed"
-msgstr "Veza nije uspjela"
-
-#: smtp.cc:678
+#: command.cc:158
 msgid ""
 "Your SMTP server does not support TLS. Disable TLS, if you want to connect "
 "without encryption."
@@ -91,19 +36,30 @@ msgstr ""
 "Vaš SMTP server ne podržava TLS. Isključite TLS ako se želite povezati "
 "bez kriptovanja."
 
-#: smtp.cc:690
-msgid "Username and password for your SMTP account:"
-msgstr "Korisničko ime i šifra za vaš SMTP račun:"
+#: command.cc:172
+msgid ""
+"Your SMTP server claims to support TLS, but negotiation was unsuccessful.\n"
+"You can disable TLS in KDE using the crypto settings module."
+msgstr ""
+"Vaš SMTP server tvrdi da podržava TLS, ali dogovaranje nije uspjelo.\n"
+"Možete isključiti TLS u KDE-u koristeći kripto konfiguracijski modul."
 
-#: smtp.cc:692
-msgid "When prompted, you ran away."
-msgstr "Kad ste upitani, zbrisali ste."
+#: command.cc:177
+msgid "Connection Failed"
+msgstr "Veza nije uspjela"
 
-#: smtp.cc:739
+#: command.cc:197
 msgid "No compatible authentication methods found."
 msgstr "Nije pronađen nijedan kompatibilan metod za potvrdu autentičnosti."
 
-#: smtp.cc:760
+#: command.cc:202
+msgid ""
+"You have requested to authenticate to the server, but the server doesn't "
+"seem to support authentication.\n"
+"Try disabling authentication entirely."
+msgstr ""
+
+#: command.cc:208
 msgid ""
 "Your SMTP server doesn't support %1.\n"
 "Choose a different authentication method."
@@ -111,15 +67,156 @@ msgstr ""
 "Vaš SMTP server ne podržava %1.\n"
 "Izaberite neku drugu metodu potvrde autentičnosti."
 
-#: smtp.cc:790
+#: command.cc:262
+#, fuzzy
+msgid ""
+"Your SMTP server doesn't support %1.\n"
+"Choose a different authentication method.\n"
+"%2"
+msgstr ""
+"Vaš SMTP server ne podržava %1.\n"
+"Izaberite neku drugu metodu potvrde autentičnosti."
+
+#: command.cc:267
+#, fuzzy, c-format
+msgid ""
+"Your SMTP server doesn't support authentication.\n"
+"%2"
+msgstr ""
+"Vaš SMTP server ne podržava %1.\n"
+"Izaberite neku drugu metodu potvrde autentičnosti."
+
+#: command.cc:271
+#, fuzzy, c-format
 msgid ""
 "Authentication failed.\n"
 "Most likely the password is wrong.\n"
-"The server responded: \"%1\""
+"%1"
 msgstr ""
 "Potvrda autentičnosti nije uspjela.\n"
 "Najvjerovatnije je šifra pogrešna.\n"
 "Server je rekao: \"%1\""
+
+#: command.cc:409
+msgid "Could not read data from application."
+msgstr ""
+
+#: command.cc:426
+#, fuzzy, c-format
+msgid ""
+"The message content was not accepted.\n"
+"%1"
+msgstr ""
+"Sadržaj poruke nije prihvaćen.\n"
+"Server kaže: \"%1\""
+
+#: response.cc:105
+#, fuzzy, c-format
+msgid ""
+"The server responded:\n"
+"%1"
+msgstr "Server je rekao: \"%1\""
+
+#: response.cc:108
+msgid "The server responded: \"%1\""
+msgstr "Server je rekao: \"%1\""
+
+#: response.cc:111
+msgid "This is a temporary failure. You may try again later."
+msgstr ""
+
+#: smtp.cc:151
+msgid "The application sent an invalid request."
+msgstr ""
+
+#: smtp.cc:213
+msgid "The sender address is missing."
+msgstr "Nedostaje adresa pošiljaoca."
+
+#: smtp.cc:221
+msgid "SMTPProtocol::smtp_open failed (%1)"
+msgstr "SMTPProtocol::smtp_open nije uspio (%1)"
+
+#: smtp.cc:229
+msgid ""
+"Your server does not support sending of 8bit messages.\n"
+"Please use base64 or quoted-printable encoding."
+msgstr ""
+
+#: smtp.cc:308
+#, fuzzy
+msgid "Invalid SMTP response (%1) recveived."
+msgstr "Primljen je neispravan SMTP odgovor."
+
+#: smtp.cc:490
+#, fuzzy, c-format
+msgid ""
+"The server did not accept the connection.\n"
+"%1"
+msgstr "Server nije prihvatio vezu: \"%1\""
+
+#: smtp.cc:540
+msgid "Username and password for your SMTP account:"
+msgstr "Korisničko ime i šifra za vaš SMTP račun:"
+
+#: smtp.cc:542
+msgid "When prompted, you ran away."
+msgstr "Kad ste upitani, zbrisali ste."
+
+#: transactionstate.cc:53
+#, fuzzy, c-format
+msgid ""
+"The server did not accept a blank sender address.\n"
+"%1"
+msgstr ""
+"Server nije prihvatio adresu pošiljaoca.\n"
+"Server kaže: \"%1\""
+
+#: transactionstate.cc:56
+#, fuzzy
+msgid ""
+"The server did not accept the sender address \"%1\".\n"
+"%2"
+msgstr ""
+"Server nije prihvatio adresu pošiljaoca.\n"
+"Server kaže: \"%1\""
+
+#: transactionstate.cc:97
+#, c-format
+msgid ""
+"Message sending failed since the following recipients were rejected by the "
+"server:\n"
+"%1"
+msgstr ""
+
+#: transactionstate.cc:107
+#, fuzzy, c-format
+msgid ""
+"The attempt to start sending the message content failed.\n"
+"%1"
+msgstr ""
+"Pokušaj slanja sadržaja poruke nije uspio.\n"
+"Server kaže: \"%1\""
+
+#: transactionstate.cc:111
+msgid "Unhandled error condition. Please send a bug report."
+msgstr ""
+
+#, fuzzy
+#~ msgid ""
+#~ "The server did not accept the recipient \"%1\".\n"
+#~ "%2"
+#~ msgstr "Server nije prihvatio vezu: \"%1\""
+
+#~ msgid ""
+#~ "One of the recipients was not accepted.\n"
+#~ "The server responded: \"%1\""
+#~ msgstr ""
+#~ "Jedan od primalaca poruke nije prihvaćen.\n"
+#~ "Server kaže: \"%1\""
+
+#~ msgid "Invalid SMTP response received: \"%1\""
+#~ msgstr "Primljen je neispravan SMTP odgovor: \"%1\""
 
 #~ msgid ""
 #~ "The server didn't accept the message content:\n"
