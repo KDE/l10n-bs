@@ -1,86 +1,301 @@
 # Bosnian translation of kio_sftp
 # Copyright (C) 2001 Free Software Foundation, Inc.
 # Amila Akagic <bono@linux.org.ba>, 2002.
+# Vedran Ljubovic <vljubovic@smartnet.ba>, 2002.
 msgid ""
 msgstr ""
 "Project-Id-Version: kio_sftp\n"
-"POT-Creation-Date: 2002-03-01 03:01+0100\n"
-"PO-Revision-Date: 2002-03-12 19:39GMT\n"
-"Last-Translator: Amila Akagic <bono@linux.org.ba>\n"
-"Language-Team: bosnian <lokal-subscribe@lugbih.org>\n"
+"POT-Creation-Date: 2002-10-03 02:48+0200\n"
+"PO-Revision-Date: 2002-11-09 23:47+0100\n"
+"Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
+"Language-Team: Bosnian <lokal@lugbih.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.5\n"
+"X-Generator: KBabel 0.9.6\n"
 
-#: kio_sftp.cpp:294
-msgid "Opening connection to host <b>%1:%2</b>"
-msgstr "Otvaram konekciju do računara <b>%1:%2</b>"
+#: kio_sftp.cpp:268 kio_sftp.cpp:828
+msgid "SFTP slave unexpectedly killed"
+msgstr "SFTP slave neočekivano prekinut"
 
-#: kio_sftp.cpp:355
-msgid "Sftp Login"
-msgstr "Sftp prijava"
+#: kio_sftp.cpp:318
+msgid "Opening SFTP connection to host <b>%1:%2</b>"
+msgstr "Otvaram SFTP konekciju do računara <b>%1:%2</b>"
 
-#: kio_sftp.cpp:357
+#: kio_sftp.cpp:323
+msgid "No hostname specified"
+msgstr "Ime računara nije naznačeno"
+
+#: kio_sftp.cpp:335 kio_sftp.cpp:447
+msgid "SFTP Login"
+msgstr "SFTP prijava"
+
+#: kio_sftp.cpp:337 kio_sftp.cpp:448
 msgid "site:"
 msgstr "site:"
 
-#: kio_sftp.cpp:369
-msgid "Login failed. Retrying..."
-msgstr "Prijava nije uspjela. Pokušavam ponovo..."
+#: kio_sftp.cpp:439
+msgid "Please enter your username and key passphrase."
+msgstr "Molim unesite vaše korisničko ime i key passphrase."
 
-#: kio_sftp.cpp:391
+#: kio_sftp.cpp:444
 msgid "Please enter your username and password."
 msgstr "Molim unesite vaše korisničko ime i šifru."
 
-#: kio_sftp.cpp:394
-msgid ""
-"Login failed.\n"
-"Please confirm your username and password, and enter them again."
-msgstr ""
-"Prijava nije uspjela.\n"
-"Provjerite vaše korisničko ime i šifru i pokušajte ponovo."
+#: kio_sftp.cpp:458
+msgid "Incorrect username or password"
+msgstr "Neispravno korisničko ime ili šifra"
 
-#: kio_sftp.cpp:399
+#: kio_sftp.cpp:464
 msgid "Please enter a username and password"
-msgstr "Molim unesite vaše korisničko ime i šifru"
+msgstr "Molim unesite korisničko ime i šifru"
 
-#: kio_sftp.cpp:419
+#: kio_sftp.cpp:523
+msgid "Warning: Cannot verify host's identity!"
+msgstr "Upozorenje: Ne mogu potvrditi identitet računara!"
+
+#: kio_sftp.cpp:534
+msgid "Warning: Host's identity changed!"
+msgstr "Upozorenje: Identitet računara se promijenio!"
+
+#: kio_sftp.cpp:545 kio_sftp.cpp:546
+msgid "Authentication failed."
+msgstr "Provjera autentičnosti nije uspjela."
+
+#: kio_sftp.cpp:560 kio_sftp.cpp:575
 msgid "Connection failed."
-msgstr "Konekcija nije uspjela."
+msgstr "Spajanje nije uspjelo."
 
-#: kio_sftp.cpp:425
-msgid "Warning: Host key not found!"
-msgstr "Upozorenje: Host ključ nije nađen!"
+#: kio_sftp.cpp:561 ksshprocess.cpp:767 ksshprocess.cpp:914
+msgid "Connection closed by remote host."
+msgstr "Veza prekinuta od strane udaljenog računara."
 
-#: kio_sftp.cpp:429
-msgid "Warning: Host key has changed!"
-msgstr "Upozorenje: Host ključ je promjenjen!"
+#: kio_sftp.cpp:576
+#, c-format
+msgid "Unexpected SFTP error: %1"
+msgstr "Neočekivana SFTP greška: %1"
 
-#: kio_sftp.cpp:440
-msgid "Shall we continue connecting to %1?"
-msgstr "Da se ponovo pokušam spojiti na %1?"
+#: kio_sftp.cpp:615
+#, c-format
+msgid "SFTP version %1"
+msgstr "SFTP verzija %1"
 
-#: kio_sftp.cpp:457
-msgid "Connected to "
-msgstr "Spojen na "
+#: kio_sftp.cpp:621
+msgid "Protocol error."
+msgstr "Greška protokola."
 
-#: kio_sftp.cpp:488
-msgid "Timed out waiting for a response from the server."
-msgstr "Isteklo je vrijeme čekanja na odgovor sa servera."
+#: kio_sftp.cpp:627
+#, c-format
+msgid "Successfully connected to %1"
+msgstr "Uspješno spojen na %1"
 
-#: kio_sftp.cpp:501
-msgid "Login failed."
-msgstr "Prijava nije uspjela."
+#: kio_sftp.cpp:1251
+msgid "Could not allocate memory for SFTP packet."
+msgstr "Ne mogu alocirati memoriju za SFTP paket."
 
-#: kio_sftp.cpp:503
+#: kio_sftp.cpp:1262
+msgid "Connection closed"
+msgstr "Veza prekinuta"
+
+#: kio_sftp.cpp:1269
+msgid "Could not read SFTP packet"
+msgstr "Ne mogu pročitati SFTP paket"
+
+#: kio_sftp.cpp:1366
+msgid "SFTP command failed for an unknown reason."
+msgstr "SFTP naredba nije uspjela iz nepoznatih razloga."
+
+#: kio_sftp.cpp:1369
+msgid "The SFTP server received a bad message."
+msgstr "SFTP server je primio neispravnu poruku."
+
+#: kio_sftp.cpp:1372
+msgid "You attempted an operation unsupported by the SFTP server."
+msgstr "Pokušali ste operaciju koju SFTP server ne podržava."
+
+#: kio_sftp.cpp:1377
+msgid "Error code: "
+msgstr "Kod greške: "
+
+#: ksshprocess.cpp:356
+msgid "Cannot specify a subsystem and command at the same time."
+msgstr "Ne mogu podesiti podsistem i naredbu u isto vrijeme."
+
+#: ksshprocess.cpp:702
+msgid "No options provided for ssh execution."
+msgstr "Nijedna opcija nije određena za izvršenje ssh."
+
+#: ksshprocess.cpp:710
+msgid "Failed to execute ssh process."
+msgstr "Nisam uspio izvršiti ssh proces."
+
+#: ksshprocess.cpp:733 ksshprocess.cpp:762 ksshprocess.cpp:881
+#: ksshprocess.cpp:953
+msgid "Error encountered while talking to ssh."
+msgstr "Došlo je do greške u komunikaciji sa ssh."
+
+#: ksshprocess.cpp:813
+msgid "Please supply a password."
+msgstr "Molim unesite vašu šifru."
+
+#: ksshprocess.cpp:852
+msgid "Please supply the passphrase for your SSH private key."
+msgstr "Molim unesite passphrase za vaš SSH privatni ključ."
+
+#: ksshprocess.cpp:866
+msgid "Authentication to %1 failed"
+msgstr "Autentifikacija na %1 nije uspjela"
+
+#: ksshprocess.cpp:889
 msgid ""
-"Could not login to %1.\n"
-"Maximum number of retries exceeded."
+"The identity of the remote host '%1' could not be verified because the "
+"host's key is not in the \"known hosts\" file."
 msgstr ""
-"Nisam se mogao prijaviti na %1.\n"
-"Maksimalan broj pokušaja pređen."
+"Identitet udaljenog računara '%1' nije mogao biti potvrđen, zato što "
+"ključ tog računara nije u datoteci \"poznati računari\" (known hosts)."
 
-#: kio_sftp.cpp:531
-msgid "Login OK"
-msgstr "Prijava je OK"
+#: ksshprocess.cpp:895
+msgid ""
+" Manually, add the host's key to the \"known hosts\" file or contact your "
+"administrator."
+msgstr ""
+" Ručno unesite ključ računara u datoteku \"poznati računari\" ili "
+"kontaktirajte vašeg administratora."
+
+#: ksshprocess.cpp:901
+msgid " Manually, add the host's key to %1 or contact your administrator."
+msgstr ""
+" Ručno unesite ključ računara u %1 ili kontaktirajte vašeg "
+"administratora."
+
+#: ksshprocess.cpp:933
+msgid ""
+"The identity of the remote host '%1' could not be verified. The host's key "
+"fingerprint is:\n"
+"%2\n"
+"You should verify the fingerprint with the host's administrator before "
+"connecting.\n"
+"\n"
+"Would you like to accept the host's key and connect anyway? "
+msgstr ""
+"Identitet udaljenog računara '%1' nije mogao biti potvrđen. Fingerprint za "
+"ključ računara je:\n"
+"%2\n"
+"Trebali biste provjeriti fingerprint sa administratorom tog računara prije "
+"konektovanja.\n"
+"\n"
+"Želite li svejedno prihvatiti ključ računara i spojiti se?"
+
+#: ksshprocess.cpp:961
+msgid ""
+"WARNING: The identity of the remote host '%1' has changed!\n"
+"\n"
+"Someone could be eavesdropping on your connection, or the administrator may "
+"have just changed the host's key. Either way, you should verify the host's "
+"key fingerprint with the host's administrator. The key fingerprint is:\n"
+"%2\n"
+"Add the correct host key to \"%3\" to get rid of this message."
+msgstr ""
+"UPOZORENJE: Identitet udaljenog računara '%1' se promijenio!\n"
+"\n"
+"Možda neko prisluškuje vašu konekciju, ili je administator tog računara "
+"promijenio njegov ključ. U svakom slučaju, trebate provjeriti ispravnost "
+"ključa sa administratorom tog računara. Fingerprint ključa je:\n"
+"%2\n"
+"Ako ne želite više vidjeti ovu poruku, dodajte ispravan ključ računara u "
+"\"%3\" "
+
+#: ksshprocess.cpp:996
+msgid ""
+"WARNING: The identity of the remote host '%1' has changed!\n"
+"\n"
+"Someone could be eavesdropping on your connection, or the administrator may "
+"have just changed the host's key. Either way, you should verify the host's "
+"key fingerprint with the host's administrator before connecting. The key "
+"fingerprint is:\n"
+"%2\n"
+"\n"
+"Would you like to accept the host's new key and connect anyway?"
+msgstr ""
+"UPOZORENJE: Identitet udaljenog računara '%1' se promijenio!\n"
+"\n"
+"Možda neko prisluškuje vašu konekciju, ili je administator tog računara "
+"promijenio njegov ključ. U svakom slučaju, trebate provjeriti ispravnost "
+"ključa sa administratorom tog računara. Fingerprint ključa je:\n"
+"%2\n"
+"\n"
+"Želite li ipak prihvatiti novi ključ računara i spojiti se?"
+
+#: ksshprocess.cpp:1020
+msgid "Host key was rejected."
+msgstr "Ključ računara je odbačen."
+
+#~ msgid "Shall we continue connecting to %1?"
+#~ msgstr "Da se ponovo pokušam spojiti na %1?"
+
+#~ msgid "Timed out waiting for a response from the server."
+#~ msgstr "Isteklo je vrijeme čekanja na odgovor sa servera."
+
+#~ msgid "Login failed."
+#~ msgstr "Prijava nije uspjela."
+
+#~ msgid ""
+#~ "Could not login to %1.\n"
+#~ "Maximum number of retries exceeded."
+#~ msgstr ""
+#~ "Nisam se mogao prijaviti na %1.\n"
+#~ "Maksimalan broj pokušaja pređen."
+
+#~ msgid ""
+#~ "A new host key was detected and strict host key checking is enabled. "
+#~ "Therefore, authentication to %1 failed. Manually update the host key to "
+#~ "the known hosts file or contact your adminstrator"
+#~ msgstr ""
+#~ "Novi ključ računara je detektovan i striktna provjera ključa je "
+#~ "uključena. Zbog toga autentifikacija na %1 nije uspjela. Ručno ispravite "
+#~ "ključ računara u datoteci poznatih računara ili kontaktirajte vašeg "
+#~ "administratora"
+
+#~ msgid ""
+#~ "Host key is not in database of known host keys.  This could mean that "
+#~ "your connection is being intercepted by a third party. Terminate your "
+#~ "connection or verify the host key fingerprint with your system "
+#~ "administrator.\n"
+#~ " Key fingerprint is %1"
+#~ msgstr ""
+#~ "Ključ računara nije u bazi poznatih ključeva.  Ovo može značiti da je "
+#~ "treća strana presrela vašu konekciju. Prekinite vašu konekciju ili "
+#~ "provjerite zapis ključa računara sa vašim sistemskim administratorom.\n"
+#~ " Zapis ključa je %1"
+
+#~ msgid ""
+#~ "The host key sent by the server is different from the host key in the "
+#~ "known hosts file. This could mean a third party is intercepting your "
+#~ "connection. Terminate your connection or verify the host key fingerprint "
+#~ "with your system administrator.\n"
+#~ "Key fingerprint is %1"
+#~ msgstr ""
+#~ "Ključ računara koji je poslao server se razlikuje od ključa računara u "
+#~ "datoteci poznatih računara. Ovo može značiti da treća strana presreće "
+#~ "vašu konekciju. Prekinite vašu konekciju ili provjerite zapis ključa "
+#~ "računara sa vašim sistemskim administratorom.\n"
+#~ "Zapis ključa je %1"
+
+#~ msgid "Login failed. Retrying..."
+#~ msgstr "Prijava nije uspjela. Pokušavam ponovo..."
+
+#~ msgid ""
+#~ "Login failed.\n"
+#~ "Please confirm your username and password, and enter them again."
+#~ msgstr ""
+#~ "Prijava nije uspjela.\n"
+#~ "Provjerite vaše korisničko ime i šifru i pokušajte ponovo."
+
+#~ msgid "Warning: Host key not found!"
+#~ msgstr "Upozorenje: Host ključ nije nađen!"
+
+#~ msgid "Connected to "
+#~ msgstr "Spojen na "
+
+#~ msgid "Login OK"
+#~ msgstr "Prijava je OK"
