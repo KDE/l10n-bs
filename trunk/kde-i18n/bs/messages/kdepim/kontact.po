@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kontact\n"
-"POT-Creation-Date: 2004-01-12 02:01+0100\n"
+"POT-Creation-Date: 2004-08-05 01:24+0200\n"
 "PO-Revision-Date: 2004-05-23 10:59+0200\n"
 "Last-Translator: Amila Akagić <bono@linux.org.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -63,7 +63,7 @@ msgstr "KDE Kontact"
 msgid "(c), 2003 Cornelius Schumacher"
 msgstr "(c), 2003 Cornelius Schumacher"
 
-#: src/kcmkontact.cpp:112
+#: plugins/summary/kcmkontactsummary.cpp:82 src/kcmkontact.cpp:112
 msgid "Name"
 msgstr "Ime"
 
@@ -71,44 +71,70 @@ msgstr "Ime"
 msgid "Description"
 msgstr "Opis"
 
-#: src/main.cpp:42
-msgid "A KDE Personal Information Manager"
+#: src/main.cpp:44
+#, fuzzy
+msgid "KDE personal information manager"
 msgstr "KDE-ov menadžer ličnih informacija"
 
-#: src/main.cpp:99
+#: src/main.cpp:74
+msgid "Start with a specific Kontact module"
+msgstr ""
+
+#: src/main.cpp:75
+msgid "Disable the splash screen"
+msgstr ""
+
+#: src/main.cpp:76
+msgid "List all possible modules and exit"
+msgstr ""
+
+#: src/main.cpp:123
 msgid "Kontact"
 msgstr "Kontact"
 
-#: src/main.cpp:100
-msgid "(C) 2001-2003 The Kontact developers"
+#: src/main.cpp:124
+#, fuzzy
+msgid "(C) 2001-2004 The Kontact developers"
 msgstr "(C) 2001-2003 Programeri Kontact-a"
 
-#: src/main.cpp:106
+#: src/main.cpp:133
 msgid "Original Author"
 msgstr "Prvobitni autor"
 
-#: src/mainwindow.cpp:182
+#: src/mainwindow.cpp:255
+msgid " Initializing..."
+msgstr ""
+
+#: src/mainwindow.cpp:266
 msgid "New"
 msgstr "Novi"
 
-#: src/mainwindow.cpp:185
+#: src/mainwindow.cpp:270
+msgid "Select Components..."
+msgstr ""
+
+#: src/mainwindow.cpp:274
 msgid "Configure Kontact..."
 msgstr "Podesi Kontact..."
 
-#: src/mainwindow.cpp:188
+#: src/mainwindow.cpp:277
 msgid "&Tip of the Day"
 msgstr "Savje&t dana"
 
-#: src/mainwindow.cpp:425
+#: src/mainwindow.cpp:279
+msgid "&Request Feature..."
+msgstr ""
+
+#: src/mainwindow.cpp:519
 msgid "Application is running standalone. Foregrounding..."
 msgstr "Program radi samostalno. Prebacujem u prvi plan..."
 
-#: src/mainwindow.cpp:438
-#, c-format
-msgid "Can't load Part for %1"
+#: src/mainwindow.cpp:532
+#, fuzzy, c-format
+msgid "Cannot load part for %1."
 msgstr "Ne mogu učitati dio za %1"
 
-#: src/mainwindow.cpp:456
+#: src/mainwindow.cpp:550
 msgid ""
 "_: Plugin dependent window title\n"
 "%1 - Kontact"
@@ -118,11 +144,12 @@ msgstr "%1 - Kontact"
 msgid "Birthdays and Anniversaries"
 msgstr "Rođendani i godišnjice"
 
-#: plugins/kaddressbook/kabsummarywidget.cpp:141
+#: plugins/kaddressbook/kabsummarywidget.cpp:157
+#: plugins/korganizer/summarywidget.cpp:134
 msgid "Today"
 msgstr "Danas"
 
-#: plugins/kaddressbook/kabsummarywidget.cpp:143
+#: plugins/kaddressbook/kabsummarywidget.cpp:159
 #, c-format
 msgid ""
 "_n: in 1 day\n"
@@ -132,7 +159,7 @@ msgstr ""
 "za %n dana\n"
 "za %n dana"
 
-#: plugins/kaddressbook/kabsummarywidget.cpp:174
+#: plugins/kaddressbook/kabsummarywidget.cpp:190
 #, c-format
 msgid ""
 "_n: one year\n"
@@ -142,7 +169,7 @@ msgstr ""
 "%n godine\n"
 "%n godina"
 
-#: plugins/kaddressbook/kabsummarywidget.cpp:188
+#: plugins/kaddressbook/kabsummarywidget.cpp:204
 #, c-format
 msgid ""
 "_n: No birthdays or anniversaries pending within the next 1 day\n"
@@ -152,84 +179,259 @@ msgstr ""
 "Nema rođendana ili godišnjica u toku sljedeća %n dana\n"
 "Nema rođendana ili godišnjica u toku sljedećih %n dana"
 
-#: plugins/kaddressbook/kabsummarywidget.cpp:233
+#: plugins/kaddressbook/kabsummarywidget.cpp:250
 msgid "Send &Mail"
 msgstr "Pošalji &poštu"
 
-#: plugins/kaddressbook/kabsummarywidget.cpp:235
+#: plugins/kaddressbook/kabsummarywidget.cpp:252
 msgid "View &Contact"
 msgstr "Prikaži &kontakt"
 
-#: plugins/kaddressbook/kabsummarywidget.cpp:252
+#: plugins/kaddressbook/kabsummarywidget.cpp:269
 #, c-format
 msgid "Mail to %1"
 msgstr "Pošta za %1"
 
-#: plugins/kaddressbook/kaddressbook_plugin.cpp:52
-msgid "New Contact"
+#: plugins/kaddressbook/kaddressbook_plugin.cpp:60
+#, fuzzy
+msgid "New Contact..."
 msgstr "Novi kontakt"
 
-#: plugins/kmail/kmail_plugin.cpp:50
-msgid "New Mail"
+#: plugins/kaddressbook/kaddressbook_plugin.cpp:140
+#: plugins/korganizer/korganizerplugin.cpp:173
+#: plugins/korganizer/todoplugin.cpp:166
+#, fuzzy
+msgid "Drops of multiple mails are not supported."
+msgstr "Spuštanje višestruke pošte nije podržano."
+
+#: plugins/kaddressbook/kaddressbook_plugin.cpp:154
+#: plugins/korganizer/korganizerplugin.cpp:186
+#: plugins/korganizer/todoplugin.cpp:179
+#, fuzzy
+msgid "Cannot handle drop events of type '%1'."
+msgstr "Ne mogu da upravljam spuštenim događajima tipa '%1'."
+
+#: plugins/kaddressbook/kcmkabsummary.cpp:79
+#: plugins/korganizer/kcmkorgsummary.cpp:78
+#, fuzzy
+msgid ""
+"_n:  day\n"
+" days"
+msgstr ""
+"za %n dan\n"
+"za %n dana\n"
+"za %n dana"
+
+#: plugins/kaddressbook/kcmkabsummary.cpp:87
+msgid "Address Book Summary"
+msgstr ""
+
+#: plugins/kaddressbook/kcmkabsummary.cpp:91
+msgid "How many days should the address book summary display at once?"
+msgstr ""
+
+#: plugins/kaddressbook/kcmkabsummary.cpp:94
+#: plugins/korganizer/kcmkorgsummary.cpp:93
+msgid "One day"
+msgstr ""
+
+#: plugins/kaddressbook/kcmkabsummary.cpp:97
+#: plugins/korganizer/kcmkorgsummary.cpp:96
+msgid "Five days"
+msgstr ""
+
+#: plugins/kaddressbook/kcmkabsummary.cpp:100
+#: plugins/korganizer/kcmkorgsummary.cpp:99
+msgid "One week"
+msgstr ""
+
+#: plugins/kaddressbook/kcmkabsummary.cpp:103
+#: plugins/korganizer/kcmkorgsummary.cpp:102
+msgid "One month"
+msgstr ""
+
+#: plugins/kaddressbook/kcmkabsummary.cpp:119
+msgid "Event Types"
+msgstr ""
+
+#: plugins/kaddressbook/kcmkabsummary.cpp:120
+msgid "Show all birthdays"
+msgstr ""
+
+#: plugins/kaddressbook/kcmkabsummary.cpp:121
+#, fuzzy
+msgid "Show all anniversaries"
+msgstr "Rođendani i godišnjice"
+
+#: plugins/kaddressbook/kcmkabsummary.cpp:190
+msgid "kcmkabsummary"
+msgstr ""
+
+#: plugins/kaddressbook/kcmkabsummary.cpp:191
+msgid "Address Book Configuration Dialog"
+msgstr ""
+
+#: plugins/kaddressbook/kcmkabsummary.cpp:193
+#: plugins/kmail/kcmkmailsummary.cpp:185
+msgid "(c) 2004 Tobias Koenig"
+msgstr ""
+
+#: plugins/kmail/kcmkmailsummary.cpp:75
+#, fuzzy
+msgid "Summary"
+msgstr "Kontact-ov sažetak"
+
+#: plugins/kmail/kcmkmailsummary.cpp:77
+msgid "Show full path for folders"
+msgstr ""
+
+#: plugins/kmail/kcmkmailsummary.cpp:97
+msgid ""
+"_: prefix for local folders\n"
+"Local"
+msgstr ""
+
+#: plugins/kmail/kcmkmailsummary.cpp:182
+msgid "kcmkmailsummary"
+msgstr ""
+
+#: plugins/kmail/kcmkmailsummary.cpp:183
+msgid "Mail Summary Configuration Dialog"
+msgstr ""
+
+#: plugins/kmail/kmail_plugin.cpp:57
+#, fuzzy
+msgid "New Mail..."
 msgstr "Nova pošta"
 
-#: plugins/kmail/summarywidget.cpp:50
+#: plugins/kmail/summarywidget.cpp:53
 msgid "New Messages"
 msgstr "Nove poruke"
 
-#: plugins/kmail/summarywidget.cpp:137
+#: plugins/kmail/summarywidget.cpp:144
+msgid ""
+"_: %1: number of unread messages %2: total number of messages\n"
+"%1 / %2"
+msgstr ""
+
+#: plugins/kmail/summarywidget.cpp:156
 msgid "No unread messages"
 msgstr "Nema nepročitanih poruka"
 
 #: plugins/knode/knode_plugin.cpp:51
-msgid "New Article"
+#, fuzzy
+msgid "New Article..."
 msgstr "Novi članak"
 
-#: plugins/knotes/knotes_part.cpp:77
+#: plugins/knotes/knotes_part.cpp:79
+msgid "Edit Note"
+msgstr ""
+
+#: plugins/knotes/knotes_part.cpp:113
 msgid "Title"
 msgstr "Naslov"
 
-#: plugins/knotes/knotes_part.cpp:84
+#: plugins/knotes/knotes_part.cpp:114
+#, fuzzy
+msgid "Content"
+msgstr "Sastanci"
+
+#: plugins/knotes/knotes_part.cpp:120
+#, fuzzy
+msgid "&New..."
+msgstr "Novi"
+
+#: plugins/knotes/knotes_part.cpp:121
 msgid "Rename"
 msgstr "Promijeni ime"
 
-#: plugins/knotes/knotes_part.cpp:212
-#, c-format
+#: plugins/knotes/knotes_part.cpp:228
+#, fuzzy, c-format
 msgid ""
-"_n: Do you really want to delete that note?\n"
+"_n: Do you really want to delete this note?\n"
 "Do you really want to delete these %n notes?"
 msgstr ""
 "Da li zaista želite obrisati ovu %n bilješku?\n"
 "Da li zaista želite obrisati ove %n bilješke?\n"
 "Da li zaista želite obrisati ovih %n bilješki?"
 
-#: plugins/knotes/knotes_part.cpp:214
+#: plugins/knotes/knotes_part.cpp:230
 msgid "Confirm Delete"
 msgstr "Potvrdi brisanje"
 
-#: plugins/knotes/knotes_plugin.cpp:44
+#: plugins/knotes/knotes_part.cpp:295
 msgid "New Note"
+msgstr "Nova bilješka"
+
+#: plugins/knotes/knotes_part.cpp:296
+msgid "Enter title for the note:"
+msgstr ""
+
+#: plugins/knotes/knotes_part.cpp:333
+msgid "Unable to access the notes, make sure no other program uses them."
+msgstr ""
+
+#: plugins/knotes/knotes_plugin.cpp:44
+#, fuzzy
+msgid "New Note..."
 msgstr "Nova bilješka"
 
 #: plugins/knotes/knotes_plugin.cpp:72 plugins/knotes/knotes_plugin.cpp:74
 msgid "Notes Management"
 msgstr "Upravljanje bilješkama"
 
-#: plugins/knotes/summarywidget.cpp:50
+#: plugins/knotes/summarywidget.cpp:56
 msgid "Notes"
 msgstr "Bilješke"
 
-#: plugins/korganizer/korganizerplugin.cpp:57
-msgid "New Event"
+#: plugins/korganizer/kcmkorgsummary.cpp:86
+#, fuzzy
+msgid "Calendar"
+msgstr "Aktivni kalendar"
+
+#: plugins/korganizer/kcmkorgsummary.cpp:90
+msgid "How many days should the calendar display at once?"
+msgstr ""
+
+#: plugins/korganizer/kcmkorgsummary.cpp:118
+#: plugins/korganizer/todosummarywidget.cpp:56
+#, fuzzy
+msgid "Todos"
+msgstr "Novi zadatak"
+
+#: plugins/korganizer/kcmkorgsummary.cpp:119
+msgid "Show all tasks"
+msgstr ""
+
+#: plugins/korganizer/kcmkorgsummary.cpp:120
+msgid "Show today's tasks"
+msgstr ""
+
+#: plugins/korganizer/kcmkorgsummary.cpp:191
+msgid "kcmkorgsummary"
+msgstr ""
+
+#: plugins/korganizer/kcmkorgsummary.cpp:192
+msgid "Schedule Configuration Dialog"
+msgstr ""
+
+#: plugins/korganizer/kcmkorgsummary.cpp:194
+#: plugins/newsticker/kcmkontactknt.cpp:424
+msgid "(c) 2003 - 2004 Tobias Koenig"
+msgstr ""
+
+#: plugins/korganizer/korganizerplugin.cpp:59
+#, fuzzy
+msgid "New Event..."
 msgstr "Novi događaj"
 
-#: plugins/korganizer/korganizerplugin.cpp:151
-#: plugins/korganizer/todoplugin.cpp:143
-msgid "Drops of multiple mails aren't supported."
-msgstr "Spuštanje višestruke pošte nije podržano."
+#: plugins/korganizer/korganizerplugin.cpp:158
+#: plugins/korganizer/todoplugin.cpp:152
+msgid "Meeting"
+msgstr ""
 
-#: plugins/korganizer/korganizerplugin.cpp:154
-#: plugins/korganizer/todoplugin.cpp:146
+#: plugins/korganizer/korganizerplugin.cpp:176
+#: plugins/korganizer/todoplugin.cpp:169
 msgid ""
 "From: %1\n"
 "To: %2\n"
@@ -239,38 +441,252 @@ msgstr ""
 "Za: %2\n"
 "Tema: %3"
 
-#: plugins/korganizer/korganizerplugin.cpp:158
-#: plugins/korganizer/todoplugin.cpp:150
+#: plugins/korganizer/korganizerplugin.cpp:180
+#: plugins/korganizer/todoplugin.cpp:173
 #, c-format
 msgid "Mail: %1"
 msgstr "Pošta: %1"
 
-#: plugins/korganizer/korganizerplugin.cpp:164
-#: plugins/korganizer/todoplugin.cpp:156
-msgid "Can't handle drop events of type '%1'."
-msgstr "Ne mogu da upravljam spuštenim događajima tipa '%1'."
-
-#: plugins/korganizer/summarywidget.cpp:55
+#: plugins/korganizer/summarywidget.cpp:56
 msgid "Appointments"
 msgstr "Sastanci"
 
-#: plugins/korganizer/summarywidget.cpp:68
-msgid "Default KOrganizer resource"
-msgstr "Uobičajeni KOrganizer-ov resurs"
-
-#: plugins/korganizer/summarywidget.cpp:70
-msgid "Active Calendar"
-msgstr "Aktivni kalendar"
-
 #: plugins/korganizer/summarywidget.cpp:138
+msgid "Tomorrow"
+msgstr ""
+
+#: plugins/korganizer/summarywidget.cpp:178
+msgid ""
+"_: Time from - to\n"
+"%1 - %2"
+msgstr ""
+
+#: plugins/korganizer/summarywidget.cpp:195
 msgid "No appointments pending"
 msgstr "Nema dolazećih sastanaka"
 
-#: plugins/korganizer/todoplugin.cpp:55
-msgid "New Todo"
+#: plugins/korganizer/todoplugin.cpp:58
+#, fuzzy
+msgid "New Todo..."
 msgstr "Novi zadatak"
 
-#: plugins/summary/summaryview_part.cpp:200
+#: plugins/korganizer/todosummarywidget.cpp:105
+msgid "overdue"
+msgstr ""
+
+#: plugins/korganizer/todosummarywidget.cpp:112
+msgid "in progress"
+msgstr ""
+
+#: plugins/korganizer/todosummarywidget.cpp:118
+msgid "starts today"
+msgstr ""
+
+#: plugins/korganizer/todosummarywidget.cpp:124
+msgid "ends today"
+msgstr ""
+
+#: plugins/korganizer/todosummarywidget.cpp:167
+#, fuzzy
+msgid "No Todos pending"
+msgstr "Nema dolazećih sastanaka"
+
+#: plugins/kpilot/kpilot_plugin.cpp:53 plugins/kpilot/summarywidget.cpp:64
+#, fuzzy
+msgid "KPilot Information"
+msgstr "Informacije o vremenu"
+
+#: plugins/kpilot/kpilot_plugin.cpp:55
+msgid ""
+"KPilot - HotSync software for KDE\n"
+"\n"
+msgstr ""
+
+#: plugins/kpilot/kpilot_plugin.cpp:58
+msgid "Plugin Developer"
+msgstr ""
+
+#: plugins/kpilot/kpilot_plugin.cpp:60
+msgid "Project Leader"
+msgstr ""
+
+#: plugins/kpilot/kpilot_plugin.cpp:63
+msgid "Maintainer"
+msgstr ""
+
+#: plugins/kpilot/summarywidget.cpp:69
+msgid "<i>Last sync:</i>"
+msgstr ""
+
+#: plugins/kpilot/summarywidget.cpp:70 plugins/kpilot/summarywidget.cpp:100
+#: plugins/kpilot/summarywidget.cpp:176 plugins/kpilot/summarywidget.cpp:196
+#, fuzzy
+msgid "No information available"
+msgstr "Nema dostupnih informacija o programu."
+
+#: plugins/kpilot/summarywidget.cpp:72
+msgid "[log]"
+msgstr ""
+
+#: plugins/kpilot/summarywidget.cpp:79
+msgid "<i>User:</i>"
+msgstr ""
+
+#: plugins/kpilot/summarywidget.cpp:80 plugins/kpilot/summarywidget.cpp:86
+msgid "Unknown"
+msgstr ""
+
+#: plugins/kpilot/summarywidget.cpp:85
+msgid "<i>Device:</i>"
+msgstr ""
+
+#: plugins/kpilot/summarywidget.cpp:91
+msgid "<i>Status:</i>"
+msgstr ""
+
+#: plugins/kpilot/summarywidget.cpp:92 plugins/kpilot/summarywidget.cpp:195
+msgid "No communication with the daemon possible"
+msgstr ""
+
+#: plugins/kpilot/summarywidget.cpp:97
+msgid "<i>Conduits:</i>"
+msgstr ""
+
+#: plugins/kpilot/summarywidget.cpp:184 plugins/kpilot/summarywidget.cpp:185
+#: plugins/kpilot/summarywidget.cpp:193 plugins/kpilot/summarywidget.cpp:194
+msgid "unknown"
+msgstr ""
+
+#: plugins/kpilot/summarywidget.cpp:191
+#, fuzzy
+msgid "No information available (Daemon not running?)"
+msgstr "Nema dostupnih informacija o programu."
+
+#: plugins/kpilot/summarywidget.cpp:203
+msgid "KPilot HotSync Log"
+msgstr ""
+
+#: plugins/kpilot/summarywidget.cpp:211
+#, c-format
+msgid "Unable to open Hotsync log %1."
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:60
+msgid "New News Feed"
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:67
+#, fuzzy
+msgid "Name:"
+msgstr "Ime"
+
+#: plugins/newsticker/kcmkontactknt.cpp:74
+msgid "URL:"
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:146
+msgid "Arts"
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:147
+msgid "Business"
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:148
+msgid "Computers"
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:149
+msgid "Misc"
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:150
+#, fuzzy
+msgid "Recreation"
+msgstr "Opis"
+
+#: plugins/newsticker/kcmkontactknt.cpp:151
+msgid "Society"
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:169
+msgid "Customs"
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:317
+msgid "All"
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:334
+msgid "Selected"
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:339
+msgid "News Feed Settings"
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:344
+msgid "Refresh time:"
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:352
+msgid "Number of items shown:"
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:359
+msgid "New Feed..."
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:362
+msgid "Delete Feed"
+msgstr ""
+
+#: plugins/newsticker/kcmkontactknt.cpp:421
+#, fuzzy
+msgid "kcmkontactknt"
+msgstr "kontactconfig"
+
+#: plugins/newsticker/kcmkontactknt.cpp:422
+msgid "Newsticker Configuration Dialog"
+msgstr ""
+
+#: plugins/newsticker/summarywidget.cpp:50
+#, fuzzy
+msgid "News Feeds"
+msgstr "Nove poruke"
+
+#: plugins/newsticker/summarywidget.cpp:59
+msgid ""
+"No rss dcop service available.\n"
+"You need rssservice to use this plugin."
+msgstr ""
+
+#: plugins/summary/kcmkontactsummary.cpp:97
+msgid ""
+"Here you can select which summary plugins to have visible in your summary "
+"view."
+msgstr ""
+
+#: plugins/summary/kcmkontactsummary.cpp:176
+#, fuzzy
+msgid "kontactsummary"
+msgstr "Kontact-ov sažetak"
+
+#: plugins/summary/kcmkontactsummary.cpp:177
+#, fuzzy
+msgid "KDE Kontact Summary"
+msgstr "Kontact-ov sažetak"
+
+#: plugins/summary/kcmkontactsummary.cpp:179
+msgid "(c), 2004 Tobias Koenig"
+msgstr ""
+
+#: plugins/summary/summaryview_part.cpp:86
+#, fuzzy
+msgid "&Configure Summary View..."
+msgstr "Prikaz Kontact-ovog sažetka"
+
+#: plugins/summary/summaryview_part.cpp:228
 msgid "What's next?"
 msgstr "Šta je sljedeće?"
 
@@ -295,11 +711,17 @@ msgstr "Proba"
 msgid "Weather Information"
 msgstr "Informacije o vremenu"
 
-#: plugins/weather/summarywidget.cpp:136
+#: plugins/weather/summarywidget.cpp:56
+msgid ""
+"No weather dcop service available;\n"
+"you need KWeather to use this plugin."
+msgstr ""
+
+#: plugins/weather/summarywidget.cpp:134
 msgid "Wind Speed"
 msgstr "Brzina vjetra"
 
-#: plugins/weather/summarywidget.cpp:138
+#: plugins/weather/summarywidget.cpp:136
 msgid "Rel. Humidity"
 msgstr "Rel. vlaž. vazd."
 
@@ -307,3 +729,5 @@ msgstr "Rel. vlaž. vazd."
 msgid "Improvements and more code cleanups"
 msgstr "Poboljšanja i dodatno čišćenje koda"
 
+#~ msgid "Default KOrganizer resource"
+#~ msgstr "Uobičajeni KOrganizer-ov resurs"
