@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kpackage\n"
-"POT-Creation-Date: 2004-07-16 01:25+0200\n"
+"POT-Creation-Date: 2004-12-31 10:52+0100\n"
 "PO-Revision-Date: 2004-07-30 19:51+0200\n"
 "Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -103,42 +103,46 @@ msgstr "Proba (bez deinstalacije)"
 msgid "Purge Config Files"
 msgstr "Ukloni datoteke sa postavkama"
 
-#: debAptInterface.cpp:104
+#: debAptInterface.cpp:105
 msgid "U&pgrade"
 msgstr "&Dogradnja"
 
-#: debAptInterface.cpp:108
+#: debAptInterface.cpp:109
 msgid "&Fixup"
 msgstr "&Popravka"
 
-#: debAptInterface.cpp:166
+#: debAptInterface.cpp:113
+msgid "&Apt-file update"
+msgstr ""
+
+#: debAptInterface.cpp:179
 #, c-format
 msgid "Querying DEB APT remote package list: %1"
 msgstr "Ispitujem DEB APT popis udaljenih paketa: %1"
 
-#: debAptInterface.cpp:172
+#: debAptInterface.cpp:185
 #, c-format
 msgid "Processing DEB APT remote package list: %1"
 msgstr "Obrađujem DEB APT popis udaljenih paketa: %1"
 
-#: debAptInterface.cpp:209 debAptInterface.cpp:265 rpmInterface.cpp:192
+#: debAptInterface.cpp:222 debAptInterface.cpp:278 rpmInterface.cpp:194
 msgid "DEB APT"
 msgstr "DEB APT"
 
-#: debAptInterface.cpp:222
+#: debAptInterface.cpp:235
 msgid "Querying DEB APT available list"
 msgstr "Ispitujem DEB APT popis dostupnih"
 
-#: debAptInterface.cpp:224
+#: debAptInterface.cpp:237
 #, c-format
 msgid "Querying DEB APT available list: %1"
 msgstr "Ispitujem DEB APT popis dostupnih: %1"
 
-#: debAptInterface.cpp:229
+#: debAptInterface.cpp:242
 msgid "Processing DEB APT available list"
 msgstr "Obrađujem DEB APT popis dostupnih"
 
-#: debAptInterface.cpp:231
+#: debAptInterface.cpp:244
 #, c-format
 msgid "Processing DEB APT available list: %1"
 msgstr "Obrađujem DEB APT popis dostupnih: %1"
@@ -243,6 +247,7 @@ msgstr "Tražim info o paketu"
 
 #: fbsdInterface.cpp:204 fbsdInterface.cpp:205 fbsdInterface.cpp:432
 #: fbsdInterface.cpp:433 fbsdInterface.cpp:571 fbsdInterface.cpp:572
+#: packageProperties.cpp:176
 msgid "none"
 msgstr "ništa"
 
@@ -297,35 +302,47 @@ msgstr "Neočekivani EOF kod pkg_info (prilikom traženja linije s komentarom)"
 msgid "Warning: invalid INDEX file entry for %1"
 msgstr "Upozorenje: Neispravna INDEX datoteka za %1"
 
-#: findf.cpp:45
+#: findf.cpp:49
 msgid "Find File"
 msgstr "Pronađi datoteku"
 
-#: findf.cpp:47 search.cpp:43
+#: findf.cpp:51 search.cpp:43
 msgid "&Find"
 msgstr "&Nađi"
 
-#: findf.cpp:61
+#: findf.cpp:60 search.cpp:41 search.cpp:51
+msgid "Find Package"
+msgstr "Pronađi paket"
+
+#: findf.cpp:71
 msgid "Find:"
 msgstr "Nađi:"
 
-#: findf.cpp:66
+#: findf.cpp:77 managementWidget.cpp:84
+msgid "Installed"
+msgstr "Instalirane"
+
+#: findf.cpp:78
 msgid "Type"
 msgstr "Tip"
 
-#: findf.cpp:67 managementWidget.cpp:110
+#: findf.cpp:80 kplview.cpp:57
 msgid "Package"
 msgstr "Paket"
 
-#: findf.cpp:68
+#: findf.cpp:81
 msgid "File Name"
 msgstr "Naziv datoteke"
 
-#: findf.cpp:132
+#: findf.cpp:85
+msgid "Also search uninstalled packages"
+msgstr ""
+
+#: findf.cpp:171
 msgid "--Nothing found--"
 msgstr "--Ništa pronađeno--"
 
-#: findf.cpp:182
+#: findf.cpp:221
 msgid "Incorrect URL type"
 msgstr "Neispravan tip URL-a"
 
@@ -361,7 +378,7 @@ msgstr "Ispitujem KISS popis paketa:"
 msgid "KPackage: Waiting on KISS"
 msgstr "KPackage: Čekam na KISS"
 
-#: kpPty.cpp:137
+#: kpPty.cpp:139
 msgid "ROOT Login"
 msgstr "ROOT Login"
 
@@ -451,6 +468,27 @@ msgstr "KIO nije uspio"
 msgid "Open location:"
 msgstr "Otvori lokaciju:"
 
+#: kplview.cpp:59
+msgid "Mark"
+msgstr "Označi"
+
+#: kplview.cpp:61
+#, fuzzy
+msgid "Summary"
+msgstr "sažetak"
+
+#: kplview.cpp:63
+msgid "Size"
+msgstr "Veličina"
+
+#: kplview.cpp:65
+msgid "Version"
+msgstr "Verzija"
+
+#: kplview.cpp:67
+msgid "Old Version"
+msgstr "Stara verzija"
+
 #: main.cpp:60
 msgid "KDE Package installer"
 msgstr "KDE program za instalaciju"
@@ -467,306 +505,303 @@ msgstr "Paket koji treba instalirati"
 msgid "KPackage"
 msgstr "KPackage"
 
-#: managementWidget.cpp:61
-msgid "Installed"
-msgstr "Instalirane"
-
-#: managementWidget.cpp:62
+#: managementWidget.cpp:85
 msgid "Updated"
 msgstr "Osvježene"
 
-#: managementWidget.cpp:63
+#: managementWidget.cpp:86
 msgid "New"
 msgstr "Nove"
 
-#: managementWidget.cpp:64
+#: managementWidget.cpp:87
 msgid "All"
 msgstr "Sve"
 
-#: managementWidget.cpp:112
-msgid "Mark"
-msgstr "Označi"
+#: managementWidget.cpp:139
+#, fuzzy
+msgid "Clear Search"
+msgstr "&Obriši označeno"
 
-#: managementWidget.cpp:114
-msgid "Size"
-msgstr "Veličina"
+#: managementWidget.cpp:142
+msgid "Search: "
+msgstr ""
 
-#: managementWidget.cpp:116
-msgid "Version"
-msgstr "Verzija"
-
-#: managementWidget.cpp:118
-msgid "Old Version"
-msgstr "Stara verzija"
-
-#: managementWidget.cpp:143
+#: managementWidget.cpp:165
 msgid "Uninstall Marked"
 msgstr "Deinstaliraj označene"
 
-#: managementWidget.cpp:147
+#: managementWidget.cpp:169
 msgid "Install Marked"
 msgstr "Instaliraj označene"
 
-#: managementWidget.cpp:172 pkgOptions.cpp:359 pkgOptions.cpp:361
+#: managementWidget.cpp:194 pkgOptions.cpp:359 pkgOptions.cpp:361
 msgid "Uninstall"
 msgstr "Deinstaliraj"
 
-#: managementWidget.cpp:176 managementWidget.cpp:263 pkgOptions.cpp:344
+#: managementWidget.cpp:198 managementWidget.cpp:269 pkgOptions.cpp:344
 #: pkgOptions.cpp:346
 msgid "Install"
 msgstr "Instaliraj"
 
-#: managementWidget.cpp:265
+#: managementWidget.cpp:271
 msgid "Fetch"
 msgstr "Dobavi"
 
-#: managementWidget.cpp:350
+#: managementWidget.cpp:356
 msgid "Building package tree"
 msgstr "Pravim stablo paketa"
 
-#: managementWidget.cpp:465
+#: managementWidget.cpp:443
 msgid ""
 "Filename not available\n"
 msgstr ""
 "Ime datoteke je zauzeto\n"
 
-#: options.cpp:71
+#: options.cpp:73
 msgid "&Types"
 msgstr "&Tipovi"
 
-#: options.cpp:73
+#: options.cpp:75
 msgid "Handle Package Type"
 msgstr "Preuzmi tip paketa"
 
-#: options.cpp:75
+#: options.cpp:77
 msgid "Remote Host"
 msgstr "Udaljeni računar"
 
-#: options.cpp:76
+#: options.cpp:78
 msgid "Use remote host (Debian APT only):"
 msgstr "Koristi računar (samo za Debian APT):"
 
-#: options.cpp:92
+#: options.cpp:94
 msgid "Enable"
 msgstr "Uključi"
 
-#: options.cpp:94
+#: options.cpp:96
 msgid "Location of Packages..."
 msgstr "Lokacije paketa..."
 
-#: options.cpp:103
+#: options.cpp:105
 msgid "Cac&he"
 msgstr "Cac&he"
 
-#: options.cpp:106
+#: options.cpp:108
 msgid "Cache Remote Package Folders"
 msgstr "Zapamti udaljene direktorije paketa"
 
-#: options.cpp:112 options.cpp:128
+#: options.cpp:114 options.cpp:130
 msgid "Always"
 msgstr "Uvijek"
 
-#: options.cpp:115 options.cpp:131
+#: options.cpp:117 options.cpp:133
 msgid "During a session"
 msgstr "Tokom sesije"
 
-#: options.cpp:118 options.cpp:134
+#: options.cpp:120 options.cpp:136
 msgid "Never"
 msgstr "Nikada"
 
-#: options.cpp:122
+#: options.cpp:124
 msgid "Cache Remote Package Files"
 msgstr "Zapamti udaljene pakete"
 
-#: options.cpp:137
+#: options.cpp:139
 msgid "Cache Folder"
 msgstr "Zapamti direktorij"
 
-#: options.cpp:144
+#: options.cpp:146
 msgid "&Misc"
 msgstr "&Razno"
 
-#: options.cpp:150
+#: options.cpp:152
 msgid "Use SSH for privileged commands"
 msgstr "Koristi SSH za privilegovane naredbe"
 
-#: options.cpp:153
+#: options.cpp:155
 msgid "Verify file list"
 msgstr "Provjeri popis datoteka"
 
-#: options.cpp:156
+#: options.cpp:158
 msgid "Read information from all local package files"
 msgstr "Pročitaj informaciju iz svih lokalnih paketa"
 
-#: packageDisplay.cpp:100
+#: packageDisplay.cpp:98
 msgid "File List"
 msgstr "Popis datoteka"
 
-#: packageDisplay.cpp:101
+#: packageDisplay.cpp:99
 msgid "Change Log"
 msgstr "Dnevnik izmjena"
 
-#: packageDisplay.cpp:262
+#: packageDisplay.cpp:266
 msgid " - No change log -"
 msgstr " - Bez dnevnika izmjena -"
 
-#: packageDisplay.cpp:280 packageDisplay.cpp:306
+#: packageDisplay.cpp:284 packageDisplay.cpp:310
 msgid "Updating File List"
 msgstr "Osvježavam popis datoteka"
 
-#: packageDisplay.cpp:313
+#: packageDisplay.cpp:317
 msgid " Files"
 msgstr " datoteke"
+
+#: packageDisplay.cpp:374
+msgid "&Open With..."
+msgstr ""
 
 #: packageInfo.cpp:122 slackInterface.cpp:341
 msgid "OTHER"
 msgstr "DRUGI"
 
-#: packageProperties.cpp:67
+#: packageProperties.cpp:69
 msgid "name"
 msgstr "ime"
 
-#: packageProperties.cpp:68
+#: packageProperties.cpp:70
 msgid "summary"
 msgstr "sažetak"
 
-#: packageProperties.cpp:69
+#: packageProperties.cpp:71
 msgid "version"
 msgstr "verzija"
 
-#: packageProperties.cpp:70
+#: packageProperties.cpp:72
 msgid "old-version"
 msgstr "stara-verzija"
 
-#: packageProperties.cpp:71
+#: packageProperties.cpp:73
 msgid "status"
 msgstr "status"
 
-#: packageProperties.cpp:72
+#: packageProperties.cpp:74
 msgid "group"
 msgstr "grupa"
 
-#: packageProperties.cpp:73
+#: packageProperties.cpp:75
 msgid "size"
 msgstr "veličina"
 
-#: packageProperties.cpp:74
+#: packageProperties.cpp:76
 msgid "file-size"
 msgstr "veličina-datoteke"
 
-#: packageProperties.cpp:75
+#: packageProperties.cpp:77
 msgid "description"
 msgstr "opis"
 
-#: packageProperties.cpp:76
+#: packageProperties.cpp:78
+msgid "url"
+msgstr ""
+
+#: packageProperties.cpp:79
 msgid "architecture"
 msgstr "arhitektura"
 
-#: packageProperties.cpp:78
+#: packageProperties.cpp:81
 msgid "unsatisfied dependencies"
 msgstr "nezadovoljene ovisnosti"
 
-#: packageProperties.cpp:79
+#: packageProperties.cpp:82
 msgid "pre-depends"
 msgstr "pred-ovisnosti"
 
-#: packageProperties.cpp:80
+#: packageProperties.cpp:83
 msgid "dependencies"
 msgstr "ovisnosti"
 
-#: packageProperties.cpp:81
+#: packageProperties.cpp:84
 msgid "depends"
 msgstr "ovisi"
 
-#: packageProperties.cpp:82
+#: packageProperties.cpp:85
 msgid "conflicts"
 msgstr "konflikti"
 
-#: packageProperties.cpp:83
+#: packageProperties.cpp:86
 msgid "provides"
 msgstr "omogućuje"
 
-#: packageProperties.cpp:84
+#: packageProperties.cpp:87
 msgid "recommends"
 msgstr "preporučuje"
 
-#: packageProperties.cpp:85
+#: packageProperties.cpp:88
 msgid "replaces"
 msgstr "zamjenjuje"
 
-#: packageProperties.cpp:86
+#: packageProperties.cpp:89
 msgid "suggests"
 msgstr "predlaže"
 
-#: packageProperties.cpp:87
+#: packageProperties.cpp:90
 msgid "priority"
 msgstr "prioritet"
 
-#: packageProperties.cpp:89
+#: packageProperties.cpp:92
 msgid "essential"
 msgstr "bitno"
 
-#: packageProperties.cpp:90
+#: packageProperties.cpp:93
 msgid "install time"
 msgstr "vrijeme instaliranja"
 
-#: packageProperties.cpp:91
+#: packageProperties.cpp:94
 msgid "config-version"
 msgstr "config-version"
 
-#: packageProperties.cpp:92
+#: packageProperties.cpp:95
 msgid "distribution"
 msgstr "distribucija"
 
-#: packageProperties.cpp:93
+#: packageProperties.cpp:96
 msgid "vendor"
 msgstr "proizvođač"
 
-#: packageProperties.cpp:94
+#: packageProperties.cpp:97
 msgid "maintainer"
 msgstr "održavatelj"
 
-#: packageProperties.cpp:95
+#: packageProperties.cpp:98
 msgid "packager"
 msgstr "pakirač"
 
-#: packageProperties.cpp:96
+#: packageProperties.cpp:99
 msgid "source"
 msgstr "izvor"
 
-#: packageProperties.cpp:97
+#: packageProperties.cpp:100
 msgid "build-time"
 msgstr "vrijeme-pravljenja"
 
-#: packageProperties.cpp:98
+#: packageProperties.cpp:101
 msgid "build-host"
 msgstr "računar-pravljenja"
 
-#: packageProperties.cpp:99
+#: packageProperties.cpp:102
 msgid "base"
 msgstr "osnova"
 
-#: packageProperties.cpp:100
+#: packageProperties.cpp:103
 msgid "filename"
 msgstr "ime datoteke"
 
-#: packageProperties.cpp:101
+#: packageProperties.cpp:104
 msgid "serial"
 msgstr "serijski"
 
-#: packageProperties.cpp:103
+#: packageProperties.cpp:106
 msgid "also in"
 msgstr "također u"
 
-#: packageProperties.cpp:104
+#: packageProperties.cpp:107
 msgid "run depends"
 msgstr "run ovisi"
 
-#: packageProperties.cpp:105
+#: packageProperties.cpp:108
 msgid "build depends"
 msgstr "build ovisi"
 
-#: packageProperties.cpp:106
+#: packageProperties.cpp:109
 msgid "available as"
 msgstr "dostupno kao"
 
@@ -774,24 +809,24 @@ msgstr "dostupno kao"
 msgid "'Delete this window to continue'"
 msgstr "'Izbriši ovaj prozor za nastavak'"
 
-#: pkgInterface.cpp:250
+#: pkgInterface.cpp:251
 msgid "Starting Kio"
 msgstr "Pokređem Kio"
 
-#: pkgInterface.cpp:255
+#: pkgInterface.cpp:256
 msgid "Kio finished"
 msgstr "Kio je završio"
 
-#: pkgInterface.cpp:265
+#: pkgInterface.cpp:266
 msgid "Kio failed"
 msgstr "Kio nije uspio"
 
-#: pkgInterface.cpp:290
+#: pkgInterface.cpp:291
 #, c-format
 msgid "Cannot read folder %1"
 msgstr "Ne mogu pročitati direktorij %1"
 
-#: pkgInterface.cpp:320
+#: pkgInterface.cpp:321
 msgid "Verifying"
 msgstr "Provjeravam"
 
@@ -829,22 +864,26 @@ msgstr "Timeout: %1"
 msgid "Kprocess error:%1"
 msgstr "Kprocess greška: %1"
 
-#: rc.cpp:4
+#. i18n: file kpackageui.rc line 13
+#: rc.cpp:6
 #, no-c-format
 msgid "&Packages"
 msgstr "&Paketi"
 
-#: rc.cpp:6
+#. i18n: file kpackageui.rc line 30
+#: rc.cpp:9
 #, no-c-format
 msgid "&Cache"
 msgstr "&Cache"
 
-#: rc.cpp:8
+#. i18n: file kpackageui.rc line 36
+#: rc.cpp:12
 #, no-c-format
 msgid "Spe&cial"
 msgstr "Po&sebno"
 
-#: rc.cpp:10
+#. i18n: file kpackageui.rc line 38
+#: rc.cpp:15
 #, no-c-format
 msgid "&APT: Debian"
 msgstr "&APT: Debian"
@@ -887,17 +926,13 @@ msgstr "Koristi skripte"
 msgid "Querying RPM package list: "
 msgstr "Ispitujem listu RPM paketa: "
 
-#: rpmInterface.cpp:155
+#: rpmInterface.cpp:157
 msgid "Querying RPM package list"
 msgstr "Ispitujem listu RPM paketa:"
 
-#: rpmInterface.cpp:159
+#: rpmInterface.cpp:161
 msgid "Processing RPM package list"
 msgstr "Obrađujem listu RPM paketa"
-
-#: search.cpp:41 search.cpp:51
-msgid "Find Package"
-msgstr "Pronađi paket"
 
 #: search.cpp:65
 msgid "Sub string"
