@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdat\n"
-"POT-Creation-Date: 2004-07-16 01:25+0200\n"
+"POT-Creation-Date: 2004-10-12 01:17+0200\n"
 "PO-Revision-Date: 2004-08-15 12:58+0200\n"
 "Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -72,6 +72,7 @@ msgstr "0Kb/min"
 msgid "Files:"
 msgstr "Datoteke:"
 
+#: BackupDlg.cpp:128 IndexDlg.cpp:81 IndexDlg.cpp:93 IndexDlg.cpp:105
 msgid "0"
 msgstr "0"
 
@@ -91,9 +92,9 @@ msgstr "Nema datoteka za backup. Prekidam."
 msgid "*** Write failed, giving up."
 msgstr "*** Pisanje nije uspjelo, odustajem."
 
+# , c-format
 #: BackupDlg.cpp:412 BackupDlg.cpp:422 IndexDlg.cpp:345 VerifyDlg.cpp:395
 #: VerifyDlg.cpp:405
-# , c-format
 #, c-format
 msgid "%02d:%02d:%02d"
 msgstr "%02d:%02d:%02d"
@@ -981,8 +982,10 @@ msgid "&Abort"
 msgstr "&Prekini"
 
 #: VerifyDlg.cpp:344
-msgid "failed while reading tape data.\n"
-msgstr "nije uspjelo za vrijeme čitanja trake.\n"
+msgid ""
+"failed while reading tape data.\n"
+msgstr ""
+"nije uspjelo za vrijeme čitanja trake.\n"
 
 #: VerifyOptDlg.cpp:41 VerifyOptDlg.cpp:42
 msgid "KDat: Restore Options"
@@ -1000,7 +1003,8 @@ msgstr "Vrati u direktorij:"
 msgid "Verify in folder:"
 msgstr "Provjeri u direktoriju:"
 
-#: VerifyOptDlg.cpp:60 rc.cpp:21 rc.cpp:29
+#. i18n: file OptionsDlgWidget.ui line 136
+#: VerifyOptDlg.cpp:60 rc.cpp:31 rc.cpp:43
 #, no-c-format
 msgid "..."
 msgstr "..."
@@ -1037,12 +1041,14 @@ msgstr "KDat"
 msgid "Can't allocate memory in kdat"
 msgstr "Ne mogu alocirati memoriju u KDat"
 
-#: rc.cpp:2
+#. i18n: file OptionsDlgWidget.ui line 17
+#: rc.cpp:3
 #, no-c-format
 msgid "Options Widget"
 msgstr "Prozor za opcije"
 
-#: rc.cpp:4
+#. i18n: file OptionsDlgWidget.ui line 53
+#: rc.cpp:6
 #, no-c-format
 msgid ""
 "This setting determines the capacity that KDat assumes your backup tapes to "
@@ -1051,29 +1057,33 @@ msgstr ""
 "Ova opcije određuje kapacitet koji će KDat pretpostavljati za vaše backup "
 "trake. Ovo se koristi prilikom formatiranja traka."
 
-#: rc.cpp:6
+#. i18n: file OptionsDlgWidget.ui line 67
+#: rc.cpp:9
 #, no-c-format
 msgid ""
 "Tape drives read and write data in individual blocks.  This setting controls "
 "the size of each block, and should be set to your tape drive's block size.  "
 "For floppy tape drives this should be set to <b>10240</b> bytes."
 msgstr ""
-"Uređaji za trake čitaju i pišu podatke u pojedinačnim blokovima.  Ova postavka "
-"određuje veličinu svakog bloka i treba je podesiti na dimenzije bloka "
-"vašeg tračnog uređaja.  Za floppy tape uređaje ovo treba biti postavljeno "
-"na <b>10240</b> bajta."
+"Uređaji za trake čitaju i pišu podatke u pojedinačnim blokovima.  Ova "
+"postavka određuje veličinu svakog bloka i treba je podesiti na dimenzije "
+"bloka vašeg tračnog uređaja.  Za floppy tape uređaje ovo treba biti "
+"postavljeno na <b>10240</b> bajta."
 
-#: rc.cpp:8
+#. i18n: file OptionsDlgWidget.ui line 73
+#: rc.cpp:12
 #, no-c-format
 msgid "MB"
 msgstr "MB"
 
-#: rc.cpp:10
+#. i18n: file OptionsDlgWidget.ui line 78
+#: rc.cpp:15
 #, no-c-format
 msgid "GB"
 msgstr "GB"
 
-#: rc.cpp:13
+#. i18n: file OptionsDlgWidget.ui line 88
+#: rc.cpp:19
 #, no-c-format
 msgid ""
 "This option chooses whether the default tape size to the left is in "
@@ -1082,75 +1092,88 @@ msgstr ""
 "Ova opcija bira da li je podrazumijevana veličina trake lijevo u "
 "megabajtima (MB) illi gigabajtima (GB)."
 
-#: rc.cpp:15
+#. i18n: file OptionsDlgWidget.ui line 96
+#: rc.cpp:22
 #, no-c-format
 msgid "bytes"
 msgstr "bajtova"
 
-#: rc.cpp:17
+#. i18n: file OptionsDlgWidget.ui line 104
+#: rc.cpp:25
 #, no-c-format
 msgid "Tape block size:"
 msgstr "Veličina bloka trake:"
 
-#: rc.cpp:19
+#. i18n: file OptionsDlgWidget.ui line 115
+#: rc.cpp:28
 #, no-c-format
 msgid "Default tape size:"
 msgstr "Uobičajena veličina trake:"
 
-#: rc.cpp:23
+#. i18n: file OptionsDlgWidget.ui line 139
+#: rc.cpp:34
 #, no-c-format
 msgid "Browse for the tar command."
 msgstr "Potraži tar naredbu."
 
-#: rc.cpp:25
+#. i18n: file OptionsDlgWidget.ui line 147
+#: rc.cpp:37
 #, no-c-format
 msgid ""
 "The location in the filesystem of the <em>non-rewinding</em> tape device.  "
 "The default is <b>/dev/tape</b>."
 msgstr ""
-"Lokacija u datotečnom sistemu <em>ne-premotavajućeg</em> tračnog uređaja.  "
-"Podrazumijeva se <b>/dev/tape</b>."
+"Lokacija u datotečnom sistemu <em>ne-premotavajućeg</em> tračnog "
+"uređaja.  Podrazumijeva se <b>/dev/tape</b>."
 
-#: rc.cpp:27
+#. i18n: file OptionsDlgWidget.ui line 155
+#: rc.cpp:40
 #, no-c-format
 msgid "Tar command:"
 msgstr "Tar komanda:"
 
-#: rc.cpp:31
+#. i18n: file OptionsDlgWidget.ui line 169
+#: rc.cpp:46
 #, no-c-format
 msgid "Browse for the tape device."
 msgstr "Potraži uređaj trake."
 
-#: rc.cpp:33
+#. i18n: file OptionsDlgWidget.ui line 177
+#: rc.cpp:49
 #, no-c-format
 msgid ""
 "This setting controls the command that KDat uses to perform the tape backup. "
 " The full path should be given.  The default is <b>tar</b>."
 msgstr ""
-"Ova postavka određuje naredbu koju će KDat koristiti da izvrši backup na traku. "
-" Puna staza treba biti zadata.  Podrazumijeva se <b>tar</b>."
+"Ova postavka određuje naredbu koju će KDat koristiti da izvrši backup na "
+"traku.  Puna staza treba biti zadata.  Podrazumijeva se <b>tar</b>."
 
-#: rc.cpp:35
+#. i18n: file OptionsDlgWidget.ui line 185
+#: rc.cpp:52
 #, no-c-format
 msgid "Tape device:"
 msgstr "Uređaj trake:"
 
-#: rc.cpp:37
+#. i18n: file OptionsDlgWidget.ui line 198
+#: rc.cpp:55
 #, no-c-format
 msgid "Tape Drive Options"
 msgstr "Opcije uređaja sa trakom"
 
-#: rc.cpp:39
+#. i18n: file OptionsDlgWidget.ui line 209
+#: rc.cpp:58
 #, no-c-format
 msgid "Load tape on mount"
 msgstr "Učitaj traku kod montiranja"
 
-#: rc.cpp:41
+#. i18n: file OptionsDlgWidget.ui line 212
+#: rc.cpp:61
 #, no-c-format
 msgid "<qt>Issue an <tt>mtload</tt> command prior to mounting the tape.</qt>"
 msgstr "<qt>Zadaj naredbu <tt>mtload</tt> prije montiranja trake.</qt>"
 
-#: rc.cpp:43
+#. i18n: file OptionsDlgWidget.ui line 217
+#: rc.cpp:64
 #, no-c-format
 msgid ""
 "This command issues an <tt>mtload</tt> command to the tape device before "
@@ -1158,22 +1181,25 @@ msgid ""
 "\n"
 "This is required by some tape drives."
 msgstr ""
-"Ova opcija izvršava naredbu <tt>mtload</tt> tračnom uređaju prije pokušaja "
-"montiranja.\n"
+"Ova opcija izvršava naredbu <tt>mtload</tt> tračnom uređaju prije "
+"pokušaja montiranja.\n"
 "\n"
 "Za neke tračne uređaje ovo je potrebno."
 
-#: rc.cpp:47
+#. i18n: file OptionsDlgWidget.ui line 225
+#: rc.cpp:69
 #, no-c-format
 msgid "Lock tape drive on mount"
 msgstr "Zaključaj traku prilikom montiranja"
 
-#: rc.cpp:49
+#. i18n: file OptionsDlgWidget.ui line 228
+#: rc.cpp:72
 #, no-c-format
 msgid "Disable the eject button after mounting the tape."
 msgstr "Onemogući dugme za vađenje trake nakon montiranja."
 
-#: rc.cpp:51
+#. i18n: file OptionsDlgWidget.ui line 233
+#: rc.cpp:75
 #, no-c-format
 msgid ""
 "This option makes KDat try to disable the eject button on the tape drive "
@@ -1181,22 +1207,25 @@ msgid ""
 "\n"
 "This doesn't work for all tape drives."
 msgstr ""
-"Ovom opcijom KDat će pokušati da onemogući korištenje eject (izvadi traku) "
-"dugmeta na uređaju trake nakon što je traka montirana.\n"
+"Ovom opcijom KDat će pokušati da onemogući korištenje eject (izvadi "
+"traku) dugmeta na uređaju trake nakon što je traka montirana.\n"
 "\n"
 "Ovo neće raditi na svim tračnim uređajima."
 
-#: rc.cpp:55
+#. i18n: file OptionsDlgWidget.ui line 241
+#: rc.cpp:80
 #, no-c-format
 msgid "Eject tape on unmount"
 msgstr "Izbaci traku nakon demontiranja"
 
-#: rc.cpp:57
+#. i18n: file OptionsDlgWidget.ui line 244
+#: rc.cpp:83
 #, no-c-format
 msgid "Try to eject the tape after it is unmounted.  Don't use this for ftape."
 msgstr "Pokušaj izbaciti traku nakon demontiranja.  Ne koristite ovo za ftape."
 
-#: rc.cpp:59
+#. i18n: file OptionsDlgWidget.ui line 249
+#: rc.cpp:86
 #, no-c-format
 msgid ""
 "Try to eject the tape after it has been unmounted.\n"
@@ -1207,17 +1236,20 @@ msgstr ""
 "\n"
 "Ovu opciju ne bi trebalo koristiti za floppy-tape uređaje."
 
-#: rc.cpp:63
+#. i18n: file OptionsDlgWidget.ui line 257
+#: rc.cpp:91
 #, no-c-format
 msgid "Variable block size"
 msgstr "Veličina bloka varijable"
 
-#: rc.cpp:65
+#. i18n: file OptionsDlgWidget.ui line 260
+#: rc.cpp:94
 #, no-c-format
 msgid "Enable variable-block size support in the tape drive."
 msgstr "Uključi podršku za blokove promjenljive veličine."
 
-#: rc.cpp:67
+#. i18n: file OptionsDlgWidget.ui line 265
+#: rc.cpp:97
 #, no-c-format
 msgid ""
 "Some tape drives support different sizes of the data block.  With this "
@@ -1225,8 +1257,7 @@ msgid ""
 "\n"
 "You must still specify the block size."
 msgstr ""
-"Neki tračni uređaji podržavaju različite veličine bloka podataka.  Sa ovom "
-"opcijom KDat će pokušati da uključi tu podršku.\n"
+"Neki tračni uređaji podržavaju različite veličine bloka podataka.  Sa "
+"ovom opcijom KDat će pokušati da uključi tu podršku.\n"
 "\n"
 "I dalje morate navesti veličinu bloka."
-
