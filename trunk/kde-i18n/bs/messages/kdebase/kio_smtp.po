@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kio_smtp\n"
-"POT-Creation-Date: 2004-07-14 01:19+0200\n"
+"POT-Creation-Date: 2004-11-06 01:32+0100\n"
 "PO-Revision-Date: 2004-08-14 16:42+0200\n"
 "Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3\n"
 
-#: command.cc:124
+#: command.cc:125
 msgid ""
 "The server rejected both EHLO and HELO commands as unknown or "
 "unimplemented.\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Server je odbio i naredbu EHLO i naredbu HELO kao nepoznate i nepodržane.\n"
 "Molim kontaktirajte administratora servera."
 
-#: command.cc:138
+#: command.cc:139
 msgid ""
 "Unexpected server response to %1 command.\n"
 "%2"
@@ -34,7 +34,7 @@ msgstr ""
 "Neočekivan odgovor servera na naredbu %1.\n"
 "%2"
 
-#: command.cc:158
+#: command.cc:159
 msgid ""
 "Your SMTP server does not support TLS. Disable TLS, if you want to connect "
 "without encryption."
@@ -42,7 +42,7 @@ msgstr ""
 "Vaš SMTP server ne podržava TLS. Isključite TLS ako se želite povezati "
 "bez kriptovanja."
 
-#: command.cc:172
+#: command.cc:173
 msgid ""
 "Your SMTP server claims to support TLS, but negotiation was unsuccessful.\n"
 "You can disable TLS in KDE using the crypto settings module."
@@ -50,33 +50,20 @@ msgstr ""
 "Vaš SMTP server tvrdi da podržava TLS, ali dogovaranje nije uspjelo.\n"
 "Možete isključiti TLS u KDE-u koristeći kripto konfiguracijski modul."
 
-#: command.cc:177
+#: command.cc:178
 msgid "Connection Failed"
 msgstr "Veza nije uspjela"
 
-#: command.cc:197
-msgid "No compatible authentication methods found."
+#: command.cc:229
+msgid "Authentication support is not compiled into kio_smtp."
+msgstr ""
+
+#: command.cc:258
+#, fuzzy
+msgid "No authentication details supplied."
 msgstr "Nije pronađen nijedan kompatibilan metod za potvrdu autentičnosti."
 
-#: command.cc:202
-msgid ""
-"You have requested to authenticate to the server, but the server does not "
-"seem to support authentication.\n"
-"Try disabling authentication entirely."
-msgstr ""
-"Tražili ste autorizaciju na serveru, ali izgleda da server ne podržava "
-"autorizaciju.\n"
-"Probajte isključiti autorizaciju."
-
-#: command.cc:208
-msgid ""
-"Your SMTP server does not support %1.\n"
-"Choose a different authentication method."
-msgstr ""
-"Vaš SMTP server ne podržava %1.\n"
-"Izaberite neku drugu metodu potvrde autentičnosti."
-
-#: command.cc:262
+#: command.cc:361
 msgid ""
 "Your SMTP server does not support %1.\n"
 "Choose a different authentication method.\n"
@@ -86,16 +73,16 @@ msgstr ""
 "Izaberite neku drugu metodu potvrde autentičnosti.\n"
 "%2"
 
-#: command.cc:267
-#, c-format
+#: command.cc:365
+#, fuzzy, c-format
 msgid ""
 "Your SMTP server does not support authentication.\n"
-"%2"
+"  %2"
 msgstr ""
 "Vaš SMTP server ne podržava potvrdu autentičnosti.\n"
 "%2"
 
-#: command.cc:271
+#: command.cc:369
 #, c-format
 msgid ""
 "Authentication failed.\n"
@@ -106,11 +93,11 @@ msgstr ""
 "Najvjerovatnije je šifra pogrešna.\n"
 "%1"
 
-#: command.cc:409
+#: command.cc:507
 msgid "Could not read data from application."
 msgstr "Ne mogu čitati podatke iz aplikacije."
 
-#: command.cc:426
+#: command.cc:524
 #, c-format
 msgid ""
 "The message content was not accepted.\n"
@@ -136,19 +123,19 @@ msgstr "Server je rekao: \"%1\""
 msgid "This is a temporary failure. You may try again later."
 msgstr "Ovo je privremena greška. Možete pokušati kasnije."
 
-#: smtp.cc:158
+#: smtp.cc:188
 msgid "The application sent an invalid request."
 msgstr "Aplikacija je poslala neispravan zahtjev."
 
-#: smtp.cc:220
+#: smtp.cc:250
 msgid "The sender address is missing."
 msgstr "Nedostaje adresa pošiljaoca."
 
-#: smtp.cc:228
+#: smtp.cc:258
 msgid "SMTPProtocol::smtp_open failed (%1)"
 msgstr "SMTPProtocol::smtp_open nije uspio (%1)"
 
-#: smtp.cc:236
+#: smtp.cc:266
 msgid ""
 "Your server does not support sending of 8-bit messages.\n"
 "Please use base64 or quoted-printable encoding."
@@ -156,11 +143,11 @@ msgstr ""
 "Vaš server ne podržava slanje 8-bitnih poruka.\n"
 "Molim pokušajte sa base64 ili quoted-printable kodiranjem."
 
-#: smtp.cc:315
+#: smtp.cc:345
 msgid "Invalid SMTP response (%1) received."
 msgstr "Primljen je neispravan SMTP odgovor (%1)."
 
-#: smtp.cc:497
+#: smtp.cc:529
 #, c-format
 msgid ""
 "The server did not accept the connection.\n"
@@ -169,13 +156,9 @@ msgstr ""
 "Server nije prihvatio vezu.\n"
 "%1"
 
-#: smtp.cc:554
+#: smtp.cc:604
 msgid "Username and password for your SMTP account:"
 msgstr "Korisničko ime i šifra za vaš SMTP račun:"
-
-#: smtp.cc:556
-msgid "When prompted, you ran away."
-msgstr "Kad ste upitani, zbrisali ste."
 
 #: transactionstate.cc:53
 #, c-format
@@ -217,3 +200,19 @@ msgstr ""
 msgid "Unhandled error condition. Please send a bug report."
 msgstr "Situacija greške koja nije podržana. Molim prijavite bug."
 
+#~ msgid ""
+#~ "You have requested to authenticate to the server, but the server does not seem to support authentication.\n"
+#~ "Try disabling authentication entirely."
+#~ msgstr ""
+#~ "Tražili ste autorizaciju na serveru, ali izgleda da server ne podržava autorizaciju.\n"
+#~ "Probajte isključiti autorizaciju."
+
+#~ msgid ""
+#~ "Your SMTP server does not support %1.\n"
+#~ "Choose a different authentication method."
+#~ msgstr ""
+#~ "Vaš SMTP server ne podržava %1.\n"
+#~ "Izaberite neku drugu metodu potvrde autentičnosti."
+
+#~ msgid "When prompted, you ran away."
+#~ msgstr "Kad ste upitani, zbrisali ste."
