@@ -1,19 +1,20 @@
+# translation of kio_smtp.po to Bosnian
 # Bosnian translation of kio_smtp
-# Copyright (C) 2002 Free Software Foundation, Inc.
+# Copyright (C) 2002,2004 Free Software Foundation, Inc.
 # Samir Marić <samir@linux.org.ba>, 2002.
-# Vedran Ljubovic <vljubovic@smartnet.ba>, 2002.
+# Vedran Ljubovic <vljubovic@smartnet.ba>, 2002,2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kio_smtp\n"
-"POT-Creation-Date: 2003-04-29 01:35+0200\n"
-"PO-Revision-Date: 2002-11-10 08:29+0100\n"
+"POT-Creation-Date: 2003-07-31 01:32+0200\n"
+"PO-Revision-Date: 2004-01-11 21:59+0100\n"
 "Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.6\n"
+"X-Generator: KBabel 1.0.1\n"
 
 #: command.cc:124
 msgid ""
@@ -21,12 +22,17 @@ msgid ""
 "unimplemented.\n"
 "Please contact the server's system administrator."
 msgstr ""
+"Server je odbio i naredbu EHLO i naredbu HELO kao nepoznate i "
+"nepodržane.\n"
+"Molim kontaktirajte administratora servera."
 
 #: command.cc:138
 msgid ""
 "Unexpected server response to %1 command.\n"
 "%2"
 msgstr ""
+"Neočekivan odgovor servera na naredbu %1.\n"
+"%2"
 
 #: command.cc:158
 msgid ""
@@ -58,6 +64,9 @@ msgid ""
 "seem to support authentication.\n"
 "Try disabling authentication entirely."
 msgstr ""
+"Tražili ste autorizaciju na serveru, ali izgleda da server ne podržava "
+"autorizaciju.\n"
+"Probajte isključiti autorizaciju."
 
 #: command.cc:208
 msgid ""
@@ -68,54 +77,56 @@ msgstr ""
 "Izaberite neku drugu metodu potvrde autentičnosti."
 
 #: command.cc:262
-#, fuzzy
 msgid ""
 "Your SMTP server doesn't support %1.\n"
 "Choose a different authentication method.\n"
 "%2"
 msgstr ""
 "Vaš SMTP server ne podržava %1.\n"
-"Izaberite neku drugu metodu potvrde autentičnosti."
+"Izaberite neku drugu metodu autorizacije.\n"
+"%2"
 
 #: command.cc:267
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your SMTP server doesn't support authentication.\n"
 "%2"
 msgstr ""
-"Vaš SMTP server ne podržava %1.\n"
-"Izaberite neku drugu metodu potvrde autentičnosti."
+"Vaš SMTP server ne podržava autorizaciju.\n"
+"%2"
 
 #: command.cc:271
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Authentication failed.\n"
 "Most likely the password is wrong.\n"
 "%1"
 msgstr ""
-"Potvrda autentičnosti nije uspjela.\n"
+"Autorizacija nije uspjela.\n"
 "Najvjerovatnije je šifra pogrešna.\n"
-"Server je rekao: \"%1\""
+"%1"
 
 #: command.cc:409
 msgid "Could not read data from application."
-msgstr ""
+msgstr "Ne mogu čitati podatke iz aplikacije."
 
 #: command.cc:426
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The message content was not accepted.\n"
 "%1"
 msgstr ""
 "Sadržaj poruke nije prihvaćen.\n"
-"Server kaže: \"%1\""
+"%1"
 
 #: response.cc:105
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The server responded:\n"
 "%1"
-msgstr "Server je rekao: \"%1\""
+msgstr ""
+"Server je odgovorio:\n"
+"%1"
 
 #: response.cc:108
 msgid "The server responded: \"%1\""
@@ -123,11 +134,11 @@ msgstr "Server je rekao: \"%1\""
 
 #: response.cc:111
 msgid "This is a temporary failure. You may try again later."
-msgstr ""
+msgstr "Ovo je privremena greška. Možete pokušati kasnije."
 
 #: smtp.cc:151
 msgid "The application sent an invalid request."
-msgstr ""
+msgstr "Aplikacija je poslala neispravan zahtjev."
 
 #: smtp.cc:213
 msgid "The sender address is missing."
@@ -139,21 +150,24 @@ msgstr "SMTPProtocol::smtp_open nije uspio (%1)"
 
 #: smtp.cc:229
 msgid ""
-"Your server does not support sending of 8bit messages.\n"
+"Your server does not support sending of 8-bit messages.\n"
 "Please use base64 or quoted-printable encoding."
 msgstr ""
+"Vaš server ne podržava slanje 8-bitnih poruka.\n"
+"Molim pokušajte sa base64 ili quoted-printable kodiranjem."
 
 #: smtp.cc:308
-#, fuzzy
-msgid "Invalid SMTP response (%1) recveived."
-msgstr "Primljen je neispravan SMTP odgovor."
+msgid "Invalid SMTP response (%1) received."
+msgstr "Primljen je neispravan SMTP odgovor (%1)."
 
 #: smtp.cc:490
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The server did not accept the connection.\n"
 "%1"
-msgstr "Server nije prihvatio vezu: \"%1\""
+msgstr ""
+"Server nije prihvatio vezu.\n"
+"%1"
 
 #: smtp.cc:540
 msgid "Username and password for your SMTP account:"
@@ -164,22 +178,21 @@ msgid "When prompted, you ran away."
 msgstr "Kad ste upitani, zbrisali ste."
 
 #: transactionstate.cc:53
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The server did not accept a blank sender address.\n"
 "%1"
 msgstr ""
-"Server nije prihvatio adresu pošiljaoca.\n"
-"Server kaže: \"%1\""
+"Server nije prihvatio praznu adresu pošiljaoca.\n"
+"%1"
 
 #: transactionstate.cc:56
-#, fuzzy
 msgid ""
 "The server did not accept the sender address \"%1\".\n"
 "%2"
 msgstr ""
-"Server nije prihvatio adresu pošiljaoca.\n"
-"Server kaže: \"%1\""
+"Server nije prihvatio adresu pošiljaoca \"%1\".\n"
+"%2"
 
 #: transactionstate.cc:97
 #, c-format
@@ -188,19 +201,21 @@ msgid ""
 "server:\n"
 "%1"
 msgstr ""
+"Slanje poruke nije uspjelo pošto je server odbio sljedeće primatelje:\n"
+"%1"
 
 #: transactionstate.cc:107
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The attempt to start sending the message content failed.\n"
 "%1"
 msgstr ""
 "Pokušaj slanja sadržaja poruke nije uspio.\n"
-"Server kaže: \"%1\""
+"%1"
 
 #: transactionstate.cc:111
 msgid "Unhandled error condition. Please send a bug report."
-msgstr ""
+msgstr "Situacija greške koja nije podržana. Molim prijavite bug."
 
 #, fuzzy
 #~ msgid ""
@@ -231,3 +246,4 @@ msgstr ""
 #~ msgstr ""
 #~ "Server nije prihvatio jednog od primalaca.\n"
 #~ "Rekao je: %1"
+
