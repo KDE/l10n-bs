@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kuser\n"
-"POT-Creation-Date: 2004-04-15 09:33+0200\n"
+"POT-Creation-Date: 2004-07-30 01:23+0200\n"
 "PO-Revision-Date: 2004-05-07 19:11+0200\n"
 "Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -29,28 +29,32 @@ msgid ""
 "Your emails"
 msgstr "bono@linux.org.ba, vljubovic@smartnet.ba"
 
-#: addUser.cpp:55
+#: addUser.cpp:45
 msgid "New Account Options"
 msgstr "Opcije novog računa"
 
-#: addUser.cpp:59 userDefaultsPage.cpp:65
+#: addUser.cpp:49 rc.cpp:48 rc.cpp:153
+#, no-c-format
 msgid "Create home folder"
 msgstr "Napravi home dir"
 
-#: addUser.cpp:61
+#: addUser.cpp:51
 msgid "Copy skeleton"
 msgstr "Kopiraj strukturu"
 
-#: addUser.cpp:62
-msgid "Use private group"
-msgstr "Koristi privatnu grupu"
-
-#: addUser.cpp:74 propdlg.cpp:701
+#: addUser.cpp:67
 # , c-format
-msgid "User with UID %1 already exists"
+#, fuzzy
+msgid "User with UID %1 already exists."
 msgstr "Korisnik sa UIDom %1 već postoji"
 
-#: addUser.cpp:113
+#: addUser.cpp:73
+# , c-format
+#, fuzzy
+msgid "User with RID %1 already exists."
+msgstr "Korisnik sa UIDom %1 već postoji"
+
+#: addUser.cpp:115
 msgid ""
 "Folder %1 already exists!\n"
 "%2 may become owner and permissions may change.\n"
@@ -60,16 +64,24 @@ msgstr ""
 "%2 može postati vlasnik i privilegije se mogu izmijeniti.\n"
 "Da li stvarno želite koristiti %3?"
 
-#: addUser.cpp:118
-msgid "%1 is not a folder"
+#: addUser.cpp:122
+#, fuzzy
+msgid "%1 is not a folder."
 msgstr "%1 nije direktorij"
 
-#: addUser.cpp:141
-msgid "Mailbox %1 already exists (uid=%2)"
-msgstr "Mailbox %1 već postoji (uid=%2)"
+#: addUser.cpp:124 addUser.cpp:152
+#, c-format
+msgid "stat() failed on %1."
+msgstr ""
 
 #: addUser.cpp:145
-msgid "%1 exists but is not a regular file"
+#, fuzzy
+msgid "Mailbox %1 already exists (uid=%2)."
+msgstr "Mailbox %1 već postoji (uid=%2)"
+
+#: addUser.cpp:149
+#, fuzzy
+msgid "%1 exists but is not a regular file."
 msgstr "%1 postoji ali nije prava datoteka"
 
 #: delUser.cpp:27
@@ -90,178 +102,264 @@ msgstr "Obriši &home direktorij: %1"
 msgid "Delete &mailbox: %1"
 msgstr "Obriši &mailbox: %1"
 
-#: editDefaults.cpp:36
-msgid "User"
-msgstr "Korisnik"
+#: editDefaults.cpp:40 propdlg.cpp:152
+msgid "<Empty>"
+msgstr "<Prazno>"
 
-#: editDefaults.cpp:41
-msgid "Sources"
-msgstr "Izvori"
+#: editDefaults.cpp:42 editDefaults.cpp:55
+msgid "Connection"
+msgstr ""
 
-#: editGroup.cpp:33
+#: editDefaults.cpp:44
+#, fuzzy
+msgid "Password Policy"
+msgstr "Šifra:"
+
+#: editDefaults.cpp:45
+msgid "General"
+msgstr ""
+
+#: editDefaults.cpp:45
+msgid "General Settings"
+msgstr ""
+
+#: editDefaults.cpp:48
+msgid "File Source Settings"
+msgstr ""
+
+#: editDefaults.cpp:58
+msgid "Settings"
+msgstr ""
+
+#: editDefaults.cpp:59 rc.cpp:36
+#, no-c-format
+msgid "LDAP"
+msgstr ""
+
+#: editDefaults.cpp:59
+msgid "LDAP Source Settings"
+msgstr ""
+
+#: editGroup.cpp:39
 msgid "Group Properties"
 msgstr "Postavke za grupu"
 
-#: editGroup.cpp:41
-msgid "Users in Group '%1'"
-msgstr "Korisnici u grupi '%1'"
+#: editGroup.cpp:49
+msgid "Domain Admins"
+msgstr ""
 
-#: editGroup.cpp:42
-msgid "Select the users that should be in this group."
-msgstr "Izaberite korisnike koji bi trebali biti u grupi."
+#: editGroup.cpp:49
+msgid "Admins"
+msgstr ""
 
-#: grpnamedlg.cpp:32
-msgid "Add Group"
-msgstr "Dodaj grupu"
+#: editGroup.cpp:50
+msgid "Domain Users"
+msgstr ""
 
-#: grpnamedlg.cpp:40
-msgid "Group name:"
-msgstr "Ime grupe:"
+#: editGroup.cpp:50 mainView.cpp:50
+msgid "Users"
+msgstr "Korisnici"
 
-#: grpnamedlg.cpp:55
+#: editGroup.cpp:51
+msgid "Domain Guests"
+msgstr ""
+
+#: editGroup.cpp:51
+msgid "Guests"
+msgstr ""
+
+#: editGroup.cpp:58
 msgid "Group number:"
 msgstr "Broj grupe:"
 
-#: grpnamedlg.cpp:80
+#: editGroup.cpp:72
+#, fuzzy
+msgid "Group rid:"
+msgstr "Broj grupe:"
+
+#: editGroup.cpp:90
+msgid "Group name:"
+msgstr "Ime grupe:"
+
+#: editGroup.cpp:104
+msgid "Description:"
+msgstr ""
+
+#: editGroup.cpp:113
+msgid "Display name:"
+msgstr ""
+
+#: editGroup.cpp:122
+msgid "Type:"
+msgstr ""
+
+#: editGroup.cpp:124 kgroupvw.cpp:65
+msgid "Domain"
+msgstr ""
+
+#: editGroup.cpp:125 kgroupvw.cpp:66
+msgid "Local"
+msgstr ""
+
+#: editGroup.cpp:126 kgroupvw.cpp:67
+msgid "Builtin"
+msgstr ""
+
+#: editGroup.cpp:143 propdlg.cpp:285
+msgid "Domain SID:"
+msgstr ""
+
+#: editGroup.cpp:154
+#, fuzzy
+msgid "Users in Group"
+msgstr "Korisnici u grupi '%1'"
+
+#: editGroup.cpp:159
+msgid "Add <-"
+msgstr ""
+
+#: editGroup.cpp:160
+msgid "Remove ->"
+msgstr ""
+
+#: editGroup.cpp:165
+#, fuzzy
+msgid "Users NOT in Group"
+msgstr "Korisnici u grupi '%1'"
+
+#: editGroup.cpp:260
+msgid "You need to type a group name."
+msgstr ""
+
+#: editGroup.cpp:268
 msgid "Group with name %1 already exists."
 msgstr "Grupa pod imenom %1 već postoji."
 
-#: grpnamedlg.cpp:86
+#: editGroup.cpp:275
+#, fuzzy
+msgid "Group with SID %1 already exists."
+msgstr "Grupa sa GIDom %1 već postoji."
+
+#: editGroup.cpp:280
 msgid "Group with gid %1 already exists."
 msgstr "Grupa sa GIDom %1 već postoji."
 
-#: kgroup.cpp:165 kuser.cpp:513
+#: kgroupfiles.cpp:96
+#, fuzzy
 msgid ""
 "stat call on file %1 failed: %2\n"
-"Check KUser Settings (Sources)\n"
+"Check KUser settings."
 msgstr ""
 "stat poziv datoteke %1 nije uspio: %2\n"
 "Provjerite KUser postavke (Izvore)\n"
 
-#: kgroup.cpp:192 kuser.cpp:540
+#: kgroupfiles.cpp:123 kuserfiles.cpp:158 kuserfiles.cpp:240
 # , c-format
-msgid "Error opening %1 for reading"
+#, fuzzy
+msgid "Error opening %1 for reading."
 msgstr "Greška pri otvaranju %1 za čitanje"
 
-#: kgroup.cpp:286 kgroup.cpp:291 kuser.cpp:771 kuser.cpp:776 kuser.cpp:918
+#: kgroupfiles.cpp:232 kgroupfiles.cpp:239 kgroupfiles.cpp:247
+#: kuserfiles.cpp:344 kuserfiles.cpp:350 kuserfiles.cpp:524
 # , c-format
-msgid "Error opening %1 for writing"
+#, fuzzy
+msgid "Error opening %1 for writing."
 msgstr "Greška pri otvaranju %1 za pisanje"
 
-#: kgroup.cpp:352
+#: kgroupfiles.cpp:353
+#, fuzzy
 msgid ""
 "Unable to process NIS group file without a minimum GID specified.\n"
-"Please update KUser Settings (Sources)"
+"Please update KUser settings (File Source Settings)."
 msgstr ""
 "Ne mogu obraditi NIS datoteku sa grupama bez određivanja minimalnog GIDa.\n"
 "Molim provjerite KUser postavke (Izvori)"
 
-#: kgroup.cpp:357
+#: kgroupfiles.cpp:357
+#, fuzzy
 msgid ""
 "Specifying NIS minimum GID requires NIS file(s).\n"
-"Please update KUser Settings (Sources)"
+"Please update KUser settings (File Source Settings)."
 msgstr ""
 "Navođenje NIS minimalnog GIDa zahtijeva NIS datoteku(e).\n"
 "Molim provjerite KUser postavke (Izvori)"
 
-#: kgroup.cpp:364
-msgid "Unable to build NIS group databases"
+#: kgroupfiles.cpp:363
+#, fuzzy
+msgid "Unable to build NIS group databases."
 msgstr "Ne mogu da napravim NIS bazu grupa"
 
-#: kgroup.cpp:394
-msgid "You have more than 65534 groups!?!? You have run out of gid space!"
-msgstr "Imate više od 65534 grupa!?!? Potrošili ste sav gid prostor!"
+#: kgroupldap.cpp:158
+msgid "Loading Groups From LDAP"
+msgstr ""
 
-#: kgroupvw.cpp:81
+#: kgroupldap.cpp:188 kuserldap.cpp:480
+msgid "LDAP Operation"
+msgstr ""
+
+#: kgroupvw.cpp:68
+msgid "Unknown"
+msgstr ""
+
+#: kgroupvw.cpp:117
 msgid "GID"
 msgstr "GID"
 
-#: kgroupvw.cpp:83
+#: kgroupvw.cpp:119
 msgid "Group Name"
 msgstr "Ime grupe"
 
-#: kuser.cpp:491
-msgid ""
-"KUser Sources were not configured.\n"
-"Local passwd source set to %1\n"
-"Local group source set to %2\n"
+#: kgroupvw.cpp:122 kuservw.cpp:126
+#, fuzzy
+msgid "RID"
+msgstr "UID"
+
+#: kgroupvw.cpp:123
+msgid "Type"
 msgstr ""
-"KUser izvori nisu podešeni.\n"
-"Lokalna passwd datoteka podešena na %1\n"
-"Lokalna group datoteka podešena na %2\n"
 
-#: kuser.cpp:624
-# , c-format
-msgid ""
-"No /etc/passwd entry for %1.\n"
-"Entry will be removed at the next `Save'-operation."
+#: kgroupvw.cpp:124
+msgid "Display Name"
 msgstr ""
-"Nema /etc/passwd unosa za %1.\n"
-"Unos će biti uklonjen pri sljedećoj `Sačuvaj'-operaciji."
 
-#: kuser.cpp:868
-msgid ""
-"Unable to process NIS passwd file without a minimum UID specified.\n"
-"Please update KUser Settings (Sources)"
+#: kgroupvw.cpp:125
+msgid "Description"
 msgstr ""
-"Nisam u mogućnosti da procesiram NIS datoteku sa šiframa bez podešavanja "
-"minimalnog UID-a.\n"
-"Molim uradite update KUser postavki (Izvori)"
 
-#: kuser.cpp:873
-msgid ""
-"Specifying NIS minimum UID requires NIS file(s).\n"
-"Please update KUser Settings (Sources)"
+#: kuser.cpp:515
+#, fuzzy
+msgid "Cannot create home folder for %1: it is null or empty."
 msgstr ""
-"Određivanje NIS minimalnog UIDa zahtijeva NIS datoteku(e).\n"
-"Molim provjerite KUser postavke (Izvori)"
+"Ne mogu napraviti home direktorij za %1: on je null ili prazan\n"
 
-#: kuser.cpp:881
-msgid "Unable to build password database"
-msgstr "Ne mogu napraviti bazu s šiframa"
-
-#: kuser.cpp:887
-msgid "Unable to build password databases"
-msgstr "Ne mogu napraviti baze s šiframa"
-
-#: kuser.cpp:928
-#, c-format
-msgid "No shadow entry for %1."
-msgstr "Nema shadow zapisa za %1."
-
-#: kuser.cpp:978
-msgid "You have more than 65534 users!?!? You have run out of uid space!"
-msgstr "Imate više od 65534 korisnika!?!? Potrošili ste sav uid prostor!"
-
-#: kuser.cpp:1018
-msgid "Cannot create home folder for %1: it is null or empty\n"
-msgstr "Ne mogu napraviti home direktorij za %1: on je null ili prazan\n"
-
-#: kuser.cpp:1025
+#: kuser.cpp:521
+#, fuzzy
 msgid ""
-"Cannot create home folder %1\n"
+"Cannot create home folder %1.\n"
 "Error: %2"
 msgstr ""
 "Ne mogu napraviti home direktorij %1\n"
 "Greška: %2"
 
-#: kuser.cpp:1032
+#: kuser.cpp:527
+#, fuzzy
 msgid ""
-"Cannot change owner of home folder %1\n"
+"Cannot change owner of home folder %1.\n"
 "Error: %2"
 msgstr ""
 "Ne mogu promijeniti vlasnika home direktorija %1\n"
 "Greška: %2"
 
-#: kuser.cpp:1038
+#: kuser.cpp:532
+#, fuzzy
 msgid ""
-"Cannot change permissions on home folder %1\n"
+"Cannot change permissions on home folder %1.\n"
 "Error: %2"
 msgstr ""
 "Ne mogu promijeniti privilegije na home direktoriju %1\n"
 "Greška: %2"
 
-#: kuser.cpp:1108
+#: kuser.cpp:547
 msgid ""
 "Folder %1 already exists!\n"
 "Will make %2 owner and change permissions.\n"
@@ -271,23 +369,16 @@ msgstr ""
 "Proglasiću %2 za vlasnika direktorija i promijeniti dozvole.\n"
 "Želite da to uradim?"
 
-#: kuser.cpp:1112 kuser.cpp:1143
+#: kuser.cpp:551 kuser.cpp:569
+#, fuzzy
 msgid ""
-"Cannot change owner of %1 folder\n"
+"Cannot change owner of %1 folder.\n"
 "Error: %2"
 msgstr ""
 "Ne mogu promijeniti vlasnika direktorija %1\n"
 "Greška: %2"
 
-#: kuser.cpp:1117 kuser.cpp:1148
-msgid ""
-"Cannot change permissions on %1 folder\n"
-"Error: %2"
-msgstr ""
-"Ne mogu promijeniti dozvole na direktoriju %1\n"
-"Greška: %2"
-
-#: kuser.cpp:1123
+#: kuser.cpp:555
 msgid ""
 "Folder %1 left 'as is'.\n"
 "Verify ownership and permissions for user %2 who may not be able to log in!"
@@ -296,19 +387,20 @@ msgstr ""
 "Provjerite vlasništvo i privilegije za korisnika %2 jer se možda neće "
 "moći prijaviti!"
 
-#: kuser.cpp:1129
+#: kuser.cpp:559
 msgid "%1 exists and is not a folder. User %2 will not be able to log in!"
 msgstr "%1 već postoji i nije direktorij. Korisnik %2 se neće moći prijaviti!"
 
-#: kuser.cpp:1137
+#: kuser.cpp:565
+#, fuzzy
 msgid ""
-"Cannot create %1 folder\n"
+"Cannot create %1 folder.\n"
 "Error: %2"
 msgstr ""
 "Ne mogu napraviti direktorij %1\n"
 "Greška: %2"
 
-#: kuser.cpp:1154
+#: kuser.cpp:573
 msgid ""
 "stat call on %1 failed.\n"
 "Error: %2"
@@ -316,11 +408,11 @@ msgstr ""
 "stat poziv za %1 nije uspio.\n"
 "Greška: %2"
 
-#: kuser.cpp:1196
+#: kuser.cpp:588
 msgid "Cannot create %1: %2"
 msgstr "Ne mogu napraviti %1: %2"
 
-#: kuser.cpp:1207
+#: kuser.cpp:598
 msgid ""
 "Cannot change owner on mailbox: %1\n"
 "Error: %2"
@@ -328,7 +420,7 @@ msgstr ""
 "Ne mogu promijeniti vlasnika mailboxa: %1\n"
 "Greška: %2"
 
-#: kuser.cpp:1214
+#: kuser.cpp:604
 msgid ""
 "Cannot change permissions on mailbox: %1\n"
 "Error: %2"
@@ -336,132 +428,223 @@ msgstr ""
 "Ne mogu promijeniti dozvole na mailboxu: %1\n"
 "Greška: %2"
 
-#: kuser.cpp:1255
+#: kuser.cpp:642
+#, fuzzy
 msgid ""
-"Cannot change owner of folder %1\n"
+"Cannot change owner of folder %1.\n"
 "Error: %2"
 msgstr ""
 "Ne mogu promijeniti vlasnika datoteke %1\n"
 "Greška: %2"
 
-#: kuser.cpp:1261
+#: kuser.cpp:647
+#, fuzzy
 msgid ""
-"Cannot change permissions on folder %1\n"
+"Cannot change permissions on folder %1.\n"
 "Error: %2"
 msgstr ""
 "Ne mogu promijeniti dozvole na datoteci %1\n"
 "Greška: %2"
 
-#: kuser.cpp:1286
+#: kuser.cpp:671
+#, fuzzy
 msgid ""
-"Cannot change owner of file %1\n"
+"Cannot change owner of file %1.\n"
 "Error: %2"
 msgstr ""
 "Ne mogu promijeniti vlasnika datoteke %1\n"
 "Greška: %2"
 
-#: kuser.cpp:1292
+#: kuser.cpp:676
+#, fuzzy
 msgid ""
-"Cannot change permissions on file %1\n"
+"Cannot change permissions on file %1.\n"
 "Error: %2"
 msgstr ""
 "Ne mogu promijeniti dozvole na datoteci %1\n"
 "Greška: %2"
 
-#: kuser.cpp:1306
+#: kuser.cpp:690
 # , c-format
-msgid "Folder %1 does not exist, cannot copy skeleton for %2"
+#, fuzzy
+msgid "Folder %1 does not exist, cannot copy skeleton for %2."
 msgstr "Direktorij %1 ne postoji, ne mogu kopirati strukturu za %2"
 
-#: kuser.cpp:1312
+#: kuser.cpp:695
 # , c-format
-msgid "Folder %1 does not exist, cannot copy skeleton"
+#, fuzzy
+msgid "Folder %1 does not exist, cannot copy skeleton."
 msgstr "Direktorij %1 ne postoji, ne mogu kopirati strukturu direktorija"
 
-#: kuser.cpp:1338
+#: kuser.cpp:721
 # , c-format
+#, fuzzy
 msgid ""
-"Cannot remove home folder %1\n"
+"Cannot remove home folder %1.\n"
 "Error: %2"
 msgstr ""
 "Ne mogu ukloniti home direktorij %1\n"
 "Greška: %2"
 
-#: kuser.cpp:1343
-msgid "Removal of home folder %1 failed (uid = %2, gid = %3)"
+#: kuser.cpp:725
+#, fuzzy
+msgid "Removal of home folder %1 failed (uid = %2, gid = %3)."
 msgstr "Uklanjanje home direktorija %1 nije uspjelo (uid = %2, gid = %3)"
 
-#: kuser.cpp:1347
+#: kuser.cpp:728
+#, fuzzy
 msgid ""
-"stat call on file %1 failed\n"
+"stat call on file %1 failed.\n"
 "Error: %2"
 msgstr ""
 "stat poziv na datoteci %1 nije uspio\n"
 "Greška: %2"
 
-#: kuser.cpp:1365
+#: kuser.cpp:746
 # , c-format
+#, fuzzy
 msgid ""
-"Cannot remove crontab %1\n"
+"Cannot remove crontab %1.\n"
 "Error: %2"
 msgstr ""
 "Ne mogu ukloniti crontab %1\n"
 "Greška: %2"
 
-#: kuser.cpp:1379
+#: kuser.cpp:760
 # , c-format
+#, fuzzy
 msgid ""
-"Cannot remove mailbox %1\n"
+"Cannot remove mailbox %1.\n"
 "Error: %2"
 msgstr ""
 "Ne mogu ukloniti mailbox %1\n"
 "Greška: %2"
 
-#: kuser.cpp:1398
-msgid "Cannot fork()"
-msgstr "Ne mogu fork()"
+#: kuser.cpp:780
+#, c-format
+msgid "Cannot fork while trying to kill processes for uid %1."
+msgstr ""
 
-#: kuservw.cpp:82
+#: kuserfiles.cpp:118
+#, fuzzy
+msgid ""
+"KUser sources were not configured.\n"
+"Local passwd source set to %1\n"
+"Local group source set to %2."
+msgstr ""
+"KUser izvori nisu podešeni.\n"
+"Lokalna passwd datoteka podešena na %1\n"
+"Lokalna group datoteka podešena na %2\n"
+
+#: kuserfiles.cpp:131
+#, fuzzy
+msgid ""
+"Stat call on file %1 failed: %2\n"
+"Check KUser settings."
+msgstr ""
+"stat poziv datoteke %1 nije uspio: %2\n"
+"Provjerite KUser postavke (Izvore)\n"
+
+#: kuserfiles.cpp:251
+# , c-format
+msgid ""
+"No /etc/passwd entry for %1.\n"
+"Entry will be removed at the next `Save'-operation."
+msgstr ""
+"Nema /etc/passwd unosa za %1.\n"
+"Unos će biti uklonjen pri sljedećoj `Sačuvaj'-operaciji."
+
+#: kuserfiles.cpp:473
+#, fuzzy
+msgid ""
+"Unable to process NIS passwd file without a minimum UID specified.\n"
+"Please update KUser settings (Files)."
+msgstr ""
+"Nisam u mogućnosti da procesiram NIS datoteku sa šiframa bez podešavanja "
+"minimalnog UID-a.\n"
+"Molim uradite update KUser postavki (Izvori)"
+
+#: kuserfiles.cpp:477
+#, fuzzy
+msgid ""
+"Specifying NIS minimum UID requires NIS file(s).\n"
+"Please update KUser settings (Files)."
+msgstr ""
+"Određivanje NIS minimalnog UIDa zahtijeva NIS datoteku(e).\n"
+"Molim provjerite KUser postavke (Izvori)"
+
+#: kuserfiles.cpp:484
+#, fuzzy
+msgid "Unable to build password database."
+msgstr "Ne mogu napraviti bazu s šiframa"
+
+#: kuserfiles.cpp:490
+#, fuzzy
+msgid "Unable to build password databases."
+msgstr "Ne mogu napraviti baze s šiframa"
+
+#: kuserldap.cpp:207
+msgid "Loading Users From LDAP"
+msgstr ""
+
+#: kuservw.cpp:117
 msgid "UID"
 msgstr "UID"
 
-#: kuservw.cpp:84
+#: kuservw.cpp:119
 msgid "User Login"
 msgstr "Korisničko ime"
 
-#: kuservw.cpp:85
+#: kuservw.cpp:120
 msgid "Full Name"
 msgstr "Puno ime"
 
-#: main.cpp:39
+#: kuservw.cpp:121
+msgid "Home Directory"
+msgstr ""
+
+#: kuservw.cpp:122
+#, fuzzy
+msgid "Login Shell"
+msgstr "&Login shell:"
+
+#: kuservw.cpp:127
+msgid "Samba Login Script"
+msgstr ""
+
+#: kuservw.cpp:128
+msgid "Samba Profile Path"
+msgstr ""
+
+#: kuservw.cpp:129
+msgid "Samba Home Drive"
+msgstr ""
+
+#: kuservw.cpp:130
+msgid "Samba Home Path"
+msgstr ""
+
+#: main.cpp:36
 msgid "KDE User Editor"
 msgstr "KDE Editor korisnika"
 
-#: main.cpp:71
+#: main.cpp:43
 msgid "KUser"
 msgstr "KUser"
 
-#: main.cpp:74
+#: main.cpp:46 main.cpp:48
 msgid "kuser author"
 msgstr "autor kuser-a"
 
-#: main.cpp:84
-msgid "Only root is allowed to manage users."
-msgstr "Samo root može upravljati korisnicima."
-
-#: main.cpp:96
+#: main.cpp:61
 msgid "KDE User Manager"
 msgstr "KDE Menadžer korisnika"
 
-#: mainView.cpp:58
-msgid "Users"
-msgstr "Korisnici"
-
-#: mainView.cpp:61 propdlg.cpp:354 propdlg.cpp:376
+#: mainView.cpp:53 propdlg.cpp:291 propdlg.cpp:296
 msgid "Groups"
 msgstr "Grupe"
 
-#: mainView.cpp:163
+#: mainView.cpp:166
 msgid ""
 "You are using private groups.\n"
 "Do you want to delete the user's private group '%1'?"
@@ -469,281 +652,299 @@ msgstr ""
 "Koristite privatne grupe.\n"
 "Da li želite obrisati korisnikovu privatnu grupu '%1'?"
 
-#: mainView.cpp:196
-msgid "Add User"
-msgstr "Dodaj korisnika"
+#: mainView.cpp:187
+#, fuzzy
+msgid "You have run out of uid space."
+msgstr "Imate više od 65534 korisnika!?!? Potrošili ste sav uid prostor!"
+
+#: mainView.cpp:191
+msgid "You have run out of user RID space."
+msgstr ""
 
 #: mainView.cpp:197
-msgid "Enter user name:"
-msgstr "Unesite korisničko ime:"
+msgid "Please type the name of the new user:"
+msgstr ""
 
-#: mainView.cpp:209
+#: mainView.cpp:203
 msgid "User with name %1 already exists."
 msgstr "Korisničko ime %1 već postoji."
 
-#: mainView.cpp:326
-msgid "Would you like to save your changes?"
-msgstr "Da li želite sačuvati izmjene?"
+#: mainView.cpp:292
+msgid ""
+"You have selected %1 users. Do you really want to change the password for "
+"all the selected users?"
+msgstr ""
 
-#: mainView.cpp:327
-msgid "Data Was Modified"
-msgstr "Podaci su izmijenjeni"
+#: mainView.cpp:376
+#, fuzzy
+msgid "You have run out of gid space."
+msgstr "Imate više od 65534 grupa!?!? Potrošili ste sav gid prostor!"
 
-#: mainView.cpp:348
-msgid "Edit Defaults"
-msgstr "Promijeni uobičajeno"
+#: mainView.cpp:381
+msgid "You have run out of group RID space."
+msgstr ""
 
-#: mainView.cpp:458
+#: mainView.cpp:424
+msgid ""
+"The group '%1' is the primary group of one or more users (such as '%2'); it "
+"cannot be deleted."
+msgstr ""
+
+#: mainView.cpp:437
 msgid "Do you really want to delete the group '%1'?"
 msgstr "Da li zaista želite ukloniti grupu '%1'?"
 
-#: mainWidget.cpp:41
+#: mainView.cpp:442
+#, fuzzy
+msgid "Do you really want to delete the %1 selected groups?"
+msgstr "Da li zaista želite ukloniti grupu '%1'?"
+
+#: mainWidget.cpp:50
 msgid "Reading configuration"
 msgstr "Čitam konfiguraciju"
 
-#: mainWidget.cpp:47
+#: mainWidget.cpp:56
 msgid "Ready"
 msgstr "Spreman"
 
-#: mainWidget.cpp:74 mainWidget.cpp:88
+#: mainWidget.cpp:78 mainWidget.cpp:90
 msgid "&Add..."
 msgstr "&Dodaj..."
 
-#: mainWidget.cpp:77 mainWidget.cpp:91
+#: mainWidget.cpp:81 mainWidget.cpp:93
 msgid "&Edit..."
 msgstr "&Promijeni..."
 
-#: mainWidget.cpp:81
+#: mainWidget.cpp:84
 msgid "&Delete..."
 msgstr "&Briši..."
 
-#: mainWidget.cpp:85
+#: mainWidget.cpp:87
 msgid "&Set Password..."
 msgstr "&Podesi šifru..."
 
-#: misc.cpp:55
+#: mainWidget.cpp:101
+msgid "&Select Connection..."
+msgstr ""
+
+#: mainWidget.cpp:105
+msgid "Show System Users/Groups"
+msgstr ""
+
+#: mainWidget.cpp:108
+msgid "Hide System Users/Groups"
+msgstr ""
+
+#: misc.cpp:46
 #, c-format
 msgid "Can't create backup file for %1"
 msgstr "Ne mogu napraviti backup datoteke %1"
 
-#: misc.cpp:123
+#: misc.cpp:71
 # , c-format
 msgid "File %1 does not exist."
 msgstr "Datoteka %1 ne postoji."
 
-#: misc.cpp:129
+#: misc.cpp:76
 msgid "Cannot open file %1 for reading."
 msgstr "Ne mogu otvoriti datoteku %1 za čitanje."
 
-#: misc.cpp:135
+#: misc.cpp:81
 msgid "Cannot open file %1 for writing."
 msgstr "Ne mogu otvoriti datoteku %1 za pisanje."
 
-#: nisDefaultsPage.cpp:70
-msgid "Local passwd source:"
-msgstr "Lokalni izvor šifara:"
+#: propdlg.cpp:60 propdlg.cpp:91
+msgid "Do not change"
+msgstr ""
 
-#: nisDefaultsPage.cpp:73
-msgid "Local group source:"
-msgstr "Lokalni izvor grupa:"
-
-#: nisDefaultsPage.cpp:88
-msgid "NIS passwd source:"
-msgstr "NIS izvor šifara:"
-
-#: nisDefaultsPage.cpp:91
-msgid "NIS group source:"
-msgstr "NIS izvor grupa:"
-
-#: nisDefaultsPage.cpp:106
-msgid "NIS minimum UID:"
-msgstr "NIS minimalni UID:"
-
-#: nisDefaultsPage.cpp:109
-msgid "NIS minimum GID:"
-msgstr "NIS minimalni GID:"
-
-#: nisDefaultsPage.cpp:124
-msgid "Enable NIS support"
-msgstr "Uključi NIS podršku"
-
-#: nisDefaultsPage.cpp:195
-msgid "This is the Sources Help text"
-msgstr "Ovo je tekst pomoći za Izvore"
-
-#: propdlg.cpp:83 propdlg.cpp:109
-msgid "Never"
-msgstr "Nikad"
-
-#: propdlg.cpp:104
+#: propdlg.cpp:76 rc.cpp:110 rc.cpp:114 rc.cpp:120 rc.cpp:124
+#, no-c-format
 msgid " days"
 msgstr " dana"
 
-#: propdlg.cpp:131
-msgid "User Properties"
-msgstr "Postavke za korisnika"
+#: propdlg.cpp:81 propdlg.cpp:243 rc.cpp:112 rc.cpp:116 rc.cpp:122 rc.cpp:129
+#, no-c-format
+msgid "Never"
+msgstr "Nikad"
 
-#: propdlg.cpp:159
+#: propdlg.cpp:107
 msgid "User Info"
 msgstr "Info o korisniku"
 
-#: propdlg.cpp:168
+#: propdlg.cpp:116
 msgid "User login:"
 msgstr "Korisničko ime:"
 
-#: propdlg.cpp:172
+#: propdlg.cpp:122
 msgid "&User ID:"
 msgstr "&Korisnički ID:"
 
-#: propdlg.cpp:175
+#: propdlg.cpp:126
 msgid "Set &Password..."
 msgstr "Podesi š&ifru..."
 
-#: propdlg.cpp:181
+#: propdlg.cpp:134
 msgid "Full &name:"
 msgstr "Puno i&me:"
 
-#: propdlg.cpp:186 userDefaultsPage.cpp:48
-msgid "<Empty>"
-msgstr "<Prazno>"
+#: propdlg.cpp:141
+#, fuzzy
+msgid "Surname:"
+msgstr "Puno i&me:"
 
-#: propdlg.cpp:194
+#: propdlg.cpp:146
+#, fuzzy
+msgid "Email address:"
+msgstr "&Adresa:"
+
+#: propdlg.cpp:160
 msgid "&Login shell:"
 msgstr "&Login shell:"
 
-#: propdlg.cpp:199
+#: propdlg.cpp:165
 msgid "&Home folder:"
 msgstr "&Home direktorij:"
 
-#: propdlg.cpp:207
+#: propdlg.cpp:173
 msgid "&Office:"
 msgstr "&Ured:"
 
-#: propdlg.cpp:212
+#: propdlg.cpp:178
 msgid "Offi&ce Phone:"
 msgstr "Tele&fon u uredu:"
 
-#: propdlg.cpp:217
+#: propdlg.cpp:183
 msgid "Ho&me Phone:"
 msgstr "Telefon kod &kuće:"
 
-#: propdlg.cpp:222
-msgid "&Office #1:"
-msgstr "&Ured #1:"
-
-#: propdlg.cpp:227
-msgid "O&ffice #2:"
-msgstr "U&red #2:"
-
-#: propdlg.cpp:232
-msgid "&Address:"
-msgstr "&Adresa:"
-
-#: propdlg.cpp:240
-msgid "Password Management"
-msgstr "Upravljanje šiframa"
-
-#: propdlg.cpp:247
-msgid "Last password change:"
-msgstr "Posljednja izmjena šifre:"
-
-#: propdlg.cpp:252
-msgid "Password may &not be changed before"
-msgstr "Šifra se ne &može promijeniti prije"
-
-#: propdlg.cpp:252 propdlg.cpp:253
-msgid "after last password change."
-msgstr "nakon promjene posljednje šifre."
-
-#: propdlg.cpp:253
-msgid "Password &expires"
-msgstr "Šifra i&stiče"
-
-#: propdlg.cpp:254
-msgid "&Issue expire warning"
-msgstr "&Pošalji upozorenje o isteku"
-
-#: propdlg.cpp:254
-msgid "before password expires."
-msgstr "prije nego šifra istekne."
-
-#: propdlg.cpp:255
-msgid "Account will be &disabled"
-msgstr "Account će biti is&ključen"
-
-#: propdlg.cpp:255
-msgid "after expiration of password."
-msgstr "nakon isteka šifre."
-
-#: propdlg.cpp:260
-msgid "&Account will expire on:"
-msgstr "&Account će isteći:"
-
-#: propdlg.cpp:267
-msgid "Quota"
-msgstr "Kvota"
-
-#: propdlg.cpp:272
-msgid "&Filesystem with quotas:"
-msgstr "&Filesistem sa kvotama:"
-
-#: propdlg.cpp:284
-msgid "Disk Space"
-msgstr "Disk prostor"
-
-#: propdlg.cpp:294
-msgid "Disk space &soft quota:"
-msgstr "&Soft kvota disk prostora:"
-
-#: propdlg.cpp:300
-msgid "Disk space &hard quota:"
-msgstr "&Hard kvota disk prostora:"
-
-#: propdlg.cpp:304
-msgid "Disk space in &use:"
-msgstr "&Iskorišteni disk prostor:"
-
-#: propdlg.cpp:311
-msgid "&Grace period:"
-msgstr "&Grace period:"
-
-#: propdlg.cpp:319
-msgid "Number of Files"
-msgstr "Broj datoteka"
-
-#: propdlg.cpp:329
-msgid "File &number soft quota:"
-msgstr "Soft kvota &broja datoteka:"
-
-#: propdlg.cpp:335
-msgid "File num&ber hard quota:"
-msgstr "Hard kvota b&roja datoteka:"
-
-#: propdlg.cpp:339
-msgid "Numbe&r of files in use:"
-msgstr "Iskorišten br&oj datoteka:"
-
-#: propdlg.cpp:346
-msgid "Grac&e period:"
-msgstr "Grac&e period:"
-
-#: propdlg.cpp:360
-msgid "&Primary group:"
-msgstr "&Primarna grupa:"
-
-#: propdlg.cpp:365
-msgid "Groups User '%1' Belongs To"
-msgstr "Grupe kojim pripada korisnik '%1'"
-
-#: propdlg.cpp:383
+#: propdlg.cpp:188
 msgid "Login class:"
 msgstr "Login klasa:"
 
-#: propdlg.cpp:385
-msgid "Account will expire after:"
-msgstr "Račun će isteći nakon:"
+#: propdlg.cpp:193
+msgid "&Office #1:"
+msgstr "&Ured #1:"
 
-#: propdlg.cpp:715
+#: propdlg.cpp:198
+msgid "O&ffice #2:"
+msgstr "U&red #2:"
+
+#: propdlg.cpp:203
+msgid "&Address:"
+msgstr "&Adresa:"
+
+#: propdlg.cpp:207
+#, fuzzy
+msgid "Account &disabled"
+msgstr "Account će biti is&ključen"
+
+#: propdlg.cpp:217
+msgid "Password Management"
+msgstr "Upravljanje šiframa"
+
+#: propdlg.cpp:223
+msgid "Last password change:"
+msgstr "Posljednja izmjena šifre:"
+
+#: propdlg.cpp:229
+#, fuzzy
+msgid "Time before password may &not be changed after last password change:"
+msgstr "Šifra se ne &može promijeniti prije"
+
+#: propdlg.cpp:230
+#, fuzzy
+msgid "Time when password &expires after last password change:"
+msgstr "nakon promjene posljednje šifre."
+
+#: propdlg.cpp:231
+msgid "Time before password expires to &issue an expire warning:"
+msgstr ""
+
+#: propdlg.cpp:232
+msgid "Time when account will be &disabled after expiration of password:"
+msgstr ""
+
+#: propdlg.cpp:237
+msgid "&Account will expire on:"
+msgstr "&Account će isteći:"
+
+#: propdlg.cpp:253
+msgid "Samba"
+msgstr ""
+
+#: propdlg.cpp:260
+msgid "RID:"
+msgstr ""
+
+#: propdlg.cpp:265
+#, fuzzy
+msgid "Login script:"
+msgstr "Login klasa:"
+
+#: propdlg.cpp:270
+msgid "Profile path:"
+msgstr ""
+
+#: propdlg.cpp:275 rc.cpp:100
+#, fuzzy, no-c-format
+msgid "Home drive:"
+msgstr "&Home direktorij:"
+
+#: propdlg.cpp:280
+#, fuzzy
+msgid "Home path:"
+msgstr "Telefon kod &kuće:"
+
+#: propdlg.cpp:301 propdlg.cpp:576 propdlg.cpp:611
+#, fuzzy
+msgid "Primary group: "
+msgstr "&Primarna grupa:"
+
+#: propdlg.cpp:304
+msgid "Set as Primary"
+msgstr ""
+
+#: propdlg.cpp:315 propdlg.cpp:330
+msgid "User Properties"
+msgstr "Postavke za korisnika"
+
+#: propdlg.cpp:320
+#, fuzzy
+msgid "User Properties - %1 Selected Users"
+msgstr "Postavke za korisnika"
+
+#: propdlg.cpp:454
+msgid "Do Not Change"
+msgstr ""
+
+#: propdlg.cpp:784
+msgid "You need to specify an UID."
+msgstr ""
+
+#: propdlg.cpp:789
+msgid "You must specify a home directory."
+msgstr ""
+
+#: propdlg.cpp:795
+msgid "You must fill the surname field."
+msgstr ""
+
+#: propdlg.cpp:802
+msgid "You need to specify a samba RID."
+msgstr ""
+
+#: propdlg.cpp:839
+# , c-format
+msgid "User with UID %1 already exists"
+msgstr "Korisnik sa UIDom %1 već postoji"
+
+#: propdlg.cpp:849
+# , c-format
+#, fuzzy
+msgid "User with RID %1 already exists"
+msgstr "Korisnik sa UIDom %1 već postoji"
+
+#: propdlg.cpp:863
 msgid ""
 "<p>"
 "The shell %1 is not yet listed in the file %2. In order to use this shell "
@@ -752,59 +953,867 @@ msgstr ""
 "<p> Shell %1 nije još naveden u datoteci %2. Da biste koristili ovaj shell "
 "morate ga najprije dodati u ovu datoteku.<p>Želite li ga sada dodati?"
 
-#: propdlg.cpp:719
+#: propdlg.cpp:867
 msgid "Unlisted Shell"
 msgstr "Shell nije izlistan"
 
-#: propdlg.cpp:720
+#: propdlg.cpp:868
 msgid "&Add Shell"
 msgstr "&Dodaj shell"
 
-#: propdlg.cpp:721
+#: propdlg.cpp:869
 msgid "Do &Not Add"
 msgstr "&Nemoj dodati"
 
-#: pwddlg.cpp:37
+#: pwddlg.cpp:29
 msgid "Enter Password"
 msgstr "Unesite šifru"
 
-#: pwddlg.cpp:43
+#: pwddlg.cpp:34
 msgid "Password:"
 msgstr "Šifra:"
 
-#: pwddlg.cpp:59
+#: pwddlg.cpp:50
 msgid "Verify:"
 msgstr "Provjera:"
 
-#: pwddlg.cpp:86
+#: pwddlg.cpp:74
+#, fuzzy
 msgid ""
 "Passwords are not identical.\n"
-"Try again"
+"Try again."
 msgstr ""
 "Šifre nisu identične.\n"
 "Pokušajte ponovo"
 
-#: rc.cpp:1
+#: rc.cpp:4
+#, no-c-format
 msgid "&User"
 msgstr "&Korisnik"
 
-#: rc.cpp:2
+#: rc.cpp:6
+#, no-c-format
 msgid "&Group"
 msgstr "&Grupa"
 
-#: userDefaultsPage.cpp:40
+#: rc.cpp:10
+#, no-c-format
+msgid "Local User Database Files"
+msgstr ""
+
+#: rc.cpp:12
+#, fuzzy, no-c-format
+msgid "Group file:"
+msgstr "Ime grupe:"
+
+#: rc.cpp:14
+#, fuzzy, no-c-format
+msgid "Password file:"
+msgstr "Šifra:"
+
+#: rc.cpp:16
+#, fuzzy, no-c-format
+msgid "Shadow password file:"
+msgstr "Posljednja izmjena šifre:"
+
+#: rc.cpp:18
+#, no-c-format
+msgid "Shadow group file:"
+msgstr ""
+
+#: rc.cpp:20
+#, no-c-format
+msgid "MD5 shadow passwords"
+msgstr ""
+
+#: rc.cpp:22
+#, no-c-format
+msgid "NIS Settings"
+msgstr ""
+
+#: rc.cpp:24
+#, fuzzy, no-c-format
+msgid "NIS password source:"
+msgstr "NIS izvor šifara:"
+
+#: rc.cpp:26
+#, no-c-format
+msgid "NIS group source:"
+msgstr "NIS izvor grupa:"
+
+#: rc.cpp:28
+#, no-c-format
+msgid "NIS minimum UID:"
+msgstr "NIS minimalni UID:"
+
+#: rc.cpp:30
+#, no-c-format
+msgid "NIS minimum GID:"
+msgstr "NIS minimalni GID:"
+
+#: rc.cpp:32
+#, no-c-format
+msgid "Source of user/group database:"
+msgstr ""
+
+#: rc.cpp:38
+#, no-c-format
+msgid "System"
+msgstr ""
+
+#: rc.cpp:40
+#, no-c-format
+msgid "First normal GID:"
+msgstr ""
+
+#: rc.cpp:42 rc.cpp:96
+#, no-c-format
+msgid "Home path template:"
+msgstr ""
+
+#: rc.cpp:44
+#, no-c-format
 msgid "Shell:"
 msgstr "Shell:"
 
-#: userDefaultsPage.cpp:56
-msgid "Base of home folders:"
-msgstr "Baza home direktorija:"
+#: rc.cpp:46
+#, no-c-format
+msgid "First normal UID:"
+msgstr ""
 
-#: userDefaultsPage.cpp:69
+#: rc.cpp:50 rc.cpp:157
+#, no-c-format
 msgid "Copy skeleton to home folder"
 msgstr "Kopiraj strukturu u home dir"
 
-#: userDefaultsPage.cpp:73
-msgid "User private group"
+#: rc.cpp:52 rc.cpp:161
+#, fuzzy, no-c-format
+msgid "User private groups"
 msgstr "Korisnikova privatna grupa"
 
+#: rc.cpp:54
+#, fuzzy, no-c-format
+msgid "User base:"
+msgstr "Korisnici"
+
+#: rc.cpp:56
+#, no-c-format
+msgid "User RDN prefix:"
+msgstr ""
+
+#: rc.cpp:58
+#, no-c-format
+msgid "uid"
+msgstr ""
+
+#: rc.cpp:60
+#, no-c-format
+msgid "uidNumber"
+msgstr ""
+
+#: rc.cpp:62
+#, no-c-format
+msgid "Group RDN prefix:"
+msgstr ""
+
+#: rc.cpp:64
+#, no-c-format
+msgid "cn"
+msgstr ""
+
+#: rc.cpp:66
+#, no-c-format
+msgid "gidNumber"
+msgstr ""
+
+#: rc.cpp:68
+#, fuzzy, no-c-format
+msgid "Group base:"
+msgstr "Ime grupe:"
+
+#: rc.cpp:70
+#, no-c-format
+msgid "Plain Text"
+msgstr ""
+
+#: rc.cpp:72
+#, no-c-format
+msgid "CRYPT"
+msgstr ""
+
+#: rc.cpp:74
+#, no-c-format
+msgid "MD5"
+msgstr ""
+
+#: rc.cpp:76
+#, no-c-format
+msgid "SMD5"
+msgstr ""
+
+#: rc.cpp:78
+#, no-c-format
+msgid "SHA"
+msgstr ""
+
+#: rc.cpp:80
+#, no-c-format
+msgid "SSHA"
+msgstr ""
+
+#: rc.cpp:82
+#, no-c-format
+msgid "Structural objectclass:"
+msgstr ""
+
+#: rc.cpp:84
+#, no-c-format
+msgid "account"
+msgstr ""
+
+#: rc.cpp:86
+#, no-c-format
+msgid "inetOrgPerson"
+msgstr ""
+
+#: rc.cpp:88
+#, fuzzy, no-c-format
+msgid "Password hash:"
+msgstr "Šifra:"
+
+#: rc.cpp:90
+#, no-c-format
+msgid "Manage shadowAccount objectclass"
+msgstr ""
+
+#: rc.cpp:92
+#, no-c-format
+msgid "Samba Settings"
+msgstr ""
+
+#: rc.cpp:94
+#, no-c-format
+msgid "Default login script:"
+msgstr ""
+
+#: rc.cpp:98
+#, no-c-format
+msgid "Profile path template:"
+msgstr ""
+
+#: rc.cpp:102
+#, no-c-format
+msgid "Domain SID (you can obtain with 'net getlocalsid domain_name'):"
+msgstr ""
+
+#: rc.cpp:104
+#, no-c-format
+msgid "Time before password expires to issue an expire warning:"
+msgstr ""
+
+#: rc.cpp:106
+#, fuzzy, no-c-format
+msgid "Time when password expires after last password change:"
+msgstr "nakon promjene posljednje šifre."
+
+#: rc.cpp:108
+#, fuzzy, no-c-format
+msgid "Time when account will be disabled after expiration of password:"
+msgstr "nakon isteka šifre."
+
+#: rc.cpp:118
+#, fuzzy, no-c-format
+msgid "Time before password may not be changed after last password change:"
+msgstr "Šifra se ne &može promijeniti prije"
+
+#: rc.cpp:127
+#, fuzzy, no-c-format
+msgid "Account will expire on:"
+msgstr "&Account će isteći:"
+
+#: rc.cpp:131
+#, no-c-format
+msgid "Default connection"
+msgstr ""
+
+#: rc.cpp:133
+#, no-c-format
+msgid "The source of the user and group database"
+msgstr ""
+
+#: rc.cpp:135
+#, no-c-format
+msgid ""
+"This option allows you to select where the user/group data stored. Currently "
+"three storage backends are supported. "
+"<BR><B>Files</B> stores user/group data in traditional /etc/passwd and "
+"/etc/group flat files. "
+"<BR><B>LDAP</B>"
+" stores data in a directory server using the posixAccount and posixGroup "
+"object classes; this backend allows allows the management of Samba "
+"users/groups via the sambaSamAccount object class."
+"<BR><B>System</B> provides a read-only access to all users and groups which "
+"your installation knows about."
+msgstr ""
+
+#: rc.cpp:137
+#, fuzzy, no-c-format
+msgid "Shell"
+msgstr "Shell:"
+
+#: rc.cpp:139
+#, no-c-format
+msgid ""
+"This option allows you to select the shell which will be the default for new "
+"users."
+msgstr ""
+
+#: rc.cpp:141
+#, no-c-format
+msgid "Home path template"
+msgstr ""
+
+#: rc.cpp:143
+#, no-c-format
+msgid ""
+"This option specifies the UNIX home path template for new users. The '%U' "
+"macro will replaced with the actual user name."
+msgstr ""
+
+#: rc.cpp:145
+#, no-c-format
+msgid "First UID"
+msgstr ""
+
+#: rc.cpp:147
+#, no-c-format
+msgid ""
+"This options specifies the first user ID where searching for an available "
+"UID starts."
+msgstr ""
+
+#: rc.cpp:149
+#, no-c-format
+msgid "First GID"
+msgstr ""
+
+#: rc.cpp:151
+#, no-c-format
+msgid ""
+"This options specifies the first group ID where searching for an available "
+"GID starts."
+msgstr ""
+
+#: rc.cpp:155
+#, no-c-format
+msgid ""
+"If this option is checked then a home directory will created for the new "
+"user."
+msgstr ""
+
+#: rc.cpp:159
+#, no-c-format
+msgid ""
+"If this option is checked then the contents of the skeleton folder will "
+"copied to the new user's home directory"
+msgstr ""
+
+#: rc.cpp:163
+#, no-c-format
+msgid ""
+"If this option is enabled, new user creation will create a private group "
+"named as the user, and the primary group of the user will assigned to this "
+"private group."
+msgstr ""
+
+#: rc.cpp:165
+#, no-c-format
+msgid "smin"
+msgstr ""
+
+#: rc.cpp:167
+#, no-c-format
+msgid "smax"
+msgstr ""
+
+#: rc.cpp:169
+#, no-c-format
+msgid "swarn"
+msgstr ""
+
+#: rc.cpp:171
+#, no-c-format
+msgid "sinact"
+msgstr ""
+
+#: rc.cpp:173
+#, no-c-format
+msgid "sexpire"
+msgstr ""
+
+#: rc.cpp:175
+#, no-c-format
+msgid "This setting is for specifying a date when user accounts will expire."
+msgstr ""
+
+#: rc.cpp:177
+#, no-c-format
+msgid "sneverexpire"
+msgstr ""
+
+#: rc.cpp:179
+#, no-c-format
+msgid "Check this if you want to user accounts never expire."
+msgstr ""
+
+#: rc.cpp:181
+#, fuzzy, no-c-format
+msgid "Password file"
+msgstr "Šifra i&stiče"
+
+#: rc.cpp:183
+#, no-c-format
+msgid "This specifies the users database file (usually /etc/passwd)."
+msgstr ""
+
+#: rc.cpp:185
+#, fuzzy, no-c-format
+msgid "Group file"
+msgstr "Ime grupe"
+
+#: rc.cpp:187
+#, no-c-format
+msgid "This specifies the groups database file (usually /etc/group)."
+msgstr ""
+
+#: rc.cpp:189
+#, no-c-format
+msgid "MD5 Shadow passwords"
+msgstr ""
+
+#: rc.cpp:191
+#, no-c-format
+msgid ""
+"Check this if you want the passwords in the shadow file MD5 hashed. Leave "
+"this unchecked if DES encryption should be used."
+msgstr ""
+
+#: rc.cpp:193
+#, no-c-format
+msgid "Shadow password file"
+msgstr ""
+
+#: rc.cpp:195
+#, no-c-format
+msgid ""
+"Specifies the shadow password file (usually /etc/shadow). Leave this empty "
+"if your system does not use a shadow password file."
+msgstr ""
+
+#: rc.cpp:197
+#, no-c-format
+msgid "Group shadow file"
+msgstr ""
+
+#: rc.cpp:199
+#, no-c-format
+msgid ""
+"Specifies the shadow group file (usually /etc/gshadow). Leave this empty if "
+"your system does not use a shadow group file."
+msgstr ""
+
+#: rc.cpp:201
+#, fuzzy, no-c-format
+msgid "NIS password source"
+msgstr "NIS izvor šifara:"
+
+#: rc.cpp:203
+#, fuzzy, no-c-format
+msgid "NIS minimum UID"
+msgstr "NIS minimalni UID:"
+
+#: rc.cpp:205
+#, fuzzy, no-c-format
+msgid "NIS group source"
+msgstr "NIS izvor grupa:"
+
+#: rc.cpp:207
+#, fuzzy, no-c-format
+msgid "NIS minimum GID"
+msgstr "NIS minimalni GID:"
+
+#: rc.cpp:209
+#, fuzzy, no-c-format
+msgid "LDAP User"
+msgstr "Dodaj korisnika"
+
+#: rc.cpp:211
+#, fuzzy, no-c-format
+msgid "LDAP Password"
+msgstr "Šifra:"
+
+#: rc.cpp:213
+#, no-c-format
+msgid "LDAP SASL Realm"
+msgstr ""
+
+#: rc.cpp:215
+#, no-c-format
+msgid "LDAP Bind DN"
+msgstr ""
+
+#: rc.cpp:217
+#, no-c-format
+msgid "LDAP Host"
+msgstr ""
+
+#: rc.cpp:219
+#, no-c-format
+msgid "LDAP Port"
+msgstr ""
+
+#: rc.cpp:221
+#, no-c-format
+msgid "LDAP version"
+msgstr ""
+
+#: rc.cpp:223
+#, no-c-format
+msgid "LDAP Size limit"
+msgstr ""
+
+#: rc.cpp:225
+#, no-c-format
+msgid "LDAP Time limit"
+msgstr ""
+
+#: rc.cpp:227
+#, no-c-format
+msgid "LDAP Base DN"
+msgstr ""
+
+#: rc.cpp:229
+#, no-c-format
+msgid "LDAP Filter"
+msgstr ""
+
+#: rc.cpp:231
+#, no-c-format
+msgid "LDAP no encryption"
+msgstr ""
+
+#: rc.cpp:233
+#, no-c-format
+msgid "LDAP TLS"
+msgstr ""
+
+#: rc.cpp:235
+#, no-c-format
+msgid "LDAP SSL"
+msgstr ""
+
+#: rc.cpp:237
+#, no-c-format
+msgid "LDAP Anonymous"
+msgstr ""
+
+#: rc.cpp:239
+#, no-c-format
+msgid "LDAP Simple auth"
+msgstr ""
+
+#: rc.cpp:241
+#, no-c-format
+msgid "LDAP SASL auth"
+msgstr ""
+
+#: rc.cpp:243
+#, no-c-format
+msgid "LDAP SASL mechanism"
+msgstr ""
+
+#: rc.cpp:245
+#, fuzzy, no-c-format
+msgid "LDAP User container"
+msgstr "KDE Menadžer korisnika"
+
+#: rc.cpp:247
+#, no-c-format
+msgid "This specifies where to store users' entries relative to the LDAP base DN."
+msgstr ""
+
+#: rc.cpp:249
+#, no-c-format
+msgid "LDAP Group container"
+msgstr ""
+
+#: rc.cpp:251
+#, no-c-format
+msgid "This specifies where to store groups' entries relative to the LDAP base DN."
+msgstr ""
+
+#: rc.cpp:253
+#, no-c-format
+msgid "LDAP User RDN prefix"
+msgstr ""
+
+#: rc.cpp:255
+#, no-c-format
+msgid "This specifies what prefix will used for user entries."
+msgstr ""
+
+#: rc.cpp:257
+#, no-c-format
+msgid "Manage LDAP shadowAccount objectclass"
+msgstr ""
+
+#: rc.cpp:259
+#, no-c-format
+msgid ""
+"Check this if the shadowAccount object should be used in the users' entries. "
+"It allows to enforce password change/expiration policies."
+msgstr ""
+
+#: rc.cpp:261
+#, no-c-format
+msgid "LDAP Structural objectclass"
+msgstr ""
+
+#: rc.cpp:263
+#, no-c-format
+msgid ""
+"This option allows to specify the structural objectclass used with users' "
+"entries. If you want to use these entries not just for authentication, but "
+"for an addressbook, too, then choose inetOrgPerson."
+msgstr ""
+
+#: rc.cpp:265
+#, no-c-format
+msgid "LDAP Group RDN prefix"
+msgstr ""
+
+#: rc.cpp:267
+#, no-c-format
+msgid "This specifies what prefix will used for group entries."
+msgstr ""
+
+#: rc.cpp:269
+#, no-c-format
+msgid "LDAP Password hash method"
+msgstr ""
+
+#: rc.cpp:271
+#, no-c-format
+msgid "This specifies the password hashing method. The most secure is SSHA."
+msgstr ""
+
+#: rc.cpp:273
+#, no-c-format
+msgid "Enable samba account management"
+msgstr ""
+
+#: rc.cpp:275
+#, no-c-format
+msgid ""
+"Check this if you want to use the user/group entries in a Samba domain. "
+"KUser will create sambaSamAccount objectclass for each entry which is usable "
+"with the ldapsam passdb backend with Samba version greater than 3.0."
+msgstr ""
+
+#: rc.cpp:277
+#, no-c-format
+msgid "Samba domain SID"
+msgstr ""
+
+#: rc.cpp:279
+#, no-c-format
+msgid ""
+"This specifies the domain Security IDentifier. It is unique in a single "
+"domain. You can query the value of the domain SID with 'net getlocalsid "
+"domain_name'."
+msgstr ""
+
+#: rc.cpp:281
+#, no-c-format
+msgid "Samba login script"
+msgstr ""
+
+#: rc.cpp:283
+#, no-c-format
+msgid ""
+"This specifies a name of a login script (in the `Netlogon` share) which will "
+"be executed as the user logs in to a Windows machine."
+msgstr ""
+
+#: rc.cpp:285
+#, no-c-format
+msgid "Samba home drive"
+msgstr ""
+
+#: rc.cpp:287
+#, no-c-format
+msgid ""
+"Specifies a drive letter where the user's home directory will automatically "
+"mapped when he/she logs into a Windows machine."
+msgstr ""
+
+#: rc.cpp:289
+#, no-c-format
+msgid "Samba profile path template"
+msgstr ""
+
+#: rc.cpp:291
+#, no-c-format
+msgid ""
+"This specifies the location of the roaming profile of the user. The '%U' "
+"macro will be replaced with the actual user name."
+msgstr ""
+
+#: rc.cpp:293
+#, no-c-format
+msgid "Samba home path template"
+msgstr ""
+
+#: rc.cpp:295
+#, no-c-format
+msgid ""
+"This specifies the location of the home directory of the user. This field is "
+"meaningful only for Windows machines. The '%U' macro will be replaced with "
+"the actual user name."
+msgstr ""
+
+#: selectconn.cpp:38
+msgid "Connection Selection"
+msgstr ""
+
+#: selectconn.cpp:42
+msgid "&New..."
+msgstr ""
+
+#: selectconn.cpp:48
+msgid "Defined connections:"
+msgstr ""
+
+#: selectconn.cpp:81
+msgid "Please type the name of the new connection:"
+msgstr ""
+
+#: selectconn.cpp:84
+#, fuzzy
+msgid "A connection with this name already exists."
+msgstr "Korisničko ime %1 već postoji."
+
+#: selectconn.cpp:122
+#, fuzzy
+msgid "Do you really want to delete the connection '%1'?"
+msgstr "Da li zaista želite ukloniti grupu '%1'?"
+
+#: selectconn.cpp:123
+msgid "Delete Connection"
+msgstr ""
+
+#~ msgid "Use private group"
+#~ msgstr "Koristi privatnu grupu"
+
+#~ msgid "User"
+#~ msgstr "Korisnik"
+
+#~ msgid "Sources"
+#~ msgstr "Izvori"
+
+#~ msgid "Select the users that should be in this group."
+#~ msgstr "Izaberite korisnike koji bi trebali biti u grupi."
+
+#~ msgid "Add Group"
+#~ msgstr "Dodaj grupu"
+
+#~ msgid "No shadow entry for %1."
+#~ msgstr "Nema shadow zapisa za %1."
+
+#~ msgid ""
+#~ "Cannot change permissions on %1 folder\n"
+#~ "Error: %2"
+#~ msgstr ""
+#~ "Ne mogu promijeniti dozvole na direktoriju %1\n"
+#~ "Greška: %2"
+
+#~ msgid "Cannot fork()"
+#~ msgstr "Ne mogu fork()"
+
+#~ msgid "Only root is allowed to manage users."
+#~ msgstr "Samo root može upravljati korisnicima."
+
+#~ msgid "Enter user name:"
+#~ msgstr "Unesite korisničko ime:"
+
+#~ msgid "Would you like to save your changes?"
+#~ msgstr "Da li želite sačuvati izmjene?"
+
+#~ msgid "Data Was Modified"
+#~ msgstr "Podaci su izmijenjeni"
+
+#~ msgid "Edit Defaults"
+#~ msgstr "Promijeni uobičajeno"
+
+#~ msgid "Local passwd source:"
+#~ msgstr "Lokalni izvor šifara:"
+
+#~ msgid "Local group source:"
+#~ msgstr "Lokalni izvor grupa:"
+
+#~ msgid "Enable NIS support"
+#~ msgstr "Uključi NIS podršku"
+
+#~ msgid "This is the Sources Help text"
+#~ msgstr "Ovo je tekst pomoći za Izvore"
+
+#~ msgid "&Issue expire warning"
+#~ msgstr "&Pošalji upozorenje o isteku"
+
+#~ msgid "before password expires."
+#~ msgstr "prije nego šifra istekne."
+
+#~ msgid "Quota"
+#~ msgstr "Kvota"
+
+#~ msgid "&Filesystem with quotas:"
+#~ msgstr "&Filesistem sa kvotama:"
+
+#~ msgid "Disk Space"
+#~ msgstr "Disk prostor"
+
+#~ msgid "Disk space &soft quota:"
+#~ msgstr "&Soft kvota disk prostora:"
+
+#~ msgid "Disk space &hard quota:"
+#~ msgstr "&Hard kvota disk prostora:"
+
+#~ msgid "Disk space in &use:"
+#~ msgstr "&Iskorišteni disk prostor:"
+
+#~ msgid "&Grace period:"
+#~ msgstr "&Grace period:"
+
+#~ msgid "Number of Files"
+#~ msgstr "Broj datoteka"
+
+#~ msgid "File &number soft quota:"
+#~ msgstr "Soft kvota &broja datoteka:"
+
+#~ msgid "File num&ber hard quota:"
+#~ msgstr "Hard kvota b&roja datoteka:"
+
+#~ msgid "Numbe&r of files in use:"
+#~ msgstr "Iskorišten br&oj datoteka:"
+
+#~ msgid "Grac&e period:"
+#~ msgstr "Grac&e period:"
+
+#~ msgid "Groups User '%1' Belongs To"
+#~ msgstr "Grupe kojim pripada korisnik '%1'"
+
+#~ msgid "Account will expire after:"
+#~ msgstr "Račun će isteći nakon:"
+
+#~ msgid "Base of home folders:"
+#~ msgstr "Baza home direktorija:"

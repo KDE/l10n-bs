@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
-"POT-Creation-Date: 2004-01-11 01:36+0100\n"
+"POT-Creation-Date: 2004-07-25 01:16+0200\n"
 "PO-Revision-Date: 2004-06-18 21:48+0200\n"
 "Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -16,67 +16,145 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3\n"
 
-#: app/kateviewspace.cpp:283
-msgid " Line: 1 Col: 0 "
-msgstr " Lin: 1 Kol: 0 "
+#: app/kateexternaltools.cpp:268
+msgid "Edit External Tool"
+msgstr ""
 
-#: app/kateviewspace.cpp:293 app/kateviewspace.cpp:332
+#: app/kateexternaltools.cpp:282
+#, fuzzy
+msgid "&Name:"
+msgstr "Ime"
+
+#: app/kateexternaltools.cpp:287
+msgid "The name will be displayed in the 'Tools->External' menu"
+msgstr ""
+
+#: app/kateexternaltools.cpp:291
+#, fuzzy
+msgid "Co&mmand:"
+msgstr "Komentar"
+
+#: app/kateexternaltools.cpp:296
+msgid ""
+"<p>The command to execute to invoke the tool. The following macros will be "
+"expanded:</p>"
+"<ul>"
+"<li><code>%URL</code> - the URL of the current "
+"document."
+"<li><code>%URLs</code> - a list of the URLs of all open "
+"documents."
+"<li><code>%directory</code> - the URL of the directory containing the "
+"current document."
+"<li><code>filename</code> - the filename of the current "
+"document."
+"<li><code>%line</code> - the current line of the text cursor in the current "
+"view."
+"<li><code>%column</code> - the column of the text cursor in the current "
+"view."
+"<li><code>%selection</code> - the selected text in the current "
+"view.<li><code>%text</code> - the text of the current document.</ul>"
+msgstr ""
+
+#: app/kateexternaltools.cpp:319
+msgid "&Executable:"
+msgstr ""
+
+#: app/kateexternaltools.cpp:324
+msgid ""
+"The executable used by the command. This is used to check if a tool should "
+"be displayed; if not set, the first word of <em>command</em> will be used."
+msgstr ""
+
+#: app/kateexternaltools.cpp:330
+msgid "&Mime types:"
+msgstr ""
+
+#: app/kateexternaltools.cpp:335
+msgid ""
+"A semicolon-separated list of mime types for which this tool should be "
+"available; if this is left empty, the tool is always available.To choose "
+"from known mimetypes, press the button on the right."
+msgstr ""
+
+#: app/kateexternaltools.cpp:345
+msgid "You must specify at least a name and a command"
+msgstr ""
+
+#: app/kateexternaltools.cpp:363
+#, fuzzy
+msgid "&New..."
+msgstr "&Novi projekat..."
+
+#: app/kateexternaltools.cpp:371
+#, fuzzy
+msgid "&Edit..."
+msgstr "Pošal&ji..."
+
+#: app/kateexternaltools.cpp:375
+msgid "Insert &Separator"
+msgstr ""
+
+#: app/kateexternaltools.cpp:395
+msgid "This list shows all the configured tools, represented by their menu text."
+msgstr ""
+
+#: app/kateviewspace.cpp:315 app/kateviewspace.cpp:354
 msgid " INS "
 msgstr " INS "
 
-#: app/kateviewspace.cpp:298 app/kateviewspace.cpp:336
+#: app/kateviewspace.cpp:320 app/kateviewspace.cpp:358
 msgid " NORM "
 msgstr " NORM "
 
-#: app/kateviewspace.cpp:324
+#: app/kateviewspace.cpp:346
 msgid " Line: %1 Col: %2 "
 msgstr " Lin: %1 Kol: %2 "
 
-#: app/kateviewspace.cpp:328
+#: app/kateviewspace.cpp:350
 msgid " R/O "
 msgstr " R/O "
 
-#: app/kateviewspace.cpp:330
+#: app/kateviewspace.cpp:352
 msgid " OVR "
 msgstr " OVR "
 
-#: app/kateviewspace.cpp:336
+#: app/kateviewspace.cpp:358
 msgid " BLK "
 msgstr " BLK "
 
-#: app/katemainwindow.cpp:195
+#: app/katemainwindow.cpp:206
 msgid "Projects"
 msgstr "Projekti"
 
-#: app/katemainwindow.cpp:204
+#: app/katemainwindow.cpp:215
 msgid "Selector"
 msgstr "Izbornik"
 
-#: app/kategrepdialog.cpp:73 app/katemainwindow.cpp:207
+#: app/kategrepdialog.cpp:73 app/katemainwindow.cpp:218
 msgid "Find in Files"
 msgstr "Pronađi u datotekama"
 
-#: app/katemainwindow.cpp:212
+#: app/katemainwindow.cpp:223
 msgid "Terminal"
 msgstr "Terminal"
 
-#: app/katemainwindow.cpp:223
+#: app/katemainwindow.cpp:234
 msgid "KDE Scri&pts"
 msgstr "KDE Skri&pte"
 
-#: app/katemainwindow.cpp:224
+#: app/katemainwindow.cpp:235
 msgid "This shows all available scripts and allows them to be executed."
 msgstr "Ovo pokazuje sve dostupne skripte i omogućuje njihovo izvršenje."
 
-#: app/katemainwindow.cpp:228
+#: app/katemainwindow.cpp:239
 msgid "Create a new document"
 msgstr "Napravi novi dokument"
 
-#: app/katemainwindow.cpp:229
+#: app/katemainwindow.cpp:240
 msgid "Open an existing document for editing"
 msgstr "Otvori postojeći dokument za editovanje"
 
-#: app/katemainwindow.cpp:232 app/kwritemain.cpp:150
+#: app/katemainwindow.cpp:243 app/kwritemain.cpp:150
 msgid ""
 "This lists files which you have opened recently, and allows you to easily "
 "open them again."
@@ -84,83 +162,92 @@ msgstr ""
 "Ovo izlistava datoteke koje su nedavno otvorene i omogućuje vam da ih lako "
 "ponovo otvorite."
 
-#: app/katemainwindow.cpp:234
+#: app/katemainwindow.cpp:245
 msgid "Save A&ll"
 msgstr "Snimi sv&e"
 
-#: app/katemainwindow.cpp:235
+#: app/katemainwindow.cpp:246
 msgid "Save all open, modified documents to disc."
 msgstr "Snimi sve otvorene i izmjenjene dokumente na disk."
 
-#: app/katemainwindow.cpp:237
+#: app/katemainwindow.cpp:248
 msgid "Close the current document."
 msgstr "Zatvori trenutni dokument."
 
-#: app/katemainwindow.cpp:239
+#: app/katemainwindow.cpp:250
 msgid "Clos&e All"
 msgstr "Za&tvori sve"
 
-#: app/katemainwindow.cpp:240
+#: app/katemainwindow.cpp:251
 msgid "Close all open documents."
 msgstr "Zatvori sve otvorene dokumente."
 
-#: app/katemainwindow.cpp:242
+#: app/katemainwindow.cpp:253
 msgid "Send one or more of the open documents as email attachments."
 msgstr "Pošalji jedan ili više otvorenih dokumenata kao email dodatke."
 
-#: app/katemainwindow.cpp:244
+#: app/katemainwindow.cpp:255
 msgid "Close this window"
 msgstr "Zatvori ovaj prozor"
 
-#: app/katemainwindow.cpp:247
+#: app/katemainwindow.cpp:258
 msgid "Create a new Kate view (a new window with the same document list)."
 msgstr "Napravi novi Kate pogled (novi prozor sa istom listom dokumenata)."
 
-#: app/katemainwindow.cpp:249
+#: app/katemainwindow.cpp:260
 msgid "Split &Vertical"
 msgstr "Podijeli &vertikalno"
 
-#: app/katemainwindow.cpp:250
+#: app/katemainwindow.cpp:261
 msgid "Split the currently active view vertically into two views."
 msgstr "Razdvoji trenutno aktivni pogled vertikalno na dva pogleda."
 
-#: app/katemainwindow.cpp:252
+#: app/katemainwindow.cpp:263
 msgid "Split &Horizontal"
 msgstr "Podijeli v&odoravno"
 
-#: app/katemainwindow.cpp:253
+#: app/katemainwindow.cpp:264
 msgid "Split the currently active view horizontally into two views."
 msgstr "Razdvoji trenutno aktivni pogled vodoravno na dva pogleda."
 
-#: app/katemainwindow.cpp:255
+#: app/katemainwindow.cpp:266
 msgid "Close &Current View"
 msgstr "Zatvori &trenutni pogled"
 
-#: app/katemainwindow.cpp:256
+#: app/katemainwindow.cpp:267
 msgid "Close the currently active splitted view"
 msgstr "Zatvori trenutno aktivni podjeljeni pogled"
 
-#: app/katemainwindow.cpp:261
+#: app/kateconfigdialog.cpp:278 app/kateconfigdialog.cpp:279
+#: app/katemainwindow.cpp:269 app/katemainwindow.cpp:547
+msgid "External Tools"
+msgstr ""
+
+#: app/katemainwindow.cpp:270
+msgid "Launch external helper applications"
+msgstr ""
+
+#: app/katemainwindow.cpp:275
 msgid "Next View"
 msgstr "Novi pogled"
 
-#: app/katemainwindow.cpp:262
+#: app/katemainwindow.cpp:276
 msgid "Make the next split view the active one."
 msgstr "Učini sljedeći podjeljeni pogled aktivnim."
 
-#: app/katemainwindow.cpp:264
+#: app/katemainwindow.cpp:278
 msgid "Previous View"
 msgstr "Prethodni pogled"
 
-#: app/katemainwindow.cpp:265
+#: app/katemainwindow.cpp:279
 msgid "Make the previous split view the active one."
 msgstr "Učini prethodni podjeljeni pogled aktivnim."
 
-#: app/katemainwindow.cpp:270
+#: app/katemainwindow.cpp:284
 msgid "Open W&ith"
 msgstr "O&tvori sa"
 
-#: app/katemainwindow.cpp:271
+#: app/katemainwindow.cpp:285
 msgid ""
 "Open the current document using another application registered for its file "
 "type, or an application of your choice."
@@ -168,51 +255,55 @@ msgstr ""
 "Otvori trenutni dokument koristeći neku drugu aplikaciju koja je "
 "registrovana za taj tip datoteka, ili neku aplikaciju po vlastitom izboru."
 
-#: app/katemainwindow.cpp:276 app/kwritemain.cpp:172
+#: app/katemainwindow.cpp:290 app/kwritemain.cpp:173
 msgid "Configure the application's keyboard shortcut assignments."
 msgstr "Podesi prečice tastature za ovaj program."
 
-#: app/katemainwindow.cpp:279 app/kwritemain.cpp:175
+#: app/katemainwindow.cpp:293 app/kwritemain.cpp:176
 msgid "Configure which items should appear in the toolbar(s)."
 msgstr "Podesi koje stavke trebaju biti u traci s alatima."
 
-#: app/katemainwindow.cpp:283
+#: app/katemainwindow.cpp:297
 msgid "&New Project..."
 msgstr "&Novi projekat..."
 
-#: app/katemainwindow.cpp:284
+#: app/katemainwindow.cpp:298
 msgid "&Open Project..."
 msgstr "&Otvori projekat..."
 
-#: app/katemainwindow.cpp:285
+#: app/katemainwindow.cpp:299
 msgid "&Save Project"
 msgstr "&Snimi projekat"
 
-#: app/katemainwindow.cpp:286
+#: app/katemainwindow.cpp:300
 msgid "&Close Project"
 msgstr "&Zatvori projekat"
 
-#: app/katemainwindow.cpp:291
+#: app/katemainwindow.cpp:305
 msgid "Configure various aspects of this application and the editing component."
 msgstr "Podesi razne aspekte ove aplikacije i komponente za editovanje."
 
-#: app/katemainwindow.cpp:294
+#: app/katemainwindow.cpp:309
+msgid "&Pipe to Console"
+msgstr ""
+
+#: app/katemainwindow.cpp:312
 msgid "This shows useful tips on the use of this application."
 msgstr "Ovo pokazuje korisne savjete za upotrebu ove aplikacije."
 
-#: app/katemainwindow.cpp:298
+#: app/katemainwindow.cpp:316
 msgid "Contents &Plugins"
 msgstr "Pomoć za &dodatke"
 
-#: app/katemainwindow.cpp:299
+#: app/katemainwindow.cpp:317
 msgid "This shows help files for various available plugins."
 msgstr "Ovo pokazuje pomoć za razne dostupne dodatke."
 
-#: app/katemainwindow.cpp:619 app/katemainwindow.cpp:627
+#: app/katemainwindow.cpp:640 app/katemainwindow.cpp:648
 msgid "&Other..."
 msgstr "&Ostalo..."
 
-#: app/katemainwindow.cpp:683
+#: app/katemainwindow.cpp:704
 msgid ""
 "<p>The current document has not been saved, and cannot be attached to an "
 "email message.<p>Do you want to save it and proceed?"
@@ -220,36 +311,37 @@ msgstr ""
 "<p>Trenutni dokument nije snimljen i ne može biti zakačen na email "
 "poruku.<p>Želite li ga snimiti i nastaviti?"
 
-#: app/katemainwindow.cpp:686
+#: app/katemainwindow.cpp:707
 msgid "Cannot Send Unsaved File"
 msgstr "Ne mogu poslati datoteku koja nije snimljena"
 
-#: app/katemainwindow.cpp:694 app/katemainwindow.cpp:715
+#: app/katemainwindow.cpp:715 app/katemainwindow.cpp:736
 msgid "The file could not be saved. Please check if you have write permission."
 msgstr ""
 "Ovu datoteku nije bilo moguće snimiti. Molim provjerite da li imate ovlasti "
 "za pisanje."
 
-#: app/katemainwindow.cpp:705
+#: app/katemainwindow.cpp:726
 msgid ""
 "<p>The current file:"
 "<br><strong>%1</strong>"
 "<br>has been modified. Modifications will not be available in the "
 "attachment.<p>Do you want to save it before sending it?"
 msgstr ""
-"<p>Trenutna datoteka: <br><strong>%1</strong> "
-"<br>je izmijenjena. Izmjene neće biti vidljive u emailu.<p>Želite "
-"li je snimiti prije slanja?"
+"<p>Trenutna datoteka: "
+"<br><strong>%1</strong> "
+"<br>je izmijenjena. Izmjene neće biti vidljive u emailu."
+"<p>Želite li je snimiti prije slanja?"
 
-#: app/katemainwindow.cpp:708
+#: app/katemainwindow.cpp:729
 msgid "Save Before Sending?"
 msgstr "Snimi prije slanja?"
 
-#: app/katemainwindow.cpp:809 app/kateprojectmanager.cpp:309
+#: app/katemainwindow.cpp:861 app/kateprojectmanager.cpp:314
 msgid "Kate Project Files"
 msgstr "Kate projektne datoteke"
 
-#: app/katemainwindow.cpp:809
+#: app/katemainwindow.cpp:861
 msgid "Open Kate Project"
 msgstr "Otvori Kate projekat"
 
@@ -294,33 +386,33 @@ msgstr ""
 "Pritisnite <strong>Pošalji...</strong> da pošaljete mailom izabrane "
 "dokumente"
 
-#: app/kateconfigdialog.cpp:92 app/kateconfigdialog.cpp:98
-#: app/kateconfigdialog.cpp:234 app/kateconfigdialog.cpp:243
-#: app/kateconfigdialog.cpp:290
+#: app/kateconfigdialog.cpp:93 app/kateconfigdialog.cpp:99
+#: app/kateconfigdialog.cpp:261 app/kateconfigdialog.cpp:270
+#: app/kateconfigdialog.cpp:278 app/kateconfigdialog.cpp:325
 msgid "Application"
 msgstr "Aplikacije"
 
-#: app/kateconfigdialog.cpp:98
+#: app/kateconfigdialog.cpp:99
 msgid "General"
 msgstr "Općenito"
 
-#: app/kateconfigdialog.cpp:99
+#: app/kateconfigdialog.cpp:100
 msgid "General Options"
 msgstr "Općenite postavke"
 
-#: app/kateconfigdialog.cpp:106
+#: app/kateconfigdialog.cpp:107
 msgid "Startup"
 msgstr "Pri pokretanju"
 
-#: app/kateconfigdialog.cpp:111
+#: app/kateconfigdialog.cpp:112
 msgid "Reopen &projects at startup"
 msgstr "Ponovo otvori &projekat pri startanju"
 
-#: app/kateconfigdialog.cpp:119
+#: app/kateconfigdialog.cpp:120
 msgid "Reopen &files at startup"
 msgstr "Ponovo otvori &datoteke"
 
-#: app/kateconfigdialog.cpp:123
+#: app/kateconfigdialog.cpp:124
 msgid ""
 "If this is enabled Kate will attempt to reopen files that were open when you "
 "closed last time. Cursor position will be recovered if possible. "
@@ -331,11 +423,11 @@ msgstr ""
 "postavljen gdje je bio, ako je to moguće. Datoteke kojih više nema neće "
 "biti otvorene."
 
-#: app/kateconfigdialog.cpp:131
+#: app/kateconfigdialog.cpp:132
 msgid "Restore &window configuration"
 msgstr "Obnovi posta&vke prozora"
 
-#: app/kateconfigdialog.cpp:134
+#: app/kateconfigdialog.cpp:135
 msgid ""
 "Check this if you want all your views and frames restored each time you open "
 "Kate"
@@ -343,31 +435,31 @@ msgstr ""
 "Odaberite ovo ako želite da vaši pogledi i okvirovi budu vraćeni svaki "
 "sljedeći put kada pokrenete Kate"
 
-#: app/kateconfigdialog.cpp:142
+#: app/kateconfigdialog.cpp:143
 msgid "Default GUI mode for new windows:"
 msgstr "Podrazumijevani GUI režim za nove prozore:"
 
-#: app/kateconfigdialog.cpp:146
+#: app/kateconfigdialog.cpp:147
 msgid "Toplevel Mode"
 msgstr "Režim najvišeg nivoa"
 
-#: app/kateconfigdialog.cpp:146
+#: app/kateconfigdialog.cpp:147
 msgid "Childframe Mode"
 msgstr "Režim okvira-djeteta"
 
-#: app/kateconfigdialog.cpp:146 app/kateconfigdialog.cpp:149
+#: app/kateconfigdialog.cpp:147 app/kateconfigdialog.cpp:150
 msgid "Tab Page Mode"
 msgstr "Režim kartica"
 
-#: app/kateconfigdialog.cpp:146 app/kateconfigdialog.cpp:149
+#: app/kateconfigdialog.cpp:147 app/kateconfigdialog.cpp:150
 msgid "IDEAL Mode"
 msgstr "IDEAL režim"
 
-#: app/kateconfigdialog.cpp:166
+#: app/kateconfigdialog.cpp:167
 msgid "Show full &path in title"
 msgstr "Pokaži &punu putanju u naslovu"
 
-#: app/kateconfigdialog.cpp:168
+#: app/kateconfigdialog.cpp:169
 msgid ""
 "If this option is checked, the full document path will be shown in the "
 "window caption."
@@ -375,25 +467,26 @@ msgstr ""
 "Ako je ova opcija uključena, u naslovu prozora će biti prikazan puni put "
 "dokumenta."
 
-#: app/kateconfigdialog.cpp:173
-msgid "Sort &files alphabetically in the file list."
+#: app/kateconfigdialog.cpp:174
+#, fuzzy
+msgid "Sort &files alphabetically in the file list"
 msgstr "Sortiraj &datoetke abecedno."
 
-#: app/kateconfigdialog.cpp:176
+#: app/kateconfigdialog.cpp:177
 msgid "If this is checked, the files in the file list will be sorted alphabetically."
 msgstr ""
 "Ako je ova opcija uključena, datoteke na listi će biti sortirane po "
 "abecedi."
 
-#: app/kateconfigdialog.cpp:180
+#: app/kateconfigdialog.cpp:181
 msgid "Behavior"
 msgstr "Ponašanje"
 
-#: app/kateconfigdialog.cpp:185
+#: app/kateconfigdialog.cpp:186
 msgid "&Number of recent files:"
 msgstr "&Broj skorašnjih datoteka:"
 
-#: app/kateconfigdialog.cpp:190
+#: app/kateconfigdialog.cpp:191
 msgid ""
 "<qt>Sets the number of recent files remembered by Kate."
 "<p><strong>NOTE: </strong>If you set this lower than the current value, the "
@@ -405,11 +498,11 @@ msgstr ""
 "trenutne, lista će biti skraćena i neke njene stavke će biti "
 "zaboravljene.</qt>"
 
-#: app/kateconfigdialog.cpp:199
+#: app/kateconfigdialog.cpp:200
 msgid "Allow Kate to use more than one UN&IX process"
 msgstr "Omogući Kate da koristi više UN&IX procesa"
 
-#: app/kateconfigdialog.cpp:203
+#: app/kateconfigdialog.cpp:204
 msgid ""
 "If this is unchecked, Kate will only use one UNIX process. If you try "
 "running it again, the current process will get the focus, and open any files "
@@ -421,11 +514,11 @@ msgstr ""
 "eventualno otvoriti datoteke koje ste tražili. Ako je uključeno, svaki put "
 "kada pokrenete Kate biće pokrenut novi UNIX proces."
 
-#: app/kateconfigdialog.cpp:210
+#: app/kateconfigdialog.cpp:211
 msgid "Sync &terminal emulator with active document"
 msgstr "Uskladi simulator &terminala sa aktivnim dokumentom"
 
-#: app/kateconfigdialog.cpp:213
+#: app/kateconfigdialog.cpp:214
 msgid ""
 "If this is checked, the built in Konsole will <code>cd</code> to the "
 "directory of the active document when started and whenever the active "
@@ -435,11 +528,11 @@ msgstr ""
 "direktorij u kojem se nalazi aktivni dokument prilikom pokretanja i svake "
 "izmjene aktivnog dokumenta, pod uslovom da je dokument lokalna datoteka."
 
-#: app/kateconfigdialog.cpp:220
+#: app/kateconfigdialog.cpp:221
 msgid "Wa&rn about files modified by foreign processes"
 msgstr "Upo&zori na datoteke koje su izmijenili strani procesi"
 
-#: app/kateconfigdialog.cpp:223
+#: app/kateconfigdialog.cpp:224
 msgid ""
 "If enabled, a passive popup message will be displayed whenever a local file "
 "is modified, created or deleted by another process."
@@ -447,23 +540,50 @@ msgstr ""
 "Ako je uključena ova opcija, pasivna pop-up poruka će biti prikazana svaki "
 "put kada neki drugi proces izmijeni, napravi ili obriše lokalnu datoteku."
 
-#: app/kateconfigdialog.cpp:234
+#: app/kateconfigdialog.cpp:230
+msgid "Meta-Information"
+msgstr ""
+
+#: app/kateconfigdialog.cpp:235
+msgid "Keep &meta-information past sessions"
+msgstr ""
+
+#: app/kateconfigdialog.cpp:238
+msgid ""
+"Check this if you want document configuration like for example bookmarks to "
+"be saved past editor sessions. The configuration will be restored if the "
+"document has not changed when reopened."
+msgstr ""
+
+#: app/kateconfigdialog.cpp:246
+msgid "&Delete unused meta-information after:"
+msgstr ""
+
+#: app/kateconfigdialog.cpp:248
+msgid "(never)"
+msgstr ""
+
+#: app/kateconfigdialog.cpp:249
+msgid " day(s)"
+msgstr ""
+
+#: app/kateconfigdialog.cpp:261
 msgid "File Selector"
 msgstr "Izbornik datoteka"
 
-#: app/kateconfigdialog.cpp:236
+#: app/kateconfigdialog.cpp:263
 msgid "File Selector Settings"
 msgstr "Postavke izbornika datoteka"
 
-#: app/kateconfigdialog.cpp:243 app/kateconfigdialog.cpp:290
+#: app/kateconfigdialog.cpp:270 app/kateconfigdialog.cpp:325
 msgid "Plugins"
 msgstr "Dodaci"
 
-#: app/kateconfigdialog.cpp:244
+#: app/kateconfigdialog.cpp:271
 msgid "Plugin Manager"
 msgstr "Menadžer dodataka"
 
-#: app/kateconfigdialog.cpp:251 app/kateconfigdialog.cpp:257
+#: app/kateconfigdialog.cpp:286 app/kateconfigdialog.cpp:292
 msgid "Editor"
 msgstr "Editor"
 
@@ -471,37 +591,48 @@ msgstr "Editor"
 msgid "Pattern:"
 msgstr "Uzorak:"
 
-#: app/kategrepdialog.cpp:106
+#: app/kategrepdialog.cpp:108
+msgid "Case sensitive"
+msgstr ""
+
+#: app/kategrepdialog.cpp:113
+msgid "Regular expression"
+msgstr ""
+
+#: app/kategrepdialog.cpp:119
 msgid "Template:"
 msgstr "Šablon:"
 
-#: app/kategrepdialog.cpp:125
+#: app/kategrepdialog.cpp:138
 msgid "Files:"
 msgstr "Datoteke:"
 
-#: app/kategrepdialog.cpp:138
+#: app/kategrepdialog.cpp:151
 msgid "Directory:"
 msgstr "Direktorij:"
 
-#: app/kategrepdialog.cpp:152
+#: app/kategrepdialog.cpp:167
 msgid "Recursive"
 msgstr "Rekurzivno"
 
-#: app/kategrepdialog.cpp:161 app/kategrepdialog.cpp:396
-msgid "Search"
-msgstr "Traži"
+#: app/kategrepdialog.cpp:175 app/kategrepdialog.cpp:430
+#, fuzzy
+msgid "Find"
+msgstr "T&raži:"
 
-#: app/kategrepdialog.cpp:176
+#: app/kategrepdialog.cpp:190
+#, fuzzy
 msgid ""
-"Enter the regular expression you want to search for here."
-"<br>Possible meta characters are:"
+"<p>Enter the expression you want to search for here."
+"<p>If 'regular expression' is unchecked, any non-space letters in your "
+"expression will be escaped with a backslash character."
+"<p>Possible meta characters are:"
 "<br><b>.</b> - Matches any character"
 "<br><b>^</b> - Matches the beginning of a line"
 "<br><b>$</b> - Matches the end of a line"
-"<br><b>\\\\\\&lt;</b> - Matches the beginning of a word"
-"<br><b>\\\\\\&gt;</b> - Matches the end of a word"
-"<br>"
-"<br>The following repetition operators exist:"
+"<br><b>\\&lt;</b> - Matches the beginning of a word"
+"<br><b>\\&gt;</b> - Matches the end of a word"
+"<p>The following repetition operators exist:"
 "<br><b>?</b> - The preceding item is matched at most once"
 "<br><b>*</b> - The preceding item is matched zero or more times"
 "<br><b>+</b> - The preceding item is matched one or more "
@@ -513,11 +644,11 @@ msgid ""
 "<br><b>{,<i>n</i>}</b> - The preceding item is matched at most <i>n</i> "
 "times"
 "<br><b>{<i>n</i>,<i>m</i>}</b> - The preceding item is matched at least "
-"<i>n</i>,"
-"<br>   but at most <i>m</i> times."
-"<br>"
-"<br>Furthermore, backreferences to bracketed subexpressions are"
-"<br>available via the notation \\\\<i>n</i>."
+"<i>n</i>, but at most <i>m</i> times."
+"<p>"
+"Furthermore, backreferences to bracketed subexpressions are available via "
+"the notation <code>\\#</code>."
+"<p>See the grep(1) documentation for the full documentation."
 msgstr ""
 "Ovdje možete unijeti regularni izraz koji želite tražiti."
 "<br>Mogući meta znakovi su:"
@@ -546,15 +677,16 @@ msgstr ""
 "<br>Pored ovoga, možete se referencirati na dijelove izraza zatvorene u "
 "zagrade <br>koristeći notaciju \\\\<i>n</i>."
 
-#: app/kategrepdialog.cpp:198
+#: app/kategrepdialog.cpp:213
+#, fuzzy
 msgid ""
 "Enter the file name pattern of the files to search here.\n"
-"You may give several patterns separated by commas"
+"You may give several patterns separated by commas."
 msgstr ""
 "Unesite uzorak imena datoteka koje želite ovdje tražiti.\n"
 "Možete dati više uzoraka razdvojenih zarezima."
 
-#: app/kategrepdialog.cpp:201
+#: app/kategrepdialog.cpp:216
 #, c-format
 msgid ""
 "You can choose a template for the pattern from the combo box\n"
@@ -567,15 +699,30 @@ msgstr ""
 "uzorkom koji unesete, što skupa čini regularni izraz\n"
 "za pretragu."
 
-#: app/kategrepdialog.cpp:206
+#: app/kategrepdialog.cpp:221
 msgid "Enter the directory which contains the files you want to search in."
 msgstr "Unesite direktorij koji sadrži datoteke koje želite pretražiti."
 
-#: app/kategrepdialog.cpp:208
+#: app/kategrepdialog.cpp:223
 msgid "Check this box to search in all subdirectories."
 msgstr "Označite ovu polje za traženje u svim poddirektorijima."
 
-#: app/kategrepdialog.cpp:210
+#: app/kategrepdialog.cpp:225
+#, fuzzy
+msgid "If this option is enabled (the default), the search will be case sensitive."
+msgstr ""
+"Ako je ova opcija uključena, u naslovu prozora će biti prikazan puni put "
+"dokumenta."
+
+#: app/kategrepdialog.cpp:227
+msgid ""
+"<p>If this is enabled, your pattern will be passed unmodified to "
+"<em>grep(1)</em>. Otherwise, all characters that are not letters will be "
+"escaped using a backslash character to prevent grep from interpreting them "
+"as part of the expression."
+msgstr ""
+
+#: app/kategrepdialog.cpp:232
 msgid ""
 "The results of the grep run are listed here. Select a\n"
 "filename/line number combination and press Enter or doubleclick\n"
@@ -585,12 +732,13 @@ msgstr ""
 "datotekabroj linije i pritisnite Enter ili dvokliknite na stavku kako bi se "
 "prikazala odgovarajuća linija u editoru."
 
-#: app/kategrepdialog.cpp:400
+#: app/kategrepdialog.cpp:434
 msgid "<strong>Error:</strong><p>"
 msgstr "<strong>Greška:</strong><p>"
 
-#: app/kategrepdialog.cpp:400
-msgid "Grep tool error"
+#: app/kategrepdialog.cpp:434
+#, fuzzy
+msgid "Grep Tool Error"
 msgstr "Greška u grep alatu"
 
 #: app/katemain.cpp:32
@@ -629,142 +777,136 @@ msgstr "Kate"
 msgid "Kate - Advanced Text Editor"
 msgstr "Kate - Napredni editor teksta"
 
-#: app/katemain.cpp:47 app/kwritemain.cpp:544
-msgid "(c) 2000-2003 The Kate Authors"
+#: app/katemain.cpp:47 app/kwritemain.cpp:545
+#, fuzzy
+msgid "(c) 2000-2004 The Kate Authors"
 msgstr "(c) 2000-2003 Autori programa Kate"
 
-#: app/katemain.cpp:49 app/kwritemain.cpp:546
+#: app/katemain.cpp:49 app/kwritemain.cpp:547
 msgid "Maintainer"
 msgstr "Održava"
 
 #: app/katemain.cpp:50 app/katemain.cpp:51 app/katemain.cpp:52
-#: app/katemain.cpp:57 app/kwritemain.cpp:547 app/kwritemain.cpp:548
-#: app/kwritemain.cpp:549 app/kwritemain.cpp:554
+#: app/katemain.cpp:57 app/kwritemain.cpp:548 app/kwritemain.cpp:549
+#: app/kwritemain.cpp:550 app/kwritemain.cpp:555
 msgid "Core Developer"
 msgstr "Glavni programer"
 
-#: app/katemain.cpp:53 app/kwritemain.cpp:550
+#: app/katemain.cpp:53 app/kwritemain.cpp:551
 msgid "The cool buffersystem"
 msgstr "Cool sistem spremnika"
 
-#: app/katemain.cpp:54 app/kwritemain.cpp:551
+#: app/katemain.cpp:54 app/kwritemain.cpp:552
 msgid "The Editing Commands"
 msgstr "Naredbe za editovanje"
 
-#: app/katemain.cpp:55 app/kwritemain.cpp:552
+#: app/katemain.cpp:55 app/kwritemain.cpp:553
 msgid "Testing, ..."
 msgstr "Testiranje, ..."
 
-#: app/katemain.cpp:56 app/kwritemain.cpp:553
+#: app/katemain.cpp:56 app/kwritemain.cpp:554
 msgid "Former Core Developer"
 msgstr "Bivši glavni programer"
 
-#: app/katemain.cpp:58 app/kwritemain.cpp:555
+#: app/katemain.cpp:58 app/kwritemain.cpp:556
 msgid "KWrite Author"
 msgstr "KWrite autor"
 
-#: app/katemain.cpp:59 app/kwritemain.cpp:556
+#: app/katemain.cpp:59 app/kwritemain.cpp:557
 msgid "KWrite port to KParts"
 msgstr "KWrite prebacio u KParts"
 
-#: app/katemain.cpp:62 app/kwritemain.cpp:559
+#: app/katemain.cpp:62 app/kwritemain.cpp:560
 msgid "KWrite Undo History, Kspell integration"
 msgstr "KWrite historija vraćanja, integracija sa KSpell-om"
 
-#: app/katemain.cpp:63 app/kwritemain.cpp:560
+#: app/katemain.cpp:63 app/kwritemain.cpp:561
 msgid "KWrite XML Syntax highlighting support"
 msgstr "KWrite podrška za bojenje XML sintakse"
 
-#: app/katemain.cpp:64 app/kwritemain.cpp:561
+#: app/katemain.cpp:64 app/kwritemain.cpp:562
 msgid "Patches and more"
 msgstr "Zakrpe i ostalo"
 
-#: app/katemain.cpp:66 app/kwritemain.cpp:563
+#: app/katemain.cpp:65
+msgid "Developer & Highlight wizard"
+msgstr ""
+
+#: app/katemain.cpp:67 app/kwritemain.cpp:564
 msgid "Highlighting for RPM Spec-Files, Perl, Diff and more"
 msgstr "Bojenje za RPM spec-datoteke, Perl, Diff i drugo"
 
-#: app/katemain.cpp:67 app/kwritemain.cpp:564
+#: app/katemain.cpp:68 app/kwritemain.cpp:565
 msgid "Highlighting for VHDL"
 msgstr "Bojenje za VHDL"
 
-#: app/katemain.cpp:68 app/kwritemain.cpp:565
+#: app/katemain.cpp:69 app/kwritemain.cpp:566
 msgid "Highlighting for SQL"
 msgstr "Bojenje za SQL"
 
-#: app/katemain.cpp:69 app/kwritemain.cpp:566
+#: app/katemain.cpp:70 app/kwritemain.cpp:567
 msgid "Highlighting for Ferite"
 msgstr "Bojenje za Ferite"
 
-#: app/katemain.cpp:70 app/kwritemain.cpp:567
+#: app/katemain.cpp:71 app/kwritemain.cpp:568
 msgid "Highlighting for ILERPG"
 msgstr "Bojenje za ILERPG"
 
-#: app/katemain.cpp:71 app/kwritemain.cpp:568
+#: app/katemain.cpp:72 app/kwritemain.cpp:569
 msgid "Highlighting for LaTeX"
 msgstr "Bojenje za LaTeX"
 
-#: app/katemain.cpp:72 app/kwritemain.cpp:569
+#: app/katemain.cpp:73 app/kwritemain.cpp:570
 msgid "Highlighting for Makefiles, Python"
 msgstr "Bojenje za Makefile, Python"
 
-#: app/katemain.cpp:73 app/kwritemain.cpp:570
+#: app/katemain.cpp:74 app/kwritemain.cpp:571
 msgid "Highlighting for Python"
 msgstr "Bojenje za Python"
 
-#: app/katemain.cpp:75 app/kwritemain.cpp:572
+#: app/katemain.cpp:76 app/kwritemain.cpp:573
 msgid "Highlighting for Scheme"
 msgstr "Bojenje za Scheme"
 
-#: app/katemain.cpp:76 app/kwritemain.cpp:573
+#: app/katemain.cpp:77 app/kwritemain.cpp:574
 msgid "PHP Keyword/Datatype list"
 msgstr "Popis PHP kjučnih riječi i vrsta podataka"
 
-#: app/katemain.cpp:77 app/katemain.cpp:78 app/kwritemain.cpp:574
-#: app/kwritemain.cpp:575
-msgid "Betatest"
-msgstr "Betatest"
-
-#: app/katemain.cpp:79 app/kwritemain.cpp:576
+#: app/katemain.cpp:78 app/kwritemain.cpp:575
 msgid "Very nice help"
 msgstr "Vrlo lijepa pomoć"
 
-#: app/katemain.cpp:80 app/kwritemain.cpp:577
+#: app/katemain.cpp:79 app/kwritemain.cpp:576
 msgid "All people who have contributed and I have forgotten to mention"
 msgstr "Svi ljudi koji su doprinjeli, a koje sam zaboravio spomenuti"
 
-#: app/katemain.cpp:82 app/kwritemain.cpp:579
+#: app/katemain.cpp:81 app/kwritemain.cpp:578
 msgid ""
 "_: NAME OF TRANSLATORS\n"
 "Your names"
 msgstr "Vedran Ljubović"
 
-#: app/katemain.cpp:82 app/kwritemain.cpp:579
+#: app/katemain.cpp:81 app/kwritemain.cpp:578
 msgid ""
 "_: EMAIL OF TRANSLATORS\n"
 "Your emails"
 msgstr "vljubovic@smartnet.ba"
 
-#: app/kactionselector.cpp:69
-msgid "&Available:"
-msgstr "&Dostupno:"
-
-#: app/kactionselector.cpp:84
-msgid "&Selected:"
-msgstr "&Izabrano:"
-
-#: app/katedocmanager.cpp:273
+#: app/katedocmanager.cpp:311
+#, fuzzy
 msgid ""
 "<p>The document '%1' has been modified, but not saved."
-"<p>Do you want to keep it?"
+"<p>Do you want to save your changes or discard them?"
 msgstr ""
 "<p>Dokument '%1' je izmijenjen, ali niste ga snimili."
 "<p>Želite li ga sačuvati?"
 
-#: app/katedocmanager.cpp:275
-msgid "Unsaved Document"
+#: app/katedocmanager.cpp:313
+#, fuzzy
+msgid "Close Document"
 msgstr "Dokument nije snimljen"
 
-#: app/katedocmanager.cpp:339
+#: app/katedocmanager.cpp:377
 msgid "Reopening files from the last session..."
 msgstr "Ponovno otvaranje datoteka od prethodne sesije..."
 
@@ -772,34 +914,42 @@ msgstr "Ponovno otvaranje datoteka od prethodne sesije..."
 msgid "Add Directories/Files to Project"
 msgstr "Dodaj direktorije/datoteke u projekat"
 
-#: app/katefilelist.cpp:161
+#: app/katefilelist.cpp:173
 msgid "The document<br><code>%1</code><br>was changed on disk by another process."
 msgstr "Strani proces je promijenio dokument <br><code>%1</code><br> na disku."
 
-#: app/katefilelist.cpp:163
+#: app/katefilelist.cpp:175
 msgid "The document<br><code>%1</code><br>was created on disk by another process."
 msgstr "Strani proces je napravio dokument <br><code>%1</code><br> na disku."
 
-#: app/katefilelist.cpp:165
+#: app/katefilelist.cpp:177
 msgid "The document<br><code>%1</code><br>was deleted from disk by another process"
 msgstr "Strani proces je obrisao dokument <br><code>%1</code><br> na disku."
 
-#: app/katefilelist.cpp:249
-msgid "<b>This file was changed (modified) on disc by another program!</b><br />"
+#: app/katefilelist.cpp:261
+#, fuzzy
+msgid "<b>This file was changed (modified) on disc by another program.</b><br />"
 msgstr "<b>Ova datoteka je izmijenjena na disku od strane drugog programa!</b><br />"
 
-#: app/katefilelist.cpp:251
-msgid "<b>This file was changed (created) on disc by another program!</b><br />"
-msgstr "<b>Ova datoteka je izmijenjena (napravljena) na disku od strane drugog programa!</b><br />"
+#: app/katefilelist.cpp:263
+#, fuzzy
+msgid "<b>This file was changed (created) on disc by another program.</b><br />"
+msgstr ""
+"<b>Ova datoteka je izmijenjena (napravljena) na disku od strane drugog "
+"programa!</b><br />"
 
-#: app/katefilelist.cpp:253
-msgid "<b>This file was changed (deleted) on disc by another program!</b><br />"
-msgstr "<b>Ova datoteka je izmijenjena (obrisana) na disku od strane drugog programa!</b><br />"
+#: app/katefilelist.cpp:265
+#, fuzzy
+msgid "<b>This file was changed (deleted) on disc by another program.</b><br />"
+msgstr ""
+"<b>Ova datoteka je izmijenjena (obrisana) na disku od strane drugog "
+"programa!</b><br />"
 
 #: app/kwritemain.cpp:82
+#, fuzzy
 msgid ""
-"A KDE text editor component could not be found!\n"
-"Please check your KDE installation."
+"A KDE text-editor component could not be found;\n"
+"please check your KDE installation."
 msgstr ""
 "KDE tekst editor komponenta nije pronađena!\n"
 "Molim provjerite vašu KDE instalaciju."
@@ -845,14 +995,18 @@ msgid "Sho&w Path"
 msgstr "Prikaži &putanju"
 
 #: app/kwritemain.cpp:170
+msgid "Hide Path"
+msgstr ""
+
+#: app/kwritemain.cpp:171
 msgid "Show the complete document path in the window caption"
 msgstr "Prikaži puni put dokumenta u naslovu prozora"
 
-#: app/kateviewmanager.cpp:447 app/kwritemain.cpp:231
+#: app/kateviewmanager.cpp:449 app/kwritemain.cpp:232
 msgid "Open File"
 msgstr "Otvori datoteku"
 
-#: app/kwritemain.cpp:255
+#: app/kwritemain.cpp:256
 msgid ""
 "The given file could not be read, check if it exists or if it is readable "
 "for the current user."
@@ -860,47 +1014,50 @@ msgstr ""
 "Nisam mogao pročitati traženu datoteku, provjerite da li postoji i da li "
 "trenutni korisnik ima pravo čitanja."
 
-#: app/kwritemain.cpp:531
-msgid "Read the contents of stdin."
+#: app/kwritemain.cpp:532
+#, fuzzy
+msgid "Read the contents of stdin"
 msgstr "Čitaj sadržaj standardnog ulaza (stdin)."
 
-#: app/kwritemain.cpp:532
-msgid "Document to open."
+#: app/kwritemain.cpp:533
+#, fuzzy
+msgid "Document to open"
 msgstr "Dokument za otvaranje."
 
-#: app/kwritemain.cpp:542
+#: app/kwritemain.cpp:543
 msgid "KWrite"
 msgstr "KWrite"
 
-#: app/kwritemain.cpp:543
+#: app/kwritemain.cpp:544
 msgid "KWrite - Text Editor"
 msgstr "KWrite - Editor teksta"
 
-#: app/kateapp.cpp:246 app/kwritemain.cpp:642
-msgid "The file '%1' could not be opened, it is not a normal file, it is a folder!"
+#: app/kateapp.cpp:268 app/kwritemain.cpp:641
+#, fuzzy
+msgid "The file '%1' could not be opened: it is not a normal file, it is a folder."
 msgstr "Ne mogu otvoriti datoteku '%1', to nije obična datoteka, to je direktorij!"
 
-#: app/kwritemain.cpp:651
+#: app/kwritemain.cpp:655
 msgid "Choose Editor Component"
 msgstr "Izaberite komponentu editora"
 
-#: app/kateprojectmanager.cpp:282
+#: app/kateprojectmanager.cpp:287
 msgid "New Project"
 msgstr "Novi projekat"
 
-#: app/kateprojectmanager.cpp:291
+#: app/kateprojectmanager.cpp:296
 msgid "Project type:"
 msgstr "Vrsta projekta:"
 
-#: app/kateprojectmanager.cpp:297
+#: app/kateprojectmanager.cpp:302
 msgid "Project name:"
 msgstr "Ime projekta:"
 
-#: app/kateprojectmanager.cpp:301
+#: app/kateprojectmanager.cpp:306
 msgid "Project file:"
 msgstr "Projektna datoteka:"
 
-#: app/kateprojectmanager.cpp:336
+#: app/kateprojectmanager.cpp:341
 msgid "You must enter a project name and file"
 msgstr "Morate unijeti ime projekta i datoteku"
 
@@ -940,11 +1097,11 @@ msgstr ""
 "Ovdje možete vidjeti sve dostupne Kate dodatke. Oni koji imaju kvaku su "
 "učitani, te će biti učitani i idući put kada pokrenete Kate."
 
-#: app/katefileselector.cpp:178
+#: app/katefileselector.cpp:179
 msgid "Current Document Folder"
 msgstr "Direktorij trenutnog dokumenta"
 
-#: app/katefileselector.cpp:206
+#: app/katefileselector.cpp:207
 msgid ""
 "<p>Here you can enter a path for a folder to display."
 "<p>To go to a folder previously entered, press the arrow on the right and "
@@ -955,10 +1112,11 @@ msgstr ""
 "<p>Ovdje možete zadati put direktorija koji želite prikazati. "
 "<p>Da biste išli u neki ranije uneseni direktorij, pritisnite desnu "
 "strelicu kako biste ga izabrali. "
-"<p>Ova stavka ima dovršavanje direktorija. Kliknite desno da biste izabrali "
+"<p>"
+"Ova stavka ima dovršavanje direktorija. Kliknite desno da biste izabrali "
 "ponašanje dovršavanja."
 
-#: app/katefileselector.cpp:211
+#: app/katefileselector.cpp:212
 msgid ""
 "<p>Here you can enter a name filter to limit which files are displayed."
 "<p>To clear the filter, toggle off the filter button to the left."
@@ -969,7 +1127,7 @@ msgstr ""
 "<p>Da očistite filter, isključite dugme filtera lijevo. "
 "<p>Da ponovo primijenite zadnje korišteni filter, uključite dugme filtera."
 
-#: app/katefileselector.cpp:215
+#: app/katefileselector.cpp:216
 msgid ""
 "<p>This button clears the name filter when toggled off, or reapplies the "
 "last filter used when toggled on."
@@ -978,69 +1136,71 @@ msgstr ""
 "Ovo dugme čisti filter imena kada je isključeno, ili ponovo primjenjuje "
 "zadnji korišteni filter kada je uključeno."
 
-#: app/katefileselector.cpp:327
+#: app/katefileselector.cpp:330
 msgid "Apply last filter (\"%1\")"
 msgstr "Primijeni zadnji filter (\"%1\")"
 
-#: app/katefileselector.cpp:332
+#: app/katefileselector.cpp:335
 msgid "Clear filter"
 msgstr "Očisti filter"
 
-#: app/katefileselector.cpp:531
+#: app/katefileselector.cpp:536
 msgid "Toolbar"
 msgstr "Traka s alatima"
 
-#: app/katefileselector.cpp:533
+#: app/katefileselector.cpp:538
 msgid "A&vailable actions:"
 msgstr "D&ostupne akcije:"
 
-#: app/katefileselector.cpp:534
+#: app/katefileselector.cpp:539
 msgid "S&elected actions:"
 msgstr "&Izabrane akcije:"
 
-#: app/katefileselector.cpp:542
+#: app/katefileselector.cpp:547
 msgid "Auto Synchronization"
 msgstr "Auto sinhronizacija"
 
-#: app/katefileselector.cpp:543
+#: app/katefileselector.cpp:548
 msgid "When a docu&ment becomes active"
 msgstr "Kada doku&ment postane aktivan"
 
-#: app/katefileselector.cpp:544
+#: app/katefileselector.cpp:549
 msgid "When the file selector becomes visible"
 msgstr "Kada izbornik datoteka postane vidljiv"
 
-#: app/katefileselector.cpp:551
+#: app/katefileselector.cpp:556
 msgid "Remember &locations:"
 msgstr "Zapamti &lokacije:"
 
-#: app/katefileselector.cpp:558
+#: app/katefileselector.cpp:563
 msgid "Remember &filters:"
 msgstr "Zapamti &filtere:"
 
-#: app/katefileselector.cpp:565
+#: app/katefileselector.cpp:570
 msgid "Session"
 msgstr "Sesija"
 
-#: app/katefileselector.cpp:566
+#: app/katefileselector.cpp:571
 msgid "Restore loca&tion"
 msgstr "Vrati loka&ciju"
 
-#: app/katefileselector.cpp:567
+#: app/katefileselector.cpp:572
 msgid "Restore last f&ilter"
 msgstr "Vrati zadnji f&ilter"
 
-#: app/katefileselector.cpp:587
+#: app/katefileselector.cpp:592
+#, fuzzy
 msgid ""
 "<p>Decides how many locations to keep in the history of the location combo "
-"box"
+"box."
 msgstr "<p>Odlučuje koliko će lokacija biti čuvano u historiji lokacija"
 
-#: app/katefileselector.cpp:592
-msgid "<p>Decides how many filters to keep in the history of the filter combo box"
+#: app/katefileselector.cpp:597
+#, fuzzy
+msgid "<p>Decides how many filters to keep in the history of the filter combo box."
 msgstr "<p>Odlučuje koliko će filtera biti čuvano u historiji filtera"
 
-#: app/katefileselector.cpp:597
+#: app/katefileselector.cpp:602
 msgid ""
 "<p>These options allow you to have the File Selector automatically change "
 "location to the folder of the active document on certain events."
@@ -1056,7 +1216,7 @@ msgstr ""
 "<p>Nijedna od ovih opcija nije podrazumijevana, ali uvijek možete "
 "sinhronizovati lokaciju pritiskajući sync dugme u traci s alatima."
 
-#: app/katefileselector.cpp:606
+#: app/katefileselector.cpp:611
 msgid ""
 "<p>If this option is enabled (default), the location will be restored when "
 "you start Kate."
@@ -1070,7 +1230,7 @@ msgstr ""
 " da ako KDE menadžer sesija kontroliše sesije, lokacija će uvijek biti "
 "vraćena."
 
-#: app/katefileselector.cpp:610
+#: app/katefileselector.cpp:615
 msgid ""
 "<p>If this option is enabled (default), the current filter will be restored "
 "when you start Kate."
@@ -1087,11 +1247,13 @@ msgstr ""
 "<p><strong>Obratite pažnju</strong> da neke od postavki autosinhronizacije "
 "mogu poništiti vraćenu lokaciju."
 
-#: rc.cpp:3
+#: rc.cpp:6
+#, no-c-format
 msgid "&Project"
 msgstr "&Projekat"
 
-#: rc.cpp:4
+#: rc.cpp:8
+#, no-c-format
 msgid "&Document"
 msgstr "Do&kument"
 
@@ -1314,3 +1476,17 @@ msgstr ""
 " da prebacite na\n"
 "prethodni/sljedeći okvir.</p>\n"
 
+#~ msgid " Line: 1 Col: 0 "
+#~ msgstr " Lin: 1 Kol: 0 "
+
+#~ msgid "Search"
+#~ msgstr "Traži"
+
+#~ msgid "Betatest"
+#~ msgstr "Betatest"
+
+#~ msgid "&Available:"
+#~ msgstr "&Dostupno:"
+
+#~ msgid "&Selected:"
+#~ msgstr "&Izabrano:"

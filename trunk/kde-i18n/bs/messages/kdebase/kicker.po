@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kicker\n"
-"POT-Creation-Date: 2004-01-07 01:28+0100\n"
+"POT-Creation-Date: 2004-06-28 01:56+0200\n"
 "PO-Revision-Date: 2004-01-13 20:51+0100\n"
 "Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -39,20 +39,23 @@ msgstr "Pretraži: %1"
 msgid "Show desktop"
 msgstr "Prikaži desktop"
 
-#: buttons/desktopbutton.cpp:44
-msgid "Show Desktop"
-msgstr "Prikaži radnu površinu"
+#: buttons/desktopbutton.cpp:44 ui/addspecialbutton_mnu.cpp:54
+#: ui/removespecialbutton_mnu.cpp:77
+msgid "Desktop Access"
+msgstr "Pristup radnoj površini"
 
 #: buttons/kbutton.cpp:50
 msgid "Click here to browse and start applications"
 msgstr "Kliknite ovdje da pretražite i pokrećete programe"
 
-#: buttons/kbutton.cpp:51
-msgid "Start Applications"
-msgstr "Pokreni aplikacije"
+#: buttons/kbutton.cpp:51 ui/addspecialbutton_mnu.cpp:48 ui/k_mnu.cpp:73
+#: ui/removespecialbutton_mnu.cpp:62
+msgid "K Menu"
+msgstr "K Meni"
 
 #: buttons/nonkdeappbutton.cpp:125 buttons/nonkdeappbutton.cpp:145
-msgid "Cannot execute non-KDE application!"
+#, fuzzy
+msgid "Cannot execute non-KDE application."
 msgstr "Ne mogu pokrenuti ne-KDE aplikaciju!"
 
 #: buttons/nonkdeappbutton.cpp:126 buttons/nonkdeappbutton.cpp:146
@@ -63,15 +66,16 @@ msgstr "Greška u Kickeru"
 msgid "Applications"
 msgstr "Aplikacije"
 
-#: buttons/urlbutton.cpp:194
-msgid "The file %1 doesn't exist"
+#: buttons/urlbutton.cpp:217
+#, fuzzy
+msgid "The file %1 does not exist"
 msgstr "Datoteka %1 ne postoji"
 
 #: buttons/windowlistbutton.cpp:39
 msgid "Window list"
 msgstr "Lista prozora"
 
-#: buttons/windowlistbutton.cpp:41
+#: buttons/windowlistbutton.cpp:41 ui/addspecialbutton_mnu.cpp:49
 msgid "Window List"
 msgstr "Lista prozora"
 
@@ -83,23 +87,23 @@ msgstr "ručka appleta %1"
 msgid "%1 menu"
 msgstr "%1 meni"
 
-#: core/container_applet.cpp:251
+#: core/container_applet.cpp:252
 msgid "The %1 applet could not be loaded. Please check your installation."
 msgstr "Nisam mogao učitati applet %1. Molim provjerite vašu instalaciju."
 
-#: core/container_applet.cpp:252
+#: core/container_applet.cpp:253
 msgid "Applet Loading Error"
 msgstr "Greška pri učitavanju appleta"
 
-#: core/container_panel.cpp:434 core/container_panel.cpp:435
+#: core/container_panel.cpp:448 core/container_panel.cpp:449
 msgid "Show panel"
 msgstr "Prikaži panel"
 
-#: core/container_panel.cpp:437 core/container_panel.cpp:438
+#: core/container_panel.cpp:451 core/container_panel.cpp:452
 msgid "Hide panel"
 msgstr "Sakrij panel"
 
-#: core/kicker.cpp:237 core/kickerbindings.cpp:16 ui/addcontainer_mnu.cpp:47
+#: core/kicker.cpp:279 core/kickerbindings.cpp:16 ui/addcontainer_mnu.cpp:47
 #: ui/removecontainer_mnu.cpp:48
 msgid "Panel"
 msgstr "Panel"
@@ -112,19 +116,21 @@ msgstr "Popup meni za pokretanje"
 msgid "Toggle Showing Desktop"
 msgstr "Uklj./Isklj. prikaz radnu površinu"
 
-#: core/main.cpp:109
+#: core/main.cpp:45
+#, fuzzy
+msgid "The KDE panel"
+msgstr "Panel KDE radne površine."
+
+#: core/main.cpp:115
 msgid "KDE Panel"
 msgstr "KDE panel"
 
-#: core/main.cpp:111
-msgid "The KDE desktop panel."
-msgstr "Panel KDE radne površine."
-
-#: core/main.cpp:113
-msgid "(c) 1999-2002, The KDE Team"
+#: core/main.cpp:117
+#, fuzzy
+msgid "(c) 1999-2004, The KDE Team"
 msgstr "(c) 1999-2002, KDE Team"
 
-#: core/main.cpp:122
+#: core/main.cpp:126
 msgid "Kiosk mode"
 msgstr "Kiosk mod"
 
@@ -140,20 +146,7 @@ msgstr "Dugme aplikacije"
 msgid "Special Button"
 msgstr "Posebno dugme"
 
-#: ui/addspecialbutton_mnu.cpp:48 ui/k_mnu.cpp:73
-#: ui/removespecialbutton_mnu.cpp:62
-msgid "K Menu"
-msgstr "K Meni"
-
-#: ui/addspecialbutton_mnu.cpp:49 ui/removespecialbutton_mnu.cpp:67
-msgid "Windowlist"
-msgstr "Lista prozora"
-
-#: ui/addspecialbutton_mnu.cpp:54 ui/removespecialbutton_mnu.cpp:77
-msgid "Desktop Access"
-msgstr "Pristup radnoj površini"
-
-#: ui/addspecialbutton_mnu.cpp:55 ui/k_mnu.cpp:235
+#: ui/addspecialbutton_mnu.cpp:55 ui/k_mnu.cpp:238
 #: ui/removespecialbutton_mnu.cpp:82
 msgid "Quick Browser"
 msgstr "Brzi preglednik"
@@ -261,8 +254,9 @@ msgstr "Otvori u upravitelju datotekama"
 msgid "Open in Terminal"
 msgstr "Otvori u terminalu"
 
-#: ui/browser_mnu.cpp:299
-msgid "More..."
+#: ui/browser_mnu.cpp:300
+#, fuzzy
+msgid "More"
 msgstr "Više..."
 
 #: ui/customSize_dlg.cpp:33 ui/customSize_dlg.cpp:41
@@ -328,35 +322,47 @@ msgstr ""
 "Izabrana datoteka nije izvršna.\n"
 "Želite li izabrati neku drugu datoteku?"
 
-#: ui/k_mnu.cpp:204
+#: ui/k_mnu.cpp:207
 msgid "All Applications"
 msgstr "Sve aplikacije"
 
-#: ui/k_mnu.cpp:206
+#: ui/k_mnu.cpp:209
 msgid "Actions"
 msgstr "Akcije"
 
-#: ui/k_mnu.cpp:282
+#: ui/k_mnu.cpp:285
 msgid "Run Command..."
 msgstr "Pokreni komandu..."
 
-#: ui/k_mnu.cpp:299
-msgid "Start New Session"
+#: ui/k_mnu.cpp:302
+#, fuzzy
+msgid "Start New Session..."
 msgstr "Pokreni novu sesiju"
 
-#: ui/k_mnu.cpp:309
+#: ui/k_mnu.cpp:312
 msgid "Save Session"
 msgstr "Snimi sesiju"
 
-#: ui/k_mnu.cpp:312
-msgid "Lock Screen"
+#: ui/k_mnu.cpp:315
+#, fuzzy
+msgid "Lock Session"
 msgstr "Zaključaj ekran"
 
-#: ui/k_mnu.cpp:315
+#: ui/k_mnu.cpp:318
 msgid "Logout..."
 msgstr "Odjava..."
 
-#: ui/k_mnu.cpp:362
+#: ui/k_mnu.cpp:364
+#, fuzzy
+msgid "Warning - New Session"
+msgstr "Pokreni novu sesiju"
+
+#: ui/k_mnu.cpp:369
+#, fuzzy
+msgid "&Start New Session"
+msgstr "Pokreni novu sesiju"
+
+#: ui/k_mnu.cpp:372
 msgid ""
 "<p>You have chosen to open another desktop session."
 "<br>The current session will be hidden and a new login screen will be "
@@ -371,6 +377,11 @@ msgstr ""
 "<br>Svakoj sesiji je dodijeljena F-tipka; F%1 se obično dodjeljuje prvoj "
 "sesiji, F%2 drugoj itd. Možete prebacivati između sesija pritiščući "
 "Ctrl, Alt i odgovarajuću F-tipku u isto vrijeme.</p>"
+
+#: ui/k_mnu.cpp:384
+#, fuzzy
+msgid "&Lock current session"
+msgstr "Zaključaj ekran"
 
 #: ui/panelop_mnu.cpp:111
 msgid "Tiny"
@@ -454,13 +465,23 @@ msgstr "%1 (Dole)"
 msgid "%1 (Left)"
 msgstr "%1 (Lijevo)"
 
-#: ui/service_mnu.cpp:248
+#: ui/removespecialbutton_mnu.cpp:67
+msgid "Windowlist"
+msgstr "Lista prozora"
+
+#: ui/service_mnu.cpp:252
 msgid "No Entries"
 msgstr "Bez zapisa"
 
-#: ui/service_mnu.cpp:255
+#: ui/service_mnu.cpp:259
 msgid "Add This Menu"
 msgstr "Dodaj ovaj meni"
+
+#~ msgid "Show Desktop"
+#~ msgstr "Prikaži radnu površinu"
+
+#~ msgid "Start Applications"
+#~ msgstr "Pokreni aplikacije"
 
 #~ msgid "Extension"
 #~ msgstr "Ekstenzija"
@@ -513,4 +534,3 @@ msgstr "Dodaj ovaj meni"
 
 #~ msgid "No entries"
 #~ msgstr "Bez zapisa"
-

@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kmailcvt\n"
-"POT-Creation-Date: 2003-10-27 01:48+0100\n"
+"POT-Creation-Date: 2004-07-16 01:28+0200\n"
 "PO-Revision-Date: 2004-05-23 11:28+0200\n"
 "Last-Translator: Amila Akagić <bono@linux.org.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -20,21 +20,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3\n"
 
-#: filters.cxx:134
+#: filters.cxx:138
 msgid ""
 "<b>Fatal:</b> Unable to start KMail for DCOP communication. Make sure "
 "<i>kmail</i> is installed."
-msgstr "<b>Fatalna greška:</b> Ne mogu da pokrenem KMail za DCOP komunikaciju. Uvjerite se da je <i>kmail</i> instaliran."
+msgstr ""
+"<b>Fatalna greška:</b> Ne mogu da pokrenem KMail za DCOP komunikaciju. "
+"Uvjerite se da je <i>kmail</i> instaliran."
 
-#: filters.cxx:142
+#: filters.cxx:146
 msgid "Cannot make folder %1 in KMail"
 msgstr "Ne mogu da napravim direktorij %1 u KMail-u"
 
-#: filters.cxx:145
+#: filters.cxx:149
 msgid "Cannot add message to folder %1 in KMail"
 msgstr "Ne mogu da dodam poruku u direktorij %1 u KMail-u"
 
-#: filters.cxx:148
+#: filters.cxx:152
+#, fuzzy
+msgid "Duplicate message subject error when adding message to folder %1 in KMail"
+msgstr "Greška prilikom dodavanja poruke u direktorij %1 u KMail-u"
+
+#: filters.cxx:155
 msgid "Error while adding message to folder %1 in KMail"
 msgstr "Greška prilikom dodavanja poruke u direktorij %1 u KMail-u"
 
@@ -69,6 +76,33 @@ msgstr "Prvobitni autor"
 #: main.cpp:37 main.cpp:38
 msgid "New GUI & cleanups"
 msgstr "Novi GUI i čistke"
+
+#: filter_evolution.cxx:31
+msgid "Import Evolution Mails and Folder Structure"
+msgstr ""
+
+#: filter_evolution.cxx:33
+msgid ""
+"<p>Select the base directory of Evolution's mails (usually "
+"~/evolution/local).</p>"
+"<p>As it is currently impossible to recreate the folder structure, it will "
+"be \"contained\" in the generated folder's names.</p>"
+"<p>For instance, if you have a \"foo\" folder in Evolution, with a \"bar\" "
+"subfolder, two folders will be created in KMail : \"foo\" and \"foo-bar\"</p>"
+msgstr ""
+
+#: filter_evolution.cxx:101 filter_mbox.cxx:51
+msgid "Unable to open %1, skipping"
+msgstr "Ne mogu da otvorim %1, preskačem"
+
+#: filter_evolution.cxx:108 filter_mbox.cxx:60
+msgid "Importing emails from %1..."
+msgstr "Uvozim e-mailove iz %1..."
+
+#: filter_evolution.cxx:128 filter_mbox.cxx:78
+#, c-format
+msgid "Finished importing emails from %1"
+msgstr "Uvoz poruka iz %1 je završen"
 
 #: kmailcvt.cpp:26
 msgid "KMailCVT Import Tool"
@@ -106,17 +140,16 @@ msgid ""
 "<p><b>Note:</b> Emails will be imported into folder with the prefix "
 "pmail-</p>"
 msgstr ""
-"<p> "
-"Odaberite direktorij Pegasus-Mail-a na vašem sistemu (sadrži CNM, PMM i "
-"MBX datoteke). Na mnogim sistemima je smješten u "
+"<p> Odaberite direktorij Pegasus-Mail-a na vašem sistemu (sadrži CNM, PMM "
+"i MBX datoteke). Na mnogim sistemima je smješten u "
 "C:\\PMail\\mail</p>"
-"<p><b>Napomena:</b> Ovaj filter za unos će uvesti vaše direktorije, ali "
-"ne i njihovu strukturu. Ovo ćete vjerotatno raditi samo "
-"jednom.</p>"
-"<p><b>Napomena:</b> Poruke će biti uvezene u "
-"direktorij sa prefiksom 'pmail-'</p>"
+"<p><b>Napomena:</b>"
+" Ovaj filter za unos će uvesti vaše direktorije, ali ne i njihovu "
+"strukturu. Ovo ćete vjerotatno raditi samo jednom.</p>"
+"<p><b>Napomena:</b> Poruke će biti uvezene u direktorij sa prefiksom "
+"'pmail-'</p>"
 
-#: filter_oe.cxx:59 filter_plain.cxx:45 filter_pmail.cxx:51
+#: filter_oe.cxx:60 filter_plain.cxx:45 filter_pmail.cxx:51
 msgid "No directory selected."
 msgstr "Nije odabran nijedan direktorij."
 
@@ -146,35 +179,43 @@ msgstr "Uvozim %1"
 msgid "Message %1"
 msgstr "Poruka %1"
 
-#: rc.cpp:1
+#: rc.cpp:2
+#, no-c-format
 msgid "Please click 'Back' to import more emails or contacts"
 msgstr "Kliknite na 'Nazad' da biste uvezli još poruka ili kontakata"
 
-#: rc.cpp:2
+#: rc.cpp:4
+#, no-c-format
 msgid "From:"
 msgstr "Od:"
 
-#: rc.cpp:3
+#: rc.cpp:6
+#, no-c-format
 msgid "To:"
 msgstr "Za:"
 
-#: rc.cpp:4
+#: rc.cpp:8
+#, no-c-format
 msgid "Current:"
 msgstr "Tekući:"
 
-#: rc.cpp:5
+#: rc.cpp:10
+#, no-c-format
 msgid "Importing in progress"
 msgstr "Uvoz je u toku"
 
-#: rc.cpp:6 rc.cpp:7 rc.cpp:9
+#: rc.cpp:12 rc.cpp:14 rc.cpp:18
+#, no-c-format
 msgid "..."
 msgstr "..."
 
-#: rc.cpp:8
+#: rc.cpp:16
+#, no-c-format
 msgid "Total:"
 msgstr "Ukupno:"
 
-#: rc.cpp:10
+#: rc.cpp:20
+#, no-c-format
 msgid ""
 "<b>Welcome to KMailCVT - The KMail Import Tool</b>\n"
 "<br><br>\n"
@@ -184,9 +225,10 @@ msgid ""
 msgstr ""
 "<b>Dobrodošli u KMailCVT ' KMail-ov alat za uvoz</b>\n"
 "<br><br>\n"
-"Ovaj program će vam pomoći da uvezete poruke iz vašeg prethodnog "
-"programa za e-mail u KMail.<br><br><br><br>\n"
-"Izaberite program iz koga želite da uvozite, pa onda kliknite na 'Sljedeći'."
+"Ovaj program će vam pomoći da uvezete poruke iz vašeg prethodnog programa "
+"za e-mail u KMail.<br><br><br><br>\n"
+"Izaberite program iz koga želite da uvozite, pa onda kliknite na "
+"'Sljedeći'."
 
 #: filter_mbox.cxx:28
 msgid "Import mbox Files (UNIX, Evolution)"
@@ -209,79 +251,71 @@ msgstr ""
 "kao što se zove datoteka iz koga su uvezene sa prefiksom 'MBOX-'</p>"
 
 #: filter_mbox.cxx:45
-msgid "mbox files (*)"
+#, fuzzy
+msgid "mbox Files (*)"
 msgstr "mbox datoteke (*)"
-
-#: filter_mbox.cxx:51
-msgid "Unable to open %1, skipping"
-msgstr "Ne mogu da otvorim %1, preskačem"
-
-#: filter_mbox.cxx:60
-msgid "Importing emails from %1..."
-msgstr "Uvozim e-mailove iz %1..."
-
-#: filter_mbox.cxx:78
-#, c-format
-msgid "Finished importing emails from %1"
-msgstr "Uvoz poruka iz %1 je završen"
 
 #: filter_oe.cxx:38
 msgid "Import Outlook Express Emails"
 msgstr "Uvoz poruka iz Outlook Express-a"
 
 #: filter_oe.cxx:40
+#, fuzzy
 msgid ""
 "<p><b>Outlook Express 4/5/6 import filter</b></p>"
-"<p>This is an Outlook Express import filter which fully supports versions 4 "
-"to 6.</p>"
-"<p>Outlook Express generally stores its mailboxes in "
-"C:\\Windows\\Application Data\\Identities\\?????\\Microsoft\\Outlook "
-"Express</p>"
+"<p>You will need to locate the folder where the mailbox has been stored by "
+"searching for .dbx or .mbx files under "
+"<ul>"
+"<li><i>C:\\Windows\\Application Data</i> in Windows 9x"
+"<li><i>Documents and Settings</i> in Windows 2000 or "
+"later</ul></p>"
 "<p><b>Note:</b> Emails will be imported into folders named after the file "
 "they came from, prefixed with OE-</p>"
 msgstr ""
 "<p><b>Outlook Express 4/5/6 filter za uvoz</b></p>"
 "<p>Ovo je filter za uvoz iz Outlook Express-a, koji u potpunosti podržava "
 "verzije 4 do 6.</p>"
-"<p>Outlook Express obično smješta svoje poštanske "
-"sandučiće u C:\\Windows\\Application Data\\Identities\\?????\\Microsoft\\Outlook Express</p>"
-"<p><b>Napomena:</b> Poruke će biti uvezene u direktorije sa imenom istim kao "
-"što se zove datoteka iz koga su uvezene sa prefiksom 'OE-'</p>"
+"<p>Outlook Express obično smješta svoje poštanske sandučiće u "
+"C:\\Windows\\Application Data\\Identities\\?????\\Microsoft\\Outlook "
+"Express</p>"
+"<p><b>Napomena:</b> Poruke će biti uvezene u direktorije sa imenom istim "
+"kao što se zove datoteka iz koga su uvezene sa prefiksom 'OE-'</p>"
 
-#: filter_oe.cxx:66
+#: filter_oe.cxx:67
 #, c-format
 msgid "No Outlook Express mailboxes found in directory %1."
 msgstr "Nisu pronađeni Outlook Express-ovi poštanski sandučići u direktoriju %1."
 
-#: filter_oe.cxx:82
+#: filter_oe.cxx:83
 msgid "Finished importing Outlook Express emails"
 msgstr "Uvoz poruka iz Outlook Express-a je završen"
 
-#: filter_oe.cxx:94
+#: filter_oe.cxx:95
 #, c-format
 msgid "Unable to open mailbox %1"
 msgstr "Ne mogu da otvorim poštansko sanduče %1"
 
-#: filter_oe.cxx:104
+#: filter_oe.cxx:105
 #, c-format
 msgid "Importing OE4 Mailbox %1"
 msgstr "Uvozim OE4 poštansko sanduče %1"
 
-#: filter_oe.cxx:112
+#: filter_oe.cxx:113
 #, c-format
 msgid "Importing OE5+ Mailbox %1"
 msgstr "Uvozim OE5+ poštansko sanduče %1"
 
-#: filter_oe.cxx:116
+#: filter_oe.cxx:117
 #, c-format
 msgid "Ignoring OE5+ Folder file %1"
 msgstr "Ignorišem OE5+ direktorij sa datotekama %1"
 
-#: filter_oe.cxx:121
-msgid "File %1 doesn't seem to be an Outlook Express mailbox"
+#: filter_oe.cxx:122
+#, fuzzy
+msgid "File %1 does not seem to be an Outlook Express mailbox"
 msgstr "Datoteka %1 ne izgleda kao poštansko sanduče Outlook Express-a"
 
-#: kselfilterpage.cpp:56
+#: kselfilterpage.cpp:57
 msgid "<p><i>Written by %1.</i></p>"
 msgstr "<p><i>Napisao %1.</i></p>"
 
@@ -297,13 +331,16 @@ msgid ""
 "prefixed by PLAIN-</p>"
 "<p>This filter will import all .msg, .eml and .txt emails.</p>"
 msgstr ""
-"<p> "
-"Odaberite direktorij koji sadrži poruke na vašem sistemu. Poruke će biti "
-"smještene u direktorij sa istim imenom kao što je i direktorij u kojem su sa "
-"prefiksom 'PLAIN-'</p>"
+"<p> Odaberite direktorij koji sadrži poruke na vašem sistemu. Poruke će "
+"biti smještene u direktorij sa istim imenom kao što je i direktorij u "
+"kojem su sa prefiksom 'PLAIN-'</p>"
 "<p>Ovaj filter će uvesti sve .msg, .eml i .txt poruke.</p>"
 
 #: filter_plain.cxx:56
 msgid "Importing new mail files..."
 msgstr "Uvozim nove poštanske datoteke..."
 
+#: filter_plain.cxx:61
+#, c-format
+msgid "Could not import %1"
+msgstr ""
