@@ -1,16 +1,20 @@
+# translation of kdat.po to Bosanski
 # KTranslator Generated File
+# Amila Akagic <bono@lugbih.org>, 2002
+# Vedran Ljubović <vljubovic@smartnet.ba>, 2003
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2002-09-18 03:05+0200\n"
-"PO-Revision-Date: 2002-03-17 10:21GMT\n"
-"Last-Translator: Amila Akagic <bono@linux.org.ba>\n"
-"Language-Team: bosnian <lokal-subscribe@lugbih.org>\n"
+"PO-Revision-Date: 2003-06-19 13:55+0200\n"
+"Last-Translator: Vedran Ljubović <vljubovic@smartnet.ba>\n"
+"Language-Team: Bosanski <lokal@lugbih.org>\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Files: Archive.cpp ArchiveInfoDlg.cpp BackupDlg.cpp BackupOptDlg.cpp "
 "File.cpp ImageCache.cpp IndexDlg.cpp KDat.cpp LocalTapeDrive.cpp Logger.cpp "
 "Node.cpp Options.cpp OptionsDlg.cpp RemoteTapeDrive.cpp Tape.cpp "
-"X-Generator: KBabel 0.9.5\n"
+"X-Generator: KBabel 1.0.1\n"
+"Project-Id-Version: kdat\n"
 
 #: ArchiveInfoWidget.cpp:41 BackupProfileWidget.cpp:42
 msgid "Archive name:"
@@ -77,9 +81,8 @@ msgid "Save Log..."
 msgstr "Sačuvaj log..."
 
 #: BackupDlg.cpp:140 VerifyDlg.cpp:148
-#, fuzzy
 msgid "&Abort"
-msgstr "Prekini"
+msgstr "&Prekini"
 
 #: BackupDlg.cpp:276
 msgid "No files to back up. Aborting."
@@ -161,6 +164,8 @@ msgid ""
 "You can dump core by selecting the \"Abort\" button.\n"
 "Please notify the maintainer (see Help->About KDat)."
 msgstr ""
+"Možete napraviti core dump pritiskom na dugme \"Abort\".\n"
+"Molim obavijestite održavatelja (vidi Pomoć->O KDat)."
 
 #: ErrorHandler.cpp:62
 msgid "An Error Signal was Received"
@@ -356,6 +361,9 @@ msgid ""
 "to restore them. To restore your files by hand, you need to know\n"
 "the name of the *non-rewinding* version of your tape device %1.\n"
 msgstr ""
+"KDat će ispravno ispisati vaše datoteke na traku, ali možda neće biti\n"
+"u mogućnosti da ih pročita. Da biste ručno vratili datoteke, trebate\n"
+"znati ime *ne-premotavajuće* verzije vašeg kasetnog uređaja %1.\n"
 
 #: KDat.cpp:427
 msgid ""
@@ -370,6 +378,16 @@ msgid ""
 "current directory. Please let us know if this happens to you!\n"
 " - KDat Maintenance Team\n"
 msgstr ""
+"Na primjer, ako je vaš uređaj /dev/st0, ne-premotavajuća verzija je\n"
+"/dev/nst0. Ako ime vašeg uređaja ne izgleda tako, kucajte\n"
+"\"ls -l %2\" u prozoru terminala kako biste vidjeli pravo ime vašeg\n"
+"uređaja sa trakom. Zamijenite ovo ime sa /dev/nst0 ispod.\n"
+"Otvorite prozor terminala i kucajte sljedeće:\n"
+"  tar tfv /dev/nst0; tar tfv /dev/nst0\n"
+"  tar xfv /dev/nst0\n"
+"Treć poziv naredbe \"tar\" će vratiti vaše podatke u vaš trenutni\n"
+"direktorij. Ako se ovo desi, molim vas javite nam!\n"
+" - KDat tim za održavanje\n"
 
 #: KDat.cpp:453
 #, c-format
@@ -466,6 +484,11 @@ msgid ""
 "/dev/st0). If you hear the tape drive moving, wait\n"
 "until it stops and then try mounting it again."
 msgstr ""
+"Izgleda da u drajvu %1 nema trake. Molim provjerite\n"
+"\"Izmijeni->Preference\" kako biste odigurali da je\n"
+"izabran ispravan uređaj kao drajv za traku (npr. /dev/st0).\n"
+"Ako možete čuti pokretanje trake, sačekajte dok ne\n"
+"prestane a zatim je probajte ponovo montirati."
 
 #: KDat.cpp:727
 msgid "The current tape index will be overwritten, continue?"
@@ -498,6 +521,8 @@ msgid ""
 "In order to delete an archive, the archive to be deleted must be selected in "
 "the tree first."
 msgstr ""
+"Nije izabrana arhiva.\n"
+"Kako biste obrisali arhivu, najprije je morate izabrati u stablu."
 
 #: KDat.cpp:783
 msgid ""
@@ -508,6 +533,12 @@ msgid ""
 "\n"
 "Delete all listed archives?"
 msgstr ""
+"Arhiva se ne može brisati iz sredine trake. Ako obrišete arhivu\n"
+"'%1' takođe će biti\n"
+"obrisane sljedeće arhive:\n"
+"%2\n"
+"\n"
+"Želite li obrisati sve izlistane arhive?"
 
 #: KDat.cpp:788
 msgid "Archives deleted."
@@ -527,12 +558,16 @@ msgid ""
 "In order to delete a tape index, the tape index to be deleted must be "
 "selected in the tree first."
 msgstr ""
+"Nije izabran indeks trake.\n"
+"Kako biste obrisali indeks trake, morate ga najprije izabrati u stablu."
 
 #: KDat.cpp:824
 msgid ""
 "Tape is still mounted. The index for a mounted tape cannot be deleted.\n"
 "Unmount the tape and try again."
 msgstr ""
+"Traka je još uvijek montirana. Ne možete obrisati indeks montirane trake.\n"
+"Demontirajte traku i probajte ponovo."
 
 #: KDat.cpp:831
 msgid "Really delete the index for '%1'?"
@@ -555,6 +590,8 @@ msgid ""
 "All data currently on the tape will be lost.\n"
 "Are you sure you want to continue?"
 msgstr ""
+"Svi podaci koji se trenutno nalaze na traci će biti izgubljeni.\n"
+"Da li ste sigurni da želite nastaviti?"
 
 #: KDat.cpp:869
 msgid "Format Tape"
@@ -590,7 +627,7 @@ msgstr "Arhiva"
 msgid ""
 "In order to delete a backup profile, the backup profile to be deleted must "
 "be selected in the tree first."
-msgstr ""
+msgstr "Kako biste obrisali backup profil, morate ga najprije izabrati u stablu."
 
 #: KDat.cpp:953
 msgid "Really delete backup profile '%1'?"
@@ -645,6 +682,14 @@ msgid ""
 "Click \"Continue\" to remove this message while\n"
 "continuing the backup."
 msgstr ""
+"Kliknite na \"ODUSTANI\" da prekinete proces backupa.\n"
+"Na primjer, možete brzo vidjeti da veličina datoteka koje\n"
+"ste izabrali prevazilazi veličinu backup trake, pa možete\n"
+"odlučiti da prekinete i uklonite neke od datoteka sa vaše\n"
+"liste za backup.\n"
+"\n"
+"Kliknite na \"Nastavi\" da sklonite ovu poruku dok\n"
+"traje vaš backup."
 
 #: KDat.cpp:1341
 msgid "Stop estimating backup size"
@@ -652,7 +697,7 @@ msgstr "Zaustavi procjenu veličine backup-a"
 
 #: KDat.cpp:1363
 msgid "C&ontinue"
-msgstr ""
+msgstr "N&astavi"
 
 #: LoggerWidget.cpp:63
 msgid "Log file exists, overwrite?"
@@ -707,9 +752,8 @@ msgid "..."
 msgstr "..."
 
 #: OptionsDlg.cpp:107
-#, fuzzy
 msgid "Tape Drive Options"
-msgstr "Opcije uređaja"
+msgstr "Opcije uređaja sa trakom"
 
 #: OptionsDlg.cpp:113
 msgid "Load tape on mount"
@@ -803,30 +847,29 @@ msgid ""
 "version of KDat. Perhaps the tape index file was created by a newer version "
 "of KDat?"
 msgstr ""
+"Format indeks datoteke na traci je verzije %d. Ova verzija KData ne može pročitati "
+"taj indeks. Možda je indeks datoteka trake napravljena nekom novijom verzijom "
+"KDat-a?"
 
 #: Tape.cpp:380
-#, fuzzy
 msgid "Error during fseek #1 while accessing archive: \""
-msgstr "Greška prilikom update-a naziva datoteke: "
+msgstr "Greška prilikom fseek #1 prilikom pristupa arhivi: \""
 
 #: Tape.cpp:385 Tape.cpp:398 Tape.cpp:411 Tape.cpp:424 Tape.cpp:439
 msgid "File Access Error"
 msgstr "Greška na pristupnoj datoteci"
 
 #: Tape.cpp:393
-#, fuzzy
 msgid "Error while accessing string #1 in archive: \""
-msgstr "Greška prilikom update-a naziva datoteke: "
+msgstr "Greška prilikom pristupa stringu #1 u arhivi: \""
 
 #: Tape.cpp:406
-#, fuzzy
 msgid "Error while accessing string #2 in archive: \""
-msgstr "Greška prilikom update-a naziva datoteke: "
+msgstr "Greška prilikom pristupa stringu #2 u arhivi: \""
 
 #: Tape.cpp:419
-#, fuzzy
 msgid "Error during fseek #2 while accessing archive: \""
-msgstr "Greška prilikom update-a naziva datoteke: "
+msgstr "Greška prilikom fseek #2 prilikom pristupa arhivi: \""
 
 #: Tape.cpp:436
 msgid "Error while updating archive name: "
@@ -960,11 +1003,11 @@ msgstr "ID trake:"
 
 #: TapeInfoWidget.cpp:48
 msgid "Archive count:"
-msgstr ""
+msgstr "Brojač arhive:"
 
 #: TapeInfoWidget.cpp:49
 msgid "Space used:"
-msgstr "Prostor iskorišten:"
+msgstr "Iskorišten prostor:"
 
 #: FormatOptDlg.cpp:39 FormatOptDlg.cpp:40
 msgid "KDat: Format Options"
@@ -991,15 +1034,12 @@ msgid "Verify log:"
 msgstr "Provjeri log:"
 
 #: VerifyDlg.cpp:143
-#, fuzzy
 msgid "&Save Log..."
-msgstr "Sačuvaj log..."
+msgstr "&Sačuvaj log..."
 
 #: VerifyDlg.cpp:343
-msgid ""
-"failed while reading tape data.\n"
-msgstr ""
-"nije uspjelo za vrijeme čitanja trake.\n"
+msgid "failed while reading tape data.\n"
+msgstr "nije uspjelo za vrijeme čitanja trake.\n"
 
 #: VerifyOptDlg.cpp:40 VerifyOptDlg.cpp:41
 msgid "KDat: Restore Options"
@@ -1035,19 +1075,19 @@ msgstr "KDat"
 
 #: main.cpp:59
 msgid "Can't allocate memory in kdat"
-msgstr ""
+msgstr "Ne mogu alocirati memoriju u KDat"
 
 #: _translatorinfo.cpp:1
 msgid ""
 "_: NAME OF TRANSLATORS\n"
 "Your names"
-msgstr "Amila Akagić"
+msgstr "Amila Akagić, Vedran Ljubović"
 
 #: _translatorinfo.cpp:3
 msgid ""
 "_: EMAIL OF TRANSLATORS\n"
 "Your emails"
-msgstr "bono@lugbih.org"
+msgstr "bono@lugbih.org, vljubovic@smartnet.ba"
 
 #, fuzzy
 #~ msgid "Delete Backup Profile..."
@@ -1061,3 +1101,4 @@ msgstr "bono@lugbih.org"
 
 #~ msgid "Delete All"
 #~ msgstr "Izbriši sve"
+
