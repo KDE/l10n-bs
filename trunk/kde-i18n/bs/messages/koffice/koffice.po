@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: koffice\n"
-"POT-Creation-Date: 2003-06-25 01:31+0200\n"
+"POT-Creation-Date: 2003-08-17 01:26+0200\n"
 "PO-Revision-Date: 2002-12-09 19:12+0100\n"
 "Last-Translator: Vedran Ljubović <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -76,7 +76,7 @@ msgid "Index"
 msgstr "Uvlačenje"
 
 #: kformula/kformulacommand.cc:127 kformula/kformulacommand.cc:184
-#: kotext/kotextobject.cc:1361 kotext/kotextobject.cc:1400
+#: kotext/kotextobject.cc:1350 kotext/kotextobject.cc:1389
 msgid "Remove Selected Text"
 msgstr "Ukloni izabrani tekst"
 
@@ -308,7 +308,7 @@ msgid "Symbol Names"
 msgstr "Imena simbola"
 
 #: kformula/kformuladocument.cc:669 kotext/koSearchDia.cc:608
-#: kotext/kotextformat.cc:1206
+#: kotext/kotextformat.cc:1208
 msgid "Normal"
 msgstr "Normalno"
 
@@ -408,26 +408,35 @@ msgstr "Napravi novi dokument na osnovu ša&blona"
 msgid "KOffice"
 msgstr ""
 
-#: kofficecore/koApplication.cc:152
+#: kofficecore/koApplication.cc:153
 #, fuzzy
 msgid "No template found for: %1 "
 msgstr "Nije pronađen handler za %1"
 
-#: kofficecore/koApplication.cc:155
+#: kofficecore/koApplication.cc:156
 #, fuzzy, c-format
 msgid "Too many templates found for: %1"
 msgstr "Nije pronađen handler za %1"
 
-#: kofficecore/koApplication.cc:174
+#: kofficecore/koApplication.cc:175
 msgid "Template %1 failed to load."
 msgstr ""
 
-#: kofficecore/koDocument.cc:349
+#: kofficecore/koDocument.cc:351
 #, fuzzy
 msgid "Internal error: not a KOffice application, saving not allowed."
 msgstr "Interna greška: ovo nije KOffice aplikacija, snimanje nije moguće"
 
-#: kofficecore/koDocument.cc:406
+#: kofficecore/koDocument.cc:367
+msgid "Making backup..."
+msgstr ""
+
+#: kofficecore/koDocument.cc:388
+#, fuzzy
+msgid "Saving..."
+msgstr "Snimanje datoteke"
+
+#: kofficecore/koDocument.cc:413
 #, c-format
 msgid ""
 "Could not save\n"
@@ -436,7 +445,7 @@ msgstr ""
 "Ne mogu snimiti\n"
 "%1"
 
-#: kofficecore/koDocument.cc:409
+#: kofficecore/koDocument.cc:416
 msgid ""
 "Could not save %1\n"
 "Reason: %2"
@@ -444,20 +453,24 @@ msgstr ""
 "Ne mogu snimiti%1\n"
 "Razlog: %2"
 
-#: kofficecore/koDocument.cc:894
+#: kofficecore/koDocument.cc:502
+msgid "Autosaving..."
+msgstr ""
+
+#: kofficecore/koDocument.cc:904
 msgid "Couldn't open the file for saving"
 msgstr "Ne mogu otvoriti datoteku za snimanje"
 
-#: kofficecore/koDocument.cc:903
+#: kofficecore/koDocument.cc:913
 msgid "Error while saving embedded documents"
 msgstr "Greška kod snimanja ugrađenih dokumenata"
 
-#: kofficecore/koDocument.cc:922
+#: kofficecore/koDocument.cc:932
 #, fuzzy
 msgid "Not able to write 'maindoc.xml'."
 msgstr "Ne mogu pisati u maindoc.xml"
 
-#: kofficecore/koDocument.cc:1103
+#: kofficecore/koDocument.cc:1113
 msgid ""
 "An autosaved file for an unnamed document exists in %1.\n"
 "This file is dated %2\n"
@@ -467,7 +480,7 @@ msgstr ""
 "Datum ove datoteke je %2\n"
 "Da li je želite otvoriti?"
 
-#: kofficecore/koDocument.cc:1156
+#: kofficecore/koDocument.cc:1166
 #, c-format
 msgid ""
 "Malformed URL\n"
@@ -476,7 +489,7 @@ msgstr ""
 "Neispravan URL\n"
 "%1"
 
-#: kofficecore/koDocument.cc:1172
+#: kofficecore/koDocument.cc:1182
 msgid ""
 "An autosaved file exists for this document.\n"
 "Do you want to open it instead?"
@@ -484,12 +497,13 @@ msgstr ""
 "Pronašao sam automatski snimljenu verziju ovog dokumenta.\n"
 "Da li je želite otvoriti?"
 
-#: kofficecore/koDocument.cc:1211 kofficeui/koTemplateChooseDia.cc:79
+#: kofficecore/koDocument.cc:1221 kofficeui/koTemplateChooseDia.cc:81
+#: kofficeui/koTemplateChooseDia.cc:629
 msgid "The file %1 doesn't exist."
 msgstr "Datoteka %1 ne postoji."
 
-#: kofficecore/koDocument.cc:1268 kofficecore/koDocument.cc:1284
-#: kofficecore/koDocument.cc:1305
+#: kofficecore/koDocument.cc:1278 kofficecore/koDocument.cc:1294
+#: kofficecore/koDocument.cc:1315
 #, c-format
 msgid ""
 "Could not open\n"
@@ -498,7 +512,7 @@ msgstr ""
 "Ne mogu otvoriti\n"
 "%1"
 
-#: kofficecore/koDocument.cc:1307
+#: kofficecore/koDocument.cc:1317
 msgid ""
 "Could not open %1\n"
 "Reason: %2"
@@ -508,43 +522,48 @@ msgstr ""
 
 #: kofficecore/koDocument.cc:1380
 #, fuzzy
+msgid "%1 is not a file."
+msgstr "%1 nije ispravan link."
+
+#: kofficecore/koDocument.cc:1396
+#, fuzzy
 msgid "Couldn't open the file for reading (check read permissions)."
 msgstr "Ne mogu otvoriti datoteku za čitanje (provjerite privilegije)"
 
-#: kofficecore/koDocument.cc:1390
+#: kofficecore/koDocument.cc:1406
 #, fuzzy
 msgid "Couldn't read the beginning of the file."
 msgstr "Ne mogu pročitati početak datoteke"
 
-#: kofficecore/koDocument.cc:1416 kofficecore/koDocument.cc:1450
+#: kofficecore/koDocument.cc:1432 kofficecore/koDocument.cc:1466
 #, fuzzy
 msgid ""
 "parsing error in the main document at line %1, column %2\n"
 "Error message: %3"
 msgstr "Greška u obradi datoteke na liniji %1, kolona %2"
 
-#: kofficecore/koDocument.cc:1433
+#: kofficecore/koDocument.cc:1449
 #, fuzzy
 msgid "Not a valid KOffice file."
 msgstr "Ovo nije ispravna KOffice datoteka"
 
-#: kofficecore/koDocument.cc:1466
+#: kofficecore/koDocument.cc:1482
 #, fuzzy
 msgid "Invalid document: no file 'maindoc.xml'."
 msgstr "Dokument je neispravan: ne postoji 'maindoc.xml'"
 
-#: kofficecore/koDocument.cc:1478
+#: kofficecore/koDocument.cc:1494
 #, fuzzy
 msgid "Couldn't load embedded objects."
 msgstr "Ne mogu učitati ugrađene objekte"
 
-#: kofficecore/koDocument.cc:1616 kofficecore/koMainWindow.cc:971
+#: kofficecore/koDocument.cc:1634 kofficecore/koMainWindow.cc:973
 msgid ""
 "<p>The document <b>'%1'</b> has been modified.</p>"
 "<p>Do you want to save it?</p>"
 msgstr "<p>Dokument <b>'%1'</b> je mijenjan.</p><p>Želite li ga snimiti?</p>"
 
-#: kofficecore/koDocument.cc:1757
+#: kofficecore/koDocument.cc:1775
 msgid "Internal error: saveXML not implemented"
 msgstr "Interna greška: saveXML nije implementiran"
 
@@ -588,68 +607,72 @@ msgstr ""
 "Nije pronađen eksterni dokument:\n"
 "%1"
 
-#: kofficecore/koDocumentInfoDlg.cc:99
+#: kofficecore/koDocumentInfoDlg.cc:104
 msgid "Document Information"
 msgstr "Informacije o dokumentu"
 
-#: kofficecore/koDocumentInfoDlg.cc:140
+#: kofficecore/koDocumentInfoDlg.cc:180
 msgid "Author"
 msgstr "Autor"
 
-#: kofficecore/koDocumentInfoDlg.cc:144 kofficeui/koTemplateChooseDia.cc:636
+#: kofficecore/koDocumentInfoDlg.cc:184 kofficeui/koTemplateChooseDia.cc:653
 #: kofficeui/koTemplateCreateDia.cc:96 kotext/koStylist.cc:184
 #: kotext/koVariableDlgs.cc:69 kotext/koVariableDlgs.cc:299
 msgid "Name:"
 msgstr "Ime:"
 
-#: kofficecore/koDocumentInfoDlg.cc:154
+#: kofficecore/koDocumentInfoDlg.cc:195
 #, fuzzy
 msgid "Initials:"
 msgstr "Kurziv:"
 
-#: kofficecore/koDocumentInfoDlg.cc:157 kofficecore/koDocumentInfoDlg.cc:228
+#: kofficecore/koDocumentInfoDlg.cc:199 kofficecore/koDocumentInfoDlg.cc:284
 msgid "Title:"
 msgstr "Pozicija:"
 
-#: kofficecore/koDocumentInfoDlg.cc:160
+#: kofficecore/koDocumentInfoDlg.cc:203
 msgid "Company:"
 msgstr "Preduzeće:"
 
-#: kofficecore/koDocumentInfoDlg.cc:170
+#: kofficecore/koDocumentInfoDlg.cc:214
 msgid "Email:"
 msgstr "Email:"
 
-#: kofficecore/koDocumentInfoDlg.cc:180
+#: kofficecore/koDocumentInfoDlg.cc:225
 msgid "Telephone:"
 msgstr "Telefon:"
 
-#: kofficecore/koDocumentInfoDlg.cc:183
+#: kofficecore/koDocumentInfoDlg.cc:229
 msgid "Fax:"
 msgstr "Fax:"
 
-#: kofficecore/koDocumentInfoDlg.cc:186
+#: kofficecore/koDocumentInfoDlg.cc:233
 msgid "Street:"
 msgstr "Ulica:"
 
-#: kofficecore/koDocumentInfoDlg.cc:189
+#: kofficecore/koDocumentInfoDlg.cc:237
 msgid "Postal code:"
 msgstr "Poštanski broj:"
 
-#: kofficecore/koDocumentInfoDlg.cc:192
+#: kofficecore/koDocumentInfoDlg.cc:241
 msgid "City:"
 msgstr "Grad:"
 
-#: kofficecore/koDocumentInfoDlg.cc:195
+#: kofficecore/koDocumentInfoDlg.cc:245
 msgid "Country:"
 msgstr "Država:"
 
-#: kofficecore/koDocumentInfoDlg.cc:225
+#: kofficecore/koDocumentInfoDlg.cc:249
+msgid "Load From Address Book"
+msgstr ""
+
+#: kofficecore/koDocumentInfoDlg.cc:281
 msgid ""
 "_: about the document\n"
 "About"
 msgstr "O dokumentu"
 
-#: kofficecore/koDocumentInfoDlg.cc:232
+#: kofficecore/koDocumentInfoDlg.cc:288
 msgid "Abstract:"
 msgstr "Sažetak:"
 
@@ -663,16 +686,16 @@ msgstr "Izaberite"
 msgid "Select a filter:"
 msgstr "Izaberite znak"
 
-#: kofficecore/koFilterManager.cc:256 kofficecore/koFilterManager.cc:265
+#: kofficecore/koFilterManager.cc:261 kofficecore/koFilterManager.cc:270
 #, fuzzy
 msgid "Could not export file."
 msgstr "Ne mogu izvesti datoteku"
 
-#: kofficecore/koFilterManager.cc:256 kofficecore/koFilterManager.cc:265
+#: kofficecore/koFilterManager.cc:261 kofficecore/koFilterManager.cc:270
 msgid "Missing Export Filter"
 msgstr "Nedostaje filter za izvoz"
 
-#: kofficecore/koFilterManager.cc:484
+#: kofficecore/koFilterManager.cc:489
 #, c-format
 msgid ""
 "Could not import file of type\n"
@@ -681,7 +704,7 @@ msgstr ""
 "Ne mogu uvesti datoteke tipa\n"
 "%1"
 
-#: kofficecore/koFilterManager.cc:487
+#: kofficecore/koFilterManager.cc:492
 msgid "Missing Import Filter"
 msgstr "Nedostaje filter za uvoz"
 
@@ -923,32 +946,32 @@ msgstr ""
 "Dokument sa ovim imenom već postoji.\n"
 "Da li ga želite zamijeniti sa trenutnim?"
 
-#: kofficecore/koMainWindow.cc:1031 kofficeui/koTemplateChooseDia.cc:160
+#: kofficecore/koMainWindow.cc:1042 kofficeui/koTemplateChooseDia.cc:169
 msgid "Open Document"
 msgstr "Otvori dokument"
 
-#: kofficecore/koMainWindow.cc:1033
+#: kofficecore/koMainWindow.cc:1044
 #, fuzzy
 msgid "Import Document"
 msgstr "Otvori dokument"
 
-#: kofficecore/koMainWindow.cc:1452
+#: kofficecore/koMainWindow.cc:1464
 msgid "Show %1 Toolbar"
 msgstr "Prikaži traku %1"
 
-#: kofficecore/koMainWindow.cc:1522
+#: kofficecore/koMainWindow.cc:1534
 msgid "ERROR: File not found."
 msgstr "GREŠKA: Datoteka nije pronađena."
 
-#: kofficecore/koMainWindow.cc:1523
+#: kofficecore/koMainWindow.cc:1535
 msgid "To send a file you must first have saved the file to the filesystem."
 msgstr "Da biste poslali datoteku morate je prvo snimiti na disk."
 
-#: kofficecore/koMainWindow.cc:1524
+#: kofficecore/koMainWindow.cc:1536
 msgid "Error: File Not Found!"
 msgstr "Greška: Datoteka nije pronađena!"
 
-#: kofficecore/koMainWindow.cc:1534
+#: kofficecore/koMainWindow.cc:1546
 msgid ""
 "You will lose all your changes!\n"
 "Do you want to continue?"
@@ -1341,51 +1364,51 @@ msgstr "Tabulator &desno"
 msgid "Tabulator &Decimal Point"
 msgstr "Tabulator &decimalna tačka"
 
-#: kofficeui/koTemplateChooseDia.cc:333
+#: kofficeui/koTemplateChooseDia.cc:345
 #, fuzzy
 msgid "Selected Template"
 msgstr "Napravi šablon"
 
-#: kofficeui/koTemplateChooseDia.cc:389
+#: kofficeui/koTemplateChooseDia.cc:401
 #, fuzzy
 msgid "Empty Document"
 msgstr "Otvori dokument"
 
-#: kofficeui/koTemplateChooseDia.cc:389
+#: kofficeui/koTemplateChooseDia.cc:401
 #, fuzzy
 msgid "Creates an empty document"
 msgstr "Počni sa &praznim dokumentom"
 
-#: kofficeui/koTemplateChooseDia.cc:405
+#: kofficeui/koTemplateChooseDia.cc:417
 msgid "Always start %1 with the selected template"
 msgstr ""
 
-#: kofficeui/koTemplateChooseDia.cc:457
+#: kofficeui/koTemplateChooseDia.cc:469
 #, fuzzy
 msgid "&Create Document"
 msgstr "Otvori dokument"
 
-#: kofficeui/koTemplateChooseDia.cc:462
+#: kofficeui/koTemplateChooseDia.cc:474
 #, fuzzy
 msgid "Open &Existing Document"
 msgstr "Otvori postojeći dokument"
 
-#: kofficeui/koTemplateChooseDia.cc:467
+#: kofficeui/koTemplateChooseDia.cc:479
 #, fuzzy
 msgid "Open &Recent Document"
 msgstr "Otvori &skorašnji dokument"
 
-#: kofficeui/koTemplateChooseDia.cc:490
+#: kofficeui/koTemplateChooseDia.cc:502
 #, fuzzy
 msgid "Create Document"
 msgstr "Otvori dokument"
 
-#: kofficeui/koTemplateChooseDia.cc:639
+#: kofficeui/koTemplateChooseDia.cc:656
 #, fuzzy
 msgid "Description:"
 msgstr "Ukras"
 
-#: kofficeui/koTemplateChooseDia.cc:641
+#: kofficeui/koTemplateChooseDia.cc:658
 #, fuzzy
 msgid "No description available"
 msgstr "Nema skorašnjih datoteka"
@@ -2622,8 +2645,10 @@ msgid "KOffice script interpreter."
 msgstr "KOffice script interpreter."
 
 #: koscript/main.cc:54
-msgid "You must specify a script.\n"
-msgstr "Morate navesti skriptu.\n"
+msgid ""
+"You must specify a script.\n"
+msgstr ""
+"Morate navesti skriptu.\n"
 
 #: kotext/dateformatwidget_impl.cc:24
 #, fuzzy
@@ -3051,8 +3076,8 @@ msgstr "Dodaj stavku na listu"
 msgid "Enter entry:"
 msgstr "Unesite stavku:"
 
-#: kotext/koChangeCaseDia.cc:34 kotext/kotextobject.cc:1718
-#: kotext/kotextobject.cc:1794
+#: kotext/koChangeCaseDia.cc:34 kotext/kotextobject.cc:1707
+#: kotext/kotextobject.cc:1783
 msgid "Change Case"
 msgstr "Promijeni velika/mala slova"
 
@@ -3829,115 +3854,115 @@ msgid ""
 "Unknown"
 msgstr "Nepoznat"
 
-#: kotext/kotextformat.cc:1185 kotext/kotextformat.cc:1196
+#: kotext/kotextformat.cc:1187 kotext/kotextformat.cc:1198
 msgid "Without"
 msgstr "Bez"
 
-#: kotext/kotextformat.cc:1186 kotext/kotextformat.cc:1197
+#: kotext/kotextformat.cc:1188 kotext/kotextformat.cc:1199
 msgid "Single"
 msgstr "Jednostruko"
 
-#: kotext/kotextformat.cc:1187 kotext/kotextformat.cc:1198
+#: kotext/kotextformat.cc:1189 kotext/kotextformat.cc:1200
 msgid "Simple Bold"
 msgstr "Jednostavna masna"
 
-#: kotext/kotextformat.cc:1188 kotext/kotextformat.cc:1199
+#: kotext/kotextformat.cc:1190 kotext/kotextformat.cc:1201
 msgid "Double"
 msgstr "Dvostruko"
 
-#: kotext/kotextformat.cc:1189
+#: kotext/kotextformat.cc:1191
 msgid "Wave"
 msgstr ""
 
-#: kotext/kotextformat.cc:1207
+#: kotext/kotextformat.cc:1209
 #, fuzzy
 msgid "Uppercase"
 msgstr "&Velika"
 
-#: kotext/kotextformat.cc:1208
+#: kotext/kotextformat.cc:1210
 #, fuzzy
 msgid "Lowercase"
 msgstr "&Mala"
 
-#: kotext/kotextformat.cc:1209
+#: kotext/kotextformat.cc:1211
 msgid "Small Caps"
 msgstr "Umanjena velika slova"
 
-#: kotext/kotextformat.cc:1216 kotext/kotextformat.cc:1227
+#: kotext/kotextformat.cc:1218 kotext/kotextformat.cc:1229
 msgid "Solid Line"
 msgstr "Puna linija"
 
-#: kotext/kotextformat.cc:1217 kotext/kotextformat.cc:1228
+#: kotext/kotextformat.cc:1219 kotext/kotextformat.cc:1230
 msgid "Dash Line"
 msgstr "Iscrtkana linija"
 
-#: kotext/kotextformat.cc:1218 kotext/kotextformat.cc:1229
+#: kotext/kotextformat.cc:1220 kotext/kotextformat.cc:1231
 msgid "Dot Line"
 msgstr "Tačkasta linija"
 
-#: kotext/kotextformat.cc:1219 kotext/kotextformat.cc:1230
+#: kotext/kotextformat.cc:1221 kotext/kotextformat.cc:1232
 msgid "Dash Dot Line"
 msgstr "Linija crta-tačka"
 
-#: kotext/kotextformat.cc:1220 kotext/kotextformat.cc:1231
+#: kotext/kotextformat.cc:1222 kotext/kotextformat.cc:1233
 msgid "Dash Dot Dot Line"
 msgstr "Linija crta-tačka-tačka"
 
-#: kotext/kotextobject.cc:420 kotext/kotextobject.cc:460
-#: kotext/kotextobject.cc:517
+#: kotext/kotextobject.cc:421 kotext/kotextobject.cc:461
+#: kotext/kotextobject.cc:518
 msgid "Delete Text"
 msgstr "Obriši tekst"
 
-#: kotext/kotextobject.cc:486 kotext/kotextview.cc:375
+#: kotext/kotextobject.cc:487 kotext/kotextview.cc:374
 msgid "Insert Text"
 msgstr "Umetni tekst"
 
-#: kotext/kotextobject.cc:689 kotext/kotextview.cc:1192
+#: kotext/kotextobject.cc:689 kotext/kotextview.cc:1191
 msgid "Paste Text"
 msgstr "Umetni tekst"
 
-#: kotext/kotextobject.cc:724
+#: kotext/kotextobject.cc:723
 #, c-format
 msgid "Apply Style %1"
 msgstr "Primijeni stil %1"
 
-#: kotext/kotextobject.cc:981
+#: kotext/kotextobject.cc:978
 msgid "Format Text"
 msgstr "Formatiraj tekst"
 
-#: kotext/kotextobject.cc:1069
+#: kotext/kotextobject.cc:1065
 msgid "Change List Type"
 msgstr "Promijeni tip liste"
 
-#: kotext/kotextobject.cc:1106
+#: kotext/kotextobject.cc:1101
 msgid "Change Alignment"
 msgstr "Promijeni poravnanje"
 
-#: kotext/kotextobject.cc:1144
+#: kotext/kotextobject.cc:1138
 msgid "Change First Line Indent"
 msgstr "Promijeni uvlačenje prve linije"
 
-#: kotext/kotextobject.cc:1146
+#: kotext/kotextobject.cc:1140
 msgid "Change Indent"
 msgstr "Promijeni uvlačenje"
 
-#: kotext/kotextobject.cc:1148
+#: kotext/kotextobject.cc:1142
 msgid "Change Paragraph Spacing"
 msgstr "Promijeni razmak između odlomaka"
 
-#: kotext/kotextobject.cc:1199
+#: kotext/kotextobject.cc:1192
 msgid "Change Line Spacing"
 msgstr "Promijeni razmak linija"
 
-#: kotext/kotextobject.cc:1260
+#: kotext/kotextobject.cc:1252
 msgid "Change Borders"
 msgstr "Promijeni rubove"
 
-#: kotext/kotextobject.cc:1300
+#: kotext/kotextobject.cc:1291
 msgid "Change Tabulator"
 msgstr "Promijeni tabulator"
 
-#: kotext/kotextobject.cc:1343
+#: kotext/kotextobject.cc:1333
 msgid "Change Shadow"
 msgstr "Promijeni sjenčenje"
 
@@ -3945,36 +3970,36 @@ msgstr "Promijeni sjenčenje"
 msgid "Remove Word"
 msgstr "Ukloni riječ"
 
-#: kotext/kotextview.cc:1078
+#: kotext/kotextview.cc:1077
 msgid "Replace Word"
 msgstr "Zamijeni riječ"
 
-#: kotext/kotextview.cc:1090
+#: kotext/kotextview.cc:1089
 msgid "%1 is not a valid link."
 msgstr "%1 nije ispravan link."
 
-#: kotext/kotextview.cc:1097
+#: kotext/kotextview.cc:1096
 msgid "Insert Soft Hyphen"
 msgstr "Umetni Soft Hyphen"
 
-#: kotext/kotextview.cc:1103
+#: kotext/kotextview.cc:1102
 msgid "Insert Line Break"
 msgstr "Umetni prekid linije"
 
-#: kotext/kotextview.cc:1109
+#: kotext/kotextview.cc:1108
 #, fuzzy
 msgid "Insert Non-Breaking Space"
 msgstr "Umetni ne-prekidajući razmak"
 
-#: kotext/kotextview.cc:1122 kotext/kotextview.cc:1130
+#: kotext/kotextview.cc:1121 kotext/kotextview.cc:1129
 msgid "Insert Special Char"
 msgstr "Umetni posebni znak"
 
-#: kotext/kotextview.cc:1307
+#: kotext/kotextview.cc:1306
 msgid "Remove Comment"
 msgstr "Ukloni komentar"
 
-#: kotext/kotextview.cc:1362
+#: kotext/kotextview.cc:1361
 #, fuzzy
 msgid "Remove Link"
 msgstr "Ukloni link"
@@ -4432,12 +4457,12 @@ msgstr "Njemački (novi orth.)"
 msgid "ISpell Default"
 msgstr "&Podrazumjevano"
 
-#: kospell/koSconfig.cpp:949
+#: kospell/koSconfig.cpp:951
 #, fuzzy
 msgid "ASpell Default"
 msgstr "&Podrazumjevano"
 
-#: kospell/koSconfig.cpp:994
+#: kospell/koSconfig.cpp:996
 #, fuzzy, c-format
 msgid ""
 "_: default spelling dictionary\n"
@@ -4499,7 +4524,7 @@ msgstr "&Dodaj"
 msgid "AutoCorrection"
 msgstr "Ispravljanje"
 
-#: kospell/koaspell.cpp:585 kospell/koispell.cpp:1168
+#: kospell/koaspell.cpp:560 kospell/koispell.cpp:1150
 #, fuzzy
 msgid "Spell Checker"
 msgstr "Izaberite znak"
@@ -4672,10 +4697,6 @@ msgstr "Izaberite znak"
 #, fuzzy
 #~ msgid "Exporting"
 #~ msgstr "Izuzeci"
-
-#, fuzzy
-#~ msgid "Saving"
-#~ msgstr "Snimanje datoteke"
 
 #, fuzzy
 #~ msgid ""
@@ -5113,4 +5134,3 @@ msgstr "Izaberite znak"
 
 #~ msgid "Insert text"
 #~ msgstr "Umetni tekst"
-
