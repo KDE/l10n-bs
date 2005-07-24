@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kopete\n"
-"POT-Creation-Date: 2005-07-23 01:36+0200\n"
+"POT-Creation-Date: 2005-07-24 01:36+0200\n"
 "PO-Revision-Date: 2004-06-18 21:51+0200\n"
 "Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -389,6 +389,17 @@ msgstr ""
 msgid "Leave Offline Mode?"
 msgstr "Postavi O&ffline"
 
+#: libkopete/connectionmanager.cpp:149
+#: protocols/jabber/ui/dlgjabberchangepassword.cpp:81
+msgid "Connect"
+msgstr "Spji"
+
+#: libkopete/connectionmanager.cpp:149
+#: protocols/jabber/ui/dlgjabberchangepassword.cpp:81
+#, fuzzy
+msgid "Stay Offline"
+msgstr "Postavi O&ffline"
+
 #: libkopete/kopeteutils.cpp:38
 #, fuzzy
 msgid "You have been disconnected."
@@ -526,11 +537,13 @@ msgstr ""
 
 #: libkopete/kabcpersistence.cpp:342
 #, fuzzy
-msgid "&Yes"
-msgstr "&Resetuj"
+msgid "Use"
+msgstr "Korisnici"
 
-#: libkopete/kabcpersistence.cpp:342
-msgid "&No"
+#. i18n: file ./protocols/gadu/ui/gadueditaccountui.ui line 310
+#: libkopete/kabcpersistence.cpp:342 rc.cpp:2935
+#, no-c-format
+msgid "Do Not Use"
 msgstr ""
 
 #: libkopete/kabcpersistence.cpp:356
@@ -1707,6 +1720,16 @@ msgstr ""
 msgid "Allow Contact?"
 msgstr "Dopusti kontakt?"
 
+#: kopete/kopeteiface.cpp:154
+#, fuzzy
+msgid "Allow"
+msgstr "&Zatvoren:"
+
+#: kopete/kopeteiface.cpp:154
+#, fuzzy
+msgid "Reject"
+msgstr "&Resetuj"
+
 #: kopete/kopeteiface.cpp:167
 msgid ""
 "An external application has attempted to add a contact using  the %1 protocol, "
@@ -1832,6 +1855,16 @@ msgid ""
 "<qt>Would you like to add <b>%1</b> to your contact list as a member of <b>"
 "%2</b>?</qt>"
 msgstr "<qt>Da li želite dodati ovaj kontakt u vašu kontakt listu?</qt>"
+
+#: kopete/contactlist/kopetecontactlistview.cpp:1001
+#: kopete/contactlist/kopetecontactlistview.cpp:1016
+#: kopete/contactlist/kopetecontactlistview.cpp:1483
+#: protocols/jabber/jabberaccount.cpp:1034
+#: protocols/oscar/aim/aimprotocol.cpp:108
+#: protocols/oscar/icq/icqprotocol.cpp:120
+#, fuzzy
+msgid "Do Not Add"
+msgstr "Ne mogu snimiti"
 
 #: kopete/contactlist/kopetecontactlistview.cpp:1014
 #, fuzzy
@@ -1998,7 +2031,8 @@ msgid ""
 msgstr "Prikaži"
 
 #. i18n: file ./protocols/irc/ui/irceditaccount.ui line 605
-#: kopete/kopeteballoon.cpp:98 rc.cpp:1998 rc.cpp:2013 rc.cpp:2031 rc.cpp:2049
+#: kopete/kopeteballoon.cpp:98 protocols/yahoo/yahoocontact.cpp:364
+#: rc.cpp:1998 rc.cpp:2013 rc.cpp:2031 rc.cpp:2049
 #, no-c-format
 msgid "Ignore"
 msgstr "Zanemari"
@@ -7086,12 +7120,6 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
-#. i18n: file ./protocols/gadu/ui/gadueditaccountui.ui line 310
-#: rc.cpp:2935
-#, no-c-format
-msgid "Do Not Use"
-msgstr ""
-
 #. i18n: file ./protocols/gadu/ui/gadueditaccountui.ui line 357
 #: rc.cpp:2944
 #, fuzzy, no-c-format
@@ -9641,6 +9669,7 @@ msgid "MSN Plugin"
 msgstr "MSN plugin"
 
 #: plugins/netmeeting/netmeetinginvitation.cpp:68
+#: protocols/yahoo/yahoocontact.cpp:364
 msgid "Accept"
 msgstr "Prihvati"
 
@@ -9966,6 +9995,15 @@ msgstr ""
 msgid "History Plugin"
 msgstr "Dodatak za historiju"
 
+#: plugins/history/historyplugin.cpp:68
+#, fuzzy
+msgid "Import && Convert"
+msgstr "Vi ste spojeni preko drugog klijenta"
+
+#: plugins/history/historyplugin.cpp:68
+msgid "Do Not Import"
+msgstr ""
+
 #: plugins/history/converter.cpp:40
 msgid "Would you like to remove old history files?"
 msgstr "Da li želite ukloniti stare historijske datoteke?"
@@ -9973,6 +10011,12 @@ msgstr "Da li želite ukloniti stare historijske datoteke?"
 #: plugins/history/converter.cpp:40
 msgid "History Converter"
 msgstr ""
+
+#: plugins/history/converter.cpp:40 protocols/jabber/jabberaccount.cpp:1088
+#: protocols/jabber/jabbercontact.cpp:929
+#, fuzzy
+msgid "Keep"
+msgstr "&Zadrži"
 
 #: plugins/history/converter.cpp:42
 msgid "History converter"
@@ -11569,6 +11613,16 @@ msgstr ""
 #: protocols/sms/smsaccount.cpp:64
 msgid "Message Too Long"
 msgstr "Poruka predugačka"
+
+#: protocols/sms/smsaccount.cpp:64
+#, fuzzy
+msgid "Divide"
+msgstr "Devoice"
+
+#: protocols/sms/smsaccount.cpp:64
+#, fuzzy
+msgid "Do Not Divide"
+msgstr "Ne uznemiravaj"
 
 #: protocols/sms/services/smssend.cpp:57
 msgid "No provider configured."
@@ -13223,6 +13277,17 @@ msgstr ""
 msgid "No Yahoo Addressbook Entry Found"
 msgstr "Novi unos u adresar"
 
+#: protocols/yahoo/kyahoo.cpp:654
+#, fuzzy
+msgid "Create Entry"
+msgstr "Napravi novi &unos..."
+
+#: protocols/winpopup/libwinpopup/libwinpopup.cpp:104
+#: protocols/yahoo/kyahoo.cpp:654
+#, fuzzy
+msgid "Do Not Create"
+msgstr "Nemoj prevoditi"
+
 #: protocols/yahoo/kyahoo.cpp:708
 msgid ""
 "An unknown error occurred. A possible reason is a invalid email address."
@@ -14336,11 +14401,28 @@ msgid ""
 "Should the directory be created? (May need root password)"
 msgstr ""
 
+#: protocols/winpopup/libwinpopup/libwinpopup.cpp:104
+#, fuzzy
+msgid "Create Directory"
+msgstr "Direktno prevedi"
+
 #: protocols/winpopup/libwinpopup/libwinpopup.cpp:117
 msgid ""
 "Permissions of the working directory /var/lib/winpopup/ are wrong!\n"
 "Fix? (May need root password)"
 msgstr ""
+
+#: protocols/winpopup/libwinpopup/libwinpopup.cpp:119
+#: protocols/winpopup/libwinpopup/libwinpopup.cpp:274
+#, fuzzy
+msgid "Fix"
+msgstr "Faks:"
+
+#: protocols/winpopup/libwinpopup/libwinpopup.cpp:119
+#: protocols/winpopup/libwinpopup/libwinpopup.cpp:274
+#, fuzzy
+msgid "Do Not Fix"
+msgstr "Ne uznemiravaj"
 
 #: protocols/winpopup/libwinpopup/libwinpopup.cpp:272
 msgid ""
@@ -14689,6 +14771,10 @@ msgid "This conversation is being logged administratively."
 msgstr ""
 
 #, fuzzy
+#~ msgid "&Yes"
+#~ msgstr "&Resetuj"
+
+#, fuzzy
 #~ msgid "MSN Contact List Full"
 #~ msgstr "Kontakt lista"
 
@@ -15027,9 +15113,6 @@ msgstr ""
 
 #~ msgid "Set Out To &Lunch"
 #~ msgstr "Postavi &Na ručku sam"
-
-#~ msgid "Set &Offline"
-#~ msgstr "Postavi O&ffline"
 
 #, fuzzy
 #~ msgid "Set &Idle"
@@ -15653,9 +15736,6 @@ msgstr ""
 
 #~ msgid "Go &Voice"
 #~ msgstr "Idi &voice"
-
-#~ msgid "Connect"
-#~ msgstr "Spji"
 
 #~ msgid "Remember &password"
 #~ msgstr "Zapamti &šifru"
