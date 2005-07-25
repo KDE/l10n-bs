@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: quanta\n"
-"POT-Creation-Date: 2005-07-23 01:42+0200\n"
+"POT-Creation-Date: 2005-07-25 01:43+0200\n"
 "PO-Revision-Date: 2004-05-09 15:45-0700\n"
 "Last-Translator: Predrag Petrovic <predrag.petrovic@lsinter.net>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -3671,7 +3671,8 @@ msgid "Project Folder"
 msgstr "Uploaduj datoteke projekta"
 
 #. i18n: file ./plugins/plugineditor.ui line 32
-#: plugins/quantaplugineditor.cpp:45 rc.cpp:2555
+#: plugins/quantaplugineditor.cpp:45 plugins/quantaplugininterface.cpp:260
+#: rc.cpp:2555
 #, no-c-format
 msgid "Edit Plugins"
 msgstr ""
@@ -9203,6 +9204,10 @@ msgstr ""
 "Trenutne datoteke su promijenjene..\n"
 "DA li ih želiš spasiti?"
 
+#: project/project.cpp:238 src/quanta.cpp:391
+msgid "Keep"
+msgstr ""
+
 #: src/quanta.cpp:484
 #, fuzzy
 msgid "Save File"
@@ -9211,6 +9216,12 @@ msgstr "&Sljedeća datoteka"
 #: src/quanta.cpp:495
 msgid "<qt>Do you want to add the<br><b>%1</b><br>file to project?</qt>"
 msgstr ""
+
+#: components/cvsservice/cvsservice.cpp:333 src/quanta.cpp:495
+#: utility/quantanetaccess.cpp:183
+#, fuzzy
+msgid "Do Not Add"
+msgstr "&Nemoj spasiti"
 
 #: src/quanta.cpp:558
 #, c-format
@@ -9505,6 +9516,11 @@ msgstr ""
 #, fuzzy
 msgid "Review"
 msgstr "Pregled"
+
+#: src/quanta.cpp:3837
+#, fuzzy
+msgid "Do Not Review"
+msgstr "&Nemoj spasiti"
 
 #: src/quanta.cpp:4039 src/quanta.cpp:4716 src/quanta.cpp:4755
 #, fuzzy
@@ -9810,6 +9826,11 @@ msgstr "Uploaduj datoteke projekta"
 msgid "<qt>Do you want to replace the existing <b>%1</b> DTD?</qt>"
 msgstr "Ne mogu otvoriti datoteku  %s za IO_WriteOnly"
 
+#: src/dtds.cpp:865 src/dtds.cpp:897
+#, fuzzy
+msgid "Do Not Replace"
+msgstr "&Nemoj spasiti"
+
 #: src/dtds.cpp:875 src/dtds.cpp:919
 msgid "<qt>Use the newly loaded <b>%1</b> DTD for the current document?</qt>"
 msgstr ""
@@ -9818,6 +9839,16 @@ msgstr ""
 #, fuzzy
 msgid "Change DTD"
 msgstr "Učitavam..."
+
+#: src/dtds.cpp:875 src/dtds.cpp:919
+#, fuzzy
+msgid "Use"
+msgstr "Korisnik"
+
+#: src/dtds.cpp:875 src/dtds.cpp:919
+#, fuzzy
+msgid "Do Not Use"
+msgstr "&Nemoj spasiti"
 
 #: src/dtds.cpp:904
 msgid ""
@@ -9834,6 +9865,16 @@ msgstr "Greška prilikom otvaranja datoteke!"
 #, fuzzy
 msgid "<qt>Autoload the <b>%1</b> DTD in the feature?</qt>"
 msgstr "Ne mogu otvoriti datoteku  %s za IO_WriteOnly"
+
+#: src/dtds.cpp:908 utility/newstuff.cpp:73
+#, fuzzy
+msgid "Load"
+msgstr "Prebaci"
+
+#: src/dtds.cpp:908
+#, fuzzy
+msgid "Do Not Load"
+msgstr "&Nemoj spasiti"
 
 #: src/quantaview.cpp:294 src/quantaview.cpp:300
 #, fuzzy
@@ -10347,6 +10388,13 @@ msgstr ""
 "Dokumenat sa ovim imenom već postoji.\n"
 "Da li ga želiš prepisati?"
 
+#: ../lib/compatibility/knewstuff/knewstuffgeneric.cpp:135
+#: messages/messageoutput.cpp:163 project/projectprivate.cpp:895
+#: treeviews/basetreeview.cpp:1028 treeviews/templatestreeview.cpp:470
+#: utility/quantacommon.cpp:683
+msgid "Overwrite"
+msgstr ""
+
 #: messages/messageoutput.cpp:168
 #, fuzzy
 msgid "<qt>Cannot save log file<br><b>%1</b></qt>"
@@ -10555,6 +10603,16 @@ msgid ""
 msgstr ""
 "Trenutne datoteke su promijenjene..\n"
 "DA li ih želiš spasiti?"
+
+#: dialogs/dtepeditdlg.cpp:204
+#, fuzzy
+msgid "Save to Different File"
+msgstr "Insertuj u projekat"
+
+#: dialogs/dtepeditdlg.cpp:204
+#, fuzzy
+msgid "Do Not Save"
+msgstr "&Nemoj spasiti"
 
 #: dialogs/dtepeditdlg.cpp:206
 #, fuzzy
@@ -11756,11 +11814,6 @@ msgstr ""
 "Dokumenat sa ovim imenom već postoji.\n"
 "Da li ga želiš prepisati?"
 
-#: ../lib/compatibility/knewstuff/knewstuffgeneric.cpp:135
-#: treeviews/basetreeview.cpp:1028 treeviews/templatestreeview.cpp:470
-msgid "Overwrite"
-msgstr ""
-
 #: treeviews/templatestreeview.cpp:476
 msgid ""
 "<qt>Could not write to file <b>%1</b>."
@@ -11814,6 +11867,16 @@ msgid ""
 "project folder.\n"
 "Do you want to copy the folder into the main project folder?"
 msgstr ""
+
+#: treeviews/templatestreeview.cpp:1067
+#, fuzzy
+msgid "Copy Folder"
+msgstr "&Sljedeća datoteka"
+
+#: treeviews/templatestreeview.cpp:1067
+#, fuzzy
+msgid "Do Not Copy"
+msgstr "&Nemoj spasiti"
 
 #: treeviews/templatestreeview.cpp:1075
 msgid ""
@@ -12329,6 +12392,15 @@ msgstr ""
 msgid "Action Not Responding"
 msgstr ""
 
+#: utility/tagaction.cpp:998
+#, fuzzy
+msgid "Terminate"
+msgstr "Šablon"
+
+#: utility/tagaction.cpp:998
+msgid "Keep Running"
+msgstr ""
+
 #: utility/quantacommon.cpp:383
 msgid ""
 "<qt>Cannot create folder"
@@ -12348,6 +12420,11 @@ msgstr ""
 #: utility/quantacommon.cpp:672
 msgid "Unknown Type"
 msgstr ""
+
+#: project/project.cpp:193 utility/quantacommon.cpp:672
+#, fuzzy
+msgid "Do Not Open"
+msgstr "&Nemoj spasiti"
 
 #: utility/quantabookmarks.cpp:88
 msgid "Set &Bookmark"
@@ -12633,6 +12710,11 @@ msgstr ""
 msgid "Event Triggered"
 msgstr ""
 
+#: utility/qpevents.cpp:88 utility/qpevents.cpp:92
+#, fuzzy
+msgid "Execute"
+msgstr "Akcija"
+
 #: utility/qpevents.cpp:92
 msgid ""
 "<qt>An external action (<i>%1</i>) associated with an event (<i>%2</i>"
@@ -12847,6 +12929,10 @@ msgstr ""
 msgid "Invalid Plugin"
 msgstr ""
 
+#: plugins/quantapluginconfig.cpp:68
+msgid "Do Not Apply"
+msgstr ""
+
 #: plugins/quantapluginconfig.cpp:80
 #, fuzzy
 msgid "Select Plugin Folder"
@@ -12881,6 +12967,11 @@ msgstr ""
 #: plugins/quantaplugininterface.cpp:260
 msgid "Invalid Plugins"
 msgstr ""
+
+#: plugins/quantaplugininterface.cpp:260
+#, fuzzy
+msgid "Do Not Edit"
+msgstr "&Nemoj spasiti"
 
 #: plugins/quantaplugininterface.cpp:267
 msgid "All plugins validated successfully."
@@ -13103,13 +13194,19 @@ msgid ""
 msgstr ""
 
 #: project/projectupload.cpp:741
-msgid "Do you really want to cancel the upload?"
-msgstr ""
+#, fuzzy
+msgid "Do you really want to abort the upload?"
+msgstr "Ne mogu otvoriti datoteku  %s za IO_WriteOnly"
 
 #: project/projectupload.cpp:742
 #, fuzzy
-msgid "Cancel Upload"
+msgid "Abort Upload"
 msgstr "Prebaci"
+
+#: project/projectupload.cpp:742
+#, fuzzy
+msgid "Abort"
+msgstr "Port:"
 
 #: project/teammembersdlg.cpp:48
 #, fuzzy
@@ -13144,6 +13241,15 @@ msgid ""
 msgstr ""
 "Trenutne datoteke su promijenjene..\n"
 "DA li ih želiš spasiti?"
+
+#: project/teammembersdlg.cpp:169
+#, fuzzy
+msgid "Reassign"
+msgstr "Sabiranje"
+
+#: project/teammembersdlg.cpp:169
+msgid "Do Not Reassign"
+msgstr ""
 
 #: project/projectprivate.cpp:74
 #, fuzzy
@@ -13733,6 +13839,14 @@ msgstr ""
 msgid "Old upload information found, fill out fields?"
 msgstr ""
 
+#: ../lib/compatibility/knewstuff/uploaddialog.cpp:116
+msgid "Fill Out Fields"
+msgstr ""
+
+#: ../lib/compatibility/knewstuff/uploaddialog.cpp:116
+msgid "Do Not Fill Out"
+msgstr ""
+
 #: ../lib/compatibility/knewstuff/uploaddialog.cpp:139
 msgid "Please put in a name."
 msgstr ""
@@ -14080,6 +14194,10 @@ msgstr "&Spasi kao"
 msgid "Saves all modified files"
 msgstr ""
 
+#, fuzzy
+#~ msgid "Cancel Upload"
+#~ msgstr "Prebaci"
+
 #~ msgid "General"
 #~ msgstr "Generalno"
 
@@ -14101,10 +14219,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "Before Upload"
-#~ msgstr "Prebaci"
-
-#, fuzzy
-#~ msgid "After Upload"
 #~ msgstr "Prebaci"
 
 #, fuzzy
@@ -15251,10 +15365,6 @@ msgstr ""
 #~ msgstr "Traži u datotekama..."
 
 #, fuzzy
-#~ msgid "Save Strings to File"
-#~ msgstr "Insertuj u projekat"
-
-#, fuzzy
 #~ msgid "Can't open folders."
 #~ msgstr "Ne mogu otvoriti datoteku  %s za IO_WriteOnly"
 
@@ -15272,10 +15382,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "Skip &File"
-#~ msgstr "&Sljedeća datoteka"
-
-#, fuzzy
-#~ msgid "Skip &Folder"
 #~ msgstr "&Sljedeća datoteka"
 
 #, fuzzy
