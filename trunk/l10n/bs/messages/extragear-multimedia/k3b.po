@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: k3b\n"
-"POT-Creation-Date: 2006-08-03 11:41+0200\n"
+"POT-Creation-Date: 2006-08-06 11:40+0200\n"
 "PO-Revision-Date: 2004-12-12 14:33-0800\n"
 "Last-Translator: Vladimir Grubor <vlado@mobih.ba>\n"
 "Language-Team: bosanski <lokal@linux.org.ba>\n"
@@ -98,7 +98,7 @@ msgstr "Datoteka već postoji"
 msgid "Overwrite"
 msgstr "Prepiši"
 
-#: k3bdiskinfoview.cpp:353 rip/k3baudioconvertingoptionwidget.cpp:122
+#: k3bdiskinfoview.cpp:353 rip/k3baudioconvertingoptionwidget.cpp:154
 #: rip/k3baudioprojectconvertingdialog.cpp:248
 #: rip/k3baudioprojectconvertingdialog.cpp:286
 #: rip/k3baudiorippingdialog.cpp:339 rip/k3baudiorippingdialog.cpp:396
@@ -221,7 +221,7 @@ msgstr ""
 msgid "Continue although the folder is not empty?"
 msgstr "Nastavi iako direktorij nije prazan?"
 
-#: rip/k3baudioconvertingoptionwidget.cpp:75
+#: rip/k3baudioconvertingoptionwidget.cpp:107
 msgid "Wave"
 msgstr "Val"
 
@@ -508,11 +508,11 @@ msgid "Extracting %1 to %2"
 msgstr "Izdvajam %1 do %2"
 
 #: rip/k3bcddbpatternwidget.cpp:50
-msgid "%A/%T/%a - %t"
+msgid "%{albumartist} - %{albumtitle}/%{artist} - %{title}"
 msgstr ""
 
 #: rip/k3bcddbpatternwidget.cpp:51
-msgid "%g/%A - %T/Track%n"
+msgid "%{genre}/%{albumartist} - %{albumtitle}/Track%{number}"
 msgstr ""
 
 #: rip/k3bcddbpatternwidget.cpp:52
@@ -524,13 +524,12 @@ msgid "%A - %T/!a='%A'{%a - }%t"
 msgstr ""
 
 #: rip/k3bcddbpatternwidget.cpp:55
-msgid "%A - %T"
+msgid "%{albumartist} - %{albumtitle}"
 msgstr ""
 
 #: rip/k3bcddbpatternwidget.cpp:57
-#, fuzzy
-msgid "playlists/%A/%T"
-msgstr "Playlista"
+msgid "playlists/%{albumartist}/%{albumtitle    }"
+msgstr ""
 
 #: rip/k3bcddbpatternwidget.cpp:132
 msgid ""
@@ -1283,7 +1282,7 @@ msgstr "Uspjeh"
 msgid "The Erasing process failed. Do you want to see the debugging output?"
 msgstr ""
 
-#: k3bemptydiscwaiter.cpp:672 misc/k3bblankingdialog.cpp:181
+#: k3bemptydiscwaiter.cpp:670 misc/k3bblankingdialog.cpp:181
 msgid "Erasing failed."
 msgstr "Brisanje neuspješno."
 
@@ -1506,7 +1505,9 @@ msgstr "Nema video transkodiranja!"
 msgid "DVD Reader Device"
 msgstr "Uređaj za čitanje DVD-a"
 
-#: misc/k3bdvdcopydialog.cpp:154
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencodereditwidget.ui line 31
+#: misc/k3bdvdcopydialog.cpp:154 rc.cpp:1327
+#, no-c-format
 msgid "General"
 msgstr "Općenito"
 
@@ -1552,7 +1553,7 @@ msgstr ""
 msgid "*.toc *.TOC|Cdrdao TOC Files and Cdrecord Clone Images"
 msgstr ""
 
-#: k3b.cpp:1285 k3bfileview.cpp:100 misc/k3bcdimagewritingdialog.cpp:186
+#: k3b.cpp:1285 k3bfileview.cpp:103 misc/k3bcdimagewritingdialog.cpp:186
 #: misc/k3bisoimagewritingdialog.cpp:151
 #, fuzzy
 msgid "*|All Files"
@@ -4081,7 +4082,7 @@ msgid "Project"
 msgstr "Projekat"
 
 #. i18n: file ./rip/base_k3bvideodvdrippingwidget.ui line 17
-#: rc.cpp:3
+#: rc.cpp:3 rc.cpp:1296 rc.cpp:1324
 #, fuzzy, no-c-format
 msgid "Form1"
 msgstr "Frames"
@@ -4184,7 +4185,7 @@ msgid "Variable &Bitrate"
 msgstr "Piši"
 
 #. i18n: file ./rip/base_k3bvideodvdrippingwidget.ui line 334
-#: rc.cpp:60
+#: rc.cpp:60 rc.cpp:1360
 #, no-c-format
 msgid "Alt+B"
 msgstr ""
@@ -4658,7 +4659,7 @@ msgstr "Ukloni image datoteke"
 
 #. i18n: file ./option/base_k3bpluginoptiontab.ui line 51
 #: projects/k3bdatafileview.cpp:66 projects/k3bmovixlistview.cpp:172
-#: rc.cpp:350
+#: rc.cpp:350 rc.cpp:1306
 #, fuzzy, no-c-format
 msgid "Name"
 msgstr "Ime"
@@ -6305,78 +6306,136 @@ msgid ""
 "used for encoding, thus slightly reducing the sound quality."
 msgstr ""
 
-#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 28
-#: rc.cpp:1296
-#, no-c-format
-msgid ""
-"Setup different external programs to encode audio data ripped from an audio CD."
-msgstr ""
-
-#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 82
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 32
 #: rc.cpp:1299
 #, no-c-format
-msgid "New"
+msgid ""
+"<p>This dialog can be used to setup external command line applications as audio "
+"encoders. These can then be used by K3b to encode audio data (Tracks from an "
+"audio CD or the titles from an audio project) to formats that are normally not "
+"supported (i.e. no encoder plugin exists).\n"
+"<p>K3b comes with a selection of predefined external applications that depends "
+"on the installed applications."
 msgstr ""
 
-#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 88
-#: rc.cpp:1302
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 48
+#: rc.cpp:1303
 #, fuzzy, no-c-format
-msgid "New Program"
-msgstr "Program"
+msgid "Configured Encoders"
+msgstr "Zatvaram datoteku..."
 
-#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 102
-#: rc.cpp:1308
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 68
+#: rc.cpp:1309
 #, fuzzy, no-c-format
-msgid "Delete Program"
-msgstr "Program"
+msgid "Extension"
+msgstr "Sesije:"
 
-#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 144
-#: rc.cpp:1311
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 79
+#: rc.cpp:1312 rc.cpp:1336
+#, fuzzy, no-c-format
+msgid "Command"
+msgstr "Potpuno"
+
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 130
+#: rc.cpp:1318
+#, fuzzy, no-c-format
+msgid "Edit..."
+msgstr "..."
+
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 138
+#: rc.cpp:1321
+#, fuzzy, no-c-format
+msgid "Add..."
+msgstr "..."
+
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencodereditwidget.ui line 52
+#: rc.cpp:1330
 #, fuzzy, no-c-format
 msgid "Name:"
 msgstr "Ime"
 
-#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 162
-#: rc.cpp:1314
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencodereditwidget.ui line 60
+#: rc.cpp:1333
 #, fuzzy, no-c-format
-msgid "Extension:"
-msgstr "Sesije:"
+msgid "Filename extension:"
+msgstr "Ime datoteke"
 
-#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 178
-#: rc.cpp:1317
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencodereditwidget.ui line 93
+#: rc.cpp:1339
 #, no-c-format
 msgid ""
 "<p><b>Command</b>"
 "<br>\n"
-"The command must at least contain the filename (%f). Metainfo may be set with:"
+"Please insert the command used to encode the audio data. The command has to "
+"read raw little endian (see <em>Swap Byte Order</em>"
+") 16bit stereo audio frames from stdin.\n"
+"<p>The following strings will be replaced by K3b:"
 "<br>\n"
-"<b>%t</b> - Title; <b>%a</b> - Artist; <b>%c</b> - Comment; <b>%n</b> "
-"- Track number;"
+"<b>%f</b> - The filename of the resulting file. This is where the command has "
+"to write its output to."
 "<br>\n"
-"<b>%m</b> - Album Title; <b>%r</b> - Album Artist; <b>%x</b> "
-"- Album comment; <b>%y</b> - Year"
+"<em>The following refer to metadata stored for example in the ID3 tag of am mp3 "
+"file (Be aware that these values might be empty).</em>"
 "<br>\n"
-"Be aware that these values might be empty."
+"<b>%t</b> - Title"
 "<br>\n"
-"The program has to read the data from stdin."
+"<b>%a</b> - Artist"
 "<br>\n"
-"If you only hear noise you most likely need to swap the byte order."
+"<b>%c</b> - Comment"
+"<br>\n"
+"<b>%n</b> - Track number"
+"<br>\n"
+"<b>%m</b> - Album Title"
+"<br>\n"
+"<b>%r</b> - Album Artist"
+"<br>\n"
+"<b>%x</b> - Album comment"
+"<br>\n"
+"<b>%y</b> - Release Year"
 msgstr ""
 
-#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 199
-#: rc.cpp:1326
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencodereditwidget.ui line 127
+#: rc.cpp:1357
 #, no-c-format
 msgid "Swap &Byte Order"
 msgstr ""
 
-#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 207
-#: rc.cpp:1329
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencodereditwidget.ui line 133
+#: rc.cpp:1363
+#, no-c-format
+msgid "Swap the byte order of the input data"
+msgstr ""
+
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencodereditwidget.ui line 137
+#: rc.cpp:1366
+#, no-c-format
+msgid ""
+"<p> If this option is checked K3b will swap the byte order of the input data. "
+"Thus, the command has to read big endian audio frames.\n"
+"<p>If the resulting audio file sounds bad it is highly likely that the byte "
+"order is wrong and this option has to be checked."
+msgstr ""
+
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencodereditwidget.ui line 145
+#: rc.cpp:1370
 #, fuzzy, no-c-format
 msgid "Write W&ave Header"
 msgstr "Zapiši image datoteku u:"
 
-#. i18n: file ../plugins/encoder/external/base_k3bexternalencoderconfigwidget.ui line 210
-#: rc.cpp:1332
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencodereditwidget.ui line 148
+#: rc.cpp:1373
+#, no-c-format
+msgid "Alt+A"
+msgstr ""
+
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencodereditwidget.ui line 151
+#: rc.cpp:1376
+#, no-c-format
+msgid "Create a wave header for the input data"
+msgstr ""
+
+#. i18n: file ../plugins/encoder/external/base_k3bexternalencodereditwidget.ui line 154
+#: rc.cpp:1379
 #, fuzzy, no-c-format
 msgid ""
 "<p>If this option is checked K3b will write a wave header. This is useful in "
@@ -6385,31 +6444,31 @@ msgstr ""
 "<p>Ako je ova opcija uključena K3b će ostaviti sve razmake u imenima datoteka "
 "kakvi jesu."
 
-#: k3bfileview.cpp:92
+#: k3bfileview.cpp:95
 msgid "Filter:"
 msgstr "Filter:"
 
-#: k3bfileview.cpp:101
+#: k3bfileview.cpp:104
 #, fuzzy
 msgid "audio/x-mp3 audio/x-wav application/x-ogg |Sound Files"
 msgstr "audio/x-mp3 application/x-ogg audio/wav |Zvučne datoteke"
 
-#: k3bfileview.cpp:102
+#: k3bfileview.cpp:105
 #, fuzzy
 msgid "audio/x-wav |Wave Sound Files"
 msgstr "audio/x-mp3 |MP3 zvučne datoteke"
 
-#: k3bfileview.cpp:103
+#: k3bfileview.cpp:106
 #, fuzzy
 msgid "audio/x-mp3 |MP3 Sound Files"
 msgstr "audio/x-mp3 |MP3 zvučne datoteke"
 
-#: k3bfileview.cpp:104
+#: k3bfileview.cpp:107
 #, fuzzy
 msgid "application/x-ogg |Ogg Vorbis Sound Files"
 msgstr "application/x-ogg |Ogg Vorbis zvučne datoteke"
 
-#: k3bfileview.cpp:105
+#: k3bfileview.cpp:108
 msgid "video/mpeg |MPEG Video Files"
 msgstr ""
 
@@ -9156,36 +9215,60 @@ msgstr "Pregled sadržaja"
 msgid "Variable Bitrate (%1)"
 msgstr "Piši"
 
-#: ../plugins/encoder/external/k3bexternalencoder.cpp:308
+#: ../plugins/encoder/external/k3bexternalencoderconfigwidget.cpp:35
+msgid "Editing external audio encoder"
+msgstr ""
+
+#: ../plugins/encoder/external/k3bexternalencoderconfigwidget.cpp:76
+#, fuzzy
+msgid "Please specify a name for the command."
+msgstr "Molimo da specificirate ispravan uzorak."
+
+#: ../plugins/encoder/external/k3bexternalencoderconfigwidget.cpp:77
+msgid "No name specified"
+msgstr ""
+
+#: ../plugins/encoder/external/k3bexternalencoderconfigwidget.cpp:81
+#, fuzzy
+msgid "Please specify an extension for the command."
+msgstr "Molimo da specificirate ispravan uzorak."
+
+#: ../plugins/encoder/external/k3bexternalencoderconfigwidget.cpp:82
+msgid "No extension specified"
+msgstr ""
+
+#: ../plugins/encoder/external/k3bexternalencoderconfigwidget.cpp:86
+#, fuzzy
+msgid "Please specify the command line."
+msgstr "Molimo da specificirate ispravan uzorak."
+
+#: ../plugins/encoder/external/k3bexternalencoderconfigwidget.cpp:87
+msgid "No command line specified"
+msgstr ""
+
+#: ../plugins/encoder/external/k3bexternalencoderconfigwidget.cpp:91
+#, c-format
+msgid "Please add the output filename (%f) to the command line."
+msgstr ""
+
+#: ../plugins/encoder/external/k3bexternalencoderconfigwidget.cpp:92
+#, fuzzy
+msgid "No filename specified"
+msgstr "Ukloni image datoteke"
+
+#: ../plugins/encoder/external/k3bexternalencoder.cpp:200
 msgid "Invalid command: the command is empty."
 msgstr ""
 
-#: ../plugins/encoder/external/k3bexternalencoder.cpp:353
+#: ../plugins/encoder/external/k3bexternalencoder.cpp:245
 #, c-format
 msgid "Command failed: %1"
 msgstr ""
 
-#: ../plugins/encoder/external/k3bexternalencoder.cpp:364
+#: ../plugins/encoder/external/k3bexternalencoder.cpp:256
 #, fuzzy
 msgid "Could not find program '%1'"
 msgstr "Ne mogu pronaći sliku %1"
-
-#: ../plugins/encoder/external/k3bexternalencoder.cpp:626
-msgid "Please specify an extension."
-msgstr ""
-
-#: ../plugins/encoder/external/k3bexternalencoder.cpp:630
-msgid "Please specify a command."
-msgstr ""
-
-#: ../plugins/encoder/external/k3bexternalencoder.cpp:634
-#, c-format
-msgid "The command needs to contain the filename (%f)."
-msgstr ""
-
-#: ../plugins/encoder/external/k3bexternalencoder.cpp:650
-msgid "Please specify a unique name and extension."
-msgstr ""
 
 #: ../plugins/audiooutput/alsa/k3balsaoutputplugin.cpp:88
 #, fuzzy
@@ -9310,6 +9393,18 @@ msgstr "Da li stvarno želite prekinuti trenutni projekt?"
 #, fuzzy
 msgid "Please select a non-empty audio project for a cddb query."
 msgstr "Molimo vas da izaberete projekat za preimenovanje."
+
+#, fuzzy
+#~ msgid "playlists/%A/%T"
+#~ msgstr "Playlista"
+
+#, fuzzy
+#~ msgid "New Program"
+#~ msgstr "Program"
+
+#, fuzzy
+#~ msgid "Delete Program"
+#~ msgstr "Program"
 
 #, fuzzy
 #~ msgid "Saves the current project as..."
