@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libk3b\n"
-"POT-Creation-Date: 2006-08-06 11:40+0200\n"
+"POT-Creation-Date: 2006-08-22 08:40+0200\n"
 "PO-Revision-Date: 2004-12-12 14:33-0800\n"
 "Last-Translator: Avdija Ahmedhodžić <avdija@narkomanija.ba>\n"
 "Language-Team: bosanski <lokal@linux.org.ba>\n"
@@ -129,7 +129,7 @@ msgstr "Radim..."
 msgid "Communication error."
 msgstr "Greška pri komunikaciji."
 
-#: core/k3bglobals.cpp:388
+#: core/k3bglobals.cpp:402
 #, fuzzy
 msgid "Auto"
 msgstr "Auto"
@@ -1251,7 +1251,7 @@ msgstr ""
 
 #: tools/k3binterferingsystemshandler.cpp:184
 msgid ""
-"The device '%1' is already in use by other applications (%2) It highly "
+"The device '%1' is already in use by other applications (%2) It is highly "
 "recommended to quit those."
 msgstr ""
 
@@ -1388,11 +1388,38 @@ msgid "Only create an image"
 msgstr ""
 
 #: tools/k3bstdguiitems.cpp:86
+msgid "Cache data"
+msgstr ""
+
+#: tools/k3bstdguiitems.cpp:87
+#, fuzzy
+msgid ""
+"<p>If this option is checked, K3b will create an image before writing the files "
+"to the CD/DVD. Otherwise the data will be written <em>on-the-fly</em>"
+", i.e. no intermediate image will be created."
+"<p><b>Caution:</b> Although writing on-the-fly should work on most systems, "
+"make sure the data is sent to the writer fast enough."
+msgstr ""
+"<p>Ako je ova opcija uključena, K3b neće prvo praviti image, nego će pisati "
+"datoteke direktno na CD/DVD."
+"<p><b>Upozorenje:</b>Iako bi ova opcija trebala raditi na većini sistema, "
+"provjerite da se podaci mogu dovoljno brzo slati pisaču."
+
+#: tools/k3bstdguiitems.cpp:92 tools/k3bstdguiitems.cpp:114
+#, fuzzy
+msgid "<p>It is recommended to try a simulation first."
+msgstr "<p>Preporučljivo je da prvo isprobate simulaciju."
+
+#: tools/k3bstdguiitems.cpp:93
+msgid "Cache the data to be written on the harddisk"
+msgstr ""
+
+#: tools/k3bstdguiitems.cpp:99
 #, fuzzy
 msgid "Remove image"
 msgstr "Ukloni image datoteke"
 
-#: tools/k3bstdguiitems.cpp:87
+#: tools/k3bstdguiitems.cpp:100
 #, fuzzy
 msgid ""
 "<p>If this option is checked, K3b will remove any created images after the "
@@ -1403,16 +1430,16 @@ msgstr ""
 "nakon završetka pisanja."
 "<p>Isključite ovu opciju ako želite zadržati image datoteke."
 
-#: tools/k3bstdguiitems.cpp:90
+#: tools/k3bstdguiitems.cpp:103
 msgid "Remove images from disk when finished"
 msgstr ""
 
-#: tools/k3bstdguiitems.cpp:96
+#: tools/k3bstdguiitems.cpp:109
 #, fuzzy
 msgid "On the fly"
 msgstr "Pisanje on the fly"
 
-#: tools/k3bstdguiitems.cpp:97
+#: tools/k3bstdguiitems.cpp:110
 #, fuzzy
 msgid ""
 "<p>If this option is checked, K3b will not create an image first but write the "
@@ -1425,27 +1452,22 @@ msgstr ""
 "<p><b>Upozorenje:</b>Iako bi ova opcija trebala raditi na većini sistema, "
 "provjerite da se podaci mogu dovoljno brzo slati pisaču."
 
-#: tools/k3bstdguiitems.cpp:101
-#, fuzzy
-msgid "<p>It is recommended to try a simulation first."
-msgstr "<p>Preporučljivo je da prvo isprobate simulaciju."
-
-#: tools/k3bstdguiitems.cpp:102
+#: tools/k3bstdguiitems.cpp:115
 #, fuzzy
 msgid "Write files directly to CD/DVD without creating an image"
 msgstr "Snimaj datoteke direktno na CD/DVD bez pravljenja image"
 
-#: tools/k3bstdguiitems.cpp:108
+#: tools/k3bstdguiitems.cpp:121
 #, fuzzy
 msgid "Write CD-TEXT"
 msgstr "Piši CD-TEXT"
 
-#: tools/k3bstdguiitems.cpp:109
+#: tools/k3bstdguiitems.cpp:122
 #, fuzzy
 msgid "Create CD-TEXT entries"
 msgstr "Napravi CD-TEXT unose"
 
-#: tools/k3bstdguiitems.cpp:110
+#: tools/k3bstdguiitems.cpp:123
 msgid ""
 "<p>If this option is checked K3b uses some otherwise-unused space on the audio "
 "CD to store additional information, like the artist or the CD title."
@@ -1456,11 +1478,11 @@ msgid ""
 "idea to enable this (if you specify CD-TEXT data)."
 msgstr ""
 
-#: tools/k3bstdguiitems.cpp:129
+#: tools/k3bstdguiitems.cpp:142
 msgid "Set the paranoia level for reading audio CDs"
 msgstr ""
 
-#: tools/k3bstdguiitems.cpp:130
+#: tools/k3bstdguiitems.cpp:143
 msgid ""
 "<p>Sets the correction mode for digital audio extraction."
 "<ul>"
@@ -1471,33 +1493,33 @@ msgid ""
 "<p><b>The extraction speed reduces from 0 to 3.</b>"
 msgstr ""
 
-#: tools/k3bstdguiitems.cpp:142
+#: tools/k3bstdguiitems.cpp:155
 #, fuzzy
 msgid "Start multisession CD"
 msgstr "Počni multi-session CD"
 
-#: tools/k3bstdguiitems.cpp:143
+#: tools/k3bstdguiitems.cpp:156
 msgid "Do not close the disk to allow additional sessions to be added later"
 msgstr ""
 
-#: tools/k3bstdguiitems.cpp:144
+#: tools/k3bstdguiitems.cpp:157
 msgid ""
 "<p>If this option is checked K3b will not close the CD, and will write a "
 "temporary table of contents.</p>"
 "<p>This allows further sessions to be appended to the CD later.</p>"
 msgstr ""
 
-#: tools/k3bstdguiitems.cpp:153
+#: tools/k3bstdguiitems.cpp:166
 #, fuzzy
 msgid "Normalize volume levels"
 msgstr "Normaliziraj nivoe glasnoće."
 
-#: tools/k3bstdguiitems.cpp:154
+#: tools/k3bstdguiitems.cpp:167
 #, fuzzy
 msgid "Adjust the volume levels of all tracks"
 msgstr "Prilagodi nivoe glasnoće na svim stazama"
 
-#: tools/k3bstdguiitems.cpp:155
+#: tools/k3bstdguiitems.cpp:168
 msgid ""
 "<p>If this option is checked K3b will adjust the volume of all tracks to a "
 "standard level. This is useful for things like creating mixes, where different "
@@ -1507,17 +1529,17 @@ msgid ""
 "the fly.</b>"
 msgstr ""
 
-#: tools/k3bstdguiitems.cpp:167
+#: tools/k3bstdguiitems.cpp:180
 #, fuzzy
 msgid "Verify written data"
 msgstr "Provjeri zapisane podatke"
 
-#: tools/k3bstdguiitems.cpp:168
+#: tools/k3bstdguiitems.cpp:181
 #, fuzzy
 msgid "Compare MD5 Sums of all written files"
 msgstr "Uporedi MD5 svih zapisanih datoteka"
 
-#: tools/k3bstdguiitems.cpp:169
+#: tools/k3bstdguiitems.cpp:182
 msgid ""
 "<p>If this option is checked, then after successfully writing the disk K3b will "
 "compare the MD5 Sums of all written files with their local sources to verify "
