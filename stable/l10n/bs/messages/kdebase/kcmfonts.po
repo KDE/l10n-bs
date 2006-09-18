@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
-"POT-Creation-Date: 2006-08-22 02:34+0200\n"
+"POT-Creation-Date: 2006-09-18 02:35+0200\n"
 "PO-Revision-Date: 2005-03-22 10:02+0100\n"
 "Last-Translator: Amila Akagić <bono@linux.org.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -16,27 +16,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3\n"
 
-#: fonts.cpp:208
+#: fonts.cpp:209
 msgid "Configure Anti-Alias Settings"
 msgstr "Podesi postavke anti-aliasinga"
 
-#: fonts.cpp:214
+#: fonts.cpp:215
 msgid "E&xclude range:"
 msgstr "I&sključi raspon:"
 
-#: fonts.cpp:217 fonts.cpp:222
+#: fonts.cpp:218 fonts.cpp:223
 msgid " pt"
 msgstr " pt"
 
-#: fonts.cpp:219
+#: fonts.cpp:220
 msgid " to "
 msgstr " do "
 
-#: fonts.cpp:225
+#: fonts.cpp:226
 msgid "&Use sub-pixel hinting:"
 msgstr "Koris&ti sub-pixel hinting:"
 
-#: fonts.cpp:228
+#: fonts.cpp:229
 msgid ""
 "If you have a TFT or LCD screen you can further improve the quality of "
 "displayed fonts by selecting this option."
@@ -50,7 +50,7 @@ msgstr ""
 "<br>"
 "<br><b>Ovo neće dati efekte sa CRT monitorima.</b>"
 
-#: fonts.cpp:236
+#: fonts.cpp:237
 msgid ""
 "In order for sub-pixel hinting to work correctly you need to know how the "
 "sub-pixels of your display are aligned."
@@ -64,86 +64,86 @@ msgstr ""
 "crvenog, zelenog i plavog. Većina ekrana ima linearan poredak sub-pixela po "
 "šemi RGB (crveno-zeleno-plavo), ali neki imaju BGR (plavo-zeleno-crveno)."
 
-#: fonts.cpp:247
+#: fonts.cpp:248
 msgid "Hinting style: "
 msgstr "Režim hinting-a: "
 
-#: fonts.cpp:254
+#: fonts.cpp:255
 msgid ""
 "Hinting is a process used to enhance the quality of fonts at small sizes."
 msgstr ""
 "Hinting je proces koji se koristi da bi poboljšao kvalitetu fontova na malim "
 "veličinama."
 
-#: fonts.cpp:491
+#: fonts.cpp:492
 msgid "General"
 msgstr "Općenito"
 
-#: fonts.cpp:492
+#: fonts.cpp:493
 msgid "Fixed width"
 msgstr "Fiksna širina"
 
-#: fonts.cpp:493
+#: fonts.cpp:494
 msgid "Toolbar"
 msgstr "Traka s alatima"
 
-#: fonts.cpp:494
+#: fonts.cpp:495
 msgid "Menu"
 msgstr "Meni"
 
-#: fonts.cpp:495
+#: fonts.cpp:496
 msgid "Window title"
 msgstr "Naslov prozora"
 
-#: fonts.cpp:496
+#: fonts.cpp:497
 msgid "Taskbar"
 msgstr "Taskbar"
 
-#: fonts.cpp:497
+#: fonts.cpp:498
 msgid "Desktop"
 msgstr "Desktop"
 
-#: fonts.cpp:531
+#: fonts.cpp:532
 msgid "Used for normal text (e.g. button labels, list items)."
 msgstr "Koristi se za obični tekst (npr. ime dugmadi, lista opcija)."
 
-#: fonts.cpp:532
+#: fonts.cpp:533
 msgid "A non-proportional font (i.e. typewriter font)."
 msgstr "Neproporcionalan font (tj. font pisaće mašine)."
 
-#: fonts.cpp:533
+#: fonts.cpp:534
 msgid "Used to display text beside toolbar icons."
 msgstr "Koristi se za prikaz teksta pored ikona na traci sa alatima."
 
-#: fonts.cpp:534
+#: fonts.cpp:535
 msgid "Used by menu bars and popup menus."
 msgstr "Koristi se za trake menija i popup menije."
 
-#: fonts.cpp:535
+#: fonts.cpp:536
 msgid "Used by the window titlebar."
 msgstr "Koristi se za naslovnu traku prozora."
 
-#: fonts.cpp:536
+#: fonts.cpp:537
 msgid "Used by the taskbar."
 msgstr "Koristi se za taskbar."
 
-#: fonts.cpp:537
+#: fonts.cpp:538
 msgid "Used for desktop icons."
 msgstr "Korišteno za ikone na desktopu."
 
-#: fonts.cpp:588
+#: fonts.cpp:589
 msgid "Ad&just All Fonts..."
 msgstr "Pri&lagodi sve fontove..."
 
-#: fonts.cpp:589
+#: fonts.cpp:590
 msgid "Click to change all fonts"
 msgstr "Kliknite da promijenite fontove"
 
-#: fonts.cpp:596
+#: fonts.cpp:597
 msgid "Use a&nti-aliasing for fonts"
 msgstr "Koristi a&nti-aliasing za fontove"
 
-#: fonts.cpp:597
+#: fonts.cpp:598
 msgid ""
 "If this option is selected, KDE will smooth the edges of curves in fonts."
 msgstr ""
@@ -153,16 +153,44 @@ msgstr ""
 msgid "Configure..."
 msgstr "Podesi..."
 
-#: fonts.cpp:676
+#: fonts.cpp:608
+msgid "Force fonts DPI"
+msgstr ""
+
+#: fonts.cpp:611
+msgid "96 DPI"
+msgstr ""
+
+#: fonts.cpp:612
+msgid "120 DPI"
+msgstr ""
+
+#: fonts.cpp:615
 msgid ""
-"<p>You have changed anti-aliasing related settings. This change will only "
-"affect newly started applications.</p>"
+"<p>This option forces a specific DPI value for fonts. It may be useful when the "
+"real DPI of the hardware is not detected properly and it is also often misused "
+"when poor quality fonts are used that do not look well with DPI values other "
+"than 96 or 120 DPI.</p>"
+"<p>The use of this option is generally discouraged. For selecting proper DPI "
+"value a better option is explicitly configuring it for the whole X server if "
+"possible (e.g. DisplaySize in xorg.conf or adding <i>-dpi value</i> "
+"to ServerLocalArgs= in $KDEDIR/share/config/kdm/kdmrc). When fonts do not "
+"render properly with real DPI value better fonts should be used or "
+"configuration of font hinting should be checked.</p>"
+msgstr ""
+
+#: fonts.cpp:728
+#, fuzzy
+msgid ""
+"<p>Some changes such as anti-aliasing will only affect newly started "
+"applications.</p>"
 msgstr ""
 "<p>Promijenili ste podešavanja vezana za anti-aliasing. Ove promjene neće imati "
 "efekta dok ponovo ne pokrenete KDE.</p>"
 
-#: fonts.cpp:677
-msgid "Anti-Aliasing Settings Changed"
+#: fonts.cpp:729
+#, fuzzy
+msgid "Font Settings Changed"
 msgstr "Anti-aliasing postavke promijenjene"
 
 #: kxftconfig.cpp:876 kxftconfig.cpp:917
