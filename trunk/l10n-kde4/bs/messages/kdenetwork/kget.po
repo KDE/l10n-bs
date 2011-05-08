@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kget\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-04-14 04:10+0200\n"
+"POT-Creation-Date: 2011-05-07 04:06+0200\n"
 "PO-Revision-Date: 2011-03-11 21:26+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -169,10 +169,46 @@ msgstr[0] "KGet preuzima %1 datoteku"
 msgstr[1] "KGet preuzima %1 datoteke"
 msgstr[2] "KGet preuzima %1 datoteka"
 
+#: core/signature.cpp:228
+msgid "The key to verify the signature is missing, do you want to download it?"
+msgstr "Nedostaje ključ za ovjeravanje potpisa, želite li ga preuzeti?"
+
+#: core/signature.cpp:250
+#, kde-format
+msgid ""
+"The signature could not be verified for %1. See transfer settings for more "
+"information."
+msgstr ""
+"Potpis za %1 ne može se dobaviti. Pogledajte postavke prijenosa za više "
+"detalja."
+
+#: core/signature.cpp:251
+msgid "Signature not verified"
+msgstr "Potpis nije ovjeren"
+
 #: core/linkimporter.cpp:90
 #, kde-format
 msgid "Error trying to get %1"
 msgstr "Greška pri pokušaju dobavljanja %1"
+
+#: core/keydownloader.cpp:73
+msgid ""
+"No server for downloading keys is specified in settings. Downloading aborted."
+msgstr ""
+"Serveri za preuzimanje ključeva nisu zadati u postavkama. Preuzimanje je "
+"obustavljeno."
+
+#: core/keydownloader.cpp:74 core/keydownloader.cpp:94
+msgid "No key server"
+msgstr "Nema servera ključeva"
+
+#: core/keydownloader.cpp:93
+msgid ""
+"No useful key server found, key not downloaded. Add more servers to the "
+"settings or restart KGet and retry downloading."
+msgstr ""
+"Ključ nije preuzet jer nema nijednog upotrebljivog servera ključeva. Dodajte "
+"još servera u postavkama, ili ponovo pokrenite KGet i pokušajte preuzimanje."
 
 #: core/kget.cpp:121
 #, kde-format
@@ -225,7 +261,7 @@ msgstr ""
 msgid "Overwrite existing file?"
 msgstr "Prebrisati postojeću datoteku?"
 
-#: core/kget.cpp:590 ui/metalinkcreator/metalinkcreator.cpp:173
+#: core/kget.cpp:590 ui/metalinkcreator/metalinkcreator.cpp:178
 #, kde-format
 msgid "Unable to save to: %1"
 msgstr "Ne mogu da snimim u: %1"
@@ -255,9 +291,7 @@ msgstr[2] ""
 msgid "Protocol unsupported"
 msgstr "Nepodržan protokol"
 
-#. i18n: file: ui/newtransferwidget.ui:17
-#. i18n: ectx: property (text), widget (KTitleWidget, titleWidget)
-#: core/kget.cpp:962 ui/newtransferdialog.cpp:50 rc.cpp:922
+#: core/kget.cpp:962 ui/newtransferdialog.cpp:50
 msgid "New Download"
 msgstr "Novo preuzimanje"
 
@@ -349,16 +383,16 @@ msgid "You are already downloading the same file"
 msgstr "Već preuzimate istu datoteku"
 
 #: core/kget.cpp:1116 core/kget.cpp:1119 core/urlchecker.cpp:606
-#: core/urlchecker.cpp:713 transfer-plugins/metalink/metalink.cpp:737
+#: core/urlchecker.cpp:713 transfer-plugins/metalink/metalink.cpp:738
 msgid "File already exists"
 msgstr "Datoteka već postoji"
 
-#: core/kget.cpp:1220
+#: core/kget.cpp:1217
 #, kde-format
 msgid "Plugin loader could not load the plugin: %1."
 msgstr "Priključak nije mogao da se učita: %1."
 
-#: core/kget.cpp:1238
+#: core/kget.cpp:1235
 #, kde-format
 msgid ""
 "Not deleting\n"
@@ -369,7 +403,7 @@ msgstr ""
 "%1\n"
 "pošto je to direktorij."
 
-#: core/kget.cpp:1248
+#: core/kget.cpp:1245
 #, kde-format
 msgid ""
 "Not deleting\n"
@@ -380,7 +414,7 @@ msgstr ""
 "%1\n"
 "pošto to nije lokalna datoteka."
 
-#: core/kget.cpp:1351
+#: core/kget.cpp:1348
 #, kde-format
 msgid ""
 "<p>The following file has finished downloading:</p><p style=\"font-size: "
@@ -389,11 +423,11 @@ msgstr ""
 "<p>Završeno je preuzimanje sljedeće datoteke:</p><p style=\"font-size: small;"
 "\">\\%1</p>"
 
-#: core/kget.cpp:1352
+#: core/kget.cpp:1349
 msgid "Download completed"
 msgstr "Preuzimanje završeno"
 
-#: core/kget.cpp:1355
+#: core/kget.cpp:1352
 #, kde-format
 msgid ""
 "<p>The following transfer has been started:</p><p style=\"font-size: small;"
@@ -401,18 +435,18 @@ msgid ""
 msgstr ""
 "<p>Započet je sljedeći prenos:</p><p style=\"font-size: small;\">\\%1</p>"
 
-#: core/kget.cpp:1356
+#: core/kget.cpp:1353
 msgid "Download started"
 msgstr "Započeto preuzimanje"
 
-#: core/kget.cpp:1358 core/datasourcefactory.cpp:286
-#: core/datasourcefactory.cpp:613 transfer-plugins/metalink/metalink.cpp:201
-#: ui/metalinkcreator/metalinkcreator.cpp:156
-#: ui/metalinkcreator/metalinkcreator.cpp:173
+#: core/kget.cpp:1355 core/datasourcefactory.cpp:287
+#: core/datasourcefactory.cpp:614 transfer-plugins/metalink/metalink.cpp:202
+#: ui/metalinkcreator/metalinkcreator.cpp:161
+#: ui/metalinkcreator/metalinkcreator.cpp:178
 msgid "Error"
 msgstr "Greška"
 
-#: core/kget.cpp:1358
+#: core/kget.cpp:1355
 #, kde-format
 msgid ""
 "<p>There has been an error in the following transfer:</p><p style=\"font-"
@@ -422,141 +456,105 @@ msgstr ""
 "<p>Greška u sljedećem prijenosu:</p><p style=\"font-size: small;\">\\%1</"
 "p><p>Poruka o grešci:</p><p style=\"font-size: small;\">\\%2</p>"
 
-#: core/kget.cpp:1363
+#: core/kget.cpp:1360
 msgid "Resolve"
 msgstr "Riješi"
 
-#: core/kget.cpp:1411
+#: core/kget.cpp:1408
 msgid "KGet is now closing, as all downloads have completed."
 msgstr "KGet će se sad zatvoriti, pošto su sva preuzimanja završena."
 
-#: core/kget.cpp:1415
+#: core/kget.cpp:1412
 msgid "The computer will now turn off, as all downloads have completed."
 msgstr "Računar će se sad ugasiti, pošto su sva preuzimanja završena."
 
-#: core/kget.cpp:1415
+#: core/kget.cpp:1412
 msgctxt "Shutting down computer"
 msgid "Shutdown"
 msgstr "Ugasi"
 
-#: core/kget.cpp:1418
+#: core/kget.cpp:1415
 msgid "The computer will now suspend to disk, as all downloads have completed."
 msgstr ""
 "Računar će se sad suspendovati na disk, pošto su sva preuzimanja završena."
 
-#: core/kget.cpp:1418
+#: core/kget.cpp:1415
 msgctxt "Hibernating computer"
 msgid "Hibernating"
 msgstr "Hibernacija"
 
-#: core/kget.cpp:1421
+#: core/kget.cpp:1418
 msgid "The computer will now suspend to RAM, as all downloads have completed."
 msgstr ""
 "Računar će se sad suspendovati u memoriju, pošto su sva preuzimanja završena."
 
-#: core/kget.cpp:1421
+#: core/kget.cpp:1418
 msgctxt "Suspending computer"
 msgid "Suspending"
 msgstr "Suspendovanje"
 
-#: core/kget.cpp:1429
+#: core/kget.cpp:1426
 msgctxt "abort the proposed action"
 msgid "Abort"
 msgstr "Prekid"
 
-#: core/kget.cpp:1439
+#: core/kget.cpp:1436
 msgid "<p>All transfers have been finished.</p>"
 msgstr "<p>Svi prijenosi su završeni.</p>"
 
-#: core/kget.cpp:1440
+#: core/kget.cpp:1437
 msgid "Downloads completed"
 msgstr "Preuzimanja završena"
 
-#: core/filemodel.cpp:280
+#: core/filemodel.cpp:283
 msgctxt "file in a filesystem"
 msgid "File"
 msgstr "Datoteka"
 
-#: core/filemodel.cpp:280
+#: core/filemodel.cpp:283
 msgctxt "status of the download"
 msgid "Status"
 msgstr "Status"
 
-#: core/filemodel.cpp:280
+#: core/filemodel.cpp:283
 msgctxt "size of the download"
 msgid "Size"
 msgstr "Veličina"
 
-#: core/filemodel.cpp:280
+#: core/filemodel.cpp:283
 msgctxt "checksum of a file"
 msgid "Checksum"
 msgstr "Kontrolna suma"
 
-#: core/filemodel.cpp:280
+#: core/filemodel.cpp:283
 msgctxt "signature of a file"
 msgid "Signature"
 msgstr "Potpis"
+
+#: core/verificationmodel.cpp:151
+msgctxt "the type of the hash, e.g. MD5"
+msgid "Type"
+msgstr "Tip"
+
+#: core/verificationmodel.cpp:153
+msgctxt "the used hash for verification"
+msgid "Hash"
+msgstr "Hash"
+
+#: core/verificationmodel.cpp:155
+msgctxt "verification-result of a file, can be true/false"
+msgid "Verified"
+msgstr "Ovjereno"
 
 #: core/kgetkjobadapter.cpp:45
 msgid "KGet Transfer"
 msgstr "KGet-ov prijenos"
 
-#: core/verifier.cpp:412
-msgctxt "the type of the hash, e.g. MD5"
-msgid "Type"
-msgstr "Tip"
-
-#: core/verifier.cpp:414
-msgctxt "the used hash for verification"
-msgid "Hash"
-msgstr "Hash"
-
-#: core/verifier.cpp:416
-msgctxt "verification-result of a file, can be true/false"
-msgid "Verified"
-msgstr "Ovjereno"
-
-#: core/verifier.cpp:1210
-msgid "The key to verify the signature is missing, do you want to download it?"
-msgstr "Nedostaje ključ za ovjeravanje potpisa, želite li ga preuzeti?"
-
-#: core/verifier.cpp:1228
-#, kde-format
-msgid ""
-"The signature could not be verified for %1. See transfer settings for more "
-"information."
-msgstr ""
-"Potpis za %1 ne može se dobaviti. Pogledajte postavke prijenosa za više "
-"detalja."
-
-#: core/verifier.cpp:1229
-msgid "Signature not verified"
-msgstr "Potpis nije ovjeren"
-
-#: core/verifier.cpp:1334
-msgid ""
-"No server for downloading keys is specified in settings. Downloading aborted."
-msgstr ""
-"Serveri za preuzimanje ključeva nisu zadati u postavkama. Preuzimanje je "
-"obustavljeno."
-
-#: core/verifier.cpp:1335 core/verifier.cpp:1355
-msgid "No key server"
-msgstr "Nema servera ključeva"
-
-#: core/verifier.cpp:1354
-msgid ""
-"No useful key server found, key not downloaded. Add more servers to the "
-"settings or restart KGet and retry downloading."
-msgstr ""
-"Ključ nije preuzet jer nema nijednog upotrebljivog servera ključeva. Dodajte "
-"još servera u postavkama, ili ponovo pokrenite KGet i pokušajte preuzimanje."
-
-#: core/datasourcefactory.cpp:286
+#: core/datasourcefactory.cpp:287
 msgid "Filesize is larger than maximum file size supported by VFAT."
 msgstr "Veličina datoteke je veća od najveće koju podržava VFAT."
 
-#: core/datasourcefactory.cpp:613
+#: core/datasourcefactory.cpp:614
 #, kde-format
 msgctxt "A mirror is removed when the file has the wrong download size"
 msgid "%1 removed as it did report a wrong file size."
@@ -963,27 +961,27 @@ msgstr "Naziv pogona:"
 #. i18n: ectx: property (text), widget (QLabel, urlLabel)
 #. i18n: file: ui/metalinkcreator/commondata.ui:170
 #. i18n: ectx: property (text), widget (QLabel, label_21)
-#. i18n: file: ui/newtransferwidget.ui:59
+#. i18n: file: ui/newtransferwidget.ui:24
 #. i18n: ectx: property (text), widget (QLabel, urlLabel)
 #: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:29 rc.cpp:218 rc.cpp:661
-#: rc.cpp:925
+#: rc.cpp:922
 msgid "URL:"
 msgstr "URL:"
 
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:227
-#: transfer-plugins/kio/transferKio.cpp:264
+#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:228
+#: transfer-plugins/kio/transferKio.cpp:265
 #, kde-format
 msgid "The download (%1) could not be verified. Do you want to repair it?"
 msgstr "Preuzimanje (%1) se ne može ovjeriti. Želite li ga popraviti?"
 
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:230
-#: transfer-plugins/kio/transferKio.cpp:267
+#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:231
+#: transfer-plugins/kio/transferKio.cpp:268
 #, kde-format
 msgid "The download (%1) could not be verified. Do you want to redownload it?"
 msgstr "Preuzimanje (%1) se ne može ovjeriti. Želite li ga preuzeti ponovo?"
 
-#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:234
-#: transfer-plugins/kio/transferKio.cpp:271
+#: transfer-plugins/multisegmentkio/transfermultisegkio.cpp:235
+#: transfer-plugins/kio/transferKio.cpp:272
 msgid "Verification failed."
 msgstr "Ovjera je propala."
 
@@ -991,7 +989,7 @@ msgstr "Ovjera je propala."
 msgid "Failed to write to the file."
 msgstr ""
 
-#: transfer-plugins/kio/transferKio.cpp:93
+#: transfer-plugins/kio/transferKio.cpp:94
 msgctxt "transfer state: connecting"
 msgid "Connecting...."
 msgstr "Povezujem se..."
@@ -1028,24 +1026,24 @@ msgctxt "Transfer State: Aborted"
 msgid "Aborted"
 msgstr "Prekinut"
 
-#: transfer-plugins/metalink/metalink.cpp:82
+#: transfer-plugins/metalink/metalink.cpp:83
 msgid "Downloading Metalink File...."
 msgstr "Preuzimam datoteku metaveze..."
 
-#: transfer-plugins/metalink/metalink.cpp:116
+#: transfer-plugins/metalink/metalink.cpp:117
 msgid ""
 "A newer version of this Metalink might exist, do you want to download it?"
 msgstr "Možda je dostupna nova verzija ove metaveze, želite li je preuzeti?"
 
-#: transfer-plugins/metalink/metalink.cpp:117
+#: transfer-plugins/metalink/metalink.cpp:118
 msgid "Redownload Metalink"
 msgstr "Ponovno preuzimanje metaveze"
 
-#: transfer-plugins/metalink/metalink.cpp:201
+#: transfer-plugins/metalink/metalink.cpp:202
 msgid "Download failed, no working URLs were found."
 msgstr "Preuzimanje propalo, nijedan URL ne radi."
 
-#: transfer-plugins/metalink/metalink.cpp:510
+#: transfer-plugins/metalink/metalink.cpp:511
 msgid ""
 "The download could not be verified, do you want to repair (if repairing does "
 "not work the download would be restarted) it?"
@@ -1349,7 +1347,7 @@ msgstr "Datoteka"
 #. i18n: ectx: property (text), item, widget (KComboBox, rangeType)
 #: transfer-plugins/bittorrent/advanceddetails/torrentfiletreemodel.cpp:377
 #: transfer-plugins/bittorrent/advanceddetails/torrentfilelistmodel.cpp:70
-#: rc.cpp:774
+#: rc.cpp:768
 msgid "Size"
 msgstr "Veličina"
 
@@ -1598,61 +1596,70 @@ msgstr "Izbor podrazumijevanog privremenog direktorija"
 msgid "Import dropped files"
 msgstr "Uvoz ispuštenih fajlova"
 
-#: ui/metalinkcreator/dragdlg.cpp:90 ui/metalinkcreator/filedlg.cpp:61
-#: ui/metalinkcreator/filedlg.cpp:172
+#: ui/metalinkcreator/dragdlg.cpp:90 ui/metalinkcreator/filedlg.cpp:66
+#: ui/metalinkcreator/filedlg.cpp:174
 msgctxt "comma, to seperate members of a list"
 msgid ","
 msgstr ","
 
-#: ui/metalinkcreator/filedlg.cpp:110
+#: ui/metalinkcreator/filedlg.cpp:115
 msgid "File Properties"
 msgstr "Osobine datoteke"
 
-#: ui/metalinkcreator/filedlg.cpp:122
+#: ui/metalinkcreator/filedlg.cpp:127
 msgid "Enter a filename."
 msgstr "Unesite ime datoteke."
 
-#: ui/metalinkcreator/filedlg.cpp:125
+#: ui/metalinkcreator/filedlg.cpp:130
 msgid "The filename exists already, choose a different one."
 msgstr "Naziv datoteke već postoji, izaberite drugi naziv."
 
-#: ui/metalinkcreator/filedlg.cpp:128
+#: ui/metalinkcreator/filedlg.cpp:133
 msgid "Enter at least one URL."
 msgstr "Unesite barem jedan URL."
-
-#: ui/metalinkcreator/filedlg.cpp:132
-msgid "Required data entered; also consider entering additional information."
-msgstr "Neophodni podaci uneseni; razmotrite da unesete još neke."
 
 #: ui/metalinkcreator/metalinkcreator.cpp:90
 msgid "Create a Metalink"
 msgstr "Stvaranje metaveze"
 
-#: ui/metalinkcreator/metalinkcreator.cpp:127
+#: ui/metalinkcreator/metalinkcreator.cpp:117
+#, fuzzy
+#| msgctxt "file as in file on hard drive"
+#| msgid "Enter at least one file."
+msgid "Add at least one file."
+msgstr "Unesite barem jednu datoteku"
+
+#: ui/metalinkcreator/metalinkcreator.cpp:119
+msgid "You need to set mirrors for the entries with an icon."
+msgstr "Morate zadati ogledala za stavke sa ikonom."
+
+#: ui/metalinkcreator/metalinkcreator.cpp:132
 msgid "General optional information for the metalink."
 msgstr "Opći podaci za metavezu."
 
-#: ui/metalinkcreator/metalinkcreator.cpp:156
+#: ui/metalinkcreator/metalinkcreator.cpp:161
 #, kde-format
 msgid "Unable to load: %1"
 msgstr "Ne mogu da učitam: %1"
 
-#: ui/metalinkcreator/metalinkcreator.cpp:183
+#: ui/metalinkcreator/metalinkcreator.cpp:188
 msgid "Metalink Version 4.0 file (*.meta4)"
 msgstr "Metalink verzije 4.0 (*.meta4)"
 
-#: ui/metalinkcreator/metalinkcreator.cpp:183
+#: ui/metalinkcreator/metalinkcreator.cpp:188
 msgid "Metalink Version 3.0 file (*.metalink)"
 msgstr "Metalink verzije 3.0 (*.metalink)"
 
-#: ui/metalinkcreator/metalinkcreator.cpp:189
+#: ui/metalinkcreator/metalinkcreator.cpp:195
 msgid "Define the saving location."
 msgstr "Odredite lokaciju upisivanja."
 
-#: ui/metalinkcreator/metalinkcreator.cpp:234
+#: ui/metalinkcreator/metalinkcreator.cpp:241
+#, fuzzy
+#| msgid "Files"
 msgctxt "file as in file on hard drive"
-msgid "Enter at least one file."
-msgstr "Unesite barem jednu datoteku"
+msgid "Files"
+msgstr "Datoteke"
 
 #: ui/linkview/kget_linkview.cpp:38
 msgid "Import Links"
@@ -1679,57 +1686,57 @@ msgctxt "Download the items which have been selected"
 msgid "&Download Checked"
 msgstr "&Preuzmi obilježeno"
 
-#: ui/linkview/kget_linkview.cpp:144
+#: ui/linkview/kget_linkview.cpp:146
 msgid "Auxiliary header"
 msgstr "Pomoćno zaglavlje"
 
-#: ui/linkview/kget_linkview.cpp:145
+#: ui/linkview/kget_linkview.cpp:147
 msgid "File Name"
 msgstr "Ime datoteke"
 
 #. i18n: file: transfer-plugins/contentfetch/dlgcontentfetchsettingwidget.ui:37
 #. i18n: ectx: property (text), widget (QTreeWidget, scriptTreeWidget)
-#: ui/linkview/kget_linkview.cpp:146 rc.cpp:278
+#: ui/linkview/kget_linkview.cpp:148 rc.cpp:278
 msgid "Description"
 msgstr "Opis"
 
-#: ui/linkview/kget_linkview.cpp:147
+#: ui/linkview/kget_linkview.cpp:149
 msgctxt "list header: type of file"
 msgid "File Type"
 msgstr "Vrste datoteke"
 
-#: ui/linkview/kget_linkview.cpp:148
+#: ui/linkview/kget_linkview.cpp:150
 msgid "Location (URL)"
 msgstr "Lokacija (URL)"
 
-#: ui/linkview/kget_linkview.cpp:237
+#: ui/linkview/kget_linkview.cpp:239
 #, kde-format
 msgid "Links in: %1 - KGet"
 msgstr "Povezan u: %1 - KGet"
 
-#: ui/linkview/kget_linkview.cpp:310
+#: ui/linkview/kget_linkview.cpp:312
 msgid "&Select All Filtered"
 msgstr "&Izaberi sve filtrirane"
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:227
+#. i18n: file: ui/linkview/importlinkdialog.ui:236
 #. i18n: ectx: property (text), widget (KPushButton, selectAll)
-#: ui/linkview/kget_linkview.cpp:310 rc.cpp:729
+#: ui/linkview/kget_linkview.cpp:312 rc.cpp:723
 msgid "&Select All"
 msgstr "&Izaberi sve"
 
-#: ui/linkview/kget_linkview.cpp:311
+#: ui/linkview/kget_linkview.cpp:313
 msgid "D&eselect All Filtered"
 msgstr "&Poništi izbor filtriranih"
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:217
+#. i18n: file: ui/linkview/importlinkdialog.ui:226
 #. i18n: ectx: property (text), widget (KPushButton, deselectAll)
-#: ui/linkview/kget_linkview.cpp:311 rc.cpp:726
+#: ui/linkview/kget_linkview.cpp:313 rc.cpp:720
 msgid "D&eselect All"
 msgstr "&Poništi izbor"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:72
 #. i18n: ectx: property (specialValueText), widget (KIntNumInput, priority)
-#: ui/mirror/mirrormodel.cpp:214 ui/mirror/mirrormodel.cpp:232 rc.cpp:756
+#: ui/mirror/mirrormodel.cpp:214 ui/mirror/mirrormodel.cpp:232 rc.cpp:750
 msgid "not specified"
 msgstr "neodređeno"
 
@@ -1882,74 +1889,81 @@ msgctxt "the transfer has been finished"
 msgid "Finished"
 msgstr "Završen"
 
-#: ui/newtransferdialog.cpp:359
-msgid "You have no source URLs selected."
-msgstr "Niste izabrali nijedan izvorni URL."
+#: ui/newtransferdialog.cpp:351
+#, fuzzy
+#| msgctxt "file as in file on hard drive"
+#| msgid "Enter at least one file."
+msgid "Select at least one source url."
+msgstr "Unesite barem jednu datoteku"
 
-#: ui/newtransferdialog.cpp:377
+#: ui/newtransferdialog.cpp:369
 msgid "Files that exist already in the current folder have been marked."
 msgstr "Datoteke koje već postoje u tekućem direktoriju su istaknute."
-
-#: ui/newtransferdialog.cpp:503
-msgctxt "an error happened in connection with the user input"
-msgid "Error:"
-msgstr "Greška:"
-
-#: ui/newtransferdialog.cpp:510
-msgctxt "a warning happened in connection with the user input"
-msgid "Warning:"
-msgstr "Upozorenje:"
 
 #: ui/tray.cpp:45
 msgid "Download Manager"
 msgstr "Download menadžer"
 
-#: ui/signaturedlg.cpp:33
+#: ui/signaturedlg.cpp:35
 msgctxt "trust level"
 msgid "Unknown"
 msgstr "Nepoznat"
 
-#: ui/signaturedlg.cpp:33
+#: ui/signaturedlg.cpp:35
 msgctxt "trust level"
 msgid "Undefined"
 msgstr "Nedefinisan"
 
-#: ui/signaturedlg.cpp:33
+#: ui/signaturedlg.cpp:35
 msgctxt "trust level"
 msgid "Never"
 msgstr "Nikad"
 
-#: ui/signaturedlg.cpp:33
+#: ui/signaturedlg.cpp:35
 msgctxt "trust level"
 msgid "Marginal"
 msgstr "Marginalno"
 
-#: ui/signaturedlg.cpp:33
+#: ui/signaturedlg.cpp:35
 msgctxt "trust level"
 msgid "Full"
 msgstr "Puni"
 
-#: ui/signaturedlg.cpp:33
+#: ui/signaturedlg.cpp:35
 msgctxt "trust level"
 msgid "Ultimate"
 msgstr "Najveće"
 
-#: ui/signaturedlg.cpp:40
+#: ui/signaturedlg.cpp:42
 #, kde-format
 msgctxt ""
 "Signature here is meant in cryptographic terms, so the signature of a file."
 msgid "Signature of %1."
 msgstr "Potpis za %1."
 
-#: ui/signaturedlg.cpp:59
+#: ui/signaturedlg.cpp:64
 msgid "This option is not supported for the current transfer."
 msgstr "Ova opcija nije podržana za tekući prijenos."
 
-#: ui/signaturedlg.cpp:105
+#: ui/signaturedlg.cpp:89
+msgid "Detached OpenPGP ASCII signature (*.asc)"
+msgstr ""
+
+#: ui/signaturedlg.cpp:90
+msgid "Detached OpenPGP binary signature (*.sig)"
+msgstr ""
+
+#: ui/signaturedlg.cpp:90
+#, fuzzy
+#| msgid "Signature"
+msgid "Load Signature File"
+msgstr "Potpis"
+
+#: ui/signaturedlg.cpp:143
 msgid "You need to define a signature."
 msgstr "Morate odrediti potpis."
 
-#: ui/signaturedlg.cpp:109
+#: ui/signaturedlg.cpp:147
 msgid ""
 "No fingerprint could be found, check if the signature is correct or verify "
 "the download."
@@ -1957,65 +1971,49 @@ msgstr ""
 "Otisak ne može da se nađe, provjerite da li je potpis ispravan ili ovjerite "
 "preuzimanje."
 
-#: ui/signaturedlg.cpp:139
+#: ui/signaturedlg.cpp:181
 msgid "The key has been revoked."
 msgstr "Ključ je povučen."
 
-#: ui/signaturedlg.cpp:143
+#: ui/signaturedlg.cpp:185
 msgid "The key is disabled."
 msgstr "Ključ je deaktiviran."
 
-#: ui/signaturedlg.cpp:147
+#: ui/signaturedlg.cpp:189
 msgid "The key is invalid."
 msgstr "Ključ je nevaljan."
 
-#: ui/signaturedlg.cpp:152
+#: ui/signaturedlg.cpp:194
 msgid "The key is expired."
 msgstr "Ključ je istekao."
 
-#: ui/signaturedlg.cpp:167
+#: ui/signaturedlg.cpp:209
 msgid "The key is not to be trusted."
 msgstr "Ključ nije pouzdan."
 
-#: ui/signaturedlg.cpp:173
+#: ui/signaturedlg.cpp:214
 msgid "The key is to be trusted marginally."
 msgstr "Ključ je granično pouzdan."
 
-#: ui/signaturedlg.cpp:179
-msgid "The key is to be trusted fully."
-msgstr "Ključ je potpuno pouzdan."
-
-#: ui/signaturedlg.cpp:183
-msgid "The key is to be trusted ultimately."
-msgstr "Ključ je bezuslovno pouzdan."
-
-#: ui/signaturedlg.cpp:189
+#: ui/signaturedlg.cpp:227
 msgid "Trust level of the key is unclear."
 msgstr "Stepen pouzdanosti ključa nije jasan."
 
-#: ui/signaturedlg.cpp:219
+#: ui/signaturedlg.cpp:256
 msgid "Unlimited"
 msgstr "Neograničeno"
 
-#: ui/signaturedlg.cpp:233 ui/signaturedlg.cpp:241
+#: ui/signaturedlg.cpp:274
 msgctxt "pgp signature is verified"
 msgid "Verified"
 msgstr "Ovjereno"
 
-#: ui/signaturedlg.cpp:236
-msgid "The signature has been verified successfully."
-msgstr "Potpis je uspješno ovjeren."
-
-#: ui/signaturedlg.cpp:242
-msgid "The signature has been verified successfully:"
-msgstr "Potpis je uspješno ovjeren:"
-
-#: ui/signaturedlg.cpp:245
+#: ui/signaturedlg.cpp:277
 msgctxt "pgp signature is not verified"
 msgid "Failed"
 msgstr "Neuspjelo"
 
-#: ui/signaturedlg.cpp:248
+#: ui/signaturedlg.cpp:280
 msgid ""
 "Caution: Verification failed. Either you entered the wrong signature, or the "
 "data has been modified."
@@ -2023,7 +2021,7 @@ msgstr ""
 "Oprez: Ovjeravanje nije uspjelo. Ili ste unijeli pogrešan potpis, ili su "
 "podaci izmijenjeni."
 
-#: ui/signaturedlg.cpp:253
+#: ui/signaturedlg.cpp:285
 msgid ""
 "Verification not possible. Check the entered data, whether gpg-agent is "
 "running, or whether you have an Internet connection (for retrieving keys.)"
@@ -2031,21 +2029,9 @@ msgstr ""
 "Ovjeravanje nije moguće. Provjerite unesene podatke, da li je gpg-agent u "
 "pogonu, i da li ste povezani na Internet (radi dobavljanja ključeva)."
 
-#: ui/signaturedlg.cpp:266
+#: ui/signaturedlg.cpp:302
 msgid "Feature is not supported, as KGet is not compiled with QPGME support."
 msgstr "Mogućnost nije podržana jer KGet nije kompilovan sa podrškom za GPGME."
-
-#: ui/signaturedlg.cpp:275
-msgid "Error:"
-msgstr "Greška:"
-
-#: ui/signaturedlg.cpp:277
-msgid "Problems:"
-msgstr "Problemi:"
-
-#: ui/signaturedlg.cpp:279
-msgid "Information:"
-msgstr "Informacije:"
 
 #: ui/transfersview.cpp:126
 msgid "Select columns"
@@ -2055,21 +2041,21 @@ msgstr "Izbor kolona"
 msgid "Transfer Details"
 msgstr "Prenesi detalje"
 
-#: ui/verificationdialog.cpp:37
+#: ui/verificationdialog.cpp:39
 msgid "Add checksum"
 msgstr "Dodavanje kontrolne sume"
 
-#: ui/verificationdialog.cpp:86
+#: ui/verificationdialog.cpp:88
 #, kde-format
 msgid "Transfer Verification for %1"
 msgstr "Ovjera prijenosa za %1"
 
-#: ui/verificationdialog.cpp:199
+#: ui/verificationdialog.cpp:201
 #, kde-format
 msgid "%1 was successfully verified."
 msgstr "Datoteka %1 je uspješno ovjerena."
 
-#: ui/verificationdialog.cpp:200
+#: ui/verificationdialog.cpp:202
 msgid "Verification successful"
 msgstr "Ovjera uspješna"
 
@@ -2715,7 +2701,7 @@ msgstr "Kontrolna suma:"
 #. i18n: ectx: property (text), widget (KPushButton, signature)
 #. i18n: file: ui/signaturedlg.ui:20
 #. i18n: ectx: property (title), widget (QGroupBox, sigGroup)
-#: rc.cpp:23 rc.cpp:856 rc.cpp:859
+#: rc.cpp:23 rc.cpp:850 rc.cpp:853
 msgid "Signature"
 msgstr "Potpis"
 
@@ -2765,7 +2751,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, rename)
 #. i18n: file: ui/transfersettingsdialog.ui:153
 #. i18n: ectx: property (text), widget (KPushButton, rename)
-#: rc.cpp:47 rc.cpp:850
+#: rc.cpp:47 rc.cpp:844
 msgid "Rename"
 msgstr "Preimenuj"
 
@@ -3486,7 +3472,7 @@ msgstr "Svi:"
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #. i18n: file: ui/transferdetailsfrm.ui:51
 #. i18n: ectx: property (text), widget (QLabel, sourceLabel)
-#: rc.cpp:463 rc.cpp:801
+#: rc.cpp:463 rc.cpp:795
 msgctxt "source-file"
 msgid "Source:"
 msgstr "Izvor:"
@@ -3495,7 +3481,7 @@ msgstr "Izvor:"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: ui/transferdetailsfrm.ui:44
 #. i18n: ectx: property (text), widget (QLabel, destLabel)
-#: rc.cpp:466 rc.cpp:798
+#: rc.cpp:466 rc.cpp:792
 msgid "Saving to:"
 msgstr "Upisujem u:"
 
@@ -3661,9 +3647,9 @@ msgstr "0123456789"
 
 #. i18n: file: ui/metalinkcreator/filedlg.ui:152
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: file: ui/signaturedlg.ui:44
+#. i18n: file: ui/signaturedlg.ui:34
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:556 rc.cpp:865
+#: rc.cpp:556 rc.cpp:856
 msgid "Verification:"
 msgstr "Ovjera:"
 
@@ -3871,260 +3857,249 @@ msgstr "Ime izdavača"
 msgid "URL to the publisher"
 msgstr "URL do izdavača"
 
-#. i18n: file: ui/metalinkcreator/files.ui:23
-#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: file: ui/metalinkcreator/files.ui:26
+#. i18n: ectx: property (toolTip), widget (KPushButton, add_local_file)
 #: rc.cpp:670
-msgctxt "Files as in files on a server"
-msgid "Files:"
-msgstr "Datoteke:"
+#, fuzzy
+#| msgid ""
+#| "Add at least one file. Adding local files adds a lot of information "
+#| "automatically."
+msgid "Adds local files adding a lot information automatically."
+msgstr ""
+"Dodajte bar jednu datoteku. Dodavanje lokalnih datoteka automatski dodaje "
+"mnoge podatke."
 
-#. i18n: file: ui/metalinkcreator/files.ui:55
+#. i18n: file: ui/metalinkcreator/files.ui:29
 #. i18n: ectx: property (text), widget (KPushButton, add_local_file)
 #: rc.cpp:673
 msgid "Add local files"
 msgstr "Dodaj lokalne datoteke"
 
-#. i18n: file: ui/metalinkcreator/files.ui:86
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:676
-msgid ""
-"Add at least one file. Adding local files adds a lot of information "
-"automatically."
-msgstr ""
-"Dodajte bar jednu datoteku. Dodavanje lokalnih datoteka automatski dodaje "
-"mnoge podatke."
-
-#. i18n: file: ui/metalinkcreator/files.ui:102
+#. i18n: file: ui/metalinkcreator/files.ui:66
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:679
+#: rc.cpp:676
 msgid "Adding local files..."
 msgstr "Dodajem lokalne datoteke..."
 
-#. i18n: file: ui/metalinkcreator/files.ui:119
-#. i18n: ectx: property (text), widget (QLabel, needUrl)
-#: rc.cpp:682
-msgid "You need to set mirrors for the entries with an icon."
-msgstr "Morate zadati ogledala za stavke sa ikonom."
-
-#. i18n: file: ui/linkview/importlinkdialog.ui:19
+#. i18n: file: ui/linkview/importlinkdialog.ui:25
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:685
+#: rc.cpp:679
 msgid "&File with links to import:"
 msgstr "&Datoteka sa vezama za uvoz:"
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:35
+#. i18n: file: ui/linkview/importlinkdialog.ui:41
 #. i18n: ectx: property (text), widget (KPushButton, importLinks)
-#: rc.cpp:688
+#: rc.cpp:682
 msgid "&Import Links"
 msgstr "&Uvezi veze"
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:49
+#. i18n: file: ui/linkview/importlinkdialog.ui:58
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:691
+#: rc.cpp:685
 msgid "Show:"
 msgstr "Prikaži:"
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:56
+#. i18n: file: ui/linkview/importlinkdialog.ui:65
 #. i18n: ectx: property (text), widget (KPushButton, showAll)
-#: rc.cpp:694
+#: rc.cpp:688
 msgctxt "filter: show all file types"
 msgid "&All"
 msgstr "&Sve"
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:75
+#. i18n: file: ui/linkview/importlinkdialog.ui:84
 #. i18n: ectx: property (text), widget (KPushButton, showVideos)
-#: rc.cpp:698
+#: rc.cpp:692
 msgid "&Videos"
 msgstr "&Video"
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:91
+#. i18n: file: ui/linkview/importlinkdialog.ui:100
 #. i18n: ectx: property (text), widget (KPushButton, showImages)
-#: rc.cpp:702
+#: rc.cpp:696
 msgid "Ima&ges"
 msgstr "Sli&ke"
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:107
+#. i18n: file: ui/linkview/importlinkdialog.ui:116
 #. i18n: ectx: property (text), widget (KPushButton, showAudio)
-#: rc.cpp:706
+#: rc.cpp:700
 msgid "A&udio"
 msgstr "&Audio"
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:123
+#. i18n: file: ui/linkview/importlinkdialog.ui:132
 #. i18n: ectx: property (text), widget (KPushButton, showArchives)
-#: rc.cpp:710
+#: rc.cpp:704
 msgid "A&rchives"
 msgstr "Ar&hive"
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:145
+#. i18n: file: ui/linkview/importlinkdialog.ui:154
 #. i18n: ectx: property (toolTip), widget (KLineEdit, textFilter)
-#: rc.cpp:714
+#: rc.cpp:708
 msgid "You can use wildcards for filtering."
 msgstr "Možete koristiti džokere za filtriranje."
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:148
+#. i18n: file: ui/linkview/importlinkdialog.ui:157
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, textFilter)
-#: rc.cpp:717
+#: rc.cpp:711
 msgid "Filter files here...."
 msgstr "Filtrirajte datoteke..."
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:159
+#. i18n: file: ui/linkview/importlinkdialog.ui:168
 #. i18n: ectx: property (text), item, widget (KComboBox, filterMode)
-#: rc.cpp:720
+#: rc.cpp:714
 msgid "Contains"
 msgstr "Sadrži"
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:164
+#. i18n: file: ui/linkview/importlinkdialog.ui:173
 #. i18n: ectx: property (text), item, widget (KComboBox, filterMode)
-#: rc.cpp:723
+#: rc.cpp:717
 msgid "Does Not Contain"
 msgstr "ne sadrži"
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:237
+#. i18n: file: ui/linkview/importlinkdialog.ui:246
 #. i18n: ectx: property (text), widget (KPushButton, invertSelection)
-#: rc.cpp:732
+#: rc.cpp:726
 msgid "Inver&t Selection"
 msgstr "&Obrni izbor"
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:247
+#. i18n: file: ui/linkview/importlinkdialog.ui:256
 #. i18n: ectx: property (text), widget (KPushButton, checkSelected)
-#: rc.cpp:735
+#: rc.cpp:729
 msgctxt "Check as in mark, not as in verify"
 msgid "Chec&k Selected"
 msgstr "O&bilježi izabrano"
 
-#. i18n: file: ui/linkview/importlinkdialog.ui:254
+#. i18n: file: ui/linkview/importlinkdialog.ui:263
 #. i18n: ectx: property (text), widget (QCheckBox, showWebContent)
-#: rc.cpp:738
+#: rc.cpp:732
 msgid "Show &web content"
 msgstr "Prikaži &web sadržaj"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:19
 #. i18n: ectx: property (text), widget (QLabel, labelMirror)
-#: rc.cpp:741
+#: rc.cpp:735
 msgid "Mirror:"
 msgstr "Ogledalo:"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:26
 #. i18n: ectx: property (text), widget (QLabel, labelConnections)
-#: rc.cpp:744
+#: rc.cpp:738
 msgid "Number of connections:"
 msgstr "Broj konekcija"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:33
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, url)
-#: rc.cpp:747
+#: rc.cpp:741
 msgid "Enter a URL"
 msgstr "Unesi URL"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:53
 #. i18n: ectx: property (text), widget (QLabel, labelPriority)
-#: rc.cpp:750
+#: rc.cpp:744
 msgid "Priority:"
 msgstr "Prioritet:"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:60
 #. i18n: ectx: property (toolTip), widget (KIntNumInput, priority)
-#: rc.cpp:753
+#: rc.cpp:747
 msgid "Optional: The priority of the mirror, 1 highest 999999 lowest."
 msgstr "Opciono: prioritet ogledala, 1 najviši, 999999 najniži."
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:79
 #. i18n: ectx: property (text), widget (QLabel, labelLocation)
-#: rc.cpp:759
+#: rc.cpp:753
 msgid "Location:"
 msgstr "Mjesto:"
 
 #. i18n: file: ui/history/transferhistory.ui:26
 #. i18n: ectx: property (text), widget (QPushButton, clearButton)
-#: rc.cpp:762
+#: rc.cpp:756
 msgid "Clear History"
 msgstr "Očisti historijat"
 
 #. i18n: file: ui/history/transferhistory.ui:46
 #. i18n: ectx: property (title), widget (KButtonGroup, viewmodesgroup)
-#: rc.cpp:765
+#: rc.cpp:759
 msgctxt "View modes"
 msgid "View Modes"
 msgstr "Režimi prikaza"
 
 #. i18n: file: ui/history/transferhistory.ui:99
 #. i18n: ectx: property (title), widget (KButtonGroup, kbuttongroup_2)
-#: rc.cpp:768
+#: rc.cpp:762
 msgid "Select Ranges"
 msgstr "Izbor opsegâ"
 
 #. i18n: file: ui/history/transferhistory.ui:115
 #. i18n: ectx: property (text), item, widget (KComboBox, rangeType)
-#: rc.cpp:771
+#: rc.cpp:765
 msgid "Date"
 msgstr "Datum"
 
 #. i18n: file: ui/history/transferhistory.ui:125
 #. i18n: ectx: property (text), item, widget (KComboBox, rangeType)
-#: rc.cpp:777
+#: rc.cpp:771
 msgid "Host"
 msgstr "Domaćin"
 
 #. i18n: file: ui/history/transferhistory.ui:136
 #. i18n: ectx: property (title), widget (KButtonGroup, kbuttongroup_3)
-#: rc.cpp:780
+#: rc.cpp:774
 msgid "Filter History"
 msgstr "Filtriranje istorijata"
 
 #. i18n: file: ui/history/transferhistory.ui:165
 #. i18n: ectx: property (text), widget (KLineEdit, searchBar)
-#: rc.cpp:783
+#: rc.cpp:777
 msgctxt "delete selected transfer"
 msgid "Delete Selected"
 msgstr "Ukloni odabrano"
 
 #. i18n: file: ui/history/transferhistory.ui:170
 #. i18n: ectx: property (text), widget (KLineEdit, searchBar)
-#: rc.cpp:786
+#: rc.cpp:780
 msgid "Download"
 msgstr "Preuzimanje"
 
 #. i18n: file: ui/verificationadddlg.ui:19
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:789
+#: rc.cpp:783
 msgctxt "hash type as in md5t, sha1 etc."
 msgid "Hash type:"
 msgstr "Tip kontrolne sume:"
 
 #. i18n: file: ui/verificationadddlg.ui:26
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:792
+#: rc.cpp:786
 msgctxt "hash as a hash of type md5, sha1 etc."
 msgid "Hash:"
 msgstr "Hash:"
 
 #. i18n: file: ui/verificationadddlg.ui:33
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, newHash)
-#: rc.cpp:795
+#: rc.cpp:789
 msgid "Enter a hash key"
 msgstr "Unesite hash ključ"
 
 #. i18n: file: ui/transferdetailsfrm.ui:114
 #. i18n: ectx: property (text), widget (QLabel, statusLabel)
-#: rc.cpp:805
+#: rc.cpp:799
 msgid "Status:"
 msgstr "Status:"
 
 #. i18n: file: ui/transferdetailsfrm.ui:165
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:811
+#: rc.cpp:805
 msgid "Remaining Time:"
 msgstr "Preostalo vrijeme:"
 
 #. i18n: file: ui/transfersettingsdialog.ui:23
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:814
+#: rc.cpp:808
 msgid "Transfer Settings"
 msgstr "Postavke prijenosa"
 
 #. i18n: file: ui/transfersettingsdialog.ui:35
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:817
+#: rc.cpp:811
 msgid "Download Destination:"
 msgstr "Destinacija preuzimanja"
 
@@ -4134,7 +4109,7 @@ msgstr "Destinacija preuzimanja"
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, downloadSpin)
 #. i18n: file: ui/transfersettingsdialog.ui:96
 #. i18n: ectx: property (specialValueText), widget (QDoubleSpinBox, ratioSpin)
-#: rc.cpp:820 rc.cpp:826 rc.cpp:832
+#: rc.cpp:814 rc.cpp:820 rc.cpp:826
 msgctxt "No value has been set"
 msgid "Not set"
 msgstr "Nije postavljeno"
@@ -4147,107 +4122,125 @@ msgstr "Nije postavljeno"
 #. i18n: ectx: property (suffix), widget (QSpinBox, downloadBox)
 #. i18n: file: ui/groupsettingsdialog.ui:117
 #. i18n: ectx: property (suffix), widget (QSpinBox, uploadBox)
-#: rc.cpp:823 rc.cpp:829 rc.cpp:913 rc.cpp:919
+#: rc.cpp:817 rc.cpp:823 rc.cpp:913 rc.cpp:919
 msgid " KiB"
 msgstr " KiB"
 
 #. i18n: file: ui/transfersettingsdialog.ui:103
 #. i18n: ectx: property (text), widget (QLabel, labelUpload)
-#: rc.cpp:835
+#: rc.cpp:829
 msgid "Upload Limit:"
 msgstr "Limit slanja:"
 
 #. i18n: file: ui/transfersettingsdialog.ui:110
 #. i18n: ectx: property (text), widget (QLabel, labelDownload)
-#: rc.cpp:838
+#: rc.cpp:832
 msgid "Download Limit:"
 msgstr "Limit preuzimanja:"
 
 #. i18n: file: ui/transfersettingsdialog.ui:117
 #. i18n: ectx: property (text), widget (QLabel, labelShareRatio)
-#: rc.cpp:841
+#: rc.cpp:835
 msgid "Maximum Share Ratio:"
 msgstr "Najveći odnos dijeljenja:"
 
 #. i18n: file: ui/transfersettingsdialog.ui:140
 #. i18n: ectx: property (toolTip), widget (KPushButton, mirrors)
-#: rc.cpp:844
+#: rc.cpp:838
 msgid "Modify the mirrors used for downloading."
 msgstr "Izmijenite ogledala za preuzimanja."
 
 #. i18n: file: ui/transfersettingsdialog.ui:143
 #. i18n: ectx: property (text), widget (KPushButton, mirrors)
-#: rc.cpp:847
+#: rc.cpp:841
 msgctxt "The available mirrors (servers) for downloading"
 msgid "Mirrors"
 msgstr "Ogledala"
 
 #. i18n: file: ui/transfersettingsdialog.ui:163
 #. i18n: ectx: property (text), widget (KPushButton, verification)
-#: rc.cpp:853
+#: rc.cpp:847
 msgctxt "verification of the download (e.g. by using MD5)"
 msgid "Verification"
 msgstr "Ovjera"
 
-#. i18n: file: ui/signaturedlg.ui:26
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:862
-msgid "PGP signature:"
+#. i18n: file: ui/signaturedlg.ui:80
+#. i18n: ectx: property (text), widget (QLabel, binaryLabel)
+#: rc.cpp:859
+#, fuzzy
+#| msgid "PGP signature:"
+msgid "Has binary PGP signature."
 msgstr "PGP potpis:"
 
-#. i18n: file: ui/signaturedlg.ui:80
-#. i18n: ectx: property (title), widget (QGroupBox, keyGroup)
+#. i18n: file: ui/signaturedlg.ui:87
+#. i18n: ectx: property (text), widget (QLabel, asciiLabel)
+#: rc.cpp:862
+#, fuzzy
+#| msgid "PGP signature:"
+msgid "Ascii PGP signature:"
+msgstr "PGP potpis:"
+
+#. i18n: file: ui/signaturedlg.ui:112
+#. i18n: ectx: property (text), widget (KPushButton, loadSignature)
+#: rc.cpp:865
+#, fuzzy
+#| msgid "Signature"
+msgid "Load Signature"
+msgstr "Potpis"
+
+#. i18n: file: ui/signaturedlg.ui:119
+#. i18n: ectx: property (text), widget (KPushButton, verify)
 #: rc.cpp:868
+msgid "Verify"
+msgstr "Provjera"
+
+#. i18n: file: ui/signaturedlg.ui:131
+#. i18n: ectx: property (title), widget (QGroupBox, keyGroup)
+#: rc.cpp:871
 msgid "Key"
 msgstr "Ključ"
 
-#. i18n: file: ui/signaturedlg.ui:92
+#. i18n: file: ui/signaturedlg.ui:143
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:871
+#: rc.cpp:874
 msgid "Issuer:"
 msgstr "Izdavač:"
 
-#. i18n: file: ui/signaturedlg.ui:115
+#. i18n: file: ui/signaturedlg.ui:166
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:874
+#: rc.cpp:877
 msgid "E-Mail:"
 msgstr "E‑pošta:"
 
-#. i18n: file: ui/signaturedlg.ui:132
+#. i18n: file: ui/signaturedlg.ui:183
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:877
+#: rc.cpp:880
 msgid "Comment:"
 msgstr "Komentar:"
 
-#. i18n: file: ui/signaturedlg.ui:146
+#. i18n: file: ui/signaturedlg.ui:197
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:880
+#: rc.cpp:883
 msgid "Creation:"
 msgstr "Napravljen:"
 
-#. i18n: file: ui/signaturedlg.ui:163
+#. i18n: file: ui/signaturedlg.ui:214
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:883
+#: rc.cpp:886
 msgid "Expiration:"
 msgstr "Ističe:"
 
-#. i18n: file: ui/signaturedlg.ui:191
+#. i18n: file: ui/signaturedlg.ui:255
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:886
+#: rc.cpp:889
 msgid "Trust:"
 msgstr "Povjerenje:"
 
-#. i18n: file: ui/signaturedlg.ui:219
+#. i18n: file: ui/signaturedlg.ui:296
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:889
+#: rc.cpp:892
 msgid "Fingerprint:"
 msgstr "Otisak:"
-
-#. i18n: file: ui/signaturedlg.ui:254
-#. i18n: ectx: property (text), widget (KPushButton, verify)
-#: rc.cpp:892
-msgid "Verify"
-msgstr "Provjera"
 
 #. i18n: file: ui/groupsettingsdialog.ui:32
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
@@ -4291,75 +4284,75 @@ msgstr "Najveća brzina preuzimanja:"
 msgid "Maximum upload speed:"
 msgstr "Najveća brzina slanja:"
 
-#. i18n: file: ui/newtransferwidget.ui:66
+#. i18n: file: ui/newtransferwidget.ui:31
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:928
+#: rc.cpp:925
 msgid "Destination:"
 msgstr "Odredište:"
 
-#. i18n: file: ui/newtransferwidget.ui:76
+#. i18n: file: ui/newtransferwidget.ui:41
 #. i18n: ectx: property (text), widget (QLabel, groupLabel)
-#: rc.cpp:931
+#: rc.cpp:928
 msgid "Transfer group:"
 msgstr "Grupa prenosa:"
 
 #. i18n: file: ui/verificationdialog.ui:42
 #. i18n: ectx: property (toolTip), widget (KPushButton, verify)
-#: rc.cpp:934
+#: rc.cpp:931
 msgid "Verify the finished download with the selected checksum."
 msgstr "Ovjerite završeno preuzimanje izabranom kontrolnom sumom."
 
 #. i18n: file: ui/verificationdialog.ui:45
 #. i18n: ectx: property (text), widget (KPushButton, verify)
-#: rc.cpp:937
+#: rc.cpp:934
 msgid "&Verify"
 msgstr "&Provjeri"
 
 #. i18n: file: ui/verificationdialog.ui:71
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:940
+#: rc.cpp:937
 msgid "Verifying:"
 msgstr "Ovjeravam:"
 
 #. i18n: file: ui/kgetui.rc:4
 #. i18n: ectx: Menu (file)
-#: rc.cpp:943
+#: rc.cpp:940
 msgid "&File"
 msgstr "&Datoteka"
 
 #. i18n: file: ui/kgetui.rc:17
 #. i18n: ectx: Menu (Downloads)
-#: rc.cpp:946
+#: rc.cpp:943
 msgid "&Downloads"
 msgstr "&Preuzimanja"
 
 #. i18n: file: ui/kgetui.rc:34
 #. i18n: ectx: Menu (settings)
-#: rc.cpp:949
+#: rc.cpp:946
 msgid "&Settings"
 msgstr "&Postavke"
 
 #. i18n: file: ui/kgetui.rc:38
 #. i18n: ectx: Menu (help)
-#: rc.cpp:952
+#: rc.cpp:949
 msgid "&Help"
 msgstr "&Pomoć"
 
 #. i18n: file: ui/kgetui.rc:41
 #. i18n: ectx: ToolBar (kget_toolbar)
-#: rc.cpp:955
+#: rc.cpp:952
 msgid "Main Toolbar"
 msgstr "Glavna alatna traka"
 
 #. i18n: file: conf/kget.kcfg:39
 #. i18n: ectx: label, entry (ShowSplashscreen), group (Appearance)
-#: rc.cpp:958
+#: rc.cpp:955
 msgid "Sets to show the splashscreen while KGet is loading"
 msgstr "Uvodni ekran pri učitavanju KGeta"
 
 #. i18n: file: conf/kget.kcfg:201
 #. i18n: ectx: label, entry (HistoryColumnWidths), group (Geometry)
-#: rc.cpp:961
+#: rc.cpp:958
 msgid "The width of the columns in the history view"
 msgstr "Širina kolona u prikazu historijata"
 
@@ -4367,7 +4360,7 @@ msgstr "Širina kolona u prikazu historijata"
 #. i18n: ectx: label, entry (SearchEnginesNameList), group (SearchEngines)
 #. i18n: file: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:9
 #. i18n: ectx: label, entry (SearchStrings), group (ChecksumSearch)
-#: rc.cpp:968 rc.cpp:991
+#: rc.cpp:965 rc.cpp:988
 msgid "List of the available search engines"
 msgstr "Spisak dostupnih pretraživača"
 
@@ -4379,27 +4372,67 @@ msgstr "Spisak dostupnih pretraživača"
 #. i18n: ectx: label, entry (UrlChangeModeList), group (ChecksumSearch)
 #. i18n: file: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:17
 #. i18n: ectx: label, entry (ChecksumTypeList), group (ChecksumSearch)
-#: rc.cpp:971 rc.cpp:977 rc.cpp:994 rc.cpp:997
+#: rc.cpp:968 rc.cpp:974 rc.cpp:991 rc.cpp:994
 msgid "List of the available search engine URLs"
 msgstr "Spisak URL‑a dostupnih pretraživača"
 
 #. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:9
 #. i18n: ectx: label, entry (UrlRegexpList), group (UserScripts)
-#: rc.cpp:974
+#: rc.cpp:971
 msgid "List of the Regexp to match input URL"
 msgstr "Spisak regularnih izraza za poklapanje ulaznog URL‑a"
 
 #. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:21
 #. i18n: ectx: label, entry (DescriptionList), group (UserScripts)
-#: rc.cpp:980
+#: rc.cpp:977
 msgid "List of descriptions for user scripts"
 msgstr "Spisak opisa korisničkih skripti"
 
 #. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:25
 #. i18n: ectx: label, entry (EnableList), group (UserScripts)
-#: rc.cpp:983
+#: rc.cpp:980
 msgid "List of whether the script is enabled"
 msgstr "Spisak pokazatelja uključenosti skripti"
+
+#~ msgid ""
+#~ "Required data entered; also consider entering additional information."
+#~ msgstr "Neophodni podaci uneseni; razmotrite da unesete još neke."
+
+#~ msgid "You have no source URLs selected."
+#~ msgstr "Niste izabrali nijedan izvorni URL."
+
+#~ msgctxt "an error happened in connection with the user input"
+#~ msgid "Error:"
+#~ msgstr "Greška:"
+
+#~ msgctxt "a warning happened in connection with the user input"
+#~ msgid "Warning:"
+#~ msgstr "Upozorenje:"
+
+#~ msgid "The key is to be trusted fully."
+#~ msgstr "Ključ je potpuno pouzdan."
+
+#~ msgid "The key is to be trusted ultimately."
+#~ msgstr "Ključ je bezuslovno pouzdan."
+
+#~ msgid "The signature has been verified successfully."
+#~ msgstr "Potpis je uspješno ovjeren."
+
+#~ msgid "The signature has been verified successfully:"
+#~ msgstr "Potpis je uspješno ovjeren:"
+
+#~ msgid "Error:"
+#~ msgstr "Greška:"
+
+#~ msgid "Problems:"
+#~ msgstr "Problemi:"
+
+#~ msgid "Information:"
+#~ msgstr "Informacije:"
+
+#~ msgctxt "Files as in files on a server"
+#~ msgid "Files:"
+#~ msgstr "Datoteke:"
 
 #~ msgctxt "Adds the item and reopens the dialog to add a further item"
 #~ msgid "Add more"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeplasma-addons\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-04-16 04:02+0200\n"
+"POT-Creation-Date: 2011-05-05 04:07+0200\n"
 "PO-Revision-Date: 2010-12-08 12:21+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -17,53 +17,101 @@ msgstr ""
 "X-Launchpad-Export-Date: 2011-04-22 01:26+0000\n"
 "X-Generator: Launchpad (build 12883)\n"
 
-#: comic.cpp:79
+#: comicarchivedialog.cpp:32
+#, kde-format
+msgid "Create %1 Comic Book Archive"
+msgstr ""
+
+#: comicarchivejob.cpp:144
+msgid "No zip file is existing, aborting."
+msgstr ""
+
+#: comicarchivejob.cpp:171
+#, kde-format
+msgid "An error happened for identifier %1."
+msgstr ""
+
+#: comicarchivejob.cpp:244
+#, kde-format
+msgid "Failed creating the file with identifier %1."
+msgstr ""
+
+#: comicarchivejob.cpp:346
+msgid "Creating Comic Book Archive"
+msgstr ""
+
+#: comicarchivejob.cpp:374
+msgid "Failed adding a file to the archive."
+msgstr ""
+
+#: comicarchivejob.cpp:391
+msgid "Could not create the archive at the specified location."
+msgstr ""
+
+#. i18n: file: comicSettings.ui:32
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: comicarchivejob.cpp:402 comic.cpp:1047 rc.cpp:102
+msgid "Comic"
+msgstr "Comic"
+
+#: comic.cpp:89 comic.cpp:814
 msgid "Go to Strip"
 msgstr "Idi na strip"
 
-#: comic.cpp:94
+#: comic.cpp:104
 msgid "&Strip Number:"
 msgstr "&Broj stripa"
 
-#: comic.cpp:181
+#: comic.cpp:195
+msgctxt "here strip means comic strip"
+msgid "&Next Tab with a new Strip"
+msgstr ""
+
+#: comic.cpp:201
 msgid "Jump to &first Strip"
 msgstr "Skoči na &prvi strip"
 
-#: comic.cpp:185
+#: comic.cpp:205
 msgid "Jump to &current Strip"
 msgstr "Skoči na &tekući strip"
 
-#: comic.cpp:189 comic.cpp:274
+#: comic.cpp:209 comic.cpp:296
 msgid "Jump to Strip ..."
 msgstr "Skoči na strip ..."
 
-#: comic.cpp:196
+#: comic.cpp:214
 msgid "Visit the shop &website"
 msgstr "Posjeti &web stranicu za kupovinu"
 
-#: comic.cpp:203
+#: comic.cpp:221
 msgid "&Save Comic As..."
 msgstr "&Snimi strip kao"
 
-#: comic.cpp:210
+#: comic.cpp:227
+#, fuzzy
+#| msgid "&Save Comic As..."
+msgid "&Create Comic Book Archive..."
+msgstr "&Snimi strip kao"
+
+#: comic.cpp:232
 msgctxt "@option:check Context menu of comic image"
 msgid "&Actual Size"
 msgstr "&Stvarna veličina"
 
-#: comic.cpp:216
+#: comic.cpp:238
 msgctxt "@option:check Context menu of comic image"
 msgid "Store current &Position"
 msgstr "Spremi  tekuću &poziciju"
 
-#: comic.cpp:285
+#: comic.cpp:307
 msgid "Visit the comic website"
 msgstr "Posjeti comic web stranicu"
 
-#: comic.cpp:364
+#: comic.cpp:385
 msgid "Getting comic strip failed:"
 msgstr "Dobavljanje stripa nije uspjelo:"
 
-#: comic.cpp:366
+#: comic.cpp:387
 msgid ""
 "Maybe there is no Internet connection.\n"
 "Maybe the comic plugin is broken.\n"
@@ -75,7 +123,7 @@ msgstr ""
 "Takođe može biti da nema stripa za ovaj dan, broj ili niz, pa dobavljanje "
 "može uspjeti ako izaberete neki drugi."
 
-#: comic.cpp:374
+#: comic.cpp:395
 msgid ""
 "\n"
 "\n"
@@ -85,37 +133,37 @@ msgstr ""
 "\n"
 "Izaberite prethodni strip da prijeđete na posljednji keširani."
 
-#: comic.cpp:420
+#: comic.cpp:465
 #, kde-format
 msgctxt "an abbreviation for Number"
 msgid "# %1"
 msgstr "# %1"
 
-#: comic.cpp:518
+#: comic.cpp:555
 msgid "General"
 msgstr "Opšte"
 
-#: comic.cpp:518
-msgid "Press the \"Get New Comics ...\" button to install comics."
-msgstr "Pritisni \"Novi stripovi ...\" za instalaciju comics-a"
-
-#: comic.cpp:519
+#: comic.cpp:556
 msgid "Appearance"
 msgstr "Izgled"
 
-#: comic.cpp:520
+#: comic.cpp:557
 msgid "Advanced"
 msgstr "Napredno"
 
-#. i18n: file: comicSettings.ui:39
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#. i18n: file: comicSettings.ui:278
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: comic.cpp:968 rc.cpp:48 rc.cpp:87
-msgid "Comic"
-msgstr "Comic"
+#: comic.cpp:814
+#, fuzzy
+#| msgid "Show comic &identifier:"
+msgid "Strip identifier:"
+msgstr "Prikaži &indetifikator stripa:"
 
-#: comic.cpp:1125
+#: comic.cpp:924
+#, fuzzy
+#| msgid "Getting comic strip failed:"
+msgid "Archiving comic failed"
+msgstr "Dobavljanje stripa nije uspjelo:"
+
+#: comic.cpp:1177
 msgid ""
 "Show at actual size in a different view.  Alternatively, click with the "
 "middle mouse button on the comic."
@@ -130,231 +178,291 @@ msgctxt "refers to caching of files on the users hd"
 msgid "Cache"
 msgstr "Keš"
 
-#. i18n: file: advancedsettings.ui:50
-#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: file: advancedsettings.ui:56
+#. i18n: ectx: property (suffix), widget (KIntNumInput, maxComicLimit)
 #: rc.cpp:6
-msgid "Limit number of cached strips per comic:"
-msgstr "Ograniči broj predviđenih odsječaka po stripu:"
+msgid " strips per comic"
+msgstr ""
 
-#. i18n: file: advancedsettings.ui:103
-#. i18n: ectx: property (text), widget (QLabel, label_4)
+#. i18n: file: advancedsettings.ui:59
+#. i18n: ectx: property (specialValueText), widget (KIntNumInput, maxComicLimit)
 #: rc.cpp:9
+msgid "No size limit"
+msgstr ""
+
+#. i18n: file: advancedsettings.ui:66
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:12
+#, fuzzy
+#| msgid "C&omic:"
+msgid "Comic cache:"
+msgstr "S&trip:"
+
+#. i18n: file: advancedsettings.ui:99
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:15
 msgid "Error Handling"
 msgstr "Rukovanje greškama"
 
-#. i18n: file: advancedsettings.ui:130
+#. i18n: file: advancedsettings.ui:126
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:12
-msgid "Show error when getting comic failed:"
+#: rc.cpp:18
+#, fuzzy
+#| msgid "Show error when getting comic failed:"
+msgid "Display error image when getting comic failed:"
 msgstr "Prikaži grešku kada ne uspije preuzimanje stripa:"
 
 #. i18n: file: appearanceSettings.ui:34
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:15
+#: rc.cpp:21
 msgid "Show arrows only on &hover:"
 msgstr "Prikaži strelicu samo na &kruženje"
 
 #. i18n: file: appearanceSettings.ui:57
 #. i18n: ectx: property (text), widget (QPushButton, pushButton_Size)
-#: rc.cpp:18
+#: rc.cpp:24
 msgid "Maximum &Size of Widget"
 msgstr "Najveća &veličina od Widgeta"
 
 #. i18n: file: appearanceSettings.ui:117
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:21
+#: rc.cpp:27
 msgid "Information"
 msgstr "Informacija"
 
 #. i18n: file: appearanceSettings.ui:132
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:24
+#: rc.cpp:30
 msgid "Show comic &title:"
 msgstr "Prikaži &naziv stripa:"
 
 #. i18n: file: appearanceSettings.ui:155
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:27
+#: rc.cpp:33
 msgid "Show comic &identifier:"
 msgstr "Prikaži &indetifikator stripa:"
 
 #. i18n: file: appearanceSettings.ui:178
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:30
+#: rc.cpp:36
 msgid "Show comic &author:"
 msgstr "Prikaži &autora stripa:"
 
 #. i18n: file: appearanceSettings.ui:201
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:33
+#: rc.cpp:39
 msgid "Show comic &URL:"
 msgstr "Prikaži &URL stripa:"
 
 #. i18n: file: appearanceSettings.ui:248
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:36
+#: rc.cpp:42
 msgid "Tabbar"
 msgstr "Traka kartica"
 
 #. i18n: file: appearanceSettings.ui:280
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
-#: rc.cpp:39
+#: rc.cpp:45
 msgctxt "Tabbar will show text only"
 msgid "Text only"
 msgstr "Samo tekst"
 
 #. i18n: file: appearanceSettings.ui:287
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
-#: rc.cpp:42
+#: rc.cpp:48
 msgctxt "Tabbar will show icons only"
 msgid "Icons only"
 msgstr "Samo ikone"
 
 #. i18n: file: appearanceSettings.ui:294
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_3)
-#: rc.cpp:45
+#: rc.cpp:51
 msgctxt "Tabbar will show both text and icons"
 msgid "Text and Icons"
 msgstr "Tekst i ikone"
 
-#. i18n: file: comicSettings.ui:52
-#. i18n: ectx: property (toolTip), widget (QLabel, label)
-#. i18n: file: comicSettings.ui:291
-#. i18n: ectx: property (toolTip), widget (QLabel, label_5)
-#: rc.cpp:51 rc.cpp:90
-msgid "Choose a comic strip"
-msgstr "Izaberi strip"
+#. i18n: file: comicarchivedialog.ui:23
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:54
+msgid "Destination:"
+msgstr ""
 
-#. i18n: file: comicSettings.ui:55
+#. i18n: file: comicarchivedialog.ui:30
+#. i18n: ectx: property (filter), widget (KUrlRequester, dest)
+#: rc.cpp:57
+msgid "*.cbz|Comic Book Archive (Zip)"
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:56
+#. i18n: ectx: property (statusTip), widget (QLabel, label)
+#: rc.cpp:60
+msgid "The range of comic strips to archive."
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:59
 #. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: file: comicSettings.ui:294
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:54 rc.cpp:93
-msgid "C&omic:"
-msgstr "S&trip:"
+#: rc.cpp:63
+msgid "Range:"
+msgstr ""
 
-#. i18n: file: comicSettings.ui:80
+#. i18n: file: comicarchivedialog.ui:67
+#. i18n: ectx: property (text), item, widget (KComboBox, archiveType)
+#: rc.cpp:66
+msgid "All"
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:72
+#. i18n: ectx: property (text), item, widget (KComboBox, archiveType)
+#: rc.cpp:69
+msgid "From beginning to ..."
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:77
+#. i18n: ectx: property (text), item, widget (KComboBox, archiveType)
+#: rc.cpp:72
+msgid "From end to ..."
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:82
+#. i18n: ectx: property (text), item, widget (KComboBox, archiveType)
+#: rc.cpp:75
+msgid "Manual range"
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:100
+#. i18n: ectx: property (text), widget (QLabel, fromDateLabel)
+#. i18n: file: comicarchivedialog.ui:141
+#. i18n: ectx: property (text), widget (QLabel, fromNumberLabel)
+#. i18n: file: comicarchivedialog.ui:176
+#. i18n: ectx: property (text), widget (QLabel, fromStringLabel)
+#: rc.cpp:78 rc.cpp:90 rc.cpp:96
+msgctxt "in a range: from to"
+msgid "From:"
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:107
+#. i18n: ectx: property (text), widget (QLabel, toDateLabel)
+#. i18n: file: comicarchivedialog.ui:148
+#. i18n: ectx: property (text), widget (QLabel, toNumberLabel)
+#. i18n: file: comicarchivedialog.ui:183
+#. i18n: ectx: property (text), widget (QLabel, toStringLabel)
+#: rc.cpp:81 rc.cpp:93 rc.cpp:99
+msgctxt "in a range: from to"
+msgid "To:"
+msgstr ""
+
+#. i18n: file: comicarchivedialog.ui:114
+#. i18n: ectx: property (displayFormat), widget (QDateEdit, fromDate)
+#. i18n: file: comicarchivedialog.ui:124
+#. i18n: ectx: property (displayFormat), widget (QDateEdit, toDate)
+#: rc.cpp:84 rc.cpp:87
+msgid "dd.MM.yyyy"
+msgstr ""
+
+#. i18n: file: comicSettings.ui:97
 #. i18n: ectx: property (toolTip), widget (QPushButton, pushButton_GHNS)
-#. i18n: file: comicSettings.ui:368
-#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton_GHNS_2)
-#: rc.cpp:57 rc.cpp:96
+#: rc.cpp:105
 msgid "Download new comics"
 msgstr "Preuzmi nove stripove"
 
-#. i18n: file: comicSettings.ui:83
+#. i18n: file: comicSettings.ui:100
 #. i18n: ectx: property (text), widget (QPushButton, pushButton_GHNS)
-#. i18n: file: comicSettings.ui:371
-#. i18n: ectx: property (text), widget (QPushButton, pushButton_GHNS_2)
-#: rc.cpp:60 rc.cpp:99
+#: rc.cpp:108
 msgid "&Get New Comics..."
 msgstr "&Uzni nove stripove"
 
-#. i18n: file: comicSettings.ui:114
+#. i18n: file: comicSettings.ui:128
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox_middle)
-#. i18n: file: comicSettings.ui:399
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox_middle_2)
-#: rc.cpp:63 rc.cpp:102
+#: rc.cpp:111
 msgid "&Middle-click on the comic to show it at its original size"
 msgstr "&Srednja tipka miša na strip za prikaz njegove stvarne veličine"
 
-#. i18n: file: comicSettings.ui:130
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#. i18n: file: comicSettings.ui:484
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:66 rc.cpp:120
-msgid "Tabs"
-msgstr "Kartice"
-
-#. i18n: file: comicSettings.ui:148
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: file: comicSettings.ui:518
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:69 rc.cpp:123
-msgid "Use &tabs:"
-msgstr "Koristi &kartice:"
-
-#. i18n: file: comicSettings.ui:201
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:72
+#. i18n: file: comicSettings.ui:144
+#. i18n: ectx: property (text), widget (QLabel, label_13)
+#: rc.cpp:114
 msgid "Update"
 msgstr "Ažuriraj"
 
-#. i18n: file: comicSettings.ui:229
-#. i18n: ectx: property (text), widget (QLabel, label_12)
-#. i18n: file: comicSettings.ui:424
+#. i18n: file: comicSettings.ui:156
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:75 rc.cpp:108
-msgid "Automatically update comics:"
+#: rc.cpp:117
+#, fuzzy
+#| msgid "Automatically update comics:"
+msgid "Automatically update comic plugins:"
 msgstr "Automatski ažuriraj stripove:"
 
-#. i18n: file: comicSettings.ui:252
+#. i18n: file: comicSettings.ui:172
 #. i18n: ectx: property (suffix), widget (KIntNumInput, updateIntervall)
-#: rc.cpp:78
-msgctxt "number of days"
+#: rc.cpp:120
 msgid " days"
 msgstr " dana"
 
-#. i18n: file: comicSettings.ui:255
+#. i18n: file: comicSettings.ui:175
 #. i18n: ectx: property (prefix), widget (KIntNumInput, updateIntervall)
-#. i18n: file: comicSettings.ui:450
-#. i18n: ectx: property (prefix), widget (KIntNumInput, updateIntervall_2)
-#: rc.cpp:81 rc.cpp:114
+#. i18n: file: comicSettings.ui:204
+#. i18n: ectx: property (prefix), widget (KIntNumInput, updateIntervallComicStrips)
+#: rc.cpp:123 rc.cpp:135
 msgid "every "
 msgstr "svakih "
 
-#. i18n: file: comicSettings.ui:258
+#. i18n: file: comicSettings.ui:178
 #. i18n: ectx: property (specialValueText), widget (KIntNumInput, updateIntervall)
-#: rc.cpp:84
-msgctxt "1"
-msgid "daily"
-msgstr "dnevno"
+#. i18n: file: comicSettings.ui:207
+#. i18n: ectx: property (specialValueText), widget (KIntNumInput, updateIntervallComicStrips)
+#: rc.cpp:126 rc.cpp:138
+#, fuzzy
+#| msgid "every "
+msgid "never"
+msgstr "svakih "
 
-#. i18n: file: comicSettings.ui:415
-#. i18n: ectx: property (text), widget (QLabel, label_13)
-#: rc.cpp:105
-msgid "Update:"
-msgstr "Ažuriraj:"
+#. i18n: file: comicSettings.ui:185
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:129
+#, fuzzy
+#| msgid "Choose a comic strip"
+msgid "Check for new comic strips:"
+msgstr "Izaberi strip"
 
-#. i18n: file: comicSettings.ui:447
-#. i18n: ectx: property (suffix), widget (KIntNumInput, updateIntervall_2)
-#: rc.cpp:111
-msgid " days"
-msgstr " dana"
-
-#. i18n: file: comicSettings.ui:453
-#. i18n: ectx: property (specialValueText), widget (KIntNumInput, updateIntervall_2)
-#: rc.cpp:117
-msgid "daily"
+#. i18n: file: comicSettings.ui:201
+#. i18n: ectx: property (suffix), widget (KIntNumInput, updateIntervallComicStrips)
+#: rc.cpp:132
+msgid " minutes"
 msgstr ""
 
-#. i18n: file: comicSettings.ui:556
-#. i18n: ectx: property (toolTip), widget (QLabel, label_9)
-#. i18n: file: comicSettings.ui:575
-#. i18n: ectx: property (toolTip), widget (QCheckBox, checkBox_hideTabBar)
-#: rc.cpp:126 rc.cpp:132
-msgid "Pressing Ctrl and scrolling also changes the tabs."
-msgstr "Pritiskom na tipku Ctrl i pomicanjem također mijenjamo kartice."
+#~ msgid "Press the \"Get New Comics ...\" button to install comics."
+#~ msgstr "Pritisni \"Novi stripovi ...\" za instalaciju comics-a"
 
-#. i18n: file: comicSettings.ui:559
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:129
-msgid "&Hide Tabbar:"
-msgstr "&Sakrij traku kartica"
+#~ msgid "Limit number of cached strips per comic:"
+#~ msgstr "Ograniči broj predviđenih odsječaka po stripu:"
 
-#. i18n: file: comicSettings.ui:594
-#. i18n: ectx: property (toolTip), widget (QTimeEdit, timeEdit_tabs)
-#: rc.cpp:135
-msgid "Interacting with the comic widget restarts the timer."
-msgstr "Interakcija sa prikazivačem striupova pokreće brojač."
+#~ msgid "Tabs"
+#~ msgstr "Kartice"
 
-#. i18n: file: comicSettings.ui:597
-#. i18n: ectx: property (displayFormat), widget (QTimeEdit, timeEdit_tabs)
-#: rc.cpp:138
-msgid "hh 'Hours' mm 'Mins' ss 'Secs'"
-msgstr "hh 'sati' mm 'minuta' ss 'sekundi'"
+#~ msgid "Use &tabs:"
+#~ msgstr "Koristi &kartice:"
 
-#. i18n: file: comicSettings.ui:611
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:141
-msgid "Automatically &switch tabs:"
-msgstr "Automatski &zamijeni kartice:"
+#~ msgctxt "number of days"
+#~ msgid " days"
+#~ msgstr " dana"
+
+#~ msgctxt "1"
+#~ msgid "daily"
+#~ msgstr "dnevno"
+
+#~ msgid "Update:"
+#~ msgstr "Ažuriraj:"
+
+#~ msgid "Pressing Ctrl and scrolling also changes the tabs."
+#~ msgstr "Pritiskom na tipku Ctrl i pomicanjem također mijenjamo kartice."
+
+#~ msgid "&Hide Tabbar:"
+#~ msgstr "&Sakrij traku kartica"
+
+#~ msgid "Interacting with the comic widget restarts the timer."
+#~ msgstr "Interakcija sa prikazivačem striupova pokreće brojač."
+
+#~ msgid "hh 'Hours' mm 'Mins' ss 'Secs'"
+#~ msgstr "hh 'sati' mm 'minuta' ss 'sekundi'"
+
+#~ msgid "Automatically &switch tabs:"
+#~ msgstr "Automatski &zamijeni kartice:"
