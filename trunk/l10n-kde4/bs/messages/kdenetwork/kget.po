@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kget\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-07 04:06+0200\n"
+"POT-Creation-Date: 2011-05-11 03:58+0200\n"
 "PO-Revision-Date: 2011-03-11 21:26+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -600,6 +600,7 @@ msgstr "Odgođen"
 #: transfer-plugins/mmsclient/mmsTransfer.cpp:48
 #: transfer-plugins/bittorrent/bttransfer.cpp:298
 #: transfer-plugins/mms/mmsTransfer.cpp:52
+#: transfer-plugins/mmsthreads/mmstransfer.cpp:86
 msgctxt "transfer state: stopped"
 msgid "Stopped"
 msgstr "Zaustavljen"
@@ -963,8 +964,8 @@ msgstr "Naziv pogona:"
 #. i18n: ectx: property (text), widget (QLabel, label_21)
 #. i18n: file: ui/newtransferwidget.ui:24
 #. i18n: ectx: property (text), widget (QLabel, urlLabel)
-#: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:29 rc.cpp:218 rc.cpp:661
-#: rc.cpp:922
+#: transfer-plugins/mirrorsearch/dlgmirrorsearch.cpp:29 rc.cpp:218 rc.cpp:664
+#: rc.cpp:925
 msgid "URL:"
 msgstr "URL:"
 
@@ -1093,6 +1094,7 @@ msgstr "Zamijeni kraj datoteke"
 
 #: transfer-plugins/mmsclient/mmsTransfer.cpp:38
 #: transfer-plugins/mms/mmsTransfer.cpp:36
+#: transfer-plugins/mmsthreads/mmstransfer.cpp:58
 msgctxt "transfer state: running"
 msgid "Running...."
 msgstr "U toku..."
@@ -1347,7 +1349,7 @@ msgstr "Datoteka"
 #. i18n: ectx: property (text), item, widget (KComboBox, rangeType)
 #: transfer-plugins/bittorrent/advanceddetails/torrentfiletreemodel.cpp:377
 #: transfer-plugins/bittorrent/advanceddetails/torrentfilelistmodel.cpp:70
-#: rc.cpp:768
+#: rc.cpp:771
 msgid "Size"
 msgstr "Veličina"
 
@@ -1592,6 +1594,24 @@ msgstr "Izbor podrazumijevanog direktorija za torente"
 msgid "Select a default temporary folder"
 msgstr "Izbor podrazumijevanog privremenog direktorija"
 
+#: transfer-plugins/mmsthreads/mmstransfer.cpp:104
+#, fuzzy
+#| msgctxt "transfer state: finished"
+#| msgid "Finished"
+msgctxt "Transfer State:Finished"
+msgid "Finished"
+msgstr "Završen"
+
+#: transfer-plugins/mmsthreads/mmstransfer.cpp:148
+msgid "Download failed, could not access this URL."
+msgstr ""
+
+#: transfer-plugins/mmsthreads/mmstransfer.cpp:156
+msgid ""
+"This url does not allow multiple connections,\n"
+"                            the download will take longer."
+msgstr ""
+
 #: ui/metalinkcreator/dragdlg.cpp:67
 msgid "Import dropped files"
 msgstr "Uvoz ispuštenih fajlova"
@@ -1720,7 +1740,7 @@ msgstr "&Izaberi sve filtrirane"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:236
 #. i18n: ectx: property (text), widget (KPushButton, selectAll)
-#: ui/linkview/kget_linkview.cpp:312 rc.cpp:723
+#: ui/linkview/kget_linkview.cpp:312 rc.cpp:726
 msgid "&Select All"
 msgstr "&Izaberi sve"
 
@@ -1730,13 +1750,13 @@ msgstr "&Poništi izbor filtriranih"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:226
 #. i18n: ectx: property (text), widget (KPushButton, deselectAll)
-#: ui/linkview/kget_linkview.cpp:313 rc.cpp:720
+#: ui/linkview/kget_linkview.cpp:313 rc.cpp:723
 msgid "D&eselect All"
 msgstr "&Poništi izbor"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:72
 #. i18n: ectx: property (specialValueText), widget (KIntNumInput, priority)
-#: ui/mirror/mirrormodel.cpp:214 ui/mirror/mirrormodel.cpp:232 rc.cpp:750
+#: ui/mirror/mirrormodel.cpp:214 ui/mirror/mirrormodel.cpp:232 rc.cpp:753
 msgid "not specified"
 msgstr "neodređeno"
 
@@ -2701,7 +2721,7 @@ msgstr "Kontrolna suma:"
 #. i18n: ectx: property (text), widget (KPushButton, signature)
 #. i18n: file: ui/signaturedlg.ui:20
 #. i18n: ectx: property (title), widget (QGroupBox, sigGroup)
-#: rc.cpp:23 rc.cpp:850 rc.cpp:853
+#: rc.cpp:23 rc.cpp:853 rc.cpp:856
 msgid "Signature"
 msgstr "Potpis"
 
@@ -2751,7 +2771,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (KPushButton, rename)
 #. i18n: file: ui/transfersettingsdialog.ui:153
 #. i18n: ectx: property (text), widget (KPushButton, rename)
-#: rc.cpp:47 rc.cpp:844
+#: rc.cpp:47 rc.cpp:847
 msgid "Rename"
 msgstr "Preimenuj"
 
@@ -3050,7 +3070,9 @@ msgstr "Novi pogon..."
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: transfer-plugins/metalink/dlgmetalink.ui:56
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:221 rc.cpp:311
+#. i18n: file: transfer-plugins/mmsthreads/dlgmms.ui:22
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:221 rc.cpp:311 rc.cpp:508
 msgid "Number of connections per URL:"
 msgstr "Broj povezivanja po URL‑u:"
 
@@ -3076,7 +3098,7 @@ msgstr "Postavke datoteke"
 #. i18n: ectx: property (text), widget (QLabel, fileNameLabel)
 #. i18n: file: ui/metalinkcreator/filedlg.ui:54
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: rc.cpp:233 rc.cpp:541
+#: rc.cpp:233 rc.cpp:544
 msgid "Filename:"
 msgstr "Ime datoteke:"
 
@@ -3196,7 +3218,7 @@ msgstr "Staza:"
 #. i18n: ectx: property (text), widget (QLabel, scriptDescriptionLabel)
 #. i18n: file: ui/metalinkcreator/commondata.ui:32
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:299 rc.cpp:622
+#: rc.cpp:299 rc.cpp:625
 msgid "Description:"
 msgstr "Opis:"
 
@@ -3472,7 +3494,7 @@ msgstr "Svi:"
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #. i18n: file: ui/transferdetailsfrm.ui:51
 #. i18n: ectx: property (text), widget (QLabel, sourceLabel)
-#: rc.cpp:463 rc.cpp:795
+#: rc.cpp:463 rc.cpp:798
 msgctxt "source-file"
 msgid "Source:"
 msgstr "Izvor:"
@@ -3481,7 +3503,7 @@ msgstr "Izvor:"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: ui/transferdetailsfrm.ui:44
 #. i18n: ectx: property (text), widget (QLabel, destLabel)
-#: rc.cpp:466 rc.cpp:792
+#: rc.cpp:466 rc.cpp:795
 msgid "Saving to:"
 msgstr "Upisujem u:"
 
@@ -3545,26 +3567,26 @@ msgstr "Rezerviši prostor na disku"
 
 #. i18n: file: ui/metalinkcreator/dragdlg.ui:21
 #. i18n: ectx: attribute (title), widget (QWidget, Seite)
-#: rc.cpp:508
+#: rc.cpp:511
 msgctxt "General options."
 msgid "General"
 msgstr "Opšte"
 
 #. i18n: file: ui/metalinkcreator/dragdlg.ui:27
 #. i18n: ectx: property (text), widget (QCheckBox, partialChecksums)
-#: rc.cpp:511
+#: rc.cpp:514
 msgid "Create partial checksums"
 msgstr "Računaj parcijalne kontrolne sume"
 
 #. i18n: file: ui/metalinkcreator/dragdlg.ui:40
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:514
+#: rc.cpp:517
 msgid "General URL:"
 msgstr "Opšti URL:"
 
 #. i18n: file: ui/metalinkcreator/dragdlg.ui:66
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:517
+#: rc.cpp:520
 msgid ""
 "Automatically create checksums for the selected types. Keep in mind that "
 "this might take a while."
@@ -3574,7 +3596,7 @@ msgstr ""
 
 #. i18n: file: ui/metalinkcreator/dragdlg.ui:92
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:520
+#: rc.cpp:523
 msgid ""
 "Enter URLs here if all the dropped files are on that server and in the same "
 "directory. For each dropped file the URL would consist of the entered part "
@@ -3586,62 +3608,62 @@ msgstr ""
 
 #. i18n: file: ui/metalinkcreator/dragdlg.ui:102
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:523
+#: rc.cpp:526
 msgid "Types of the checksums:"
 msgstr "Tip kontrolne sume:"
 
 #. i18n: file: ui/metalinkcreator/dragdlg.ui:115
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:526
+#: rc.cpp:529
 msgid "Create checksums:"
 msgstr "Kreiraj kontrolnu sumu:"
 
 #. i18n: file: ui/metalinkcreator/dragdlg.ui:132
 #. i18n: ectx: attribute (title), widget (QWidget, Seite_2)
-#: rc.cpp:529
+#: rc.cpp:532
 msgctxt "These entries are optional."
 msgid "Optional"
 msgstr "Opciono"
 
 #. i18n: file: ui/metalinkcreator/dragdlg.ui:144
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:532
+#: rc.cpp:535
 msgid "Optional data:"
 msgstr "Opcioni podaci:"
 
 #. i18n: file: ui/metalinkcreator/dragdlg.ui:169
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:535
+#: rc.cpp:538
 msgid "Enter information that all chosen files share."
 msgstr "Unesite zajedničke podatke svim izabranim fajlovima."
 
 #. i18n: file: ui/metalinkcreator/filedlg.ui:24
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: rc.cpp:538
+#: rc.cpp:541
 msgid "Required"
 msgstr "Potrebno"
 
 #. i18n: file: ui/metalinkcreator/filedlg.ui:95
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:544
+#: rc.cpp:547
 msgid "Used Mirrors:"
 msgstr "Korištena ogledala:"
 
 #. i18n: file: ui/metalinkcreator/filedlg.ui:103
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
-#: rc.cpp:547
+#: rc.cpp:550
 msgid "Recommended"
 msgstr "Preporučeno"
 
 #. i18n: file: ui/metalinkcreator/filedlg.ui:111
 #. i18n: ectx: property (text), widget (QLabel, label_11)
-#: rc.cpp:550
+#: rc.cpp:553
 msgid "File size (in bytes):"
 msgstr "Veličina datoteke (bajtova):"
 
 #. i18n: file: ui/metalinkcreator/filedlg.ui:121
 #. i18n: ectx: property (validChars), widget (KRestrictedLine, size)
-#: rc.cpp:553
+#: rc.cpp:556
 msgid "0123456789"
 msgstr "0123456789"
 
@@ -3649,19 +3671,19 @@ msgstr "0123456789"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: ui/signaturedlg.ui:34
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:556 rc.cpp:856
+#: rc.cpp:559 rc.cpp:859
 msgid "Verification:"
 msgstr "Ovjera:"
 
 #. i18n: file: ui/metalinkcreator/filedlg.ui:199
 #. i18n: ectx: attribute (title), widget (QWidget, Seite)
-#: rc.cpp:559
+#: rc.cpp:562
 msgid "Optional"
 msgstr "Opcionalno"
 
 #. i18n: file: ui/metalinkcreator/introduction.ui:17
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:562
+#: rc.cpp:565
 msgid ""
 "This assistant allows you to create metalinks from scratch or base them on "
 "existing metalinks. A lot of the fields are optional or recommended, so "
@@ -3675,55 +3697,55 @@ msgstr ""
 
 #. i18n: file: ui/metalinkcreator/introduction.ui:48
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:565
+#: rc.cpp:568
 msgid "Save created Metalink at:"
 msgstr "Sačuvaj novu metavezu u:"
 
 #. i18n: file: ui/metalinkcreator/introduction.ui:78
 #. i18n: ectx: property (text), widget (QRadioButton, createButton)
-#: rc.cpp:568
+#: rc.cpp:571
 msgid "Create new Metalink"
 msgstr "Nova metaveza"
 
 #. i18n: file: ui/metalinkcreator/introduction.ui:88
 #. i18n: ectx: property (text), widget (QRadioButton, loadButton)
-#: rc.cpp:571
+#: rc.cpp:574
 msgid "Load existing Metalink:"
 msgstr "Učitaj postojeću metavezu:"
 
 #. i18n: file: ui/metalinkcreator/introduction.ui:98
 #. i18n: ectx: property (filter), widget (KUrlRequester, load)
-#: rc.cpp:574
+#: rc.cpp:577
 msgid "*.metalink *.meta4|Metalink file (*.metalink *.meta4)"
 msgstr "*.metalink *.meta4|fajlovi metaveza"
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:577
+#: rc.cpp:580
 msgid "General information:"
 msgstr "Opšti podaci:"
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:30
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: rc.cpp:580
+#: rc.cpp:583
 msgid "Here you can enter optional general information on the metalink."
 msgstr "Ovde možete uneti opcione opšte podatke o metavezi."
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:61
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:583
+#: rc.cpp:586
 msgid "Origin:"
 msgstr "Izvor:"
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:68
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, origin)
-#: rc.cpp:586
+#: rc.cpp:589
 msgid "Web URL to the metalink"
 msgstr "Web URL metaveze"
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:75
 #. i18n: ectx: property (toolTip), widget (QLabel, labelDynamic)
-#: rc.cpp:589
+#: rc.cpp:592
 msgid "Dynamic means that updated metalinks can be found at \"Origin\"."
 msgstr ""
 "<html>Dinamički znači da se ažurirane metaveze mogu naći pod "
@@ -3731,13 +3753,13 @@ msgstr ""
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:78
 #. i18n: ectx: property (text), widget (QLabel, labelDynamic)
-#: rc.cpp:592
+#: rc.cpp:595
 msgid "Dynamic:"
 msgstr "Динамички:"
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:110
 #. i18n: ectx: property (title), widget (QGroupBox, publishedGroupBox)
-#: rc.cpp:595
+#: rc.cpp:598
 msgid "Metalink published"
 msgstr "Метавеза објављена"
 
@@ -3745,7 +3767,7 @@ msgstr "Метавеза објављена"
 #. i18n: ectx: property (text), widget (QLabel, label_30)
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:223
 #. i18n: ectx: property (text), widget (QLabel, label_29)
-#: rc.cpp:598 rc.cpp:616
+#: rc.cpp:601 rc.cpp:619
 msgid "Date and time:"
 msgstr "Datum i vrijeme:"
 
@@ -3753,7 +3775,7 @@ msgstr "Datum i vrijeme:"
 #. i18n: ectx: property (text), widget (QCheckBox, use_publishedtimeoffset)
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:213
 #. i18n: ectx: property (text), widget (QCheckBox, use_updatedtimeoffset)
-#: rc.cpp:601 rc.cpp:613
+#: rc.cpp:604 rc.cpp:616
 msgid "Timezone offset:"
 msgstr "Pomak vremenske zone:"
 
@@ -3761,79 +3783,79 @@ msgstr "Pomak vremenske zone:"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:206
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:604 rc.cpp:610
+#: rc.cpp:607 rc.cpp:613
 msgid "Negative offset:"
 msgstr "Negativni pomak:"
 
 #. i18n: file: ui/metalinkcreator/generalwidget.ui:178
 #. i18n: ectx: property (title), widget (QGroupBox, updatedGroupBox)
-#: rc.cpp:607
+#: rc.cpp:610
 msgid "Metalink updated"
 msgstr "Metaveza ažurirana"
 
 #. i18n: file: ui/metalinkcreator/commondata.ui:22
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:619
+#: rc.cpp:622
 msgid "Identity"
 msgstr "Identitet"
 
 #. i18n: file: ui/metalinkcreator/commondata.ui:46
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:625
+#: rc.cpp:628
 msgid "Version:"
 msgstr "Verzija:"
 
 #. i18n: file: ui/metalinkcreator/commondata.ui:56
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: rc.cpp:628
+#: rc.cpp:631
 msgid "Logo:"
 msgstr "Logotip:"
 
 #. i18n: file: ui/metalinkcreator/commondata.ui:63
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, logo)
-#: rc.cpp:631
+#: rc.cpp:634
 msgid "URL to the logo"
 msgstr "URL logotipa"
 
 #. i18n: file: ui/metalinkcreator/commondata.ui:73
 #. i18n: ectx: property (toolTip), widget (QLabel, label_13)
-#: rc.cpp:634
+#: rc.cpp:637
 msgid "The language of the file"
 msgstr "Jezik datoteke"
 
 #. i18n: file: ui/metalinkcreator/commondata.ui:76
 #. i18n: ectx: property (text), widget (QLabel, label_13)
-#: rc.cpp:637
+#: rc.cpp:640
 msgid "Language:"
 msgstr "Jezik:"
 
 #. i18n: file: ui/metalinkcreator/commondata.ui:86
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: rc.cpp:640
+#: rc.cpp:643
 msgid "Operating systems:"
 msgstr "Operativni sistemi:"
 
 #. i18n: file: ui/metalinkcreator/commondata.ui:93
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, os)
-#: rc.cpp:643
+#: rc.cpp:646
 msgid "Supported OSes, separated with commas"
 msgstr "Podržani OS‑ovi, razdvojeni zarezima"
 
 #. i18n: file: ui/metalinkcreator/commondata.ui:103
 #. i18n: ectx: property (text), widget (QLabel, label_18)
-#: rc.cpp:646
+#: rc.cpp:649
 msgid "Copyright:"
 msgstr "Autorska prava:"
 
 #. i18n: file: ui/metalinkcreator/commondata.ui:141
 #. i18n: ectx: property (text), widget (QLabel, label_20)
-#: rc.cpp:649
+#: rc.cpp:652
 msgid "Publisher:"
 msgstr "Izdavač"
 
 #. i18n: file: ui/metalinkcreator/commondata.ui:150
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: rc.cpp:652
+#: rc.cpp:655
 msgid "Name:"
 msgstr "Naziv:"
 
@@ -3841,25 +3863,25 @@ msgstr "Naziv:"
 #. i18n: ectx: property (toolTip), widget (KLineEdit, pub_name)
 #. i18n: file: ui/metalinkcreator/commondata.ui:177
 #. i18n: ectx: property (toolTip), widget (KLineEdit, pub_url)
-#: rc.cpp:655 rc.cpp:664
+#: rc.cpp:658 rc.cpp:667
 msgid "publisher"
 msgstr "izdavač"
 
 #. i18n: file: ui/metalinkcreator/commondata.ui:160
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, pub_name)
-#: rc.cpp:658
+#: rc.cpp:661
 msgid "Name of the publisher"
 msgstr "Ime izdavača"
 
 #. i18n: file: ui/metalinkcreator/commondata.ui:180
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, pub_url)
-#: rc.cpp:667
+#: rc.cpp:670
 msgid "URL to the publisher"
 msgstr "URL do izdavača"
 
 #. i18n: file: ui/metalinkcreator/files.ui:26
 #. i18n: ectx: property (toolTip), widget (KPushButton, add_local_file)
-#: rc.cpp:670
+#: rc.cpp:673
 #, fuzzy
 #| msgid ""
 #| "Add at least one file. Adding local files adds a lot of information "
@@ -3871,235 +3893,235 @@ msgstr ""
 
 #. i18n: file: ui/metalinkcreator/files.ui:29
 #. i18n: ectx: property (text), widget (KPushButton, add_local_file)
-#: rc.cpp:673
+#: rc.cpp:676
 msgid "Add local files"
 msgstr "Dodaj lokalne datoteke"
 
 #. i18n: file: ui/metalinkcreator/files.ui:66
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:676
+#: rc.cpp:679
 msgid "Adding local files..."
 msgstr "Dodajem lokalne datoteke..."
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:25
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:679
+#: rc.cpp:682
 msgid "&File with links to import:"
 msgstr "&Datoteka sa vezama za uvoz:"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:41
 #. i18n: ectx: property (text), widget (KPushButton, importLinks)
-#: rc.cpp:682
+#: rc.cpp:685
 msgid "&Import Links"
 msgstr "&Uvezi veze"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:58
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:685
+#: rc.cpp:688
 msgid "Show:"
 msgstr "Prikaži:"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:65
 #. i18n: ectx: property (text), widget (KPushButton, showAll)
-#: rc.cpp:688
+#: rc.cpp:691
 msgctxt "filter: show all file types"
 msgid "&All"
 msgstr "&Sve"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:84
 #. i18n: ectx: property (text), widget (KPushButton, showVideos)
-#: rc.cpp:692
+#: rc.cpp:695
 msgid "&Videos"
 msgstr "&Video"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:100
 #. i18n: ectx: property (text), widget (KPushButton, showImages)
-#: rc.cpp:696
+#: rc.cpp:699
 msgid "Ima&ges"
 msgstr "Sli&ke"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:116
 #. i18n: ectx: property (text), widget (KPushButton, showAudio)
-#: rc.cpp:700
+#: rc.cpp:703
 msgid "A&udio"
 msgstr "&Audio"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:132
 #. i18n: ectx: property (text), widget (KPushButton, showArchives)
-#: rc.cpp:704
+#: rc.cpp:707
 msgid "A&rchives"
 msgstr "Ar&hive"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:154
 #. i18n: ectx: property (toolTip), widget (KLineEdit, textFilter)
-#: rc.cpp:708
+#: rc.cpp:711
 msgid "You can use wildcards for filtering."
 msgstr "Možete koristiti džokere za filtriranje."
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:157
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, textFilter)
-#: rc.cpp:711
+#: rc.cpp:714
 msgid "Filter files here...."
 msgstr "Filtrirajte datoteke..."
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:168
 #. i18n: ectx: property (text), item, widget (KComboBox, filterMode)
-#: rc.cpp:714
+#: rc.cpp:717
 msgid "Contains"
 msgstr "Sadrži"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:173
 #. i18n: ectx: property (text), item, widget (KComboBox, filterMode)
-#: rc.cpp:717
+#: rc.cpp:720
 msgid "Does Not Contain"
 msgstr "ne sadrži"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:246
 #. i18n: ectx: property (text), widget (KPushButton, invertSelection)
-#: rc.cpp:726
+#: rc.cpp:729
 msgid "Inver&t Selection"
 msgstr "&Obrni izbor"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:256
 #. i18n: ectx: property (text), widget (KPushButton, checkSelected)
-#: rc.cpp:729
+#: rc.cpp:732
 msgctxt "Check as in mark, not as in verify"
 msgid "Chec&k Selected"
 msgstr "O&bilježi izabrano"
 
 #. i18n: file: ui/linkview/importlinkdialog.ui:263
 #. i18n: ectx: property (text), widget (QCheckBox, showWebContent)
-#: rc.cpp:732
+#: rc.cpp:735
 msgid "Show &web content"
 msgstr "Prikaži &web sadržaj"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:19
 #. i18n: ectx: property (text), widget (QLabel, labelMirror)
-#: rc.cpp:735
+#: rc.cpp:738
 msgid "Mirror:"
 msgstr "Ogledalo:"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:26
 #. i18n: ectx: property (text), widget (QLabel, labelConnections)
-#: rc.cpp:738
+#: rc.cpp:741
 msgid "Number of connections:"
 msgstr "Broj konekcija"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:33
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, url)
-#: rc.cpp:741
+#: rc.cpp:744
 msgid "Enter a URL"
 msgstr "Unesi URL"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:53
 #. i18n: ectx: property (text), widget (QLabel, labelPriority)
-#: rc.cpp:744
+#: rc.cpp:747
 msgid "Priority:"
 msgstr "Prioritet:"
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:60
 #. i18n: ectx: property (toolTip), widget (KIntNumInput, priority)
-#: rc.cpp:747
+#: rc.cpp:750
 msgid "Optional: The priority of the mirror, 1 highest 999999 lowest."
 msgstr "Opciono: prioritet ogledala, 1 najviši, 999999 najniži."
 
 #. i18n: file: ui/mirror/mirroradddlg.ui:79
 #. i18n: ectx: property (text), widget (QLabel, labelLocation)
-#: rc.cpp:753
+#: rc.cpp:756
 msgid "Location:"
 msgstr "Mjesto:"
 
 #. i18n: file: ui/history/transferhistory.ui:26
 #. i18n: ectx: property (text), widget (QPushButton, clearButton)
-#: rc.cpp:756
+#: rc.cpp:759
 msgid "Clear History"
 msgstr "Očisti historijat"
 
 #. i18n: file: ui/history/transferhistory.ui:46
 #. i18n: ectx: property (title), widget (KButtonGroup, viewmodesgroup)
-#: rc.cpp:759
+#: rc.cpp:762
 msgctxt "View modes"
 msgid "View Modes"
 msgstr "Režimi prikaza"
 
 #. i18n: file: ui/history/transferhistory.ui:99
 #. i18n: ectx: property (title), widget (KButtonGroup, kbuttongroup_2)
-#: rc.cpp:762
+#: rc.cpp:765
 msgid "Select Ranges"
 msgstr "Izbor opsegâ"
 
 #. i18n: file: ui/history/transferhistory.ui:115
 #. i18n: ectx: property (text), item, widget (KComboBox, rangeType)
-#: rc.cpp:765
+#: rc.cpp:768
 msgid "Date"
 msgstr "Datum"
 
 #. i18n: file: ui/history/transferhistory.ui:125
 #. i18n: ectx: property (text), item, widget (KComboBox, rangeType)
-#: rc.cpp:771
+#: rc.cpp:774
 msgid "Host"
 msgstr "Domaćin"
 
 #. i18n: file: ui/history/transferhistory.ui:136
 #. i18n: ectx: property (title), widget (KButtonGroup, kbuttongroup_3)
-#: rc.cpp:774
+#: rc.cpp:777
 msgid "Filter History"
 msgstr "Filtriranje istorijata"
 
 #. i18n: file: ui/history/transferhistory.ui:165
 #. i18n: ectx: property (text), widget (KLineEdit, searchBar)
-#: rc.cpp:777
+#: rc.cpp:780
 msgctxt "delete selected transfer"
 msgid "Delete Selected"
 msgstr "Ukloni odabrano"
 
 #. i18n: file: ui/history/transferhistory.ui:170
 #. i18n: ectx: property (text), widget (KLineEdit, searchBar)
-#: rc.cpp:780
+#: rc.cpp:783
 msgid "Download"
 msgstr "Preuzimanje"
 
 #. i18n: file: ui/verificationadddlg.ui:19
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:783
+#: rc.cpp:786
 msgctxt "hash type as in md5t, sha1 etc."
 msgid "Hash type:"
 msgstr "Tip kontrolne sume:"
 
 #. i18n: file: ui/verificationadddlg.ui:26
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:786
+#: rc.cpp:789
 msgctxt "hash as a hash of type md5, sha1 etc."
 msgid "Hash:"
 msgstr "Hash:"
 
 #. i18n: file: ui/verificationadddlg.ui:33
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, newHash)
-#: rc.cpp:789
+#: rc.cpp:792
 msgid "Enter a hash key"
 msgstr "Unesite hash ključ"
 
 #. i18n: file: ui/transferdetailsfrm.ui:114
 #. i18n: ectx: property (text), widget (QLabel, statusLabel)
-#: rc.cpp:799
+#: rc.cpp:802
 msgid "Status:"
 msgstr "Status:"
 
 #. i18n: file: ui/transferdetailsfrm.ui:165
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:805
+#: rc.cpp:808
 msgid "Remaining Time:"
 msgstr "Preostalo vrijeme:"
 
 #. i18n: file: ui/transfersettingsdialog.ui:23
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:808
+#: rc.cpp:811
 msgid "Transfer Settings"
 msgstr "Postavke prijenosa"
 
 #. i18n: file: ui/transfersettingsdialog.ui:35
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:811
+#: rc.cpp:814
 msgid "Download Destination:"
 msgstr "Destinacija preuzimanja"
 
@@ -4109,7 +4131,7 @@ msgstr "Destinacija preuzimanja"
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, downloadSpin)
 #. i18n: file: ui/transfersettingsdialog.ui:96
 #. i18n: ectx: property (specialValueText), widget (QDoubleSpinBox, ratioSpin)
-#: rc.cpp:814 rc.cpp:820 rc.cpp:826
+#: rc.cpp:817 rc.cpp:823 rc.cpp:829
 msgctxt "No value has been set"
 msgid "Not set"
 msgstr "Nije postavljeno"
@@ -4122,51 +4144,51 @@ msgstr "Nije postavljeno"
 #. i18n: ectx: property (suffix), widget (QSpinBox, downloadBox)
 #. i18n: file: ui/groupsettingsdialog.ui:117
 #. i18n: ectx: property (suffix), widget (QSpinBox, uploadBox)
-#: rc.cpp:817 rc.cpp:823 rc.cpp:913 rc.cpp:919
+#: rc.cpp:820 rc.cpp:826 rc.cpp:916 rc.cpp:922
 msgid " KiB"
 msgstr " KiB"
 
 #. i18n: file: ui/transfersettingsdialog.ui:103
 #. i18n: ectx: property (text), widget (QLabel, labelUpload)
-#: rc.cpp:829
+#: rc.cpp:832
 msgid "Upload Limit:"
 msgstr "Limit slanja:"
 
 #. i18n: file: ui/transfersettingsdialog.ui:110
 #. i18n: ectx: property (text), widget (QLabel, labelDownload)
-#: rc.cpp:832
+#: rc.cpp:835
 msgid "Download Limit:"
 msgstr "Limit preuzimanja:"
 
 #. i18n: file: ui/transfersettingsdialog.ui:117
 #. i18n: ectx: property (text), widget (QLabel, labelShareRatio)
-#: rc.cpp:835
+#: rc.cpp:838
 msgid "Maximum Share Ratio:"
 msgstr "Najveći odnos dijeljenja:"
 
 #. i18n: file: ui/transfersettingsdialog.ui:140
 #. i18n: ectx: property (toolTip), widget (KPushButton, mirrors)
-#: rc.cpp:838
+#: rc.cpp:841
 msgid "Modify the mirrors used for downloading."
 msgstr "Izmijenite ogledala za preuzimanja."
 
 #. i18n: file: ui/transfersettingsdialog.ui:143
 #. i18n: ectx: property (text), widget (KPushButton, mirrors)
-#: rc.cpp:841
+#: rc.cpp:844
 msgctxt "The available mirrors (servers) for downloading"
 msgid "Mirrors"
 msgstr "Ogledala"
 
 #. i18n: file: ui/transfersettingsdialog.ui:163
 #. i18n: ectx: property (text), widget (KPushButton, verification)
-#: rc.cpp:847
+#: rc.cpp:850
 msgctxt "verification of the download (e.g. by using MD5)"
 msgid "Verification"
 msgstr "Ovjera"
 
 #. i18n: file: ui/signaturedlg.ui:80
 #. i18n: ectx: property (text), widget (QLabel, binaryLabel)
-#: rc.cpp:859
+#: rc.cpp:862
 #, fuzzy
 #| msgid "PGP signature:"
 msgid "Has binary PGP signature."
@@ -4174,7 +4196,7 @@ msgstr "PGP potpis:"
 
 #. i18n: file: ui/signaturedlg.ui:87
 #. i18n: ectx: property (text), widget (QLabel, asciiLabel)
-#: rc.cpp:862
+#: rc.cpp:865
 #, fuzzy
 #| msgid "PGP signature:"
 msgid "Ascii PGP signature:"
@@ -4182,7 +4204,7 @@ msgstr "PGP potpis:"
 
 #. i18n: file: ui/signaturedlg.ui:112
 #. i18n: ectx: property (text), widget (KPushButton, loadSignature)
-#: rc.cpp:865
+#: rc.cpp:868
 #, fuzzy
 #| msgid "Signature"
 msgid "Load Signature"
@@ -4190,169 +4212,169 @@ msgstr "Potpis"
 
 #. i18n: file: ui/signaturedlg.ui:119
 #. i18n: ectx: property (text), widget (KPushButton, verify)
-#: rc.cpp:868
+#: rc.cpp:871
 msgid "Verify"
 msgstr "Provjera"
 
 #. i18n: file: ui/signaturedlg.ui:131
 #. i18n: ectx: property (title), widget (QGroupBox, keyGroup)
-#: rc.cpp:871
+#: rc.cpp:874
 msgid "Key"
 msgstr "Ključ"
 
 #. i18n: file: ui/signaturedlg.ui:143
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:874
+#: rc.cpp:877
 msgid "Issuer:"
 msgstr "Izdavač:"
 
 #. i18n: file: ui/signaturedlg.ui:166
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:877
+#: rc.cpp:880
 msgid "E-Mail:"
 msgstr "E‑pošta:"
 
 #. i18n: file: ui/signaturedlg.ui:183
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: rc.cpp:880
+#: rc.cpp:883
 msgid "Comment:"
 msgstr "Komentar:"
 
 #. i18n: file: ui/signaturedlg.ui:197
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:883
+#: rc.cpp:886
 msgid "Creation:"
 msgstr "Napravljen:"
 
 #. i18n: file: ui/signaturedlg.ui:214
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:886
+#: rc.cpp:889
 msgid "Expiration:"
 msgstr "Ističe:"
 
 #. i18n: file: ui/signaturedlg.ui:255
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:889
+#: rc.cpp:892
 msgid "Trust:"
 msgstr "Povjerenje:"
 
 #. i18n: file: ui/signaturedlg.ui:296
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:892
+#: rc.cpp:895
 msgid "Fingerprint:"
 msgstr "Otisak:"
 
 #. i18n: file: ui/groupsettingsdialog.ui:32
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
-#: rc.cpp:895
+#: rc.cpp:898
 msgid "Group Settings"
 msgstr "Postavke grupa"
 
 #. i18n: file: ui/groupsettingsdialog.ui:44
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:898
+#: rc.cpp:901
 msgid "Default folder:"
 msgstr "Podrazumijevana fascikla:"
 
 #. i18n: file: ui/groupsettingsdialog.ui:58
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
-#: rc.cpp:901
+#: rc.cpp:904
 msgid "Moves all transfers with the regular expression to this group"
 msgstr "Premješta sve prenose po regularnom izrazu u ovu grupu."
 
 #. i18n: file: ui/groupsettingsdialog.ui:61
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:904
+#: rc.cpp:907
 msgid "Regular expression:"
 msgstr "Regularni izraz:"
 
 #. i18n: file: ui/groupsettingsdialog.ui:68
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, regExpEdit)
-#: rc.cpp:907
+#: rc.cpp:910
 msgid "*movies*"
 msgstr "*film*"
 
 #. i18n: file: ui/groupsettingsdialog.ui:75
 #. i18n: ectx: property (text), widget (QCheckBox, downloadCheck)
-#: rc.cpp:910
+#: rc.cpp:913
 msgid "Maximum download speed:"
 msgstr "Najveća brzina preuzimanja:"
 
 #. i18n: file: ui/groupsettingsdialog.ui:101
 #. i18n: ectx: property (text), widget (QCheckBox, uploadCheck)
-#: rc.cpp:916
+#: rc.cpp:919
 msgid "Maximum upload speed:"
 msgstr "Najveća brzina slanja:"
 
 #. i18n: file: ui/newtransferwidget.ui:31
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:925
+#: rc.cpp:928
 msgid "Destination:"
 msgstr "Odredište:"
 
 #. i18n: file: ui/newtransferwidget.ui:41
 #. i18n: ectx: property (text), widget (QLabel, groupLabel)
-#: rc.cpp:928
+#: rc.cpp:931
 msgid "Transfer group:"
 msgstr "Grupa prenosa:"
 
 #. i18n: file: ui/verificationdialog.ui:42
 #. i18n: ectx: property (toolTip), widget (KPushButton, verify)
-#: rc.cpp:931
+#: rc.cpp:934
 msgid "Verify the finished download with the selected checksum."
 msgstr "Ovjerite završeno preuzimanje izabranom kontrolnom sumom."
 
 #. i18n: file: ui/verificationdialog.ui:45
 #. i18n: ectx: property (text), widget (KPushButton, verify)
-#: rc.cpp:934
+#: rc.cpp:937
 msgid "&Verify"
 msgstr "&Provjeri"
 
 #. i18n: file: ui/verificationdialog.ui:71
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:937
+#: rc.cpp:940
 msgid "Verifying:"
 msgstr "Ovjeravam:"
 
 #. i18n: file: ui/kgetui.rc:4
 #. i18n: ectx: Menu (file)
-#: rc.cpp:940
+#: rc.cpp:943
 msgid "&File"
 msgstr "&Datoteka"
 
 #. i18n: file: ui/kgetui.rc:17
 #. i18n: ectx: Menu (Downloads)
-#: rc.cpp:943
+#: rc.cpp:946
 msgid "&Downloads"
 msgstr "&Preuzimanja"
 
 #. i18n: file: ui/kgetui.rc:34
 #. i18n: ectx: Menu (settings)
-#: rc.cpp:946
+#: rc.cpp:949
 msgid "&Settings"
 msgstr "&Postavke"
 
 #. i18n: file: ui/kgetui.rc:38
 #. i18n: ectx: Menu (help)
-#: rc.cpp:949
+#: rc.cpp:952
 msgid "&Help"
 msgstr "&Pomoć"
 
 #. i18n: file: ui/kgetui.rc:41
 #. i18n: ectx: ToolBar (kget_toolbar)
-#: rc.cpp:952
+#: rc.cpp:955
 msgid "Main Toolbar"
 msgstr "Glavna alatna traka"
 
 #. i18n: file: conf/kget.kcfg:39
 #. i18n: ectx: label, entry (ShowSplashscreen), group (Appearance)
-#: rc.cpp:955
+#: rc.cpp:958
 msgid "Sets to show the splashscreen while KGet is loading"
 msgstr "Uvodni ekran pri učitavanju KGeta"
 
 #. i18n: file: conf/kget.kcfg:201
 #. i18n: ectx: label, entry (HistoryColumnWidths), group (Geometry)
-#: rc.cpp:958
+#: rc.cpp:961
 msgid "The width of the columns in the history view"
 msgstr "Širina kolona u prikazu historijata"
 
@@ -4360,7 +4382,7 @@ msgstr "Širina kolona u prikazu historijata"
 #. i18n: ectx: label, entry (SearchEnginesNameList), group (SearchEngines)
 #. i18n: file: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:9
 #. i18n: ectx: label, entry (SearchStrings), group (ChecksumSearch)
-#: rc.cpp:965 rc.cpp:988
+#: rc.cpp:968 rc.cpp:991
 msgid "List of the available search engines"
 msgstr "Spisak dostupnih pretraživača"
 
@@ -4372,25 +4394,25 @@ msgstr "Spisak dostupnih pretraživača"
 #. i18n: ectx: label, entry (UrlChangeModeList), group (ChecksumSearch)
 #. i18n: file: transfer-plugins/checksumsearch/kget_checksumsearchfactory.kcfg:17
 #. i18n: ectx: label, entry (ChecksumTypeList), group (ChecksumSearch)
-#: rc.cpp:968 rc.cpp:974 rc.cpp:991 rc.cpp:994
+#: rc.cpp:971 rc.cpp:977 rc.cpp:994 rc.cpp:997
 msgid "List of the available search engine URLs"
 msgstr "Spisak URL‑a dostupnih pretraživača"
 
 #. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:9
 #. i18n: ectx: label, entry (UrlRegexpList), group (UserScripts)
-#: rc.cpp:971
+#: rc.cpp:974
 msgid "List of the Regexp to match input URL"
 msgstr "Spisak regularnih izraza za poklapanje ulaznog URL‑a"
 
 #. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:21
 #. i18n: ectx: label, entry (DescriptionList), group (UserScripts)
-#: rc.cpp:977
+#: rc.cpp:980
 msgid "List of descriptions for user scripts"
 msgstr "Spisak opisa korisničkih skripti"
 
 #. i18n: file: transfer-plugins/contentfetch/kget_contentfetchfactory.kcfg:25
 #. i18n: ectx: label, entry (EnableList), group (UserScripts)
-#: rc.cpp:980
+#: rc.cpp:983
 msgid "List of whether the script is enabled"
 msgstr "Spisak pokazatelja uključenosti skripti"
 
