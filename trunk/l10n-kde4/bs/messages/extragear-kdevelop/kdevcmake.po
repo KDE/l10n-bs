@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevelop\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-06 03:39+0200\n"
+"POT-Creation-Date: 2011-05-12 03:54+0200\n"
 "PO-Revision-Date: 2011-03-23 22:02+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -96,7 +96,7 @@ msgstr "Komentar"
 
 #. i18n: file: settings/cmakebuildsettings.ui:106
 #. i18n: ectx: property (title), widget (QGroupBox, advancedBox)
-#: settings/cmakecachemodel.cpp:38 rc.cpp:43
+#: settings/cmakecachemodel.cpp:38 rc.cpp:38
 msgid "Advanced"
 msgstr "Napredno"
 
@@ -197,61 +197,72 @@ msgstr "CMake menadžer"
 msgid "Support for managing CMake projects"
 msgstr "Podrška za upravljanje CMake projektima"
 
-#: cmakemanager.cpp:965
-msgid "Jump to target definition"
-msgstr "Skok na odredišnu definiciju"
-
-#: cmakemanager.cpp:1042
-#, kde-format
-msgid "Create a folder called '%1'."
-msgstr "Kreiraj direktorij zvani '%1'."
-
-#: cmakemanager.cpp:1059 cmakemanager.cpp:1299
+#: cmakemanager.cpp:99
 msgid "KDevelop - CMake Support"
 msgstr "KDevelop - CMake podrška"
 
-#: cmakemanager.cpp:1060
-msgid "Could not save the change."
-msgstr "Ne mogu snimiti promjenu"
+#: cmakemanager.cpp:1192
+msgid "Jump to target definition"
+msgstr "Skok na odredišnu definiciju"
 
-#: cmakemanager.cpp:1203 cmakemanager.cpp:1240
-msgid "CMakeLists Changes"
-msgstr "CMakeLists promjene"
+#: cmakemanager.cpp:1256
+#, fuzzy
+#| msgid "Remove files and folders from CMakeLists as follows:"
+msgid "Move files and folders within CMakeLists as follows:"
+msgstr "Ukloni datoteke i direktorije iz CMakeLists kako slijedi:"
 
-#: cmakemanager.cpp:1204
+#: cmakemanager.cpp:1288
+#, fuzzy
+#| msgid "Changes to CMakeLists failed, abort file deletion?"
+msgid "Changes to CMakeLists failed, abort move?"
+msgstr "Promjene nad CMakeLists neuspjele, prekinuti brisanje datoteka?"
+
+#: cmakemanager.cpp:1309
 msgid "Remove files and folders from CMakeLists as follows:"
 msgstr "Ukloni datoteke i direktorije iz CMakeLists kako slijedi:"
 
-#: cmakemanager.cpp:1216
-msgid "Changes to CMakeLists failed, abort file deletion?"
+#: cmakemanager.cpp:1319
+#, fuzzy
+#| msgid "Changes to CMakeLists failed, abort file deletion?"
+msgid "Changes to CMakeLists failed, abort deletion?"
 msgstr "Promjene nad CMakeLists neuspjele, prekinuti brisanje datoteka?"
 
-#: cmakemanager.cpp:1217
-msgid "Error"
-msgstr "Greška"
-
-#: cmakemanager.cpp:1241
+#: cmakemanager.cpp:1341
 msgid "Modify project targets as follows:"
 msgstr "Izmijeni odredišta projekta kako slijedi:"
 
-#: cmakemanager.cpp:1288
-#, kde-format
-msgid "Add a file called '%1' to target '%2'."
-msgstr "Dodati datoteku s imenom '%1' na odredište '%2'."
+#: cmakemanager.cpp:1360
+#, fuzzy, kde-format
+#| msgid "Create a folder called '%1'."
+msgid "Create folder '%1':"
+msgstr "Kreiraj direktorij zvani '%1'."
 
-#: cmakemanager.cpp:1300
-msgid "Cannot save the change."
+#: cmakemanager.cpp:1376
+msgid "Could not save the change."
 msgstr "Ne mogu snimiti promjenu"
 
-#: cmakemanager.cpp:1393
-#, kde-format
-msgid "Remove a file called '%1'."
-msgstr "Ukloniti datoteku s imenom '%1'."
+#: cmakemanager.cpp:1417
+#, fuzzy, kde-format
+#| msgid "Modify project targets as follows:"
+msgid "Modify target '%2' as follows:"
+msgstr "Izmijeni odredišta projekta kako slijedi:"
 
-#: cmakemanager.cpp:1444
+#: cmakemanager.cpp:1424
+#, fuzzy
+#| msgid "CMakeLists Changes"
+msgid "CMakeLists changes failed."
+msgstr "CMakeLists promjene"
+
+#: cmakemanager.cpp:1433
 #, kde-format
-msgid "Rename a folder called '%1'."
-msgstr "Ukloniti direktorij s imenom '%1'."
+msgid "Rename '%1' to '%2':"
+msgstr ""
+
+#: cmakemanager.cpp:1452
+#, fuzzy
+#| msgid "Changes to CMakeLists failed, abort file deletion?"
+msgid "Changes to CMakeLists failed, abort rename?"
+msgstr "Promjene nad CMakeLists neuspjele, prekinuti brisanje datoteka?"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -289,13 +300,13 @@ msgstr "&Tip izgradnje:"
 
 #. i18n: file: cmakebuilddirchooser.ui:144
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:22
+#: rc.cpp:17
 msgid "Extra Arguments:"
 msgstr "Dodatni argumenti:"
 
 #. i18n: file: cmakepossibleroots.ui:16
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:25
+#: rc.cpp:20
 msgid ""
 "KDevelop has found several possible project root for your project, please "
 "select the correct one."
@@ -305,42 +316,57 @@ msgstr ""
 
 #. i18n: file: settings/cmakebuildsettings.ui:33
 #. i18n: ectx: property (text), widget (QPushButton, addBuildDir)
-#: rc.cpp:28
+#: rc.cpp:23
 msgid "Add"
 msgstr "Dodaj"
 
 #. i18n: file: settings/cmakebuildsettings.ui:46
 #. i18n: ectx: property (text), widget (QPushButton, removeBuildDir)
-#: rc.cpp:31
+#: rc.cpp:26
 msgid "Remove"
 msgstr "Ukloni"
 
 #. i18n: file: settings/cmakebuildsettings.ui:55
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:34
+#: rc.cpp:29
 msgid "Cache Values"
 msgstr "Priručne vrijednosti"
 
 #. i18n: file: settings/cmakebuildsettings.ui:70
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: rc.cpp:37
+#: rc.cpp:32
 msgid "Comment:"
 msgstr "Komentar:"
 
 #. i18n: file: settings/cmakebuildsettings.ui:87
 #. i18n: ectx: property (text), widget (QPushButton, showAdvanced)
-#: rc.cpp:40
+#: rc.cpp:35
 msgid "Show Advanced"
 msgstr "Prikaži napredne"
 
 #. i18n: file: settings/cmakebuildsettings.ui:112
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:46
+#: rc.cpp:41
 msgid "CMake Directory"
 msgstr "CMake direktorij"
 
 #. i18n: file: settings/cmakebuildsettings.ui:122
 #. i18n: ectx: property (text), widget (QCheckBox, showInternal)
-#: rc.cpp:49
+#: rc.cpp:44
 msgid "Show Advanced Values"
 msgstr "Prikaži napredne vrijednosti"
+
+#~ msgid "Error"
+#~ msgstr "Greška"
+
+#~ msgid "Add a file called '%1' to target '%2'."
+#~ msgstr "Dodati datoteku s imenom '%1' na odredište '%2'."
+
+#~ msgid "Cannot save the change."
+#~ msgstr "Ne mogu snimiti promjenu"
+
+#~ msgid "Remove a file called '%1'."
+#~ msgstr "Ukloniti datoteku s imenom '%1'."
+
+#~ msgid "Rename a folder called '%1'."
+#~ msgstr "Ukloniti direktorij s imenom '%1'."

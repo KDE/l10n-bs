@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-11 03:50+0200\n"
+"POT-Creation-Date: 2011-05-12 04:19+0200\n"
 "PO-Revision-Date: 2011-03-23 09:29+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -765,7 +765,7 @@ msgid "Original Developer"
 msgstr "Programer"
 
 #: src/plugins/render/mapscale/MapScaleFloatItem.cpp:248
-#: src/lib/CurrentLocationWidget.cpp:234
+#: src/lib/CurrentLocationWidget.cpp:239
 msgid "m"
 msgstr "m"
 
@@ -1229,7 +1229,7 @@ msgid "WSW"
 msgstr "ZJZ"
 
 #: src/plugins/render/weather/WeatherData.cpp:591
-#: src/lib/CurrentLocationWidget.cpp:232
+#: src/lib/CurrentLocationWidget.cpp:237
 msgid "km/h"
 msgstr "km/h"
 
@@ -1553,17 +1553,25 @@ msgstr "Ažuriraj"
 msgid "Delete"
 msgstr "Obriši"
 
-#: src/plugins/runner/monav/MonavPlugin.cpp:205
+#: src/plugins/runner/monav/MonavPlugin.cpp:222
 msgid "Monav"
 msgstr "Monav"
 
-#: src/plugins/runner/monav/MonavPlugin.cpp:207
-msgid "Retrieves routes from monav"
-msgstr "Vraća puteve sa monav"
+#: src/plugins/runner/monav/MonavPlugin.cpp:224
+msgid "Offline routing using the monav daemon"
+msgstr ""
 
-#: src/plugins/runner/monav/MonavPlugin.cpp:208
+#: src/plugins/runner/monav/MonavPlugin.cpp:225
 msgid "Monav Routing"
 msgstr "Monav rutiranje"
+
+#: src/plugins/runner/monav/MonavPlugin.cpp:231
+msgid "No offline maps installed yet."
+msgstr ""
+
+#: src/plugins/runner/monav/MonavPlugin.cpp:234
+msgid "The monav routing daemon does not seem to be installed on your system."
+msgstr ""
 
 #: src/plugins/runner/nominatim/NominatimPlugin.cpp:22
 msgid "OSM Nominatim"
@@ -1582,42 +1590,49 @@ msgid "OpenRouteService"
 msgstr "OpenRouteService"
 
 #: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:26
-msgid "Retrieves routes from openrouteservice.org"
+#, fuzzy
+#| msgid "Retrieves routes from openrouteservice.org"
+msgid "Routing in Europe using openrouteservice.org"
 msgstr "Preuzima rute sa openrouteservice.org"
 
 #: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:27
+#: src/plugins/runner/yours/YoursPlugin.cpp:25
+msgid "This service requires an Internet connection."
+msgstr ""
+
+#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:28
 msgid "OpenRouteService Routing"
 msgstr "OpenRouteService rutiranje"
 
-#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:45
+#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:46
 msgid "Car (fastest way)"
 msgstr "Automobil (najbrži put)"
 
-#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:46
+#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:47
 msgid "Car (shortest way)"
 msgstr "Automobil (najkraći put)"
 
-#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:47
+#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:48
 msgid "Pedestrian (shortest way)"
 msgstr "Pješak (najkraći put)"
 
-#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:48
+#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:49
 msgid "Bicycle (shortest track)"
 msgstr "Bicikl (najkraći put)"
 
-#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:49
+#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:50
 msgid "Bicycle (Mountainbike)"
 msgstr "Bicikl (planinski)"
 
-#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:50
+#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:51
 msgid "Bicycle (Racer)"
 msgstr "Bicikl (trkaći)"
 
-#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:51
+#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:52
 msgid "Bicycle (safest track)"
 msgstr "Bicikl (najbezbjedniji puti)"
 
-#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:52
+#: src/plugins/runner/openrouteservice/OpenRouteServicePlugin.cpp:53
 msgid "Bicycle (preferred Cycleway/-route)"
 msgstr "Bicikl (preferirani kružni put)"
 
@@ -1650,10 +1665,10 @@ msgid "Yours"
 msgstr "Vaš"
 
 #: src/plugins/runner/yours/YoursPlugin.cpp:24
-msgid "Retrieves routes from a yours server"
-msgstr "Vraća rute s vašeg servera"
+msgid "Worldwide routing using a YOURS server"
+msgstr ""
 
-#: src/plugins/runner/yours/YoursPlugin.cpp:25
+#: src/plugins/runner/yours/YoursPlugin.cpp:26
 msgid "Yours Routing"
 msgstr "Vaše rutiranje"
 
@@ -2027,38 +2042,42 @@ msgstr ""
 msgid "Unable to insert data into cache"
 msgstr "Nije moguće umetanje podataka u keš"
 
-#: src/lib/CurrentLocationWidget.cpp:171
+#: src/lib/CurrentLocationWidget.cpp:176
 msgid "Waiting for current location information..."
 msgstr "Čekanje informacija o trenutnoj lokaciji..."
 
-#: src/lib/CurrentLocationWidget.cpp:174
+#: src/lib/CurrentLocationWidget.cpp:179
 msgid "Initializing current location service..."
 msgstr "Pokrećem trenutnu uslugu lokacije"
 
-#: src/lib/CurrentLocationWidget.cpp:180
+#: src/lib/CurrentLocationWidget.cpp:185
 msgid "Error when determining current location: "
 msgstr "Greška u utvrđivanju trenutne lokacije: "
 
-#: src/lib/CurrentLocationWidget.cpp:240
+#: src/lib/CurrentLocationWidget.cpp:245
 msgid "m/h"
 msgstr "m/h"
 
-#: src/lib/CurrentLocationWidget.cpp:242
+#: src/lib/CurrentLocationWidget.cpp:247
 msgid "ft"
 msgstr "ft"
 
-#: src/lib/CurrentLocationWidget.cpp:260
+#: src/lib/CurrentLocationWidget.cpp:265
 msgid "Disabled"
 msgstr "Isključeno"
 
-#: src/lib/CurrentLocationWidget.cpp:312
+#: src/lib/CurrentLocationWidget.cpp:317
 msgid "Save Track"
 msgstr ""
 
-#: src/lib/CurrentLocationWidget.cpp:314
+#: src/lib/CurrentLocationWidget.cpp:319 src/lib/CurrentLocationWidget.cpp:332
 #, fuzzy
 msgid "KML File (*.kml)"
 msgstr "KML datoteke (*.kml)"
+
+#: src/lib/CurrentLocationWidget.cpp:331
+msgid "Open Track"
+msgstr ""
 
 #: src/lib/DataMigration.cpp:98
 msgid "Marble data conversion"
@@ -3294,11 +3313,6 @@ msgstr "Datoteka nije validna DGML 2.0 datoteka"
 msgid "Clear"
 msgstr "Očisti"
 
-#: src/lib/routing/RoutingProfileSettingsDialog.cpp:33
-#, fuzzy
-msgid "Routing Profile - Marble"
-msgstr "Rutiranje - Marble"
-
 #: src/lib/routing/RoutingProfilesModel.cpp:111
 msgid "Car (fastest)"
 msgstr "Automobil (najbrže)"
@@ -3551,9 +3565,20 @@ msgstr "LičniDirektorij"
 msgid "Choose Placemark"
 msgstr "Izbor oznake"
 
+#: src/lib/routing/RoutingProfileSettingsDialog.cpp:33
+#, fuzzy
+msgid "Routing Profile - Marble"
+msgstr "Rutiranje - Marble"
+
 #: src/lib/global.h:252
 msgid "not available"
 msgstr "nije dostupno"
+
+#~ msgid "Retrieves routes from monav"
+#~ msgstr "Vraća puteve sa monav"
+
+#~ msgid "Retrieves routes from a yours server"
+#~ msgstr "Vraća rute s vašeg servera"
 
 #~ msgid "&Remove all Bookmarks"
 #~ msgstr "Ob&riši sve zabilješke"
