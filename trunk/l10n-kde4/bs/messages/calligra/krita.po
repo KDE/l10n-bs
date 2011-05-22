@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: koffice\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-21 03:33+0200\n"
+"POT-Creation-Date: 2011-05-22 03:34+0200\n"
 "PO-Revision-Date: 2011-03-30 22:55+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1378,7 +1378,7 @@ msgstr "Profil sloja:"
 
 #. i18n: file: plugins/extensions/compose/wdg_compose.ui:52
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:207 ui/tool/kis_tool_paint.cc:247
+#: rc.cpp:207 ui/kis_paintop_box.cc:154
 msgid "Opacity: "
 msgstr "Neprozirnost: "
 
@@ -4128,7 +4128,7 @@ msgstr "Osmougao (8)"
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: rc.cpp:1418 rc.cpp:3094
 #: plugins/filters/roundcorners/kis_round_corners_filter.cpp:136
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:965
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:954
 msgid "Radius"
 msgstr "Poluprečnik"
 
@@ -7233,7 +7233,7 @@ msgstr "Ograniči na trenutni sloj"
 #. i18n: file: plugins/tools/tool_crop/wdg_tool_crop.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgToolCrop)
 #: rc.cpp:3127 image/kis_crop_visitor.h:121
-#: plugins/tools/tool_crop/kis_tool_crop.cc:442
+#: plugins/tools/tool_crop/kis_tool_crop.cc:451
 msgid "Crop"
 msgstr "Saseci"
 
@@ -7508,8 +7508,8 @@ msgstr "Tip zakrivljenja"
 
 #. i18n: file: plugins/tools/tool_transform2/wdg_tool_transform.ui:1062
 #. i18n: ectx: property (text), widget (QPushButton, lockUnlockPointsButton)
-#: rc.cpp:3303 plugins/tools/tool_transform2/kis_tool_transform.cc:2502
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2893
+#: rc.cpp:3303 plugins/tools/tool_transform2/kis_tool_transform.cc:2509
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2900
 msgid "Lock Points"
 msgstr "Tačke zaključavanja"
 
@@ -9304,17 +9304,17 @@ msgstr "Poplavna popuna"
 msgid "Gradient Fill"
 msgstr "Gradijentna ispuna"
 
-#: image/brushengine/kis_paintop_factory.cpp:45
+#: image/brushengine/kis_paintop_factory.cpp:61
 msgctxt "Category of brush engines"
 msgid "Experimental"
 msgstr "Eksperimentalno"
 
-#: image/brushengine/kis_paintop_factory.cpp:50
+#: image/brushengine/kis_paintop_factory.cpp:66
 msgctxt "Category of brush engines"
 msgid "Stable"
 msgstr "Stabilno"
 
-#: image/brushengine/kis_paintop_registry.cc:113
+#: image/brushengine/kis_paintop_registry.cc:117
 msgid "default"
 msgstr "podrazumijevano"
 
@@ -9863,27 +9863,15 @@ msgstr "Sastavi sloj..."
 msgid "Compose Layer"
 msgstr "Sastavi sloj"
 
-#: plugins/extensions/dockers/channeldocker/channeldocker_dock.cpp:33
-#, fuzzy
-msgid "Channels"
-msgstr "Kanal"
-
 #: plugins/extensions/dockers/channeldocker/channelmodel.cpp:61
 #, fuzzy
 msgid "Enabled"
 msgstr "Tablet"
 
-#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:44
-#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:102
-#: plugins/extensions/histogram/dlg_histogram.cc:47
-#: plugins/extensions/histogram/dlg_histogram.cc:54
-msgid "Histogram"
-msgstr "Histogram"
-
-#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:115
-#, kde-format
-msgid "Histograms are not supported for images in the %1 colorspace."
-msgstr "Histogrami nisu podržani za slike u %1 prostoru boja."
+#: plugins/extensions/dockers/channeldocker/channeldocker_dock.cpp:33
+#, fuzzy
+msgid "Channels"
+msgstr "Kanal"
 
 #: plugins/extensions/dockers/defaultdockers/kis_birdeye_box.cc:62
 msgid "Select the exposure (stops) for HDR images"
@@ -9892,6 +9880,18 @@ msgstr "Izaberite ekspoziciju (stanice) za HDR slike"
 #: plugins/extensions/dockers/defaultdockers/kis_palette_docker.cc:32
 msgid "Palettes"
 msgstr "Palete"
+
+#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:44
+#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:106
+#: plugins/extensions/histogram/dlg_histogram.cc:47
+#: plugins/extensions/histogram/dlg_histogram.cc:54
+msgid "Histogram"
+msgstr "Histogram"
+
+#: plugins/extensions/dockers/defaultdockers/histogramdock.cpp:119
+#, kde-format
+msgid "Histograms are not supported for images in the %1 colorspace."
+msgstr "Histogrami nisu podržani za slike u %1 prostoru boja."
 
 #: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:76
 msgid "Layers"
@@ -9976,7 +9976,7 @@ msgstr "&Dupli sloj ili maska"
 msgid "&Effect Mask..."
 msgstr "Maska &Efekta..."
 
-#: plugins/extensions/dockers/digitalmixer/digitalmixer_dock.cc:42
+#: plugins/extensions/dockers/digitalmixer/digitalmixer_dock.cc:43
 msgid "Digital Colors Mixer"
 msgstr "Digitalna mješalica boja"
 
@@ -9995,10 +9995,6 @@ msgstr "Istorija boja"
 msgid "Small Color Selector"
 msgstr "Mali izbornik boja"
 
-#: plugins/extensions/dockers/specificcolorselector/specificcolorselector_dock.cc:30
-msgid "Specific Color Selector"
-msgstr "Specifični izbornik boja"
-
 #: plugins/extensions/dockers/specificcolorselector/kis_color_input.cc:47
 #, kde-format
 msgid "%1:"
@@ -10010,7 +10006,11 @@ msgstr "%1:"
 msgid "Color name:"
 msgstr "Prostor boja:"
 
-#: plugins/extensions/dockers/trianglecolorselector/kis_triangle_color_selector_dock.cc:28
+#: plugins/extensions/dockers/specificcolorselector/specificcolorselector_dock.cc:31
+msgid "Specific Color Selector"
+msgstr "Specifični izbornik boja"
+
+#: plugins/extensions/dockers/trianglecolorselector/kis_triangle_color_selector_dock.cc:29
 msgid "Triangle Color Selector"
 msgstr "Trougaoni izbornik boja"
 
@@ -10217,10 +10217,6 @@ msgstr "Izbor pera..."
 msgid "KS%1 Engine"
 msgstr "KS%1 Pogon"
 
-#: plugins/extensions/painterlyframework/kis_painterlymixerdocker.cpp:36
-msgid "Painterly Color Mixer"
-msgstr "Mješač boja za slikanje"
-
 #: plugins/extensions/painterlyframework/kis_ks_colorspace.h:77
 #, kde-format
 msgid "Painterly Color Space, %1 wavelengths"
@@ -10241,6 +10237,10 @@ msgstr "Apsorpcija"
 #: plugins/extensions/painterlyframework/kis_ks_colorspace.h:135
 msgid "Scattering"
 msgstr "Disperzija"
+
+#: plugins/extensions/painterlyframework/kis_painterlymixerdocker.cpp:36
+msgid "Painterly Color Mixer"
+msgstr "Mješač boja za slikanje"
 
 #: plugins/extensions/rotateimage/rotateimage.cc:67
 msgid "&Rotate Image..."
@@ -10799,7 +10799,7 @@ msgstr ""
 "Sve slike u Krita su u pravoj boji. Neće biti promjena u boji i (ako "
 "postoje) efekata animacije."
 
-#: plugins/formats/gif/gif_export.cpp:64 ui/dialogs/kis_dlg_preferences.cc:657
+#: plugins/formats/gif/gif_export.cpp:64 ui/dialogs/kis_dlg_preferences.cc:654
 #: ui/kis_aboutdata.h:31 ui/kis_clipboard.cc:154
 msgid "Krita"
 msgstr "Krita"
@@ -11086,7 +11086,7 @@ msgid "Darken"
 msgstr "Potamni"
 
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option.cpp:31
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:925
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:914
 msgid "Mirror"
 msgstr "Ogledalo"
 
@@ -11101,12 +11101,12 @@ msgid "Mirrored"
 msgstr "Ogledalo"
 
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:35
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:945
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:934
 msgid "Horizontally"
 msgstr "Vodoravno"
 
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:37
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:947
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:936
 msgid "Vertically"
 msgstr "Uspravno"
 
@@ -11923,23 +11923,23 @@ msgid "Color Rate"
 msgstr "Opseg boja"
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:137
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:889
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:878
 msgctxt "smooth out the curves while drawing"
 msgid "Smoothness:"
 msgstr "Glatkoća:"
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:152
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:904
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:893
 msgid "Assistant:"
 msgstr "Pomoćnik:"
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:153
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:905
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:894
 msgid "You need to add Ruler Assistants before this tool will work."
 msgstr "Trebate dodati linjirski pomoćnik prije nego ovaj alat proradi"
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:156
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:908
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:897
 msgid "Assistant Magnetism"
 msgstr "Pomoćni magnetizam"
 
@@ -12145,23 +12145,23 @@ msgstr "Povećaj veličinu četke"
 msgid "Decrease Brush Size"
 msgstr "Smanji veličinu četke"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:917
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:906
 #, fuzzy
 #| msgid "Axis X"
 msgid "Axis point"
 msgstr "X osa"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:924
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:913
 msgid "Symmetry"
 msgstr ""
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:926
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:915
 #, fuzzy
 #| msgid "Triangle"
 msgid "Translate"
 msgstr "Trougao"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:930
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:919
 #, fuzzy
 #| msgid "Brush tip"
 msgid "Brush count"
@@ -12261,7 +12261,7 @@ msgstr "Nejasnoća: "
 msgid "Similar Selection"
 msgstr "Izbor sličnog"
 
-#: plugins/tools/tool_crop/kis_tool_crop.h:147
+#: plugins/tools/tool_crop/kis_tool_crop.h:148
 msgid "Crop the image to an area"
 msgstr "Izreži sliku u oblast"
 
@@ -12419,30 +12419,30 @@ msgstr "Primijeni transformaciju"
 msgid "Transform"
 msgstr "Transformacija"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2099
-msgid "Apply Transformation"
-msgstr "Primijeni transformaciju"
-
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2356
-msgid "Affine"
-msgstr "Afina"
-
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2357
-msgid "Similitude"
-msgstr "Similituda"
-
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2358
-msgid "Rigid"
-msgstr "Rigidno"
-
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2504
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:2889
-msgid "Unlock Points"
-msgstr "Otključaj tačke"
-
 #: plugins/tools/tool_transform2/kis_tool_transform.h:435
 msgid "Transform a layer or a selection"
 msgstr "Transformiši sloj ili izbor"
+
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2106
+msgid "Apply Transformation"
+msgstr "Primijeni transformaciju"
+
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2363
+msgid "Affine"
+msgstr "Afina"
+
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2364
+msgid "Similitude"
+msgstr "Similituda"
+
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2365
+msgid "Rigid"
+msgstr "Rigidno"
+
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2511
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:2896
+msgid "Unlock Points"
+msgstr "Otključaj tačke"
 
 #: ui/kis_filter_handler.cc:110
 #, kde-format
@@ -12524,6 +12524,10 @@ msgstr "Svojstva slike"
 msgid "Layer Properties"
 msgstr "Svojstva sloja"
 
+#: ui/dialogs/kis_dlg_transformation_effect.cpp:38
+msgid "New Transformation Mask"
+msgstr "Nova transformacijska maska"
+
 #: ui/dialogs/kis_dlg_preferences.cc:190
 msgid "Monitor profile: "
 msgstr "Profil monitora: "
@@ -12552,7 +12556,7 @@ msgstr "Tablet postavke"
 msgid "Tablet"
 msgstr "Tablet"
 
-#: ui/dialogs/kis_dlg_preferences.cc:654
+#: ui/dialogs/kis_dlg_preferences.cc:651
 msgid ""
 "You are trying to enable OpenGL\n"
 "\n"
@@ -12567,10 +12571,6 @@ msgstr ""
 "bilo zbog drajvera, ili zbog problema sa prozorskim efektima.\n"
 "\n"
 "Jeste li sigurni da želite da omogućite OpenGL?\n"
-
-#: ui/dialogs/kis_dlg_transformation_effect.cpp:38
-msgid "New Transformation Mask"
-msgstr "Nova transformacijska maska"
 
 #: ui/flake/kis_shape_controller.cpp:229
 #, kde-format
@@ -12795,41 +12795,41 @@ msgstr "Andreas Lundin"
 msgid "New configuration %1"
 msgstr "Nova konfiguracija %1"
 
-#: ui/kis_paintop_box.cc:98
+#: ui/kis_paintop_box.cc:99
 msgid "Painter's Toolchest"
 msgstr "Slikareva riznica alata"
 
-#: ui/kis_paintop_box.cc:102
+#: ui/kis_paintop_box.cc:103
 msgid "Edit brush settings"
 msgstr "Izjijeni postavke četke"
 
-#: ui/kis_paintop_box.cc:108
+#: ui/kis_paintop_box.cc:109
 msgid "Choose brush preset"
 msgstr "Izaberi pripremljene postavke četke"
 
-#: ui/kis_paintop_box.cc:115
+#: ui/kis_paintop_box.cc:116
 msgid "Set eraser mode"
 msgstr "Postavi režim gumice"
 
-#: ui/kis_paintop_box.cc:125
+#: ui/kis_paintop_box.cc:126
 #, fuzzy
 msgid "Set horizontal mirror mode"
 msgstr "Horizontalna ivica"
 
-#: ui/kis_paintop_box.cc:135
+#: ui/kis_paintop_box.cc:136
 #, fuzzy
 msgid "Set vertical mirror mode"
 msgstr "Postavi režim gumice"
 
-#: ui/kis_paintop_box.cc:146
+#: ui/kis_paintop_box.cc:147
 msgid "Mode: "
 msgstr "Režim: "
 
-#: ui/kis_paintop_box.cc:157
+#: ui/kis_paintop_box.cc:166
 msgid "Save to Palette"
 msgstr "Snimi u paletu"
 
-#: ui/kis_paintop_box.cc:165
+#: ui/kis_paintop_box.cc:174
 #, fuzzy
 msgid "Choose workspace"
 msgstr "Prostor boja"
@@ -13366,14 +13366,6 @@ msgstr "Izaberi metapodatke za strategiju spajanja"
 msgid "x%1"
 msgstr "%1:"
 
-#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:46
-msgid "Thumbnails"
-msgstr "Sličice"
-
-#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:51
-msgid "Details"
-msgstr "Detalji"
-
 #: ui/widgets/kis_wdg_generator.cpp:150 ui/widgets/kis_wdg_generator.cpp:164
 msgid "No configuration options."
 msgstr "Nema konfiguracijskih opcija."
@@ -13415,6 +13407,14 @@ msgstr "Pridruži na alatnu traku"
 #: ui/widgets/kis_paintop_presets_popup.cpp:233
 msgid "Detach from Toolbar"
 msgstr "Odvoji s alatne trake"
+
+#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:47
+msgid "Thumbnails"
+msgstr "Sličice"
+
+#: ui/widgets/kis_paintop_presets_chooser_popup.cpp:52
+msgid "Details"
+msgstr "Detalji"
 
 #~ msgid "TextLabel"
 #~ msgstr "TekstualnaOznaka"
