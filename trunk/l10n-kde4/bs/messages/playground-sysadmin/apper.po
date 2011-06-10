@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpackagekit\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-06-04 04:53+0200\n"
+"POT-Creation-Date: 2011-06-10 04:48+0200\n"
 "PO-Revision-Date: 2011-05-08 12:57+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -475,7 +475,7 @@ msgstr "Datum"
 msgid "Action"
 msgstr "Akcija"
 
-#: ApperKCM/TransactionModel.cpp:48 Sentinel/TransactionWatcher.cpp:285
+#: ApperKCM/TransactionModel.cpp:48 Sentinel/TransactionWatcher.cpp:293
 msgid "Details"
 msgstr "Detalji"
 
@@ -874,6 +874,53 @@ msgstr "Korisnik je otkazao transakciju"
 msgid "An unknown error happened"
 msgstr "Desila se nepoznata greška"
 
+#: Sentinel/TransactionWatcher.cpp:65 Sentinel/TransactionWatcher.cpp:250
+msgid "Hide this icon"
+msgstr "Sakrij ovu sličicu"
+
+#: Sentinel/TransactionWatcher.cpp:167
+msgid "The system update has completed"
+msgstr "Sistemska nadgradnja je završena"
+
+#: Sentinel/TransactionWatcher.cpp:173
+#, fuzzy, kde-format
+#| msgid "Package: %2"
+#| msgid_plural "Packages: %2"
+msgid "Packages: %1"
+msgstr "Paket : %2"
+
+#: Sentinel/TransactionWatcher.cpp:185
+#, kde-format
+msgid "Package: %2"
+msgid_plural "Packages: %2"
+msgstr[0] "Paket : %2"
+msgstr[1] "Paketi : %2"
+msgstr[2] "Paketi : %2"
+
+#: Sentinel/TransactionWatcher.cpp:232 Sentinel/TransactionWatcher.cpp:272
+#, fuzzy
+#| msgid "Package Manager Messages"
+msgid "Software Manager Messages"
+msgstr "Poruke upravljača paketima"
+
+#: Sentinel/TransactionWatcher.cpp:233
+#, fuzzy, kde-format
+#| msgid "One message from the package manager"
+#| msgid_plural "%1 messages from the package manager"
+msgid "One message from the software manager"
+msgid_plural "%1 messages from the software manager"
+msgstr[0] "%1 poruka od upravljača paketima"
+msgstr[1] "%1 poruke od upravljača paketima"
+msgstr[2] "%1 poruka od upravljača paketima"
+
+#: Sentinel/TransactionWatcher.cpp:241
+msgid "Show messages"
+msgstr "Prikaži poruke"
+
+#: Sentinel/TransactionWatcher.cpp:293
+msgid "Ignore"
+msgstr "Ignoriši"
+
 #: Sentinel/TransactionTrayIcon.cpp:45
 msgid "Transactions"
 msgstr "Transakcije"
@@ -940,53 +987,6 @@ msgstr "Sistemska nadgradnja je bila uspješna"
 #: Sentinel/KpkUpdateIcon.cpp:300
 msgid "The automated software update failed."
 msgstr "Automatizirano ažuriranje softvera nije uspjelo."
-
-#: Sentinel/TransactionWatcher.cpp:64 Sentinel/TransactionWatcher.cpp:242
-msgid "Hide this icon"
-msgstr "Sakrij ovu sličicu"
-
-#: Sentinel/TransactionWatcher.cpp:160
-msgid "The system update has completed"
-msgstr "Sistemska nadgradnja je završena"
-
-#: Sentinel/TransactionWatcher.cpp:166
-#, fuzzy, kde-format
-#| msgid "Package: %2"
-#| msgid_plural "Packages: %2"
-msgid "Packages: %1"
-msgstr "Paket : %2"
-
-#: Sentinel/TransactionWatcher.cpp:178
-#, kde-format
-msgid "Package: %2"
-msgid_plural "Packages: %2"
-msgstr[0] "Paket : %2"
-msgstr[1] "Paketi : %2"
-msgstr[2] "Paketi : %2"
-
-#: Sentinel/TransactionWatcher.cpp:224 Sentinel/TransactionWatcher.cpp:264
-#, fuzzy
-#| msgid "Package Manager Messages"
-msgid "Software Manager Messages"
-msgstr "Poruke upravljača paketima"
-
-#: Sentinel/TransactionWatcher.cpp:225
-#, fuzzy, kde-format
-#| msgid "One message from the package manager"
-#| msgid_plural "%1 messages from the package manager"
-msgid "One message from the software manager"
-msgid_plural "%1 messages from the software manager"
-msgstr[0] "%1 poruka od upravljača paketima"
-msgstr[1] "%1 poruke od upravljača paketima"
-msgstr[2] "%1 poruka od upravljača paketima"
-
-#: Sentinel/TransactionWatcher.cpp:233
-msgid "Show messages"
-msgstr "Prikaži poruke"
-
-#: Sentinel/TransactionWatcher.cpp:285
-msgid "Ignore"
-msgstr "Ignoriši"
 
 #: Sentinel/main.cpp:36
 #, fuzzy
@@ -3116,6 +3116,37 @@ msgid ""
 msgstr ""
 "Dozvoljava vam da sakrijete prozor dok čuvate transakcijski zadatak u pogonu"
 
+#: libshared/KpkPackageModel.cpp:165
+#, fuzzy
+#| msgctxt "The group type"
+#| msgid "Games"
+msgid "Name"
+msgstr "Igre"
+
+#: libshared/KpkPackageModel.cpp:169
+msgid "Arch"
+msgstr ""
+
+#: libshared/KpkPackageModel.cpp:171
+msgid "Summary"
+msgstr "Kratak pregled"
+
+#: libshared/KpkPackageModel.cpp:259
+#, fuzzy, kde-format
+#| msgid "Show Architectures"
+msgid ""
+"Version: %1\n"
+"Architecture: %2"
+msgstr "Prikaži arhitekture"
+
+#: libshared/KpkPackageModel.cpp:316
+msgid "To be Removed"
+msgstr "Za odstraniti"
+
+#: libshared/KpkPackageModel.cpp:318
+msgid "To be Installed"
+msgstr "Za instalirati"
+
 #: libshared/PkTransaction.cpp:180
 #, fuzzy
 #| msgid "Failed to simulate package install"
@@ -3202,37 +3233,6 @@ msgstr "Nisam uspio prihvatiti EULA"
 #: libshared/PkTransaction.cpp:697
 msgid "Failed to install signature"
 msgstr "Instalacija potpisa nije uspjela"
-
-#: libshared/KpkPackageModel.cpp:165
-#, fuzzy
-#| msgctxt "The group type"
-#| msgid "Games"
-msgid "Name"
-msgstr "Igre"
-
-#: libshared/KpkPackageModel.cpp:169
-msgid "Arch"
-msgstr ""
-
-#: libshared/KpkPackageModel.cpp:171
-msgid "Summary"
-msgstr "Kratak pregled"
-
-#: libshared/KpkPackageModel.cpp:259
-#, fuzzy, kde-format
-#| msgid "Show Architectures"
-msgid ""
-"Version: %1\n"
-"Architecture: %2"
-msgstr "Prikaži arhitekture"
-
-#: libshared/KpkPackageModel.cpp:316
-msgid "To be Removed"
-msgstr "Za odstraniti"
-
-#: libshared/KpkPackageModel.cpp:318
-msgid "To be Installed"
-msgstr "Za instalirati"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
