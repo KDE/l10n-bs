@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: koffice\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-06-18 04:35+0200\n"
+"POT-Creation-Date: 2011-06-19 04:29+0200\n"
 "PO-Revision-Date: 2011-03-11 16:09+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -19,10 +19,6 @@ msgstr ""
 "X-Launchpad-Export-Date: 2011-04-22 11:53+0000\n"
 "X-Generator: Launchpad (build 12883)\n"
 
-#: flake/KoToolBase.cpp:173 flake/KoToolManager.cpp:352
-msgid "Tool Options"
-msgstr "Opcije alata"
-
 #: flake/KPathShapeFactory.cpp:32
 msgid "Simple path shape"
 msgstr "Obični oblik putanje"
@@ -31,14 +27,18 @@ msgstr "Obični oblik putanje"
 msgid "A simple path shape"
 msgstr "Obični oblik putanje"
 
-#: flake/KShapePaste.cpp:100
-msgid "Paste Shapes"
-msgstr "Umetni oblik"
+#: flake/KToolBase.cpp:173 flake/KToolManager.cpp:352
+msgid "Tool Options"
+msgstr "Opcije alata"
 
-#: flake/KoToolManager.cpp:351
+#: flake/KToolManager.cpp:351
 #, kde-format
 msgid "Active tool: %1"
 msgstr "Aktivan alat: %1"
+
+#: flake/KShapePaste.cpp:100
+msgid "Paste Shapes"
+msgstr "Umetni oblik"
 
 #: flake/commands/KPathSegmentBreakCommand.cpp:40
 #, fuzzy
@@ -109,6 +109,11 @@ msgstr "Presloži oblike"
 msgid "Resize Shapes"
 msgstr "Promijeni veličinu oblika"
 
+#: flake/commands/KSubpathRemoveCommand.cpp:30
+#, fuzzy
+msgid "Remove Subpath"
+msgstr "Ukloni podputanju"
+
 #: flake/commands/KParameterHandleMoveCommand.cpp:34
 #, fuzzy
 msgid "Change Parameter"
@@ -147,12 +152,6 @@ msgstr "Spoji tačke"
 #: flake/commands/KPathPointMoveCommand.cpp:58
 msgid "Move points"
 msgstr "Pomjeri tačke"
-
-#: flake/commands/KPathPointRemoveCommand.cpp:104
-#: flake/commands/KPathPointRemoveCommand.cpp:133
-#, fuzzy
-msgid "Remove Points"
-msgstr "Ukloni tačke"
 
 #: flake/commands/KPathPointTypeCommand.cpp:46
 #, fuzzy
@@ -194,53 +193,38 @@ msgstr "Zaključaj oblike"
 msgid "Set Shadow"
 msgstr "Postavite sjenu"
 
-#: flake/commands/KoShapeTransparencyCommand.cpp:49
-#: flake/commands/KoShapeTransparencyCommand.cpp:60
-#: flake/commands/KoShapeTransparencyCommand.cpp:73
+#: flake/commands/KPathPointRemoveCommand.cpp:104
+#: flake/commands/KPathPointRemoveCommand.cpp:133
+#, fuzzy
+msgid "Remove Points"
+msgstr "Ukloni tačke"
+
+#: flake/commands/KShapeTransparencyCommand.cpp:49
+#: flake/commands/KShapeTransparencyCommand.cpp:60
+#: flake/commands/KShapeTransparencyCommand.cpp:73
 #, fuzzy
 msgid "Set Opacity"
 msgstr "Postavite neprozirnost"
 
-#: flake/commands/KoShapeUngroupCommand.cpp:57
+#: flake/commands/KShapeUngroupCommand.cpp:57
 #, fuzzy
 msgid "Ungroup Shapes"
 msgstr "Razgrupisanje oblika"
 
-#: flake/commands/KoSubpathJoinCommand.cpp:51
+#: flake/commands/KSubpathJoinCommand.cpp:51
 #, fuzzy
 msgid "Close Subpath"
 msgstr "Zatvori podputanja"
 
-#: flake/commands/KoSubpathJoinCommand.cpp:53
+#: flake/commands/KSubpathJoinCommand.cpp:53
 #, fuzzy
 msgid "Join Subpaths"
 msgstr "Spoji podputanje"
-
-#: flake/commands/KoSubpathRemoveCommand.cpp:30
-#, fuzzy
-msgid "Remove Subpath"
-msgstr "Ukloni podputanju"
 
 #: flake/commands/KShapeShearCommand.cpp:51
 #, fuzzy
 msgid "Shear Shapes"
 msgstr "Kresanje oblika"
-
-#: flake/tools/KCreatePathTool.cpp:369 flake/tools/KPathTool.cpp:180
-msgid "Snapping"
-msgstr "Ljepljenje"
-
-#: flake/tools/KCreatePathTool.cpp:374
-msgid "Angle snapping delta"
-msgstr "Promjena ugla postavljanja"
-
-#: flake/tools/KCreatePathTool.cpp:379
-msgid "Angle Constraints"
-msgstr "Ugao ograničenja"
-
-#: flake/tools/KCreatePathToolFactory.cpp:33
-msgid "Create Path"
-msgstr "Napravite putanju"
 
 #: flake/tools/KCreateShapesToolFactory.cpp:33
 msgid "Create object"
@@ -249,10 +233,6 @@ msgstr "Napravi objekat"
 #: flake/tools/KPanToolFactory.cpp:29
 msgid "Pan"
 msgstr "Paniraj"
-
-#: flake/tools/KPathSegmentChangeStrategy.cpp:140
-msgid "Change Segment"
-msgstr "Segment promjene"
 
 #: flake/tools/KPathTool.cpp:87
 msgid "Corner point"
@@ -314,6 +294,10 @@ msgstr "Put do"
 msgid "Line/Curve"
 msgstr "Linija/Kriva"
 
+#: flake/tools/KPathTool.cpp:180 flake/tools/KCreatePathTool.cpp:369
+msgid "Snapping"
+msgstr "Ljepljenje"
+
 #: flake/tools/KPathTool.cpp:514
 msgid "Drag to move handle."
 msgstr "Povlačenje do držača za premještanje"
@@ -334,14 +318,30 @@ msgstr "Pritisnite B za prelom puta u označenoj tački"
 msgid "Press B to break path at selected segments."
 msgstr "Pritisnite za prelom puta u označenom segmentu"
 
-#: flake/tools/KoZoomToolFactory.cpp:29 widgets/KoZoomAction.cpp:248
+#: flake/tools/KPathToolFactory.cpp:29
+msgid "Path editing tool"
+msgstr "Alat za izmjenu puta"
+
+#: flake/tools/KZoomToolFactory.cpp:29 widgets/KoZoomAction.cpp:248
 #: widgets/KoZoomController.cpp:38 widgets/KoZoomInput.cpp:52
 msgid "Zoom"
 msgstr "Uvećaj"
 
-#: flake/tools/KPathToolFactory.cpp:29
-msgid "Path editing tool"
-msgstr "Alat za izmjenu puta"
+#: flake/tools/KCreatePathTool.cpp:374
+msgid "Angle snapping delta"
+msgstr "Promjena ugla postavljanja"
+
+#: flake/tools/KCreatePathTool.cpp:379
+msgid "Angle Constraints"
+msgstr "Ugao ograničenja"
+
+#: flake/tools/KCreatePathToolFactory.cpp:33
+msgid "Create Path"
+msgstr "Napravite putanju"
+
+#: flake/tools/KPathSegmentChangeStrategy.cpp:140
+msgid "Change Segment"
+msgstr "Segment promjene"
 
 #: kokross/KoScriptManager.cpp:177
 msgid "Install Script Package"
@@ -724,6 +724,10 @@ msgstr "Odaberite glavni dizajn stranice:"
 msgid "Master Page"
 msgstr "Glavna stranica"
 
+#: kopageapp/tools/backgroundTool/KoPABackgroundToolWidget.cpp:93
+msgid "Change background image"
+msgstr "Promijeni sliku pozadine"
+
 #: kopageapp/tools/backgroundTool/KoPABackgroundTool.cpp:105
 msgid "Background Tool"
 msgstr "Alat pozadine"
@@ -735,10 +739,6 @@ msgstr "Koristite stilove doker da manipulirate sa pozadinom."
 #: kopageapp/tools/backgroundTool/KoPABackgroundToolFactory.cpp:30
 msgid "Background editing tool"
 msgstr "Alat za izmjenu pozadine"
-
-#: kopageapp/tools/backgroundTool/KoPABackgroundToolWidget.cpp:93
-msgid "Change background image"
-msgstr "Promijeni sliku pozadine"
 
 #: kopageapp/KoPAPastePage.cpp:132
 msgid "Paste Slide"
@@ -862,45 +862,6 @@ msgstr[2] "Nađeno %1 slaganja"
 msgid "Found no match"
 msgstr "Nije pronađeno ništa što se poklapa"
 
-#: kotext/InsertTextLocator.cpp:29
-msgid "Index Reference"
-msgstr "Indeksna referenca"
-
-#: kotext/InsertTextReferenceAction.cpp:35
-#: kotext/InsertTextReferenceAction.cpp:63
-msgid "Text Reference"
-msgstr "Referenca za tekst"
-
-#: kotext/InsertTextReferenceAction.cpp:44
-msgid "Please create an index to reference first."
-msgstr "Molim prvo kreirajte indeks na referencu."
-
-#: kotext/InsertTextReferenceAction.cpp:53
-msgid "Select the index you want to reference"
-msgstr "Označite index koji želite referencirati"
-
-#: kotext/InsertTextReferenceAction.cpp:63 kotext/InsertVariableAction.cpp:51
-#: main/rdf/InsertSemanticObjectCreateAction.cpp:59
-#: main/rdf/InsertSemanticObjectReferenceAction.cpp:63
-#, kde-format
-msgid "%1 Options"
-msgstr "%1 Opcija"
-
-#: kotext/KoText.cpp:47
-msgctxt "Underline Style"
-msgid "None"
-msgstr "Nikakvo"
-
-#: kotext/KoText.cpp:48
-msgctxt "Underline Style"
-msgid "Single"
-msgstr "Jednostruki"
-
-#: kotext/KoText.cpp:49
-msgctxt "Underline Style"
-msgid "Double"
-msgstr "Dvostruki"
-
 #: kotext/commands/DeleteTableColumnCommand.cpp:40
 #: kotext/KoTextEditor.cpp:1058
 #, fuzzy
@@ -934,6 +895,70 @@ msgstr "Umetni prelom"
 #, fuzzy
 msgid "Insert Row Above"
 msgstr "Umetni tabelu"
+
+#: kotext/KoText.cpp:47
+msgctxt "Underline Style"
+msgid "None"
+msgstr "Nikakvo"
+
+#: kotext/KoText.cpp:48
+msgctxt "Underline Style"
+msgid "Single"
+msgstr "Jednostruki"
+
+#: kotext/KoText.cpp:49
+msgctxt "Underline Style"
+msgid "Double"
+msgstr "Dvostruki"
+
+#: kotext/KReplaceStrategy.cpp:58
+msgid ""
+"Found no match\n"
+"\n"
+"No text was replaced"
+msgstr ""
+"Nije pronađeno ništa što se poklapa\n"
+"\n"
+"Tekst nije zamjenjen"
+
+#: kotext/KReplaceStrategy.cpp:61
+#, kde-format
+msgid "1 replacement made"
+msgid_plural "%1 replacements made"
+msgstr[0] "%1 zamjena urađena"
+msgstr[1] "%1 zamjene urađeno"
+msgstr[2] "%1 zamjena urađeno"
+
+#: kotext/KReplaceStrategy.cpp:74
+#, kde-format
+msgid "Replace %1 with %2?"
+msgstr "Zamijeni %1 sa %2"
+
+#. i18n: file: widgets/KoCsvImportDialog.ui:147
+#. i18n: ectx: attribute (title), widget (QWidget, m_formatTab)
+#: kotext/KoTextEditor_p.h:93 kotext/KoTextEditor_p.h:130 rc.cpp:344
+msgid "Format"
+msgstr "Format"
+
+#: kotext/InsertTextReferenceAction.cpp:35
+#: kotext/InsertTextReferenceAction.cpp:63
+msgid "Text Reference"
+msgstr "Referenca za tekst"
+
+#: kotext/InsertTextReferenceAction.cpp:44
+msgid "Please create an index to reference first."
+msgstr "Molim prvo kreirajte indeks na referencu."
+
+#: kotext/InsertTextReferenceAction.cpp:53
+msgid "Select the index you want to reference"
+msgstr "Označite index koji želite referencirati"
+
+#: kotext/InsertTextReferenceAction.cpp:63 kotext/InsertVariableAction.cpp:51
+#: main/rdf/InsertSemanticObjectReferenceAction.cpp:63
+#: main/rdf/InsertSemanticObjectCreateAction.cpp:59
+#, kde-format
+msgid "%1 Options"
+msgstr "%1 Opcija"
 
 #: kotext/KoTextEditor.cpp:111 kotext/KoTextEditor.cpp:167
 #: kotext/KoTextEditor.cpp:325 widgets/KoCsvImportDialog.cpp:216
@@ -1054,34 +1079,9 @@ msgstr "&Dijeljeni pogled"
 msgid "Line Break"
 msgstr "Prelom linije"
 
-#: kotext/KReplaceStrategy.cpp:58
-msgid ""
-"Found no match\n"
-"\n"
-"No text was replaced"
-msgstr ""
-"Nije pronađeno ništa što se poklapa\n"
-"\n"
-"Tekst nije zamjenjen"
-
-#: kotext/KReplaceStrategy.cpp:61
-#, kde-format
-msgid "1 replacement made"
-msgid_plural "%1 replacements made"
-msgstr[0] "%1 zamjena urađena"
-msgstr[1] "%1 zamjene urađeno"
-msgstr[2] "%1 zamjena urađeno"
-
-#: kotext/KReplaceStrategy.cpp:74
-#, kde-format
-msgid "Replace %1 with %2?"
-msgstr "Zamijeni %1 sa %2"
-
-#. i18n: file: widgets/KoCsvImportDialog.ui:147
-#. i18n: ectx: attribute (title), widget (QWidget, m_formatTab)
-#: kotext/KoTextEditor_p.h:93 kotext/KoTextEditor_p.h:130 rc.cpp:344
-msgid "Format"
-msgstr "Format"
+#: kotext/InsertTextLocator.cpp:29
+msgid "Index Reference"
+msgstr "Indeksna referenca"
 
 #: main/KoApplication.cpp:77
 msgid "Only print and exit"
@@ -2133,6 +2133,10 @@ msgstr "Događaji"
 msgid "Locations"
 msgstr "Lokacije"
 
+#: main/rdf/KoDocumentRdf.cpp:851
+msgid "Reference"
+msgstr "Referenca"
+
 #: main/rdf/KoSopranoTableModel.cpp:80
 msgid "Empty"
 msgstr "Prazan"
@@ -2183,10 +2187,6 @@ msgstr "Snimljen u"
 #: main/rdf/InsertSemanticObjectReferenceAction.cpp:55
 msgid "Select the object you want to reference"
 msgstr "Označite objekat koji želite referencirati"
-
-#: main/rdf/KoDocumentRdf.cpp:851
-msgid "Reference"
-msgstr "Referenca"
 
 #: main/config/KoConfigDocumentPage.cpp:75
 msgid "Auto save (min):"
@@ -3027,13 +3027,13 @@ msgstr "Sekcija presjeka linija"
 msgid "Guide lines"
 msgstr "Pomoćne linije"
 
-#. i18n: file: flake/tools/KoZoomToolWidget.ui:20
+#. i18n: file: flake/tools/KZoomToolWidget.ui:20
 #. i18n: ectx: property (text), widget (QRadioButton, zoomInButton)
 #: rc.cpp:27
 msgid "Zoom In"
 msgstr "Uvećaj"
 
-#. i18n: file: flake/tools/KoZoomToolWidget.ui:30
+#. i18n: file: flake/tools/KZoomToolWidget.ui:30
 #. i18n: ectx: property (text), widget (QRadioButton, zoomOutButton)
 #: rc.cpp:30
 msgid "Zoom Out"
