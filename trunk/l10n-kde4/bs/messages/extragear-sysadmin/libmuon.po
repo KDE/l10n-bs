@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: muon\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-06-03 03:53+0200\n"
+"POT-Creation-Date: 2011-06-20 04:02+0200\n"
 "PO-Revision-Date: 2011-03-24 14:44+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -996,6 +996,25 @@ msgctxt "@label showing download and install size"
 msgid "%1 to download, %2 of space to be used"
 msgstr "%1 za preuzeti, %2 prostora će se koristiti"
 
+#: libmuon/DownloadWidget.cpp:76
+msgctxt "@action:button Cancels the download"
+msgid "Cancel"
+msgstr "Odustani"
+
+#: libmuon/DownloadWidget.cpp:103
+#, kde-format
+msgctxt "@label Download rate"
+msgid "Download rate: %1/s"
+msgstr "Brzina preuzimanja: %1/s"
+
+#: libmuon/DownloadWidget.cpp:112
+#, fuzzy, kde-format
+#| msgctxt "@item:intext Remaining time"
+#| msgid " - %1 remaining"
+msgctxt "@item:intext Remaining time"
+msgid "%1 remaining"
+msgstr " - %1 preostalo"
+
 #: libmuon/MuonMainWindow.cpp:97
 msgctxt "@label"
 msgid ""
@@ -1141,21 +1160,51 @@ msgstr "Neslaganje veličina"
 
 #: libmuon/MuonMainWindow.cpp:337
 msgctxt "@title:window"
+msgid "Configuration File Changed"
+msgstr ""
+
+#: libmuon/MuonMainWindow.cpp:339
+#, kde-format
+msgctxt "@label Notifies a config file change"
+msgid ""
+"A new version of the configuration file <filename>%1</filename> is "
+"available, but your version has been modified. Would you like to keep your "
+"current version or install the new version?"
+msgstr ""
+
+#: libmuon/MuonMainWindow.cpp:344
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Force Version"
+msgctxt "@action Use the new config file"
+msgid "Use New Version"
+msgstr "Forsiraj verziju"
+
+#: libmuon/MuonMainWindow.cpp:345
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Force Version"
+msgctxt "@action Keep the old config file"
+msgid "Keep Old Version"
+msgstr "Forsiraj verziju"
+
+#: libmuon/MuonMainWindow.cpp:362
+msgctxt "@title:window"
 msgid "Media Change Required"
 msgstr "Potrebna promjena medija"
 
-#: libmuon/MuonMainWindow.cpp:338
+#: libmuon/MuonMainWindow.cpp:363
 #, kde-format
 msgctxt "@label Asks for a CD change"
 msgid "Please insert %1 into <filename>%2</filename>"
 msgstr "Molim ubacite %1 u <filename>%2</filename>"
 
-#: libmuon/MuonMainWindow.cpp:347
+#: libmuon/MuonMainWindow.cpp:372
 msgctxt "@title:window"
 msgid "Warning - Unverified Software"
 msgstr "Pažnja -neovjeren softver"
 
-#: libmuon/MuonMainWindow.cpp:349
+#: libmuon/MuonMainWindow.cpp:374
 msgctxt "@label"
 msgid ""
 "The following piece of software cannot be verified. <warning>Installing "
@@ -1180,12 +1229,12 @@ msgstr[2] ""
 "softvera je sigurnosni rizik, jer je prisustvo neprovjerenog softvera mogući "
 "predznak upada..</warning> Želite li nastaviti?"
 
-#: libmuon/MuonMainWindow.cpp:385
+#: libmuon/MuonMainWindow.cpp:410
 msgctxt "@label"
 msgid "Unable to download the following packages:"
 msgstr "Ne mogu se preuzeti sljedeći paketi:"
 
-#: libmuon/MuonMainWindow.cpp:390
+#: libmuon/MuonMainWindow.cpp:415
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -1197,12 +1246,12 @@ msgstr ""
 "%2\n"
 "\n"
 
-#: libmuon/MuonMainWindow.cpp:393
+#: libmuon/MuonMainWindow.cpp:418
 msgctxt "@title:window"
 msgid "Some Packages Could not be Downloaded"
 msgstr "Neki paketi se ne mogu skinuti"
 
-#: libmuon/MuonMainWindow.cpp:400
+#: libmuon/MuonMainWindow.cpp:425
 msgctxt "@label"
 msgid "An error occurred while applying changes:"
 msgid_plural "The following errors occurred while applying changes:"
@@ -1210,30 +1259,30 @@ msgstr[0] "Došlo je do greške pri primjeni promjena:"
 msgstr[1] "Sljedeće greške su nastale pri primjeni promjena:"
 msgstr[2] "Sljedeće greške su nastale pri primjeni promjena:"
 
-#: libmuon/MuonMainWindow.cpp:404
+#: libmuon/MuonMainWindow.cpp:429
 #, kde-format
 msgctxt "@label Shows which package failed"
 msgid "Package: %1"
 msgstr "Paket: %1"
 
-#: libmuon/MuonMainWindow.cpp:405
+#: libmuon/MuonMainWindow.cpp:430
 #, kde-format
 msgctxt "@label Shows the error"
 msgid "Error: %1"
 msgstr "Greška: %1"
 
-#: libmuon/MuonMainWindow.cpp:409
+#: libmuon/MuonMainWindow.cpp:434
 msgctxt "@title:window"
 msgid "Commit error"
 msgstr "Greška u potvrđivanju"
 
-#: libmuon/MuonMainWindow.cpp:423
+#: libmuon/MuonMainWindow.cpp:448
 msgctxt "@title:window"
 msgid "Save Markings As"
 msgstr "Snimi markiranja kao"
 
-#: libmuon/MuonMainWindow.cpp:430 libmuon/MuonMainWindow.cpp:455
-#: libmuon/MuonMainWindow.cpp:479
+#: libmuon/MuonMainWindow.cpp:455 libmuon/MuonMainWindow.cpp:480
+#: libmuon/MuonMainWindow.cpp:504
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -1249,22 +1298,22 @@ msgstr ""
 "Provjerite da li imate pristup pisanja za ovu datoteku ili da imate dovoljno "
 "prostora na disku na raspolaganju."
 
-#: libmuon/MuonMainWindow.cpp:448
+#: libmuon/MuonMainWindow.cpp:473
 msgctxt "@title:window"
 msgid "Save Installed Packages List As"
 msgstr "Snimi listu instaliranih paketa kao"
 
-#: libmuon/MuonMainWindow.cpp:472
+#: libmuon/MuonMainWindow.cpp:497
 msgctxt "@title:window"
 msgid "Save Download List As"
 msgstr "Snimi listu preuzimanja kao"
 
-#: libmuon/MuonMainWindow.cpp:495 libmuon/MuonMainWindow.cpp:510
+#: libmuon/MuonMainWindow.cpp:520 libmuon/MuonMainWindow.cpp:535
 msgctxt "@title:window"
 msgid "Open File"
 msgstr "Otvori datoteku"
 
-#: libmuon/MuonMainWindow.cpp:518
+#: libmuon/MuonMainWindow.cpp:543
 msgctxt "@label"
 msgid ""
 "Could not mark changes. Please make sure that the file is a markings file "
@@ -1273,12 +1322,12 @@ msgstr ""
 "Nije moguće označiti promjene. Molimo provjerite da li je datoteka kreirana "
 "datoteka oznake bilo Muon paket menadžera ili Synaptic."
 
-#: libmuon/MuonMainWindow.cpp:532
+#: libmuon/MuonMainWindow.cpp:557
 msgctxt "@title:window"
 msgid "Choose a Directory"
 msgstr "Izaberite direktorij"
 
-#: libmuon/MuonMainWindow.cpp:555
+#: libmuon/MuonMainWindow.cpp:580
 #, kde-format
 msgctxt "@label"
 msgid "%1 package was successfully added to the cache"
@@ -1287,41 +1336,22 @@ msgstr[0] "%1 paket je uspješno dodat u keš"
 msgstr[1] "%1 paketa su uspješno dodana u keš"
 msgstr[2] "%1 paketa je uspješno dodano u keš"
 
-#: libmuon/MuonMainWindow.cpp:561
+#: libmuon/MuonMainWindow.cpp:586
 msgctxt "@label"
 msgid ""
 "No valid packages could be found in this directory. Please make sure the "
 "packages are compatible with your computer and are at the latest version."
 msgstr ""
 
-#: libmuon/MuonMainWindow.cpp:565
+#: libmuon/MuonMainWindow.cpp:590
 msgctxt "@title:window"
 msgid "Packages Could Not be Found"
 msgstr "Paketi se ne mogu naći"
 
-#: libmuon/MuonMainWindow.cpp:621
+#: libmuon/MuonMainWindow.cpp:646
 msgctxt "@label Easter Egg"
 msgid "This Muon has super cow powers"
 msgstr ""
-
-#: libmuon/DownloadWidget.cpp:76
-msgctxt "@action:button Cancels the download"
-msgid "Cancel"
-msgstr "Odustani"
-
-#: libmuon/DownloadWidget.cpp:103
-#, kde-format
-msgctxt "@label Download rate"
-msgid "Download rate: %1/s"
-msgstr "Brzina preuzimanja: %1/s"
-
-#: libmuon/DownloadWidget.cpp:112
-#, fuzzy, kde-format
-#| msgctxt "@item:intext Remaining time"
-#| msgid " - %1 remaining"
-msgctxt "@item:intext Remaining time"
-msgid "%1 remaining"
-msgstr " - %1 preostalo"
 
 #~ msgctxt "@label Label for when the download speed is unknown"
 #~ msgid "Unknown speed"
