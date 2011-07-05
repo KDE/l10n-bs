@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdewebdev\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-12 04:35+0200\n"
+"POT-Creation-Date: 2011-07-05 05:35+0200\n"
 "PO-Revision-Date: 2010-01-23 16:28+0000\n"
 "Last-Translator: Launchpad Translations Administrators <rosetta@launchpad."
 "net>\n"
@@ -720,6 +720,15 @@ msgstr ""
 "Akcija „%1“ je već dodata u ovaj meni.\n"
 "Akcija se može pojaviti samo jednom u datom meniju."
 
+#: editor/tableeditorimpl.cpp:57
+msgid "<no field>"
+msgstr "<nema polja>"
+
+#: editor/tableeditorimpl.cpp:317
+#, kde-format
+msgid "Edit Rows and Columns of '%1' "
+msgstr "Uredi vrste i kolone za „%1“ "
+
 #: editor/actionlistview.cpp:93 editor/actioneditorimpl.cpp:51
 msgid "New &Action"
 msgstr "Nova &akcija"
@@ -740,47 +749,9 @@ msgstr "&Poveži akciju..."
 msgid "Delete Action"
 msgstr "Obriši akciju"
 
-#: editor/tableeditorimpl.cpp:57
-msgid "<no field>"
-msgstr "<nema polja>"
-
-#: editor/tableeditorimpl.cpp:317
-#, kde-format
-msgid "Edit Rows and Columns of '%1' "
-msgstr "Uredi vrste i kolone za „%1“ "
-
 #: editor/actioneditorimpl.cpp:46 editor/mainwindow.cpp:301
 msgid "Actions"
 msgstr "Akcije"
-
-#: editor/choosewidgetimpl.cpp:38 editor/hierarchyview.cpp:601
-#: editor/mainwindow.cpp:268
-msgid "Widgets"
-msgstr "Kontrole"
-
-#: editor/command.cpp:504 editor/command.cpp:516
-msgid "Set 'name' Property"
-msgstr "Postavi svojstvo „ime“"
-
-#: editor/command.cpp:505
-#, kde-format
-msgid ""
-"The name of a widget must be unique.\n"
-"'%1' is already used in form '%2',\n"
-"so the name has been reverted to '%3'."
-msgstr ""
-"Ime kontrole mora biti jedinstveno.\n"
-"„%1“ se već koristi u obrascu „%2“,\n"
-"tako da je ime vraćeno na „%3“."
-
-#: editor/command.cpp:517
-#, kde-format
-msgid ""
-"The name of a widget must not be null.\n"
-"The name has been reverted to '%1'."
-msgstr ""
-"Ime kontrole ne smje biti prazno.\n"
-"Ime je vraćeno na „%1“."
 
 #: editor/wizardeditorimpl.cpp:62
 msgid "Edit Wizard Pages"
@@ -824,6 +795,11 @@ msgstr "Novi naslov strane:"
 msgid "Rename page %1 of %2"
 msgstr "Preimenuj stranu %1 od %2"
 
+#: editor/choosewidgetimpl.cpp:38 editor/hierarchyview.cpp:601
+#: editor/mainwindow.cpp:268
+msgid "Widgets"
+msgstr "Kontrole"
+
 #: editor/multilineeditorimpl.cpp:56
 #, kde-format
 msgid "Set Text of '%1'"
@@ -835,6 +811,30 @@ msgstr "Postavi tekst za „%1“"
 #: editor/mainwindow.cpp:1467 rc.cpp:946
 msgid "Text"
 msgstr "Tekst"
+
+#: editor/command.cpp:504 editor/command.cpp:516
+msgid "Set 'name' Property"
+msgstr "Postavi svojstvo „ime“"
+
+#: editor/command.cpp:505
+#, kde-format
+msgid ""
+"The name of a widget must be unique.\n"
+"'%1' is already used in form '%2',\n"
+"so the name has been reverted to '%3'."
+msgstr ""
+"Ime kontrole mora biti jedinstveno.\n"
+"„%1“ se već koristi u obrascu „%2“,\n"
+"tako da je ime vraćeno na „%3“."
+
+#: editor/command.cpp:517
+#, kde-format
+msgid ""
+"The name of a widget must not be null.\n"
+"The name has been reverted to '%1'."
+msgstr ""
+"Ime kontrole ne smje biti prazno.\n"
+"Ime je vraćeno na „%1“."
 
 #: editor/hierarchyview.cpp:105
 msgid "(Constructor)"
@@ -856,6 +856,23 @@ msgstr "Klasa"
 msgid "Database"
 msgstr "Baza podataka"
 
+#: editor/newformimpl.cpp:116
+msgid "Load Template"
+msgstr "Učitaj šablon"
+
+#: editor/newformimpl.cpp:117
+#, kde-format
+msgid "Could not load form description from template '%1'"
+msgstr "Nisam mogao da učitam opis obrasca iz šablona „%1“"
+
+#: editor/newformimpl.cpp:137
+msgid "Dialog"
+msgstr "Dijalog"
+
+#: editor/newformimpl.cpp:143
+msgid "Wizard"
+msgstr "Čarobnjak"
+
 #: editor/listvieweditorimpl.cpp:69
 #, kde-format
 msgid "Edit Items and Columns of '%1'"
@@ -873,34 +890,17 @@ msgstr "&Stavke"
 
 #. i18n: file: editor/templates/Configuration_Dialog.ui:31
 #. i18n: ectx: property (text), item, widget (QListBox)
-#: editor/listboxeditorimpl.cpp:64 editor/iconvieweditorimpl.cpp:60
+#: editor/iconvieweditorimpl.cpp:60 editor/listboxeditorimpl.cpp:64
 #: editor/widgetfactory.cpp:847 editor/widgetfactory.cpp:880
 #: editor/widgetfactory.cpp:891 editor/widgetfactory.cpp:1082
 #: editor/widgetfactory.cpp:1168 rc.cpp:23
 msgid "New Item"
 msgstr "Nova stavka"
 
-#: editor/listboxeditorimpl.cpp:137 editor/iconvieweditorimpl.cpp:127
+#: editor/iconvieweditorimpl.cpp:127 editor/listboxeditorimpl.cpp:137
 #, kde-format
 msgid "Edit Items of '%1'"
 msgstr "Uredi stavke za „%1“"
-
-#: editor/newformimpl.cpp:116
-msgid "Load Template"
-msgstr "Učitaj šablon"
-
-#: editor/newformimpl.cpp:117
-#, kde-format
-msgid "Could not load form description from template '%1'"
-msgstr "Nisam mogao da učitam opis obrasca iz šablona „%1“"
-
-#: editor/newformimpl.cpp:137
-msgid "Dialog"
-msgstr "Dijalog"
-
-#: editor/newformimpl.cpp:143
-msgid "Wizard"
-msgstr "Čarobnjak"
 
 #: editor/mainwindow.cpp:147
 msgid "Welcome to the Kommander Editor"
@@ -1226,10 +1226,6 @@ msgstr "Std.iz."
 msgid "Stderr"
 msgstr "Std.gr."
 
-#: editor/resource.cpp:571
-msgid "Paste"
-msgstr "Umetni"
-
 #: editor/pixmapchooser.cpp:949
 msgid "All Pixmaps"
 msgstr "Sve piksmape"
@@ -1248,6 +1244,10 @@ msgstr "Sve datoteke (*)"
 #: editor/pixmapchooser.cpp:966 rc.cpp:68
 msgid "Choose Pixmap"
 msgstr "Izaberite piksmapu"
+
+#: editor/resource.cpp:571
+msgid "Paste"
+msgstr "Umetni"
 
 #: editor/formwindow.cpp:315
 msgid "&Horizontal"
@@ -1426,6 +1426,81 @@ msgstr "Rasturi raspored"
 #: editor/formwindow.cpp:2142 editor/mainwindowactions.cpp:1053
 msgid "Edit connections..."
 msgstr "Uredi veze..."
+
+#: editor/sizehandle.cpp:233
+msgid "Resize"
+msgstr "Promijeni veličinu"
+
+#: editor/main.cpp:31
+msgid "Kommander is a graphical editor of scripted dialogs."
+msgstr "Kommander je grafički uređivač skriptovanih dijaloga."
+
+#: editor/main.cpp:33
+msgid "Based on Qt Designer, (C) 2000 Trolltech AS."
+msgstr "Zasnovano na Qt-ovom Designer-u, © 2000 Trolltech AS."
+
+#: editor/main.cpp:37
+msgid "Kommander"
+msgstr "Kommander"
+
+#: editor/main.cpp:39
+msgid "(C) 2002-2005 Kommander authors"
+msgstr "(C) 2002-2005 Kommander autori"
+
+#: editor/main.cpp:40 pluginmanager/main.cpp:49 executor/main.cpp:55
+msgid "Marc Britton"
+msgstr "Marc Britton"
+
+#: editor/main.cpp:40 pluginmanager/main.cpp:49
+msgid "Original author"
+msgstr "Prvobitni autor"
+
+#: editor/main.cpp:41 pluginmanager/main.cpp:50
+msgid "Eric Laffoon"
+msgstr "Eric Laffoon"
+
+#: editor/main.cpp:41 pluginmanager/main.cpp:50
+msgid "Project manager"
+msgstr "Menadžer projekta"
+
+#: editor/main.cpp:42 pluginmanager/main.cpp:51 executor/main.cpp:56
+msgid "Michal Rudolf"
+msgstr "Michal Rudolf"
+
+#: editor/main.cpp:42 pluginmanager/main.cpp:51
+msgid "Current maintainer"
+msgstr "Trenutni održavalac"
+
+#: editor/main.cpp:43 rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Mirela Emšo, ,Launchpad Contributions:,Mirela Emso,Samir Ribić"
+
+#: editor/main.cpp:44 rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mirela.emso@hotmail.com,,,,"
+
+#: editor/main.cpp:48 executor/main.cpp:62
+msgid "Dialog to open"
+msgstr "Dijalog za otvaranje"
+
+#: editor/main.cpp:67
+msgid "Kommander Dialog Editor"
+msgstr "Uređivač dijaloga Kommander"
+
+#: editor/connectioneditorimpl.cpp:232
+#, kde-format
+msgid "Connect/Disconnect the signals and slots of '%1' and '%2'"
+msgstr "Poveži/otkači signale i slotove od %1 i %2"
+
+#: editor/connectioneditorimpl.cpp:240
+msgid "Remove Connections"
+msgstr "Ukloni veze"
+
+#: editor/connectioneditorimpl.cpp:251
+msgid "Add Connections"
+msgstr "Dodaj veze"
 
 #: editor/mainwindowactions.cpp:79
 msgid ""
@@ -1902,81 +1977,6 @@ msgstr "Uredi podešavanja tekućeg obrasca..."
 msgid "Edit preferences..."
 msgstr "Uredi lična podešavanja..."
 
-#: editor/sizehandle.cpp:233
-msgid "Resize"
-msgstr "Promijeni veličinu"
-
-#: editor/main.cpp:31
-msgid "Kommander is a graphical editor of scripted dialogs."
-msgstr "Kommander je grafički uređivač skriptovanih dijaloga."
-
-#: editor/main.cpp:33
-msgid "Based on Qt Designer, (C) 2000 Trolltech AS."
-msgstr "Zasnovano na Qt-ovom Designer-u, © 2000 Trolltech AS."
-
-#: editor/main.cpp:37
-msgid "Kommander"
-msgstr "Kommander"
-
-#: editor/main.cpp:39
-msgid "(C) 2002-2005 Kommander authors"
-msgstr "(C) 2002-2005 Kommander autori"
-
-#: editor/main.cpp:40 pluginmanager/main.cpp:49 executor/main.cpp:55
-msgid "Marc Britton"
-msgstr "Marc Britton"
-
-#: editor/main.cpp:40 pluginmanager/main.cpp:49
-msgid "Original author"
-msgstr "Prvobitni autor"
-
-#: editor/main.cpp:41 pluginmanager/main.cpp:50
-msgid "Eric Laffoon"
-msgstr "Eric Laffoon"
-
-#: editor/main.cpp:41 pluginmanager/main.cpp:50
-msgid "Project manager"
-msgstr "Menadžer projekta"
-
-#: editor/main.cpp:42 pluginmanager/main.cpp:51 executor/main.cpp:56
-msgid "Michal Rudolf"
-msgstr "Michal Rudolf"
-
-#: editor/main.cpp:42 pluginmanager/main.cpp:51
-msgid "Current maintainer"
-msgstr "Trenutni održavalac"
-
-#: editor/main.cpp:43 rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Mirela Emšo, ,Launchpad Contributions:,Mirela Emso,Samir Ribić"
-
-#: editor/main.cpp:44 rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "mirela.emso@hotmail.com,,,,"
-
-#: editor/main.cpp:48 executor/main.cpp:62
-msgid "Dialog to open"
-msgstr "Dijalog za otvaranje"
-
-#: editor/main.cpp:67
-msgid "Kommander Dialog Editor"
-msgstr "Uređivač dijaloga Kommander"
-
-#: editor/connectioneditorimpl.cpp:232
-#, kde-format
-msgid "Connect/Disconnect the signals and slots of '%1' and '%2'"
-msgstr "Poveži/otkači signale i slotove od %1 i %2"
-
-#: editor/connectioneditorimpl.cpp:240
-msgid "Remove Connections"
-msgstr "Ukloni veze"
-
-#: editor/connectioneditorimpl.cpp:251
-msgid "Add Connections"
-msgstr "Dodaj veze"
-
 #: editor/functionsimpl.cpp:133
 msgid "<p>Parameters are not obligatory."
 msgstr "<p>Parametri nisu obavezujući."
@@ -2162,6 +2162,252 @@ msgstr ""
 "Greška: dijalog nije dat. Koristite opciju --stdin da biste učitali dijalog "
 "sa standardnog ulaza.\n"
 
+#: widgets/treewidget.cpp:66
+msgid "Add column at end with column header"
+msgstr "Dodavanje kolone na kraju s zaglavljem kolone"
+
+#: widgets/treewidget.cpp:67
+msgid "Set sorting for a column"
+msgstr "Postavlja sortiranje za kolonu"
+
+#: widgets/treewidget.cpp:69
+msgid "Get the column count"
+msgstr "Uzima broj kolona"
+
+#: widgets/treewidget.cpp:70
+msgid "Get the column caption for column index"
+msgstr "Dobavi natpis kolone za indeks kolone"
+
+#: widgets/treewidget.cpp:71
+msgid "Set the pixel width for column index - use 0 to hide"
+msgstr ""
+"Postavlja širinu u pikselima za indeks kolone, koristite 0 za sakrivanje"
+
+#: widgets/fontdialog.cpp:53
+msgid ""
+"Sets the default font for the dialog, by specifying the family, the size and "
+"other style options."
+msgstr ""
+"Postavlja podrazumijevani font dijaloga, po porodici, veličini, i drugim "
+"stilskim opcijama."
+
+#: widgets/fontdialog.cpp:55
+msgid "Returns the font family."
+msgstr "Vraća porodicu fonta."
+
+#: widgets/fontdialog.cpp:57
+msgid "Returns the font size in points."
+msgstr "Vraća veličinu fonta u tačkama"
+
+#: widgets/fontdialog.cpp:59
+msgid "Returns true if the font is bold."
+msgstr "Vraćža TRUE ako je font podebljan"
+
+#: widgets/fontdialog.cpp:61
+msgid "Returns true if the font is italic."
+msgstr "Vraćža TRUE ako je font kurzivni"
+
+#: widgets/aboutdialog.cpp:62
+msgid ""
+"Sets information about the application. This is the first method that must "
+"be called, any addition to the dialog done before initialization will be "
+"ignored."
+msgstr ""
+"Postavlja podatke o programu. Ovo je prva metoda koja se mora zvati, bilo "
+"koje dodavanje na dijalog učinjeno prije inicijalizacije će biti zanemareno."
+
+#: widgets/aboutdialog.cpp:64
+msgid "Add an author. Only the author name is required."
+msgstr "Dodaj autora. Potrebno je samo ime autora."
+
+#: widgets/aboutdialog.cpp:66
+msgid "Add a translator. Only the name is required."
+msgstr "Dodaj prevodioca. Potrebno je samo ime."
+
+#: widgets/aboutdialog.cpp:68
+msgid "Set a short description text."
+msgstr "Postavi kratak opis."
+
+#: widgets/aboutdialog.cpp:70
+msgid "Set a homepage address."
+msgstr "Postavi adresu domaće strane."
+
+#: widgets/aboutdialog.cpp:72
+msgid "Set an email address, where bugs can be reported."
+msgstr "Postavi adresu e-pošte na koju se mogu prijavljivati greške."
+
+#: widgets/aboutdialog.cpp:74
+msgid ""
+"Sets license information of the application. The parameter can be one of the "
+"license keys - GPL_V2, LGPL_V2, BSD, ARTISTIC -, or a freely specified text."
+msgstr ""
+"Postavi podatke o licenciranju. Parametar može biti jedan od predefinisanih "
+"ključeva — GPL_V2, LGPL_V2, BSD, ARTISTIC — ili slobodan tekst."
+
+#: widgets/aboutdialog.cpp:76
+msgid "Returns the set version string."
+msgstr "Vraća postavljeni znakovni niz verzije."
+
+#: widgets/corewidgetsplugin.cpp:38
+msgid "Kommander HTML part plugin."
+msgstr "Dodatak Kommander HTML dijelove."
+
+#: widgets/textedit.cpp:49
+msgid "See if the widget has been modified."
+msgstr "Provjeri da li je grafička kontrola mijenjana"
+
+#: widgets/toolbox.cpp:42
+msgid "Adds a widget to the toolbox. Returns the index of the widget."
+msgstr "Dodaje kontrolu u skup alata. Vraća indeks kontrole."
+
+#: widgets/toolbox.cpp:44
+msgid "Returns the name of the active widget."
+msgstr "Vraća ime aktivne kontrole."
+
+#: widgets/toolbox.cpp:45
+msgid ""
+"Remove the selected widget, returns the index of the removed widget or -1 if "
+"no such widget was found."
+msgstr ""
+"Ukloni izabranu kontrolu. Vraća indeks uklonjene kontrole ili -1 ako takva "
+"nije nađena."
+
+#: widgets/toolbox.cpp:46
+msgid ""
+"Remove the widget from the index position, returns the index of the removed "
+"widget or -1 if no widget was found."
+msgstr ""
+"Ukloni kontrolu na položaju indeksa. Vraća indeks uklonjene kontrole ili -1 "
+"ako takva nije nađena."
+
+#: widgets/toolbox.cpp:48
+msgid "Activates the selected widget."
+msgstr "Aktivira izabranu kontrolu."
+
+#: widgets/toolbox.cpp:50
+msgid "Returns the index of the active widget."
+msgstr "Vraća indeks aktivne kontrole."
+
+#: widgets/toolbox.cpp:52
+msgid "Returns the widget having the supplied index."
+msgstr "Vraća kontrolu koja odgovara datom indeksu."
+
+#: widgets/toolbox.cpp:54
+msgid ""
+"Returns the index of the widget, -1 if the widget is not part of the toolbox."
+msgstr "Vraća indeks kontrole, ili -1 ako kontrola nije dio skupa alata."
+
+#: widgets/popupmenu.cpp:59
+msgid ""
+"Insert an item into the popup menu. The executeWidget's execute method will "
+"be run when this item is selected. Returns the id of the inserted item. Use -"
+"1 as the index to insert at the end. The icon is optional."
+msgstr ""
+"Umetanje stavke u iskočni meniu. ExecuteWidget izvršna metoda će se izvoditi "
+"kada je ova stavka odabrana. Vraća ID umetnute stavke. Koristite -1 kao "
+"indeks za umetanje na kraju. Ikona je opcionalna."
+
+#: widgets/popupmenu.cpp:60
+msgid ""
+"Insert a separator item into the popup menu. Use -1 as the index to insert "
+"at the end."
+msgstr ""
+"Umeće separatorsku stavku u iskočnom meniju. Koristite -1 kao indeks za "
+"umetanje na kraju."
+
+#: widgets/popupmenu.cpp:61
+msgid ""
+"Change an item specified by id in the popup menu. The executeWidget's "
+"execute method will be run when this item is selected."
+msgstr ""
+"Promijeni stavku određenu id.-om u iskačućem meniju. Metod za izvršavanje "
+"kontrole executeWidget poziva se kada se stavka izabere."
+
+#: widgets/popupmenu.cpp:62
+msgid "Enable the item specified by id in the popup menu."
+msgstr "Uključi stavku određenu id.-om u iskačućem meniju."
+
+#: widgets/popupmenu.cpp:63
+msgid "Check if the item specified by id is enabled."
+msgstr "Provjeri da li je stavka određena id.-om uključena."
+
+#: widgets/popupmenu.cpp:64
+msgid "Make the item specified by id visible."
+msgstr "Učini stavku određenu id.-om vidljivom."
+
+#: widgets/popupmenu.cpp:65
+msgid "Apply checked status for the item specified by id."
+msgstr "Primijeni status popunjenosti na stavku određenu id.-om."
+
+#: widgets/popupmenu.cpp:66
+msgid "Check if the item specified by id is visible."
+msgstr "Provjeri da li je stavka određena id.-om vidljiva."
+
+#: widgets/popupmenu.cpp:67
+msgid "Verify if the item specified by id is checked."
+msgstr "Potvrdi da je stavka određena id.-om popunjena."
+
+#: widgets/popupmenu.cpp:68
+msgid ""
+"Insert submenu widget into the popup menu. Use -1 as the index to insert at "
+"the end. The icon is optional."
+msgstr ""
+"Umeće podmeni kontrolu u iskočnom meniju. Koristite -1 kao indeks za "
+"umetanje na kraju. Ikona je opciona."
+
+#: widgets/table.cpp:55
+msgid ""
+"Sets a column to sort ascending or descending. Optionally can sort with rows "
+"intact for database use. wholeRows is ignored under KDE4."
+msgstr ""
+"Postavlja kolonu za sortiranje rastuće ili opadajuće. Opcionalno možete "
+"sortirati s redovima očuvanim za bazu podataka. wholeRows se ignoriše pod "
+"KDE4."
+
+#: widgets/table.cpp:56
+msgid "Scrolls the table so the cell indicated is visible."
+msgstr "Pomiče tabelu tako da je označena ćelija vidljiva."
+
+#: widgets/table.cpp:57
+msgid "Select cells using the upper left and lower right cell addresses"
+msgstr "Odaber ćelije koristeći gornju lijevu i donju desnu adresu ćelijke"
+
+#: widgets/table.cpp:58
+msgid "Select the row with the zero based index."
+msgstr "Odabira red s indeksom koji počinje od nule"
+
+#: widgets/table.cpp:59
+msgid "Select the column with the zero based index."
+msgstr "Odabira kolonu s indeksom koji počinje od nule"
+
+#: widgets/table.cpp:60
+msgid "Set the column read only using zero based index."
+msgstr "Postavi kolonu samo za čitanje s indeksom koji počinje od nule"
+
+#: widgets/table.cpp:61
+msgid "Set the row read only using zero based index."
+msgstr "Postavi red samo za čitanje s indeksom koji počinje od nule"
+
+#: widgets/combobox.cpp:53
+msgid "Make the combobox expose its list without needing to use the mouse."
+msgstr "Čini da combobox izloži svoje liste bez potrebe za korištenje miša."
+
+#: widgets/closebutton.cpp:121
+msgid "Failed to start shell process."
+msgstr "Nisam uspio da pokrenem proces školjke."
+
+#: widgets/closebutton.cpp:128
+msgid "Shell process exited with an error."
+msgstr "Proces školjke izašao s greškom."
+
+#: widgets/timer.cpp:66
+msgid "Set the timer timeout interval in ms."
+msgstr "Postavi vrijeme prekoračenja tajmera u ms."
+
+#: widgets/scriptobject.cpp:102 lib/kommanderwidget.cpp:120
+msgid "Invalid state for associated text."
+msgstr "Neispravno stanje za pridruženi tekst."
+
 #: lib/expression.cpp:200 lib/expression.cpp:209
 msgid "error"
 msgstr "greška"
@@ -2200,10 +2446,6 @@ msgstr "Skripta za @%1 je prazna."
 #: lib/functionlib.cpp:738
 msgid "Enter a password"
 msgstr "Unesite lozinku"
-
-#: lib/kommanderwidget.cpp:120 widgets/scriptobject.cpp:102
-msgid "Invalid state for associated text."
-msgstr "Neispravno stanje za pridruženi tekst."
 
 #: lib/kommanderwidget.cpp:140
 #, kde-format
@@ -3063,248 +3305,6 @@ msgid ""
 msgstr ""
 "Prikazuje upitni dijalog sa do tri dugmeta. Vraća broj izabranog dugmeta."
 
-#: widgets/treewidget.cpp:66
-msgid "Add column at end with column header"
-msgstr "Dodavanje kolone na kraju s zaglavljem kolone"
-
-#: widgets/treewidget.cpp:67
-msgid "Set sorting for a column"
-msgstr "Postavlja sortiranje za kolonu"
-
-#: widgets/treewidget.cpp:69
-msgid "Get the column count"
-msgstr "Uzima broj kolona"
-
-#: widgets/treewidget.cpp:70
-msgid "Get the column caption for column index"
-msgstr "Dobavi natpis kolone za indeks kolone"
-
-#: widgets/treewidget.cpp:71
-msgid "Set the pixel width for column index - use 0 to hide"
-msgstr ""
-"Postavlja širinu u pikselima za indeks kolone, koristite 0 za sakrivanje"
-
-#: widgets/fontdialog.cpp:53
-msgid ""
-"Sets the default font for the dialog, by specifying the family, the size and "
-"other style options."
-msgstr ""
-"Postavlja podrazumijevani font dijaloga, po porodici, veličini, i drugim "
-"stilskim opcijama."
-
-#: widgets/fontdialog.cpp:55
-msgid "Returns the font family."
-msgstr "Vraća porodicu fonta."
-
-#: widgets/fontdialog.cpp:57
-msgid "Returns the font size in points."
-msgstr "Vraća veličinu fonta u tačkama"
-
-#: widgets/fontdialog.cpp:59
-msgid "Returns true if the font is bold."
-msgstr "Vraćža TRUE ako je font podebljan"
-
-#: widgets/fontdialog.cpp:61
-msgid "Returns true if the font is italic."
-msgstr "Vraćža TRUE ako je font kurzivni"
-
-#: widgets/textedit.cpp:49
-msgid "See if the widget has been modified."
-msgstr "Provjeri da li je grafička kontrola mijenjana"
-
-#: widgets/corewidgetsplugin.cpp:38
-msgid "Kommander HTML part plugin."
-msgstr "Dodatak Kommander HTML dijelove."
-
-#: widgets/aboutdialog.cpp:62
-msgid ""
-"Sets information about the application. This is the first method that must "
-"be called, any addition to the dialog done before initialization will be "
-"ignored."
-msgstr ""
-"Postavlja podatke o programu. Ovo je prva metoda koja se mora zvati, bilo "
-"koje dodavanje na dijalog učinjeno prije inicijalizacije će biti zanemareno."
-
-#: widgets/aboutdialog.cpp:64
-msgid "Add an author. Only the author name is required."
-msgstr "Dodaj autora. Potrebno je samo ime autora."
-
-#: widgets/aboutdialog.cpp:66
-msgid "Add a translator. Only the name is required."
-msgstr "Dodaj prevodioca. Potrebno je samo ime."
-
-#: widgets/aboutdialog.cpp:68
-msgid "Set a short description text."
-msgstr "Postavi kratak opis."
-
-#: widgets/aboutdialog.cpp:70
-msgid "Set a homepage address."
-msgstr "Postavi adresu domaće strane."
-
-#: widgets/aboutdialog.cpp:72
-msgid "Set an email address, where bugs can be reported."
-msgstr "Postavi adresu e-pošte na koju se mogu prijavljivati greške."
-
-#: widgets/aboutdialog.cpp:74
-msgid ""
-"Sets license information of the application. The parameter can be one of the "
-"license keys - GPL_V2, LGPL_V2, BSD, ARTISTIC -, or a freely specified text."
-msgstr ""
-"Postavi podatke o licenciranju. Parametar može biti jedan od predefinisanih "
-"ključeva — GPL_V2, LGPL_V2, BSD, ARTISTIC — ili slobodan tekst."
-
-#: widgets/aboutdialog.cpp:76
-msgid "Returns the set version string."
-msgstr "Vraća postavljeni znakovni niz verzije."
-
-#: widgets/toolbox.cpp:42
-msgid "Adds a widget to the toolbox. Returns the index of the widget."
-msgstr "Dodaje kontrolu u skup alata. Vraća indeks kontrole."
-
-#: widgets/toolbox.cpp:44
-msgid "Returns the name of the active widget."
-msgstr "Vraća ime aktivne kontrole."
-
-#: widgets/toolbox.cpp:45
-msgid ""
-"Remove the selected widget, returns the index of the removed widget or -1 if "
-"no such widget was found."
-msgstr ""
-"Ukloni izabranu kontrolu. Vraća indeks uklonjene kontrole ili -1 ako takva "
-"nije nađena."
-
-#: widgets/toolbox.cpp:46
-msgid ""
-"Remove the widget from the index position, returns the index of the removed "
-"widget or -1 if no widget was found."
-msgstr ""
-"Ukloni kontrolu na položaju indeksa. Vraća indeks uklonjene kontrole ili -1 "
-"ako takva nije nađena."
-
-#: widgets/toolbox.cpp:48
-msgid "Activates the selected widget."
-msgstr "Aktivira izabranu kontrolu."
-
-#: widgets/toolbox.cpp:50
-msgid "Returns the index of the active widget."
-msgstr "Vraća indeks aktivne kontrole."
-
-#: widgets/toolbox.cpp:52
-msgid "Returns the widget having the supplied index."
-msgstr "Vraća kontrolu koja odgovara datom indeksu."
-
-#: widgets/toolbox.cpp:54
-msgid ""
-"Returns the index of the widget, -1 if the widget is not part of the toolbox."
-msgstr "Vraća indeks kontrole, ili -1 ako kontrola nije dio skupa alata."
-
-#: widgets/popupmenu.cpp:59
-msgid ""
-"Insert an item into the popup menu. The executeWidget's execute method will "
-"be run when this item is selected. Returns the id of the inserted item. Use -"
-"1 as the index to insert at the end. The icon is optional."
-msgstr ""
-"Umetanje stavke u iskočni meniu. ExecuteWidget izvršna metoda će se izvoditi "
-"kada je ova stavka odabrana. Vraća ID umetnute stavke. Koristite -1 kao "
-"indeks za umetanje na kraju. Ikona je opcionalna."
-
-#: widgets/popupmenu.cpp:60
-msgid ""
-"Insert a separator item into the popup menu. Use -1 as the index to insert "
-"at the end."
-msgstr ""
-"Umeće separatorsku stavku u iskočnom meniju. Koristite -1 kao indeks za "
-"umetanje na kraju."
-
-#: widgets/popupmenu.cpp:61
-msgid ""
-"Change an item specified by id in the popup menu. The executeWidget's "
-"execute method will be run when this item is selected."
-msgstr ""
-"Promijeni stavku određenu id.-om u iskačućem meniju. Metod za izvršavanje "
-"kontrole executeWidget poziva se kada se stavka izabere."
-
-#: widgets/popupmenu.cpp:62
-msgid "Enable the item specified by id in the popup menu."
-msgstr "Uključi stavku određenu id.-om u iskačućem meniju."
-
-#: widgets/popupmenu.cpp:63
-msgid "Check if the item specified by id is enabled."
-msgstr "Provjeri da li je stavka određena id.-om uključena."
-
-#: widgets/popupmenu.cpp:64
-msgid "Make the item specified by id visible."
-msgstr "Učini stavku određenu id.-om vidljivom."
-
-#: widgets/popupmenu.cpp:65
-msgid "Apply checked status for the item specified by id."
-msgstr "Primijeni status popunjenosti na stavku određenu id.-om."
-
-#: widgets/popupmenu.cpp:66
-msgid "Check if the item specified by id is visible."
-msgstr "Provjeri da li je stavka određena id.-om vidljiva."
-
-#: widgets/popupmenu.cpp:67
-msgid "Verify if the item specified by id is checked."
-msgstr "Potvrdi da je stavka određena id.-om popunjena."
-
-#: widgets/popupmenu.cpp:68
-msgid ""
-"Insert submenu widget into the popup menu. Use -1 as the index to insert at "
-"the end. The icon is optional."
-msgstr ""
-"Umeće podmeni kontrolu u iskočnom meniju. Koristite -1 kao indeks za "
-"umetanje na kraju. Ikona je opciona."
-
-#: widgets/table.cpp:55
-msgid ""
-"Sets a column to sort ascending or descending. Optionally can sort with rows "
-"intact for database use. wholeRows is ignored under KDE4."
-msgstr ""
-"Postavlja kolonu za sortiranje rastuće ili opadajuće. Opcionalno možete "
-"sortirati s redovima očuvanim za bazu podataka. wholeRows se ignoriše pod "
-"KDE4."
-
-#: widgets/table.cpp:56
-msgid "Scrolls the table so the cell indicated is visible."
-msgstr "Pomiče tabelu tako da je označena ćelija vidljiva."
-
-#: widgets/table.cpp:57
-msgid "Select cells using the upper left and lower right cell addresses"
-msgstr "Odaber ćelije koristeći gornju lijevu i donju desnu adresu ćelijke"
-
-#: widgets/table.cpp:58
-msgid "Select the row with the zero based index."
-msgstr "Odabira red s indeksom koji počinje od nule"
-
-#: widgets/table.cpp:59
-msgid "Select the column with the zero based index."
-msgstr "Odabira kolonu s indeksom koji počinje od nule"
-
-#: widgets/table.cpp:60
-msgid "Set the column read only using zero based index."
-msgstr "Postavi kolonu samo za čitanje s indeksom koji počinje od nule"
-
-#: widgets/table.cpp:61
-msgid "Set the row read only using zero based index."
-msgstr "Postavi red samo za čitanje s indeksom koji počinje od nule"
-
-#: widgets/combobox.cpp:53
-msgid "Make the combobox expose its list without needing to use the mouse."
-msgstr "Čini da combobox izloži svoje liste bez potrebe za korištenje miša."
-
-#: widgets/closebutton.cpp:121
-msgid "Failed to start shell process."
-msgstr "Nisam uspio da pokrenem proces školjke."
-
-#: widgets/closebutton.cpp:128
-msgid "Shell process exited with an error."
-msgstr "Proces školjke izašao s greškom."
-
-#: widgets/timer.cpp:66
-msgid "Set the timer timeout interval in ms."
-msgstr "Postavi vrijeme prekoračenja tajmera u ms."
-
 #. i18n: file: editor/templates/Tab_Dialog.ui:37
 #. i18n: ectx: attribute (title), widget (QWidget)
 #. i18n: file: editor/templates/Tab_Dialog.ui:45
@@ -3369,7 +3369,7 @@ msgstr "F1"
 #. i18n: ectx: property (text), widget (QPushButton, buttonOk)
 #: rc.cpp:17 rc.cpp:38 rc.cpp:44 rc.cpp:62 rc.cpp:83 rc.cpp:134 rc.cpp:161
 #: rc.cpp:221 rc.cpp:287 rc.cpp:314 rc.cpp:353 rc.cpp:463 rc.cpp:757
-#: rc.cpp:796 rc.cpp:880 rc.cpp:1030 rc.cpp:1231 rc.cpp:1258 rc.cpp:1282
+#: rc.cpp:808 rc.cpp:880 rc.cpp:1030 rc.cpp:1231 rc.cpp:1258 rc.cpp:1282
 msgid "&OK"
 msgstr "&U redu"
 
@@ -3415,7 +3415,7 @@ msgstr "&U redu"
 #. i18n: ectx: property (text), widget (QPushButton, buttonCancel)
 #: rc.cpp:20 rc.cpp:41 rc.cpp:47 rc.cpp:65 rc.cpp:86 rc.cpp:140 rc.cpp:173
 #: rc.cpp:224 rc.cpp:293 rc.cpp:326 rc.cpp:359 rc.cpp:475 rc.cpp:604
-#: rc.cpp:763 rc.cpp:799 rc.cpp:892 rc.cpp:1036 rc.cpp:1243 rc.cpp:1264
+#: rc.cpp:763 rc.cpp:811 rc.cpp:892 rc.cpp:1036 rc.cpp:1243 rc.cpp:1264
 #: rc.cpp:1294
 msgid "&Cancel"
 msgstr "&Odustani"
@@ -4688,41 +4688,41 @@ msgstr "Ko&ntrola:"
 msgid "Fi&le..."
 msgstr "D&atotekal..."
 
-#. i18n: file: editor/choosewidget.ui:13
-#. i18n: ectx: property (windowTitle), widget (QDialog, ChooseWidgetBase)
-#: rc.cpp:793
-msgid "Choose Widget"
-msgstr "Izaberite kontrolu"
-
-#. i18n: file: editor/choosewidget.ui:92
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:802
-msgid "Find:"
-msgstr "Nađi:"
-
 #. i18n: file: editor/actioneditor.ui:13
 #. i18n: ectx: property (windowTitle), widget (QWidget, ActionEditorBase)
-#: rc.cpp:805
+#: rc.cpp:793
 msgid "Edit Actions"
 msgstr "Uredi akcije"
 
 #. i18n: file: editor/actioneditor.ui:42
 #. i18n: ectx: property (toolTip), widget (QToolButton, buttonNewAction)
-#: rc.cpp:808
+#: rc.cpp:796
 msgid "Create new Action"
 msgstr "Napravi novu akciju"
 
 #. i18n: file: editor/actioneditor.ui:58
 #. i18n: ectx: property (toolTip), widget (QToolButton, buttonDeleteAction)
-#: rc.cpp:811
+#: rc.cpp:799
 msgid "Delete current Action"
 msgstr "Obriši tekuću akciju"
 
 #. i18n: file: editor/actioneditor.ui:74
 #. i18n: ectx: property (toolTip), widget (QToolButton, buttonConnect)
-#: rc.cpp:814
+#: rc.cpp:802
 msgid "Connect current Action"
 msgstr "Poveži tekuću akciju"
+
+#. i18n: file: editor/choosewidget.ui:13
+#. i18n: ectx: property (windowTitle), widget (QDialog, ChooseWidgetBase)
+#: rc.cpp:805
+msgid "Choose Widget"
+msgstr "Izaberite kontrolu"
+
+#. i18n: file: editor/choosewidget.ui:92
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:814
+msgid "Find:"
+msgstr "Nađi:"
 
 #. i18n: file: editor/iconvieweditor.ui:35
 #. i18n: ectx: property (caption), widget (QDialog)
