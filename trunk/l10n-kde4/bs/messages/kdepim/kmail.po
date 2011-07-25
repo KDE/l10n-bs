@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-07-24 04:23+0200\n"
+"POT-Creation-Date: 2011-07-25 04:23+0200\n"
 "PO-Revision-Date: 2011-01-31 11:58+0000\n"
 "Last-Translator: ahmed alic <Unknown>\n"
 "Language-Team: Bosanski <bs@li.org>\n"
@@ -2306,133 +2306,1953 @@ msgstr "Obriši poruke"
 msgid "Found no attachments to save."
 msgstr "Nisam pronašao priloge koje bi trebalo snimiti."
 
-#. i18n: file: tips:2
-#. i18n: ectx: @info:tipoftheday
-#: tips.cpp:3
-msgid ""
-"<p>...that you can go to the next and previous message by using the\n"
-"right and left arrow keys respectively?</p>\n"
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
 msgstr ""
-"<p>...da možete preći na sljedeću ili prethodnu poruku u fasciklu\n"
-"koristeći dugmad sa strelicama lijevo i desno respektivno?</p>\n"
+"Vedran Ljubović, ,Launchpad Contributions:,Arne Goetje,Mirza,Samir Ribić,"
+"ahmed alic"
 
-#. i18n: file: tips:9
-#. i18n: ectx: @info:tipoftheday
-#: tips.cpp:9
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "vljubovic@smartnet.ba,,,arne@linux.org.tw,,,"
+
+#. i18n: file: kmail.kcfg.cmake:49
+#. i18n: ectx: whatsthis, entry (ExcludeImportantMailFromExpiry), group (Behaviour)
+#: rc.cpp:6
+msgid ""
+"This prevents the automatic expiry of old messages in a folder from deleting "
+"(or moving to an archive folder) the messages that are marked 'Important' or "
+"'Action Item'"
+msgstr ""
+"Time se sprječava automatsko isticanje stare poruke u fascikli od brisanja "
+"(ili premještanje u arhivnu fasciklu) poruka koje su označene kao \"važne\" "
+"ili \"Akcijski predmet '"
+
+#. i18n: file: kmail.kcfg.cmake:54
+#. i18n: ectx: label, entry (SendOnCheck), group (Behaviour)
+#: rc.cpp:9
+msgid "Send queued mail on mail check"
+msgstr "Pošalji poštu iz reda čekanja prilikom provjere pošte"
+
+#. i18n: file: kmail.kcfg.cmake:55
+#. i18n: ectx: whatsthis, entry (SendOnCheck), group (Behaviour)
+#: rc.cpp:12
+msgid ""
+"<qt><p>Select whether you want KMail to send all messages in the outbox on "
+"manual or all mail checks, or whether you do not want messages to be sent "
+"automatically at all. </p></qt>"
+msgstr ""
+"<qt><p>Izaberite da li želite da KMail šalje sve poruke iz outboxa prilikom "
+"ručnih ili svih provjera nove pošte ili ne želite uopšte slati poruke "
+"automatski.</p></qt>"
+
+#. i18n: file: kmail.kcfg.cmake:65
+#. i18n: ectx: label, entry (AutoLostFoundMove), group (Behaviour)
+#: rc.cpp:15
+msgid ""
+"Automatically move non-synced mails from folders with insufficient access "
+"rights"
+msgstr ""
+"Automatski premjesti nesinhornizovanu poštu iz fascikla sa nedovoljnim "
+"pravima pristupa"
+
+#. i18n: file: kmail.kcfg.cmake:66
+#. i18n: ectx: whatsthis, entry (AutoLostFoundMove), group (Behaviour)
+#: rc.cpp:18
+msgid ""
+"If there are new messages in a folder, which have not been uploaded to the "
+"server yet, but you do not have sufficient access rights on the folder now "
+"to upload them, these messages will automatically be moved into a lost and "
+"found folder."
+msgstr ""
+"Ako u direkorijima ima novih poruka koje još uvijek nisu poslate na server, "
+"ali nemate dovoljna prava pristupa za fascikl da biste ih poslali, te poruke "
+"će biti automatski premještene u direkorij izgubljenog i nađenog."
+
+#. i18n: file: kmail.kcfg.cmake:71
+#. i18n: ectx: label, entry (AllowLocalFlags), group (Behaviour)
+#: rc.cpp:21
+msgid "Allow local flags in read-only folders"
+msgstr "Lokalne zastavice moguće u fasciklima samo-za-čitanje"
+
+#. i18n: file: kmail.kcfg.cmake:78
+#. i18n: ectx: whatsthis, entry (LastSelectedFolder), group (FolderSelectionDialog)
+#: rc.cpp:24
+msgid "The most recently selected folder in the folder selection dialog."
+msgstr "Najskorije korišten fascikl u prozoru za izbor fascikla."
+
+#. i18n: file: kmail.kcfg.cmake:93
+#. i18n: ectx: label, entry (SystemTrayPolicy), group (General)
+#: rc.cpp:30
+msgid "Policy for showing the system tray icon"
+msgstr "Politika prikazivanja ikone u sistemskom trayu"
+
+#. i18n: file: kmail.kcfg.cmake:101
+#. i18n: ectx: label, entry (CloseDespiteSystemTray), group (General)
+#: rc.cpp:33
+msgid ""
+"Close the application when the main window is closed, even if there is a "
+"system tray icon active."
+msgstr ""
+"Zatvori aplikaciju kada je glavni prozor zatvoren, čak i ako postoji aktivna "
+"ikona u sistemskom uglu."
+
+#. i18n: file: kmail.kcfg.cmake:105
+#. i18n: ectx: label, entry (VerboseNewMailNotification), group (General)
+#: rc.cpp:36
+msgid "Verbose new mail notification"
+msgstr "Obavijest o novim porukama"
+
+#. i18n: file: kmail.kcfg.cmake:106
+#. i18n: ectx: whatsthis, entry (VerboseNewMailNotification), group (General)
+#: rc.cpp:39
+msgid ""
+"If this option is enabled then for each folder the number of newly arrived "
+"messages is shown in the new mail notification; otherwise, you will only get "
+"a simple 'New mail arrived' message."
+msgstr ""
+"Ako je uključena ova opcija, za svaki fascikl biće prikazan broj novih "
+"poruka u obavještenju o novoj pošti. U suprotnom, dobićete jednostavnu "
+"poruku 'Imate novu poštu'."
+
+#. i18n: file: kmail.kcfg.cmake:110
+#. i18n: ectx: label, entry (ExternalEditor), group (General)
+#: rc.cpp:42
+msgid "Specify e&ditor:"
+msgstr "Navedite e&ditor:"
+
+#. i18n: file: kmail.kcfg.cmake:114
+#. i18n: ectx: label, entry (UseExternalEditor), group (General)
+#: rc.cpp:45
+msgid "Use e&xternal editor instead of composer"
+msgstr "Koristi &vanjski editor umjesto sastavljača"
+
+#. i18n: file: kmail.kcfg.cmake:118
+#. i18n: ectx: label, entry (CustomMessageHeadersCount), group (General)
+#: rc.cpp:48
+msgid ""
+"Specifies the number of custom MIME header fields to be inserted in messages "
+"(for internal use only)"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:124
+#. i18n: ectx: label, entry (CloseToQuotaThreshold), group (General)
+#: rc.cpp:51
+msgid ""
+"The threshold for when to warn the user that a folder is nearing its quota "
+"limit."
+msgstr "Prag upozoravanja korisnika da se fascikl bliži ograničenju kvote."
+
+#. i18n: file: kmail.kcfg.cmake:128
+#. i18n: ectx: label, entry (BeepOnMail), group (General)
+#: rc.cpp:54
+msgid "Beep upon receiving new mail"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:132
+#. i18n: ectx: label, entry (EmptyTrashOnExit), group (General)
+#: rc.cpp:57
+#, fuzzy
+msgid "Empty the local trash folder on program exit"
+msgstr "Isprazni lokalnu fasciklu za &smeće pri izlasku iz programa"
+
+#. i18n: file: kmail.kcfg.cmake:136
+#. i18n: ectx: label, entry (StartupFolder), group (General)
+#: rc.cpp:60
+msgid "Specify the folder to open when the program is started"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:140
+#. i18n: ectx: label, entry (ConfirmBeforeEmpty), group (General)
+#: rc.cpp:63
+#, fuzzy
+msgid "Ask for confirmation before moving all messages to trash"
+msgstr "Pitaj za po&tvrdu prije premještanja svih poruka u smeće"
+
+#. i18n: file: kmail.kcfg.cmake:144
+#. i18n: ectx: label, entry (AutoExpiring), group (General)
+#: rc.cpp:66
+msgid ""
+"Specifies whether the folders will expire in the background (for internal "
+"use only)"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:148
+#. i18n: ectx: label, entry (FirstStart), group (General)
+#: rc.cpp:69
+msgid ""
+"Specifies whether this is the very first time that the application is run "
+"(for internal use only)"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:152
+#. i18n: ectx: label, entry (PreviousVersion), group (General)
+#: rc.cpp:72
+msgid ""
+"Specifies the version of the application that was last used (for internal "
+"use only)"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:161
+#. i18n: ectx: whatsthis, entry (PreviousNewFeaturesMD5), group (Internal)
+#: rc.cpp:75
+msgid ""
+"This value is used to decide whether the KMail Introduction should be "
+"displayed."
+msgstr ""
+"Ova vrijednost se koristi za odlučivanje da li će biti prikazan KMail uvodni "
+"ekran."
+
+#. i18n: file: kmail.kcfg.cmake:168
+#. i18n: ectx: label, entry (MaxConnectionsPerHost), group (Network)
+#: rc.cpp:78
+msgid "Maximal number of connections per host"
+msgstr "Maksimalan broj konekcija po računaru"
+
+#. i18n: file: kmail.kcfg.cmake:169
+#. i18n: ectx: whatsthis, entry (MaxConnectionsPerHost), group (Network)
+#: rc.cpp:81
+msgid ""
+"This can be used to restrict the number of connections per host while "
+"checking for new mail. By default the number of connections is unlimited (0)."
+msgstr ""
+"Ovo se može koristiti da se ograniči broj konekcija po računaru prilikom "
+"provjere nove pošte. Podrazumijevani broj konekcija je neograničen (0)."
+
+#. i18n: file: kmail.kcfg.cmake:177
+#. i18n: ectx: label, entry (EnableFolderQuickSearch), group (UserInterface)
+#: rc.cpp:84
+msgid "Show folder quick search line edit"
+msgstr "Prikaži liniju za brzu pretragu fascikla"
+
+#. i18n: file: kmail.kcfg.cmake:181
+#. i18n: ectx: label, entry (HideLocalInbox), group (UserInterface)
+#: rc.cpp:87
+msgid "Hide local inbox if unused"
+msgstr "Sakrij lokalni prijemni sandučić ako se ne koristi"
+
+#. i18n: file: kmail.kcfg.cmake:189
+#. i18n: ectx: label, entry (ForwardingInlineByDefault), group (Composer)
+#: rc.cpp:90
+msgid "Forward Inline As Default."
+msgstr "Prosljeđivanje u liniji kao podrazumevano."
+
+#. i18n: file: kmail.kcfg.cmake:193
+#. i18n: ectx: whatsthis, entry (StickyIdentity), group (Composer)
+#: rc.cpp:93
+msgid ""
+"Remember this identity, so that it will be used in future composer windows "
+"as well.\n"
+"        "
+msgstr ""
+"Zapamti ovaj identitet, kako bi se koristio i u budućim prozorima "
+"sastavljača.\n"
+"        "
+
+#. i18n: file: kmail.kcfg.cmake:197
+#. i18n: ectx: whatsthis, entry (StickyFcc), group (Composer)
+#: rc.cpp:97
+msgid ""
+"Remember this folder for sent items, so that it will be used in future "
+"composer windows as well."
+msgstr ""
+"Zapamti ovaj fascikl za poslanu poštu, tako da će biti korišten i za buduće "
+"prozore sastavljača."
+
+#. i18n: file: kmail.kcfg.cmake:201
+#. i18n: ectx: whatsthis, entry (StickyTransport), group (Composer)
+#: rc.cpp:100
+msgid ""
+"Remember this mail transport, so that it will be used in future composer "
+"windows as well."
+msgstr ""
+"Zapamti ovaj mail transport, tako da će biti korišten i za buduće prozore "
+"sastavljača."
+
+#. i18n: file: kmail.kcfg.cmake:206
+#. i18n: ectx: whatsthis, entry (StickyDictionary), group (Composer)
+#: rc.cpp:103
 #, fuzzy
 msgid ""
-"<p>...that you can rapidly create filters on sender, recipient,\n"
-"subject and mailing lists with <em>Message-&gt;Create Filter</em>?</p>\n"
+"Remember this dictionary, so that it will be used in future composer windows "
+"as well.\n"
+"        "
 msgstr ""
-"<p>...da možete brzo napraviti filtere na pošiljaoca, primaoca\n"
-"temu i distribucijaku listu sa <em>Poruka-&gt;Kreiraj&nbsp;Filter</em>?</p>\n"
+"Zapamti ovaj identitet, kako bi se koristio i u budućim prozorima "
+"sastavljača.\n"
+"        "
 
-#. i18n: file: tips:16
-#. i18n: ectx: @info:tipoftheday
-#: tips.cpp:15
+#. i18n: file: kmail.kcfg.cmake:210
+#. i18n: ectx: label, entry (TooManyRecipients), group (Composer)
+#: rc.cpp:107
+msgid "Warn if the number of recipients is larger than"
+msgstr "Upozori ako je broj prmaoca veći od"
+
+#. i18n: file: kmail.kcfg.cmake:212
+#. i18n: ectx: whatsthis, entry (TooManyRecipients), group (Composer)
+#. i18n: file: kmail.kcfg.cmake:219
+#. i18n: ectx: whatsthis, entry (RecipientThreshold), group (Composer)
+#: rc.cpp:110 rc.cpp:113
 msgid ""
-"<p>...that you can get rid of the &quot;[mailing list name]&quot;\n"
-"added to the subject of some mailing lists by using the <em>rewrite\n"
-"header</em> filter action? Just use\n"
-"<pre>rewrite header &quot;Subject&quot;\n"
-"   replace &quot;\\s*\\[mailing list name\\]\\s*&quot;\n"
-"   with &quot;&quot;</pre>\n"
-"</p>\n"
+"If the number of recipients is larger than this value, KMail will warn and "
+"ask for a confirmation before sending the mail. The warning can be turned "
+"off."
 msgstr ""
-"<p>..da se možete otarasiti &quot;[imena mailing liste]&quot;\n"
-"koje se dodaje temi kod nekih mailig lista koristeći filter akciju\n"
-"<em>prepiši header</em>? Samo koristite\n"
-"<pre>prepiši header &quot;Tema&quot;\n"
-"   zamijeni &quot;\\s*\\[ime mailing liste\\]\\s*&quot;\n"
-"   sa &quot;&quot;</pre>\n"
-"</p>\n"
+"Ako je broj primaoca veći od ove vrijednosti, KMail će upozoriti i pitati za "
+"odobrenje prije slanja meila. Upozorenje može biti ugašeno."
 
-#. i18n: file: tips:28
-#. i18n: ectx: @info:tipoftheday
-#: tips.cpp:26
+#. i18n: file: kmail.kcfg.cmake:248
+#. i18n: ectx: label, entry (RequestMDN), group (Composer)
+#: rc.cpp:119
+msgid "Automatically request &message disposition notifications"
+msgstr "Automatski traži obavijest o &prijemu poruke"
+
+#. i18n: file: kmail.kcfg.cmake:249
+#. i18n: ectx: whatsthis, entry (RequestMDN), group (Composer)
+#: rc.cpp:122
+msgid ""
+"<qt><p>Enable this option if you want KMail to request Message Disposition "
+"Notifications (MDNs) for each of your outgoing messages.</p><p>This option "
+"only affects the default; you can still enable or disable MDN requesting on "
+"a per-message basis in the composer, menu item <em>Options</em>-><em>Request "
+"Disposition Notification</em>.</p></qt>"
+msgstr ""
+"<qt><p>Uključite ovu opciju ako želite da KMail zahtjeva obavještenja o "
+"raspoređivanju poruke (MDN) za svaku vašu odlazeću poruku.</p><p>Ova opcija "
+"utiče samo na podrazumevano; u sastavljaču uvijek možete uključiti ili "
+"isključiti zahtijevanje MDN-a za svaku poruku preko stavke u meniju "
+"<em>Opcije</em>-&gt;<em>Zahtevaj ovaveštenje o raspoređivanju</em>.</p></qt>"
+
+#. i18n: file: kmail.kcfg.cmake:270
+#. i18n: ectx: label, entry (AutosaveInterval), group (Composer)
+#: rc.cpp:125
+msgid "Autosave interval:"
+msgstr "Interval pro&vjere:"
+
+#. i18n: file: kmail.kcfg.cmake:271
+#. i18n: ectx: whatsthis, entry (AutosaveInterval), group (Composer)
+#: rc.cpp:128
+msgid ""
+"A backup copy of the text in the composer window can be created regularly. "
+"The interval used to create the backups is set here. You can disable "
+"autosaving by setting it to the value 0."
+msgstr ""
+"Možete redovno praviti rezervnu kopiju teksta u sastavljaču. Ovdje "
+"podešavate interval u kojem se prave rezervne kopije. Možete isključiti auto-"
+"snimanje ako podesite vrijednost na nulu."
+
+#. i18n: file: kmail.kcfg.cmake:275
+#. i18n: ectx: label, entry (QuoteSelectionOnly), group (Composer)
+#: rc.cpp:131
+msgid "Only quote selected text when replying"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:282
+#. i18n: ectx: label, entry (ShowSnippetManager), group (Composer)
+#: rc.cpp:134
+msgid "Show the Text Snippet Management and Insertion Panel in the composer."
+msgstr "Prikaži panel za umetanje i upravljanje isečcima teksta u sastavljaču."
+
+#. i18n: file: kmail.kcfg.cmake:288
+#. i18n: ectx: label, entry (ShowGnuPGAuditLogAfterSuccessfulSignEncrypt), group (Composer)
+#: rc.cpp:137
+msgid ""
+"Show the GnuPG Audit Log even after crypto operations that completed "
+"successfully."
+msgstr ""
+"Prikaži dnevnik revizije GnuPG-a čak i kada je kriptografski postupak "
+"uspješno dovršen."
+
+#. i18n: file: kmail.kcfg.cmake:293
+#. i18n: ectx: label, entry (CryptoEncryptToSelf), group (Composer)
+#: rc.cpp:140
 #, fuzzy
 msgid ""
-"<p>...that you can associate mailing lists with folders in the\n"
-"<em>Folder-&gt;Mailing List Management</em> dialog? You can then use\n"
-"<em>Message-&gt;New Message to Mailing List...</em>\n"
-"to open the composer with the mailing list address preset.\n"
-"Alternatively, you can click with the middle mouse button on the folder.</"
-"p>\n"
+"When encrypting emails, always also encrypt to the certificate of my own "
+"identity"
 msgstr ""
-"<p>...da možete da pridružite diskusionu listu fascikla u dijalogu\n"
-"<em>Fascikla-&gt;Upravljanje diskusionom listom...</em>? Onda možete "
-"koristiti\n"
-"<em>Poruka-&gt;Nova&nbsp;poruka&nbsp;u&nbsp; diskusionoj&nbsp;listi...</em>\n"
-"da otvorite sastavljač sa postavljenom adresom diskusione liste.\n"
-"Drugačije, možete kliknuti srednjim tasterom miša na fasciklu.</p>\n"
+"Kod dešifrovanja e-pošte, uvijek također dešifruj potvrdu mog identiteta"
 
-#. i18n: file: tips:38
-#. i18n: ectx: @info:tipoftheday
-#: tips.cpp:35
-msgid ""
-"<p>...that you can assign custom icons to each folder individually?\n"
-"See <em>Folder-&gt;Properties</em></p>\n"
-msgstr ""
-"<p>...da možete pridružiti vlastite ikone pojedinačno svakom fasciklu?\n"
-"Pogledajte <em>Direktorij-&gt;Osobine...</em></p>\n"
+#. i18n: file: kmail.kcfg.cmake:297
+#. i18n: ectx: label, entry (CryptoShowEncryptionResult), group (Composer)
+#: rc.cpp:143
+#, fuzzy
+msgid "Show signed/encrypted text after composing"
+msgstr "Prikaži p&otpisani/šifrovani tekst nakon sastavljanja"
 
-#. i18n: file: tips:45
-#. i18n: ectx: @info:tipoftheday
-#: tips.cpp:41
+#. i18n: file: kmail.kcfg.cmake:301
+#. i18n: ectx: label, entry (CryptoShowKeysForApproval), group (Composer)
+#: rc.cpp:146
 msgid ""
-"<p>...that KMail can show a color bar indicating the type of message\n"
-"(Plain text/HTML/OpenPGP) currently displayed?</p>\n"
-"<p>This thwarts attempts to fake successful signature verification by\n"
-"sending HTML mails mimicking KMail's signature status frames.</p>\n"
+"Always show the list of encryption keys to select the one which will be used"
 msgstr ""
-"<p>...da KMail može pokazati obojenu traku koja pokazuje vrstu\n"
-"(Običan tekst/HTML/OpenPGP) poruke koja je trenutno prikazana?</p>\n"
-"<p>Ovo sprječava pokušaje lažiranja uspješne provjere potpisa koristeći\n"
-"HTML poruke koje imitiraju statusne okvirove KMailovog potpisa.</p>\n"
 
-#. i18n: file: tips:54
-#. i18n: ectx: @info:tipoftheday
-#: tips.cpp:49
-msgid ""
-"<p>...that you can filter on any header by simply entering its name\n"
-"in the first edit field of a search rule?</p>\n"
+#. i18n: file: kmail.kcfg.cmake:305
+#. i18n: ectx: label, entry (CryptoStoreEncrypted), group (Composer)
+#: rc.cpp:149
+msgid "When check, sent messages will be stored in the encrypted form"
 msgstr ""
-"<p>...da možete filtrirati po osnovu bilo kojeg polja zaglavlja jednostavno\n"
-"unoseći njegovo ime u prvo polje pravila za pretragu?</p>\n"
 
-#. i18n: file: tips:61
-#. i18n: ectx: @info:tipoftheday
-#: tips.cpp:55
-msgid ""
-"<p>...that you can filter out HTML only messages with the rule\n"
-"<pre>&quot;Content-type&quot; contains &quot;text/html&quot;?</pre>\n"
-"</p>\n"
+#. i18n: file: kmail.kcfg.cmake:309
+#. i18n: ectx: label, entry (RecentUrls), group (Composer)
+#: rc.cpp:152
+msgid "A list of all the recently used URLs"
 msgstr ""
-"<p>...da možete filtrirati samo-HTML poruke koristeći pravilo\n"
-"<pre>&quot;Content-type&quot; sadrži &quot;text/html&quot;?</pre>\n"
-"</p>\n"
 
-#. i18n: file: tips:69
-#. i18n: ectx: @info:tipoftheday
-#: tips.cpp:62
-msgid ""
-"<p>...that when replying, only the selected part of the message is quoted?</"
-"p>\n"
-"<p>If nothing is selected, the full message is quoted.</p>\n"
-"<p>This even works with text of attachments when\n"
-"<em>View-&gt;Attachments-&gt;Inline</em> is selected.</p>\n"
-"<p>This feature is available with all reply commands except\n"
-"<em>Message-&gt;Reply Without Quote</em>.</p>\n"
-"<p align=\"right\"><em>contributed by David F. Newman</em></p>\n"
+#. i18n: file: kmail.kcfg.cmake:315
+#. i18n: ectx: label, entry (RecentEncodings), group (Composer)
+#: rc.cpp:155
+msgid "A list of all the recently used encodings"
 msgstr ""
-"<p>...da će prilikom odgovora biti citiran samo onaj dio poruke koji ste "
-"izabrali?</p>\n"
-"<p>Ako ništa nije izabrano, biće citirana čitava poruka.</p>\n"
-"<p>Ovo radi čak i za tekst priloga ako ste izabrali opciju\n"
-"<em>Pogled-&gt;Prilozi-&gt;U sastavu poruke</em>.</p>\n"
-"<p>Ova opcija je dostupna sa svim naredbama za odgovor osim\n"
-"<em>Poruka-&gt;Odgovori bez citiranja</em>.</p>\n"
-"<p align=\"right\"><em>napisao: David F. Newman</em></p>\n"
+
+#. i18n: file: kmail.kcfg.cmake:334
+#. i18n: ectx: label, entry (FilterDialogSize), group (Geometry)
+#: rc.cpp:158
+msgid "The size of the filter dialog (for internal use only)"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:338
+#. i18n: ectx: label, entry (IdentityDialogSize), group (Geometry)
+#: rc.cpp:161
+msgid "The size of the identity dialog (for internal use only)"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:342
+#. i18n: ectx: label, entry (SearchWidgetWidth), group (Geometry)
+#: rc.cpp:164
+msgid "The width of the search window (for internal use only)"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:346
+#. i18n: ectx: label, entry (SearchWidgetHeight), group (Geometry)
+#: rc.cpp:167
+msgid "The height of the search window (for internal use only)"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:350
+#. i18n: ectx: label, entry (ConfigureDialogWidth), group (Geometry)
+#: rc.cpp:170
+msgid "The width of the Configure KMail dialog (for internal use only)"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:354
+#. i18n: ectx: label, entry (ConfigureDialogHeight), group (Geometry)
+#: rc.cpp:173
+msgid "The height of the Configure KMail dialog (for internal use only)"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:380
+#. i18n: ectx: label, entry (readerWindowMode), group (Geometry)
+#: rc.cpp:176
+msgid "Message Preview Pane"
+msgstr "Panel za čitanje poruke"
+
+#. i18n: file: kmail.kcfg.cmake:383
+#. i18n: ectx: label, entry (readerWindowMode), group (Geometry)
+#: rc.cpp:179
+msgid "Do not show a message preview pane"
+msgstr "Ne pokazuj okno pregleda poruka"
+
+#. i18n: file: kmail.kcfg.cmake:386
+#. i18n: ectx: label, entry (readerWindowMode), group (Geometry)
+#: rc.cpp:182
+msgid "Show the message preview pane below the message list"
+msgstr "Prikaži okno pregleda poruka ispod liste poruka"
+
+#. i18n: file: kmail.kcfg.cmake:389
+#. i18n: ectx: label, entry (readerWindowMode), group (Geometry)
+#: rc.cpp:185
+msgid "Show the message preview pane next to the message list"
+msgstr "Prikaži okno pregleda poruka pored liste poruka"
+
+#. i18n: file: kmail.kcfg.cmake:399
+#. i18n: ectx: label, entry (FolderList), group (Geometry)
+#: rc.cpp:191
+msgid "Long folder list"
+msgstr "Dugačka lista fascikli"
+
+#. i18n: file: kmail.kcfg.cmake:402
+#. i18n: ectx: label, entry (FolderList), group (Geometry)
+#: rc.cpp:194
+msgid "Short folder list"
+msgstr "Kratka lista fascikli"
+
+#. i18n: file: kmail.kcfg.cmake:411
+#. i18n: ectx: label, entry (CloseAfterReplyOrForward), group (Reader)
+#: rc.cpp:197
+msgid "Close message window after replying or forwarding"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:419
+#. i18n: ectx: label, entry (SendMDNsWithEmptySender), group (MDN)
+#: rc.cpp:200
+msgid "Send Message Disposition Notifications with an empty sender."
+msgstr "Šalji obavještenja o raspoređivanju poruka sa praznim pošiljaocem."
+
+#. i18n: file: kmail.kcfg.cmake:420
+#. i18n: ectx: whatsthis, entry (SendMDNsWithEmptySender), group (MDN)
+#: rc.cpp:203
+msgid ""
+"Send Message Disposition Notifications with an empty sender string. Some "
+"servers might be configure to reject such messages, so if you are "
+"experiencing problems sending MDNs, uncheck this option."
+msgstr ""
+"Šalji obavještenja o raspoređivanju poruka sa praznim znakovnim nizom "
+"pošiljaoca. Neki serveri mogu biti podešeni da odbacuju takve poruke, tako "
+"da ako imate problema sa slanjem MDN-ova, isključite ovu opciju."
+
+#. i18n: file: kmail.kcfg.cmake:426
+#. i18n: ectx: label, entry (TemplateNewMessage), group (GlobalTemplates)
+#: rc.cpp:206
+msgid "Message template for new message"
+msgstr "Šablon poruke za novu poruku"
+
+#. i18n: file: kmail.kcfg.cmake:431
+#. i18n: ectx: label, entry (TemplateReply), group (GlobalTemplates)
+#: rc.cpp:209
+msgid "Message template for reply"
+msgstr "Šablon poruke za odgovor"
+
+#. i18n: file: kmail.kcfg.cmake:436
+#. i18n: ectx: label, entry (TemplateReplyAll), group (GlobalTemplates)
+#: rc.cpp:212
+msgid "Message template for reply to all"
+msgstr "Šablon poruke za odgovor svima"
+
+#. i18n: file: kmail.kcfg.cmake:441
+#. i18n: ectx: label, entry (TemplateForward), group (GlobalTemplates)
+#: rc.cpp:215
+msgid "Message template for forward"
+msgstr "Šablon poruke za prosljeđivanje"
+
+#. i18n: file: kmail.kcfg.cmake:446
+#. i18n: ectx: label, entry (QuoteString), group (GlobalTemplates)
+#: rc.cpp:218
+msgid "Quote characters"
+msgstr "Znakovi citiranja"
+
+#. i18n: file: kmail.kcfg.cmake:470
+#. i18n: ectx: label, entry (UpdateLevel), group (Startup)
+#: rc.cpp:221
+msgid "Specifies the number of updates to perform (for internal use only)"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:477
+#. i18n: ectx: label, entry (ToolTipDisplayPolicy), group (MainFolderView)
+#: rc.cpp:224
+msgid "Specifies the policy used when displaying policy"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:485
+#. i18n: ectx: label, entry (SubjectWidth), group (SearchDialog)
+#: rc.cpp:227
+msgid ""
+"Specifies the width of the subject field in the Search Window dialog (for "
+"internal use only)"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:489
+#. i18n: ectx: label, entry (SenderWidth), group (SearchDialog)
+#: rc.cpp:230
+msgid ""
+"Specifies the width of the sender field in the Search Window dialog (for "
+"internal use only)"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:493
+#. i18n: ectx: label, entry (DateWidth), group (SearchDialog)
+#: rc.cpp:233
+msgid ""
+"Specifies the width of the date field in the Search Window dialog (for "
+"internal use only)"
+msgstr ""
+
+#. i18n: file: kmail.kcfg.cmake:497
+#. i18n: ectx: label, entry (FolderWidth), group (SearchDialog)
+#: rc.cpp:236
+msgid ""
+"Specifies the width of the folder field in the Search Window dialog (for "
+"internal use only)"
+msgstr ""
+
+#. i18n: file: kmail_part.rc:8
+#. i18n: ectx: Menu (file)
+#. i18n: file: kmmainwin.rc:8
+#. i18n: ectx: Menu (file)
+#. i18n: file: kmreadermainwin.rc:5
+#. i18n: ectx: Menu (file)
+#: rc.cpp:256 rc.cpp:325 rc.cpp:367
+msgid "&File"
+msgstr "&Datoteka"
+
+#. i18n: file: kmail_part.rc:10
+#. i18n: ectx: Menu (file_new)
+#. i18n: file: kmmainwin.rc:10
+#. i18n: ectx: Menu (file_new)
+#: rc.cpp:259 rc.cpp:328
+msgctxt "@title:menu New message, folder or new window."
+msgid "New"
+msgstr "Nova"
+
+#. i18n: file: kmail_part.rc:38
+#. i18n: ectx: Menu (edit)
+#. i18n: file: kmcomposerui.rc:23
+#. i18n: ectx: Menu (edit)
+#. i18n: file: kmmainwin.rc:38
+#. i18n: ectx: Menu (edit)
+#. i18n: file: kmreadermainwin.rc:15
+#. i18n: ectx: Menu (edit)
+#: rc.cpp:262 rc.cpp:301 rc.cpp:331 rc.cpp:370
+msgid "&Edit"
+msgstr "&Izmijeni"
+
+#. i18n: file: kmail_part.rc:62
+#. i18n: ectx: Menu (view)
+#. i18n: file: kmcomposerui.rc:47
+#. i18n: ectx: Menu (view)
+#. i18n: file: kmmainwin.rc:62
+#. i18n: ectx: Menu (view)
+#. i18n: file: kmreadermainwin.rc:20
+#. i18n: ectx: Menu (view)
+#: rc.cpp:265 rc.cpp:307 rc.cpp:334 rc.cpp:373
+msgid "&View"
+msgstr "&Pogled"
+
+#. i18n: file: kmail_part.rc:83
+#. i18n: ectx: Menu (go)
+#. i18n: file: kmmainwin.rc:83
+#. i18n: ectx: Menu (go)
+#: rc.cpp:268 rc.cpp:337
+msgid "&Go"
+msgstr "&Idi"
+
+#. i18n: file: kmail_part.rc:97
+#. i18n: ectx: Menu (folder)
+#. i18n: file: kmmainwin.rc:97
+#. i18n: ectx: Menu (folder)
+#: rc.cpp:271 rc.cpp:340
+msgid "F&older"
+msgstr "Di&rektorij"
+
+#. i18n: file: kmail_part.rc:120
+#. i18n: ectx: Menu (message)
+#. i18n: file: kmcomposerui.rc:5
+#. i18n: ectx: Menu (file)
+#. i18n: file: kmmainwin.rc:120
+#. i18n: ectx: Menu (message)
+#. i18n: file: kmreadermainwin.rc:31
+#. i18n: ectx: Menu (message)
+#: rc.cpp:274 rc.cpp:298 rc.cpp:343 rc.cpp:376
+msgid "&Message"
+msgstr "Poru&ka"
+
+#. i18n: file: kmail_part.rc:127
+#. i18n: ectx: Menu (reply_special)
+#. i18n: file: kmmainwin.rc:127
+#. i18n: ectx: Menu (reply_special)
+#. i18n: file: kmreadermainwin.rc:38
+#. i18n: ectx: Menu (reply_special)
+#: rc.cpp:277 rc.cpp:346 rc.cpp:379
+msgid "Reply Special"
+msgstr "Odgovori posebno"
+
+#. i18n: file: kmail_part.rc:136
+#. i18n: ectx: Menu (menubar_message_forward)
+#. i18n: file: kmmainwin.rc:136
+#. i18n: ectx: Menu (menubar_message_forward)
+#. i18n: file: kmreadermainwin.rc:47
+#. i18n: ectx: Menu (menubar_message_forward)
+#: rc.cpp:280 rc.cpp:349 rc.cpp:382
+msgid "&Forward"
+msgstr "P&roslijedi:"
+
+#. i18n: file: kmail_part.rc:153
+#. i18n: ectx: Menu (apply_filter_actions)
+#. i18n: file: kmmainwin.rc:153
+#. i18n: ectx: Menu (apply_filter_actions)
+#: rc.cpp:283 rc.cpp:352 kmmainwidget.cpp:3251
+msgid "A&pply Filter"
+msgstr "Primijeni &filter"
+
+#. i18n: file: kmail_part.rc:162
+#. i18n: ectx: Menu (tools)
+#. i18n: file: kmmainwin.rc:162
+#. i18n: ectx: Menu (tools)
+#: rc.cpp:286 rc.cpp:355
+msgid "&Tools"
+msgstr "&Alati"
+
+#. i18n: file: kmail_part.rc:179
+#. i18n: ectx: Menu (settings)
+#. i18n: file: kmcomposerui.rc:86
+#. i18n: ectx: Menu (settings)
+#. i18n: file: kmmainwin.rc:179
+#. i18n: ectx: Menu (settings)
+#. i18n: file: kmreadermainwin.rc:63
+#. i18n: ectx: Menu (settings)
+#: rc.cpp:289 rc.cpp:313 rc.cpp:358 rc.cpp:385
+msgid "&Settings"
+msgstr "&Postavke"
+
+#. i18n: file: kmail_part.rc:191
+#. i18n: ectx: Menu (help)
+#. i18n: file: kmmainwin.rc:191
+#. i18n: ectx: Menu (help)
+#: rc.cpp:292 rc.cpp:361
+msgid "&Help"
+msgstr "&Pomoć"
+
+#. i18n: file: kmail_part.rc:257
+#. i18n: ectx: ToolBar (mainToolBar)
+#. i18n: file: kmcomposerui.rc:90
+#. i18n: ectx: ToolBar (mainToolBar)
+#. i18n: file: kmmainwin.rc:257
+#. i18n: ectx: ToolBar (mainToolBar)
+#. i18n: file: kmreadermainwin.rc:72
+#. i18n: ectx: ToolBar (mainToolBar)
+#: rc.cpp:295 rc.cpp:316 rc.cpp:364 rc.cpp:388
+msgid "Main Toolbar"
+msgstr "Glavna alatna traka"
+
+#. i18n: file: kmcomposerui.rc:32
+#. i18n: ectx: Menu (options)
+#: rc.cpp:304
+msgid "&Options"
+msgstr "&Opcije"
+
+#. i18n: file: kmcomposerui.rc:66
+#. i18n: ectx: Menu (attach)
+#: rc.cpp:310
+msgid "&Attach"
+msgstr "&Priloži"
+
+#. i18n: file: kmcomposerui.rc:104
+#. i18n: ectx: ToolBar (htmlToolBar)
+#: rc.cpp:319
+msgid "HTML Toolbar"
+msgstr "HTML traka s alatima"
+
+#. i18n: file: kmcomposerui.rc:123
+#. i18n: ectx: ToolBar (directionToolBar)
+#: rc.cpp:322
+msgid "Text Direction Toolbar"
+msgstr ""
+
+#. i18n: file: ui/accountspagereceivingtab.ui:19
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:391
+msgid "Incoming accounts (add at least one):"
+msgstr "Dolazni računi (dodajte barem jedan):"
+
+#. i18n: file: ui/accountspagereceivingtab.ui:56
+#. i18n: ectx: property (text), widget (KPushButton, mRemoveAccountButton)
+#: rc.cpp:400
+msgid "R&emove"
+msgstr "&Ukloni..."
+
+#. i18n: file: ui/accountspagereceivingtab.ui:80
+#. i18n: ectx: property (title), widget (QGroupBox, group)
+#: rc.cpp:403
+msgid "New Mail Notification"
+msgstr "Obavijest o novim porukama"
+
+#. i18n: file: ui/accountspagereceivingtab.ui:92
+#. i18n: ectx: property (text), widget (QCheckBox, mBeepNewMailCheck)
+#: rc.cpp:406
+msgid "&Beep"
+msgstr "&Zvuk"
+
+#. i18n: file: ui/accountspagereceivingtab.ui:105
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mVerboseNotificationCheck)
+#: rc.cpp:409
+msgid "Show for each folder the number of newly arrived messages"
+msgstr "Idi na sljedeći fascikl sa nepročitanim porukama"
+
+#. i18n: file: ui/accountspagereceivingtab.ui:108
+#. i18n: ectx: property (text), widget (QCheckBox, mVerboseNotificationCheck)
+#: rc.cpp:412
+msgid "Deta&iled new mail notification"
+msgstr "Obavijest o novim porukama"
+
+#. i18n: file: ui/accountspagereceivingtab.ui:121
+#. i18n: ectx: property (text), widget (QPushButton, mOtherNewMailActionsButton)
+#: rc.cpp:415
+msgid "Other Actio&ns..."
+msgstr "&Druge radnje..."
+
+#. i18n: file: ui/identitypage.ui:24
+#. i18n: ectx: property (toolTip), widget (QPushButton, mButtonAdd)
+#: rc.cpp:418
+msgid "Add a new identity"
+msgstr "Dodaj novi identitet"
+
+#. i18n: file: ui/identitypage.ui:27
+#. i18n: ectx: property (text), widget (QPushButton, mButtonAdd)
+#: rc.cpp:421 simplestringlisteditor.cpp:77
+msgid "&Add..."
+msgstr "&Dodaj..."
+
+#. i18n: file: ui/identitypage.ui:37
+#. i18n: ectx: property (toolTip), widget (QPushButton, mModifyButton)
+#: rc.cpp:424
+msgid "Modify the selected identity"
+msgstr "Izmijeni  odabrani identitet"
+
+#. i18n: file: ui/identitypage.ui:50
+#. i18n: ectx: property (toolTip), widget (QPushButton, mRenameButton)
+#: rc.cpp:430
+msgid "Rename the selected identity"
+msgstr "Preimenuj odabrani identitet"
+
+#. i18n: file: ui/identitypage.ui:53
+#. i18n: ectx: property (text), widget (QPushButton, mRenameButton)
+#: rc.cpp:433
+msgid "&Rename"
+msgstr "&Promijeni ime"
+
+#. i18n: file: ui/identitypage.ui:63
+#. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
+#: rc.cpp:436
+msgid "Remove the selected identity"
+msgstr "Ukloni odabrani identitet"
+
+#. i18n: file: ui/identitypage.ui:76
+#. i18n: ectx: property (toolTip), widget (QPushButton, mSetAsDefaultButton)
+#: rc.cpp:442
+msgid "Use the selected identity by default"
+msgstr "Koristi odabrani identitet kao zadani"
+
+#. i18n: file: ui/identitypage.ui:79
+#. i18n: ectx: property (text), widget (QPushButton, mSetAsDefaultButton)
+#: rc.cpp:445
+msgid "Set as &Default"
+msgstr "Postavi za &podrazumjevano"
+
+#. i18n: file: ui/miscpagemaintab.ui:19
+#. i18n: ectx: property (text), widget (QCheckBox, mEmptyFolderConfirmCheck)
+#: rc.cpp:448
+msgctxt "Corresponds to Folder->Move All Messages to Trash"
+msgid "Ask for co&nfirmation before moving all messages to trash"
+msgstr "Pitaj za po&tvrdu prije premještanja svih poruka u smeće"
+
+#. i18n: file: ui/miscpagemaintab.ui:26
+#. i18n: ectx: property (text), widget (QCheckBox, mExcludeImportantFromExpiry)
+#: rc.cpp:451
+msgid "E&xclude important messages from expiry"
+msgstr "I&sključi važne poruke iz isticanja"
+
+#. i18n: file: ui/miscpagemaintab.ui:39
+#. i18n: ectx: property (text), widget (QLabel, mLoopLabel)
+#: rc.cpp:454
+msgctxt ""
+"to be continued with \"do not loop\", \"loop in current folder\", and \"loop "
+"in all folders\""
+msgid "&When trying to find unread messages:"
+msgstr "&Kada pokušava da nađe nepročitane poruke:"
+
+#. i18n: file: ui/miscpagemaintab.ui:64
+#. i18n: ectx: property (whatsThis), widget (KComboBox, mLoopOnGotoUnread)
+#: rc.cpp:457
+msgctxt "what's this help"
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">When jumping to the next "
+"unread message, it may occur that no more unread messages are below the "
+"current message.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Do not loop:</span> The search will stop at the last message "
+"in the current folder.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Loop in current folder:</span> The search will continue at the "
+"top of the message list, but not go to another folder.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Loop in all folders:</span> The search will continue at the "
+"top of the message list. If no unread messages are found it will then "
+"continue to the next folder.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Similarly, when searching "
+"for the previous unread message, the search will start from the bottom of "
+"the message list and continue to the previous folder depending on which "
+"option is selected.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Loop in all marked folders: </span>This is the same as \"Loop "
+"in all folders\" except that only folders are taken into account which have "
+"been marked with the folder property \"Act on new/unread mail in this folder"
+"\".</p></body></html>"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
+"weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Pri skoku na narednu "
+"mepročitanu poruku se može desiti, da pod trenutnim porukama nema ni jedne "
+"nepročitane.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Ne Kruži:</span> Traženje se zaustavlja na zadnjoj poruci u "
+"trenutnoj fascikli.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Kruži po trenutnoj fascikli:</span> Traženje se nastavlja na "
+"vrhu spiska poruka, a ne skače se u drugu.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Kruži po vseh mapah:</span> Traženje se nastavlja na vrhu "
+"spiska poruka. Ako nema nepročitanih poruka, nastavlja se u narednoj "
+"fascikli.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Slično, pri traženju "
+"predhodne nepročitane poruke, traženje počinje na dnu spiska poruka i, "
+"ovisno od izbrane opcije, nastavlja u prethodnoj fascikli.</p>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+"weight:600;\">Kruži po svim označenim fasciklama: </span>To je jednako "
+"opciji »Kruži po svim fasciklama«, s tom razlikom, da se uzimaju samo "
+"fascikle, koje su bile označene svojstvom »Reaguj na novu/nepročitanu poštu "
+"u toj fascikli«.</p></body></html>"
+
+#. i18n: file: ui/miscpagemaintab.ui:68
+#. i18n: ectx: property (text), item, widget (KComboBox, mLoopOnGotoUnread)
+#: rc.cpp:469
+msgid "Do not Loop"
+msgstr "Ne ponavljaj u petlji"
+
+#. i18n: file: ui/miscpagemaintab.ui:73
+#. i18n: ectx: property (text), item, widget (KComboBox, mLoopOnGotoUnread)
+#: rc.cpp:472
+msgid "Loop in Current Folder"
+msgstr "Kruži kroz trenutni direktorij"
+
+#. i18n: file: ui/miscpagemaintab.ui:78
+#. i18n: ectx: property (text), item, widget (KComboBox, mLoopOnGotoUnread)
+#: rc.cpp:475
+msgid "Loop in All Folders"
+msgstr "Kruži kroz sve direktorije"
+
+#. i18n: file: ui/miscpagemaintab.ui:83
+#. i18n: ectx: property (text), item, widget (KComboBox, mLoopOnGotoUnread)
+#: rc.cpp:478
+msgid "Loop in All Marked Folders"
+msgstr "Petlja u svim označenim direktorijima"
+
+#. i18n: file: ui/miscpagemaintab.ui:97
+#. i18n: ectx: property (text), widget (QLabel, mEnterFolderLabel)
+#: rc.cpp:481
+msgctxt ""
+"to be continued with \"jump to first new message\", \"jump to first unread "
+"or new message\", and \"jump to last selected message\""
+msgid "When ente&ring a folder:"
+msgstr "Kada ulazi u direkto&rij:"
+
+#. i18n: file: ui/miscpagemaintab.ui:108
+#. i18n: ectx: property (text), item, widget (KComboBox, mActionEnterFolder)
+#: rc.cpp:484
+#, fuzzy
+msgid "Jump to First Unread Message"
+msgstr "skoči na prvu nepročitanu ili novu poruku"
+
+#. i18n: file: ui/miscpagemaintab.ui:113
+#. i18n: ectx: property (text), item, widget (KComboBox, mActionEnterFolder)
+#: rc.cpp:487
+msgid "Jump to Last Selected Message"
+msgstr "skoči na posljednje izabranu poruku"
+
+#. i18n: file: ui/miscpagemaintab.ui:118
+#. i18n: ectx: property (text), item, widget (KComboBox, mActionEnterFolder)
+#: rc.cpp:490
+#, fuzzy
+msgid "Jump to Newest Message"
+msgstr "skoči na prvu novu poruku"
+
+#. i18n: file: ui/miscpagemaintab.ui:123
+#. i18n: ectx: property (text), item, widget (KComboBox, mActionEnterFolder)
+#: rc.cpp:493
+#, fuzzy
+msgid "Jump to Oldest Message"
+msgstr "skoči na prvu novu poruku"
+
+#. i18n: file: ui/miscpagemaintab.ui:137
+#. i18n: ectx: property (text), widget (QCheckBox, mDelayedMarkAsRead)
+#: rc.cpp:496
+msgid "Mar&k selected message as read after"
+msgstr "Oz&nači trenutnu poruku kao pročitanu nakon"
+
+#. i18n: file: ui/miscpagemaintab.ui:147
+#. i18n: ectx: property (suffix), widget (KIntSpinBox, mDelayedMarkTime)
+#: rc.cpp:499
+msgid " sec"
+msgstr " sek"
+
+#. i18n: file: ui/miscpagemaintab.ui:157
+#. i18n: ectx: property (text), widget (QCheckBox, mShowPopupAfterDnD)
+#: rc.cpp:502
+msgid "&Ask for action after dragging messages to another folder"
+msgstr "Pit&aj za radnje nakon premještanja poruka u drugi direktorij"
+
+#. i18n: file: ui/miscpagemaintab.ui:170
+#. i18n: ectx: property (text), widget (QLabel, mStartUpFolderLabel)
+#: rc.cpp:505
+msgid "Open this folder on &startup:"
+msgstr "Otvori ovaj direktorij na &početku:"
+
+#. i18n: file: ui/miscpagemaintab.ui:177
+#. i18n: ectx: property (text), widget (QCheckBox, mEmptyTrashCheck)
+#: rc.cpp:508
+msgid "Empty local &trash folder on program exit"
+msgstr "Isprazni lokalnu fasciklu za &smeće pri izlasku iz programa"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:511
+msgid "HTML Messages"
+msgstr "HTML poruke"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:23
+#. i18n: ectx: property (text), widget (QLabel, labelWarnHTML)
+#: rc.cpp:514
+msgid ""
+"<b>WARNING:</b> Allowing HTML in email may increase the risk that your "
+"system will be compromised by present and anticipated security exploits. <a "
+"href=\"whatsthis1\">More about HTML mails...</a> <a href=\"whatsthis2\">More "
+"about external references...</a>"
+msgstr ""
+"<b>UPOZORENJE:</b>Dopuštanje HTML u e-pošti može povećati rizik da će vaš "
+"sistem biti ugrožen trenutnim i budućim iskorištenjem sigurnosnih rupa.<a "
+"href=\"whatsthis1\">Više o HTML e-pošti...</a> <a href=\"whatsthis2\">Više o "
+"vanjskim referencama...</a>"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:36
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mHtmlMailCheck)
+#: rc.cpp:517
+msgid ""
+"<qt><p>Messages sometimes come in both formats. This option controls whether "
+"you want the HTML part or the plain text part to be displayed.</"
+"p><p>Displaying the HTML part makes the message look better, but at the same "
+"time increases the risk of security holes being exploited.</p><p>Displaying "
+"the plain text part loses much of the message's formatting, but makes it "
+"almost <em>impossible</em> to exploit security holes in the HTML renderer "
+"(Konqueror).</p><p>The option below guards against one common misuse of HTML "
+"messages, but it cannot guard against security issues that were not known at "
+"the time this version of KMail was written.</p><p>It is therefore advisable "
+"to <em>not</em> prefer HTML to plain text.</p><p><b>Note:</b> You can set "
+"this option on a per-folder basis from the <i>Folder</i> menu of KMail's "
+"main window.</p></qt>"
+msgstr ""
+"<qt><p> Emailovi ponekad dolaze u oba formata. Ova opcija određuje da li "
+"želite prikazati HTML dio ili dio sa čistim tekstom.</p><p>Prikazivanjem "
+"HTML dijela poruka izgleda ljepše, ali istovremeno povećavate rizik "
+"zloupotrebe sigurnosnih rupa.</p><p>Prikazivanjem čistog teksta gubi se "
+"većina formatiranja poruke, ali istovremeno čini se gotovo <em>nemoguća</em> "
+"zloupotreba eventualnih rupa u Konqueror slagaču HTMLa.</p><p>Sljedeća "
+"opcija vas čuva od jedne česte zloupotrebe HTML poruka, ali vas ne može "
+"sačuvati od sigurnosnih rupa koje nisu bile poznate u vrijeme pravljenja ove "
+"verzije KMaila.</p><p>Stoga preporučujemo da <em>ne</em> preferirate HTML u "
+"odnosu na čisti tekst.</p><p><b>Napomena:</b> Ovu opciju možete podešavati "
+"posebno za svaki fascikl u meniju <i>Direktorij</i> vašeg glavnog KMail "
+"prozora.</p></qt>"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:39
+#. i18n: ectx: property (text), widget (QCheckBox, mHtmlMailCheck)
+#: rc.cpp:520
+msgid "Prefer HTML to plain text"
+msgstr "Koristi HTML umjesto običnog teksta"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:46
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mExternalReferences)
+#: rc.cpp:523
+msgid ""
+"<qt><p>Some mail advertisements are in HTML and contain references to, for "
+"example, images that the advertisers employ to find out that you have read "
+"their message (\"web bugs\").</p><p>There is no valid reason to load images "
+"off the Internet like this, since the sender can always attach the required "
+"images directly to the message.</p><p>To guard from such a misuse of the "
+"HTML displaying feature of KMail, this option is <em>disabled</em> by "
+"default.</p><p>However, if you wish to, for example, view images in HTML "
+"messages that were not attached to it, you can enable this option, but you "
+"should be aware of the possible problem.</p></qt>"
+msgstr ""
+"<qt><p>Neke reklame su pošte u HTML i sadrže reference, na primjer, slike "
+"koje oglašivači koriste da bi saznali da ste pročitali njihove poruke (\"web "
+"bube\").</p><p>Nema valjanog razloga za učitavanje slike s Interneta kao što "
+"su ove, jer pošiljalac uvijek može priložiti potrebne slike direktno na "
+"poruku.</p><p>Kako bi se zaštitli od takve zlopotrebe HTML prikaza u KMail, "
+"ovu opciju je <em>onemogućena</em> inicijalno.</p><p>Međutim, ako želite, na "
+"primjer, prikaz slike u HTML porukama koje nisu u prilogu, možete omogućite "
+"tu mogućnost, ali trebali biste biti svjesni mogućih problema.</p></qt>"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:49
+#. i18n: ectx: property (text), widget (QCheckBox, mExternalReferences)
+#: rc.cpp:526
+msgid "Allow messages to load external references from the Internet"
+msgstr "Dozvoli porukama da učitaju vanjske reference sa Mreže"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:59
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:529
+msgid "Encrypted Messages"
+msgstr "Šifrovane poruke"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:65
+#. i18n: ectx: property (text), widget (QCheckBox, mAlwaysDecrypt)
+#: rc.cpp:532
+msgid "Attempt decryption of encrypted messages when viewing"
+msgstr "Pokušaj da dešifruješ šifrovane poruke pri pregledu"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:75
+#. i18n: ectx: property (title), widget (QGroupBox, groupMessageDisp)
+#: rc.cpp:535
+msgid "Message Disposition Notifications"
+msgstr "Obavijesti o stanju poruke"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:81
+#. i18n: ectx: property (text), widget (QLabel, labelSend)
+#: rc.cpp:538
+msgid "Send policy:"
+msgstr "Politika slanja:"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:88
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioIgnore)
+#. i18n: file: ui/securitypagegeneraltab.ui:98
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioAsk)
+#. i18n: file: ui/securitypagegeneraltab.ui:108
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioDeny)
+#. i18n: file: ui/securitypagegeneraltab.ui:118
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioAlways)
+#. i18n: file: ui/securitypagegeneraltab.ui:135
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioNothing)
+#. i18n: file: ui/securitypagegeneraltab.ui:145
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioFull)
+#. i18n: file: ui/securitypagegeneraltab.ui:155
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioHeaders)
+#: rc.cpp:541 rc.cpp:547 rc.cpp:553 rc.cpp:559 rc.cpp:568 rc.cpp:574
+#: rc.cpp:580
+msgid ""
+"<qt><h3>Message Disposition Notification Policy</h3><p>MDNs are a "
+"generalization of what is commonly called <b>read receipt</b>. The message "
+"author requests a disposition notification to be sent and the receiver's "
+"mail program generates a reply from which the author can learn what happened "
+"to his message. Common disposition types include <b>displayed</b> (i.e. "
+"read), <b>deleted</b> and <b>dispatched</b> (e.g. forwarded).</p><p>The "
+"following options are available to control KMail's sending of MDNs:</"
+"p><ul><li><em>Ignore</em>: Ignores any request for disposition "
+"notifications. No MDN will ever be sent automatically (recommended).</"
+"li><li><em>Ask</em>: Answers requests only after asking the user for "
+"permission. This way, you can send MDNs for selected messages while denying "
+"or ignoring them for others.</li><li><em>Deny</em>: Always sends a "
+"<b>denied</b> notification. This is only <em>slightly</em> better than "
+"always sending MDNs. The author will still know that the messages has been "
+"acted upon, he just cannot tell whether it was deleted or read etc.</"
+"li><li><em>Always send</em>: Always sends the requested disposition "
+"notification. That means that the author of the message gets to know when "
+"the message was acted upon and, in addition, what happened to it (displayed, "
+"deleted, etc.). This option is strongly discouraged, but since it makes much "
+"sense e.g. for customer relationship management, it has been made available."
+"</li></ul></qt>"
+msgstr ""
+"<qt><h3>Politika obavješenja o stanju poruke</h3> <p>MDN (Message "
+"Disposition Notification) je opštiji slučaj onoga što se obično zove "
+"<b>potvrda čitanja</b>. Autor poruke je zatražio da bude poslano "
+"obavještenje o stanju, tj. da e-mail program primatelja generiše odgovor iz "
+"kojeg autor može saznati šta se desilo sa njegovom/njenom porukom. "
+"Uobičajene vrsta stanja su <b>prikazana</b> (tj. pročitana poruka), "
+"<b>obrisana</b> i <b>poslana</b> (tj. proslijeđena poruka).</p><p>Dostupne "
+"su sljedeće opcije za kontrolu KMailovog slanja MDNova:</"
+"p><ul><li><em>Ignoriši</em>: Ignoriše sve zahtjeve za obavještenjima o "
+"stanju. MDNovi neće nikada biti poslani automatski (preporučeno).</"
+"li><li><em>Pitaj</em>: Odgovor će biti poslan tek nakon što se dobije "
+"dozvola od korisnika. Na ovaj način možete slati MDNove za poruke za koje to "
+"želite učiniti, odbijajući ili ignorišući ostale.</li> <li><em>Odbij</em>: "
+"Uvijek šalje obavještenje da je poruka <b>odbijena</b>. Ovo je tek  "
+"<em>neznatno</em> bolje od slanja običnog MDNa. Autor će i dalje znati da je "
+"poruka primljena i da je na nju reagovano, jedino neće znati kako (da li je "
+"poruka obrisana, pročitana itd.</li> <li><em>Uvijek šalji</em>: Uvijek šalje "
+"traženo obavještenje o stanju. Ovo znači da će autor poruke znati da li je "
+"reagovano na poruku kao i šta se desilo s njom (da li je prikazana, obrisana "
+"itd.). Ova opcija se ne preporučuje, ali pošto ona može biti korisna npr. za "
+"odjel odnosa s javnošću, ostavljena je kao mogućnost.</li></ul></qt>"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:91
+#. i18n: ectx: property (text), widget (QRadioButton, radioIgnore)
+#: rc.cpp:544
+msgid "Ignore"
+msgstr "Ignoriši"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:101
+#. i18n: ectx: property (text), widget (QRadioButton, radioAsk)
+#: rc.cpp:550
+msgid "Ask"
+msgstr "Pitaj"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:111
+#. i18n: ectx: property (text), widget (QRadioButton, radioDeny)
+#: rc.cpp:556
+msgid "Deny"
+msgstr "Zabrani"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:121
+#. i18n: ectx: property (text), widget (QRadioButton, radioAlways)
+#: rc.cpp:562
+msgid "Always send"
+msgstr "Uvijek pošalji"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:128
+#. i18n: ectx: property (text), widget (QLabel, labelQuote)
+#: rc.cpp:565
+msgid "Quote original message:"
+msgstr "Od originalne poruke citiraj:"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:138
+#. i18n: ectx: property (text), widget (QRadioButton, radioNothing)
+#: rc.cpp:571
+msgid "Nothing"
+msgstr "Ništa"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:148
+#. i18n: ectx: property (text), widget (QRadioButton, radioFull)
+#: rc.cpp:577
+msgid "Full message"
+msgstr "Puna poruka"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:158
+#. i18n: ectx: property (text), widget (QRadioButton, radioHeaders)
+#: rc.cpp:583
+msgid "Only headers"
+msgstr "Samo zaglavlja"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:165
+#. i18n: ectx: property (text), widget (QCheckBox, mNoMDNsWhenEncryptedCheck)
+#: rc.cpp:586
+msgid "Do not send MDNs in response to encrypted messages"
+msgstr "Nemoj slati MDN kao odgovor na šifrovanu poruku"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:172
+#. i18n: ectx: property (text), widget (QLabel, labelWarning)
+#: rc.cpp:589
+msgid ""
+"<b>WARNING:</b> Unconditionally returning confirmations undermines your "
+"privacy. <a href=\"whatsthis3\">More about MDNs...</a>"
+msgstr ""
+"<b>UPOZORENJE:</b> Bezuslovno vračanje potvrda ugrožava vašu privatnost.<a "
+"href=\"whatsthis3\">Više o MDN-ovima...</a>"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:188
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: rc.cpp:592
+msgid "Certificate && Key Bundle Attachments"
+msgstr "Upravljanje certifikatima"
+
+#. i18n: file: ui/securitypagegeneraltab.ui:194
+#. i18n: ectx: property (text), widget (QCheckBox, mAutomaticallyImportAttachedKeysCheck)
+#: rc.cpp:595
+msgid "Automatically import keys and certificate"
+msgstr "Automatski uvezi ključeve i certifikate"
+
+#. i18n: file: ui/smimeconfiguration.ui:16
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, CRLRB)
+#: rc.cpp:598
+msgid ""
+"If this option is selected, S/MIME certificates are validated using "
+"Certificate Revocation Lists (CRLs)."
+msgstr ""
+"Ako je uključena ova opcija, S/MIME certifikati će biti provjeravani "
+"koristeći Liste opoziva certifikata (CRL)."
+
+#. i18n: file: ui/smimeconfiguration.ui:19
+#. i18n: ectx: property (text), widget (QRadioButton, CRLRB)
+#: rc.cpp:601
+msgid "Validate certificates using CRLs"
+msgstr "Provjeri certifikate koristeći CRL"
+
+#. i18n: file: ui/smimeconfiguration.ui:29
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, OCSPRB)
+#: rc.cpp:604
+msgid ""
+"If this option is selected, S/MIME certificates are validated online using "
+"the Online Certificates Status Protocol (OCSP). Fill in the URL of the OCSP "
+"responder below."
+msgstr ""
+"Ako je ova opcija uključena, S/MIME certifikati se provjeravaju online "
+"koristeći Online protokol za status certifikata (OCSP). Unesite URL za OCSP "
+"responder ispod."
+
+#. i18n: file: ui/smimeconfiguration.ui:32
+#. i18n: ectx: property (text), widget (QRadioButton, OCSPRB)
+#: rc.cpp:607
+msgid "Validate certificates online (OCSP)"
+msgstr "Provjeri certifikate on-line (OCSP)"
+
+#. i18n: file: ui/smimeconfiguration.ui:39
+#. i18n: ectx: property (title), widget (QGroupBox, OCSPGroupBox)
+#: rc.cpp:610
+msgid "Online Certificate Validation"
+msgstr "Generisanje certifikata"
+
+#. i18n: file: ui/smimeconfiguration.ui:49
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:613
+msgid "OCSP responder URL:"
+msgstr "OCSP responder URL:"
+
+#. i18n: file: ui/smimeconfiguration.ui:59
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:616
+msgid "OCSP responder signature:"
+msgstr "OCSP responder potpis:"
+
+#. i18n: file: ui/smimeconfiguration.ui:73
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, OCSPResponderURL)
+#: rc.cpp:619
+msgid ""
+"Enter here the address of the server for online validation of certificates "
+"(OCSP responder). The URL is usually starting with http://."
+msgstr ""
+"Unesite ovdje adresu servera za online provjeru certifikata (OCSP "
+"responder). URL obično počinje sa http://."
+
+#. i18n: file: ui/smimeconfiguration.ui:87
+#. i18n: ectx: property (text), widget (QCheckBox, ignoreServiceURLCB)
+#: rc.cpp:622
+msgid "Ignore service URL of certificates"
+msgstr "Ignoriši servisni URL sertifikata"
+
+#. i18n: file: ui/smimeconfiguration.ui:97
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, doNotCheckCertPolicyCB)
+#: rc.cpp:625
+msgid ""
+"By default GnuPG uses the file ~/.gnupg/policies.txt to check if a "
+"certificate policy is allowed. If this option is selected, policies are not "
+"checked."
+msgstr ""
+"Normalno GnuPG koristi datoteku ~/.gnupg/policies.txt da bi provjerio da li "
+"je dozvoljena politika certifikata. Ako je uključena ova opcija, politike "
+"neće biti provjeravane."
+
+#. i18n: file: ui/smimeconfiguration.ui:100
+#. i18n: ectx: property (text), widget (QCheckBox, doNotCheckCertPolicyCB)
+#: rc.cpp:628
+msgid "Do not check certificate policies"
+msgstr "Nemoj provjeravati politiku certifikata"
+
+#. i18n: file: ui/smimeconfiguration.ui:107
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, neverConsultCB)
+#: rc.cpp:631
+msgid ""
+"If this option is checked, Certificate Revocation Lists are never used to "
+"validate S/MIME certificates."
+msgstr ""
+"Ako je ova opcija isključena, Liste opoziva certifikata (CRL) se nikad ne "
+"koriste za provjeru S/MIME certifikata."
+
+#. i18n: file: ui/smimeconfiguration.ui:110
+#. i18n: ectx: property (text), widget (QCheckBox, neverConsultCB)
+#: rc.cpp:634
+msgid "Never consult a CRL"
+msgstr "Nikad ne konsultuj CRL"
+
+#. i18n: file: ui/smimeconfiguration.ui:117
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, fetchMissingCB)
+#: rc.cpp:637
+msgid ""
+"If this option is checked, missing issuer certificates are fetched when "
+"necessary (this applies to both validation methods, CRLs and OCSP)"
+msgstr ""
+"Ako je ova opcija uključena, nedostajući certifikati izdavača su dobavljeni "
+"kada je to potrebno (ovo se odnosi na oba metoda provjere, CRLove i OCSP)"
+
+#. i18n: file: ui/smimeconfiguration.ui:120
+#. i18n: ectx: property (text), widget (QCheckBox, fetchMissingCB)
+#: rc.cpp:640
+msgid "Fetch missing issuer certificates"
+msgstr "Kod dodavanja certifikata"
+
+#. i18n: file: ui/smimeconfiguration.ui:131
+#. i18n: ectx: attribute (title), widget (QWidget, tabHTTP)
+#: rc.cpp:643
+msgid "HTTP Requests"
+msgstr "HTTP zahtjevi"
+
+#. i18n: file: ui/smimeconfiguration.ui:137
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, disableHTTPCB)
+#: rc.cpp:646
+msgid "Entirely disables the use of HTTP for S/MIME."
+msgstr "Potpuno isključuje upotrebu HTTP-a za S/MIME."
+
+#. i18n: file: ui/smimeconfiguration.ui:140
+#. i18n: ectx: property (text), widget (QCheckBox, disableHTTPCB)
+#: rc.cpp:649
+msgid "Do not perform any HTTP requests"
+msgstr "Ne izvršavaj nijedan HTTP zahtjev"
+
+#. i18n: file: ui/smimeconfiguration.ui:147
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreHTTPDPCB)
+#: rc.cpp:652
+msgid ""
+"When looking for the location of a CRL, the to-be-tested certificate usually "
+"contains what are known as \"CRL Distribution Point\" (DP) entries, which "
+"are URLs describing the way to access the URL. The first found DP entry is "
+"used.  With this option all entries using the HTTP scheme are ignored when "
+"looking for a suitable DP."
+msgstr ""
+"Pri traženju lokacije CRL-a, sertifikat koji će biti testiran obično sadrži "
+"unose za  takozvane „distribucione tačke CRL-ova“ (DP); to su URL-ovi koji "
+"opisuju način pristupa do CRL-ova. Koristi se prvi pronađeni DP unos. Ovom "
+"opcijom ignorišu se svi unosi koji koriste HTTP šemu pri traženju pogodne DP."
+
+#. i18n: file: ui/smimeconfiguration.ui:150
+#. i18n: ectx: property (text), widget (QCheckBox, ignoreHTTPDPCB)
+#: rc.cpp:655
+msgid "Ignore HTTP CRL distribution point of certificates"
+msgstr "Ignoriši distribucionu tačku HTTP CRL-ova sertifikata"
+
+#. i18n: file: ui/smimeconfiguration.ui:172
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, honorHTTPProxyRB)
+#: rc.cpp:658
+msgid ""
+"If this option is selected, the value of the HTTP proxy shown on the right "
+"(which comes from the environment variable http_proxy) will be used for any "
+"HTTP request."
+msgstr ""
+"Ako je ova opcija izabrana, vrijednost HTTP proksija prikazana lijevo "
+"(dolazi iz promjenljive okruženja http_proxy) biće korišćena za sve HTTP "
+"zahtjeve."
+
+#. i18n: file: ui/smimeconfiguration.ui:175
+#. i18n: ectx: property (text), widget (QRadioButton, honorHTTPProxyRB)
+#: rc.cpp:661
+msgid "Use system HTTP proxy:"
+msgstr "Koristi sistemski HTTP proksi:"
+
+#. i18n: file: ui/smimeconfiguration.ui:192
+#. i18n: ectx: property (text), widget (QRadioButton, useCustomHTTPProxyRB)
+#: rc.cpp:667
+msgid "Use this proxy for HTTP requests: "
+msgstr "Koristi ovaj proksi za HTTP zahtjeve: "
+
+#. i18n: file: ui/smimeconfiguration.ui:199
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, customHTTPProxy)
+#: rc.cpp:670
+msgid ""
+"Enter here the location of your HTTP Proxy, which will be used for all HTTP "
+"requests relating to S/MIME. The syntax is host:port, for instance myproxy."
+"nowhere.com:3128."
+msgstr ""
+"Unesite ovdje lokaciju HTTP proksija koji treba koristiti za sve HTTP "
+"zahtjeve u vezi sa S/MIME-ovima. Sintaksa je domacin:port, npr. mojproksi."
+"nigdje.com:3128."
+
+#. i18n: file: ui/smimeconfiguration.ui:209
+#. i18n: ectx: attribute (title), widget (QWidget, tabLDAP)
+#: rc.cpp:673
+msgid "LDAP Requests"
+msgstr "LDAP zahtjevi"
+
+#. i18n: file: ui/smimeconfiguration.ui:217
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, disableLDAPCB)
+#: rc.cpp:676
+msgid "Entirely disables the use of LDAP for S/MIME."
+msgstr "Potpuno isključuje upotrebu LDAP-a za S/MIME."
+
+#. i18n: file: ui/smimeconfiguration.ui:220
+#. i18n: ectx: property (text), widget (QCheckBox, disableLDAPCB)
+#: rc.cpp:679
+msgid "Do not perform any LDAP requests"
+msgstr "Ne izvršavaj nijedan LDAP zahtjev"
+
+#. i18n: file: ui/smimeconfiguration.ui:227
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreLDAPDPCB)
+#: rc.cpp:682
+msgid ""
+"When looking for the location of a CRL, the to-be-tested certificate usually "
+"contains what are known as \"CRL Distribution Point\" (DP) entries, which "
+"are URLs describing the way to access the URL. The first found DP entry is "
+"used.  With this option all entries using the LDAP scheme are ignored when "
+"looking for a suitable DP."
+msgstr ""
+"Pri traženju lokacije CRL-a, sertifikat koji će biti testiran obično sadrži "
+"unose za  takozvane „distribucione tačke CRL-ova“ (DP); to su URL-ovi koji "
+"opisuju način pristupa do CRL-ova. Koristi se prvi pronađeni DP unos. Ovom "
+"opcijom ignorišu se svi unosi koji koriste LDAP šemu pri traženju pogodne DP."
+
+#. i18n: file: ui/smimeconfiguration.ui:230
+#. i18n: ectx: property (text), widget (QCheckBox, ignoreLDAPDPCB)
+#: rc.cpp:685
+msgid "Ignore LDAP CRL distribution point of certificates"
+msgstr "Ignoriši distribucionu tačku LDAP CRL-ova sertifikata"
+
+#. i18n: file: ui/smimeconfiguration.ui:239
+#. i18n: ectx: property (text), widget (QLabel, customLDAPLabel)
+#: rc.cpp:688
+msgid "Primary host for LDAP requests:"
+msgstr "Primarni domaćin za LDAP zahtjeve:"
+
+#. i18n: file: ui/smimeconfiguration.ui:250
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, customLDAPProxy)
+#: rc.cpp:691
+msgid ""
+"Entering a LDAP server here will make all LDAP requests go to that server "
+"first. More precisely, this setting overrides any specified host and port "
+"part in a LDAP URL and will also be used if host and port have been omitted "
+"from the URL. Other LDAP servers will be used only if the connection to the "
+"\"proxy\" failed.\n"
+"The syntax is \"HOST\" or \"HOST:PORT\". If PORT is omitted, port 389 "
+"(standard LDAP port) is used."
+msgstr ""
+"Svi LDAP zahtjevi će prvo ići na LDAP server koji ovdje unesete. Preciznije, "
+"ovo podešavanje gazi bilo koji domaćin i port naveden u LDAP URL-u, a "
+"koristi se i ako su domaćin i port izostavljeni u URL-u. Drugi LDAP serveri "
+"koriste se samo ako veza sa proksijem ne uspje.\n"
+"Sintaksa je „DOMACIN“ ili „DOMACIN:PORT“. Ako se port izostavi, koristiće se "
+"389 (standardni LDAP port)."
+
+#. i18n: file: ui/composercryptoconfiguration.ui:16
+#. i18n: ectx: property (title), widget (QGroupBox, optionsGroup_2)
+#: rc.cpp:695
+msgid "Signing"
+msgstr "Potpiši"
+
+#. i18n: file: ui/composercryptoconfiguration.ui:22
+#. i18n: ectx: property (text), widget (QCheckBox, mAutoSignature)
+#: rc.cpp:698
+msgid "&Automatically sign messages"
+msgstr "Automatski &potpiši poruke uz pomoć OpenPGPa"
+
+#. i18n: file: ui/composercryptoconfiguration.ui:25
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mAutoSignature)
+#: rc.cpp:701
+msgid ""
+"When this option is enabled, all messages you send will be signed by "
+"default; of course, it is still possible to disable signing for each message "
+"individually."
+msgstr ""
+"Kada je ova opcija uključena, sve poruke koje pošaljete će automatski biti "
+"potpisane. Naravno, još uvijek je moguće spriječiti potpisivanje pojedinačne "
+"poruke."
+
+#. i18n: file: ui/composercryptoconfiguration.ui:35
+#. i18n: ectx: property (title), widget (QGroupBox, optionsGroup)
+#: rc.cpp:704
+msgid "Encrypting"
+msgstr "Kriptovanje"
+
+#. i18n: file: ui/composercryptoconfiguration.ui:41
+#. i18n: ectx: property (text), widget (QCheckBox, mEncToSelf)
+#: rc.cpp:707
+msgid ""
+"When encrypting emails, always also encr&ypt to the certificate of my own "
+"identity"
+msgstr ""
+"Kod dešifrovanja e-pošte, uvijek također dešifruj potvrdu mog identiteta"
+
+#. i18n: file: ui/composercryptoconfiguration.ui:44
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mEncToSelf)
+#: rc.cpp:710
+msgid ""
+"When this option is enabled, the message/file will not only be encrypted "
+"with the receiver's public key, but also with your key. This will enable you "
+"to decrypt the message/file at a later time. This is generally a good idea."
+msgstr ""
+"Kada je ova opcija uključena, poruka/datoteka neće biti šifrovana samo "
+"primateljevim javnim ključem, nego i vašim ključem. Ovo vam omogućuje da "
+"dešifrujete poruku/datoteku kasnije. Ovo je generalno dobra ideja."
+
+#. i18n: file: ui/composercryptoconfiguration.ui:51
+#. i18n: ectx: property (text), widget (QCheckBox, mShowEncryptionResult)
+#: rc.cpp:713
+msgid "Show s&igned/encrypted text after composing"
+msgstr "Prikaži p&otpisani/šifrovani tekst nakon sastavljanja"
+
+#. i18n: file: ui/composercryptoconfiguration.ui:54
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mShowEncryptionResult)
+#: rc.cpp:716
+msgid ""
+"When this option is enabled, the signed/encrypted text will be shown in a "
+"separate window, enabling you to know how it will look before it is sent. "
+"This is a good idea when you are verifying that your encryption system works."
+msgstr ""
+"Kada je ova opcija uključena, poslani/šifrovani tekst će biti prikazan u "
+"zasebnom prozoru, što vam omogućuje da vidite kako će izgledati prije nego "
+"što ga pošaljete. Ovo je dobra ideja ako želite provjeriti kako funkcioniše "
+"vaš sistem šifrovanja."
+
+#. i18n: file: ui/composercryptoconfiguration.ui:61
+#. i18n: ectx: property (text), widget (QCheckBox, mStoreEncrypted)
+#: rc.cpp:719
+msgid "Store sent messages encry&pted"
+msgstr "Snimi poslane poruke š&ifrovano"
+
+#. i18n: file: ui/composercryptoconfiguration.ui:67
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mStoreEncrypted)
+#: rc.cpp:722
+msgid "Check to store messages encrypted "
+msgstr "Uključite da snimate poruke u šifrovanom obliku "
+
+#. i18n: file: ui/composercryptoconfiguration.ui:75
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mStoreEncrypted)
+#: rc.cpp:725
+#, fuzzy
+msgid ""
+"<qt>\n"
+"<h1>Store Messages Encrypted</h1>\n"
+"When this box is checked, sent messages are stored encrypted like they were "
+"sent. This is not recommended, as you will not be able to read the messages "
+"any longer if a necessary certificate expires.\n"
+"<p>\n"
+"However, there may be local rules that require you to turn this option on. "
+"When in doubt, check with your local administrator.\n"
+"</p></qt>"
+msgstr ""
+"<qt>\n"
+"<h1>Čuvaj poruke u šifrovanom obliku</h1>\n"
+"Kada je uključena ova opcija, poslane poruke će biti čuvane u šifrovanom "
+"obliku kao što su i poslane. Ovo se ne preporučuje, pošto nećete moći "
+"pročitati poruke ako potrebni certifikat istekne.\n"
+"<p>\n"
+"Ipak, možda postoje neka lokalna pravila koja od vas traže da uključite ovu "
+"opciju. Ako niste sigurni, pitajte vašeg lokalnog administratora.\n"
+"</qt>"
+
+#. i18n: file: ui/composercryptoconfiguration.ui:82
+#. i18n: ectx: property (text), widget (QCheckBox, mShowKeyApprovalDlg)
+#: rc.cpp:733
+msgid "Always show the encryption keys &for approval"
+msgstr "Uvijek pokaži ključeve za šifrovanje &radi odobrenja"
+
+#. i18n: file: ui/composercryptoconfiguration.ui:85
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mShowKeyApprovalDlg)
+#: rc.cpp:736
+msgid ""
+"When this option is enabled, the application will always show you a list of "
+"public keys from which you can choose the one it will use for encryption. If "
+"it is off, the application will only show the dialog if it cannot find the "
+"right key or if there are several which could be used."
+msgstr ""
+"Ako je ova opcija uključena, program će vam uvijek prikazati listu javnih "
+"ključeva među kojima možete izabrati onaj koji će biti korišten za "
+"šifrovanje. Ako je isključena, program će vam samo prikazati prozor ako ne "
+"može naći odgovarajući ključ ili ako se može koristiti nekoliko."
+
+#. i18n: file: ui/composercryptoconfiguration.ui:92
+#. i18n: ectx: property (text), widget (QCheckBox, mAutoEncrypt)
+#: rc.cpp:739
+msgid "Automatically encrypt &messages whenever possible"
+msgstr "Automatski š&ifriraj poruke kad god je moguće"
+
+#. i18n: file: ui/composercryptoconfiguration.ui:95
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mAutoEncrypt)
+#: rc.cpp:742
+msgid ""
+"When this option is enabled, every message you send will be encrypted "
+"whenever encryption is possible and desired; of course, it is still possible "
+"to disable the automatic encryption for each message individually."
+msgstr ""
+"Kada je ova opcija uključena, sve poruke koje pošaljete će automatski biti "
+"šifrovane kad god je enkripcija moguća i poželjna. Naravno, još uvijek je "
+"moguće spriječiti šifrovanje za svaku pojedinačnu poruku."
+
+#. i18n: file: ui/composercryptoconfiguration.ui:102
+#. i18n: ectx: property (text), widget (QCheckBox, mNeverEncryptWhenSavingInDrafts)
+#: rc.cpp:745
+msgid "Never sign/encrypt when sa&ving as draft"
+msgstr "Nikad ne potpisuj / ne šifruj prilikom s&nimanja kao nacrt"
+
+#. i18n: file: ui/warningconfiguration.ui:17
+#. i18n: ectx: property (toolTip), widget (QCheckBox, mWarnUnsigned)
+#: rc.cpp:748
+msgid "Check to be warned when sending unsigned messages."
+msgstr "Uključite da biste bili upozoreni prilikom slanja nepotpisanih poruka."
+
+#. i18n: file: ui/warningconfiguration.ui:25
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, mWarnUnsigned)
+#: rc.cpp:751
+#, fuzzy
+msgid ""
+"<qt>\n"
+"<h1>Warn When Trying To Send Unsigned Messages</h1>\n"
+"If this box is checked, you will be warned when you try to send parts of or "
+"the whole message unsigned.\n"
+"<p>\n"
+"It is recommended to leave this option turned on for maximum integrity.\n"
+"</p></qt>"
+msgstr ""
+"<qt>\n"
+"<h1>Upozori prilikom pokušaja slanja nepotpisanih poruka</h1>\n"
+"Ako je ova opcija uključena, bićete upozoreni kada pokušate slati dijelove "
+"ili čitavu poruku bez potpisivanja.\n"
+"<p>\n"
+"Preporučeno je da ovu opciju ostavite uključenom radi maksimalnog "
+"integriteta.\n"
+"</qt>"
+
+#. i18n: file: ui/warningconfiguration.ui:28
+#. i18n: ectx: property (text), widget (QCheckBox, mWarnUnsigned)
+#: rc.cpp:759
+msgid "Warn when trying to send &unsigned messages"
+msgstr "Upozori prije slanja &nepotpisanih poruka"
+
+#. i18n: file: ui/warningconfiguration.ui:38
+#. i18n: ectx: property (toolTip), widget (QCheckBox, warnUnencryptedCB)
+#: rc.cpp:762
+msgid "Check to be warned when sending unencrypted messages."
+msgstr ""
+"Uključite da biste bili upozoreni prilikom slanja ne-šifrovanih poruka."
+
+#. i18n: file: ui/warningconfiguration.ui:46
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, warnUnencryptedCB)
+#: rc.cpp:765
+#, fuzzy
+msgid ""
+"<qt>\n"
+"<h1>Warn When Trying To Send Unencrypted Messages</h1>\n"
+"If this box is checked, you will be warned when you try to send parts of or "
+"the whole message unencrypted.\n"
+"<p>\n"
+"It is recommended to leave this option turned on for maximum integrity.\n"
+"</p></qt>"
+msgstr ""
+"<qt>\n"
+"<h1>Upozori prilikom pokušaja slanja nešifrovanih poruka</h1>\n"
+"Ako je ova opcija uključena, bićete upozoreni kada pokušate slati dijelove "
+"ili čitavu poruku bez šifrovanja.\n"
+"<p>\n"
+"Preporučeno je da ovu opciju ostavite uključenom radi maksimalnog "
+"integriteta.\n"
+"</qt>"
+
+#. i18n: file: ui/warningconfiguration.ui:49
+#. i18n: ectx: property (text), widget (QCheckBox, warnUnencryptedCB)
+#: rc.cpp:773
+msgid "&Warn when trying to send unencrypted messages"
+msgstr "&Upozori pri pokušaju slanja ne-šifrovane poruke"
+
+#. i18n: file: ui/warningconfiguration.ui:59
+#. i18n: ectx: property (toolTip), widget (QCheckBox, warnReceiverNotInCertificateCB)
+#: rc.cpp:776
+msgid "Check to be warned if the address is not in the certificate"
+msgstr "Uključite da biste bili upozoreni ako adresa nije u certifikatu"
+
+#. i18n: file: ui/warningconfiguration.ui:67
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, warnReceiverNotInCertificateCB)
+#: rc.cpp:779
+#, fuzzy
+msgid ""
+"<qt>\n"
+"<h1>Warn if receiver's email address is not in certificate</h1>\n"
+"If this option is checked, a warning is issued if the email address of the "
+"receiver is not contained in the certificate used for encrypting.\n"
+"<p>\n"
+"It is recommended to leave this option turned on for maximum security.\n"
+"</p></qt>"
+msgstr ""
+"<qt>\n"
+"<h1>Upozori, ako primaočeve elektronske adrese nema u certifikatu</h1>\n"
+"Ako je ta opcija uključena, izda se upozorenju, ukoliko primaočeve "
+"elektronske adrese nema u certifikatu, upotrbljenom za šifriranje.\n"
+"<p>\n"
+"Za najveću sigurnost je preporučeno, da je ta opcija uključena.\n"
+"</qt>"
+
+#. i18n: file: ui/warningconfiguration.ui:70
+#. i18n: ectx: property (text), widget (QCheckBox, warnReceiverNotInCertificateCB)
+#: rc.cpp:787
+msgid "Warn if &Receiver's Email Address is Not in Certificate"
+msgstr "Upozori ako e-adresa p&rimaoca nije u certifikatu"
+
+#. i18n: file: ui/warningconfiguration.ui:80
+#. i18n: ectx: property (title), widget (QGroupBox, warnGroupBox)
+#: rc.cpp:790
+msgid "Warn if certificates/keys expire soon (configure thresholds below)"
+msgstr ""
+"Upozori ako certifikati/ključevi ističu uskoro (ispod podesite ograničenja)"
+
+#. i18n: file: ui/warningconfiguration.ui:89
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#: rc.cpp:793
+msgid "For Signing"
+msgstr "Za potpisivanje"
+
+#. i18n: file: ui/warningconfiguration.ui:102
+#. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
+#: rc.cpp:796
+msgid "For Encryption"
+msgstr "Za šifriranje"
+
+#. i18n: file: ui/warningconfiguration.ui:121
+#. i18n: ectx: property (toolTip), widget (KIntSpinBox, mWarnSignKeyExpiresSB)
+#. i18n: file: ui/warningconfiguration.ui:157
+#. i18n: ectx: property (toolTip), widget (KIntSpinBox, mWarnEncrKeyExpiresSB)
+#. i18n: file: ui/warningconfiguration.ui:193
+#. i18n: ectx: property (toolTip), widget (KIntSpinBox, mWarnEncrChainCertExpiresSB)
+#. i18n: file: ui/warningconfiguration.ui:223
+#. i18n: ectx: property (toolTip), widget (KIntSpinBox, mWarnSignChainCertExpiresSB)
+#. i18n: file: ui/warningconfiguration.ui:253
+#. i18n: ectx: property (toolTip), widget (KIntSpinBox, mWarnSignRootCertExpiresSB)
+#. i18n: file: ui/warningconfiguration.ui:289
+#. i18n: ectx: property (toolTip), widget (KIntSpinBox, mWarnEncrRootCertExpiresSB)
+#: rc.cpp:799 rc.cpp:810 rc.cpp:821 rc.cpp:832 rc.cpp:843 rc.cpp:854
+msgid "Select the number of days here"
+msgstr "Ovdje izaberite broj dana"
+
+#. i18n: file: ui/warningconfiguration.ui:129
+#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, mWarnSignKeyExpiresSB)
+#: rc.cpp:802
+#, fuzzy
+msgid ""
+"<qt>\n"
+"<h1>Warn If Signature Certificate Expires</h1>\n"
+"Select the minimum number of days the signature certificate should be valid "
+"without issuing a warning.\n"
+"<p>\n"
+"The recommended SPHINX setting is 14 days.\n"
+"</p></qt>"
+msgstr ""
+"<qt>\n"
+"<h1>Upozori ako certifikat za potpisivanje ističe</h1>\n"
+"Izaberite minimalan broj dana tokom kojih je certifikat za potpisivanje "
+"ispravan bez prikazivanja upozorenja.\n"
+"<p>\n"
+"Predložena SPHINX postavka je 14 dana.\n"
+"</qt>"
+
+#. i18n: file: ui/warningconfiguration.ui:165
+#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, mWarnEncrKeyExpiresSB)
+#: rc.cpp:813
+#, fuzzy
+msgid ""
+"<qt>\n"
+"<h1>Warn If Encryption Certificate Expires</h1>\n"
+"Select the minimum number of days the encryption certificate should be valid "
+"without issuing a warning.\n"
+"<p>\n"
+"The recommended SPHINX setting is 14 days.\n"
+"</p></qt>"
+msgstr ""
+"<qt>\n"
+"<h1>Upozori ako certifikat za šifrovanje ističe</h1>\n"
+"Izaberite minimalan broj dana tokom kojih je certifikat za šifrovanje "
+"ispravan bez prikazivanja upozorenja.\n"
+"<p>\n"
+"Predložena SPHINX postavka je 14 dana.\n"
+"</qt>"
+
+#. i18n: file: ui/warningconfiguration.ui:201
+#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, mWarnEncrChainCertExpiresSB)
+#: rc.cpp:824
+#, fuzzy
+msgid ""
+"<qt>\n"
+"<h1>Warn If A Certificate In The Chain Expires</h1>\n"
+"Select the minimum number of days all certificates in the chain should be "
+"valid without issuing a warning.\n"
+"<p>\n"
+"The recommended SPHINX setting is 14 days.\n"
+"</p></qt>"
+msgstr ""
+"<qt>\n"
+"<h1>Upozori ako certifikat iz lanca ističe</h1>\n"
+"Izaberite minimalan broj dana tokom kojih svi certifikati u lancu trebaju "
+"biti ispravni bez prikazivanja upozorenja.\n"
+"<p>\n"
+"Predložena SPHINX postavka je 14 dana.\n"
+"</qt>"
+
+#. i18n: file: ui/warningconfiguration.ui:231
+#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, mWarnSignChainCertExpiresSB)
+#: rc.cpp:835
+#, fuzzy
+msgid ""
+"<qt>\n"
+"<h1>Warn If CA Certificate Expires</h1>\n"
+"Select the minimum number of days the CA certificate should be valid without "
+"issuing a warning.\n"
+"<p>\n"
+"The recommended SPHINX setting is 14 days.\n"
+"</p></qt>"
+msgstr ""
+"<qt>\n"
+"<h1>Upozori ako CA certifikat ističe</h1>\n"
+"Izaberite minimalan broj dana tokom kojih je CA certifikat ispravan bez "
+"prikazivanja upozorenja.\n"
+"<p>\n"
+"Predložena SPHINX postavka je 14 dana.\n"
+"</qt>"
+
+#. i18n: file: ui/warningconfiguration.ui:261
+#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, mWarnSignRootCertExpiresSB)
+#. i18n: file: ui/warningconfiguration.ui:297
+#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, mWarnEncrRootCertExpiresSB)
+#: rc.cpp:846 rc.cpp:857
+#, fuzzy
+msgid ""
+"<qt>\n"
+"<h1>Warn If Root Certificate Expires</h1>\n"
+"Select the minimum number of days the root certificate should be valid "
+"without issuing a warning.\n"
+"<p>\n"
+"The recommended SPHINX setting is 14 days.\n"
+"</p></qt>"
+msgstr ""
+"<qt>\n"
+"<h1>Upozori ako korijenski certifikat ističe</h1>\n"
+"Izaberite minimalan broj dana tokom kojih je korijenski certifikat ispravan "
+"bez prikazivanja upozorenja.\n"
+"<p>\n"
+"Predložena SPHINX postavka je 14 dana.\n"
+"</qt>"
+
+#. i18n: file: ui/warningconfiguration.ui:313
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2_2)
+#: rc.cpp:865
+msgid "For root certificates:"
+msgstr "Za korijenske certifikate:"
+
+#. i18n: file: ui/warningconfiguration.ui:326
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: rc.cpp:868
+msgid "For intermediate CA certificates:"
+msgstr "Za certifikate CA posrednika:"
+
+#. i18n: file: ui/warningconfiguration.ui:339
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:871
+msgid "For end-user certificates/keys:"
+msgstr "Za certifikate/ključeve korisnika:"
+
+#. i18n: file: ui/warningconfiguration.ui:402
+#. i18n: ectx: property (text), widget (QPushButton, gnupgButton)
+#: rc.cpp:874
+#, fuzzy
+msgid "GnuPG Settings..."
+msgstr "POP postavke"
+
+#. i18n: file: ui/warningconfiguration.ui:426
+#. i18n: ectx: property (text), widget (QPushButton, chiasmusButton)
+#: rc.cpp:877
+#, fuzzy
+msgid "Chiasmus Settings..."
+msgstr "Postav&ke Oznake"
+
+#. i18n: file: ui/warningconfiguration.ui:456
+#. i18n: ectx: property (text), widget (QPushButton, enableAllWarningsPB)
+#: rc.cpp:880
+msgid "Re-enable All \"Do not Ask Again\" Warnings"
+msgstr "Ponovo uključi sva \"Ne pitaj ponovo\" upozorenja"
 
 #: kmcomposereditor.cpp:64
 msgid "Pa&ste as Quotation"
@@ -3931,14 +5751,6 @@ msgstr "Snimi pri&loge..."
 msgid "Appl&y All Filters"
 msgstr "Primijeni s&ve filtere"
 
-#. i18n: file: kmail_part.rc:153
-#. i18n: ectx: Menu (apply_filter_actions)
-#. i18n: file: kmmainwin.rc:153
-#. i18n: ectx: Menu (apply_filter_actions)
-#: kmmainwidget.cpp:3251 rc.cpp:283 rc.cpp:352
-msgid "A&pply Filter"
-msgstr "Primijeni &filter"
-
 #: kmmainwidget.cpp:3255
 #, fuzzy
 #| msgctxt "View->"
@@ -4139,1945 +5951,133 @@ msgctxt "@title:window"
 msgid "Properties of Folder %1"
 msgstr "Svojstva fascikla %1"
 
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-"Vedran Ljubović, ,Launchpad Contributions:,Arne Goetje,Mirza,Samir Ribić,"
-"ahmed alic"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "vljubovic@smartnet.ba,,,arne@linux.org.tw,,,"
-
-#. i18n: file: kmail.kcfg.cmake:49
-#. i18n: ectx: whatsthis, entry (ExcludeImportantMailFromExpiry), group (Behaviour)
-#: rc.cpp:6
+#. i18n: file: tips:2
+#. i18n: ectx: @info:tipoftheday
+#: tips.cpp:3
 msgid ""
-"This prevents the automatic expiry of old messages in a folder from deleting "
-"(or moving to an archive folder) the messages that are marked 'Important' or "
-"'Action Item'"
+"<p>...that you can go to the next and previous message by using the\n"
+"right and left arrow keys respectively?</p>\n"
 msgstr ""
-"Time se sprječava automatsko isticanje stare poruke u fascikli od brisanja "
-"(ili premještanje u arhivnu fasciklu) poruka koje su označene kao \"važne\" "
-"ili \"Akcijski predmet '"
+"<p>...da možete preći na sljedeću ili prethodnu poruku u fasciklu\n"
+"koristeći dugmad sa strelicama lijevo i desno respektivno?</p>\n"
 
-#. i18n: file: kmail.kcfg.cmake:54
-#. i18n: ectx: label, entry (SendOnCheck), group (Behaviour)
-#: rc.cpp:9
-msgid "Send queued mail on mail check"
-msgstr "Pošalji poštu iz reda čekanja prilikom provjere pošte"
-
-#. i18n: file: kmail.kcfg.cmake:55
-#. i18n: ectx: whatsthis, entry (SendOnCheck), group (Behaviour)
-#: rc.cpp:12
-msgid ""
-"<qt><p>Select whether you want KMail to send all messages in the outbox on "
-"manual or all mail checks, or whether you do not want messages to be sent "
-"automatically at all. </p></qt>"
-msgstr ""
-"<qt><p>Izaberite da li želite da KMail šalje sve poruke iz outboxa prilikom "
-"ručnih ili svih provjera nove pošte ili ne želite uopšte slati poruke "
-"automatski.</p></qt>"
-
-#. i18n: file: kmail.kcfg.cmake:65
-#. i18n: ectx: label, entry (AutoLostFoundMove), group (Behaviour)
-#: rc.cpp:15
-msgid ""
-"Automatically move non-synced mails from folders with insufficient access "
-"rights"
-msgstr ""
-"Automatski premjesti nesinhornizovanu poštu iz fascikla sa nedovoljnim "
-"pravima pristupa"
-
-#. i18n: file: kmail.kcfg.cmake:66
-#. i18n: ectx: whatsthis, entry (AutoLostFoundMove), group (Behaviour)
-#: rc.cpp:18
-msgid ""
-"If there are new messages in a folder, which have not been uploaded to the "
-"server yet, but you do not have sufficient access rights on the folder now "
-"to upload them, these messages will automatically be moved into a lost and "
-"found folder."
-msgstr ""
-"Ako u direkorijima ima novih poruka koje još uvijek nisu poslate na server, "
-"ali nemate dovoljna prava pristupa za fascikl da biste ih poslali, te poruke "
-"će biti automatski premještene u direkorij izgubljenog i nađenog."
-
-#. i18n: file: kmail.kcfg.cmake:71
-#. i18n: ectx: label, entry (AllowLocalFlags), group (Behaviour)
-#: rc.cpp:21
-msgid "Allow local flags in read-only folders"
-msgstr "Lokalne zastavice moguće u fasciklima samo-za-čitanje"
-
-#. i18n: file: kmail.kcfg.cmake:78
-#. i18n: ectx: whatsthis, entry (LastSelectedFolder), group (FolderSelectionDialog)
-#: rc.cpp:24
-msgid "The most recently selected folder in the folder selection dialog."
-msgstr "Najskorije korišten fascikl u prozoru za izbor fascikla."
-
-#. i18n: file: kmail.kcfg.cmake:93
-#. i18n: ectx: label, entry (SystemTrayPolicy), group (General)
-#: rc.cpp:30
-msgid "Policy for showing the system tray icon"
-msgstr "Politika prikazivanja ikone u sistemskom trayu"
-
-#. i18n: file: kmail.kcfg.cmake:101
-#. i18n: ectx: label, entry (CloseDespiteSystemTray), group (General)
-#: rc.cpp:33
-msgid ""
-"Close the application when the main window is closed, even if there is a "
-"system tray icon active."
-msgstr ""
-"Zatvori aplikaciju kada je glavni prozor zatvoren, čak i ako postoji aktivna "
-"ikona u sistemskom uglu."
-
-#. i18n: file: kmail.kcfg.cmake:105
-#. i18n: ectx: label, entry (VerboseNewMailNotification), group (General)
-#: rc.cpp:36
-msgid "Verbose new mail notification"
-msgstr "Obavijest o novim porukama"
-
-#. i18n: file: kmail.kcfg.cmake:106
-#. i18n: ectx: whatsthis, entry (VerboseNewMailNotification), group (General)
-#: rc.cpp:39
-msgid ""
-"If this option is enabled then for each folder the number of newly arrived "
-"messages is shown in the new mail notification; otherwise, you will only get "
-"a simple 'New mail arrived' message."
-msgstr ""
-"Ako je uključena ova opcija, za svaki fascikl biće prikazan broj novih "
-"poruka u obavještenju o novoj pošti. U suprotnom, dobićete jednostavnu "
-"poruku 'Imate novu poštu'."
-
-#. i18n: file: kmail.kcfg.cmake:110
-#. i18n: ectx: label, entry (ExternalEditor), group (General)
-#: rc.cpp:42
-msgid "Specify e&ditor:"
-msgstr "Navedite e&ditor:"
-
-#. i18n: file: kmail.kcfg.cmake:114
-#. i18n: ectx: label, entry (UseExternalEditor), group (General)
-#: rc.cpp:45
-msgid "Use e&xternal editor instead of composer"
-msgstr "Koristi &vanjski editor umjesto sastavljača"
-
-#. i18n: file: kmail.kcfg.cmake:118
-#. i18n: ectx: label, entry (CustomMessageHeadersCount), group (General)
-#: rc.cpp:48
-msgid ""
-"Specifies the number of custom MIME header fields to be inserted in messages "
-"(for internal use only)"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:124
-#. i18n: ectx: label, entry (CloseToQuotaThreshold), group (General)
-#: rc.cpp:51
-msgid ""
-"The threshold for when to warn the user that a folder is nearing its quota "
-"limit."
-msgstr "Prag upozoravanja korisnika da se fascikl bliži ograničenju kvote."
-
-#. i18n: file: kmail.kcfg.cmake:128
-#. i18n: ectx: label, entry (BeepOnMail), group (General)
-#: rc.cpp:54
-msgid "Beep upon receiving new mail"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:132
-#. i18n: ectx: label, entry (EmptyTrashOnExit), group (General)
-#: rc.cpp:57
-#, fuzzy
-msgid "Empty the local trash folder on program exit"
-msgstr "Isprazni lokalnu fasciklu za &smeće pri izlasku iz programa"
-
-#. i18n: file: kmail.kcfg.cmake:136
-#. i18n: ectx: label, entry (StartupFolder), group (General)
-#: rc.cpp:60
-msgid "Specify the folder to open when the program is started"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:140
-#. i18n: ectx: label, entry (ConfirmBeforeEmpty), group (General)
-#: rc.cpp:63
-#, fuzzy
-msgid "Ask for confirmation before moving all messages to trash"
-msgstr "Pitaj za po&tvrdu prije premještanja svih poruka u smeće"
-
-#. i18n: file: kmail.kcfg.cmake:144
-#. i18n: ectx: label, entry (AutoExpiring), group (General)
-#: rc.cpp:66
-msgid ""
-"Specifies whether the folders will expire in the background (for internal "
-"use only)"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:148
-#. i18n: ectx: label, entry (FirstStart), group (General)
-#: rc.cpp:69
-msgid ""
-"Specifies whether this is the very first time that the application is run "
-"(for internal use only)"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:152
-#. i18n: ectx: label, entry (PreviousVersion), group (General)
-#: rc.cpp:72
-msgid ""
-"Specifies the version of the application that was last used (for internal "
-"use only)"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:161
-#. i18n: ectx: whatsthis, entry (PreviousNewFeaturesMD5), group (Internal)
-#: rc.cpp:75
-msgid ""
-"This value is used to decide whether the KMail Introduction should be "
-"displayed."
-msgstr ""
-"Ova vrijednost se koristi za odlučivanje da li će biti prikazan KMail uvodni "
-"ekran."
-
-#. i18n: file: kmail.kcfg.cmake:168
-#. i18n: ectx: label, entry (MaxConnectionsPerHost), group (Network)
-#: rc.cpp:78
-msgid "Maximal number of connections per host"
-msgstr "Maksimalan broj konekcija po računaru"
-
-#. i18n: file: kmail.kcfg.cmake:169
-#. i18n: ectx: whatsthis, entry (MaxConnectionsPerHost), group (Network)
-#: rc.cpp:81
-msgid ""
-"This can be used to restrict the number of connections per host while "
-"checking for new mail. By default the number of connections is unlimited (0)."
-msgstr ""
-"Ovo se može koristiti da se ograniči broj konekcija po računaru prilikom "
-"provjere nove pošte. Podrazumijevani broj konekcija je neograničen (0)."
-
-#. i18n: file: kmail.kcfg.cmake:177
-#. i18n: ectx: label, entry (EnableFolderQuickSearch), group (UserInterface)
-#: rc.cpp:84
-msgid "Show folder quick search line edit"
-msgstr "Prikaži liniju za brzu pretragu fascikla"
-
-#. i18n: file: kmail.kcfg.cmake:181
-#. i18n: ectx: label, entry (HideLocalInbox), group (UserInterface)
-#: rc.cpp:87
-msgid "Hide local inbox if unused"
-msgstr "Sakrij lokalni prijemni sandučić ako se ne koristi"
-
-#. i18n: file: kmail.kcfg.cmake:189
-#. i18n: ectx: label, entry (ForwardingInlineByDefault), group (Composer)
-#: rc.cpp:90
-msgid "Forward Inline As Default."
-msgstr "Prosljeđivanje u liniji kao podrazumevano."
-
-#. i18n: file: kmail.kcfg.cmake:193
-#. i18n: ectx: whatsthis, entry (StickyIdentity), group (Composer)
-#: rc.cpp:93
-msgid ""
-"Remember this identity, so that it will be used in future composer windows "
-"as well.\n"
-"        "
-msgstr ""
-"Zapamti ovaj identitet, kako bi se koristio i u budućim prozorima "
-"sastavljača.\n"
-"        "
-
-#. i18n: file: kmail.kcfg.cmake:197
-#. i18n: ectx: whatsthis, entry (StickyFcc), group (Composer)
-#: rc.cpp:97
-msgid ""
-"Remember this folder for sent items, so that it will be used in future "
-"composer windows as well."
-msgstr ""
-"Zapamti ovaj fascikl za poslanu poštu, tako da će biti korišten i za buduće "
-"prozore sastavljača."
-
-#. i18n: file: kmail.kcfg.cmake:201
-#. i18n: ectx: whatsthis, entry (StickyTransport), group (Composer)
-#: rc.cpp:100
-msgid ""
-"Remember this mail transport, so that it will be used in future composer "
-"windows as well."
-msgstr ""
-"Zapamti ovaj mail transport, tako da će biti korišten i za buduće prozore "
-"sastavljača."
-
-#. i18n: file: kmail.kcfg.cmake:206
-#. i18n: ectx: whatsthis, entry (StickyDictionary), group (Composer)
-#: rc.cpp:103
+#. i18n: file: tips:9
+#. i18n: ectx: @info:tipoftheday
+#: tips.cpp:9
 #, fuzzy
 msgid ""
-"Remember this dictionary, so that it will be used in future composer windows "
-"as well.\n"
-"        "
+"<p>...that you can rapidly create filters on sender, recipient,\n"
+"subject and mailing lists with <em>Message-&gt;Create Filter</em>?</p>\n"
 msgstr ""
-"Zapamti ovaj identitet, kako bi se koristio i u budućim prozorima "
-"sastavljača.\n"
-"        "
+"<p>...da možete brzo napraviti filtere na pošiljaoca, primaoca\n"
+"temu i distribucijaku listu sa <em>Poruka-&gt;Kreiraj&nbsp;Filter</em>?</p>\n"
 
-#. i18n: file: kmail.kcfg.cmake:210
-#. i18n: ectx: label, entry (TooManyRecipients), group (Composer)
-#: rc.cpp:107
-msgid "Warn if the number of recipients is larger than"
-msgstr "Upozori ako je broj prmaoca veći od"
-
-#. i18n: file: kmail.kcfg.cmake:212
-#. i18n: ectx: whatsthis, entry (TooManyRecipients), group (Composer)
-#. i18n: file: kmail.kcfg.cmake:219
-#. i18n: ectx: whatsthis, entry (RecipientThreshold), group (Composer)
-#: rc.cpp:110 rc.cpp:113
+#. i18n: file: tips:16
+#. i18n: ectx: @info:tipoftheday
+#: tips.cpp:15
 msgid ""
-"If the number of recipients is larger than this value, KMail will warn and "
-"ask for a confirmation before sending the mail. The warning can be turned "
-"off."
+"<p>...that you can get rid of the &quot;[mailing list name]&quot;\n"
+"added to the subject of some mailing lists by using the <em>rewrite\n"
+"header</em> filter action? Just use\n"
+"<pre>rewrite header &quot;Subject&quot;\n"
+"   replace &quot;\\s*\\[mailing list name\\]\\s*&quot;\n"
+"   with &quot;&quot;</pre>\n"
+"</p>\n"
 msgstr ""
-"Ako je broj primaoca veći od ove vrijednosti, KMail će upozoriti i pitati za "
-"odobrenje prije slanja meila. Upozorenje može biti ugašeno."
+"<p>..da se možete otarasiti &quot;[imena mailing liste]&quot;\n"
+"koje se dodaje temi kod nekih mailig lista koristeći filter akciju\n"
+"<em>prepiši header</em>? Samo koristite\n"
+"<pre>prepiši header &quot;Tema&quot;\n"
+"   zamijeni &quot;\\s*\\[ime mailing liste\\]\\s*&quot;\n"
+"   sa &quot;&quot;</pre>\n"
+"</p>\n"
 
-#. i18n: file: kmail.kcfg.cmake:248
-#. i18n: ectx: label, entry (RequestMDN), group (Composer)
-#: rc.cpp:119
-msgid "Automatically request &message disposition notifications"
-msgstr "Automatski traži obavijest o &prijemu poruke"
-
-#. i18n: file: kmail.kcfg.cmake:249
-#. i18n: ectx: whatsthis, entry (RequestMDN), group (Composer)
-#: rc.cpp:122
-msgid ""
-"<qt><p>Enable this option if you want KMail to request Message Disposition "
-"Notifications (MDNs) for each of your outgoing messages.</p><p>This option "
-"only affects the default; you can still enable or disable MDN requesting on "
-"a per-message basis in the composer, menu item <em>Options</em>-><em>Request "
-"Disposition Notification</em>.</p></qt>"
-msgstr ""
-"<qt><p>Uključite ovu opciju ako želite da KMail zahtjeva obavještenja o "
-"raspoređivanju poruke (MDN) za svaku vašu odlazeću poruku.</p><p>Ova opcija "
-"utiče samo na podrazumevano; u sastavljaču uvijek možete uključiti ili "
-"isključiti zahtijevanje MDN-a za svaku poruku preko stavke u meniju "
-"<em>Opcije</em>-&gt;<em>Zahtevaj ovaveštenje o raspoređivanju</em>.</p></qt>"
-
-#. i18n: file: kmail.kcfg.cmake:270
-#. i18n: ectx: label, entry (AutosaveInterval), group (Composer)
-#: rc.cpp:125
-msgid "Autosave interval:"
-msgstr "Interval pro&vjere:"
-
-#. i18n: file: kmail.kcfg.cmake:271
-#. i18n: ectx: whatsthis, entry (AutosaveInterval), group (Composer)
-#: rc.cpp:128
-msgid ""
-"A backup copy of the text in the composer window can be created regularly. "
-"The interval used to create the backups is set here. You can disable "
-"autosaving by setting it to the value 0."
-msgstr ""
-"Možete redovno praviti rezervnu kopiju teksta u sastavljaču. Ovdje "
-"podešavate interval u kojem se prave rezervne kopije. Možete isključiti auto-"
-"snimanje ako podesite vrijednost na nulu."
-
-#. i18n: file: kmail.kcfg.cmake:275
-#. i18n: ectx: label, entry (QuoteSelectionOnly), group (Composer)
-#: rc.cpp:131
-msgid "Only quote selected text when replying"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:282
-#. i18n: ectx: label, entry (ShowSnippetManager), group (Composer)
-#: rc.cpp:134
-msgid "Show the Text Snippet Management and Insertion Panel in the composer."
-msgstr "Prikaži panel za umetanje i upravljanje isečcima teksta u sastavljaču."
-
-#. i18n: file: kmail.kcfg.cmake:288
-#. i18n: ectx: label, entry (ShowGnuPGAuditLogAfterSuccessfulSignEncrypt), group (Composer)
-#: rc.cpp:137
-msgid ""
-"Show the GnuPG Audit Log even after crypto operations that completed "
-"successfully."
-msgstr ""
-"Prikaži dnevnik revizije GnuPG-a čak i kada je kriptografski postupak "
-"uspješno dovršen."
-
-#. i18n: file: kmail.kcfg.cmake:293
-#. i18n: ectx: label, entry (CryptoEncryptToSelf), group (Composer)
-#: rc.cpp:140
+#. i18n: file: tips:28
+#. i18n: ectx: @info:tipoftheday
+#: tips.cpp:26
 #, fuzzy
 msgid ""
-"When encrypting emails, always also encrypt to the certificate of my own "
-"identity"
+"<p>...that you can associate mailing lists with folders in the\n"
+"<em>Folder-&gt;Mailing List Management</em> dialog? You can then use\n"
+"<em>Message-&gt;New Message to Mailing List...</em>\n"
+"to open the composer with the mailing list address preset.\n"
+"Alternatively, you can click with the middle mouse button on the folder.</"
+"p>\n"
 msgstr ""
-"Kod dešifrovanja e-pošte, uvijek također dešifruj potvrdu mog identiteta"
+"<p>...da možete da pridružite diskusionu listu fascikla u dijalogu\n"
+"<em>Fascikla-&gt;Upravljanje diskusionom listom...</em>? Onda možete "
+"koristiti\n"
+"<em>Poruka-&gt;Nova&nbsp;poruka&nbsp;u&nbsp; diskusionoj&nbsp;listi...</em>\n"
+"da otvorite sastavljač sa postavljenom adresom diskusione liste.\n"
+"Drugačije, možete kliknuti srednjim tasterom miša na fasciklu.</p>\n"
 
-#. i18n: file: kmail.kcfg.cmake:297
-#. i18n: ectx: label, entry (CryptoShowEncryptionResult), group (Composer)
-#: rc.cpp:143
-#, fuzzy
-msgid "Show signed/encrypted text after composing"
-msgstr "Prikaži p&otpisani/šifrovani tekst nakon sastavljanja"
-
-#. i18n: file: kmail.kcfg.cmake:301
-#. i18n: ectx: label, entry (CryptoShowKeysForApproval), group (Composer)
-#: rc.cpp:146
+#. i18n: file: tips:38
+#. i18n: ectx: @info:tipoftheday
+#: tips.cpp:35
 msgid ""
-"Always show the list of encryption keys to select the one which will be used"
+"<p>...that you can assign custom icons to each folder individually?\n"
+"See <em>Folder-&gt;Properties</em></p>\n"
 msgstr ""
+"<p>...da možete pridružiti vlastite ikone pojedinačno svakom fasciklu?\n"
+"Pogledajte <em>Direktorij-&gt;Osobine...</em></p>\n"
 
-#. i18n: file: kmail.kcfg.cmake:305
-#. i18n: ectx: label, entry (CryptoStoreEncrypted), group (Composer)
-#: rc.cpp:149
-msgid "When check, sent messages will be stored in the encrypted form"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:309
-#. i18n: ectx: label, entry (RecentUrls), group (Composer)
-#: rc.cpp:152
-msgid "A list of all the recently used URLs"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:315
-#. i18n: ectx: label, entry (RecentEncodings), group (Composer)
-#: rc.cpp:155
-msgid "A list of all the recently used encodings"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:334
-#. i18n: ectx: label, entry (FilterDialogSize), group (Geometry)
-#: rc.cpp:158
-msgid "The size of the filter dialog (for internal use only)"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:338
-#. i18n: ectx: label, entry (IdentityDialogSize), group (Geometry)
-#: rc.cpp:161
-msgid "The size of the identity dialog (for internal use only)"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:342
-#. i18n: ectx: label, entry (SearchWidgetWidth), group (Geometry)
-#: rc.cpp:164
-msgid "The width of the search window (for internal use only)"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:346
-#. i18n: ectx: label, entry (SearchWidgetHeight), group (Geometry)
-#: rc.cpp:167
-msgid "The height of the search window (for internal use only)"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:350
-#. i18n: ectx: label, entry (ConfigureDialogWidth), group (Geometry)
-#: rc.cpp:170
-msgid "The width of the Configure KMail dialog (for internal use only)"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:354
-#. i18n: ectx: label, entry (ConfigureDialogHeight), group (Geometry)
-#: rc.cpp:173
-msgid "The height of the Configure KMail dialog (for internal use only)"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:380
-#. i18n: ectx: label, entry (readerWindowMode), group (Geometry)
-#: rc.cpp:176
-msgid "Message Preview Pane"
-msgstr "Panel za čitanje poruke"
-
-#. i18n: file: kmail.kcfg.cmake:383
-#. i18n: ectx: label, entry (readerWindowMode), group (Geometry)
-#: rc.cpp:179
-msgid "Do not show a message preview pane"
-msgstr "Ne pokazuj okno pregleda poruka"
-
-#. i18n: file: kmail.kcfg.cmake:386
-#. i18n: ectx: label, entry (readerWindowMode), group (Geometry)
-#: rc.cpp:182
-msgid "Show the message preview pane below the message list"
-msgstr "Prikaži okno pregleda poruka ispod liste poruka"
-
-#. i18n: file: kmail.kcfg.cmake:389
-#. i18n: ectx: label, entry (readerWindowMode), group (Geometry)
-#: rc.cpp:185
-msgid "Show the message preview pane next to the message list"
-msgstr "Prikaži okno pregleda poruka pored liste poruka"
-
-#. i18n: file: kmail.kcfg.cmake:399
-#. i18n: ectx: label, entry (FolderList), group (Geometry)
-#: rc.cpp:191
-msgid "Long folder list"
-msgstr "Dugačka lista fascikli"
-
-#. i18n: file: kmail.kcfg.cmake:402
-#. i18n: ectx: label, entry (FolderList), group (Geometry)
-#: rc.cpp:194
-msgid "Short folder list"
-msgstr "Kratka lista fascikli"
-
-#. i18n: file: kmail.kcfg.cmake:411
-#. i18n: ectx: label, entry (CloseAfterReplyOrForward), group (Reader)
-#: rc.cpp:197
-msgid "Close message window after replying or forwarding"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:419
-#. i18n: ectx: label, entry (SendMDNsWithEmptySender), group (MDN)
-#: rc.cpp:200
-msgid "Send Message Disposition Notifications with an empty sender."
-msgstr "Šalji obavještenja o raspoređivanju poruka sa praznim pošiljaocem."
-
-#. i18n: file: kmail.kcfg.cmake:420
-#. i18n: ectx: whatsthis, entry (SendMDNsWithEmptySender), group (MDN)
-#: rc.cpp:203
+#. i18n: file: tips:45
+#. i18n: ectx: @info:tipoftheday
+#: tips.cpp:41
 msgid ""
-"Send Message Disposition Notifications with an empty sender string. Some "
-"servers might be configure to reject such messages, so if you are "
-"experiencing problems sending MDNs, uncheck this option."
+"<p>...that KMail can show a color bar indicating the type of message\n"
+"(Plain text/HTML/OpenPGP) currently displayed?</p>\n"
+"<p>This thwarts attempts to fake successful signature verification by\n"
+"sending HTML mails mimicking KMail's signature status frames.</p>\n"
 msgstr ""
-"Šalji obavještenja o raspoređivanju poruka sa praznim znakovnim nizom "
-"pošiljaoca. Neki serveri mogu biti podešeni da odbacuju takve poruke, tako "
-"da ako imate problema sa slanjem MDN-ova, isključite ovu opciju."
+"<p>...da KMail može pokazati obojenu traku koja pokazuje vrstu\n"
+"(Običan tekst/HTML/OpenPGP) poruke koja je trenutno prikazana?</p>\n"
+"<p>Ovo sprječava pokušaje lažiranja uspješne provjere potpisa koristeći\n"
+"HTML poruke koje imitiraju statusne okvirove KMailovog potpisa.</p>\n"
 
-#. i18n: file: kmail.kcfg.cmake:426
-#. i18n: ectx: label, entry (TemplateNewMessage), group (GlobalTemplates)
-#: rc.cpp:206
-msgid "Message template for new message"
-msgstr "Šablon poruke za novu poruku"
-
-#. i18n: file: kmail.kcfg.cmake:431
-#. i18n: ectx: label, entry (TemplateReply), group (GlobalTemplates)
-#: rc.cpp:209
-msgid "Message template for reply"
-msgstr "Šablon poruke za odgovor"
-
-#. i18n: file: kmail.kcfg.cmake:436
-#. i18n: ectx: label, entry (TemplateReplyAll), group (GlobalTemplates)
-#: rc.cpp:212
-msgid "Message template for reply to all"
-msgstr "Šablon poruke za odgovor svima"
-
-#. i18n: file: kmail.kcfg.cmake:441
-#. i18n: ectx: label, entry (TemplateForward), group (GlobalTemplates)
-#: rc.cpp:215
-msgid "Message template for forward"
-msgstr "Šablon poruke za prosljeđivanje"
-
-#. i18n: file: kmail.kcfg.cmake:446
-#. i18n: ectx: label, entry (QuoteString), group (GlobalTemplates)
-#: rc.cpp:218
-msgid "Quote characters"
-msgstr "Znakovi citiranja"
-
-#. i18n: file: kmail.kcfg.cmake:470
-#. i18n: ectx: label, entry (UpdateLevel), group (Startup)
-#: rc.cpp:221
-msgid "Specifies the number of updates to perform (for internal use only)"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:477
-#. i18n: ectx: label, entry (ToolTipDisplayPolicy), group (MainFolderView)
-#: rc.cpp:224
-msgid "Specifies the policy used when displaying policy"
-msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:485
-#. i18n: ectx: label, entry (SubjectWidth), group (SearchDialog)
-#: rc.cpp:227
+#. i18n: file: tips:54
+#. i18n: ectx: @info:tipoftheday
+#: tips.cpp:49
 msgid ""
-"Specifies the width of the subject field in the Search Window dialog (for "
-"internal use only)"
+"<p>...that you can filter on any header by simply entering its name\n"
+"in the first edit field of a search rule?</p>\n"
 msgstr ""
+"<p>...da možete filtrirati po osnovu bilo kojeg polja zaglavlja jednostavno\n"
+"unoseći njegovo ime u prvo polje pravila za pretragu?</p>\n"
 
-#. i18n: file: kmail.kcfg.cmake:489
-#. i18n: ectx: label, entry (SenderWidth), group (SearchDialog)
-#: rc.cpp:230
+#. i18n: file: tips:61
+#. i18n: ectx: @info:tipoftheday
+#: tips.cpp:55
 msgid ""
-"Specifies the width of the sender field in the Search Window dialog (for "
-"internal use only)"
+"<p>...that you can filter out HTML only messages with the rule\n"
+"<pre>&quot;Content-type&quot; contains &quot;text/html&quot;?</pre>\n"
+"</p>\n"
 msgstr ""
+"<p>...da možete filtrirati samo-HTML poruke koristeći pravilo\n"
+"<pre>&quot;Content-type&quot; sadrži &quot;text/html&quot;?</pre>\n"
+"</p>\n"
 
-#. i18n: file: kmail.kcfg.cmake:493
-#. i18n: ectx: label, entry (DateWidth), group (SearchDialog)
-#: rc.cpp:233
+#. i18n: file: tips:69
+#. i18n: ectx: @info:tipoftheday
+#: tips.cpp:62
 msgid ""
-"Specifies the width of the date field in the Search Window dialog (for "
-"internal use only)"
+"<p>...that when replying, only the selected part of the message is quoted?</"
+"p>\n"
+"<p>If nothing is selected, the full message is quoted.</p>\n"
+"<p>This even works with text of attachments when\n"
+"<em>View-&gt;Attachments-&gt;Inline</em> is selected.</p>\n"
+"<p>This feature is available with all reply commands except\n"
+"<em>Message-&gt;Reply Without Quote</em>.</p>\n"
+"<p align=\"right\"><em>contributed by David F. Newman</em></p>\n"
 msgstr ""
-
-#. i18n: file: kmail.kcfg.cmake:497
-#. i18n: ectx: label, entry (FolderWidth), group (SearchDialog)
-#: rc.cpp:236
-msgid ""
-"Specifies the width of the folder field in the Search Window dialog (for "
-"internal use only)"
-msgstr ""
-
-#. i18n: file: kmail_part.rc:8
-#. i18n: ectx: Menu (file)
-#. i18n: file: kmmainwin.rc:8
-#. i18n: ectx: Menu (file)
-#. i18n: file: kmreadermainwin.rc:5
-#. i18n: ectx: Menu (file)
-#: rc.cpp:256 rc.cpp:325 rc.cpp:367
-msgid "&File"
-msgstr "&Datoteka"
-
-#. i18n: file: kmail_part.rc:10
-#. i18n: ectx: Menu (file_new)
-#. i18n: file: kmmainwin.rc:10
-#. i18n: ectx: Menu (file_new)
-#: rc.cpp:259 rc.cpp:328
-msgctxt "@title:menu New message, folder or new window."
-msgid "New"
-msgstr "Nova"
-
-#. i18n: file: kmail_part.rc:38
-#. i18n: ectx: Menu (edit)
-#. i18n: file: kmcomposerui.rc:23
-#. i18n: ectx: Menu (edit)
-#. i18n: file: kmmainwin.rc:38
-#. i18n: ectx: Menu (edit)
-#. i18n: file: kmreadermainwin.rc:15
-#. i18n: ectx: Menu (edit)
-#: rc.cpp:262 rc.cpp:301 rc.cpp:331 rc.cpp:370
-msgid "&Edit"
-msgstr "&Izmijeni"
-
-#. i18n: file: kmail_part.rc:62
-#. i18n: ectx: Menu (view)
-#. i18n: file: kmcomposerui.rc:47
-#. i18n: ectx: Menu (view)
-#. i18n: file: kmmainwin.rc:62
-#. i18n: ectx: Menu (view)
-#. i18n: file: kmreadermainwin.rc:20
-#. i18n: ectx: Menu (view)
-#: rc.cpp:265 rc.cpp:307 rc.cpp:334 rc.cpp:373
-msgid "&View"
-msgstr "&Pogled"
-
-#. i18n: file: kmail_part.rc:83
-#. i18n: ectx: Menu (go)
-#. i18n: file: kmmainwin.rc:83
-#. i18n: ectx: Menu (go)
-#: rc.cpp:268 rc.cpp:337
-msgid "&Go"
-msgstr "&Idi"
-
-#. i18n: file: kmail_part.rc:97
-#. i18n: ectx: Menu (folder)
-#. i18n: file: kmmainwin.rc:97
-#. i18n: ectx: Menu (folder)
-#: rc.cpp:271 rc.cpp:340
-msgid "F&older"
-msgstr "Di&rektorij"
-
-#. i18n: file: kmail_part.rc:120
-#. i18n: ectx: Menu (message)
-#. i18n: file: kmcomposerui.rc:5
-#. i18n: ectx: Menu (file)
-#. i18n: file: kmmainwin.rc:120
-#. i18n: ectx: Menu (message)
-#. i18n: file: kmreadermainwin.rc:31
-#. i18n: ectx: Menu (message)
-#: rc.cpp:274 rc.cpp:298 rc.cpp:343 rc.cpp:376
-msgid "&Message"
-msgstr "Poru&ka"
-
-#. i18n: file: kmail_part.rc:127
-#. i18n: ectx: Menu (reply_special)
-#. i18n: file: kmmainwin.rc:127
-#. i18n: ectx: Menu (reply_special)
-#. i18n: file: kmreadermainwin.rc:38
-#. i18n: ectx: Menu (reply_special)
-#: rc.cpp:277 rc.cpp:346 rc.cpp:379
-msgid "Reply Special"
-msgstr "Odgovori posebno"
-
-#. i18n: file: kmail_part.rc:136
-#. i18n: ectx: Menu (menubar_message_forward)
-#. i18n: file: kmmainwin.rc:136
-#. i18n: ectx: Menu (menubar_message_forward)
-#. i18n: file: kmreadermainwin.rc:47
-#. i18n: ectx: Menu (menubar_message_forward)
-#: rc.cpp:280 rc.cpp:349 rc.cpp:382
-msgid "&Forward"
-msgstr "P&roslijedi:"
-
-#. i18n: file: kmail_part.rc:162
-#. i18n: ectx: Menu (tools)
-#. i18n: file: kmmainwin.rc:162
-#. i18n: ectx: Menu (tools)
-#: rc.cpp:286 rc.cpp:355
-msgid "&Tools"
-msgstr "&Alati"
-
-#. i18n: file: kmail_part.rc:179
-#. i18n: ectx: Menu (settings)
-#. i18n: file: kmcomposerui.rc:86
-#. i18n: ectx: Menu (settings)
-#. i18n: file: kmmainwin.rc:179
-#. i18n: ectx: Menu (settings)
-#. i18n: file: kmreadermainwin.rc:63
-#. i18n: ectx: Menu (settings)
-#: rc.cpp:289 rc.cpp:313 rc.cpp:358 rc.cpp:385
-msgid "&Settings"
-msgstr "&Postavke"
-
-#. i18n: file: kmail_part.rc:191
-#. i18n: ectx: Menu (help)
-#. i18n: file: kmmainwin.rc:191
-#. i18n: ectx: Menu (help)
-#: rc.cpp:292 rc.cpp:361
-msgid "&Help"
-msgstr "&Pomoć"
-
-#. i18n: file: kmail_part.rc:257
-#. i18n: ectx: ToolBar (mainToolBar)
-#. i18n: file: kmcomposerui.rc:90
-#. i18n: ectx: ToolBar (mainToolBar)
-#. i18n: file: kmmainwin.rc:257
-#. i18n: ectx: ToolBar (mainToolBar)
-#. i18n: file: kmreadermainwin.rc:72
-#. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:295 rc.cpp:316 rc.cpp:364 rc.cpp:388
-msgid "Main Toolbar"
-msgstr "Glavna alatna traka"
-
-#. i18n: file: kmcomposerui.rc:32
-#. i18n: ectx: Menu (options)
-#: rc.cpp:304
-msgid "&Options"
-msgstr "&Opcije"
-
-#. i18n: file: kmcomposerui.rc:66
-#. i18n: ectx: Menu (attach)
-#: rc.cpp:310
-msgid "&Attach"
-msgstr "&Priloži"
-
-#. i18n: file: kmcomposerui.rc:104
-#. i18n: ectx: ToolBar (htmlToolBar)
-#: rc.cpp:319
-msgid "HTML Toolbar"
-msgstr "HTML traka s alatima"
-
-#. i18n: file: kmcomposerui.rc:123
-#. i18n: ectx: ToolBar (directionToolBar)
-#: rc.cpp:322
-msgid "Text Direction Toolbar"
-msgstr ""
-
-#. i18n: file: ui/accountspagereceivingtab.ui:19
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:391
-msgid "Incoming accounts (add at least one):"
-msgstr "Dolazni računi (dodajte barem jedan):"
-
-#. i18n: file: ui/accountspagereceivingtab.ui:56
-#. i18n: ectx: property (text), widget (KPushButton, mRemoveAccountButton)
-#: rc.cpp:400
-msgid "R&emove"
-msgstr "&Ukloni..."
-
-#. i18n: file: ui/accountspagereceivingtab.ui:80
-#. i18n: ectx: property (title), widget (QGroupBox, group)
-#: rc.cpp:403
-msgid "New Mail Notification"
-msgstr "Obavijest o novim porukama"
-
-#. i18n: file: ui/accountspagereceivingtab.ui:92
-#. i18n: ectx: property (text), widget (QCheckBox, mBeepNewMailCheck)
-#: rc.cpp:406
-msgid "&Beep"
-msgstr "&Zvuk"
-
-#. i18n: file: ui/accountspagereceivingtab.ui:105
-#. i18n: ectx: property (toolTip), widget (QCheckBox, mVerboseNotificationCheck)
-#: rc.cpp:409
-msgid "Show for each folder the number of newly arrived messages"
-msgstr "Idi na sljedeći fascikl sa nepročitanim porukama"
-
-#. i18n: file: ui/accountspagereceivingtab.ui:108
-#. i18n: ectx: property (text), widget (QCheckBox, mVerboseNotificationCheck)
-#: rc.cpp:412
-msgid "Deta&iled new mail notification"
-msgstr "Obavijest o novim porukama"
-
-#. i18n: file: ui/accountspagereceivingtab.ui:121
-#. i18n: ectx: property (text), widget (QPushButton, mOtherNewMailActionsButton)
-#: rc.cpp:415
-msgid "Other Actio&ns..."
-msgstr "&Druge radnje..."
-
-#. i18n: file: ui/identitypage.ui:24
-#. i18n: ectx: property (toolTip), widget (QPushButton, mButtonAdd)
-#: rc.cpp:418
-msgid "Add a new identity"
-msgstr "Dodaj novi identitet"
-
-#. i18n: file: ui/identitypage.ui:27
-#. i18n: ectx: property (text), widget (QPushButton, mButtonAdd)
-#: rc.cpp:421 simplestringlisteditor.cpp:77
-msgid "&Add..."
-msgstr "&Dodaj..."
-
-#. i18n: file: ui/identitypage.ui:37
-#. i18n: ectx: property (toolTip), widget (QPushButton, mModifyButton)
-#: rc.cpp:424
-msgid "Modify the selected identity"
-msgstr "Izmijeni  odabrani identitet"
-
-#. i18n: file: ui/identitypage.ui:50
-#. i18n: ectx: property (toolTip), widget (QPushButton, mRenameButton)
-#: rc.cpp:430
-msgid "Rename the selected identity"
-msgstr "Preimenuj odabrani identitet"
-
-#. i18n: file: ui/identitypage.ui:53
-#. i18n: ectx: property (text), widget (QPushButton, mRenameButton)
-#: rc.cpp:433
-msgid "&Rename"
-msgstr "&Promijeni ime"
-
-#. i18n: file: ui/identitypage.ui:63
-#. i18n: ectx: property (toolTip), widget (QPushButton, mRemoveButton)
-#: rc.cpp:436
-msgid "Remove the selected identity"
-msgstr "Ukloni odabrani identitet"
-
-#. i18n: file: ui/identitypage.ui:76
-#. i18n: ectx: property (toolTip), widget (QPushButton, mSetAsDefaultButton)
-#: rc.cpp:442
-msgid "Use the selected identity by default"
-msgstr "Koristi odabrani identitet kao zadani"
-
-#. i18n: file: ui/identitypage.ui:79
-#. i18n: ectx: property (text), widget (QPushButton, mSetAsDefaultButton)
-#: rc.cpp:445
-msgid "Set as &Default"
-msgstr "Postavi za &podrazumjevano"
-
-#. i18n: file: ui/miscpagemaintab.ui:19
-#. i18n: ectx: property (text), widget (QCheckBox, mEmptyFolderConfirmCheck)
-#: rc.cpp:448
-msgctxt "Corresponds to Folder->Move All Messages to Trash"
-msgid "Ask for co&nfirmation before moving all messages to trash"
-msgstr "Pitaj za po&tvrdu prije premještanja svih poruka u smeće"
-
-#. i18n: file: ui/miscpagemaintab.ui:26
-#. i18n: ectx: property (text), widget (QCheckBox, mExcludeImportantFromExpiry)
-#: rc.cpp:451
-msgid "E&xclude important messages from expiry"
-msgstr "I&sključi važne poruke iz isticanja"
-
-#. i18n: file: ui/miscpagemaintab.ui:39
-#. i18n: ectx: property (text), widget (QLabel, mLoopLabel)
-#: rc.cpp:454
-msgctxt ""
-"to be continued with \"do not loop\", \"loop in current folder\", and \"loop "
-"in all folders\""
-msgid "&When trying to find unread messages:"
-msgstr "&Kada pokušava da nađe nepročitane poruke:"
-
-#. i18n: file: ui/miscpagemaintab.ui:64
-#. i18n: ectx: property (whatsThis), widget (KComboBox, mLoopOnGotoUnread)
-#: rc.cpp:457
-msgctxt "what's this help"
-msgid ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">When jumping to the next "
-"unread message, it may occur that no more unread messages are below the "
-"current message.</p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Do not loop:</span> The search will stop at the last message "
-"in the current folder.</p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Loop in current folder:</span> The search will continue at the "
-"top of the message list, but not go to another folder.</p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Loop in all folders:</span> The search will continue at the "
-"top of the message list. If no unread messages are found it will then "
-"continue to the next folder.</p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Similarly, when searching "
-"for the previous unread message, the search will start from the bottom of "
-"the message list and continue to the previous folder depending on which "
-"option is selected.</p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Loop in all marked folders: </span>This is the same as \"Loop "
-"in all folders\" except that only folders are taken into account which have "
-"been marked with the folder property \"Act on new/unread mail in this folder"
-"\".</p></body></html>"
-msgstr ""
-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-"REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
-"\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Sans Serif'; font-size:10pt; font-"
-"weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Pri skoku na narednu "
-"mepročitanu poruku se može desiti, da pod trenutnim porukama nema ni jedne "
-"nepročitane.</p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Ne Kruži:</span> Traženje se zaustavlja na zadnjoj poruci u "
-"trenutnoj fascikli.</p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Kruži po trenutnoj fascikli:</span> Traženje se nastavlja na "
-"vrhu spiska poruka, a ne skače se u drugu.</p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Kruži po vseh mapah:</span> Traženje se nastavlja na vrhu "
-"spiska poruka. Ako nema nepročitanih poruka, nastavlja se u narednoj "
-"fascikli.</p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Slično, pri traženju "
-"predhodne nepročitane poruke, traženje počinje na dnu spiska poruka i, "
-"ovisno od izbrane opcije, nastavlja u prethodnoj fascikli.</p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-"weight:600;\">Kruži po svim označenim fasciklama: </span>To je jednako "
-"opciji »Kruži po svim fasciklama«, s tom razlikom, da se uzimaju samo "
-"fascikle, koje su bile označene svojstvom »Reaguj na novu/nepročitanu poštu "
-"u toj fascikli«.</p></body></html>"
-
-#. i18n: file: ui/miscpagemaintab.ui:68
-#. i18n: ectx: property (text), item, widget (KComboBox, mLoopOnGotoUnread)
-#: rc.cpp:469
-msgid "Do not Loop"
-msgstr "Ne ponavljaj u petlji"
-
-#. i18n: file: ui/miscpagemaintab.ui:73
-#. i18n: ectx: property (text), item, widget (KComboBox, mLoopOnGotoUnread)
-#: rc.cpp:472
-msgid "Loop in Current Folder"
-msgstr "Kruži kroz trenutni direktorij"
-
-#. i18n: file: ui/miscpagemaintab.ui:78
-#. i18n: ectx: property (text), item, widget (KComboBox, mLoopOnGotoUnread)
-#: rc.cpp:475
-msgid "Loop in All Folders"
-msgstr "Kruži kroz sve direktorije"
-
-#. i18n: file: ui/miscpagemaintab.ui:83
-#. i18n: ectx: property (text), item, widget (KComboBox, mLoopOnGotoUnread)
-#: rc.cpp:478
-msgid "Loop in All Marked Folders"
-msgstr "Petlja u svim označenim direktorijima"
-
-#. i18n: file: ui/miscpagemaintab.ui:97
-#. i18n: ectx: property (text), widget (QLabel, mEnterFolderLabel)
-#: rc.cpp:481
-msgctxt ""
-"to be continued with \"jump to first new message\", \"jump to first unread "
-"or new message\", and \"jump to last selected message\""
-msgid "When ente&ring a folder:"
-msgstr "Kada ulazi u direkto&rij:"
-
-#. i18n: file: ui/miscpagemaintab.ui:108
-#. i18n: ectx: property (text), item, widget (KComboBox, mActionEnterFolder)
-#: rc.cpp:484
-#, fuzzy
-msgid "Jump to First Unread Message"
-msgstr "skoči na prvu nepročitanu ili novu poruku"
-
-#. i18n: file: ui/miscpagemaintab.ui:113
-#. i18n: ectx: property (text), item, widget (KComboBox, mActionEnterFolder)
-#: rc.cpp:487
-msgid "Jump to Last Selected Message"
-msgstr "skoči na posljednje izabranu poruku"
-
-#. i18n: file: ui/miscpagemaintab.ui:118
-#. i18n: ectx: property (text), item, widget (KComboBox, mActionEnterFolder)
-#: rc.cpp:490
-#, fuzzy
-msgid "Jump to Newest Message"
-msgstr "skoči na prvu novu poruku"
-
-#. i18n: file: ui/miscpagemaintab.ui:123
-#. i18n: ectx: property (text), item, widget (KComboBox, mActionEnterFolder)
-#: rc.cpp:493
-#, fuzzy
-msgid "Jump to Oldest Message"
-msgstr "skoči na prvu novu poruku"
-
-#. i18n: file: ui/miscpagemaintab.ui:137
-#. i18n: ectx: property (text), widget (QCheckBox, mDelayedMarkAsRead)
-#: rc.cpp:496
-msgid "Mar&k selected message as read after"
-msgstr "Oz&nači trenutnu poruku kao pročitanu nakon"
-
-#. i18n: file: ui/miscpagemaintab.ui:147
-#. i18n: ectx: property (suffix), widget (KIntSpinBox, mDelayedMarkTime)
-#: rc.cpp:499
-msgid " sec"
-msgstr " sek"
-
-#. i18n: file: ui/miscpagemaintab.ui:157
-#. i18n: ectx: property (text), widget (QCheckBox, mShowPopupAfterDnD)
-#: rc.cpp:502
-msgid "&Ask for action after dragging messages to another folder"
-msgstr "Pit&aj za radnje nakon premještanja poruka u drugi direktorij"
-
-#. i18n: file: ui/miscpagemaintab.ui:170
-#. i18n: ectx: property (text), widget (QLabel, mStartUpFolderLabel)
-#: rc.cpp:505
-msgid "Open this folder on &startup:"
-msgstr "Otvori ovaj direktorij na &početku:"
-
-#. i18n: file: ui/miscpagemaintab.ui:177
-#. i18n: ectx: property (text), widget (QCheckBox, mEmptyTrashCheck)
-#: rc.cpp:508
-msgid "Empty local &trash folder on program exit"
-msgstr "Isprazni lokalnu fasciklu za &smeće pri izlasku iz programa"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:17
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:511
-msgid "HTML Messages"
-msgstr "HTML poruke"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:23
-#. i18n: ectx: property (text), widget (QLabel, labelWarnHTML)
-#: rc.cpp:514
-msgid ""
-"<b>WARNING:</b> Allowing HTML in email may increase the risk that your "
-"system will be compromised by present and anticipated security exploits. <a "
-"href=\"whatsthis1\">More about HTML mails...</a> <a href=\"whatsthis2\">More "
-"about external references...</a>"
-msgstr ""
-"<b>UPOZORENJE:</b>Dopuštanje HTML u e-pošti može povećati rizik da će vaš "
-"sistem biti ugrožen trenutnim i budućim iskorištenjem sigurnosnih rupa.<a "
-"href=\"whatsthis1\">Više o HTML e-pošti...</a> <a href=\"whatsthis2\">Više o "
-"vanjskim referencama...</a>"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:36
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, mHtmlMailCheck)
-#: rc.cpp:517
-msgid ""
-"<qt><p>Messages sometimes come in both formats. This option controls whether "
-"you want the HTML part or the plain text part to be displayed.</"
-"p><p>Displaying the HTML part makes the message look better, but at the same "
-"time increases the risk of security holes being exploited.</p><p>Displaying "
-"the plain text part loses much of the message's formatting, but makes it "
-"almost <em>impossible</em> to exploit security holes in the HTML renderer "
-"(Konqueror).</p><p>The option below guards against one common misuse of HTML "
-"messages, but it cannot guard against security issues that were not known at "
-"the time this version of KMail was written.</p><p>It is therefore advisable "
-"to <em>not</em> prefer HTML to plain text.</p><p><b>Note:</b> You can set "
-"this option on a per-folder basis from the <i>Folder</i> menu of KMail's "
-"main window.</p></qt>"
-msgstr ""
-"<qt><p> Emailovi ponekad dolaze u oba formata. Ova opcija određuje da li "
-"želite prikazati HTML dio ili dio sa čistim tekstom.</p><p>Prikazivanjem "
-"HTML dijela poruka izgleda ljepše, ali istovremeno povećavate rizik "
-"zloupotrebe sigurnosnih rupa.</p><p>Prikazivanjem čistog teksta gubi se "
-"većina formatiranja poruke, ali istovremeno čini se gotovo <em>nemoguća</em> "
-"zloupotreba eventualnih rupa u Konqueror slagaču HTMLa.</p><p>Sljedeća "
-"opcija vas čuva od jedne česte zloupotrebe HTML poruka, ali vas ne može "
-"sačuvati od sigurnosnih rupa koje nisu bile poznate u vrijeme pravljenja ove "
-"verzije KMaila.</p><p>Stoga preporučujemo da <em>ne</em> preferirate HTML u "
-"odnosu na čisti tekst.</p><p><b>Napomena:</b> Ovu opciju možete podešavati "
-"posebno za svaki fascikl u meniju <i>Direktorij</i> vašeg glavnog KMail "
-"prozora.</p></qt>"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:39
-#. i18n: ectx: property (text), widget (QCheckBox, mHtmlMailCheck)
-#: rc.cpp:520
-msgid "Prefer HTML to plain text"
-msgstr "Koristi HTML umjesto običnog teksta"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:46
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, mExternalReferences)
-#: rc.cpp:523
-msgid ""
-"<qt><p>Some mail advertisements are in HTML and contain references to, for "
-"example, images that the advertisers employ to find out that you have read "
-"their message (\"web bugs\").</p><p>There is no valid reason to load images "
-"off the Internet like this, since the sender can always attach the required "
-"images directly to the message.</p><p>To guard from such a misuse of the "
-"HTML displaying feature of KMail, this option is <em>disabled</em> by "
-"default.</p><p>However, if you wish to, for example, view images in HTML "
-"messages that were not attached to it, you can enable this option, but you "
-"should be aware of the possible problem.</p></qt>"
-msgstr ""
-"<qt><p>Neke reklame su pošte u HTML i sadrže reference, na primjer, slike "
-"koje oglašivači koriste da bi saznali da ste pročitali njihove poruke (\"web "
-"bube\").</p><p>Nema valjanog razloga za učitavanje slike s Interneta kao što "
-"su ove, jer pošiljalac uvijek može priložiti potrebne slike direktno na "
-"poruku.</p><p>Kako bi se zaštitli od takve zlopotrebe HTML prikaza u KMail, "
-"ovu opciju je <em>onemogućena</em> inicijalno.</p><p>Međutim, ako želite, na "
-"primjer, prikaz slike u HTML porukama koje nisu u prilogu, možete omogućite "
-"tu mogućnost, ali trebali biste biti svjesni mogućih problema.</p></qt>"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:49
-#. i18n: ectx: property (text), widget (QCheckBox, mExternalReferences)
-#: rc.cpp:526
-msgid "Allow messages to load external references from the Internet"
-msgstr "Dozvoli porukama da učitaju vanjske reference sa Mreže"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:59
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:529
-msgid "Encrypted Messages"
-msgstr "Šifrovane poruke"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:65
-#. i18n: ectx: property (text), widget (QCheckBox, mAlwaysDecrypt)
-#: rc.cpp:532
-msgid "Attempt decryption of encrypted messages when viewing"
-msgstr "Pokušaj da dešifruješ šifrovane poruke pri pregledu"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:75
-#. i18n: ectx: property (title), widget (QGroupBox, groupMessageDisp)
-#: rc.cpp:535
-msgid "Message Disposition Notifications"
-msgstr "Obavijesti o stanju poruke"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:81
-#. i18n: ectx: property (text), widget (QLabel, labelSend)
-#: rc.cpp:538
-msgid "Send policy:"
-msgstr "Politika slanja:"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:88
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioIgnore)
-#. i18n: file: ui/securitypagegeneraltab.ui:98
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioAsk)
-#. i18n: file: ui/securitypagegeneraltab.ui:108
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioDeny)
-#. i18n: file: ui/securitypagegeneraltab.ui:118
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioAlways)
-#. i18n: file: ui/securitypagegeneraltab.ui:135
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioNothing)
-#. i18n: file: ui/securitypagegeneraltab.ui:145
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioFull)
-#. i18n: file: ui/securitypagegeneraltab.ui:155
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, radioHeaders)
-#: rc.cpp:541 rc.cpp:547 rc.cpp:553 rc.cpp:559 rc.cpp:568 rc.cpp:574
-#: rc.cpp:580
-msgid ""
-"<qt><h3>Message Disposition Notification Policy</h3><p>MDNs are a "
-"generalization of what is commonly called <b>read receipt</b>. The message "
-"author requests a disposition notification to be sent and the receiver's "
-"mail program generates a reply from which the author can learn what happened "
-"to his message. Common disposition types include <b>displayed</b> (i.e. "
-"read), <b>deleted</b> and <b>dispatched</b> (e.g. forwarded).</p><p>The "
-"following options are available to control KMail's sending of MDNs:</"
-"p><ul><li><em>Ignore</em>: Ignores any request for disposition "
-"notifications. No MDN will ever be sent automatically (recommended).</"
-"li><li><em>Ask</em>: Answers requests only after asking the user for "
-"permission. This way, you can send MDNs for selected messages while denying "
-"or ignoring them for others.</li><li><em>Deny</em>: Always sends a "
-"<b>denied</b> notification. This is only <em>slightly</em> better than "
-"always sending MDNs. The author will still know that the messages has been "
-"acted upon, he just cannot tell whether it was deleted or read etc.</"
-"li><li><em>Always send</em>: Always sends the requested disposition "
-"notification. That means that the author of the message gets to know when "
-"the message was acted upon and, in addition, what happened to it (displayed, "
-"deleted, etc.). This option is strongly discouraged, but since it makes much "
-"sense e.g. for customer relationship management, it has been made available."
-"</li></ul></qt>"
-msgstr ""
-"<qt><h3>Politika obavješenja o stanju poruke</h3> <p>MDN (Message "
-"Disposition Notification) je opštiji slučaj onoga što se obično zove "
-"<b>potvrda čitanja</b>. Autor poruke je zatražio da bude poslano "
-"obavještenje o stanju, tj. da e-mail program primatelja generiše odgovor iz "
-"kojeg autor može saznati šta se desilo sa njegovom/njenom porukom. "
-"Uobičajene vrsta stanja su <b>prikazana</b> (tj. pročitana poruka), "
-"<b>obrisana</b> i <b>poslana</b> (tj. proslijeđena poruka).</p><p>Dostupne "
-"su sljedeće opcije za kontrolu KMailovog slanja MDNova:</"
-"p><ul><li><em>Ignoriši</em>: Ignoriše sve zahtjeve za obavještenjima o "
-"stanju. MDNovi neće nikada biti poslani automatski (preporučeno).</"
-"li><li><em>Pitaj</em>: Odgovor će biti poslan tek nakon što se dobije "
-"dozvola od korisnika. Na ovaj način možete slati MDNove za poruke za koje to "
-"želite učiniti, odbijajući ili ignorišući ostale.</li> <li><em>Odbij</em>: "
-"Uvijek šalje obavještenje da je poruka <b>odbijena</b>. Ovo je tek  "
-"<em>neznatno</em> bolje od slanja običnog MDNa. Autor će i dalje znati da je "
-"poruka primljena i da je na nju reagovano, jedino neće znati kako (da li je "
-"poruka obrisana, pročitana itd.</li> <li><em>Uvijek šalji</em>: Uvijek šalje "
-"traženo obavještenje o stanju. Ovo znači da će autor poruke znati da li je "
-"reagovano na poruku kao i šta se desilo s njom (da li je prikazana, obrisana "
-"itd.). Ova opcija se ne preporučuje, ali pošto ona može biti korisna npr. za "
-"odjel odnosa s javnošću, ostavljena je kao mogućnost.</li></ul></qt>"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:91
-#. i18n: ectx: property (text), widget (QRadioButton, radioIgnore)
-#: rc.cpp:544
-msgid "Ignore"
-msgstr "Ignoriši"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:101
-#. i18n: ectx: property (text), widget (QRadioButton, radioAsk)
-#: rc.cpp:550
-msgid "Ask"
-msgstr "Pitaj"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:111
-#. i18n: ectx: property (text), widget (QRadioButton, radioDeny)
-#: rc.cpp:556
-msgid "Deny"
-msgstr "Zabrani"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:121
-#. i18n: ectx: property (text), widget (QRadioButton, radioAlways)
-#: rc.cpp:562
-msgid "Always send"
-msgstr "Uvijek pošalji"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:128
-#. i18n: ectx: property (text), widget (QLabel, labelQuote)
-#: rc.cpp:565
-msgid "Quote original message:"
-msgstr "Od originalne poruke citiraj:"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:138
-#. i18n: ectx: property (text), widget (QRadioButton, radioNothing)
-#: rc.cpp:571
-msgid "Nothing"
-msgstr "Ništa"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:148
-#. i18n: ectx: property (text), widget (QRadioButton, radioFull)
-#: rc.cpp:577
-msgid "Full message"
-msgstr "Puna poruka"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:158
-#. i18n: ectx: property (text), widget (QRadioButton, radioHeaders)
-#: rc.cpp:583
-msgid "Only headers"
-msgstr "Samo zaglavlja"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:165
-#. i18n: ectx: property (text), widget (QCheckBox, mNoMDNsWhenEncryptedCheck)
-#: rc.cpp:586
-msgid "Do not send MDNs in response to encrypted messages"
-msgstr "Nemoj slati MDN kao odgovor na šifrovanu poruku"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:172
-#. i18n: ectx: property (text), widget (QLabel, labelWarning)
-#: rc.cpp:589
-msgid ""
-"<b>WARNING:</b> Unconditionally returning confirmations undermines your "
-"privacy. <a href=\"whatsthis3\">More about MDNs...</a>"
-msgstr ""
-"<b>UPOZORENJE:</b> Bezuslovno vračanje potvrda ugrožava vašu privatnost.<a "
-"href=\"whatsthis3\">Više o MDN-ovima...</a>"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:188
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: rc.cpp:592
-msgid "Certificate && Key Bundle Attachments"
-msgstr "Upravljanje certifikatima"
-
-#. i18n: file: ui/securitypagegeneraltab.ui:194
-#. i18n: ectx: property (text), widget (QCheckBox, mAutomaticallyImportAttachedKeysCheck)
-#: rc.cpp:595
-msgid "Automatically import keys and certificate"
-msgstr "Automatski uvezi ključeve i certifikate"
-
-#. i18n: file: ui/smimeconfiguration.ui:16
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, CRLRB)
-#: rc.cpp:598
-msgid ""
-"If this option is selected, S/MIME certificates are validated using "
-"Certificate Revocation Lists (CRLs)."
-msgstr ""
-"Ako je uključena ova opcija, S/MIME certifikati će biti provjeravani "
-"koristeći Liste opoziva certifikata (CRL)."
-
-#. i18n: file: ui/smimeconfiguration.ui:19
-#. i18n: ectx: property (text), widget (QRadioButton, CRLRB)
-#: rc.cpp:601
-msgid "Validate certificates using CRLs"
-msgstr "Provjeri certifikate koristeći CRL"
-
-#. i18n: file: ui/smimeconfiguration.ui:29
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, OCSPRB)
-#: rc.cpp:604
-msgid ""
-"If this option is selected, S/MIME certificates are validated online using "
-"the Online Certificates Status Protocol (OCSP). Fill in the URL of the OCSP "
-"responder below."
-msgstr ""
-"Ako je ova opcija uključena, S/MIME certifikati se provjeravaju online "
-"koristeći Online protokol za status certifikata (OCSP). Unesite URL za OCSP "
-"responder ispod."
-
-#. i18n: file: ui/smimeconfiguration.ui:32
-#. i18n: ectx: property (text), widget (QRadioButton, OCSPRB)
-#: rc.cpp:607
-msgid "Validate certificates online (OCSP)"
-msgstr "Provjeri certifikate on-line (OCSP)"
-
-#. i18n: file: ui/smimeconfiguration.ui:39
-#. i18n: ectx: property (title), widget (QGroupBox, OCSPGroupBox)
-#: rc.cpp:610
-msgid "Online Certificate Validation"
-msgstr "Generisanje certifikata"
-
-#. i18n: file: ui/smimeconfiguration.ui:49
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:613
-msgid "OCSP responder URL:"
-msgstr "OCSP responder URL:"
-
-#. i18n: file: ui/smimeconfiguration.ui:59
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:616
-msgid "OCSP responder signature:"
-msgstr "OCSP responder potpis:"
-
-#. i18n: file: ui/smimeconfiguration.ui:73
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, OCSPResponderURL)
-#: rc.cpp:619
-msgid ""
-"Enter here the address of the server for online validation of certificates "
-"(OCSP responder). The URL is usually starting with http://."
-msgstr ""
-"Unesite ovdje adresu servera za online provjeru certifikata (OCSP "
-"responder). URL obično počinje sa http://."
-
-#. i18n: file: ui/smimeconfiguration.ui:87
-#. i18n: ectx: property (text), widget (QCheckBox, ignoreServiceURLCB)
-#: rc.cpp:622
-msgid "Ignore service URL of certificates"
-msgstr "Ignoriši servisni URL sertifikata"
-
-#. i18n: file: ui/smimeconfiguration.ui:97
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, doNotCheckCertPolicyCB)
-#: rc.cpp:625
-msgid ""
-"By default GnuPG uses the file ~/.gnupg/policies.txt to check if a "
-"certificate policy is allowed. If this option is selected, policies are not "
-"checked."
-msgstr ""
-"Normalno GnuPG koristi datoteku ~/.gnupg/policies.txt da bi provjerio da li "
-"je dozvoljena politika certifikata. Ako je uključena ova opcija, politike "
-"neće biti provjeravane."
-
-#. i18n: file: ui/smimeconfiguration.ui:100
-#. i18n: ectx: property (text), widget (QCheckBox, doNotCheckCertPolicyCB)
-#: rc.cpp:628
-msgid "Do not check certificate policies"
-msgstr "Nemoj provjeravati politiku certifikata"
-
-#. i18n: file: ui/smimeconfiguration.ui:107
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, neverConsultCB)
-#: rc.cpp:631
-msgid ""
-"If this option is checked, Certificate Revocation Lists are never used to "
-"validate S/MIME certificates."
-msgstr ""
-"Ako je ova opcija isključena, Liste opoziva certifikata (CRL) se nikad ne "
-"koriste za provjeru S/MIME certifikata."
-
-#. i18n: file: ui/smimeconfiguration.ui:110
-#. i18n: ectx: property (text), widget (QCheckBox, neverConsultCB)
-#: rc.cpp:634
-msgid "Never consult a CRL"
-msgstr "Nikad ne konsultuj CRL"
-
-#. i18n: file: ui/smimeconfiguration.ui:117
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, fetchMissingCB)
-#: rc.cpp:637
-msgid ""
-"If this option is checked, missing issuer certificates are fetched when "
-"necessary (this applies to both validation methods, CRLs and OCSP)"
-msgstr ""
-"Ako je ova opcija uključena, nedostajući certifikati izdavača su dobavljeni "
-"kada je to potrebno (ovo se odnosi na oba metoda provjere, CRLove i OCSP)"
-
-#. i18n: file: ui/smimeconfiguration.ui:120
-#. i18n: ectx: property (text), widget (QCheckBox, fetchMissingCB)
-#: rc.cpp:640
-msgid "Fetch missing issuer certificates"
-msgstr "Kod dodavanja certifikata"
-
-#. i18n: file: ui/smimeconfiguration.ui:131
-#. i18n: ectx: attribute (title), widget (QWidget, tabHTTP)
-#: rc.cpp:643
-msgid "HTTP Requests"
-msgstr "HTTP zahtjevi"
-
-#. i18n: file: ui/smimeconfiguration.ui:137
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, disableHTTPCB)
-#: rc.cpp:646
-msgid "Entirely disables the use of HTTP for S/MIME."
-msgstr "Potpuno isključuje upotrebu HTTP-a za S/MIME."
-
-#. i18n: file: ui/smimeconfiguration.ui:140
-#. i18n: ectx: property (text), widget (QCheckBox, disableHTTPCB)
-#: rc.cpp:649
-msgid "Do not perform any HTTP requests"
-msgstr "Ne izvršavaj nijedan HTTP zahtjev"
-
-#. i18n: file: ui/smimeconfiguration.ui:147
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreHTTPDPCB)
-#: rc.cpp:652
-msgid ""
-"When looking for the location of a CRL, the to-be-tested certificate usually "
-"contains what are known as \"CRL Distribution Point\" (DP) entries, which "
-"are URLs describing the way to access the URL. The first found DP entry is "
-"used.  With this option all entries using the HTTP scheme are ignored when "
-"looking for a suitable DP."
-msgstr ""
-"Pri traženju lokacije CRL-a, sertifikat koji će biti testiran obično sadrži "
-"unose za  takozvane „distribucione tačke CRL-ova“ (DP); to su URL-ovi koji "
-"opisuju način pristupa do CRL-ova. Koristi se prvi pronađeni DP unos. Ovom "
-"opcijom ignorišu se svi unosi koji koriste HTTP šemu pri traženju pogodne DP."
-
-#. i18n: file: ui/smimeconfiguration.ui:150
-#. i18n: ectx: property (text), widget (QCheckBox, ignoreHTTPDPCB)
-#: rc.cpp:655
-msgid "Ignore HTTP CRL distribution point of certificates"
-msgstr "Ignoriši distribucionu tačku HTTP CRL-ova sertifikata"
-
-#. i18n: file: ui/smimeconfiguration.ui:172
-#. i18n: ectx: property (whatsThis), widget (QRadioButton, honorHTTPProxyRB)
-#: rc.cpp:658
-msgid ""
-"If this option is selected, the value of the HTTP proxy shown on the right "
-"(which comes from the environment variable http_proxy) will be used for any "
-"HTTP request."
-msgstr ""
-"Ako je ova opcija izabrana, vrijednost HTTP proksija prikazana lijevo "
-"(dolazi iz promjenljive okruženja http_proxy) biće korišćena za sve HTTP "
-"zahtjeve."
-
-#. i18n: file: ui/smimeconfiguration.ui:175
-#. i18n: ectx: property (text), widget (QRadioButton, honorHTTPProxyRB)
-#: rc.cpp:661
-msgid "Use system HTTP proxy:"
-msgstr "Koristi sistemski HTTP proksi:"
-
-#. i18n: file: ui/smimeconfiguration.ui:192
-#. i18n: ectx: property (text), widget (QRadioButton, useCustomHTTPProxyRB)
-#: rc.cpp:667
-msgid "Use this proxy for HTTP requests: "
-msgstr "Koristi ovaj proksi za HTTP zahtjeve: "
-
-#. i18n: file: ui/smimeconfiguration.ui:199
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, customHTTPProxy)
-#: rc.cpp:670
-msgid ""
-"Enter here the location of your HTTP Proxy, which will be used for all HTTP "
-"requests relating to S/MIME. The syntax is host:port, for instance myproxy."
-"nowhere.com:3128."
-msgstr ""
-"Unesite ovdje lokaciju HTTP proksija koji treba koristiti za sve HTTP "
-"zahtjeve u vezi sa S/MIME-ovima. Sintaksa je domacin:port, npr. mojproksi."
-"nigdje.com:3128."
-
-#. i18n: file: ui/smimeconfiguration.ui:209
-#. i18n: ectx: attribute (title), widget (QWidget, tabLDAP)
-#: rc.cpp:673
-msgid "LDAP Requests"
-msgstr "LDAP zahtjevi"
-
-#. i18n: file: ui/smimeconfiguration.ui:217
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, disableLDAPCB)
-#: rc.cpp:676
-msgid "Entirely disables the use of LDAP for S/MIME."
-msgstr "Potpuno isključuje upotrebu LDAP-a za S/MIME."
-
-#. i18n: file: ui/smimeconfiguration.ui:220
-#. i18n: ectx: property (text), widget (QCheckBox, disableLDAPCB)
-#: rc.cpp:679
-msgid "Do not perform any LDAP requests"
-msgstr "Ne izvršavaj nijedan LDAP zahtjev"
-
-#. i18n: file: ui/smimeconfiguration.ui:227
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreLDAPDPCB)
-#: rc.cpp:682
-msgid ""
-"When looking for the location of a CRL, the to-be-tested certificate usually "
-"contains what are known as \"CRL Distribution Point\" (DP) entries, which "
-"are URLs describing the way to access the URL. The first found DP entry is "
-"used.  With this option all entries using the LDAP scheme are ignored when "
-"looking for a suitable DP."
-msgstr ""
-"Pri traženju lokacije CRL-a, sertifikat koji će biti testiran obično sadrži "
-"unose za  takozvane „distribucione tačke CRL-ova“ (DP); to su URL-ovi koji "
-"opisuju način pristupa do CRL-ova. Koristi se prvi pronađeni DP unos. Ovom "
-"opcijom ignorišu se svi unosi koji koriste LDAP šemu pri traženju pogodne DP."
-
-#. i18n: file: ui/smimeconfiguration.ui:230
-#. i18n: ectx: property (text), widget (QCheckBox, ignoreLDAPDPCB)
-#: rc.cpp:685
-msgid "Ignore LDAP CRL distribution point of certificates"
-msgstr "Ignoriši distribucionu tačku LDAP CRL-ova sertifikata"
-
-#. i18n: file: ui/smimeconfiguration.ui:239
-#. i18n: ectx: property (text), widget (QLabel, customLDAPLabel)
-#: rc.cpp:688
-msgid "Primary host for LDAP requests:"
-msgstr "Primarni domaćin za LDAP zahtjeve:"
-
-#. i18n: file: ui/smimeconfiguration.ui:250
-#. i18n: ectx: property (whatsThis), widget (KLineEdit, customLDAPProxy)
-#: rc.cpp:691
-msgid ""
-"Entering a LDAP server here will make all LDAP requests go to that server "
-"first. More precisely, this setting overrides any specified host and port "
-"part in a LDAP URL and will also be used if host and port have been omitted "
-"from the URL. Other LDAP servers will be used only if the connection to the "
-"\"proxy\" failed.\n"
-"The syntax is \"HOST\" or \"HOST:PORT\". If PORT is omitted, port 389 "
-"(standard LDAP port) is used."
-msgstr ""
-"Svi LDAP zahtjevi će prvo ići na LDAP server koji ovdje unesete. Preciznije, "
-"ovo podešavanje gazi bilo koji domaćin i port naveden u LDAP URL-u, a "
-"koristi se i ako su domaćin i port izostavljeni u URL-u. Drugi LDAP serveri "
-"koriste se samo ako veza sa proksijem ne uspje.\n"
-"Sintaksa je „DOMACIN“ ili „DOMACIN:PORT“. Ako se port izostavi, koristiće se "
-"389 (standardni LDAP port)."
-
-#. i18n: file: ui/composercryptoconfiguration.ui:16
-#. i18n: ectx: property (title), widget (QGroupBox, optionsGroup_2)
-#: rc.cpp:695
-msgid "Signing"
-msgstr "Potpiši"
-
-#. i18n: file: ui/composercryptoconfiguration.ui:22
-#. i18n: ectx: property (text), widget (QCheckBox, mAutoSignature)
-#: rc.cpp:698
-msgid "&Automatically sign messages"
-msgstr "Automatski &potpiši poruke uz pomoć OpenPGPa"
-
-#. i18n: file: ui/composercryptoconfiguration.ui:25
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, mAutoSignature)
-#: rc.cpp:701
-msgid ""
-"When this option is enabled, all messages you send will be signed by "
-"default; of course, it is still possible to disable signing for each message "
-"individually."
-msgstr ""
-"Kada je ova opcija uključena, sve poruke koje pošaljete će automatski biti "
-"potpisane. Naravno, još uvijek je moguće spriječiti potpisivanje pojedinačne "
-"poruke."
-
-#. i18n: file: ui/composercryptoconfiguration.ui:35
-#. i18n: ectx: property (title), widget (QGroupBox, optionsGroup)
-#: rc.cpp:704
-msgid "Encrypting"
-msgstr "Kriptovanje"
-
-#. i18n: file: ui/composercryptoconfiguration.ui:41
-#. i18n: ectx: property (text), widget (QCheckBox, mEncToSelf)
-#: rc.cpp:707
-msgid ""
-"When encrypting emails, always also encr&ypt to the certificate of my own "
-"identity"
-msgstr ""
-"Kod dešifrovanja e-pošte, uvijek također dešifruj potvrdu mog identiteta"
-
-#. i18n: file: ui/composercryptoconfiguration.ui:44
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, mEncToSelf)
-#: rc.cpp:710
-msgid ""
-"When this option is enabled, the message/file will not only be encrypted "
-"with the receiver's public key, but also with your key. This will enable you "
-"to decrypt the message/file at a later time. This is generally a good idea."
-msgstr ""
-"Kada je ova opcija uključena, poruka/datoteka neće biti šifrovana samo "
-"primateljevim javnim ključem, nego i vašim ključem. Ovo vam omogućuje da "
-"dešifrujete poruku/datoteku kasnije. Ovo je generalno dobra ideja."
-
-#. i18n: file: ui/composercryptoconfiguration.ui:51
-#. i18n: ectx: property (text), widget (QCheckBox, mShowEncryptionResult)
-#: rc.cpp:713
-msgid "Show s&igned/encrypted text after composing"
-msgstr "Prikaži p&otpisani/šifrovani tekst nakon sastavljanja"
-
-#. i18n: file: ui/composercryptoconfiguration.ui:54
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, mShowEncryptionResult)
-#: rc.cpp:716
-msgid ""
-"When this option is enabled, the signed/encrypted text will be shown in a "
-"separate window, enabling you to know how it will look before it is sent. "
-"This is a good idea when you are verifying that your encryption system works."
-msgstr ""
-"Kada je ova opcija uključena, poslani/šifrovani tekst će biti prikazan u "
-"zasebnom prozoru, što vam omogućuje da vidite kako će izgledati prije nego "
-"što ga pošaljete. Ovo je dobra ideja ako želite provjeriti kako funkcioniše "
-"vaš sistem šifrovanja."
-
-#. i18n: file: ui/composercryptoconfiguration.ui:61
-#. i18n: ectx: property (text), widget (QCheckBox, mStoreEncrypted)
-#: rc.cpp:719
-msgid "Store sent messages encry&pted"
-msgstr "Snimi poslane poruke š&ifrovano"
-
-#. i18n: file: ui/composercryptoconfiguration.ui:67
-#. i18n: ectx: property (toolTip), widget (QCheckBox, mStoreEncrypted)
-#: rc.cpp:722
-msgid "Check to store messages encrypted "
-msgstr "Uključite da snimate poruke u šifrovanom obliku "
-
-#. i18n: file: ui/composercryptoconfiguration.ui:75
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, mStoreEncrypted)
-#: rc.cpp:725
-#, fuzzy
-msgid ""
-"<qt>\n"
-"<h1>Store Messages Encrypted</h1>\n"
-"When this box is checked, sent messages are stored encrypted like they were "
-"sent. This is not recommended, as you will not be able to read the messages "
-"any longer if a necessary certificate expires.\n"
-"<p>\n"
-"However, there may be local rules that require you to turn this option on. "
-"When in doubt, check with your local administrator.\n"
-"</p></qt>"
-msgstr ""
-"<qt>\n"
-"<h1>Čuvaj poruke u šifrovanom obliku</h1>\n"
-"Kada je uključena ova opcija, poslane poruke će biti čuvane u šifrovanom "
-"obliku kao što su i poslane. Ovo se ne preporučuje, pošto nećete moći "
-"pročitati poruke ako potrebni certifikat istekne.\n"
-"<p>\n"
-"Ipak, možda postoje neka lokalna pravila koja od vas traže da uključite ovu "
-"opciju. Ako niste sigurni, pitajte vašeg lokalnog administratora.\n"
-"</qt>"
-
-#. i18n: file: ui/composercryptoconfiguration.ui:82
-#. i18n: ectx: property (text), widget (QCheckBox, mShowKeyApprovalDlg)
-#: rc.cpp:733
-msgid "Always show the encryption keys &for approval"
-msgstr "Uvijek pokaži ključeve za šifrovanje &radi odobrenja"
-
-#. i18n: file: ui/composercryptoconfiguration.ui:85
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, mShowKeyApprovalDlg)
-#: rc.cpp:736
-msgid ""
-"When this option is enabled, the application will always show you a list of "
-"public keys from which you can choose the one it will use for encryption. If "
-"it is off, the application will only show the dialog if it cannot find the "
-"right key or if there are several which could be used."
-msgstr ""
-"Ako je ova opcija uključena, program će vam uvijek prikazati listu javnih "
-"ključeva među kojima možete izabrati onaj koji će biti korišten za "
-"šifrovanje. Ako je isključena, program će vam samo prikazati prozor ako ne "
-"može naći odgovarajući ključ ili ako se može koristiti nekoliko."
-
-#. i18n: file: ui/composercryptoconfiguration.ui:92
-#. i18n: ectx: property (text), widget (QCheckBox, mAutoEncrypt)
-#: rc.cpp:739
-msgid "Automatically encrypt &messages whenever possible"
-msgstr "Automatski š&ifriraj poruke kad god je moguće"
-
-#. i18n: file: ui/composercryptoconfiguration.ui:95
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, mAutoEncrypt)
-#: rc.cpp:742
-msgid ""
-"When this option is enabled, every message you send will be encrypted "
-"whenever encryption is possible and desired; of course, it is still possible "
-"to disable the automatic encryption for each message individually."
-msgstr ""
-"Kada je ova opcija uključena, sve poruke koje pošaljete će automatski biti "
-"šifrovane kad god je enkripcija moguća i poželjna. Naravno, još uvijek je "
-"moguće spriječiti šifrovanje za svaku pojedinačnu poruku."
-
-#. i18n: file: ui/composercryptoconfiguration.ui:102
-#. i18n: ectx: property (text), widget (QCheckBox, mNeverEncryptWhenSavingInDrafts)
-#: rc.cpp:745
-msgid "Never sign/encrypt when sa&ving as draft"
-msgstr "Nikad ne potpisuj / ne šifruj prilikom s&nimanja kao nacrt"
-
-#. i18n: file: ui/warningconfiguration.ui:17
-#. i18n: ectx: property (toolTip), widget (QCheckBox, mWarnUnsigned)
-#: rc.cpp:748
-msgid "Check to be warned when sending unsigned messages."
-msgstr "Uključite da biste bili upozoreni prilikom slanja nepotpisanih poruka."
-
-#. i18n: file: ui/warningconfiguration.ui:25
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, mWarnUnsigned)
-#: rc.cpp:751
-#, fuzzy
-msgid ""
-"<qt>\n"
-"<h1>Warn When Trying To Send Unsigned Messages</h1>\n"
-"If this box is checked, you will be warned when you try to send parts of or "
-"the whole message unsigned.\n"
-"<p>\n"
-"It is recommended to leave this option turned on for maximum integrity.\n"
-"</p></qt>"
-msgstr ""
-"<qt>\n"
-"<h1>Upozori prilikom pokušaja slanja nepotpisanih poruka</h1>\n"
-"Ako je ova opcija uključena, bićete upozoreni kada pokušate slati dijelove "
-"ili čitavu poruku bez potpisivanja.\n"
-"<p>\n"
-"Preporučeno je da ovu opciju ostavite uključenom radi maksimalnog "
-"integriteta.\n"
-"</qt>"
-
-#. i18n: file: ui/warningconfiguration.ui:28
-#. i18n: ectx: property (text), widget (QCheckBox, mWarnUnsigned)
-#: rc.cpp:759
-msgid "Warn when trying to send &unsigned messages"
-msgstr "Upozori prije slanja &nepotpisanih poruka"
-
-#. i18n: file: ui/warningconfiguration.ui:38
-#. i18n: ectx: property (toolTip), widget (QCheckBox, warnUnencryptedCB)
-#: rc.cpp:762
-msgid "Check to be warned when sending unencrypted messages."
-msgstr ""
-"Uključite da biste bili upozoreni prilikom slanja ne-šifrovanih poruka."
-
-#. i18n: file: ui/warningconfiguration.ui:46
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, warnUnencryptedCB)
-#: rc.cpp:765
-#, fuzzy
-msgid ""
-"<qt>\n"
-"<h1>Warn When Trying To Send Unencrypted Messages</h1>\n"
-"If this box is checked, you will be warned when you try to send parts of or "
-"the whole message unencrypted.\n"
-"<p>\n"
-"It is recommended to leave this option turned on for maximum integrity.\n"
-"</p></qt>"
-msgstr ""
-"<qt>\n"
-"<h1>Upozori prilikom pokušaja slanja nešifrovanih poruka</h1>\n"
-"Ako je ova opcija uključena, bićete upozoreni kada pokušate slati dijelove "
-"ili čitavu poruku bez šifrovanja.\n"
-"<p>\n"
-"Preporučeno je da ovu opciju ostavite uključenom radi maksimalnog "
-"integriteta.\n"
-"</qt>"
-
-#. i18n: file: ui/warningconfiguration.ui:49
-#. i18n: ectx: property (text), widget (QCheckBox, warnUnencryptedCB)
-#: rc.cpp:773
-msgid "&Warn when trying to send unencrypted messages"
-msgstr "&Upozori pri pokušaju slanja ne-šifrovane poruke"
-
-#. i18n: file: ui/warningconfiguration.ui:59
-#. i18n: ectx: property (toolTip), widget (QCheckBox, warnReceiverNotInCertificateCB)
-#: rc.cpp:776
-msgid "Check to be warned if the address is not in the certificate"
-msgstr "Uključite da biste bili upozoreni ako adresa nije u certifikatu"
-
-#. i18n: file: ui/warningconfiguration.ui:67
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, warnReceiverNotInCertificateCB)
-#: rc.cpp:779
-#, fuzzy
-msgid ""
-"<qt>\n"
-"<h1>Warn if receiver's email address is not in certificate</h1>\n"
-"If this option is checked, a warning is issued if the email address of the "
-"receiver is not contained in the certificate used for encrypting.\n"
-"<p>\n"
-"It is recommended to leave this option turned on for maximum security.\n"
-"</p></qt>"
-msgstr ""
-"<qt>\n"
-"<h1>Upozori, ako primaočeve elektronske adrese nema u certifikatu</h1>\n"
-"Ako je ta opcija uključena, izda se upozorenju, ukoliko primaočeve "
-"elektronske adrese nema u certifikatu, upotrbljenom za šifriranje.\n"
-"<p>\n"
-"Za najveću sigurnost je preporučeno, da je ta opcija uključena.\n"
-"</qt>"
-
-#. i18n: file: ui/warningconfiguration.ui:70
-#. i18n: ectx: property (text), widget (QCheckBox, warnReceiverNotInCertificateCB)
-#: rc.cpp:787
-msgid "Warn if &Receiver's Email Address is Not in Certificate"
-msgstr "Upozori ako e-adresa p&rimaoca nije u certifikatu"
-
-#. i18n: file: ui/warningconfiguration.ui:80
-#. i18n: ectx: property (title), widget (QGroupBox, warnGroupBox)
-#: rc.cpp:790
-msgid "Warn if certificates/keys expire soon (configure thresholds below)"
-msgstr ""
-"Upozori ako certifikati/ključevi ističu uskoro (ispod podesite ograničenja)"
-
-#. i18n: file: ui/warningconfiguration.ui:89
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#: rc.cpp:793
-msgid "For Signing"
-msgstr "Za potpisivanje"
-
-#. i18n: file: ui/warningconfiguration.ui:102
-#. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
-#: rc.cpp:796
-msgid "For Encryption"
-msgstr "Za šifriranje"
-
-#. i18n: file: ui/warningconfiguration.ui:121
-#. i18n: ectx: property (toolTip), widget (KIntSpinBox, mWarnSignKeyExpiresSB)
-#. i18n: file: ui/warningconfiguration.ui:157
-#. i18n: ectx: property (toolTip), widget (KIntSpinBox, mWarnEncrKeyExpiresSB)
-#. i18n: file: ui/warningconfiguration.ui:193
-#. i18n: ectx: property (toolTip), widget (KIntSpinBox, mWarnEncrChainCertExpiresSB)
-#. i18n: file: ui/warningconfiguration.ui:223
-#. i18n: ectx: property (toolTip), widget (KIntSpinBox, mWarnSignChainCertExpiresSB)
-#. i18n: file: ui/warningconfiguration.ui:253
-#. i18n: ectx: property (toolTip), widget (KIntSpinBox, mWarnSignRootCertExpiresSB)
-#. i18n: file: ui/warningconfiguration.ui:289
-#. i18n: ectx: property (toolTip), widget (KIntSpinBox, mWarnEncrRootCertExpiresSB)
-#: rc.cpp:799 rc.cpp:810 rc.cpp:821 rc.cpp:832 rc.cpp:843 rc.cpp:854
-msgid "Select the number of days here"
-msgstr "Ovdje izaberite broj dana"
-
-#. i18n: file: ui/warningconfiguration.ui:129
-#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, mWarnSignKeyExpiresSB)
-#: rc.cpp:802
-#, fuzzy
-msgid ""
-"<qt>\n"
-"<h1>Warn If Signature Certificate Expires</h1>\n"
-"Select the minimum number of days the signature certificate should be valid "
-"without issuing a warning.\n"
-"<p>\n"
-"The recommended SPHINX setting is 14 days.\n"
-"</p></qt>"
-msgstr ""
-"<qt>\n"
-"<h1>Upozori ako certifikat za potpisivanje ističe</h1>\n"
-"Izaberite minimalan broj dana tokom kojih je certifikat za potpisivanje "
-"ispravan bez prikazivanja upozorenja.\n"
-"<p>\n"
-"Predložena SPHINX postavka je 14 dana.\n"
-"</qt>"
-
-#. i18n: file: ui/warningconfiguration.ui:165
-#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, mWarnEncrKeyExpiresSB)
-#: rc.cpp:813
-#, fuzzy
-msgid ""
-"<qt>\n"
-"<h1>Warn If Encryption Certificate Expires</h1>\n"
-"Select the minimum number of days the encryption certificate should be valid "
-"without issuing a warning.\n"
-"<p>\n"
-"The recommended SPHINX setting is 14 days.\n"
-"</p></qt>"
-msgstr ""
-"<qt>\n"
-"<h1>Upozori ako certifikat za šifrovanje ističe</h1>\n"
-"Izaberite minimalan broj dana tokom kojih je certifikat za šifrovanje "
-"ispravan bez prikazivanja upozorenja.\n"
-"<p>\n"
-"Predložena SPHINX postavka je 14 dana.\n"
-"</qt>"
-
-#. i18n: file: ui/warningconfiguration.ui:201
-#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, mWarnEncrChainCertExpiresSB)
-#: rc.cpp:824
-#, fuzzy
-msgid ""
-"<qt>\n"
-"<h1>Warn If A Certificate In The Chain Expires</h1>\n"
-"Select the minimum number of days all certificates in the chain should be "
-"valid without issuing a warning.\n"
-"<p>\n"
-"The recommended SPHINX setting is 14 days.\n"
-"</p></qt>"
-msgstr ""
-"<qt>\n"
-"<h1>Upozori ako certifikat iz lanca ističe</h1>\n"
-"Izaberite minimalan broj dana tokom kojih svi certifikati u lancu trebaju "
-"biti ispravni bez prikazivanja upozorenja.\n"
-"<p>\n"
-"Predložena SPHINX postavka je 14 dana.\n"
-"</qt>"
-
-#. i18n: file: ui/warningconfiguration.ui:231
-#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, mWarnSignChainCertExpiresSB)
-#: rc.cpp:835
-#, fuzzy
-msgid ""
-"<qt>\n"
-"<h1>Warn If CA Certificate Expires</h1>\n"
-"Select the minimum number of days the CA certificate should be valid without "
-"issuing a warning.\n"
-"<p>\n"
-"The recommended SPHINX setting is 14 days.\n"
-"</p></qt>"
-msgstr ""
-"<qt>\n"
-"<h1>Upozori ako CA certifikat ističe</h1>\n"
-"Izaberite minimalan broj dana tokom kojih je CA certifikat ispravan bez "
-"prikazivanja upozorenja.\n"
-"<p>\n"
-"Predložena SPHINX postavka je 14 dana.\n"
-"</qt>"
-
-#. i18n: file: ui/warningconfiguration.ui:261
-#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, mWarnSignRootCertExpiresSB)
-#. i18n: file: ui/warningconfiguration.ui:297
-#. i18n: ectx: property (whatsThis), widget (KIntSpinBox, mWarnEncrRootCertExpiresSB)
-#: rc.cpp:846 rc.cpp:857
-#, fuzzy
-msgid ""
-"<qt>\n"
-"<h1>Warn If Root Certificate Expires</h1>\n"
-"Select the minimum number of days the root certificate should be valid "
-"without issuing a warning.\n"
-"<p>\n"
-"The recommended SPHINX setting is 14 days.\n"
-"</p></qt>"
-msgstr ""
-"<qt>\n"
-"<h1>Upozori ako korijenski certifikat ističe</h1>\n"
-"Izaberite minimalan broj dana tokom kojih je korijenski certifikat ispravan "
-"bez prikazivanja upozorenja.\n"
-"<p>\n"
-"Predložena SPHINX postavka je 14 dana.\n"
-"</qt>"
-
-#. i18n: file: ui/warningconfiguration.ui:313
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2_2)
-#: rc.cpp:865
-msgid "For root certificates:"
-msgstr "Za korijenske certifikate:"
-
-#. i18n: file: ui/warningconfiguration.ui:326
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: rc.cpp:868
-msgid "For intermediate CA certificates:"
-msgstr "Za certifikate CA posrednika:"
-
-#. i18n: file: ui/warningconfiguration.ui:339
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:871
-msgid "For end-user certificates/keys:"
-msgstr "Za certifikate/ključeve korisnika:"
-
-#. i18n: file: ui/warningconfiguration.ui:402
-#. i18n: ectx: property (text), widget (QPushButton, gnupgButton)
-#: rc.cpp:874
-#, fuzzy
-msgid "GnuPG Settings..."
-msgstr "POP postavke"
-
-#. i18n: file: ui/warningconfiguration.ui:426
-#. i18n: ectx: property (text), widget (QPushButton, chiasmusButton)
-#: rc.cpp:877
-#, fuzzy
-msgid "Chiasmus Settings..."
-msgstr "Postav&ke Oznake"
-
-#. i18n: file: ui/warningconfiguration.ui:456
-#. i18n: ectx: property (text), widget (QPushButton, enableAllWarningsPB)
-#: rc.cpp:880
-msgid "Re-enable All \"Do not Ask Again\" Warnings"
-msgstr "Ponovo uključi sva \"Ne pitaj ponovo\" upozorenja"
+"<p>...da će prilikom odgovora biti citiran samo onaj dio poruke koji ste "
+"izabrali?</p>\n"
+"<p>Ako ništa nije izabrano, biće citirana čitava poruka.</p>\n"
+"<p>Ovo radi čak i za tekst priloga ako ste izabrali opciju\n"
+"<em>Pogled-&gt;Prilozi-&gt;U sastavu poruke</em>.</p>\n"
+"<p>Ova opcija je dostupna sa svim naredbama za odgovor osim\n"
+"<em>Poruka-&gt;Odgovori bez citiranja</em>.</p>\n"
+"<p align=\"right\"><em>napisao: David F. Newman</em></p>\n"
 
 #: kmmainwin.cpp:57
 msgid "New &Window"
