@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bluedevil\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-07-17 03:43+0200\n"
+"POT-Creation-Date: 2011-07-26 15:09+0200\n"
 "PO-Revision-Date: 2011-04-20 07:28+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -79,6 +79,12 @@ msgstr "%1: vrijeme je isteklo za uslugu ulaza"
 msgid "%1: input service connected and configured"
 msgstr "%1: usluga ulaza povezana i konfigurisana"
 
+#: actionplugins/sendfile/helper/pages/connectingpage.cpp:41
+#, kde-format
+msgctxt "Connecting to a Bluetooth device"
+msgid "Connecting to %1..."
+msgstr "Povezujem se na %1..."
+
 #. i18n: file: actionplugins/sendfile/helper/pages/selectfilediscover.ui:112
 #. i18n: ectx: property (text), widget (QLabel, selectLbl)
 #: actionplugins/sendfile/helper/pages/selectdeviceandfilespage.cpp:87
@@ -91,12 +97,6 @@ msgstr "Odaberite jednu ili više datoteka"
 msgid "Selected files: <b>%1</b>"
 msgstr "Izabrane datoteke: <b>%1</b>"
 
-#: actionplugins/sendfile/helper/pages/connectingpage.cpp:41
-#, kde-format
-msgctxt "Connecting to a Bluetooth device"
-msgid "Connecting to %1..."
-msgstr "Povezujem se na %1..."
-
 #: actionplugins/sendfile/helper/main.cpp:33
 msgid "Bluetooth Send File Helper"
 msgstr "Pomoć za slanje datoteka preko bluetootha"
@@ -108,14 +108,6 @@ msgstr "UUID uređaja gdje se datoteke šalju"
 #: actionplugins/sendfile/helper/main.cpp:44
 msgid "Files that will be sent"
 msgstr "Datoteke koje se šalju"
-
-#: actionplugins/sendfile/helper/sendfilewizard.cpp:59
-msgid "Bluetooth Send Files"
-msgstr "Slanje datoteka preko bluetootha"
-
-#: actionplugins/sendfile/helper/sendfilewizard.cpp:61
-msgid "Send Files"
-msgstr "Pošalji datoteke"
 
 #: actionplugins/sendfile/helper/sendfilesjob.cpp:80
 #: actionplugins/sendfile/helper/sendfilesjob.cpp:90
@@ -137,6 +129,14 @@ msgstr "Od"
 msgctxt "File transfer destination"
 msgid "To"
 msgstr "Za"
+
+#: actionplugins/sendfile/helper/sendfilewizard.cpp:59
+msgid "Bluetooth Send Files"
+msgstr "Slanje datoteka preko bluetootha"
+
+#: actionplugins/sendfile/helper/sendfilewizard.cpp:61
+msgid "Send Files"
+msgstr "Pošalji datoteke"
 
 #: daemon/helpers/authorize/authorize.cpp:43
 #, kde-format
@@ -510,36 +510,6 @@ msgctxt "Type of remote device (e.g. Camera, Mouse, Headset...)"
 msgid "Type: %1"
 msgstr "Tip: %1"
 
-#: kcmodule/devicedetails.cpp:44
-msgctxt "Name of the device"
-msgid "Name"
-msgstr "Ime"
-
-#: kcmodule/devicedetails.cpp:45
-msgctxt "Alias of the device"
-msgid "Alias"
-msgstr "Alias"
-
-#: kcmodule/devicedetails.cpp:49
-msgctxt "Physical address of the device"
-msgid "Address"
-msgstr "Adresa"
-
-#: kcmodule/devicedetails.cpp:52
-msgctxt "Device is paired"
-msgid "Paired"
-msgstr "Uparen"
-
-#: kcmodule/devicedetails.cpp:54
-msgctxt "Device is blocked"
-msgid "Blocked"
-msgstr "Blokiran"
-
-#: kcmodule/devicedetails.cpp:56
-msgctxt "Device is trusted"
-msgid "Trusted"
-msgstr "Povjerljiv"
-
 #: kcmodule/bluedeviltransfer.cpp:52
 msgid "Bluetooth Transfer"
 msgstr "Transfer preko bluetootha"
@@ -582,6 +552,36 @@ msgstr "Samo za čitanje"
 msgctxt "'Permissions' option value"
 msgid "Modify and Read"
 msgstr "Izmjena i čitanje"
+
+#: kcmodule/devicedetails.cpp:44
+msgctxt "Name of the device"
+msgid "Name"
+msgstr "Ime"
+
+#: kcmodule/devicedetails.cpp:45
+msgctxt "Alias of the device"
+msgid "Alias"
+msgstr "Alias"
+
+#: kcmodule/devicedetails.cpp:49
+msgctxt "Physical address of the device"
+msgid "Address"
+msgstr "Adresa"
+
+#: kcmodule/devicedetails.cpp:52
+msgctxt "Device is paired"
+msgid "Paired"
+msgstr "Uparen"
+
+#: kcmodule/devicedetails.cpp:54
+msgctxt "Device is blocked"
+msgid "Blocked"
+msgstr "Blokiran"
+
+#: kcmodule/devicedetails.cpp:56
+msgctxt "Device is trusted"
+msgid "Trusted"
+msgstr "Povjerljiv"
 
 #: kcmodule/systemcheck.cpp:144 kio/bluetooth/kiobluetooth.cpp:362
 #: kio/bluetooth/kiobluetooth.cpp:388
@@ -761,6 +761,10 @@ msgstr "Bluetooth čarobnjak"
 msgid "Device to pair with"
 msgstr "Uređaj s kojim se treba upariti"
 
+#: wizard/pages/discoverpage.cpp:39
+msgid "Select a device"
+msgstr "Izbor uređaja"
+
 #: wizard/pages/fail.cpp:46
 msgctxt ""
 "Button offered when the wizard fail. This button will restart the wizard"
@@ -809,10 +813,6 @@ msgid ""
 "Please, confirm that the PIN displayed on \"%1\" matches the wizard one."
 msgstr ""
 "Molim, potvrdite da  PIN prikazan na \"%1\" odgovara onom na čarobnjaku."
-
-#: wizard/pages/discoverpage.cpp:39
-msgid "Select a device"
-msgstr "Izbor uređaja"
 
 #: wizard/bluewizard.cpp:44
 msgid "Bluetooth Device Wizard"
@@ -939,84 +939,85 @@ msgstr "Dijeljene datoteke"
 msgid "Shared Folder"
 msgstr "Dijeljeni direktorij"
 
-#. i18n: file: settings/global.kcfg:10
-#. i18n: ectx: label, entry (enableGlobalBluetooth), group (General)
-#: rc.cpp:51
-msgid "Enable or disable the global KDE Bluetooth integration"
-msgstr "Omogućavanje ili onemogućavanje globalne KDE Bluetooth-integracije"
-
 #. i18n: file: settings/filereceiver.kcfg:21
 #. i18n: ectx: label, entry (enabled), group (General)
-#: rc.cpp:54
+#: rc.cpp:51
 msgid "Enable or disable receiving files"
 msgstr "Omogući ili onemogući prijem datoteka"
 
 #. i18n: file: settings/filereceiver.kcfg:25
 #. i18n: ectx: label, entry (saveUrl), group (General)
-#: rc.cpp:57
+#: rc.cpp:54
 msgid "Save received files to:"
 msgstr "Snimi primljene datoteke u"
 
 #. i18n: file: settings/filereceiver.kcfg:29
 #. i18n: ectx: label, entry (autoAccept), group (General)
-#: rc.cpp:60
+#: rc.cpp:57
 msgid "Whether allow to modify shared files"
 msgstr "Da li dopustiti modifikaciju dijeljenih datoteka"
 
 #. i18n: file: settings/filereceiver.kcfg:34
 #. i18n: ectx: label, entry (shareEnabled), group (General)
-#: rc.cpp:63
+#: rc.cpp:60
 msgid "Enable or disable file sharing"
 msgstr "Uključi ili isključi dijeljenje datoteka"
 
 #. i18n: file: settings/filereceiver.kcfg:38
 #. i18n: ectx: label, entry (requirePin), group (General)
-#: rc.cpp:66
+#: rc.cpp:63
 msgid "Whether require the PIN"
 msgstr "Da li zahtijevati PIN"
 
 #. i18n: file: settings/filereceiver.kcfg:42
 #. i18n: ectx: label, entry (allowWrite), group (General)
-#: rc.cpp:69
+#: rc.cpp:66
 msgid "Allow external devices to modify the shared files"
 msgstr "Dozvolite spoljnim uređajima da mijenjaju dijeljene datoteke"
 
-#. i18n: file: wizard/pages/services.ui:19
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:99
-msgid "The following compatible services have been found:"
-msgstr "Sljedeći kompatibilni uređaji su pronađeni:"
+#. i18n: file: settings/global.kcfg:10
+#. i18n: ectx: label, entry (enableGlobalBluetooth), group (General)
+#: rc.cpp:96
+msgid "Enable or disable the global KDE Bluetooth integration"
+msgstr "Omogućavanje ili onemogućavanje globalne KDE Bluetooth-integracije"
 
 #. i18n: file: wizard/pages/discover.ui:63
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:102
+#: rc.cpp:99
 msgid "Scanning..."
 msgstr "Pretražujem..."
 
 #. i18n: file: wizard/pages/discover.ui:83
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:105
+#: rc.cpp:102
 msgid "Manual PIN:"
 msgstr "Ručni PIN:"
 
 #. i18n: file: wizard/pages/discover.ui:118
 #. i18n: ectx: property (inputMask), widget (QLineEdit, pinText)
-#: rc.cpp:108
+#: rc.cpp:105
 msgid "999999999; "
 msgstr "999999999; "
 
 #. i18n: file: wizard/pages/discover.ui:124
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, pinText)
-#: rc.cpp:111
+#: rc.cpp:108
 msgid "0000"
 msgstr "0000"
 
 #. i18n: file: wizard/pages/fail.ui:35
 #. i18n: ectx: property (text), widget (QLabel, failLbl)
-#: rc.cpp:115
+#: rc.cpp:112
 #, no-c-format, kde-format
 msgid "The setup of %1 has failed"
 msgstr "Podešavanje %1 neuspjelo"
+
+#. i18n: file: wizard/pages/keyboardpairing.ui:108
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:115
+msgid ""
+"Please introduce the PIN in your keyboard when it appears and press Enter"
+msgstr "Molim  ubacite PIN u tastaturu kada se pojavi i pritisnite Enter"
 
 #. i18n: file: wizard/pages/legacypairing.ui:108
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -1024,19 +1025,18 @@ msgstr "Podešavanje %1 neuspjelo"
 msgid "Please introduce the PIN in your device when it appears"
 msgstr "Molim  ubacite PIN u uređaj  kada se pojavi"
 
+#. i18n: file: wizard/pages/services.ui:19
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:125
+msgid "The following compatible services have been found:"
+msgstr "Sljedeći kompatibilni uređaji su pronađeni:"
+
 #. i18n: file: wizard/pages/ssppairing.ui:117
 #. i18n: ectx: property (text), widget (QLabel, confirmLbl)
-#: rc.cpp:126
+#: rc.cpp:129
 #, no-c-format, kde-format
 msgid "Connecting to %1 ..."
 msgstr "Povezujem se sa %1 ..."
-
-#. i18n: file: wizard/pages/keyboardpairing.ui:108
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:129
-msgid ""
-"Please introduce the PIN in your keyboard when it appears and press Enter"
-msgstr "Molim  ubacite PIN u tastaturu kada se pojavi i pritisnite Enter"
 
 #, fuzzy
 #~| msgid "Add Device..."
