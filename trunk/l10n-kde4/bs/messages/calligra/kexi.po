@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: koffice\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-07-26 03:52+0200\n"
+"POT-Creation-Date: 2011-07-27 03:41+0200\n"
 "PO-Revision-Date: 2011-03-11 15:54+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -135,6 +135,25 @@ msgstr "Nisam mogao da učitam priključak \"%1\"."
 msgctxt "database connection"
 msgid "(connection %1)"
 msgstr "(veza %1)"
+
+#: core/KexiWindow.cpp:612
+msgid ""
+"Design has been changed. You must save it before switching to other view."
+msgstr ""
+"Dizajn je izmijenjen. Morate ga snimiti prije prebacivanja na drugi prikaz."
+
+#: core/KexiWindow.cpp:677 main/KexiMainWindow.cpp:3582
+#, kde-format
+msgid "Switching to other view failed (%1)."
+msgstr "Prebacivanje na drugi prikaz nije uspjelo (%1)."
+
+#: core/KexiWindow.cpp:859
+msgid "Saving object's definition failed."
+msgstr "Snimanje definicije objekta nije uspjelo."
+
+#: core/KexiWindow.cpp:943
+msgid "Saving object's data failed."
+msgstr "Spremanje podataka objekta nije uspjelo."
 
 #: core/kexicmdlineargs.h:32
 msgid "Options related to entire projects:"
@@ -842,25 +861,6 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ",,,,,"
 
-#: core/KexiWindow.cpp:612
-msgid ""
-"Design has been changed. You must save it before switching to other view."
-msgstr ""
-"Dizajn je izmijenjen. Morate ga snimiti prije prebacivanja na drugi prikaz."
-
-#: core/KexiWindow.cpp:677 main/KexiMainWindow.cpp:3582
-#, kde-format
-msgid "Switching to other view failed (%1)."
-msgstr "Prebacivanje na drugi prikaz nije uspjelo (%1)."
-
-#: core/KexiWindow.cpp:859
-msgid "Saving object's definition failed."
-msgstr "Snimanje definicije objekta nije uspjelo."
-
-#: core/KexiWindow.cpp:943
-msgid "Saving object's data failed."
-msgstr "Spremanje podataka objekta nije uspjelo."
-
 #: core/kexi.cpp:122
 msgid "&No View"
 msgstr "&Nema prikaza"
@@ -898,7 +898,8 @@ msgstr "state_sql"
 #| msgid ""
 #| "You can correct data in this row or use \"Cancel row changes\" function."
 msgid ""
-"You can correct data in this row or use \"Cancel record changes\" function."
+"You can correct data in this record or use \"Cancel record changes\" "
+"function."
 msgstr ""
 "Možete ispraviti podatke u ovoj vrsti ili upotrijebiti funkciju \"Otkaži "
 "promjene u vrsti\"."
@@ -2738,22 +2739,6 @@ msgstr "Ukloni stranu"
 msgid "file"
 msgstr "datoteku"
 
-#: kexidb/cursor.cpp:145
-msgid "No query statement or schema defined."
-msgstr "Šema ili naredba upita nije definisana."
-
-#: kexidb/cursor.cpp:155
-msgid "Query statement is empty."
-msgstr "Naredba upita je prazna."
-
-#: kexidb/cursor.cpp:165
-msgid "Error opening database cursor."
-msgstr "Greška pri otvaranju kursora baze podataka."
-
-#: kexidb/cursor.cpp:410 kexidb/cursor.cpp:433
-msgid "Cannot fetch next record."
-msgstr "Ne mogu da dohvatim sljedeći zapis."
-
 #: kexidb/dbobjectnamevalidator.cpp:46
 #, kde-format
 msgid ""
@@ -3647,6 +3632,22 @@ msgstr "Brisanje vrste na serveru nije uspjelo."
 msgctxt "short for 'expression' word, e.g. 'expr' (only latin letters, please)"
 msgid "expr"
 msgstr "izraz"
+
+#: kexidb/cursor.cpp:145
+msgid "No query statement or schema defined."
+msgstr "Šema ili naredba upita nije definisana."
+
+#: kexidb/cursor.cpp:155
+msgid "Query statement is empty."
+msgstr "Naredba upita je prazna."
+
+#: kexidb/cursor.cpp:165
+msgid "Error opening database cursor."
+msgstr "Greška pri otvaranju kursora baze podataka."
+
+#: kexidb/cursor.cpp:410 kexidb/cursor.cpp:433
+msgid "Cannot fetch next record."
+msgstr "Ne mogu da dohvatim sljedeći zapis."
 
 #: kexiutils/identifier.cpp:92
 #, kde-format
@@ -7378,26 +7379,6 @@ msgstr "Ispravi izmjene"
 msgid "Discard Changes"
 msgstr "Odbaci izmjene"
 
-#: widget/tableview/kexitableview.cpp:120
-#, fuzzy
-#| msgid "Contains a pointer to the currently selected row"
-msgid "Contains a pointer to the currently selected record"
-msgstr "Sadrži pokazivač na trenutno izabranu vrstu"
-
-#: widget/tableview/kexitableview.cpp:122
-#, fuzzy
-#| msgid "Row navigator"
-msgid "Record navigator"
-msgstr "Navigator vrsta"
-
-#: widget/tableview/kexitableview.cpp:242
-msgid "Add Record"
-msgstr "Dodaj slog"
-
-#: widget/tableview/kexitableview.cpp:245
-msgid "Remove Record"
-msgstr "Ukloni slog"
-
 #: widget/tableview/kexitableviewdata.cpp:596
 #: widget/tableview/kexitableviewdata.cpp:607
 #, kde-format
@@ -7421,6 +7402,26 @@ msgstr "Izmjena vrste nije uspjela."
 #| msgid "Row deleting failed."
 msgid "Record deleting failed."
 msgstr "Brisanje vrste nije uspjelo."
+
+#: widget/tableview/kexitableview.cpp:120
+#, fuzzy
+#| msgid "Contains a pointer to the currently selected row"
+msgid "Contains a pointer to the currently selected record"
+msgstr "Sadrži pokazivač na trenutno izabranu vrstu"
+
+#: widget/tableview/kexitableview.cpp:122
+#, fuzzy
+#| msgid "Row navigator"
+msgid "Record navigator"
+msgstr "Navigator vrsta"
+
+#: widget/tableview/kexitableview.cpp:242
+msgid "Add Record"
+msgstr "Dodaj slog"
+
+#: widget/tableview/kexitableview.cpp:245
+msgid "Remove Record"
+msgstr "Ukloni slog"
 
 #: widget/utils/kexidatetimeformatter.cpp:303
 msgid "pm"
