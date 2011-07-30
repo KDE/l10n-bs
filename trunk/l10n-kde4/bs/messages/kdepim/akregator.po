@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-07-06 04:34+0200\n"
+"POT-Creation-Date: 2011-07-30 04:16+0200\n"
 "PO-Revision-Date: 2010-12-05 12:26+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -127,24 +127,6 @@ msgstr "(c), 2008 Didier Hoarau"
 msgid "Didier Hoarau"
 msgstr "Didier Hoarau"
 
-#: plugins/onlinesync/onlinesyncplugin.cpp:61
-msgid "Synchronize Feeds"
-msgstr "Uskladi dovode"
-
-#: plugins/onlinesync/onlinesyncplugin.cpp:96
-#, kde-format
-msgid "Get from %1"
-msgstr "Dobij it %1"
-
-#: plugins/onlinesync/onlinesyncplugin.cpp:105
-#, kde-format
-msgid "Send to %1"
-msgstr "Pošalji u %1"
-
-#: plugins/onlinesync/onlinesyncplugin.cpp:114
-msgid "Manage..."
-msgstr "Upravljaj..."
-
 #: plugins/onlinesync/sync/feedsync.cpp:161
 msgid ""
 "Some categories and feeds have been marked for removal. Do you want to "
@@ -200,6 +182,24 @@ msgstr "Dovodi"
 msgid "Ask"
 msgstr "Pitaj"
 
+#: plugins/onlinesync/onlinesyncplugin.cpp:61
+msgid "Synchronize Feeds"
+msgstr "Uskladi dovode"
+
+#: plugins/onlinesync/onlinesyncplugin.cpp:96
+#, kde-format
+msgid "Get from %1"
+msgstr "Dobij it %1"
+
+#: plugins/onlinesync/onlinesyncplugin.cpp:105
+#, kde-format
+msgid "Send to %1"
+msgstr "Pošalji u %1"
+
+#: plugins/onlinesync/onlinesyncplugin.cpp:114
+msgid "Manage..."
+msgstr "Upravljaj..."
+
 #: plugins/sharemicroblog/akregator_config_sharemicroblog.cpp:50
 #, fuzzy
 msgid "kcmakrshareconfig"
@@ -240,6 +240,46 @@ msgstr ""
 #: plugins/sharemicroblog/sharemicroblogplugin.cpp:165
 msgid "Error during article share"
 msgstr ""
+
+#: src/feedlist.cpp:177
+msgid "All Feeds"
+msgstr "Svi dovodi"
+
+#: src/searchbar.cpp:77
+msgctxt "Title of article searchbar"
+msgid "S&earch:"
+msgstr "Pretraga:"
+
+#: src/searchbar.cpp:88
+msgid "Status:"
+msgstr "Status:"
+
+#: src/searchbar.cpp:97
+msgid "All Articles"
+msgstr "Svi članci"
+
+#: src/searchbar.cpp:98
+msgctxt "Unread articles filter"
+msgid "Unread"
+msgstr "Nepročitano"
+
+#: src/searchbar.cpp:99
+msgctxt "New articles filter"
+msgid "New"
+msgstr "Novo"
+
+#: src/searchbar.cpp:100
+msgctxt "Important articles filter"
+msgid "Important"
+msgstr "Važno"
+
+#: src/searchbar.cpp:102
+msgid "Enter space-separated terms to filter article list"
+msgstr "Unesite izraze razdvojene zapetama da biste filtrirali listu članaka"
+
+#: src/searchbar.cpp:103
+msgid "Choose what kind of articles to show in article list"
+msgstr "Izaberite kakvu vrstu članaka treba prikazivati u listi članaka"
 
 #: src/mainwindow.cpp:104
 #, fuzzy, kde-format
@@ -365,33 +405,13 @@ msgstr ""
 msgid "Ask Me Later"
 msgstr ""
 
-#: src/actions.cpp:35 src/pageviewer.cpp:411
-msgid "Open Link in New &Tab"
-msgstr "Otvori vezu u &novoj kartici"
+#: src/tabwidget.cpp:113
+msgid "Close the current tab"
+msgstr "Zatvori tekuću karticu"
 
-#: src/actions.cpp:44 src/pageviewer.cpp:413
-msgid "Open Link in External &Browser"
-msgstr "Otvori vezu u spoljašnjem &pregledaču"
-
-#. i18n: file: src/addfeedwidgetbase.ui:13
-#. i18n: ectx: property (windowTitle), widget (QWidget, Akregator::AddFeedWidgetBase)
-#: src/addfeeddialog.cpp:65 rc.cpp:419
-msgid "Add Feed"
-msgstr "Dodaj dovod"
-
-#: src/addfeeddialog.cpp:104
-#, kde-format
-msgid "Downloading %1"
-msgstr "Preuzimam %1"
-
-#: src/addfeeddialog.cpp:123
-#, kde-format
-msgid "Feed not found from %1."
-msgstr "Dovod nije nađen na %1."
-
-#: src/addfeeddialog.cpp:129
-msgid "Feed found, downloading..."
-msgstr "Dovod je nađen, preuzimam..."
+#: src/articlejobs.cpp:188
+msgid "The feed to be listed was already removed."
+msgstr "Dovod koji se želi izlistati je već uklonjen"
 
 #: src/akregator_options.h:37 src/akregator_options.h:41
 msgid "Add a feed with the given URL"
@@ -404,6 +424,18 @@ msgstr "Prilikom dodavanja dovoda, smjesti ih u ovu grupu"
 #: src/akregator_options.h:40
 msgid "Hide main window on startup"
 msgstr "Sakrij glavni prozor pri pokretanju"
+
+#: src/progressmanager.cpp:177
+msgid "Fetch completed"
+msgstr "Dobavljanje završeno"
+
+#: src/progressmanager.cpp:187
+msgid "Fetch error"
+msgstr "Greška pri dobavljanju"
+
+#: src/progressmanager.cpp:197
+msgid "Fetch aborted"
+msgstr "Dobavljanje je prekinuto"
 
 #: src/articleviewer.cpp:137
 msgid "Copy &Link Address"
@@ -465,22 +497,6 @@ msgstr "Želite li zaista da isključite ovu uvodnu stranu?"
 #: src/articleviewer.cpp:735
 msgid "Disable Introduction Page"
 msgstr "Isključi uvodnu stranu"
-
-#: src/progressmanager.cpp:177
-msgid "Fetch completed"
-msgstr "Dobavljanje završeno"
-
-#: src/progressmanager.cpp:187
-msgid "Fetch error"
-msgstr "Greška pri dobavljanju"
-
-#: src/progressmanager.cpp:197
-msgid "Fetch aborted"
-msgstr "Dobavljanje je prekinuto"
-
-#: src/articlejobs.cpp:188
-msgid "The feed to be listed was already removed."
-msgstr "Dovod koji se želi izlistati je već uklonjen"
 
 #: src/articlemodel.cpp:106
 msgctxt "Articlelist's column header"
@@ -558,9 +574,13 @@ msgstr "Obriši dovod"
 msgid "No Archive"
 msgstr "Nema arhive"
 
-#: src/feedlist.cpp:177
-msgid "All Feeds"
-msgstr "Svi dovodi"
+#: src/actions.cpp:35 src/pageviewer.cpp:411
+msgid "Open Link in New &Tab"
+msgstr "Otvori vezu u &novoj kartici"
+
+#: src/actions.cpp:44 src/pageviewer.cpp:413
+msgid "Open Link in External &Browser"
+msgstr "Otvori vezu u spoljašnjem &pregledaču"
 
 #: src/feedpropertiesdialog.cpp:71 src/feedpropertiesdialog.cpp:96
 msgid "Minute"
@@ -884,41 +904,25 @@ msgstr "Prilog:"
 msgid "Complete Story"
 msgstr "Cijela priča"
 
-#: src/searchbar.cpp:77
-msgctxt "Title of article searchbar"
-msgid "S&earch:"
-msgstr "Pretraga:"
+#. i18n: file: src/addfeedwidgetbase.ui:13
+#. i18n: ectx: property (windowTitle), widget (QWidget, Akregator::AddFeedWidgetBase)
+#: src/addfeeddialog.cpp:65 rc.cpp:419
+msgid "Add Feed"
+msgstr "Dodaj dovod"
 
-#: src/searchbar.cpp:88
-msgid "Status:"
-msgstr "Status:"
+#: src/addfeeddialog.cpp:104
+#, kde-format
+msgid "Downloading %1"
+msgstr "Preuzimam %1"
 
-#: src/searchbar.cpp:97
-msgid "All Articles"
-msgstr "Svi članci"
+#: src/addfeeddialog.cpp:123
+#, kde-format
+msgid "Feed not found from %1."
+msgstr "Dovod nije nađen na %1."
 
-#: src/searchbar.cpp:98
-msgctxt "Unread articles filter"
-msgid "Unread"
-msgstr "Nepročitano"
-
-#: src/searchbar.cpp:99
-msgctxt "New articles filter"
-msgid "New"
-msgstr "Novo"
-
-#: src/searchbar.cpp:100
-msgctxt "Important articles filter"
-msgid "Important"
-msgstr "Važno"
-
-#: src/searchbar.cpp:102
-msgid "Enter space-separated terms to filter article list"
-msgstr "Unesite izraze razdvojene zapetama da biste filtrirali listu članaka"
-
-#: src/searchbar.cpp:103
-msgid "Choose what kind of articles to show in article list"
-msgstr "Izaberite kakvu vrstu članaka treba prikazivati u listi članaka"
+#: src/addfeeddialog.cpp:129
+msgid "Feed found, downloading..."
+msgstr "Dovod je nađen, preuzimam..."
 
 #: src/subscriptionlistjobs.cpp:64
 msgid "Feed list was deleted"
@@ -980,10 +984,6 @@ msgstr "Ukupno"
 #: src/subscriptionlistview.cpp:181 src/articlelistview.cpp:184
 msgid "Columns"
 msgstr "Kolone"
-
-#: src/tabwidget.cpp:113
-msgid "Close the current tab"
-msgstr "Zatvori tekuću karticu"
 
 #: src/articlelistview.cpp:383
 msgid ""

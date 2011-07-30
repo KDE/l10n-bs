@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-07-28 03:50+0200\n"
+"POT-Creation-Date: 2011-07-30 03:48+0200\n"
 "PO-Revision-Date: 2011-04-09 23:07+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -115,7 +115,7 @@ msgstr "Uslov"
 msgid "Active status"
 msgstr "Aktivni status"
 
-#: debugger/breakpoint/breakpointmodel.cpp:137 shell/sessioncontroller.cpp:941
+#: debugger/breakpoint/breakpointmodel.cpp:137 shell/sessioncontroller.cpp:900
 msgid "State"
 msgstr "Stanje"
 
@@ -830,7 +830,7 @@ msgstr "Alias imenskog prostora"
 msgid "Forward Declaration"
 msgstr "Deklaracija unaprijed"
 
-#: language/duchain/repositories/itemrepository.cpp:295
+#: language/duchain/repositories/itemrepository.cpp:262
 #, kde-format
 msgid "Session crashed %1 time in a row"
 msgid_plural "Session crashed %1 times in a row"
@@ -838,11 +838,11 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: language/duchain/repositories/itemrepository.cpp:300
+#: language/duchain/repositories/itemrepository.cpp:267
 msgid "Clear cache: [Y/n] "
 msgstr ""
 
-#: language/duchain/repositories/itemrepository.cpp:312
+#: language/duchain/repositories/itemrepository.cpp:279
 #, kde-format
 msgid "The Session crashed once."
 msgid_plural "The Session crashed %1 times in a row."
@@ -850,7 +850,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: language/duchain/repositories/itemrepository.cpp:312
+#: language/duchain/repositories/itemrepository.cpp:279
 msgid ""
 "The crash may be caused by a corruption of cached data.\n"
 "\n"
@@ -858,7 +858,7 @@ msgid ""
 "you are sure the crash has another origin."
 msgstr ""
 
-#: language/duchain/repositories/itemrepository.cpp:313
+#: language/duchain/repositories/itemrepository.cpp:280
 msgid "Session crashed"
 msgstr "Sesija krahirala"
 
@@ -1490,6 +1490,126 @@ msgstr "otvori %1 kao projekt"
 msgid "Selected URL is invalid."
 msgstr "Odabrani URL je nevažeći"
 
+#: shell/sessioncontroller.cpp:185
+msgid ""
+"The current session and all contained settings will be deleted. The projects "
+"will stay unaffected. Do you really want to continue?"
+msgstr ""
+"Trenutna sesija i sva sadržana podešavanja će biti izbrisana. Projekti će "
+"ostati nepromenjeni. Da li zaista želite da nastavite?"
+
+#: shell/sessioncontroller.cpp:197
+msgid "Rename Session"
+msgstr "Preimenuj sesiju"
+
+#: shell/sessioncontroller.cpp:201
+msgid "New Session Name"
+msgstr "Novo ime sesije"
+
+#: shell/sessioncontroller.cpp:221
+msgid "The selected session is already active in another running instance"
+msgstr "Odabrana sesija je već aktivna u drugoj pokrenutoj instanci."
+
+#: shell/sessioncontroller.cpp:369
+msgid "Recover"
+msgstr "Obnovi"
+
+#: shell/sessioncontroller.cpp:373
+#, kde-format
+msgctxt "%1: date of the last snapshot"
+msgid ""
+"The session crashed the last time it was used. The following modified files "
+"can be recovered from a backup from %1."
+msgstr ""
+"Sesija je krahirala zadnji put kada je korištena. Sljedeće izmijenjene "
+"datoteke se mogu obnoviti s rezervne kopije iz %1."
+
+#: shell/sessioncontroller.cpp:375
+msgid "Crash Recovery"
+msgstr "Sanacija pada aplikacije"
+
+#: shell/sessioncontroller.cpp:405
+#, kde-format
+msgid "Could not recover %1, the recovery file is empty"
+msgstr "Ne mogu obnoviti %1, datoteka za obnovu je prazna"
+
+#: shell/sessioncontroller.cpp:405
+msgid "Recovery"
+msgstr "Obnova"
+
+#: shell/sessioncontroller.cpp:514
+#, kde-format
+msgid ""
+"Failed to write recovery copies to %1. Please make sure that your home "
+"directory is writable and not full. This application requires available "
+"space in the home directory to run stable. You may experience application "
+"crashes until you free up some space."
+msgstr ""
+
+#: shell/sessioncontroller.cpp:515
+#, fuzzy
+msgid "Recovery Error"
+msgstr "Obnova"
+
+#: shell/sessioncontroller.cpp:567
+msgid "Start New Session"
+msgstr "Pokreni novu sesiju"
+
+#: shell/sessioncontroller.cpp:568
+msgid "Start a new KDevelop instance with an empty session"
+msgstr "Pokreni novu KDevelop instancu s praznom sesijom"
+
+#: shell/sessioncontroller.cpp:572
+msgid "Rename Session..."
+msgstr "Preimenuj sesiju..."
+
+#: shell/sessioncontroller.cpp:576
+msgid "Delete Session..."
+msgstr "Obriši sesiju..."
+
+#: shell/sessioncontroller.cpp:580
+msgid "Quit"
+msgstr "Izlaz"
+
+#: shell/sessioncontroller.cpp:586
+msgid "Configure Sessions..."
+msgstr "Konfiguriši sesiju..."
+
+#: shell/sessioncontroller.cpp:587
+msgid "Create/Delete/Activate Sessions"
+msgstr "Kreiraj/Obriši/Aktiviraj sesije"
+
+#: shell/sessioncontroller.cpp:588
+msgid ""
+"<b>Configure Sessions</b><p>Shows a dialog to Create/Delete Sessions and set "
+"a new active session.</p>"
+msgstr ""
+"<b>Konfiguriši sesije</b><p>Prikazuje dijaloški prozor za Kreiranje/brisanje "
+"sesija i postavlja novu aktivnu sesiju.</p>"
+
+#: shell/sessioncontroller.cpp:749
+#, kde-format
+msgid "Copy of %1"
+msgstr "Kopija od %1"
+
+#: shell/sessioncontroller.cpp:865 shell/sessioncontroller.cpp:940
+#: shell/sessioncontroller.cpp:963
+msgid "Create New Session"
+msgstr "Kreiraj novu sesiju"
+
+#: shell/sessioncontroller.cpp:873
+#, kde-format
+msgid "[running, pid %1, app %2, host %3]"
+msgstr "[ruadi, pid %1, apl %2, host %3]"
+
+#: shell/sessioncontroller.cpp:898
+msgid "Identity"
+msgstr "Identitet"
+
+#: shell/sessioncontroller.cpp:899
+msgid "Contents"
+msgstr "Sadržaj"
+
 #: shell/debugcontroller.cpp:131
 msgid "Frame Stack"
 msgstr "Stek okvira"
@@ -1790,126 +1910,6 @@ msgstr "Pregled"
 #: shell/uicontroller.cpp:364
 msgid "Select Tool View to Add"
 msgstr "Odaberi pogled alata za dodati"
-
-#: shell/sessioncontroller.cpp:214
-msgid ""
-"The current session and all contained settings will be deleted. The projects "
-"will stay unaffected. Do you really want to continue?"
-msgstr ""
-"Trenutna sesija i sva sadržana podešavanja će biti izbrisana. Projekti će "
-"ostati nepromenjeni. Da li zaista želite da nastavite?"
-
-#: shell/sessioncontroller.cpp:226
-msgid "Rename Session"
-msgstr "Preimenuj sesiju"
-
-#: shell/sessioncontroller.cpp:230
-msgid "New Session Name"
-msgstr "Novo ime sesije"
-
-#: shell/sessioncontroller.cpp:250
-msgid "The selected session is already active in another running instance"
-msgstr "Odabrana sesija je već aktivna u drugoj pokrenutoj instanci."
-
-#: shell/sessioncontroller.cpp:401
-msgid "Recover"
-msgstr "Obnovi"
-
-#: shell/sessioncontroller.cpp:405
-#, kde-format
-msgctxt "%1: date of the last snapshot"
-msgid ""
-"The session crashed the last time it was used. The following modified files "
-"can be recovered from a backup from %1."
-msgstr ""
-"Sesija je krahirala zadnji put kada je korištena. Sljedeće izmijenjene "
-"datoteke se mogu obnoviti s rezervne kopije iz %1."
-
-#: shell/sessioncontroller.cpp:407
-msgid "Crash Recovery"
-msgstr "Sanacija pada aplikacije"
-
-#: shell/sessioncontroller.cpp:437
-#, kde-format
-msgid "Could not recover %1, the recovery file is empty"
-msgstr "Ne mogu obnoviti %1, datoteka za obnovu je prazna"
-
-#: shell/sessioncontroller.cpp:437
-msgid "Recovery"
-msgstr "Obnova"
-
-#: shell/sessioncontroller.cpp:555
-#, kde-format
-msgid ""
-"Failed to write recovery copies to %1. Please make sure that your home "
-"directory is writable and not full. This application requires available "
-"space in the home directory to run stable. You may experience application "
-"crashes until you free up some space."
-msgstr ""
-
-#: shell/sessioncontroller.cpp:556
-#, fuzzy
-msgid "Recovery Error"
-msgstr "Obnova"
-
-#: shell/sessioncontroller.cpp:608
-msgid "Start New Session"
-msgstr "Pokreni novu sesiju"
-
-#: shell/sessioncontroller.cpp:609
-msgid "Start a new KDevelop instance with an empty session"
-msgstr "Pokreni novu KDevelop instancu s praznom sesijom"
-
-#: shell/sessioncontroller.cpp:613
-msgid "Rename Session..."
-msgstr "Preimenuj sesiju..."
-
-#: shell/sessioncontroller.cpp:617
-msgid "Delete Session..."
-msgstr "Obriši sesiju..."
-
-#: shell/sessioncontroller.cpp:621
-msgid "Quit"
-msgstr "Izlaz"
-
-#: shell/sessioncontroller.cpp:627
-msgid "Configure Sessions..."
-msgstr "Konfiguriši sesiju..."
-
-#: shell/sessioncontroller.cpp:628
-msgid "Create/Delete/Activate Sessions"
-msgstr "Kreiraj/Obriši/Aktiviraj sesije"
-
-#: shell/sessioncontroller.cpp:629
-msgid ""
-"<b>Configure Sessions</b><p>Shows a dialog to Create/Delete Sessions and set "
-"a new active session.</p>"
-msgstr ""
-"<b>Konfiguriši sesije</b><p>Prikazuje dijaloški prozor za Kreiranje/brisanje "
-"sesija i postavlja novu aktivnu sesiju.</p>"
-
-#: shell/sessioncontroller.cpp:790
-#, kde-format
-msgid "Copy of %1"
-msgstr "Kopija od %1"
-
-#: shell/sessioncontroller.cpp:906 shell/sessioncontroller.cpp:981
-#: shell/sessioncontroller.cpp:1004
-msgid "Create New Session"
-msgstr "Kreiraj novu sesiju"
-
-#: shell/sessioncontroller.cpp:914
-#, kde-format
-msgid "[running, pid %1, app %2, host %3]"
-msgstr "[ruadi, pid %1, apl %2, host %3]"
-
-#: shell/sessioncontroller.cpp:939
-msgid "Identity"
-msgstr "Identitet"
-
-#: shell/sessioncontroller.cpp:940
-msgid "Contents"
-msgstr "Sadržaj"
 
 #: shell/projectcontroller.cpp:146
 #, kde-format

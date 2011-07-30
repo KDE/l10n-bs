@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kalarm\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-07-27 04:17+0200\n"
+"POT-Creation-Date: 2011-07-30 04:16+0200\n"
 "PO-Revision-Date: 2010-12-16 22:53+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -2247,27 +2247,6 @@ msgctxt "@option Name of the weekday"
 msgid "Sunday"
 msgstr "Nedjelja"
 
-#: lib/shellprocess.cpp:158
-msgctxt "@info"
-msgid "Failed to execute command (shell access not authorized)"
-msgstr "Neuspjelo izvršavanje komande(pristup ljusci nije ovlašten)"
-
-#: lib/shellprocess.cpp:161
-msgctxt "@info"
-msgid "Failed to execute command"
-msgstr "Neuspjelo izvršavanje komande"
-
-#: lib/shellprocess.cpp:163
-msgctxt "@info"
-msgid "Command execution error"
-msgstr "Greška pri izvršavanju komande"
-
-#: lib/shellprocess.cpp:166
-#, kde-format
-msgctxt "@info"
-msgid "Command exit code: %1"
-msgstr "Izlazni kod komande: %1"
-
 #: lib/timeedit.cpp:177
 msgctxt "@item:inlistbox Morning, as in 2am"
 msgid "am"
@@ -2306,6 +2285,27 @@ msgid ""
 msgstr ""
 "Pritisnite tipku Shift dok klikate spin dugmad za podešavanje vremena  većim "
 "korakom (6 sati / 5 minuta)."
+
+#: lib/shellprocess.cpp:158
+msgctxt "@info"
+msgid "Failed to execute command (shell access not authorized)"
+msgstr "Neuspjelo izvršavanje komande(pristup ljusci nije ovlašten)"
+
+#: lib/shellprocess.cpp:161
+msgctxt "@info"
+msgid "Failed to execute command"
+msgstr "Neuspjelo izvršavanje komande"
+
+#: lib/shellprocess.cpp:163
+msgctxt "@info"
+msgid "Command execution error"
+msgstr "Greška pri izvršavanju komande"
+
+#: lib/shellprocess.cpp:166
+#, kde-format
+msgctxt "@info"
+msgid "Command exit code: %1"
+msgstr "Izlazni kod komande: %1"
 
 #: main.cpp:39
 msgid "Personal alarm message, command and email scheduler for KDE"
@@ -4593,18 +4593,6 @@ msgstr ""
 "<title>%1</title><para>Tip kalendara: %2<nl/>Sadržaj: %3<nl/>%4: <filename>%"
 "5</filename><nl/>Dozvole: %6<nl/>Status: %7<nl/>Početni kalendar: %8</para>"
 
-#: resources/alarmresources.cpp:157
-#, kde-format
-msgctxt "@info"
-msgid "%1: invalid calendar file name: <filename>%2</filename>"
-msgstr "%1: neispravno ime datoteke kalendara: <filename>%2</filename>"
-
-#: resources/alarmresources.cpp:165
-#, kde-format
-msgctxt "@info"
-msgid "%1: file name not permitted: <filename>%2</filename>"
-msgstr "%1: ime datoteke nije dopušteno: <filename>%2</filename>"
-
 #: resources/resourcelocaldirwidget.cpp:40
 #: resources/resourcelocalwidget.cpp:42
 msgctxt "@label:textbox"
@@ -4646,6 +4634,18 @@ msgstr ""
 "Kalendar <resource>%1</resource> ne može biti napravljen za pisanje jer nije "
 "stvoren od strane <application>KAlarm</application>, ili je stvoren novijom "
 "verzijom <application>KAlarm</application>"
+
+#: resources/alarmresources.cpp:157
+#, kde-format
+msgctxt "@info"
+msgid "%1: invalid calendar file name: <filename>%2</filename>"
+msgstr "%1: neispravno ime datoteke kalendara: <filename>%2</filename>"
+
+#: resources/alarmresources.cpp:165
+#, kde-format
+msgctxt "@info"
+msgid "%1: file name not permitted: <filename>%2</filename>"
+msgstr "%1: ime datoteke nije dopušteno: <filename>%2</filename>"
 
 #: resourceselector.cpp:99
 msgctxt "@title:group"
@@ -5420,6 +5420,30 @@ msgid ""
 ">Error code: %2."
 msgstr ""
 
+#: wakedlg.cpp:53
+msgctxt "@title:window"
+msgid "Wake From Suspend"
+msgstr ""
+
+#: wakedlg.cpp:178
+#, fuzzy
+#| msgctxt "@info:whatsthis"
+#| msgid "Next scheduled date and time of the alarm"
+msgctxt "@info"
+msgid "Cannot schedule wakeup time for a date-only alarm"
+msgstr "Sljedeće zakazano vrijeme i datum alarma"
+
+#: wakedlg.cpp:182
+msgctxt "@info"
+msgid ""
+"<para>This wakeup will cancel any existing wakeup which has been set by "
+"KAlarm or any other application, because your computer can only schedule a "
+"single wakeup time.</para><para><b>Note:</b> Wake From Suspend is not "
+"supported at all on some computers, especially older ones, and some "
+"computers only support setting a wakeup time up to 24 hours ahead. You may "
+"wish to set up a test alarm to check your system's capability.</para>"
+msgstr ""
+
 #: calendarmigrator.cpp:250
 #, fuzzy, kde-format
 msgctxt "@info/plain"
@@ -5480,30 +5504,6 @@ msgstr ""
 #: calendarmigrator.cpp:644
 msgctxt "@info/plain"
 msgid "New configuration was corrupt"
-msgstr ""
-
-#: wakedlg.cpp:53
-msgctxt "@title:window"
-msgid "Wake From Suspend"
-msgstr ""
-
-#: wakedlg.cpp:178
-#, fuzzy
-#| msgctxt "@info:whatsthis"
-#| msgid "Next scheduled date and time of the alarm"
-msgctxt "@info"
-msgid "Cannot schedule wakeup time for a date-only alarm"
-msgstr "Sljedeće zakazano vrijeme i datum alarma"
-
-#: wakedlg.cpp:182
-msgctxt "@info"
-msgid ""
-"<para>This wakeup will cancel any existing wakeup which has been set by "
-"KAlarm or any other application, because your computer can only schedule a "
-"single wakeup time.</para><para><b>Note:</b> Wake From Suspend is not "
-"supported at all on some computers, especially older ones, and some "
-"computers only support setting a wakeup time up to 24 hours ahead. You may "
-"wish to set up a test alarm to check your system's capability.</para>"
 msgstr ""
 
 #: rc.cpp:1
