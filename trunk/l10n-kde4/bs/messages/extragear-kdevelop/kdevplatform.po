@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-02 04:43+0200\n"
+"POT-Creation-Date: 2011-08-08 02:47+0200\n"
 "PO-Revision-Date: 2011-04-09 23:07+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -651,6 +651,35 @@ msgstr[0] "<b>Datoteka:</b> %2 &nbsp; <i>(%1 upotreba)</i>"
 msgstr[1] "<b>Datoteka:</b> %2 &nbsp; <i>(%1 upotrebe)</i>"
 msgstr[2] "<b>Datoteka:</b> %2 &nbsp; <i>(%1 upotreba)</i>"
 
+#: language/duchain/navigation/abstractnavigationcontext.cpp:370
+msgid "Typedef"
+msgstr "DefTipa"
+
+#: language/duchain/navigation/abstractnavigationcontext.cpp:373
+msgid "Class"
+msgstr "Klasa"
+
+#: language/duchain/navigation/abstractnavigationcontext.cpp:375
+#: shell/settings/environmentgroupmodel.cpp:90
+msgid "Variable"
+msgstr "Promjenljiva"
+
+#: language/duchain/navigation/abstractnavigationcontext.cpp:377
+msgid "Namespace"
+msgstr "Imenski prostor"
+
+#: language/duchain/navigation/abstractnavigationcontext.cpp:382
+msgid "Namespace import"
+msgstr "Uvoz Imenskog prostora"
+
+#: language/duchain/navigation/abstractnavigationcontext.cpp:384
+msgid "Namespace alias"
+msgstr "Alias imenskog prostora"
+
+#: language/duchain/navigation/abstractnavigationcontext.cpp:391
+msgid "Forward Declaration"
+msgstr "Deklaracija unaprijed"
+
 #: language/duchain/navigation/abstractdeclarationnavigationcontext.cpp:71
 msgid "<br /> lost declaration <br />"
 msgstr "<br /> izgubljena deklaracija <br />"
@@ -802,34 +831,24 @@ msgctxt "A declaration that is unknown"
 msgid "Unknown"
 msgstr "Nepoznato"
 
-#: language/duchain/navigation/abstractnavigationcontext.cpp:370
-msgid "Typedef"
-msgstr "DefTipa"
+#: language/duchain/navigation/abstractdeclarationnavigationcontext.cpp:648
+#, fuzzy
+#| msgid "Definition"
+msgctxt "tells if a declaration is defining the variable's value"
+msgid "definition"
+msgstr "Definicija"
 
-#: language/duchain/navigation/abstractnavigationcontext.cpp:373
-msgid "Class"
-msgstr "Klasa"
+#: language/duchain/navigation/abstractdeclarationnavigationcontext.cpp:653
+#, fuzzy
+#| msgid "Forward"
+msgctxt "as in c++ forward declaration"
+msgid "forward"
+msgstr "Naprijed"
 
-#: language/duchain/navigation/abstractnavigationcontext.cpp:375
-#: shell/settings/environmentgroupmodel.cpp:90
-msgid "Variable"
-msgstr "Promjenljiva"
-
-#: language/duchain/navigation/abstractnavigationcontext.cpp:377
-msgid "Namespace"
-msgstr "Imenski prostor"
-
-#: language/duchain/navigation/abstractnavigationcontext.cpp:382
-msgid "Namespace import"
-msgstr "Uvoz Imenskog prostora"
-
-#: language/duchain/navigation/abstractnavigationcontext.cpp:384
-msgid "Namespace alias"
-msgstr "Alias imenskog prostora"
-
-#: language/duchain/navigation/abstractnavigationcontext.cpp:391
-msgid "Forward Declaration"
-msgstr "Deklaracija unaprijed"
+#: language/duchain/navigation/abstractdeclarationnavigationcontext.cpp:658
+msgctxt "a variable that won't change, const"
+msgid "constant"
+msgstr ""
 
 #: language/duchain/repositories/itemrepository.cpp:262
 #, kde-format
@@ -2443,19 +2462,19 @@ msgstr "Učitaj radni skup (Lijevi klik)"
 msgid "Delete Working Set"
 msgstr "Obriši radni skup"
 
-#: shell/documentcontroller.cpp:65
+#: shell/documentcontroller.cpp:67
 msgid "Untitled"
 msgstr "Bez naslova"
 
-#: shell/documentcontroller.cpp:126 shell/documentcontroller.cpp:203
+#: shell/documentcontroller.cpp:128 shell/documentcontroller.cpp:205
 msgid "*|Text File\n"
 msgstr "*|Tekst fajl\n"
 
-#: shell/documentcontroller.cpp:128 shell/documentcontroller.cpp:205
+#: shell/documentcontroller.cpp:130 shell/documentcontroller.cpp:207
 msgid "Open File"
 msgstr "Otvori datoteku"
 
-#: shell/documentcontroller.cpp:296
+#: shell/documentcontroller.cpp:298
 #, kde-format
 msgid ""
 "KDevelop could not find the editor for file '%1' of type %2.\n"
@@ -2464,23 +2483,23 @@ msgstr ""
 "KDevelop nije mogao naći uređivač za datoteku'%1' tipa %2.\n"
 "Želite li je otvoriti kao obični tekst?"
 
-#: shell/documentcontroller.cpp:296
+#: shell/documentcontroller.cpp:298
 msgid "Could Not Find Editor"
 msgstr "Ne mogu naći uređivač"
 
-#: shell/documentcontroller.cpp:591
+#: shell/documentcontroller.cpp:594
 msgid "&Open..."
 msgstr "&Otvori..."
 
-#: shell/documentcontroller.cpp:593
+#: shell/documentcontroller.cpp:596
 msgid "Open file"
 msgstr "Otvori datoteku"
 
-#: shell/documentcontroller.cpp:594
+#: shell/documentcontroller.cpp:597
 msgid "<b>Open file</b><p>Opens a file for editing.</p>"
 msgstr "<b>Otvori datoteku</b><p>Otvori datoteku za uređivanje.</p>"
 
-#: shell/documentcontroller.cpp:598
+#: shell/documentcontroller.cpp:601
 msgid ""
 "This lists files which you have opened recently, and allows you to easily "
 "open them again."
@@ -2488,15 +2507,15 @@ msgstr ""
 "Spisak dokumenata koji su bili skorije otvarani, odakle ih možete lako "
 "ponovo otvoriti."
 
-#: shell/documentcontroller.cpp:603
+#: shell/documentcontroller.cpp:606
 msgid "Save Al&l"
 msgstr "Snmi s&ve"
 
-#: shell/documentcontroller.cpp:605
+#: shell/documentcontroller.cpp:608
 msgid "Save all open documents"
 msgstr "Snimi sve otvorene dokumente"
 
-#: shell/documentcontroller.cpp:606
+#: shell/documentcontroller.cpp:609
 msgid ""
 "<b>Save all documents</b><p>Save all open documents, prompting for "
 "additional information when necessary.</p>"
@@ -2504,15 +2523,15 @@ msgstr ""
 "<b>Snimi sve otvorene dokumente</b><p>Snima sve otvorene dokumente, pitajući "
 "za dodatne informacije ako je potrebno.</p>"
 
-#: shell/documentcontroller.cpp:611
+#: shell/documentcontroller.cpp:615
 msgid "Rever&t All"
 msgstr "Vra&ti sve"
 
-#: shell/documentcontroller.cpp:613
+#: shell/documentcontroller.cpp:617
 msgid "Revert all open documents"
 msgstr "Vrati sve otvorene dokumente"
 
-#: shell/documentcontroller.cpp:614
+#: shell/documentcontroller.cpp:618
 msgid ""
 "<b>Revert all documents</b><p>Revert all open documents, returning to the "
 "previously saved state.</p>"
@@ -2520,27 +2539,27 @@ msgstr ""
 "<b>Vrati sve otvorene dokumente</b><p>Vraća sve otvorene dokumente, "
 "povratkom na prethodno snimljeno stanje</p>"
 
-#: shell/documentcontroller.cpp:620
+#: shell/documentcontroller.cpp:624
 msgid "&Close"
 msgstr "&Zatvori"
 
-#: shell/documentcontroller.cpp:622 sublime/container.cpp:442
+#: shell/documentcontroller.cpp:626 sublime/container.cpp:442
 msgid "Close File"
 msgstr "Zatvori datoteku"
 
-#: shell/documentcontroller.cpp:623
+#: shell/documentcontroller.cpp:627
 msgid "<b>Close File</b><p>Closes current file.</p>"
 msgstr "<b>Zatvori datoteku</b><p>Zatvori trenutnu datoteku .</p>"
 
-#: shell/documentcontroller.cpp:628
+#: shell/documentcontroller.cpp:632
 msgid "Clos&e All"
 msgstr "Zatvori sv&e"
 
-#: shell/documentcontroller.cpp:630
+#: shell/documentcontroller.cpp:634
 msgid "Close all open documents"
 msgstr "Zatvori sve otvorene dokumente"
 
-#: shell/documentcontroller.cpp:631
+#: shell/documentcontroller.cpp:635
 msgid ""
 "<b>Close all documents</b><p>Close all open documents, prompting for "
 "additional information when necessary.</p>"
@@ -2548,15 +2567,15 @@ msgstr ""
 "<b>Zatvori sve dokumenta</b><p>Zatvori sve otvorene dokumente pitajući za "
 "oddatne informacije kada je potrebno.</p>"
 
-#: shell/documentcontroller.cpp:637
+#: shell/documentcontroller.cpp:641
 msgid "Close All Ot&hers"
 msgstr "Zatvori sve d&ruge"
 
-#: shell/documentcontroller.cpp:639
+#: shell/documentcontroller.cpp:643
 msgid "Close all other documents"
 msgstr "Zatvori ostale dokumente"
 
-#: shell/documentcontroller.cpp:640
+#: shell/documentcontroller.cpp:644
 msgid ""
 "<b>Close all other documents</b><p>Close all open documents, with the "
 "exception of the currently active document.</p>"
