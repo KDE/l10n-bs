@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dolphin\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-14 03:34+0200\n"
+"POT-Creation-Date: 2011-08-15 03:29+0200\n"
 "PO-Revision-Date: 2011-05-08 21:28+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -227,26 +227,6 @@ msgctxt "@title:window"
 msgid "Configure Preview for %1"
 msgstr "Konfiguriši pregled za %1"
 
-#: settings/general/previewssettingspage.cpp:69
-msgctxt "@title:group"
-msgid "Show previews for"
-msgstr "Pokazuj prikaze za"
-
-#: settings/general/previewssettingspage.cpp:90
-msgctxt "@title:group"
-msgid "Do not create previews for"
-msgstr "Ne stvaraj prikaze za"
-
-#: settings/general/previewssettingspage.cpp:93
-msgctxt "@label Don't create previews for: <Local files above:> XX MByte"
-msgid "Local files above:"
-msgstr "Lokalne datoteke iznad:"
-
-#: settings/general/previewssettingspage.cpp:101
-msgctxt "@label Don't create previews for: <Remote files above:> XX MByte"
-msgid "Remote files above:"
-msgstr "Daljinske datoteke iznad:"
-
 #: settings/general/behaviorsettingspage.cpp:56
 msgctxt "@title:group"
 msgid "View Properties"
@@ -301,6 +281,26 @@ msgstr "Prikaži marker odabira"
 msgctxt "option:check"
 msgid "Natural sorting of items"
 msgstr "Prirodno sortiranje stavki"
+
+#: settings/general/previewssettingspage.cpp:69
+msgctxt "@title:group"
+msgid "Show previews for"
+msgstr "Pokazuj prikaze za"
+
+#: settings/general/previewssettingspage.cpp:90
+msgctxt "@title:group"
+msgid "Do not create previews for"
+msgstr "Ne stvaraj prikaze za"
+
+#: settings/general/previewssettingspage.cpp:93
+msgctxt "@label Don't create previews for: <Local files above:> XX MByte"
+msgid "Local files above:"
+msgstr "Lokalne datoteke iznad:"
+
+#: settings/general/previewssettingspage.cpp:101
+msgctxt "@label Don't create previews for: <Remote files above:> XX MByte"
+msgid "Remote files above:"
+msgstr "Daljinske datoteke iznad:"
 
 #: settings/kcm/kcmdolphinviewmodes.cpp:58
 #: settings/viewmodes/viewsettingspage.cpp:45
@@ -794,19 +794,19 @@ msgctxt "@label"
 msgid "Path"
 msgstr "Putanja"
 
-#: views/dolphinview.cpp:467
+#: views/dolphinview.cpp:476
 #, kde-format
 msgctxt "@info:status"
 msgid "<filename>%1</filename> selected"
 msgstr "<filename>%1</filename> odabrana"
 
-#: views/dolphinview.cpp:468
+#: views/dolphinview.cpp:477
 #, kde-format
 msgctxt "@info:status"
 msgid "<filename>%1</filename> selected (%2)"
 msgstr "<filename>%1</filename> odabrana (%2)"
 
-#: views/dolphinview.cpp:472
+#: views/dolphinview.cpp:481
 #, kde-format
 msgctxt "@info:status"
 msgid "1 Folder selected"
@@ -815,7 +815,7 @@ msgstr[0] "%1 direktorij odabran"
 msgstr[1] "%1 direktorija odabrana"
 msgstr[2] "%1 direktorija odabranih"
 
-#: views/dolphinview.cpp:473
+#: views/dolphinview.cpp:482
 #, kde-format
 msgctxt "@info:status"
 msgid "1 File selected"
@@ -824,29 +824,29 @@ msgstr[0] "%1 datoteka odabrana"
 msgstr[1] "%1 datoteke odabrane"
 msgstr[2] "%1 datoteka odabrano"
 
-#: views/dolphinview.cpp:475
+#: views/dolphinview.cpp:484
 #, kde-format
 msgctxt "@info:status folders, files (size)"
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: views/dolphinview.cpp:478
+#: views/dolphinview.cpp:487
 #, kde-format
 msgctxt "@info:status files (size)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: views/dolphinview.cpp:960
+#: views/dolphinview.cpp:959
 msgctxt "@info:status"
 msgid "Delete operation completed."
 msgstr "Operacija brisanja je završena."
 
-#: views/dolphinview.cpp:1012
+#: views/dolphinview.cpp:1011
 msgctxt "@info:status"
 msgid "The location is empty."
 msgstr "Lokacija je prazna."
 
-#: views/dolphinview.cpp:1014
+#: views/dolphinview.cpp:1013
 #, kde-format
 msgctxt "@info:status"
 msgid "The location '%1' is invalid."
@@ -1046,7 +1046,7 @@ msgctxt "@action:inmenu Edit"
 msgid "Unselect All"
 msgstr "Poništi sav odabir"
 
-#: dolphinpart.cpp:166 dolphinmainwindow.cpp:1633
+#: dolphinpart.cpp:166 dolphinmainwindow.cpp:1631
 msgctxt "@action:inmenu Edit"
 msgid "Invert Selection"
 msgstr "Obrni odabir"
@@ -1118,7 +1118,15 @@ msgctxt "@item:intable"
 msgid "items"
 msgstr "%1 stavka"
 
-#: kitemviews/kfileitemlistwidget.cpp:640
+#: kitemviews/kfileitemmodel.cpp:622
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Link Destination"
+msgctxt "@item:intable"
+msgid "No destination"
+msgstr "Odredište veze"
+
+#: kitemviews/kfileitemlistwidget.cpp:624
 #, fuzzy, kde-format
 #| msgctxt "Items in a folder"
 #| msgid "1 item"
@@ -1129,14 +1137,6 @@ msgid_plural "%1 items"
 msgstr[0] "%1 stavka"
 msgstr[1] "%1 stavke"
 msgstr[2] "%1 stavki"
-
-#: kitemviews/kfileitemmodel.cpp:622
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Link Destination"
-msgctxt "@item:intable"
-msgid "No destination"
-msgstr "Odredište veze"
 
 #: dolphinviewcontainer.cpp:339
 msgctxt "@info:progress"
@@ -1228,215 +1228,215 @@ msgstr ""
 msgid "Do not ask again"
 msgstr "Ne pitaj ponovo"
 
-#: dolphinmainwindow.cpp:1219
+#: dolphinmainwindow.cpp:1217
 msgctxt "@action:inmenu"
 msgid "New Tab"
 msgstr "Nova kartica"
 
-#: dolphinmainwindow.cpp:1222
+#: dolphinmainwindow.cpp:1220
 msgctxt "@action:inmenu"
 msgid "Detach Tab"
 msgstr "Otkači karticu"
 
-#: dolphinmainwindow.cpp:1224
+#: dolphinmainwindow.cpp:1222
 msgctxt "@action:inmenu"
 msgid "Close Other Tabs"
 msgstr "Zatvori ostale kartice"
 
-#: dolphinmainwindow.cpp:1226
+#: dolphinmainwindow.cpp:1224
 msgctxt "@action:inmenu"
 msgid "Close Tab"
 msgstr "Zatvori karticu"
 
-#: dolphinmainwindow.cpp:1453
+#: dolphinmainwindow.cpp:1451
 msgctxt "@action:inmenu"
 msgid "Location Bar"
 msgstr "Lokacijska traka"
 
-#: dolphinmainwindow.cpp:1461
+#: dolphinmainwindow.cpp:1459
 msgctxt "@action:inmenu"
 msgid "Go"
 msgstr "Kreni"
 
-#: dolphinmainwindow.cpp:1471
+#: dolphinmainwindow.cpp:1469
 msgctxt "@action:inmenu"
 msgid "Tools"
 msgstr "Alati"
 
-#: dolphinmainwindow.cpp:1485
+#: dolphinmainwindow.cpp:1483
 msgctxt "@action:inmenu"
 msgid "Help"
 msgstr "Pomoć"
 
-#: dolphinmainwindow.cpp:1581 dolphincontextmenu.cpp:245
+#: dolphinmainwindow.cpp:1579 dolphincontextmenu.cpp:245
 msgctxt "@title:menu Create new folder, file, link, etc."
 msgid "Create New"
 msgstr "Napravi novi"
 
-#: dolphinmainwindow.cpp:1588
+#: dolphinmainwindow.cpp:1586
 msgctxt "@action:inmenu File"
 msgid "New &Window"
 msgstr "Novi &prozor"
 
-#: dolphinmainwindow.cpp:1594
+#: dolphinmainwindow.cpp:1592
 msgctxt "@action:inmenu File"
 msgid "New Tab"
 msgstr "Nova kartica"
 
-#: dolphinmainwindow.cpp:1600
+#: dolphinmainwindow.cpp:1598
 msgctxt "@action:inmenu File"
 msgid "Close Tab"
 msgstr "Zatvori karticu"
 
-#: dolphinmainwindow.cpp:1623
+#: dolphinmainwindow.cpp:1621
 msgctxt "@action:inmenu Edit"
 msgid "Paste"
 msgstr "Umetni"
 
-#: dolphinmainwindow.cpp:1628
+#: dolphinmainwindow.cpp:1626
 msgctxt "@action:inmenu Edit"
 msgid "Select All"
 msgstr "Izaberi sve"
 
-#: dolphinmainwindow.cpp:1646
+#: dolphinmainwindow.cpp:1644
 msgctxt "@action:inmenu View"
 msgid "Reload"
 msgstr "Učitaj ponovo"
 
-#: dolphinmainwindow.cpp:1652
+#: dolphinmainwindow.cpp:1650
 msgctxt "@action:inmenu View"
 msgid "Stop"
 msgstr "Zaustavi"
 
-#: dolphinmainwindow.cpp:1653
+#: dolphinmainwindow.cpp:1651
 msgctxt "@info"
 msgid "Stop loading"
 msgstr "Zaustavi učitavanje"
 
-#: dolphinmainwindow.cpp:1658
+#: dolphinmainwindow.cpp:1656
 msgctxt "@action:inmenu Navigation Bar"
 msgid "Editable Location"
 msgstr "Izmijenjiva lokacija"
 
-#: dolphinmainwindow.cpp:1663
+#: dolphinmainwindow.cpp:1661
 msgctxt "@action:inmenu Navigation Bar"
 msgid "Replace Location"
 msgstr "Zamijeni lokaciju"
 
-#: dolphinmainwindow.cpp:1674
+#: dolphinmainwindow.cpp:1672
 msgid "Recently Closed Tabs"
 msgstr "Nedavno zatvorene kartice"
 
-#: dolphinmainwindow.cpp:1680
+#: dolphinmainwindow.cpp:1678
 msgid "Empty Recently Closed Tabs"
 msgstr "Isprazni nedavno zatvorene kartice"
 
-#: dolphinmainwindow.cpp:1697
+#: dolphinmainwindow.cpp:1695
 msgctxt "@action:inmenu Tools"
 msgid "Show Filter Bar"
 msgstr "Prikaži filter traku"
 
-#: dolphinmainwindow.cpp:1703
+#: dolphinmainwindow.cpp:1701
 msgctxt "@action:inmenu Tools"
 msgid "Compare Files"
 msgstr "Uporedi datoteke"
 
-#: dolphinmainwindow.cpp:1709
+#: dolphinmainwindow.cpp:1707
 msgctxt "@action:inmenu Tools"
 msgid "Open Terminal"
 msgstr "Otvori terminal"
 
-#: dolphinmainwindow.cpp:1728
+#: dolphinmainwindow.cpp:1726
 msgctxt "@action:inmenu"
 msgid "Activate Next Tab"
 msgstr "Aktiviraj sljedeću karticu"
 
-#: dolphinmainwindow.cpp:1733
+#: dolphinmainwindow.cpp:1731
 msgctxt "@action:inmenu"
 msgid "Activate Previous Tab"
 msgstr "Aktiviraj prethodnu karticu"
 
-#: dolphinmainwindow.cpp:1739
+#: dolphinmainwindow.cpp:1737
 msgctxt "@action:inmenu"
 msgid "Open in New Tab"
 msgstr "Otvori u novoj kartici"
 
-#: dolphinmainwindow.cpp:1744
+#: dolphinmainwindow.cpp:1742
 msgctxt "@action:inmenu"
 msgid "Open in New Window"
 msgstr "Otvori u novom prozoru"
 
-#: dolphinmainwindow.cpp:1754
+#: dolphinmainwindow.cpp:1752
 msgctxt "@action:inmenu Panels"
 msgid "Unlock Panels"
 msgstr "Otključaj panele"
 
-#: dolphinmainwindow.cpp:1756
+#: dolphinmainwindow.cpp:1754
 msgctxt "@action:inmenu Panels"
 msgid "Lock Panels"
 msgstr "Zaključaj Panele"
 
-#: dolphinmainwindow.cpp:1762
+#: dolphinmainwindow.cpp:1760
 msgctxt "@title:window"
 msgid "Information"
 msgstr "Informacije"
 
-#: dolphinmainwindow.cpp:1785
+#: dolphinmainwindow.cpp:1783
 msgctxt "@title:window"
 msgid "Folders"
 msgstr "Direktoriji"
 
-#: dolphinmainwindow.cpp:1806
+#: dolphinmainwindow.cpp:1804
 msgctxt "@title:window Shell terminal"
 msgid "Terminal"
 msgstr "Terminal"
 
-#: dolphinmainwindow.cpp:1830
+#: dolphinmainwindow.cpp:1828
 msgctxt "@title:window"
 msgid "Search"
 msgstr "Pretraga"
 
-#: dolphinmainwindow.cpp:1868
+#: dolphinmainwindow.cpp:1858
 msgctxt "@title:window"
 msgid "Places"
 msgstr "Mjesta"
 
-#: dolphinmainwindow.cpp:1898
+#: dolphinmainwindow.cpp:1888
 msgctxt "@action:inmenu View"
 msgid "Panels"
 msgstr "Paneli"
 
-#: dolphinmainwindow.cpp:1976
+#: dolphinmainwindow.cpp:1966
 msgctxt "@info:tooltip"
 msgid "Configure and control Dolphin"
 msgstr "Konfiguriši i kontroliši Dolphin"
 
-#: dolphinmainwindow.cpp:2146
+#: dolphinmainwindow.cpp:2136
 msgctxt "@action:intoolbar Close right view"
 msgid "Close"
 msgstr "Zatvori"
 
-#: dolphinmainwindow.cpp:2147
+#: dolphinmainwindow.cpp:2137
 msgctxt "@info"
 msgid "Close right view"
 msgstr "Zatvori desni prikaz"
 
-#: dolphinmainwindow.cpp:2150
+#: dolphinmainwindow.cpp:2140
 msgctxt "@action:intoolbar Close left view"
 msgid "Close"
 msgstr "Zatvori"
 
-#: dolphinmainwindow.cpp:2151
+#: dolphinmainwindow.cpp:2141
 msgctxt "@info"
 msgid "Close left view"
 msgstr "Zatvori lijevi prikaz"
 
-#: dolphinmainwindow.cpp:2155
+#: dolphinmainwindow.cpp:2145
 msgctxt "@action:intoolbar Split view"
 msgid "Split"
 msgstr "Razdvoji"
 
-#: dolphinmainwindow.cpp:2156
+#: dolphinmainwindow.cpp:2146
 msgctxt "@info"
 msgid "Split view"
 msgstr "Razdvojeni prikaz"
@@ -1914,25 +1914,15 @@ msgid "Should the full path be shown inside the location bar"
 msgstr "Treba li cijeli put biti prikazan unutar lokacijske trake"
 
 #. i18n: file: settings/dolphin_generalsettings.kcfg:24
-#. i18n: ectx: label, entry (FirstRun), group (General)
-#: rc.cpp:186
-msgid ""
-"Is the application started the first time (internal setting not shown in the "
-"UI)"
-msgstr ""
-"Da li je program pokrenut prvi put (interno podešavanje se ne prikazuje u "
-"korisničkom interfejsu)"
-
-#. i18n: file: settings/dolphin_generalsettings.kcfg:28
 #. i18n: ectx: label, entry (Version), group (General)
-#: rc.cpp:189
+#: rc.cpp:186
 msgid ""
 "Internal version of Dolphin, containing 3 digits for mayor, minor, bugfix"
 msgstr ""
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:32
+#. i18n: file: settings/dolphin_generalsettings.kcfg:28
 #. i18n: ectx: label, entry (ModifiedStartupSettings), group (General)
-#: rc.cpp:192
+#: rc.cpp:189
 msgid ""
 "Have the startup settings been modified (internal setting not shown in the "
 "UI)"
@@ -1940,110 +1930,117 @@ msgstr ""
 "Da li su izmijenjene postavke pokretanja (interne postavke se ne prikazuje u "
 "korisničkom interfejsu)"
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:36
+#. i18n: file: settings/dolphin_generalsettings.kcfg:32
 #. i18n: ectx: label, entry (HomeUrl), group (General)
-#: rc.cpp:195
+#: rc.cpp:192
 msgid "Home URL"
 msgstr "Početni URL"
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:40
+#. i18n: file: settings/dolphin_generalsettings.kcfg:36
 #. i18n: ectx: label, entry (SplitView), group (General)
-#: rc.cpp:198
+#: rc.cpp:195
 msgid "Split the view into two panes"
 msgstr "Razdvoji prikaz u dva panela"
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:44
+#. i18n: file: settings/dolphin_generalsettings.kcfg:40
 #. i18n: ectx: label, entry (FilterBar), group (General)
-#: rc.cpp:201
+#: rc.cpp:198
 msgid "Should the filter bar be shown"
 msgstr "Da li će traka s filterom biti prikazana"
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:48
+#. i18n: file: settings/dolphin_generalsettings.kcfg:44
 #. i18n: ectx: label, entry (GlobalViewProps), group (General)
-#: rc.cpp:204
+#: rc.cpp:201
 msgid "Should the view properties be used for all directories"
 msgstr "Trebaju li se svojstva prikaza koristiti za sve direktorije"
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:52
+#. i18n: file: settings/dolphin_generalsettings.kcfg:48
 #. i18n: ectx: label, entry (BrowseThroughArchives), group (General)
-#: rc.cpp:207
+#: rc.cpp:204
 msgid "Browse through archives"
 msgstr "Traži kroz arhive"
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:56
+#. i18n: file: settings/dolphin_generalsettings.kcfg:52
 #. i18n: ectx: label, entry (ConfirmClosingMultipleTabs), group (General)
-#: rc.cpp:210
+#: rc.cpp:207
 msgid "Ask for confirmation when closing windows with multiple tabs."
 msgstr "Pitaj za potvrdu prilikom zatvaranja prozora s više kartica."
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:60
+#. i18n: file: settings/dolphin_generalsettings.kcfg:56
 #. i18n: ectx: label, entry (RenameInline), group (General)
-#: rc.cpp:213
+#: rc.cpp:210
 msgid "Rename inline"
 msgstr "Preimenuj unutar linije"
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:64
+#. i18n: file: settings/dolphin_generalsettings.kcfg:60
 #. i18n: ectx: label, entry (ShowSelectionToggle), group (General)
-#: rc.cpp:216
+#: rc.cpp:213
 msgid "Show selection toggle"
 msgstr "Prikaži odabirni preklopnik"
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:68
+#. i18n: file: settings/dolphin_generalsettings.kcfg:64
 #. i18n: ectx: label, entry (ShowToolTips), group (General)
-#: rc.cpp:219
+#: rc.cpp:216
 msgid "Show tooltips"
 msgstr "Prikaži opis alata"
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:72
+#. i18n: file: settings/dolphin_generalsettings.kcfg:68
 #. i18n: ectx: label, entry (ShowCopyMoveMenu), group (General)
-#: rc.cpp:222
+#: rc.cpp:219
 msgid "Show 'Copy To' and 'Move To' commands in context menu"
 msgstr ""
 "Prikaži naredbe 'Kopiraj na' ili 'Premjesti na' u kontekstnom izborniku"
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:76
+#. i18n: file: settings/dolphin_generalsettings.kcfg:72
 #. i18n: ectx: label, entry (ViewPropsTimestamp), group (General)
-#: rc.cpp:225
+#: rc.cpp:222
 msgid "Timestamp since when the view properties are valid"
 msgstr "Postavljaj vremenske oznake od kad vrijede svojstva prikaza"
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:79
+#. i18n: file: settings/dolphin_generalsettings.kcfg:75
 #. i18n: ectx: label, entry (AutoExpandFolders), group (General)
-#: rc.cpp:228
+#: rc.cpp:225
 msgid "Use auto-expanding folders for all view types"
 msgstr "Koristi samoproširujuće direktorije za sve tipove prikaza"
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:83
+#. i18n: file: settings/dolphin_generalsettings.kcfg:79
 #. i18n: ectx: label, entry (ShowZoomSlider), group (General)
-#: rc.cpp:231
+#: rc.cpp:228
 msgid "Show zoom slider in the statusbar"
 msgstr "Prikaži zum klizač u statusnoj traci"
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:87
+#. i18n: file: settings/dolphin_generalsettings.kcfg:83
 #. i18n: ectx: label, entry (ShowSpaceInfo), group (General)
-#: rc.cpp:234
+#: rc.cpp:231
 msgid "Show the space information in the statusbar"
 msgstr "Prikaži informacije o prostoru u statusnoj traci"
 
-#. i18n: file: settings/dolphin_generalsettings.kcfg:91
+#. i18n: file: settings/dolphin_generalsettings.kcfg:87
 #. i18n: ectx: label, entry (LockPanels), group (General)
-#: rc.cpp:237
+#: rc.cpp:234
 msgid "Lock the layout of the panels"
 msgstr "Zaključaj raspored panela"
 
 #. i18n: file: dolphinui.rc:34
 #. i18n: ectx: Menu (location_bar)
-#: rc.cpp:242
+#: rc.cpp:239
 msgctxt "@title:menu"
 msgid "Location Bar"
 msgstr "Lokacijska traka"
 
 #. i18n: file: dolphinui.rc:88
 #. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:245
+#: rc.cpp:242
 msgctxt "@title:menu"
 msgid "Main Toolbar"
 msgstr "Glavna alatna traka"
+
+#~ msgid ""
+#~ "Is the application started the first time (internal setting not shown in "
+#~ "the UI)"
+#~ msgstr ""
+#~ "Da li je program pokrenut prvi put (interno podešavanje se ne prikazuje u "
+#~ "korisničkom interfejsu)"
 
 #~ msgctxt "@title:tab"
 #~ msgid "Column"
