@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpackagekit\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-17 04:14+0200\n"
+"POT-Creation-Date: 2011-08-18 04:21+0200\n"
 "PO-Revision-Date: 2011-05-08 12:57+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -36,7 +36,7 @@ msgstr "Apper"
 msgid "Apper is an Application to Get and Manage Software"
 msgstr "Apper je aplikacija za dobivanje i upravljanje softverom"
 
-#: Apper/main.cpp:58 Sentinel/main.cpp:38
+#: Apper/main.cpp:58 ApperKCM/ApperKCM.cpp:81 Sentinel/main.cpp:38
 msgid "(C) 2008-2011 Daniel Nicoletti"
 msgstr "(C) 2008-2011 Daniel Nicoletti"
 
@@ -341,7 +341,7 @@ msgstr "Prikaži arhitekture"
 
 #. i18n: file: ApperKCM/ApperKCM.ui:230
 #. i18n: ectx: property (text), widget (QPushButton, checkUpdatesPB)
-#: ApperKCM/Updater/Updater.cpp:273 rc.cpp:200
+#: ApperKCM/Updater/Updater.cpp:273 rc.cpp:194
 msgid "Check for new Updates"
 msgstr "Potraži nove nadgradnje."
 
@@ -352,10 +352,6 @@ msgstr "Aplikacijski menadžer"
 #: ApperKCM/ApperKCM.cpp:79
 msgid "KDE interface for managing software"
 msgstr "KDE interfejs za upravljanje softverom"
-
-#: ApperKCM/ApperKCM.cpp:81
-msgid "(C) 2008-2010 Daniel Nicoletti"
-msgstr "(C) 2008-2010 Daniel Nicoletti"
 
 #: ApperKCM/ApperKCM.cpp:109 ApperKCM/ApperKCM.cpp:291
 msgid "Find"
@@ -378,19 +374,19 @@ msgstr "&Odustani"
 
 #. i18n: file: ApperKCM/ApperKCM.ui:284
 #. i18n: ectx: property (text), widget (QToolButton, backTB)
-#: ApperKCM/ApperKCM.cpp:278 rc.cpp:206
+#: ApperKCM/ApperKCM.cpp:278 rc.cpp:200
 msgid "Find by &name"
 msgstr "Nađi po &nazivu"
 
 #. i18n: file: ApperKCM/ApperKCM.ui:294
 #. i18n: ectx: property (text), widget (QToolButton, backTB)
-#: ApperKCM/ApperKCM.cpp:279 rc.cpp:212
+#: ApperKCM/ApperKCM.cpp:279 rc.cpp:206
 msgid "Find by f&ile name"
 msgstr "Nađi po nazivu &datoteke"
 
 #. i18n: file: ApperKCM/ApperKCM.ui:289
 #. i18n: ectx: property (text), widget (QToolButton, backTB)
-#: ApperKCM/ApperKCM.cpp:280 rc.cpp:209
+#: ApperKCM/ApperKCM.cpp:280 rc.cpp:203
 msgid "Find by &description"
 msgstr "Nađi po &opisu"
 
@@ -405,26 +401,6 @@ msgstr ""
 #: ApperKCM/ApperKCM.cpp:416
 msgid "Apply Settings"
 msgstr "Primijeni postavke"
-
-#: ApperKCM/CategoryModel.cpp:47
-msgid "Installed Software"
-msgstr "Instalirani softver"
-
-#: ApperKCM/CategoryModel.cpp:50 ApperKCM/CategoryModel.cpp:58
-msgid "Lists"
-msgstr "Liste"
-
-#: ApperKCM/CategoryModel.cpp:55
-msgid "Updates"
-msgstr "Nadogradnje"
-
-#: ApperKCM/CategoryModel.cpp:155 ApperKCM/CategoryModel.cpp:339
-msgid "Categories"
-msgstr "Kategorije"
-
-#: ApperKCM/CategoryModel.cpp:208
-msgid "Groups"
-msgstr "Grupe"
 
 #: ApperKCM/FiltersMenu.cpp:37
 msgid "Collections"
@@ -542,6 +518,26 @@ msgstr "Prikaži samo programe"
 msgid "Hide packages that are not applications"
 msgstr "Sakrij pakete koji nisu programi"
 
+#: ApperKCM/CategoryModel.cpp:47
+msgid "Installed Software"
+msgstr "Instalirani softver"
+
+#: ApperKCM/CategoryModel.cpp:50 ApperKCM/CategoryModel.cpp:58
+msgid "Lists"
+msgstr "Liste"
+
+#: ApperKCM/CategoryModel.cpp:55
+msgid "Updates"
+msgstr "Nadogradnje"
+
+#: ApperKCM/CategoryModel.cpp:155 ApperKCM/CategoryModel.cpp:339
+msgid "Categories"
+msgstr "Kategorije"
+
+#: ApperKCM/CategoryModel.cpp:208
+msgid "Groups"
+msgstr "Grupe"
+
 #: ApperKCM/PackageDetails.cpp:73
 msgid "Display"
 msgstr "Prikaz"
@@ -635,7 +631,13 @@ msgstr "%1 nadgradnja"
 msgid "%1 script engine"
 msgstr ""
 
-#: Sentinel/PkInstallPlasmaResources.cpp:65
+#: Sentinel/PkInstallPlasmaResources.cpp:66
+#, fuzzy
+#| msgid "No files were found."
+msgid "No supported resources were provided"
+msgstr "Nijedna datoteka nije pronađena."
+
+#: Sentinel/PkInstallPlasmaResources.cpp:68
 #, fuzzy
 #| msgid ""
 #| "The following plugin is required: <ul><li>%2</li></ul>Do you want to "
@@ -656,7 +658,7 @@ msgstr[2] ""
 "Sljedeći dodaci se zahtijevaju : <ul><li>%2</li></ul> Da li želite da ih "
 "potražite sada ?"
 
-#: Sentinel/PkInstallPlasmaResources.cpp:72
+#: Sentinel/PkInstallPlasmaResources.cpp:77
 #, fuzzy
 #| msgid "%2 requires an additional plugin for this operation"
 #| msgid_plural "%2 requires additional plugins for this operation"
@@ -666,89 +668,103 @@ msgstr[0] "%2 zahtijeva dodatni priključak za ovu operaciju"
 msgstr[1] "%2 zahtijeva dodatne priključke za ovu operaciju"
 msgstr[2] "%2 zahtijeva dodatne priključke za ovu operaciju"
 
-#: Sentinel/PkInstallPlasmaResources.cpp:95 Sentinel/PkInstallMimeTypes.cpp:91
-#: Sentinel/PkInstallGStreamerResources.cpp:134
+#: Sentinel/PkInstallPlasmaResources.cpp:100
 #: Sentinel/PkInstallPrinterDrivers.cpp:74
+#: Sentinel/PkInstallGStreamerResources.cpp:134
 #: Sentinel/PkInstallFontconfigResources.cpp:143
 #: Sentinel/PkInstallFontconfigResources.cpp:164
+#: Sentinel/PkInstallMimeTypes.cpp:92
 msgid "Failed to search for provides"
 msgstr "Potraga za pružaocima nije uspjela"
 
-#: Sentinel/PkInstallPlasmaResources.cpp:106
+#: Sentinel/PkInstallPlasmaResources.cpp:111
 #, fuzzy
 #| msgid "Failed to search for provides"
 msgid "Failed to search for Plasma service"
 msgstr "Potraga za pružaocima nije uspjela"
 
-#: Sentinel/PkInstallPlasmaResources.cpp:109
+#: Sentinel/PkInstallPlasmaResources.cpp:114
 #, fuzzy
 #| msgid "Could not find plugin in any configured software source"
 msgid "Could not find service in any configured software source"
 msgstr ""
 "Nije moguće naći priključak u bilo kojem konfigurisanom programskom izvoru"
 
-#: Sentinel/PkInstallMimeTypes.cpp:39
+#: Sentinel/PkInstallProvideFiles.cpp:39
 #, fuzzy
-#| msgid "Install Files"
-msgid "Install Support for File Types"
-msgstr "instaliraj datoteke"
+#| msgid "Install Packages from List..."
+msgid "Install Packages that Provides Files"
+msgstr "Instaliraj pakete sa spiska..."
 
-#: Sentinel/PkInstallMimeTypes.cpp:50
+#: Sentinel/PkInstallProvideFiles.cpp:49
 #, fuzzy
 #| msgid "No files were found."
-msgid "No valid file types were provided"
+msgid "No files where provided"
 msgstr "Nijedna datoteka nije pronađena."
 
-#: Sentinel/PkInstallMimeTypes.cpp:52
+#: Sentinel/PkInstallProvideFiles.cpp:52
 #, fuzzy
 #| msgid ""
 #| "Do you want to search for packages containing this file and remove it now?"
 #| msgid_plural ""
 #| "Do you want to search for packages containing these files and remove them "
 #| "now?"
-msgid "Do you want to search for a program that can open this file type?"
-msgid_plural ""
-"Do you want to search for a program that can open these file types?"
+msgid "Do you want to search for this now?"
+msgid_plural "Do you want to search for these now?"
 msgstr[0] ""
 "Da li želite da tražite pakete koji sadrže ovu datoteku i da je odstranite "
 "sada :"
 msgstr[1] ""
-"Da li želite da tražite pakete koji sadrže ovu datoteku i da je odstranite "
+"Da li želite da tražite pakete koji sadrže ove datoteke i da ih odstranite "
 "sada :"
 msgstr[2] ""
-"Da li želite da tražite pakete koji sadrže ovu datoteku i da je odstranite "
+"Da li želite da tražite pakete koji sadrže ove datoteke i da ih odstranite "
 "sada :"
 
-#: Sentinel/PkInstallMimeTypes.cpp:61
-#, fuzzy
-#| msgid "A program requires an additional plugin to decode this file"
-#| msgid_plural "A program requires additional plugins to decode this file"
-msgid "A program is requiring support to open this kind of files"
-msgid_plural "A program is requiring support to open these kinds of files"
-msgstr[0] "Program zahtijeva dodatni priključak za dekodiranje ove datoteke"
-msgstr[1] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
-msgstr[2] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
+#: Sentinel/PkInstallProvideFiles.cpp:62
+msgid "A program wants to install a file"
+msgid_plural "A program wants to install files"
+msgstr[0] "Program želi da instalira datoteku"
+msgstr[1] "Program želi da instalira datoteke"
+msgstr[2] "Program želi da instalira datoteke"
 
-#: Sentinel/PkInstallMimeTypes.cpp:65
+#: Sentinel/PkInstallProvideFiles.cpp:66
 #, fuzzy, kde-format
-#| msgid "A program requires an additional plugin to decode this file"
-#| msgid_plural "A program requires additional plugins to decode this file"
-msgid "The application %2 is requiring support to open this kind of files"
-msgid_plural ""
-"The application %2 is requiring support to open these kinds of files"
-msgstr[0] "Program zahtijeva dodatni priključak za dekodiranje ove datoteke"
-msgstr[1] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
-msgstr[2] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
+#| msgid "%2 wants to install a package"
+#| msgid_plural "%2 wants to install packages"
+msgid "The application %2 is asking to install a file"
+msgid_plural "The application %2 is asking to install files"
+msgstr[0] "%2 želi da instalira paket"
+msgstr[1] "%2 želi da instalira pakete"
+msgstr[2] "%2 želi da instalira pakete"
 
-#: Sentinel/PkInstallMimeTypes.cpp:100
-#, fuzzy
-#| msgid "Failed to find software"
-msgid "Could not find software"
-msgstr "Traženje programa nije uspjelo"
+#: Sentinel/PkInstallProvideFiles.cpp:88
+#: Sentinel/PkRemovePackageByFiles.cpp:128 Sentinel/PkSearchFile.cpp:54
+msgid "Failed to start search file transaction"
+msgstr "Početak pretrage transakciju datoteka nije uspio"
 
-#: Sentinel/PkInstallMimeTypes.cpp:102
-msgid "No new applications can be found to handle this type of file"
-msgstr "Ne mogu se naći nove aplikacije za rukovanje ovom datotekom"
+#: Sentinel/PkInstallProvideFiles.cpp:101 libapper/PkTransaction.cpp:281
+msgid "Failed to install file"
+msgid_plural "Failed to install files"
+msgstr[0] "Instalacija datoteke nije uspjela"
+msgstr[1] "Instalacija datoteka nije uspjela"
+msgstr[2] "Instalacija datoteka nije uspjela"
+
+#: Sentinel/PkInstallProvideFiles.cpp:102
+#, kde-format
+msgid "The %1 package already provides this file"
+msgstr "%1 paketa već pruža ovu datoteku"
+
+#: Sentinel/PkInstallProvideFiles.cpp:108
+msgid "Failed to find package"
+msgstr "Traženje paketa nije uspjelo"
+
+#: Sentinel/PkInstallProvideFiles.cpp:109
+msgid "The file could not be found in any packages"
+msgid_plural "The files could not be found in any packages"
+msgstr[0] "Datoteka nije mogla biti pronađena u bilo kojim paketima"
+msgstr[1] "Datoteke nisu mogle biti pronađene u bilo kojim paketima"
+msgstr[2] "Datoteke nisu mogle biti pronađene u bilo kojim paketima"
 
 #: Sentinel/PkInstallPackageNames.cpp:41
 #, fuzzy
@@ -757,6 +773,12 @@ msgid "Install Packages by Name"
 msgstr "Instaliraj pakete"
 
 #: Sentinel/PkInstallPackageNames.cpp:57
+#, fuzzy
+#| msgid "No files were found."
+msgid "No package names were provided"
+msgstr "Nijedna datoteka nije pronađena."
+
+#: Sentinel/PkInstallPackageNames.cpp:60
 #, fuzzy
 #| msgid ""
 #| "Do you want to search for packages containing this file and remove it now?"
@@ -775,7 +797,7 @@ msgstr[2] ""
 "Da li želite da tražite pakete koji sadrže ove datoteke i da ih odstranite "
 "sada :"
 
-#: Sentinel/PkInstallPackageNames.cpp:65 Sentinel/PkInstallPackageFiles.cpp:79
+#: Sentinel/PkInstallPackageNames.cpp:70 Sentinel/PkInstallPackageFiles.cpp:79
 #, fuzzy
 #| msgid "A program wants to install a package"
 #| msgid_plural "A program wants to install packages"
@@ -785,7 +807,7 @@ msgstr[0] "Program želi da instalira paket"
 msgstr[1] "Program želi da instalira pakete"
 msgstr[2] "Program želi da instalira pakete"
 
-#: Sentinel/PkInstallPackageNames.cpp:69 Sentinel/PkInstallPackageFiles.cpp:83
+#: Sentinel/PkInstallPackageNames.cpp:74 Sentinel/PkInstallPackageFiles.cpp:83
 #, fuzzy, kde-format
 #| msgid "%2 wants to install a package"
 #| msgid_plural "%2 wants to install packages"
@@ -795,16 +817,16 @@ msgstr[0] "%2 želi da instalira paket"
 msgstr[1] "%2 želi da instalira pakete"
 msgstr[2] "%2 želi da instalira pakete"
 
-#: Sentinel/PkInstallPackageNames.cpp:91 Sentinel/PkInstallCatalogs.cpp:290
+#: Sentinel/PkInstallPackageNames.cpp:96 Sentinel/PkInstallCatalogs.cpp:278
 #: Sentinel/PkIsInstalled.cpp:46
 msgid "Failed to start resolve transaction"
 msgstr "Pokretanje rješavana transakcije nije uspjelo"
 
-#: Sentinel/PkInstallPackageNames.cpp:103
+#: Sentinel/PkInstallPackageNames.cpp:108
 msgid "Failed to install packages"
 msgstr "Instalacija paketa nije uspjela"
 
-#: Sentinel/PkInstallPackageNames.cpp:104
+#: Sentinel/PkInstallPackageNames.cpp:109
 #, kde-format
 msgid "The package %2 is already installed"
 msgid_plural "The packages %2 are already installed"
@@ -812,18 +834,164 @@ msgstr[0] "Paket %2 je već instaliran"
 msgstr[1] "Paketi %2 su već instalirani"
 msgstr[2] "Paketi %2 su već instalirani"
 
-#: Sentinel/PkInstallPackageNames.cpp:112 Sentinel/PkSearchFile.cpp:81
-#: Sentinel/PkRemovePackageByFiles.cpp:131
+#: Sentinel/PkInstallPackageNames.cpp:117
+#: Sentinel/PkRemovePackageByFiles.cpp:149 Sentinel/PkSearchFile.cpp:81
 #, kde-format
 msgid "Could not find %1"
 msgstr "Nisam mogao da nađem %1"
 
-#: Sentinel/PkInstallPackageNames.cpp:113
+#: Sentinel/PkInstallPackageNames.cpp:118
 msgid "The package could not be found in any software source"
 msgid_plural "The packages could not be found in any software source"
 msgstr[0] "Paket nije mogao biti pronađen u bilo kojem programskom izvoru"
 msgstr[1] "Paketi nisu mogli biti pronađeni u bilo kojem programskom izvoru"
 msgstr[2] "Paketi nisu mogli biti pronađeni u bilo kojem programskom izvoru"
+
+#: Sentinel/PkInstallPrinterDrivers.cpp:39
+#, fuzzy
+#| msgctxt "The role of the transaction, in present tense"
+#| msgid "Installing file"
+msgid "Install Printer Drivers"
+msgstr "Instaliranje datoteke"
+
+#: Sentinel/PkInstallPrinterDrivers.cpp:87
+msgid "Failed to search for printer driver"
+msgstr "Neuspjelo traženje drajvera za štampač"
+
+#: Sentinel/PkInstallPrinterDrivers.cpp:88
+msgid "Could not find printer driver in any configured software source"
+msgstr ""
+"Nije moguće pronaći upravljački program za štampač na bilo kojem "
+"konfigurisanom izvoru softvera"
+
+#: Sentinel/UpdateIcon.cpp:173
+msgid "Review Updates"
+msgstr "Pregled nadgradnji"
+
+#: Sentinel/UpdateIcon.cpp:176
+msgid "Configure"
+msgstr "Konfigurisati"
+
+#. i18n: file: ApperKCM/PackageDetails.ui:359
+#. i18n: ectx: property (text), widget (QToolButton, hideTB)
+#. i18n: file: ApperKCM/Updater/UpdateDetails.ui:20
+#. i18n: ectx: property (text), widget (QToolButton, hideTB)
+#: Sentinel/UpdateIcon.cpp:180 libapper/PkTransactionDialog.cpp:86 rc.cpp:137
+#: rc.cpp:179
+msgid "Hide"
+msgstr "Sakrij"
+
+#: Sentinel/UpdateIcon.cpp:190
+#, kde-format
+msgid "You have one update"
+msgid_plural "You have %1 updates"
+msgstr[0] "Imate %1 nadgradnju"
+msgstr[1] "Imate %1 nadgradnje"
+msgstr[2] "Imate %1 nadgradnji"
+
+#: Sentinel/UpdateIcon.cpp:243
+msgid "Updates are being automatically installed."
+msgstr "Nadgradnje se automatski instališu"
+
+#: Sentinel/UpdateIcon.cpp:264
+msgid "Security updates are being automatically installed."
+msgstr "Sigurnosne nadgradnje se automatski instališu"
+
+#: Sentinel/UpdateIcon.cpp:291
+msgid "System update was successful."
+msgstr "Sistemska nadgradnja je bila uspješna"
+
+#: Sentinel/UpdateIcon.cpp:300
+msgid "The automated software update failed."
+msgstr "Automatizirano ažuriranje softvera nije uspjelo."
+
+#: Sentinel/ReviewChanges.cpp:52
+msgid "The following package was found"
+msgid_plural "The following packages were found"
+msgstr[0] "Sljedeći paket je pronađen"
+msgstr[1] "Sljedeći paketi su pronađeni"
+msgstr[2] "Sljedeći paketi su pronađeni"
+
+#: Sentinel/PkInstallGStreamerResources.cpp:39
+msgid "Install GStreamer Resources"
+msgstr ""
+
+#: Sentinel/PkInstallGStreamerResources.cpp:67
+#, fuzzy
+#| msgid ""
+#| "The following plugin is required: <ul><li>%2</li></ul>Do you want to "
+#| "search for this now?"
+#| msgid_plural ""
+#| "The following plugins are required: <ul><li>%2</li></ul>Do you want to "
+#| "search for these now?"
+msgid "The following plugin is required. Do you want to search for this now?"
+msgid_plural ""
+"The following plugins are required. Do you want to search for these now?"
+msgstr[0] ""
+"Sljedeći dodatak se zahtijeva : <ul><li>%2</li></ul> Da li želite da ga "
+"potražite sada ?"
+msgstr[1] ""
+"Sljedeći dodaci se zahtijevaju : <ul><li>%2</li></ul> Da li želite da ih "
+"potražite sada ?"
+msgstr[2] ""
+"Sljedeći dodaci se zahtijevaju : <ul><li>%2</li></ul> Da li želite da ih "
+"potražite sada ?"
+
+#: Sentinel/PkInstallGStreamerResources.cpp:78
+msgid "A program requires an additional plugin to decode this file"
+msgid_plural "A program requires additional plugins to decode this file"
+msgstr[0] "Program zahtijeva dodatni priključak za dekodiranje ove datoteke"
+msgstr[1] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
+msgstr[2] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
+
+#: Sentinel/PkInstallGStreamerResources.cpp:83
+msgid "A program requires an additional plugin to encode this file"
+msgid_plural "A program requires additional plugins to encode this file"
+msgstr[0] "Program zahtijeva dodatni priključak za dekodiranje ove datoteke"
+msgstr[1] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
+msgstr[2] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
+
+#: Sentinel/PkInstallGStreamerResources.cpp:88
+msgid "A program requires an additional plugin for this operation"
+msgid_plural "A program requires additional plugins for this operation"
+msgstr[0] "Program zahtijeva dodatni priključak za ovu operaciju"
+msgstr[1] "Program zahtijeva dodatne priključke za ovu operaciju"
+msgstr[2] "Program zahtijeva dodatne priključke za ovu operaciju"
+
+#: Sentinel/PkInstallGStreamerResources.cpp:95
+#, kde-format
+msgid "%2 requires an additional plugin to decode this file"
+msgid_plural "%2 requires additional plugins to decode this file"
+msgstr[0] "%2 zahtijeva dodatni priključak za dekodiranje ove datoteke"
+msgstr[1] "%2 zahtijeva dodatne priključke za dekodiranje ove datoteke"
+msgstr[2] "%2 zahtijeva dodatne priključke za dekodiranje ove datoteke"
+
+#: Sentinel/PkInstallGStreamerResources.cpp:101
+#, kde-format
+msgid "%2 requires an additional plugin to encode this file"
+msgid_plural "%2 requires additional plugins to encode this file"
+msgstr[0] "%2 zahtijeva dodatni priključak za kodiranje ove datoteke"
+msgstr[1] "%2 zahtijeva dodatni priključak za kodiranje ove datoteke"
+msgstr[2] "%2 zahtijeva dodatni priključak za kodiranje ove datoteke"
+
+#: Sentinel/PkInstallGStreamerResources.cpp:107
+#, kde-format
+msgid "%2 requires an additional plugin for this operation"
+msgid_plural "%2 requires additional plugins for this operation"
+msgstr[0] "%2 zahtijeva dodatni priključak za ovu operaciju"
+msgstr[1] "%2 zahtijeva dodatne priključke za ovu operaciju"
+msgstr[2] "%2 zahtijeva dodatne priključke za ovu operaciju"
+
+#: Sentinel/PkInstallGStreamerResources.cpp:145
+#, fuzzy
+#| msgid "No files were found."
+msgid "No results found"
+msgstr "Nijedna datoteka nije pronađena."
+
+#: Sentinel/PkInstallGStreamerResources.cpp:147
+msgid "Could not find plugin in any configured software source"
+msgstr ""
+"Nije moguće naći priključak u bilo kojem konfigurisanom programskom izvoru"
 
 #: Sentinel/PkInstallCatalogs.cpp:46
 #, fuzzy
@@ -923,197 +1091,6 @@ msgid "Could not find any package to install in this catalog"
 msgstr ""
 "<h3> Da li želite da instalirate ovaj katalog ? </h3><ul><li>%2</li></ul>"
 
-#: Sentinel/UpdateIcon.cpp:173
-msgid "Review Updates"
-msgstr "Pregled nadgradnji"
-
-#: Sentinel/UpdateIcon.cpp:176
-msgid "Configure"
-msgstr "Konfigurisati"
-
-#. i18n: file: ApperKCM/PackageDetails.ui:359
-#. i18n: ectx: property (text), widget (QToolButton, hideTB)
-#. i18n: file: ApperKCM/Updater/UpdateDetails.ui:20
-#. i18n: ectx: property (text), widget (QToolButton, hideTB)
-#: Sentinel/UpdateIcon.cpp:180 libapper/PkTransactionDialog.cpp:85 rc.cpp:137
-#: rc.cpp:179
-msgid "Hide"
-msgstr "Sakrij"
-
-#: Sentinel/UpdateIcon.cpp:190
-#, kde-format
-msgid "You have one update"
-msgid_plural "You have %1 updates"
-msgstr[0] "Imate %1 nadgradnju"
-msgstr[1] "Imate %1 nadgradnje"
-msgstr[2] "Imate %1 nadgradnji"
-
-#: Sentinel/UpdateIcon.cpp:243
-msgid "Updates are being automatically installed."
-msgstr "Nadgradnje se automatski instališu"
-
-#: Sentinel/UpdateIcon.cpp:264
-msgid "Security updates are being automatically installed."
-msgstr "Sigurnosne nadgradnje se automatski instališu"
-
-#: Sentinel/UpdateIcon.cpp:291
-msgid "System update was successful."
-msgstr "Sistemska nadgradnja je bila uspješna"
-
-#: Sentinel/UpdateIcon.cpp:300
-msgid "The automated software update failed."
-msgstr "Automatizirano ažuriranje softvera nije uspjelo."
-
-#: Sentinel/PkInstallGStreamerResources.cpp:39
-msgid "Install GStreamer Resources"
-msgstr ""
-
-#: Sentinel/PkInstallGStreamerResources.cpp:67
-#, fuzzy
-#| msgid ""
-#| "The following plugin is required: <ul><li>%2</li></ul>Do you want to "
-#| "search for this now?"
-#| msgid_plural ""
-#| "The following plugins are required: <ul><li>%2</li></ul>Do you want to "
-#| "search for these now?"
-msgid "The following plugin is required. Do you want to search for this now?"
-msgid_plural ""
-"The following plugins are required. Do you want to search for these now?"
-msgstr[0] ""
-"Sljedeći dodatak se zahtijeva : <ul><li>%2</li></ul> Da li želite da ga "
-"potražite sada ?"
-msgstr[1] ""
-"Sljedeći dodaci se zahtijevaju : <ul><li>%2</li></ul> Da li želite da ih "
-"potražite sada ?"
-msgstr[2] ""
-"Sljedeći dodaci se zahtijevaju : <ul><li>%2</li></ul> Da li želite da ih "
-"potražite sada ?"
-
-#: Sentinel/PkInstallGStreamerResources.cpp:78
-msgid "A program requires an additional plugin to decode this file"
-msgid_plural "A program requires additional plugins to decode this file"
-msgstr[0] "Program zahtijeva dodatni priključak za dekodiranje ove datoteke"
-msgstr[1] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
-msgstr[2] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
-
-#: Sentinel/PkInstallGStreamerResources.cpp:83
-msgid "A program requires an additional plugin to encode this file"
-msgid_plural "A program requires additional plugins to encode this file"
-msgstr[0] "Program zahtijeva dodatni priključak za dekodiranje ove datoteke"
-msgstr[1] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
-msgstr[2] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
-
-#: Sentinel/PkInstallGStreamerResources.cpp:88
-msgid "A program requires an additional plugin for this operation"
-msgid_plural "A program requires additional plugins for this operation"
-msgstr[0] "Program zahtijeva dodatni priključak za ovu operaciju"
-msgstr[1] "Program zahtijeva dodatne priključke za ovu operaciju"
-msgstr[2] "Program zahtijeva dodatne priključke za ovu operaciju"
-
-#: Sentinel/PkInstallGStreamerResources.cpp:95
-#, kde-format
-msgid "%2 requires an additional plugin to decode this file"
-msgid_plural "%2 requires additional plugins to decode this file"
-msgstr[0] "%2 zahtijeva dodatni priključak za dekodiranje ove datoteke"
-msgstr[1] "%2 zahtijeva dodatne priključke za dekodiranje ove datoteke"
-msgstr[2] "%2 zahtijeva dodatne priključke za dekodiranje ove datoteke"
-
-#: Sentinel/PkInstallGStreamerResources.cpp:101
-#, kde-format
-msgid "%2 requires an additional plugin to encode this file"
-msgid_plural "%2 requires additional plugins to encode this file"
-msgstr[0] "%2 zahtijeva dodatni priključak za kodiranje ove datoteke"
-msgstr[1] "%2 zahtijeva dodatni priključak za kodiranje ove datoteke"
-msgstr[2] "%2 zahtijeva dodatni priključak za kodiranje ove datoteke"
-
-#: Sentinel/PkInstallGStreamerResources.cpp:107
-#, kde-format
-msgid "%2 requires an additional plugin for this operation"
-msgid_plural "%2 requires additional plugins for this operation"
-msgstr[0] "%2 zahtijeva dodatni priključak za ovu operaciju"
-msgstr[1] "%2 zahtijeva dodatne priključke za ovu operaciju"
-msgstr[2] "%2 zahtijeva dodatne priključke za ovu operaciju"
-
-#: Sentinel/PkInstallGStreamerResources.cpp:145
-#, fuzzy
-#| msgid "No files were found."
-msgid "No results found"
-msgstr "Nijedna datoteka nije pronađena."
-
-#: Sentinel/PkInstallGStreamerResources.cpp:147
-msgid "Could not find plugin in any configured software source"
-msgstr ""
-"Nije moguće naći priključak u bilo kojem konfigurisanom programskom izvoru"
-
-#: Sentinel/PkInstallPackageFiles.cpp:38
-#, fuzzy
-#| msgid "Install Packages"
-msgid "Install Packages Files"
-msgstr "Instaliraj pakete"
-
-#: Sentinel/PkInstallPackageFiles.cpp:42
-#: Sentinel/PkRemovePackageByFiles.cpp:44
-msgid "You can drop more files in here"
-msgstr ""
-
-#: Sentinel/PkInstallPackageFiles.cpp:52
-#, fuzzy
-#| msgid "Not supported"
-msgid "Not Supported"
-msgstr "Nije podržano"
-
-#: Sentinel/PkInstallPackageFiles.cpp:53
-#, fuzzy
-#| msgid "Current backend does not support installing packages."
-msgid "Your current backend does not support installing files"
-msgstr "Postojeći backend ne podržava instaliranje paketa"
-
-#: Sentinel/PkInstallPackageFiles.cpp:68
-#: Sentinel/PkRemovePackageByFiles.cpp:65
-#, fuzzy
-#| msgid "No files were found."
-msgid "No supported files were provided"
-msgstr "Nijedna datoteka nije pronađena."
-
-#: Sentinel/PkInstallPackageFiles.cpp:70
-#, fuzzy
-#| msgid "Do you want to install this file?"
-#| msgid_plural "Do you want to install these files?"
-msgid "Press <i>Continue</i> if you want to install this file"
-msgid_plural "Press <i>Continue</i> if you want to install these files"
-msgstr[0] "Da li želite da instalirate ovu datoteku ?"
-msgstr[1] "Da li želite da instalirate ove datoteke ?"
-msgstr[2] "Da li želite da instalirate ove datoteke ?"
-
-#: Sentinel/PkInstallPackageFiles.cpp:106
-#, fuzzy
-#| msgctxt "The role of the transaction, in present tense"
-#| msgid "Installing file"
-msgid "Installation Complete"
-msgstr "Instaliranje datoteke"
-
-#: Sentinel/PkInstallPackageFiles.cpp:107
-msgid "File was installed successfully"
-msgid_plural "Files were installed successfully"
-msgstr[0] "Datoteka je uspješno instalirana"
-msgstr[1] "Datoteke su uspješno instalirane"
-msgstr[2] "Datoteke su uspješno instalirane"
-
-#: Sentinel/PkInstallPackageFiles.cpp:118
-#, fuzzy
-#| msgid "Failed to install file"
-#| msgid_plural "Failed to install files"
-msgid "Failed to install files"
-msgstr "Instalacija datoteke nije uspjela"
-
-#: Sentinel/PkInstallPackageFiles.cpp:119
-#: Sentinel/PkInstallPackageFiles.cpp:121
-#, fuzzy
-#| msgid "Failed to install file"
-#| msgid_plural "Failed to install files"
-msgid "Could not install files"
-msgstr "Instalacija datoteke nije uspjela"
-
 #: Sentinel/TransactionWatcher.cpp:64 Sentinel/TransactionWatcher.cpp:249
 msgid "Hide this icon"
 msgstr "Sakrij ovu sličicu"
@@ -1161,23 +1138,6 @@ msgstr "Prikaži poruke"
 msgid "Ignore"
 msgstr "Ignoriši"
 
-#: Sentinel/PkInstallPrinterDrivers.cpp:39
-#, fuzzy
-#| msgctxt "The role of the transaction, in present tense"
-#| msgid "Installing file"
-msgid "Install Printer Drivers"
-msgstr "Instaliranje datoteke"
-
-#: Sentinel/PkInstallPrinterDrivers.cpp:87
-msgid "Failed to search for printer driver"
-msgstr "Neuspjelo traženje drajvera za štampač"
-
-#: Sentinel/PkInstallPrinterDrivers.cpp:88
-msgid "Could not find printer driver in any configured software source"
-msgstr ""
-"Nije moguće pronaći upravljački program za štampač na bilo kojem "
-"konfigurisanom izvoru softvera"
-
 #: Sentinel/PkIsInstalled.cpp:36
 #, fuzzy
 #| msgid "The package is not installed"
@@ -1192,73 +1152,57 @@ msgstr "Korisnik je otkazao transakciju"
 msgid "An unknown error happened"
 msgstr "Desila se nepoznata greška"
 
-#: Sentinel/PkSearchFile.cpp:37
-#, fuzzy
-#| msgctxt "The role of the transaction, in past tense"
-#| msgid "Searched for package details"
-msgid "Search Packages that Provides Files"
-msgstr "Traženi detalji paketa"
-
-#: Sentinel/PkSearchFile.cpp:54 Sentinel/PkInstallProvideFiles.cpp:83
-#: Sentinel/PkRemovePackageByFiles.cpp:119
-msgid "Failed to start search file transaction"
-msgstr "Početak pretrage transakciju datoteka nije uspio"
-
-#: Sentinel/PkSearchFile.cpp:80
-msgid "The file name could not be found in any software source"
-msgstr "Ime datoteke nije pronađeno u bilo kojem programskom izvoru"
-
-#: Sentinel/SessionTask.cpp:62 libapper/Requirements.cpp:229
+#: Sentinel/SessionTask.cpp:63 libapper/Requirements.cpp:229
 msgid "Continue"
 msgstr "Nastavi"
 
-#: Sentinel/SessionTask.cpp:305
+#: Sentinel/SessionTask.cpp:334
 #, fuzzy
 #| msgid "The package is not installed"
 msgid "There are no packages to Install or Remove"
 msgstr "Paket nije instaliran"
 
-#: Sentinel/SessionTask.cpp:306
+#: Sentinel/SessionTask.cpp:335
 #, fuzzy
 #| msgid "This action is unknown."
 msgid "This action should not happen"
 msgstr "Ova radnja je nepoznata"
 
-#: Sentinel/SessionTask.cpp:335
+#: Sentinel/SessionTask.cpp:364
 #, fuzzy
 #| msgid "Could not find %1"
 msgid "Could not find"
 msgstr "Nisam mogao da nađem %1"
 
-#: Sentinel/SessionTask.cpp:336 Sentinel/SessionTask.cpp:345
+#: Sentinel/SessionTask.cpp:365 Sentinel/SessionTask.cpp:374
 #, fuzzy
 #| msgid "No package was found to be installed"
 msgid "No packages were found that meet the request"
 msgstr "Nije pronađen nijedan paket da bi se instalirao"
 
-#: Sentinel/SessionTask.cpp:344
+#: Sentinel/SessionTask.cpp:373
 #, fuzzy
 #| msgid "Failed to find font"
 msgid "Failed to find"
 msgstr "Traženje karaktera nije uspjelo"
 
-#: Sentinel/SessionTask.cpp:363
+#: Sentinel/SessionTask.cpp:391
 #, fuzzy
 #| msgid "Failed to start setup transaction"
 msgid "Failed to commit transaction"
 msgstr "Pokretanje postavne  transakcije nije uspjelo"
 
-#: Sentinel/SessionTask.cpp:365
+#: Sentinel/SessionTask.cpp:393
 msgid "Transaction did not finish with success"
 msgstr "Tranzakcija nije uspjela da se završi"
 
-#: Sentinel/SessionTask.cpp:371
+#: Sentinel/SessionTask.cpp:399
 #, fuzzy
 #| msgid "Obsoleted"
 msgid "Task completed"
 msgstr "Zastarjelo"
 
-#: Sentinel/SessionTask.cpp:371
+#: Sentinel/SessionTask.cpp:399
 #, fuzzy
 #| msgid "File was installed successfully"
 #| msgid_plural "Files were installed successfully"
@@ -1278,175 +1222,6 @@ msgstr "%1% - %2"
 #, kde-format
 msgid "%1"
 msgstr "%1"
-
-#: Sentinel/ReviewChanges.cpp:67
-msgid "The following package was found"
-msgid_plural "The following packages were found"
-msgstr[0] "Sljedeći paket je pronađen"
-msgstr[1] "Sljedeći paketi su pronađeni"
-msgstr[2] "Sljedeći paketi su pronađeni"
-
-#: Sentinel/main.cpp:36
-#, fuzzy
-#| msgid "Apply Settings"
-msgid "Apper Sentinel"
-msgstr "Primijeni postavke"
-
-#: Sentinel/main.cpp:41
-msgid "Trever Fischer"
-msgstr "Trever Fischer"
-
-#: Sentinel/PkInstallProvideFiles.cpp:39
-#, fuzzy
-#| msgid "Install Packages from List..."
-msgid "Install Packages that Provides Files"
-msgstr "Instaliraj pakete sa spiska..."
-
-#: Sentinel/PkInstallProvideFiles.cpp:49
-#, fuzzy
-#| msgid ""
-#| "Do you want to search for packages containing this file and remove it now?"
-#| msgid_plural ""
-#| "Do you want to search for packages containing these files and remove them "
-#| "now?"
-msgid "Do you want to search for this now?"
-msgid_plural "Do you want to search for these now?"
-msgstr[0] ""
-"Da li želite da tražite pakete koji sadrže ovu datoteku i da je odstranite "
-"sada :"
-msgstr[1] ""
-"Da li želite da tražite pakete koji sadrže ove datoteke i da ih odstranite "
-"sada :"
-msgstr[2] ""
-"Da li želite da tražite pakete koji sadrže ove datoteke i da ih odstranite "
-"sada :"
-
-#: Sentinel/PkInstallProvideFiles.cpp:55
-msgid "A program wants to install a file"
-msgid_plural "A program wants to install files"
-msgstr[0] "Program želi da instalira datoteku"
-msgstr[1] "Program želi da instalira datoteke"
-msgstr[2] "Program želi da instalira datoteke"
-
-#: Sentinel/PkInstallProvideFiles.cpp:59
-#, fuzzy, kde-format
-#| msgid "%2 wants to install a package"
-#| msgid_plural "%2 wants to install packages"
-msgid "The application %2 is asking to install a file"
-msgid_plural "The application %2 is asking to install files"
-msgstr[0] "%2 želi da instalira paket"
-msgstr[1] "%2 želi da instalira pakete"
-msgstr[2] "%2 želi da instalira pakete"
-
-#: Sentinel/PkInstallProvideFiles.cpp:96 libapper/PkTransaction.cpp:304
-msgid "Failed to install file"
-msgid_plural "Failed to install files"
-msgstr[0] "Instalacija datoteke nije uspjela"
-msgstr[1] "Instalacija datoteka nije uspjela"
-msgstr[2] "Instalacija datoteka nije uspjela"
-
-#: Sentinel/PkInstallProvideFiles.cpp:97
-#, kde-format
-msgid "The %1 package already provides this file"
-msgstr "%1 paketa već pruža ovu datoteku"
-
-#: Sentinel/PkInstallProvideFiles.cpp:103
-msgid "Failed to find package"
-msgstr "Traženje paketa nije uspjelo"
-
-#: Sentinel/PkInstallProvideFiles.cpp:104
-msgid "The file could not be found in any packages"
-msgid_plural "The files could not be found in any packages"
-msgstr[0] "Datoteka nije mogla biti pronađena u bilo kojim paketima"
-msgstr[1] "Datoteke nisu mogle biti pronađene u bilo kojim paketima"
-msgstr[2] "Datoteke nisu mogle biti pronađene u bilo kojim paketima"
-
-#: Sentinel/PkRemovePackageByFiles.cpp:41
-#, fuzzy
-#| msgid "Remove Packages"
-msgid "Remove Packages that Provides Files"
-msgstr "odstrani pakete"
-
-#: Sentinel/PkRemovePackageByFiles.cpp:68
-#, fuzzy
-#| msgid "You need to restart the application"
-msgid "Do you want to remove the following application?"
-msgid_plural "Do you want to remove the following applications?"
-msgstr[0] "Potrebno je da ponovno pokrenete aplikaciju"
-msgstr[1] "Potrebno je da ponovno pokrenete aplikaciju"
-msgstr[2] "Potrebno je da ponovno pokrenete aplikaciju"
-
-#: Sentinel/PkRemovePackageByFiles.cpp:72
-#, fuzzy
-#| msgid ""
-#| "Do you want to search for packages containing this file and remove it now?"
-#| msgid_plural ""
-#| "Do you want to search for packages containing these files and remove them "
-#| "now?"
-msgid "Do you want to search for a package providing this file?"
-msgid_plural "Do you want to search for a package providing these files?"
-msgstr[0] ""
-"Da li želite da tražite pakete koji sadrže ovu datoteku i da je odstranite "
-"sada :"
-msgstr[1] ""
-"Da li želite da tražite pakete koji sadrže ovu datoteku i da je odstranite "
-"sada :"
-msgstr[2] ""
-"Da li želite da tražite pakete koji sadrže ovu datoteku i da je odstranite "
-"sada :"
-
-#: Sentinel/PkRemovePackageByFiles.cpp:83
-#, fuzzy
-#| msgid "%2 wants to install a package"
-#| msgid_plural "%2 wants to install packages"
-msgid "An application is asking to remove an application"
-msgid_plural "An application is asking to remove applications"
-msgstr[0] "%2 želi da instalira paket"
-msgstr[1] "%2 želi da instalira pakete"
-msgstr[2] "%2 želi da instalira pakete"
-
-#: Sentinel/PkRemovePackageByFiles.cpp:87
-#, fuzzy
-#| msgid "%2 wants to install a package"
-#| msgid_plural "%2 wants to install packages"
-msgid "An application is asking to remove a file"
-msgid_plural "An application is asking to remove files"
-msgstr[0] "%2 želi da instalira paket"
-msgstr[1] "%2 želi da instalira pakete"
-msgstr[2] "%2 želi da instalira pakete"
-
-#: Sentinel/PkRemovePackageByFiles.cpp:93
-#, fuzzy, kde-format
-#| msgid "%2 wants to install a package"
-#| msgid_plural "%2 wants to install packages"
-msgid "The application <i>%2</i> is asking to remove an application"
-msgid_plural "The application <i>%2</i> is asking to remove applications"
-msgstr[0] "%2 želi da instalira paket"
-msgstr[1] "%2 želi da instalira pakete"
-msgstr[2] "%2 želi da instalira pakete"
-
-#: Sentinel/PkRemovePackageByFiles.cpp:98
-#, fuzzy, kde-format
-#| msgid "%2 wants to install a package"
-#| msgid_plural "%2 wants to install packages"
-msgid "The application <i>%2</i> is asking to remove a file"
-msgid_plural "The application <i>%2</i> is asking to remove files"
-msgstr[0] "%2 želi da instalira paket"
-msgstr[1] "%2 želi da instalira pakete"
-msgstr[2] "%2 želi da instalira pakete"
-
-#: Sentinel/PkRemovePackageByFiles.cpp:104
-#, fuzzy
-#| msgid "No update description was found."
-msgid "No application was found"
-msgstr "Opis nadgradnje nije pronađen."
-
-#: Sentinel/PkRemovePackageByFiles.cpp:132
-msgid "The file could not be found in any installed package"
-msgid_plural "The files could not be found in any installed package"
-msgstr[0] "Datoteka nije pronađena niti u jednom instaliranom paketu"
-msgstr[1] "Datoteke nisu pronađene niti u jednom instaliranom paketu"
-msgstr[2] "Datoteke nisu pronađene niti u jednom instaliranom paketu"
 
 #: Sentinel/PkInstallFontconfigResources.cpp:41
 #, fuzzy
@@ -1507,16 +1282,245 @@ msgstr "Traženje karaktera nije uspjelo"
 msgid "No new fonts could be found for this document"
 msgstr "Ne mogu se naći novi karakteri za ovaj dokument"
 
-#: libapper/ApplicationLauncher.cpp:33
-msgid "The following application was just installed. Click on it to launch:"
+#: Sentinel/PkInstallMimeTypes.cpp:39
+#, fuzzy
+#| msgid "Install Files"
+msgid "Install Support for File Types"
+msgstr "instaliraj datoteke"
+
+#: Sentinel/PkInstallMimeTypes.cpp:50
+#, fuzzy
+#| msgid ""
+#| "Do you want to search for packages containing this file and remove it now?"
+#| msgid_plural ""
+#| "Do you want to search for packages containing these files and remove them "
+#| "now?"
+msgid "Do you want to search for a program that can open this file type?"
 msgid_plural ""
-"The following applications were just installed. Click on them to launch:"
+"Do you want to search for a program that can open these file types?"
 msgstr[0] ""
-"Sljedeći program je upravo instaliran. Kliknite na njega da se pokrene:"
+"Da li želite da tražite pakete koji sadrže ovu datoteku i da je odstranite "
+"sada :"
 msgstr[1] ""
-"Sljedeći programi su upravo instalirani. Kliknite na njih da se pokrenu:"
+"Da li želite da tražite pakete koji sadrže ovu datoteku i da je odstranite "
+"sada :"
 msgstr[2] ""
-"Sljedeći programi su upravo instalirani. Kliknite na njih da se pokrenu:"
+"Da li želite da tražite pakete koji sadrže ovu datoteku i da je odstranite "
+"sada :"
+
+#: Sentinel/PkInstallMimeTypes.cpp:55
+#, fuzzy
+#| msgid "No files were found."
+msgid "No valid file types were provided"
+msgstr "Nijedna datoteka nije pronađena."
+
+#: Sentinel/PkInstallMimeTypes.cpp:62
+#, fuzzy
+#| msgid "A program requires an additional plugin to decode this file"
+#| msgid_plural "A program requires additional plugins to decode this file"
+msgid "A program is requiring support to open this kind of files"
+msgid_plural "A program is requiring support to open these kinds of files"
+msgstr[0] "Program zahtijeva dodatni priključak za dekodiranje ove datoteke"
+msgstr[1] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
+msgstr[2] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
+
+#: Sentinel/PkInstallMimeTypes.cpp:66
+#, fuzzy, kde-format
+#| msgid "A program requires an additional plugin to decode this file"
+#| msgid_plural "A program requires additional plugins to decode this file"
+msgid "The application %2 is requiring support to open this kind of files"
+msgid_plural ""
+"The application %2 is requiring support to open these kinds of files"
+msgstr[0] "Program zahtijeva dodatni priključak za dekodiranje ove datoteke"
+msgstr[1] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
+msgstr[2] "Program zahtijeva dodatne priključke za dekodiranje ove datoteke"
+
+#: Sentinel/PkInstallMimeTypes.cpp:101
+#, fuzzy
+#| msgid "Failed to find software"
+msgid "Could not find software"
+msgstr "Traženje programa nije uspjelo"
+
+#: Sentinel/PkInstallMimeTypes.cpp:103
+msgid "No new applications can be found to handle this type of file"
+msgstr "Ne mogu se naći nove aplikacije za rukovanje ovom datotekom"
+
+#: Sentinel/main.cpp:36
+#, fuzzy
+#| msgid "Apply Settings"
+msgid "Apper Sentinel"
+msgstr "Primijeni postavke"
+
+#: Sentinel/main.cpp:41
+msgid "Trever Fischer"
+msgstr "Trever Fischer"
+
+#: Sentinel/PkInstallPackageFiles.cpp:38
+#, fuzzy
+#| msgid "Install Packages"
+msgid "Install Packages Files"
+msgstr "Instaliraj pakete"
+
+#: Sentinel/PkInstallPackageFiles.cpp:42
+#: Sentinel/PkRemovePackageByFiles.cpp:43
+msgid "You can drop more files in here"
+msgstr ""
+
+#: Sentinel/PkInstallPackageFiles.cpp:52
+#, fuzzy
+#| msgid "Not supported"
+msgid "Not Supported"
+msgstr "Nije podržano"
+
+#: Sentinel/PkInstallPackageFiles.cpp:53
+#, fuzzy
+#| msgid "Current backend does not support installing packages."
+msgid "Your current backend does not support installing files"
+msgstr "Postojeći backend ne podržava instaliranje paketa"
+
+#: Sentinel/PkInstallPackageFiles.cpp:68
+#: Sentinel/PkRemovePackageByFiles.cpp:64
+#, fuzzy
+#| msgid "No files were found."
+msgid "No supported files were provided"
+msgstr "Nijedna datoteka nije pronađena."
+
+#: Sentinel/PkInstallPackageFiles.cpp:70
+#, fuzzy
+#| msgid "Do you want to install this file?"
+#| msgid_plural "Do you want to install these files?"
+msgid "Press <i>Continue</i> if you want to install this file"
+msgid_plural "Press <i>Continue</i> if you want to install these files"
+msgstr[0] "Da li želite da instalirate ovu datoteku ?"
+msgstr[1] "Da li želite da instalirate ove datoteke ?"
+msgstr[2] "Da li želite da instalirate ove datoteke ?"
+
+#: Sentinel/PkInstallPackageFiles.cpp:105
+#, fuzzy
+#| msgctxt "The role of the transaction, in present tense"
+#| msgid "Installing file"
+msgid "Installation Complete"
+msgstr "Instaliranje datoteke"
+
+#: Sentinel/PkInstallPackageFiles.cpp:106
+msgid "File was installed successfully"
+msgid_plural "Files were installed successfully"
+msgstr[0] "Datoteka je uspješno instalirana"
+msgstr[1] "Datoteke su uspješno instalirane"
+msgstr[2] "Datoteke su uspješno instalirane"
+
+#: Sentinel/PkInstallPackageFiles.cpp:117
+#, fuzzy
+#| msgid "Failed to install file"
+#| msgid_plural "Failed to install files"
+msgid "Failed to install files"
+msgstr "Instalacija datoteke nije uspjela"
+
+#: Sentinel/PkInstallPackageFiles.cpp:118
+#: Sentinel/PkInstallPackageFiles.cpp:120
+#, fuzzy
+#| msgid "Failed to install file"
+#| msgid_plural "Failed to install files"
+msgid "Could not install files"
+msgstr "Instalacija datoteke nije uspjela"
+
+#: Sentinel/PkRemovePackageByFiles.cpp:40
+#, fuzzy
+#| msgid "Remove Packages"
+msgid "Remove Packages that Provides Files"
+msgstr "odstrani pakete"
+
+#: Sentinel/PkRemovePackageByFiles.cpp:67
+#, fuzzy
+#| msgid "You need to restart the application"
+msgid "Do you want to remove the following application?"
+msgid_plural "Do you want to remove the following applications?"
+msgstr[0] "Potrebno je da ponovno pokrenete aplikaciju"
+msgstr[1] "Potrebno je da ponovno pokrenete aplikaciju"
+msgstr[2] "Potrebno je da ponovno pokrenete aplikaciju"
+
+#: Sentinel/PkRemovePackageByFiles.cpp:71
+#, fuzzy
+#| msgid ""
+#| "Do you want to search for packages containing this file and remove it now?"
+#| msgid_plural ""
+#| "Do you want to search for packages containing these files and remove them "
+#| "now?"
+msgid "Do you want to search for a package providing this file?"
+msgid_plural "Do you want to search for a package providing these files?"
+msgstr[0] ""
+"Da li želite da tražite pakete koji sadrže ovu datoteku i da je odstranite "
+"sada :"
+msgstr[1] ""
+"Da li želite da tražite pakete koji sadrže ovu datoteku i da je odstranite "
+"sada :"
+msgstr[2] ""
+"Da li želite da tražite pakete koji sadrže ovu datoteku i da je odstranite "
+"sada :"
+
+#: Sentinel/PkRemovePackageByFiles.cpp:82
+#, fuzzy
+#| msgid "%2 wants to install a package"
+#| msgid_plural "%2 wants to install packages"
+msgid "An application is asking to remove an application"
+msgid_plural "An application is asking to remove applications"
+msgstr[0] "%2 želi da instalira paket"
+msgstr[1] "%2 želi da instalira pakete"
+msgstr[2] "%2 želi da instalira pakete"
+
+#: Sentinel/PkRemovePackageByFiles.cpp:86
+#, fuzzy
+#| msgid "%2 wants to install a package"
+#| msgid_plural "%2 wants to install packages"
+msgid "An application is asking to remove a file"
+msgid_plural "An application is asking to remove files"
+msgstr[0] "%2 želi da instalira paket"
+msgstr[1] "%2 želi da instalira pakete"
+msgstr[2] "%2 želi da instalira pakete"
+
+#: Sentinel/PkRemovePackageByFiles.cpp:92
+#, fuzzy, kde-format
+#| msgid "%2 wants to install a package"
+#| msgid_plural "%2 wants to install packages"
+msgid "The application <i>%2</i> is asking to remove an application"
+msgid_plural "The application <i>%2</i> is asking to remove applications"
+msgstr[0] "%2 želi da instalira paket"
+msgstr[1] "%2 želi da instalira pakete"
+msgstr[2] "%2 želi da instalira pakete"
+
+#: Sentinel/PkRemovePackageByFiles.cpp:97
+#, fuzzy, kde-format
+#| msgid "%2 wants to install a package"
+#| msgid_plural "%2 wants to install packages"
+msgid "The application <i>%2</i> is asking to remove a file"
+msgid_plural "The application <i>%2</i> is asking to remove files"
+msgstr[0] "%2 želi da instalira paket"
+msgstr[1] "%2 želi da instalira pakete"
+msgstr[2] "%2 želi da instalira pakete"
+
+#: Sentinel/PkRemovePackageByFiles.cpp:103
+#, fuzzy
+#| msgid "No update description was found."
+msgid "No application was found"
+msgstr "Opis nadgradnje nije pronađen."
+
+#: Sentinel/PkRemovePackageByFiles.cpp:150
+msgid "The file could not be found in any installed package"
+msgid_plural "The files could not be found in any installed package"
+msgstr[0] "Datoteka nije pronađena niti u jednom instaliranom paketu"
+msgstr[1] "Datoteke nisu pronađene niti u jednom instaliranom paketu"
+msgstr[2] "Datoteke nisu pronađene niti u jednom instaliranom paketu"
+
+#: Sentinel/PkSearchFile.cpp:37
+#, fuzzy
+#| msgctxt "The role of the transaction, in past tense"
+#| msgid "Searched for package details"
+msgid "Search Packages that Provides Files"
+msgstr "Traženi detalji paketa"
+
+#: Sentinel/PkSearchFile.cpp:80
+msgid "The file name could not be found in any software source"
+msgstr "Ime datoteke nije pronađeno u bilo kojem programskom izvoru"
 
 #: libapper/ChangesDelegate.cpp:45
 #, fuzzy
@@ -1546,7 +1550,7 @@ msgstr "%1 preostalo"
 msgid "Name"
 msgstr "Igre"
 
-#: libapper/PackageModel.cpp:169 libapper/SimulateModel.cpp:134
+#: libapper/PackageModel.cpp:169 libapper/SimulateModel.cpp:141
 msgid "Version"
 msgstr "Verzija"
 
@@ -2404,7 +2408,7 @@ msgstr "Paket nije u skladu sa sistemom"
 msgid "No space is left on the disk"
 msgstr "Nema više slobodnog prostora na disku"
 
-#: libapper/PkStrings.cpp:477 libapper/PkTransaction.cpp:671
+#: libapper/PkStrings.cpp:477 libapper/PkTransaction.cpp:602
 msgid "A media change is required"
 msgstr "Potrebna je izmjena medija"
 
@@ -3397,75 +3401,82 @@ msgstr "Desila se nepoznata greška"
 msgid "Software signature is required"
 msgstr "Programski potpis se zahtjeva"
 
-#: libapper/SimulateModel.cpp:132
-msgid "Package"
-msgstr "Paket"
+#: libapper/ApplicationLauncher.cpp:77
+msgid "The following application was just installed. Click on it to launch:"
+msgid_plural ""
+"The following applications were just installed. Click on them to launch:"
+msgstr[0] ""
+"Sljedeći program je upravo instaliran. Kliknite na njega da se pokrene:"
+msgstr[1] ""
+"Sljedeći programi su upravo instalirani. Kliknite na njih da se pokrenu:"
+msgstr[2] ""
+"Sljedeći programi su upravo instalirani. Kliknite na njih da se pokrenu:"
 
-#: libapper/PkTransaction.cpp:154
+#: libapper/PkTransaction.cpp:136
 #, fuzzy
 #| msgid "Failed to simulate package install"
 msgid "Failed to simulate file install"
 msgstr "Simulacija instalacije paketa nije uspjela"
 
-#: libapper/PkTransaction.cpp:163
+#: libapper/PkTransaction.cpp:142
 #, fuzzy
 #| msgid "Current backend does not support installing packages."
 msgid "Current backend does not support installing files."
 msgstr "Postojeći backend ne podržava instaliranje paketa"
 
-#: libapper/PkTransaction.cpp:163 libapper/PkTransaction.cpp:189
-#: libapper/PkTransaction.cpp:216 libapper/PkTransaction.cpp:239
+#: libapper/PkTransaction.cpp:142 libapper/PkTransaction.cpp:167
+#: libapper/PkTransaction.cpp:194 libapper/PkTransaction.cpp:217
 msgid "Error"
 msgstr "Greška"
 
-#: libapper/PkTransaction.cpp:181
+#: libapper/PkTransaction.cpp:161
 msgid "Failed to simulate package install"
 msgstr "Simulacija instalacije paketa nije uspjela"
 
-#: libapper/PkTransaction.cpp:189
+#: libapper/PkTransaction.cpp:167
 msgid "Current backend does not support installing packages."
 msgstr "Postojeći backend ne podržava instaliranje paketa"
 
-#: libapper/PkTransaction.cpp:207
+#: libapper/PkTransaction.cpp:187
 msgid "Failed to simulate package removal"
 msgstr "Simulacija odstranjivanja paketa nije uspjela"
 
-#: libapper/PkTransaction.cpp:216
+#: libapper/PkTransaction.cpp:194
 msgid "The current backend does not support removing packages."
 msgstr "Postojeći backend ne podržava odstranjivanje paketa"
 
-#: libapper/PkTransaction.cpp:231
+#: libapper/PkTransaction.cpp:211
 msgid "Failed to simulate package update"
 msgstr "Simulacija nadogradnje paketa nije uspjela"
 
-#: libapper/PkTransaction.cpp:239
+#: libapper/PkTransaction.cpp:217
 msgid "The current backend does not support updating packages."
 msgstr "Postojeći backend ne podržava nadogradnju paketa"
 
-#: libapper/PkTransaction.cpp:250
+#: libapper/PkTransaction.cpp:229
 #, fuzzy
 #| msgid "Failed to remove package"
 msgid "Failed to refresh package cache"
 msgstr "Odstranjivanje paketa nije uspjelo"
 
-#: libapper/PkTransaction.cpp:290
+#: libapper/PkTransaction.cpp:268
 msgid "Failed to install package"
 msgstr "Instaliranje paketa nije uspjelo"
 
-#: libapper/PkTransaction.cpp:320
+#: libapper/PkTransaction.cpp:296
 msgid "Failed to remove package"
 msgstr "Odstranjivanje paketa nije uspjelo"
 
-#: libapper/PkTransaction.cpp:336
+#: libapper/PkTransaction.cpp:309
 msgid "Failed to update package"
 msgstr "Nadograđivanje paketa nije uspjelo"
 
-#: libapper/PkTransaction.cpp:541
+#: libapper/PkTransaction.cpp:475
 #, kde-format
 msgid "Downloading packages at %1/s"
 msgstr "Preuzimanje paketa pri %1/s"
 
-#: libapper/PkTransaction.cpp:592
+#: libapper/PkTransaction.cpp:524
 msgid ""
 "You are about to install unsigned packages that can compromise your system, "
 "as it is impossible to verify if the software came from a trusted source.\n"
@@ -3476,19 +3487,19 @@ msgstr ""
 "sistem, pošto je nemoguće potvrditi da li je program došao iz pouzdanog "
 "izvora"
 
-#: libapper/PkTransaction.cpp:595
+#: libapper/PkTransaction.cpp:527
 msgid "Installing unsigned software"
 msgstr "Instaliram nepotpisan program"
 
-#: libapper/PkTransaction.cpp:653
+#: libapper/PkTransaction.cpp:586
 msgid "Failed to accept EULA"
 msgstr "Nisam uspio prihvatiti EULA"
 
-#: libapper/PkTransaction.cpp:703
+#: libapper/PkTransaction.cpp:635
 msgid "Failed to install signature"
 msgstr "Instalacija potpisa nije uspjela"
 
-#: libapper/PkTransactionDialog.cpp:87
+#: libapper/PkTransactionDialog.cpp:88
 msgid ""
 "Allows you to hide the window whilst keeping the transaction task running."
 msgstr ""
@@ -3537,6 +3548,10 @@ msgid_plural "%1 packages to update"
 msgstr[0] "%1 paket za nadgradnju"
 msgstr[1] "%1 paketa za nadgradnju"
 msgstr[2] "%1 paketa za nadgradnju"
+
+#: libapper/SimulateModel.cpp:139
+msgid "Package"
+msgstr "Paket"
 
 #: libapper/ApplicationsDelegate.cpp:40
 msgid "Install"
@@ -3605,7 +3620,7 @@ msgstr "Distribucijski ID :"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: file: ApperKCM/ApperKCM.ui:167
 #. i18n: ectx: property (text), widget (QToolButton, filtersTB)
-#: rc.cpp:20 rc.cpp:194
+#: rc.cpp:20 rc.cpp:188
 msgid "Filters"
 msgstr "Filteri"
 
@@ -3890,41 +3905,41 @@ msgstr ""
 msgid "Show application launcher after installing new applications"
 msgstr "Prikaži pokretača aplikacije nakon instalacije novih aplikacija"
 
-#. i18n: file: ApperKCM/BrowseView.ui:140
-#. i18n: ectx: property (text), widget (QPushButton, exportInstalledPB)
-#: rc.cpp:182
-msgid "Export Installed Package List..."
-msgstr "Izvezi spisak instalacije paketa"
-
-#. i18n: file: ApperKCM/BrowseView.ui:150
-#. i18n: ectx: property (text), widget (QPushButton, importInstalledPB)
-#: rc.cpp:185
-msgid "Install Packages from List..."
-msgstr "Instaliraj pakete sa spiska..."
-
 #. i18n: file: ApperKCM/ApperKCM.ui:20
 #. i18n: ectx: property (windowTitle), widget (QWidget, ApperKCM)
-#: rc.cpp:188
+#: rc.cpp:182
 msgid "Add and Remove Software"
 msgstr "Programi za dodavanje i odstranjivanje"
 
 #. i18n: file: ApperKCM/ApperKCM.ui:127
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, searchKLE)
-#: rc.cpp:191
+#: rc.cpp:185
 msgid "Search packages"
 msgstr "trazi pakete"
 
 #. i18n: file: ApperKCM/ApperKCM.ui:196
 #. i18n: ectx: property (text), widget (QPushButton, changesPB)
-#: rc.cpp:197
+#: rc.cpp:191
 msgid "Pending Changes"
 msgstr "Čekanje promjena"
 
 #. i18n: file: ApperKCM/ApperKCM.ui:274
 #. i18n: ectx: property (text), widget (QToolButton, backTB)
-#: rc.cpp:203
+#: rc.cpp:197
 msgid "Back"
 msgstr "Nazad"
+
+#. i18n: file: ApperKCM/BrowseView.ui:140
+#. i18n: ectx: property (text), widget (QPushButton, exportInstalledPB)
+#: rc.cpp:209
+msgid "Export Installed Package List..."
+msgstr "Izvezi spisak instalacije paketa"
+
+#. i18n: file: ApperKCM/BrowseView.ui:150
+#. i18n: ectx: property (text), widget (QPushButton, importInstalledPB)
+#: rc.cpp:212
+msgid "Install Packages from List..."
+msgstr "Instaliraj pakete sa spiska..."
 
 #. i18n: file: Sentinel/IntroDialog.ui:59
 #. i18n: ectx: property (text), widget (QLabel, descriptionL)
@@ -4004,6 +4019,9 @@ msgstr "Ne prikazuj ovu potvrdu kada se instališu ili ažuriraju dodatni paketi
 #: rc.cpp:257
 msgid "Please read the following important information before continuing:"
 msgstr "Prije nastavljanja, molim vas pročitajte sljedeće važne informacije"
+
+#~ msgid "(C) 2008-2010 Daniel Nicoletti"
+#~ msgstr "(C) 2008-2010 Daniel Nicoletti"
 
 #~ msgid "KPackageKit"
 #~ msgstr "KPackageKit"
