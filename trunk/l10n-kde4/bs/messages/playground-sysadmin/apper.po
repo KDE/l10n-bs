@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpackagekit\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-18 04:21+0200\n"
+"POT-Creation-Date: 2011-08-19 03:59+0200\n"
 "PO-Revision-Date: 2011-05-08 12:57+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -699,7 +699,7 @@ msgstr "Instaliraj pakete sa spiska..."
 #: Sentinel/PkInstallProvideFiles.cpp:49
 #, fuzzy
 #| msgid "No files were found."
-msgid "No files where provided"
+msgid "No files were provided"
 msgstr "Nijedna datoteka nije pronađena."
 
 #: Sentinel/PkInstallProvideFiles.cpp:52
@@ -743,7 +743,7 @@ msgstr[2] "%2 želi da instalira pakete"
 msgid "Failed to start search file transaction"
 msgstr "Početak pretrage transakciju datoteka nije uspio"
 
-#: Sentinel/PkInstallProvideFiles.cpp:101 libapper/PkTransaction.cpp:281
+#: Sentinel/PkInstallProvideFiles.cpp:101 libapper/PkTransaction.cpp:263
 msgid "Failed to install file"
 msgid_plural "Failed to install files"
 msgstr[0] "Instalacija datoteke nije uspjela"
@@ -1152,57 +1152,51 @@ msgstr "Korisnik je otkazao transakciju"
 msgid "An unknown error happened"
 msgstr "Desila se nepoznata greška"
 
-#: Sentinel/SessionTask.cpp:63 libapper/Requirements.cpp:229
+#: Sentinel/SessionTask.cpp:63 libapper/Requirements.cpp:43
 msgid "Continue"
 msgstr "Nastavi"
 
-#: Sentinel/SessionTask.cpp:334
+#: Sentinel/SessionTask.cpp:343
 #, fuzzy
 #| msgid "The package is not installed"
 msgid "There are no packages to Install or Remove"
 msgstr "Paket nije instaliran"
 
-#: Sentinel/SessionTask.cpp:335
+#: Sentinel/SessionTask.cpp:344
 #, fuzzy
 #| msgid "This action is unknown."
 msgid "This action should not happen"
 msgstr "Ova radnja je nepoznata"
 
-#: Sentinel/SessionTask.cpp:364
+#: Sentinel/SessionTask.cpp:373
 #, fuzzy
 #| msgid "Could not find %1"
 msgid "Could not find"
 msgstr "Nisam mogao da nađem %1"
 
-#: Sentinel/SessionTask.cpp:365 Sentinel/SessionTask.cpp:374
+#: Sentinel/SessionTask.cpp:374 Sentinel/SessionTask.cpp:383
 #, fuzzy
 #| msgid "No package was found to be installed"
 msgid "No packages were found that meet the request"
 msgstr "Nije pronađen nijedan paket da bi se instalirao"
 
-#: Sentinel/SessionTask.cpp:373
+#: Sentinel/SessionTask.cpp:382
 #, fuzzy
 #| msgid "Failed to find font"
 msgid "Failed to find"
 msgstr "Traženje karaktera nije uspjelo"
 
-#: Sentinel/SessionTask.cpp:391
-#, fuzzy
-#| msgid "Failed to start setup transaction"
-msgid "Failed to commit transaction"
-msgstr "Pokretanje postavne  transakcije nije uspjelo"
-
-#: Sentinel/SessionTask.cpp:393
+#: Sentinel/SessionTask.cpp:404
 msgid "Transaction did not finish with success"
 msgstr "Tranzakcija nije uspjela da se završi"
 
-#: Sentinel/SessionTask.cpp:399
+#: Sentinel/SessionTask.cpp:410
 #, fuzzy
 #| msgid "Obsoleted"
 msgid "Task completed"
 msgstr "Zastarjelo"
 
-#: Sentinel/SessionTask.cpp:399
+#: Sentinel/SessionTask.cpp:410
 #, fuzzy
 #| msgid "File was installed successfully"
 #| msgid_plural "Files were installed successfully"
@@ -2408,7 +2402,7 @@ msgstr "Paket nije u skladu sa sistemom"
 msgid "No space is left on the disk"
 msgstr "Nema više slobodnog prostora na disku"
 
-#: libapper/PkStrings.cpp:477 libapper/PkTransaction.cpp:602
+#: libapper/PkStrings.cpp:477 libapper/PkTransaction.cpp:577
 msgid "A media change is required"
 msgstr "Potrebna je izmjena medija"
 
@@ -3395,13 +3389,17 @@ msgstr "Nije moguće komunicirati sa packagekitd"
 msgid "An unknown error happened."
 msgstr "Desila se nepoznata greška"
 
-#. i18n: file: libapper/RepoSig.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, RepoSig)
-#: libapper/RepoSig.cpp:38 rc.cpp:221
-msgid "Software signature is required"
-msgstr "Programski potpis se zahtjeva"
+#: libapper/PkTransactionDialog.cpp:88
+msgid ""
+"Allows you to hide the window whilst keeping the transaction task running."
+msgstr ""
+"Dozvoljava vam da sakrijete prozor dok čuvate transakcijski zadatak u pogonu"
 
-#: libapper/ApplicationLauncher.cpp:77
+#: libapper/SimulateModel.cpp:139
+msgid "Package"
+msgstr "Paket"
+
+#: libapper/ApplicationLauncher.cpp:92
 msgid "The following application was just installed. Click on it to launch:"
 msgid_plural ""
 "The following applications were just installed. Click on them to launch:"
@@ -3412,71 +3410,86 @@ msgstr[1] ""
 msgstr[2] ""
 "Sljedeći programi su upravo instalirani. Kliknite na njih da se pokrenu:"
 
-#: libapper/PkTransaction.cpp:136
+#: libapper/LicenseAgreement.cpp:36
+msgid "Accept Agreement"
+msgstr "Prihvati saglasnost"
+
+#. i18n: file: libapper/LicenseAgreement.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, LicenseAgreement)
+#: libapper/LicenseAgreement.cpp:37 rc.cpp:251
+msgid "License Agreement Required"
+msgstr "Saglasnost za odobrenje obavezna"
+
+#: libapper/LicenseAgreement.cpp:38
+#, kde-format
+msgid "License required for %1 by %2"
+msgstr "Odobrenje potrebno za %1 od%2"
+
+#: libapper/PkTransaction.cpp:122
 #, fuzzy
 #| msgid "Failed to simulate package install"
 msgid "Failed to simulate file install"
 msgstr "Simulacija instalacije paketa nije uspjela"
 
-#: libapper/PkTransaction.cpp:142
+#: libapper/PkTransaction.cpp:129
 #, fuzzy
 #| msgid "Current backend does not support installing packages."
 msgid "Current backend does not support installing files."
 msgstr "Postojeći backend ne podržava instaliranje paketa"
 
-#: libapper/PkTransaction.cpp:142 libapper/PkTransaction.cpp:167
-#: libapper/PkTransaction.cpp:194 libapper/PkTransaction.cpp:217
+#: libapper/PkTransaction.cpp:129 libapper/PkTransaction.cpp:153
+#: libapper/PkTransaction.cpp:179 libapper/PkTransaction.cpp:202
 msgid "Error"
 msgstr "Greška"
 
-#: libapper/PkTransaction.cpp:161
+#: libapper/PkTransaction.cpp:146
 msgid "Failed to simulate package install"
 msgstr "Simulacija instalacije paketa nije uspjela"
 
-#: libapper/PkTransaction.cpp:167
+#: libapper/PkTransaction.cpp:153
 msgid "Current backend does not support installing packages."
 msgstr "Postojeći backend ne podržava instaliranje paketa"
 
-#: libapper/PkTransaction.cpp:187
+#: libapper/PkTransaction.cpp:171
 msgid "Failed to simulate package removal"
 msgstr "Simulacija odstranjivanja paketa nije uspjela"
 
-#: libapper/PkTransaction.cpp:194
+#: libapper/PkTransaction.cpp:179
 msgid "The current backend does not support removing packages."
 msgstr "Postojeći backend ne podržava odstranjivanje paketa"
 
-#: libapper/PkTransaction.cpp:211
+#: libapper/PkTransaction.cpp:195
 msgid "Failed to simulate package update"
 msgstr "Simulacija nadogradnje paketa nije uspjela"
 
-#: libapper/PkTransaction.cpp:217
+#: libapper/PkTransaction.cpp:202
 msgid "The current backend does not support updating packages."
 msgstr "Postojeći backend ne podržava nadogradnju paketa"
 
-#: libapper/PkTransaction.cpp:229
+#: libapper/PkTransaction.cpp:213
 #, fuzzy
 #| msgid "Failed to remove package"
 msgid "Failed to refresh package cache"
 msgstr "Odstranjivanje paketa nije uspjelo"
 
-#: libapper/PkTransaction.cpp:268
+#: libapper/PkTransaction.cpp:251
 msgid "Failed to install package"
 msgstr "Instaliranje paketa nije uspjelo"
 
-#: libapper/PkTransaction.cpp:296
+#: libapper/PkTransaction.cpp:276
 msgid "Failed to remove package"
 msgstr "Odstranjivanje paketa nije uspjelo"
 
-#: libapper/PkTransaction.cpp:309
+#: libapper/PkTransaction.cpp:288
 msgid "Failed to update package"
 msgstr "Nadograđivanje paketa nije uspjelo"
 
-#: libapper/PkTransaction.cpp:475
+#: libapper/PkTransaction.cpp:453
 #, kde-format
 msgid "Downloading packages at %1/s"
 msgstr "Preuzimanje paketa pri %1/s"
 
-#: libapper/PkTransaction.cpp:524
+#: libapper/PkTransaction.cpp:501
 msgid ""
 "You are about to install unsigned packages that can compromise your system, "
 "as it is impossible to verify if the software came from a trusted source.\n"
@@ -3487,71 +3500,13 @@ msgstr ""
 "sistem, pošto je nemoguće potvrditi da li je program došao iz pouzdanog "
 "izvora"
 
-#: libapper/PkTransaction.cpp:527
+#: libapper/PkTransaction.cpp:504
 msgid "Installing unsigned software"
 msgstr "Instaliram nepotpisan program"
 
-#: libapper/PkTransaction.cpp:586
-msgid "Failed to accept EULA"
-msgstr "Nisam uspio prihvatiti EULA"
-
-#: libapper/PkTransaction.cpp:635
+#: libapper/PkTransaction.cpp:562 libapper/PkTransaction.cpp:615
 msgid "Failed to install signature"
 msgstr "Instalacija potpisa nije uspjela"
-
-#: libapper/PkTransactionDialog.cpp:88
-msgid ""
-"Allows you to hide the window whilst keeping the transaction task running."
-msgstr ""
-"Dozvoljava vam da sakrijete prozor dok čuvate transakcijski zadatak u pogonu"
-
-#: libapper/Requirements.cpp:227
-msgid "Additional changes"
-msgstr "Dodatne promjene"
-
-#: libapper/Requirements.cpp:257
-#, kde-format
-msgid "1 package to remove"
-msgid_plural "%1 packages to remove"
-msgstr[0] "%1 paket za odstraniti"
-msgstr[1] "%1 paketa za odstraniti"
-msgstr[2] "%1 paketa za odstraniti"
-
-#: libapper/Requirements.cpp:267
-#, kde-format
-msgid "1 package to downgrade"
-msgid_plural "%1 packages to downgrade"
-msgstr[0] "%1 paket za degradiranje"
-msgstr[1] "%1 paketa za degradiranje"
-msgstr[2] "%1 paketa za degradiranje"
-
-#: libapper/Requirements.cpp:279
-#, kde-format
-msgid "1 package to reinstall"
-msgid_plural "%1 packages to reinstall"
-msgstr[0] "%1 paket za ponovno instaliranje"
-msgstr[1] "%1 paketa za ponovno instaliranje"
-msgstr[2] "%1 paketa za ponovno instaliranje"
-
-#: libapper/Requirements.cpp:291
-#, kde-format
-msgid "1 package to install"
-msgid_plural "%1 packages to install"
-msgstr[0] "%1 paket za instalirati"
-msgstr[1] "%1 paketa za instalirati"
-msgstr[2] "%1 paketa za instalirati"
-
-#: libapper/Requirements.cpp:303
-#, kde-format
-msgid "1 package to update"
-msgid_plural "%1 packages to update"
-msgstr[0] "%1 paket za nadgradnju"
-msgstr[1] "%1 paketa za nadgradnju"
-msgstr[2] "%1 paketa za nadgradnju"
-
-#: libapper/SimulateModel.cpp:139
-msgid "Package"
-msgstr "Paket"
 
 #: libapper/ApplicationsDelegate.cpp:40
 msgid "Install"
@@ -3561,20 +3516,55 @@ msgstr "Instaliraj"
 msgid "Remove"
 msgstr "Odstrani"
 
-#: libapper/LicenseAgreement.cpp:34
-msgid "Accept Agreement"
-msgstr "Prihvati saglasnost"
+#. i18n: file: libapper/RepoSig.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, RepoSig)
+#: libapper/RepoSig.cpp:40 rc.cpp:224
+msgid "Software signature is required"
+msgstr "Programski potpis se zahtjeva"
 
-#. i18n: file: libapper/LicenseAgreement.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, LicenseAgreement)
-#: libapper/LicenseAgreement.cpp:35 rc.cpp:254
-msgid "License Agreement Required"
-msgstr "Saglasnost za odobrenje obavezna"
+#: libapper/Requirements.cpp:41
+msgid "Additional changes"
+msgstr "Dodatne promjene"
 
-#: libapper/LicenseAgreement.cpp:36
+#: libapper/Requirements.cpp:62
 #, kde-format
-msgid "License required for %1 by %2"
-msgstr "Odobrenje potrebno za %1 od%2"
+msgid "1 package to remove"
+msgid_plural "%1 packages to remove"
+msgstr[0] "%1 paket za odstraniti"
+msgstr[1] "%1 paketa za odstraniti"
+msgstr[2] "%1 paketa za odstraniti"
+
+#: libapper/Requirements.cpp:77
+#, kde-format
+msgid "1 package to downgrade"
+msgid_plural "%1 packages to downgrade"
+msgstr[0] "%1 paket za degradiranje"
+msgstr[1] "%1 paketa za degradiranje"
+msgstr[2] "%1 paketa za degradiranje"
+
+#: libapper/Requirements.cpp:92
+#, kde-format
+msgid "1 package to reinstall"
+msgid_plural "%1 packages to reinstall"
+msgstr[0] "%1 paket za ponovno instaliranje"
+msgstr[1] "%1 paketa za ponovno instaliranje"
+msgstr[2] "%1 paketa za ponovno instaliranje"
+
+#: libapper/Requirements.cpp:105
+#, kde-format
+msgid "1 package to install"
+msgid_plural "%1 packages to install"
+msgstr[0] "%1 paket za instalirati"
+msgstr[1] "%1 paketa za instalirati"
+msgstr[2] "%1 paketa za instalirati"
+
+#: libapper/Requirements.cpp:118
+#, kde-format
+msgid "1 package to update"
+msgid_plural "%1 packages to update"
+msgstr[0] "%1 paket za nadgradnju"
+msgstr[1] "%1 paketa za nadgradnju"
+msgstr[2] "%1 paketa za nadgradnju"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -3947,78 +3937,83 @@ msgstr "Instaliraj pakete sa spiska..."
 msgid "TextLabel"
 msgstr "TextLabel"
 
-#. i18n: file: libapper/ApplicationLauncher.ui:40
-#. i18n: ectx: property (text), widget (QCheckBox, showCB)
-#: rc.cpp:218
-msgid "Do not show this dialog again"
-msgstr "Ne prikazuj više ovaj dijalog"
-
-#. i18n: file: libapper/RepoSig.ui:29
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:224
-msgid "Do you trust the origin of packages?"
-msgstr "Da li vjerujete izvoru paketa ?"
-
-#. i18n: file: libapper/RepoSig.ui:47
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:227
-msgid "Repository name:"
-msgstr "Ime repozitorija :"
-
-#. i18n: file: libapper/RepoSig.ui:70
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:230
-msgid "Signature URL:"
-msgstr "URL potpisa :"
-
-#. i18n: file: libapper/RepoSig.ui:93
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: rc.cpp:233
-msgid "Signature user identifier:"
-msgstr "Identifikator korisničkog potpisa"
-
-#. i18n: file: libapper/RepoSig.ui:116
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: rc.cpp:236
-msgid "Signature identifier:"
-msgstr "Identifikator potpisa"
-
 #. i18n: file: libapper/PkTransaction.ui:38
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:239
+#: rc.cpp:218
 msgid "icon"
 msgstr "ikona"
 
 #. i18n: file: libapper/PkTransaction.ui:64
 #. i18n: ectx: property (text), widget (QLabel, currentL)
-#: rc.cpp:242
+#: rc.cpp:221
 msgid "Downloading Packages"
 msgstr "Preuzimanje paketa"
 
+#. i18n: file: libapper/RepoSig.ui:23
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:227
+msgid "Do you trust the origin of packages?"
+msgstr "Da li vjerujete izvoru paketa ?"
+
+#. i18n: file: libapper/RepoSig.ui:47
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:230
+msgid "Repository name:"
+msgstr "Ime repozitorija :"
+
+#. i18n: file: libapper/RepoSig.ui:73
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:233
+msgid "Signature URL:"
+msgstr "URL potpisa :"
+
+#. i18n: file: libapper/RepoSig.ui:99
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:236
+msgid "Signature user identifier:"
+msgstr "Identifikator korisničkog potpisa"
+
+#. i18n: file: libapper/RepoSig.ui:125
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:239
+msgid "Signature identifier:"
+msgstr "Identifikator potpisa"
+
 #. i18n: file: libapper/Requirements.ui:31
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:245
+#: rc.cpp:242
 msgid "Additional changes are required to complete the task"
 msgstr "Potrebne su dodatne promjene da bi se završio zadatak"
 
-#. i18n: file: libapper/Requirements.ui:57
-#. i18n: ectx: property (windowTitle), widget (QDockWidget, dockWidget)
-#: rc.cpp:248
-msgid "Actions"
-msgstr "Radnje"
-
-#. i18n: file: libapper/Requirements.ui:144
+#. i18n: file: libapper/Requirements.ui:81
 #. i18n: ectx: property (text), widget (QCheckBox, confirmCB)
-#: rc.cpp:251
+#: rc.cpp:245
 msgid ""
 "Do not show this confirmation when installing or updating additional packages"
 msgstr "Ne prikazuj ovu potvrdu kada se instališu ili ažuriraju dodatni paketi"
 
-#. i18n: file: libapper/LicenseAgreement.ui:34
+#. i18n: file: libapper/ApplicationLauncher.ui:63
+#. i18n: ectx: property (text), widget (QCheckBox, showCB)
+#: rc.cpp:248
+msgid "Do not show this dialog again"
+msgstr "Ne prikazuj više ovaj dijalog"
+
+#. i18n: file: libapper/LicenseAgreement.ui:40
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:257
+#: rc.cpp:254
 msgid "Please read the following important information before continuing:"
 msgstr "Prije nastavljanja, molim vas pročitajte sljedeće važne informacije"
+
+#, fuzzy
+#~| msgid "Failed to start setup transaction"
+#~ msgid "Failed to commit transaction"
+#~ msgstr "Pokretanje postavne  transakcije nije uspjelo"
+
+#~ msgid "Failed to accept EULA"
+#~ msgstr "Nisam uspio prihvatiti EULA"
+
+#~ msgid "Actions"
+#~ msgstr "Radnje"
 
 #~ msgid "(C) 2008-2010 Daniel Nicoletti"
 #~ msgstr "(C) 2008-2010 Daniel Nicoletti"
