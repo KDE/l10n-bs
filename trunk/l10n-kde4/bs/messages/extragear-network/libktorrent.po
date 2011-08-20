@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-02 05:00+0200\n"
+"POT-Creation-Date: 2011-08-20 02:37+0200\n"
 "PO-Revision-Date: 2011-05-08 12:33+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -70,6 +70,14 @@ msgstr "Ne mogu da pretvorim %1 u cio broj"
 msgid "Torrent is incomplete."
 msgstr "Torent nije završen."
 
+#: src/datachecker/multidatachecker.cpp:209
+#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:722
+#: src/diskio/multifilecache.cpp:761 src/torrent/torrentcreator.cpp:124
+#: src/torrent/torrentcreator.cpp:255 src/torrent/torrentcreator.cpp:292
+#, kde-format
+msgid "Cannot open file %1: %2"
+msgstr "Ne mogu da otvorim datoteku %1: %2"
+
 #: src/datachecker/datacheckerjob.cpp:82
 msgid "Waiting for other data checks to finish"
 msgstr "Čekanje na završetak provjere drugih podataka"
@@ -81,14 +89,6 @@ msgstr "Provjeravam podatke"
 #: src/datachecker/datacheckerjob.cpp:141
 msgid "Checking Data"
 msgstr "Provjeravam podatke"
-
-#: src/datachecker/multidatachecker.cpp:209
-#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:722
-#: src/diskio/multifilecache.cpp:761 src/torrent/torrentcreator.cpp:124
-#: src/torrent/torrentcreator.cpp:255 src/torrent/torrentcreator.cpp:292
-#, kde-format
-msgid "Cannot open file %1: %2"
-msgstr "Ne mogu da otvorim datoteku %1: %2"
 
 #: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:354
 #: src/util/fileops.cpp:396
@@ -160,25 +160,6 @@ msgstr "Ne mogu da upišem prvi komad u DND datoteku: %1"
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Ne mogu da upišem posljednji komad u DND datoteku: %1"
 
-#: src/diskio/movedatafilesjob.cpp:140
-msgid "Waiting for other move jobs to finish"
-msgstr "Čeklanje na završetak drugih poslova premještanja"
-
-#: src/diskio/movedatafilesjob.cpp:141 src/diskio/movedatafilesjob.cpp:181
-msgctxt "The source of a file operation"
-msgid "Source"
-msgstr "Izvor"
-
-#: src/diskio/movedatafilesjob.cpp:142 src/diskio/movedatafilesjob.cpp:182
-msgctxt "The destination of a file operation"
-msgid "Destination"
-msgstr "Odredište"
-
-#: src/diskio/movedatafilesjob.cpp:180
-msgctxt "@title job"
-msgid "Moving"
-msgstr "Pomjeram"
-
 #: src/diskio/multifilecache.cpp:93 src/diskio/singlefilecache.cpp:79
 #, kde-format
 msgid "Failed to open %1: %2"
@@ -197,6 +178,25 @@ msgstr "Ne može se upisati komad jer je mapiran samo za čitanje"
 #, kde-format
 msgid "Cannot open index file %1: %2"
 msgstr "Ne mogu da otvorim datoteku indeksa %1: %2"
+
+#: src/diskio/movedatafilesjob.cpp:140
+msgid "Waiting for other move jobs to finish"
+msgstr "Čeklanje na završetak drugih poslova premještanja"
+
+#: src/diskio/movedatafilesjob.cpp:141 src/diskio/movedatafilesjob.cpp:181
+msgctxt "The source of a file operation"
+msgid "Source"
+msgstr "Izvor"
+
+#: src/diskio/movedatafilesjob.cpp:142 src/diskio/movedatafilesjob.cpp:182
+msgctxt "The destination of a file operation"
+msgid "Destination"
+msgstr "Odredište"
+
+#: src/diskio/movedatafilesjob.cpp:180
+msgctxt "@title job"
+msgid "Moving"
+msgstr "Pomjeram"
 
 #: src/download/httpconnection.cpp:37 src/download/webseed.cpp:51
 #: src/download/webseed.cpp:98
@@ -409,17 +409,6 @@ msgstr "Već preuzimate torent <b>%1</b>."
 msgid "Redirect without a redirect location"
 msgstr "Preusmerenje bez lokacije preusmerenja"
 
-#: src/tracker/udptracker.cpp:372 src/tracker/udptracker.cpp:382
-#: src/tracker/httptracker.cpp:561
-#, kde-format
-msgid "Timeout contacting tracker %1"
-msgstr "Isteklo vrijeme za kontaktiranje pratioca %1"
-
-#: src/tracker/udptracker.cpp:409
-#, kde-format
-msgid "Unable to resolve hostname %1"
-msgstr "Ne mogu da razriješim ime domaćina %1"
-
 #: src/tracker/httptracker.cpp:284 src/tracker/httptracker.cpp:304
 #: src/tracker/httptracker.cpp:466
 msgid "Invalid response from tracker"
@@ -432,6 +421,17 @@ msgstr "Neispravni podaci sa pratioca"
 #: src/tracker/httptracker.cpp:483
 msgid "Invalid tracker URL"
 msgstr "Neispravan URL pratioca"
+
+#: src/tracker/httptracker.cpp:561 src/tracker/udptracker.cpp:372
+#: src/tracker/udptracker.cpp:382
+#, kde-format
+msgid "Timeout contacting tracker %1"
+msgstr "Isteklo vrijeme za kontaktiranje pratioca %1"
+
+#: src/tracker/udptracker.cpp:409
+#, kde-format
+msgid "Unable to resolve hostname %1"
+msgstr "Ne mogu da razriješim ime domaćina %1"
 
 #: src/upnp/httprequest.cpp:96
 msgid "Connection closed unexpectedly"
