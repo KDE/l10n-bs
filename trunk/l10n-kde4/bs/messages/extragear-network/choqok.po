@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: choqok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-04 02:35+0200\n"
+"POT-Creation-Date: 2011-08-26 03:15+0200\n"
 "PO-Revision-Date: 2011-05-08 01:41+0200\n"
 "Last-Translator: \n"
 "Language-Team:  <bs@li.org>\n"
@@ -674,29 +674,6 @@ msgstr ""
 "Korisnički nalog sa tim pseudonimom već postoji: jedinstveni pseudonim mora "
 "biti specificiran."
 
-#: libchoqok/mediamanager.cpp:108
-msgid "Cannot create a KDE Job. Please check your installation."
-msgstr "Nije moguće stvoriti posao u KDE-u. Molim provjerite vašu instalaciju."
-
-#: libchoqok/mediamanager.cpp:127
-#, kde-format
-msgid "Cannot download image from %1."
-msgstr "Nije moguće preuzeti sliku s %1."
-
-#: libchoqok/mediamanager.cpp:138
-msgid "The download failed. The returned file is corrupted."
-msgstr "Neuspješno preuzimanje. Vraćena datoteka je pokvarena."
-
-#: libchoqok/mediamanager.cpp:168
-msgid "No pluginId specified, And last used plugin is null."
-msgstr "pluginId nije specificiran, posljednji korišteni dodatak je ništavan."
-
-#: libchoqok/mediamanager.cpp:186 libchoqok/mediamanager.cpp:192
-#: microblogs/laconica/laconicamicroblog.cpp:168
-#: microblogs/laconica/laconicamicroblog.cpp:175
-msgid "Uploading medium failed: cannot read the medium file."
-msgstr "Slanje medija neuspješno: neuspjelo čitanje medija."
-
 #: libchoqok/notifymanager.h:41
 msgid "Error"
 msgstr "Greška"
@@ -934,6 +911,29 @@ msgid ""
 msgstr ""
 "Ne mogu otovriti KDE upravljač novčanikom, vaše tajne lozinke ćebiti "
 "smještene kao otvoreni tekst, instalirajte KWallet da to popravite."
+
+#: libchoqok/mediamanager.cpp:107
+msgid "Cannot create a KDE Job. Please check your installation."
+msgstr "Nije moguće stvoriti posao u KDE-u. Molim provjerite vašu instalaciju."
+
+#: libchoqok/mediamanager.cpp:126
+#, kde-format
+msgid "Cannot download image from %1."
+msgstr "Nije moguće preuzeti sliku s %1."
+
+#: libchoqok/mediamanager.cpp:137
+msgid "The download failed. The returned file is corrupted."
+msgstr "Neuspješno preuzimanje. Vraćena datoteka je pokvarena."
+
+#: libchoqok/mediamanager.cpp:167
+msgid "No pluginId specified, And last used plugin is null."
+msgstr "pluginId nije specificiran, posljednji korišteni dodatak je ništavan."
+
+#: libchoqok/mediamanager.cpp:185 libchoqok/mediamanager.cpp:191
+#: microblogs/laconica/laconicamicroblog.cpp:168
+#: microblogs/laconica/laconicamicroblog.cpp:175
+msgid "Uploading medium failed: cannot read the medium file."
+msgstr "Slanje medija neuspješno: neuspjelo čitanje medija."
 
 #: microblogs/laconica/laconicacomposerwidget.cpp:134
 msgid "Select Media to Upload"
@@ -1428,10 +1428,12 @@ msgid "Goo.gl error"
 msgstr "Goo.gl greška"
 
 #: plugins/shorteners/goo_gl/goo_gl.cpp:80
+#: plugins/shorteners/is_gd/is_gd.cpp:83
 msgid "Malformed response\n"
 msgstr "Loše formiran odgovor\n"
 
 #: plugins/shorteners/goo_gl/goo_gl.cpp:82
+#: plugins/shorteners/is_gd/is_gd.cpp:87
 #: plugins/shorteners/three_ly/three_ly.cpp:68
 #: plugins/shorteners/tinyarro_ws/tinyarro_ws.cpp:75
 #: plugins/shorteners/yourls/yourls.cpp:92
@@ -1442,6 +1444,13 @@ msgid ""
 msgstr ""
 "Kreiranje kratkog url-a nemoguće\n"
 "%1"
+
+#: plugins/shorteners/is_gd/is_gd.cpp:75 plugins/shorteners/is_gd/is_gd.cpp:83
+#: plugins/shorteners/is_gd/is_gd.cpp:87
+#, fuzzy
+#| msgid "bit.ly error"
+msgid "is.gd error"
+msgstr "bit.ly greška"
 
 #: plugins/shorteners/three_ly/three_ly.cpp:65
 msgid "3.ly error"
@@ -1620,6 +1629,16 @@ msgstr "Filter po autoru"
 #: plugins/quickfilter/quickfilter.cpp:51
 msgid "Filter by content"
 msgstr "Filter po sadržaju"
+
+#: plugins/quickfilter/quickfilter.cpp:111
+#, fuzzy
+#| msgid "Filter by author"
+msgid "Filter out timeline by author"
+msgstr "Filter po autoru"
+
+#: plugins/quickfilter/quickfilter.cpp:113
+msgid "Filter out timeline by text"
+msgstr ""
 
 #: plugins/quickfilter/quickfilter.cpp:126
 msgid "Author"
@@ -1954,7 +1973,7 @@ msgstr "Datoteka"
 #. i18n: ectx: Menu (tools)
 #. i18n: file: plugins/quickfilter/quickfilterui.rc:4
 #. i18n: ectx: Menu (tools)
-#: rc.cpp:140 rc.cpp:389 rc.cpp:430 rc.cpp:433 rc.cpp:559
+#: rc.cpp:140 rc.cpp:389 rc.cpp:430 rc.cpp:433 rc.cpp:562
 msgid "Tools"
 msgstr "Alati"
 
@@ -1966,7 +1985,7 @@ msgstr "Alati"
 #. i18n: ectx: Menu (settings)
 #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:82
 #. i18n: ectx: attribute (title), widget (QWidget, settingsTab)
-#: rc.cpp:143 rc.cpp:484
+#: rc.cpp:143 rc.cpp:487
 msgid "Settings"
 msgstr "Postavke"
 
@@ -2308,7 +2327,7 @@ msgstr "Akreditivi"
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:34
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:299 rc.cpp:463
+#: rc.cpp:299 rc.cpp:466
 msgid "Username:"
 msgstr "Korisničko ime:"
 
@@ -2324,7 +2343,7 @@ msgstr "Korisničko ime:"
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:74
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:302 rc.cpp:466 rc.cpp:547
+#: rc.cpp:302 rc.cpp:469 rc.cpp:550
 msgid "Password:"
 msgstr "Šifra:"
 
@@ -2623,45 +2642,51 @@ msgstr "Domena:"
 msgid "(No matter for Bit.ly Pro accounts)"
 msgstr "(Nema veze za Bit.ly Pro naloge)"
 
+#. i18n: file: plugins/shorteners/is_gd/is_gd_prefs.ui:19
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_logstats)
+#: rc.cpp:454
+msgid "Generate Statistics"
+msgstr ""
+
 #. i18n: file: plugins/shorteners/tinyarro_ws/tinyarro_ws_prefs.ui:40
 #. i18n: ectx: property (text), widget (QLabel, urlHostLabel)
-#: rc.cpp:454
+#: rc.cpp:457
 msgid "Shortener URL host:"
 msgstr "Kratiov URL host:"
 
 #. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:17
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:457
+#: rc.cpp:460
 msgid "Yourls API URL:"
 msgstr "Tvojurl API URL:"
 
 #. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:27
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, kcfg_yourlsHost)
-#: rc.cpp:460
+#: rc.cpp:463
 msgid "http://SomeDomain.com/yourls/yourls-api.php"
 msgstr "http://NekaDomena.com/tvojurl/tvojurl-api.php"
 
 #. i18n: file: plugins/translator/translatorprefs.ui:17
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:469
+#: rc.cpp:472
 msgid "Select languages to be shown in translate menu"
 msgstr "Odaberite jezike koji će se prikazati u meniju prevođenja"
 
 #. i18n: file: plugins/untiny/untinyprefs.ui:17
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useUntinyDotCom)
-#: rc.cpp:472
+#: rc.cpp:475
 msgid "Use untiny.com service"
 msgstr "Koristi untiny.com servis"
 
 #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:24
 #. i18n: ectx: attribute (title), widget (QWidget, authTab)
-#: rc.cpp:475
+#: rc.cpp:478
 msgid "Authorization"
 msgstr "Ovlašćenje"
 
 #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:51
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:478
+#: rc.cpp:481
 msgid ""
 "Click the below button, If everything goes well, you'll pointed to Flickr."
 "com website to allow access to Choqok."
@@ -2671,73 +2696,73 @@ msgstr ""
 
 #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:61
 #. i18n: ectx: property (text), widget (QPushButton, authButton)
-#: rc.cpp:481
+#: rc.cpp:484
 msgid "Click here to authorize Choqok on Flickr.com"
 msgstr "Kliknite ovdje da autorizirate Choqok na Flickr.com"
 
 #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:90
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:487
+#: rc.cpp:490
 msgid "Who can view photo"
 msgstr "Ko može vidjeti fotografiju"
 
 #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:96
 #. i18n: ectx: property (text), widget (QRadioButton, cfg_forprivate)
-#: rc.cpp:490
+#: rc.cpp:493
 msgid "Private"
 msgstr "Privatni"
 
 #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:105
 #. i18n: ectx: property (text), widget (QCheckBox, cfg_forfriends)
-#: rc.cpp:493
+#: rc.cpp:496
 msgid "Visible for friends"
 msgstr "Vidljivo za prijatelje"
 
 #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:112
 #. i18n: ectx: property (text), widget (QCheckBox, cfg_forfamily)
-#: rc.cpp:496
+#: rc.cpp:499
 msgid "Visible for family"
 msgstr "Vidljivo za porodicu"
 
 #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:121
 #. i18n: ectx: property (text), widget (QRadioButton, cfg_forpublic)
-#: rc.cpp:499
+#: rc.cpp:502
 msgid "Public"
 msgstr "Javni"
 
 #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:134
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:502
+#: rc.cpp:505
 msgid "Set safety level"
 msgstr "POstavi nivo sigurnosti"
 
 #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:140
 #. i18n: ectx: property (text), widget (QRadioButton, cfg_safe)
-#: rc.cpp:505
+#: rc.cpp:508
 msgid "Safe"
 msgstr "Siguran"
 
 #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:150
 #. i18n: ectx: property (text), widget (QRadioButton, cfg_moderate)
-#: rc.cpp:508
+#: rc.cpp:511
 msgid "Moderate"
 msgstr "Umjereno"
 
 #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:157
 #. i18n: ectx: property (text), widget (QRadioButton, cfg_restricted)
-#: rc.cpp:511
+#: rc.cpp:514
 msgid "Restricted"
 msgstr "Ograničeno"
 
 #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:169
 #. i18n: ectx: property (text), widget (QCheckBox, cfg_hidefromsearch)
-#: rc.cpp:514
+#: rc.cpp:517
 msgid "Hide picture from public search"
 msgstr "Sakriij sliku iz javne pretrage"
 
 #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:176
 #. i18n: ectx: property (text), widget (QCheckBox, cfg_shorturl)
-#: rc.cpp:517
+#: rc.cpp:520
 msgid "Use Flic.kr to short URLs"
 msgstr "koristi Flic.kr da se skrati URLs"
 
@@ -2749,13 +2774,13 @@ msgstr "koristi Flic.kr da se skrati URLs"
 #. i18n: ectx: property (text), widget (QRadioButton, cfg_oauth)
 #. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:40
 #. i18n: ectx: property (text), widget (QRadioButton, cfg_oauth)
-#: rc.cpp:520 rc.cpp:535
+#: rc.cpp:523 rc.cpp:538
 msgid "Twitter account"
 msgstr "Twitter analog"
 
 #. i18n: file: plugins/uploaders/mobypicture/mobypictureprefs.ui:47
 #. i18n: ectx: property (text), widget (QRadioButton, cfg_basic)
-#: rc.cpp:523
+#: rc.cpp:526
 msgid "Mobypicture login and password:"
 msgstr "Mobypicture lkorisničko ime i lozinka:"
 
@@ -2767,31 +2792,31 @@ msgstr "Mobypicture lkorisničko ime i lozinka:"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:57
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:526 rc.cpp:541
+#: rc.cpp:529 rc.cpp:544
 msgid "Upload files using:"
 msgstr "Pošalji datoteke koristeći:"
 
 #. i18n: file: plugins/uploaders/mobypicture/mobypictureprefs.ui:64
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:529
+#: rc.cpp:532
 msgid "Login:"
 msgstr "Prijava:"
 
 #. i18n: file: plugins/uploaders/mobypicture/mobypictureprefs.ui:74
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:532
+#: rc.cpp:535
 msgid "Password (PIN):"
 msgstr "Losinka (PIN):"
 
 #. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:47
 #. i18n: ectx: property (text), widget (QRadioButton, cfg_basic)
-#: rc.cpp:538
+#: rc.cpp:541
 msgid "Posterous login and password:"
 msgstr "Posterous korisničko ime i lozinka:"
 
 #. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:64
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:544
+#: rc.cpp:547
 msgid "E-mail:"
 msgstr "E-mail:"
 
@@ -2803,25 +2828,25 @@ msgstr "E-mail:"
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: file: plugins/uploaders/twitpic/twitpicprefs.ui:17
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:550 rc.cpp:556
+#: rc.cpp:553 rc.cpp:559
 msgid "Twitter account:"
 msgstr "Twitter  nalog:"
 
 #. i18n: file: plugins/uploaders/twitgoo/twitgooprefs.ui:50
 #. i18n: ectx: property (text), widget (QCheckBox, cfg_directLink)
-#: rc.cpp:553
+#: rc.cpp:556
 msgid "Get direct link to file"
 msgstr "Uzmio direktnu vezu na datoteku"
 
 #. i18n: file: plugins/betternotify/notifyprefs.ui:23
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:562
+#: rc.cpp:565
 msgid "Select timelines you wish to see notifications for their new posts:"
 msgstr ""
 
 #. i18n: file: plugins/betternotify/notifyprefs.ui:39
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: rc.cpp:565
+#: rc.cpp:568
 #, fuzzy
 #| msgid "Edit Account"
 msgid "Accounts"
@@ -2829,7 +2854,7 @@ msgstr "Uredi račun"
 
 #. i18n: file: plugins/betternotify/notifyprefs.ui:49
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: rc.cpp:568
+#: rc.cpp:571
 #, fuzzy
 #| msgid "Close Timeline"
 msgid "Select Timelines"
