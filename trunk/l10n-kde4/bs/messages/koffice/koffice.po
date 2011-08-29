@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: koffice\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-13 03:45+0200\n"
+"POT-Creation-Date: 2011-08-29 04:01+0200\n"
 "PO-Revision-Date: 2011-03-11 16:09+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -40,6 +40,16 @@ msgstr "Aktivan alat: %1"
 #: flake/KShapePaste.cpp:100
 msgid "Paste Shapes"
 msgstr "Umetni oblik"
+
+#: flake/commands/KShapeGroupCommand.cpp:107
+#, fuzzy
+msgid "Group Shapes"
+msgstr "Grupisanje oblika"
+
+#: flake/commands/KShapeGroupCommand.cpp:109
+#, fuzzy
+msgid "Add Shapes to Group"
+msgstr "Dodaj oblike u grupu"
 
 #: flake/commands/KPathSegmentBreakCommand.cpp:40
 #, fuzzy
@@ -77,16 +87,6 @@ msgstr "Postavi okvir"
 #, fuzzy
 msgid "Distribute Shapes"
 msgstr "Raspodjeli oblike"
-
-#: flake/commands/KShapeGroupCommand.cpp:107
-#, fuzzy
-msgid "Group Shapes"
-msgstr "Grupisanje oblika"
-
-#: flake/commands/KShapeGroupCommand.cpp:109
-#, fuzzy
-msgid "Add Shapes to Group"
-msgstr "Dodaj oblike u grupu"
 
 #: flake/commands/KShapeMoveCommand.cpp:42
 #, fuzzy
@@ -244,10 +244,6 @@ msgstr "Alat za izmjenu puta"
 msgid "Zoom"
 msgstr "Uvećaj"
 
-#: flake/tools/KCreatePathToolFactory.cpp:33
-msgid "Create Path"
-msgstr "Napravite putanju"
-
 #: flake/tools/KCreatePathTool.cpp:370 flake/tools/KPathTool.cpp:181
 msgid "Snapping"
 msgstr "Ljepljenje"
@@ -259,6 +255,10 @@ msgstr "Promjena ugla postavljanja"
 #: flake/tools/KCreatePathTool.cpp:380
 msgid "Angle Constraints"
 msgstr "Ugao ograničenja"
+
+#: flake/tools/KCreatePathToolFactory.cpp:33
+msgid "Create Path"
+msgstr "Napravite putanju"
 
 #: flake/tools/KPathSegmentChangeStrategy.cpp:140
 msgid "Change Segment"
@@ -476,16 +476,6 @@ msgstr "Skripta"
 msgid "Collection"
 msgstr "Kolekcija"
 
-#: kopageapp/KoPAPageThumbnailModel.cpp:67 kopageapp/KoPADocumentModel.cpp:158
-#, kde-format
-msgid "Slide %1"
-msgstr "Slajd %1"
-
-#: kopageapp/KoPAPageThumbnailModel.cpp:69
-#, kde-format
-msgid "Page %1"
-msgstr "Stranica %1"
-
 #: kopageapp/KoPADocumentStructureDocker.cpp:82 main/KoMainWindow.cpp:1710
 msgid "Document"
 msgstr "Dokument"
@@ -587,30 +577,15 @@ msgstr "Kopiraj"
 msgid "Paste"
 msgstr "Umetni"
 
-#: kopageapp/KoPADocumentModel.cpp:160
+#: kopageapp/KoPAPageThumbnailModel.cpp:67 kopageapp/KoPADocumentModel.cpp:158
 #, kde-format
-msgid "Page  %1"
+msgid "Slide %1"
+msgstr "Slajd %1"
+
+#: kopageapp/KoPAPageThumbnailModel.cpp:69
+#, kde-format
+msgid "Page %1"
 msgstr "Stranica %1"
-
-#: kopageapp/KoPADocumentModel.cpp:167
-msgid "Group"
-msgstr "Grupa"
-
-#: kopageapp/KoPADocumentModel.cpp:170
-msgid "Shape"
-msgstr "Oblik"
-
-#: kopageapp/KoPADocumentModel.cpp:283
-msgid "Visible"
-msgstr "Vidljivo"
-
-#: kopageapp/KoPADocumentModel.cpp:284
-msgid "Locked"
-msgstr "Zaključan"
-
-#: kopageapp/KoPADocumentModel.cpp:497 kopageapp/KoPADocumentModel.cpp:518
-msgid "Reparent shapes"
-msgstr "Reparentno oblikuj"
 
 #: kopageapp/commands/KoPAChangeMasterPageCommand.cpp:35
 msgid "Change master slide"
@@ -851,6 +826,31 @@ msgstr[0] "Umetni stranicu"
 msgstr[1] "Umetni stranice"
 msgstr[2] "Umetni stranice"
 
+#: kopageapp/KoPADocumentModel.cpp:160
+#, kde-format
+msgid "Page  %1"
+msgstr "Stranica %1"
+
+#: kopageapp/KoPADocumentModel.cpp:167
+msgid "Group"
+msgstr "Grupa"
+
+#: kopageapp/KoPADocumentModel.cpp:170
+msgid "Shape"
+msgstr "Oblik"
+
+#: kopageapp/KoPADocumentModel.cpp:283
+msgid "Visible"
+msgstr "Vidljivo"
+
+#: kopageapp/KoPADocumentModel.cpp:284
+msgid "Locked"
+msgstr "Zaključan"
+
+#: kopageapp/KoPADocumentModel.cpp:497 kopageapp/KoPADocumentModel.cpp:518
+msgid "Reparent shapes"
+msgstr "Reparentno oblikuj"
+
 #: kotext/KFindStrategy.cpp:63
 #, kde-format
 msgid "Found 1 match"
@@ -897,21 +897,6 @@ msgstr "Umetni prelom"
 msgid "Insert Row Above"
 msgstr "Umetni tabelu"
 
-#: kotext/KoText.cpp:45
-msgctxt "Underline Style"
-msgid "None"
-msgstr "Nikakvo"
-
-#: kotext/KoText.cpp:46
-msgctxt "Underline Style"
-msgid "Single"
-msgstr "Jednostruki"
-
-#: kotext/KoText.cpp:47
-msgctxt "Underline Style"
-msgid "Double"
-msgstr "Dvostruki"
-
 #: kotext/KReplaceStrategy.cpp:58
 msgid ""
 "Found no match\n"
@@ -935,11 +920,20 @@ msgstr[2] "%1 zamjena urađeno"
 msgid "Replace %1 with %2?"
 msgstr "Zamijeni %1 sa %2"
 
-#. i18n: file: widgets/KoCsvImportDialog.ui:147
-#. i18n: ectx: attribute (title), widget (QWidget, m_formatTab)
-#: kotext/KoTextEditor_p.h:93 kotext/KoTextEditor_p.h:130 rc.cpp:440
-msgid "Format"
-msgstr "Format"
+#: kotext/KOdfText.cpp:45
+msgctxt "Underline Style"
+msgid "None"
+msgstr "Nikakvo"
+
+#: kotext/KOdfText.cpp:46
+msgctxt "Underline Style"
+msgid "Single"
+msgstr "Jednostruki"
+
+#: kotext/KOdfText.cpp:47
+msgctxt "Underline Style"
+msgid "Double"
+msgstr "Dvostruki"
 
 #: kotext/InsertTextReferenceAction.cpp:36
 #: kotext/InsertTextReferenceAction.cpp:64
@@ -960,6 +954,12 @@ msgstr "Označite index koji želite referencirati"
 #, kde-format
 msgid "%1 Options"
 msgstr "%1 Opcija"
+
+#. i18n: file: widgets/KoCsvImportDialog.ui:147
+#. i18n: ectx: attribute (title), widget (QWidget, m_formatTab)
+#: kotext/KoTextEditor_p.h:93 kotext/KoTextEditor_p.h:130 rc.cpp:440
+msgid "Format"
+msgstr "Format"
 
 #: kotext/KoTextEditor.cpp:111 kotext/KoTextEditor.cpp:167
 #: kotext/KoTextEditor.cpp:325 widgets/KoCsvImportDialog.cpp:216
@@ -2843,6 +2843,40 @@ msgstr "Paleta"
 msgid "Add/Remove Colors"
 msgstr "Dodaj/Ukloni boje"
 
+#: widgets/KoPageLayoutWidget.cpp:178
+msgid "Left Edge:"
+msgstr "Lijeva ivica:"
+
+#: widgets/KoPageLayoutWidget.cpp:179
+msgid "Right Edge:"
+msgstr "Desna ivica:"
+
+#: widgets/KoPageLayoutWidget.cpp:182
+msgid "Binding Edge:"
+msgstr "Vezivna ivica:"
+
+#: widgets/KoPageLayoutWidget.cpp:183
+msgid "Page Edge:"
+msgstr "Ivica stranice:"
+
+#: widgets/KoPageLayoutWidget.cpp:279
+msgid "Facing Pages:"
+msgstr "Suprotne strane:"
+
+#. i18n: file: widgets/KoPageLayoutWidget.ui:143
+#. i18n: ectx: property (text), widget (QRadioButton, facingPages)
+#: widgets/KoPageLayoutWidget.cpp:280 rc.cpp:395
+msgid "Facing pages"
+msgstr "Suprotne stranice"
+
+#: widgets/KoPageLayoutWidget.cpp:282
+msgid "Page Layout:"
+msgstr "Postavke stranice:"
+
+#: widgets/KoPageLayoutWidget.cpp:283
+msgid "Page spread"
+msgstr "Opseg stranice"
+
 #: widgets/KoPageLayoutDialog.cpp:47
 msgid "Page Layout"
 msgstr "Izgled strane"
@@ -2885,40 +2919,6 @@ msgstr "Uvećaj do označenog"
 #: widgets/KoZoomAction.cpp:279
 msgid "Zoom to All"
 msgstr "Uvećaj sve"
-
-#: widgets/KoPageLayoutWidget.cpp:178
-msgid "Left Edge:"
-msgstr "Lijeva ivica:"
-
-#: widgets/KoPageLayoutWidget.cpp:179
-msgid "Right Edge:"
-msgstr "Desna ivica:"
-
-#: widgets/KoPageLayoutWidget.cpp:182
-msgid "Binding Edge:"
-msgstr "Vezivna ivica:"
-
-#: widgets/KoPageLayoutWidget.cpp:183
-msgid "Page Edge:"
-msgstr "Ivica stranice:"
-
-#: widgets/KoPageLayoutWidget.cpp:279
-msgid "Facing Pages:"
-msgstr "Suprotne strane:"
-
-#. i18n: file: widgets/KoPageLayoutWidget.ui:143
-#. i18n: ectx: property (text), widget (QRadioButton, facingPages)
-#: widgets/KoPageLayoutWidget.cpp:280 rc.cpp:395
-msgid "Facing pages"
-msgstr "Suprotne stranice"
-
-#: widgets/KoPageLayoutWidget.cpp:282
-msgid "Page Layout:"
-msgstr "Postavke stranice:"
-
-#: widgets/KoPageLayoutWidget.cpp:283
-msgid "Page spread"
-msgstr "Opseg stranice"
 
 #: widgets/KoZoomMode.cpp:26
 msgid "Fit Page Width"

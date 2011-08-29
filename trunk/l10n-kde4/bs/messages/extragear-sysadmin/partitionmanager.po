@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: partitionmanager\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-02 05:05+0200\n"
+"POT-Creation-Date: 2011-08-29 03:21+0200\n"
 "PO-Revision-Date: 2011-01-05 10:55+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian<kde-i18n-bs@kde.org>\n"
@@ -1725,7 +1725,7 @@ msgctxt "@item/plain partition table name"
 msgid "unknown"
 msgstr "nepoznato"
 
-#: core/operationstack.cpp:107
+#: core/operationstack.cpp:112
 msgctxt "@info/plain"
 msgid ""
 "Deleting a partition just created: Undoing the operation to create the "
@@ -1733,7 +1733,7 @@ msgid ""
 msgstr ""
 "Brišem upravo napravljenu particiju: opoziv postupka pravljenja particije."
 
-#: core/operationstack.cpp:126
+#: core/operationstack.cpp:131
 msgctxt "@info/plain"
 msgid ""
 "Resizing a partition just created: Updating start and end in existing "
@@ -1742,28 +1742,39 @@ msgstr ""
 "Mijenjam veličinu upravo napravljene particije: ažuriranje početka i kraja u "
 "tekućem postupku."
 
-#: core/operationstack.cpp:147
+#: core/operationstack.cpp:152
 msgctxt "@info/plain"
 msgid "Copying a new partition: Creating a new partition instead."
 msgstr "Kopiram novu particiju: umjesto pravljenja nove particije."
 
-#: core/operationstack.cpp:165
+#: core/operationstack.cpp:170
 msgctxt "@info/plain"
 msgid "Changing label for a new partition: No new operation required."
 msgstr "Mijenjam etiketu za novu particiju: nije potrebna nova operacija."
 
-#: core/operationstack.cpp:179
+#: core/operationstack.cpp:184
 msgctxt "@info/plain"
 msgid "Changing file system for a new partition: No new operation required."
 msgstr ""
 "Mijenjam datotečni sistem za novu particiju: nije potrebna nova operacija."
 
-#: core/operationstack.cpp:235
+#: core/operationstack.cpp:202
+#, fuzzy
+#| msgctxt "@info/plain"
+#| msgid "Changing file system for a new partition: No new operation required."
+msgctxt "@info/plain"
+msgid ""
+"Checking file systems is automatically done when creating them: No new "
+"operation required."
+msgstr ""
+"Mijenjam datotečni sistem za novu particiju: nije potrebna nova operacija."
+
+#: core/operationstack.cpp:251
 msgctxt "@info/plain"
 msgid "Deleting a partition just copied: Removing the copy."
 msgstr "Brišem upravo kopiranu particiju: uklanjam kopiju."
 
-#: core/operationstack.cpp:242
+#: core/operationstack.cpp:258
 msgctxt "@info/plain"
 msgid ""
 "Deleting a partition just copied over an existing partition: Removing the "
@@ -1772,7 +1783,7 @@ msgstr ""
 "Brišem particiju upravo kopiranu preko postojeće: uklanjam kopiju i brišem "
 "postojeću particiju."
 
-#: core/operationstack.cpp:256
+#: core/operationstack.cpp:272
 msgctxt "@info/plain"
 msgid ""
 "Copying a partition that is itself a copy: Copying the original source "
@@ -1781,12 +1792,12 @@ msgstr ""
 "Kopiram particiju koja je i sama kopija: umjesto toga kopiram originalnu "
 "izvornu particiju."
 
-#: core/operationstack.cpp:287
+#: core/operationstack.cpp:303
 msgctxt "@info/plain"
 msgid "Deleting a partition just restored: Removing the restore operation."
 msgstr "Brišem upravo vraćenu particiju: uklanjam operaciju vraćanja."
 
-#: core/operationstack.cpp:294
+#: core/operationstack.cpp:310
 msgctxt "@info/plain"
 msgid ""
 "Deleting a partition just restored to an existing partition: Removing the "
@@ -1795,17 +1806,17 @@ msgstr ""
 "Brišem particiju upravo vraćenu na postojeću: uklanjam operaciju vraćanja i "
 "brišem postojeću particiju."
 
-#: core/operationstack.cpp:328
+#: core/operationstack.cpp:344
 msgctxt "@info/plain"
 msgid "Changing flags again for the same partition: Removing old operation."
 msgstr "Ponovo mijenjam zastavice za istu particiju: uklanjam staru operaciju."
 
-#: core/operationstack.cpp:360
+#: core/operationstack.cpp:376
 msgctxt "@info/plain"
 msgid "Changing label again for the same partition: Removing old operation."
 msgstr "Ponovo mijenjam etiketu za istu particiju: uklanjam staru operaciju."
 
-#: core/operationstack.cpp:387
+#: core/operationstack.cpp:403
 #, fuzzy
 #| msgctxt "@info:status"
 #| msgid "Create a new and empty partition table on a device."
@@ -1814,7 +1825,7 @@ msgid "Creating new partition table, discarding previous operation on device."
 msgstr "Pravi novu i praznu tabelu particija na uređaju."
 
 # >> %1 is operation description
-#: core/operationstack.cpp:438
+#: core/operationstack.cpp:454
 #, kde-format
 msgctxt "@info/plain"
 msgid "Add operation: %1"
@@ -2745,7 +2756,7 @@ msgstr ""
 "Uspješno promijenjena veličina datotečnog sistema ~@¦Libpartedom¦LibPartedom¦"
 
 #: jobs/resizefilesystemjob.cpp:140
-#: plugins/libparted/libpartedpartitiontable.cpp:320
+#: plugins/libparted/libpartedpartitiontable.cpp:334
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
@@ -2756,7 +2767,7 @@ msgstr ""
 "veličine datotečnog sistema."
 
 #: jobs/resizefilesystemjob.cpp:145
-#: plugins/libparted/libpartedpartitiontable.cpp:323
+#: plugins/libparted/libpartedpartitiontable.cpp:337
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
@@ -2792,8 +2803,47 @@ msgstr[2] ""
 "Promjena veličine datotečnog sistema na particiji <filename>%2</filename> na "
 "%1 sektora"
 
+#: jobs/createfilesystemjob.cpp:70
+#, fuzzy, kde-format
+#| msgctxt "@info/plain"
+#| msgid "Failed to clobber file system on partition <filename>%1</filename>."
+msgctxt "@info/plain"
+msgid ""
+"Failed to set the system type for the file system on partition <filename>%1</"
+"filename>."
+msgstr ""
+"Ne mogu da uništim datotečni sistem na particiji <filename>%1</filename>."
+
+#: jobs/createfilesystemjob.cpp:75
+#, fuzzy, kde-format
+#| msgctxt "@info/plain"
+#| msgid ""
+#| "Could not open device <filename>%1</filename> to create new partition "
+#| "<filename>%2</filename>."
+msgctxt "@info/plain"
+msgid ""
+"Could not open partition table on device <filename>%1</filename> to set the "
+"system type for partition <filename>%2</filename>."
+msgstr ""
+"Ne mogu da otvorim uređaj <filename>%1</filename> radi pravljenja nove "
+"particije <filename>%2</filename>."
+
+#: jobs/createfilesystemjob.cpp:80
+#, fuzzy, kde-format
+#| msgctxt "@info/plain"
+#| msgid ""
+#| "Could not open device <filename>%1</filename> to set partition flags for "
+#| "partition <filename>%2</filename>."
+msgctxt "@info/plain"
+msgid ""
+"Could not open device <filename>%1</filename> to set the system type for "
+"partition <filename>%2</filename>."
+msgstr ""
+"Ne mogu da otvorim uređaj <filename>%1</filename> radi postavljanja "
+"zastavica za particiju <filename>%2</filename>."
+
 # >> Job description, used as tooltip and in job lists.
-#: jobs/createfilesystemjob.cpp:55
+#: jobs/createfilesystemjob.cpp:91
 #, kde-format
 msgctxt "@info/plain"
 msgid "Create file system %1 on partition <filename>%2</filename>"
@@ -3046,7 +3096,7 @@ msgstr ""
 "particiju <filename>%2</filename>"
 
 #: jobs/deletepartitionjob.cpp:71
-#: plugins/libparted/libpartedpartitiontable.cpp:218
+#: plugins/libparted/libpartedpartitiontable.cpp:217
 #, kde-format
 msgctxt "@info/plain"
 msgid "Could not delete partition <filename>%1</filename>."
@@ -3083,7 +3133,7 @@ msgid "Delete the partition <filename>%1</filename>"
 msgstr "Brisanje particije <filename>%1</filename>"
 
 #: jobs/createpartitionjob.cpp:71
-#: plugins/libparted/libpartedpartitiontable.cpp:196
+#: plugins/libparted/libpartedpartitiontable.cpp:195
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
@@ -3762,7 +3812,7 @@ msgstr ""
 "filename> nije uspelo: početno montiranje nije uspelo."
 
 # >> Operation description, used as tooltip and in operation lists.
-#: fs/fat16.cpp:134
+#: fs/fat16.cpp:132
 #, kde-format
 msgctxt "@info/plain"
 msgid "Setting label for partition <filename>%1</filename> to %2"
@@ -4077,7 +4127,7 @@ msgid "(Command timeout while running)"
 msgstr "(Prekovreme naredbe tokom izvršavanja)"
 
 # >! Put application nami into the message.
-#: util/helpers.cpp:105
+#: util/helpers.cpp:97
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -4093,42 +4143,45 @@ msgstr ""
 "para><para>Želite li da nastavite sa pokretanjem <application>%1</"
 "application>?</para>"
 
-#: util/helpers.cpp:110
+#: util/helpers.cpp:102
 msgctxt "@title:window"
 msgid "No administrative privileges"
 msgstr "Nedostaju administratorska ovlašćenja"
 
-#: util/helpers.cpp:111
+#: util/helpers.cpp:103
 msgctxt "@action:button"
 msgid "Run without administrative privileges"
 msgstr "Pokreni bez administratorskih ovlašćenja"
 
-#: util/helpers.cpp:124
+#: util/helpers.cpp:116
 msgctxt "@title"
 msgid "<application>KDE Partition Manager</application>"
 msgstr "<application>KDE‑ov menadžer particija</application>"
 
-#: util/helpers.cpp:126
+#: util/helpers.cpp:118
 msgctxt "@title"
 msgid "Manage your disks, partitions and file systems"
 msgstr "Upravljanje diskovima, particijama i datotečnim sistemima"
 
-#: util/helpers.cpp:128
+#: util/helpers.cpp:120
+#, fuzzy
+#| msgctxt "@info:credit"
+#| msgid "(c) 2008, 2009, 2010 Volker Lanz"
 msgctxt "@info:credit"
-msgid "(c) 2008, 2009, 2010 Volker Lanz"
+msgid "(c) 2008, 2009, 2010, 2011 Volker Lanz"
 msgstr "© 2008, 2009, 2010 Folker Lanc"
 
-#: util/helpers.cpp:131 plugins/libparted/libpartedbackend.cpp:73
+#: util/helpers.cpp:123 plugins/libparted/libpartedbackend.cpp:73
 #: plugins/dummy/dummybackend.cpp:53
 msgctxt "@info:credit"
 msgid "Volker Lanz"
 msgstr "Folker Lanc"
 
-#: util/helpers.cpp:134
+#: util/helpers.cpp:126
 msgid "Hugo Pereira Da Costa"
 msgstr ""
 
-#: util/helpers.cpp:134
+#: util/helpers.cpp:126
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Partition type:"
@@ -4136,7 +4189,7 @@ msgctxt "@info:credit"
 msgid "Partition Widget Design"
 msgstr "Vrsta particije:"
 
-#: util/helpers.cpp:165
+#: util/helpers.cpp:157
 #, fuzzy
 #| msgctxt "@title:mijenu"
 #| msgid "Columns"
@@ -4144,7 +4197,7 @@ msgctxt "@title:menu"
 msgid "Columns"
 msgstr "Kolone"
 
-#: util/helpers.cpp:199
+#: util/helpers.cpp:191
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -4152,12 +4205,12 @@ msgid ""
 "para><para>Loading the default backend plugin \"%2\" instead.</para>"
 msgstr ""
 
-#: util/helpers.cpp:202 util/helpers.cpp:211
+#: util/helpers.cpp:194 util/helpers.cpp:203
 msgctxt "@title:window"
 msgid "Error: Could Not Load Backend Plugin"
 msgstr ""
 
-#: util/helpers.cpp:208
+#: util/helpers.cpp:200
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -4297,13 +4350,13 @@ msgctxt "@info/plain"
 msgid "LibParted Exception: %1"
 msgstr "Izuzetak Libparteda: %1"
 
-#: plugins/libparted/libpartedbackend.cpp:388
+#: plugins/libparted/libpartedbackend.cpp:398
 #, kde-format
 msgctxt "@info/plain"
 msgid "Could not access device <filename>%1</filename>"
 msgstr "Ne mogu da pristupim uređaju <filename>%1</filename>"
 
-#: plugins/libparted/libpartedbackend.cpp:392
+#: plugins/libparted/libpartedbackend.cpp:402
 #, kde-format
 msgctxt "@info/plain"
 msgid "Device found: %1"
@@ -4353,20 +4406,20 @@ msgstr ""
 "Pravljenje tabele particija nije uspelo: ne mogu da nađem vrstu tabele "
 "particija „%1“ za <filename>%2</filename>."
 
-#: plugins/libparted/libpartedpartitiontable.cpp:167
+#: plugins/libparted/libpartedpartitiontable.cpp:166
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
 "Unknown partition role for new partition <filename>%1</filename> (roles: %2)"
 msgstr "Nepoznata uloga nove particije <filename>%1</filename> (uloge: %2)."
 
-#: plugins/libparted/libpartedpartitiontable.cpp:177
+#: plugins/libparted/libpartedpartitiontable.cpp:176
 #, kde-format
 msgctxt "@info/plain"
 msgid "Failed to create new partition <filename>%1</filename>."
 msgstr "Ne mogu da napravim particiju <filename>%1</filename>."
 
-#: plugins/libparted/libpartedpartitiontable.cpp:189
+#: plugins/libparted/libpartedpartitiontable.cpp:188
 msgctxt "@info/plain"
 msgid ""
 "Failed to create a new partition: could not get geometry for constraint."
@@ -4374,7 +4427,7 @@ msgstr ""
 "Neuspelo pravljenje nove particije: ne mogu da dobavim geometriju radi "
 "ograničavanja."
 
-#: plugins/libparted/libpartedpartitiontable.cpp:221
+#: plugins/libparted/libpartedpartitiontable.cpp:220
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
@@ -4384,7 +4437,7 @@ msgstr ""
 "Neuspelo brisanje particije: particija <filename>%1</filename> nije nađena "
 "na disku."
 
-#: plugins/libparted/libpartedpartitiontable.cpp:245
+#: plugins/libparted/libpartedpartitiontable.cpp:244
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
@@ -4394,7 +4447,7 @@ msgstr ""
 "Ne mogu da postavim geometriju za particiju <filename>%1</filename> pri "
 "pokušaju njenog menjanja/pomeranja."
 
-#: plugins/libparted/libpartedpartitiontable.cpp:248
+#: plugins/libparted/libpartedpartitiontable.cpp:247
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
@@ -4404,7 +4457,7 @@ msgstr ""
 "Ne mogu da očitam ograničenje za particiju <filename>%1</filename> pri "
 "pokušaju njenog menjanja/pomeranja."
 
-#: plugins/libparted/libpartedpartitiontable.cpp:251
+#: plugins/libparted/libpartedpartitiontable.cpp:250
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
@@ -4414,7 +4467,7 @@ msgstr ""
 "Ne mogu da očitam geometriju za particiju <filename>%1</filename> pri "
 "pokušaju njenog menjanja/pomeranja."
 
-#: plugins/libparted/libpartedpartitiontable.cpp:254
+#: plugins/libparted/libpartedpartitiontable.cpp:253
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
@@ -4448,7 +4501,7 @@ msgstr ""
 "Ne mogu da obrišem datotečni sistem na particiji <filename>%1</filename>: ne "
 "mogu da dobavim particiju."
 
-#: plugins/libparted/libpartedpartitiontable.cpp:312
+#: plugins/libparted/libpartedpartitiontable.cpp:326
 #, kde-format
 msgctxt "@info/plain"
 msgid "Could not resize file system on partition <filename>%1</filename>."
@@ -4456,7 +4509,7 @@ msgstr ""
 "Ne mogu da promijenim veličinu datotečnog sistema na particiji <filename>%1</"
 "filename>."
 
-#: plugins/libparted/libpartedpartitiontable.cpp:315
+#: plugins/libparted/libpartedpartitiontable.cpp:329
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
@@ -4466,7 +4519,7 @@ msgstr ""
 "Ne mogu da očitam geometriju za izmijenjenu particiju <filename>%1</"
 "filename> pri pokušaju promjene veličine datotečnog sistema."
 
-#: plugins/libparted/libpartedpartitiontable.cpp:337
+#: plugins/libparted/libpartedpartitiontable.cpp:356
 #, kde-format
 msgctxt "@info/plain"
 msgid ""
@@ -4475,6 +4528,16 @@ msgid ""
 msgstr ""
 "Ne mogu da odredim datotečni sistem particije na sektoru %1 uređaja "
 "<filename>%2</filename>."
+
+#: plugins/libparted/libpartedpartitiontable.cpp:369
+#, fuzzy, kde-format
+#| msgctxt "@info/plain"
+#| msgid "Could not resize file system on partition <filename>%1</filename>."
+msgctxt "@info/plain"
+msgid "Could not update the system type for partition <filename>%1</filename>."
+msgstr ""
+"Ne mogu da promijenim veličinu datotečnog sistema na particiji <filename>%1</"
+"filename>."
 
 #: plugins/dummy/dummybackend.cpp:47
 msgctxt "@title"
