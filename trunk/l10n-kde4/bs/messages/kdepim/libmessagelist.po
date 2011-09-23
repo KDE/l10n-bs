@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-09-15 04:08+0200\n"
+"POT-Creation-Date: 2011-09-23 04:11+0200\n"
 "PO-Revision-Date: 2010-11-05 01:56+0000\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -187,12 +187,12 @@ msgctxt "Sort order for mail groups"
 msgid "Descending"
 msgstr "Opadajuće"
 
-#: core/item.cpp:228
+#: core/item.cpp:228 core/messageitem.cpp:611
 msgctxt "Status of an item"
 msgid "Read"
 msgstr "Pročitana"
 
-#: core/item.cpp:230
+#: core/item.cpp:230 core/messageitem.cpp:611
 msgctxt "Status of an item"
 msgid "Unread"
 msgstr "Nepročitano"
@@ -202,7 +202,7 @@ msgctxt "Status of an item"
 msgid "Has Attachment"
 msgstr "Ima prilog"
 
-#: core/item.cpp:236
+#: core/item.cpp:236 core/messageitem.cpp:609
 msgctxt "Status of an item"
 msgid "Replied"
 msgstr "Odgovorena"
@@ -401,90 +401,6 @@ msgstr "Oblikovani pravugaonici"
 msgid "Styled Joined Rectangles"
 msgstr "Oblikovani spojeni pravougaonici"
 
-#: core/model.cpp:290
-msgid "Today"
-msgstr "Danas"
-
-#: core/model.cpp:291
-msgid "Yesterday"
-msgstr "Juče"
-
-#: core/model.cpp:293 core/manager.cpp:98
-msgctxt "Unknown date"
-msgid "Unknown"
-msgstr "Nepoznat"
-
-#: core/model.cpp:294
-msgid "Last Week"
-msgstr "Prošle sedmice"
-
-#: core/model.cpp:295
-msgid "Two Weeks Ago"
-msgstr "Prije dvije sedmice"
-
-#: core/model.cpp:296
-msgid "Three Weeks Ago"
-msgstr "Prije tri sedmice"
-
-#: core/model.cpp:297
-msgid "Four Weeks Ago"
-msgstr "Prije četiri sedmice"
-
-#: core/model.cpp:298
-msgid "Five Weeks Ago"
-msgstr "Prije pet sedmica"
-
-#: core/model.cpp:512 utils/themeeditor.cpp:204
-msgid "Receiver"
-msgstr "Primatelj"
-
-#: core/model.cpp:513 utils/themeeditor.cpp:203
-msgid "Sender"
-msgstr "Pošiljalac"
-
-#: core/model.cpp:1335
-#, kde-format
-msgctxt "Message Aggregation Group Header: Month name and Year number"
-msgid "%1 %2"
-msgstr ""
-
-#: core/model.cpp:3765
-#, kde-format
-msgid "Processed 1 Message of %2"
-msgid_plural "Processed %1 Messages of %2"
-msgstr[0] "Prerađena %1 poruka od %2"
-msgstr[1] "Prerađene %1 poruke od %2"
-msgstr[2] "Prerađeno %1 poruka od %2"
-
-#: core/model.cpp:3771 core/model.cpp:3777
-#, kde-format
-msgid "Threaded 1 Message of %2"
-msgid_plural "Threaded %1 Messages of %2"
-msgstr[0] "%1 poruka od %2 u nitima"
-msgstr[1] "%1poruke od %2 u nitima"
-msgstr[2] "%1poruka od %2  u nitima"
-
-#: core/model.cpp:3783
-#, kde-format
-msgid "Grouped 1 Thread of %2"
-msgid_plural "Grouped %1 Threads of %2"
-msgstr[0] "Grupisana %1 nit od %2"
-msgstr[1] "Grupisane %1 niti od %2"
-msgstr[2] "Grupisano %1 niti od %2"
-
-#: core/model.cpp:3789
-#, kde-format
-msgid "Updated 1 Group of %2"
-msgid_plural "Updated %1 Groups of %2"
-msgstr[0] "Ažurirana %1 nit od %2"
-msgstr[1] "Ažurirane %1 niti od %2"
-msgstr[2] "Ažurirano %1 niti od %2"
-
-#: core/model.cpp:3885
-msgctxt "@info:status Finished view fill"
-msgid "Ready"
-msgstr "Spreman"
-
 #: core/view.cpp:721
 msgid "Adjust Column Sizes"
 msgstr "Prilagodite veličine kolone"
@@ -675,6 +591,11 @@ msgid_plural "<b>%1</b> messages (<b>%2</b> unread)"
 msgstr[0] "<b>%1</b> poruka (<b>%2</b> nova + <b>%3</b> nepročitana)"
 msgstr[1] "<b>%1</b> poruke (<b>%2</b> nove + <b>%3</b> nepročitane)"
 msgstr[2] "<b>%1</b> poruka (<b>%2</b> novih + <b>%3</b> nepročitanih)"
+
+#: core/manager.cpp:98 core/model.cpp:293
+msgctxt "Unknown date"
+msgid "Unknown"
+msgstr "Nepoznat"
 
 #: core/manager.cpp:320
 msgid "Current Activity, Threaded"
@@ -971,6 +892,85 @@ msgstr "Pravac grupnog sortiranja"
 #: core/widgetbase.cpp:733
 msgid "Folder Always Uses This Sort Order"
 msgstr "Direktorij uvijek koristi ovo sortiranje"
+
+#: core/model.cpp:290
+msgid "Today"
+msgstr "Danas"
+
+#: core/model.cpp:291
+msgid "Yesterday"
+msgstr "Juče"
+
+#: core/model.cpp:294
+msgid "Last Week"
+msgstr "Prošle sedmice"
+
+#: core/model.cpp:295
+msgid "Two Weeks Ago"
+msgstr "Prije dvije sedmice"
+
+#: core/model.cpp:296
+msgid "Three Weeks Ago"
+msgstr "Prije tri sedmice"
+
+#: core/model.cpp:297
+msgid "Four Weeks Ago"
+msgstr "Prije četiri sedmice"
+
+#: core/model.cpp:298
+msgid "Five Weeks Ago"
+msgstr "Prije pet sedmica"
+
+#: core/model.cpp:524 utils/themeeditor.cpp:204
+msgid "Receiver"
+msgstr "Primatelj"
+
+#: core/model.cpp:525 utils/themeeditor.cpp:203
+msgid "Sender"
+msgstr "Pošiljalac"
+
+#: core/model.cpp:1347
+#, kde-format
+msgctxt "Message Aggregation Group Header: Month name and Year number"
+msgid "%1 %2"
+msgstr ""
+
+#: core/model.cpp:3777
+#, kde-format
+msgid "Processed 1 Message of %2"
+msgid_plural "Processed %1 Messages of %2"
+msgstr[0] "Prerađena %1 poruka od %2"
+msgstr[1] "Prerađene %1 poruke od %2"
+msgstr[2] "Prerađeno %1 poruka od %2"
+
+#: core/model.cpp:3783 core/model.cpp:3789
+#, kde-format
+msgid "Threaded 1 Message of %2"
+msgid_plural "Threaded %1 Messages of %2"
+msgstr[0] "%1 poruka od %2 u nitima"
+msgstr[1] "%1poruke od %2 u nitima"
+msgstr[2] "%1poruka od %2  u nitima"
+
+#: core/model.cpp:3795
+#, kde-format
+msgid "Grouped 1 Thread of %2"
+msgid_plural "Grouped %1 Threads of %2"
+msgstr[0] "Grupisana %1 nit od %2"
+msgstr[1] "Grupisane %1 niti od %2"
+msgstr[2] "Grupisano %1 niti od %2"
+
+#: core/model.cpp:3801
+#, kde-format
+msgid "Updated 1 Group of %2"
+msgid_plural "Updated %1 Groups of %2"
+msgstr[0] "Ažurirana %1 nit od %2"
+msgstr[1] "Ažurirane %1 niti od %2"
+msgstr[2] "Ažurirano %1 niti od %2"
+
+#: core/model.cpp:3897
+msgctxt "@info:status Finished view fill"
+msgid "Ready"
+msgstr "Spreman"
 
 #: utils/configureaggregationsdialog.cpp:98
 msgid "Customize Message Aggregation Modes"

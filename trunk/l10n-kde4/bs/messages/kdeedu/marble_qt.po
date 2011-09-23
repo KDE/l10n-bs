@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-22 03:48+0200\n"
+"POT-Creation-Date: 2011-09-23 04:01+0200\n"
 "PO-Revision-Date: 2011-03-23 09:29+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -380,47 +380,47 @@ msgstr ""
 "Sve podržane datoteke (*.gpx *.kml *.pnt);;GPS Data (*.gpx);;Google Earth "
 "KML (*.kml);; Micro World Database II (*.pnt)"
 
-#: src/QtMainWindow.cpp:986
+#: src/QtMainWindow.cpp:992
 msgid "Unnamed"
 msgstr "Neimenovano"
 
-#: src/QtMainWindow.cpp:1285
+#: src/QtMainWindow.cpp:1296
 msgid "Map View - Marble"
 msgstr "Map pogled - Marble"
 
-#: src/QtMainWindow.cpp:1313
+#: src/QtMainWindow.cpp:1324
 msgid "Routing - Marble"
 msgstr "Rutiranje - Marble"
 
-#: src/QtMainWindow.cpp:1322
+#: src/QtMainWindow.cpp:1333
 #, fuzzy
 msgid "Open Route..."
 msgstr "Otvori rutu"
 
-#: src/QtMainWindow.cpp:1326
+#: src/QtMainWindow.cpp:1337
 #, fuzzy
 msgid "Save Route..."
 msgstr "Otvori rutu"
 
-#: src/QtMainWindow.cpp:1330
+#: src/QtMainWindow.cpp:1341
 #, fuzzy
 msgid "Reverse Route"
 msgstr "Otvori rutu"
 
-#: src/QtMainWindow.cpp:1336 src/lib/routing/RoutingLineEdit.cpp:41
+#: src/QtMainWindow.cpp:1347 src/lib/routing/RoutingLineEdit.cpp:41
 msgid "Clear"
 msgstr "Očisti"
 
-#: src/QtMainWindow.cpp:1360
+#: src/QtMainWindow.cpp:1371
 #, fuzzy
 msgid "Tracking - Marble"
 msgstr "Rutiranje - Marble"
 
-#: src/QtMainWindow.cpp:1384
+#: src/QtMainWindow.cpp:1395
 msgid "Zoom &In"
 msgstr "&Uvećaj"
 
-#: src/QtMainWindow.cpp:1389
+#: src/QtMainWindow.cpp:1400
 msgid "Zoom &Out"
 msgstr "U&manji"
 
@@ -755,7 +755,7 @@ msgstr "Izostavlja čuvar ekrana prilikom navigacije korak po korak"
 
 #: src/plugins/render/mapscale/MapScaleFloatItem.cpp:48
 #: src/plugins/render/mapscale/MapScaleFloatItem.cpp:244
-#: src/lib/MarbleWidget.cpp:1219
+#: src/lib/MarbleWidget.cpp:1224
 msgid "km"
 msgstr "km"
 
@@ -793,7 +793,7 @@ msgid "m"
 msgstr "m"
 
 #: src/plugins/render/mapscale/MapScaleFloatItem.cpp:253
-#: src/lib/MarbleWidget.cpp:1223
+#: src/lib/MarbleWidget.cpp:1228
 msgid "mi"
 msgstr "mi"
 
@@ -2066,10 +2066,6 @@ msgstr ""
 msgid "Gpx Parser"
 msgstr ""
 
-#: src/plugins/runner/gpx/GpxParser.cpp:32
-msgid "The file is not a valid GPX 1.0 / 1.1 file"
-msgstr "Datoteka nije validna GPX 1.0 / 1.1 datoteka"
-
 #: src/plugins/runner/pnt/PntPlugin.cpp:19
 msgid "Pnt File Parser"
 msgstr ""
@@ -2081,12 +2077,6 @@ msgstr ""
 #: src/plugins/runner/pnt/PntPlugin.cpp:22
 msgid "Pnt Parser"
 msgstr ""
-
-#: src/plugins/runner/osm/OsmParser.cpp:37
-#, fuzzy
-#| msgid "The file is not a valid file."
-msgid "The file is not a valid OSM file"
-msgstr "Ova datoteka nije valjana datoteka."
 
 #: src/plugins/runner/osm/OsmPlugin.cpp:19
 msgid "Osm File Parser"
@@ -2125,11 +2115,11 @@ msgstr "&Datoteka"
 msgid "Add &Measure Point"
 msgstr "Dodaj &Mjernu tačku"
 
-#: src/lib/MarbleWidgetInputHandler.cpp:316
+#: src/lib/MarbleWidgetInputHandler.cpp:315
 msgid "Remove &Last Measure Point"
 msgstr "Ukloni &posljednju mjernu tačku"
 
-#: src/lib/MarbleWidgetInputHandler.cpp:320
+#: src/lib/MarbleWidgetInputHandler.cpp:318
 msgid "&Remove Measure Points"
 msgstr "&Ukloni mjerne tačke"
 
@@ -2245,18 +2235,27 @@ msgstr "m/h"
 msgid "Disabled"
 msgstr "Isključeno"
 
-#: src/lib/CurrentLocationWidget.cpp:318
+#: src/lib/CurrentLocationWidget.cpp:317
 msgid "Save Track"
 msgstr ""
 
-#: src/lib/CurrentLocationWidget.cpp:320 src/lib/CurrentLocationWidget.cpp:333
+#: src/lib/CurrentLocationWidget.cpp:319 src/lib/CurrentLocationWidget.cpp:331
 #, fuzzy
 msgid "KML File (*.kml)"
 msgstr "KML datoteke (*.kml)"
 
-#: src/lib/CurrentLocationWidget.cpp:332
+#: src/lib/CurrentLocationWidget.cpp:330
 msgid "Open Track"
 msgstr ""
+
+#: src/lib/CurrentLocationWidget.cpp:342
+msgid "Clear current track"
+msgstr ""
+
+#: src/lib/CurrentLocationWidget.cpp:343
+#, fuzzy
+msgid "Are you sure you want to clear the current track?"
+msgstr "Da li ste sigurni da želite obrisati sve zabilješke?"
 
 #: src/lib/DataMigration.cpp:98
 msgid "Marble data conversion"
@@ -2365,6 +2364,10 @@ msgstr ""
 #: src/lib/MarbleControlBox.cpp:181
 msgid "Current Location"
 msgstr "Trenutna lokacija"
+
+#: src/lib/FileManager.cpp:186
+msgid "File Parsing Error"
+msgstr ""
 
 #: src/lib/LatLonEdit.cpp:113
 msgctxt "East, the direction"
@@ -3455,26 +3458,14 @@ msgstr "Nije uspjelo konvertovanje <maximum> sadržaja teksta u integer. '%1'"
 msgid "Could not convert <minimum> child text content to integer. Was: '%1'"
 msgstr "Nije uspjelo konvertovanje <minimum> sadržaja teksta u integer. '%1'"
 
-#: src/lib/geodata/parser/GeoSceneParser.cpp:65
-msgid "The file is not a valid DGML 2.0 file"
-msgstr "Datoteka nije validna DGML 2.0 datoteka"
-
-#: src/lib/geodata/parser/GeoParser.cpp:134
+#: src/lib/geodata/parser/GeoParser.cpp:135
 #, qt-format
 msgid "Error parsing file at line: %1 and column %2 . "
 msgstr "Greška u analizi datoteke na liniji: %1 i koloni %2 . "
 
-#: src/lib/geodata/parser/GeoParser.cpp:136
+#: src/lib/geodata/parser/GeoParser.cpp:137
 msgid "This is an Invalid File"
 msgstr "Ovo je nevažeća datoteka"
-
-#: src/lib/geodata/parser/GeoParser.cpp:194
-msgid "File format unrecognized"
-msgstr "Format datoteke nije prepoznat"
-
-#: src/lib/geodata/parser/GeoDataParser.cpp:82
-msgid "The file is not a valid KML 2.0 / 2.1 / 2.2 file"
-msgstr "Datoteka nije validna KML 2.0 / 2.1 / 2.2 datoteka"
 
 #: src/lib/routing/RoutingProfilesModel.cpp:111
 msgid "Car (fastest)"
@@ -3736,6 +3727,23 @@ msgstr "Novi profil"
 #: src/lib/global.h:252
 msgid "not available"
 msgstr "nije dostupno"
+
+#~ msgid "The file is not a valid GPX 1.0 / 1.1 file"
+#~ msgstr "Datoteka nije validna GPX 1.0 / 1.1 datoteka"
+
+#, fuzzy
+#~| msgid "The file is not a valid file."
+#~ msgid "The file is not a valid OSM file"
+#~ msgstr "Ova datoteka nije valjana datoteka."
+
+#~ msgid "The file is not a valid DGML 2.0 file"
+#~ msgstr "Datoteka nije validna DGML 2.0 datoteka"
+
+#~ msgid "File format unrecognized"
+#~ msgstr "Format datoteke nije prepoznat"
+
+#~ msgid "The file is not a valid KML 2.0 / 2.1 / 2.2 file"
+#~ msgstr "Datoteka nije validna KML 2.0 / 2.1 / 2.2 datoteka"
 
 #~ msgid "Any"
 #~ msgstr "Bilo koji"
