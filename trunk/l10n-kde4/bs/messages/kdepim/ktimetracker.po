@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-09-29 04:15+0200\n"
+"POT-Creation-Date: 2011-09-30 04:09+0200\n"
 "PO-Revision-Date: 2010-10-09 20:06+0000\n"
 "Last-Translator: Launchpad Translations Administrators <rosetta@launchpad."
 "net>\n"
@@ -33,20 +33,20 @@ msgstr "I&zvoz u clipboard"
 
 #. i18n: file: csvexportdialog_base.ui:176
 #. i18n: ectx: property (text), item, widget (QComboBox, combodecimalminutes)
-#: csvexportdialog.cpp:93 rc.cpp:163
+#: csvexportdialog.cpp:93 rc.cpp:166
 msgctxt "format to display times"
 msgid "Decimal"
 msgstr "Decimalni"
 
 #. i18n: file: csvexportdialog_base.ui:203
 #. i18n: ectx: property (text), item, widget (QComboBox, combosessiontimes)
-#: csvexportdialog.cpp:108 rc.cpp:172
+#: csvexportdialog.cpp:108 rc.cpp:175
 msgid "Session Times"
 msgstr "Vrijeme sesije"
 
 #. i18n: file: csvexportdialog_base.ui:220
 #. i18n: ectx: property (text), item, widget (QComboBox, comboalltasks)
-#: csvexportdialog.cpp:109 rc.cpp:175
+#: csvexportdialog.cpp:109 rc.cpp:178
 msgid "All Tasks"
 msgstr "Svi zadaci"
 
@@ -76,6 +76,11 @@ msgstr "Nije ispravan datum/vrijeme."
 
 #: historydialog.cpp:260
 msgid "Please select a task to delete."
+msgstr ""
+
+#: idletimedetector.cpp:113
+#, kde-format
+msgid "Desktop has been idle since %1. What do you want to do ?"
 msgstr ""
 
 #: idletimedetector.cpp:118
@@ -417,8 +422,10 @@ msgstr "Sačuvaj zadatke svakih:"
 #. i18n: file: edittaskdialog.ui:14
 #. i18n: ectx: property (windowTitle), widget (QDialog, EditTaskDialog)
 #: rc.cpp:68
-msgid "Dialog"
-msgstr "Dijalog"
+#, fuzzy
+#| msgid "Edit Task"
+msgid "Add/Edit a task"
+msgstr "Izmijeni zadatak"
 
 #. i18n: file: edittaskdialog.ui:26
 #. i18n: ectx: property (text), widget (QLabel, tasknamelabel)
@@ -455,35 +462,41 @@ msgstr ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-style:"
 "italic;\">Primjer:</span> razgovor s majkom</p></body></html>"
 
-#. i18n: file: edittaskdialog.ui:57
-#. i18n: ectx: property (whatsThis), widget (QPushButton, edittimespushbutton)
+#. i18n: file: edittaskdialog.ui:51
+#. i18n: ectx: property (text), widget (QLabel, label_2)
 #: rc.cpp:82
+msgid "Description:"
+msgstr ""
+
+#. i18n: file: edittaskdialog.ui:74
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:85
+msgid "Change time (in minutes, e.g. -60)"
+msgstr ""
+
+#. i18n: file: edittaskdialog.ui:103
+#. i18n: ectx: property (title), widget (QGroupBox, autotrackinggroupbox)
+#: rc.cpp:88
+msgid "Auto Tracking"
+msgstr "Automatsko praćenje"
+
+#. i18n: file: edittaskdialog.ui:133
+#. i18n: ectx: property (whatsThis), widget (QPushButton, edittimespushbutton)
+#: rc.cpp:91
 msgid "To change this task's time, you have to edit its event history."
 msgstr ""
 "Da bi promijenili vrijeme ovog zadatka, morate da izmijenite historiju "
 "događaja."
 
-#. i18n: file: edittaskdialog.ui:60
+#. i18n: file: edittaskdialog.ui:136
 #. i18n: ectx: property (text), widget (QPushButton, edittimespushbutton)
-#: rc.cpp:85
+#: rc.cpp:94
 msgid "Edit Times"
 msgstr "Izmijeni vrijeme"
 
-#. i18n: file: edittaskdialog.ui:73
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:88
-msgid "Change time (in minutes, e.g. -60)"
-msgstr ""
-
-#. i18n: file: edittaskdialog.ui:90
-#. i18n: ectx: property (title), widget (QGroupBox, autotrackinggroupbox)
-#: rc.cpp:91
-msgid "Auto Tracking"
-msgstr "Automatsko praćenje"
-
 #. i18n: file: new/mainwindow.ui:50
 #. i18n: ectx: property (title), widget (QMenu, menuFile)
-#: rc.cpp:94
+#: rc.cpp:97
 msgid "File"
 msgstr "Datoteka"
 
@@ -491,117 +504,117 @@ msgstr "Datoteka"
 #. i18n: ectx: property (title), widget (QMenu, menuHelp)
 #. i18n: file: new/mainwindow.ui:104
 #. i18n: ectx: property (text), widget (QToolBar, toolBar)
-#: rc.cpp:97 rc.cpp:115
+#: rc.cpp:100 rc.cpp:118
 msgid "Help"
 msgstr "Pomoć"
 
 #. i18n: file: new/mainwindow.ui:64
 #. i18n: ectx: property (title), widget (QMenu, menuConfigure)
-#: rc.cpp:100
+#: rc.cpp:103
 msgid "Configure"
 msgstr ""
 
 #. i18n: file: new/mainwindow.ui:75
 #. i18n: ectx: property (windowTitle), widget (QToolBar, toolBar)
-#: rc.cpp:103
+#: rc.cpp:106
 msgid "toolBar"
 msgstr "Alatna traka"
 
 #. i18n: file: new/mainwindow.ui:89
 #. i18n: ectx: property (text), widget (QToolBar, toolBar)
-#: rc.cpp:106
+#: rc.cpp:109
 msgid "Load"
 msgstr "Učitaj"
 
 #. i18n: file: new/mainwindow.ui:94
 #. i18n: ectx: property (text), widget (QToolBar, toolBar)
-#: rc.cpp:109
+#: rc.cpp:112
 msgid "Save"
 msgstr "Snimi"
 
 #. i18n: file: new/mainwindow.ui:99
 #. i18n: ectx: property (text), widget (QToolBar, toolBar)
-#: rc.cpp:112
+#: rc.cpp:115
 msgid "Quit"
 msgstr "Izlaz"
 
 #. i18n: file: new/mainwindow.ui:109
 #. i18n: ectx: property (text), widget (QToolBar, toolBar)
-#: rc.cpp:118
+#: rc.cpp:121
 #, fuzzy
 msgid "Configure ktimetracker"
 msgstr "Konfiguracija KTimeTracker ..."
 
 #. i18n: file: historydialog.ui:14
 #. i18n: ectx: property (windowTitle), widget (QDialog, historydialog)
-#: rc.cpp:121
+#: rc.cpp:124
 msgid "Edit History"
 msgstr "Izmijeni historiju"
 
 #. i18n: file: historydialog.ui:23
 #. i18n: ectx: property (text), widget (QPushButton, deletepushbutton)
-#: rc.cpp:124
+#: rc.cpp:127
 #, fuzzy
 msgid "Delete"
 msgstr "&Obriši"
 
 #. i18n: file: historydialog.ui:33
 #. i18n: ectx: property (text), widget (QPushButton, okpushbutton)
-#: rc.cpp:127
+#: rc.cpp:130
 msgid "Close"
 msgstr ""
 
 #. i18n: file: csvexportdialog_base.ui:13
 #. i18n: ectx: property (windowTitle), widget (KDialog, CSVExportDialogBase)
-#: rc.cpp:130
+#: rc.cpp:133
 msgid "CSV Export"
 msgstr "CSV izvoz"
 
 #. i18n: file: csvexportdialog_base.ui:36
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
-#: rc.cpp:133
+#: rc.cpp:136
 msgid "Export to:"
 msgstr "Izvezi u:"
 
 #. i18n: file: csvexportdialog_base.ui:46
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, urlExportTo)
-#: rc.cpp:136
+#: rc.cpp:139
 msgid "The file where KTimeTracker will write the data."
 msgstr "Datoteka u koju će KTimeTracker upisivati podatke."
 
 #. i18n: file: csvexportdialog_base.ui:64
 #. i18n: ectx: property (text), widget (QLabel, quotesLabel)
-#: rc.cpp:139
+#: rc.cpp:142
 msgid "Quotes:"
 msgstr "Navodnici:"
 
 #. i18n: file: csvexportdialog_base.ui:85
 #. i18n: ectx: property (whatsThis), widget (QComboBox, cboQuote)
-#: rc.cpp:142
+#: rc.cpp:145
 msgid "All fields are quoted in the output."
 msgstr "Sva polja se označavaju navodnicima u ispisu."
 
 #. i18n: file: csvexportdialog_base.ui:89
 #. i18n: ectx: property (text), item, widget (QComboBox, cboQuote)
-#: rc.cpp:145
+#: rc.cpp:148
 msgid "\""
 msgstr "\""
 
 #. i18n: file: csvexportdialog_base.ui:94
 #. i18n: ectx: property (text), item, widget (QComboBox, cboQuote)
-#: rc.cpp:148
+#: rc.cpp:151
 msgid "'"
 msgstr "'"
 
 #. i18n: file: csvexportdialog_base.ui:105
 #. i18n: ectx: property (title), widget (QGroupBox, grpDateRange)
-#: rc.cpp:151
+#: rc.cpp:154
 msgid "Date Range"
 msgstr "Opseg datuma"
 
 #. i18n: file: csvexportdialog_base.ui:108
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, grpDateRange)
-#: rc.cpp:154
+#: rc.cpp:157
 msgid ""
 "<p>An inclusive date range for reporting on time card history.  Not enabled "
 "when reporting on totals.</p>"
@@ -611,123 +624,123 @@ msgstr ""
 
 #. i18n: file: csvexportdialog_base.ui:114
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:157
+#: rc.cpp:160
 msgid "From:"
 msgstr "Od:"
 
 #. i18n: file: csvexportdialog_base.ui:139
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: rc.cpp:160
+#: rc.cpp:163
 msgid "To:"
 msgstr "Do:"
 
 #. i18n: file: csvexportdialog_base.ui:181
 #. i18n: ectx: property (text), item, widget (QComboBox, combodecimalminutes)
-#: rc.cpp:166
+#: rc.cpp:169
 msgid "Hours:Minutes"
 msgstr "Sati:Minute"
 
 #. i18n: file: csvexportdialog_base.ui:198
 #. i18n: ectx: property (text), item, widget (QComboBox, combosessiontimes)
-#: rc.cpp:169
+#: rc.cpp:172
 msgid "All Times"
 msgstr "Sva vremena"
 
 #. i18n: file: csvexportdialog_base.ui:225
 #. i18n: ectx: property (text), item, widget (QComboBox, comboalltasks)
-#: rc.cpp:178
+#: rc.cpp:181
 msgid "Only Selected"
 msgstr "Samo označeno"
 
 #. i18n: file: csvexportdialog_base.ui:241
 #. i18n: ectx: property (title), widget (QGroupBox, grpDelimiter)
-#: rc.cpp:181
+#: rc.cpp:184
 msgid "Delimiter"
 msgstr "Razdvajač"
 
 #. i18n: file: csvexportdialog_base.ui:244
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, grpDelimiter)
-#: rc.cpp:184
+#: rc.cpp:187
 msgid "The character used to separate one field from another in the output."
 msgstr "Znak koji se koristi da odvoji jedno polje od drugog na izlazu."
 
 #. i18n: file: csvexportdialog_base.ui:256
 #. i18n: ectx: property (text), widget (QRadioButton, radioTab)
-#: rc.cpp:187
+#: rc.cpp:190
 msgctxt "tabulator delimiter"
 msgid "Tab"
 msgstr "Tab"
 
 #. i18n: file: csvexportdialog_base.ui:263
 #. i18n: ectx: property (text), widget (QRadioButton, radioOther)
-#: rc.cpp:190
+#: rc.cpp:193
 msgctxt "user can set an user defined delimiter"
 msgid "Other:"
 msgstr "Ostalo:"
 
 #. i18n: file: csvexportdialog_base.ui:270
 #. i18n: ectx: property (text), widget (QRadioButton, radioSpace)
-#: rc.cpp:193
+#: rc.cpp:196
 msgid "Space"
 msgstr "Razmak"
 
 #. i18n: file: csvexportdialog_base.ui:277
 #. i18n: ectx: property (text), widget (QRadioButton, radioComma)
-#: rc.cpp:196
+#: rc.cpp:199
 msgid "Comma"
 msgstr "Zarez"
 
 #. i18n: file: csvexportdialog_base.ui:314
 #. i18n: ectx: property (text), widget (QRadioButton, radioSemicolon)
-#: rc.cpp:199
+#: rc.cpp:202
 msgid "Semicolon"
 msgstr "Tačka-zarez"
 
 #. i18n: file: ktimetrackerui.rc:5
 #. i18n: ectx: Menu (file)
-#: rc.cpp:202
+#: rc.cpp:205
 msgid "&File"
 msgstr "&Datoteka"
 
 #. i18n: file: ktimetrackerui.rc:14
 #. i18n: ectx: Menu (import)
-#: rc.cpp:205
+#: rc.cpp:208
 msgid "&Import"
 msgstr "&Uvezi"
 
 #. i18n: file: ktimetrackerui.rc:18
 #. i18n: ectx: Menu (export)
-#: rc.cpp:208
+#: rc.cpp:211
 msgid "&Export"
 msgstr "&Izvezi"
 
 #. i18n: file: ktimetrackerui.rc:27
 #. i18n: ectx: Menu (clock)
-#: rc.cpp:211
+#: rc.cpp:214
 msgid "&Clock"
 msgstr "&Sat"
 
 #. i18n: file: ktimetrackerui.rc:34
 #. i18n: ectx: Menu (task)
-#: rc.cpp:214
+#: rc.cpp:217
 msgid "&Task"
 msgstr "&Zadatak"
 
 #. i18n: file: ktimetrackerui.rc:45
 #. i18n: ectx: Menu (settings)
-#: rc.cpp:217
+#: rc.cpp:220
 msgid "&Settings"
 msgstr "&Postavke"
 
 #. i18n: file: ktimetrackerui.rc:50
 #. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:220
+#: rc.cpp:223
 msgid "Main Toolbar"
 msgstr "Glavna alatna traka"
 
 #. i18n: file: ktimetrackerui.rc:59
 #. i18n: ectx: ToolBar (taskToolBar)
-#: rc.cpp:223
+#: rc.cpp:226
 msgid "Tasks"
 msgstr "Zadaci"
 
@@ -799,7 +812,7 @@ msgctxt "combox entry for lowest priority"
 msgid "9 (lowest)"
 msgstr "9 (najniži)"
 
-#: taskview.cpp:300 taskview.cpp:887
+#: taskview.cpp:300 taskview.cpp:888
 msgid ""
 "Error storing new task. Your changes were not saved. Make sure you can edit "
 "your iCalendar file. Also quit all applications using this file and remove "
@@ -829,23 +842,23 @@ msgstr "Nemoguće sačuvati."
 msgid "New Task"
 msgstr "Novi zadatak"
 
-#: taskview.cpp:872 taskview.cpp:944
+#: taskview.cpp:872 taskview.cpp:946
 msgid "Unnamed Task"
 msgstr "Bezimeni zadatak"
 
-#: taskview.cpp:926
+#: taskview.cpp:927
 msgid "New Sub Task"
 msgstr "Novi podzadatak"
 
-#: taskview.cpp:939
+#: taskview.cpp:940
 msgid "Edit Task"
 msgstr "Izmijeni zadatak"
 
-#: taskview.cpp:977 taskview.cpp:1018 taskview.cpp:1040
+#: taskview.cpp:979 taskview.cpp:1020 taskview.cpp:1042
 msgid "No task selected."
 msgstr "Nema izbaranih zadataka."
 
-#: taskview.cpp:1026
+#: taskview.cpp:1028
 #, fuzzy
 msgid ""
 "Are you sure you want to delete the selected task and its entire history?\n"
@@ -855,7 +868,7 @@ msgstr ""
 "historiju?\n"
 "NAPOMENA: Svi podzadaci i njihove historije će također biti obrisani."
 
-#: taskview.cpp:1030
+#: taskview.cpp:1032
 msgid "Deleting Task"
 msgstr "Brišem zadatak"
 
@@ -1199,6 +1212,9 @@ msgstr "Prikaži"
 #: treeviewheadercontextmenu.cpp:141
 msgid "Hide"
 msgstr "Sakrij"
+
+#~ msgid "Dialog"
+#~ msgstr "Dijalog"
 
 #~ msgid "This document has not been saved yet. Do you want to save it?"
 #~ msgstr "Ovaj dokument još nije sačuvan. Da li ga želite sačuvati?"
