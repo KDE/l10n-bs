@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-03 03:53+0200\n"
+"POT-Creation-Date: 2011-10-04 04:37+0200\n"
 "PO-Revision-Date: 2011-03-23 09:29+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -569,9 +569,11 @@ msgstr ""
 #: src/plugins/render/compass/CompassFloatItem.cpp:84
 #: src/plugins/render/crosshairs/CrosshairsPlugin.cpp:95
 #: src/plugins/render/earthquake/EarthquakePlugin.cpp:75
+#: src/plugins/render/mapscale/MapScaleFloatItem.cpp:110
+#: src/plugins/render/positionmarker/PositionMarker.cpp:112
 #, fuzzy
 msgid ""
-"<br />(c) 2009, 2010 The Marble Project <br /><br /><a href=\"http://edu.kde."
+"<br />(c) 2009, 2010 The Marble Project<br /><br /><a href=\"http://edu.kde."
 "org/marble\">http://edu.kde.org/marble</a>"
 msgstr ""
 "<br />(c) 2009 Projekat Marble<br /><br /><a href=\"http://edu.kde.org/marble"
@@ -760,7 +762,7 @@ msgstr "Izostavlja čuvar ekrana prilikom navigacije korak po korak"
 #: src/plugins/render/elevationprofile/ElevationProfileFloatItem.cpp:268
 #: src/plugins/render/elevationprofile/ElevationProfileFloatItem.cpp:304
 #: src/plugins/render/elevationprofile/ElevationProfileFloatItem.cpp:393
-#: src/lib/MarbleWidget.cpp:1226
+#: src/lib/MarbleWidget.cpp:1231
 msgid "km"
 msgstr "km"
 
@@ -775,16 +777,6 @@ msgstr "&Traka sa skalom"
 #: src/plugins/render/mapscale/MapScaleFloatItem.cpp:85
 msgid "This is a float item that provides a map scale."
 msgstr "Ovo je plutajući predmet koji obezbjeđuje skalu mape."
-
-#: src/plugins/render/mapscale/MapScaleFloatItem.cpp:110
-#: src/plugins/render/positionmarker/PositionMarker.cpp:112
-#, fuzzy
-msgid ""
-"<br />(c) 2009, 2010 The Marble Project<br /><br /><a href=\"http://edu.kde."
-"org/marble\">http://edu.kde.org/marble</a>"
-msgstr ""
-"<br />(c) 2009 Projekat Marble<br /><br /><a href=\"http://edu.kde.org/marble"
-"\">http://edu.kde.org/marble</a>"
 
 #: src/plugins/render/mapscale/MapScaleFloatItem.cpp:114
 #, fuzzy
@@ -805,7 +797,7 @@ msgstr "m"
 #: src/plugins/render/elevationprofile/ElevationProfileFloatItem.cpp:276
 #: src/plugins/render/elevationprofile/ElevationProfileFloatItem.cpp:311
 #: src/plugins/render/elevationprofile/ElevationProfileFloatItem.cpp:397
-#: src/lib/MarbleWidget.cpp:1230
+#: src/lib/MarbleWidget.cpp:1235
 msgid "mi"
 msgstr "mi"
 
@@ -1541,9 +1533,10 @@ msgid "Shows caches from OpenCaching.de on the screen."
 msgstr ""
 
 #: src/plugins/render/opencaching/OpenCachingPlugin.cpp:74
+#: src/plugins/render/elevationprofile/ElevationProfileFloatItem.cpp:145
 #, fuzzy
 msgid ""
-"<br />(c) 2009, 2010, 2011 The Marble Project <br /><br /><a href=\"http://"
+"<br />(c) 2009, 2010, 2011 The Marble Project<br /><br /><a href=\"http://"
 "edu.kde.org/marble\">http://edu.kde.org/marble</a>"
 msgstr ""
 "<br />(c) 2009 Projekat Marble<br /><br /><a href=\"http://edu.kde.org/marble"
@@ -1593,15 +1586,6 @@ msgstr "Ekstrem nadmorske visine"
 #| msgid "This is a float item that provides an overview map."
 msgid "This is a float item that provides an route/track elevation profile."
 msgstr "Ovo je plutajući predmet koji omogućava prikaz mape."
-
-#: src/plugins/render/elevationprofile/ElevationProfileFloatItem.cpp:145
-#, fuzzy
-msgid ""
-"<br />(c) 2009, 2010, 2011 The Marble Project<br /><br /><a href=\"http://"
-"edu.kde.org/marble\">http://edu.kde.org/marble</a>"
-msgstr ""
-"<br />(c) 2009 Projekat Marble<br /><br /><a href=\"http://edu.kde.org/marble"
-"\">http://edu.kde.org/marble</a>"
 
 #: src/plugins/render/elevationprofile/ElevationProfileFloatItem.cpp:197
 msgid "Create a route to view its elevation profile."
@@ -3673,22 +3657,6 @@ msgstr "LičniDirektorij"
 msgid "Choose Placemark"
 msgstr "Izbor oznake"
 
-#: src/lib/routing/RoutingLayer.cpp:186
-msgid "&Remove this destination"
-msgstr "&Ukloni ovu destinaciju"
-
-#: src/lib/routing/RoutingLayer.cpp:189
-msgid "&Export route..."
-msgstr "&Izvezi putanju..."
-
-#: src/lib/routing/RoutingLayer.cpp:821
-msgid "Export Route"
-msgstr "Izvezi putanju"
-
-#: src/lib/routing/RoutingLayer.cpp:823
-msgid "GPX and KML files (*.gpx *.kml)"
-msgstr "GPX i KML datoteke (*.gpx *.kml)"
-
 #: src/lib/routing/RoutingProfilesWidget.cpp:55
 msgid "New Profile"
 msgstr "Novi profil"
@@ -3789,9 +3757,41 @@ msgstr "Pješice"
 msgid "Unknown"
 msgstr "Nepoznato"
 
+#: src/lib/routing/RoutingLayer.cpp:186
+msgid "&Remove this destination"
+msgstr "&Ukloni ovu destinaciju"
+
+#: src/lib/routing/RoutingLayer.cpp:189
+msgid "&Export route..."
+msgstr "&Izvezi putanju..."
+
+#: src/lib/routing/RoutingLayer.cpp:817
+msgid "Export Route"
+msgstr "Izvezi putanju"
+
+#: src/lib/routing/RoutingLayer.cpp:819
+msgid "GPX and KML files (*.gpx *.kml)"
+msgstr "GPX i KML datoteke (*.gpx *.kml)"
+
 #: src/lib/global.h:252
 msgid "not available"
 msgstr "nije dostupno"
+
+#, fuzzy
+#~ msgid ""
+#~ "<br />(c) 2009, 2010 The Marble Project <br /><br /><a href=\"http://edu."
+#~ "kde.org/marble\">http://edu.kde.org/marble</a>"
+#~ msgstr ""
+#~ "<br />(c) 2009 Projekat Marble<br /><br /><a href=\"http://edu.kde.org/"
+#~ "marble\">http://edu.kde.org/marble</a>"
+
+#, fuzzy
+#~ msgid ""
+#~ "<br />(c) 2009, 2010, 2011 The Marble Project <br /><br /><a href="
+#~ "\"http://edu.kde.org/marble\">http://edu.kde.org/marble</a>"
+#~ msgstr ""
+#~ "<br />(c) 2009 Projekat Marble<br /><br /><a href=\"http://edu.kde.org/"
+#~ "marble\">http://edu.kde.org/marble</a>"
 
 #~ msgid "The file is not a valid GPX 1.0 / 1.1 file"
 #~ msgstr "Datoteka nije validna GPX 1.0 / 1.1 datoteka"
