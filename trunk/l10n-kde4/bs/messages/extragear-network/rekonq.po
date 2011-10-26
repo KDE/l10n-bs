@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rekonq\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-10-25 03:51+0200\n"
+"POT-Creation-Date: 2011-10-26 04:00+0200\n"
 "PO-Revision-Date: 2011-05-08 12:23+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -38,11 +38,11 @@ msgstr ""
 "Nepravilan URL:\n"
 "%1"
 
-#: application.cpp:682
+#: application.cpp:681
 msgid "Are you sure you want to turn on private browsing?"
 msgstr "Želite li da uključite privatno pregledanje?"
 
-#: application.cpp:683
+#: application.cpp:682
 #, kde-format
 msgid ""
 "<b>%1</b><p>rekonq will save your current tabs for when you'll stop private "
@@ -51,21 +51,21 @@ msgstr ""
 "<b>%1</b><p>rekonk će sačuvati trenutne kartice za doba kada ćete prestati "
 "da privatno pregledate meržu.</p>"
 
-#: application.cpp:688
+#: application.cpp:687
 msgid "don't ask again"
 msgstr "Ne pitaj ponovo"
 
-#: application.cpp:738
+#: application.cpp:737
 #, fuzzy
 #| msgid "Wanna close the window or the whole app?"
 msgid "Do you want to close the window or the whole application?"
 msgstr "Želite li zatvoriti prozor ili cijeli program?"
 
-#: application.cpp:739
+#: application.cpp:738
 msgid "Application/Window closing..."
 msgstr "Zatvaranje programa/prozora..."
 
-#: application.cpp:740
+#: application.cpp:739
 #, fuzzy
 #| msgid "C&lose Current Window"
 msgid "C&lose Current Window"
@@ -465,7 +465,7 @@ msgstr "Adblok"
 #. i18n: ectx: Menu (toolsMenu)
 #. i18n: file: rekonqui.rc:109
 #. i18n: ectx: Menu (tools)
-#: mainwindow.cpp:539 rc.cpp:419 rc.cpp:440
+#: mainwindow.cpp:539 rc.cpp:425 rc.cpp:446
 msgid "&Tools"
 msgstr "&Alatke"
 
@@ -1058,7 +1058,9 @@ msgstr "*.css"
 #. i18n: ectx: attribute (title), widget (QWidget, tabMisc)
 #. i18n: file: settings/settings_general.ui:180
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: rc.cpp:200 rc.cpp:266
+#. i18n: file: settings/settings_webkit.ui:151
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:200 rc.cpp:266 rc.cpp:392
 msgid "Misc"
 msgstr "Razno"
 
@@ -1338,188 +1340,204 @@ msgid "Animated tab highlighting"
 msgstr "Animirano nagkašavanje kartica"
 
 #. i18n: file: settings/settings_webkit.ui:17
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: rc.cpp:353
-msgid "WebKit Settings"
-msgstr "Postavke Webkita"
-
-#. i18n: file: settings/settings_webkit.ui:23
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_autoLoadImages)
-#: rc.cpp:356
-msgid "Autoload images"
-msgstr "Samoučitavanje slika"
-
-#. i18n: file: settings/settings_webkit.ui:43
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_linksIncludedInFocusChain)
-#: rc.cpp:359
-msgid "Links included in focus chain"
-msgstr "Veze uključene u lanac fokusiranja"
-
-#. i18n: file: settings/settings_webkit.ui:50
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_dnsPrefetch)
-#: rc.cpp:362
-msgid "Prefetch DNS entries"
-msgstr "Predohvatanje DNS unosa"
-
-#. i18n: file: settings/settings_webkit.ui:57
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_zoomTextOnly)
-#: rc.cpp:365
-msgid "Zoom text only"
-msgstr "Uveličaj samo tekst"
-
-#. i18n: file: settings/settings_webkit.ui:70
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_javascriptEnabled)
-#: rc.cpp:368
-msgid "JavaScript support"
+#, fuzzy
+#| msgid "JavaScript support"
+msgid "Javascript"
 msgstr "Podrška za javaskript"
 
-#. i18n: file: settings/settings_webkit.ui:77
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_printElementBackgrounds)
-#: rc.cpp:371
-msgid "Print element backgrounds"
-msgstr "Štampanje pozadinskih elemenata"
+#. i18n: file: settings/settings_webkit.ui:29
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_javascriptEnabled)
+#: rc.cpp:356
+msgid "Enable JavaScript"
+msgstr ""
 
-#. i18n: file: settings/settings_webkit.ui:84
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_offlineStorageDatabaseEnabled)
+#. i18n: file: settings/settings_webkit.ui:36
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_javascriptCanOpenWindows)
+#: rc.cpp:359
+#, fuzzy
+#| msgid "JavaScript can open windows"
+msgid "Let Javascipt open new windows"
+msgstr "Javaskript može da otvara prozore"
+
+#. i18n: file: settings/settings_webkit.ui:43
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_javascriptCanAccessClipboard)
+#: rc.cpp:362
+#, fuzzy
+#| msgid "JavaScript can access clipboard"
+msgid "Let Javascript access clipboard"
+msgstr "Javaskript može da pristupa klipbordu"
+
+#. i18n: file: settings/settings_webkit.ui:62
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: rc.cpp:365
+#, fuzzy
+#| msgid "Load Plugin"
+msgid "Plugins"
+msgstr "Učitaj priključak"
+
+#. i18n: file: settings/settings_webkit.ui:83
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: rc.cpp:368
+msgid "When loading web pages:"
+msgstr "Pri učitavanju web stranica:"
+
+#. i18n: file: settings/settings_webkit.ui:100
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_pluginsEnabled)
+#: rc.cpp:371
+msgid "Autoload Plugins"
+msgstr "automatski učitaj priključke"
+
+#. i18n: file: settings/settings_webkit.ui:105
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_pluginsEnabled)
 #: rc.cpp:374
+msgid "Manually Load Plugins"
+msgstr "ručno učitaj priključke"
+
+#. i18n: file: settings/settings_webkit.ui:110
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_pluginsEnabled)
+#: rc.cpp:377
+msgid "Never Load Plugins"
+msgstr "nikad ne učitavaj priključke"
+
+#. i18n: file: settings/settings_webkit.ui:121
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: rc.cpp:380
+msgid "HTML 5"
+msgstr ""
+
+#. i18n: file: settings/settings_webkit.ui:127
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_offlineStorageDatabaseEnabled)
+#: rc.cpp:383
 msgid "Offline storage database"
 msgstr "Baza za skladištenje van veze"
 
-#. i18n: file: settings/settings_webkit.ui:91
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_javaEnabled)
-#: rc.cpp:377
-msgid "Java support"
-msgstr "Podrška za javu"
-
-#. i18n: file: settings/settings_webkit.ui:98
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_javascriptCanOpenWindows)
-#: rc.cpp:380
-msgid "JavaScript can open windows"
-msgstr "Javaskript može da otvara prozore"
-
-#. i18n: file: settings/settings_webkit.ui:105
+#. i18n: file: settings/settings_webkit.ui:134
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_offlineWebApplicationCacheEnabled)
-#: rc.cpp:383
+#: rc.cpp:386
 msgid "Offline web application cache"
 msgstr "Keš web programâ van veze"
 
-#. i18n: file: settings/settings_webkit.ui:112
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_javascriptCanAccessClipboard)
-#: rc.cpp:386
-msgid "JavaScript can access clipboard"
-msgstr "Javaskript može da pristupa klipbordu"
-
-#. i18n: file: settings/settings_webkit.ui:119
+#. i18n: file: settings/settings_webkit.ui:141
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_localStorageEnabled)
 #: rc.cpp:389
 msgid "Local Storage"
 msgstr "Lokalno skladište"
 
-#. i18n: file: settings/settings_webkit.ui:138
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:392
-msgid "Plugin Settings"
-msgstr "Postavke priključaka"
-
-#. i18n: file: settings/settings_webkit.ui:159
-#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: file: settings/settings_webkit.ui:157
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_javaEnabled)
 #: rc.cpp:395
-msgid "When loading web pages:"
-msgstr "Pri učitavanju web stranica:"
+msgid "load java applets"
+msgstr ""
 
-#. i18n: file: settings/settings_webkit.ui:176
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_pluginsEnabled)
+#. i18n: file: settings/settings_webkit.ui:164
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_webGL)
 #: rc.cpp:398
-msgid "Autoload Plugins"
-msgstr "automatski učitaj priključke"
+msgid "WebGL"
+msgstr ""
 
-#. i18n: file: settings/settings_webkit.ui:181
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_pluginsEnabled)
+#. i18n: file: settings/settings_webkit.ui:171
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_spatialNavigation)
 #: rc.cpp:401
-msgid "Manually Load Plugins"
-msgstr "ručno učitaj priključke"
+#, fuzzy
+#| msgid "Navigation"
+msgid "Spatial Navigation"
+msgstr "Navigacija"
 
-#. i18n: file: settings/settings_webkit.ui:186
-#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_pluginsEnabled)
+#. i18n: file: settings/settings_webkit.ui:178
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_frameFlattening)
 #: rc.cpp:404
-msgid "Never Load Plugins"
-msgstr "nikad ne učitavaj priključke"
+msgid "Frame Flattening"
+msgstr ""
+
+#. i18n: file: settings/settings_webkit.ui:185
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_dnsPrefetch)
+#: rc.cpp:407
+msgid "Prefetch DNS entries"
+msgstr "Predohvatanje DNS unosa"
+
+#. i18n: file: settings/settings_webkit.ui:192
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_printElementBackgrounds)
+#: rc.cpp:410
+msgid "Print element backgrounds"
+msgstr "Štampanje pozadinskih elemenata"
 
 #. i18n: file: useragent/useragentsettings.ui:24
 #. i18n: ectx: property (text), widget (QTreeWidget, sitePolicyTreeWidget)
-#: rc.cpp:407
+#: rc.cpp:413
 msgid "Host"
 msgstr "Domaćin"
 
 #. i18n: file: useragent/useragentsettings.ui:29
 #. i18n: ectx: property (text), widget (QTreeWidget, sitePolicyTreeWidget)
-#: rc.cpp:410
+#: rc.cpp:416
 msgid "Identification"
 msgstr "Identifikacija"
 
 #. i18n: file: useragent/useragentsettings.ui:39
 #. i18n: ectx: property (text), widget (QPushButton, deleteButton)
-#: rc.cpp:413 bookmarks/bookmarkowner.cpp:90 urlbar/urlbar.cpp:494
+#: rc.cpp:419 bookmarks/bookmarkowner.cpp:90 urlbar/urlbar.cpp:494
 msgid "Delete"
 msgstr "Obriši"
 
 #. i18n: file: useragent/useragentsettings.ui:46
 #. i18n: ectx: property (text), widget (QPushButton, deleteAllButton)
-#: rc.cpp:416
+#: rc.cpp:422
 msgid "Delete All"
 msgstr "Obriši sve"
 
 #. i18n: file: rekonqui.rc:36
 #. i18n: ectx: Menu (help)
-#: rc.cpp:422
+#: rc.cpp:428
 msgid "&Help"
 msgstr ""
 
 #. i18n: file: rekonqui.rc:55
 #. i18n: ectx: Menu (file)
-#: rc.cpp:425
+#: rc.cpp:431
 msgid "&File"
 msgstr "&Datoteka"
 
 #. i18n: file: rekonqui.rc:71
 #. i18n: ectx: Menu (edit)
-#: rc.cpp:428
+#: rc.cpp:434
 msgid "&Edit"
 msgstr "&Izmijeni"
 
 #. i18n: file: rekonqui.rc:85
 #. i18n: ectx: Menu (view)
-#: rc.cpp:431
+#: rc.cpp:437
 msgid "&View"
 msgstr "&Prikaz"
 
 #. i18n: file: rekonqui.rc:101
 #. i18n: ectx: Menu (go)
-#: rc.cpp:434
+#: rc.cpp:440
 msgid "Hi&story"
 msgstr "I&storijat"
 
 #. i18n: file: rekonqui.rc:105
 #. i18n: ectx: Menu (go)
-#: rc.cpp:437 bookmarks/bookmarkprovider.cpp:96
+#: rc.cpp:443 bookmarks/bookmarkprovider.cpp:96
 msgid "&Bookmarks"
 msgstr "&Zabilješke"
 
 #. i18n: file: rekonqui.rc:122
 #. i18n: ectx: Menu (settings)
-#: rc.cpp:443
+#: rc.cpp:449
 msgid "&Settings"
 msgstr "&Podešavanje"
 
 #. i18n: file: rekonqui.rc:137
 #. i18n: ectx: ToolBar (mainToolBar)
-#: rc.cpp:446
+#: rc.cpp:452
 msgid "Main Toolbar"
 msgstr "Glavna traka"
 
 #. i18n: file: rekonqui.rc:148
 #. i18n: ectx: ToolBar (bookmarkToolBar)
-#: rc.cpp:449
+#: rc.cpp:455
 msgid "Bookmark Toolbar"
 msgstr "Traka zabilješki"
 
@@ -2058,11 +2076,19 @@ msgctxt "Window title of the settings dialog"
 msgid "Configure – rekonq"
 msgstr "Podešavanje — Rekonk"
 
-#: settings/webkitwidget.cpp:58
-msgid "Specifies whether images are automatically loaded in web pages."
-msgstr "Određuje da li se slike na web stranicama automatski učitavaju."
+#: settings/webkitwidget.cpp:67
+msgid "Enables WebGL technology"
+msgstr ""
 
-#: settings/webkitwidget.cpp:59
+#: settings/webkitwidget.cpp:68
+msgid "Lets you navigating between focusable elements using arrow keys."
+msgstr ""
+
+#: settings/webkitwidget.cpp:69
+msgid "Flatten all the frames to become one scrollable page."
+msgstr ""
+
+#: settings/webkitwidget.cpp:70
 msgid ""
 "Specifies whether WebKit will try to prefetch DNS entries to speed up "
 "browsing."
@@ -2070,41 +2096,7 @@ msgstr ""
 "Određuje da li će Webkit pokušavati da predohvati DNS unose, radi bržeg "
 "pregledanja."
 
-#: settings/webkitwidget.cpp:60
-msgid "Enables the execution of JavaScript programs."
-msgstr "Aktivira izvršavanje javaskriptnih programa."
-
-#: settings/webkitwidget.cpp:61
-msgid "Enables support for Java applets."
-msgstr "Aktivira podršku za javanske aplete."
-
-#: settings/webkitwidget.cpp:62
-msgid "Enables support for plugins in web pages."
-msgstr "Aktivira podršku za priključke na web stranicama."
-
-#: settings/webkitwidget.cpp:63
-msgid "If enabled, JavaScript programs are allowed to open new windows."
-msgstr ""
-"Ako je aktivirano, javaskriptni programi mogu da otvaraju nove prozore."
-
-#: settings/webkitwidget.cpp:64
-msgid ""
-"If enabled, JavaScript programs are allowed to read from and to write to the "
-"clipboard."
-msgstr ""
-"Ako je aktivirano, javaskriptni programi mogu da čitaju iz klipborda i pišu "
-"u njega."
-
-#: settings/webkitwidget.cpp:65
-msgid "If enabled, hyperlinks are included in the keyboard focus chain."
-msgstr ""
-"Ako je aktivirano, hiperveze su uključene u lanac fokusiranja tastature."
-
-#: settings/webkitwidget.cpp:66
-msgid "If enabled, the zoom factor on a frame is only applied to the text."
-msgstr "Ako je aktivirano, faktor uveličanja se primjenjuje samo na tekst."
-
-#: settings/webkitwidget.cpp:67
+#: settings/webkitwidget.cpp:71
 msgid ""
 "If enabled, background colors and images are also drawn when the page is "
 "printed."
@@ -2112,15 +2104,36 @@ msgstr ""
 "Ako je aktivirano, boje pozadine i slike štampaju se zajedno sa ostatkom "
 "stranice."
 
-#: settings/webkitwidget.cpp:68
+#: settings/webkitwidget.cpp:72
+msgid "Enables the execution of JavaScript programs."
+msgstr "Aktivira izvršavanje javaskriptnih programa."
+
+#: settings/webkitwidget.cpp:73
+msgid "If enabled, JavaScript programs are allowed to open new windows."
+msgstr ""
+"Ako je aktivirano, javaskriptni programi mogu da otvaraju nove prozore."
+
+#: settings/webkitwidget.cpp:74
+msgid ""
+"If enabled, JavaScript programs are allowed to read from and to write to the "
+"clipboard."
+msgstr ""
+"Ako je aktivirano, javaskriptni programi mogu da čitaju iz klipborda i pišu "
+"u njega."
+
+#: settings/webkitwidget.cpp:75
+msgid "Enables support for Java applets."
+msgstr "Aktivira podršku za javanske aplete."
+
+#: settings/webkitwidget.cpp:76
 msgid "Enables support for the HTML 5 offline storage feature."
 msgstr "Aktivira podršku za mogućnost skladištenja van veze HTML‑a 5."
 
-#: settings/webkitwidget.cpp:69
+#: settings/webkitwidget.cpp:77
 msgid "Enables support for the HTML 5 web application cache feature."
 msgstr "Aktivira podršku za mogućnost keširanja veb programa HTML 5."
 
-#: settings/webkitwidget.cpp:70
+#: settings/webkitwidget.cpp:78
 msgid "Enables support for the HTML 5 local storage feature."
 msgstr "Aktivira podršku za mogućnost lokalnog skladištenja HTML‑a 5."
 
@@ -2350,6 +2363,37 @@ msgstr "Prečice:"
 msgid "The shortcut \"%1\" is already assigned to \"%2\"."
 msgstr "Prečica \"%1\" je već dodijeljena na \"%2\"."
 
+#~ msgid "WebKit Settings"
+#~ msgstr "Postavke Webkita"
+
+#~ msgid "Autoload images"
+#~ msgstr "Samoučitavanje slika"
+
+#~ msgid "Links included in focus chain"
+#~ msgstr "Veze uključene u lanac fokusiranja"
+
+#~ msgid "Zoom text only"
+#~ msgstr "Uveličaj samo tekst"
+
+#~ msgid "Java support"
+#~ msgstr "Podrška za javu"
+
+#~ msgid "Plugin Settings"
+#~ msgstr "Postavke priključaka"
+
+#~ msgid "Specifies whether images are automatically loaded in web pages."
+#~ msgstr "Određuje da li se slike na web stranicama automatski učitavaju."
+
+#~ msgid "Enables support for plugins in web pages."
+#~ msgstr "Aktivira podršku za priključke na web stranicama."
+
+#~ msgid "If enabled, hyperlinks are included in the keyboard focus chain."
+#~ msgstr ""
+#~ "Ako je aktivirano, hiperveze su uključene u lanac fokusiranja tastature."
+
+#~ msgid "If enabled, the zoom factor on a frame is only applied to the text."
+#~ msgstr "Ako je aktivirano, faktor uveličanja se primjenjuje samo na tekst."
+
 #~ msgid "Toggle automatic scrolling on middle click in a web page"
 #~ msgstr "Automatsko klizanje srednjim klikom na web stranicu."
 
@@ -2398,9 +2442,6 @@ msgstr "Prečica \"%1\" je već dodijeljena na \"%2\"."
 #~| msgid "When connecting to: <b>%1</b>"
 #~ msgid "The connection uses %1.\n"
 #~ msgstr "Pri povezivanju na: <b>%1</b>"
-
-#~ msgid "Navigation"
-#~ msgstr "Navigacija"
 
 #~ msgid "The SSL information for this site appears to be corrupt."
 #~ msgstr "Izgleda da su SSL podaci za ovaj sajt oštećeni."
