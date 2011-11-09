@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-11-07 03:35+0100\n"
+"POT-Creation-Date: 2011-11-09 03:34+0100\n"
 "PO-Revision-Date: 2011-05-08 01:51+0200\n"
 "Last-Translator: \n"
 "Language-Team:  <bs@li.org>\n"
@@ -885,6 +885,150 @@ msgstr "Torenti"
 msgid "Torrent filter"
 msgstr "Ograničenja torenta"
 
+#: ktorrent/view/viewmodel.cpp:490 plugins/infowidget/webseedsmodel.cpp:126
+#: plugins/infowidget/peerviewmodel.cpp:266
+msgid "Downloaded"
+msgstr "Preuzeto"
+
+#: ktorrent/view/viewmodel.cpp:491
+#: libktcore/torrent/torrentfilelistmodel.cpp:77
+#: libktcore/torrent/torrentfiletreemodel.cpp:400
+msgid "Size"
+msgstr "Veličina"
+
+#: ktorrent/view/viewmodel.cpp:492 plugins/infowidget/peerviewmodel.cpp:267
+msgid "Uploaded"
+msgstr "Poslato"
+
+#: ktorrent/view/viewmodel.cpp:493
+#: plugins/infowidget/chunkdownloadmodel.cpp:201
+#: plugins/infowidget/peerviewmodel.cpp:257
+msgid "Down Speed"
+msgstr "Smanji brzinu"
+
+#: ktorrent/view/viewmodel.cpp:494 plugins/infowidget/peerviewmodel.cpp:258
+msgid "Up Speed"
+msgstr "Povećaj brzinu"
+
+#: ktorrent/view/viewmodel.cpp:495
+msgid "Time Left"
+msgstr "Preostalo vrijeme"
+
+#: ktorrent/view/viewmodel.cpp:496 plugins/infowidget/trackermodel.cpp:149
+msgid "Seeders"
+msgstr "Sijači"
+
+#: ktorrent/view/viewmodel.cpp:497 plugins/infowidget/trackermodel.cpp:150
+msgid "Leechers"
+msgstr "Pijavice"
+
+#: ktorrent/view/viewmodel.cpp:499
+#, no-c-format
+msgid "% Complete"
+msgstr "% završeno"
+
+#: ktorrent/view/viewmodel.cpp:500
+msgid "Share Ratio"
+msgstr "Odnos dijeljenja"
+
+#: ktorrent/view/viewmodel.cpp:501
+msgid "Time Downloaded"
+msgstr "Vrijeme preuzimanja"
+
+#: ktorrent/view/viewmodel.cpp:502
+msgid "Time Seeded"
+msgstr "Vrijeme sijanja"
+
+# >> @title:column
+#: ktorrent/view/viewmodel.cpp:503
+msgid "Location"
+msgstr "lokacija"
+
+# >> @title:column
+#: ktorrent/view/viewmodel.cpp:504
+msgid "Added"
+msgstr "dodato"
+
+#: ktorrent/view/viewmodel.cpp:512
+msgid "How much data we have downloaded of the torrent"
+msgstr "Koliko je podataka iz torenta preuzeto"
+
+#: ktorrent/view/viewmodel.cpp:513
+msgid "Total size of the torrent, excluded files are not included"
+msgstr "Ukupna veličina torenta, izuzete datoteke nisu uračunati"
+
+#: ktorrent/view/viewmodel.cpp:514
+msgid "How much data we have uploaded"
+msgstr "Koliko je podataka poslato"
+
+#: ktorrent/view/viewmodel.cpp:515
+msgid "Current download speed"
+msgstr "Trenutna brzina preuzimanja"
+
+#: ktorrent/view/viewmodel.cpp:516
+msgid "Current upload speed"
+msgstr "Trenutna brzina slanja"
+
+#: ktorrent/view/viewmodel.cpp:517
+msgid ""
+"How much time is left before the torrent is finished or before the maximum "
+"share ratio is reached, if that is enabled"
+msgstr ""
+"Koliko je vremena preostalo do završetka ili do dostizanja najvećeg odnosa "
+"dijeljenja, ako je to uključeno."
+
+#: ktorrent/view/viewmodel.cpp:518
+msgid ""
+"How many seeders we are connected to (How many seeders there are according "
+"to the tracker)"
+msgstr "Na koliko sijača smo povezani (koliko ih ima prema pratiocu)"
+
+#: ktorrent/view/viewmodel.cpp:519
+msgid ""
+"How many leechers we are connected to (How many leechers there are according "
+"to the tracker)"
+msgstr "Na koliko pijavica smo povezani (koliko ih ima prema pratiocu)"
+
+#: ktorrent/view/viewmodel.cpp:521
+#, no-c-format
+msgid ""
+"The percentage of data we have of the whole torrent, not including excluded "
+"files"
+msgstr "Procenat pristiglih podataka torenta, isključujući izuzete datoteke"
+
+#: ktorrent/view/viewmodel.cpp:522
+msgid ""
+"Share ratio is the number of bytes uploaded divided by the number of bytes "
+"downloaded"
+msgstr "Odnos dijeljenja je broj poslatih podeljen brojem preuzetih bajtova"
+
+#: ktorrent/view/viewmodel.cpp:523
+msgid "How long we have been downloading the torrent"
+msgstr "Koliko dugo se torent već preuzima"
+
+#: ktorrent/view/viewmodel.cpp:524
+msgid "How long we have been seeding the torrent"
+msgstr "Koliko dugo se torent već seje"
+
+#: ktorrent/view/viewmodel.cpp:525
+msgid "The location of the torrent's data on disk"
+msgstr "Lokacija podataka torenta na disku"
+
+#: ktorrent/view/viewmodel.cpp:526
+msgid "When this torrent was added"
+msgstr "Kada je dodat ovaj torent"
+
+#: ktorrent/view/viewmodel.cpp:575
+#, kde-format
+msgid "%1<br>Url: <b>%2</b>"
+msgstr "<html>%1<br />URL: <b>%2</b></html>"
+
+#: ktorrent/view/viewmodel.cpp:581
+#, fuzzy
+#| msgid "Unable to contact a tracker."
+msgid "<br/><br/>Unable to contact a tracker."
+msgstr "Ne mogu da kontaktiram pratilac."
+
 #. i18n: file: ktorrent/kttorrentactivityui.rc:75
 #. i18n: ectx: Menu (ColumnsMenu)
 #: ktorrent/view/view.cpp:94 rc.cpp:1312
@@ -1058,163 +1202,23 @@ msgstr "Obriši podatke"
 msgid "Keep Data"
 msgstr "Zadrži podatke"
 
-#: ktorrent/view/view.cpp:493
+#: ktorrent/view/view.cpp:499
+#, fuzzy
+#| msgid ""
+#| "You will lose all the downloaded data. Are you sure you want to do this?"
 msgid ""
-"You will lose all the downloaded data. Are you sure you want to do this?"
+"You will lose all the downloaded data of the following torrents. Are you "
+"sure you want to do this?"
 msgstr "Izgubićete sve preuzete podatke. Želite li zaista ovo da učinite?"
 
-#: ktorrent/view/view.cpp:494
+#: ktorrent/view/view.cpp:500
 msgid "Remove Torrent"
 msgstr "Ukloni torent"
 
-#: ktorrent/view/view.cpp:589 plugins/infowidget/fileview.cpp:340
+#: ktorrent/view/view.cpp:596 plugins/infowidget/fileview.cpp:340
 #: plugins/infowidget/fileview.cpp:361
 msgid "Select a directory to move the data to."
 msgstr "Izaberite direktorije gdje premještate podatke."
-
-#: ktorrent/view/viewmodel.cpp:490 plugins/infowidget/webseedsmodel.cpp:126
-#: plugins/infowidget/peerviewmodel.cpp:266
-msgid "Downloaded"
-msgstr "Preuzeto"
-
-#: ktorrent/view/viewmodel.cpp:491
-#: libktcore/torrent/torrentfilelistmodel.cpp:77
-#: libktcore/torrent/torrentfiletreemodel.cpp:400
-msgid "Size"
-msgstr "Veličina"
-
-#: ktorrent/view/viewmodel.cpp:492 plugins/infowidget/peerviewmodel.cpp:267
-msgid "Uploaded"
-msgstr "Poslato"
-
-#: ktorrent/view/viewmodel.cpp:493
-#: plugins/infowidget/chunkdownloadmodel.cpp:201
-#: plugins/infowidget/peerviewmodel.cpp:257
-msgid "Down Speed"
-msgstr "Smanji brzinu"
-
-#: ktorrent/view/viewmodel.cpp:494 plugins/infowidget/peerviewmodel.cpp:258
-msgid "Up Speed"
-msgstr "Povećaj brzinu"
-
-#: ktorrent/view/viewmodel.cpp:495
-msgid "Time Left"
-msgstr "Preostalo vrijeme"
-
-#: ktorrent/view/viewmodel.cpp:496 plugins/infowidget/trackermodel.cpp:149
-msgid "Seeders"
-msgstr "Sijači"
-
-#: ktorrent/view/viewmodel.cpp:497 plugins/infowidget/trackermodel.cpp:150
-msgid "Leechers"
-msgstr "Pijavice"
-
-#: ktorrent/view/viewmodel.cpp:499
-#, no-c-format
-msgid "% Complete"
-msgstr "% završeno"
-
-#: ktorrent/view/viewmodel.cpp:500
-msgid "Share Ratio"
-msgstr "Odnos dijeljenja"
-
-#: ktorrent/view/viewmodel.cpp:501
-msgid "Time Downloaded"
-msgstr "Vrijeme preuzimanja"
-
-#: ktorrent/view/viewmodel.cpp:502
-msgid "Time Seeded"
-msgstr "Vrijeme sijanja"
-
-# >> @title:column
-#: ktorrent/view/viewmodel.cpp:503
-msgid "Location"
-msgstr "lokacija"
-
-# >> @title:column
-#: ktorrent/view/viewmodel.cpp:504
-msgid "Added"
-msgstr "dodato"
-
-#: ktorrent/view/viewmodel.cpp:512
-msgid "How much data we have downloaded of the torrent"
-msgstr "Koliko je podataka iz torenta preuzeto"
-
-#: ktorrent/view/viewmodel.cpp:513
-msgid "Total size of the torrent, excluded files are not included"
-msgstr "Ukupna veličina torenta, izuzete datoteke nisu uračunati"
-
-#: ktorrent/view/viewmodel.cpp:514
-msgid "How much data we have uploaded"
-msgstr "Koliko je podataka poslato"
-
-#: ktorrent/view/viewmodel.cpp:515
-msgid "Current download speed"
-msgstr "Trenutna brzina preuzimanja"
-
-#: ktorrent/view/viewmodel.cpp:516
-msgid "Current upload speed"
-msgstr "Trenutna brzina slanja"
-
-#: ktorrent/view/viewmodel.cpp:517
-msgid ""
-"How much time is left before the torrent is finished or before the maximum "
-"share ratio is reached, if that is enabled"
-msgstr ""
-"Koliko je vremena preostalo do završetka ili do dostizanja najvećeg odnosa "
-"dijeljenja, ako je to uključeno."
-
-#: ktorrent/view/viewmodel.cpp:518
-msgid ""
-"How many seeders we are connected to (How many seeders there are according "
-"to the tracker)"
-msgstr "Na koliko sijača smo povezani (koliko ih ima prema pratiocu)"
-
-#: ktorrent/view/viewmodel.cpp:519
-msgid ""
-"How many leechers we are connected to (How many leechers there are according "
-"to the tracker)"
-msgstr "Na koliko pijavica smo povezani (koliko ih ima prema pratiocu)"
-
-#: ktorrent/view/viewmodel.cpp:521
-#, no-c-format
-msgid ""
-"The percentage of data we have of the whole torrent, not including excluded "
-"files"
-msgstr "Procenat pristiglih podataka torenta, isključujući izuzete datoteke"
-
-#: ktorrent/view/viewmodel.cpp:522
-msgid ""
-"Share ratio is the number of bytes uploaded divided by the number of bytes "
-"downloaded"
-msgstr "Odnos dijeljenja je broj poslatih podeljen brojem preuzetih bajtova"
-
-#: ktorrent/view/viewmodel.cpp:523
-msgid "How long we have been downloading the torrent"
-msgstr "Koliko dugo se torent već preuzima"
-
-#: ktorrent/view/viewmodel.cpp:524
-msgid "How long we have been seeding the torrent"
-msgstr "Koliko dugo se torent već seje"
-
-#: ktorrent/view/viewmodel.cpp:525
-msgid "The location of the torrent's data on disk"
-msgstr "Lokacija podataka torenta na disku"
-
-#: ktorrent/view/viewmodel.cpp:526
-msgid "When this torrent was added"
-msgstr "Kada je dodat ovaj torent"
-
-#: ktorrent/view/viewmodel.cpp:575
-#, kde-format
-msgid "%1<br>Url: <b>%2</b>"
-msgstr "<html>%1<br />URL: <b>%2</b></html>"
-
-#: ktorrent/view/viewmodel.cpp:581
-#, fuzzy
-#| msgid "Unable to contact a tracker."
-msgid "<br/><br/>Unable to contact a tracker."
-msgstr "Ne mogu da kontaktiram pratilac."
 
 #. i18n: file: ktorrent/pref/advancedpref.ui:174
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_eta)
