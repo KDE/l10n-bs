@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeqt\n"
 "Report-Msgid-Bugs-To: qt-bugs@trolltech.com\n"
-"POT-Creation-Date: 2011-11-24 04:38+0100\n"
+"POT-Creation-Date: 2011-11-28 04:04+0100\n"
 "PO-Revision-Date: 2011-03-26 15:24+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1607,8 +1607,8 @@ msgctxt "QIODevice"
 msgid "No space left on device"
 msgstr "Nema više prostora na uređaju"
 
-#: corelib/io/qiodevice.cpp:1629 corelib/plugin/qlibrary.cpp:1233
-#: corelib/plugin/qpluginloader.cpp:367
+#: corelib/io/qiodevice.cpp:1629 corelib/plugin/qpluginloader.cpp:367
+#: corelib/plugin/qlibrary.cpp:1233
 #: corelib/statemachine/qstatemachine.cpp:1046
 #: network/kernel/qhostinfo_unix.cpp:300 network/kernel/qhostinfo_win.cpp:209
 #: network/kernel/qhostinfo_win.cpp:236
@@ -1892,15 +1892,34 @@ msgstr "postavi: vrijednost ne predstavlja objekat"
 msgid "'%1' is an invalid ELF object (%2)"
 msgstr "%1 nije valjano %2"
 
+#: corelib/plugin/qlibrary_unix.cpp:244 corelib/plugin/qlibrary_win.cpp:87
+#, qt-format
+msgid "Cannot load library %1: %2"
+msgstr "Ne mogu da učitam biblioteku %1: %2"
+
+#: corelib/plugin/qlibrary_unix.cpp:261 corelib/plugin/qlibrary_win.cpp:109
+#, qt-format
+msgid "Cannot unload library %1: %2"
+msgstr "Ne mogu da odučitam biblioteku %1: %2"
+
+#: corelib/plugin/qlibrary_unix.cpp:295 corelib/plugin/qlibrary_win.cpp:124
+#, qt-format
+msgid "Cannot resolve symbol \"%1\" in %2: %3"
+msgstr "Ne mogu da razriješim simbol ‘%1’ u %2: %3"
+
+#: corelib/plugin/qpluginloader.cpp:254
+msgid "The plugin was not loaded."
+msgstr "Priključak nije učitan."
+
+#: corelib/plugin/qpluginloader.cpp:343 corelib/plugin/qlibrary.cpp:679
+#: corelib/plugin/qlibrary.cpp:825
+msgid "The shared library was not found."
+msgstr "Dijeljena biblioteka nije nađena."
+
 #: corelib/plugin/qlibrary.cpp:402
 #, qt-format
 msgid "Plugin verification data mismatch in '%1'"
 msgstr "Nepoklapanje ovjere priključka u „%1“"
-
-#: corelib/plugin/qlibrary.cpp:679 corelib/plugin/qlibrary.cpp:825
-#: corelib/plugin/qpluginloader.cpp:343
-msgid "The shared library was not found."
-msgstr "Dijeljena biblioteka nije nađena."
 
 #: corelib/plugin/qlibrary.cpp:827
 #, qt-format
@@ -1929,25 +1948,6 @@ msgid ""
 msgstr ""
 "Priključak „%1“ koristi nesaglasnu biblioteku Qt‑a. (Ne mogu se miješati "
 "ispravljački i prometne biblioteke.)"
-
-#: corelib/plugin/qlibrary_unix.cpp:244 corelib/plugin/qlibrary_win.cpp:87
-#, qt-format
-msgid "Cannot load library %1: %2"
-msgstr "Ne mogu da učitam biblioteku %1: %2"
-
-#: corelib/plugin/qlibrary_unix.cpp:261 corelib/plugin/qlibrary_win.cpp:109
-#, qt-format
-msgid "Cannot unload library %1: %2"
-msgstr "Ne mogu da odučitam biblioteku %1: %2"
-
-#: corelib/plugin/qlibrary_unix.cpp:295 corelib/plugin/qlibrary_win.cpp:124
-#, qt-format
-msgid "Cannot resolve symbol \"%1\" in %2: %3"
-msgstr "Ne mogu da razriješim simbol ‘%1’ u %2: %3"
-
-#: corelib/plugin/qpluginloader.cpp:254
-msgid "The plugin was not loaded."
-msgstr "Priključak nije učitan."
 
 #: corelib/statemachine/qstatemachine.cpp:1028
 #, qt-format
@@ -6516,10 +6516,6 @@ msgstr ""
 msgid "Could not reset to read data"
 msgstr "Ne mogu da dobavim podatke niza"
 
-#: plugins/inputmethods/imsw-multi/qmultiinputcontext.cpp:88
-msgid "Select IM"
-msgstr "Izaberite IM"
-
 #: plugins/inputmethods/imsw-multi/qmultiinputcontextplugin.cpp:95
 msgid "Multiple input method switcher"
 msgstr "Mjenjač metoda unosa"
@@ -6530,6 +6526,10 @@ msgid ""
 msgstr ""
 "Mjenjač metoda unosa koji koristi kontekstni meni tekstualnih grafičke "
 "kontrole"
+
+#: plugins/inputmethods/imsw-multi/qmultiinputcontext.cpp:88
+msgid "Select IM"
+msgstr "Izaberite IM"
 
 #: plugins/qmltooling/qmldbg_inspector/editor/liveselectiontool.cpp:143
 msgid "Items"
