@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-12-02 03:32+0100\n"
+"POT-Creation-Date: 2011-12-03 03:10+0100\n"
 "PO-Revision-Date: 2011-05-21 22:47+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -7087,6 +7087,10 @@ msgstr "Premještam datoteke u smeće"
 msgid "Delete Tracks"
 msgstr "Obriši numere"
 
+#: browsers/BrowserCategoryList.cpp:52
+msgid "Filter Music Sources"
+msgstr "Filtriraj izvore muzike"
+
 #: browsers/BrowserBreadcrumbItem.cpp:68
 msgid "Media Sources Home"
 msgstr "Domaća medijskih izvora"
@@ -7118,10 +7122,6 @@ msgid_plural "%1 tracks"
 msgstr[0] "%1 numera"
 msgstr[1] "%1 numere"
 msgstr[2] "%1 numera"
-
-#: browsers/BrowserCategoryList.cpp:52
-msgid "Filter Music Sources"
-msgstr "Filtriraj izvore muzike"
 
 #: configdialog/dialogs/DatabaseConfig.cpp:93
 msgctxt ""
@@ -8227,11 +8227,6 @@ msgstr "Radnja nije podržana, %1"
 msgid "print() takes one argument"
 msgstr "Jedan argument za print()"
 
-#: context/toolbar/AppletItemOverlay.cpp:104
-#: context/toolbar/AppletToolbarAppletItem.cpp:58
-msgid "Remove Applet"
-msgstr "Ukloni aplet"
-
 #: context/toolbar/AppletToolbarAddItem.cpp:47
 msgid "Add Applets..."
 msgstr "Dodaj aplete..."
@@ -8247,6 +8242,11 @@ msgstr "Podesi aplete..."
 #: context/toolbar/AppletToolbarAppletItem.cpp:53
 msgid "no applet name"
 msgstr "nema naziva apleta"
+
+#: context/toolbar/AppletToolbarAppletItem.cpp:58
+#: context/toolbar/AppletItemOverlay.cpp:105
+msgid "Remove Applet"
+msgstr "Ukloni aplet"
 
 #: context/tools/amarokpkg.cpp:40
 msgid "Install, list, remove Amarok applets"
@@ -13448,46 +13448,6 @@ msgstr "Preuzimam bazu sa Džamenda"
 msgid "Updating the local Jamendo database."
 msgstr "Ažuriram lokalnu bazu Džamenda"
 
-#: services/lastfm/LastFmTreeModel.cpp:182
-msgid "Personal Radio"
-msgstr "Privatni Radio"
-
-#: services/lastfm/LastFmTreeModel.cpp:183
-msgid "Neighborhood"
-msgstr "Komšiluk"
-
-#: services/lastfm/LastFmTreeModel.cpp:368
-msgid "My Recommendations"
-msgstr "Moje preporuke"
-
-#: services/lastfm/LastFmTreeModel.cpp:370
-msgid "My Radio Station"
-msgstr "Moja radio stanica"
-
-#: services/lastfm/LastFmTreeModel.cpp:372
-msgid "My Mix Radio"
-msgstr "Moj Mix Radio"
-
-#: services/lastfm/LastFmTreeModel.cpp:374
-msgid "My Neighborhood"
-msgstr "Moj komšiluk"
-
-#: services/lastfm/LastFmTreeModel.cpp:379
-msgid "My Top Artists"
-msgstr "Moji omiljeni izvođači"
-
-#: services/lastfm/LastFmTreeModel.cpp:381
-msgid "My Tags"
-msgstr "Moje oznake"
-
-#: services/lastfm/LastFmTreeModel.cpp:383
-msgid "Friends"
-msgstr "Prijatelji"
-
-#: services/lastfm/LastFmTreeModel.cpp:385
-msgid "Neighbors"
-msgstr "Komšije"
-
 #: services/lastfm/LoveTrackAction.cpp:25
 #: services/lastfm/LastFmService.cpp:284
 msgid "Last.fm: Love"
@@ -13843,6 +13803,46 @@ msgstr "Korisnik"
 msgctxt "As in, lastfm"
 msgid "Loved Track: %1"
 msgstr "Voljena numera: %1"
+
+#: services/lastfm/LastFmTreeModel.cpp:172
+msgid "Personal Radio"
+msgstr "Privatni Radio"
+
+#: services/lastfm/LastFmTreeModel.cpp:173
+msgid "Neighborhood"
+msgstr "Komšiluk"
+
+#: services/lastfm/LastFmTreeModel.cpp:331
+msgid "My Recommendations"
+msgstr "Moje preporuke"
+
+#: services/lastfm/LastFmTreeModel.cpp:333
+msgid "My Radio Station"
+msgstr "Moja radio stanica"
+
+#: services/lastfm/LastFmTreeModel.cpp:335
+msgid "My Mix Radio"
+msgstr "Moj Mix Radio"
+
+#: services/lastfm/LastFmTreeModel.cpp:337
+msgid "My Neighborhood"
+msgstr "Moj komšiluk"
+
+#: services/lastfm/LastFmTreeModel.cpp:342
+msgid "My Top Artists"
+msgstr "Moji omiljeni izvođači"
+
+#: services/lastfm/LastFmTreeModel.cpp:344
+msgid "My Tags"
+msgstr "Moje oznake"
+
+#: services/lastfm/LastFmTreeModel.cpp:346
+msgid "Friends"
+msgstr "Prijatelji"
+
+#: services/lastfm/LastFmTreeModel.cpp:348
+msgid "Neighbors"
+msgstr "Komšije"
 
 #: services/magnatune/MagnatuneCollectionLocation.cpp:42
 msgid "Preview Tracks"
@@ -14368,12 +14368,6 @@ msgctxt ""
 msgid "Amazon"
 msgstr ""
 
-#: services/amazon/AmazonShoppingCartView.cpp:64
-#, fuzzy
-#| msgid "Remove From Playlist"
-msgid "Remove from Cart"
-msgstr "Ukloni sa liste numera"
-
 #: services/amazon/AmazonStore.cpp:100
 msgid "Access the Amazon MP3 Store directly from Amarok"
 msgstr ""
@@ -14405,62 +14399,68 @@ msgid ""
 "settings to make the store work."
 msgstr ""
 
-#: services/amazon/AmazonStore.cpp:403
+#: services/amazon/AmazonStore.cpp:409
 msgid "Select results page to show"
 msgstr ""
 
-#: services/amazon/AmazonStore.cpp:426
+#: services/amazon/AmazonStore.cpp:432
 #, fuzzy
 #| msgid "&Add to Playlist"
 msgctxt "Add selected item to your shopping cart"
 msgid "Add to Cart"
 msgstr "Dod&aj u listu numera"
 
-#: services/amazon/AmazonStore.cpp:427
+#: services/amazon/AmazonStore.cpp:433
 msgid "Add selected item to your shopping cart"
 msgstr ""
 
-#: services/amazon/AmazonStore.cpp:434
+#: services/amazon/AmazonStore.cpp:440
 #, fuzzy
 #| msgid "View map"
 msgctxt "View your shopping cart contents"
 msgid "View Cart"
 msgstr "Vidi mapu"
 
-#: services/amazon/AmazonStore.cpp:435
+#: services/amazon/AmazonStore.cpp:441
 msgid "View your shopping cart contents"
 msgstr ""
 
-#: services/amazon/AmazonStore.cpp:442
+#: services/amazon/AmazonStore.cpp:448
 #, fuzzy
 #| msgid "Checkpoint"
 msgctxt "Checkout your shopping cart"
 msgid "Checkout"
 msgstr "Kontrolna tačka"
 
-#: services/amazon/AmazonStore.cpp:443
+#: services/amazon/AmazonStore.cpp:449
 msgid "Checkout your shopping cart"
 msgstr ""
 
-#: services/amazon/AmazonStore.cpp:463
+#: services/amazon/AmazonStore.cpp:469
 msgid "Error: Querying MP3 Music Store database failed. :-("
 msgstr ""
 
-#: services/amazon/AmazonStore.cpp:498
+#: services/amazon/AmazonStore.cpp:504
 msgid "Error: Received an invalid reply. :-("
 msgstr ""
 
-#: services/amazon/AmazonStore.cpp:518
+#: services/amazon/AmazonStore.cpp:524
 #, fuzzy
 #| msgid "Unable to parse avatar image data."
 msgid "Error: Unable to open temporary file. :-("
 msgstr "Ne mogu da raščlanim podatke slike avatara."
 
-#: services/amazon/AmazonStore.cpp:538
+#: services/amazon/AmazonStore.cpp:544
 #, fuzzy
 #| msgid "Unable to parse avatar image data."
 msgid "Error: Unable to parse temporary file. :-("
 msgstr "Ne mogu da raščlanim podatke slike avatara."
+
+#: services/amazon/AmazonShoppingCartView.cpp:64
+#, fuzzy
+#| msgid "Remove From Playlist"
+msgid "Remove from Cart"
+msgstr "Ukloni sa liste numera"
 
 #: services/amazon/AmazonItemTreeView.cpp:271
 #, fuzzy
