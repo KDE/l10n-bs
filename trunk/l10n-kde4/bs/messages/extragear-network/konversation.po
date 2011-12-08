@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konversation\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-12-01 03:37+0100\n"
+"POT-Creation-Date: 2011-12-08 03:12+0100\n"
 "PO-Revision-Date: 2011-05-08 01:46+0200\n"
 "Last-Translator: \n"
 "Language-Team:  <bs@li.org>\n"
@@ -56,7 +56,7 @@ msgstr[1] ""
 msgstr[2] ""
 "Pokušaću da se ponovo povežem na %2 (port <numid>%3</numid>) za %1 sekundi."
 
-#: src/connectionmanager.cpp:282 src/dcc/chatcontainer.cpp:283
+#: src/connectionmanager.cpp:282 src/dcc/chatcontainer.cpp:273
 #: src/irc/outputfilter.cpp:2038 src/irc/outputfilterresolvejob.cpp:85
 #: src/irc/inputfilter.cpp:1164 src/irc/inputfilter.cpp:1168
 #: src/irc/inputfilter.cpp:1181 src/irc/inputfilter.cpp:1252
@@ -998,76 +998,6 @@ msgstr "Nema slobodnih portova"
 msgid "Could not open a socket"
 msgstr "Nisam mogao da otvorim soket"
 
-#: src/dcc/chatcontainer.cpp:116
-#, kde-format
-msgctxt "%1=extension like Chat or Whiteboard, %2=partnerNick, %3=port"
-msgid "DCC %1 with %2 on port <numid>%3</numid>."
-msgstr "DCC %1 sa %2 na portu <numid>%3</numid>.."
-
-#: src/dcc/chatcontainer.cpp:123
-#, kde-format
-msgctxt ""
-"%1=extension like Chat or Whiteboard, %2 = nickname, %3 = IP, %4 = port"
-msgid "DCC %1 with %2 on %3:<numid>%4</numid>."
-msgstr "DCC %1 sa %2 na %3:<numid>%4</numid>."
-
-#: src/dcc/chatcontainer.cpp:145 src/dcc/transferrecv.cpp:583
-#: src/dcc/transfersend.cpp:350
-msgctxt "Universal Plug and Play"
-msgid "UPnP"
-msgstr "UPnP"
-
-#: src/dcc/chatcontainer.cpp:189
-#, kde-format
-msgctxt "%1=extension like Chat or Whiteboard, %2=partnerNick"
-msgid "Do you want to close your DCC %1 with %2?"
-msgstr "Želite li da zatvorite DCC %1 sa %2?"
-
-#: src/dcc/chatcontainer.cpp:192
-#, kde-format
-msgctxt "%1=extension like Chat or Whiteboard"
-msgid "Close DCC %1"
-msgstr "Zatvori DCC %1"
-
-#: src/dcc/chatcontainer.cpp:211 src/irc/query.cpp:517
-msgid "Talking to yourself"
-msgstr "Pričate sami sa sobom"
-
-#: src/dcc/chatcontainer.cpp:227
-#, kde-format
-msgctxt "%1=Encoding"
-msgid "Default ( %1 )"
-msgstr "Podrazumevano ( %1 )"
-
-#: src/dcc/chatcontainer.cpp:269 src/irc/outputfilter.cpp:2020
-msgid "Usage"
-msgstr "Upotreba"
-
-#: src/dcc/chatcontainer.cpp:269 src/irc/outputfilter.cpp:683
-#, kde-format
-msgid "Usage: %1ME text"
-msgstr "Upotreba: %1ME tekst"
-
-#: src/dcc/chatcontainer.cpp:283
-msgid "Unknown command."
-msgstr "Nepoznata naredba."
-
-#. i18n: file: src/config/ignore_configui.ui:83
-#. i18n: ectx: property (text), widget (QCheckBox, chkCTCP)
-#: src/dcc/chatcontainer.cpp:331 src/irc/outputfilter.cpp:851
-#: src/irc/inputfilter.cpp:269 src/irc/inputfilter.cpp:276
-#: src/irc/inputfilter.cpp:292 src/irc/inputfilter.cpp:299
-#: src/irc/inputfilter.cpp:447 src/irc/inputfilter.cpp:458
-#: src/irc/inputfilter.cpp:479 src/irc/inputfilter.cpp:527
-#: src/irc/inputfilter.cpp:555 src/viewer/ignorelistviewitem.cpp:45 rc.cpp:316
-msgid "CTCP"
-msgstr "CTCP"
-
-#: src/dcc/chatcontainer.cpp:331
-#, kde-format
-msgid "Received unknown CTCP-%1 request from %2"
-msgstr "Primio sam nepoznat CTCP-%1 zahtjev od %2"
-
 #: src/dcc/recipientdialog.cpp:43
 msgid "Select Recipient"
 msgstr "Izaberite primaoca"
@@ -1178,7 +1108,7 @@ msgctxt "less than 1 sec"
 msgid "&lt; 1sec"
 msgstr "&lt; 1 sek."
 
-#: src/dcc/transferpanel.cpp:45 src/viewer/viewcontainer.cpp:2172
+#: src/dcc/transferpanel.cpp:45 src/viewer/viewcontainer.cpp:2173
 msgid "DCC Status"
 msgstr "DCC status"
 
@@ -1343,6 +1273,12 @@ msgid ""
 msgstr ""
 "Ne mogu da pošaljem obrnuto DCC SEND odobrenje sagovorniku, preko IRC "
 "servera."
+
+#: src/dcc/transferrecv.cpp:583 src/dcc/transfersend.cpp:350
+#: src/dcc/chatcontainer.cpp:145
+msgctxt "Universal Plug and Play"
+msgid "UPnP"
+msgstr "UPnP"
 
 #: src/dcc/transferrecv.cpp:583 src/dcc/transfersend.cpp:350
 #: src/dcc/chat.cpp:304 src/dcc/chat.cpp:335
@@ -1781,6 +1717,70 @@ msgstr "Odlazni prenosi"
 #: src/dcc/transferview.cpp:313
 msgid "Columns"
 msgstr "Kolone"
+
+#: src/dcc/chatcontainer.cpp:116
+#, kde-format
+msgctxt "%1=extension like Chat or Whiteboard, %2=partnerNick, %3=port"
+msgid "DCC %1 with %2 on port <numid>%3</numid>."
+msgstr "DCC %1 sa %2 na portu <numid>%3</numid>.."
+
+#: src/dcc/chatcontainer.cpp:123
+#, kde-format
+msgctxt ""
+"%1=extension like Chat or Whiteboard, %2 = nickname, %3 = IP, %4 = port"
+msgid "DCC %1 with %2 on %3:<numid>%4</numid>."
+msgstr "DCC %1 sa %2 na %3:<numid>%4</numid>."
+
+#: src/dcc/chatcontainer.cpp:184
+#, kde-format
+msgctxt "%1=extension like Chat or Whiteboard, %2=partnerNick"
+msgid "Do you want to close your DCC %1 with %2?"
+msgstr "Želite li da zatvorite DCC %1 sa %2?"
+
+#: src/dcc/chatcontainer.cpp:187
+#, kde-format
+msgctxt "%1=extension like Chat or Whiteboard"
+msgid "Close DCC %1"
+msgstr "Zatvori DCC %1"
+
+#: src/dcc/chatcontainer.cpp:206 src/irc/query.cpp:500
+msgid "Talking to yourself"
+msgstr "Pričate sami sa sobom"
+
+#: src/dcc/chatcontainer.cpp:222
+#, kde-format
+msgctxt "%1=Encoding"
+msgid "Default ( %1 )"
+msgstr "Podrazumevano ( %1 )"
+
+#: src/dcc/chatcontainer.cpp:259 src/irc/outputfilter.cpp:2020
+msgid "Usage"
+msgstr "Upotreba"
+
+#: src/dcc/chatcontainer.cpp:259 src/irc/outputfilter.cpp:683
+#, kde-format
+msgid "Usage: %1ME text"
+msgstr "Upotreba: %1ME tekst"
+
+#: src/dcc/chatcontainer.cpp:273
+msgid "Unknown command."
+msgstr "Nepoznata naredba."
+
+#. i18n: file: src/config/ignore_configui.ui:83
+#. i18n: ectx: property (text), widget (QCheckBox, chkCTCP)
+#: src/dcc/chatcontainer.cpp:321 src/irc/outputfilter.cpp:851
+#: src/irc/inputfilter.cpp:269 src/irc/inputfilter.cpp:276
+#: src/irc/inputfilter.cpp:292 src/irc/inputfilter.cpp:299
+#: src/irc/inputfilter.cpp:447 src/irc/inputfilter.cpp:458
+#: src/irc/inputfilter.cpp:479 src/irc/inputfilter.cpp:527
+#: src/irc/inputfilter.cpp:555 src/viewer/ignorelistviewitem.cpp:45 rc.cpp:316
+msgid "CTCP"
+msgstr "CTCP"
+
+#: src/dcc/chatcontainer.cpp:321
+#, kde-format
+msgid "Received unknown CTCP-%1 request from %2"
+msgstr "Primio sam nepoznat CTCP-%1 zahtjev od %2"
 
 #: src/irc/channelnick.cpp:199
 msgid "Operator"
@@ -2445,7 +2445,7 @@ msgid "%1 has joined this channel (%2)."
 msgstr "%1 se pridružio ovom kanalu (%2)."
 
 #: src/irc/channel.cpp:1137 src/irc/channel.cpp:1139 src/irc/channel.cpp:1160
-#: src/irc/channel.cpp:1162 src/irc/query.cpp:533 src/irc/query.cpp:540
+#: src/irc/channel.cpp:1162 src/irc/query.cpp:516 src/irc/query.cpp:523
 #: src/viewer/ircview.cpp:820
 msgid "Quit"
 msgstr "Izlaz"
@@ -2476,7 +2476,7 @@ msgctxt "%1 adds the channel and %2 the reason"
 msgid "You have left channel %1 (%2)."
 msgstr "Napustili ste kanal %1 (%2)."
 
-#: src/irc/channel.cpp:1160 src/irc/query.cpp:533
+#: src/irc/channel.cpp:1160 src/irc/query.cpp:516
 #, kde-format
 msgid "%1 has left this server."
 msgstr "%1 je napustio ovaj server"
@@ -3114,21 +3114,21 @@ msgstr "Zaštiti kanal lozinkom."
 msgid "Set user limit to channel."
 msgstr "Postavi ograničenje korisnika na kanalu."
 
-#: src/irc/channel.cpp:2339
+#: src/irc/channel.cpp:2318
 #, kde-format
 msgid "Do you want to leave %1?"
 msgstr "Želite li da napustite %1 ?"
 
-#: src/irc/channel.cpp:2340
+#: src/irc/channel.cpp:2319
 msgid "Leave Channel"
 msgstr "Napustite kanal"
 
-#: src/irc/channel.cpp:2341
+#: src/irc/channel.cpp:2320
 msgid "Leave"
 msgstr "Napusti"
 
-#: src/irc/channel.cpp:2493 src/irc/query.cpp:480
-#: src/viewer/statuspanel.cpp:322
+#: src/irc/channel.cpp:2472 src/irc/query.cpp:463
+#: src/viewer/statuspanel.cpp:306
 #, kde-format
 msgid "Identity Default ( %1 )"
 msgstr "Podrazumjevano za identitet (%1)"
@@ -4096,8 +4096,8 @@ msgstr "Tema kanala"
 
 #. i18n: file: src/irc/channellistpanelui.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, ChannelListWidgetUI)
-#: src/irc/channellistpanel.cpp:146 src/viewer/viewcontainer.cpp:2476
-#: src/viewer/viewcontainer.cpp:2497 rc.cpp:1070
+#: src/irc/channellistpanel.cpp:146 src/viewer/viewcontainer.cpp:2477
+#: src/viewer/viewcontainer.cpp:2498 rc.cpp:1070
 msgid "Channel List"
 msgstr "Lista kanala"
 
@@ -4447,35 +4447,6 @@ msgctxt "(Offline) nickname details (e.g. real name from address book)"
 msgid "(Offline) %1"
 msgstr "(van veze) %1"
 
-#: src/irc/query.cpp:63
-msgid ""
-"<qt><p>Some details of the person you are talking to in this query is shown "
-"in this bar.  The full name and hostmask is shown, along with any image or "
-"logo this person has associated with them in the KDE Address Book.</p><p>See "
-"the <i>Konversation Handbook</i> for information on associating a nick with "
-"a contact in the address book, and for an explanation of what the hostmask "
-"is.</p></qt>"
-msgstr ""
-"<qt><p>U ovoj traci su prikazani neki detalji o osobi sa kojom pričate u "
-"ovom upitu. Prikazano je puno ime i maska domaćina, zajedno sa (ako postoji) "
-"slikom ili logotipom pridruženim ovoj osobi u KDE adresaru.</p><p>Pogledajte "
-"<i>Priručnik za Konverzaciju</i> za informacije o pridruživanju nadimka "
-"kontaktu iz adresara, i za objašnjenje šta je maska domaćina.</p></qt>"
-
-#: src/irc/query.cpp:490
-#, kde-format
-msgid "Do you want to close your query with %1?"
-msgstr "Želite li da zatvorite upit sa %1 ?"
-
-#: src/irc/query.cpp:491
-msgid "Close Query"
-msgstr "Zatvori upit"
-
-#: src/irc/query.cpp:540
-#, kde-format
-msgid "%1 has left this server (%2)."
-msgstr "%1 je napustio ovaj server (%2)"
-
 #: src/irc/servergroupdialog.cpp:79
 msgid "Change network information"
 msgstr "Izmijeni informacije o mreži"
@@ -4579,6 +4550,35 @@ msgstr "Da li zaista želite obrisati odabrane unose?"
 #, kde-format
 msgid "Do you really want to delete %1?"
 msgstr "Da li zaista želite obrisati %1 ?"
+
+#: src/irc/query.cpp:63
+msgid ""
+"<qt><p>Some details of the person you are talking to in this query is shown "
+"in this bar.  The full name and hostmask is shown, along with any image or "
+"logo this person has associated with them in the KDE Address Book.</p><p>See "
+"the <i>Konversation Handbook</i> for information on associating a nick with "
+"a contact in the address book, and for an explanation of what the hostmask "
+"is.</p></qt>"
+msgstr ""
+"<qt><p>U ovoj traci su prikazani neki detalji o osobi sa kojom pričate u "
+"ovom upitu. Prikazano je puno ime i maska domaćina, zajedno sa (ako postoji) "
+"slikom ili logotipom pridruženim ovoj osobi u KDE adresaru.</p><p>Pogledajte "
+"<i>Priručnik za Konverzaciju</i> za informacije o pridruživanju nadimka "
+"kontaktu iz adresara, i za objašnjenje šta je maska domaćina.</p></qt>"
+
+#: src/irc/query.cpp:473
+#, kde-format
+msgid "Do you want to close your query with %1?"
+msgstr "Želite li da zatvorite upit sa %1 ?"
+
+#: src/irc/query.cpp:474
+msgid "Close Query"
+msgstr "Zatvori upit"
+
+#: src/irc/query.cpp:523
+#, kde-format
+msgid "%1 has left this server (%2)."
+msgstr "%1 je napustio ovaj server (%2)"
 
 #: src/linkaddressbook/addressbook.cpp:105
 msgid "Offline"
@@ -5009,7 +5009,7 @@ msgstr "Snimi dnevničku datoteku"
 msgid "Choose Destination Folder"
 msgstr "Izaberite odredišni direktorij"
 
-#: src/viewer/rawlog.cpp:25 src/viewer/viewcontainer.cpp:2258
+#: src/viewer/rawlog.cpp:25 src/viewer/viewcontainer.cpp:2259
 msgid "Raw Log"
 msgstr "Sirovi dnevnik"
 
@@ -5075,182 +5075,14 @@ msgstr "Samo cijele riječi"
 msgid "From Cursor"
 msgstr "Od pokazivača"
 
-#: src/viewer/statuspanel.cpp:231
-#, kde-format
-msgid ""
-"Do you really want to close '%1'?\n"
-"\n"
-" All associated tabs will be closed as well."
-msgstr ""
-"Želite li zaista da zatvorite „%1“?\n"
-"\n"
-"Biće zatvoreni i sve pridružene kartice."
-
-#: src/viewer/statuspanel.cpp:232
-msgid "Close Tab"
-msgstr "Zatvori karticu"
-
-#: src/viewer/statuspanel.cpp:241
-#, kde-format
-msgid ""
-"Do you want to disconnect from '%1'?\n"
-"\n"
-" All associated tabs will be closed as well."
-msgstr ""
-"Želite li da prekinete vezu sa „%1“?\n"
-"Biće zatvorene i svi pridružene kartice."
-
-#: src/viewer/statuspanel.cpp:242
-msgid "Disconnect From Server"
-msgstr "Prekini vezu sa serverom"
-
-#: src/viewer/statuspanel.cpp:243
-msgid "Disconnect"
-msgstr "Prekini vezu"
-
 #: src/viewer/topiclabel.cpp:301 src/viewer/ircview.cpp:2153
 #, kde-format
 msgid "Join the channel %1"
 msgstr "Pridruži se kanalu %1"
 
-#: src/viewer/chatwindow.cpp:444
-#, kde-format
-msgid ""
-"\n"
-"*** Logfile started\n"
-"*** on %1\n"
-"\n"
-msgstr ""
-"\n"
-"*** Dnevničku datoteku započeti\n"
-"*** na %1\n"
-"\n"
-
 #: src/viewer/trayicon.cpp:23
 msgid "Konversation - IRC Client"
 msgstr "Konversation — IRC klijent"
-
-#: src/viewer/viewcontainer.cpp:221 src/mainwindow.cpp:291
-msgid "Move Tab Up"
-msgstr "Pomjeri karticu gore"
-
-#: src/viewer/viewcontainer.cpp:229 src/mainwindow.cpp:302
-msgid "Move Tab Down"
-msgstr "Pomjeri karticu dolje"
-
-#: src/viewer/viewcontainer.cpp:322 src/mainwindow.cpp:322
-#: src/mainwindow.cpp:334
-msgid "Move Tab Left"
-msgstr "Pomjeri karticu lijevo"
-
-#: src/viewer/viewcontainer.cpp:330 src/mainwindow.cpp:313
-#: src/mainwindow.cpp:343
-msgid "Move Tab Right"
-msgstr "Pomjeri karticu desno"
-
-#: src/viewer/viewcontainer.cpp:561
-msgid "Find Text..."
-msgstr "Pronađi tekst..."
-
-#: src/viewer/viewcontainer.cpp:563
-msgid "Search for text in the current tab"
-msgstr "Traži tekst u trenutnoj kartici"
-
-#: src/viewer/viewcontainer.cpp:581
-#, kde-format
-msgid "Channel &List for %1"
-msgstr "&Lista kanala za %1"
-
-#: src/viewer/viewcontainer.cpp:587 src/mainwindow.cpp:203
-msgid "Channel &List"
-msgstr "%Lista kanala"
-
-#: src/viewer/viewcontainer.cpp:596 src/mainwindow.cpp:186
-#: src/mainwindow.cpp:773
-msgid "&Open Logfile"
-msgstr "Otvori &dnevničku datoteku"
-
-#: src/viewer/viewcontainer.cpp:601
-#, kde-format
-msgid "&Open Logfile for %1"
-msgstr "Otvori &dnevničku datoteku za %1"
-
-#: src/viewer/viewcontainer.cpp:612
-#, kde-format
-msgid "&Channel Settings for %1..."
-msgstr "Podešavanja &kanala za %1..."
-
-#: src/viewer/viewcontainer.cpp:617 src/mainwindow.cpp:195
-msgid "&Channel Settings..."
-msgstr "&Podešavanja kanala"
-
-#: src/viewer/viewcontainer.cpp:1673
-msgid "Rename Tab"
-msgstr "Preimenuj karticu"
-
-#: src/viewer/viewcontainer.cpp:1674
-msgid "Enter new tab name:"
-msgstr "Unesite novo ime kartice:"
-
-#: src/viewer/viewcontainer.cpp:1743
-#, kde-format
-msgctxt "Default encoding"
-msgid "Default ( %1 )"
-msgstr "Podrazumjevano (%1)"
-
-#: src/viewer/viewcontainer.cpp:1778
-msgid "&Rename Tab..."
-msgstr "&Preimenuj karticu..."
-
-#: src/viewer/viewcontainer.cpp:1923
-msgid "You can only search in text fields."
-msgstr "Možete tražiti samo u tekstualnim poljima."
-
-#: src/viewer/viewcontainer.cpp:1924
-msgid "Find Text Information"
-msgstr "Nađi tekstualne informacije"
-
-#: src/viewer/viewcontainer.cpp:2121
-#, kde-format
-msgid "Logfile of %1"
-msgstr "Dnevničku datoteku za %1"
-
-#: src/viewer/viewcontainer.cpp:2130 src/viewer/viewcontainer.cpp:2131
-#: src/konsolepanel.cpp:27
-msgid "Konsole"
-msgstr "Konzola"
-
-#: src/viewer/viewcontainer.cpp:2141 src/urlcatcher.cpp:84
-msgid "URL Catcher"
-msgstr "Hvatač URL-ova"
-
-#: src/viewer/viewcontainer.cpp:2493
-msgid ""
-"To know which server to display the channel list for, the list can only be "
-"opened from a query, channel or status window."
-msgstr ""
-"Lista kanala može biti otvorena samo iz upita, kanala ili prozora stanja da "
-"bi se saznalo kom serveru ta lista pripada."
-
-#: src/viewer/viewcontainer.cpp:2523
-msgid ""
-"Using this function may result in a lot of network traffic. If your "
-"connection is not fast enough, it is possible that your client will be "
-"disconnected by the server."
-msgstr ""
-"Upotreba ove funkcije može dovesti do dosta mrežnog saobraćaja. Ako vaša "
-"veza nije dovoljno brza, moguće je da će server prekinuti vezu sa vašim "
-"klijentom."
-
-#: src/viewer/viewcontainer.cpp:2527
-msgid "Channel List Warning"
-msgstr "Upozorenje o listi kanala"
-
-#: src/viewer/viewcontainer.cpp:2557
-#, fuzzy
-#| msgid "Watched Nicknames"
-msgid "Watched Nicks"
-msgstr "Nadgledani nadimci"
 
 #: src/viewer/irccontextmenus.cpp:112
 msgid "Copy Link Address"
@@ -5565,6 +5397,174 @@ msgstr "Uredi višelinijsko umetanje"
 #, fuzzy
 msgid "&Send"
 msgstr "Šaljem"
+
+#: src/viewer/chatwindow.cpp:446
+#, kde-format
+msgid ""
+"\n"
+"*** Logfile started\n"
+"*** on %1\n"
+"\n"
+msgstr ""
+"\n"
+"*** Dnevničku datoteku započeti\n"
+"*** na %1\n"
+"\n"
+
+#: src/viewer/statuspanel.cpp:229
+#, kde-format
+msgid ""
+"Do you really want to close '%1'?\n"
+"\n"
+" All associated tabs will be closed as well."
+msgstr ""
+"Želite li zaista da zatvorite „%1“?\n"
+"\n"
+"Biće zatvoreni i sve pridružene kartice."
+
+#: src/viewer/statuspanel.cpp:230
+msgid "Close Tab"
+msgstr "Zatvori karticu"
+
+#: src/viewer/statuspanel.cpp:239
+#, kde-format
+msgid ""
+"Do you want to disconnect from '%1'?\n"
+"\n"
+" All associated tabs will be closed as well."
+msgstr ""
+"Želite li da prekinete vezu sa „%1“?\n"
+"Biće zatvorene i svi pridružene kartice."
+
+#: src/viewer/statuspanel.cpp:240
+msgid "Disconnect From Server"
+msgstr "Prekini vezu sa serverom"
+
+#: src/viewer/statuspanel.cpp:241
+msgid "Disconnect"
+msgstr "Prekini vezu"
+
+#: src/viewer/viewcontainer.cpp:221 src/mainwindow.cpp:291
+msgid "Move Tab Up"
+msgstr "Pomjeri karticu gore"
+
+#: src/viewer/viewcontainer.cpp:229 src/mainwindow.cpp:302
+msgid "Move Tab Down"
+msgstr "Pomjeri karticu dolje"
+
+#: src/viewer/viewcontainer.cpp:322 src/mainwindow.cpp:322
+#: src/mainwindow.cpp:334
+msgid "Move Tab Left"
+msgstr "Pomjeri karticu lijevo"
+
+#: src/viewer/viewcontainer.cpp:330 src/mainwindow.cpp:313
+#: src/mainwindow.cpp:343
+msgid "Move Tab Right"
+msgstr "Pomjeri karticu desno"
+
+#: src/viewer/viewcontainer.cpp:562
+msgid "Find Text..."
+msgstr "Pronađi tekst..."
+
+#: src/viewer/viewcontainer.cpp:564
+msgid "Search for text in the current tab"
+msgstr "Traži tekst u trenutnoj kartici"
+
+#: src/viewer/viewcontainer.cpp:582
+#, kde-format
+msgid "Channel &List for %1"
+msgstr "&Lista kanala za %1"
+
+#: src/viewer/viewcontainer.cpp:588 src/mainwindow.cpp:203
+msgid "Channel &List"
+msgstr "%Lista kanala"
+
+#: src/viewer/viewcontainer.cpp:597 src/mainwindow.cpp:186
+#: src/mainwindow.cpp:773
+msgid "&Open Logfile"
+msgstr "Otvori &dnevničku datoteku"
+
+#: src/viewer/viewcontainer.cpp:602
+#, kde-format
+msgid "&Open Logfile for %1"
+msgstr "Otvori &dnevničku datoteku za %1"
+
+#: src/viewer/viewcontainer.cpp:613
+#, kde-format
+msgid "&Channel Settings for %1..."
+msgstr "Podešavanja &kanala za %1..."
+
+#: src/viewer/viewcontainer.cpp:618 src/mainwindow.cpp:195
+msgid "&Channel Settings..."
+msgstr "&Podešavanja kanala"
+
+#: src/viewer/viewcontainer.cpp:1674
+msgid "Rename Tab"
+msgstr "Preimenuj karticu"
+
+#: src/viewer/viewcontainer.cpp:1675
+msgid "Enter new tab name:"
+msgstr "Unesite novo ime kartice:"
+
+#: src/viewer/viewcontainer.cpp:1744
+#, kde-format
+msgctxt "Default encoding"
+msgid "Default ( %1 )"
+msgstr "Podrazumjevano (%1)"
+
+#: src/viewer/viewcontainer.cpp:1779
+msgid "&Rename Tab..."
+msgstr "&Preimenuj karticu..."
+
+#: src/viewer/viewcontainer.cpp:1924
+msgid "You can only search in text fields."
+msgstr "Možete tražiti samo u tekstualnim poljima."
+
+#: src/viewer/viewcontainer.cpp:1925
+msgid "Find Text Information"
+msgstr "Nađi tekstualne informacije"
+
+#: src/viewer/viewcontainer.cpp:2122
+#, kde-format
+msgid "Logfile of %1"
+msgstr "Dnevničku datoteku za %1"
+
+#: src/viewer/viewcontainer.cpp:2131 src/viewer/viewcontainer.cpp:2132
+#: src/konsolepanel.cpp:27
+msgid "Konsole"
+msgstr "Konzola"
+
+#: src/viewer/viewcontainer.cpp:2142 src/urlcatcher.cpp:84
+msgid "URL Catcher"
+msgstr "Hvatač URL-ova"
+
+#: src/viewer/viewcontainer.cpp:2494
+msgid ""
+"To know which server to display the channel list for, the list can only be "
+"opened from a query, channel or status window."
+msgstr ""
+"Lista kanala može biti otvorena samo iz upita, kanala ili prozora stanja da "
+"bi se saznalo kom serveru ta lista pripada."
+
+#: src/viewer/viewcontainer.cpp:2524
+msgid ""
+"Using this function may result in a lot of network traffic. If your "
+"connection is not fast enough, it is possible that your client will be "
+"disconnected by the server."
+msgstr ""
+"Upotreba ove funkcije može dovesti do dosta mrežnog saobraćaja. Ako vaša "
+"veza nije dovoljno brza, moguće je da će server prekinuti vezu sa vašim "
+"klijentom."
+
+#: src/viewer/viewcontainer.cpp:2528
+msgid "Channel List Warning"
+msgstr "Upozorenje o listi kanala"
+
+#: src/viewer/viewcontainer.cpp:2558
+#, fuzzy
+#| msgid "Watched Nicknames"
+msgid "Watched Nicks"
+msgstr "Nadgledani nadimci"
 
 #: src/queuetuner.cpp:234
 msgid "Reset..."
