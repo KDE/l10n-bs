@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcron\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-02 05:12+0200\n"
+"POT-Creation-Date: 2011-12-21 04:36+0100\n"
 "PO-Revision-Date: 2011-03-09 15:06+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -36,6 +36,22 @@ msgstr ""
 msgctxt "User login: errorMessage"
 msgid "User %1: %2"
 msgstr "Korisnik %1: %2"
+
+#: src/crontablib/ctunit.cpp:172
+msgid ","
+msgstr ","
+
+#: src/crontablib/ctunit.cpp:173 src/crontablib/cttask.cpp:318
+msgid " and "
+msgstr " i "
+
+#: src/crontablib/ctunit.cpp:176 src/crontablib/cttask.cpp:321
+msgid ", "
+msgstr ", "
+
+#: src/crontablib/ctHelper.cpp:22
+msgid "No comment"
+msgstr "Bez komentara"
 
 #: src/crontablib/ctdom.cpp:23 src/crontablib/ctdow.cpp:44
 #: src/crontablib/cttask.cpp:266
@@ -166,25 +182,33 @@ msgstr "30."
 msgid "31st"
 msgstr "31."
 
-#: src/crontablib/ctHelper.cpp:22
-msgid "No comment"
-msgstr "Bez komentara"
-
-#: src/crontablib/ctunit.cpp:172
-msgid ","
-msgstr ","
-
-#: src/crontablib/ctunit.cpp:173 src/crontablib/cttask.cpp:318
-msgid " and "
-msgstr " i "
-
-#: src/crontablib/ctunit.cpp:176 src/crontablib/cttask.cpp:321
-msgid ", "
-msgstr ", "
-
 #: src/crontablib/ctGlobalCron.cpp:39
 msgid "All users"
 msgstr "Svi korisnici"
+
+#: src/crontablib/ctvariable.cpp:126
+msgid "Override default home folder."
+msgstr "Prepiši zadanu glavnu mapu."
+
+#: src/crontablib/ctvariable.cpp:129
+msgid "Email output to specified account."
+msgstr "Pošalji izlaz na navedenu adresu."
+
+#: src/crontablib/ctvariable.cpp:132
+msgid "Override default shell."
+msgstr "Prepiši preko uobičajenog shella."
+
+#: src/crontablib/ctvariable.cpp:135
+msgid "Folders to search for program files."
+msgstr "Direktoriji u kojima treba tražiti programske datoteke."
+
+#: src/crontablib/ctvariable.cpp:138
+msgid "Dynamic libraries location."
+msgstr "Lokacija dinamičkih biblioteka."
+
+#: src/crontablib/ctvariable.cpp:141
+msgid "Local Variable"
+msgstr "Lokalna Varijabla"
 
 #: src/crontablib/ctmonth.cpp:23
 msgid "every month"
@@ -239,30 +263,6 @@ msgstr "Novembar"
 #: src/crontablib/ctmonth.cpp:33
 msgid "December"
 msgstr "Decembar"
-
-#: src/crontablib/ctvariable.cpp:126
-msgid "Override default home folder."
-msgstr "Prepiši zadanu glavnu mapu."
-
-#: src/crontablib/ctvariable.cpp:129
-msgid "Email output to specified account."
-msgstr "Pošalji izlaz na navedenu adresu."
-
-#: src/crontablib/ctvariable.cpp:132
-msgid "Override default shell."
-msgstr "Prepiši preko uobičajenog shella."
-
-#: src/crontablib/ctvariable.cpp:135
-msgid "Folders to search for program files."
-msgstr "Direktoriji u kojima treba tražiti programske datoteke."
-
-#: src/crontablib/ctvariable.cpp:138
-msgid "Dynamic libraries location."
-msgstr "Lokacija dinamičkih biblioteka."
-
-#: src/crontablib/ctvariable.cpp:141
-msgid "Local Variable"
-msgstr "Lokalna Varijabla"
 
 #: src/crontablib/ctdow.cpp:56
 msgid "Mon"
@@ -446,47 +446,6 @@ msgstr "Omogućeno"
 msgid "Disabled"
 msgstr "Isključeno"
 
-#: src/variableEditorDialog.cpp:60
-msgid "Add or modify a variable"
-msgstr "Dodaj ili modificiraj varijablu"
-
-#: src/variableEditorDialog.cpp:64
-msgctxt "The environmental variable name ie HOME, MAILTO etc"
-msgid "&Variable:"
-msgstr "&Varijabla:"
-
-#: src/variableEditorDialog.cpp:93
-msgid "Va&lue:"
-msgstr "V&rijednost:"
-
-#: src/variableEditorDialog.cpp:102 src/taskEditorDialog.cpp:106
-msgid "&Run as:"
-msgstr "&Pokreni kao:"
-
-#: src/variableEditorDialog.cpp:120 src/taskEditorDialog.cpp:122
-msgid "Co&mment:"
-msgstr "Ko&mentar:"
-
-#: src/variableEditorDialog.cpp:128
-msgid "&Enable this variable"
-msgstr "&Osposobi ovu varijablu"
-
-#: src/variableEditorDialog.cpp:156
-msgid "<i>This variable will be used by scheduled tasks.</i>"
-msgstr "<i> Ova varijabla će se koristiti za zakazane zadatke. </ i>"
-
-#: src/variableEditorDialog.cpp:200
-msgid "<i>This variable is disabled.</i>"
-msgstr "<i>Ova varijabla je onesposobljena.</i>"
-
-#: src/variableEditorDialog.cpp:207
-msgid "<i>Please enter the variable name...</i>"
-msgstr "<i>Molimo unesite naziv varijable...<i>"
-
-#: src/variableEditorDialog.cpp:214
-msgid "<i>Please enter the variable value ...</i>"
-msgstr "<i>Molimo unesite vrijednost varijable...</i>"
-
 #: src/variablesWidget.cpp:48
 msgid "<b>Environment Variables</b>"
 msgstr "<b>Varijable Okruženja</b>"
@@ -543,6 +502,47 @@ msgstr "&Obriši"
 #: src/variablesWidget.cpp:231
 msgid "Delete the selected variable."
 msgstr "Obriši izabranu varijablu."
+
+#: src/variableEditorDialog.cpp:60
+msgid "Add or modify a variable"
+msgstr "Dodaj ili modificiraj varijablu"
+
+#: src/variableEditorDialog.cpp:64
+msgctxt "The environmental variable name ie HOME, MAILTO etc"
+msgid "&Variable:"
+msgstr "&Varijabla:"
+
+#: src/variableEditorDialog.cpp:93
+msgid "Va&lue:"
+msgstr "V&rijednost:"
+
+#: src/variableEditorDialog.cpp:102 src/taskEditorDialog.cpp:106
+msgid "&Run as:"
+msgstr "&Pokreni kao:"
+
+#: src/variableEditorDialog.cpp:120 src/taskEditorDialog.cpp:122
+msgid "Co&mment:"
+msgstr "Ko&mentar:"
+
+#: src/variableEditorDialog.cpp:128
+msgid "&Enable this variable"
+msgstr "&Osposobi ovu varijablu"
+
+#: src/variableEditorDialog.cpp:156
+msgid "<i>This variable will be used by scheduled tasks.</i>"
+msgstr "<i> Ova varijabla će se koristiti za zakazane zadatke. </ i>"
+
+#: src/variableEditorDialog.cpp:200
+msgid "<i>This variable is disabled.</i>"
+msgstr "<i>Ova varijabla je onesposobljena.</i>"
+
+#: src/variableEditorDialog.cpp:207
+msgid "<i>Please enter the variable name...</i>"
+msgstr "<i>Molimo unesite naziv varijable...<i>"
+
+#: src/variableEditorDialog.cpp:214
+msgid "<i>Please enter the variable value ...</i>"
+msgstr "<i>Molimo unesite vrijednost varijable...</i>"
 
 #: src/taskEditorDialog.cpp:76
 msgid "Add or modify a scheduled task"
