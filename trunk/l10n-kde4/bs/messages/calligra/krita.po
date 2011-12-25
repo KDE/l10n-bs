@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: koffice\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-12-24 02:24+0100\n"
+"POT-Creation-Date: 2011-12-25 02:22+0100\n"
 "PO-Revision-Date: 2011-03-30 22:55+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -4193,7 +4193,7 @@ msgstr "Izlaz u boji, ne u sivim tonovima"
 
 #. i18n: file: plugins/extensions/shearimage/wdg_shearimage.ui:16
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgShearImage)
-#: rc.cpp:1356 image/kis_image.cc:606
+#: rc.cpp:1356 image/kis_image.cc:650
 #: plugins/extensions/shearimage/dlg_shearimage.cc:32
 #: plugins/extensions/shearimage/shearimage.cc:90
 msgid "Shear Image"
@@ -9983,7 +9983,7 @@ msgctxt "Category of brush engines"
 msgid "Stable"
 msgstr "Stabilno"
 
-#: image/brushengine/kis_paintop_registry.cc:119
+#: image/brushengine/kis_paintop_registry.cc:135
 msgid "default"
 msgstr "podrazumijevano"
 
@@ -10157,50 +10157,54 @@ msgstr "Vidljiv"
 msgid "Locked"
 msgstr "Zaključan"
 
-#: image/kis_image.cc:261
+#: image/kis_image.cc:260
 msgid "background"
 msgstr "pozadina"
 
-#: image/kis_image.cc:264
+#: image/kis_image.cc:263
 #, kde-format
 msgid "Layer %1"
 msgstr "Sloj %1"
 
-#: image/kis_image.cc:420
+#: image/kis_image.cc:419
 msgid "Crop Image"
 msgstr "Saseci sliku"
 
-#: image/kis_image.cc:420
+#: image/kis_image.cc:419
 msgid "Resize Image"
 msgstr "Promijeni veličinu slike"
 
-#: image/kis_image.cc:452
+#: image/kis_image.cc:451
 #, fuzzy
 #| msgid "Crop Image"
 msgid "Crop Node"
 msgstr "Saseci sliku"
 
-#: image/kis_image.cc:626
+#: image/kis_image.cc:644
+msgid "Shear layer"
+msgstr "Smakni sloj"
+
+#: image/kis_image.cc:660
 msgid "Convert Image Color Space"
 msgstr "Konvertuj prostor boja slike"
 
-#: image/kis_image.cc:643
+#: image/kis_image.cc:677
 msgid "Assign Profile"
 msgstr "Dodijeli profil"
 
-#: image/kis_image.cc:664
+#: image/kis_image.cc:698
 msgid "Convert Projection Color Space"
 msgstr "Konvertuj prostor boja projekcije"
 
-#: image/kis_image.cc:838 ui/kis_layer_manager.cc:740
+#: image/kis_image.cc:872 ui/kis_layer_manager.cc:719
 msgid "Flatten Image"
 msgstr "Spljošti sliku"
 
-#: image/kis_image.cc:896
+#: image/kis_image.cc:930
 msgid "Merge with Layer Below"
 msgstr "Stopi sa slojem ispod"
 
-#: image/kis_image.cc:921
+#: image/kis_image.cc:955
 msgid "Flatten Layer"
 msgstr "Izravnaj sloj"
 
@@ -10697,7 +10701,7 @@ msgid "&Duplicate Layer or Mask"
 msgstr "&Dupli sloj ili maska"
 
 #: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:381
-#: ui/kis_layer_manager.cc:138
+#: ui/kis_layer_manager.cc:137
 msgid "&Merge with Layer Below"
 msgstr "&Stopi sa slojem ispod"
 
@@ -11065,7 +11069,7 @@ msgid "Rotate Layer of 90° to the Left"
 msgstr "Rotiraj sloj 90 ° na lijevo"
 
 #: plugins/extensions/rotateimage/rotateimage.cc:151
-#: ui/kis_layer_manager.cc:678
+#: ui/kis_layer_manager.cc:675
 msgid "Rotate Layer"
 msgstr "Rotiraj sloj"
 
@@ -11125,7 +11129,7 @@ msgid "Separate Image..."
 msgstr "Razdvoji sliku..."
 
 #: plugins/extensions/separate_channels/kis_channel_separator.cc:242
-#: ui/kis_layer_manager.cc:832
+#: ui/kis_layer_manager.cc:811
 msgid "Export Layer"
 msgstr "Izvezi sloj"
 
@@ -11269,10 +11273,6 @@ msgstr "Podešavanje boja"
 msgid "&Brightness/Contrast curve..."
 msgstr "&Kriva osvjetljenja/kontrasta..."
 
-#: plugins/filters/colorsfilters/kis_perchannel_filter.cpp:370
-msgid "&Color Adjustment curves..."
-msgstr "&Krive prilagođenja boje..."
-
 #: plugins/filters/colorsfilters/colorsfilters.cpp:89
 msgid "&Auto Contrast"
 msgstr "&Automatski kontrast"
@@ -11280,6 +11280,10 @@ msgstr "&Automatski kontrast"
 #: plugins/filters/colorsfilters/colorsfilters.cpp:193
 msgid "&Desaturate"
 msgstr "&Smanji zasićenje"
+
+#: plugins/filters/colorsfilters/kis_perchannel_filter.cpp:376
+msgid "&Color Adjustment curves..."
+msgstr "&Krive prilagođenja boje..."
 
 #: plugins/filters/convolutionfilters/convolutionfilters.h:34
 msgid "Sharpen"
@@ -13861,85 +13865,81 @@ msgstr "Ponovo primjeni filter"
 msgid "Apply Filter Again: %1"
 msgstr "Primijeni filter ponovo: %1"
 
-#: ui/kis_image_manager.cc:58
+#: ui/kis_image_manager.cc:55
 msgid "I&nsert Image as Layer..."
 msgstr "U&baci sliku kao sloj..."
 
-#: ui/kis_image_manager.cc:62
+#: ui/kis_image_manager.cc:59
 msgid "Properties..."
 msgstr "Svojstva..."
 
-#: ui/kis_image_manager.cc:93
+#: ui/kis_image_manager.cc:90
 msgid "Import Image"
 msgstr "Uvezi sliku"
 
-#: ui/kis_layer_manager.cc:133
+#: ui/kis_layer_manager.cc:132
 msgid "&Flatten image"
 msgstr "S&pljošti sliku"
 
-#: ui/kis_layer_manager.cc:143
+#: ui/kis_layer_manager.cc:142
 msgid "&Flatten Layer"
 msgstr "&Izravnaj sloj"
 
-#: ui/kis_layer_manager.cc:147 ui/kis_layer_manager.cc:804
+#: ui/kis_layer_manager.cc:146 ui/kis_layer_manager.cc:783
 #, fuzzy
 msgid "Rasterize Layer"
 msgstr "Rotiraj sloj"
 
-#: ui/kis_layer_manager.cc:151
+#: ui/kis_layer_manager.cc:150
 msgid "Save Layer as Image..."
 msgstr "Snimi sloj kao sliku..."
 
-#: ui/kis_layer_manager.cc:155
+#: ui/kis_layer_manager.cc:154
 msgid "Size Canvas to Size of Current Layer"
 msgstr "Razvuci platno na veličinu trenutnog sloja"
 
-#: ui/kis_layer_manager.cc:223
+#: ui/kis_layer_manager.cc:220
 msgid "Filter Layer Properties"
 msgstr "Svojstva filterskog sloja"
 
-#: ui/kis_layer_manager.cc:252
+#: ui/kis_layer_manager.cc:249
 msgid "Generator Layer Properties"
 msgstr "Svojstva generatorskog sloja"
 
-#: ui/kis_layer_manager.cc:305 ui/kis_layer_manager.cc:321
-#: ui/kis_layer_manager.cc:365 ui/kis_layer_manager.cc:398
-#: ui/kis_layer_manager.cc:536
+#: ui/kis_layer_manager.cc:302 ui/kis_layer_manager.cc:318
+#: ui/kis_layer_manager.cc:362 ui/kis_layer_manager.cc:395
+#: ui/kis_layer_manager.cc:533
 msgid "Could not add layer to image."
 msgstr "Nisam mogao da dodam sloj slici."
 
-#: ui/kis_layer_manager.cc:305 ui/kis_layer_manager.cc:321
-#: ui/kis_layer_manager.cc:365 ui/kis_layer_manager.cc:398
-#: ui/kis_layer_manager.cc:536
+#: ui/kis_layer_manager.cc:302 ui/kis_layer_manager.cc:318
+#: ui/kis_layer_manager.cc:362 ui/kis_layer_manager.cc:395
+#: ui/kis_layer_manager.cc:533
 msgid "Layer Error"
 msgstr "Greška u sloju"
 
-#: ui/kis_layer_manager.cc:428
+#: ui/kis_layer_manager.cc:425
 msgid "New Filter Layer"
 msgstr "Novi filterski sloj"
 
-#: ui/kis_layer_manager.cc:598 ui/kis_layer_manager.cc:608
+#: ui/kis_layer_manager.cc:595 ui/kis_layer_manager.cc:605
 msgid "Mirror Layer X"
 msgstr "Sloj X u ogledalu"
 
-#: ui/kis_layer_manager.cc:625 ui/kis_layer_manager.cc:635
+#: ui/kis_layer_manager.cc:622 ui/kis_layer_manager.cc:632
 #: ui/kis_mask_manager.cc:316
 msgid "Mirror Layer Y"
 msgstr "Sloj Y u ogledalu"
 
-#: ui/kis_layer_manager.cc:657
+#: ui/kis_layer_manager.cc:654
 msgid "Scale Layer"
 msgstr "Skaliraj sloj"
 
-#: ui/kis_layer_manager.cc:710 ui/kis_layer_manager.cc:713
-msgid "Shear layer"
-msgstr "Smakni sloj"
-
-#: ui/kis_layer_manager.cc:739
+#: ui/kis_layer_manager.cc:718
 msgid "The image contains hidden layers that will be lost."
 msgstr "Slika sadrži skrivene slojeve, koji će biti izgubljeni."
 
-#: ui/kis_layer_manager.cc:741
+#: ui/kis_layer_manager.cc:720
 msgid "&Flatten Image"
 msgstr "&Spljošti sliku"
 
