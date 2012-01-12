@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeqt\n"
 "Report-Msgid-Bugs-To: qt-bugs@trolltech.com\n"
-"POT-Creation-Date: 2012-01-06 04:16+0100\n"
+"POT-Creation-Date: 2012-01-12 04:27+0100\n"
 "PO-Revision-Date: 2011-03-26 15:24+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1607,8 +1607,8 @@ msgctxt "QIODevice"
 msgid "No space left on device"
 msgstr "Nema više prostora na uređaju"
 
-#: corelib/io/qiodevice.cpp:1629 corelib/plugin/qpluginloader.cpp:367
-#: corelib/plugin/qlibrary.cpp:1233
+#: corelib/io/qiodevice.cpp:1629 corelib/plugin/qlibrary.cpp:1233
+#: corelib/plugin/qpluginloader.cpp:367
 #: corelib/statemachine/qstatemachine.cpp:1046
 #: network/kernel/qhostinfo_unix.cpp:300 network/kernel/qhostinfo_win.cpp:209
 #: network/kernel/qhostinfo_win.cpp:236
@@ -1616,6 +1616,24 @@ msgstr "Nema više prostora na uređaju"
 #: network/socket/qsymbiansocketengine.cpp:1435 network/ssl/qsslerror.cpp:289
 msgid "Unknown error"
 msgstr "Nepoznata greška"
+
+#: corelib/io/qprocess.cpp:887 corelib/io/qprocess.cpp:939
+#: corelib/io/qprocess_win.cpp:601 corelib/io/qprocess_win.cpp:651
+msgid "Error reading from process"
+msgstr "Greška pri čitanju iz procesa"
+
+#: corelib/io/qprocess.cpp:986 corelib/io/qprocess.cpp:1854
+#: corelib/io/qprocess_win.cpp:791
+msgid "Error writing to process"
+msgstr "Greška pri pisanju u proces"
+
+#: corelib/io/qprocess.cpp:1055
+msgid "Process crashed"
+msgstr "Proces se srušio"
+
+#: corelib/io/qprocess.cpp:2056
+msgid "No program defined"
+msgstr "Program nije definisan"
 
 #: corelib/io/qprocess_unix.cpp:401 corelib/io/qprocess_win.cpp:138
 msgid "Could not open input redirection for reading"
@@ -1642,24 +1660,6 @@ msgstr "Postupku procesa isteklo vrijeme"
 #, qt-format
 msgid "Process failed to start: %1"
 msgstr "Proces ne može da se pokrene: %1"
-
-#: corelib/io/qprocess_win.cpp:601 corelib/io/qprocess_win.cpp:651
-#: corelib/io/qprocess.cpp:887 corelib/io/qprocess.cpp:939
-msgid "Error reading from process"
-msgstr "Greška pri čitanju iz procesa"
-
-#: corelib/io/qprocess_win.cpp:791 corelib/io/qprocess.cpp:986
-#: corelib/io/qprocess.cpp:1854
-msgid "Error writing to process"
-msgstr "Greška pri pisanju u proces"
-
-#: corelib/io/qprocess.cpp:1055
-msgid "Process crashed"
-msgstr "Proces se srušio"
-
-#: corelib/io/qprocess.cpp:2056
-msgid "No program defined"
-msgstr "Program nije definisan"
 
 #: corelib/io/qfile.cpp:736 corelib/io/qfile.cpp:890
 msgid "Destination file exists"
@@ -1892,34 +1892,15 @@ msgstr "postavi: vrijednost ne predstavlja objekat"
 msgid "'%1' is an invalid ELF object (%2)"
 msgstr "%1 nije valjano %2"
 
-#: corelib/plugin/qlibrary_unix.cpp:244 corelib/plugin/qlibrary_win.cpp:87
-#, qt-format
-msgid "Cannot load library %1: %2"
-msgstr "Ne mogu da učitam biblioteku %1: %2"
-
-#: corelib/plugin/qlibrary_unix.cpp:261 corelib/plugin/qlibrary_win.cpp:109
-#, qt-format
-msgid "Cannot unload library %1: %2"
-msgstr "Ne mogu da odučitam biblioteku %1: %2"
-
-#: corelib/plugin/qlibrary_unix.cpp:295 corelib/plugin/qlibrary_win.cpp:124
-#, qt-format
-msgid "Cannot resolve symbol \"%1\" in %2: %3"
-msgstr "Ne mogu da razriješim simbol ‘%1’ u %2: %3"
-
-#: corelib/plugin/qpluginloader.cpp:254
-msgid "The plugin was not loaded."
-msgstr "Priključak nije učitan."
-
-#: corelib/plugin/qpluginloader.cpp:343 corelib/plugin/qlibrary.cpp:679
-#: corelib/plugin/qlibrary.cpp:825
-msgid "The shared library was not found."
-msgstr "Dijeljena biblioteka nije nađena."
-
 #: corelib/plugin/qlibrary.cpp:402
 #, qt-format
 msgid "Plugin verification data mismatch in '%1'"
 msgstr "Nepoklapanje ovjere priključka u „%1“"
+
+#: corelib/plugin/qlibrary.cpp:679 corelib/plugin/qlibrary.cpp:825
+#: corelib/plugin/qpluginloader.cpp:343
+msgid "The shared library was not found."
+msgstr "Dijeljena biblioteka nije nađena."
 
 #: corelib/plugin/qlibrary.cpp:827
 #, qt-format
@@ -1948,6 +1929,25 @@ msgid ""
 msgstr ""
 "Priključak „%1“ koristi nesaglasnu biblioteku Qt‑a. (Ne mogu se miješati "
 "ispravljački i prometne biblioteke.)"
+
+#: corelib/plugin/qlibrary_unix.cpp:244 corelib/plugin/qlibrary_win.cpp:87
+#, qt-format
+msgid "Cannot load library %1: %2"
+msgstr "Ne mogu da učitam biblioteku %1: %2"
+
+#: corelib/plugin/qlibrary_unix.cpp:261 corelib/plugin/qlibrary_win.cpp:109
+#, qt-format
+msgid "Cannot unload library %1: %2"
+msgstr "Ne mogu da odučitam biblioteku %1: %2"
+
+#: corelib/plugin/qlibrary_unix.cpp:295 corelib/plugin/qlibrary_win.cpp:124
+#, qt-format
+msgid "Cannot resolve symbol \"%1\" in %2: %3"
+msgstr "Ne mogu da razriješim simbol ‘%1’ u %2: %3"
+
+#: corelib/plugin/qpluginloader.cpp:254
+msgid "The plugin was not loaded."
+msgstr "Priključak nije učitan."
 
 #: corelib/statemachine/qstatemachine.cpp:1028
 #, qt-format
@@ -2128,6 +2128,49 @@ msgctxt "Debugger::JSAgentWatchData"
 msgid "<undefined>"
 msgstr ""
 
+#: declarative/graphicsitems/qdeclarativeitem.cpp:814
+msgid "LayoutDirection attached property only works with Items"
+msgstr ""
+
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:103
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:206
+msgctxt "QDeclarativeAnimatedImage"
+msgid "Qt was built without support for QMovie"
+msgstr "QT je napravljen bez podrške za QMovie"
+
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:175
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:258
+msgid "KeyNavigation is only available via attached properties"
+msgstr "KeyNavigation je dostupan jedino preko dodijeljenih osobina"
+
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:176
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:259
+msgid "Keys is only available via attached properties"
+msgstr "Keys je dostupan jedino preko dodijeljenih osobina."
+
+#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:201
+#, fuzzy
+#| msgid "KeyNavigation is only available via attached properties"
+msgid "LayoutMirroring is only available via attached properties"
+msgstr "KeyNavigation je dostupan jedino preko dodijeljenih osobina"
+
+#: declarative/graphicsitems/qdeclarativeloader.cpp:407
+msgid "Loader does not support loading non-visual elements."
+msgstr "Loader ne podržava učitavanje ne-vizuelnih elemenata."
+
+#: declarative/graphicsitems/qdeclarativetextinput.cpp:962
+#: declarative/graphicsitems/qdeclarativetextinput.cpp:970
+msgid "Could not load cursor delegate"
+msgstr "Neuspjelo učitavanje delegata kursora."
+
+#: declarative/graphicsitems/qdeclarativetextinput.cpp:981
+msgid "Could not instantiate cursor delegate"
+msgstr "Neuspjelo davanje primjera delegata kursora."
+
+#: declarative/graphicsitems/qdeclarativevisualitemmodel.cpp:1099
+msgid "Delegate component must be Item type."
+msgstr "Komponenta delegata mora biti u tipu podatka."
+
 #: declarative/graphicsitems/qdeclarativeanchors.cpp:198
 msgid "Possible anchor loop detected on fill."
 msgstr "Moguća pričvršćena petlja otkrivane pri unosu."
@@ -2184,49 +2227,6 @@ msgstr ""
 #: declarative/graphicsitems/qdeclarativeanchors.cpp:1149
 msgid "Cannot anchor a vertical edge to a horizontal edge."
 msgstr "Nemoguće usidriti vertikalnu ivicu na horizontalnu ivicu."
-
-#: declarative/graphicsitems/qdeclarativeitem.cpp:814
-msgid "LayoutDirection attached property only works with Items"
-msgstr ""
-
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:103
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:206
-msgctxt "QDeclarativeAnimatedImage"
-msgid "Qt was built without support for QMovie"
-msgstr "QT je napravljen bez podrške za QMovie"
-
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:175
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:258
-msgid "KeyNavigation is only available via attached properties"
-msgstr "KeyNavigation je dostupan jedino preko dodijeljenih osobina"
-
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:176
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:259
-msgid "Keys is only available via attached properties"
-msgstr "Keys je dostupan jedino preko dodijeljenih osobina."
-
-#: declarative/graphicsitems/qdeclarativeitemsmodule.cpp:201
-#, fuzzy
-#| msgid "KeyNavigation is only available via attached properties"
-msgid "LayoutMirroring is only available via attached properties"
-msgstr "KeyNavigation je dostupan jedino preko dodijeljenih osobina"
-
-#: declarative/graphicsitems/qdeclarativeloader.cpp:407
-msgid "Loader does not support loading non-visual elements."
-msgstr "Loader ne podržava učitavanje ne-vizuelnih elemenata."
-
-#: declarative/graphicsitems/qdeclarativetextinput.cpp:962
-#: declarative/graphicsitems/qdeclarativetextinput.cpp:970
-msgid "Could not load cursor delegate"
-msgstr "Neuspjelo učitavanje delegata kursora."
-
-#: declarative/graphicsitems/qdeclarativetextinput.cpp:981
-msgid "Could not instantiate cursor delegate"
-msgstr "Neuspjelo davanje primjera delegata kursora."
-
-#: declarative/graphicsitems/qdeclarativevisualitemmodel.cpp:1099
-msgid "Delegate component must be Item type."
-msgstr "Komponenta delegata mora biti u tipu podatka."
 
 #: declarative/graphicsitems/qdeclarativeflipable.cpp:138
 msgid "front is a write-once property"
@@ -2929,10 +2929,6 @@ msgstr "Prostor za ime %1 ne može biti korišten kao tip."
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: declarative/util/qdeclarativebehavior.cpp:127
-msgid "Cannot change the animation assigned to a Behavior."
-msgstr "Nemoguće promjeniti animaciju."
-
 #: declarative/util/qdeclarativeconnections.cpp:217
 msgid "Connections: nested objects not allowed"
 msgstr "Konekcije: ugniježđeni objekti nedozvoljeni"
@@ -2995,6 +2991,49 @@ msgstr "ListElement: ne prihvata korištenje skripte za vrijednost osobine"
 msgid "ListModel: undefined property '%1'"
 msgstr "ListModel: nedefinisana osobina '%1'"
 
+#: declarative/util/qdeclarativepixmapcache.cpp:311
+#, qt-format
+msgid "Error decoding: %1: %2"
+msgstr "Greška u dekodiranju: %1: %2"
+
+#: declarative/util/qdeclarativepixmapcache.cpp:478
+#: declarative/util/qdeclarativepixmapcache.cpp:838
+#, qt-format
+msgid "Failed to get image from provider: %1"
+msgstr "Neuspjelo preuzimanje slike: %1"
+
+#: declarative/util/qdeclarativepixmapcache.cpp:496
+#: declarative/util/qdeclarativepixmapcache.cpp:856
+#, qt-format
+msgid "Cannot open: %1"
+msgstr "Neuspjelo otvaranje: %1"
+
+#: declarative/util/qdeclarativepropertychanges.cpp:256
+msgid "PropertyChanges does not support creating state-specific objects."
+msgstr "Promjene osobina ne podržavaju stvaranje statičnih objekata."
+
+#: declarative/util/qdeclarativepropertychanges.cpp:427
+#, qt-format
+msgid "Cannot assign to read-only property \"%1\""
+msgstr "Nemoguće dodijeliti fiksnoj osobini \"%1\""
+
+#: declarative/util/qdeclarativestateoperations.cpp:103
+#: declarative/util/qdeclarativeanimation.cpp:2699
+msgid "Unable to preserve appearance under complex transform"
+msgstr "Nuspjelo očuvanje izgleda pod složenom transformacijom"
+
+#: declarative/util/qdeclarativestateoperations.cpp:114
+#: declarative/util/qdeclarativestateoperations.cpp:121
+#: declarative/util/qdeclarativeanimation.cpp:2710
+#: declarative/util/qdeclarativeanimation.cpp:2717
+msgid "Unable to preserve appearance under non-uniform scale"
+msgstr "Neuspjelo očuvanje izgleda pod neravnomjernim razmjerom"
+
+#: declarative/util/qdeclarativestateoperations.cpp:128
+#: declarative/util/qdeclarativeanimation.cpp:2724
+msgid "Unable to preserve appearance under scale of 0"
+msgstr "Neuspjelo očuvanje izgleda pod razmjerom 0"
+
 #: declarative/util/qdeclarativeutilmodule.cpp:79
 #, fuzzy
 #| msgid "Animation is an abstract class"
@@ -3014,39 +3053,6 @@ msgstr "Qt napravljen uz podršku xmlpatterns-a"
 msgid "Animation is an abstract class"
 msgstr "Animacija je apstraktna vrsta"
 
-#: declarative/util/qdeclarativeanimation.cpp:172
-#, qt-format
-msgid "Cannot animate non-existent property \"%1\""
-msgstr "Nemoguće animirati nepostojeću osobinu \"%1\""
-
-#: declarative/util/qdeclarativeanimation.cpp:175
-#, qt-format
-msgid "Cannot animate read-only property \"%1\""
-msgstr "Nemoguće animirati fiksnu osobinu \"%1\""
-
-#: declarative/util/qdeclarativeanimation.cpp:609
-#: declarative/util/qdeclarativeanimation.cpp:1847
-#: declarative/util/qdeclarativeanimation.cpp:2867
-msgid "Cannot set a duration of < 0"
-msgstr "Nemoguće odrediti trajanje <0"
-
-#: declarative/util/qdeclarativeanimation.cpp:2699
-#: declarative/util/qdeclarativestateoperations.cpp:103
-msgid "Unable to preserve appearance under complex transform"
-msgstr "Nuspjelo očuvanje izgleda pod složenom transformacijom"
-
-#: declarative/util/qdeclarativeanimation.cpp:2710
-#: declarative/util/qdeclarativeanimation.cpp:2717
-#: declarative/util/qdeclarativestateoperations.cpp:114
-#: declarative/util/qdeclarativestateoperations.cpp:121
-msgid "Unable to preserve appearance under non-uniform scale"
-msgstr "Neuspjelo očuvanje izgleda pod neravnomjernim razmjerom"
-
-#: declarative/util/qdeclarativeanimation.cpp:2724
-#: declarative/util/qdeclarativestateoperations.cpp:128
-msgid "Unable to preserve appearance under scale of 0"
-msgstr "Neuspjelo očuvanje izgleda pod razmjerom 0"
-
 #: declarative/util/qdeclarativexmllistmodel.cpp:581
 #, qt-format
 msgid "\"%1\" duplicates a previous role name and will be disabled."
@@ -3063,31 +3069,25 @@ msgstr "XmlListModel upit mora početi sa '/' ili sa \"//\""
 msgid "invalid query: \"%1\""
 msgstr "Nevažeći upit: \"%1\""
 
-#: declarative/util/qdeclarativepropertychanges.cpp:256
-msgid "PropertyChanges does not support creating state-specific objects."
-msgstr "Promjene osobina ne podržavaju stvaranje statičnih objekata."
-
-#: declarative/util/qdeclarativepropertychanges.cpp:427
+#: declarative/util/qdeclarativeanimation.cpp:172
 #, qt-format
-msgid "Cannot assign to read-only property \"%1\""
-msgstr "Nemoguće dodijeliti fiksnoj osobini \"%1\""
+msgid "Cannot animate non-existent property \"%1\""
+msgstr "Nemoguće animirati nepostojeću osobinu \"%1\""
 
-#: declarative/util/qdeclarativepixmapcache.cpp:311
+#: declarative/util/qdeclarativeanimation.cpp:175
 #, qt-format
-msgid "Error decoding: %1: %2"
-msgstr "Greška u dekodiranju: %1: %2"
+msgid "Cannot animate read-only property \"%1\""
+msgstr "Nemoguće animirati fiksnu osobinu \"%1\""
 
-#: declarative/util/qdeclarativepixmapcache.cpp:478
-#: declarative/util/qdeclarativepixmapcache.cpp:838
-#, qt-format
-msgid "Failed to get image from provider: %1"
-msgstr "Neuspjelo preuzimanje slike: %1"
+#: declarative/util/qdeclarativeanimation.cpp:609
+#: declarative/util/qdeclarativeanimation.cpp:1847
+#: declarative/util/qdeclarativeanimation.cpp:2867
+msgid "Cannot set a duration of < 0"
+msgstr "Nemoguće odrediti trajanje <0"
 
-#: declarative/util/qdeclarativepixmapcache.cpp:496
-#: declarative/util/qdeclarativepixmapcache.cpp:856
-#, qt-format
-msgid "Cannot open: %1"
-msgstr "Neuspjelo otvaranje: %1"
+#: declarative/util/qdeclarativebehavior.cpp:127
+msgid "Cannot change the animation assigned to a Behavior."
+msgstr "Nemoguće promjeniti animaciju."
 
 #: gui/accessible/qaccessibleobject.cpp:374
 msgid "Activate"
@@ -3097,18 +3097,14 @@ msgstr "Aktiviraj"
 msgid "Activates the program's main window"
 msgstr "Aktivira glavni prozor programa"
 
-#: gui/dialogs/qabstractpagesetupdialog.cpp:68
-#: gui/dialogs/qabstractpagesetupdialog.cpp:80
-msgctxt "QPrintPreviewDialog"
-msgid "Page Setup"
-msgstr "Postavka stranice"
+#: gui/dialogs/qdialog.cpp:524 gui/dialogs/qwizard.cpp:698
+#: gui/kernel/qsoftkeymanager.cpp:70
+msgid "Done"
+msgstr "Gotovo"
 
-# >> @title:window
-#: gui/dialogs/qabstractprintdialog.cpp:116
-#: gui/dialogs/qabstractprintdialog.cpp:129
-msgctxt "QPrintDialog"
-msgid "Print"
-msgstr "Štampanje"
+#: gui/dialogs/qdialog.cpp:651 gui/kernel/qwhatsthis.cpp:527
+msgid "What's This?"
+msgstr "Šta je ovo?"
 
 #: gui/dialogs/qfilesystemmodel.cpp:763 gui/itemviews/qdirmodel.cpp:1334
 #, qt-format
@@ -3210,6 +3206,110 @@ msgstr "&Zapisni sistem"
 #: gui/dialogs/qinputdialog.cpp:223
 msgid "Enter a value:"
 msgstr "Unesite vrijednost:"
+
+#: gui/dialogs/qmessagebox.cpp:139
+msgid "Show Details..."
+msgstr "Prikaži detalje..."
+
+#: gui/dialogs/qmessagebox.cpp:139
+msgid "Hide Details..."
+msgstr "Sakrij detalje..."
+
+#: gui/dialogs/qmessagebox.cpp:427 gui/dialogs/qmessagebox.cpp:1272
+msgctxt "QMessageBox"
+msgid "OK"
+msgstr "U redu"
+
+#: gui/dialogs/qmessagebox.cpp:1273
+msgctxt "QMessageBox"
+msgid "Help"
+msgstr "Pomoć"
+
+#: gui/dialogs/qmessagebox.cpp:1762
+#, qt-format
+msgid "<h3>About Qt</h3><p>This program uses Qt version %1.</p>"
+msgstr "<h3>O Qt‑u</h3><p>Ovaj program koristi izdanje Qt‑a %1.</p>"
+
+#: gui/dialogs/qmessagebox.cpp:1767
+#, fuzzy
+#| msgid ""
+#| "<p>Qt is a C++ toolkit for cross-platform application development.</"
+#| "p><p>Qt provides single-source portability across MS&nbsp;Windows, "
+#| "Mac&nbsp;OS&nbsp;X, Linux, and all major commercial Unix variants. Qt is "
+#| "also available for embedded devices as Qt for Embedded Linux and Qt for "
+#| "Windows CE.</p><p>Qt is available under three different licensing options "
+#| "designed to accommodate the needs of our various users.</p><p>Qt licensed "
+#| "under our commercial license agreement is appropriate for development of "
+#| "proprietary/commercial software where you do not want to share any source "
+#| "code with third parties or otherwise cannot comply with the terms of the "
+#| "GNU LGPL version 2.1 or GNU GPL version 3.0.</p><p>Qt licensed under the "
+#| "GNU LGPL version 2.1 is appropriate for the development of Qt "
+#| "applications (proprietary or open source) provided you can comply with "
+#| "the terms and conditions of the GNU LGPL version 2.1.</p><p>Qt licensed "
+#| "under the GNU General Public License version 3.0 is appropriate for the "
+#| "development of Qt applications where you wish to use such applications in "
+#| "combination with software subject to the terms of the GNU GPL version 3.0 "
+#| "or where you are otherwise willing to comply with the terms of the GNU "
+#| "GPL version 3.0.</p><p>Please see <a href=\"http://qt.nokia.com/products/"
+#| "licensing\">qt.nokia.com/products/licensing</a> for an overview of Qt "
+#| "licensing.</p><p>Copyright (C) 2010 Nokia Corporation and/or its "
+#| "subsidiary(-ies).</p><p>Qt is a Nokia product. See <a href=\"http://qt."
+#| "nokia.com/\">qt.nokia.com</a> for more information.</p>"
+msgid ""
+"<p>Qt is a C++ toolkit for cross-platform application development.</p><p>Qt "
+"provides single-source portability across MS&nbsp;Windows, Mac&nbsp;OS&nbsp;"
+"X, Linux, and all major commercial Unix variants. Qt is also available for "
+"embedded devices as Qt for Embedded Linux and Qt for Windows CE.</p><p>Qt is "
+"available under three different licensing options designed to accommodate "
+"the needs of our various users.</p><p>Qt licensed under our commercial "
+"license agreement is appropriate for development of proprietary/commercial "
+"software where you do not want to share any source code with third parties "
+"or otherwise cannot comply with the terms of the GNU LGPL version 2.1 or GNU "
+"GPL version 3.0.</p><p>Qt licensed under the GNU LGPL version 2.1 is "
+"appropriate for the development of Qt applications (proprietary or open "
+"source) provided you can comply with the terms and conditions of the GNU "
+"LGPL version 2.1.</p><p>Qt licensed under the GNU General Public License "
+"version 3.0 is appropriate for the development of Qt applications where you "
+"wish to use such applications in combination with software subject to the "
+"terms of the GNU GPL version 3.0 or where you are otherwise willing to "
+"comply with the terms of the GNU GPL version 3.0.</p><p>Please see <a href="
+"\"http://qt.nokia.com/products/licensing\">qt.nokia.com/products/licensing</"
+"a> for an overview of Qt licensing.</p><p>Copyright (C) 2012 Nokia "
+"Corporation and/or its subsidiary(-ies).</p><p>Qt is a Nokia product. See <a "
+"href=\"http://qt.nokia.com/\">qt.nokia.com</a> for more information.</p>"
+msgstr ""
+"<p>QT je C ++ alat za višeplatformski razvoj aplikacija.</p><p>QT "
+"obezbjeđuje jednim izvorom prenosivost preko MS Windows, Mac OS X Linux, i "
+"svih većih komercijalnih Unix varijanti. QT je takođe na raspolaganju za "
+"ugrađene uređaje kao QT za Embedded Linux i QT za Vindovs CE.</p><p>QT je "
+"dostupan pod tri različite opcije licenciranja dizajniran da se prilagodi "
+"potrebama naših različitih korisnika.</p><p>QT licenciran pod našim "
+"komercijalnim ugovorom o licenciranju je pogodan za razvoj vlasničkog / "
+"komercijalnog softvera, gdje ne želite da dijelite bilo koji izvorni kod sa "
+"trećim licima ili na drugi način ne možete da ispunite uslove GNU LGPL "
+"verziju 2.1 ili 3.0 verziju GNU-ove GPL.</p><p>QT licenciran pod GNU LGPL "
+"verzija 2.1 je pogodan za razvoj QT aplikacija (vlasnički ili open source), "
+"pod uslovom da može da ispuni uslove GNU LGPL verziju 2.1.</p><p>QT "
+"licenciran pod GNU General Public Licence verzije 3.0 je pogodan za razvoj "
+"QT aplikacija u kojoj želite da koristite takve aplikacije u kombinaciji sa "
+"softverom u skladu sa uslovima GNU-ove GPL verzije 3.0 ili gdje ste spremni "
+"da na drugi način budete u skladu sa uslovima GNU-ove OJL verzije 3,0.</"
+"p><p>Molimo pogledajte <a href=\"http://qt.nokia.com/products/licensing\">qt."
+"nokia.com/products/licensing</a> za pregled na QT licenciranja.</"
+"p><p>Copyright (C) 2010 Nokia Corporation i kompanije u njenom vlasništvu.</"
+"p><p>QT je Nokia proizvod. Pogledajte <a href=\"http://qt.nokia.com/\">qt."
+"nokia.com</a> Za više informacija.</p>"
+
+#: gui/dialogs/qmessagebox.cpp:1797
+msgid "About Qt"
+msgstr "O Qt‑u"
+
+#: gui/dialogs/qmessagebox.cpp:1937 gui/dialogs/qmessagebox.cpp:2383
+#: gui/dialogs/qprintdialog_win.cpp:272 gui/kernel/qsoftkeymanager.cpp:64
+#: qt3support/dialogs/q3tabdialog.cpp:190
+#: qt3support/dialogs/q3tabdialog.cpp:1014
+msgid "OK"
+msgstr "U redu"
 
 #: gui/dialogs/qpagesetupdialog_unix.cpp:72
 msgid "A0"
@@ -3352,6 +3452,151 @@ msgstr "inči (in)"
 msgid "Points (pt)"
 msgstr "tačke (tač.)"
 
+#: gui/dialogs/qprintdialog_unix.cpp:396 gui/dialogs/qprintdialog_unix.cpp:464
+msgid "&Options >>"
+msgstr "&Opcije >>"
+
+#: gui/dialogs/qprintdialog_unix.cpp:401
+msgid "&Print"
+msgstr "&Štampaj"
+
+# skip-rule: x-markup-q
+#: gui/dialogs/qprintdialog_unix.cpp:468
+msgid "&Options <<"
+msgstr "&Opcije <<"
+
+#: gui/dialogs/qprintdialog_unix.cpp:728
+msgid "Print to File (PDF)"
+msgstr "Štampaj u datoteku (PDF)"
+
+#: gui/dialogs/qprintdialog_unix.cpp:729
+msgid "Print to File (Postscript)"
+msgstr "Štampaj u datoteku (PostScript)"
+
+# >> @item Location: Local file
+#: gui/dialogs/qprintdialog_unix.cpp:776
+msgid "Local file"
+msgstr "lokalnu datoteku"
+
+# >> @item Type: Write %1 file
+# >! Split into two strings.
+#: gui/dialogs/qprintdialog_unix.cpp:777
+#, qt-format
+msgid "Write %1 file"
+msgstr "%1 datoteka upisana"
+
+# >> @title:window
+#: gui/dialogs/qprintdialog_unix.cpp:848
+msgid "Print To File ..."
+msgstr "Štampanje u datoteku"
+
+#: gui/dialogs/qprintdialog_unix.cpp:926
+#, qt-format
+msgid ""
+"%1 is a directory.\n"
+"Please choose a different file name."
+msgstr ""
+"%1 je direktorijum.\n"
+"Izaberite drugo ime datoteke."
+
+#: gui/dialogs/qprintdialog_unix.cpp:930
+#, qt-format
+msgid ""
+"File %1 is not writable.\n"
+"Please choose a different file name."
+msgstr ""
+"Ne može se pisati u datoteku %1.\n"
+"Izaberite drugo ime datoteke."
+
+#: gui/dialogs/qprintdialog_unix.cpp:934
+#, qt-format
+msgid ""
+"%1 already exists.\n"
+"Do you want to overwrite it?"
+msgstr ""
+"%1 već postoji.\n"
+"Želite li da prebrišete datoteku?"
+
+# >> @title:column
+#: gui/dialogs/qprintdialog_unix.cpp:1238
+msgctxt "QPPDOptionsModel"
+msgid "Name"
+msgstr "ime"
+
+# >> @title:column
+#: gui/dialogs/qprintdialog_unix.cpp:1240
+msgctxt "QPPDOptionsModel"
+msgid "Value"
+msgstr "vrijednost"
+
+# >> @title:window
+#: gui/dialogs/qprintdialog_win.cpp:270
+msgid "Print"
+msgstr "Štampanje"
+
+#: gui/dialogs/qprintdialog_win.cpp:271
+msgid "The 'From' value cannot be greater than the 'To' value."
+msgstr "Vrijednost ‘od’ ne može biti veća od vrijednosti ‘do’."
+
+#: gui/dialogs/qprogressdialog.cpp:203 gui/dialogs/qwizard.cpp:700
+#: gui/kernel/qsoftkeymanager.cpp:76
+#: qt3support/dialogs/q3progressdialog.cpp:224
+#: qt3support/dialogs/q3progressdialog.cpp:285
+#: qt3support/dialogs/q3tabdialog.cpp:786
+msgid "Cancel"
+msgstr "Odustani"
+
+#: gui/dialogs/qwizard.cpp:688
+msgid "Go Back"
+msgstr "Idi nazad"
+
+# |, no-check-markup
+#: gui/dialogs/qwizard.cpp:688 qt3support/dialogs/q3wizard.cpp:178
+msgid "< &Back"
+msgstr "< &Nazad"
+
+#: gui/dialogs/qwizard.cpp:691 scripttools/debugging/qscriptdebugger.cpp:1694
+msgid "Continue"
+msgstr "Nastavi"
+
+#: gui/dialogs/qwizard.cpp:694
+msgid "&Next"
+msgstr "&Dalje"
+
+#: gui/dialogs/qwizard.cpp:694 qt3support/dialogs/q3wizard.cpp:179
+msgid "&Next >"
+msgstr "&Dalje >"
+
+#: gui/dialogs/qwizard.cpp:696
+msgid "Commit"
+msgstr "Predaj"
+
+#: gui/dialogs/qwizard.cpp:698 qt3support/dialogs/q3wizard.cpp:180
+msgid "&Finish"
+msgstr "&Završi"
+
+#: gui/dialogs/qwizard.cpp:702 gui/widgets/qmdisubwindow.cpp:355
+#: qt3support/dialogs/q3tabdialog.cpp:691
+msgid "Help"
+msgstr "Pomoć"
+
+#: gui/dialogs/qwizard.cpp:702 qt3support/dialogs/q3wizard.cpp:181
+msgid "&Help"
+msgstr "P&omoć"
+
+#: gui/dialogs/qabstractpagesetupdialog.cpp:68
+#: gui/dialogs/qabstractpagesetupdialog.cpp:80
+msgctxt "QPrintPreviewDialog"
+msgid "Page Setup"
+msgstr "Postavka stranice"
+
+# >> @title:window
+#: gui/dialogs/qabstractprintdialog.cpp:116
+#: gui/dialogs/qabstractprintdialog.cpp:129
+msgctxt "QPrintDialog"
+msgid "Print"
+msgstr "Štampanje"
+
 #: gui/dialogs/qprintdialog_qws.cpp:148
 msgid "File exists"
 msgstr "Datoteka postoji"
@@ -3488,99 +3733,6 @@ msgstr "Štampaj izbor"
 msgid "Print current page"
 msgstr "Isprintaj trenutnu stranicu"
 
-#: gui/dialogs/qprintdialog_unix.cpp:396 gui/dialogs/qprintdialog_unix.cpp:464
-msgid "&Options >>"
-msgstr "&Opcije >>"
-
-#: gui/dialogs/qprintdialog_unix.cpp:401
-msgid "&Print"
-msgstr "&Štampaj"
-
-# skip-rule: x-markup-q
-#: gui/dialogs/qprintdialog_unix.cpp:468
-msgid "&Options <<"
-msgstr "&Opcije <<"
-
-#: gui/dialogs/qprintdialog_unix.cpp:728
-msgid "Print to File (PDF)"
-msgstr "Štampaj u datoteku (PDF)"
-
-#: gui/dialogs/qprintdialog_unix.cpp:729
-msgid "Print to File (Postscript)"
-msgstr "Štampaj u datoteku (PostScript)"
-
-# >> @item Location: Local file
-#: gui/dialogs/qprintdialog_unix.cpp:776
-msgid "Local file"
-msgstr "lokalnu datoteku"
-
-# >> @item Type: Write %1 file
-# >! Split into two strings.
-#: gui/dialogs/qprintdialog_unix.cpp:777
-#, qt-format
-msgid "Write %1 file"
-msgstr "%1 datoteka upisana"
-
-# >> @title:window
-#: gui/dialogs/qprintdialog_unix.cpp:848
-msgid "Print To File ..."
-msgstr "Štampanje u datoteku"
-
-#: gui/dialogs/qprintdialog_unix.cpp:926
-#, qt-format
-msgid ""
-"%1 is a directory.\n"
-"Please choose a different file name."
-msgstr ""
-"%1 je direktorijum.\n"
-"Izaberite drugo ime datoteke."
-
-#: gui/dialogs/qprintdialog_unix.cpp:930
-#, qt-format
-msgid ""
-"File %1 is not writable.\n"
-"Please choose a different file name."
-msgstr ""
-"Ne može se pisati u datoteku %1.\n"
-"Izaberite drugo ime datoteke."
-
-#: gui/dialogs/qprintdialog_unix.cpp:934
-#, qt-format
-msgid ""
-"%1 already exists.\n"
-"Do you want to overwrite it?"
-msgstr ""
-"%1 već postoji.\n"
-"Želite li da prebrišete datoteku?"
-
-# >> @title:column
-#: gui/dialogs/qprintdialog_unix.cpp:1238
-msgctxt "QPPDOptionsModel"
-msgid "Name"
-msgstr "ime"
-
-# >> @title:column
-#: gui/dialogs/qprintdialog_unix.cpp:1240
-msgctxt "QPPDOptionsModel"
-msgid "Value"
-msgstr "vrijednost"
-
-# >> @title:window
-#: gui/dialogs/qprintdialog_win.cpp:270
-msgid "Print"
-msgstr "Štampanje"
-
-#: gui/dialogs/qprintdialog_win.cpp:271
-msgid "The 'From' value cannot be greater than the 'To' value."
-msgstr "Vrijednost ‘od’ ne može biti veća od vrijednosti ‘do’."
-
-#: gui/dialogs/qprintdialog_win.cpp:272 gui/dialogs/qmessagebox.cpp:1937
-#: gui/dialogs/qmessagebox.cpp:2383 gui/kernel/qsoftkeymanager.cpp:64
-#: qt3support/dialogs/q3tabdialog.cpp:190
-#: qt3support/dialogs/q3tabdialog.cpp:1014
-msgid "OK"
-msgstr "U redu"
-
 #: gui/dialogs/qprintpreviewdialog.cpp:249
 #, qt-format
 msgid "%1%"
@@ -3683,161 +3835,9 @@ msgctxt "QPrintPreviewDialog"
 msgid "Export to PostScript"
 msgstr "Izvoz u PostScript"
 
-#: gui/dialogs/qprogressdialog.cpp:203 gui/dialogs/qwizard.cpp:700
-#: gui/kernel/qsoftkeymanager.cpp:76
-#: qt3support/dialogs/q3progressdialog.cpp:224
-#: qt3support/dialogs/q3progressdialog.cpp:285
-#: qt3support/dialogs/q3tabdialog.cpp:786
-msgid "Cancel"
-msgstr "Odustani"
-
 #: gui/dialogs/qsidebar.cpp:442
 msgid "Remove"
 msgstr "Ukloni"
-
-#: gui/dialogs/qwizard.cpp:688
-msgid "Go Back"
-msgstr "Idi nazad"
-
-# |, no-check-markup
-#: gui/dialogs/qwizard.cpp:688 qt3support/dialogs/q3wizard.cpp:178
-msgid "< &Back"
-msgstr "< &Nazad"
-
-#: gui/dialogs/qwizard.cpp:691 scripttools/debugging/qscriptdebugger.cpp:1694
-msgid "Continue"
-msgstr "Nastavi"
-
-#: gui/dialogs/qwizard.cpp:694
-msgid "&Next"
-msgstr "&Dalje"
-
-#: gui/dialogs/qwizard.cpp:694 qt3support/dialogs/q3wizard.cpp:179
-msgid "&Next >"
-msgstr "&Dalje >"
-
-#: gui/dialogs/qwizard.cpp:696
-msgid "Commit"
-msgstr "Predaj"
-
-#: gui/dialogs/qwizard.cpp:698 gui/dialogs/qdialog.cpp:524
-#: gui/kernel/qsoftkeymanager.cpp:70
-msgid "Done"
-msgstr "Gotovo"
-
-#: gui/dialogs/qwizard.cpp:698 qt3support/dialogs/q3wizard.cpp:180
-msgid "&Finish"
-msgstr "&Završi"
-
-#: gui/dialogs/qwizard.cpp:702 gui/widgets/qmdisubwindow.cpp:355
-#: qt3support/dialogs/q3tabdialog.cpp:691
-msgid "Help"
-msgstr "Pomoć"
-
-#: gui/dialogs/qwizard.cpp:702 qt3support/dialogs/q3wizard.cpp:181
-msgid "&Help"
-msgstr "P&omoć"
-
-#: gui/dialogs/qdialog.cpp:651 gui/kernel/qwhatsthis.cpp:527
-msgid "What's This?"
-msgstr "Šta je ovo?"
-
-#: gui/dialogs/qmessagebox.cpp:139
-msgid "Show Details..."
-msgstr "Prikaži detalje..."
-
-#: gui/dialogs/qmessagebox.cpp:139
-msgid "Hide Details..."
-msgstr "Sakrij detalje..."
-
-#: gui/dialogs/qmessagebox.cpp:427 gui/dialogs/qmessagebox.cpp:1272
-msgctxt "QMessageBox"
-msgid "OK"
-msgstr "U redu"
-
-#: gui/dialogs/qmessagebox.cpp:1273
-msgctxt "QMessageBox"
-msgid "Help"
-msgstr "Pomoć"
-
-#: gui/dialogs/qmessagebox.cpp:1762
-#, qt-format
-msgid "<h3>About Qt</h3><p>This program uses Qt version %1.</p>"
-msgstr "<h3>O Qt‑u</h3><p>Ovaj program koristi izdanje Qt‑a %1.</p>"
-
-#: gui/dialogs/qmessagebox.cpp:1767
-#, fuzzy
-#| msgid ""
-#| "<p>Qt is a C++ toolkit for cross-platform application development.</"
-#| "p><p>Qt provides single-source portability across MS&nbsp;Windows, "
-#| "Mac&nbsp;OS&nbsp;X, Linux, and all major commercial Unix variants. Qt is "
-#| "also available for embedded devices as Qt for Embedded Linux and Qt for "
-#| "Windows CE.</p><p>Qt is available under three different licensing options "
-#| "designed to accommodate the needs of our various users.</p><p>Qt licensed "
-#| "under our commercial license agreement is appropriate for development of "
-#| "proprietary/commercial software where you do not want to share any source "
-#| "code with third parties or otherwise cannot comply with the terms of the "
-#| "GNU LGPL version 2.1 or GNU GPL version 3.0.</p><p>Qt licensed under the "
-#| "GNU LGPL version 2.1 is appropriate for the development of Qt "
-#| "applications (proprietary or open source) provided you can comply with "
-#| "the terms and conditions of the GNU LGPL version 2.1.</p><p>Qt licensed "
-#| "under the GNU General Public License version 3.0 is appropriate for the "
-#| "development of Qt applications where you wish to use such applications in "
-#| "combination with software subject to the terms of the GNU GPL version 3.0 "
-#| "or where you are otherwise willing to comply with the terms of the GNU "
-#| "GPL version 3.0.</p><p>Please see <a href=\"http://qt.nokia.com/products/"
-#| "licensing\">qt.nokia.com/products/licensing</a> for an overview of Qt "
-#| "licensing.</p><p>Copyright (C) 2010 Nokia Corporation and/or its "
-#| "subsidiary(-ies).</p><p>Qt is a Nokia product. See <a href=\"http://qt."
-#| "nokia.com/\">qt.nokia.com</a> for more information.</p>"
-msgid ""
-"<p>Qt is a C++ toolkit for cross-platform application development.</p><p>Qt "
-"provides single-source portability across MS&nbsp;Windows, Mac&nbsp;OS&nbsp;"
-"X, Linux, and all major commercial Unix variants. Qt is also available for "
-"embedded devices as Qt for Embedded Linux and Qt for Windows CE.</p><p>Qt is "
-"available under three different licensing options designed to accommodate "
-"the needs of our various users.</p><p>Qt licensed under our commercial "
-"license agreement is appropriate for development of proprietary/commercial "
-"software where you do not want to share any source code with third parties "
-"or otherwise cannot comply with the terms of the GNU LGPL version 2.1 or GNU "
-"GPL version 3.0.</p><p>Qt licensed under the GNU LGPL version 2.1 is "
-"appropriate for the development of Qt applications (proprietary or open "
-"source) provided you can comply with the terms and conditions of the GNU "
-"LGPL version 2.1.</p><p>Qt licensed under the GNU General Public License "
-"version 3.0 is appropriate for the development of Qt applications where you "
-"wish to use such applications in combination with software subject to the "
-"terms of the GNU GPL version 3.0 or where you are otherwise willing to "
-"comply with the terms of the GNU GPL version 3.0.</p><p>Please see <a href="
-"\"http://qt.nokia.com/products/licensing\">qt.nokia.com/products/licensing</"
-"a> for an overview of Qt licensing.</p><p>Copyright (C) 2011 Nokia "
-"Corporation and/or its subsidiary(-ies).</p><p>Qt is a Nokia product. See <a "
-"href=\"http://qt.nokia.com/\">qt.nokia.com</a> for more information.</p>"
-msgstr ""
-"<p>QT je C ++ alat za višeplatformski razvoj aplikacija.</p><p>QT "
-"obezbjeđuje jednim izvorom prenosivost preko MS Windows, Mac OS X Linux, i "
-"svih većih komercijalnih Unix varijanti. QT je takođe na raspolaganju za "
-"ugrađene uređaje kao QT za Embedded Linux i QT za Vindovs CE.</p><p>QT je "
-"dostupan pod tri različite opcije licenciranja dizajniran da se prilagodi "
-"potrebama naših različitih korisnika.</p><p>QT licenciran pod našim "
-"komercijalnim ugovorom o licenciranju je pogodan za razvoj vlasničkog / "
-"komercijalnog softvera, gdje ne želite da dijelite bilo koji izvorni kod sa "
-"trećim licima ili na drugi način ne možete da ispunite uslove GNU LGPL "
-"verziju 2.1 ili 3.0 verziju GNU-ove GPL.</p><p>QT licenciran pod GNU LGPL "
-"verzija 2.1 je pogodan za razvoj QT aplikacija (vlasnički ili open source), "
-"pod uslovom da može da ispuni uslove GNU LGPL verziju 2.1.</p><p>QT "
-"licenciran pod GNU General Public Licence verzije 3.0 je pogodan za razvoj "
-"QT aplikacija u kojoj želite da koristite takve aplikacije u kombinaciji sa "
-"softverom u skladu sa uslovima GNU-ove GPL verzije 3.0 ili gdje ste spremni "
-"da na drugi način budete u skladu sa uslovima GNU-ove OJL verzije 3,0.</"
-"p><p>Molimo pogledajte <a href=\"http://qt.nokia.com/products/licensing\">qt."
-"nokia.com/products/licensing</a> za pregled na QT licenciranja.</"
-"p><p>Copyright (C) 2010 Nokia Corporation i kompanije u njenom vlasništvu.</"
-"p><p>QT je Nokia proizvod. Pogledajte <a href=\"http://qt.nokia.com/\">qt."
-"nokia.com</a> Za više informacija.</p>"
-
-#: gui/dialogs/qmessagebox.cpp:1797
-msgid "About Qt"
-msgstr "O Qt‑u"
 
 #: gui/inputmethod/qinputcontextfactory.cpp:301
 msgid "XIM"
@@ -5058,6 +5058,11 @@ msgstr "+"
 msgid "F%1"
 msgstr "F%1"
 
+#: gui/kernel/qsoftkeymanager.cpp:67
+#: plugins/qmltooling/qmldbg_inspector/editor/qmltoolbar.cpp:67
+msgid "Select"
+msgstr "izaberi"
+
 #: gui/kernel/qsoftkeymanager_s60.cpp:373
 msgid "Exit"
 msgstr "Izlaz"
@@ -5065,11 +5070,6 @@ msgstr "Izlaz"
 #: gui/kernel/qwidget.cpp:6050
 msgid "*"
 msgstr "*"
-
-#: gui/kernel/qsoftkeymanager.cpp:67
-#: plugins/qmltooling/qmldbg_inspector/editor/qmltoolbar.cpp:67
-msgid "Select"
-msgstr "izaberi"
 
 # ...štampač
 #: gui/painting/qprinterinfo_unix.cpp:135
@@ -5622,9 +5622,9 @@ msgstr "Obnovi"
 #: gui/widgets/qmdisubwindow.cpp:352 gui/widgets/qworkspace.cpp:113
 #: plugins/accessible/compat/q3complexwidgets.cpp:256
 #: plugins/accessible/widgets/complexwidgets.cpp:1847
-#: plugins/accessible/widgets/qaccessiblewidgets.cpp:1249
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:157
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:382
+#: plugins/accessible/widgets/qaccessiblewidgets.cpp:1249
 #: scripttools/debugging/qscriptbreakpointswidget.cpp:81
 #: scripttools/debugging/qscriptdebuggercodefinderwidget.cpp:141
 msgid "Close"
@@ -6342,14 +6342,20 @@ msgstr "Klizaj desno"
 
 #: plugins/accessible/widgets/complexwidgets.cpp:1781
 #: plugins/accessible/widgets/complexwidgets.cpp:1847
-#: plugins/accessible/widgets/simplewidgets.cpp:117
-#: plugins/accessible/widgets/simplewidgets.cpp:452
-#: plugins/accessible/widgets/simplewidgets.cpp:460
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:158
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:383
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:437
+#: plugins/accessible/widgets/simplewidgets.cpp:117
+#: plugins/accessible/widgets/simplewidgets.cpp:452
+#: plugins/accessible/widgets/simplewidgets.cpp:460
 msgid "Open"
 msgstr "Otvori"
+
+#: plugins/accessible/widgets/qaccessiblemenu.cpp:160
+#: plugins/accessible/widgets/qaccessiblemenu.cpp:385
+#: plugins/accessible/widgets/qaccessiblemenu.cpp:438
+msgid "Execute"
+msgstr "Izvrši"
 
 #: plugins/accessible/widgets/qaccessiblewidgets.cpp:1251
 msgid "Dock"
@@ -6418,12 +6424,6 @@ msgstr "Prebaci"
 msgid "Press"
 msgstr "Pritisni"
 
-#: plugins/accessible/widgets/qaccessiblemenu.cpp:160
-#: plugins/accessible/widgets/qaccessiblemenu.cpp:385
-#: plugins/accessible/widgets/qaccessiblemenu.cpp:438
-msgid "Execute"
-msgstr "Izvrši"
-
 #: plugins/bearer/icd/qnetworksession_impl.cpp:1030
 msgid "Roaming error"
 msgstr "Pokretna greška"
@@ -6433,8 +6433,8 @@ msgid "Session aborted by user or system"
 msgstr "Sesija prekinuta od strane korisnika ili sistema"
 
 #: plugins/bearer/icd/qnetworksession_impl.cpp:1036
-#: plugins/bearer/qnetworksession_impl.cpp:260
 #: plugins/bearer/symbian/qnetworksession_impl.cpp:307
+#: plugins/bearer/qnetworksession_impl.cpp:260
 msgid "The specified configuration cannot be used."
 msgstr "Navedena konfiguracija ne može biti korištena."
 
@@ -6442,23 +6442,23 @@ msgstr "Navedena konfiguracija ne može biti korištena."
 msgid "Unidentified Error"
 msgstr "Nepoznata greška"
 
-#: plugins/bearer/qnetworksession_impl.cpp:254
 #: plugins/bearer/symbian/qnetworksession_impl.cpp:301
+#: plugins/bearer/qnetworksession_impl.cpp:254
 msgid "Unknown session error."
 msgstr "Nepoznata greška sa sesijom."
 
-#: plugins/bearer/qnetworksession_impl.cpp:256
 #: plugins/bearer/symbian/qnetworksession_impl.cpp:303
+#: plugins/bearer/qnetworksession_impl.cpp:256
 msgid "The session was aborted by the user or system."
 msgstr "Sesija je prekinuta od strane korisnika ili sistema."
 
-#: plugins/bearer/qnetworksession_impl.cpp:258
 #: plugins/bearer/symbian/qnetworksession_impl.cpp:305
+#: plugins/bearer/qnetworksession_impl.cpp:258
 msgid "The requested operation is not supported by the system."
 msgstr "Tražena operacija nije podržana od strane sistema."
 
-#: plugins/bearer/qnetworksession_impl.cpp:262
 #: plugins/bearer/symbian/qnetworksession_impl.cpp:309
+#: plugins/bearer/qnetworksession_impl.cpp:262
 msgid "Roaming was aborted or is not possible."
 msgstr "Kretanje je prekinuto ili nije moguće."
 
@@ -6516,6 +6516,10 @@ msgstr ""
 msgid "Could not reset to read data"
 msgstr "Ne mogu da dobavim podatke niza"
 
+#: plugins/inputmethods/imsw-multi/qmultiinputcontext.cpp:88
+msgid "Select IM"
+msgstr "Izaberite IM"
+
 #: plugins/inputmethods/imsw-multi/qmultiinputcontextplugin.cpp:95
 msgid "Multiple input method switcher"
 msgstr "Mjenjač metoda unosa"
@@ -6526,10 +6530,6 @@ msgid ""
 msgstr ""
 "Mjenjač metoda unosa koji koristi kontekstni meni tekstualnih grafičke "
 "kontrole"
-
-#: plugins/inputmethods/imsw-multi/qmultiinputcontext.cpp:88
-msgid "Select IM"
-msgstr "Izaberite IM"
 
 #: plugins/qmltooling/qmldbg_inspector/editor/liveselectiontool.cpp:143
 msgid "Items"
@@ -7664,6 +7664,23 @@ msgid ""
 "character."
 msgstr "Kodna tačka %1, nađena u %2 sa kodiranjem %3, nije valjan XML znak."
 
+#: xmlpatterns/api/qiodevicedelegate.cpp:84
+msgid "Network timeout."
+msgstr "Prekovreme mreže."
+
+#: xmlpatterns/api/qxmlserializer.cpp:321
+#, qt-format
+msgid ""
+"Element %1 can't be serialized because it appears outside the document "
+"element."
+msgstr ""
+"Element %1 ne može se serijalizovati jer se javlja izvan dokument-elementa."
+
+#: xmlpatterns/api/qxmlserializer.cpp:381
+#, qt-format
+msgid "Attribute %1 can't be serialized because it appears at the top level."
+msgstr "Atribut %1 ne može se serijalizovati jer se javlja na najvišem nivou."
+
 #: xmlpatterns/api/qcoloringmessagehandler.cpp:87
 #, qt-format
 msgid "Warning in %1, at line %2, column %3: %4"
@@ -7687,76 +7704,6 @@ msgstr "Greška %1 u %2, kod reda %3 kolona %4: %5"
 #, qt-format
 msgid "Error %1 in %2: %3"
 msgstr "Greška %1 u %2: %3"
-
-#: xmlpatterns/api/qiodevicedelegate.cpp:84
-msgid "Network timeout."
-msgstr "Prekovreme mreže."
-
-#: xmlpatterns/api/qxmlserializer.cpp:321
-#, qt-format
-msgid ""
-"Element %1 can't be serialized because it appears outside the document "
-"element."
-msgstr ""
-"Element %1 ne može se serijalizovati jer se javlja izvan dokument-elementa."
-
-#: xmlpatterns/api/qxmlserializer.cpp:381
-#, qt-format
-msgid "Attribute %1 can't be serialized because it appears at the top level."
-msgstr "Atribut %1 ne može se serijalizovati jer se javlja na najvišem nivou."
-
-#: xmlpatterns/data/qabstractdatetime.cpp:80
-#, qt-format
-msgid "Year %1 is invalid because it begins with %2."
-msgstr "Godina %1 nije valjana jer počinje sa %2."
-
-#: xmlpatterns/data/qabstractdatetime.cpp:99
-#, qt-format
-msgid "Day %1 is outside the range %2..%3."
-msgstr "Dan %1 je izvan opsega %2-%3."
-
-#: xmlpatterns/data/qabstractdatetime.cpp:106
-#, qt-format
-msgid "Month %1 is outside the range %2..%3."
-msgstr "Mjesec %1 je izvan opsega %2-%3."
-
-#: xmlpatterns/data/qabstractdatetime.cpp:117
-#, qt-format
-msgid "Overflow: Can't represent date %1."
-msgstr "Prelivanje: ne mogu da predstavim datum %1."
-
-#: xmlpatterns/data/qabstractdatetime.cpp:125
-#, qt-format
-msgid "Day %1 is invalid for month %2."
-msgstr "Dan %1 nije valjan za mjesec %2."
-
-#: xmlpatterns/data/qabstractdatetime.cpp:174
-#, qt-format
-msgid ""
-"Time 24:%1:%2.%3 is invalid. Hour is 24, but minutes, seconds, and "
-"milliseconds are not all 0; "
-msgstr ""
-"Vrijeme 24:%1:%2.%3 nije valjano. Čas je 24, ali minuti, sekunde i "
-"milisekunde nisu svi 0. "
-
-#: xmlpatterns/data/qabstractdatetime.cpp:187
-#, qt-format
-msgid "Time %1:%2:%3.%4 is invalid."
-msgstr "Vrijeme %1:%2:%3.%4 nije valjano."
-
-#: xmlpatterns/data/qabstractdatetime.cpp:302
-msgid "Overflow: Date can't be represented."
-msgstr "Prelivanje: datum se ne može predstaviti."
-
-#: xmlpatterns/data/qabstractduration.cpp:99
-#: xmlpatterns/data/qabstractduration.cpp:114
-msgid "At least one component must be present."
-msgstr "Mora biti prisutna bar jedna komponenta."
-
-#: xmlpatterns/data/qabstractduration.cpp:107
-#, qt-format
-msgid "At least one time component must appear after the %1-delimiter."
-msgstr "Bar jedna vremenska komponenta mora slijediti %1‑razdvajač."
 
 #: xmlpatterns/data/qabstractfloatmathematician.cpp:64
 #, qt-format
@@ -7837,6 +7784,59 @@ msgstr ""
 #, qt-format
 msgid "%1 is not valid as a value of type %2."
 msgstr "%1 nije valjana kao vrijednost tipa %2."
+
+#: xmlpatterns/data/qabstractdatetime.cpp:80
+#, qt-format
+msgid "Year %1 is invalid because it begins with %2."
+msgstr "Godina %1 nije valjana jer počinje sa %2."
+
+#: xmlpatterns/data/qabstractdatetime.cpp:99
+#, qt-format
+msgid "Day %1 is outside the range %2..%3."
+msgstr "Dan %1 je izvan opsega %2-%3."
+
+#: xmlpatterns/data/qabstractdatetime.cpp:106
+#, qt-format
+msgid "Month %1 is outside the range %2..%3."
+msgstr "Mjesec %1 je izvan opsega %2-%3."
+
+#: xmlpatterns/data/qabstractdatetime.cpp:117
+#, qt-format
+msgid "Overflow: Can't represent date %1."
+msgstr "Prelivanje: ne mogu da predstavim datum %1."
+
+#: xmlpatterns/data/qabstractdatetime.cpp:125
+#, qt-format
+msgid "Day %1 is invalid for month %2."
+msgstr "Dan %1 nije valjan za mjesec %2."
+
+#: xmlpatterns/data/qabstractdatetime.cpp:174
+#, qt-format
+msgid ""
+"Time 24:%1:%2.%3 is invalid. Hour is 24, but minutes, seconds, and "
+"milliseconds are not all 0; "
+msgstr ""
+"Vrijeme 24:%1:%2.%3 nije valjano. Čas je 24, ali minuti, sekunde i "
+"milisekunde nisu svi 0. "
+
+#: xmlpatterns/data/qabstractdatetime.cpp:187
+#, qt-format
+msgid "Time %1:%2:%3.%4 is invalid."
+msgstr "Vrijeme %1:%2:%3.%4 nije valjano."
+
+#: xmlpatterns/data/qabstractdatetime.cpp:302
+msgid "Overflow: Date can't be represented."
+msgstr "Prelivanje: datum se ne može predstaviti."
+
+#: xmlpatterns/data/qabstractduration.cpp:99
+#: xmlpatterns/data/qabstractduration.cpp:114
+msgid "At least one component must be present."
+msgstr "Mora biti prisutna bar jedna komponenta."
+
+#: xmlpatterns/data/qabstractduration.cpp:107
+#, qt-format
+msgid "At least one time component must appear after the %1-delimiter."
+msgstr "Bar jedna vremenska komponenta mora slijediti %1‑razdvajač."
 
 #: xmlpatterns/expr/qapplytemplate.cpp:119
 msgid "Ambiguous rule match."
@@ -8021,36 +8021,6 @@ msgstr "Proslijeđen je parametar %1, ali ne postoji odgovarajući %2."
 msgid "The parameter %1 is required, but no corresponding %2 is supplied."
 msgstr "Zahtijevan je parametar %1, ali nije zadat odgovarajući %2."
 
-#: xmlpatterns/functions/qaggregatefns.cpp:120
-#, qt-format
-msgid ""
-"The first argument to %1 cannot be of type %2. It must be a numeric type, xs:"
-"yearMonthDuration or xs:dayTimeDuration."
-msgstr ""
-"Prvi argument za %1 ne može biti tipa %2. Mora biti brojevni, xs:"
-"yearMonthDuration ili xs:dayTimeDuration."
-
-#: xmlpatterns/functions/qaggregatefns.cpp:194
-#, qt-format
-msgid ""
-"The first argument to %1 cannot be of type %2. It must be of type %3, %4, or "
-"%5."
-msgstr ""
-"Prvi argument za %1 ne može biti tipa %2, već jednog od %3, %4, ili %5."
-
-#: xmlpatterns/functions/qaggregatefns.cpp:285
-#, qt-format
-msgid ""
-"The second argument to %1 cannot be of type %2. It must be of type %3, %4, "
-"or %5."
-msgstr ""
-"Drugi argument za %1 ne može biti tipa %2, već jednog od %3, %4, ili %5."
-
-#: xmlpatterns/functions/qassemblestringfns.cpp:88
-#, qt-format
-msgid "%1 is not a valid XML 1.0 character."
-msgstr "%1 nije valjan znak u XML‑u 1.0."
-
 #: xmlpatterns/functions/qcomparingaggregator.cpp:197
 #, qt-format
 msgid "The first argument to %1 cannot be of type %2."
@@ -8148,6 +8118,15 @@ msgstr ""
 msgid "It will not be possible to retrieve %1."
 msgstr "Neće biti moguće dobaviti %1."
 
+#: xmlpatterns/functions/qsequencegeneratingfns.cpp:282
+msgid "The default collection is undefined"
+msgstr "Podrazumijevana zbirka nije definisana"
+
+#: xmlpatterns/functions/qsequencegeneratingfns.cpp:295
+#, qt-format
+msgid "%1 cannot be retrieved"
+msgstr "%1 se ne može dobaviti"
+
 #: xmlpatterns/functions/qstringvaluefns.cpp:252
 #, qt-format
 msgid ""
@@ -8172,14 +8151,35 @@ msgstr "%1 nije cio broj minuta."
 msgid "The URI cannot have a fragment"
 msgstr "URI ne može imati fragment"
 
-#: xmlpatterns/functions/qsequencegeneratingfns.cpp:282
-msgid "The default collection is undefined"
-msgstr "Podrazumijevana zbirka nije definisana"
-
-#: xmlpatterns/functions/qsequencegeneratingfns.cpp:295
+#: xmlpatterns/functions/qaggregatefns.cpp:120
 #, qt-format
-msgid "%1 cannot be retrieved"
-msgstr "%1 se ne može dobaviti"
+msgid ""
+"The first argument to %1 cannot be of type %2. It must be a numeric type, xs:"
+"yearMonthDuration or xs:dayTimeDuration."
+msgstr ""
+"Prvi argument za %1 ne može biti tipa %2. Mora biti brojevni, xs:"
+"yearMonthDuration ili xs:dayTimeDuration."
+
+#: xmlpatterns/functions/qaggregatefns.cpp:194
+#, qt-format
+msgid ""
+"The first argument to %1 cannot be of type %2. It must be of type %3, %4, or "
+"%5."
+msgstr ""
+"Prvi argument za %1 ne može biti tipa %2, već jednog od %3, %4, ili %5."
+
+#: xmlpatterns/functions/qaggregatefns.cpp:285
+#, qt-format
+msgid ""
+"The second argument to %1 cannot be of type %2. It must be of type %3, %4, "
+"or %5."
+msgstr ""
+"Drugi argument za %1 ne može biti tipa %2, već jednog od %3, %4, ili %5."
+
+#: xmlpatterns/functions/qassemblestringfns.cpp:88
+#, qt-format
+msgid "%1 is not a valid XML 1.0 character."
+msgstr "%1 nije valjan znak u XML‑u 1.0."
 
 #: xmlpatterns/janitors/qcardinalityverifier.cpp:58
 #, qt-format
@@ -8250,157 +8250,6 @@ msgstr "Element s lokalnim imenom %1 ne postoji u XSLT‑u."
 #, qt-format
 msgid "The variable %1 is unused"
 msgstr "Promjenljiva %1 nije upotrijebljena"
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:519
-#, qt-format
-msgid "Element %1 is not allowed at this location."
-msgstr "Element %1 nije dozvoljen na ovom mjestu."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:528
-msgid "Text nodes are not allowed at this location."
-msgstr "Tekstualni čvorovi nisu dozvoljeni na ovom mjestu."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:548
-#, qt-format
-msgid "Parse error: %1"
-msgstr "Greška u raščlanjivanju: %1"
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:610
-#, qt-format
-msgid ""
-"The value of the XSL-T version attribute must be a value of type %1, which "
-"%2 isn't."
-msgstr "Vrijednost XSLT atributa verzije mora biti tipa %1, što %2 nije."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:630
-msgid "Running an XSL-T 1.0 stylesheet with a 2.0 processor."
-msgstr "Izvršavanje XSLT 1.0 opisa stila sa 2.0 obrađivačem."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:738
-#, qt-format
-msgid "Unknown XSL-T attribute %1."
-msgstr "Nepoznat XSLT atribut %1."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:761
-#, qt-format
-msgid "Attribute %1 and %2 are mutually exclusive."
-msgstr "Atributi %1 i %2 međusobno su isključivi."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:927
-#, qt-format
-msgid "In a simplified stylesheet module, attribute %1 must be present."
-msgstr "U pojednostavljenom modulu opisa stila, mora biti prisutan atribut %1."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:999
-#, qt-format
-msgid "If element %1 has no attribute %2, it cannot have attribute %3 or %4."
-msgstr "Ako element %1 nema atribut %2, ne može imati ni %3 ni %4."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1008
-#, qt-format
-msgid "Element %1 must have at least one of the attributes %2 or %3."
-msgstr "Element %1 mora imati bar jedan od atributa %2 i %3."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1036
-#, qt-format
-msgid "At least one mode must be specified in the %1-attribute on element %2."
-msgstr "Bar jedan režim mora biti zadat u atributu %1 elementa %2."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1159
-#, qt-format
-msgid "Element %1 must come last."
-msgstr "Element %1 mora biti na kraju."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1183
-#, qt-format
-msgid "At least one %1-element must occur before %2."
-msgstr "Mora se javiti bar jedan element %1 prije %2."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1190
-#, qt-format
-msgid "Only one %1-element can appear."
-msgstr "Može se javiti samo element %1."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1221
-#, qt-format
-msgid "At least one %1-element must occur inside %2."
-msgstr "Mora se javiti bar jedan element %1 unutar %2."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1279
-#, qt-format
-msgid ""
-"When attribute %1 is present on %2, a sequence constructor cannot be used."
-msgstr ""
-"Kada je atribut %1 prisutan uz %2, ne može se upotrijebiti konstruktor niza."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1292
-#, qt-format
-msgid "Element %1 must have either a %2-attribute or a sequence constructor."
-msgstr "Element %1 mora imati ili atribut %2 ili konstruktor niza."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1417
-#, qt-format
-msgid ""
-"When a parameter is required, a default value cannot be supplied through a "
-"%1-attribute or a sequence constructor."
-msgstr ""
-"Kada je neophodan parametar, podrazumijevana vrijednost se ne može zadati "
-"kroz atribut %1 ili konstruktor niza."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:1687
-#, qt-format
-msgid "Element %1 cannot have children."
-msgstr "Element %1 ne može imati djecu."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2121
-#, qt-format
-msgid "Element %1 cannot have a sequence constructor."
-msgstr "Element %1 ne može imati konstruktor niza."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2207
-#: xmlpatterns/parser/qxslttokenizer.cpp:2216
-#, qt-format
-msgid "The attribute %1 cannot appear on %2, when it is a child of %3."
-msgstr "Atribut %1 ne može se javiti uz %2 koji je dijete od %3."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2231
-msgid "A parameter in a function cannot be declared to be a tunnel."
-msgstr "Parametar u funkciji ne može se deklarisati kao tunel."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2380
-#, qt-format
-msgid "This processor is not Schema-aware and therefore %1 cannot be used."
-msgstr "Ovaj obrađivač ne poznaje šeme, pa se %1 ne može koristiti."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2437
-#, qt-format
-msgid ""
-"Top level stylesheet elements must be in a non-null namespace, which %1 "
-"isn't."
-msgstr ""
-"Elementi najvišeg nivou u opisu stila moraju biti u nenultom imenskom "
-"prostor, što %1 nije."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2485
-#, qt-format
-msgid ""
-"The value for attribute %1 on element %2 must either be %3 or %4, not %5."
-msgstr "Vrijednost za atribut %1 uz element %2 mora biti ili %3 ili %4, ne %5."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2505
-#, qt-format
-msgid "Attribute %1 cannot have the value %2."
-msgstr "Atribut %1 ne može imati vrijednost %2."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2563
-#, qt-format
-msgid "The attribute %1 can only appear on the first %2 element."
-msgstr "Atribut %1 može se javiti samo na prvom elementu %2."
-
-#: xmlpatterns/parser/qxslttokenizer.cpp:2662
-#, qt-format
-msgid "At least one %1 element must appear as child of %2."
-msgstr "Bar jedan element %1 mora se javiti kao dijete %2."
 
 #: querytransformparser.ypp:202
 msgid "W3C XML Schema identity constraint selector"
@@ -8790,6 +8639,157 @@ msgstr ""
 #: querytransformparser.ypp:4553
 msgid "The name of an extension expression must be in a namespace."
 msgstr "Ime proširivačkog izraza mora biti u imenskom prostoru."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:519
+#, qt-format
+msgid "Element %1 is not allowed at this location."
+msgstr "Element %1 nije dozvoljen na ovom mjestu."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:528
+msgid "Text nodes are not allowed at this location."
+msgstr "Tekstualni čvorovi nisu dozvoljeni na ovom mjestu."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:548
+#, qt-format
+msgid "Parse error: %1"
+msgstr "Greška u raščlanjivanju: %1"
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:610
+#, qt-format
+msgid ""
+"The value of the XSL-T version attribute must be a value of type %1, which "
+"%2 isn't."
+msgstr "Vrijednost XSLT atributa verzije mora biti tipa %1, što %2 nije."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:630
+msgid "Running an XSL-T 1.0 stylesheet with a 2.0 processor."
+msgstr "Izvršavanje XSLT 1.0 opisa stila sa 2.0 obrađivačem."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:738
+#, qt-format
+msgid "Unknown XSL-T attribute %1."
+msgstr "Nepoznat XSLT atribut %1."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:761
+#, qt-format
+msgid "Attribute %1 and %2 are mutually exclusive."
+msgstr "Atributi %1 i %2 međusobno su isključivi."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:927
+#, qt-format
+msgid "In a simplified stylesheet module, attribute %1 must be present."
+msgstr "U pojednostavljenom modulu opisa stila, mora biti prisutan atribut %1."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:999
+#, qt-format
+msgid "If element %1 has no attribute %2, it cannot have attribute %3 or %4."
+msgstr "Ako element %1 nema atribut %2, ne može imati ni %3 ni %4."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1008
+#, qt-format
+msgid "Element %1 must have at least one of the attributes %2 or %3."
+msgstr "Element %1 mora imati bar jedan od atributa %2 i %3."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1036
+#, qt-format
+msgid "At least one mode must be specified in the %1-attribute on element %2."
+msgstr "Bar jedan režim mora biti zadat u atributu %1 elementa %2."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1159
+#, qt-format
+msgid "Element %1 must come last."
+msgstr "Element %1 mora biti na kraju."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1183
+#, qt-format
+msgid "At least one %1-element must occur before %2."
+msgstr "Mora se javiti bar jedan element %1 prije %2."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1190
+#, qt-format
+msgid "Only one %1-element can appear."
+msgstr "Može se javiti samo element %1."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1221
+#, qt-format
+msgid "At least one %1-element must occur inside %2."
+msgstr "Mora se javiti bar jedan element %1 unutar %2."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1279
+#, qt-format
+msgid ""
+"When attribute %1 is present on %2, a sequence constructor cannot be used."
+msgstr ""
+"Kada je atribut %1 prisutan uz %2, ne može se upotrijebiti konstruktor niza."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1292
+#, qt-format
+msgid "Element %1 must have either a %2-attribute or a sequence constructor."
+msgstr "Element %1 mora imati ili atribut %2 ili konstruktor niza."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1417
+#, qt-format
+msgid ""
+"When a parameter is required, a default value cannot be supplied through a "
+"%1-attribute or a sequence constructor."
+msgstr ""
+"Kada je neophodan parametar, podrazumijevana vrijednost se ne može zadati "
+"kroz atribut %1 ili konstruktor niza."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:1687
+#, qt-format
+msgid "Element %1 cannot have children."
+msgstr "Element %1 ne može imati djecu."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2121
+#, qt-format
+msgid "Element %1 cannot have a sequence constructor."
+msgstr "Element %1 ne može imati konstruktor niza."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2207
+#: xmlpatterns/parser/qxslttokenizer.cpp:2216
+#, qt-format
+msgid "The attribute %1 cannot appear on %2, when it is a child of %3."
+msgstr "Atribut %1 ne može se javiti uz %2 koji je dijete od %3."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2231
+msgid "A parameter in a function cannot be declared to be a tunnel."
+msgstr "Parametar u funkciji ne može se deklarisati kao tunel."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2380
+#, qt-format
+msgid "This processor is not Schema-aware and therefore %1 cannot be used."
+msgstr "Ovaj obrađivač ne poznaje šeme, pa se %1 ne može koristiti."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2437
+#, qt-format
+msgid ""
+"Top level stylesheet elements must be in a non-null namespace, which %1 "
+"isn't."
+msgstr ""
+"Elementi najvišeg nivou u opisu stila moraju biti u nenultom imenskom "
+"prostor, što %1 nije."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2485
+#, qt-format
+msgid ""
+"The value for attribute %1 on element %2 must either be %3 or %4, not %5."
+msgstr "Vrijednost za atribut %1 uz element %2 mora biti ili %3 ili %4, ne %5."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2505
+#, qt-format
+msgid "Attribute %1 cannot have the value %2."
+msgstr "Atribut %1 ne može imati vrijednost %2."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2563
+#, qt-format
+msgid "The attribute %1 can only appear on the first %2 element."
+msgstr "Atribut %1 može se javiti samo na prvom elementu %2."
+
+#: xmlpatterns/parser/qxslttokenizer.cpp:2662
+#, qt-format
+msgid "At least one %1 element must appear as child of %2."
+msgstr "Bar jedan element %1 mora se javiti kao dijete %2."
 
 #: xmlpatterns/schema/qxsdparticlechecker.cpp:165
 msgid "Empty particle cannot be derived from non-empty particle."
@@ -9704,6 +9704,249 @@ msgstr "Ograničenje identiteta %1 je već definisano."
 msgid "Duplicated facets in simple type %1."
 msgstr "Udvostručeni aspekti u jednostavnom tipu %1."
 
+#: xmlpatterns/schema/qxsdtypechecker.cpp:235
+#: xmlpatterns/schema/qxsdtypechecker.cpp:242
+#: xmlpatterns/schema/qxsdtypechecker.cpp:263
+#, qt-format
+msgid "%1 is not valid according to %2."
+msgstr "%1 nije dobro prema %2."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:430
+msgid "String content does not match the length facet."
+msgstr "Sadržaj tipa niske ne poklapa aspekt length."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:438
+msgid "String content does not match the minLength facet."
+msgstr "Sadržaj tipa niske ne poklapa aspekt minLength."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:446
+msgid "String content does not match the maxLength facet."
+msgstr "Sadržaj tipa niske ne poklapa aspekt maxLength."
+
+# literal-segment: pattern
+#: xmlpatterns/schema/qxsdtypechecker.cpp:464
+msgid "String content does not match pattern facet."
+msgstr "Sadržaj tipa niske ne poklapa aspekt pattern."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:482
+msgid "String content is not listed in the enumeration facet."
+msgstr "Sadržaj tipa niske nije spomenut u aspektu enumeration."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:499
+msgid "Signed integer content does not match the maxInclusive facet."
+msgstr "Označeni celobrojni sadržaj ne poklapa aspekt maxInclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:507
+msgid "Signed integer content does not match the maxExclusive facet."
+msgstr "Označeni celobrojni sadržaj ne poklapa aspekt maxExclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:515
+msgid "Signed integer content does not match the minInclusive facet."
+msgstr "Označeni celobrojni sadržaj ne poklapa aspekt minInclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:523
+msgid "Signed integer content does not match the minExclusive facet."
+msgstr "Označeni celobrojni sadržaj ne poklapa aspekt minExclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:541
+msgid "Signed integer content is not listed in the enumeration facet."
+msgstr "Označeni celobrojni sadržaj nije spomenut u aspektu enumeration."
+
+# literal-segment: pattern
+#: xmlpatterns/schema/qxsdtypechecker.cpp:559
+msgid "Signed integer content does not match pattern facet."
+msgstr "Označeni celobrojni sadržaj ne poklapa aspekt pattern."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:568
+msgid "Signed integer content does not match in the totalDigits facet."
+msgstr "Označeni celobrojni sadržaj ne poklapa aspekt totalDigits."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:585
+msgid "Unsigned integer content does not match the maxInclusive facet."
+msgstr "Neoznačeni celobrojni sadržaj ne poklapa aspekt maxInclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:593
+msgid "Unsigned integer content does not match the maxExclusive facet."
+msgstr "Neoznačeni celobrojni sadržaj ne poklapa aspekt maxExclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:601
+msgid "Unsigned integer content does not match the minInclusive facet."
+msgstr "Neoznačeni celobrojni sadržaj ne poklapa aspekt minInclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:609
+msgid "Unsigned integer content does not match the minExclusive facet."
+msgstr "Neoznačeni celobrojni sadržaj ne poklapa aspekt minExclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:627
+msgid "Unsigned integer content is not listed in the enumeration facet."
+msgstr "Neoznačeni celobrojni sadržaj nije spomenut u aspektu enumeration."
+
+# literal-segment: pattern
+#: xmlpatterns/schema/qxsdtypechecker.cpp:645
+msgid "Unsigned integer content does not match pattern facet."
+msgstr "Neoznačeni celobrojni sadržaj ne poklapa aspekt pattern."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:654
+msgid "Unsigned integer content does not match in the totalDigits facet."
+msgstr "Neoznačeni celobrojni sadržaj ne poklapa aspekt totalDigits."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:671
+msgid "Double content does not match the maxInclusive facet."
+msgstr "Sadržaj dvostruke tačnosti ne poklapa aspekt maxInclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:679
+msgid "Double content does not match the maxExclusive facet."
+msgstr "Sadržaj dvostruke tačnosti ne poklapa aspekt maxExclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:687
+msgid "Double content does not match the minInclusive facet."
+msgstr "Sadržaj dvostruke tačnosti ne poklapa aspekt minInclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:695
+msgid "Double content does not match the minExclusive facet."
+msgstr "Sadržaj dvostruke tačnosti ne poklapa aspekt minExclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:721
+msgid "Double content is not listed in the enumeration facet."
+msgstr "Sadržaj dvostruke tačnosti nije spomenut u aspektu enumeration."
+
+# literal-segment: pattern
+#: xmlpatterns/schema/qxsdtypechecker.cpp:739
+msgid "Double content does not match pattern facet."
+msgstr "Sadržaj dvostruke tačnosti ne poklapa aspekt pattern."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:757
+msgid "Decimal content does not match in the fractionDigits facet."
+msgstr "Decimalni sadržaj ne poklapa aspekt fractionDigits."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:766
+msgid "Decimal content does not match in the totalDigits facet."
+msgstr "Decimalni sadržaj ne poklapa aspekt totalDigits."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:780
+msgid "Date time content does not match the maxInclusive facet."
+msgstr "Datumsko-vremenski sadržaj ne poklapa aspekt maxInclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:788
+msgid "Date time content does not match the maxExclusive facet."
+msgstr "Datumsko-vremenski sadržaj ne poklapa aspekt maxExclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:796
+msgid "Date time content does not match the minInclusive facet."
+msgstr "Datumsko-vremenski sadržaj ne poklapa aspekt minInclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:804
+msgid "Date time content does not match the minExclusive facet."
+msgstr "Datumsko-vremenski sadržaj ne poklapa aspekt minExclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:822
+msgid "Date time content is not listed in the enumeration facet."
+msgstr "Datumsko-vremenski sadržaj nije spomenut u aspektu enumeration."
+
+# literal-segment: pattern
+#: xmlpatterns/schema/qxsdtypechecker.cpp:840
+msgid "Date time content does not match pattern facet."
+msgstr "Datumsko-vremenski sadržaj ne poklapa aspekt pattern."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:855
+msgid "Duration content does not match the maxInclusive facet."
+msgstr "Sadržaj tipa trajanja ne poklapa aspekt maxInclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:864
+msgid "Duration content does not match the maxExclusive facet."
+msgstr "Sadržaj tipa trajanja ne poklapa aspekt maxExclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:873
+msgid "Duration content does not match the minInclusive facet."
+msgstr "Sadržaj tipa trajanja ne poklapa aspekt minInclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:882
+msgid "Duration content does not match the minExclusive facet."
+msgstr "Sadržaj tipa trajanja ne poklapa aspekt minExclusive."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:900
+msgid "Duration content is not listed in the enumeration facet."
+msgstr "Sadržaj tipa trajanja nije spomenut u aspektu enumeration."
+
+# literal-segment: pattern
+#: xmlpatterns/schema/qxsdtypechecker.cpp:918
+msgid "Duration content does not match pattern facet."
+msgstr "Sadržaj tipa trajanja ne poklapa aspekt pattern."
+
+# literal-segment: pattern
+#: xmlpatterns/schema/qxsdtypechecker.cpp:945
+msgid "Boolean content does not match pattern facet."
+msgstr "Logički sadržaj ne poklapa aspekt pattern."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:962
+msgid "Binary content does not match the length facet."
+msgstr "Binarni sadržaj ne poklapa aspekt length."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:970
+msgid "Binary content does not match the minLength facet."
+msgstr "Binarni sadržaj ne poklapa aspekt minLength."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:978
+msgid "Binary content does not match the maxLength facet."
+msgstr "Binarni sadržaj ne poklapa aspekt maxLength."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:996
+msgid "Binary content is not listed in the enumeration facet."
+msgstr "Binarni sadržaj nije spomenut u aspektu enumeration."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1023
+#, qt-format
+msgid "Invalid QName content: %1."
+msgstr "Loš sadržaj tipa QName: %1."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1040
+msgid "QName content is not listed in the enumeration facet."
+msgstr "Sadržaj tipa QName nije spomenut u aspektu enumeration."
+
+# literal-segment: pattern
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1058
+msgid "QName content does not match pattern facet."
+msgstr "Sadržaj tipa QName ne poklapa aspekt pattern."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1094
+msgid "Notation content is not listed in the enumeration facet."
+msgstr "Notacijski sadržaj nije spomenut u aspektu enumeration."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1113
+msgid "List content does not match length facet."
+msgstr "Sadržaj tipa liste ne poklapa aspekt facet."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1120
+msgid "List content does not match minLength facet."
+msgstr "Sadržaj tipa liste ne poklapa aspekt minLength."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1127
+msgid "List content does not match maxLength facet."
+msgstr "Sadržaj tipa liste ne poklapa aspekt maxLength."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1217
+msgid "List content is not listed in the enumeration facet."
+msgstr "Sadržaj tipa liste nije spomenut u aspektu enumeration."
+
+# literal-segment: pattern
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1235
+msgid "List content does not match pattern facet."
+msgstr "Sadržaj tipa liste ne poklapa aspekt pattern."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1274
+msgid "Union content is not listed in the enumeration facet."
+msgstr "Sadržaj tipa unije nije spomenut u aspektu enumeration."
+
+# literal-segment: pattern
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1292
+msgid "Union content does not match pattern facet."
+msgstr "Sadržaj tipa unije ne poklapa aspekt pattern."
+
+#: xmlpatterns/schema/qxsdtypechecker.cpp:1307
+#, qt-format
+msgid "Data of type %1 are not allowed to be empty."
+msgstr "Podatak tipa %1 ne može biti prazan."
+
 #: xmlpatterns/schema/qxsdschemaresolver.cpp:354
 #, qt-format
 msgid "%1 references unknown %2 or %3 element %4."
@@ -10106,249 +10349,6 @@ msgstr "ID vrijednost ‘%1’ nije jedinstvena."
 #, qt-format
 msgid "'%1' attribute contains invalid QName content: %2."
 msgstr "Atribut ‘%1’ ima loš sadržaj tipa QName: %2."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:235
-#: xmlpatterns/schema/qxsdtypechecker.cpp:242
-#: xmlpatterns/schema/qxsdtypechecker.cpp:263
-#, qt-format
-msgid "%1 is not valid according to %2."
-msgstr "%1 nije dobro prema %2."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:430
-msgid "String content does not match the length facet."
-msgstr "Sadržaj tipa niske ne poklapa aspekt length."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:438
-msgid "String content does not match the minLength facet."
-msgstr "Sadržaj tipa niske ne poklapa aspekt minLength."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:446
-msgid "String content does not match the maxLength facet."
-msgstr "Sadržaj tipa niske ne poklapa aspekt maxLength."
-
-# literal-segment: pattern
-#: xmlpatterns/schema/qxsdtypechecker.cpp:464
-msgid "String content does not match pattern facet."
-msgstr "Sadržaj tipa niske ne poklapa aspekt pattern."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:482
-msgid "String content is not listed in the enumeration facet."
-msgstr "Sadržaj tipa niske nije spomenut u aspektu enumeration."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:499
-msgid "Signed integer content does not match the maxInclusive facet."
-msgstr "Označeni celobrojni sadržaj ne poklapa aspekt maxInclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:507
-msgid "Signed integer content does not match the maxExclusive facet."
-msgstr "Označeni celobrojni sadržaj ne poklapa aspekt maxExclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:515
-msgid "Signed integer content does not match the minInclusive facet."
-msgstr "Označeni celobrojni sadržaj ne poklapa aspekt minInclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:523
-msgid "Signed integer content does not match the minExclusive facet."
-msgstr "Označeni celobrojni sadržaj ne poklapa aspekt minExclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:541
-msgid "Signed integer content is not listed in the enumeration facet."
-msgstr "Označeni celobrojni sadržaj nije spomenut u aspektu enumeration."
-
-# literal-segment: pattern
-#: xmlpatterns/schema/qxsdtypechecker.cpp:559
-msgid "Signed integer content does not match pattern facet."
-msgstr "Označeni celobrojni sadržaj ne poklapa aspekt pattern."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:568
-msgid "Signed integer content does not match in the totalDigits facet."
-msgstr "Označeni celobrojni sadržaj ne poklapa aspekt totalDigits."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:585
-msgid "Unsigned integer content does not match the maxInclusive facet."
-msgstr "Neoznačeni celobrojni sadržaj ne poklapa aspekt maxInclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:593
-msgid "Unsigned integer content does not match the maxExclusive facet."
-msgstr "Neoznačeni celobrojni sadržaj ne poklapa aspekt maxExclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:601
-msgid "Unsigned integer content does not match the minInclusive facet."
-msgstr "Neoznačeni celobrojni sadržaj ne poklapa aspekt minInclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:609
-msgid "Unsigned integer content does not match the minExclusive facet."
-msgstr "Neoznačeni celobrojni sadržaj ne poklapa aspekt minExclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:627
-msgid "Unsigned integer content is not listed in the enumeration facet."
-msgstr "Neoznačeni celobrojni sadržaj nije spomenut u aspektu enumeration."
-
-# literal-segment: pattern
-#: xmlpatterns/schema/qxsdtypechecker.cpp:645
-msgid "Unsigned integer content does not match pattern facet."
-msgstr "Neoznačeni celobrojni sadržaj ne poklapa aspekt pattern."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:654
-msgid "Unsigned integer content does not match in the totalDigits facet."
-msgstr "Neoznačeni celobrojni sadržaj ne poklapa aspekt totalDigits."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:671
-msgid "Double content does not match the maxInclusive facet."
-msgstr "Sadržaj dvostruke tačnosti ne poklapa aspekt maxInclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:679
-msgid "Double content does not match the maxExclusive facet."
-msgstr "Sadržaj dvostruke tačnosti ne poklapa aspekt maxExclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:687
-msgid "Double content does not match the minInclusive facet."
-msgstr "Sadržaj dvostruke tačnosti ne poklapa aspekt minInclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:695
-msgid "Double content does not match the minExclusive facet."
-msgstr "Sadržaj dvostruke tačnosti ne poklapa aspekt minExclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:721
-msgid "Double content is not listed in the enumeration facet."
-msgstr "Sadržaj dvostruke tačnosti nije spomenut u aspektu enumeration."
-
-# literal-segment: pattern
-#: xmlpatterns/schema/qxsdtypechecker.cpp:739
-msgid "Double content does not match pattern facet."
-msgstr "Sadržaj dvostruke tačnosti ne poklapa aspekt pattern."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:757
-msgid "Decimal content does not match in the fractionDigits facet."
-msgstr "Decimalni sadržaj ne poklapa aspekt fractionDigits."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:766
-msgid "Decimal content does not match in the totalDigits facet."
-msgstr "Decimalni sadržaj ne poklapa aspekt totalDigits."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:780
-msgid "Date time content does not match the maxInclusive facet."
-msgstr "Datumsko-vremenski sadržaj ne poklapa aspekt maxInclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:788
-msgid "Date time content does not match the maxExclusive facet."
-msgstr "Datumsko-vremenski sadržaj ne poklapa aspekt maxExclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:796
-msgid "Date time content does not match the minInclusive facet."
-msgstr "Datumsko-vremenski sadržaj ne poklapa aspekt minInclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:804
-msgid "Date time content does not match the minExclusive facet."
-msgstr "Datumsko-vremenski sadržaj ne poklapa aspekt minExclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:822
-msgid "Date time content is not listed in the enumeration facet."
-msgstr "Datumsko-vremenski sadržaj nije spomenut u aspektu enumeration."
-
-# literal-segment: pattern
-#: xmlpatterns/schema/qxsdtypechecker.cpp:840
-msgid "Date time content does not match pattern facet."
-msgstr "Datumsko-vremenski sadržaj ne poklapa aspekt pattern."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:855
-msgid "Duration content does not match the maxInclusive facet."
-msgstr "Sadržaj tipa trajanja ne poklapa aspekt maxInclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:864
-msgid "Duration content does not match the maxExclusive facet."
-msgstr "Sadržaj tipa trajanja ne poklapa aspekt maxExclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:873
-msgid "Duration content does not match the minInclusive facet."
-msgstr "Sadržaj tipa trajanja ne poklapa aspekt minInclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:882
-msgid "Duration content does not match the minExclusive facet."
-msgstr "Sadržaj tipa trajanja ne poklapa aspekt minExclusive."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:900
-msgid "Duration content is not listed in the enumeration facet."
-msgstr "Sadržaj tipa trajanja nije spomenut u aspektu enumeration."
-
-# literal-segment: pattern
-#: xmlpatterns/schema/qxsdtypechecker.cpp:918
-msgid "Duration content does not match pattern facet."
-msgstr "Sadržaj tipa trajanja ne poklapa aspekt pattern."
-
-# literal-segment: pattern
-#: xmlpatterns/schema/qxsdtypechecker.cpp:945
-msgid "Boolean content does not match pattern facet."
-msgstr "Logički sadržaj ne poklapa aspekt pattern."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:962
-msgid "Binary content does not match the length facet."
-msgstr "Binarni sadržaj ne poklapa aspekt length."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:970
-msgid "Binary content does not match the minLength facet."
-msgstr "Binarni sadržaj ne poklapa aspekt minLength."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:978
-msgid "Binary content does not match the maxLength facet."
-msgstr "Binarni sadržaj ne poklapa aspekt maxLength."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:996
-msgid "Binary content is not listed in the enumeration facet."
-msgstr "Binarni sadržaj nije spomenut u aspektu enumeration."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1023
-#, qt-format
-msgid "Invalid QName content: %1."
-msgstr "Loš sadržaj tipa QName: %1."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1040
-msgid "QName content is not listed in the enumeration facet."
-msgstr "Sadržaj tipa QName nije spomenut u aspektu enumeration."
-
-# literal-segment: pattern
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1058
-msgid "QName content does not match pattern facet."
-msgstr "Sadržaj tipa QName ne poklapa aspekt pattern."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1094
-msgid "Notation content is not listed in the enumeration facet."
-msgstr "Notacijski sadržaj nije spomenut u aspektu enumeration."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1113
-msgid "List content does not match length facet."
-msgstr "Sadržaj tipa liste ne poklapa aspekt facet."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1120
-msgid "List content does not match minLength facet."
-msgstr "Sadržaj tipa liste ne poklapa aspekt minLength."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1127
-msgid "List content does not match maxLength facet."
-msgstr "Sadržaj tipa liste ne poklapa aspekt maxLength."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1217
-msgid "List content is not listed in the enumeration facet."
-msgstr "Sadržaj tipa liste nije spomenut u aspektu enumeration."
-
-# literal-segment: pattern
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1235
-msgid "List content does not match pattern facet."
-msgstr "Sadržaj tipa liste ne poklapa aspekt pattern."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1274
-msgid "Union content is not listed in the enumeration facet."
-msgstr "Sadržaj tipa unije nije spomenut u aspektu enumeration."
-
-# literal-segment: pattern
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1292
-msgid "Union content does not match pattern facet."
-msgstr "Sadržaj tipa unije ne poklapa aspekt pattern."
-
-#: xmlpatterns/schema/qxsdtypechecker.cpp:1307
-#, qt-format
-msgid "Data of type %1 are not allowed to be empty."
-msgstr "Podatak tipa %1 ne može biti prazan."
 
 # element regiza
 #: xmlpatterns/type/qcardinality.cpp:55
