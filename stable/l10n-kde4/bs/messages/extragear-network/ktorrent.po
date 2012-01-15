@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-01-09 10:06+0100\n"
+"POT-Creation-Date: 2012-01-15 10:27+0100\n"
 "PO-Revision-Date: 2011-05-08 01:51+0200\n"
 "Last-Translator: \n"
 "Language-Team:  <bs@li.org>\n"
@@ -37,27 +37,9 @@ msgstr "© 2009, Joris Gison"
 msgid "Document to open"
 msgstr "Dokument za otvaranje"
 
-#. i18n: file: ktorrent/dialogs/pastedlgbase.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, PasteDlgBase)
-#: ktorrent/dialogs/pastedialog.cpp:38 rc.cpp:94
-msgid "Open an URL"
-msgstr "Otvori URL"
-
-#: ktorrent/dialogs/pastedialog.cpp:62
-#: ktorrent/dialogs/torrentcreatordlg.cpp:118
-#: ktorrent/dialogs/fileselectdlg.cpp:430 libktcore/groups/allgroup.cpp:26
-msgid "All Torrents"
-msgstr "Svi torenti"
-
-#: ktorrent/dialogs/pastedialog.cpp:105
-#: ktorrent/dialogs/torrentcreatordlg.cpp:251 ktorrent/gui.cpp:337
-#, kde-format
-msgid "Invalid URL: %1"
-msgstr "Neispravan URL: %1"
-
 #. i18n: file: ktorrent/dialogs/speedlimitsdlg.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, SpeedLimitsDlg)
-#: ktorrent/dialogs/speedlimitsdlg.cpp:50 ktorrent/view/view.cpp:251
+#: ktorrent/dialogs/speedlimitsdlg.cpp:50 ktorrent/view/view.cpp:254
 #: rc.cpp:106
 msgid "Speed Limits"
 msgstr "Ograničenja brzine"
@@ -264,34 +246,6 @@ msgstr "nema obezbeđene brzine"
 msgid " KiB/s"
 msgstr " kiB/s"
 
-# >> @title:window
-#: ktorrent/dialogs/torrentcreatordlg.cpp:44
-msgid "Create A Torrent"
-msgstr "Stvaranje torenta"
-
-#: ktorrent/dialogs/torrentcreatordlg.cpp:257
-msgid "Only HTTP is supported for webseeding."
-msgstr "Samo HTTP je podržan za web sijanje."
-
-#: ktorrent/dialogs/torrentcreatordlg.cpp:289
-msgid "You must select a file or a folder."
-msgstr "Morate izabrati datoteku ili direktorij."
-
-#: ktorrent/dialogs/torrentcreatordlg.cpp:295
-msgid ""
-"You have not added a tracker, are you sure you want to create this torrent?"
-msgstr ""
-"Niste dodali pratioca. Jeste li sigurni da hoćete da napravite ovaj torent ?"
-
-#: ktorrent/dialogs/torrentcreatordlg.cpp:303
-msgid "You must add at least one node."
-msgstr "Morate dodati bar jedan čvor."
-
-# >> @title:window
-#: ktorrent/dialogs/torrentcreatordlg.cpp:369
-msgid "Choose a file to save the torrent"
-msgstr "Izaberi datoteku za upisivanje torenta"
-
 #: ktorrent/dialogs/torrentmigratordlg.cpp:97
 #, kde-format
 msgid "Importing 1 torrent ..."
@@ -328,6 +282,52 @@ msgstr "Ne mogu da uvezem <b>%1</b>: %2"
 #, kde-format
 msgid "Imported <b>%1</b>"
 msgstr "Uvezen <b>%1</b>"
+
+#: ktorrent/dialogs/importdialog.cpp:225 ktorrent/dialogs/importdialog.cpp:257
+#, kde-format
+msgid "Cannot load the torrent file: %1"
+msgstr "Ne mogu da učitam torent: %1"
+
+#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:67
+#: plugins/ipfilter/convertthread.cpp:167
+#: plugins/search/searchenginelist.cpp:192
+#, kde-format
+msgid "Cannot open %1: %2"
+msgstr "Ne mogu da otvorim %1: %2"
+
+#: ktorrent/dialogs/importdialog.cpp:394 ktorrent/dialogs/importdialog.cpp:411
+#, kde-format
+msgid "Failed to create %1: %2"
+msgstr "Ne mogu da napravim %1: %2"
+
+#: ktorrent/dialogs/missingfilesdlg.cpp:77
+#: ktorrent/dialogs/missingfilesdlg.cpp:110
+msgid "Select the directory where the data now is."
+msgstr "Izaberite direktorij gdje su sada podaci."
+
+#: ktorrent/dialogs/missingfilesdlg.cpp:88
+msgid ""
+"The data files are not present in the location you selected. Do you want to "
+"create all the files in the selected directory?"
+msgstr ""
+"Datoteke sa podacima se ne nalaze na lokaciji koju ste izabrali. Želite li "
+"da napravite sve datoteke u izabranom direktoriju?"
+
+#: ktorrent/dialogs/missingfilesdlg.cpp:90
+msgid ""
+"Not all files were found in the new location; some are still missing. Do you "
+"want to create the missing files in the selected directory?"
+msgstr ""
+"Nisu sve datoteke nađeni na novoj lokaciji, neki još uvijek nedostaju. "
+"Želite li da napravite nedostajuće datoteke u izabranom direktoriju?"
+
+#: ktorrent/dialogs/missingfilesdlg.cpp:119
+msgid ""
+"The data file is not present in the location you selected. Do you want to "
+"create the file in the selected directory?"
+msgstr ""
+"Datoteka sa podacima se ne nalazi na lokaciji koju ste izabrali. Želite li "
+"da napravite datoteku u izabranom direktoriju?"
 
 #: ktorrent/dialogs/fileselectdlg.cpp:89
 msgid "Show a file tree"
@@ -405,122 +405,121 @@ msgid ""
 "Please select a different location."
 msgstr ""
 
-#: ktorrent/dialogs/fileselectdlg.cpp:504
+#: ktorrent/dialogs/fileselectdlg.cpp:430 ktorrent/dialogs/pastedialog.cpp:62
+#: ktorrent/dialogs/torrentcreatordlg.cpp:118 libktcore/groups/allgroup.cpp:26
+msgid "All Torrents"
+msgstr "Svi torenti"
+
+#: ktorrent/dialogs/fileselectdlg.cpp:507
 msgid "<b>Unable to determine free space</b>"
 msgstr "<b>Ne mogu da odredim slobodan prostor</b>"
 
-#: ktorrent/dialogs/fileselectdlg.cpp:514
+#: ktorrent/dialogs/fileselectdlg.cpp:517
 #, kde-format
 msgid "%1 (%2 in use by existing files)"
 msgstr ""
 
-#: ktorrent/dialogs/fileselectdlg.cpp:523
+#: ktorrent/dialogs/fileselectdlg.cpp:526
 #, kde-format
 msgctxt "We are %1 bytes short of what we need"
 msgid "%1 short"
 msgstr "%1 nedostaje"
 
-#: ktorrent/dialogs/fileselectdlg.cpp:555
+#: ktorrent/dialogs/fileselectdlg.cpp:558
 msgid "Existing files: <b>None</b>"
 msgstr "Postojeće datoteke: <b>ništa</b>"
 
-#: ktorrent/dialogs/fileselectdlg.cpp:557
+#: ktorrent/dialogs/fileselectdlg.cpp:560
 msgid "Existing files: <b>All</b>"
 msgstr "Postojeće datoteke: <b>svi</b>"
 
-#: ktorrent/dialogs/fileselectdlg.cpp:559
+#: ktorrent/dialogs/fileselectdlg.cpp:562
 #, kde-format
 msgid "Existing files: <b>%1</b> of <b>%2</b>"
 msgstr "Postojeće datoteke: <b>%1</b> od <b>%2</b>"
 
-#: ktorrent/dialogs/fileselectdlg.cpp:566
+#: ktorrent/dialogs/fileselectdlg.cpp:569
 msgid "Existing file: <b>No</b>"
 msgstr "Postojeća datoteka: <b>ne</b>"
 
-#: ktorrent/dialogs/fileselectdlg.cpp:571
+#: ktorrent/dialogs/fileselectdlg.cpp:574
 msgid "Existing file: <b>Yes</b>"
 msgstr "Postojeća datoteka: <b>da</b>"
 
-#: ktorrent/dialogs/fileselectdlg.cpp:651
+#: ktorrent/dialogs/fileselectdlg.cpp:654
 msgid "Clear History"
 msgstr "Očisti historijat "
 
-#: ktorrent/dialogs/importdialog.cpp:225 ktorrent/dialogs/importdialog.cpp:257
+#. i18n: file: ktorrent/dialogs/pastedlgbase.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, PasteDlgBase)
+#: ktorrent/dialogs/pastedialog.cpp:38 rc.cpp:94
+msgid "Open an URL"
+msgstr "Otvori URL"
+
+#: ktorrent/dialogs/pastedialog.cpp:106
+#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:337
 #, kde-format
-msgid "Cannot load the torrent file: %1"
-msgstr "Ne mogu da učitam torent: %1"
+msgid "Invalid URL: %1"
+msgstr "Neispravan URL: %1"
 
-#: ktorrent/dialogs/importdialog.cpp:285 plugins/ipfilter/convertthread.cpp:67
-#: plugins/ipfilter/convertthread.cpp:167
-#: plugins/search/searchenginelist.cpp:192
-#, kde-format
-msgid "Cannot open %1: %2"
-msgstr "Ne mogu da otvorim %1: %2"
+# >> @title:window
+#: ktorrent/dialogs/torrentcreatordlg.cpp:44
+msgid "Create A Torrent"
+msgstr "Stvaranje torenta"
 
-#: ktorrent/dialogs/importdialog.cpp:394 ktorrent/dialogs/importdialog.cpp:411
-#, kde-format
-msgid "Failed to create %1: %2"
-msgstr "Ne mogu da napravim %1: %2"
+#: ktorrent/dialogs/torrentcreatordlg.cpp:258
+msgid "Only HTTP is supported for webseeding."
+msgstr "Samo HTTP je podržan za web sijanje."
 
-#: ktorrent/dialogs/missingfilesdlg.cpp:77
-#: ktorrent/dialogs/missingfilesdlg.cpp:110
-msgid "Select the directory where the data now is."
-msgstr "Izaberite direktorij gdje su sada podaci."
+#: ktorrent/dialogs/torrentcreatordlg.cpp:290
+msgid "You must select a file or a folder."
+msgstr "Morate izabrati datoteku ili direktorij."
 
-#: ktorrent/dialogs/missingfilesdlg.cpp:88
+#: ktorrent/dialogs/torrentcreatordlg.cpp:296
 msgid ""
-"The data files are not present in the location you selected. Do you want to "
-"create all the files in the selected directory?"
+"You have not added a tracker, are you sure you want to create this torrent?"
 msgstr ""
-"Datoteke sa podacima se ne nalaze na lokaciji koju ste izabrali. Želite li "
-"da napravite sve datoteke u izabranom direktoriju?"
+"Niste dodali pratioca. Jeste li sigurni da hoćete da napravite ovaj torent ?"
 
-#: ktorrent/dialogs/missingfilesdlg.cpp:90
-msgid ""
-"Not all files were found in the new location; some are still missing. Do you "
-"want to create the missing files in the selected directory?"
-msgstr ""
-"Nisu sve datoteke nađeni na novoj lokaciji, neki još uvijek nedostaju. "
-"Želite li da napravite nedostajuće datoteke u izabranom direktoriju?"
+#: ktorrent/dialogs/torrentcreatordlg.cpp:304
+msgid "You must add at least one node."
+msgstr "Morate dodati bar jedan čvor."
 
-#: ktorrent/dialogs/missingfilesdlg.cpp:119
-msgid ""
-"The data file is not present in the location you selected. Do you want to "
-"create the file in the selected directory?"
-msgstr ""
-"Datoteka sa podacima se ne nalazi na lokaciji koju ste izabrali. Želite li "
-"da napravite datoteku u izabranom direktoriju?"
+# >> @title:window
+#: ktorrent/dialogs/torrentcreatordlg.cpp:370
+msgid "Choose a file to save the torrent"
+msgstr "Izaberi datoteku za upisivanje torenta"
 
 #: ktorrent/groups/grouppolicydlg.cpp:31
 #, kde-format
 msgid "Policy for the %1 group"
 msgstr "Smjernica za grupu %1"
 
-#: ktorrent/groups/groupview.cpp:117
+#: ktorrent/groups/groupview.cpp:116
 msgid "Custom Groups"
 msgstr "Posebne grupe"
 
-#: ktorrent/groups/groupview.cpp:139 ktorrent/view/view.cpp:219
+#: ktorrent/groups/groupview.cpp:142 ktorrent/view/view.cpp:219
 msgid "New Group"
 msgstr "Nova grupa"
 
-#: ktorrent/groups/groupview.cpp:143
+#: ktorrent/groups/groupview.cpp:146
 msgid "Edit Name"
 msgstr "Uredi ime"
 
-#: ktorrent/groups/groupview.cpp:147
+#: ktorrent/groups/groupview.cpp:150
 msgid "Remove Group"
 msgstr "Ukloni grupu"
 
-#: ktorrent/groups/groupview.cpp:151
+#: ktorrent/groups/groupview.cpp:154
 msgid "Group Policy"
 msgstr "Smjernica grupe"
 
-#: ktorrent/groups/groupview.cpp:317
+#: ktorrent/groups/groupview.cpp:321
 msgid "Please enter the group name."
 msgstr "Unesite ime grupe."
 
-#: ktorrent/groups/groupview.cpp:324 ktorrent/groups/groupview.cpp:445
+#: ktorrent/groups/groupview.cpp:328 ktorrent/groups/groupview.cpp:449
 #, kde-format
 msgid "The group %1 already exists."
 msgstr "Grupa %1 već postoji."
@@ -573,7 +572,7 @@ msgstr "(= %1/s)"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: file: ktorrent/pref/qmpref.ui:27
 #. i18n: ectx: property (title), widget (QGroupBox, m_qm_group_box)
-#: ktorrent/pref/qmpref.cpp:25 ktorrent/torrentactivity.cpp:89 rc.cpp:869
+#: ktorrent/pref/qmpref.cpp:25 ktorrent/torrentactivity.cpp:95 rc.cpp:869
 #: rc.cpp:981
 msgid "Queue Manager"
 msgstr "Upravljač priključcima"
@@ -807,197 +806,6 @@ msgstr "Torenti"
 msgid "Torrent filter"
 msgstr "Ograničenja torenta"
 
-#. i18n: file: ktorrent/kttorrentactivityui.rc:75
-#. i18n: ectx: Menu (ColumnsMenu)
-#: ktorrent/view/view.cpp:94 rc.cpp:1294
-msgid "Columns"
-msgstr "Kolone"
-
-#: ktorrent/view/view.cpp:133
-msgctxt "@action Start all selected torrents in the current tab"
-msgid "Start"
-msgstr "Pokreni"
-
-#: ktorrent/view/view.cpp:134
-msgid "Start all selected torrents in the current tab"
-msgstr "Pokreće sve izabrane torente u tekućoj kartici"
-
-#: ktorrent/view/view.cpp:139
-#, fuzzy
-#| msgctxt "@action Start all selected torrents in the current tab"
-#| msgid "Start"
-msgctxt "@action Force start all selected torrents in the current tab"
-msgid "Force Start"
-msgstr "Pokreni"
-
-#: ktorrent/view/view.cpp:140
-#, fuzzy
-#| msgid "Start all selected torrents in the current tab"
-msgid "Force start all selected torrents in the current tab"
-msgstr "Pokreće sve izabrane torente u tekućoj kartici"
-
-#: ktorrent/view/view.cpp:144
-msgctxt "@action Stop all selected torrents in the current tab"
-msgid "Stop"
-msgstr "Zaustavi"
-
-#: ktorrent/view/view.cpp:145
-msgid "Stop all selected torrents in the current tab"
-msgstr "Zaustavlja sve izabrane torente u tekućoj kartici"
-
-#: ktorrent/view/view.cpp:150
-msgctxt "@action Pause all selected torrents in the current tab"
-msgid "Pause"
-msgstr "Pauziraj"
-
-#: ktorrent/view/view.cpp:151
-msgid "Pause all selected torrents in the current tab"
-msgstr "Pauzira sve izabrane torente u tekućoj kartici"
-
-#: ktorrent/view/view.cpp:155
-msgctxt "@action Remove all selected torrents in the current tab"
-msgid "Remove"
-msgstr "Ukloni"
-
-#: ktorrent/view/view.cpp:156
-msgid "Remove all selected torrents in the current tab"
-msgstr "Uklanja sve izabrane torente u tekućoj kartici"
-
-#: ktorrent/view/view.cpp:161
-msgctxt "@action Start all torrents in the current tab"
-msgid "Start All"
-msgstr "Pokreni sve"
-
-#: ktorrent/view/view.cpp:162
-msgid "Start all torrents in the current tab"
-msgstr "Pokreće sve torente u tekućoj kartici"
-
-#: ktorrent/view/view.cpp:167
-msgctxt "@action Stop all torrents in the current tab"
-msgid "Stop All"
-msgstr "Zaustavi sve"
-
-#: ktorrent/view/view.cpp:168
-msgid "Stop all torrents in the current tab"
-msgstr "Zaustavlja sve torente u tekućoj kartici"
-
-#: ktorrent/view/view.cpp:173
-msgid "Remove Torrent and Data"
-msgstr "Ukloni torent i podatke"
-
-#: ktorrent/view/view.cpp:178
-msgid "Rename Torrent"
-msgstr "Preimenuj torent"
-
-#: ktorrent/view/view.cpp:182
-msgid "Add Peers"
-msgstr "Dodaj saradnike"
-
-#: ktorrent/view/view.cpp:186
-msgid "Manual Announce"
-msgstr "Ručno objavljivanje"
-
-#: ktorrent/view/view.cpp:191
-msgid "Scrape"
-msgstr "Zagrebi"
-
-#: ktorrent/view/view.cpp:195
-msgid "Preview"
-msgstr "Pregled"
-
-#: ktorrent/view/view.cpp:199
-msgid "Data Directory"
-msgstr "Direktorijum podataka"
-
-#: ktorrent/view/view.cpp:203
-msgid "Temporary Directory"
-msgstr "Privremeni direktorijum"
-
-#: ktorrent/view/view.cpp:207
-msgid "Move Data"
-msgstr "Premjesti podatke"
-
-#. i18n: file: plugins/stats/Settings.ui:13
-#. i18n: ectx: property (windowTitle), widget (QWidget, StatsSettingsWgt)
-#: ktorrent/view/view.cpp:211 rc.cpp:2352
-msgid "Settings"
-msgstr "Postavke"
-
-#: ktorrent/view/view.cpp:215
-msgid "Remove from Group"
-msgstr "Ukloni iz grupe"
-
-#: ktorrent/view/view.cpp:223
-msgid "Check Data"
-msgstr "Provjeri podatke"
-
-#: ktorrent/view/view.cpp:224
-msgid "Check all the data of a torrent"
-msgstr "Provjeri sve podatke torenta"
-
-#. i18n: file: ktorrent/kttorrentactivityui.rc:60
-#. i18n: ectx: Menu (OpenDirMenu)
-#: ktorrent/view/view.cpp:237 rc.cpp:1285
-msgid "Open Directory"
-msgstr "Otvori direktorijum"
-
-#. i18n: file: ktorrent/kttorrentactivityui.rc:66
-#. i18n: ectx: Menu (GroupsSubMenu)
-#: ktorrent/view/view.cpp:240 rc.cpp:1288
-msgid "Add to Group"
-msgstr "Dodaj u grupu"
-
-#: ktorrent/view/view.cpp:243
-msgid "Copy Torrent URL"
-msgstr "Kopiraj URL torenta"
-
-#: ktorrent/view/view.cpp:247
-msgid "Export Torrent"
-msgstr "Uvezi torent"
-
-#: ktorrent/view/view.cpp:252
-msgid "Set the speed limits of individual torrents"
-msgstr "Postavi ograničenja brzine pojedinačnih torenata"
-
-#: ktorrent/view/view.cpp:461
-#, kde-format
-msgid ""
-"The torrent <b>%1</b> has not finished downloading, do you want to delete "
-"the incomplete data, too?"
-msgstr ""
-"Preuzimanje torenta <b>%1</b> nije završeno. Želite li da obrišete i "
-"nepotpune podatke?"
-
-#: ktorrent/view/view.cpp:466
-msgid "Remove Download"
-msgstr "Ukloni preuzimanje"
-
-#: ktorrent/view/view.cpp:467
-msgid "Delete Data"
-msgstr "Obriši podatke"
-
-#: ktorrent/view/view.cpp:468
-msgid "Keep Data"
-msgstr "Zadrži podatke"
-
-#: ktorrent/view/view.cpp:493
-#, fuzzy
-#| msgid ""
-#| "You will lose all the downloaded data. Are you sure you want to do this?"
-msgid ""
-"You will lose all the downloaded data of the following torrents. Are you "
-"sure you want to do this?"
-msgstr "Izgubićete sve preuzete podatke. Želite li zaista ovo da učinite?"
-
-#: ktorrent/view/view.cpp:494
-msgid "Remove Torrent"
-msgstr "Ukloni torent"
-
-#: ktorrent/view/view.cpp:590 plugins/infowidget/fileview.cpp:348
-#: plugins/infowidget/fileview.cpp:369
-msgid "Select a directory to move the data to."
-msgstr "Izaberite direktorije gdje premještate podatke."
-
 #: ktorrent/view/viewmodel.cpp:490 plugins/infowidget/peerviewmodel.cpp:266
 #: plugins/infowidget/webseedsmodel.cpp:126
 msgid "Downloaded"
@@ -1141,6 +949,197 @@ msgstr "<html>%1<br />URL: <b>%2</b></html>"
 #| msgid "Unable to contact a tracker."
 msgid "<br/><br/>Unable to contact a tracker."
 msgstr "Ne mogu da kontaktiram pratilac."
+
+#. i18n: file: ktorrent/kttorrentactivityui.rc:75
+#. i18n: ectx: Menu (ColumnsMenu)
+#: ktorrent/view/view.cpp:94 rc.cpp:1294
+msgid "Columns"
+msgstr "Kolone"
+
+#: ktorrent/view/view.cpp:133
+msgctxt "@action Start all selected torrents in the current tab"
+msgid "Start"
+msgstr "Pokreni"
+
+#: ktorrent/view/view.cpp:134
+msgid "Start all selected torrents in the current tab"
+msgstr "Pokreće sve izabrane torente u tekućoj kartici"
+
+#: ktorrent/view/view.cpp:139
+#, fuzzy
+#| msgctxt "@action Start all selected torrents in the current tab"
+#| msgid "Start"
+msgctxt "@action Force start all selected torrents in the current tab"
+msgid "Force Start"
+msgstr "Pokreni"
+
+#: ktorrent/view/view.cpp:140
+#, fuzzy
+#| msgid "Start all selected torrents in the current tab"
+msgid "Force start all selected torrents in the current tab"
+msgstr "Pokreće sve izabrane torente u tekućoj kartici"
+
+#: ktorrent/view/view.cpp:144
+msgctxt "@action Stop all selected torrents in the current tab"
+msgid "Stop"
+msgstr "Zaustavi"
+
+#: ktorrent/view/view.cpp:145
+msgid "Stop all selected torrents in the current tab"
+msgstr "Zaustavlja sve izabrane torente u tekućoj kartici"
+
+#: ktorrent/view/view.cpp:150
+msgctxt "@action Pause all selected torrents in the current tab"
+msgid "Pause"
+msgstr "Pauziraj"
+
+#: ktorrent/view/view.cpp:151
+msgid "Pause all selected torrents in the current tab"
+msgstr "Pauzira sve izabrane torente u tekućoj kartici"
+
+#: ktorrent/view/view.cpp:155
+msgctxt "@action Remove all selected torrents in the current tab"
+msgid "Remove"
+msgstr "Ukloni"
+
+#: ktorrent/view/view.cpp:156
+msgid "Remove all selected torrents in the current tab"
+msgstr "Uklanja sve izabrane torente u tekućoj kartici"
+
+#: ktorrent/view/view.cpp:161
+msgctxt "@action Start all torrents in the current tab"
+msgid "Start All"
+msgstr "Pokreni sve"
+
+#: ktorrent/view/view.cpp:162
+msgid "Start all torrents in the current tab"
+msgstr "Pokreće sve torente u tekućoj kartici"
+
+#: ktorrent/view/view.cpp:167
+msgctxt "@action Stop all torrents in the current tab"
+msgid "Stop All"
+msgstr "Zaustavi sve"
+
+#: ktorrent/view/view.cpp:168
+msgid "Stop all torrents in the current tab"
+msgstr "Zaustavlja sve torente u tekućoj kartici"
+
+#: ktorrent/view/view.cpp:173
+msgid "Remove Torrent and Data"
+msgstr "Ukloni torent i podatke"
+
+#: ktorrent/view/view.cpp:178
+msgid "Rename Torrent"
+msgstr "Preimenuj torent"
+
+#: ktorrent/view/view.cpp:182
+msgid "Add Peers"
+msgstr "Dodaj saradnike"
+
+#: ktorrent/view/view.cpp:186
+msgid "Manual Announce"
+msgstr "Ručno objavljivanje"
+
+#: ktorrent/view/view.cpp:191
+msgid "Scrape"
+msgstr "Zagrebi"
+
+#: ktorrent/view/view.cpp:195
+msgid "Preview"
+msgstr "Pregled"
+
+#: ktorrent/view/view.cpp:199
+msgid "Data Directory"
+msgstr "Direktorijum podataka"
+
+#: ktorrent/view/view.cpp:203
+msgid "Temporary Directory"
+msgstr "Privremeni direktorijum"
+
+#: ktorrent/view/view.cpp:207
+msgid "Move Data"
+msgstr "Premjesti podatke"
+
+#. i18n: file: plugins/stats/Settings.ui:13
+#. i18n: ectx: property (windowTitle), widget (QWidget, StatsSettingsWgt)
+#: ktorrent/view/view.cpp:211 rc.cpp:2352
+msgid "Settings"
+msgstr "Postavke"
+
+#: ktorrent/view/view.cpp:215
+msgid "Remove from Group"
+msgstr "Ukloni iz grupe"
+
+#: ktorrent/view/view.cpp:223
+msgid "Check Data"
+msgstr "Provjeri podatke"
+
+#: ktorrent/view/view.cpp:224
+msgid "Check all the data of a torrent"
+msgstr "Provjeri sve podatke torenta"
+
+#. i18n: file: ktorrent/kttorrentactivityui.rc:60
+#. i18n: ectx: Menu (OpenDirMenu)
+#: ktorrent/view/view.cpp:240 rc.cpp:1285
+msgid "Open Directory"
+msgstr "Otvori direktorijum"
+
+#. i18n: file: ktorrent/kttorrentactivityui.rc:66
+#. i18n: ectx: Menu (GroupsSubMenu)
+#: ktorrent/view/view.cpp:243 rc.cpp:1288
+msgid "Add to Group"
+msgstr "Dodaj u grupu"
+
+#: ktorrent/view/view.cpp:246
+msgid "Copy Torrent URL"
+msgstr "Kopiraj URL torenta"
+
+#: ktorrent/view/view.cpp:250
+msgid "Export Torrent"
+msgstr "Uvezi torent"
+
+#: ktorrent/view/view.cpp:255
+msgid "Set the speed limits of individual torrents"
+msgstr "Postavi ograničenja brzine pojedinačnih torenata"
+
+#: ktorrent/view/view.cpp:464
+#, kde-format
+msgid ""
+"The torrent <b>%1</b> has not finished downloading, do you want to delete "
+"the incomplete data, too?"
+msgstr ""
+"Preuzimanje torenta <b>%1</b> nije završeno. Želite li da obrišete i "
+"nepotpune podatke?"
+
+#: ktorrent/view/view.cpp:469
+msgid "Remove Download"
+msgstr "Ukloni preuzimanje"
+
+#: ktorrent/view/view.cpp:470
+msgid "Delete Data"
+msgstr "Obriši podatke"
+
+#: ktorrent/view/view.cpp:471
+msgid "Keep Data"
+msgstr "Zadrži podatke"
+
+#: ktorrent/view/view.cpp:496
+#, fuzzy
+#| msgid ""
+#| "You will lose all the downloaded data. Are you sure you want to do this?"
+msgid ""
+"You will lose all the downloaded data of the following torrents. Are you "
+"sure you want to do this?"
+msgstr "Izgubićete sve preuzete podatke. Želite li zaista ovo da učinite?"
+
+#: ktorrent/view/view.cpp:497
+msgid "Remove Torrent"
+msgstr "Ukloni torent"
+
+#: ktorrent/view/view.cpp:593 plugins/infowidget/fileview.cpp:348
+#: plugins/infowidget/fileview.cpp:369
+msgid "Select a directory to move the data to."
+msgstr "Izaberite direktorije gdje premještate podatke."
 
 #: ktorrent/statusbar.cpp:39 ktorrent/statusbar.cpp:71
 #, kde-format
@@ -1718,76 +1717,6 @@ msgstr "Zakrpa za preimenovanje torrenta od jedne datoteke u njeno ime"
 msgid "Silently open torrent given on URL"
 msgstr "Tiho otvori torent dat u URL‑u"
 
-#. i18n: file: ktorrent/kttorrentactivityui.rc:7
-#. i18n: ectx: Menu (Torrents)
-#. i18n: file: ktorrent/kttorrentactivityui.rc:81
-#. i18n: ectx: ToolBar (TorrentsToolBar)
-#. i18n: file: ktorrent/kttorrentactivityui.rc:7
-#. i18n: ectx: Menu (Torrents)
-#. i18n: file: ktorrent/kttorrentactivityui.rc:81
-#. i18n: ectx: ToolBar (TorrentsToolBar)
-#: ktorrent/torrentactivity.cpp:48 libktcore/interfaces/functions.cpp:179
-#: rc.cpp:1273 rc.cpp:1297
-msgid "Torrents"
-msgstr "Torenti"
-
-#: ktorrent/torrentactivity.cpp:89
-msgid "Widget to manage the torrent queue"
-msgstr "Grafička kontrola za upravljanje redoslijedom torenata"
-
-#: ktorrent/torrentactivity.cpp:92
-#: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
-msgid "Magnet"
-msgstr "Magnet"
-
-#: ktorrent/torrentactivity.cpp:93
-msgid "Displays the currently downloading magnet links"
-msgstr "Prikazuje sve magnetske veze koje preuzimate"
-
-#: ktorrent/torrentactivity.cpp:108
-msgid "Start All"
-msgstr "Pokreni sve"
-
-#: ktorrent/torrentactivity.cpp:109
-msgid "Start all torrents"
-msgstr "Pokreni sve torente"
-
-#: ktorrent/torrentactivity.cpp:113
-msgid "Stop All"
-msgstr "Zaustavi sve"
-
-#: ktorrent/torrentactivity.cpp:114
-msgid "Stop all torrents"
-msgstr "Zaustavi sve torente"
-
-#: ktorrent/torrentactivity.cpp:118
-msgid "Suspend Torrents"
-msgstr "Suspenduj torente"
-
-#. i18n: file: plugins/bwscheduler/edititemdlg.ui:109
-#. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
-#: ktorrent/torrentactivity.cpp:120 rc.cpp:1547
-msgid "Suspend all running torrents"
-msgstr "Suspenduj sve pokrenute torente"
-
-#: ktorrent/torrentactivity.cpp:125
-msgid "Group View Visible"
-msgstr "Grupni prikaz vidljiv"
-
-#: ktorrent/torrentactivity.cpp:126
-msgid "Show or hide the group view"
-msgstr "Prikazuje ili skriva grupni prikaz"
-
-#: ktorrent/torrentactivity.cpp:130
-#, fuzzy
-#| msgid "All Torrents"
-msgid "Filter Torrents"
-msgstr "Svi torenti"
-
-#: ktorrent/torrentactivity.cpp:131
-msgid "Filter torrents based on filter string"
-msgstr ""
-
 #: ktorrent/trayicon.cpp:111
 msgid "Set max upload speed"
 msgstr "Postavi najveću brzinu slanja"
@@ -1915,6 +1844,82 @@ msgstr "Ograničenje u kiB/s"
 msgid "Unlimited"
 msgstr "Neograničeno"
 
+#. i18n: file: ktorrent/kttorrentactivityui.rc:7
+#. i18n: ectx: Menu (Torrents)
+#. i18n: file: ktorrent/kttorrentactivityui.rc:81
+#. i18n: ectx: ToolBar (TorrentsToolBar)
+#. i18n: file: ktorrent/kttorrentactivityui.rc:7
+#. i18n: ectx: Menu (Torrents)
+#. i18n: file: ktorrent/kttorrentactivityui.rc:81
+#. i18n: ectx: ToolBar (TorrentsToolBar)
+#: ktorrent/torrentactivity.cpp:51 libktcore/interfaces/functions.cpp:179
+#: rc.cpp:1273 rc.cpp:1297
+msgid "Torrents"
+msgstr "Torenti"
+
+#: ktorrent/torrentactivity.cpp:95
+msgid "Widget to manage the torrent queue"
+msgstr "Grafička kontrola za upravljanje redoslijedom torenata"
+
+#: ktorrent/torrentactivity.cpp:98
+#: plugins/magnetgenerator/magnetgeneratorplugin.cpp:143
+msgid "Magnet"
+msgstr "Magnet"
+
+#: ktorrent/torrentactivity.cpp:99
+msgid "Displays the currently downloading magnet links"
+msgstr "Prikazuje sve magnetske veze koje preuzimate"
+
+#: ktorrent/torrentactivity.cpp:114
+msgid "Start All"
+msgstr "Pokreni sve"
+
+#: ktorrent/torrentactivity.cpp:115
+msgid "Start all torrents"
+msgstr "Pokreni sve torente"
+
+#: ktorrent/torrentactivity.cpp:119
+msgid "Stop All"
+msgstr "Zaustavi sve"
+
+#: ktorrent/torrentactivity.cpp:120
+msgid "Stop all torrents"
+msgstr "Zaustavi sve torente"
+
+#: ktorrent/torrentactivity.cpp:124
+msgid "Suspend Torrents"
+msgstr "Suspenduj torente"
+
+#. i18n: file: plugins/bwscheduler/edititemdlg.ui:109
+#. i18n: ectx: property (text), widget (QCheckBox, m_suspended)
+#: ktorrent/torrentactivity.cpp:126 rc.cpp:1547
+msgid "Suspend all running torrents"
+msgstr "Suspenduj sve pokrenute torente"
+
+#: ktorrent/torrentactivity.cpp:131
+msgid "Group View Visible"
+msgstr "Grupni prikaz vidljiv"
+
+#: ktorrent/torrentactivity.cpp:132
+msgid "Show or hide the group view"
+msgstr "Prikazuje ili skriva grupni prikaz"
+
+#: ktorrent/torrentactivity.cpp:136
+#, fuzzy
+#| msgid "All Torrents"
+msgid "Filter Torrents"
+msgstr "Svi torenti"
+
+#: ktorrent/torrentactivity.cpp:137
+msgid "Filter torrents based on filter string"
+msgstr ""
+
+#: ktorrent/torrentactivity.cpp:142
+#, fuzzy
+#| msgid "Tracker"
+msgid "Switch To View"
+msgstr "Pratilac"
+
 #: ktupnptest/main.cpp:40
 msgid "KTUPnPTest"
 msgstr "KTUPnPTest"
@@ -1935,57 +1940,57 @@ msgstr "Dostignut najveći odnos dijeljenja."
 msgid "Maximum seed time reached."
 msgstr "Dostignuto najveće vrijeme sijanja."
 
-#: libktcore/groups/ungroupedgroup.cpp:27
-msgid "Ungrouped Torrents"
-msgstr "Negrupisani torenti"
-
-#: libktcore/groups/groupmanager.cpp:100
+#: libktcore/groups/groupmanager.cpp:102
 msgid "Uploads"
 msgstr "Poslato"
 
-#: libktcore/groups/groupmanager.cpp:102
+#: libktcore/groups/groupmanager.cpp:104
 msgid "Running Uploads"
 msgstr "Pokrenuta slanja"
 
-#: libktcore/groups/groupmanager.cpp:104
+#: libktcore/groups/groupmanager.cpp:106
 msgid "Not Running Uploads"
 msgstr "Neaktivna slanja"
 
-#: libktcore/groups/groupmanager.cpp:108
+#: libktcore/groups/groupmanager.cpp:110
 msgid "Downloads"
 msgstr "Preuzimanja"
 
-#: libktcore/groups/groupmanager.cpp:110
+#: libktcore/groups/groupmanager.cpp:112
 msgid "Running Downloads"
 msgstr "Aktivna preuzimanja"
 
-#: libktcore/groups/groupmanager.cpp:112
+#: libktcore/groups/groupmanager.cpp:114
 msgid "Not Running Downloads"
 msgstr "Neaktivna preuzimanja"
 
-#: libktcore/groups/groupmanager.cpp:116
+#: libktcore/groups/groupmanager.cpp:118
 msgid "Active Torrents"
 msgstr "Aktivni torenti"
 
-#: libktcore/groups/groupmanager.cpp:118
+#: libktcore/groups/groupmanager.cpp:120
 msgid "Active Downloads"
 msgstr "Aktivna preuzimanja"
 
-#: libktcore/groups/groupmanager.cpp:120
+#: libktcore/groups/groupmanager.cpp:122
 msgid "Active Uploads"
 msgstr "Aktivna slanja"
 
-#: libktcore/groups/groupmanager.cpp:122
+#: libktcore/groups/groupmanager.cpp:124
 msgid "Passive Torrents"
 msgstr "Neaktivni torenti"
 
-#: libktcore/groups/groupmanager.cpp:124
+#: libktcore/groups/groupmanager.cpp:126
 msgid "Passive Downloads"
 msgstr "Neaktivna preuzimanja"
 
-#: libktcore/groups/groupmanager.cpp:126
+#: libktcore/groups/groupmanager.cpp:128
 msgid "Passive Uploads"
 msgstr "Neaktivna slanja"
+
+#: libktcore/groups/ungroupedgroup.cpp:27
+msgid "Ungrouped Torrents"
+msgstr "Negrupisani torenti"
 
 #: libktcore/interfaces/functions.cpp:181
 #: plugins/bwscheduler/scheduleeditor.cpp:141
@@ -3132,19 +3137,19 @@ msgstr "Spreman za puštanje"
 msgid "KTorrent is playing a video."
 msgstr "K‑torent pušta video."
 
-#: plugins/scanfolder/scanfolderprefpage.cpp:37
-#: plugins/scanfolder/scanfolderplugin.cpp:64
-#: plugins/scanfolder/scanfolderplugin.cpp:77
-msgctxt "plugin name"
-msgid "Scan Folder"
-msgstr "Pretraga direktorija"
-
 #: plugins/scanfolder/scanfolder.cpp:69 plugins/scanfolder/scanthread.cpp:194
 #: plugins/scanfolder/torrentloadqueue.cpp:166
 #: plugins/scanfolder/torrentloadqueue.cpp:167
 #: plugins/scanfolder/torrentloadqueue.cpp:170
 msgid "loaded"
 msgstr "Poslato"
+
+#: plugins/scanfolder/scanfolderplugin.cpp:64
+#: plugins/scanfolder/scanfolderplugin.cpp:77
+#: plugins/scanfolder/scanfolderprefpage.cpp:37
+msgctxt "plugin name"
+msgid "Scan Folder"
+msgstr "Pretraga direktorija"
 
 #. i18n: file: plugins/scripting/ktscriptingpluginui.rc:4
 #. i18n: ectx: ToolBar (ScriptingToolbar)
