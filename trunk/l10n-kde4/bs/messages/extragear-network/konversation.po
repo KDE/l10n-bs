@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konversation\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-01-09 03:14+0100\n"
+"POT-Creation-Date: 2012-01-16 03:43+0100\n"
 "PO-Revision-Date: 2011-05-08 01:46+0200\n"
 "Last-Translator: \n"
 "Language-Team:  <bs@li.org>\n"
@@ -22,8 +22,8 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 
 #: src/connectionmanager.cpp:224 src/connectionmanager.cpp:257
-#: src/connectionmanager.cpp:267 src/irc/outputfilter.cpp:2029
-#: src/irc/inputfilter.cpp:1318 src/irc/server.cpp:254 src/irc/server.cpp:400
+#: src/connectionmanager.cpp:267 src/irc/inputfilter.cpp:1318
+#: src/irc/outputfilter.cpp:2029 src/irc/server.cpp:254 src/irc/server.cpp:400
 #: src/irc/server.cpp:459 src/irc/server.cpp:623 src/irc/server.cpp:634
 #: src/irc/server.cpp:900 src/irc/server.cpp:930
 msgid "Info"
@@ -57,13 +57,13 @@ msgstr[2] ""
 "Pokušaću da se ponovo povežem na %2 (port <numid>%3</numid>) za %1 sekundi."
 
 #: src/connectionmanager.cpp:282 src/dcc/chatcontainer.cpp:273
-#: src/irc/outputfilter.cpp:2038 src/irc/inputfilter.cpp:1161
-#: src/irc/inputfilter.cpp:1165 src/irc/inputfilter.cpp:1178
-#: src/irc/inputfilter.cpp:1249 src/irc/inputfilter.cpp:1302
-#: src/irc/inputfilter.cpp:1436 src/irc/inputfilter.cpp:2015
-#: src/irc/inputfilter.cpp:2025 src/irc/inputfilter.cpp:2062
-#: src/irc/inputfilter.cpp:2070 src/irc/inputfilter.cpp:2078
-#: src/irc/inputfilter.cpp:2102 src/irc/outputfilterresolvejob.cpp:85
+#: src/irc/inputfilter.cpp:1161 src/irc/inputfilter.cpp:1165
+#: src/irc/inputfilter.cpp:1178 src/irc/inputfilter.cpp:1249
+#: src/irc/inputfilter.cpp:1302 src/irc/inputfilter.cpp:1436
+#: src/irc/inputfilter.cpp:2015 src/irc/inputfilter.cpp:2025
+#: src/irc/inputfilter.cpp:2062 src/irc/inputfilter.cpp:2070
+#: src/irc/inputfilter.cpp:2078 src/irc/inputfilter.cpp:2102
+#: src/irc/outputfilter.cpp:2038 src/irc/outputfilterresolvejob.cpp:85
 #: src/irc/server.cpp:719 src/irc/server.cpp:2084 src/irc/server.cpp:2155
 #: src/irc/server.cpp:2328 src/irc/server.cpp:2364 src/irc/server.cpp:2415
 #: src/irc/server.cpp:2483 src/irc/server.cpp:2502 src/irc/server.cpp:2518
@@ -1768,12 +1768,13 @@ msgstr "Nepoznata naredba."
 
 #. i18n: file: src/config/ignore_configui.ui:83
 #. i18n: ectx: property (text), widget (QCheckBox, chkCTCP)
-#: src/dcc/chatcontainer.cpp:321 src/irc/outputfilter.cpp:851
-#: src/irc/inputfilter.cpp:269 src/irc/inputfilter.cpp:276
-#: src/irc/inputfilter.cpp:292 src/irc/inputfilter.cpp:299
-#: src/irc/inputfilter.cpp:447 src/irc/inputfilter.cpp:458
-#: src/irc/inputfilter.cpp:479 src/irc/inputfilter.cpp:527
-#: src/irc/inputfilter.cpp:555 src/viewer/ignorelistviewitem.cpp:45 rc.cpp:316
+#: src/dcc/chatcontainer.cpp:321 src/irc/inputfilter.cpp:269
+#: src/irc/inputfilter.cpp:276 src/irc/inputfilter.cpp:292
+#: src/irc/inputfilter.cpp:299 src/irc/inputfilter.cpp:447
+#: src/irc/inputfilter.cpp:458 src/irc/inputfilter.cpp:479
+#: src/irc/inputfilter.cpp:527 src/irc/inputfilter.cpp:555
+#: src/irc/outputfilter.cpp:851 src/viewer/ignorelistviewitem.cpp:45
+#: rc.cpp:316
 msgid "CTCP"
 msgstr "CTCP"
 
@@ -1863,486 +1864,6 @@ msgstr "(nepoznat)"
 #, fuzzy
 msgid "Online&nbsp;Since:"
 msgstr "Na vezi od:"
-
-#: src/irc/outputfilter.cpp:222
-msgid ""
-"The message you are sending includes characters that do not exist in your "
-"current encoding. If you choose to continue anyway those characters will be "
-"replaced by a '?'."
-msgstr ""
-"Poruka koju šaljete uključuje i znake koji ne postoje u trenutnom kodiranju. "
-"Izaberete li da ipak nastavite, ti znaci biće zamijenjeni sa „?“."
-
-#: src/irc/outputfilter.cpp:226
-msgid "Encoding Conflict Warning"
-msgstr "Upozorenje o sukobu kodiranja"
-
-#: src/irc/outputfilter.cpp:331
-msgid "Raw"
-msgstr "Neobrađen"
-
-#: src/irc/outputfilter.cpp:388
-#, kde-format
-msgid "Usage: %1JOIN <channel> [password]"
-msgstr "Upotreba: %1JOIN <kanal> [lozinka]"
-
-#: src/irc/outputfilter.cpp:427
-#, kde-format
-msgid "Usage: %1KICK <nick> [reason]"
-msgstr "Upotreba: %1KICK <nadimak> [razlog]"
-
-#: src/irc/outputfilter.cpp:441
-#, kde-format
-msgid "%1KICK only works from within channels."
-msgstr "%1KICK radi samo unutar kanala."
-
-#: src/irc/outputfilter.cpp:461
-#, kde-format
-msgid ""
-"%1PART and %1LEAVE without parameters only work from within a channel or a "
-"query."
-msgstr "%1PART i %1LEAVE bez parametara radi samo unutar kanala ili upita."
-
-#: src/irc/outputfilter.cpp:486
-#, kde-format
-msgid "%1PART without channel name only works from within a channel."
-msgstr "%1PART bez imena kanala radi samo unutar kanala."
-
-#: src/irc/outputfilter.cpp:510
-#, kde-format
-msgid "%1TOPIC without parameters only works from within a channel."
-msgstr "%1TOPIC bez parametara radi samo unutar kanala."
-
-#: src/irc/outputfilter.cpp:547
-#, kde-format
-msgid "%1TOPIC without channel name only works from within a channel."
-msgstr "%1TOPIC bez imena kanala radi samo unutar kanala."
-
-#: src/irc/outputfilter.cpp:603
-#, kde-format
-msgid ""
-"%1NAMES with no target may disconnect you from the server. Specify '*' if "
-"you really want this."
-msgstr ""
-"%1NAMES bez cilja može vam prekinuti vezu sa serverom. Navedite '*'ako "
-"zaista želite ovo."
-
-#: src/irc/outputfilter.cpp:626
-#, c-format, kde-format
-msgid ""
-"Usage: %1close [window] closes the named channel or query tab, or the "
-"current tab if none specified."
-msgstr ""
-"Upotreba: %1close [prozor] zatvara imenovani kanal ili karticu upita, ili "
-"trenutnu karticu ako se ni jedna ne navede."
-
-#: src/irc/outputfilter.cpp:662
-#, kde-format
-msgid "Usage: %1NOTICE <recipient> <message>"
-msgstr "Upotreba: %1NOTICE <primalac> <poruka>"
-
-#. i18n: file: src/config/ignore_configui.ui:104
-#. i18n: ectx: property (text), widget (QCheckBox, chkNotice)
-#: src/irc/outputfilter.cpp:666 src/irc/outputfilter.cpp:902
-#: src/irc/inputfilter.cpp:504 src/irc/inputfilter.cpp:569
-#: src/irc/inputfilter.cpp:574 src/irc/inputfilter.cpp:597
-#: src/irc/inputfilter.cpp:763 src/irc/inputfilter.cpp:1310
-#: src/irc/server.cpp:4025 src/irc/server.cpp:4054
-#: src/viewer/ignorelistviewitem.cpp:44 rc.cpp:325
-msgid "Notice"
-msgstr "Obavještenje"
-
-#: src/irc/outputfilter.cpp:669
-#, kde-format
-msgctxt "%1 is the message, %2 the recipient nickname"
-msgid "Sending notice \"%1\" to %2."
-msgstr "Šaljem opomenu „%1“ za %2."
-
-#: src/irc/outputfilter.cpp:681
-#, fuzzy, kde-format
-msgid "%1ME only works from a channel, query or DCC chat tab."
-msgstr "%1KICK radi samo unutar kanala."
-
-#: src/irc/outputfilter.cpp:749
-#, fuzzy
-msgid "You need to specify a recipient."
-msgstr "Greška: Morate da navedete primaoca."
-
-#: src/irc/outputfilter.cpp:754
-#, fuzzy
-msgid "You cannot open queries to channels."
-msgstr "Greška: Ne možete da otvorite upite za kanale."
-
-#: src/irc/outputfilter.cpp:760
-#, fuzzy
-msgid "You need to specify a message."
-msgstr "Greška: Morate da navedete poruku."
-
-#: src/irc/outputfilter.cpp:843 src/irc/outputfilter.cpp:848
-#, kde-format
-msgid "Sending CTCP-%1 request to %2."
-msgstr "Šaljem CTCP-%1 zahtjev prema %2"
-
-#: src/irc/outputfilter.cpp:860
-#, c-format, kde-format
-msgid "Usage: %1AME [-LOCAL] text"
-msgstr "Upotreba: %1AME [-LOCAL] teksta"
-
-#: src/irc/outputfilter.cpp:873
-#, c-format, kde-format
-msgid "Usage: %1AMSG [-LOCAL] text"
-msgstr "Upotreba: %1AMSG [-LOCAL] teksta"
-
-#: src/irc/outputfilter.cpp:886
-#, kde-format
-msgid "Usage: %1OMSG text"
-msgstr "Upotreba: %1OMSG tekst"
-
-#: src/irc/outputfilter.cpp:904
-#, kde-format
-msgid "Sending notice \"%1\" to %2."
-msgstr "Šaljem opomenu „%1“ za %2."
-
-#: src/irc/outputfilter.cpp:907
-#, kde-format
-msgid "Usage: %1ONOTICE text"
-msgstr "Upotreba: %1ONOTICE tekst"
-
-#: src/irc/outputfilter.cpp:917
-#, kde-format
-msgid "Usage: %1QUOTE command list"
-msgstr "Upotreba: %1QUOTE lista naredbi"
-
-#: src/irc/outputfilter.cpp:929
-#, c-format, kde-format
-msgid "Usage: %1SAY text"
-msgstr "Upotreba: %1SAY tekst"
-
-#: src/irc/outputfilter.cpp:985
-#, kde-format
-msgid "File \"%1\" does not exist."
-msgstr "Datoteka \"%1\" ne postoji."
-
-# literal-segment: \[.*\]
-#: src/irc/outputfilter.cpp:989
-#, kde-format
-msgid "Usage: %1DCC [SEND [nickname [filename]]]"
-msgstr "Upotreba: %1DCC [SEND [nadimak [imedatoteke]]]"
-
-# literal-segment: \[.*\]
-#: src/irc/outputfilter.cpp:1007
-#, kde-format
-msgid "Usage: %1DCC [GET [nickname [filename]]]"
-msgstr "Upotreba: %1DCC [GET [nadimak [imedatoteke]]]"
-
-# literal-segment: \[.*\]
-#: src/irc/outputfilter.cpp:1023
-#, kde-format
-msgid "Usage: %1DCC [CHAT [nickname]]"
-msgstr "Upotreba: %1DCC [CHAT [nadimak]]"
-
-# literal-segment: \[.*\]
-#: src/irc/outputfilter.cpp:1039
-#, kde-format
-msgid "Usage: %1DCC [WHITEBOARD [nickname]]"
-msgstr "Upotreba: %1DCC [WHITEBOARD [nadimak]]"
-
-# literal-segment: SEND, CHAT, CLOSE, GET
-#: src/irc/outputfilter.cpp:1044
-#, kde-format
-msgid ""
-"Unrecognized command %1DCC %2. Possible commands are SEND, CHAT, CLOSE, GET, "
-"WHITEBOARD."
-msgstr ""
-"Nepoznata naredba %1DCC %2. Moguće naredbe su SEND, CHAT, CLOSE, GET,"
-"WHITEBOARD."
-
-#: src/irc/outputfilter.cpp:1187
-#, kde-format
-msgid "Usage: %1INVITE <nick> [channel]"
-msgstr "Upotreba: %1INVITE <nadimak> [kanal]"
-
-#: src/irc/outputfilter.cpp:1198
-#, kde-format
-msgid "%1INVITE without channel name works only from within channels."
-msgstr "%1INVITE bez imena kanala radi samo unutar kanala."
-
-#: src/irc/outputfilter.cpp:1207
-#, kde-format
-msgid "%1 is not a channel."
-msgstr "%1 nije kanal."
-
-#: src/irc/outputfilter.cpp:1219
-#, fuzzy, c-format, kde-format
-msgid "Usage: %1EXEC [-SHOWPATH] <script> [parameter list]"
-msgstr "Upotreba: %1EXEC <script> [lista parametara]"
-
-#: src/irc/outputfilter.cpp:1228
-#, kde-format
-msgctxt "%2 is a filesystem path to the script file"
-msgid "The script file '%1' was found at: %2"
-msgstr ""
-
-#: src/irc/outputfilter.cpp:1235
-#, fuzzy
-msgid "The script name may not contain \"../\"."
-msgstr "Ime skripte ne smje da sadrži „../“."
-
-#: src/irc/outputfilter.cpp:1250
-#, kde-format
-msgid "Usage: %1RAW [OPEN | CLOSE]"
-msgstr "Upotreba: %1RAW [OTVORITI | ZATVORITI]"
-
-#: src/irc/outputfilter.cpp:1292
-#, kde-format
-msgctxt "%1 = Comma-separated list of nicknames"
-msgid "The notify list has been emptied (removed %1)."
-msgstr ""
-
-#: src/irc/outputfilter.cpp:1295
-#, fuzzy
-#| msgid "Current notify list is empty."
-msgid "The notify list is currently empty."
-msgstr "Trenutna lista obavještavanja je prazna."
-
-#: src/irc/outputfilter.cpp:1301
-#, fuzzy, kde-format
-#| msgid "Current notify list: %1"
-msgctxt "%1 and %2 = Comma-separated lists of nicknames"
-msgid "Current notify list: %1 (added %2)."
-msgstr "Trenutna lista obavještavanja: %1"
-
-#: src/irc/outputfilter.cpp:1305
-#, fuzzy, kde-format
-#| msgid "Current notify list: %1"
-msgctxt "%1 and %2 = Comma-separated lists of nicknames"
-msgid "Current notify list: %1 (removed %2)."
-msgstr "Trenutna lista obavještavanja: %1"
-
-#: src/irc/outputfilter.cpp:1309
-#, fuzzy, kde-format
-#| msgid "Current notify list: %1"
-msgctxt "%1, %2 and %3 = Comma-separated lists of nicknames"
-msgid "Current notify list: %1 (added %2, removed %3)."
-msgstr "Trenutna lista obavještavanja: %1"
-
-#: src/irc/outputfilter.cpp:1313
-#, fuzzy, kde-format
-#| msgid "Current notify list: %1"
-msgctxt "%1 = Comma-separated list of nicknames"
-msgid "Current notify list: %1."
-msgstr "Trenutna lista obavještavanja: %1"
-
-#: src/irc/outputfilter.cpp:1318 src/irc/server.cpp:2885
-#: src/irc/server.cpp:2902
-msgid "Notify"
-msgstr "Obavijesti"
-
-#: src/irc/outputfilter.cpp:1334
-msgid "Enter username and password for IRC operator privileges:"
-msgstr "Unesite korisničko ime i lozinku za ovlašćenja IRC operatera:"
-
-#: src/irc/outputfilter.cpp:1336
-msgid "IRC Operator Password"
-msgstr "Lozinka IRC operatera"
-
-#: src/irc/outputfilter.cpp:1400
-#, kde-format
-msgid "%1BAN without channel name works only from inside a channel."
-msgstr "%1BAN  bez imena kanala radi samo iz unutrašnjosti kanala."
-
-#: src/irc/outputfilter.cpp:1403
-#, kde-format
-msgid "%1KICKBAN without channel name works only from inside a channel."
-msgstr "%1KICKBAN  bez imena kanala radi samo iz unutrašnjosti kanala."
-
-# literal-segment: \[.*\]
-#: src/irc/outputfilter.cpp:1438
-#, fuzzy, kde-format
-msgid ""
-"Usage: %1BAN [-HOST | -DOMAIN | -USERHOST | -USERDOMAIN] [channel] <nickname "
-"| mask>"
-msgstr ""
-"Upotreba: %1BAN [-HOST | -DOMAIN | -USERHOST | -USERDOMAIN] [kanal] &lt;"
-"korisnik|maska&gt;"
-
-# literal-segment: \[.*\]
-#: src/irc/outputfilter.cpp:1441
-#, fuzzy, kde-format
-msgid ""
-"Usage: %1KICKBAN [-HOST | -DOMAIN | -USERHOST | -USERDOMAIN] [channel] "
-"<nickname | mask> [reason]"
-msgstr ""
-"Upotreba: %1KICKBAN [-HOST | -DOMAIN | -USERHOST | -USERDOMAIN] [kanal] &lt;"
-"korisnik|maska&gt; [razlog]"
-
-#: src/irc/outputfilter.cpp:1484
-#, kde-format
-msgid "%1UNBAN without channel name works only from inside a channel."
-msgstr "%1UNBAN bez imena kanala radi samo iz unutrašnjosti kanala."
-
-#: src/irc/outputfilter.cpp:1499
-#, kde-format
-msgid "Usage: %1UNBAN [channel] pattern"
-msgstr "Upotreba: %1UNBAN [kanal] uzorak"
-
-#: src/irc/outputfilter.cpp:1545
-#, kde-format
-msgid "Added %1 to your ignore list."
-msgstr "Dodao sam %1 na vašu listu ignorisanja."
-
-#: src/irc/outputfilter.cpp:1555
-#, kde-format
-msgid "Usage: %1IGNORE [ -ALL ] <user 1> <user 2> ... <user n>"
-msgstr "Upotreba: %1IGNORE [ -ALL ] <korisnik 1> <korisnik 2> ... <korisnik n>"
-
-#: src/irc/outputfilter.cpp:1566
-#, kde-format
-msgid "Usage: %1UNIGNORE <user 1> <user 2> ... <user n>"
-msgstr "Upotreba: %1UNIGNORE <korisnik 1> <korisnik 2> ... <korisnik n>"
-
-#: src/irc/outputfilter.cpp:1616
-#, kde-format
-msgid "Removed %1 from your ignore list."
-msgstr "Uklonjeno %1 iz vaše liste ignorisanja."
-
-#: src/irc/outputfilter.cpp:1623
-#, kde-format
-msgid "No such ignore: %2"
-msgid_plural "No such ignores: %2"
-msgstr[0] "Nema ignorisanog: %2"
-msgstr[1] "Nema ignorisanih: %2"
-msgstr[2] "Nema ignorisanih: %2"
-
-#: src/irc/outputfilter.cpp:1658
-#, kde-format
-msgid "Current encoding is: %1"
-msgstr "Trenutno kodiranje je: %1"
-
-#: src/irc/outputfilter.cpp:1669
-#, kde-format
-msgid "Switched to %1 encoding."
-msgstr "Postavi na %1 kodiranje."
-
-#: src/irc/outputfilter.cpp:1672
-#, kde-format
-msgid "%1 is not a valid encoding."
-msgstr "%1 nije važeće kodiranje."
-
-#: src/irc/outputfilter.cpp:1690
-#, c-format, kde-format
-msgid ""
-"Usage: %1setkey <nick|channel> <key> sets the encryption key for nick or "
-"channel. %1setkey <key> when in a channel or query tab sets the key for it. "
-"The key field recognizes \"cbc:\" and \"ecb:\" prefixes to set the block "
-"cipher mode of operation to either Cipher-Block Chaining or Electronic "
-"Codebook. The mode it defaults to when no prefix is given can be changed in "
-"the configuration dialog under Behavior -> Connection -> Encryption -> "
-"Default Encryption Type, with the default for that setting being Electronic "
-"Codebook (ECB)."
-msgstr ""
-"Upotreba: %1setkey &lt;nadimak|kanal&gt; &lt;ključ&gt; postavlja ključ "
-"šifrovanja za nadimak ili kanal. %1setkey &lt;ključ&gt; u kartici kanala ili "
-"upita, postavlja ključ za njih. Polje ključa prepoznaje prefikse cbc: i ecb: "
-"za postavljanje režima lanca šifrarskih blokova ili elektronske kodne "
-"knjige. Podrazumijevani režim na koji se spada kada nije naveden prefiks se "
-"može podesiti u dijalogu za podešavanje pod <interface>Ponašanje->Veza-"
-">Šifrovanje->Podrazumevana vrsta šifrovanja:</interface>, gdje je "
-"podrazumijevana postavka <interface>Elektronska kodna knjiga (⁠ECB)</"
-"interface>."
-
-#: src/irc/outputfilter.cpp:1702
-#, fuzzy, kde-format
-msgid "Unable to set an encryption key for %1."
-msgstr "Postavili ste izuzetak zabrane za %1."
-
-#: src/irc/outputfilter.cpp:1711
-#, kde-format
-msgid "The key for %1 has been set."
-msgstr "Ključ za %1 je sada postavljen."
-
-#: src/irc/outputfilter.cpp:1714 src/irc/outputfilter.cpp:1739
-msgid ""
-"Setting an encryption key requires Konversation to have been built with "
-"support for the Qt Cryptographic Architecture (QCA) library. Contact your "
-"distributor about a Konversation package with QCA support, or rebuild "
-"Konversation with QCA present."
-msgstr ""
-"Postavljanje šifrarskog ključa zahtjeva da Konverzacija bude izgrađena sa "
-"bibliotekom kriptografske arhitekture KuT‑a (KuCA). Obratite se svom "
-"distributeru oko paketa Konverzacije sa podrškom za KuCA, ili izgradite "
-"Konverzaciju sa prisutnim KuCA‑om."
-
-#: src/irc/outputfilter.cpp:1729
-#, kde-format
-msgid ""
-"Usage: %1keyx <nick|channel> triggers DH1080 key exchange with the target."
-msgstr ""
-"Upotreba: %1keyx &lt;nadimak|kanal&gt; okida razmjenu DH1080 ključa sa "
-"korisnikom."
-
-#: src/irc/outputfilter.cpp:1732
-#, fuzzy, kde-format
-msgid "Unable to request a key exchange from %1."
-msgstr "Neuspjelo pokretanje razmjene ključa sa %1."
-
-#: src/irc/outputfilter.cpp:1736
-#, kde-format
-msgid "Beginning DH1080 key exchange with %1."
-msgstr "Počinjem razmjenu DH1080 ključa sa %1."
-
-#: src/irc/outputfilter.cpp:1755
-#, c-format, kde-format
-msgid ""
-"Usage: %1delkey <nick> or <channel> deletes the encryption key for nick or "
-"channel"
-msgstr ""
-"Upotreba: %1delkey &lt;nadimak&gt; ili &lt;kanal&gt; briše ključ za "
-"šifrovanje za nadimak ili kanal"
-
-#: src/irc/outputfilter.cpp:1767
-#, kde-format
-msgid "The key for %1 has been deleted."
-msgstr "Ključ za %1 je sada izbrisan."
-
-#: src/irc/outputfilter.cpp:1770 src/irc/outputfilter.cpp:1790
-#, kde-format
-msgid "No key has been set for %1."
-msgstr "Ključ nije postavljen za %1."
-
-#: src/irc/outputfilter.cpp:1787
-#, kde-format
-msgid "The key for %1 is \"%2\"."
-msgstr "Ključ za %1 je sada „%2“."
-
-#: src/irc/outputfilter.cpp:1788
-msgid "Blowfish"
-msgstr "Bloufiš"
-
-#: src/irc/outputfilter.cpp:1800
-#, kde-format
-msgid "Usage: %1KILL <nick> [comment]"
-msgstr "Upotreba: %1KILL &lt;nadimak&gt; [komentar]"
-
-#: src/irc/outputfilter.cpp:1814
-#, kde-format
-msgid "Usage: %1DNS <nick>"
-msgstr "Upotreba: %1DNS <nadimak>"
-
-#: src/irc/outputfilter.cpp:1844
-#, c-format, kde-format
-msgid "Usage: %1queuetuner [on | off]"
-msgstr "Upotreba: %1queuetuner [on | off]"
-
-#: src/irc/outputfilter.cpp:1905
-#, c-format, kde-format
-msgid "%1CYCLE [-APP | -SERVER] [channel | nickname]"
-msgstr ""
-
-#: src/irc/outputfilter.cpp:1936
-#, c-format, kde-format
-msgid "%1CLEAR [-ALL] [channel | nickname]"
-msgstr ""
 
 #: src/irc/channel.cpp:129
 msgid "Edit Channel Settings"
@@ -3190,6 +2711,17 @@ msgstr "Primljen nepoznati CTCP-%1 zahtjev od %2 za kanal %3."
 msgid "Received unknown CTCP-%1 request from %2."
 msgstr "Primljen nepoznat CTCP-%1 zahtjev od %2."
 
+#. i18n: file: src/config/ignore_configui.ui:104
+#. i18n: ectx: property (text), widget (QCheckBox, chkNotice)
+#: src/irc/inputfilter.cpp:504 src/irc/inputfilter.cpp:569
+#: src/irc/inputfilter.cpp:574 src/irc/inputfilter.cpp:597
+#: src/irc/inputfilter.cpp:763 src/irc/inputfilter.cpp:1310
+#: src/irc/outputfilter.cpp:666 src/irc/outputfilter.cpp:902
+#: src/irc/server.cpp:4025 src/irc/server.cpp:4054
+#: src/viewer/ignorelistviewitem.cpp:44 rc.cpp:325
+msgid "Notice"
+msgstr "Obavještenje"
+
 #: src/irc/inputfilter.cpp:505
 #, kde-format
 msgid "-%1 to %2- %3"
@@ -3718,6 +3250,475 @@ msgstr "%1 je izmijenio vaše lične režime: %2"
 #, kde-format
 msgid "%1 sets mode: %2"
 msgstr "%1 postavlja režim: %2"
+
+#: src/irc/outputfilter.cpp:222
+msgid ""
+"The message you are sending includes characters that do not exist in your "
+"current encoding. If you choose to continue anyway those characters will be "
+"replaced by a '?'."
+msgstr ""
+"Poruka koju šaljete uključuje i znake koji ne postoje u trenutnom kodiranju. "
+"Izaberete li da ipak nastavite, ti znaci biće zamijenjeni sa „?“."
+
+#: src/irc/outputfilter.cpp:226
+msgid "Encoding Conflict Warning"
+msgstr "Upozorenje o sukobu kodiranja"
+
+#: src/irc/outputfilter.cpp:331
+msgid "Raw"
+msgstr "Neobrađen"
+
+#: src/irc/outputfilter.cpp:388
+#, kde-format
+msgid "Usage: %1JOIN <channel> [password]"
+msgstr "Upotreba: %1JOIN <kanal> [lozinka]"
+
+#: src/irc/outputfilter.cpp:427
+#, kde-format
+msgid "Usage: %1KICK <nick> [reason]"
+msgstr "Upotreba: %1KICK <nadimak> [razlog]"
+
+#: src/irc/outputfilter.cpp:441
+#, kde-format
+msgid "%1KICK only works from within channels."
+msgstr "%1KICK radi samo unutar kanala."
+
+#: src/irc/outputfilter.cpp:461
+#, kde-format
+msgid ""
+"%1PART and %1LEAVE without parameters only work from within a channel or a "
+"query."
+msgstr "%1PART i %1LEAVE bez parametara radi samo unutar kanala ili upita."
+
+#: src/irc/outputfilter.cpp:486
+#, kde-format
+msgid "%1PART without channel name only works from within a channel."
+msgstr "%1PART bez imena kanala radi samo unutar kanala."
+
+#: src/irc/outputfilter.cpp:510
+#, kde-format
+msgid "%1TOPIC without parameters only works from within a channel."
+msgstr "%1TOPIC bez parametara radi samo unutar kanala."
+
+#: src/irc/outputfilter.cpp:547
+#, kde-format
+msgid "%1TOPIC without channel name only works from within a channel."
+msgstr "%1TOPIC bez imena kanala radi samo unutar kanala."
+
+#: src/irc/outputfilter.cpp:603
+#, kde-format
+msgid ""
+"%1NAMES with no target may disconnect you from the server. Specify '*' if "
+"you really want this."
+msgstr ""
+"%1NAMES bez cilja može vam prekinuti vezu sa serverom. Navedite '*'ako "
+"zaista želite ovo."
+
+#: src/irc/outputfilter.cpp:626
+#, c-format, kde-format
+msgid ""
+"Usage: %1close [window] closes the named channel or query tab, or the "
+"current tab if none specified."
+msgstr ""
+"Upotreba: %1close [prozor] zatvara imenovani kanal ili karticu upita, ili "
+"trenutnu karticu ako se ni jedna ne navede."
+
+#: src/irc/outputfilter.cpp:662
+#, kde-format
+msgid "Usage: %1NOTICE <recipient> <message>"
+msgstr "Upotreba: %1NOTICE <primalac> <poruka>"
+
+#: src/irc/outputfilter.cpp:669
+#, kde-format
+msgctxt "%1 is the message, %2 the recipient nickname"
+msgid "Sending notice \"%1\" to %2."
+msgstr "Šaljem opomenu „%1“ za %2."
+
+#: src/irc/outputfilter.cpp:681
+#, fuzzy, kde-format
+msgid "%1ME only works from a channel, query or DCC chat tab."
+msgstr "%1KICK radi samo unutar kanala."
+
+#: src/irc/outputfilter.cpp:749
+#, fuzzy
+msgid "You need to specify a recipient."
+msgstr "Greška: Morate da navedete primaoca."
+
+#: src/irc/outputfilter.cpp:754
+#, fuzzy
+msgid "You cannot open queries to channels."
+msgstr "Greška: Ne možete da otvorite upite za kanale."
+
+#: src/irc/outputfilter.cpp:760
+#, fuzzy
+msgid "You need to specify a message."
+msgstr "Greška: Morate da navedete poruku."
+
+#: src/irc/outputfilter.cpp:843 src/irc/outputfilter.cpp:848
+#, kde-format
+msgid "Sending CTCP-%1 request to %2."
+msgstr "Šaljem CTCP-%1 zahtjev prema %2"
+
+#: src/irc/outputfilter.cpp:860
+#, c-format, kde-format
+msgid "Usage: %1AME [-LOCAL] text"
+msgstr "Upotreba: %1AME [-LOCAL] teksta"
+
+#: src/irc/outputfilter.cpp:873
+#, c-format, kde-format
+msgid "Usage: %1AMSG [-LOCAL] text"
+msgstr "Upotreba: %1AMSG [-LOCAL] teksta"
+
+#: src/irc/outputfilter.cpp:886
+#, kde-format
+msgid "Usage: %1OMSG text"
+msgstr "Upotreba: %1OMSG tekst"
+
+#: src/irc/outputfilter.cpp:904
+#, kde-format
+msgid "Sending notice \"%1\" to %2."
+msgstr "Šaljem opomenu „%1“ za %2."
+
+#: src/irc/outputfilter.cpp:907
+#, kde-format
+msgid "Usage: %1ONOTICE text"
+msgstr "Upotreba: %1ONOTICE tekst"
+
+#: src/irc/outputfilter.cpp:917
+#, kde-format
+msgid "Usage: %1QUOTE command list"
+msgstr "Upotreba: %1QUOTE lista naredbi"
+
+#: src/irc/outputfilter.cpp:929
+#, c-format, kde-format
+msgid "Usage: %1SAY text"
+msgstr "Upotreba: %1SAY tekst"
+
+#: src/irc/outputfilter.cpp:985
+#, kde-format
+msgid "File \"%1\" does not exist."
+msgstr "Datoteka \"%1\" ne postoji."
+
+# literal-segment: \[.*\]
+#: src/irc/outputfilter.cpp:989
+#, kde-format
+msgid "Usage: %1DCC [SEND [nickname [filename]]]"
+msgstr "Upotreba: %1DCC [SEND [nadimak [imedatoteke]]]"
+
+# literal-segment: \[.*\]
+#: src/irc/outputfilter.cpp:1007
+#, kde-format
+msgid "Usage: %1DCC [GET [nickname [filename]]]"
+msgstr "Upotreba: %1DCC [GET [nadimak [imedatoteke]]]"
+
+# literal-segment: \[.*\]
+#: src/irc/outputfilter.cpp:1023
+#, kde-format
+msgid "Usage: %1DCC [CHAT [nickname]]"
+msgstr "Upotreba: %1DCC [CHAT [nadimak]]"
+
+# literal-segment: \[.*\]
+#: src/irc/outputfilter.cpp:1039
+#, kde-format
+msgid "Usage: %1DCC [WHITEBOARD [nickname]]"
+msgstr "Upotreba: %1DCC [WHITEBOARD [nadimak]]"
+
+# literal-segment: SEND, CHAT, CLOSE, GET
+#: src/irc/outputfilter.cpp:1044
+#, kde-format
+msgid ""
+"Unrecognized command %1DCC %2. Possible commands are SEND, CHAT, CLOSE, GET, "
+"WHITEBOARD."
+msgstr ""
+"Nepoznata naredba %1DCC %2. Moguće naredbe su SEND, CHAT, CLOSE, GET,"
+"WHITEBOARD."
+
+#: src/irc/outputfilter.cpp:1187
+#, kde-format
+msgid "Usage: %1INVITE <nick> [channel]"
+msgstr "Upotreba: %1INVITE <nadimak> [kanal]"
+
+#: src/irc/outputfilter.cpp:1198
+#, kde-format
+msgid "%1INVITE without channel name works only from within channels."
+msgstr "%1INVITE bez imena kanala radi samo unutar kanala."
+
+#: src/irc/outputfilter.cpp:1207
+#, kde-format
+msgid "%1 is not a channel."
+msgstr "%1 nije kanal."
+
+#: src/irc/outputfilter.cpp:1219
+#, fuzzy, c-format, kde-format
+msgid "Usage: %1EXEC [-SHOWPATH] <script> [parameter list]"
+msgstr "Upotreba: %1EXEC <script> [lista parametara]"
+
+#: src/irc/outputfilter.cpp:1228
+#, kde-format
+msgctxt "%2 is a filesystem path to the script file"
+msgid "The script file '%1' was found at: %2"
+msgstr ""
+
+#: src/irc/outputfilter.cpp:1235
+#, fuzzy
+msgid "The script name may not contain \"../\"."
+msgstr "Ime skripte ne smje da sadrži „../“."
+
+#: src/irc/outputfilter.cpp:1250
+#, kde-format
+msgid "Usage: %1RAW [OPEN | CLOSE]"
+msgstr "Upotreba: %1RAW [OTVORITI | ZATVORITI]"
+
+#: src/irc/outputfilter.cpp:1292
+#, kde-format
+msgctxt "%1 = Comma-separated list of nicknames"
+msgid "The notify list has been emptied (removed %1)."
+msgstr ""
+
+#: src/irc/outputfilter.cpp:1295
+#, fuzzy
+#| msgid "Current notify list is empty."
+msgid "The notify list is currently empty."
+msgstr "Trenutna lista obavještavanja je prazna."
+
+#: src/irc/outputfilter.cpp:1301
+#, fuzzy, kde-format
+#| msgid "Current notify list: %1"
+msgctxt "%1 and %2 = Comma-separated lists of nicknames"
+msgid "Current notify list: %1 (added %2)."
+msgstr "Trenutna lista obavještavanja: %1"
+
+#: src/irc/outputfilter.cpp:1305
+#, fuzzy, kde-format
+#| msgid "Current notify list: %1"
+msgctxt "%1 and %2 = Comma-separated lists of nicknames"
+msgid "Current notify list: %1 (removed %2)."
+msgstr "Trenutna lista obavještavanja: %1"
+
+#: src/irc/outputfilter.cpp:1309
+#, fuzzy, kde-format
+#| msgid "Current notify list: %1"
+msgctxt "%1, %2 and %3 = Comma-separated lists of nicknames"
+msgid "Current notify list: %1 (added %2, removed %3)."
+msgstr "Trenutna lista obavještavanja: %1"
+
+#: src/irc/outputfilter.cpp:1313
+#, fuzzy, kde-format
+#| msgid "Current notify list: %1"
+msgctxt "%1 = Comma-separated list of nicknames"
+msgid "Current notify list: %1."
+msgstr "Trenutna lista obavještavanja: %1"
+
+#: src/irc/outputfilter.cpp:1318 src/irc/server.cpp:2885
+#: src/irc/server.cpp:2902
+msgid "Notify"
+msgstr "Obavijesti"
+
+#: src/irc/outputfilter.cpp:1334
+msgid "Enter username and password for IRC operator privileges:"
+msgstr "Unesite korisničko ime i lozinku za ovlašćenja IRC operatera:"
+
+#: src/irc/outputfilter.cpp:1336
+msgid "IRC Operator Password"
+msgstr "Lozinka IRC operatera"
+
+#: src/irc/outputfilter.cpp:1400
+#, kde-format
+msgid "%1BAN without channel name works only from inside a channel."
+msgstr "%1BAN  bez imena kanala radi samo iz unutrašnjosti kanala."
+
+#: src/irc/outputfilter.cpp:1403
+#, kde-format
+msgid "%1KICKBAN without channel name works only from inside a channel."
+msgstr "%1KICKBAN  bez imena kanala radi samo iz unutrašnjosti kanala."
+
+# literal-segment: \[.*\]
+#: src/irc/outputfilter.cpp:1438
+#, fuzzy, kde-format
+msgid ""
+"Usage: %1BAN [-HOST | -DOMAIN | -USERHOST | -USERDOMAIN] [channel] <nickname "
+"| mask>"
+msgstr ""
+"Upotreba: %1BAN [-HOST | -DOMAIN | -USERHOST | -USERDOMAIN] [kanal] &lt;"
+"korisnik|maska&gt;"
+
+# literal-segment: \[.*\]
+#: src/irc/outputfilter.cpp:1441
+#, fuzzy, kde-format
+msgid ""
+"Usage: %1KICKBAN [-HOST | -DOMAIN | -USERHOST | -USERDOMAIN] [channel] "
+"<nickname | mask> [reason]"
+msgstr ""
+"Upotreba: %1KICKBAN [-HOST | -DOMAIN | -USERHOST | -USERDOMAIN] [kanal] &lt;"
+"korisnik|maska&gt; [razlog]"
+
+#: src/irc/outputfilter.cpp:1484
+#, kde-format
+msgid "%1UNBAN without channel name works only from inside a channel."
+msgstr "%1UNBAN bez imena kanala radi samo iz unutrašnjosti kanala."
+
+#: src/irc/outputfilter.cpp:1499
+#, kde-format
+msgid "Usage: %1UNBAN [channel] pattern"
+msgstr "Upotreba: %1UNBAN [kanal] uzorak"
+
+#: src/irc/outputfilter.cpp:1545
+#, kde-format
+msgid "Added %1 to your ignore list."
+msgstr "Dodao sam %1 na vašu listu ignorisanja."
+
+#: src/irc/outputfilter.cpp:1555
+#, kde-format
+msgid "Usage: %1IGNORE [ -ALL ] <user 1> <user 2> ... <user n>"
+msgstr "Upotreba: %1IGNORE [ -ALL ] <korisnik 1> <korisnik 2> ... <korisnik n>"
+
+#: src/irc/outputfilter.cpp:1566
+#, kde-format
+msgid "Usage: %1UNIGNORE <user 1> <user 2> ... <user n>"
+msgstr "Upotreba: %1UNIGNORE <korisnik 1> <korisnik 2> ... <korisnik n>"
+
+#: src/irc/outputfilter.cpp:1616
+#, kde-format
+msgid "Removed %1 from your ignore list."
+msgstr "Uklonjeno %1 iz vaše liste ignorisanja."
+
+#: src/irc/outputfilter.cpp:1623
+#, kde-format
+msgid "No such ignore: %2"
+msgid_plural "No such ignores: %2"
+msgstr[0] "Nema ignorisanog: %2"
+msgstr[1] "Nema ignorisanih: %2"
+msgstr[2] "Nema ignorisanih: %2"
+
+#: src/irc/outputfilter.cpp:1658
+#, kde-format
+msgid "Current encoding is: %1"
+msgstr "Trenutno kodiranje je: %1"
+
+#: src/irc/outputfilter.cpp:1669
+#, kde-format
+msgid "Switched to %1 encoding."
+msgstr "Postavi na %1 kodiranje."
+
+#: src/irc/outputfilter.cpp:1672
+#, kde-format
+msgid "%1 is not a valid encoding."
+msgstr "%1 nije važeće kodiranje."
+
+#: src/irc/outputfilter.cpp:1690
+#, c-format, kde-format
+msgid ""
+"Usage: %1setkey <nick|channel> <key> sets the encryption key for nick or "
+"channel. %1setkey <key> when in a channel or query tab sets the key for it. "
+"The key field recognizes \"cbc:\" and \"ecb:\" prefixes to set the block "
+"cipher mode of operation to either Cipher-Block Chaining or Electronic "
+"Codebook. The mode it defaults to when no prefix is given can be changed in "
+"the configuration dialog under Behavior -> Connection -> Encryption -> "
+"Default Encryption Type, with the default for that setting being Electronic "
+"Codebook (ECB)."
+msgstr ""
+"Upotreba: %1setkey &lt;nadimak|kanal&gt; &lt;ključ&gt; postavlja ključ "
+"šifrovanja za nadimak ili kanal. %1setkey &lt;ključ&gt; u kartici kanala ili "
+"upita, postavlja ključ za njih. Polje ključa prepoznaje prefikse cbc: i ecb: "
+"za postavljanje režima lanca šifrarskih blokova ili elektronske kodne "
+"knjige. Podrazumijevani režim na koji se spada kada nije naveden prefiks se "
+"može podesiti u dijalogu za podešavanje pod <interface>Ponašanje->Veza-"
+">Šifrovanje->Podrazumevana vrsta šifrovanja:</interface>, gdje je "
+"podrazumijevana postavka <interface>Elektronska kodna knjiga (⁠ECB)</"
+"interface>."
+
+#: src/irc/outputfilter.cpp:1702
+#, fuzzy, kde-format
+msgid "Unable to set an encryption key for %1."
+msgstr "Postavili ste izuzetak zabrane za %1."
+
+#: src/irc/outputfilter.cpp:1711
+#, kde-format
+msgid "The key for %1 has been set."
+msgstr "Ključ za %1 je sada postavljen."
+
+#: src/irc/outputfilter.cpp:1714 src/irc/outputfilter.cpp:1739
+msgid ""
+"Setting an encryption key requires Konversation to have been built with "
+"support for the Qt Cryptographic Architecture (QCA) library. Contact your "
+"distributor about a Konversation package with QCA support, or rebuild "
+"Konversation with QCA present."
+msgstr ""
+"Postavljanje šifrarskog ključa zahtjeva da Konverzacija bude izgrađena sa "
+"bibliotekom kriptografske arhitekture KuT‑a (KuCA). Obratite se svom "
+"distributeru oko paketa Konverzacije sa podrškom za KuCA, ili izgradite "
+"Konverzaciju sa prisutnim KuCA‑om."
+
+#: src/irc/outputfilter.cpp:1729
+#, kde-format
+msgid ""
+"Usage: %1keyx <nick|channel> triggers DH1080 key exchange with the target."
+msgstr ""
+"Upotreba: %1keyx &lt;nadimak|kanal&gt; okida razmjenu DH1080 ključa sa "
+"korisnikom."
+
+#: src/irc/outputfilter.cpp:1732
+#, fuzzy, kde-format
+msgid "Unable to request a key exchange from %1."
+msgstr "Neuspjelo pokretanje razmjene ključa sa %1."
+
+#: src/irc/outputfilter.cpp:1736
+#, kde-format
+msgid "Beginning DH1080 key exchange with %1."
+msgstr "Počinjem razmjenu DH1080 ključa sa %1."
+
+#: src/irc/outputfilter.cpp:1755
+#, c-format, kde-format
+msgid ""
+"Usage: %1delkey <nick> or <channel> deletes the encryption key for nick or "
+"channel"
+msgstr ""
+"Upotreba: %1delkey &lt;nadimak&gt; ili &lt;kanal&gt; briše ključ za "
+"šifrovanje za nadimak ili kanal"
+
+#: src/irc/outputfilter.cpp:1767
+#, kde-format
+msgid "The key for %1 has been deleted."
+msgstr "Ključ za %1 je sada izbrisan."
+
+#: src/irc/outputfilter.cpp:1770 src/irc/outputfilter.cpp:1790
+#, kde-format
+msgid "No key has been set for %1."
+msgstr "Ključ nije postavljen za %1."
+
+#: src/irc/outputfilter.cpp:1787
+#, kde-format
+msgid "The key for %1 is \"%2\"."
+msgstr "Ključ za %1 je sada „%2“."
+
+#: src/irc/outputfilter.cpp:1788
+msgid "Blowfish"
+msgstr "Bloufiš"
+
+#: src/irc/outputfilter.cpp:1800
+#, kde-format
+msgid "Usage: %1KILL <nick> [comment]"
+msgstr "Upotreba: %1KILL &lt;nadimak&gt; [komentar]"
+
+#: src/irc/outputfilter.cpp:1814
+#, kde-format
+msgid "Usage: %1DNS <nick>"
+msgstr "Upotreba: %1DNS <nadimak>"
+
+#: src/irc/outputfilter.cpp:1844
+#, c-format, kde-format
+msgid "Usage: %1queuetuner [on | off]"
+msgstr "Upotreba: %1queuetuner [on | off]"
+
+#: src/irc/outputfilter.cpp:1905
+#, c-format, kde-format
+msgid "%1CYCLE [-APP | -SERVER] [channel | nickname]"
+msgstr ""
+
+#: src/irc/outputfilter.cpp:1936
+#, c-format, kde-format
+msgid "%1CLEAR [-ALL] [channel | nickname]"
+msgstr ""
 
 #: src/irc/outputfilterresolvejob.cpp:83
 #, kde-format
