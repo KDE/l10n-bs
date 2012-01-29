@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kolourpaint\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-12-11 03:43+0100\n"
+"POT-Creation-Date: 2012-01-29 13:30+0100\n"
 "PO-Revision-Date: 2008-02-16 22:19+0000\n"
 "Last-Translator: Launchpad Translations Administrators <rosetta@launchpad."
 "net>\n"
@@ -56,11 +56,6 @@ msgstr "Spljoštiti"
 msgid "Reduce to Grayscale"
 msgstr "Snizi na nijanse sive"
 
-#: commands/imagelib/effects/kpEffectHSVCommand.cpp:37
-#: dialogs/imagelib/effects/kpEffectsDialog.cpp:116
-msgid "Hue, Saturation, Value"
-msgstr "Nijansa, Zasićenje, Vrijednost"
-
 #: commands/imagelib/effects/kpEffectInvertCommand.cpp:50
 #: commands/imagelib/effects/kpEffectInvertCommand.cpp:58
 msgid "Invert Colors"
@@ -70,6 +65,16 @@ msgstr "Izokreni boje"
 #: dialogs/imagelib/effects/kpEffectsDialog.cpp:117
 msgid "Invert"
 msgstr "Izokreni"
+
+#: commands/imagelib/effects/kpEffectToneEnhanceCommand.cpp:41
+#: dialogs/imagelib/effects/kpEffectsDialog.cpp:115
+msgid "Histogram Equalizer"
+msgstr "Histogram ujednačenja"
+
+#: commands/imagelib/effects/kpEffectHSVCommand.cpp:37
+#: dialogs/imagelib/effects/kpEffectsDialog.cpp:116
+msgid "Hue, Saturation, Value"
+msgstr "Nijansa, Zasićenje, Vrijednost"
 
 #: commands/imagelib/effects/kpEffectReduceColorsCommand.cpp:57
 msgid "Reduce to Monochrome (Dithered)"
@@ -87,11 +92,6 @@ msgstr "Snizi na 256 boja (Dithered)"
 msgid "Reduce to 256 Color"
 msgstr "Snizi na 256 boja"
 
-#: commands/imagelib/effects/kpEffectToneEnhanceCommand.cpp:41
-#: dialogs/imagelib/effects/kpEffectsDialog.cpp:115
-msgid "Histogram Equalizer"
-msgstr "Histogram ujednačenja"
-
 #: commands/imagelib/transforms/kpTransformFlipCommand.cpp:69
 msgid "Flip"
 msgstr "Okreni"
@@ -107,6 +107,14 @@ msgstr "Okreni vodoravno"
 #: commands/imagelib/transforms/kpTransformFlipCommand.cpp:76
 msgid "Flip vertically"
 msgstr "Okreni uspravno"
+
+#: commands/imagelib/transforms/kpTransformRotateCommand.cpp:72
+msgid "Rotate"
+msgstr "Rotiraj"
+
+#: commands/imagelib/transforms/kpTransformSkewCommand.cpp:75
+msgid "Skew"
+msgstr "Iskrivi"
 
 #: commands/imagelib/transforms/kpTransformResizeScaleCommand.cpp:110
 #: commands/tools/selection/kpToolSelectionResizeScaleCommand.cpp:62
@@ -134,13 +142,14 @@ msgstr "Razmjera"
 msgid "Smooth Scale"
 msgstr "Smooth Scale"
 
-#: commands/imagelib/transforms/kpTransformRotateCommand.cpp:72
-msgid "Rotate"
-msgstr "Rotiraj"
+#: commands/tools/kpToolColorPickerCommand.cpp:61
+#: tools/kpToolColorPicker.cpp:47
+msgid "Color Picker"
+msgstr "Izbornik boja"
 
-#: commands/imagelib/transforms/kpTransformSkewCommand.cpp:75
-msgid "Skew"
-msgstr "Iskrivi"
+#: commands/tools/kpToolFloodFillCommand.cpp:78 tools/kpToolFloodFill.cpp:55
+msgid "Flood Fill"
+msgstr "Popunjavanje"
 
 #: commands/kpCommandHistoryBase.cpp:454
 #, kde-format
@@ -190,15 +199,6 @@ msgid_plural "%1 more items"
 msgstr[0] "%1 stavka preostala"
 msgstr[1] "%1 stavke preostala"
 msgstr[2] "%1 stavki preostalo"
-
-#: commands/tools/kpToolColorPickerCommand.cpp:61
-#: tools/kpToolColorPicker.cpp:47
-msgid "Color Picker"
-msgstr "Izbornik boja"
-
-#: commands/tools/kpToolFloodFillCommand.cpp:78 tools/kpToolFloodFill.cpp:55
-msgid "Flood Fill"
-msgstr "Popunjavanje"
 
 #: dialogs/imagelib/effects/kpEffectsDialog.cpp:91
 msgctxt "@title:window"
@@ -892,7 +892,7 @@ msgid "Set as Image"
 msgstr "Postavi kao sliku"
 
 #: imagelib/transforms/kpTransformCrop_ImageSelection.cpp:248
-#: mainWindow/kpMainWindow_Image.cpp:314 mainWindow/kpMainWindow_Edit.cpp:367
+#: mainWindow/kpMainWindow_Edit.cpp:367 mainWindow/kpMainWindow_Image.cpp:314
 #: tools/selection/image/kpAbstractImageSelectionTool.cpp:81
 msgid "Selection: Create"
 msgstr "Selekcija: Napravi"
@@ -938,95 +938,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Cannot Autocrop"
 msgstr "Ne mogu autoizrezivati"
-
-#: kolourpaint.cpp:49
-msgid "KolourPaint"
-msgstr "KolourPaint"
-
-#: kolourpaint.cpp:51
-msgid "Paint Program for KDE"
-msgstr "Program za crtanje za KDE"
-
-#: kolourpaint.cpp:54
-msgid "To obtain support, please visit the website."
-msgstr "Za dobivanje podrške, posjetite web stranice."
-
-#: kolourpaint.cpp:65
-msgid "Clarence Dang"
-msgstr "Clarence Dang"
-
-#: kolourpaint.cpp:65
-msgid "Project Founder"
-msgstr "Projekt započeo"
-
-#: kolourpaint.cpp:66
-msgid "Thurston Dang"
-msgstr "Thurston Dang"
-
-#: kolourpaint.cpp:66
-msgid "Chief Investigator"
-msgstr "Glavni istražitelj"
-
-#: kolourpaint.cpp:68
-msgid "Martin Koller"
-msgstr "Martin Koller"
-
-#: kolourpaint.cpp:68
-msgid "Scanning Support, Alpha Support, Current Maintainer"
-msgstr "Podrška za skeniranje, alfa podrškam trenutno održava"
-
-#: kolourpaint.cpp:69
-msgid "Kristof Borrey"
-msgstr "Kristof Borrey"
-
-#: kolourpaint.cpp:69 kolourpaint.cpp:72 kolourpaint.cpp:73
-msgid "Icons"
-msgstr "Ikone"
-
-#: kolourpaint.cpp:70
-msgid "Tasuku Suzuki"
-msgstr "Tasuku Suzuki"
-
-#: kolourpaint.cpp:70 kolourpaint.cpp:71
-msgid "InputMethod Support"
-msgstr "Podrška za metode unosa"
-
-#: kolourpaint.cpp:71
-msgid "Kazuki Ohta"
-msgstr "Kazuki Ohta"
-
-#: kolourpaint.cpp:72
-msgid "Nuno Pinheiro"
-msgstr "Nuno Pinheiro"
-
-#: kolourpaint.cpp:73
-msgid "Danny Allen"
-msgstr "Danny Allen"
-
-#: kolourpaint.cpp:74
-msgid "Mike Gashler"
-msgstr "Mike Gashler"
-
-#: kolourpaint.cpp:74
-msgid "Image Effects"
-msgstr "Efekti slika"
-
-#: kolourpaint.cpp:76
-msgid "Laurent Montel"
-msgstr "Laurent Montel"
-
-#: kolourpaint.cpp:76
-msgid "KDE 4 Porting"
-msgstr "KDE 4 prilagođenje"
-
-#: kolourpaint.cpp:80
-msgid ""
-"Thanks to the many others who have helped to make this program possible."
-msgstr "Hvala mnogim drugima koji su pomogli da je ovaj program moguć."
-
-#: kolourpaint.cpp:85
-msgid "Image file to open"
-msgstr "Slika datoteka za otvaranje"
 
 #: layers/selections/text/kpTextSelection.cpp:136
 #: tools/selection/text/kpToolText.cpp:59
@@ -1106,10 +1017,6 @@ msgstr "Režim &uveličanih minijatura"
 #: mainWindow/kpMainWindow_View_Thumbnail.cpp:90
 msgid "Enable Thumbnail &Rectangle"
 msgstr "Uključi &pravougaonik minijatura"
-
-#: mainWindow/kpMainWindow_View.cpp:76
-msgid "Show &Grid"
-msgstr "Pokaži &mrežu"
 
 #: mainWindow/kpMainWindow_Colors.cpp:59
 msgid "Use KolourPaint Defaults"
@@ -1228,167 +1135,9 @@ msgstr ""
 msgid "Save Color Palette As"
 msgstr "Snimi paletu boja kao"
 
-#: mainWindow/kpMainWindow_StatusBar.cpp:149
-#, kde-format
-msgid "%1,%2"
-msgstr "%1,%2"
-
-#: mainWindow/kpMainWindow_StatusBar.cpp:156
-#, kde-format
-msgid "%1,%2 - %3,%4"
-msgstr "%1,%2 - %3,%4"
-
-#: mainWindow/kpMainWindow_StatusBar.cpp:199
-#: widgets/toolbars/options/kpToolWidgetEraserSize.cpp:115
-#: widgets/toolbars/options/kpToolWidgetSpraycanSize.cpp:92
-#, kde-format
-msgid "%1x%2"
-msgstr "%1x%2"
-
-#: mainWindow/kpMainWindow_StatusBar.cpp:258
-#, kde-format
-msgid "%1bpp"
-msgstr "%1bpp"
-
-#: mainWindow/kpMainWindow_StatusBar.cpp:284
-#: mainWindow/kpMainWindow_View_Zoom.cpp:91
-#, kde-format
-msgid "%1%"
-msgstr "%1%"
-
-#: mainWindow/kpMainWindow_View_Zoom.cpp:113
-msgid "&Zoom"
-msgstr "&Uvećaj"
-
-#: mainWindow/kpMainWindow_View_Zoom.cpp:194
-#, kde-format
-msgid ""
-"Setting the zoom level to a value that is not a multiple of 100% results in "
-"imprecise editing and redraw glitches.\n"
-"Do you really want to set to zoom level to %1%?"
-msgstr ""
-"Postavljanjem uvećavajućeg niva na vrijednost koja nije množitelj od 100 "
-"rezultira nepreciznim editovanjem.\n"
-"Da li stvarno želite da postavite nivo uvećavanja na %1%?"
-
-#: mainWindow/kpMainWindow_View_Zoom.cpp:199
-#, kde-format
-msgid "Set Zoom Level to %1%"
-msgstr "Postavi nivo povećavanja na %1%"
-
-#: mainWindow/kpMainWindow_Image.cpp:119
-msgid "R&esize / Scale..."
-msgstr "P&romijeni veličinu / Skale..."
-
-#: mainWindow/kpMainWindow_Image.cpp:124
-msgid "Se&t as Image (Crop)"
-msgstr "P&ostavi kao sliku (Isjeci)"
-
-#: mainWindow/kpMainWindow_Image.cpp:134
-msgid "&Flip (upside down)"
-msgstr "&Prevrni (odozgo prema dole)"
-
-#: mainWindow/kpMainWindow_Image.cpp:139
-msgid "Mirror (horizontally)"
-msgstr "Ogledalo vodoravno"
-
-#: mainWindow/kpMainWindow_Image.cpp:144
-msgid "&Rotate..."
-msgstr "R&otiraj..."
-
-#: mainWindow/kpMainWindow_Image.cpp:150
-msgid "Rotate &Left"
-msgstr "Rotiraj &lijevo"
-
-#: mainWindow/kpMainWindow_Image.cpp:156
-msgid "Rotate Righ&t"
-msgstr "Rotiraj &Desno"
-
-#: mainWindow/kpMainWindow_Image.cpp:162
-msgid "S&kew..."
-msgstr "Is&kriviti..."
-
-#: mainWindow/kpMainWindow_Image.cpp:167
-msgid "Reduce to Mo&nochrome (Dithered)"
-msgstr "Snizi na mo&nohromatsko (Dithered)"
-
-#: mainWindow/kpMainWindow_Image.cpp:171
-msgid "Reduce to &Grayscale"
-msgstr "Snizi na N&ijanse sive"
-
-#: mainWindow/kpMainWindow_Image.cpp:175
-msgid "&Invert Colors"
-msgstr "I&zokreni boje"
-
-#: mainWindow/kpMainWindow_Image.cpp:180
-msgid "C&lear"
-msgstr "&Očisti"
-
-#: mainWindow/kpMainWindow_Image.cpp:185
-msgid "&More Effects..."
-msgstr "Vi&še efekata..."
-
-#: mainWindow/kpMainWindow_Image.cpp:225
-msgctxt ""
-"Image/Selection Menu caption - make sure the translation has the same accel "
-"as the Select&ion translation"
-msgid "&Image"
-msgstr "&Slika"
-
-#: mainWindow/kpMainWindow_Image.cpp:229
-msgctxt ""
-"Image/Selection Menu caption - make sure that translation has the same accel "
-"as the &Image translation"
-msgid "Select&ion"
-msgstr "Oda&bir"
-
-#: mainWindow/kpMainWindow_Image.cpp:316 mainWindow/kpMainWindow_Edit.cpp:366
-#: mainWindow/kpMainWindow_Edit.cpp:440 tools/selection/text/kpToolText.cpp:93
-msgid "Text: Create Box"
-msgstr "Tekst: Napravi okvir"
-
-#: mainWindow/kpMainWindow_Settings.cpp:67
-msgid "Show &Path"
-msgstr "Prikaži &putanju"
-
-#: mainWindow/kpMainWindow_Tools.cpp:136
-msgid "Previous Tool Option (Group #1)"
-msgstr "Prethodne opcije alata (Grupa #1)"
-
-#: mainWindow/kpMainWindow_Tools.cpp:142
-msgid "Next Tool Option (Group #1)"
-msgstr "Sljedeće opcije alata (Grupa #1)"
-
-#: mainWindow/kpMainWindow_Tools.cpp:148
-msgid "Previous Tool Option (Group #2)"
-msgstr "Prethodne opcije alata (Grupa #2)"
-
-#: mainWindow/kpMainWindow_Tools.cpp:154
-msgid "Next Tool Option (Group #2)"
-msgstr "Sljedeće opcije alata (Grupa #2)"
-
-#: mainWindow/kpMainWindow_Tools.cpp:166
-msgid "&Draw Opaque"
-msgstr "Crtaj &neprozirno"
-
-#: mainWindow/kpMainWindow_Tools.cpp:171
-msgid "Draw With Color Similarity..."
-msgstr "Crtanje u boji sličnosti ..."
-
-#: mainWindow/kpMainWindow_Tools.cpp:182
-msgid "Tool Box"
-msgstr "Kutija alata"
-
-#: mainWindow/kpMainWindow_Tools.cpp:641
-#, kde-format
-msgid ""
-"<qt><p>Resizing the image to %1x%2 may take a substantial amount of memory. "
-"This can reduce system responsiveness and cause other application resource "
-"problems.</p><p>Are you sure want to resize the image?</p></qt>"
-msgstr ""
-"<qt><p>Promjenom veličin slike u %1x%2 može zauzeti bitan iznos memorije. "
-"Ovo može usporiti vaš sistem i uzrokovati probleme kod rada drugih "
-"aplikacija.</p><p> Sigurno želite da promijenite veličinu slike?</p></qt>"
+#: mainWindow/kpMainWindow_View.cpp:76
+msgid "Show &Grid"
+msgstr "Pokaži &mrežu"
 
 #: mainWindow/kpMainWindow_Edit.cpp:98
 msgid "Paste in &New Window"
@@ -1405,6 +1154,12 @@ msgstr "K&opiraj u datoteku..."
 #: mainWindow/kpMainWindow_Edit.cpp:117
 msgid "Paste &From File..."
 msgstr "Umetni &Iz dateteke..."
+
+#: mainWindow/kpMainWindow_Edit.cpp:366 mainWindow/kpMainWindow_Edit.cpp:440
+#: mainWindow/kpMainWindow_Image.cpp:316
+#: tools/selection/text/kpToolText.cpp:93
+msgid "Text: Create Box"
+msgstr "Tekst: Napravi okvir"
 
 #: mainWindow/kpMainWindow_Edit.cpp:446
 msgid "Text: Paste"
@@ -1557,6 +1312,163 @@ msgstr ""
 "Dokument \"%1\" je izmijenjen.\n"
 "Želite li ga snimiti?"
 
+#: mainWindow/kpMainWindow_Image.cpp:119
+msgid "R&esize / Scale..."
+msgstr "P&romijeni veličinu / Skale..."
+
+#: mainWindow/kpMainWindow_Image.cpp:124
+msgid "Se&t as Image (Crop)"
+msgstr "P&ostavi kao sliku (Isjeci)"
+
+#: mainWindow/kpMainWindow_Image.cpp:134
+msgid "&Flip (upside down)"
+msgstr "&Prevrni (odozgo prema dole)"
+
+#: mainWindow/kpMainWindow_Image.cpp:139
+msgid "Mirror (horizontally)"
+msgstr "Ogledalo vodoravno"
+
+#: mainWindow/kpMainWindow_Image.cpp:144
+msgid "&Rotate..."
+msgstr "R&otiraj..."
+
+#: mainWindow/kpMainWindow_Image.cpp:150
+msgid "Rotate &Left"
+msgstr "Rotiraj &lijevo"
+
+#: mainWindow/kpMainWindow_Image.cpp:156
+msgid "Rotate Righ&t"
+msgstr "Rotiraj &Desno"
+
+#: mainWindow/kpMainWindow_Image.cpp:162
+msgid "S&kew..."
+msgstr "Is&kriviti..."
+
+#: mainWindow/kpMainWindow_Image.cpp:167
+msgid "Reduce to Mo&nochrome (Dithered)"
+msgstr "Snizi na mo&nohromatsko (Dithered)"
+
+#: mainWindow/kpMainWindow_Image.cpp:171
+msgid "Reduce to &Grayscale"
+msgstr "Snizi na N&ijanse sive"
+
+#: mainWindow/kpMainWindow_Image.cpp:175
+msgid "&Invert Colors"
+msgstr "I&zokreni boje"
+
+#: mainWindow/kpMainWindow_Image.cpp:180
+msgid "C&lear"
+msgstr "&Očisti"
+
+#: mainWindow/kpMainWindow_Image.cpp:185
+msgid "&More Effects..."
+msgstr "Vi&še efekata..."
+
+#: mainWindow/kpMainWindow_Image.cpp:225
+msgctxt ""
+"Image/Selection Menu caption - make sure the translation has the same accel "
+"as the Select&ion translation"
+msgid "&Image"
+msgstr "&Slika"
+
+#: mainWindow/kpMainWindow_Image.cpp:229
+msgctxt ""
+"Image/Selection Menu caption - make sure that translation has the same accel "
+"as the &Image translation"
+msgid "Select&ion"
+msgstr "Oda&bir"
+
+#: mainWindow/kpMainWindow_Settings.cpp:67
+msgid "Show &Path"
+msgstr "Prikaži &putanju"
+
+#: mainWindow/kpMainWindow_StatusBar.cpp:149
+#, kde-format
+msgid "%1,%2"
+msgstr "%1,%2"
+
+#: mainWindow/kpMainWindow_StatusBar.cpp:156
+#, kde-format
+msgid "%1,%2 - %3,%4"
+msgstr "%1,%2 - %3,%4"
+
+#: mainWindow/kpMainWindow_StatusBar.cpp:199
+#: widgets/toolbars/options/kpToolWidgetEraserSize.cpp:115
+#: widgets/toolbars/options/kpToolWidgetSpraycanSize.cpp:92
+#, kde-format
+msgid "%1x%2"
+msgstr "%1x%2"
+
+#: mainWindow/kpMainWindow_StatusBar.cpp:258
+#, kde-format
+msgid "%1bpp"
+msgstr "%1bpp"
+
+#: mainWindow/kpMainWindow_StatusBar.cpp:284
+#: mainWindow/kpMainWindow_View_Zoom.cpp:91
+#, kde-format
+msgid "%1%"
+msgstr "%1%"
+
+#: mainWindow/kpMainWindow_Tools.cpp:136
+msgid "Previous Tool Option (Group #1)"
+msgstr "Prethodne opcije alata (Grupa #1)"
+
+#: mainWindow/kpMainWindow_Tools.cpp:142
+msgid "Next Tool Option (Group #1)"
+msgstr "Sljedeće opcije alata (Grupa #1)"
+
+#: mainWindow/kpMainWindow_Tools.cpp:148
+msgid "Previous Tool Option (Group #2)"
+msgstr "Prethodne opcije alata (Grupa #2)"
+
+#: mainWindow/kpMainWindow_Tools.cpp:154
+msgid "Next Tool Option (Group #2)"
+msgstr "Sljedeće opcije alata (Grupa #2)"
+
+#: mainWindow/kpMainWindow_Tools.cpp:166
+msgid "&Draw Opaque"
+msgstr "Crtaj &neprozirno"
+
+#: mainWindow/kpMainWindow_Tools.cpp:171
+msgid "Draw With Color Similarity..."
+msgstr "Crtanje u boji sličnosti ..."
+
+#: mainWindow/kpMainWindow_Tools.cpp:182
+msgid "Tool Box"
+msgstr "Kutija alata"
+
+#: mainWindow/kpMainWindow_Tools.cpp:641
+#, kde-format
+msgid ""
+"<qt><p>Resizing the image to %1x%2 may take a substantial amount of memory. "
+"This can reduce system responsiveness and cause other application resource "
+"problems.</p><p>Are you sure want to resize the image?</p></qt>"
+msgstr ""
+"<qt><p>Promjenom veličin slike u %1x%2 može zauzeti bitan iznos memorije. "
+"Ovo može usporiti vaš sistem i uzrokovati probleme kod rada drugih "
+"aplikacija.</p><p> Sigurno želite da promijenite veličinu slike?</p></qt>"
+
+#: mainWindow/kpMainWindow_View_Zoom.cpp:113
+msgid "&Zoom"
+msgstr "&Uvećaj"
+
+#: mainWindow/kpMainWindow_View_Zoom.cpp:194
+#, kde-format
+msgid ""
+"Setting the zoom level to a value that is not a multiple of 100% results in "
+"imprecise editing and redraw glitches.\n"
+"Do you really want to set to zoom level to %1%?"
+msgstr ""
+"Postavljanjem uvećavajućeg niva na vrijednost koja nije množitelj od 100 "
+"rezultira nepreciznim editovanjem.\n"
+"Da li stvarno želite da postavite nivo uvećavanja na %1%?"
+
+#: mainWindow/kpMainWindow_View_Zoom.cpp:199
+#, kde-format
+msgid "Set Zoom Level to %1%"
+msgstr "Postavi nivo povećavanja na %1%"
+
 #: tools/flow/kpToolBrush.cpp:35
 msgid "Brush"
 msgstr "Četka"
@@ -1594,10 +1506,11 @@ msgid "Click or drag to erase."
 msgstr "Kliknite ili povucite za brisanje."
 
 #: tools/flow/kpToolFlowBase.cpp:302 tools/kpToolColorPicker.cpp:112
-#: tools/kpToolFloodFill.cpp:144 tools/polygonal/kpToolPolygonalBase.cpp:437
+#: tools/polygonal/kpToolPolygonalBase.cpp:437
 #: tools/rectangular/kpToolRectangularBase.cpp:356
 #: tools/selection/kpAbstractSelectionTool.cpp:260
-#: tools/selection/kpAbstractSelectionTool.cpp:518 tools/kpToolZoom.cpp:205
+#: tools/selection/kpAbstractSelectionTool.cpp:518
+#: tools/kpToolFloodFill.cpp:144 tools/kpToolZoom.cpp:205
 msgid "Let go of all the mouse buttons."
 msgstr "Otpusti sve tipke miša."
 
@@ -1628,27 +1541,6 @@ msgstr "Dopušta vam da izaberete boju sa slike"
 #: tools/kpToolColorPicker.cpp:72
 msgid "Click to select a color."
 msgstr "Kliknite da odaberete boju"
-
-#: tools/kpToolFloodFill.cpp:55
-msgid "Fills regions in the image"
-msgstr "Puni područja slike"
-
-#: tools/kpToolFloodFill.cpp:75
-msgid "Click to fill a region."
-msgstr "Kliknite za punjenje područja"
-
-#: tools/kpTool_UserNotifications.cpp:42
-msgid "Right click to cancel."
-msgstr "Desno kliknite da poništite."
-
-#: tools/kpTool_UserNotifications.cpp:44
-msgid "Left click to cancel."
-msgstr "Lijevo kliknite da poništite."
-
-#: tools/kpTool_UserNotifications.cpp:73
-#, kde-format
-msgid "%1: "
-msgstr "%1: "
 
 #: tools/polygonal/kpToolCurve.cpp:86
 msgid "Curve"
@@ -1753,22 +1645,6 @@ msgstr "Zaobljen pravougaonik"
 msgid "Draws rectangles and squares with rounded corners"
 msgstr "Crta pravougaonike i kvadrate sa zaobljenim ćoškovima"
 
-#: tools/selection/image/kpAbstractImageSelectionTool_Transparency.cpp:169
-msgid "Selection: Opaque"
-msgstr "Selekcija: neprozirnost"
-
-#: tools/selection/image/kpAbstractImageSelectionTool_Transparency.cpp:170
-msgid "Selection: Transparent"
-msgstr "Selekcija: transparentnost"
-
-#: tools/selection/image/kpAbstractImageSelectionTool_Transparency.cpp:190
-msgid "Selection: Transparency Color"
-msgstr "Selekcija: transparentnost boje"
-
-#: tools/selection/image/kpAbstractImageSelectionTool_Transparency.cpp:210
-msgid "Selection: Transparency Color Similarity"
-msgstr "Selekcija: transparentnost sličnih boja"
-
 #: tools/selection/image/kpToolEllipticalSelection.cpp:43
 msgid "Selection (Elliptical)"
 msgstr "Selekcija (elipsasta)"
@@ -1792,6 +1668,22 @@ msgstr "Selekcija (pravougaonasta)"
 #: tools/selection/image/kpToolRectSelection.cpp:43
 msgid "Makes a rectangular selection"
 msgstr "Pravi pravougaonastu selekciju"
+
+#: tools/selection/image/kpAbstractImageSelectionTool_Transparency.cpp:169
+msgid "Selection: Opaque"
+msgstr "Selekcija: neprozirnost"
+
+#: tools/selection/image/kpAbstractImageSelectionTool_Transparency.cpp:170
+msgid "Selection: Transparent"
+msgstr "Selekcija: transparentnost"
+
+#: tools/selection/image/kpAbstractImageSelectionTool_Transparency.cpp:190
+msgid "Selection: Transparency Color"
+msgstr "Selekcija: transparentnost boje"
+
+#: tools/selection/image/kpAbstractImageSelectionTool_Transparency.cpp:210
+msgid "Selection: Transparency Color Similarity"
+msgstr "Selekcija: transparentnost sličnih boja"
 
 #: tools/selection/image/kpAbstractImageSelectionTool.cpp:89
 msgid "Left drag to create selection."
@@ -1897,6 +1789,27 @@ msgstr "Selekcija: pomjeraj"
 #, kde-format
 msgid "%1: Smear"
 msgstr "%1: Mrlja"
+
+#: tools/kpToolFloodFill.cpp:55
+msgid "Fills regions in the image"
+msgstr "Puni područja slike"
+
+#: tools/kpToolFloodFill.cpp:75
+msgid "Click to fill a region."
+msgstr "Kliknite za punjenje područja"
+
+#: tools/kpTool_UserNotifications.cpp:42
+msgid "Right click to cancel."
+msgstr "Desno kliknite da poništite."
+
+#: tools/kpTool_UserNotifications.cpp:44
+msgid "Left click to cancel."
+msgstr "Lijevo kliknite da poništite."
+
+#: tools/kpTool_UserNotifications.cpp:73
+#, kde-format
+msgid "%1: "
+msgstr "%1: "
 
 #: tools/kpTool.cpp:140
 #, kde-format
@@ -2160,38 +2073,6 @@ msgstr "Svedi na"
 msgid "&Granularity:"
 msgstr "&Granularnost"
 
-#: widgets/kpDocumentSaveOptionsWidget.cpp:93
-msgid "Convert &to:"
-msgstr "Pro&mijeni u:"
-
-#: widgets/kpDocumentSaveOptionsWidget.cpp:98
-msgid "Quali&ty:"
-msgstr "Kvali&tet"
-
-#: widgets/kpDocumentSaveOptionsWidget.cpp:106
-msgid "&Preview"
-msgstr "&Prikaz"
-
-#: widgets/kpDocumentSaveOptionsWidget.cpp:228
-msgid "Monochrome"
-msgstr "Monohromatski"
-
-#: widgets/kpDocumentSaveOptionsWidget.cpp:229
-msgid "Monochrome (Dithered)"
-msgstr "Monohromatski (Dithered)"
-
-#: widgets/kpDocumentSaveOptionsWidget.cpp:233
-msgid "256 Color"
-msgstr "256 boja"
-
-#: widgets/kpDocumentSaveOptionsWidget.cpp:234
-msgid "256 Color (Dithered)"
-msgstr "256 boja (Dithered)"
-
-#: widgets/kpDocumentSaveOptionsWidget.cpp:239
-msgid "24-bit Color"
-msgstr "24-bit boja"
-
 #: widgets/toolbars/options/kpToolWidgetBrush.cpp:204
 msgid "1x1"
 msgstr "1x1"
@@ -2254,6 +2135,38 @@ msgctxt "Colors: name_or_url_of_color_palette [modified]"
 msgid "Colors: %1 [modified]"
 msgstr "Boje: %1 [modified]"
 
+#: widgets/kpDocumentSaveOptionsWidget.cpp:93
+msgid "Convert &to:"
+msgstr "Pro&mijeni u:"
+
+#: widgets/kpDocumentSaveOptionsWidget.cpp:98
+msgid "Quali&ty:"
+msgstr "Kvali&tet"
+
+#: widgets/kpDocumentSaveOptionsWidget.cpp:106
+msgid "&Preview"
+msgstr "&Prikaz"
+
+#: widgets/kpDocumentSaveOptionsWidget.cpp:228
+msgid "Monochrome"
+msgstr "Monohromatski"
+
+#: widgets/kpDocumentSaveOptionsWidget.cpp:229
+msgid "Monochrome (Dithered)"
+msgstr "Monohromatski (Dithered)"
+
+#: widgets/kpDocumentSaveOptionsWidget.cpp:233
+msgid "256 Color"
+msgstr "256 boja"
+
+#: widgets/kpDocumentSaveOptionsWidget.cpp:234
+msgid "256 Color (Dithered)"
+msgstr "256 boja (Dithered)"
+
+#: widgets/kpDocumentSaveOptionsWidget.cpp:239
+msgid "24-bit Color"
+msgstr "24-bit boja"
+
 #: widgets/kpPrintDialogPage.cpp:60
 msgctxt "@title:tab"
 msgid "I&mage Position"
@@ -2284,6 +2197,95 @@ msgstr ""
 "ćelije s bilo kojom drugom ćelijom pomoću prevlačenja i ispuštanja. Takođe, "
 "ako držite <b>Ctrl</b> taster, odredišna boja ćelije će biti prebrisana, "
 "umjesto da se zamijenili s bojom izvorne ćelije.</p></qt>"
+
+#: kolourpaint.cpp:49
+msgid "KolourPaint"
+msgstr "KolourPaint"
+
+#: kolourpaint.cpp:51
+msgid "Paint Program for KDE"
+msgstr "Program za crtanje za KDE"
+
+#: kolourpaint.cpp:54
+msgid "To obtain support, please visit the website."
+msgstr "Za dobivanje podrške, posjetite web stranice."
+
+#: kolourpaint.cpp:65
+msgid "Clarence Dang"
+msgstr "Clarence Dang"
+
+#: kolourpaint.cpp:65
+msgid "Project Founder"
+msgstr "Projekt započeo"
+
+#: kolourpaint.cpp:66
+msgid "Thurston Dang"
+msgstr "Thurston Dang"
+
+#: kolourpaint.cpp:66
+msgid "Chief Investigator"
+msgstr "Glavni istražitelj"
+
+#: kolourpaint.cpp:68
+msgid "Martin Koller"
+msgstr "Martin Koller"
+
+#: kolourpaint.cpp:68
+msgid "Scanning Support, Alpha Support, Current Maintainer"
+msgstr "Podrška za skeniranje, alfa podrškam trenutno održava"
+
+#: kolourpaint.cpp:69
+msgid "Kristof Borrey"
+msgstr "Kristof Borrey"
+
+#: kolourpaint.cpp:69 kolourpaint.cpp:72 kolourpaint.cpp:73
+msgid "Icons"
+msgstr "Ikone"
+
+#: kolourpaint.cpp:70
+msgid "Tasuku Suzuki"
+msgstr "Tasuku Suzuki"
+
+#: kolourpaint.cpp:70 kolourpaint.cpp:71
+msgid "InputMethod Support"
+msgstr "Podrška za metode unosa"
+
+#: kolourpaint.cpp:71
+msgid "Kazuki Ohta"
+msgstr "Kazuki Ohta"
+
+#: kolourpaint.cpp:72
+msgid "Nuno Pinheiro"
+msgstr "Nuno Pinheiro"
+
+#: kolourpaint.cpp:73
+msgid "Danny Allen"
+msgstr "Danny Allen"
+
+#: kolourpaint.cpp:74
+msgid "Mike Gashler"
+msgstr "Mike Gashler"
+
+#: kolourpaint.cpp:74
+msgid "Image Effects"
+msgstr "Efekti slika"
+
+#: kolourpaint.cpp:76
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: kolourpaint.cpp:76
+msgid "KDE 4 Porting"
+msgstr "KDE 4 prilagođenje"
+
+#: kolourpaint.cpp:80
+msgid ""
+"Thanks to the many others who have helped to make this program possible."
+msgstr "Hvala mnogim drugima koji su pomogli da je ovaj program moguć."
+
+#: kolourpaint.cpp:85
+msgid "Image file to open"
+msgstr "Slika datoteka za otvaranje"
 
 #: kpThumbnail.cpp:126
 msgctxt "@title:window"

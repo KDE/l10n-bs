@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-01-09 03:41+0100\n"
+"POT-Creation-Date: 2012-01-29 13:31+0100\n"
 "PO-Revision-Date: 2010-12-05 12:26+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -242,52 +242,37 @@ msgstr ""
 msgid "Error during article share"
 msgstr ""
 
+#: src/actions.cpp:35 src/pageviewer.cpp:411
+msgid "Open Link in New &Tab"
+msgstr "Otvori vezu u &novoj kartici"
+
+#: src/actions.cpp:44 src/pageviewer.cpp:413
+msgid "Open Link in External &Browser"
+msgstr "Otvori vezu u spoljašnjem &pregledaču"
+
 #: src/feedlist.cpp:177
 msgid "All Feeds"
 msgstr "Svi dovodi"
 
-#: src/searchbar.cpp:77
-msgctxt "Title of article searchbar"
-msgid "S&earch:"
-msgstr "Pretraga:"
+#. i18n: file: src/addfeedwidgetbase.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, Akregator::AddFeedWidgetBase)
+#: src/addfeeddialog.cpp:73 rc.cpp:419
+msgid "Add Feed"
+msgstr "Dodaj dovod"
 
-#: src/searchbar.cpp:88
-msgid "Status:"
-msgstr "Status:"
+#: src/addfeeddialog.cpp:112
+#, kde-format
+msgid "Downloading %1"
+msgstr "Preuzimam %1"
 
-#: src/searchbar.cpp:97
-msgid "All Articles"
-msgstr "Svi članci"
+#: src/addfeeddialog.cpp:131
+#, kde-format
+msgid "Feed not found from %1."
+msgstr "Dovod nije nađen na %1."
 
-#: src/searchbar.cpp:98
-msgctxt "Unread articles filter"
-msgid "Unread"
-msgstr "Nepročitano"
-
-#: src/searchbar.cpp:99
-msgctxt "New articles filter"
-msgid "New"
-msgstr "Novo"
-
-#: src/searchbar.cpp:100
-msgctxt "Important articles filter"
-msgid "Important"
-msgstr "Važno"
-
-#: src/searchbar.cpp:102
-msgid "Enter space-separated terms to filter article list"
-msgstr "Unesite izraze razdvojene zapetama da biste filtrirali listu članaka"
-
-#: src/searchbar.cpp:103
-msgid "Choose what kind of articles to show in article list"
-msgstr "Izaberite kakvu vrstu članaka treba prikazivati u listi članaka"
-
-#: src/mainwindow.cpp:104
-#, fuzzy, kde-format
-msgid ""
-"Could not find the Akregator part; please check your installation.\n"
-"%1"
-msgstr "Nisam mogao da nađem aKregator-ov deo; provjerite svoju instalaciju."
+#: src/addfeeddialog.cpp:137
+msgid "Feed found, downloading..."
+msgstr "Dovod je nađen, preuzimam..."
 
 #: src/akregator_part.cpp:125
 msgid "KDE Dot News"
@@ -406,14 +391,6 @@ msgstr ""
 msgid "Ask Me Later"
 msgstr ""
 
-#: src/tabwidget.cpp:113
-msgid "Close the current tab"
-msgstr "Zatvori tekuću karticu"
-
-#: src/articlejobs.cpp:188
-msgid "The feed to be listed was already removed."
-msgstr "Dovod koji se želi izlistati je već uklonjen"
-
 #: src/akregator_options.h:37 src/akregator_options.h:41
 msgid "Add a feed with the given URL"
 msgstr "Dodaj dovod sa datim URL-om"
@@ -425,18 +402,6 @@ msgstr "Prilikom dodavanja dovoda, smjesti ih u ovu grupu"
 #: src/akregator_options.h:40
 msgid "Hide main window on startup"
 msgstr "Sakrij glavni prozor pri pokretanju"
-
-#: src/progressmanager.cpp:177
-msgid "Fetch completed"
-msgstr "Dobavljanje završeno"
-
-#: src/progressmanager.cpp:187
-msgid "Fetch error"
-msgstr "Greška pri dobavljanju"
-
-#: src/progressmanager.cpp:197
-msgid "Fetch aborted"
-msgstr "Dobavljanje je prekinuto"
 
 #: src/articleviewer.cpp:137
 msgid "Copy &Link Address"
@@ -498,6 +463,62 @@ msgstr "Želite li zaista da isključite ovu uvodnu stranu?"
 #: src/articleviewer.cpp:735
 msgid "Disable Introduction Page"
 msgstr "Isključi uvodnu stranu"
+
+#: src/progressmanager.cpp:177
+msgid "Fetch completed"
+msgstr "Dobavljanje završeno"
+
+#: src/progressmanager.cpp:187
+msgid "Fetch error"
+msgstr "Greška pri dobavljanju"
+
+#: src/progressmanager.cpp:197
+msgid "Fetch aborted"
+msgstr "Dobavljanje je prekinuto"
+
+#: src/searchbar.cpp:77
+msgctxt "Title of article searchbar"
+msgid "S&earch:"
+msgstr "Pretraga:"
+
+#: src/searchbar.cpp:88
+msgid "Status:"
+msgstr "Status:"
+
+#: src/searchbar.cpp:97
+msgid "All Articles"
+msgstr "Svi članci"
+
+#: src/searchbar.cpp:98
+msgctxt "Unread articles filter"
+msgid "Unread"
+msgstr "Nepročitano"
+
+#: src/searchbar.cpp:99
+msgctxt "New articles filter"
+msgid "New"
+msgstr "Novo"
+
+#: src/searchbar.cpp:100
+msgctxt "Important articles filter"
+msgid "Important"
+msgstr "Važno"
+
+#: src/searchbar.cpp:102
+msgid "Enter space-separated terms to filter article list"
+msgstr "Unesite izraze razdvojene zapetama da biste filtrirali listu članaka"
+
+#: src/searchbar.cpp:103
+msgid "Choose what kind of articles to show in article list"
+msgstr "Izaberite kakvu vrstu članaka treba prikazivati u listi članaka"
+
+#: src/articlejobs.cpp:188
+msgid "The feed to be listed was already removed."
+msgstr "Dovod koji se želi izlistati je već uklonjen"
+
+#: src/speechclient.cpp:113
+msgid "Next Article: "
+msgstr "Sljedeći članak: "
 
 #: src/articlemodel.cpp:106
 msgctxt "Articlelist's column header"
@@ -575,13 +596,9 @@ msgstr "Obriši dovod"
 msgid "No Archive"
 msgstr "Nema arhive"
 
-#: src/actions.cpp:35 src/pageviewer.cpp:411
-msgid "Open Link in New &Tab"
-msgstr "Otvori vezu u &novoj kartici"
-
-#: src/actions.cpp:44 src/pageviewer.cpp:413
-msgid "Open Link in External &Browser"
-msgstr "Otvori vezu u spoljašnjem &pregledaču"
+#: src/tabwidget.cpp:113
+msgid "Close the current tab"
+msgstr "Zatvori tekuću karticu"
 
 #: src/feedpropertiesdialog.cpp:71 src/feedpropertiesdialog.cpp:96
 msgid "Minute"
@@ -757,9 +774,12 @@ msgstr[2] "<qt>Jeste li sigurni da želite obrisati %1 označenih članaka?</qt>
 msgid "Delete Article"
 msgstr "Obriši članak"
 
-#: src/speechclient.cpp:113
-msgid "Next Article: "
-msgstr "Sljedeći članak: "
+#: src/mainwindow.cpp:104
+#, fuzzy, kde-format
+msgid ""
+"Could not find the Akregator part; please check your installation.\n"
+"%1"
+msgstr "Nisam mogao da nađem aKregator-ov deo; provjerite svoju instalaciju."
 
 #: src/notificationmanager.cpp:79
 #, kde-format
@@ -846,85 +866,6 @@ msgstr "Izdanje radnog okvira"
 msgid "Plugin Information"
 msgstr "Podaci o priključku"
 
-#: src/articleformatter.cpp:57
-#, kde-format
-msgid "(%1, %2)"
-msgstr "(%1, %2)"
-
-#: src/articleformatter.cpp:62
-#, kde-format
-msgid "<a href=\"%1\">%2</a> %3"
-msgstr "<a href=\"%1\">%2</a> %3"
-
-#: src/articleformatter.cpp:108 src/articleformatter.cpp:150
-msgid " (no unread articles)"
-msgstr " (nema nepročitanih članaka)"
-
-#: src/articleformatter.cpp:110 src/articleformatter.cpp:152
-#, kde-format
-msgid " (1 unread article)"
-msgid_plural " (%1 unread articles)"
-msgstr[0] " (%1 nepročitan članak)"
-msgstr[1] " (%1 nepročitana članka)"
-msgstr[2] " (%1 nepročitanih članaka)"
-
-#: src/articleformatter.cpp:128
-#, kde-format
-msgid "<b>Description:</b> %1<br /><br />"
-msgstr "<b>Opis:</b> %1<br /><br />"
-
-#: src/articleformatter.cpp:135
-#, kde-format
-msgid "<b>Homepage:</b> <a href=\"%1\">%2</a>"
-msgstr "<b>Domaća strana:</b> <a href=\"%1\">%2</a>"
-
-#: src/articleformatter.cpp:189 src/articleformatter.cpp:190
-#: src/articleformatter.cpp:385 src/articleformatter.cpp:386
-msgid "Date"
-msgstr "Datum"
-
-#: src/articleformatter.cpp:197 src/articleformatter.cpp:198
-#: src/articleformatter.cpp:394 src/articleformatter.cpp:395
-msgid "Author"
-msgstr "Autor"
-
-#: src/articleformatter.cpp:205 src/articleformatter.cpp:206
-#: src/articleformatter.cpp:402 src/articleformatter.cpp:403
-msgid "Enclosure"
-msgstr "Prilog"
-
-#: src/articleformatter.cpp:237 src/articleformatter.cpp:434
-msgid "Comments"
-msgstr "Komentari"
-
-#: src/articleformatter.cpp:246 src/articleformatter.cpp:444
-msgid "Enclosure:"
-msgstr "Prilog:"
-
-#: src/articleformatter.cpp:260 src/articleformatter.cpp:458
-msgid "Complete Story"
-msgstr "Cijela priča"
-
-#. i18n: file: src/addfeedwidgetbase.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, Akregator::AddFeedWidgetBase)
-#: src/addfeeddialog.cpp:73 rc.cpp:419
-msgid "Add Feed"
-msgstr "Dodaj dovod"
-
-#: src/addfeeddialog.cpp:112
-#, kde-format
-msgid "Downloading %1"
-msgstr "Preuzimam %1"
-
-#: src/addfeeddialog.cpp:131
-#, kde-format
-msgid "Feed not found from %1."
-msgstr "Dovod nije nađen na %1."
-
-#: src/addfeeddialog.cpp:137
-msgid "Feed found, downloading..."
-msgstr "Dovod je nađen, preuzimam..."
-
 #: src/subscriptionlistjobs.cpp:64
 msgid "Feed list was deleted"
 msgstr "Lista dovoda je obrisana"
@@ -986,6 +927,14 @@ msgstr "Ukupno"
 msgid "Columns"
 msgstr "Kolone"
 
+#: src/trayicon.cpp:75
+#, fuzzy, kde-format
+msgid "1 unread article"
+msgid_plural "%1 unread articles"
+msgstr[0] " (%1 nepročitan članak)"
+msgstr[1] " (%1 nepročitana članka)"
+msgstr[2] " (%1 nepročitanih članaka)"
+
 #: src/articlelistview.cpp:386
 msgid ""
 "<h2>Article list</h2>Here you can browse articles from the currently "
@@ -1016,14 +965,6 @@ msgstr ""
 "<div align=center><h3>Nije izabran dovod</h3>Ova oblast je lista članaka. "
 "Izaberite dovod iz liste dovoda vesti i ovdje ćete vidjeti njegove članke.</"
 "div>"
-
-#: src/trayicon.cpp:75
-#, fuzzy, kde-format
-msgid "1 unread article"
-msgid_plural "%1 unread articles"
-msgstr[0] " (%1 nepročitan članak)"
-msgstr[1] " (%1 nepročitana članka)"
-msgstr[2] " (%1 nepročitanih članaka)"
 
 #: src/actionmanagerimpl.cpp:77 src/actionmanagerimpl.cpp:259
 msgid "&Fetch Feed"
@@ -1115,7 +1056,7 @@ msgstr "Prikaži brzi filter"
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_LMBBehaviour)
 #. i18n: file: configuration/settings_browser.ui:46
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MMBBehaviour)
-#: src/actionmanagerimpl.cpp:296 rc.cpp:65 rc.cpp:77
+#: src/actionmanagerimpl.cpp:296 rc.cpp:83 rc.cpp:95
 msgid "Open in Tab"
 msgstr "Otvori u kartici"
 
@@ -1123,7 +1064,7 @@ msgstr "Otvori u kartici"
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_LMBBehaviour)
 #. i18n: file: configuration/settings_browser.ui:56
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MMBBehaviour)
-#: src/actionmanagerimpl.cpp:302 rc.cpp:71 rc.cpp:83
+#: src/actionmanagerimpl.cpp:302 rc.cpp:89 rc.cpp:101
 msgid "Open in External Browser"
 msgstr "Otvori u spoljašnjem pregledaču"
 
@@ -1404,6 +1345,65 @@ msgstr "Philipp Droessler"
 msgid "Gentoo Ebuild"
 msgstr "Gentoo-ov Ebuild"
 
+#: src/articleformatter.cpp:57
+#, kde-format
+msgid "(%1, %2)"
+msgstr "(%1, %2)"
+
+#: src/articleformatter.cpp:62
+#, kde-format
+msgid "<a href=\"%1\">%2</a> %3"
+msgstr "<a href=\"%1\">%2</a> %3"
+
+#: src/articleformatter.cpp:108 src/articleformatter.cpp:150
+msgid " (no unread articles)"
+msgstr " (nema nepročitanih članaka)"
+
+#: src/articleformatter.cpp:110 src/articleformatter.cpp:152
+#, kde-format
+msgid " (1 unread article)"
+msgid_plural " (%1 unread articles)"
+msgstr[0] " (%1 nepročitan članak)"
+msgstr[1] " (%1 nepročitana članka)"
+msgstr[2] " (%1 nepročitanih članaka)"
+
+#: src/articleformatter.cpp:128
+#, kde-format
+msgid "<b>Description:</b> %1<br /><br />"
+msgstr "<b>Opis:</b> %1<br /><br />"
+
+#: src/articleformatter.cpp:135
+#, kde-format
+msgid "<b>Homepage:</b> <a href=\"%1\">%2</a>"
+msgstr "<b>Domaća strana:</b> <a href=\"%1\">%2</a>"
+
+#: src/articleformatter.cpp:189 src/articleformatter.cpp:190
+#: src/articleformatter.cpp:385 src/articleformatter.cpp:386
+msgid "Date"
+msgstr "Datum"
+
+#: src/articleformatter.cpp:197 src/articleformatter.cpp:198
+#: src/articleformatter.cpp:394 src/articleformatter.cpp:395
+msgid "Author"
+msgstr "Autor"
+
+#: src/articleformatter.cpp:205 src/articleformatter.cpp:206
+#: src/articleformatter.cpp:402 src/articleformatter.cpp:403
+msgid "Enclosure"
+msgstr "Prilog"
+
+#: src/articleformatter.cpp:237 src/articleformatter.cpp:434
+msgid "Comments"
+msgstr "Komentari"
+
+#: src/articleformatter.cpp:246 src/articleformatter.cpp:444
+msgid "Enclosure:"
+msgstr "Prilog:"
+
+#: src/articleformatter.cpp:260 src/articleformatter.cpp:458
+msgid "Complete Story"
+msgstr "Cijela priča"
+
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
@@ -1418,123 +1418,159 @@ msgstr ""
 "caslav.ilic@gmx.nit,simicsl@verat.nit,,,caslav.ilic@gmx.nit,,,caslav."
 "ilic@gmx.net,,,"
 
+#. i18n: file: configuration/settings_advancedbase.ui:10
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: rc.cpp:5
+msgid "Archive"
+msgstr "Arhiva"
+
+#. i18n: file: configuration/settings_advancedbase.ui:18
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: rc.cpp:8
+msgid "Archive backend:"
+msgstr "Program za arhiviranje:"
+
+#. i18n: file: configuration/settings_advancedbase.ui:28
+#. i18n: ectx: property (text), widget (QPushButton, pbBackendConfigure)
+#: rc.cpp:11
+msgid "&Configure..."
+msgstr "&Podesi..."
+
+#. i18n: file: configuration/settings_advancedbase.ui:53
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:14
+msgid "Article List"
+msgstr "Lista članaka"
+
+#. i18n: file: configuration/settings_advancedbase.ui:61
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseMarkReadDelay)
+#: rc.cpp:17
+msgid "Mar&k selected article read after"
+msgstr "O&znači izabrani članak kao pročitan nakon"
+
+#. i18n: file: configuration/settings_advancedbase.ui:96
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ResetQuickFilterOnNodeChange)
+#: rc.cpp:20
+msgid "Reset search bar when changing feeds"
+msgstr "Resetuj traku pretrage pri promjeni dovoda"
+
 #. i18n: file: configuration/settings_appearance.ui:10
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:5
+#: rc.cpp:23
 msgid "Article List Colors"
 msgstr "Boje listanja članka"
 
 #. i18n: file: configuration/settings_appearance.ui:37
 #. i18n: ectx: property (text), widget (QLabel, lbl_unreadArticles)
-#: rc.cpp:8
+#: rc.cpp:26
 msgid "Unread articles:"
 msgstr "Nepročitani članci:"
 
 #. i18n: file: configuration/settings_appearance.ui:54
 #. i18n: ectx: property (text), widget (QLabel, lbl_newArticles)
-#: rc.cpp:11
+#: rc.cpp:29
 msgid "New articles:"
 msgstr "Novi članci:"
 
 #. i18n: file: configuration/settings_appearance.ui:70
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseCustomColors)
-#: rc.cpp:14
+#: rc.cpp:32
 msgid "Use custom colors"
 msgstr "Koristi podešene boje"
 
 #. i18n: file: configuration/settings_appearance.ui:80
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:17
+#: rc.cpp:35
 msgid "Font Size"
 msgstr "Veličina slova"
 
 #. i18n: file: configuration/settings_appearance.ui:86
 #. i18n: ectx: property (text), widget (QLabel, lbl_MinimumFontSize)
-#: rc.cpp:20
+#: rc.cpp:38
 msgid "Minimum font size:"
 msgstr "Najmanja veličina fonta:"
 
 #. i18n: file: configuration/settings_appearance.ui:126
 #. i18n: ectx: property (text), widget (QLabel, lbl_MediumFontSize)
-#: rc.cpp:23
+#: rc.cpp:41
 msgid "Medium font size:"
 msgstr "Srednja veličina fonta:"
 
 #. i18n: file: configuration/settings_appearance.ui:169
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:26
+#: rc.cpp:44
 msgid "Fonts"
 msgstr "Fontovi"
 
 #. i18n: file: configuration/settings_appearance.ui:175
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:29
+#: rc.cpp:47
 msgid "Standard font:"
 msgstr "Standardni font:"
 
 #. i18n: file: configuration/settings_appearance.ui:185
 #. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
-#: rc.cpp:32
+#: rc.cpp:50
 msgid "Fixed font:"
 msgstr "Fiksni font:"
 
 #. i18n: file: configuration/settings_appearance.ui:195
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:35
+#: rc.cpp:53
 msgid "Serif font:"
 msgstr "Serifni font:"
 
 #. i18n: file: configuration/settings_appearance.ui:205
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
-#: rc.cpp:38
+#: rc.cpp:56
 msgid "Sans serif font:"
 msgstr "Bezserifni font:"
 
 #. i18n: file: configuration/settings_appearance.ui:218
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_UnderlineLinks)
-#: rc.cpp:41
+#: rc.cpp:59
 msgid "&Underline links"
 msgstr "Podv&uci veze"
 
 #. i18n: file: configuration/settings_archive.ui:10
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:44
+#: rc.cpp:62
 msgid "Default Archive Settings"
 msgstr "Podrazumijevana podešavanja arhive"
 
 #. i18n: file: configuration/settings_archive.ui:16
 #. i18n: ectx: property (text), widget (QRadioButton, rb_DisableArchiving)
-#: rc.cpp:47
+#: rc.cpp:65
 msgid "Disable archiving"
 msgstr "Isključi arhiviranje"
 
 #. i18n: file: configuration/settings_archive.ui:23
 #. i18n: ectx: property (text), widget (QRadioButton, rb_KeepAllArticles)
-#: rc.cpp:50
+#: rc.cpp:68
 msgid "Keep all articles"
 msgstr "Zadrži sve članke"
 
 #. i18n: file: configuration/settings_archive.ui:35
 #. i18n: ectx: property (text), widget (QRadioButton, rb_LimitArticleNumber)
-#: rc.cpp:53
+#: rc.cpp:71
 msgid "Limit feed archive size to:"
 msgstr "Ograniči veličinu arhive dovoda na:"
 
 #. i18n: file: configuration/settings_archive.ui:62
 #. i18n: ectx: property (text), widget (QRadioButton, rb_LimitArticleAge)
-#: rc.cpp:56
+#: rc.cpp:74
 msgid "Delete articles older than: "
 msgstr "Briši članke starije od: "
 
 #. i18n: file: configuration/settings_archive.ui:100
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_DoNotExpireImportantArticles)
-#: rc.cpp:59
+#: rc.cpp:77
 msgid "Do not expire important articles"
 msgstr "Važni članci se ne brišu"
 
 #. i18n: file: configuration/settings_browser.ui:12
 #. i18n: ectx: property (text), widget (QLabel, LMBlabel)
-#: rc.cpp:62
+#: rc.cpp:80
 msgid "Left mouse click:"
 msgstr "Lijevi klik miša:"
 
@@ -1542,25 +1578,25 @@ msgstr "Lijevi klik miša:"
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_LMBBehaviour)
 #. i18n: file: configuration/settings_browser.ui:51
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MMBBehaviour)
-#: rc.cpp:68 rc.cpp:80
+#: rc.cpp:86 rc.cpp:98
 msgid "Open in Background Tab"
 msgstr "Otvori u pozadinskoj kartici"
 
 #. i18n: file: configuration/settings_browser.ui:38
 #. i18n: ectx: property (text), widget (QLabel, MMBlabel)
-#: rc.cpp:74
+#: rc.cpp:92
 msgid "Middle mouse click:"
 msgstr "Srednji klik miša:"
 
 #. i18n: file: configuration/settings_browser.ui:66
 #. i18n: ectx: property (title), widget (QGroupBox, externalBrowserGroupBox)
-#: rc.cpp:86
+#: rc.cpp:104
 msgid "External Browsing"
 msgstr "Eksterno pregledanje"
 
 #. i18n: file: configuration/settings_browser.ui:75
 #. i18n: ectx: property (text), widget (QLineEdit, kcfg_ExternalBrowserCustomCommand)
-#: rc.cpp:90
+#: rc.cpp:108
 #, no-c-format
 msgid "firefox %u"
 msgstr "firefox %u"
@@ -1569,19 +1605,19 @@ msgstr "firefox %u"
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_ExternalBrowserUseCustomCommand)
 #. i18n: file: interfaces/akregator.kcfg:176
 #. i18n: ectx: label, entry, group (Browser)
-#: rc.cpp:93 rc.cpp:328
+#: rc.cpp:111 rc.cpp:328
 msgid "Use this command:"
 msgstr "Koristi ovu naredbu:"
 
 #. i18n: file: configuration/settings_browser.ui:89
 #. i18n: ectx: property (text), widget (QRadioButton, kcfg_ExternalBrowserUseKdeDefault)
-#: rc.cpp:96
+#: rc.cpp:114
 msgid "Use default web browser"
 msgstr "Koristi zadani web pretraživač"
 
 #. i18n: file: configuration/settings_browser.ui:102
 #. i18n: ectx: property (title), widget (QGroupBox, tabsGroupBox)
-#: rc.cpp:99
+#: rc.cpp:117
 msgid "Tabs"
 msgstr "Kartice"
 
@@ -1589,13 +1625,13 @@ msgstr "Kartice"
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AlwaysShowTabBar)
 #. i18n: file: interfaces/akregator.kcfg:156
 #. i18n: ectx: label, entry, group (Browser)
-#: rc.cpp:102 rc.cpp:304
+#: rc.cpp:120 rc.cpp:304
 msgid "Always show the tab bar"
 msgstr "Uvijek pokaži traku s karticama"
 
 #. i18n: file: configuration/settings_browser.ui:115
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_CloseButtonOnTabs)
-#: rc.cpp:105
+#: rc.cpp:123
 msgid "Show close button on each tab"
 msgstr "Pokaži dugme za zatvaranje na svakoj kartici"
 
@@ -1603,118 +1639,82 @@ msgstr "Pokaži dugme za zatvaranje na svakoj kartici"
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_NewWindowInTab)
 #. i18n: file: interfaces/akregator.kcfg:166
 #. i18n: ectx: label, entry, group (Browser)
-#: rc.cpp:108 rc.cpp:316
+#: rc.cpp:126 rc.cpp:316
 msgid "Open links in new tab instead of in new window"
 msgstr ""
 
 #. i18n: file: configuration/settings_general.ui:10
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: rc.cpp:111
+#: rc.cpp:129
 msgid "Global"
 msgstr "Globalno"
 
 #. i18n: file: configuration/settings_general.ui:16
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowTrayIcon)
-#: rc.cpp:114
+#: rc.cpp:132
 msgid "Show tra&y icon"
 msgstr "Prikaži &kasetnu ikonu"
 
 #. i18n: file: configuration/settings_general.ui:47
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableTrayIconUnreadArticleCount)
-#: rc.cpp:117
+#: rc.cpp:135
 msgid "Display an unread article &count in the tray icon"
 msgstr ""
 
 #. i18n: file: configuration/settings_general.ui:59
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_UseNotifications)
-#: rc.cpp:120
+#: rc.cpp:138
 msgid "Select this if you want to get notified when there are new articles."
 msgstr ""
 "Izaberite ovo ako želite da budete obaviješteni kad pristignu novi članci."
 
 #. i18n: file: configuration/settings_general.ui:62
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseNotifications)
-#: rc.cpp:123
+#: rc.cpp:141
 msgid "Use &notifications for all feeds"
 msgstr "Koristi &obavještenja za sve dovode"
 
 #. i18n: file: configuration/settings_general.ui:69
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseIntervalFetch)
-#: rc.cpp:126
+#: rc.cpp:144
 msgid "&Use interval fetching"
 msgstr "&Koristi dobavljanje u intervalima"
 
 #. i18n: file: configuration/settings_general.ui:97
 #. i18n: ectx: property (text), widget (QLabel, autoFetchIntervalLabel)
-#: rc.cpp:129
+#: rc.cpp:147
 msgid "Fetch feeds every:"
 msgstr "Dobavljaj dovode svakih:"
 
 #. i18n: file: configuration/settings_general.ui:138
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:132
+#: rc.cpp:150
 msgid "Startup"
 msgstr "Pokretanje"
 
 #. i18n: file: configuration/settings_general.ui:144
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_MarkAllFeedsReadOnStartup)
-#: rc.cpp:135
+#: rc.cpp:153
 msgid "Mark &all feeds as read on startup"
 msgstr "Pri pokretanju označi &sve dovode kao pročitane"
 
 #. i18n: file: configuration/settings_general.ui:151
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_FetchOnStartup)
-#: rc.cpp:138
+#: rc.cpp:156
 msgid "Fetch all fee&ds on startup"
 msgstr "Pri pokretanju &dobavi sve dovode"
 
 #. i18n: file: configuration/settings_general.ui:161
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:141
+#: rc.cpp:159
 msgid "Network"
 msgstr "Mreža"
 
 #. i18n: file: configuration/settings_general.ui:167
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseHTMLCache)
-#: rc.cpp:144
+#: rc.cpp:162
 msgid "Use the &browser cache (less network traffic)"
 msgstr "Koristi keš pre&gledača (manje mrežnog saobraćaja)"
-
-#. i18n: file: configuration/settings_advancedbase.ui:10
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: rc.cpp:147
-msgid "Archive"
-msgstr "Arhiva"
-
-#. i18n: file: configuration/settings_advancedbase.ui:18
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:150
-msgid "Archive backend:"
-msgstr "Program za arhiviranje:"
-
-#. i18n: file: configuration/settings_advancedbase.ui:28
-#. i18n: ectx: property (text), widget (QPushButton, pbBackendConfigure)
-#: rc.cpp:153
-msgid "&Configure..."
-msgstr "&Podesi..."
-
-#. i18n: file: configuration/settings_advancedbase.ui:53
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: rc.cpp:156
-msgid "Article List"
-msgstr "Lista članaka"
-
-#. i18n: file: configuration/settings_advancedbase.ui:61
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_UseMarkReadDelay)
-#: rc.cpp:159
-msgid "Mar&k selected article read after"
-msgstr "O&znači izabrani članak kao pročitan nakon"
-
-#. i18n: file: configuration/settings_advancedbase.ui:96
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ResetQuickFilterOnNodeChange)
-#: rc.cpp:162
-msgid "Reset search bar when changing feeds"
-msgstr "Resetuj traku pretrage pri promjeni dovoda"
 
 #. i18n: file: interfaces/akregator.kcfg:10
 #. i18n: ectx: whatsthis, entry, group (View)
