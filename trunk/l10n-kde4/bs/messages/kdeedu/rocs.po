@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-03 04:28+0100\n"
+"POT-Creation-Date: 2012-02-04 04:42+0100\n"
 "PO-Revision-Date: 2011-04-09 23:07+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -19,14 +19,6 @@ msgstr ""
 "X-Generator: Launchpad (build 12883)\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-
-#: Actions/ZoomAction.cpp:39 Interface/GraphScene.cpp:280
-msgid "Zoom"
-msgstr ""
-
-#: Actions/ZoomAction.cpp:40
-msgid "Zoom the canvas by the wheel, or by dragging."
-msgstr ""
 
 #: Actions/AddConnectionHandAction.cpp:35
 msgid "Add Edge"
@@ -54,9 +46,10 @@ msgstr "bez naslova"
 msgid "Creates a new node at the click position on the drawing area."
 msgstr "Stvara novi čvor na klik poziciju na području crtanja."
 
-#: Actions/DeleteHandAction.cpp:35 Interface/GraphScene.cpp:327
-#: Interface/GraphScene.cpp:328 Interface/GraphScene.cpp:329
-#: Interface/MainWindow.cpp:348
+#: Actions/DeleteHandAction.cpp:35 Interface/MainWindow.cpp:348
+#: Interface/VisualEditor/GraphScene.cpp:406
+#: Interface/VisualEditor/GraphScene.cpp:407
+#: Interface/VisualEditor/GraphScene.cpp:408
 msgid "Delete"
 msgstr "Obriši"
 
@@ -72,6 +65,14 @@ msgstr "Premjesti čvor"
 
 #: Actions/SelectMoveHandAction.cpp:38
 msgid "Select and move items."
+msgstr ""
+
+#: Actions/ZoomAction.cpp:39 Interface/VisualEditor/GraphScene.cpp:356
+msgid "Zoom"
+msgstr ""
+
+#: Actions/ZoomAction.cpp:40
+msgid "Zoom the canvas by the wheel, or by dragging."
 msgstr ""
 
 #: Core/DynamicPropertiesList.cpp:171
@@ -112,93 +113,6 @@ msgstr ""
 #, kde-format
 msgid "v=%1"
 msgstr ""
-
-#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:28
-#. i18n: ectx: property (text), widget (QLabel, dataStructuresComboLabel)
-#: Interface/GraphScene.cpp:264 rc.cpp:219
-#, fuzzy
-#| msgid "Graph Structure"
-msgid "Data Structure"
-msgstr "Grafička struktura"
-
-#: Interface/GraphScene.cpp:265
-#, fuzzy
-#| msgid "Select"
-msgid "Selected"
-msgstr "Odaberi"
-
-#: Interface/GraphScene.cpp:282
-msgid "In"
-msgstr ""
-
-#: Interface/GraphScene.cpp:283
-#, fuzzy
-#| msgid "Output"
-msgid "Out"
-msgstr "Prikaz"
-
-#: Interface/GraphScene.cpp:284
-msgid "Reset"
-msgstr ""
-
-#: Interface/GraphScene.cpp:290 Interface/GraphScene.cpp:306
-msgid "Align"
-msgstr ""
-
-#: Interface/GraphScene.cpp:291 Interface/GraphScene.cpp:307
-msgid "Bottom"
-msgstr ""
-
-#: Interface/GraphScene.cpp:292 Interface/GraphScene.cpp:308
-msgid "Center"
-msgstr ""
-
-#: Interface/GraphScene.cpp:293 Interface/GraphScene.cpp:309
-msgid "Top"
-msgstr ""
-
-#: Interface/GraphScene.cpp:294 Interface/GraphScene.cpp:310
-msgid "Left"
-msgstr ""
-
-#: Interface/GraphScene.cpp:295 Interface/GraphScene.cpp:311
-msgid "Right"
-msgstr ""
-
-#: Interface/GraphScene.cpp:296 Interface/GraphScene.cpp:312
-#, fuzzy
-#| msgid "Circular"
-msgid "Circle"
-msgstr "Kružno"
-
-#: Interface/GraphScene.cpp:297 Interface/GraphScene.cpp:313
-msgid "Minimize Crossing Edges"
-msgstr ""
-
-#: Interface/GraphScene.cpp:315 Interface/GraphScene.cpp:320
-#, fuzzy
-#| msgid "Value"
-msgid "Values"
-msgstr "Vrijednost"
-
-#: Interface/GraphScene.cpp:316 Interface/GraphScene.cpp:321
-msgid "Enumerate"
-msgstr ""
-
-#: Interface/GraphScene.cpp:317 Interface/GraphScene.cpp:322
-msgid "Random Integers"
-msgstr ""
-
-#: Interface/GraphScene.cpp:318 Interface/GraphScene.cpp:323
-#, fuzzy
-msgid "Random Reals"
-msgstr "Snimi graf"
-
-#: Interface/GraphScene.cpp:330
-#, fuzzy
-#| msgid "Node Properties"
-msgid "Properties"
-msgstr "Svojstva čvora"
 
 #: Interface/MainWindow.cpp:200
 msgid "*.js|Script files"
@@ -404,6 +318,105 @@ msgid ""
 msgstr ""
 "KDE Uređivač teksta nije mogao biti pronađen,\n"
 " molim vas, provjerite vašu instalaciju"
+
+#. i18n: file: Plugins/AssignValues/assignvalueswidget.ui:28
+#. i18n: ectx: property (text), widget (QLabel, dataStructuresComboLabel)
+#: Interface/VisualEditor/GraphScene.cpp:341 rc.cpp:219
+#, fuzzy
+#| msgid "Graph Structure"
+msgid "Data Structure"
+msgstr "Grafička struktura"
+
+#: Interface/VisualEditor/GraphScene.cpp:342
+#, fuzzy
+#| msgid "Select"
+msgid "Selected"
+msgstr "Odaberi"
+
+#: Interface/VisualEditor/GraphScene.cpp:358
+msgid "In"
+msgstr ""
+
+#: Interface/VisualEditor/GraphScene.cpp:359
+#, fuzzy
+#| msgid "Output"
+msgid "Out"
+msgstr "Prikaz"
+
+#: Interface/VisualEditor/GraphScene.cpp:360
+msgid "Reset"
+msgstr ""
+
+#: Interface/VisualEditor/GraphScene.cpp:369
+#: Interface/VisualEditor/GraphScene.cpp:385
+msgid "Align"
+msgstr ""
+
+#: Interface/VisualEditor/GraphScene.cpp:370
+#: Interface/VisualEditor/GraphScene.cpp:386
+msgid "Bottom"
+msgstr ""
+
+#: Interface/VisualEditor/GraphScene.cpp:371
+#: Interface/VisualEditor/GraphScene.cpp:387
+msgid "Center"
+msgstr ""
+
+#: Interface/VisualEditor/GraphScene.cpp:372
+#: Interface/VisualEditor/GraphScene.cpp:388
+msgid "Top"
+msgstr ""
+
+#: Interface/VisualEditor/GraphScene.cpp:373
+#: Interface/VisualEditor/GraphScene.cpp:389
+msgid "Left"
+msgstr ""
+
+#: Interface/VisualEditor/GraphScene.cpp:374
+#: Interface/VisualEditor/GraphScene.cpp:390
+msgid "Right"
+msgstr ""
+
+#: Interface/VisualEditor/GraphScene.cpp:375
+#: Interface/VisualEditor/GraphScene.cpp:391
+#, fuzzy
+#| msgid "Circular"
+msgid "Circle"
+msgstr "Kružno"
+
+#: Interface/VisualEditor/GraphScene.cpp:376
+#: Interface/VisualEditor/GraphScene.cpp:392
+msgid "Minimize Crossing Edges"
+msgstr ""
+
+#: Interface/VisualEditor/GraphScene.cpp:394
+#: Interface/VisualEditor/GraphScene.cpp:399
+#, fuzzy
+#| msgid "Value"
+msgid "Values"
+msgstr "Vrijednost"
+
+#: Interface/VisualEditor/GraphScene.cpp:395
+#: Interface/VisualEditor/GraphScene.cpp:400
+msgid "Enumerate"
+msgstr ""
+
+#: Interface/VisualEditor/GraphScene.cpp:396
+#: Interface/VisualEditor/GraphScene.cpp:401
+msgid "Random Integers"
+msgstr ""
+
+#: Interface/VisualEditor/GraphScene.cpp:397
+#: Interface/VisualEditor/GraphScene.cpp:402
+#, fuzzy
+msgid "Random Reals"
+msgstr "Snimi graf"
+
+#: Interface/VisualEditor/GraphScene.cpp:409
+#, fuzzy
+#| msgid "Node Properties"
+msgid "Properties"
+msgstr "Svojstva čvora"
 
 #: Interface/GraphLayers.cpp:46
 msgid "Add"
