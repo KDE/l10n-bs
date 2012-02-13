@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kile\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-10 04:06+0100\n"
+"POT-Creation-Date: 2012-02-13 03:58+0100\n"
 "PO-Revision-Date: 2011-01-05 10:55+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bhld@linux.org.ba>\n"
@@ -234,7 +234,7 @@ msgstr "&Naredba:"
 #. i18n: file: dialogs/latexcommanddialog_base.ui:50
 #. i18n: ectx: property (text), widget (QTreeWidget, environments)
 #: dialogs/findfilesdialog.cpp:157 dialogs/tabular/newtabulardialog.cpp:123
-#: dialogs/mathenvironmentdialog.cpp:53 kile.cpp:831 rc.cpp:5 rc.cpp:209
+#: dialogs/mathenvironmentdialog.cpp:53 rc.cpp:5 rc.cpp:209 kile.cpp:831
 msgid "Environment"
 msgstr "Okruženje"
 
@@ -2321,8 +2321,8 @@ msgstr "Podesi korisničku pomoć"
 
 #. i18n: file: widgets/helpconfigwidget.ui:99
 #. i18n: ectx: property (title), widget (QGroupBox, m_gbUserHelp)
-#: dialogs/userhelpdialog.cpp:64 dialogs/userhelpdialog.cpp:374 kile.cpp:940
-#: rc.cpp:1085
+#: dialogs/userhelpdialog.cpp:64 dialogs/userhelpdialog.cpp:374 rc.cpp:1085
+#: kile.cpp:940
 #, fuzzy
 msgid "User Help"
 msgstr "Pomoć korisniku"
@@ -2913,8 +2913,8 @@ msgstr "Datoteka:"
 #. i18n: ectx: property (windowTitle), widget (QWidget, KileWidgetEnvironmentConfig)
 #. i18n: file: widgets/latexconfigwidget.ui:14
 #. i18n: ectx: property (windowTitle), widget (QWidget, KileWidgetLatexConfig)
-#: dialogs/configurationdialog.cpp:82 kileinfo.cpp:301 kile.cpp:581
-#: kile.cpp:918 rc.cpp:1037 rc.cpp:1121
+#: dialogs/configurationdialog.cpp:82 kileinfo.cpp:301 rc.cpp:1037 rc.cpp:1121
+#: kile.cpp:581 kile.cpp:918
 msgid "LaTeX"
 msgstr "LaTeX"
 
@@ -3190,7 +3190,7 @@ msgstr "Matematika"
 #. i18n: ectx: property (text), widget (QTreeWidget, environments)
 #. i18n: file: kileui.rc:554
 #. i18n: ectx: ToolBar (mathToolBar)
-#: dialogs/latexcommanddialog.cpp:375 kile.cpp:864 rc.cpp:218 rc.cpp:983
+#: dialogs/latexcommanddialog.cpp:375 rc.cpp:218 rc.cpp:983 kile.cpp:864
 msgid "Math"
 msgstr "Matematika"
 
@@ -3298,54 +3298,89 @@ msgstr "Greška: Ime ne smje da sadrži kroz „/“."
 msgid "Error: The name may not contain a (, ), [, or ]."
 msgstr "Greška: Ime ne smje da sadrži (,),[ ili ]."
 
-#: dialogs/configcheckerdialog.cpp:81 configtester.cpp:278
-#: configtester.cpp:453
+#: dialogs/configcheckerdialog.cpp:80 configtester.cpp:257
+#: configtester.cpp:452
 msgid "Passed"
 msgstr "Prošlo"
 
-#: dialogs/configcheckerdialog.cpp:85
+#: dialogs/configcheckerdialog.cpp:84
 msgid "Critical failure, Kile will not function properly"
 msgstr "Kritičan neuspjeh, Kile neće ispravno funkcionisati"
 
-#: dialogs/configcheckerdialog.cpp:89
+#: dialogs/configcheckerdialog.cpp:88
 msgid "Failed, but not critical"
 msgstr "Neuspjeh, ali ne kritičan"
 
-#: dialogs/configcheckerdialog.cpp:104 kile.cpp:2675
+#: dialogs/configcheckerdialog.cpp:105
 msgid "System Check"
 msgstr "Provjera sistema"
 
-#: dialogs/configcheckerdialog.cpp:109
-#, fuzzy
-msgid "&Save Results..."
-msgstr "Rezultati testa"
+#: dialogs/configcheckerdialog.cpp:111
+msgid ""
+"<p>This configuration assistant will check whether your system is set up "
+"correctly to process LaTeX documents. It will also allow to fine-tune the "
+"configuration of Kile while taking the results of the tests into account.</"
+"p><p>It is recommended to run this assistant before using Kile for the first "
+"time.</p><p>Please press 'Next' now to start the test procedure.</p>"
+msgstr ""
 
-#: dialogs/configcheckerdialog.cpp:181
-#, fuzzy
-#| msgid "Finished testing your system..."
-msgid "Finished testing your system."
-msgstr "Završio sam sa testiranjem sistema..."
+#: dialogs/configcheckerdialog.cpp:122
+msgid "System Check & Configuration Assistant"
+msgstr ""
 
-#: dialogs/configcheckerdialog.cpp:201
+#: dialogs/configcheckerdialog.cpp:125
+#, fuzzy
+#| msgid "Checking if your TeX system is installed correctly..."
+msgid "Checking whether the system is set up correctly..."
+msgstr "Provjeravam da li je vaš TeX sistem ispravno instaliran..."
+
+#: dialogs/configcheckerdialog.cpp:145
+#, fuzzy
+#| msgid "Whether to show the side bar."
+msgid "Configure the viewer tools to use the document viewer"
+msgstr "Da li prikazati bočnu traku."
+
+#: dialogs/configcheckerdialog.cpp:147
+#, fuzzy
+msgid "Use the 'modern' configuration for the TeX, PDFTeX, and LaTeX tools"
+msgstr "Potrebna vam je bar jedna konfiguracija za svaki alat."
+
+#: dialogs/configcheckerdialog.cpp:149
+#, fuzzy
+#| msgid ""
+#| "Supported, use the 'Modern' configuration for (La)TeX and PDF(La)TeX to "
+#| "auto-enable inverse and forward search capabilities."
+msgid "Use the 'modern' configuration for the PDFLaTeX and XeLaTeX tools"
+msgstr ""
+"Podržano, koristite „moderna“ podešavanja za (La)TeX i PDF(La)TeX da biste "
+"automatski uključili mogućnosti inverzne i pretrage unaprijed."
+
+#: dialogs/configcheckerdialog.cpp:151
+msgid ""
+"<br/>Please press 'Finish' now to accept the recommended configuration "
+"changes."
+msgstr ""
+
+#: dialogs/configcheckerdialog.cpp:154 dialogs/configcheckerdialog.cpp:226
 msgid "Test Results"
 msgstr "Rezultati testa"
 
-#: dialogs/configcheckerdialog.cpp:203
+#: dialogs/configcheckerdialog.cpp:229
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>The following tools did not pass all <b>critical</b> tests:<br>"
 #| "%1<br>Your system is not ready to use. Please consult the results to find "
 #| "out what to fix.</qt>"
 msgid ""
-"<qt>The following <b>critical</b> tests did not succeed:<br/><br/>%1<br/><br/"
-">Kile cannot function correctly on your system. Please consult the<br/>test "
-"results to determine which programs have to be fixed.</qt>"
+"The following <b>critical</b> tests did not succeed:<br/><br/>%1<br/><br/"
+">Kile cannot function correctly on your system. Please consult the test "
+"results<br/>to determine which programs have to be fixed."
 msgstr ""
 "<qt>Sledeći alati nisu prošli sve <b>kritične</b> testove:<br>%1<br>Vaš "
 "sistem nije spreman za upotrebu. Pogledajte rezultate da biste vidjeli šta "
 "treba ispraviti.</qt>"
 
-#: dialogs/configcheckerdialog.cpp:209
+#: dialogs/configcheckerdialog.cpp:235
 #, fuzzy, kde-format
 #| msgid ""
 #| "The following tools did not pass all tests:\n"
@@ -3353,32 +3388,42 @@ msgstr ""
 #| "You will still be able to use Kile; however, not all features are "
 #| "guaranteed to work."
 msgid ""
-"The following tests did not succeed:\n"
-"\n"
-"%1\n"
-"\n"
-"You will still be able to use Kile; however, not all features\n"
-" are guaranteed to work."
+"The following tests did not succeed:<br/><br/>%1<br/><br/>You will still be "
+"able to use Kile; however, not all features are guaranteed to work."
 msgstr ""
 "Sljedeći alati nisu prošli sve testove:\n"
 " %1\n"
 "I dalje ćete moći da koristite Kile, ali možda neće raditi sve mogućnosti."
 
-#: dialogs/configcheckerdialog.cpp:214
+#: dialogs/configcheckerdialog.cpp:240
 #, fuzzy
 #| msgid "No problems detected, your system is ready to use."
-msgid "No problems detected. Kile will work correctly on your system."
+msgid ""
+"<b>No problems were detected. Kile will work correctly on your system.</b>"
 msgstr "Nijedan problem nije pronađen, sistem je spreman za upotrebu."
 
-#: dialogs/configcheckerdialog.cpp:219
-msgid "Tests finished abruptly..."
-msgstr "Testovi su iznenada završeni..."
+#: dialogs/configcheckerdialog.cpp:252
+msgid "The embedded viewer is available and live preview is supported."
+msgstr ""
 
-#: dialogs/configcheckerdialog.cpp:220
+#: dialogs/configcheckerdialog.cpp:255
+msgid ""
+"The embedded viewer is available, but the installed version of PDFLaTeX "
+"is<br/><b>not compatible</b> with live preview."
+msgstr ""
+
+#: dialogs/configcheckerdialog.cpp:262
+msgid ""
+"The embedded viewer is <b>not available</b> (as Okular is either not "
+"available or the installed<br/>version is too old). Live preview is hence "
+"<b>not supported</b>."
+msgstr ""
+
+#: dialogs/configcheckerdialog.cpp:282
 #, fuzzy
 msgid ""
-"The tests could not be finished correctly. Please check the available disk "
-"space."
+"<br/><font color=\"#FF0000\"><b>The tests could not be finished correctly. "
+"Please check the available disk space.</b></font>"
 msgstr ""
 "Datoteka %1/%2 ne postoji. Ako ste iznenađeni, provjerite dozvole za "
 "datoteku."
@@ -6636,24 +6681,6 @@ msgstr "LaTeX-ova referenca"
 msgid "Only the label"
 msgstr ""
 
-#: kiletoolmanager.cpp:258
-msgid "No factory installed, contact the author of Kile."
-msgstr "Nema instalirane fabrike, kontaktirajte autora Kile-a."
-
-#: kiletoolmanager.cpp:264 kiletool.cpp:770
-#, kde-format
-msgid "Unknown tool %1."
-msgstr "Nepoznat alat %1."
-
-#: kiletoolmanager.cpp:341
-msgid "Aborted"
-msgstr "Obustavljeno"
-
-#: kiletoolmanager.cpp:463
-#, fuzzy, kde-format
-msgid "Cannot find the tool \"%1\" in the configuration database."
-msgstr "Ne mogu da pronađem alat %1 u bazi podešavanja."
-
 #: documentinfo.cpp:108
 #, fuzzy
 msgid "Invalid Characters"
@@ -7057,1227 +7084,33 @@ msgstr ""
 msgid "Toggle Live Preview for Current Document or Project"
 msgstr ""
 
-#: livepreview.cpp:675
+#: livepreview.cpp:686
 msgid "Some documents could not be saved correctly"
 msgstr ""
 
-#: livepreview.cpp:681
+#: livepreview.cpp:692
 msgid ""
 "The document must have been saved before the live preview can be started"
 msgstr ""
 
-#: livepreview.cpp:705
+#: livepreview.cpp:716
 msgid ""
 "The location of one project item is not relative to the project's base "
 "directory\n"
 "Live preview for this project has been disabled"
 msgstr ""
 
-#: livepreview.cpp:709
+#: livepreview.cpp:720
 #, fuzzy
 #| msgid "Failed to create the template."
 msgid "Failed to create the subdirectory structure"
 msgstr "Nisam uspio da napravim šablon."
 
-#: livepreview.cpp:1098
+#: livepreview.cpp:1109
 #, fuzzy
 #| msgid "Preview"
 msgid "LivePreview"
 msgstr "Pregled"
-
-#: kile.cpp:325
-msgid ""
-"You have defined some tools in the User menu. From now on these tools will "
-"be available from the Build->Other menu and can be configured in the "
-"configuration dialog (go to the Settings menu and choose Configure Kile). "
-"This has some advantages; your own tools can now be used in a QuickBuild "
-"command if you wish."
-msgstr ""
-"Definisali ste neke alate u meniju „Korisnik“. Od sada će ti alati biti "
-"dostupni iz menija Izgradi->Ostalo i mogu se podesiti u dijalogu za "
-"podešavanje (idite na meni Podešavanja i izaberite Podesi Kile). Ovo ima "
-"nekih prednosti: vaši sopstveni alati sada se mogu koristiti u naredbi za "
-"brzu izgradnju ako želite."
-
-#: kile.cpp:325
-msgid "User Tools Detected"
-msgstr "Detektovani korisnički alati"
-
-#: kile.cpp:331
-msgid ""
-"The standard tool list need to be reloaded because of the switch from KDE3 "
-"to KDE4. This will overwrite any changes in the tools you have made. Do you "
-"want to reload the list now (recommended)?"
-msgstr ""
-
-#: kile.cpp:332
-msgid "Tools need to be updated"
-msgstr ""
-
-#: kile.cpp:409
-#, fuzzy
-msgid "Normal Mode"
-msgstr "Normalan režim"
-
-#: kile.cpp:426
-msgid "Open File"
-msgstr "Otvori datoteku"
-
-#: kile.cpp:445
-#, fuzzy
-msgid "Files and Projects"
-msgstr "Datoteke i projekti"
-
-#: kile.cpp:484
-#, fuzzy
-msgid "Scripts"
-msgstr "veličina pisma"
-
-#: kile.cpp:513
-#, fuzzy
-msgid "Symbols"
-msgstr "Simboli strelica"
-
-#: kile.cpp:516
-msgid "Most Frequently Used"
-msgstr ""
-
-#: kile.cpp:522
-#, fuzzy
-msgid "Relation"
-msgstr "Izbor"
-
-#: kile.cpp:527
-#, fuzzy
-msgid "Operators"
-msgstr "&Razdvajač"
-
-#: kile.cpp:532
-#, fuzzy
-msgid "Arrows"
-msgstr "AMS strelice"
-
-#: kile.cpp:537
-#, fuzzy
-msgid "Miscellaneous Math"
-msgstr "Razni simboli"
-
-#: kile.cpp:542
-#, fuzzy
-msgid "Miscellaneous Text"
-msgstr "Razni simboli"
-
-#: kile.cpp:547
-msgid "Delimiters"
-msgstr "Graničnici"
-
-#: kile.cpp:552
-msgid "Greek"
-msgstr ""
-
-#. i18n: file: widgets/latexconfigwidget.ui:133
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: kile.cpp:557 rc.cpp:1142
-msgid "Special Characters"
-msgstr "Posebni znakovi"
-
-#: kile.cpp:562
-#, fuzzy
-msgid "Cyrillic Characters"
-msgstr "Posebni znakovi"
-
-#: kile.cpp:567
-#, fuzzy
-msgid "User Defined"
-msgstr "Korisnički definisan:"
-
-#: kile.cpp:572
-msgid ""
-"<p>Move the mouse over the icons to see the corresponding LaTeX commands.<br/"
-">Click on an image to insert the corresponding command, additionally "
-"pressing \"Shift\" inserts it in math mode, pressing \"Ctrl\" in curly "
-"brackets.</p>"
-msgstr ""
-
-#: kile.cpp:619
-#, fuzzy
-msgid "Log and Messages"
-msgstr " Dnevnik i poruke "
-
-#: kile.cpp:625
-#, fuzzy
-msgid "Output"
-msgstr "Izlaz:"
-
-#: kile.cpp:628
-#, fuzzy
-msgid "Konsole"
-msgstr " Konsole "
-
-#: kile.cpp:709
-msgid "Save All"
-msgstr "Snimi sve"
-
-#: kile.cpp:710
-msgid "Save Copy As..."
-msgstr ""
-
-#: kile.cpp:711
-msgid "Create Template From Document..."
-msgstr "Napravi šablon od dokumenta..."
-
-#: kile.cpp:712
-msgid "&Remove Template..."
-msgstr "&Ukloni šablon..."
-
-#: kile.cpp:714 kile.cpp:823
-msgid "Close All"
-msgstr "Zatvori sve"
-
-#: kile.cpp:715
-#, fuzzy
-msgid "Close All Ot&hers"
-msgstr "Zatvori sve"
-
-#: kile.cpp:716
-msgid "S&tatistics"
-msgstr "S&tatistika"
-
-#: kile.cpp:717
-msgid "&ASCII"
-msgstr "&ASCII"
-
-#: kile.cpp:718
-msgid "Latin-&1 (iso 8859-1)"
-msgstr "Latinica-&1 (ISO 8859-1)"
-
-#: kile.cpp:719
-msgid "Latin-&2 (iso 8859-2)"
-msgstr "Latinica-&2 (ISO 8859-2)"
-
-#: kile.cpp:720
-msgid "Latin-&3 (iso 8859-3)"
-msgstr "Latinica-&3 (ISO 8859-3)"
-
-#: kile.cpp:721
-msgid "Latin-&4 (iso 8859-4)"
-msgstr "Latinica-&4 (ISO 8859-4)"
-
-#: kile.cpp:722
-msgid "Latin-&5 (iso 8859-5)"
-msgstr "Latinica-&5 (ISO 8859-5)"
-
-#: kile.cpp:723
-msgid "Latin-&9 (iso 8859-9)"
-msgstr "Latinica-&9 (ISO 8859-9)"
-
-#: kile.cpp:724
-msgid "&Central European (cp-1250)"
-msgstr "&Centralno evropski (CP-1250)"
-
-#: kile.cpp:725
-msgid "&Western European (cp-1252)"
-msgstr "&Zapadno evropski (CP-1252)"
-
-#: kile.cpp:728
-msgid "Move Tab Left"
-msgstr ""
-
-#: kile.cpp:729
-msgid "Move Tab Right"
-msgstr ""
-
-#: kile.cpp:731
-#, fuzzy
-msgid "Next section"
-msgstr "Izbor"
-
-#: kile.cpp:732
-#, fuzzy
-msgid "Prev section"
-msgstr "&Brzi pregled izbora"
-
-#: kile.cpp:733
-#, fuzzy
-msgid "Next paragraph"
-msgstr "Pasus"
-
-#: kile.cpp:734
-#, fuzzy
-msgid "Prev paragraph"
-msgstr "Pasus"
-
-#: kile.cpp:736
-msgid "Find &in Files..."
-msgstr "Pronađ&i u datotekama..."
-
-#: kile.cpp:738
-msgid "Refresh Str&ucture"
-msgstr "Osvježi &strukturu"
-
-#: kile.cpp:741
-msgid "&New Project..."
-msgstr "&Novi projekat..."
-
-#: kile.cpp:742
-msgid "&Open Project..."
-msgstr "&Otvori projekat..."
-
-#: kile.cpp:744
-msgid "Open &Recent Project"
-msgstr "Otvori &skorašnji projekat"
-
-#: kile.cpp:751
-msgid "A&dd Files to Project..."
-msgstr "D&odaj datoteke projektu..."
-
-#: kile.cpp:755
-msgid "&Close Project"
-msgstr "&Zatvori projekat"
-
-#: kile.cpp:758
-#, fuzzy
-msgid "&Show Projects..."
-msgstr "&Novi projekat..."
-
-#: kile.cpp:759
-#, fuzzy
-msgid "Re&move Files From Project..."
-msgstr "Ne mogu da uklonim datoteku iz projekta"
-
-#: kile.cpp:760
-#, fuzzy
-msgid "Show Project &Files..."
-msgstr "Pregledam projektne datoteke..."
-
-#: kile.cpp:763
-#, fuzzy
-msgid "Find in &Project..."
-msgstr "Otvori projekat..."
-
-#: kile.cpp:766 kile.cpp:842 kile.cpp:2126 kiledocmanager.cpp:1902
-#: kiledocmanager.cpp:1912
-msgid "Clean"
-msgstr "Očisti"
-
-#: kile.cpp:767
-msgid "&Stop"
-msgstr "&Zaustavi"
-
-#: kile.cpp:770
-msgid "View Log File"
-msgstr "Prikaži datoteka dnevnika"
-
-#: kile.cpp:772
-msgid "Previous LaTeX Error"
-msgstr "Prethodna LaTeX-ova greška"
-
-#: kile.cpp:774
-msgid "Next LaTeX Error"
-msgstr "Sljedeća LaTeX-ova greška"
-
-#: kile.cpp:776
-msgid "Previous LaTeX Warning"
-msgstr "Prethodno LaTeX-ovo upozorenje"
-
-#: kile.cpp:778
-msgid "Next LaTeX Warning"
-msgstr "Sljedeće LaTeX-ovo upozorenje"
-
-#: kile.cpp:780
-msgid "Previous LaTeX BadBox"
-msgstr "Prethodna LaTeX-ova loša kutija"
-
-#: kile.cpp:782
-msgid "Next LaTeX BadBox"
-msgstr "Sljedeća LaTeX-ova loša kutija"
-
-#: kile.cpp:785
-msgid "Return to Editor"
-msgstr ""
-
-#: kile.cpp:786
-msgid "Next Document"
-msgstr "Sljedeći dokument"
-
-#: kile.cpp:787
-msgid "Previous Document"
-msgstr "Prethodni dokument"
-
-#: kile.cpp:788
-msgid "Focus Log/Messages View"
-msgstr "Fokusiraj prikaz dnevnika/poruka"
-
-#: kile.cpp:789
-msgid "Focus Output View"
-msgstr "Fokusiraj prikaz izlaza"
-
-#: kile.cpp:790
-msgid "Focus Konsole View"
-msgstr "Fokusiraj prikaz Konsole"
-
-#: kile.cpp:791
-msgid "Focus Editor View"
-msgstr "Fokusiraj prikaz uređivača"
-
-#: kile.cpp:793
-#, fuzzy
-msgctxt "@action: Starts the completion of the current LaTeX command"
-msgid "Complete (La)TeX Command"
-msgstr "Naredba LaTeX-a"
-
-#: kile.cpp:794
-#, fuzzy
-msgctxt "@action: Starts the input (and completion) of a LaTeX environment"
-msgid "Complete LaTeX Environment"
-msgstr "Integrisano okruženje LaTeX-a za KDE"
-
-#: kile.cpp:795
-#, fuzzy
-msgctxt "@action: Starts the completion of the current abbreviation"
-msgid "Complete Abbreviation"
-msgstr "Datoteke dovršavanja za režim skraćenica"
-
-#: kile.cpp:797
-msgid "Next Bullet"
-msgstr "Sljedeći predznak"
-
-#: kile.cpp:798
-msgid "Prev Bullet"
-msgstr "Prethodni predznak"
-
-#: kile.cpp:801 kile.cpp:810
-msgid "Environment (inside)"
-msgstr "Okruženje (unutra)"
-
-#: kile.cpp:802 kile.cpp:811
-msgid "Environment (outside)"
-msgstr "Okruženje (izvan)"
-
-#: kile.cpp:803 kile.cpp:812
-msgid "TeX Group (inside)"
-msgstr "TeX grupa (unutra)"
-
-#: kile.cpp:804 kile.cpp:813
-msgid "TeX Group (outside)"
-msgstr "TeX grupa (izvan)"
-
-#: kile.cpp:805 kile.cpp:814
-#, fuzzy
-msgid "Math Group"
-msgstr "TeX &grupa"
-
-#: kile.cpp:806 kile.cpp:815
-msgid "Paragraph"
-msgstr "Pasus"
-
-#: kile.cpp:807
-msgid "Line"
-msgstr "Red"
-
-#: kile.cpp:808 kile.cpp:817
-msgid "TeX Word"
-msgstr "TeX riječ"
-
-#: kile.cpp:816
-msgid "To End of Line"
-msgstr ""
-
-#: kile.cpp:819 kile.cpp:825
-#, fuzzy
-msgid "Go to Begin"
-msgstr "Idi na početak"
-
-#: kile.cpp:820 kile.cpp:826
-#, fuzzy
-msgid "Go to End"
-msgstr "Idi na kraj"
-
-#: kile.cpp:821 kile.cpp:827
-msgid "Match"
-msgstr "Poklopi"
-
-#: kile.cpp:822 kile.cpp:828
-#, fuzzy
-msgid "Close"
-msgstr "Zatvori sve"
-
-#: kile.cpp:830
-msgid "Selection"
-msgstr "Izbor"
-
-#: kile.cpp:832
-msgid "Subdocument"
-msgstr "Poddokument"
-
-#: kile.cpp:833
-#, fuzzy
-msgid "Mathgroup"
-msgstr "Matematika"
-
-#: kile.cpp:838
-msgid "&Bibliography"
-msgstr "&Bibliografija"
-
-#. i18n: file: kileui.rc:486
-#. i18n: ectx: Menu (settings)
-#: kile.cpp:844 rc.cpp:965
-#, fuzzy
-msgid "&Settings"
-msgstr "&Odeljak"
-
-#: kile.cpp:847
-msgid "Settings for BibTeX"
-msgstr ""
-
-#: kile.cpp:851
-msgid "Settings for Biblatex"
-msgstr ""
-
-#: kile.cpp:858 kile.cpp:2235
-msgid "Quick Start"
-msgstr "Brzi početak"
-
-#: kile.cpp:863
-msgid "Floats"
-msgstr "Plutajući"
-
-#: kile.cpp:868
-msgid "Define Current Document as '&Master Document'"
-msgstr "Definiši tekući dokument kao „&glavni dokument“"
-
-#: kile.cpp:874
-#, fuzzy
-msgid "Show Document Viewer"
-msgstr "Dokument: %1"
-
-#: kile.cpp:882
-msgid "Show S&ide Bar"
-msgstr "Prikaži &bočnu traku"
-
-#: kile.cpp:888
-msgid "Show Mess&ages Bar"
-msgstr "Prikaži traku &poruka"
-
-#: kile.cpp:900
-msgid "Watch File Mode"
-msgstr "Režim nadgledanja datoteke"
-
-#: kile.cpp:917
-#, fuzzy
-msgid "TeX Guide"
-msgstr "Vodič za teTeX"
-
-#: kile.cpp:919
-msgid "LaTeX Command"
-msgstr "Naredba LaTeX-a"
-
-#: kile.cpp:920
-msgid "LaTeX Subject"
-msgstr "LaTeX-ova tema"
-
-#: kile.cpp:921
-msgid "LaTeX Env"
-msgstr "LaTeX-ovo okruženje"
-
-#: kile.cpp:922
-msgid "Context Help"
-msgstr "Kontekstna pomoć"
-
-#: kile.cpp:925
-msgid "LaTeX Reference"
-msgstr "LaTeX-ova referenca"
-
-#: kile.cpp:930
-msgid "&About Editor Component"
-msgstr ""
-
-#: kile.cpp:938
-msgid "&System Check..."
-msgstr "Provjera &sistema..."
-
-#: kile.cpp:957
-msgid "Biblatex"
-msgstr ""
-
-#: kile.cpp:1231
-#, fuzzy
-msgid "Edit User Tags..."
-msgstr "Uredi korisničke oznake"
-
-#: kile.cpp:1331
-msgid ""
-"It was impossible to create the \"Archive\" tool.\n"
-"\n"
-"Please check and repair your installation of Kile."
-msgstr ""
-
-#: kile.cpp:1333
-#, fuzzy
-#| msgid "Unable to remove the template."
-msgid "Unable to Create Archive Tool"
-msgstr "Nisam uspio da uklonim šablon."
-
-#: kile.cpp:1402
-#, kde-format
-msgid "Project: %1"
-msgstr "Projekat: %1"
-
-#: kile.cpp:1405
-#, kde-format
-msgid "Project: %1 (Master document: %2)"
-msgstr "Projekat: %1 (glavni dokument: %2)"
-
-#: kile.cpp:1411
-msgid "Normal mode"
-msgstr "Normalan režim"
-
-#: kile.cpp:1414
-#, kde-format
-msgid "Master document: %1"
-msgstr "Glavni dokument: %1"
-
-#: kile.cpp:1419 kile.cpp:2604
-msgid "Define Current Document as 'Master Document'"
-msgstr "Definiši tekući dokument kao „glavni dokument“"
-
-#: kile.cpp:1423 kile.cpp:2596
-#, kde-format
-msgid "Normal mode (current master document: %1)"
-msgstr "Normalni režim (tekući glavni dokument: %1)"
-
-#: kile.cpp:2119
-msgid "There is no active document or it is not saved."
-msgstr "Nema aktivnog dokumenta ili nije snimljen."
-
-#: kile.cpp:2206
-#, fuzzy, kde-format
-msgid "You have to include the package %1."
-msgstr "Nisam mogao da identifikujem ime paketa."
-
-#: kile.cpp:2206 kile.cpp:2209
-#, fuzzy
-msgid "Insert text"
-msgstr "Ubaci tekst"
-
-#: kile.cpp:2209
-#, fuzzy, kde-format
-msgid "You have to include the packages %1."
-msgstr "Nisam mogao da identifikujem ime paketa."
-
-#: kile.cpp:2357
-#, fuzzy
-msgid "Could not create the \"ViewHTML\" tool. Please reset the tools."
-msgstr "Nisam mogao da napravim privremenu datoteku."
-
-#: kile.cpp:2369
-msgid "Edit User Tags"
-msgstr "Uredi korisničke oznake"
-
-#: kile.cpp:2389 kile.cpp:2427
-msgid "no name"
-msgstr "bez imena"
-
-#: kile.cpp:2620
-msgid ""
-"In order to define the current document as a master document, it has to be "
-"saved first."
-msgstr ""
-"Da biste definisali tekući dokument kao glavni, morate ga prvo snimiti."
-
-#: kile.cpp:2675
-msgid ""
-"Please turn off the 'Master Document' mode before performing the System "
-"Check."
-msgstr ""
-
-#: kile.cpp:2925
-#, fuzzy, kde-format
-msgid "Line: %1 Col: %2"
-msgstr "Linija: 1 kolona: 1"
-
-#: kile.cpp:2953
-msgctxt "@info:status status bar label for block selection mode"
-msgid "BLOCK"
-msgstr ""
-
-#: kile.cpp:2954
-msgctxt "@info:status status bar label for line selection mode"
-msgid "LINE"
-msgstr ""
-
-#: kile.cpp:2961
-#, fuzzy
-#| msgid "Refresh Str&ucture"
-msgid "Refreshing structure..."
-msgstr "Osvježi &strukturu"
-
-#: kiledocmanager.cpp:122
-#, fuzzy
-msgid "No editor component found. Please check your KDE installation."
-msgstr "Ovaj ključni alat uopšte ne radi, provjerite svoju instalaciju."
-
-#: kiledocmanager.cpp:123
-#, fuzzy
-msgid "No editor component found."
-msgstr "Nisu pronađene bibliografije."
-
-#: kiledocmanager.cpp:180
-msgid ""
-"The internal structure of Kile is corrupted (probably due to a bug in Kile). "
-"Please select Save All from the File menu and close Kile.\n"
-"The Kile team apologizes for any inconvenience and would appreciate a bug "
-"report."
-msgstr ""
-"Unutrašnja struktura Kile-a je iskvarena (verovatno zbog greške u Kile-u). "
-"Izaberite „Snimi sve“ iz menija „Datoteka“ i zatvorite Kile.\n"
-"Kile-ov tim vam se izvinjava zbog eventualnih problema i volio bi da mu "
-"pošaljete izvještaj o grešci."
-
-#: kiledocmanager.cpp:670
-#, kde-format
-msgid "Could not find template: %1"
-msgstr "Nisam mogao da pronađem šablon: %1"
-
-#: kiledocmanager.cpp:670
-msgid "File Not Found"
-msgstr "Datoteka nije pronađena"
-
-#: kiledocmanager.cpp:728
-msgid "Please save the file first."
-msgstr "Prvo snimite datoteku."
-
-#: kiledocmanager.cpp:733
-msgid "Open/create a document first."
-msgstr "Prvo otvorite/napravite dokument."
-
-#: kiledocmanager.cpp:741
-#, fuzzy
-msgid "A template for this type of document cannot be created."
-msgstr "Izaberite tip dokumenta koji želite da napravite:"
-
-#: kiledocmanager.cpp:745
-msgid "Create Template From Document"
-msgstr "Napravi šablon od dokumenta"
-
-#: kiledocmanager.cpp:751
-msgid "Remove Template"
-msgstr "Ukloni šablon"
-
-#: kiledocmanager.cpp:813
-msgid "Open Files"
-msgstr "Otvori datoteke"
-
-#: kiledocmanager.cpp:921
-#, fuzzy, kde-format
-msgid ""
-"The file %1 could not be saved, check the permissions and free disk space."
-msgstr ""
-"Datoteka %1/%2 ne postoji. Ako ste iznenađeni, provjerite dozvole za "
-"datoteku."
-
-#: kiledocmanager.cpp:922
-#, fuzzy
-msgid "Autosave"
-msgstr "Automatsko &snimanje"
-
-#: kiledocmanager.cpp:933
-#, kde-format
-msgid ""
-"Kile encountered problems while saving the file %1. Do you have enough free "
-"disk space left?"
-msgstr ""
-
-#: kiledocmanager.cpp:934
-#, fuzzy
-msgid "Saving"
-msgstr "Pro&red"
-
-#: kiledocmanager.cpp:1041
-#, fuzzy
-msgid "Save File"
-msgstr "Novu datoteku"
-
-#: kiledocmanager.cpp:1051
-#, fuzzy, kde-format
-msgid ""
-"A file with the name \"%1\" exists already. Do you want to overwrite it?"
-msgstr "Datoteka po imenu „%1“ već postoji. Želite li zaista da ga prebrišete?"
-
-#: kiledocmanager.cpp:1051
-#, fuzzy
-msgid "Overwrite File?"
-msgstr "Novu datoteku"
-
-#: kiledocmanager.cpp:1051
-msgid "&Overwrite"
-msgstr ""
-
-#: kiledocmanager.cpp:1275
-msgid "Refresh Project Tree"
-msgstr "Osvježi stablo projekta"
-
-#: kiledocmanager.cpp:1283
-msgid ""
-"The current document is not associated to a project. Please activate a "
-"document that is associated to the project you want to build the tree for, "
-"then choose Refresh Project Tree again."
-msgstr ""
-"Tekući dokument nije povezan sa projektom. Aktivirate dokument koji je "
-"povezan sa projektom za koji želite da izgradite stablo, a onda ponovo "
-"izaberite „Osveži stablo projekta“."
-
-#: kiledocmanager.cpp:1283
-msgid "Could Not Refresh Project Tree"
-msgstr "Nisam mogao da osvježim stablo projekta"
-
-#: kiledocmanager.cpp:1357 kiledocmanager.cpp:2073 kiledocmanager.cpp:2148
-#: kiledocmanager.cpp:2185
-msgid "Select Project"
-msgstr "Izaberite projekat"
-
-#: kiledocmanager.cpp:1381 kiledocmanager.cpp:1397 kiledocmanager.cpp:1404
-msgid "Add to Project"
-msgstr "Dodaj projektu"
-
-#: kiledocmanager.cpp:1396
-#, fuzzy, kde-format
-msgid "The file %1 is already member of the project %2"
-msgstr "Datoteka „%1“ već postoji, želite li da ga prebrišete?"
-
-#: kiledocmanager.cpp:1403
-#, kde-format
-msgid ""
-"The file %1 can not be added because it does not exist or is not readable"
-msgstr ""
-
-#: kiledocmanager.cpp:1422
-#, fuzzy
-msgid ""
-"This file is the project file, which holds all the information about your "
-"project.  As such, it cannot be removed from the project."
-msgstr ""
-"Ovaj datoteka je datoteka projekta, i sadrži sve informacije o vašem "
-"projektu. Stoga, nije dozvoljeno uklanjanje ove datoteke iz projekta."
-
-#: kiledocmanager.cpp:1422
-msgid "Cannot Remove File From Project"
-msgstr "Ne mogu da uklonim datoteku iz projekta"
-
-#: kiledocmanager.cpp:1480
-msgid ""
-"The project you tried to open is already opened. If you wanted to reload the "
-"project, close the project before you re-open it."
-msgstr ""
-"Projekat koji ste pokušali da otvorite je već otvoren. Ako ste željeli da "
-"ponovo učitate projekat, zatvorite ga prije nego što ga ponovo otvorite."
-
-#: kiledocmanager.cpp:1480
-msgid "Project Already Open"
-msgstr "Projekat je već otvoren"
-
-#: kiledocmanager.cpp:1490
-#, fuzzy, kde-format
-msgid ""
-"The project file for the project \"%1\" does not exist or is not readable. "
-"Remove this project from the recent projects list?"
-msgstr ""
-"Datoteka projekta za ovaj projekat ne postoji, ili nije čitljiv. Da uklonim "
-"ovaj projekat iz liste skorašnjih projekata?"
-
-#: kiledocmanager.cpp:1490
-msgid "Could Not Load Project File"
-msgstr "Nisam mogao da učitam datoteku projekta"
-
-#: kiledocmanager.cpp:1587
-msgid ""
-"*.kilepr|Kile Project Files\n"
-"*|All Files"
-msgstr ""
-"*.kilepr|Kile-ove datoteke projekta\n"
-"*|Sve datoteke"
-
-#: kiledocmanager.cpp:1587
-msgid "Open Project"
-msgstr "Otvori projekat"
-
-#: kiledocmanager.cpp:1608
-msgid "Save Project"
-msgstr "Snimi projekat"
-
-#: kiledocmanager.cpp:1660
-msgid ""
-"The current document is not associated to a project. Please activate a "
-"document that is associated to the project you want to save, then choose "
-"Save Project again."
-msgstr ""
-"Tekući dokument nije povezan sa projektom. Aktivirajte dokument koji je "
-"povezan sa projektom koji želite da snimite, a onda ponovo izaberite „Snimi "
-"projekat“."
-
-#: kiledocmanager.cpp:1660
-msgid "Could Determine Active Project"
-msgstr "Utvrdio sam koji je projekat aktivan"
-
-#: kiledocmanager.cpp:1683
-msgid "Add Files to Project"
-msgstr "Dodaj datoteke projektu"
-
-#: kiledocmanager.cpp:1694
-msgid "*|All Files"
-msgstr "*|Sve datoteke"
-
-#: kiledocmanager.cpp:1698
-msgid "Add Files"
-msgstr "Dodaj datoteke"
-
-#: kiledocmanager.cpp:1714
-msgid ""
-"There are no projects opened. Please open the project you want to add files "
-"to, then choose Add Files again."
-msgstr ""
-"Nema otvorenih projekata. Otvorite projekat kome želite da dodate datoteke, "
-"a onda ponovo izaberite „Dodaj datoteke“."
-
-#: kiledocmanager.cpp:1714 kiledocmanager.cpp:1749
-msgid "Could Not Determine Active Project"
-msgstr "Nisam mogao da utvrdim koji je projekat aktivan"
-
-#: kiledocmanager.cpp:1740
-msgid "Project Options For"
-msgstr "Opcije projekta za"
-
-#: kiledocmanager.cpp:1749
-msgid ""
-"The current document is not associated to a project. Please activate a "
-"document that is associated to the project you want to modify, then choose "
-"Project Options again."
-msgstr ""
-"Tekući dokument nije povezan sa projektom. Aktivirajte dokument koji je "
-"povezan sa projektom koji želite da izmijenite, a onda ponovo izaberite "
-"„Opcije projekta“."
-
-#: kiledocmanager.cpp:1777
-msgid "Close Project"
-msgstr "Zatvori projekat"
-
-#: kiledocmanager.cpp:1831
-msgid ""
-"The current document is not associated to a project. Please activate a "
-"document that is associated to the project you want to close, then choose "
-"Close Project again."
-msgstr ""
-"Tekući dokument nije povezan sa projektom. Aktivirajte dokument koji je "
-"povezan sa projektom koji želite da zatvorite, a onda ponovo izaberite "
-"„Zatvori projekat“."
-
-#: kiledocmanager.cpp:1831
-msgid "Could Not Close Project"
-msgstr "Nisam mogao da zatvorim projekat"
-
-#: kiledocmanager.cpp:1901
-#, kde-format
-msgid "Nothing to clean for %1"
-msgstr "Nema ničega da se očisti za %1"
-
-#: kiledocmanager.cpp:1911
-#, fuzzy, kde-format
-msgid "Cleaning %1: %2"
-msgstr "čistim %1 : %2"
-
-#: kiledocmanager.cpp:1981
-#, fuzzy
-msgid "Switch Project"
-msgstr "Izaberite projekat"
-
-#: kiledocmanager.cpp:2040
-#, fuzzy
-msgid "Select Files to Remove"
-msgstr "Izaberite datoteku"
-
-#: kiledocmanager.cpp:2054 kiledocmanager.cpp:2057
-#, fuzzy
-msgid "Show Project Files"
-msgstr "&Datoteka projekta:"
-
-#: kiledocmanager.cpp:2054 kiledocmanager.cpp:2104
-#, fuzzy
-msgid "project configuration file"
-msgstr "Izaberite konfiguraciju:"
-
-#: kiledocmanager.cpp:2057 kiledocmanager.cpp:2107
-#, fuzzy
-msgid "graphics file"
-msgstr "Grafika"
-
-#: kiledocmanager.cpp:2104 kiledocmanager.cpp:2107
-#, fuzzy
-msgid "Open All Project Files"
-msgstr "Otvori projekat"
-
-#: kiledocmanager.cpp:2141
-#, kde-format
-msgid "not opened: %1 (%2)"
-msgstr ""
-
-#: kiledocmanager.cpp:2166 kiledocmanager.cpp:2203
-#, fuzzy
-msgid "Project Files"
-msgstr "&Datoteka projekta:"
-
-#: kiledocmanager.cpp:2174 kiledocmanager.cpp:2212
-#, fuzzy
-msgid "Could not determine the selected file."
-msgstr "Nisam mogao da utvrdim glavnu datoteku za ovaj dokument."
-
-#: kiledocmanager.cpp:2174 kiledocmanager.cpp:2212
-#, fuzzy
-msgid "Project Error"
-msgstr "&Projekat"
-
-#: kiledocmanager.cpp:2296
-#, fuzzy
-msgid "Opening Project..."
-msgstr "Otvori projekat..."
-
-#: kiledocmanager.cpp:2299
-msgid "Scanning project files..."
-msgstr "Pregledam projektne datoteke..."
-
-#: configtester.cpp:134
-msgid "You cannot use the png preview for mathgroups in the bottom bar."
-msgstr ""
-
-#: configtester.cpp:135
-msgid ""
-"You cannot use the png previews with conversions 'dvi->ps->png' and 'pdf-"
-">png'."
-msgstr ""
-
-#: configtester.cpp:137
-msgid ""
-"You cannot open pdf documents with Adobe Reader because acroread could not "
-"be found in your path.  <br>If Adobe Reader is your default pdf viewer, try "
-"setting ViewPDF to System Default.  Alternatively, you could use Okular."
-msgstr ""
-
-#: configtester.cpp:139
-msgid ""
-"You cannot open pdf documents with Adobe Reader, but you could use Okular."
-msgstr ""
-
-#: configtester.cpp:239
-msgid "Running in Kile"
-msgstr "Radi u Kile-u"
-
-#: configtester.cpp:263
-#, fuzzy
-#| msgid ""
-#| "Kile is not configured correctly. Go to Settings->Configure Kile->Tools "
-#| "and either fix the problem or change to the default settings."
-msgid ""
-"Tool not found.\n"
-"Kile is not configured correctly. Go to Settings->Configure Kile->Tools and "
-"either fix the problem or change to the default settings."
-msgstr ""
-"Kile nije ispravno podešen. Idite na Podešavanja->Podesi Kile->Alati i ili "
-"ispravite problem ili vratite na podrazumijevana podešavanja."
-
-#: configtester.cpp:285 configtester.cpp:464
-msgid "Failed"
-msgstr "Nije uspelo"
-
-#: configtester.cpp:304
-msgid "Version"
-msgstr "Verzija"
-
-#: configtester.cpp:319
-#, fuzzy
-msgid "Okular could not be found"
-msgstr "ISpell (ili ASpell) nije mogao biti pokrenut."
-
-#: configtester.cpp:330
-#, kde-format
-msgid "%1 - Forward Search and Embedded Viewer Mode are supported"
-msgstr ""
-
-#: configtester.cpp:334
-#, kde-format
-msgid "%1 - Forward Search is supported, but not Embedded Viewer mode"
-msgstr ""
-
-#: configtester.cpp:338
-#, kde-format
-msgid ""
-"%1 - The installed version is too old for Forward Search and Embedded Viewer "
-"mode; you must use at least version 0.8.6 for Forward Search, and 0.14.80 "
-"for Embedded Viewer Mode"
-msgstr ""
-
-#: configtester.cpp:351
-msgid "Binary"
-msgstr "Izvršna datoteka"
-
-#: configtester.cpp:366
-#, fuzzy
-#| msgid "Could not find the binary for this essential tool."
-msgid "Could not find the binary for this essential tool"
-msgstr "Nisam mogao da nađem izvršnu datoteku za ovaj ključni alat."
-
-#: configtester.cpp:369
-#, kde-format
-msgid "No executable '%1' found"
-msgstr ""
-
-#: configtester.cpp:374
-#, kde-format
-msgctxt "executable => path"
-msgid "Found (%1 => %2)"
-msgstr ""
-
-#: configtester.cpp:384
-msgid "Simple Test"
-msgstr "Jednostavna proba"
-
-#: configtester.cpp:461
-#, fuzzy
-#| msgid "This essential tool does not work at all, check your installation."
-msgid "This essential tool does not work; please check your installation."
-msgstr "Ovaj ključni alat uopšte ne radi, provjerite svoju instalaciju."
-
-#: configtester.cpp:476
-msgid "Source Specials Switch"
-msgstr "Prekidač za posebnosti izvora"
-
-#: configtester.cpp:508
-#, fuzzy
-#| msgid ""
-#| "Supported, use the 'Modern' configuration for (La)TeX and PDF(La)TeX to "
-#| "auto-enable inverse and forward search capabilities."
-msgid ""
-"Supported, use the 'Modern' configuration for (La)TeX to auto-enable inverse "
-"and forward search capabilities."
-msgstr ""
-"Podržano, koristite „moderna“ podešavanja za (La)TeX i PDF(La)TeX da biste "
-"automatski uključili mogućnosti inverzne i pretrage unaprijed."
-
-#: configtester.cpp:515
-msgid ""
-"Not supported, use the srcltx package to enable the inverse and forward "
-"search capabilities."
-msgstr ""
-"Nije podržano, koristite paket srcltx da biste uključili mogućnosti inverzne "
-"i pretrage unaprijed."
-
-#: configtester.cpp:526
-msgid "SyncTeX Support"
-msgstr ""
-
-#: configtester.cpp:535
-#, fuzzy
-#| msgid ""
-#| "Supported, use the 'Modern' configuration for (La)TeX and PDF(La)TeX to "
-#| "auto-enable inverse and forward search capabilities."
-msgid ""
-"Supported, use the 'Modern' configuration for PDFLaTeX and XeLaTeX to auto-"
-"enable inverse and forward search capabilities."
-msgstr ""
-"Podržano, koristite „moderna“ podešavanja za (La)TeX i PDF(La)TeX da biste "
-"automatski uključili mogućnosti inverzne i pretrage unaprijed."
-
-#: configtester.cpp:542
-msgid "Not supported"
-msgstr ""
-
-#: kiletool.cpp:54
-#, kde-format
-msgid "Could not change to the folder %1."
-msgstr "Nisam mogao da pređem u fasciklu %1."
-
-#: kiletool.cpp:55
-#, kde-format
-msgid ""
-"The folder %1 is not writable, therefore %2 will not be able to save its "
-"results."
-msgstr ""
-"U fasciklu %1 ne može se pisati, stoga %2 neće moći da snimi svoje rezultate."
-
-#: kiletool.cpp:56
-#, fuzzy, kde-format
-msgid ""
-"The file %1/%2 does not exist. If this is unexpected, check the file "
-"permissions."
-msgstr ""
-"Datoteka %1/%2 ne postoji. Ako ste iznenađeni, provjerite dozvole za "
-"datoteku."
-
-#: kiletool.cpp:57
-#, fuzzy, kde-format
-msgid ""
-"The file %1/%2 is not readable. If this is unexpected, check the file "
-"permissions."
-msgstr ""
-"Datoteka %1/%2 nije čitljiva. Ako ste iznenađeni, provjerite dozvole za "
-"datoteku."
-
-#: kiletool.cpp:58
-#, kde-format
-msgid ""
-"Could not determine on which file to run %1, because there is no active "
-"document."
-msgstr ""
-"Nisam mogao da odredim nad kojom datotekom da pokrenem %1, zato što nema "
-"aktivnog dokumenta."
-
-#: kiletool.cpp:59
-msgid "Could not determine the master file for this document."
-msgstr "Nisam mogao da utvrdim glavnu datoteku za ovaj dokument."
-
-#: kiletool.cpp:60
-msgid "Please save the untitled document first."
-msgstr "Prvo snimite neimenovani dokument."
-
-#: kiletool.cpp:61
-#, fuzzy, kde-format
-msgid "The file %1 does not exist."
-msgstr "Izvinite, datoteka %1 ne postoji."
-
-#: kiletool.cpp:62
-#, fuzzy, kde-format
-msgid "The file %1 is not readable."
-msgstr "Izvinite, datoteka %1 nije čitljiva."
-
-#: kiletool.cpp:627
-#, kde-format
-msgid "The document %1 is not a LaTeX root document; continue anyway?"
-msgstr "Dokument %1 nije LaTeX-ov korijeni dokument; da ipak nastavim?"
-
-#: kiletool.cpp:627
-msgid "Continue?"
-msgstr "Da nastavim?"
-
-#: kiletool.cpp:639
-#, fuzzy, kde-format
-msgid "The file %1/%2 does not exist; did you compile the source file?"
-msgstr "Datoteka %2/%3 ne postoji; da li ste preveli izvornu datoteku?"
-
-#: kiletool.cpp:659
-msgid ""
-"The current document is not associated to a project. Please activate a "
-"document that is associated to the project you want to archive, then choose "
-"Archive again."
-msgstr ""
-"Tekući dokument nije povezan sa projektom. Aktivirajte dokument koji je "
-"povezan sa projektom koji želite da arhivirate, a onda ponovo izaberite "
-"„Arhiviraj“."
-
-#: kiletool.cpp:663
-msgid "No files have been chosen for archiving."
-msgstr ""
-
-#: kiletool.cpp:679
-msgid "Archive Project"
-msgstr "Arhiviraj projekat"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -10145,6 +8978,13 @@ msgstr "Korisničke oznake"
 msgid "&Wizard"
 msgstr "&Čarobnjak"
 
+#. i18n: file: kileui.rc:486
+#. i18n: ectx: Menu (settings)
+#: rc.cpp:965 kile.cpp:844
+#, fuzzy
+msgid "&Settings"
+msgstr "&Odeljak"
+
 #. i18n: file: kileui.rc:497
 #. i18n: ectx: Menu (help)
 #: rc.cpp:968
@@ -10438,6 +9278,12 @@ msgstr ""
 #, fuzzy
 msgid "&Type:"
 msgstr "&Tip"
+
+#. i18n: file: widgets/latexconfigwidget.ui:133
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:1142 kile.cpp:557
+msgid "Special Characters"
+msgstr "Posebni znakovi"
 
 #. i18n: file: widgets/latexconfigwidget.ui:142
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InsertSpecialCharacters)
@@ -11134,6 +9980,1200 @@ msgid "Let Kile process LyX commands sent by bibliography editors/viewers"
 msgstr ""
 "Dozvoli Kile-u da obradi naredbe LyX-a iz uređivača/prikazivač bibliografije."
 
+#: kiledocmanager.cpp:122
+#, fuzzy
+msgid "No editor component found. Please check your KDE installation."
+msgstr "Ovaj ključni alat uopšte ne radi, provjerite svoju instalaciju."
+
+#: kiledocmanager.cpp:123
+#, fuzzy
+msgid "No editor component found."
+msgstr "Nisu pronađene bibliografije."
+
+#: kiledocmanager.cpp:180
+msgid ""
+"The internal structure of Kile is corrupted (probably due to a bug in Kile). "
+"Please select Save All from the File menu and close Kile.\n"
+"The Kile team apologizes for any inconvenience and would appreciate a bug "
+"report."
+msgstr ""
+"Unutrašnja struktura Kile-a je iskvarena (verovatno zbog greške u Kile-u). "
+"Izaberite „Snimi sve“ iz menija „Datoteka“ i zatvorite Kile.\n"
+"Kile-ov tim vam se izvinjava zbog eventualnih problema i volio bi da mu "
+"pošaljete izvještaj o grešci."
+
+#: kiledocmanager.cpp:670
+#, kde-format
+msgid "Could not find template: %1"
+msgstr "Nisam mogao da pronađem šablon: %1"
+
+#: kiledocmanager.cpp:670
+msgid "File Not Found"
+msgstr "Datoteka nije pronađena"
+
+#: kiledocmanager.cpp:728
+msgid "Please save the file first."
+msgstr "Prvo snimite datoteku."
+
+#: kiledocmanager.cpp:733
+msgid "Open/create a document first."
+msgstr "Prvo otvorite/napravite dokument."
+
+#: kiledocmanager.cpp:741
+#, fuzzy
+msgid "A template for this type of document cannot be created."
+msgstr "Izaberite tip dokumenta koji želite da napravite:"
+
+#: kiledocmanager.cpp:745
+msgid "Create Template From Document"
+msgstr "Napravi šablon od dokumenta"
+
+#: kiledocmanager.cpp:751
+msgid "Remove Template"
+msgstr "Ukloni šablon"
+
+#: kiledocmanager.cpp:813
+msgid "Open Files"
+msgstr "Otvori datoteke"
+
+#: kiledocmanager.cpp:921
+#, fuzzy, kde-format
+msgid ""
+"The file %1 could not be saved, check the permissions and free disk space."
+msgstr ""
+"Datoteka %1/%2 ne postoji. Ako ste iznenađeni, provjerite dozvole za "
+"datoteku."
+
+#: kiledocmanager.cpp:922
+#, fuzzy
+msgid "Autosave"
+msgstr "Automatsko &snimanje"
+
+#: kiledocmanager.cpp:933
+#, kde-format
+msgid ""
+"Kile encountered problems while saving the file %1. Do you have enough free "
+"disk space left?"
+msgstr ""
+
+#: kiledocmanager.cpp:934
+#, fuzzy
+msgid "Saving"
+msgstr "Pro&red"
+
+#: kiledocmanager.cpp:1041
+#, fuzzy
+msgid "Save File"
+msgstr "Novu datoteku"
+
+#: kiledocmanager.cpp:1051
+#, fuzzy, kde-format
+msgid ""
+"A file with the name \"%1\" exists already. Do you want to overwrite it?"
+msgstr "Datoteka po imenu „%1“ već postoji. Želite li zaista da ga prebrišete?"
+
+#: kiledocmanager.cpp:1051
+#, fuzzy
+msgid "Overwrite File?"
+msgstr "Novu datoteku"
+
+#: kiledocmanager.cpp:1051
+msgid "&Overwrite"
+msgstr ""
+
+#: kiledocmanager.cpp:1275
+msgid "Refresh Project Tree"
+msgstr "Osvježi stablo projekta"
+
+#: kiledocmanager.cpp:1283
+msgid ""
+"The current document is not associated to a project. Please activate a "
+"document that is associated to the project you want to build the tree for, "
+"then choose Refresh Project Tree again."
+msgstr ""
+"Tekući dokument nije povezan sa projektom. Aktivirate dokument koji je "
+"povezan sa projektom za koji želite da izgradite stablo, a onda ponovo "
+"izaberite „Osveži stablo projekta“."
+
+#: kiledocmanager.cpp:1283
+msgid "Could Not Refresh Project Tree"
+msgstr "Nisam mogao da osvježim stablo projekta"
+
+#: kiledocmanager.cpp:1357 kiledocmanager.cpp:2073 kiledocmanager.cpp:2148
+#: kiledocmanager.cpp:2185
+msgid "Select Project"
+msgstr "Izaberite projekat"
+
+#: kiledocmanager.cpp:1381 kiledocmanager.cpp:1397 kiledocmanager.cpp:1404
+msgid "Add to Project"
+msgstr "Dodaj projektu"
+
+#: kiledocmanager.cpp:1396
+#, fuzzy, kde-format
+msgid "The file %1 is already member of the project %2"
+msgstr "Datoteka „%1“ već postoji, želite li da ga prebrišete?"
+
+#: kiledocmanager.cpp:1403
+#, kde-format
+msgid ""
+"The file %1 can not be added because it does not exist or is not readable"
+msgstr ""
+
+#: kiledocmanager.cpp:1422
+#, fuzzy
+msgid ""
+"This file is the project file, which holds all the information about your "
+"project.  As such, it cannot be removed from the project."
+msgstr ""
+"Ovaj datoteka je datoteka projekta, i sadrži sve informacije o vašem "
+"projektu. Stoga, nije dozvoljeno uklanjanje ove datoteke iz projekta."
+
+#: kiledocmanager.cpp:1422
+msgid "Cannot Remove File From Project"
+msgstr "Ne mogu da uklonim datoteku iz projekta"
+
+#: kiledocmanager.cpp:1480
+msgid ""
+"The project you tried to open is already opened. If you wanted to reload the "
+"project, close the project before you re-open it."
+msgstr ""
+"Projekat koji ste pokušali da otvorite je već otvoren. Ako ste željeli da "
+"ponovo učitate projekat, zatvorite ga prije nego što ga ponovo otvorite."
+
+#: kiledocmanager.cpp:1480
+msgid "Project Already Open"
+msgstr "Projekat je već otvoren"
+
+#: kiledocmanager.cpp:1490
+#, fuzzy, kde-format
+msgid ""
+"The project file for the project \"%1\" does not exist or is not readable. "
+"Remove this project from the recent projects list?"
+msgstr ""
+"Datoteka projekta za ovaj projekat ne postoji, ili nije čitljiv. Da uklonim "
+"ovaj projekat iz liste skorašnjih projekata?"
+
+#: kiledocmanager.cpp:1490
+msgid "Could Not Load Project File"
+msgstr "Nisam mogao da učitam datoteku projekta"
+
+#: kiledocmanager.cpp:1587
+msgid ""
+"*.kilepr|Kile Project Files\n"
+"*|All Files"
+msgstr ""
+"*.kilepr|Kile-ove datoteke projekta\n"
+"*|Sve datoteke"
+
+#: kiledocmanager.cpp:1587
+msgid "Open Project"
+msgstr "Otvori projekat"
+
+#: kiledocmanager.cpp:1608
+msgid "Save Project"
+msgstr "Snimi projekat"
+
+#: kiledocmanager.cpp:1660
+msgid ""
+"The current document is not associated to a project. Please activate a "
+"document that is associated to the project you want to save, then choose "
+"Save Project again."
+msgstr ""
+"Tekući dokument nije povezan sa projektom. Aktivirajte dokument koji je "
+"povezan sa projektom koji želite da snimite, a onda ponovo izaberite „Snimi "
+"projekat“."
+
+#: kiledocmanager.cpp:1660
+msgid "Could Determine Active Project"
+msgstr "Utvrdio sam koji je projekat aktivan"
+
+#: kiledocmanager.cpp:1683
+msgid "Add Files to Project"
+msgstr "Dodaj datoteke projektu"
+
+#: kiledocmanager.cpp:1694
+msgid "*|All Files"
+msgstr "*|Sve datoteke"
+
+#: kiledocmanager.cpp:1698
+msgid "Add Files"
+msgstr "Dodaj datoteke"
+
+#: kiledocmanager.cpp:1714
+msgid ""
+"There are no projects opened. Please open the project you want to add files "
+"to, then choose Add Files again."
+msgstr ""
+"Nema otvorenih projekata. Otvorite projekat kome želite da dodate datoteke, "
+"a onda ponovo izaberite „Dodaj datoteke“."
+
+#: kiledocmanager.cpp:1714 kiledocmanager.cpp:1749
+msgid "Could Not Determine Active Project"
+msgstr "Nisam mogao da utvrdim koji je projekat aktivan"
+
+#: kiledocmanager.cpp:1740
+msgid "Project Options For"
+msgstr "Opcije projekta za"
+
+#: kiledocmanager.cpp:1749
+msgid ""
+"The current document is not associated to a project. Please activate a "
+"document that is associated to the project you want to modify, then choose "
+"Project Options again."
+msgstr ""
+"Tekući dokument nije povezan sa projektom. Aktivirajte dokument koji je "
+"povezan sa projektom koji želite da izmijenite, a onda ponovo izaberite "
+"„Opcije projekta“."
+
+#: kiledocmanager.cpp:1777
+msgid "Close Project"
+msgstr "Zatvori projekat"
+
+#: kiledocmanager.cpp:1831
+msgid ""
+"The current document is not associated to a project. Please activate a "
+"document that is associated to the project you want to close, then choose "
+"Close Project again."
+msgstr ""
+"Tekući dokument nije povezan sa projektom. Aktivirajte dokument koji je "
+"povezan sa projektom koji želite da zatvorite, a onda ponovo izaberite "
+"„Zatvori projekat“."
+
+#: kiledocmanager.cpp:1831
+msgid "Could Not Close Project"
+msgstr "Nisam mogao da zatvorim projekat"
+
+#: kiledocmanager.cpp:1901
+#, kde-format
+msgid "Nothing to clean for %1"
+msgstr "Nema ničega da se očisti za %1"
+
+#: kiledocmanager.cpp:1902 kiledocmanager.cpp:1912 kile.cpp:766 kile.cpp:842
+#: kile.cpp:2126
+msgid "Clean"
+msgstr "Očisti"
+
+#: kiledocmanager.cpp:1911
+#, fuzzy, kde-format
+msgid "Cleaning %1: %2"
+msgstr "čistim %1 : %2"
+
+#: kiledocmanager.cpp:1981
+#, fuzzy
+msgid "Switch Project"
+msgstr "Izaberite projekat"
+
+#: kiledocmanager.cpp:2040
+#, fuzzy
+msgid "Select Files to Remove"
+msgstr "Izaberite datoteku"
+
+#: kiledocmanager.cpp:2054 kiledocmanager.cpp:2057
+#, fuzzy
+msgid "Show Project Files"
+msgstr "&Datoteka projekta:"
+
+#: kiledocmanager.cpp:2054 kiledocmanager.cpp:2104
+#, fuzzy
+msgid "project configuration file"
+msgstr "Izaberite konfiguraciju:"
+
+#: kiledocmanager.cpp:2057 kiledocmanager.cpp:2107
+#, fuzzy
+msgid "graphics file"
+msgstr "Grafika"
+
+#: kiledocmanager.cpp:2104 kiledocmanager.cpp:2107
+#, fuzzy
+msgid "Open All Project Files"
+msgstr "Otvori projekat"
+
+#: kiledocmanager.cpp:2141
+#, kde-format
+msgid "not opened: %1 (%2)"
+msgstr ""
+
+#: kiledocmanager.cpp:2166 kiledocmanager.cpp:2203
+#, fuzzy
+msgid "Project Files"
+msgstr "&Datoteka projekta:"
+
+#: kiledocmanager.cpp:2174 kiledocmanager.cpp:2212
+#, fuzzy
+msgid "Could not determine the selected file."
+msgstr "Nisam mogao da utvrdim glavnu datoteku za ovaj dokument."
+
+#: kiledocmanager.cpp:2174 kiledocmanager.cpp:2212
+#, fuzzy
+msgid "Project Error"
+msgstr "&Projekat"
+
+#: kiledocmanager.cpp:2296
+#, fuzzy
+msgid "Opening Project..."
+msgstr "Otvori projekat..."
+
+#: kiledocmanager.cpp:2299
+msgid "Scanning project files..."
+msgstr "Pregledam projektne datoteke..."
+
+#: configtester.cpp:211
+msgid "Running in Kile"
+msgstr "Radi u Kile-u"
+
+#: configtester.cpp:235
+#, fuzzy
+#| msgid ""
+#| "Kile is not configured correctly. Go to Settings->Configure Kile->Tools "
+#| "and either fix the problem or change to the default settings."
+msgid ""
+"Tool not found.\n"
+"Kile is not configured correctly. Go to Settings->Configure Kile->Tools and "
+"either fix the problem or change to the default settings."
+msgstr ""
+"Kile nije ispravno podešen. Idite na Podešavanja->Podesi Kile->Alati i ili "
+"ispravite problem ili vratite na podrazumijevana podešavanja."
+
+#: configtester.cpp:267 configtester.cpp:463
+msgid "Failed"
+msgstr "Nije uspelo"
+
+#: configtester.cpp:286
+msgid "Version"
+msgstr "Verzija"
+
+#: configtester.cpp:301
+#, fuzzy
+msgid "Okular could not be found"
+msgstr "ISpell (ili ASpell) nije mogao biti pokrenut."
+
+#: configtester.cpp:312
+#, kde-format
+msgid "%1 - Forward Search and Embedded Viewer Mode are supported"
+msgstr ""
+
+#: configtester.cpp:316
+#, kde-format
+msgid "%1 - Forward Search is supported, but not Embedded Viewer mode"
+msgstr ""
+
+#: configtester.cpp:320
+#, kde-format
+msgid ""
+"%1 - The installed version is too old for Forward Search and Embedded Viewer "
+"mode; you must use at least version 0.8.6 for Forward Search, and 0.14.80 "
+"for Embedded Viewer Mode"
+msgstr ""
+
+#: configtester.cpp:333
+msgid "Binary"
+msgstr "Izvršna datoteka"
+
+#: configtester.cpp:350
+#, fuzzy, kde-format
+#| msgid "Could not find the binary for this essential tool."
+msgctxt "additional failure message given as argument"
+msgid "Could not find the binary for this essential tool. %1"
+msgstr "Nisam mogao da nađem izvršnu datoteku za ovaj ključni alat."
+
+#: configtester.cpp:354
+#, kde-format
+msgctxt "additional failure message given as argument"
+msgid "No executable '%1' found. %2"
+msgstr ""
+
+#: configtester.cpp:359
+#, fuzzy
+#| msgid "Could not find the binary for this essential tool."
+msgid "Could not find the binary for this essential tool"
+msgstr "Nisam mogao da nađem izvršnu datoteku za ovaj ključni alat."
+
+#: configtester.cpp:362
+#, kde-format
+msgid "No executable '%1' found"
+msgstr ""
+
+#: configtester.cpp:368
+#, kde-format
+msgctxt "executable => path"
+msgid "Found (%1 => %2)"
+msgstr ""
+
+#: configtester.cpp:383
+msgid "Simple Test"
+msgstr "Jednostavna proba"
+
+#: configtester.cpp:460
+#, fuzzy
+#| msgid "This essential tool does not work at all, check your installation."
+msgid "This essential tool does not work; please check your installation."
+msgstr "Ovaj ključni alat uopšte ne radi, provjerite svoju instalaciju."
+
+#: configtester.cpp:475
+msgid "Source Specials Switch"
+msgstr "Prekidač za posebnosti izvora"
+
+#: configtester.cpp:507
+#, fuzzy
+#| msgid ""
+#| "Supported, use the 'Modern' configuration for (La)TeX and PDF(La)TeX to "
+#| "auto-enable inverse and forward search capabilities."
+msgid ""
+"Supported, use the 'Modern' configuration for (La)TeX to auto-enable inverse "
+"and forward search capabilities."
+msgstr ""
+"Podržano, koristite „moderna“ podešavanja za (La)TeX i PDF(La)TeX da biste "
+"automatski uključili mogućnosti inverzne i pretrage unaprijed."
+
+#: configtester.cpp:514
+msgid ""
+"Not supported, use the srcltx package to enable the inverse and forward "
+"search capabilities."
+msgstr ""
+"Nije podržano, koristite paket srcltx da biste uključili mogućnosti inverzne "
+"i pretrage unaprijed."
+
+#: configtester.cpp:525
+msgid "SyncTeX Support"
+msgstr ""
+
+#: configtester.cpp:534
+#, fuzzy
+#| msgid ""
+#| "Supported, use the 'Modern' configuration for (La)TeX and PDF(La)TeX to "
+#| "auto-enable inverse and forward search capabilities."
+msgid ""
+"Supported, use the 'Modern' configuration for PDFLaTeX and XeLaTeX to auto-"
+"enable inverse and forward search capabilities."
+msgstr ""
+"Podržano, koristite „moderna“ podešavanja za (La)TeX i PDF(La)TeX da biste "
+"automatski uključili mogućnosti inverzne i pretrage unaprijed."
+
+#: configtester.cpp:541
+msgid "Not supported"
+msgstr ""
+
+#: configtester.cpp:783
+msgid "PNG previews cannot be used for mathgroups in the bottom preview pane"
+msgstr ""
+
+#: configtester.cpp:793
+msgid ""
+"PNG previews cannot be used with conversions 'dvi->ps->png' and 'pdf->png' "
+"in the bottom preview pane"
+msgstr ""
+
+#: kile.cpp:325
+msgid ""
+"You have defined some tools in the User menu. From now on these tools will "
+"be available from the Build->Other menu and can be configured in the "
+"configuration dialog (go to the Settings menu and choose Configure Kile). "
+"This has some advantages; your own tools can now be used in a QuickBuild "
+"command if you wish."
+msgstr ""
+"Definisali ste neke alate u meniju „Korisnik“. Od sada će ti alati biti "
+"dostupni iz menija Izgradi->Ostalo i mogu se podesiti u dijalogu za "
+"podešavanje (idite na meni Podešavanja i izaberite Podesi Kile). Ovo ima "
+"nekih prednosti: vaši sopstveni alati sada se mogu koristiti u naredbi za "
+"brzu izgradnju ako želite."
+
+#: kile.cpp:325
+msgid "User Tools Detected"
+msgstr "Detektovani korisnički alati"
+
+#: kile.cpp:331
+msgid ""
+"The standard tool list need to be reloaded because of the switch from KDE3 "
+"to KDE4. This will overwrite any changes in the tools you have made. Do you "
+"want to reload the list now (recommended)?"
+msgstr ""
+
+#: kile.cpp:332
+msgid "Tools need to be updated"
+msgstr ""
+
+#: kile.cpp:409
+#, fuzzy
+msgid "Normal Mode"
+msgstr "Normalan režim"
+
+#: kile.cpp:426
+msgid "Open File"
+msgstr "Otvori datoteku"
+
+#: kile.cpp:445
+#, fuzzy
+msgid "Files and Projects"
+msgstr "Datoteke i projekti"
+
+#: kile.cpp:484
+#, fuzzy
+msgid "Scripts"
+msgstr "veličina pisma"
+
+#: kile.cpp:513
+#, fuzzy
+msgid "Symbols"
+msgstr "Simboli strelica"
+
+#: kile.cpp:516
+msgid "Most Frequently Used"
+msgstr ""
+
+#: kile.cpp:522
+#, fuzzy
+msgid "Relation"
+msgstr "Izbor"
+
+#: kile.cpp:527
+#, fuzzy
+msgid "Operators"
+msgstr "&Razdvajač"
+
+#: kile.cpp:532
+#, fuzzy
+msgid "Arrows"
+msgstr "AMS strelice"
+
+#: kile.cpp:537
+#, fuzzy
+msgid "Miscellaneous Math"
+msgstr "Razni simboli"
+
+#: kile.cpp:542
+#, fuzzy
+msgid "Miscellaneous Text"
+msgstr "Razni simboli"
+
+#: kile.cpp:547
+msgid "Delimiters"
+msgstr "Graničnici"
+
+#: kile.cpp:552
+msgid "Greek"
+msgstr ""
+
+#: kile.cpp:562
+#, fuzzy
+msgid "Cyrillic Characters"
+msgstr "Posebni znakovi"
+
+#: kile.cpp:567
+#, fuzzy
+msgid "User Defined"
+msgstr "Korisnički definisan:"
+
+#: kile.cpp:572
+msgid ""
+"<p>Move the mouse over the icons to see the corresponding LaTeX commands.<br/"
+">Click on an image to insert the corresponding command, additionally "
+"pressing \"Shift\" inserts it in math mode, pressing \"Ctrl\" in curly "
+"brackets.</p>"
+msgstr ""
+
+#: kile.cpp:619
+#, fuzzy
+msgid "Log and Messages"
+msgstr " Dnevnik i poruke "
+
+#: kile.cpp:625
+#, fuzzy
+msgid "Output"
+msgstr "Izlaz:"
+
+#: kile.cpp:628
+#, fuzzy
+msgid "Konsole"
+msgstr " Konsole "
+
+#: kile.cpp:709
+msgid "Save All"
+msgstr "Snimi sve"
+
+#: kile.cpp:710
+msgid "Save Copy As..."
+msgstr ""
+
+#: kile.cpp:711
+msgid "Create Template From Document..."
+msgstr "Napravi šablon od dokumenta..."
+
+#: kile.cpp:712
+msgid "&Remove Template..."
+msgstr "&Ukloni šablon..."
+
+#: kile.cpp:714 kile.cpp:823
+msgid "Close All"
+msgstr "Zatvori sve"
+
+#: kile.cpp:715
+#, fuzzy
+msgid "Close All Ot&hers"
+msgstr "Zatvori sve"
+
+#: kile.cpp:716
+msgid "S&tatistics"
+msgstr "S&tatistika"
+
+#: kile.cpp:717
+msgid "&ASCII"
+msgstr "&ASCII"
+
+#: kile.cpp:718
+msgid "Latin-&1 (iso 8859-1)"
+msgstr "Latinica-&1 (ISO 8859-1)"
+
+#: kile.cpp:719
+msgid "Latin-&2 (iso 8859-2)"
+msgstr "Latinica-&2 (ISO 8859-2)"
+
+#: kile.cpp:720
+msgid "Latin-&3 (iso 8859-3)"
+msgstr "Latinica-&3 (ISO 8859-3)"
+
+#: kile.cpp:721
+msgid "Latin-&4 (iso 8859-4)"
+msgstr "Latinica-&4 (ISO 8859-4)"
+
+#: kile.cpp:722
+msgid "Latin-&5 (iso 8859-5)"
+msgstr "Latinica-&5 (ISO 8859-5)"
+
+#: kile.cpp:723
+msgid "Latin-&9 (iso 8859-9)"
+msgstr "Latinica-&9 (ISO 8859-9)"
+
+#: kile.cpp:724
+msgid "&Central European (cp-1250)"
+msgstr "&Centralno evropski (CP-1250)"
+
+#: kile.cpp:725
+msgid "&Western European (cp-1252)"
+msgstr "&Zapadno evropski (CP-1252)"
+
+#: kile.cpp:728
+msgid "Move Tab Left"
+msgstr ""
+
+#: kile.cpp:729
+msgid "Move Tab Right"
+msgstr ""
+
+#: kile.cpp:731
+#, fuzzy
+msgid "Next section"
+msgstr "Izbor"
+
+#: kile.cpp:732
+#, fuzzy
+msgid "Prev section"
+msgstr "&Brzi pregled izbora"
+
+#: kile.cpp:733
+#, fuzzy
+msgid "Next paragraph"
+msgstr "Pasus"
+
+#: kile.cpp:734
+#, fuzzy
+msgid "Prev paragraph"
+msgstr "Pasus"
+
+#: kile.cpp:736
+msgid "Find &in Files..."
+msgstr "Pronađ&i u datotekama..."
+
+#: kile.cpp:738
+msgid "Refresh Str&ucture"
+msgstr "Osvježi &strukturu"
+
+#: kile.cpp:741
+msgid "&New Project..."
+msgstr "&Novi projekat..."
+
+#: kile.cpp:742
+msgid "&Open Project..."
+msgstr "&Otvori projekat..."
+
+#: kile.cpp:744
+msgid "Open &Recent Project"
+msgstr "Otvori &skorašnji projekat"
+
+#: kile.cpp:751
+msgid "A&dd Files to Project..."
+msgstr "D&odaj datoteke projektu..."
+
+#: kile.cpp:755
+msgid "&Close Project"
+msgstr "&Zatvori projekat"
+
+#: kile.cpp:758
+#, fuzzy
+msgid "&Show Projects..."
+msgstr "&Novi projekat..."
+
+#: kile.cpp:759
+#, fuzzy
+msgid "Re&move Files From Project..."
+msgstr "Ne mogu da uklonim datoteku iz projekta"
+
+#: kile.cpp:760
+#, fuzzy
+msgid "Show Project &Files..."
+msgstr "Pregledam projektne datoteke..."
+
+#: kile.cpp:763
+#, fuzzy
+msgid "Find in &Project..."
+msgstr "Otvori projekat..."
+
+#: kile.cpp:767
+msgid "&Stop"
+msgstr "&Zaustavi"
+
+#: kile.cpp:770
+msgid "View Log File"
+msgstr "Prikaži datoteka dnevnika"
+
+#: kile.cpp:772
+msgid "Previous LaTeX Error"
+msgstr "Prethodna LaTeX-ova greška"
+
+#: kile.cpp:774
+msgid "Next LaTeX Error"
+msgstr "Sljedeća LaTeX-ova greška"
+
+#: kile.cpp:776
+msgid "Previous LaTeX Warning"
+msgstr "Prethodno LaTeX-ovo upozorenje"
+
+#: kile.cpp:778
+msgid "Next LaTeX Warning"
+msgstr "Sljedeće LaTeX-ovo upozorenje"
+
+#: kile.cpp:780
+msgid "Previous LaTeX BadBox"
+msgstr "Prethodna LaTeX-ova loša kutija"
+
+#: kile.cpp:782
+msgid "Next LaTeX BadBox"
+msgstr "Sljedeća LaTeX-ova loša kutija"
+
+#: kile.cpp:785
+msgid "Return to Editor"
+msgstr ""
+
+#: kile.cpp:786
+msgid "Next Document"
+msgstr "Sljedeći dokument"
+
+#: kile.cpp:787
+msgid "Previous Document"
+msgstr "Prethodni dokument"
+
+#: kile.cpp:788
+msgid "Focus Log/Messages View"
+msgstr "Fokusiraj prikaz dnevnika/poruka"
+
+#: kile.cpp:789
+msgid "Focus Output View"
+msgstr "Fokusiraj prikaz izlaza"
+
+#: kile.cpp:790
+msgid "Focus Konsole View"
+msgstr "Fokusiraj prikaz Konsole"
+
+#: kile.cpp:791
+msgid "Focus Editor View"
+msgstr "Fokusiraj prikaz uređivača"
+
+#: kile.cpp:793
+#, fuzzy
+msgctxt "@action: Starts the completion of the current LaTeX command"
+msgid "Complete (La)TeX Command"
+msgstr "Naredba LaTeX-a"
+
+#: kile.cpp:794
+#, fuzzy
+msgctxt "@action: Starts the input (and completion) of a LaTeX environment"
+msgid "Complete LaTeX Environment"
+msgstr "Integrisano okruženje LaTeX-a za KDE"
+
+#: kile.cpp:795
+#, fuzzy
+msgctxt "@action: Starts the completion of the current abbreviation"
+msgid "Complete Abbreviation"
+msgstr "Datoteke dovršavanja za režim skraćenica"
+
+#: kile.cpp:797
+msgid "Next Bullet"
+msgstr "Sljedeći predznak"
+
+#: kile.cpp:798
+msgid "Prev Bullet"
+msgstr "Prethodni predznak"
+
+#: kile.cpp:801 kile.cpp:810
+msgid "Environment (inside)"
+msgstr "Okruženje (unutra)"
+
+#: kile.cpp:802 kile.cpp:811
+msgid "Environment (outside)"
+msgstr "Okruženje (izvan)"
+
+#: kile.cpp:803 kile.cpp:812
+msgid "TeX Group (inside)"
+msgstr "TeX grupa (unutra)"
+
+#: kile.cpp:804 kile.cpp:813
+msgid "TeX Group (outside)"
+msgstr "TeX grupa (izvan)"
+
+#: kile.cpp:805 kile.cpp:814
+#, fuzzy
+msgid "Math Group"
+msgstr "TeX &grupa"
+
+#: kile.cpp:806 kile.cpp:815
+msgid "Paragraph"
+msgstr "Pasus"
+
+#: kile.cpp:807
+msgid "Line"
+msgstr "Red"
+
+#: kile.cpp:808 kile.cpp:817
+msgid "TeX Word"
+msgstr "TeX riječ"
+
+#: kile.cpp:816
+msgid "To End of Line"
+msgstr ""
+
+#: kile.cpp:819 kile.cpp:825
+#, fuzzy
+msgid "Go to Begin"
+msgstr "Idi na početak"
+
+#: kile.cpp:820 kile.cpp:826
+#, fuzzy
+msgid "Go to End"
+msgstr "Idi na kraj"
+
+#: kile.cpp:821 kile.cpp:827
+msgid "Match"
+msgstr "Poklopi"
+
+#: kile.cpp:822 kile.cpp:828
+#, fuzzy
+msgid "Close"
+msgstr "Zatvori sve"
+
+#: kile.cpp:830
+msgid "Selection"
+msgstr "Izbor"
+
+#: kile.cpp:832
+msgid "Subdocument"
+msgstr "Poddokument"
+
+#: kile.cpp:833
+#, fuzzy
+msgid "Mathgroup"
+msgstr "Matematika"
+
+#: kile.cpp:838
+msgid "&Bibliography"
+msgstr "&Bibliografija"
+
+#: kile.cpp:847
+msgid "Settings for BibTeX"
+msgstr ""
+
+#: kile.cpp:851
+msgid "Settings for Biblatex"
+msgstr ""
+
+#: kile.cpp:858 kile.cpp:2235
+msgid "Quick Start"
+msgstr "Brzi početak"
+
+#: kile.cpp:863
+msgid "Floats"
+msgstr "Plutajući"
+
+#: kile.cpp:868
+msgid "Define Current Document as '&Master Document'"
+msgstr "Definiši tekući dokument kao „&glavni dokument“"
+
+#: kile.cpp:874
+#, fuzzy
+msgid "Show Document Viewer"
+msgstr "Dokument: %1"
+
+#: kile.cpp:882
+msgid "Show S&ide Bar"
+msgstr "Prikaži &bočnu traku"
+
+#: kile.cpp:888
+msgid "Show Mess&ages Bar"
+msgstr "Prikaži traku &poruka"
+
+#: kile.cpp:900
+msgid "Watch File Mode"
+msgstr "Režim nadgledanja datoteke"
+
+#: kile.cpp:917
+#, fuzzy
+msgid "TeX Guide"
+msgstr "Vodič za teTeX"
+
+#: kile.cpp:919
+msgid "LaTeX Command"
+msgstr "Naredba LaTeX-a"
+
+#: kile.cpp:920
+msgid "LaTeX Subject"
+msgstr "LaTeX-ova tema"
+
+#: kile.cpp:921
+msgid "LaTeX Env"
+msgstr "LaTeX-ovo okruženje"
+
+#: kile.cpp:922
+msgid "Context Help"
+msgstr "Kontekstna pomoć"
+
+#: kile.cpp:925
+msgid "LaTeX Reference"
+msgstr "LaTeX-ova referenca"
+
+#: kile.cpp:930
+msgid "&About Editor Component"
+msgstr ""
+
+#: kile.cpp:938
+msgid "&System Check..."
+msgstr "Provjera &sistema..."
+
+#: kile.cpp:957
+msgid "Biblatex"
+msgstr ""
+
+#: kile.cpp:1231
+#, fuzzy
+msgid "Edit User Tags..."
+msgstr "Uredi korisničke oznake"
+
+#: kile.cpp:1331
+msgid ""
+"It was impossible to create the \"Archive\" tool.\n"
+"\n"
+"Please check and repair your installation of Kile."
+msgstr ""
+
+#: kile.cpp:1333
+#, fuzzy
+#| msgid "Unable to remove the template."
+msgid "Unable to Create Archive Tool"
+msgstr "Nisam uspio da uklonim šablon."
+
+#: kile.cpp:1402
+#, kde-format
+msgid "Project: %1"
+msgstr "Projekat: %1"
+
+#: kile.cpp:1405
+#, kde-format
+msgid "Project: %1 (Master document: %2)"
+msgstr "Projekat: %1 (glavni dokument: %2)"
+
+#: kile.cpp:1411
+msgid "Normal mode"
+msgstr "Normalan režim"
+
+#: kile.cpp:1414
+#, kde-format
+msgid "Master document: %1"
+msgstr "Glavni dokument: %1"
+
+#: kile.cpp:1419 kile.cpp:2606
+msgid "Define Current Document as 'Master Document'"
+msgstr "Definiši tekući dokument kao „glavni dokument“"
+
+#: kile.cpp:1423 kile.cpp:2596
+#, kde-format
+msgid "Normal mode (current master document: %1)"
+msgstr "Normalni režim (tekući glavni dokument: %1)"
+
+#: kile.cpp:2119
+msgid "There is no active document or it is not saved."
+msgstr "Nema aktivnog dokumenta ili nije snimljen."
+
+#: kile.cpp:2206
+#, fuzzy, kde-format
+msgid "You have to include the package %1."
+msgstr "Nisam mogao da identifikujem ime paketa."
+
+#: kile.cpp:2206 kile.cpp:2209
+#, fuzzy
+msgid "Insert text"
+msgstr "Ubaci tekst"
+
+#: kile.cpp:2209
+#, fuzzy, kde-format
+msgid "You have to include the packages %1."
+msgstr "Nisam mogao da identifikujem ime paketa."
+
+#: kile.cpp:2357
+#, fuzzy
+msgid "Could not create the \"ViewHTML\" tool. Please reset the tools."
+msgstr "Nisam mogao da napravim privremenu datoteku."
+
+#: kile.cpp:2369
+msgid "Edit User Tags"
+msgstr "Uredi korisničke oznake"
+
+#: kile.cpp:2389 kile.cpp:2427
+msgid "no name"
+msgstr "bez imena"
+
+#: kile.cpp:2624
+msgid ""
+"In order to define the current document as a master document, it has to be "
+"saved first."
+msgstr ""
+"Da biste definisali tekući dokument kao glavni, morate ga prvo snimiti."
+
+#: kile.cpp:2941
+#, fuzzy, kde-format
+msgid "Line: %1 Col: %2"
+msgstr "Linija: 1 kolona: 1"
+
+#: kile.cpp:2969
+msgctxt "@info:status status bar label for block selection mode"
+msgid "BLOCK"
+msgstr ""
+
+#: kile.cpp:2970
+msgctxt "@info:status status bar label for line selection mode"
+msgid "LINE"
+msgstr ""
+
+#: kile.cpp:2977
+#, fuzzy
+#| msgid "Refresh Str&ucture"
+msgid "Refreshing structure..."
+msgstr "Osvježi &strukturu"
+
+#: kiletool.cpp:54
+#, kde-format
+msgid "Could not change to the folder %1."
+msgstr "Nisam mogao da pređem u fasciklu %1."
+
+#: kiletool.cpp:55
+#, kde-format
+msgid ""
+"The folder %1 is not writable, therefore %2 will not be able to save its "
+"results."
+msgstr ""
+"U fasciklu %1 ne može se pisati, stoga %2 neće moći da snimi svoje rezultate."
+
+#: kiletool.cpp:56
+#, fuzzy, kde-format
+msgid ""
+"The file %1/%2 does not exist. If this is unexpected, check the file "
+"permissions."
+msgstr ""
+"Datoteka %1/%2 ne postoji. Ako ste iznenađeni, provjerite dozvole za "
+"datoteku."
+
+#: kiletool.cpp:57
+#, fuzzy, kde-format
+msgid ""
+"The file %1/%2 is not readable. If this is unexpected, check the file "
+"permissions."
+msgstr ""
+"Datoteka %1/%2 nije čitljiva. Ako ste iznenađeni, provjerite dozvole za "
+"datoteku."
+
+#: kiletool.cpp:58
+#, kde-format
+msgid ""
+"Could not determine on which file to run %1, because there is no active "
+"document."
+msgstr ""
+"Nisam mogao da odredim nad kojom datotekom da pokrenem %1, zato što nema "
+"aktivnog dokumenta."
+
+#: kiletool.cpp:59
+msgid "Could not determine the master file for this document."
+msgstr "Nisam mogao da utvrdim glavnu datoteku za ovaj dokument."
+
+#: kiletool.cpp:60
+msgid "Please save the untitled document first."
+msgstr "Prvo snimite neimenovani dokument."
+
+#: kiletool.cpp:61
+#, fuzzy, kde-format
+msgid "The file %1 does not exist."
+msgstr "Izvinite, datoteka %1 ne postoji."
+
+#: kiletool.cpp:62
+#, fuzzy, kde-format
+msgid "The file %1 is not readable."
+msgstr "Izvinite, datoteka %1 nije čitljiva."
+
+#: kiletool.cpp:634
+#, kde-format
+msgid "The document %1 is not a LaTeX root document; continue anyway?"
+msgstr "Dokument %1 nije LaTeX-ov korijeni dokument; da ipak nastavim?"
+
+#: kiletool.cpp:634
+msgid "Continue?"
+msgstr "Da nastavim?"
+
+#: kiletool.cpp:646
+#, fuzzy, kde-format
+msgid "The file %1/%2 does not exist; did you compile the source file?"
+msgstr "Datoteka %2/%3 ne postoji; da li ste preveli izvornu datoteku?"
+
+#: kiletool.cpp:666
+msgid ""
+"The current document is not associated to a project. Please activate a "
+"document that is associated to the project you want to archive, then choose "
+"Archive again."
+msgstr ""
+"Tekući dokument nije povezan sa projektom. Aktivirajte dokument koji je "
+"povezan sa projektom koji želite da arhivirate, a onda ponovo izaberite "
+"„Arhiviraj“."
+
+#: kiletool.cpp:670
+msgid "No files have been chosen for archiving."
+msgstr ""
+
+#: kiletool.cpp:686
+msgid "Archive Project"
+msgstr "Arhiviraj projekat"
+
+#: kiletool.cpp:777 kiletoolmanager.cpp:264
+#, kde-format
+msgid "Unknown tool %1."
+msgstr "Nepoznat alat %1."
+
+#: kiletoolmanager.cpp:258
+msgid "No factory installed, contact the author of Kile."
+msgstr "Nema instalirane fabrike, kontaktirajte autora Kile-a."
+
+#: kiletoolmanager.cpp:341
+msgid "Aborted"
+msgstr "Obustavljeno"
+
+#: kiletoolmanager.cpp:465
+#, fuzzy, kde-format
+msgid "Cannot find the tool \"%1\" in the configuration database."
+msgstr "Ne mogu da pronađem alat %1 u bazi podešavanja."
+
 #. i18n: file: tips:2
 #. i18n: ectx: @info:tipoftheday
 #: tips.cpp:3
@@ -11328,6 +11368,18 @@ msgstr ""
 "<p>...da Kile može prikazati korisnički definisane datoteke pomoći?</p>\n"
 "<p>Idite na <b>Podešavanja->Podesi Kile->Pomoć</b> i podesite svoje datoteke "
 "pomoći, koji se integrišu u meni za pomoć.</p>\n"
+
+#, fuzzy
+#~ msgid "&Save Results..."
+#~ msgstr "Rezultati testa"
+
+#, fuzzy
+#~| msgid "Finished testing your system..."
+#~ msgid "Finished testing your system."
+#~ msgstr "Završio sam sa testiranjem sistema..."
+
+#~ msgid "Tests finished abruptly..."
+#~ msgstr "Testovi su iznenada završeni..."
 
 #~ msgid "Critical failure"
 #~ msgstr "Kritičan neuspjeh"
