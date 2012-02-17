@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-14 05:34+0100\n"
+"POT-Creation-Date: 2012-02-17 03:57+0100\n"
 "PO-Revision-Date: 2011-05-08 12:42+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -66,8 +66,8 @@ msgctxt "@title:window"
 msgid "Select Folder"
 msgstr "Izbor direktorija"
 
-#: bookmarks/kbookmarkdialog.cc:159 ../kfile/kdirselectdialog.cpp:135
-#: ../kfile/knewfilemenu.cpp:1032
+#: bookmarks/kbookmarkdialog.cc:159 ../kfile/knewfilemenu.cpp:1032
+#: ../kfile/kdirselectdialog.cpp:135
 msgctxt "@title:window"
 msgid "New Folder"
 msgstr "Novi direktorij"
@@ -239,9 +239,67 @@ msgstr "Napravi novi direktorij obilježivača u ovom meniju"
 msgid "Receiving corrupt data."
 msgstr "Primam oštećene podatke."
 
-#: kfile/kdevicelistmodel.cpp:116
-msgid "Device name"
-msgstr "Ime uređaja"
+#: kfile/kfilemetadataprovider.cpp:223
+#, fuzzy, kde-format
+#| msgctxt "Items in a folder"
+#| msgid "1 item"
+#| msgid_plural "%1 items"
+msgctxt "@item:intable"
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] "%1 stavka"
+msgstr[1] "%1 stavke"
+msgstr[2] "%1 stavki"
+
+#: kfile/kfilemetadataprovider.cpp:422 kfile/knfotranslator.cpp:40
+msgctxt "@label"
+msgid "Comment"
+msgstr "Komentar"
+
+# >> file modification date
+#: kfile/kfilemetadataprovider.cpp:423
+msgctxt "@label"
+msgid "Modified"
+msgstr "Izmijenjen"
+
+#: kfile/kfilemetadataprovider.cpp:424
+msgctxt "@label"
+msgid "Owner"
+msgstr "Vlasnik"
+
+#: kfile/kfilemetadataprovider.cpp:425
+msgctxt "@label"
+msgid "Permissions"
+msgstr "Dozvole"
+
+#: kfile/kfilemetadataprovider.cpp:426
+msgctxt "@label"
+msgid "Rating"
+msgstr "Rejting"
+
+#: kfile/kfilemetadataprovider.cpp:427
+msgctxt "@label"
+msgid "Size"
+msgstr "Veličina"
+
+#: kfile/kfilemetadataprovider.cpp:428
+msgctxt "@label"
+msgid "Tags"
+msgstr "Oznake"
+
+#: kfile/kfilemetadataprovider.cpp:429
+msgctxt "@label"
+msgid "Total Size"
+msgstr "Ukupna veličina"
+
+#: kfile/kfilemetadataprovider.cpp:430
+msgctxt "@label"
+msgid "Type"
+msgstr "Vrsta:"
+
+#: kfile/kfilemetainfowidget.cpp:163
+msgid "<Error>"
+msgstr "&lt;greška&gt;"
 
 #: kfile/kfilesharedialog.cpp:53
 msgid "&Share"
@@ -318,118 +376,6 @@ msgid ""
 msgstr ""
 "Greška pri pokušaju prekida dijeljenja direktorija <filename>%1</filename>. "
 "Provjerite da li skripta <command>fileshareset</command> ima korijeni sUID."
-
-#: kfile/kopenwithdialog.cpp:269
-msgid "Known Applications"
-msgstr "Poznati programi"
-
-#: kfile/kopenwithdialog.cpp:483
-msgid "Open With"
-msgstr "Otvori pomoću"
-
-#: kfile/kopenwithdialog.cpp:488
-#, kde-format
-msgid ""
-"<qt>Select the program that should be used to open <b>%1</b>. If the program "
-"is not listed, enter the name or click the browse button.</qt>"
-msgstr ""
-"<qt>Izaberite program kojim će se otvoriti <b>%1</b>. Ako program nije na "
-"spisku, unesite njegovo ime ili kliknite na dugme za pregledanje.</qt>"
-
-#: kfile/kopenwithdialog.cpp:494
-msgid "Choose the name of the program with which to open the selected files."
-msgstr "Izaberite ime programa kojim će se otvoriti izabrane datoteke."
-
-#: kfile/kopenwithdialog.cpp:521
-#, kde-format
-msgid "Choose Application for %1"
-msgstr "Izaberite program za %1"
-
-#: kfile/kopenwithdialog.cpp:522
-#, kde-format
-msgid ""
-"<qt>Select the program for the file type: <b>%1</b>. If the program is not "
-"listed, enter the name or click the browse button.</qt>"
-msgstr ""
-"<qt>Izaberite program za tip datoteke: <b>%1</b>. Ako program nije na "
-"spisku, unesite njegovo ime ili kliknite na dugme za pregledanje.</qt>"
-
-# >> @title:window
-#: kfile/kopenwithdialog.cpp:537
-msgid "Choose Application"
-msgstr "Izbor programa"
-
-#: kfile/kopenwithdialog.cpp:538
-msgid ""
-"<qt>Select a program. If the program is not listed, enter the name or click "
-"the browse button.</qt>"
-msgstr ""
-"<qt>Izaberite program. Ako program nije na spisku, unesite njegovo ime ili "
-"kliknite na dugme za pregledanje.</qt>"
-
-#: kfile/kopenwithdialog.cpp:601
-msgid ""
-"Following the command, you can have several place holders which will be "
-"replaced with the actual values when the actual program is run:\n"
-"%f - a single file name\n"
-"%F - a list of files; use for applications that can open several local files "
-"at once\n"
-"%u - a single URL\n"
-"%U - a list of URLs\n"
-"%d - the directory of the file to open\n"
-"%D - a list of directories\n"
-"%i - the icon\n"
-"%m - the mini-icon\n"
-"%c - the comment"
-msgstr ""
-"Uz naredbu se mogu zadati neki mjestodržači koji će biti zamijenjeni "
-"stvarnim vrijednostima kad se pokrene program:\n"
-"%f — jedno ime datoteke\n"
-"%F — spisak datoteka; koristi se za programe koji mogu da otvore više "
-"lokalnih datoteka odjednom\n"
-"%u — jedan URL\n"
-"%U — spisak URL‑ova\n"
-"%d — direktorij datoteke koji se otvara\n"
-"%D — spisak direktorija\n"
-"%i — ikona\n"
-"%m — mini‑ikona\n"
-"%c — komentar"
-
-#: kfile/kopenwithdialog.cpp:636
-msgid "Run in &terminal"
-msgstr "Pokreni u &terminalu"
-
-#: kfile/kopenwithdialog.cpp:653
-msgid "&Do not close when command exits"
-msgstr "Ne &zatvaraj kad se naredba završi"
-
-#: kfile/kopenwithdialog.cpp:670
-msgid "&Remember application association for this type of file"
-msgstr "Zapamti &program koji otvara ovaj tip datoteke"
-
-#: kfile/kopenwithdialog.cpp:814
-#, kde-format
-msgid ""
-"Could not extract executable name from '%1', please type a valid program "
-"name."
-msgstr ""
-"Ne mogu da izvučem izvršno ime iz <filename>%1</filename>, unesite ispravno "
-"ime programa."
-
-#: kfile/kopenwithdialog.cpp:860
-#, kde-format
-msgid "'%1' not found, please type a valid program name."
-msgstr ""
-"Ne mogu da nađem <filename>%1</filename>, unesite ispravno ime programa."
-
-#: kfile/kfilemetainfowidget.cpp:163
-msgid "<Error>"
-msgstr "&lt;greška&gt;"
-
-#: kfile/knfotranslator.cpp:40 kfile/kfilemetadataprovider.cpp:422
-msgctxt "@label"
-msgid "Comment"
-msgstr "Komentar"
 
 #: kfile/knfotranslator.cpp:41
 msgctxt "@label creation date"
@@ -810,26 +756,6 @@ msgstr "Datum prevoda"
 msgctxt "@label Number of untranslated strings"
 msgid "Untranslated"
 msgstr "Neprevedeno"
-
-#: kfile/kmetaprops.cpp:57
-msgctxt "@title:window"
-msgid "Configure Shown Data"
-msgstr "Podešavanje prikaza podataka"
-
-#: kfile/kmetaprops.cpp:62
-msgctxt "@label::textbox"
-msgid "Select which data should be shown:"
-msgstr "Izaberite koji podaci treba da budu prikazani:"
-
-#: kfile/kmetaprops.cpp:120
-msgctxt "@action:button"
-msgid "Configure..."
-msgstr "Podesi..."
-
-#: kfile/kmetaprops.cpp:130
-msgctxt "@title:tab"
-msgid "Information"
-msgstr "Podaci"
 
 #: kfile/kpreviewprops.cpp:50
 msgid "P&review"
@@ -1379,30 +1305,6 @@ msgstr "Izvršne datoteke su podržani samo na lokalnom datotečnom sistemu."
 msgid "Advanced Options for %1"
 msgstr "Napredne opcije za %1"
 
-#: kfile/kfiledialog.cpp:126
-msgid "*|All files"
-msgstr "*|Sve datoteke"
-
-#: kfile/kfiledialog.cpp:357 ../kfile/kfilefiltercombo.cpp:185
-msgid "All Supported Files"
-msgstr "Svi podržani tipovi datoteka"
-
-#: kfile/kfiledialog.cpp:480 kfile/kfiledialog.cpp:490
-#: kfile/kfiledialog.cpp:511 kfile/kfiledialog.cpp:535
-#: kfile/kfiledialog.cpp:545 kfile/kfiledialog.cpp:571
-#: kfile/kfiledialog.cpp:603 kfile/kfiledialog.cpp:658
-#: kfile/kicondialog.cpp:693 kfile/kencodingfiledialog.cpp:106
-#: kfile/kencodingfiledialog.cpp:124 kfile/kencodingfiledialog.cpp:139
-#: kfile/kencodingfiledialog.cpp:157 kfile/kurlrequesterdialog.cpp:128
-msgid "Open"
-msgstr "Otvori"
-
-#: kfile/kfiledialog.cpp:738 kfile/kfiledialog.cpp:757
-#: kfile/kfiledialog.cpp:794 kfile/kfiledialog.cpp:836
-#: kfile/kencodingfiledialog.cpp:177 kfile/kencodingfiledialog.cpp:198
-msgid "Save As"
-msgstr "Sačuvaj kao"
-
 #: kfile/kacleditwidget.cpp:61 kfile/kacleditwidget.cpp:454
 msgid "Owner"
 msgstr "Vlasnik"
@@ -1494,6 +1396,10 @@ msgstr "i"
 #: kfile/kacleditwidget.cpp:630
 msgid "Effective"
 msgstr "Efektivni"
+
+#: kfile/kdevicelistmodel.cpp:116
+msgid "Device name"
+msgstr "Ime uređaja"
 
 # >> @title:window
 #: kfile/kicondialog.cpp:336 kfile/kicondialog.cpp:348
@@ -1590,58 +1496,138 @@ msgstr "stanje"
 msgid "*.png *.xpm *.svg *.svgz|Icon Files (*.png *.xpm *.svg *.svgz)"
 msgstr "*.png *.xpm *.svg *.svgz|datoteke ikona (*.png *.xpm *.svg *.svgz)"
 
-#: kfile/kfilemetadataprovider.cpp:223
-#, fuzzy, kde-format
-#| msgctxt "Items in a folder"
-#| msgid "1 item"
-#| msgid_plural "%1 items"
-msgctxt "@item:intable"
-msgid "%1 item"
-msgid_plural "%1 items"
-msgstr[0] "%1 stavka"
-msgstr[1] "%1 stavke"
-msgstr[2] "%1 stavki"
+#: kfile/kicondialog.cpp:693 kfile/kfiledialog.cpp:480
+#: kfile/kfiledialog.cpp:490 kfile/kfiledialog.cpp:511
+#: kfile/kfiledialog.cpp:535 kfile/kfiledialog.cpp:545
+#: kfile/kfiledialog.cpp:571 kfile/kfiledialog.cpp:603
+#: kfile/kfiledialog.cpp:658 kfile/kencodingfiledialog.cpp:106
+#: kfile/kencodingfiledialog.cpp:124 kfile/kencodingfiledialog.cpp:139
+#: kfile/kencodingfiledialog.cpp:157 kfile/kurlrequesterdialog.cpp:128
+msgid "Open"
+msgstr "Otvori"
 
-# >> file modification date
-#: kfile/kfilemetadataprovider.cpp:423
-msgctxt "@label"
-msgid "Modified"
-msgstr "Izmijenjen"
+#: kfile/kmetaprops.cpp:57
+msgctxt "@title:window"
+msgid "Configure Shown Data"
+msgstr "Podešavanje prikaza podataka"
 
-#: kfile/kfilemetadataprovider.cpp:424
-msgctxt "@label"
-msgid "Owner"
-msgstr "Vlasnik"
+#: kfile/kmetaprops.cpp:62
+msgctxt "@label::textbox"
+msgid "Select which data should be shown:"
+msgstr "Izaberite koji podaci treba da budu prikazani:"
 
-#: kfile/kfilemetadataprovider.cpp:425
-msgctxt "@label"
-msgid "Permissions"
-msgstr "Dozvole"
+#: kfile/kmetaprops.cpp:120
+msgctxt "@action:button"
+msgid "Configure..."
+msgstr "Podesi..."
 
-#: kfile/kfilemetadataprovider.cpp:426
-msgctxt "@label"
-msgid "Rating"
-msgstr "Rejting"
+#: kfile/kmetaprops.cpp:130
+msgctxt "@title:tab"
+msgid "Information"
+msgstr "Podaci"
 
-#: kfile/kfilemetadataprovider.cpp:427
-msgctxt "@label"
-msgid "Size"
-msgstr "Veličina"
+#: kfile/kopenwithdialog.cpp:269
+msgid "Known Applications"
+msgstr "Poznati programi"
 
-#: kfile/kfilemetadataprovider.cpp:428
-msgctxt "@label"
-msgid "Tags"
-msgstr "Oznake"
+#: kfile/kopenwithdialog.cpp:483
+msgid "Open With"
+msgstr "Otvori pomoću"
 
-#: kfile/kfilemetadataprovider.cpp:429
-msgctxt "@label"
-msgid "Total Size"
-msgstr "Ukupna veličina"
+#: kfile/kopenwithdialog.cpp:488
+#, kde-format
+msgid ""
+"<qt>Select the program that should be used to open <b>%1</b>. If the program "
+"is not listed, enter the name or click the browse button.</qt>"
+msgstr ""
+"<qt>Izaberite program kojim će se otvoriti <b>%1</b>. Ako program nije na "
+"spisku, unesite njegovo ime ili kliknite na dugme za pregledanje.</qt>"
 
-#: kfile/kfilemetadataprovider.cpp:430
-msgctxt "@label"
-msgid "Type"
-msgstr "Vrsta:"
+#: kfile/kopenwithdialog.cpp:494
+msgid "Choose the name of the program with which to open the selected files."
+msgstr "Izaberite ime programa kojim će se otvoriti izabrane datoteke."
+
+#: kfile/kopenwithdialog.cpp:521
+#, kde-format
+msgid "Choose Application for %1"
+msgstr "Izaberite program za %1"
+
+#: kfile/kopenwithdialog.cpp:522
+#, kde-format
+msgid ""
+"<qt>Select the program for the file type: <b>%1</b>. If the program is not "
+"listed, enter the name or click the browse button.</qt>"
+msgstr ""
+"<qt>Izaberite program za tip datoteke: <b>%1</b>. Ako program nije na "
+"spisku, unesite njegovo ime ili kliknite na dugme za pregledanje.</qt>"
+
+# >> @title:window
+#: kfile/kopenwithdialog.cpp:537
+msgid "Choose Application"
+msgstr "Izbor programa"
+
+#: kfile/kopenwithdialog.cpp:538
+msgid ""
+"<qt>Select a program. If the program is not listed, enter the name or click "
+"the browse button.</qt>"
+msgstr ""
+"<qt>Izaberite program. Ako program nije na spisku, unesite njegovo ime ili "
+"kliknite na dugme za pregledanje.</qt>"
+
+#: kfile/kopenwithdialog.cpp:601
+msgid ""
+"Following the command, you can have several place holders which will be "
+"replaced with the actual values when the actual program is run:\n"
+"%f - a single file name\n"
+"%F - a list of files; use for applications that can open several local files "
+"at once\n"
+"%u - a single URL\n"
+"%U - a list of URLs\n"
+"%d - the directory of the file to open\n"
+"%D - a list of directories\n"
+"%i - the icon\n"
+"%m - the mini-icon\n"
+"%c - the comment"
+msgstr ""
+"Uz naredbu se mogu zadati neki mjestodržači koji će biti zamijenjeni "
+"stvarnim vrijednostima kad se pokrene program:\n"
+"%f — jedno ime datoteke\n"
+"%F — spisak datoteka; koristi se za programe koji mogu da otvore više "
+"lokalnih datoteka odjednom\n"
+"%u — jedan URL\n"
+"%U — spisak URL‑ova\n"
+"%d — direktorij datoteke koji se otvara\n"
+"%D — spisak direktorija\n"
+"%i — ikona\n"
+"%m — mini‑ikona\n"
+"%c — komentar"
+
+#: kfile/kopenwithdialog.cpp:636
+msgid "Run in &terminal"
+msgstr "Pokreni u &terminalu"
+
+#: kfile/kopenwithdialog.cpp:653
+msgid "&Do not close when command exits"
+msgstr "Ne &zatvaraj kad se naredba završi"
+
+#: kfile/kopenwithdialog.cpp:670
+msgid "&Remember application association for this type of file"
+msgstr "Zapamti &program koji otvara ovaj tip datoteke"
+
+#: kfile/kopenwithdialog.cpp:814
+#, kde-format
+msgid ""
+"Could not extract executable name from '%1', please type a valid program "
+"name."
+msgstr ""
+"Ne mogu da izvučem izvršno ime iz <filename>%1</filename>, unesite ispravno "
+"ime programa."
+
+#: kfile/kopenwithdialog.cpp:860
+#, kde-format
+msgid "'%1' not found, please type a valid program name."
+msgstr ""
+"Ne mogu da nađem <filename>%1</filename>, unesite ispravno ime programa."
 
 #: kfile/kcommentwidget.cpp:65
 msgctxt "@label"
@@ -1662,6 +1648,20 @@ msgstr "Izmjena komentara"
 msgctxt "@title:window"
 msgid "Add Comment"
 msgstr "Dodavanje komentara"
+
+#: kfile/kfiledialog.cpp:126
+msgid "*|All files"
+msgstr "*|Sve datoteke"
+
+#: kfile/kfiledialog.cpp:357 ../kfile/kfilefiltercombo.cpp:185
+msgid "All Supported Files"
+msgstr "Svi podržani tipovi datoteka"
+
+#: kfile/kfiledialog.cpp:738 kfile/kfiledialog.cpp:757
+#: kfile/kfiledialog.cpp:794 kfile/kfiledialog.cpp:836
+#: kfile/kencodingfiledialog.cpp:177 kfile/kencodingfiledialog.cpp:198
+msgid "Save As"
+msgstr "Sačuvaj kao"
 
 #: kfile/kencodingfiledialog.cpp:49
 msgid "Encoding:"
@@ -4039,6 +4039,16 @@ msgstr "OCR slika"
 msgid "The desktop is offline"
 msgstr "Površ je van veze"
 
+#: kio/netaccess.cpp:104
+#, kde-format
+msgid "File '%1' is not readable"
+msgstr "Datoteka „%1“ nije čitljiva"
+
+#: kio/netaccess.cpp:453
+#, kde-format
+msgid "ERROR: Unknown protocol '%1'"
+msgstr "GREŠKA: Nepoznat protokol „%1“"
+
 #: kio/pastedialog.cpp:55
 msgid "Data format:"
 msgstr "Format podataka:"
@@ -4093,21 +4103,6 @@ msgstr "&Da"
 msgid "&No"
 msgstr "&Ne"
 
-#: kio/netaccess.cpp:104
-#, kde-format
-msgid "File '%1' is not readable"
-msgstr "Datoteka „%1“ nije čitljiva"
-
-#: kio/netaccess.cpp:453
-#, kde-format
-msgid "ERROR: Unknown protocol '%1'"
-msgstr "GREŠKA: Nepoznat protokol „%1“"
-
-# rewrite-msgid: /Authorization/Authentication/
-#: kio/passworddialog.cpp:57
-msgid "Authorization Dialog"
-msgstr "Dijalog za autentifikaciju"
-
 #: kio/skipdialog.cpp:37
 msgid "Information"
 msgstr "Informacija"
@@ -4119,6 +4114,11 @@ msgstr "Preskoči"
 #: kio/skipdialog.cpp:47
 msgid "AutoSkip"
 msgstr "Automatski preskači"
+
+# rewrite-msgid: /Authorization/Authentication/
+#: kio/passworddialog.cpp:57
+msgid "Authorization Dialog"
+msgstr "Dijalog za autentifikaciju"
 
 #: kio/slave.cpp:438
 #, kde-format
@@ -4933,19 +4933,6 @@ msgstr "Ne mogu naći 'FindProxyForURL' ili 'FindProxyForURLEx'"
 msgid "Got an invalid reply when calling %1"
 msgstr "Dobijen nevažeći odgovor pri pozivu %1"
 
-#: misc/kpac/downloader.cpp:87
-#, kde-format
-msgid ""
-"Could not download the proxy configuration script:\n"
-"%1"
-msgstr ""
-"Ne mogu da preuzmem skriptu postave proksija:\n"
-"%1"
-
-#: misc/kpac/downloader.cpp:89
-msgid "Could not download the proxy configuration script"
-msgstr "Ne mogu da preuzmem skriptu postave proksija"
-
 #: misc/kpac/proxyscout.cpp:224
 #, kde-format
 msgid ""
@@ -4967,6 +4954,19 @@ msgstr ""
 #: misc/kpac/discovery.cpp:111
 msgid "Could not find a usable proxy configuration script"
 msgstr "Ne mogu da pronađem upotrebljivu skriptu postave proksija"
+
+#: misc/kpac/downloader.cpp:87
+#, kde-format
+msgid ""
+"Could not download the proxy configuration script:\n"
+"%1"
+msgstr ""
+"Ne mogu da preuzmem skriptu postave proksija:\n"
+"%1"
+
+#: misc/kpac/downloader.cpp:89
+msgid "Could not download the proxy configuration script"
+msgstr "Ne mogu da preuzmem skriptu postave proksija"
 
 #: misc/ksendbugmail/main.cpp:43
 msgid "Error connecting to server."
@@ -5784,11 +5784,11 @@ msgstr ""
 "%2\n"
 "\n"
 
-#: ../kioslave/ftp/ftp.cpp:576 ../kioslave/http/http.cpp:3491
+#: ../kioslave/ftp/ftp.cpp:576 ../kioslave/http/http.cpp:3493
 msgid "You need to supply a username and a password to access this site."
 msgstr "Morate navesti korisničko ime i lozinku za pristup ovom sajtu."
 
-#: ../kioslave/ftp/ftp.cpp:578 ../kioslave/http/http.cpp:3493
+#: ../kioslave/ftp/ftp.cpp:578 ../kioslave/http/http.cpp:3495
 msgid "Site:"
 msgstr "Sajt:"
 
@@ -5806,8 +5806,8 @@ msgstr "Prijava u redu"
 msgid "Could not login to %1."
 msgstr "Ne mogu da se prijavim na %1."
 
-#: ../kioslave/ftp/ftp.cpp:2561 ../kioslave/http/http.cpp:3503
-#: ../kioslave/http/http.cpp:5408
+#: ../kioslave/ftp/ftp.cpp:2561 ../kioslave/http/http.cpp:3505
+#: ../kioslave/http/http.cpp:5410
 msgid ""
 "You need to supply a username and a password for the proxy server listed "
 "below before you are allowed to access any sites."
@@ -5815,19 +5815,19 @@ msgstr ""
 "Morate navesti korisničko ime i lozinku za proksi server naveden ispod prije "
 "nego što vam se dozvoli pristup bilo kom sajtu."
 
-#: ../kioslave/ftp/ftp.cpp:2565 ../kioslave/http/http.cpp:3506
-#: ../kioslave/http/http.cpp:5412
+#: ../kioslave/ftp/ftp.cpp:2565 ../kioslave/http/http.cpp:3508
+#: ../kioslave/http/http.cpp:5414
 msgid "Proxy:"
 msgstr "Proksi:"
 
-#: ../kioslave/ftp/ftp.cpp:2566 ../kioslave/http/http.cpp:3580
-#: ../kioslave/http/http.cpp:5413
+#: ../kioslave/ftp/ftp.cpp:2566 ../kioslave/http/http.cpp:3582
+#: ../kioslave/http/http.cpp:5415
 #, kde-format
 msgid "<b>%1</b> at <b>%2</b>"
 msgstr "<b>%1</b> na <b>%2</b>"
 
-#: ../kioslave/ftp/ftp.cpp:2567 ../kioslave/http/http.cpp:3570
-#: ../kioslave/http/http.cpp:5414
+#: ../kioslave/ftp/ftp.cpp:2567 ../kioslave/http/http.cpp:3572
+#: ../kioslave/http/http.cpp:5416
 msgid "Proxy Authentication Failed."
 msgstr "Autentifikacija proksija nije uspjela."
 
@@ -6011,97 +6011,97 @@ msgstr "Ukloni sve kolačiće"
 msgid "Reload configuration file"
 msgstr "Učitaj ponovo postavnu datoteku"
 
-#: ../kioslave/http/http.cpp:599
+#: ../kioslave/http/http.cpp:601
 msgid "No host specified."
 msgstr "Domaćin nije naveden."
 
-#: ../kioslave/http/http.cpp:1592
+#: ../kioslave/http/http.cpp:1594
 msgid "Otherwise, the request would have succeeded."
 msgstr "Inače, zahtjev bi uspio."
 
 # U sklopu rečenice: „...pri pokušaju da se ...“ ili „Ne može ...“
-#: ../kioslave/http/http.cpp:1596
+#: ../kioslave/http/http.cpp:1598
 msgctxt "request type"
 msgid "retrieve property values"
 msgstr "dobave vrijednosti svojstva"
 
 # U sklopu rečenice: „...pri pokušaju da se ...“ ili „Ne može ...“
-#: ../kioslave/http/http.cpp:1599
+#: ../kioslave/http/http.cpp:1601
 msgctxt "request type"
 msgid "set property values"
 msgstr "postavi vrijednosti svojstva"
 
 # U sklopu rečenice: „...pri pokušaju da se ...“ ili „Ne može ...“
-#: ../kioslave/http/http.cpp:1602
+#: ../kioslave/http/http.cpp:1604
 msgctxt "request type"
 msgid "create the requested folder"
 msgstr "napravi zahtijevani direktorij"
 
 # U sklopu rečenice: „...pri pokušaju da se ...“ ili „Ne može ...“
-#: ../kioslave/http/http.cpp:1605
+#: ../kioslave/http/http.cpp:1607
 msgctxt "request type"
 msgid "copy the specified file or folder"
 msgstr "kopira navedenu datoteku ili direktorij"
 
 # U sklopu rečenice: „...pri pokušaju da se ...“ ili „Ne može ...“
-#: ../kioslave/http/http.cpp:1608
+#: ../kioslave/http/http.cpp:1610
 msgctxt "request type"
 msgid "move the specified file or folder"
 msgstr "pomjeri navedenu datoteku ili direktorij"
 
 # U sklopu rečenice: „...pri pokušaju da se ...“ ili „Ne može ...“
-#: ../kioslave/http/http.cpp:1611
+#: ../kioslave/http/http.cpp:1613
 msgctxt "request type"
 msgid "search in the specified folder"
 msgstr "traži u navedenom direktoriju"
 
 # U sklopu rečenice: „...pri pokušaju da se ...“ ili „Ne može ...“
-#: ../kioslave/http/http.cpp:1614
+#: ../kioslave/http/http.cpp:1616
 msgctxt "request type"
 msgid "lock the specified file or folder"
 msgstr "zaključa navedenu datoteku ili direktorij"
 
 # U sklopu rečenice: „...pri pokušaju da se ...“ ili „Ne može ...“
-#: ../kioslave/http/http.cpp:1617
+#: ../kioslave/http/http.cpp:1619
 msgctxt "request type"
 msgid "unlock the specified file or folder"
 msgstr "otključa navedenu datoteku ili direktorij"
 
 # U sklopu rečenice: „...pri pokušaju da se ...“ ili „Ne može ...“
-#: ../kioslave/http/http.cpp:1620
+#: ../kioslave/http/http.cpp:1622
 msgctxt "request type"
 msgid "delete the specified file or folder"
 msgstr "obriše navedenu datoteku ili direktorij"
 
 # U sklopu rečenice: „...pri pokušaju da se ...“ ili „Ne može ...“
-#: ../kioslave/http/http.cpp:1623
+#: ../kioslave/http/http.cpp:1625
 msgctxt "request type"
 msgid "query the server's capabilities"
 msgstr "upita server za sposobnosti"
 
 # U sklopu rečenice: „...pri pokušaju da se ...“ ili „Ne može ...“
-#: ../kioslave/http/http.cpp:1626
+#: ../kioslave/http/http.cpp:1628
 msgctxt "request type"
 msgid "retrieve the contents of the specified file or folder"
 msgstr "dobavi sadržaj navedene datoteke ili direktorija"
 
 # U sklopu rečenice: „...pri pokušaju da se ...“ ili „Ne može ...“
-#: ../kioslave/http/http.cpp:1629
+#: ../kioslave/http/http.cpp:1631
 msgctxt "request type"
 msgid "run a report in the specified folder"
 msgstr "izvrši izvještaj u navedenom direktoriju"
 
-#: ../kioslave/http/http.cpp:1640
+#: ../kioslave/http/http.cpp:1642
 #, kde-format
 msgctxt "%1: code, %2: request type"
 msgid "An unexpected error (%1) occurred while attempting to %2."
 msgstr "Neočekivana greška (%1) pri pokušaju da se %2."
 
-#: ../kioslave/http/http.cpp:1648
+#: ../kioslave/http/http.cpp:1650
 msgid "The server does not support the WebDAV protocol."
 msgstr "Server ne podržava protokol WebDAV."
 
-#: ../kioslave/http/http.cpp:1690
+#: ../kioslave/http/http.cpp:1692
 #, kde-format
 msgctxt "%1: request type, %2: url"
 msgid ""
@@ -6109,13 +6109,13 @@ msgid ""
 "below."
 msgstr "Greška pri pokušaju da se %1, %2. Sažetak razloga je dat ispod."
 
-#: ../kioslave/http/http.cpp:1704 ../kioslave/http/http.cpp:1836
+#: ../kioslave/http/http.cpp:1706 ../kioslave/http/http.cpp:1838
 #, kde-format
 msgctxt "%1: request type"
 msgid "Access was denied while attempting to %1."
 msgstr "Odbijen je pristup pri pokušaju da se %1."
 
-#: ../kioslave/http/http.cpp:1717 ../kioslave/http/http.cpp:1842
+#: ../kioslave/http/http.cpp:1719 ../kioslave/http/http.cpp:1844
 msgid ""
 "A resource cannot be created at the destination until one or more "
 "intermediate collections (folders) have been created."
@@ -6123,7 +6123,7 @@ msgstr ""
 "Resurs ne može biti napravljen na odredištu sve dok se jedna ili više "
 "posredišnih zbirki (direktorija) ne napravi."
 
-#: ../kioslave/http/http.cpp:1725
+#: ../kioslave/http/http.cpp:1727
 #, kde-format
 msgid ""
 "The server was unable to maintain the liveness of the properties listed in "
@@ -6134,26 +6134,26 @@ msgstr ""
 "<icode>propertybehavior</icode> ili ste pokušali da prebrišete datoteku iako "
 "ste zahtijevali da se datoteke ne prebrisuju. %1"
 
-#: ../kioslave/http/http.cpp:1733
+#: ../kioslave/http/http.cpp:1735
 #, kde-format
 msgid "The requested lock could not be granted. %1"
 msgstr "Traženo zaključavanje nije bilo odobreno. %1"
 
-#: ../kioslave/http/http.cpp:1739
+#: ../kioslave/http/http.cpp:1741
 msgid "The server does not support the request type of the body."
 msgstr "Server ne podržava tip zahtijeva u tijelu."
 
-#: ../kioslave/http/http.cpp:1744 ../kioslave/http/http.cpp:1850
+#: ../kioslave/http/http.cpp:1746 ../kioslave/http/http.cpp:1852
 #, kde-format
 msgctxt "%1: request type"
 msgid "Unable to %1 because the resource is locked."
 msgstr "Ne može da se %1 zato što je resurs zaključan."
 
-#: ../kioslave/http/http.cpp:1748
+#: ../kioslave/http/http.cpp:1750
 msgid "This action was prevented by another error."
 msgstr "Ova radnja je spriječena drugom greškom."
 
-#: ../kioslave/http/http.cpp:1754 ../kioslave/http/http.cpp:1856
+#: ../kioslave/http/http.cpp:1756 ../kioslave/http/http.cpp:1858
 #, kde-format
 msgctxt "%1: request type"
 msgid ""
@@ -6163,7 +6163,7 @@ msgstr ""
 "Ne može da se %1 zato što odredišni server odbija da prihvati datoteku ili "
 "direktorij."
 
-#: ../kioslave/http/http.cpp:1761 ../kioslave/http/http.cpp:1863
+#: ../kioslave/http/http.cpp:1763 ../kioslave/http/http.cpp:1865
 msgid ""
 "The destination resource does not have sufficient space to record the state "
 "of the resource after the execution of this method."
@@ -6171,29 +6171,29 @@ msgstr ""
 "Odredišni resurs nema dovoljno prostora da zapiše stanje resursa poslije "
 "izvršenja ove metode."
 
-#: ../kioslave/http/http.cpp:1814
+#: ../kioslave/http/http.cpp:1816
 msgid "The resource cannot be deleted."
 msgstr "Resurs se ne može obrisati."
 
 # U sklopu rečenice: „pri pokušaju da se ...“ ili „ne može ...“
-#: ../kioslave/http/http.cpp:1827
+#: ../kioslave/http/http.cpp:1829
 #, kde-format
 msgctxt "request type"
 msgid "upload %1"
 msgstr "okači %1"
 
-#: ../kioslave/http/http.cpp:1877
+#: ../kioslave/http/http.cpp:1879
 #, kde-format
 msgctxt "%1: response code, %2: request type"
 msgid "An unexpected error (%1) occurred while attempting to %2."
 msgstr "Neočekivana greška (%1) pri pokušaju da se %2."
 
-#: ../kioslave/http/http.cpp:2703
+#: ../kioslave/http/http.cpp:2705
 #, kde-format
 msgid "%1 contacted. Waiting for reply..."
 msgstr "%1 je kontaktiran. Čekam odgovor..."
 
-#: ../kioslave/http/http.cpp:3035
+#: ../kioslave/http/http.cpp:3037
 #, kde-format
 msgctxt "@warning: Security check on url being accessed"
 msgid ""
@@ -6202,35 +6202,35 @@ msgid ""
 "<p>Is \"%1\" the site you want to visit?"
 msgstr ""
 
-#: ../kioslave/http/http.cpp:3042
+#: ../kioslave/http/http.cpp:3044
 msgctxt "@title:window"
 msgid "Confirm Website Access"
 msgstr ""
 
-#: ../kioslave/http/http.cpp:3119
+#: ../kioslave/http/http.cpp:3121
 msgid "Server processing request, please wait..."
 msgstr "Server obrađuje zahtjev, sačekajte..."
 
-#: ../kioslave/http/http.cpp:3567
+#: ../kioslave/http/http.cpp:3569
 msgid "Authentication Failed."
 msgstr "Autentifikacija nije uspjela."
 
 # rewrite-msgid: /Authorization/Authentication/
-#: ../kioslave/http/http.cpp:3613
+#: ../kioslave/http/http.cpp:3615
 msgid "Authorization failed."
 msgstr "Autentifikacija nije uspjela."
 
 # rewrite-msgid: /Authorization/Authentication/
-#: ../kioslave/http/http.cpp:3630
+#: ../kioslave/http/http.cpp:3632
 msgid "Unknown Authorization method."
 msgstr "Nepoznat metod autentifikacije."
 
-#: ../kioslave/http/http.cpp:4012 ../kioslave/http/http.cpp:4066
+#: ../kioslave/http/http.cpp:4014 ../kioslave/http/http.cpp:4068
 #, kde-format
 msgid "Sending data to %1"
 msgstr "Šaljem podatke na %1"
 
-#: ../kioslave/http/http.cpp:4532
+#: ../kioslave/http/http.cpp:4534
 #, kde-format
 msgid "Retrieving %1 from %2..."
 msgstr "Dobavljam %1 sa %2..."
@@ -6243,35 +6243,6 @@ msgstr "kio_metainfo"
 #, kde-format
 msgid "No metainfo for %1"
 msgstr "Nema metapodataka za %1"
-
-#: ../kfile/kfileplacesview.cpp:575
-msgctxt "@action:inmenu"
-msgid "Empty Trash"
-msgstr "Isprazni smeće"
-
-#: ../kfile/kfileplacesview.cpp:582
-#, kde-format
-msgid "&Edit Entry '%1'..."
-msgstr "&Izmijeni stavku „%1“..."
-
-#: ../kfile/kfileplacesview.cpp:604
-#, kde-format
-msgid "&Hide Entry '%1'"
-msgstr "&Sakrij stavku „%1“"
-
-#: ../kfile/kfileplacesview.cpp:613
-msgid "&Show All Entries"
-msgstr "&Prikaži sve unose"
-
-#: ../kfile/kfileplacesview.cpp:624
-#, kde-format
-msgid "&Remove Entry '%1'"
-msgstr "&Ukloni stavku „%1“"
-
-#: ../kfile/kfileplacesview.cpp:636
-msgctxt "@info"
-msgid "Do you really want to empty the Trash? All items will be deleted."
-msgstr "Želite li zaista da ispraznite smeće? Sve stavke će biti obrisane."
 
 #: ../kfile/kurlnavigatorprotocolcombo.cpp:173
 msgctxt "@item:inmenu"
@@ -6288,147 +6259,13 @@ msgctxt "@item:inmenu"
 msgid "Other"
 msgstr "Drugo"
 
-#: ../kfile/kdirselectdialog.cpp:131
-msgctxt "folder name"
-msgid "New Folder"
-msgstr "Novi Direktorij"
+#: ../kfile/kfilefiltercombo.cpp:36 ../kfile/kfilewidget.cpp:1802
+msgid "*|All Files"
+msgstr "*|Sve datoteke"
 
-#: ../kfile/kdirselectdialog.cpp:136
-#, kde-format
-msgctxt "@label:textbox"
-msgid ""
-"Create new folder in:\n"
-"%1"
-msgstr ""
-"Napravi novi direktorij u:\n"
-"<filename>%1</filename>"
-
-#: ../kfile/kdirselectdialog.cpp:159 ../kfile/kdiroperator.cpp:766
-#, kde-format
-msgid "A file or folder named %1 already exists."
-msgstr "Datoteka ili direktorij po imenu <filename>%1</filename> već postoji."
-
-#: ../kfile/kdirselectdialog.cpp:163 ../kfile/kdiroperator.cpp:768
-msgid "You do not have permission to create that folder."
-msgstr "Nemate dozvolu da napravite taj direktorij."
-
-#: ../kfile/kdirselectdialog.cpp:283
-msgctxt "@action:button"
-msgid "New Folder..."
-msgstr "Novi direktorij..."
-
-#: ../kfile/kdirselectdialog.cpp:324
-msgctxt "@action:inmenu"
-msgid "New Folder..."
-msgstr "Novi direktorij..."
-
-#: ../kfile/kdirselectdialog.cpp:331
-msgctxt "@action:inmenu"
-msgid "Move to Trash"
-msgstr "Premjesti u smeće"
-
-#: ../kfile/kdirselectdialog.cpp:338
-msgctxt "@action:inmenu"
-msgid "Delete"
-msgstr "Obriši"
-
-#: ../kfile/kdirselectdialog.cpp:347
-msgctxt "@option:check"
-msgid "Show Hidden Folders"
-msgstr "Prikaz skrivenih direktorija"
-
-#: ../kfile/kdirselectdialog.cpp:354
-msgctxt "@action:inmenu"
-msgid "Properties"
-msgstr "Svojstva"
-
-#: ../kfile/knewfilemenu.cpp:369 ../kfile/knewfilemenu.cpp:878
-msgid "Sorry"
-msgstr "Žalim"
-
-#: ../kfile/knewfilemenu.cpp:378
-#, kde-format
-msgid "<qt>The template file <b>%1</b> does not exist.</qt>"
-msgstr "<qt>Datoteka šablona <filename>%1</filename> ne postoji.</qt>"
-
-#: ../kfile/knewfilemenu.cpp:397
-msgctxt "@action:button"
-msgid "Create directory"
-msgstr "Napravi direktorij"
-
-#: ../kfile/knewfilemenu.cpp:399
-msgctxt "@action:button"
-msgid "Enter a different name"
-msgstr "Izaberi drugo ime"
-
-#: ../kfile/knewfilemenu.cpp:402
-msgid "Create hidden directory?"
-msgstr "Napraviti skriveni direktorij?"
-
-#: ../kfile/knewfilemenu.cpp:406
-#, kde-format
-msgid ""
-"The name \"%1\" starts with a dot, so the directory will be hidden by "
-"default."
-msgstr ""
-"<html>Ime <filename>%1</filename> počinje s tačkom, tako da će direktorij "
-"podrazumijevano biti skriven.</html>"
-
-#: ../kfile/knewfilemenu.cpp:408
-msgid "Do not ask again"
-msgstr "Ne pitaj ponovo"
-
-#: ../kfile/knewfilemenu.cpp:501 ../kfile/knewfilemenu.cpp:564
-msgid "File name:"
-msgstr "Ime datoteke:"
-
-#: ../kfile/knewfilemenu.cpp:504
-msgid "Create Symlink"
-msgstr "Kreiraj simboličku vezu"
-
-#: ../kfile/knewfilemenu.cpp:568
-msgid "Create link to URL"
-msgstr "Stvaranje veze ka URL‑u"
-
-#: ../kfile/knewfilemenu.cpp:614 ../kfile/knewfilemenu.cpp:662
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Open With, %1 is application name"
-#| msgid "%1"
-msgctxt "@item:inmenu Create New"
-msgid "%1"
-msgstr "%1"
-
-#: ../kfile/knewfilemenu.cpp:888
-msgid ""
-"Basic links can only point to local files or directories.\n"
-"Please use \"Link to Location\" for remote URLs."
-msgstr ""
-"Osnovne veze mogu da pokazuju samo na lokalne datoteke i direktorije.\n"
-"Za udaljene URL‑ove koristite <interface>Veza do lokacije (URL)...</"
-"interface>."
-
-# >> @action Create new document
-#: ../kfile/knewfilemenu.cpp:964
-msgid "Create New"
-msgstr "Napravi novi"
-
-#: ../kfile/knewfilemenu.cpp:977
-msgid "Link to Device"
-msgstr "Veza ka uređaju"
-
-#: ../kfile/knewfilemenu.cpp:1022
-msgctxt "Default name for a new folder"
-msgid "New Folder"
-msgstr "Novi Direktorij"
-
-#: ../kfile/knewfilemenu.cpp:1036
-#, kde-format
-msgid ""
-"Create new folder in:\n"
-"%1"
-msgstr ""
-"Napravi novi direktorij u:\n"
-"<filename>%1</filename>"
+#: ../kfile/kfilefiltercombo.cpp:194
+msgid "All Files"
+msgstr "Sve datoteke"
 
 #: ../kfile/kurlnavigatortogglebutton.cpp:93
 msgid "Click for Location Navigation"
@@ -6437,14 +6274,6 @@ msgstr "Kliknite za kretanje kroz lokacije"
 #: ../kfile/kurlnavigatortogglebutton.cpp:95
 msgid "Click to Edit Location"
 msgstr "Kliknite za uređivanje lokacije"
-
-#: ../kfile/kfilefiltercombo.cpp:36 ../kfile/kfilewidget.cpp:1802
-msgid "*|All Files"
-msgstr "*|Sve datoteke"
-
-#: ../kfile/kfilefiltercombo.cpp:194
-msgid "All Files"
-msgstr "Sve datoteke"
 
 #: ../kfile/kfileplacesmodel.cpp:117
 msgctxt "KFile System Bookmarks"
@@ -6501,276 +6330,6 @@ msgstr "Greška pri pristupu <resource>%1</resource>, sistem javlja: %2"
 #, kde-format
 msgid "An error occurred while accessing '%1'"
 msgstr "Greška pri pristupu <resource>%1</resource>"
-
-#: ../kfile/kfiletreeview.cpp:187
-msgid "Show Hidden Folders"
-msgstr "Skriveni direktoriji"
-
-#: ../kfile/kfileplaceeditdialog.cpp:90
-msgid "Add Places Entry"
-msgstr "Dodavanje stavke u Mjesta"
-
-#: ../kfile/kfileplaceeditdialog.cpp:92
-msgid "Edit Places Entry"
-msgstr "Uredi stavku u Mjestima"
-
-#: ../kfile/kfileplaceeditdialog.cpp:103
-msgid ""
-"<qt>This is the text that will appear in the Places panel.<br /><br />The "
-"label should consist of one or two words that will help you remember what "
-"this entry refers to. If you do not enter a label, it will be derived from "
-"the location's URL.</qt>"
-msgstr ""
-"<qt><p>Ovo je tekst koji će se pojaviti u panelu Mjesta.</p><p>Etiketa bi "
-"trebalo da bude jedna ili dvije riječi koje će vas podsjetiti na šta ova "
-"stavka upućuje. Ako je ne unesete, biće izvedena iz URL‑a lokacije.</p></qt>"
-
-#: ../kfile/kfileplaceeditdialog.cpp:109
-msgid "L&abel:"
-msgstr "&Etiketa:"
-
-#: ../kfile/kfileplaceeditdialog.cpp:111
-msgid "Enter descriptive label here"
-msgstr "Ovdje ide opisna etiketa"
-
-#: ../kfile/kfileplaceeditdialog.cpp:115
-#, kde-format
-msgid ""
-"<qt>This is the location associated with the entry. Any valid URL may be "
-"used. For example:<br /><br />%1<br />http://www.kde.org<br />ftp://ftp.kde."
-"org/pub/kde/stable<br /><br />By clicking on the button next to the text "
-"edit box you can browse to an appropriate URL.</qt>"
-msgstr ""
-"<qt>Ovo je lokacija pridružena stavki. Može biti zadat bilo koji ispravan "
-"URL, na primjer:<br />%1<br />http://www.kde.org<br />ftp://ftp.kde.org/pub/"
-"kde/stable<br /><br />Klikom na dugme pored polja za unos teksta možete "
-"pregledati navedeni URL.</qt>"
-
-#: ../kfile/kfileplaceeditdialog.cpp:121
-msgid "&Location:"
-msgstr "&Lokacija:"
-
-#: ../kfile/kfileplaceeditdialog.cpp:127
-msgid ""
-"<qt>This is the icon that will appear in the Places panel.<br /><br />Click "
-"on the button to select a different icon.</qt>"
-msgstr ""
-"<qt>Ovo je ikona koja će se stajati uz stavku u panelu Mjesta.<br /><br /"
-">Kliknite na dugme da izaberete neku drugu.</qt>"
-
-#: ../kfile/kfileplaceeditdialog.cpp:130
-msgid "Choose an &icon:"
-msgstr "Izaberite &ikonu:"
-
-#: ../kfile/kfileplaceeditdialog.cpp:147
-#, kde-format
-msgid "&Only show when using this application (%1)"
-msgstr "Prikazuj samo u okviru &ovog programa (%1)"
-
-#: ../kfile/kfileplaceeditdialog.cpp:149
-#, kde-format
-msgid ""
-"<qt>Select this setting if you want this entry to show only when using the "
-"current application (%1).<br /><br />If this setting is not selected, the "
-"entry will be available in all applications.</qt>"
-msgstr ""
-"<qt>Postavite ovo ako želite da se stavka prikazuje samo kad se koristi "
-"tekući program (%1).<br /><br />U suprotnom, stavka će biti dostupna u svim "
-"programima.</qt>"
-
-#: ../kfile/kurlnavigator.cpp:431
-msgid "Copy"
-msgstr "Kopiraj"
-
-#: ../kfile/kurlnavigator.cpp:435
-msgid "Paste"
-msgstr "Umetni"
-
-#: ../kfile/kurlnavigator.cpp:442
-msgid "Edit"
-msgstr "Izmijeni"
-
-#: ../kfile/kurlnavigator.cpp:445
-msgid "Navigate"
-msgstr "Navigacija"
-
-#: ../kfile/kurlnavigator.cpp:460
-msgid "Show Full Path"
-msgstr "Puna putanja"
-
-#: ../kfile/kurlnavigator.cpp:698
-msgid "Custom Path"
-msgstr "Posebna putanja"
-
-#: ../kfile/kurlnavigatorbutton.cpp:675
-msgctxt "@action:inmenu"
-msgid "More"
-msgstr "Više"
-
-#: ../kfile/kdiroperator.cpp:783
-msgid "You did not select a file to delete."
-msgstr "Niste izabrali datoteku za brisanje."
-
-#: ../kfile/kdiroperator.cpp:784
-msgid "Nothing to Delete"
-msgstr "Ničijeg za brisanje"
-
-#: ../kfile/kdiroperator.cpp:805
-#, kde-format
-msgid ""
-"<qt>Do you really want to delete\n"
-" <b>'%1'</b>?</qt>"
-msgstr ""
-"<qt>Želite li zaista da obrišete\n"
-"<filename>%1</filename>?</qt>"
-
-#: ../kfile/kdiroperator.cpp:807
-msgid "Delete File"
-msgstr "Obriši datoteku"
-
-#: ../kfile/kdiroperator.cpp:845
-msgid "You did not select a file to trash."
-msgstr "Niste izabrali datoteku za bacanje u smeće."
-
-#: ../kfile/kdiroperator.cpp:846
-msgid "Nothing to Trash"
-msgstr "Ničijeg za smeće"
-
-#: ../kfile/kdiroperator.cpp:863
-#, kde-format
-msgid ""
-"<qt>Do you really want to trash\n"
-" <b>'%1'</b>?</qt>"
-msgstr ""
-"<qt>Želite li zaista da bacite u smeće\n"
-"<filename>%1</filename>?</qt>"
-
-#: ../kfile/kdiroperator.cpp:865
-msgid "Trash File"
-msgstr "Baci u smeće"
-
-#: ../kfile/kdiroperator.cpp:866 ../kfile/kdiroperator.cpp:873
-msgctxt "to trash"
-msgid "&Trash"
-msgstr "&Baci"
-
-#: ../kfile/kdiroperator.cpp:870
-#, kde-format
-msgid "translators: not called for n == 1"
-msgid_plural "Do you really want to trash these %1 items?"
-msgstr[0] "Želite li zaista da bacite u smeće ovu %1 stavku?"
-msgstr[1] "Želite li zaista da bacite u smeće ove %1 stavke?"
-msgstr[2] "Želite li zaista da bacite u smeće ovih %1 stavki?"
-
-#: ../kfile/kdiroperator.cpp:872
-msgid "Trash Files"
-msgstr "Baci u smeće"
-
-#: ../kfile/kdiroperator.cpp:1064 ../kfile/kdiroperator.cpp:1201
-msgid "The specified folder does not exist or was not readable."
-msgstr "Navedeni direktorij ne postoji ili se ne može čitati."
-
-#: ../kfile/kdiroperator.cpp:1852
-msgid "Menu"
-msgstr "Meni"
-
-#: ../kfile/kdiroperator.cpp:1856
-msgid "Parent Folder"
-msgstr "Roditeljski direktorij"
-
-#: ../kfile/kdiroperator.cpp:1863
-msgid "Home Folder"
-msgstr "Lični direktorij"
-
-#: ../kfile/kdiroperator.cpp:1866
-msgid "Reload"
-msgstr "Učitaj ponovo"
-
-#: ../kfile/kdiroperator.cpp:1869
-msgid "New Folder..."
-msgstr "Novi direktorij..."
-
-#: ../kfile/kdiroperator.cpp:1880
-msgid "Delete"
-msgstr "Obriši"
-
-#: ../kfile/kdiroperator.cpp:1887
-msgid "Sorting"
-msgstr "Ređanje"
-
-#: ../kfile/kdiroperator.cpp:1890
-msgid "By Name"
-msgstr "po imenu"
-
-#: ../kfile/kdiroperator.cpp:1894
-msgid "By Size"
-msgstr "po veličini"
-
-#: ../kfile/kdiroperator.cpp:1898
-msgid "By Date"
-msgstr "po datumu"
-
-#: ../kfile/kdiroperator.cpp:1902
-msgid "By Type"
-msgstr "po tipu"
-
-#: ../kfile/kdiroperator.cpp:1906
-msgid "Descending"
-msgstr "opadajuće"
-
-#: ../kfile/kdiroperator.cpp:1910
-msgid "Folders First"
-msgstr "prvo direktoriji"
-
-#: ../kfile/kdiroperator.cpp:1920
-msgid "Icon Position"
-msgstr "Položaj ikona"
-
-# @item:inmenu Icon Position
-#: ../kfile/kdiroperator.cpp:1923
-msgid "Next to File Name"
-msgstr "pored imena datoteke"
-
-# @item:inmenu Icon Position
-#: ../kfile/kdiroperator.cpp:1927
-msgid "Above File Name"
-msgstr "iznad imena datoteke"
-
-#: ../kfile/kdiroperator.cpp:1938
-msgid "Short View"
-msgstr "Sažeti prikaz"
-
-#: ../kfile/kdiroperator.cpp:1943
-msgid "Detailed View"
-msgstr "Detaljan prikaz"
-
-#: ../kfile/kdiroperator.cpp:1948
-msgid "Tree View"
-msgstr "Prikaz stabla"
-
-#: ../kfile/kdiroperator.cpp:1953
-msgid "Detailed Tree View"
-msgstr "Detaljni prikaz stabla"
-
-#: ../kfile/kdiroperator.cpp:1964
-msgid "Show Hidden Files"
-msgstr "Skrivene datoteke"
-
-#: ../kfile/kdiroperator.cpp:1968
-msgid "Show Aside Preview"
-msgstr "Pregled sa strane"
-
-#: ../kfile/kdiroperator.cpp:1974
-msgid "Show Preview"
-msgstr "Pregled"
-
-#: ../kfile/kdiroperator.cpp:1978
-msgid "Open File Manager"
-msgstr "Otvori menadžer datoteka"
-
-#: ../kfile/kdiroperator.cpp:1990
-msgid "&View"
-msgstr "&Prikaz"
 
 #: ../kfile/kfilewidget.cpp:286
 msgid ""
@@ -7045,6 +6604,447 @@ msgstr ""
 "na njega, otvoriće vam se meni u kome možete dodavati, uređivati ili birati "
 "obilježivače.<br /><br />Ovi obilježivači su posebni za dijalog datoteka, "
 "ali se inače ponašaju kao bilo gdje drugdje u KDE‑u.</qt>"
+
+#: ../kfile/kdiroperator.cpp:766 ../kfile/kdirselectdialog.cpp:159
+#, kde-format
+msgid "A file or folder named %1 already exists."
+msgstr "Datoteka ili direktorij po imenu <filename>%1</filename> već postoji."
+
+#: ../kfile/kdiroperator.cpp:768 ../kfile/kdirselectdialog.cpp:163
+msgid "You do not have permission to create that folder."
+msgstr "Nemate dozvolu da napravite taj direktorij."
+
+#: ../kfile/kdiroperator.cpp:783
+msgid "You did not select a file to delete."
+msgstr "Niste izabrali datoteku za brisanje."
+
+#: ../kfile/kdiroperator.cpp:784
+msgid "Nothing to Delete"
+msgstr "Ničijeg za brisanje"
+
+#: ../kfile/kdiroperator.cpp:805
+#, kde-format
+msgid ""
+"<qt>Do you really want to delete\n"
+" <b>'%1'</b>?</qt>"
+msgstr ""
+"<qt>Želite li zaista da obrišete\n"
+"<filename>%1</filename>?</qt>"
+
+#: ../kfile/kdiroperator.cpp:807
+msgid "Delete File"
+msgstr "Obriši datoteku"
+
+#: ../kfile/kdiroperator.cpp:845
+msgid "You did not select a file to trash."
+msgstr "Niste izabrali datoteku za bacanje u smeće."
+
+#: ../kfile/kdiroperator.cpp:846
+msgid "Nothing to Trash"
+msgstr "Ničijeg za smeće"
+
+#: ../kfile/kdiroperator.cpp:863
+#, kde-format
+msgid ""
+"<qt>Do you really want to trash\n"
+" <b>'%1'</b>?</qt>"
+msgstr ""
+"<qt>Želite li zaista da bacite u smeće\n"
+"<filename>%1</filename>?</qt>"
+
+#: ../kfile/kdiroperator.cpp:865
+msgid "Trash File"
+msgstr "Baci u smeće"
+
+#: ../kfile/kdiroperator.cpp:866 ../kfile/kdiroperator.cpp:873
+msgctxt "to trash"
+msgid "&Trash"
+msgstr "&Baci"
+
+#: ../kfile/kdiroperator.cpp:870
+#, kde-format
+msgid "translators: not called for n == 1"
+msgid_plural "Do you really want to trash these %1 items?"
+msgstr[0] "Želite li zaista da bacite u smeće ovu %1 stavku?"
+msgstr[1] "Želite li zaista da bacite u smeće ove %1 stavke?"
+msgstr[2] "Želite li zaista da bacite u smeće ovih %1 stavki?"
+
+#: ../kfile/kdiroperator.cpp:872
+msgid "Trash Files"
+msgstr "Baci u smeće"
+
+#: ../kfile/kdiroperator.cpp:1064 ../kfile/kdiroperator.cpp:1201
+msgid "The specified folder does not exist or was not readable."
+msgstr "Navedeni direktorij ne postoji ili se ne može čitati."
+
+#: ../kfile/kdiroperator.cpp:1852
+msgid "Menu"
+msgstr "Meni"
+
+#: ../kfile/kdiroperator.cpp:1856
+msgid "Parent Folder"
+msgstr "Roditeljski direktorij"
+
+#: ../kfile/kdiroperator.cpp:1863
+msgid "Home Folder"
+msgstr "Lični direktorij"
+
+#: ../kfile/kdiroperator.cpp:1866
+msgid "Reload"
+msgstr "Učitaj ponovo"
+
+#: ../kfile/kdiroperator.cpp:1869
+msgid "New Folder..."
+msgstr "Novi direktorij..."
+
+#: ../kfile/kdiroperator.cpp:1880
+msgid "Delete"
+msgstr "Obriši"
+
+#: ../kfile/kdiroperator.cpp:1887
+msgid "Sorting"
+msgstr "Ređanje"
+
+#: ../kfile/kdiroperator.cpp:1890
+msgid "By Name"
+msgstr "po imenu"
+
+#: ../kfile/kdiroperator.cpp:1894
+msgid "By Size"
+msgstr "po veličini"
+
+#: ../kfile/kdiroperator.cpp:1898
+msgid "By Date"
+msgstr "po datumu"
+
+#: ../kfile/kdiroperator.cpp:1902
+msgid "By Type"
+msgstr "po tipu"
+
+#: ../kfile/kdiroperator.cpp:1906
+msgid "Descending"
+msgstr "opadajuće"
+
+#: ../kfile/kdiroperator.cpp:1910
+msgid "Folders First"
+msgstr "prvo direktoriji"
+
+#: ../kfile/kdiroperator.cpp:1920
+msgid "Icon Position"
+msgstr "Položaj ikona"
+
+# @item:inmenu Icon Position
+#: ../kfile/kdiroperator.cpp:1923
+msgid "Next to File Name"
+msgstr "pored imena datoteke"
+
+# @item:inmenu Icon Position
+#: ../kfile/kdiroperator.cpp:1927
+msgid "Above File Name"
+msgstr "iznad imena datoteke"
+
+#: ../kfile/kdiroperator.cpp:1938
+msgid "Short View"
+msgstr "Sažeti prikaz"
+
+#: ../kfile/kdiroperator.cpp:1943
+msgid "Detailed View"
+msgstr "Detaljan prikaz"
+
+#: ../kfile/kdiroperator.cpp:1948
+msgid "Tree View"
+msgstr "Prikaz stabla"
+
+#: ../kfile/kdiroperator.cpp:1953
+msgid "Detailed Tree View"
+msgstr "Detaljni prikaz stabla"
+
+#: ../kfile/kdiroperator.cpp:1964
+msgid "Show Hidden Files"
+msgstr "Skrivene datoteke"
+
+#: ../kfile/kdiroperator.cpp:1968
+msgid "Show Aside Preview"
+msgstr "Pregled sa strane"
+
+#: ../kfile/kdiroperator.cpp:1974
+msgid "Show Preview"
+msgstr "Pregled"
+
+#: ../kfile/kdiroperator.cpp:1978
+msgid "Open File Manager"
+msgstr "Otvori menadžer datoteka"
+
+#: ../kfile/kdiroperator.cpp:1990
+msgid "&View"
+msgstr "&Prikaz"
+
+#: ../kfile/kfileplaceeditdialog.cpp:90
+msgid "Add Places Entry"
+msgstr "Dodavanje stavke u Mjesta"
+
+#: ../kfile/kfileplaceeditdialog.cpp:92
+msgid "Edit Places Entry"
+msgstr "Uredi stavku u Mjestima"
+
+#: ../kfile/kfileplaceeditdialog.cpp:103
+msgid ""
+"<qt>This is the text that will appear in the Places panel.<br /><br />The "
+"label should consist of one or two words that will help you remember what "
+"this entry refers to. If you do not enter a label, it will be derived from "
+"the location's URL.</qt>"
+msgstr ""
+"<qt><p>Ovo je tekst koji će se pojaviti u panelu Mjesta.</p><p>Etiketa bi "
+"trebalo da bude jedna ili dvije riječi koje će vas podsjetiti na šta ova "
+"stavka upućuje. Ako je ne unesete, biće izvedena iz URL‑a lokacije.</p></qt>"
+
+#: ../kfile/kfileplaceeditdialog.cpp:109
+msgid "L&abel:"
+msgstr "&Etiketa:"
+
+#: ../kfile/kfileplaceeditdialog.cpp:111
+msgid "Enter descriptive label here"
+msgstr "Ovdje ide opisna etiketa"
+
+#: ../kfile/kfileplaceeditdialog.cpp:115
+#, kde-format
+msgid ""
+"<qt>This is the location associated with the entry. Any valid URL may be "
+"used. For example:<br /><br />%1<br />http://www.kde.org<br />ftp://ftp.kde."
+"org/pub/kde/stable<br /><br />By clicking on the button next to the text "
+"edit box you can browse to an appropriate URL.</qt>"
+msgstr ""
+"<qt>Ovo je lokacija pridružena stavki. Može biti zadat bilo koji ispravan "
+"URL, na primjer:<br />%1<br />http://www.kde.org<br />ftp://ftp.kde.org/pub/"
+"kde/stable<br /><br />Klikom na dugme pored polja za unos teksta možete "
+"pregledati navedeni URL.</qt>"
+
+#: ../kfile/kfileplaceeditdialog.cpp:121
+msgid "&Location:"
+msgstr "&Lokacija:"
+
+#: ../kfile/kfileplaceeditdialog.cpp:127
+msgid ""
+"<qt>This is the icon that will appear in the Places panel.<br /><br />Click "
+"on the button to select a different icon.</qt>"
+msgstr ""
+"<qt>Ovo je ikona koja će se stajati uz stavku u panelu Mjesta.<br /><br /"
+">Kliknite na dugme da izaberete neku drugu.</qt>"
+
+#: ../kfile/kfileplaceeditdialog.cpp:130
+msgid "Choose an &icon:"
+msgstr "Izaberite &ikonu:"
+
+#: ../kfile/kfileplaceeditdialog.cpp:147
+#, kde-format
+msgid "&Only show when using this application (%1)"
+msgstr "Prikazuj samo u okviru &ovog programa (%1)"
+
+#: ../kfile/kfileplaceeditdialog.cpp:149
+#, kde-format
+msgid ""
+"<qt>Select this setting if you want this entry to show only when using the "
+"current application (%1).<br /><br />If this setting is not selected, the "
+"entry will be available in all applications.</qt>"
+msgstr ""
+"<qt>Postavite ovo ako želite da se stavka prikazuje samo kad se koristi "
+"tekući program (%1).<br /><br />U suprotnom, stavka će biti dostupna u svim "
+"programima.</qt>"
+
+#: ../kfile/kfileplacesview.cpp:575
+msgctxt "@action:inmenu"
+msgid "Empty Trash"
+msgstr "Isprazni smeće"
+
+#: ../kfile/kfileplacesview.cpp:582
+#, kde-format
+msgid "&Edit Entry '%1'..."
+msgstr "&Izmijeni stavku „%1“..."
+
+#: ../kfile/kfileplacesview.cpp:604
+#, kde-format
+msgid "&Hide Entry '%1'"
+msgstr "&Sakrij stavku „%1“"
+
+#: ../kfile/kfileplacesview.cpp:613
+msgid "&Show All Entries"
+msgstr "&Prikaži sve unose"
+
+#: ../kfile/kfileplacesview.cpp:624
+#, kde-format
+msgid "&Remove Entry '%1'"
+msgstr "&Ukloni stavku „%1“"
+
+#: ../kfile/kfileplacesview.cpp:636
+msgctxt "@info"
+msgid "Do you really want to empty the Trash? All items will be deleted."
+msgstr "Želite li zaista da ispraznite smeće? Sve stavke će biti obrisane."
+
+#: ../kfile/kfiletreeview.cpp:187
+msgid "Show Hidden Folders"
+msgstr "Skriveni direktoriji"
+
+#: ../kfile/knewfilemenu.cpp:369 ../kfile/knewfilemenu.cpp:878
+msgid "Sorry"
+msgstr "Žalim"
+
+#: ../kfile/knewfilemenu.cpp:378
+#, kde-format
+msgid "<qt>The template file <b>%1</b> does not exist.</qt>"
+msgstr "<qt>Datoteka šablona <filename>%1</filename> ne postoji.</qt>"
+
+#: ../kfile/knewfilemenu.cpp:397
+msgctxt "@action:button"
+msgid "Create directory"
+msgstr "Napravi direktorij"
+
+#: ../kfile/knewfilemenu.cpp:399
+msgctxt "@action:button"
+msgid "Enter a different name"
+msgstr "Izaberi drugo ime"
+
+#: ../kfile/knewfilemenu.cpp:402
+msgid "Create hidden directory?"
+msgstr "Napraviti skriveni direktorij?"
+
+#: ../kfile/knewfilemenu.cpp:406
+#, kde-format
+msgid ""
+"The name \"%1\" starts with a dot, so the directory will be hidden by "
+"default."
+msgstr ""
+"<html>Ime <filename>%1</filename> počinje s tačkom, tako da će direktorij "
+"podrazumijevano biti skriven.</html>"
+
+#: ../kfile/knewfilemenu.cpp:408
+msgid "Do not ask again"
+msgstr "Ne pitaj ponovo"
+
+#: ../kfile/knewfilemenu.cpp:501 ../kfile/knewfilemenu.cpp:564
+msgid "File name:"
+msgstr "Ime datoteke:"
+
+#: ../kfile/knewfilemenu.cpp:504
+msgid "Create Symlink"
+msgstr "Kreiraj simboličku vezu"
+
+#: ../kfile/knewfilemenu.cpp:568
+msgid "Create link to URL"
+msgstr "Stvaranje veze ka URL‑u"
+
+#: ../kfile/knewfilemenu.cpp:614 ../kfile/knewfilemenu.cpp:662
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu Open With, %1 is application name"
+#| msgid "%1"
+msgctxt "@item:inmenu Create New"
+msgid "%1"
+msgstr "%1"
+
+#: ../kfile/knewfilemenu.cpp:888
+msgid ""
+"Basic links can only point to local files or directories.\n"
+"Please use \"Link to Location\" for remote URLs."
+msgstr ""
+"Osnovne veze mogu da pokazuju samo na lokalne datoteke i direktorije.\n"
+"Za udaljene URL‑ove koristite <interface>Veza do lokacije (URL)...</"
+"interface>."
+
+# >> @action Create new document
+#: ../kfile/knewfilemenu.cpp:964
+msgid "Create New"
+msgstr "Napravi novi"
+
+#: ../kfile/knewfilemenu.cpp:977
+msgid "Link to Device"
+msgstr "Veza ka uređaju"
+
+#: ../kfile/knewfilemenu.cpp:1022
+msgctxt "Default name for a new folder"
+msgid "New Folder"
+msgstr "Novi Direktorij"
+
+#: ../kfile/knewfilemenu.cpp:1036
+#, kde-format
+msgid ""
+"Create new folder in:\n"
+"%1"
+msgstr ""
+"Napravi novi direktorij u:\n"
+"<filename>%1</filename>"
+
+#: ../kfile/kurlnavigator.cpp:431
+msgid "Copy"
+msgstr "Kopiraj"
+
+#: ../kfile/kurlnavigator.cpp:435
+msgid "Paste"
+msgstr "Umetni"
+
+#: ../kfile/kurlnavigator.cpp:442
+msgid "Edit"
+msgstr "Izmijeni"
+
+#: ../kfile/kurlnavigator.cpp:445
+msgid "Navigate"
+msgstr "Navigacija"
+
+#: ../kfile/kurlnavigator.cpp:460
+msgid "Show Full Path"
+msgstr "Puna putanja"
+
+#: ../kfile/kurlnavigator.cpp:698
+msgid "Custom Path"
+msgstr "Posebna putanja"
+
+#: ../kfile/kurlnavigatorbutton.cpp:675
+msgctxt "@action:inmenu"
+msgid "More"
+msgstr "Više"
+
+#: ../kfile/kdirselectdialog.cpp:131
+msgctxt "folder name"
+msgid "New Folder"
+msgstr "Novi Direktorij"
+
+#: ../kfile/kdirselectdialog.cpp:136
+#, kde-format
+msgctxt "@label:textbox"
+msgid ""
+"Create new folder in:\n"
+"%1"
+msgstr ""
+"Napravi novi direktorij u:\n"
+"<filename>%1</filename>"
+
+#: ../kfile/kdirselectdialog.cpp:283
+msgctxt "@action:button"
+msgid "New Folder..."
+msgstr "Novi direktorij..."
+
+#: ../kfile/kdirselectdialog.cpp:324
+msgctxt "@action:inmenu"
+msgid "New Folder..."
+msgstr "Novi direktorij..."
+
+#: ../kfile/kdirselectdialog.cpp:331
+msgctxt "@action:inmenu"
+msgid "Move to Trash"
+msgstr "Premjesti u smeće"
+
+#: ../kfile/kdirselectdialog.cpp:338
+msgctxt "@action:inmenu"
+msgid "Delete"
+msgstr "Obriši"
+
+#: ../kfile/kdirselectdialog.cpp:347
+msgctxt "@option:check"
+msgid "Show Hidden Folders"
+msgstr "Prikaz skrivenih direktorija"
+
+#: ../kfile/kdirselectdialog.cpp:354
+msgctxt "@action:inmenu"
+msgid "Properties"
+msgstr "Svojstva"
 
 #~ msgid "Edit file type"
 #~ msgstr "Izmijeni tip datoteke"
