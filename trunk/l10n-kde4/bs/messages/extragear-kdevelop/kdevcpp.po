@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevelop\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-22 03:29+0100\n"
+"POT-Creation-Date: 2012-02-29 03:40+0100\n"
 "PO-Revision-Date: 2011-03-25 17:27+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -64,7 +64,7 @@ msgstr "Inicijaliziraj"
 msgid "Not Included Container"
 msgstr "Nije uključen sadržilac"
 
-#: codecompletion/context.cpp:1429
+#: codecompletion/context.cpp:1433
 #, kde-format
 msgctxt ""
 "Here, overload is used as a programming term.  This string is used to "
@@ -76,24 +76,27 @@ msgstr[0] "%1 dodatno preopterećenje od %2 (vidi više)"
 msgstr[1] "%1 dodatna preopterećenja od %2 (vidi više)"
 msgstr[2] "%1 dodatnih preopterećenja od %2 (vidi više)"
 
-#: codecompletion/context.cpp:1552
+#: codecompletion/context.cpp:1556
 #, kde-format
 msgid "Connect to %1 (%2)"
 msgstr "Poveži se %1 (%2)"
 
-#: codecompletion/context.cpp:1604
+#: codecompletion/context.cpp:1608
 msgid "Signals/Slots"
 msgstr "Signali/slotovi"
 
-#: codecompletion/context.cpp:1727
+#: codecompletion/context.cpp:1731
 msgid "Virtual Override"
 msgstr "Virtualno potiskivanje (override)"
 
-#: codecompletion/context.cpp:1734
+#: codecompletion/context.cpp:1738
+#, fuzzy
+#| msgid "Implement Function"
+msgctxt "@action"
 msgid "Implement Function"
 msgstr "Implementacija funkcije"
 
-#: codecompletion/context.cpp:1762 codecompletion/context.cpp:1764
+#: codecompletion/context.cpp:1766 codecompletion/context.cpp:1768
 msgid "C++ Builtin"
 msgstr "C++ ugrađeno"
 
@@ -146,39 +149,15 @@ msgstr "Nisam odabrao ništa, ne dodajem na odredište"
 msgid "Cancel"
 msgstr "Odustani"
 
-#: codegen/signatureassistant.cpp:209 codegen/signatureassistant.cpp:215
-msgid "declaration"
-msgstr "deklaracija"
-
-#: codegen/signatureassistant.cpp:209 codegen/signatureassistant.cpp:215
-msgid "definition"
-msgstr "definicija"
-
-#: codegen/signatureassistant.cpp:209
-#, kde-format
-msgid "Update %1 signature"
-msgstr "Ažuriranje %1 signatura"
-
-#: codegen/signatureassistant.cpp:214
-#, kde-format
-msgid ""
-"Update %1\n"
-"from: %2(%3)%4\n"
-"to: %2(%5)%6"
-msgstr ""
-"Ažuriranje %1\n"
-"sa: %2(%3)%4\n"
-"na: %2(%5)%6"
-
-#: codegen/signatureassistant.cpp:293 codegen/renameassistant.cpp:74
-#, kde-format
-msgid "Failed to apply changes: %1"
-msgstr "Neuspjela primjena promjena: %1"
-
 #: codegen/renameassistant.cpp:46
 #, kde-format
 msgid "Rename \"%1\" to \"%2\""
 msgstr "Preimenujem \"%1\" u \"%2\""
+
+#: codegen/renameassistant.cpp:74 codegen/signatureassistant.cpp:293
+#, kde-format
+msgid "Failed to apply changes: %1"
+msgstr "Neuspjela primjena promjena: %1"
 
 #: codegen/simplerefactoring.cpp:79
 msgid ""
@@ -276,6 +255,37 @@ msgstr "Preimenujem \"%1\" u \"%2\""
 #, kde-format
 msgid "Applying changes failed: %1"
 msgstr "Primjena promjena nije uspjela: %1"
+
+#: codegen/signatureassistant.cpp:209
+#, fuzzy
+#| msgid "Update %1 signature"
+msgid "Update declaration signature"
+msgstr "Ažuriranje %1 signatura"
+
+#: codegen/signatureassistant.cpp:209
+#, fuzzy
+#| msgid "Update %1 signature"
+msgid "Update definition signature"
+msgstr "Ažuriranje %1 signatura"
+
+#: codegen/signatureassistant.cpp:215
+msgid "declaration"
+msgstr "deklaracija"
+
+#: codegen/signatureassistant.cpp:215
+msgid "definition"
+msgstr "definicija"
+
+#: codegen/signatureassistant.cpp:214
+#, kde-format
+msgid ""
+"Update %1\n"
+"from: %2(%3)%4\n"
+"to: %2(%5)%6"
+msgstr ""
+"Ažuriranje %1\n"
+"sa: %2(%3)%4\n"
+"na: %2(%5)%6"
 
 #: cppduchain/missingdeclarationproblem.cpp:27
 #, kde-format
@@ -516,27 +526,6 @@ msgstr "Ne mogu izdvojiti include staze iz make izlaza"
 msgid "Folder: \"%1\"  Command: \"%2\"  Output: \"%3\""
 msgstr "Direktorij: \"%1\"  Naredba: \"%2\"  Izlaz: \"%3\""
 
-#: cppparsejob.cpp:153
-msgid "Parsing included files"
-msgstr "Parsiranje uključenih datoteka"
-
-#: cppparsejob.cpp:459
-msgid "Parsing actual file"
-msgstr "Parsiranje stvarne datoteke"
-
-#: cppparsejob.cpp:571
-#, kde-format
-msgid "Not updating duchain for %1"
-msgstr "Nije ažuriran duchain za %1"
-
-#: cppparsejob.cpp:709
-msgid "Building uses"
-msgstr "Gradnja koristi"
-
-#: cppparsejob.cpp:857
-msgid "Ready"
-msgstr "Spreman"
-
 #: includepathcomputer.cpp:182
 #, kde-format
 msgid "Build manager for project %1 did not return a build directory"
@@ -652,6 +641,27 @@ msgid ""
 msgstr ""
 "Nađene staze za uključenje:\n"
 "%1"
+
+#: cppparsejob.cpp:153
+msgid "Parsing included files"
+msgstr "Parsiranje uključenih datoteka"
+
+#: cppparsejob.cpp:459
+msgid "Parsing actual file"
+msgstr "Parsiranje stvarne datoteke"
+
+#: cppparsejob.cpp:571
+#, kde-format
+msgid "Not updating duchain for %1"
+msgstr "Nije ažuriran duchain za %1"
+
+#: cppparsejob.cpp:709
+msgid "Building uses"
+msgstr "Gradnja koristi"
+
+#: cppparsejob.cpp:857
+msgid "Ready"
+msgstr "Spreman"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
