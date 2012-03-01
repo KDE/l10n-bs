@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: koffice\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-02-27 02:57+0100\n"
+"POT-Creation-Date: 2012-03-01 02:40+0100\n"
 "PO-Revision-Date: 2011-03-30 22:55+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1331,7 +1331,7 @@ msgstr "Kreiraj HDR sloj"
 
 #. i18n: file: plugins/extensions/bracketing2hdr/wdgbracketing2hdr.ui:162
 #. i18n: ectx: property (text), widget (QPushButton, pushButtonCancel)
-#: rc.cpp:80 ui/kis_view2.cpp:499
+#: rc.cpp:80 ui/kis_view2.cpp:500
 msgid "Cancel"
 msgstr "Odustani"
 
@@ -10230,7 +10230,7 @@ msgstr "Konvertuj prostor boja slike"
 msgid "Convert Projection Color Space"
 msgstr "Konvertuj prostor boja projekcije"
 
-#: image/kis_image.cc:873 ui/kis_layer_manager.cc:698
+#: image/kis_image.cc:873 ui/kis_layer_manager.cc:721
 msgid "Flatten Image"
 msgstr "Spljošti sliku"
 
@@ -10743,7 +10743,7 @@ msgid "&Duplicate Layer or Mask"
 msgstr "&Dupli sloj ili maska"
 
 #: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:391
-#: ui/kis_layer_manager.cc:140
+#: ui/kis_layer_manager.cc:141
 msgid "&Merge with Layer Below"
 msgstr "&Stopi sa slojem ispod"
 
@@ -11101,7 +11101,7 @@ msgid "Rotate Layer 90° to the Left"
 msgstr "Rotiraj sloj 90 ° na lijevo"
 
 #: plugins/extensions/rotateimage/rotateimage.cc:151
-#: ui/kis_layer_manager.cc:654
+#: ui/kis_layer_manager.cc:677
 msgid "Rotate Layer"
 msgstr "Rotiraj sloj"
 
@@ -11157,7 +11157,7 @@ msgid "Separate Image"
 msgstr "Razdvoji sliku"
 
 #: plugins/extensions/separate_channels/kis_channel_separator.cc:242
-#: ui/kis_layer_manager.cc:793
+#: ui/kis_layer_manager.cc:816
 msgid "Export Layer"
 msgstr "Izvezi sloj"
 
@@ -11594,7 +11594,6 @@ msgstr "Opcije izvoza u JPEG"
 #: plugins/formats/jp2/jp2_converter.cc:342
 #: plugins/formats/jp2/jp2_converter.cc:353
 #: plugins/formats/jpeg/kis_jpeg_converter.cc:96
-#: plugins/formats/ppm/kis_ppm_export.cpp:193
 #: plugins/formats/tiff/kis_tiff_writer_visitor.cpp:65
 #: ui/kis_png_converter.cpp:80
 #, kde-format
@@ -11633,7 +11632,7 @@ msgstr "Stranica %1"
 msgid "PNG Export Options"
 msgstr "PNG mogućnosti izvoza"
 
-#: plugins/formats/ppm/kis_ppm_export.cpp:152
+#: plugins/formats/ppm/kis_ppm_export.cpp:154
 msgid "PPM Export Options"
 msgstr "PPM izvozne opcije"
 
@@ -13296,6 +13295,10 @@ msgstr "Ovaj filter nema opcija za podešavanje"
 msgid "Image Properties"
 msgstr "Svojstva slike"
 
+#: ui/dialogs/kis_dlg_layer_properties.cc:78
+msgid "Layer Properties"
+msgstr "Svojstva sloja"
+
 #: ui/dialogs/kis_dlg_preferences.cc:91
 #, fuzzy
 #| msgid "Small Tiles"
@@ -13330,19 +13333,7 @@ msgstr "Tablet postavke"
 msgid "Tablet"
 msgstr "Tablet"
 
-#: ui/dialogs/kis_dlg_preferences.cc:612
-#, fuzzy
-#| msgid "General settings"
-msgid "Canvas-only settings"
-msgstr "Opšte postavke"
-
-#: ui/dialogs/kis_dlg_preferences.cc:613
-#, fuzzy
-#| msgid "Canvas color:"
-msgid "Canvas-only"
-msgstr "Boja platna:"
-
-#: ui/dialogs/kis_dlg_preferences.cc:704
+#: ui/dialogs/kis_dlg_preferences.cc:705
 msgid ""
 "You are trying to enable OpenGL\n"
 "\n"
@@ -13358,14 +13349,10 @@ msgstr ""
 "\n"
 "Jeste li sigurni da želite da omogućite OpenGL?\n"
 
-#: ui/dialogs/kis_dlg_preferences.cc:707 ui/kis_aboutdata.h:31
+#: ui/dialogs/kis_dlg_preferences.cc:708 ui/kis_aboutdata.h:31
 #: ui/kis_clipboard.cc:155
 msgid "Krita"
 msgstr "Krita"
-
-#: ui/dialogs/kis_dlg_layer_properties.cc:78
-msgid "Layer Properties"
-msgstr "Svojstva sloja"
 
 #: ui/flake/kis_shape_controller.cpp:169
 #, fuzzy, kde-format
@@ -13753,69 +13740,79 @@ msgstr "Svojstva..."
 msgid "Import Image"
 msgstr "Uvezi sliku"
 
-#: ui/kis_layer_manager.cc:135
+#: ui/kis_layer_manager.cc:136
 msgid "&Flatten image"
 msgstr "S&pljošti sliku"
 
-#: ui/kis_layer_manager.cc:145
+#: ui/kis_layer_manager.cc:146
 msgid "&Flatten Layer"
 msgstr "&Izravnaj sloj"
 
-#: ui/kis_layer_manager.cc:149 ui/kis_layer_manager.cc:765
+#: ui/kis_layer_manager.cc:150 ui/kis_layer_manager.cc:788
 #, fuzzy
 msgid "Rasterize Layer"
 msgstr "Rotiraj sloj"
 
-#: ui/kis_layer_manager.cc:153
+#: ui/kis_layer_manager.cc:154
 msgid "Save Layer as Image..."
 msgstr "Snimi sloj kao sliku..."
 
-#: ui/kis_layer_manager.cc:157
+#: ui/kis_layer_manager.cc:158
 msgid "Size Canvas to Size of Current Layer"
 msgstr "Razvuci platno na veličinu trenutnog sloja"
 
-#: ui/kis_layer_manager.cc:223
+#: ui/kis_layer_manager.cc:224
 msgid "Filter Layer Properties"
 msgstr "Svojstva filterskog sloja"
 
-#: ui/kis_layer_manager.cc:252
+#: ui/kis_layer_manager.cc:253
 msgid "Generator Layer Properties"
 msgstr "Svojstva generatorskog sloja"
 
-#: ui/kis_layer_manager.cc:303 ui/kis_layer_manager.cc:317
-#: ui/kis_layer_manager.cc:358 ui/kis_layer_manager.cc:389
-#: ui/kis_layer_manager.cc:512
+#: ui/kis_layer_manager.cc:304 ui/kis_layer_manager.cc:318
+#: ui/kis_layer_manager.cc:359 ui/kis_layer_manager.cc:390
+#: ui/kis_layer_manager.cc:513
 msgid "Could not add layer to image."
 msgstr "Nisam mogao da dodam sloj slici."
 
-#: ui/kis_layer_manager.cc:303 ui/kis_layer_manager.cc:317
-#: ui/kis_layer_manager.cc:358 ui/kis_layer_manager.cc:389
-#: ui/kis_layer_manager.cc:512
+#: ui/kis_layer_manager.cc:304 ui/kis_layer_manager.cc:318
+#: ui/kis_layer_manager.cc:359 ui/kis_layer_manager.cc:390
+#: ui/kis_layer_manager.cc:513
 msgid "Layer Error"
 msgstr "Greška u sloju"
 
-#: ui/kis_layer_manager.cc:413
+#: ui/kis_layer_manager.cc:414
 msgid "New Filter Layer"
 msgstr "Novi filterski sloj"
 
-#: ui/kis_layer_manager.cc:574 ui/kis_layer_manager.cc:584
+#: ui/kis_layer_manager.cc:573 ui/kis_layer_manager.cc:583
 msgid "Mirror Layer X"
 msgstr "Sloj X u ogledalu"
 
-#: ui/kis_layer_manager.cc:601 ui/kis_layer_manager.cc:611
+#: ui/kis_layer_manager.cc:595 ui/kis_mask_manager.cc:287
+msgid "Mirror Mask X"
+msgstr "Ogledalo maske X"
+
+#: ui/kis_layer_manager.cc:611 ui/kis_layer_manager.cc:621
 #: ui/kis_mask_manager.cc:309
 msgid "Mirror Layer Y"
 msgstr "Sloj Y u ogledalu"
 
 #: ui/kis_layer_manager.cc:633
+#, fuzzy
+#| msgid "Mirror Mask X"
+msgid "Mirror Mask Y"
+msgstr "Ogledalo maske X"
+
+#: ui/kis_layer_manager.cc:656
 msgid "Scale Layer"
 msgstr "Skaliraj sloj"
 
-#: ui/kis_layer_manager.cc:697
+#: ui/kis_layer_manager.cc:720
 msgid "The image contains hidden layers that will be lost."
 msgstr "Slika sadrži skrivene slojeve, koji će biti izgubljeni."
 
-#: ui/kis_layer_manager.cc:699
+#: ui/kis_layer_manager.cc:722
 msgid "&Flatten Image"
 msgstr "&Spljošti sliku"
 
@@ -13854,10 +13851,6 @@ msgstr "Sloj iz maske"
 #: ui/kis_mask_manager.cc:256
 msgid "Duplication of "
 msgstr "Kopija od "
-
-#: ui/kis_mask_manager.cc:287
-msgid "Mirror Mask X"
-msgstr "Ogledalo maske X"
 
 #: ui/kis_mask_manager.cc:334
 msgid "Effect Mask Properties"
@@ -14032,15 +14025,15 @@ msgstr "Kopiraj izabrano u novi sloj"
 msgid "Cut Selection to New Layer"
 msgstr "Isijeci izabrano u novi sloj"
 
-#: ui/kis_selection_manager.cc:176 ui/kis_selection_manager.cc:584
+#: ui/kis_selection_manager.cc:176 ui/kis_selection_manager.cc:588
 msgid "Fill with Foreground Color"
 msgstr "Popuni bojom iscrtavanja"
 
-#: ui/kis_selection_manager.cc:181 ui/kis_selection_manager.cc:589
+#: ui/kis_selection_manager.cc:181 ui/kis_selection_manager.cc:593
 msgid "Fill with Background Color"
 msgstr "Popuni bojom pozadine"
 
-#: ui/kis_selection_manager.cc:186 ui/kis_selection_manager.cc:594
+#: ui/kis_selection_manager.cc:186 ui/kis_selection_manager.cc:598
 msgid "Fill with Pattern"
 msgstr "Popuni šemom"
 
@@ -14056,21 +14049,21 @@ msgstr "Omekšaj..."
 msgid "Size Canvas to Size of Selection"
 msgstr "Raširi platno na veličinu izbora"
 
-#: ui/kis_selection_manager.cc:363
+#: ui/kis_selection_manager.cc:367
 msgid "Cut"
 msgstr "Isijeci"
 
-#: ui/kis_selection_manager.cc:437
+#: ui/kis_selection_manager.cc:441
 msgid "(pasted)"
 msgstr "(umetnuto)"
 
-#: ui/kis_selection_manager.cc:472
+#: ui/kis_selection_manager.cc:476
 #, fuzzy
 #| msgid "Pastels"
 msgid "Pasted"
 msgstr "Pastelne"
 
-#: ui/kis_selection_manager.cc:496
+#: ui/kis_selection_manager.cc:500
 msgid "Select All"
 msgstr "Izaberi sve"
 
@@ -14165,45 +14158,33 @@ msgstr ""
 msgid "Shows or hides the status bar"
 msgstr ""
 
-#: ui/kis_view2.cpp:323
-msgid "Show Canvas Only"
-msgstr ""
-
-#: ui/kis_view2.cpp:324
-msgid "Return to Window"
-msgstr ""
-
-#: ui/kis_view2.cpp:325
-msgid "Shows just the canvas or the whole window"
-msgstr ""
-
-#: ui/kis_view2.cpp:452
+#: ui/kis_view2.cpp:453
 #, fuzzy
 #| msgid "&Paint Layer"
 msgid "Pasted Layer"
 msgstr "&Slikarski sloj"
 
-#: ui/kis_view2.cpp:490
+#: ui/kis_view2.cpp:491
 msgid "Insert as New Layer"
 msgstr "Ubaci kao novi sloj"
 
-#: ui/kis_view2.cpp:491
+#: ui/kis_view2.cpp:492
 msgid "Insert as New Layers"
 msgstr "Ubaci kao nove slojeve"
 
-#: ui/kis_view2.cpp:493
+#: ui/kis_view2.cpp:494
 msgid "Open in New Document"
 msgstr "Otvori u dokumentu"
 
-#: ui/kis_view2.cpp:494
+#: ui/kis_view2.cpp:495
 msgid "Open in New Documents"
 msgstr "Otvori u novim dokumentima"
 
-#: ui/kis_view2.cpp:710
+#: ui/kis_view2.cpp:711
 msgid "Edit Palette..."
 msgstr "Uredi paletu..."
 
-#: ui/kis_view2.cpp:838 ui/kis_view2.cpp:841
+#: ui/kis_view2.cpp:839 ui/kis_view2.cpp:842
 msgid "Edit Palette"
 msgstr "Uredi paletu"
 
@@ -14383,6 +14364,16 @@ msgstr "Prostor boja"
 #: main.cc:50
 msgid "File(s) or URL(s) to open"
 msgstr "Datoteke ili URL-ovi za otvaranje"
+
+#, fuzzy
+#~| msgid "General settings"
+#~ msgid "Canvas-only settings"
+#~ msgstr "Opšte postavke"
+
+#, fuzzy
+#~| msgid "Canvas color:"
+#~ msgid "Canvas-only"
+#~ msgstr "Boja platna:"
 
 #~ msgid "Assign Profile"
 #~ msgstr "Dodijeli profil"
