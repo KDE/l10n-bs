@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-03-04 03:26+0100\n"
+"POT-Creation-Date: 2012-03-09 03:40+0100\n"
 "PO-Revision-Date: 2011-05-21 22:47+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -1847,6 +1847,7 @@ msgid "&Edit Track Details"
 msgstr "&Izmijeni podatke numere"
 
 #: browsers/filebrowser/FileView.cpp:573
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:39
 msgctxt "@title:window"
 msgid "Confirm Delete"
 msgstr "Potvrda brisanja"
@@ -1860,7 +1861,7 @@ msgstr[1] "Želite li zaista da obrišete ove %1 stavke?"
 msgstr[2] "Želite li zaista da obrišete ovih %1 stavki?"
 
 #: browsers/filebrowser/FileView.cpp:580
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:70
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:52
 msgctxt "@title:window"
 msgid "Confirm Move to Trash"
 msgstr "Potvrdi premještanje u smeće"
@@ -4328,16 +4329,32 @@ msgstr "Playdar kolekcija"
 msgid "Proxy Collection"
 msgstr "Posredna zbirka"
 
-#: core-impl/collections/support/TrashCollectionLocation.cpp:47
-msgid "Trash"
-msgstr "Smeće"
+#: core-impl/collections/support/ArtistHelper.cpp:31
+msgctxt "The genre name for classical music"
+msgid "Classical"
+msgstr "Klasična"
 
-#: core-impl/collections/support/TrashCollectionLocation.cpp:101
-#, kde-format
-msgid "Moving to trash: %1"
-msgstr "Premještam u smeće: %1"
+#: core-impl/collections/support/TextualQueryFilter.cpp:279
+msgid "today"
+msgstr "danas"
 
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:40
+#: core-impl/collections/support/TextualQueryFilter.cpp:281
+msgid "last week"
+msgstr "prošle nedjelje"
+
+#: core-impl/collections/support/TextualQueryFilter.cpp:283
+msgid "last month"
+msgstr "prošlog mjeseca"
+
+#: core-impl/collections/support/TextualQueryFilter.cpp:285
+msgid "two months ago"
+msgstr "prije dva mjeseca"
+
+#: core-impl/collections/support/TextualQueryFilter.cpp:287
+msgid "three months ago"
+msgstr "prije tri mjeseca"
+
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:35
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -4348,11 +4365,11 @@ msgstr "Premještam u smeće: %1"
 #| "disk as well as your collection."
 msgctxt "@info"
 msgid ""
-"Do you really want to delete this track? It will be removed from your "
-"collection."
+"Do you really want to delete this track? It will be removed from %1 and from "
+"underlying storage medium."
 msgid_plural ""
-"Do you really want to delete these %1 tracks? They will be removed from your "
-"collection."
+"Do you really want to delete these %2 tracks? They will be removed from %1 "
+"and from underlying storage medium."
 msgstr[0] ""
 "Želite li zaista da uklonite ovu %1 numeru? Biće uklonjene i iz zbirke i sa "
 "diska."
@@ -4363,12 +4380,7 @@ msgstr[2] ""
 "Želite li zaista da uklonite ove %1 numere? Biće uklonjene i iz zbirke i sa "
 "diska."
 
-# >> @title:window
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:45
-msgid "Delete Files"
-msgstr "Brisanje datoteka"
-
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:61
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:48
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -4380,10 +4392,10 @@ msgstr "Brisanje datoteka"
 msgctxt "@info"
 msgid ""
 "Do you really want to move this track to the trash? It will be removed from "
-"your collection."
+"%1."
 msgid_plural ""
-"Do you really want to move these %1 tracks to the trash? They will be "
-"removed from your collection."
+"Do you really want to move these %2 tracks to the trash? They will be "
+"removed from %1."
 msgstr[0] ""
 "Da li zaista želite da premestite ovu %1 numeru u smeće? Ona će biti "
 "uklonjene sa diska, kao i iz vaše kolekcije."
@@ -4394,7 +4406,7 @@ msgstr[2] ""
 "Da li zaista želite da premestite ovih %1 numera u smeće? One će biti "
 "uklonjene sa diska, kao i iz vaše kolekcije."
 
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:82
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:62
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -4414,11 +4426,21 @@ msgstr[2] ""
 "originali obrisani."
 
 # >> @title
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:87
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:66
+#, fuzzy
+#| msgid "Move Files"
+msgctxt "@title:window"
 msgid "Move Files"
 msgstr "Premještanje datoteka"
 
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:98
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:66
+#, fuzzy
+#| msgid "&Rename..."
+msgctxt "rename files button"
+msgid "&Rename"
+msgstr "P&reimenuj..."
+
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:76
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -4444,11 +4466,13 @@ msgstr[2] ""
 "Došlo je do problema i %1 numera ne može biti uklonjeno. Provjerite da li je "
 "direktorij upisiv."
 
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:103
-msgid "Unable to be removed tracks"
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:79
+#, fuzzy
+#| msgid "Unable to be removed tracks"
+msgid "Unable to remove tracks"
 msgstr "Numere koje je nemoguće ukloniti"
 
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:110
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:87
 #, fuzzy
 #| msgid ""
 #| "The collection does not have enough free space available or is not "
@@ -4457,38 +4481,44 @@ msgid ""
 "The collection does not have enough free space available or is not writable."
 msgstr "Zbirka nema dovoljno slobodnog prostora ili nije upisiva."
 
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:116
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:94
 msgid "Do you want to remove empty folders?"
 msgstr "Želite li da uklonite prazne direktorije?"
 
-#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:117
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:95
 msgid "Remove empty folders?"
 msgstr "Ukloniti prazne direktorije?"
 
-#: core-impl/collections/support/ArtistHelper.cpp:31
-msgctxt "The genre name for classical music"
-msgid "Classical"
-msgstr "Klasična"
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:116
+#, kde-format
+msgctxt "%1 is track url, %2 track title, %3 track artist"
+msgid "%1 (%2 by %3)"
+msgstr ""
 
-#: core-impl/collections/support/TextualQueryFilter.cpp:279
-msgid "today"
-msgstr "danas"
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:118
+#, fuzzy, kde-format
+#| msgctxt "%1 is number of tracks, %2 is time"
+#| msgid "%1 track (%2)"
+#| msgid_plural "%1 tracks (%2)"
+msgctxt "%1 is track url, %2 track name"
+msgid "%1 (%2)"
+msgstr "%1 numera (%2)"
 
-#: core-impl/collections/support/TextualQueryFilter.cpp:281
-msgid "last week"
-msgstr "prošle nedjelje"
+#: core-impl/collections/support/CollectionLocationDelegateImpl.cpp:120
+#, fuzzy, kde-format
+#| msgid "\"%1\" (track) by %2"
+msgctxt "%1 is track url, %2 artist name"
+msgid "%1 (by %2)"
+msgstr "„%1“ (numera) od %2"
 
-#: core-impl/collections/support/TextualQueryFilter.cpp:283
-msgid "last month"
-msgstr "prošlog mjeseca"
+#: core-impl/collections/support/TrashCollectionLocation.cpp:47
+msgid "Trash"
+msgstr "Smeće"
 
-#: core-impl/collections/support/TextualQueryFilter.cpp:285
-msgid "two months ago"
-msgstr "prije dva mjeseca"
-
-#: core-impl/collections/support/TextualQueryFilter.cpp:287
-msgid "three months ago"
-msgstr "prije tri mjeseca"
+#: core-impl/collections/support/TrashCollectionLocation.cpp:101
+#, kde-format
+msgid "Moving to trash: %1"
+msgstr "Premještam u smeće: %1"
 
 #: core-impl/collections/umscollection/podcasts/UmsPodcastProvider.cpp:184
 msgid "&Delete Episode"
@@ -15948,6 +15978,10 @@ msgid ""
 msgstr ""
 "Muzička staza, %1, je postavljena u sistemskim postavkama.\n"
 "Želite li je koristiti kao direktorij kolekcije?"
+
+# >> @title:window
+#~ msgid "Delete Files"
+#~ msgstr "Brisanje datoteka"
 
 #~ msgid "Devices"
 #~ msgstr "Uređaji"
