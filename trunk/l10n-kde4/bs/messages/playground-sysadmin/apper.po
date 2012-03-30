@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpackagekit\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-03-29 04:35+0200\n"
+"POT-Creation-Date: 2012-03-30 05:32+0200\n"
 "PO-Revision-Date: 2011-05-08 12:57+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -589,7 +589,7 @@ msgstr "Programski izvori"
 msgid "Display"
 msgstr "Prikaz"
 
-#: ApperKCM/PackageDetails.cpp:80
+#: ApperKCM/PackageDetails.cpp:80 AppSetup/SetupWizard.cpp:217
 msgid "Description"
 msgstr "Opis"
 
@@ -659,6 +659,7 @@ msgid "Action"
 msgstr "Akcija"
 
 #: ApperKCM/TransactionModel.cpp:48 Sentinel/TransactionWatcher.cpp:308
+#: AppSetup/SetupWizard.cpp:189
 msgid "Details"
 msgstr "Detalji"
 
@@ -1009,7 +1010,7 @@ msgstr ""
 "<h3> Da li želite da instalirate ovaj katalog ? </h3><ul><li>%2</li></ul>"
 
 #: Sentinel/SessionTask.cpp:66 libapper/Requirements.cpp:44
-#: AppSetup/SetupWizard.cpp:40
+#: AppSetup/SetupWizard.cpp:126
 msgid "Continue"
 msgstr "Nastavi"
 
@@ -3571,6 +3572,7 @@ msgstr "Postojeći backend ne podržava instaliranje paketa"
 
 #: libapper/PkTransaction.cpp:129 libapper/PkTransaction.cpp:153
 #: libapper/PkTransaction.cpp:179 libapper/PkTransaction.cpp:202
+#: AppSetup/SetupWizard.cpp:98
 msgid "Error"
 msgstr "Greška"
 
@@ -3654,40 +3656,135 @@ msgstr "Instaliraj"
 msgid "Remove"
 msgstr "Odstrani"
 
-#: AppSetup/main.cpp:30 AppSetup/main.cpp:31
+#: AppSetup/SetupWizard.cpp:83
+#, fuzzy
+#| msgctxt "The role of the transaction, in present tense"
+#| msgid "Installing file"
+msgid "Installation finished!"
+msgstr "Instaliranje datoteke"
+
+#: AppSetup/SetupWizard.cpp:84
+#, fuzzy, kde-format
+#| msgid "File was installed successfully"
+#| msgid_plural "Files were installed successfully"
+msgid "%1 has been installed successfully!"
+msgstr "Datoteka je uspješno instalirana"
+
+#: AppSetup/SetupWizard.cpp:99
+#, fuzzy
+#| msgid "An internal system error has occurred"
+msgid "An error occured"
+msgstr "Pojavila se interna sistemska greška"
+
+#. i18n: file: ApperKCM/ApperKCM.ui:281
+#. i18n: ectx: property (text), widget (QToolButton, backTB)
+#: AppSetup/SetupWizard.cpp:128 rc.cpp:197
+msgid "Back"
+msgstr "Nazad"
+
+#: AppSetup/SetupWizard.cpp:178
+msgid "Welcome!"
+msgstr ""
+
+#: AppSetup/SetupWizard.cpp:179
+#, kde-format
+msgid "Welcome to the installation of %1!"
+msgstr ""
+
+#: AppSetup/SetupWizard.cpp:180
+msgid ""
+"Please be careful while installing 3rd-party applications.<br>They may "
+"eventually <b>damage</b> your system or have <b>malicious behaviour</b>, "
+"like spying out your passwords.<br>Please do only install this software if "
+"you <b>trust the publisher and the author</b> of it."
+msgstr ""
+
+#: AppSetup/SetupWizard.cpp:190
+msgid "Details about this installation"
+msgstr ""
+
+#: AppSetup/SetupWizard.cpp:216
+#, fuzzy
+#| msgid "Applications"
+msgid "Application description"
+msgstr "Aplikacije"
+
+#: AppSetup/SetupWizard.cpp:225
+#, fuzzy
+#| msgctxt "The group type"
+#| msgid "Software sources"
+msgid "Software license"
+msgstr "Programski izvori"
+
+#: AppSetup/SetupWizard.cpp:226
+#, fuzzy
+#| msgid "Please read the following important information before continuing:"
+msgid "Please read the following terms and conditions carefully!"
+msgstr "Prije nastavljanja, molim vas pročitajte sljedeće važne informacije"
+
+#: AppSetup/SetupWizard.cpp:233
+#, fuzzy
+#| msgctxt "transaction state, scanning for running processes"
+#| msgid "Scanning installed applications"
+msgid "Running installation"
+msgstr "Skeniranje instaliranih aplikacija"
+
+#: AppSetup/SetupWizard.cpp:234
+#, fuzzy, kde-format
+#| msgid "Installing"
+msgid "Installing %1..."
+msgstr "Instaliranje"
+
+#: AppSetup/main.cpp:33 AppSetup/main.cpp:34
 #, fuzzy
 #| msgid "Application Manager"
 msgid "KDE Application Installer"
 msgstr "Aplikacijski menadžer"
 
-#: AppSetup/main.cpp:32
+#: AppSetup/main.cpp:35
 msgid "(C) 2012, Matthias Klumpp"
 msgstr ""
 
-#: AppSetup/main.cpp:34
+#: AppSetup/main.cpp:37
 #, fuzzy
 #| msgid "Daniel Nicoletti"
 msgctxt "@info:credit"
 msgid "Daniel Nicoletti"
 msgstr "Daniel Nicoletti"
 
-#: AppSetup/main.cpp:34 AppSetup/main.cpp:36
+#: AppSetup/main.cpp:37 AppSetup/main.cpp:39
 #, fuzzy
 #| msgid "Development"
 msgid "Developer"
 msgstr "Razvoj"
 
-#: AppSetup/main.cpp:36
+#: AppSetup/main.cpp:39
 msgctxt "@info:credit"
 msgid "Matthias Klumpp"
 msgstr ""
 
-#: AppSetup/main.cpp:43
+#: AppSetup/main.cpp:46
 #, fuzzy
 #| msgctxt "transaction state, getting data from a server"
 #| msgid "Getting information"
 msgid "Show debugging information"
 msgstr "Prikupljanje informacija"
+
+#: AppSetup/main.cpp:47
+#, fuzzy
+#| msgid "Invalid package file"
+msgid "IPK package filename"
+msgstr "Nevažeća paketska datoteka"
+
+#: AppSetup/main.cpp:69
+msgid "Sorry, we didn't get an existing IPK package as parameter."
+msgstr ""
+
+#: AppSetup/main.cpp:70
+#, fuzzy
+#| msgid "The package was not found"
+msgid "Package not found!"
+msgstr "Paket nije pronađen"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -4038,12 +4135,6 @@ msgstr "trazi pakete"
 msgid "Pending Changes"
 msgstr "Čekanje promjena"
 
-#. i18n: file: ApperKCM/ApperKCM.ui:281
-#. i18n: ectx: property (text), widget (QToolButton, backTB)
-#: rc.cpp:197
-msgid "Back"
-msgstr "Nazad"
-
 #. i18n: file: Sentinel/IntroDialog.ui:65
 #. i18n: ectx: property (text), widget (QLabel, descriptionL)
 #: rc.cpp:209
@@ -4119,6 +4210,18 @@ msgstr "ikona"
 #: rc.cpp:248
 msgid "Downloading Packages"
 msgstr "Preuzimanje paketa"
+
+#. i18n: file: AppSetup/LicensePage.ui:98
+#. i18n: ectx: property (text), widget (QRadioButton, acceptedRB)
+#: rc.cpp:251
+msgid "I agree to the above terms and conditions"
+msgstr ""
+
+#. i18n: file: AppSetup/LicensePage.ui:111
+#. i18n: ectx: property (text), widget (QRadioButton, rejectedRB)
+#: rc.cpp:254
+msgid "I don't agree"
+msgstr ""
 
 #~ msgid "Update Settings"
 #~ msgstr "Postavke nadgradnje"
