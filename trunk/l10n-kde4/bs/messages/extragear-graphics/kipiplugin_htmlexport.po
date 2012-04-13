@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kipiplugin_htmlexport\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-04-02 03:44+0200\n"
+"POT-Creation-Date: 2012-04-13 02:43+0200\n"
 "PO-Revision-Date: 2011-03-09 15:16+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -18,25 +18,238 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: wizard.cpp:170
+#: generator.cpp:152
+#, kde-format
+msgid "Could not find theme in '%1'"
+msgstr "Ne mogu da nađem temu u „%1“"
+
+#: generator.cpp:160
+msgid "Copying theme"
+msgstr "Kopiram temu"
+
+#: generator.cpp:174
+msgid "Could not copy theme"
+msgstr "Ne mogu da kopiram temu"
+
+#: generator.cpp:200
+#, kde-format
+msgid "Downloading remote files for \"%1\""
+msgstr "Preuzima se udaljena datoteka za \"%1\""
+
+#: generator.cpp:218
+msgid "Could not open temporary file"
+msgstr "Ne može se otvoriti privremena datoteka"
+
+#: generator.cpp:229
+#, kde-format
+msgid "Could not download %1"
+msgstr "Ne može se preuzeti %1"
+
+#: generator.cpp:249
+msgid "Could not create gallery.xml"
+msgstr "Ne mogu da napravim gallery.xml"
+
+#: generator.cpp:293
+#, kde-format
+msgid "Generating files for \"%1\""
+msgstr "Pravim datoteke za „%1“"
+
+#: generator.cpp:328
+msgid "Previous"
+msgstr "Prethodno"
+
+#: generator.cpp:329
+msgid "Next"
+msgstr "Sljedeće"
+
+#: generator.cpp:330
+msgid "Collection List"
+msgstr "Lista zbirki"
+
+#: generator.cpp:331
+msgid "Original Image"
+msgstr "Originalna slika"
+
+#: generator.cpp:332
+msgid "Go Up"
+msgstr "Idi gore"
+
+#: generator.cpp:334
+msgid "Make"
+msgstr "Kreiraj"
+
+#: generator.cpp:335
+msgid "Model"
+msgstr "Model"
+
+#: generator.cpp:336
+msgid "Image Orientation"
+msgstr "Orijentacija slike"
+
+#: generator.cpp:337
+msgid "Image X Resolution"
+msgstr "X rezolucija slike"
+
+#: generator.cpp:338
+msgid "Image Y Resolution"
+msgstr "Y rezolucija slike"
+
+#: generator.cpp:339
+msgid "Image Resolution Unit"
+msgstr "Jedinica rezolucije slike"
+
+#: generator.cpp:340
+msgid "Image Date Time"
+msgstr "Datum i vrijeme slike"
+
+#: generator.cpp:341
+msgid "YCBCR Positioning"
+msgstr "YCBCR pozicija"
+
+#: generator.cpp:342
+msgid "Exposure Time"
+msgstr "Dužina ekspozicije"
+
+#: generator.cpp:343
+msgid "F Number"
+msgstr "F broj"
+
+#: generator.cpp:344
+msgid "Exposure Index"
+msgstr "Indeks ekspozicije"
+
+#: generator.cpp:345
+msgid "ISO Speed Ratings"
+msgstr "ISO razredi brzine"
+
+#: generator.cpp:346
+msgid "Shutter Speed Value"
+msgstr "Zatvaračka vrijednost brzine"
+
+#: generator.cpp:347
+msgid "Aperture Value"
+msgstr "Otvor blende"
+
+#: generator.cpp:348
+msgid "Focal Length"
+msgstr "Žižna daljina"
+
+#: generator.cpp:349
+msgid "GPS Altitude"
+msgstr ""
+
+#: generator.cpp:350
+msgid "GPS Latitude"
+msgstr ""
+
+#: generator.cpp:351
+msgid "GPS Longitude"
+msgstr ""
+
+#: generator.cpp:380
+msgid "Generating HTML files"
+msgstr "Pravim HTML datoteke"
+
+#: generator.cpp:387
+#, kde-format
+msgid "Could not load XSL file '%1'"
+msgstr "Ne mogu da učitam XSL datoteku „%1“"
+
+#: generator.cpp:394
+#, kde-format
+msgid "Could not load XML file '%1'"
+msgstr "Ne mogu da učitam XML datoteku „%1“"
+
+#: generator.cpp:428
+msgid "Error processing XML file"
+msgstr "Greška u obradi XML datoteke"
+
+#: generator.cpp:436 generator.cpp:443
+#, kde-format
+msgid "Could not open '%1' for writing"
+msgstr "Ne mogu da otvorim „%1“ radi upisa"
+
+#: generator.cpp:463
+#, kde-format
+msgid "Could not create folder '%1' in '%2'"
+msgstr "Ne mogu da napravim direktorij „%1“ u „%2“"
+
+#: imagegenerationfunctor.cpp:98
+#, kde-format
+msgid "Could not read image '%1'"
+msgstr "Ne mogu da čitam sliku „%1“"
+
+#: imagegenerationfunctor.cpp:114
+#, fuzzy, kde-format
+#| msgid "Error loading image '%1'"
+msgid "Error loading RAW image '%1'"
+msgstr "Greška pri učitavanju slike „%1“"
+
+#: imagegenerationfunctor.cpp:123
+#, kde-format
+msgid "Format of image '%1' is unknown"
+msgstr "Format slike „%1“ je nepoznat"
+
+#: imagegenerationfunctor.cpp:133
+#, kde-format
+msgid "Error loading image '%1'"
+msgstr "Greška pri učitavanju slike „%1“"
+
+#: imagegenerationfunctor.cpp:178
+#, kde-format
+msgid "Could not save image '%1' to '%2'"
+msgstr "Ne mogu da sačuvam sliku „%1“ u „%2“"
+
+#: imagegenerationfunctor.cpp:202
+#, kde-format
+msgid "Could not save thumbnail for image '%1' to '%2'"
+msgstr "Ne mogu da sačuvam umanjeni prikaz za sliku „%1“ u „%2“"
+
+#: imagegenerationfunctor.cpp:211
+msgid "unavailable"
+msgstr "nedostupno"
+
+#: imagegenerationfunctor.cpp:400
+#, kde-format
+msgid "Could not open file '%1' for writing"
+msgstr "Ne mogu da otvorim datoteku „%1“ radi upisa"
+
+#: imagegenerationfunctor.cpp:405
+#, kde-format
+msgid "Could not save image to file '%1'"
+msgstr "Ne mogu da snimim sliku u datoteku „%1“"
+
+#: plugin_htmlexport.cpp:81
+msgid "Export to &HTML..."
+msgstr "Izvoz u &HTML..."
+
+#: plugin_htmlexport.cpp:107
+msgid "Generating gallery..."
+msgstr "Stvaram galeriju..."
+
+#: plugin_htmlexport.cpp:119
+msgid "Finished, but some warnings occurred."
+msgstr "Gotovo, ali se neka upozorenja dogodila."
+
+#: wizard.cpp:194
 #, kde-format
 msgctxt "'%1' is a label for a theme parameter"
 msgid "%1:"
 msgstr "%1:"
 
-#: wizard.cpp:206
+#: wizard.cpp:233
 msgid "Export image collections to HTML pages"
 msgstr "Izvoz zbirke slika u HTML stranice"
 
-#: wizard.cpp:212
+#: wizard.cpp:239
 msgid "HTML Export"
 msgstr "Izvoz u HTML"
 
-#: wizard.cpp:215
+#: wizard.cpp:242
 msgid "A KIPI plugin to export image collections to HTML pages"
 msgstr "KIPI priključak za izvoz zbirke slika u HTML strane"
 
-#: wizard.cpp:216
+#: wizard.cpp:243
 msgid ""
 "(c) 2006-2009, Aurelien Gateau\n"
 "(c) 2010, Gianluca Urgese"
@@ -44,263 +257,46 @@ msgstr ""
 "(c) 2006-2009, Aurelien Gateau\n"
 "(c) 2010, Gianluca Urgese"
 
-#: wizard.cpp:220
+#: wizard.cpp:247
 msgid "Gianluca Urgese"
 msgstr "Gianluca Urgese"
 
-#: wizard.cpp:221
+#: wizard.cpp:248
 msgid "Maintainer"
 msgstr "Održava"
 
-#: wizard.cpp:225
+#: wizard.cpp:252
 msgid "Aurelien Gateau"
 msgstr "Aurelien Gateau"
 
-#: wizard.cpp:226
+#: wizard.cpp:253
 msgid "Former Author and Maintainer"
 msgstr "Bivši autor i održavalac"
 
-#: wizard.cpp:234
-msgid "Handbook"
-msgstr "Priručnik"
-
-#: wizard.cpp:243
+#: wizard.cpp:262
 msgid "Collection Selection"
 msgstr "Izbor zbirke"
 
-#: wizard.cpp:248
+#: wizard.cpp:267
 msgid "Theme"
 msgstr "Tema"
 
-#: wizard.cpp:253
+#: wizard.cpp:272
 msgid "Theme Parameters"
 msgstr "Parametri teme"
 
-#: wizard.cpp:255
+#: wizard.cpp:274
 msgid "Image Settings"
 msgstr "Postavke slike"
 
-#: wizard.cpp:257
+#: wizard.cpp:276
 msgid "Output"
 msgstr "Izlaz"
 
-#: wizard.cpp:314
+#: wizard.cpp:335
 #, kde-format
 msgid "Author: %1"
 msgstr "Autor: %1"
-
-#: generator.cpp:148
-#, kde-format
-msgid "Could not find theme in '%1'"
-msgstr "Ne mogu da nađem temu u „%1“"
-
-#: generator.cpp:156
-msgid "Copying theme"
-msgstr "Kopiram temu"
-
-#: generator.cpp:170
-msgid "Could not copy theme"
-msgstr "Ne mogu da kopiram temu"
-
-#: generator.cpp:196
-#, kde-format
-msgid "Downloading remote files for \"%1\""
-msgstr "Preuzima se udaljena datoteka za \"%1\""
-
-#: generator.cpp:214
-msgid "Could not open temporary file"
-msgstr "Ne može se otvoriti privremena datoteka"
-
-#: generator.cpp:225
-#, kde-format
-msgid "Could not download %1"
-msgstr "Ne može se preuzeti %1"
-
-#: generator.cpp:245
-msgid "Could not create gallery.xml"
-msgstr "Ne mogu da napravim gallery.xml"
-
-#: generator.cpp:289
-#, kde-format
-msgid "Generating files for \"%1\""
-msgstr "Pravim datoteke za „%1“"
-
-#: generator.cpp:324
-msgid "Previous"
-msgstr "Prethodno"
-
-#: generator.cpp:325
-msgid "Next"
-msgstr "Sljedeće"
-
-#: generator.cpp:326
-msgid "Collection List"
-msgstr "Lista zbirki"
-
-#: generator.cpp:327
-msgid "Original Image"
-msgstr "Originalna slika"
-
-#: generator.cpp:328
-msgid "Go Up"
-msgstr "Idi gore"
-
-#: generator.cpp:330
-msgid "Make"
-msgstr "Kreiraj"
-
-#: generator.cpp:331
-msgid "Model"
-msgstr "Model"
-
-#: generator.cpp:332
-msgid "Image Orientation"
-msgstr "Orijentacija slike"
-
-#: generator.cpp:333
-msgid "Image X Resolution"
-msgstr "X rezolucija slike"
-
-#: generator.cpp:334
-msgid "Image Y Resolution"
-msgstr "Y rezolucija slike"
-
-#: generator.cpp:335
-msgid "Image Resolution Unit"
-msgstr "Jedinica rezolucije slike"
-
-#: generator.cpp:336
-msgid "Image Date Time"
-msgstr "Datum i vrijeme slike"
-
-#: generator.cpp:337
-msgid "YCBCR Positioning"
-msgstr "YCBCR pozicija"
-
-#: generator.cpp:338
-msgid "Exposure Time"
-msgstr "Dužina ekspozicije"
-
-#: generator.cpp:339
-msgid "F Number"
-msgstr "F broj"
-
-#: generator.cpp:340
-msgid "Exposure Index"
-msgstr "Indeks ekspozicije"
-
-#: generator.cpp:341
-msgid "ISO Speed Ratings"
-msgstr "ISO razredi brzine"
-
-#: generator.cpp:342
-msgid "Shutter Speed Value"
-msgstr "Zatvaračka vrijednost brzine"
-
-#: generator.cpp:343
-msgid "Aperture Value"
-msgstr "Otvor blende"
-
-#: generator.cpp:344
-msgid "Focal Length"
-msgstr "Žižna daljina"
-
-#: generator.cpp:345
-msgid "GPS Altitude"
-msgstr ""
-
-#: generator.cpp:346
-msgid "GPS Latitude"
-msgstr ""
-
-#: generator.cpp:347
-msgid "GPS Longitude"
-msgstr ""
-
-#: generator.cpp:376
-msgid "Generating HTML files"
-msgstr "Pravim HTML datoteke"
-
-#: generator.cpp:383
-#, kde-format
-msgid "Could not load XSL file '%1'"
-msgstr "Ne mogu da učitam XSL datoteku „%1“"
-
-#: generator.cpp:390
-#, kde-format
-msgid "Could not load XML file '%1'"
-msgstr "Ne mogu da učitam XML datoteku „%1“"
-
-#: generator.cpp:424
-msgid "Error processing XML file"
-msgstr "Greška u obradi XML datoteke"
-
-#: generator.cpp:432 generator.cpp:439
-#, kde-format
-msgid "Could not open '%1' for writing"
-msgstr "Ne mogu da otvorim „%1“ radi upisa"
-
-#: generator.cpp:459
-#, kde-format
-msgid "Could not create folder '%1' in '%2'"
-msgstr "Ne mogu da napravim direktorij „%1“ u „%2“"
-
-#: imagegenerationfunctor.cpp:95
-#, kde-format
-msgid "Could not read image '%1'"
-msgstr "Ne mogu da čitam sliku „%1“"
-
-#: imagegenerationfunctor.cpp:111
-#, fuzzy, kde-format
-#| msgid "Error loading image '%1'"
-msgid "Error loading RAW image '%1'"
-msgstr "Greška pri učitavanju slike „%1“"
-
-#: imagegenerationfunctor.cpp:120
-#, kde-format
-msgid "Format of image '%1' is unknown"
-msgstr "Format slike „%1“ je nepoznat"
-
-#: imagegenerationfunctor.cpp:130
-#, kde-format
-msgid "Error loading image '%1'"
-msgstr "Greška pri učitavanju slike „%1“"
-
-#: imagegenerationfunctor.cpp:175
-#, kde-format
-msgid "Could not save image '%1' to '%2'"
-msgstr "Ne mogu da sačuvam sliku „%1“ u „%2“"
-
-#: imagegenerationfunctor.cpp:199
-#, kde-format
-msgid "Could not save thumbnail for image '%1' to '%2'"
-msgstr "Ne mogu da sačuvam umanjeni prikaz za sliku „%1“ u „%2“"
-
-#: imagegenerationfunctor.cpp:208
-msgid "unavailable"
-msgstr "nedostupno"
-
-#: imagegenerationfunctor.cpp:397
-#, kde-format
-msgid "Could not open file '%1' for writing"
-msgstr "Ne mogu da otvorim datoteku „%1“ radi upisa"
-
-#: imagegenerationfunctor.cpp:402
-#, kde-format
-msgid "Could not save image to file '%1'"
-msgstr "Ne mogu da snimim sliku u datoteku „%1“"
-
-#: plugin_htmlexport.cpp:78
-msgid "Export to &HTML..."
-msgstr "Izvoz u &HTML..."
-
-#: plugin_htmlexport.cpp:104
-msgid "Generating gallery..."
-msgstr "Stvaram galeriju..."
-
-#: plugin_htmlexport.cpp:116
-msgid "Finished, but some warnings occurred."
-msgstr "Gotovo, ali se neka upozorenja dogodila."
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -415,3 +411,6 @@ msgstr "Veličina:"
 #| msgid "Thumbnail"
 msgid "Square thumbnails"
 msgstr "Umanjeni prikaz"
+
+#~ msgid "Handbook"
+#~ msgstr "Priručnik"
