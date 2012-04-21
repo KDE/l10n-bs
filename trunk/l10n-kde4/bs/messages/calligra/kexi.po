@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: koffice\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-04-17 02:41+0200\n"
+"POT-Creation-Date: 2012-04-21 02:51+0200\n"
 "PO-Revision-Date: 2011-03-11 15:54+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -2925,20 +2925,6 @@ msgstr "Nepoznata greška."
 msgid "Could not compact database \"%1\"."
 msgstr "Nisam mogao da sažmem bazu podataka \"%1\"."
 
-#: kexidb/drivers/sqlite/sqlitevacuum.cpp:129
-msgid "Compacting database"
-msgstr "Sažimam bazu podataka"
-
-#: kexidb/drivers/sqlite/sqlitevacuum.cpp:130
-#, kde-format
-msgid "Compacting database \"%1\"..."
-msgstr "Sažimam bazu podataka \"%1\"..."
-
-#: kexidb/drivers/sqlite/sqlitevacuum.cpp:203
-#, kde-format
-msgid "The database has been compacted. Current size decreased by %1% to %2."
-msgstr "Baza je sažeta. Tekuća veličina je smanjena %1%, na %2."
-
 #: kexidb/drivers/sqlite/sqliteconnection.cpp:242
 #, kde-format
 msgid "Do you want to open file \"%1\" as read-only?"
@@ -2973,6 +2959,20 @@ msgid ""
 msgstr ""
 "Provjerite dozvole datoteke, kao i da li je možda već otvorio i zaključao "
 "neki drugi program."
+
+#: kexidb/drivers/sqlite/sqlitevacuum.cpp:129
+msgid "Compacting database"
+msgstr "Sažimam bazu podataka"
+
+#: kexidb/drivers/sqlite/sqlitevacuum.cpp:130
+#, kde-format
+msgid "Compacting database \"%1\"..."
+msgstr "Sažimam bazu podataka \"%1\"..."
+
+#: kexidb/drivers/sqlite/sqlitevacuum.cpp:203
+#, kde-format
+msgid "The database has been compacted. Current size decreased by %1% to %2."
+msgstr "Baza je sažeta. Tekuća veličina je smanjena %1%, na %2."
 
 #: kexidb/drivers/xbase/xbaseexport.cpp:263
 msgid "Data not set for migration"
@@ -3083,6 +3083,22 @@ msgstr ""
 msgid "Unspecified error encountered"
 msgstr "Pojavila se neodređena greška"
 
+#: sqlscanner.l:98
+msgid "Invalid integer number"
+msgstr "Neispravan cio broj"
+
+#: sqlscanner.l:98
+msgid "This integer number may be too large."
+msgstr "Možda je ovaj cio broj prevelik."
+
+#: sqlscanner.l:286
+msgid "Invalid identifier"
+msgstr "Neispravan identifikator"
+
+#: sqlscanner.l:287 plugins/queries/kexiquerydesignerguieditor.cpp:1451
+msgid "Identifiers should start with a letter or '_' character"
+msgstr "Identifikatori ne mogu počinjati slovom ili znakom '_'"
+
 #: kexidb/parser/parser_p.cpp:137
 msgid "identifier was expected"
 msgstr "Očekivan je identifikator"
@@ -3140,22 +3156,6 @@ msgid "Could not define sorting - column name or alias \"%1\" does not exist"
 msgstr ""
 "Nisam mogao da definišem sortiranje - ime kolone ili alijas \"%1\" ne postoji"
 
-#: sqlscanner.l:98
-msgid "Invalid integer number"
-msgstr "Neispravan cio broj"
-
-#: sqlscanner.l:98
-msgid "This integer number may be too large."
-msgstr "Možda je ovaj cio broj prevelik."
-
-#: sqlscanner.l:286
-msgid "Invalid identifier"
-msgstr "Neispravan identifikator"
-
-#: sqlscanner.l:287 plugins/queries/kexiquerydesignerguieditor.cpp:1451
-msgid "Identifiers should start with a letter or '_' character"
-msgstr "Identifikatori ne mogu počinjati slovom ili znakom '_'"
-
 #: kexidb/simplecommandlineapp.cpp:81
 msgid "Database driver name"
 msgstr "Ime drajvera baza podataka"
@@ -3184,6 +3184,149 @@ msgstr "Ime datoteke lokalnog soketa na serveru"
 #, kde-format
 msgid "Enter password for %1: "
 msgstr "Unesite lozinku za %1: "
+
+#: kexidb/connectiondata.cpp:97
+msgid "file"
+msgstr "datoteku"
+
+#: kexidb/drivermanager.cpp:171
+msgid "Could not find any database drivers."
+msgstr "Nisam mogao da nađem nijedan drajver baze podataka."
+
+#: kexidb/drivermanager.cpp:181 kexidb/drivermanager.cpp:200
+#, kde-format
+msgid "Could not find database driver \"%1\"."
+msgstr "Nisam mogao da nađem drajver baze podataka \"%1\"."
+
+#: kexidb/drivermanager.cpp:231
+#, kde-format
+msgid "Could not load database driver \"%1\"."
+msgstr "Nisam mogao da učitam drajver baze podataka \"%1\"."
+
+#: kexidb/drivermanager.cpp:374
+#, kde-format
+msgid "No such driver service: \"%1\"."
+msgstr "Ovakav servis drajvera ne postoji: \"%1\"."
+
+#: kexidb/utils.cpp:131
+msgid "Message from server:"
+msgstr "Poruka od servera:"
+
+#: kexidb/utils.cpp:133
+msgid "SQL statement:"
+msgstr "SQL naredba:"
+
+#: kexidb/utils.cpp:150 kexidb/utils.cpp:157
+msgid "Server result:"
+msgstr "Rezultati sa servera"
+
+#: kexidb/utils.cpp:394 kexidb/utils.cpp:457 kexidb/utils.cpp:462
+msgid "Test Connection"
+msgstr "Isprobaj vezu"
+
+#: kexidb/utils.cpp:395
+#, kde-format
+msgid "<qt>Testing connection to <b>%1</b> database server...</qt>"
+msgstr "<qt>Isprobavam vezu do servera baza <b>%1</b>...</qt>"
+
+#: kexidb/utils.cpp:456
+#, kde-format
+msgid ""
+"<qt>Test connection to <b>%1</b> database server failed. The server is not "
+"responding.</qt>"
+msgstr ""
+"<qt>Proba veze do servera baze <b>%1</b> nije uspjela. Server se ne odaziva."
+"</qt>"
+
+#: kexidb/utils.cpp:460
+#, kde-format
+msgid ""
+"<qt>Test connection to <b>%1</b> database server established successfully.</"
+"qt>"
+msgstr ""
+"<qt>Probna veza do servera baza <b>%1</b> uspješno je uspostavljena.</qt>"
+
+#: kexidb/utils.cpp:1248
+msgid "Number"
+msgstr "Broj"
+
+#: kexidb/utils.cpp:1251 plugins/forms/kexidbfactory.cpp:344
+#: widget/utils/kexicontextmenuutils.cpp:293
+msgid "Image"
+msgstr "Slika"
+
+#: kexidb/field.cpp:708
+msgid "Invalid Type"
+msgstr "Neispravan tip"
+
+#: kexidb/field.cpp:709
+msgid "Byte"
+msgstr "Bajt"
+
+#: kexidb/field.cpp:710
+msgid "Short Integer Number"
+msgstr "Kratak cio broj"
+
+#: kexidb/field.cpp:711 kexidb/field.cpp:741
+msgid "Integer Number"
+msgstr "Cio broj"
+
+#: kexidb/field.cpp:712
+msgid "Big Integer Number"
+msgstr "Veliki cio broj"
+
+#: kexidb/field.cpp:713
+msgid "Yes/No Value"
+msgstr "Da/ne vrijednost"
+
+#: kexidb/field.cpp:714
+msgid "Date"
+msgstr "Datum"
+
+#: kexidb/field.cpp:715
+msgid "Date and Time"
+msgstr "Datum i vrijeme"
+
+#: kexidb/field.cpp:716
+msgid "Time"
+msgstr "Vrijeme"
+
+#: kexidb/field.cpp:717
+msgid "Single Precision Number"
+msgstr "Broj jednostruke tačnosti"
+
+#: kexidb/field.cpp:718
+msgid "Double Precision Number"
+msgstr "Broj dvostruke tačnosti"
+
+#: kexidb/field.cpp:720
+msgid "Long Text"
+msgstr "Dugačak tekst"
+
+#: kexidb/field.cpp:721 kexidb/field.cpp:745
+msgid "Object"
+msgstr "Objekat"
+
+#: kexidb/field.cpp:739
+msgid "Invalid Group"
+msgstr "Neispravna grupa"
+
+#: kexidb/field.cpp:742
+msgid "Floating Point Number"
+msgstr "Broj u pokretnom zarezu"
+
+#: kexidb/field.cpp:743
+msgid "Yes/No"
+msgstr "Da/ne"
+
+#: kexidb/field.cpp:744
+msgid "Date/Time"
+msgstr "Datum/vrijeme"
+
+#: kexidb/queryschema.cpp:266
+msgctxt "short for 'expression' word, e.g. 'expr' (only latin letters, please)"
+msgid "expr"
+msgstr "izraz"
 
 #: kexidb/connection.cpp:114
 msgid "Invalid database contents. "
@@ -3548,149 +3691,6 @@ msgstr ""
 #| msgid "Row deletion on the server failed."
 msgid "Record deletion on the server failed."
 msgstr "Brisanje vrste na serveru nije uspjelo."
-
-#: kexidb/connectiondata.cpp:97
-msgid "file"
-msgstr "datoteku"
-
-#: kexidb/drivermanager.cpp:171
-msgid "Could not find any database drivers."
-msgstr "Nisam mogao da nađem nijedan drajver baze podataka."
-
-#: kexidb/drivermanager.cpp:181 kexidb/drivermanager.cpp:200
-#, kde-format
-msgid "Could not find database driver \"%1\"."
-msgstr "Nisam mogao da nađem drajver baze podataka \"%1\"."
-
-#: kexidb/drivermanager.cpp:231
-#, kde-format
-msgid "Could not load database driver \"%1\"."
-msgstr "Nisam mogao da učitam drajver baze podataka \"%1\"."
-
-#: kexidb/drivermanager.cpp:374
-#, kde-format
-msgid "No such driver service: \"%1\"."
-msgstr "Ovakav servis drajvera ne postoji: \"%1\"."
-
-#: kexidb/utils.cpp:131
-msgid "Message from server:"
-msgstr "Poruka od servera:"
-
-#: kexidb/utils.cpp:133
-msgid "SQL statement:"
-msgstr "SQL naredba:"
-
-#: kexidb/utils.cpp:150 kexidb/utils.cpp:157
-msgid "Server result:"
-msgstr "Rezultati sa servera"
-
-#: kexidb/utils.cpp:394 kexidb/utils.cpp:457 kexidb/utils.cpp:462
-msgid "Test Connection"
-msgstr "Isprobaj vezu"
-
-#: kexidb/utils.cpp:395
-#, kde-format
-msgid "<qt>Testing connection to <b>%1</b> database server...</qt>"
-msgstr "<qt>Isprobavam vezu do servera baza <b>%1</b>...</qt>"
-
-#: kexidb/utils.cpp:456
-#, kde-format
-msgid ""
-"<qt>Test connection to <b>%1</b> database server failed. The server is not "
-"responding.</qt>"
-msgstr ""
-"<qt>Proba veze do servera baze <b>%1</b> nije uspjela. Server se ne odaziva."
-"</qt>"
-
-#: kexidb/utils.cpp:460
-#, kde-format
-msgid ""
-"<qt>Test connection to <b>%1</b> database server established successfully.</"
-"qt>"
-msgstr ""
-"<qt>Probna veza do servera baza <b>%1</b> uspješno je uspostavljena.</qt>"
-
-#: kexidb/utils.cpp:1248
-msgid "Number"
-msgstr "Broj"
-
-#: kexidb/utils.cpp:1251 plugins/forms/kexidbfactory.cpp:344
-#: widget/utils/kexicontextmenuutils.cpp:293
-msgid "Image"
-msgstr "Slika"
-
-#: kexidb/field.cpp:708
-msgid "Invalid Type"
-msgstr "Neispravan tip"
-
-#: kexidb/field.cpp:709
-msgid "Byte"
-msgstr "Bajt"
-
-#: kexidb/field.cpp:710
-msgid "Short Integer Number"
-msgstr "Kratak cio broj"
-
-#: kexidb/field.cpp:711 kexidb/field.cpp:741
-msgid "Integer Number"
-msgstr "Cio broj"
-
-#: kexidb/field.cpp:712
-msgid "Big Integer Number"
-msgstr "Veliki cio broj"
-
-#: kexidb/field.cpp:713
-msgid "Yes/No Value"
-msgstr "Da/ne vrijednost"
-
-#: kexidb/field.cpp:714
-msgid "Date"
-msgstr "Datum"
-
-#: kexidb/field.cpp:715
-msgid "Date and Time"
-msgstr "Datum i vrijeme"
-
-#: kexidb/field.cpp:716
-msgid "Time"
-msgstr "Vrijeme"
-
-#: kexidb/field.cpp:717
-msgid "Single Precision Number"
-msgstr "Broj jednostruke tačnosti"
-
-#: kexidb/field.cpp:718
-msgid "Double Precision Number"
-msgstr "Broj dvostruke tačnosti"
-
-#: kexidb/field.cpp:720
-msgid "Long Text"
-msgstr "Dugačak tekst"
-
-#: kexidb/field.cpp:721 kexidb/field.cpp:745
-msgid "Object"
-msgstr "Objekat"
-
-#: kexidb/field.cpp:739
-msgid "Invalid Group"
-msgstr "Neispravna grupa"
-
-#: kexidb/field.cpp:742
-msgid "Floating Point Number"
-msgstr "Broj u pokretnom zarezu"
-
-#: kexidb/field.cpp:743
-msgid "Yes/No"
-msgstr "Da/ne"
-
-#: kexidb/field.cpp:744
-msgid "Date/Time"
-msgstr "Datum/vrijeme"
-
-#: kexidb/queryschema.cpp:266
-msgctxt "short for 'expression' word, e.g. 'expr' (only latin letters, please)"
-msgid "expr"
-msgstr "izraz"
 
 #: kexiutils/identifier.cpp:92
 #, kde-format
