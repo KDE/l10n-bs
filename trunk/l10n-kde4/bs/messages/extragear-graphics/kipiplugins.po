@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kipi-plugins\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-04-26 03:33+0200\n"
+"POT-Creation-Date: 2012-04-27 03:24+0200\n"
 "PO-Revision-Date: 2011-03-19 23:19+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -479,7 +479,7 @@ msgid "Copy to Clip&board"
 msgstr "Kopiraj u &međuspremnik"
 
 #: common/libkipiplugins/dialogs/kpoutputdialog.cpp:103
-#: common/libkipiplugins/dialogs/kpdialogprivate.cpp:64
+#: common/libkipiplugins/dialogs/kptooldialog_p.cpp:64
 msgid "Handbook"
 msgstr "Priručnik"
 
@@ -591,16 +591,16 @@ msgstr ""
 "Datum gradnje: %1 (target: %2)\n"
 "Rev.: %3"
 
+#: common/libkipiplugins/tools/kpbinaryiface.cpp:136
+#, kde-format
+msgid "Navigate to %1"
+msgstr ""
+
 #: common/libkipiplugins/tools/kpaboutdata.h:47
 #, fuzzy
 #| msgid "Copyright 2003-2011, kipi-plugins team"
 msgid "Copyright 2003-2012, kipi-plugins team"
 msgstr "Copyright 2003-2011, kipi-plugins team"
-
-#: common/libkipiplugins/tools/kpbinaryiface.cpp:136
-#, kde-format
-msgid "Navigate to %1"
-msgstr ""
 
 #: common/libkipiplugins/widgets/kpbinarysearch.cpp:65
 msgid "Binary"
@@ -650,6 +650,44 @@ msgstr ""
 #: common/libkipiplugins/widgets/kppreviewmanager.cpp:170
 msgid "Failed to load image"
 msgstr "Neuspjelo učitavanje slike"
+
+#: common/libkipiplugins/widgets/kpsavesettingswidget.cpp:76
+msgid "Output file format:"
+msgstr "Format izlazne datoteke:"
+
+#: common/libkipiplugins/widgets/kpsavesettingswidget.cpp:78
+msgid ""
+"<p>Set the output file format to use here:</p><p><b>JPEG</b>: output the "
+"processed image in JPEG format. This format will give smaller-sized files.</"
+"p><p><b>Warning: Due to the destructive compression algorithm, JPEG is a "
+"lossy quality format.</b></p><p><b>TIFF</b>: output the processed image in "
+"TIFF format. This generates large files, without losing quality. Image is "
+"compressed.</p><p><b>PNG</b>: output the processed image in PNG format. This "
+"generates large files, without losing quality. Image is compressed.</"
+"p><p><b>PPM</b>: output the processed image in PPM format. This generates "
+"the largest files, without losing quality. Image is not compressed.</p>"
+msgstr ""
+"<p>Postavite izlaznni format datoteke za korištenje ovdje:</p><p><b>JPEG</b>:"
+"generiši obrađenu sliku u JPEG formatu. Ovaj format će dati manje veličine "
+"datoteke.</p><p><b>Upozorenje: Zbog destruktivnog algoritam sažimanja, JPEG "
+"je format u kom se gubi kvalitet.</b></p><p><b>TIFF</b>: generiši obrađenu "
+"sliku u TIFF formatu. . Ovo generiše velike datoteke bez gubitka kvaliteta. "
+"Slika je kompresovana.</p><p><b>PNG</b>: generiši obrađenu sliku u PNG "
+"formatu. . Ovo generiše velike datoteke bez gubitka kvaliteta. Slika je "
+"kompresovana.</p><p><b>PPM</b>: generiši obrađenu sliku u PPM formatu. . Ovo "
+"generiše najveće datoteke bez gubitka kvaliteta. Slika nije kompresovana.</p>"
+
+#: common/libkipiplugins/widgets/kpsavesettingswidget.cpp:94
+msgid "If Target File Exists:"
+msgstr "Ako odredišna datoteka postoji:"
+
+#: common/libkipiplugins/widgets/kpsavesettingswidget.cpp:98
+msgid "Overwrite automatically"
+msgstr "Automatski pisati preko"
+
+#: common/libkipiplugins/widgets/kpsavesettingswidget.cpp:99
+msgid "Open rename-file dialog"
+msgstr "Otvori dijalog preimenovanja datoteke"
 
 #: common/libkipiplugins/widgets/kpimageslist.cpp:291
 msgid "Thumbnail"
@@ -718,44 +756,6 @@ msgstr ""
 #: common/libkipiplugins/widgets/kpimageslist.cpp:991
 msgid "Select the image file list to save"
 msgstr ""
-
-#: common/libkipiplugins/widgets/kpsavesettingswidget.cpp:76
-msgid "Output file format:"
-msgstr "Format izlazne datoteke:"
-
-#: common/libkipiplugins/widgets/kpsavesettingswidget.cpp:78
-msgid ""
-"<p>Set the output file format to use here:</p><p><b>JPEG</b>: output the "
-"processed image in JPEG format. This format will give smaller-sized files.</"
-"p><p><b>Warning: Due to the destructive compression algorithm, JPEG is a "
-"lossy quality format.</b></p><p><b>TIFF</b>: output the processed image in "
-"TIFF format. This generates large files, without losing quality. Image is "
-"compressed.</p><p><b>PNG</b>: output the processed image in PNG format. This "
-"generates large files, without losing quality. Image is compressed.</"
-"p><p><b>PPM</b>: output the processed image in PPM format. This generates "
-"the largest files, without losing quality. Image is not compressed.</p>"
-msgstr ""
-"<p>Postavite izlaznni format datoteke za korištenje ovdje:</p><p><b>JPEG</b>:"
-"generiši obrađenu sliku u JPEG formatu. Ovaj format će dati manje veličine "
-"datoteke.</p><p><b>Upozorenje: Zbog destruktivnog algoritam sažimanja, JPEG "
-"je format u kom se gubi kvalitet.</b></p><p><b>TIFF</b>: generiši obrađenu "
-"sliku u TIFF formatu. . Ovo generiše velike datoteke bez gubitka kvaliteta. "
-"Slika je kompresovana.</p><p><b>PNG</b>: generiši obrađenu sliku u PNG "
-"formatu. . Ovo generiše velike datoteke bez gubitka kvaliteta. Slika je "
-"kompresovana.</p><p><b>PPM</b>: generiši obrađenu sliku u PPM formatu. . Ovo "
-"generiše najveće datoteke bez gubitka kvaliteta. Slika nije kompresovana.</p>"
-
-#: common/libkipiplugins/widgets/kpsavesettingswidget.cpp:94
-msgid "If Target File Exists:"
-msgstr "Ako odredišna datoteka postoji:"
-
-#: common/libkipiplugins/widgets/kpsavesettingswidget.cpp:98
-msgid "Overwrite automatically"
-msgstr "Automatski pisati preko"
-
-#: common/libkipiplugins/widgets/kpsavesettingswidget.cpp:99
-msgid "Open rename-file dialog"
-msgstr "Otvori dijalog preimenovanja datoteke"
 
 #: common/libkipiplugins/widgets/kppreviewimage.cpp:483
 #: common/libkipiplugins/widgets/kppreviewimage.cpp:484
