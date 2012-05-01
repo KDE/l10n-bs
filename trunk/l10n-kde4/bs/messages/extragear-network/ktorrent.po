@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-04-22 03:48+0200\n"
+"POT-Creation-Date: 2012-05-01 05:00+0200\n"
 "PO-Revision-Date: 2011-05-08 01:51+0200\n"
 "Last-Translator: \n"
 "Language-Team:  <bs@li.org>\n"
@@ -399,6 +399,23 @@ msgstr ""
 "Datoteka sa podacima se ne nalazi na lokaciji koju ste izabrali. Želite li "
 "da napravite datoteku u izabranom direktoriju?"
 
+#. i18n: file: ktorrent/dialogs/pastedlgbase.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, PasteDlgBase)
+#: ktorrent/dialogs/pastedialog.cpp:38 rc.cpp:41
+msgid "Open an URL"
+msgstr "Otvori URL"
+
+#: ktorrent/dialogs/pastedialog.cpp:62 ktorrent/dialogs/fileselectdlg.cpp:430
+#: ktorrent/dialogs/torrentcreatordlg.cpp:118 libktcore/groups/allgroup.cpp:26
+msgid "All Torrents"
+msgstr "Svi torenti"
+
+#: ktorrent/dialogs/pastedialog.cpp:106
+#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:339
+#, kde-format
+msgid "Invalid URL: %1"
+msgstr "Neispravan URL: %1"
+
 #: ktorrent/dialogs/fileselectdlg.cpp:89
 msgid "Show a file tree"
 msgstr "Prikaži stablo datoteka"
@@ -475,11 +492,6 @@ msgid ""
 "Please select a different location."
 msgstr ""
 
-#: ktorrent/dialogs/fileselectdlg.cpp:430 ktorrent/dialogs/pastedialog.cpp:62
-#: ktorrent/dialogs/torrentcreatordlg.cpp:118 libktcore/groups/allgroup.cpp:26
-msgid "All Torrents"
-msgstr "Svi torenti"
-
 #: ktorrent/dialogs/fileselectdlg.cpp:507
 msgid "<b>Unable to determine free space</b>"
 msgstr "<b>Ne mogu da odredim slobodan prostor</b>"
@@ -519,18 +531,6 @@ msgstr "Postojeća datoteka: <b>da</b>"
 #: ktorrent/dialogs/fileselectdlg.cpp:654
 msgid "Clear History"
 msgstr "Očisti historijat "
-
-#. i18n: file: ktorrent/dialogs/pastedlgbase.ui:14
-#. i18n: ectx: property (windowTitle), widget (QWidget, PasteDlgBase)
-#: ktorrent/dialogs/pastedialog.cpp:38 rc.cpp:41
-msgid "Open an URL"
-msgstr "Otvori URL"
-
-#: ktorrent/dialogs/pastedialog.cpp:106
-#: ktorrent/dialogs/torrentcreatordlg.cpp:252 ktorrent/gui.cpp:339
-#, kde-format
-msgid "Invalid URL: %1"
-msgstr "Neispravan URL: %1"
 
 # >> @title:window
 #: ktorrent/dialogs/torrentcreatordlg.cpp:44
@@ -805,25 +805,13 @@ msgstr "Preuzimam"
 msgid "Stopped"
 msgstr "Zaustavljen"
 
-#: ktorrent/tools/magnetview.cpp:42
-msgid "Start Magnet"
-msgstr "Pokreni magnet"
-
-#: ktorrent/tools/magnetview.cpp:43
-msgid "Stop Magnet"
-msgstr "Zaustavi magnet"
-
-#: ktorrent/tools/magnetview.cpp:45
-msgid "Remove Magnet"
-msgstr "Ukloni magnet"
-
 # >> @title:column
 #: ktorrent/tools/queuemanagermodel.cpp:193
 msgid "Order"
 msgstr "redoslijed"
 
 # >> @title:column
-#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:500
+#: ktorrent/tools/queuemanagermodel.cpp:195 ktorrent/view/viewmodel.cpp:495
 #: plugins/downloadorder/downloadorderdialog.cpp:80
 msgid "Name"
 msgstr "Ime"
@@ -867,6 +855,18 @@ msgid ""
 msgstr ""
 "Redoslijed torenata u redu.\n"
 "Redoslijed menjajte prevlačenjem ili dugmadima gore‑dole desno."
+
+#: ktorrent/tools/magnetview.cpp:43
+msgid "Start Magnet"
+msgstr "Pokreni magnet"
+
+#: ktorrent/tools/magnetview.cpp:44
+msgid "Stop Magnet"
+msgstr "Zaustavi magnet"
+
+#: ktorrent/tools/magnetview.cpp:46
+msgid "Remove Magnet"
+msgstr "Ukloni magnet"
 
 #: ktorrent/view/propertiesdlg.cpp:34
 #, fuzzy
@@ -1080,103 +1080,103 @@ msgstr "Ukloni torent"
 msgid "Select a directory to move the data to."
 msgstr "Izaberite direktorije gdje premještate podatke."
 
-#: ktorrent/view/viewmodel.cpp:501 plugins/infowidget/peerviewmodel.cpp:266
+#: ktorrent/view/viewmodel.cpp:496 plugins/infowidget/peerviewmodel.cpp:266
 #: plugins/infowidget/webseedsmodel.cpp:126
 msgid "Downloaded"
 msgstr "Preuzeto"
 
-#: ktorrent/view/viewmodel.cpp:502
+#: ktorrent/view/viewmodel.cpp:497
 #: libktcore/torrent/torrentfilelistmodel.cpp:77
 #: libktcore/torrent/torrentfiletreemodel.cpp:400
 msgid "Size"
 msgstr "Veličina"
 
-#: ktorrent/view/viewmodel.cpp:503 plugins/infowidget/peerviewmodel.cpp:267
+#: ktorrent/view/viewmodel.cpp:498 plugins/infowidget/peerviewmodel.cpp:267
 msgid "Uploaded"
 msgstr "Poslato"
 
-#: ktorrent/view/viewmodel.cpp:504
+#: ktorrent/view/viewmodel.cpp:499
 #, fuzzy
 #| msgid "Left:"
 msgctxt "Bytes left to downloaded"
 msgid "Left"
 msgstr "Preostalo:"
 
-#: ktorrent/view/viewmodel.cpp:505 plugins/infowidget/peerviewmodel.cpp:257
+#: ktorrent/view/viewmodel.cpp:500 plugins/infowidget/peerviewmodel.cpp:257
 #: plugins/infowidget/chunkdownloadmodel.cpp:200
 msgid "Down Speed"
 msgstr "Smanji brzinu"
 
-#: ktorrent/view/viewmodel.cpp:506 plugins/infowidget/peerviewmodel.cpp:258
+#: ktorrent/view/viewmodel.cpp:501 plugins/infowidget/peerviewmodel.cpp:258
 msgid "Up Speed"
 msgstr "Povećaj brzinu"
 
-#: ktorrent/view/viewmodel.cpp:507
+#: ktorrent/view/viewmodel.cpp:502
 msgid "Time Left"
 msgstr "Preostalo vrijeme"
 
-#: ktorrent/view/viewmodel.cpp:508 plugins/infowidget/trackermodel.cpp:149
+#: ktorrent/view/viewmodel.cpp:503 plugins/infowidget/trackermodel.cpp:149
 msgid "Seeders"
 msgstr "Sijači"
 
-#: ktorrent/view/viewmodel.cpp:509 plugins/infowidget/trackermodel.cpp:150
+#: ktorrent/view/viewmodel.cpp:504 plugins/infowidget/trackermodel.cpp:150
 msgid "Leechers"
 msgstr "Pijavice"
 
-#: ktorrent/view/viewmodel.cpp:511
+#: ktorrent/view/viewmodel.cpp:506
 #, no-c-format
 msgid "% Complete"
 msgstr "% završeno"
 
-#: ktorrent/view/viewmodel.cpp:512
+#: ktorrent/view/viewmodel.cpp:507
 msgid "Share Ratio"
 msgstr "Odnos dijeljenja"
 
-#: ktorrent/view/viewmodel.cpp:513
+#: ktorrent/view/viewmodel.cpp:508
 msgid "Time Downloaded"
 msgstr "Vrijeme preuzimanja"
 
-#: ktorrent/view/viewmodel.cpp:514
+#: ktorrent/view/viewmodel.cpp:509
 msgid "Time Seeded"
 msgstr "Vrijeme sijanja"
 
 # >> @title:column
-#: ktorrent/view/viewmodel.cpp:515
+#: ktorrent/view/viewmodel.cpp:510
 msgid "Location"
 msgstr "lokacija"
 
 # >> @title:column
-#: ktorrent/view/viewmodel.cpp:516
+#: ktorrent/view/viewmodel.cpp:511
 msgid "Added"
 msgstr "dodato"
 
-#: ktorrent/view/viewmodel.cpp:524
+#: ktorrent/view/viewmodel.cpp:519
 msgid "How much data we have downloaded of the torrent"
 msgstr "Koliko je podataka iz torenta preuzeto"
 
-#: ktorrent/view/viewmodel.cpp:525
+#: ktorrent/view/viewmodel.cpp:520
 msgid "Total size of the torrent, excluded files are not included"
 msgstr "Ukupna veličina torenta, izuzete datoteke nisu uračunati"
 
-#: ktorrent/view/viewmodel.cpp:526
+#: ktorrent/view/viewmodel.cpp:521
 msgid "How much data we have uploaded"
 msgstr "Koliko je podataka poslato"
 
-#: ktorrent/view/viewmodel.cpp:527
+#: ktorrent/view/viewmodel.cpp:522
 #, fuzzy
 #| msgid "How much data we have uploaded"
 msgid "How much data left to download"
 msgstr "Koliko je podataka poslato"
 
-#: ktorrent/view/viewmodel.cpp:528
+#: ktorrent/view/viewmodel.cpp:523
 msgid "Current download speed"
 msgstr "Trenutna brzina preuzimanja"
 
-#: ktorrent/view/viewmodel.cpp:529
+#: ktorrent/view/viewmodel.cpp:524
 msgid "Current upload speed"
 msgstr "Trenutna brzina slanja"
 
-#: ktorrent/view/viewmodel.cpp:530
+#: ktorrent/view/viewmodel.cpp:525
 msgid ""
 "How much time is left before the torrent is finished or before the maximum "
 "share ratio is reached, if that is enabled"
@@ -1184,53 +1184,53 @@ msgstr ""
 "Koliko je vremena preostalo do završetka ili do dostizanja najvećeg odnosa "
 "dijeljenja, ako je to uključeno."
 
-#: ktorrent/view/viewmodel.cpp:531
+#: ktorrent/view/viewmodel.cpp:526
 msgid ""
 "How many seeders we are connected to (How many seeders there are according "
 "to the tracker)"
 msgstr "Na koliko sijača smo povezani (koliko ih ima prema pratiocu)"
 
-#: ktorrent/view/viewmodel.cpp:532
+#: ktorrent/view/viewmodel.cpp:527
 msgid ""
 "How many leechers we are connected to (How many leechers there are according "
 "to the tracker)"
 msgstr "Na koliko pijavica smo povezani (koliko ih ima prema pratiocu)"
 
-#: ktorrent/view/viewmodel.cpp:534
+#: ktorrent/view/viewmodel.cpp:529
 #, no-c-format
 msgid ""
 "The percentage of data we have of the whole torrent, not including excluded "
 "files"
 msgstr "Procenat pristiglih podataka torenta, isključujući izuzete datoteke"
 
-#: ktorrent/view/viewmodel.cpp:535
+#: ktorrent/view/viewmodel.cpp:530
 msgid ""
 "Share ratio is the number of bytes uploaded divided by the number of bytes "
 "downloaded"
 msgstr "Odnos dijeljenja je broj poslatih podeljen brojem preuzetih bajtova"
 
-#: ktorrent/view/viewmodel.cpp:536
+#: ktorrent/view/viewmodel.cpp:531
 msgid "How long we have been downloading the torrent"
 msgstr "Koliko dugo se torent već preuzima"
 
-#: ktorrent/view/viewmodel.cpp:537
+#: ktorrent/view/viewmodel.cpp:532
 msgid "How long we have been seeding the torrent"
 msgstr "Koliko dugo se torent već seje"
 
-#: ktorrent/view/viewmodel.cpp:538
+#: ktorrent/view/viewmodel.cpp:533
 msgid "The location of the torrent's data on disk"
 msgstr "Lokacija podataka torenta na disku"
 
-#: ktorrent/view/viewmodel.cpp:539
+#: ktorrent/view/viewmodel.cpp:534
 msgid "When this torrent was added"
 msgstr "Kada je dodat ovaj torent"
 
-#: ktorrent/view/viewmodel.cpp:588
+#: ktorrent/view/viewmodel.cpp:583
 #, kde-format
 msgid "%1<br>Url: <b>%2</b>"
 msgstr "<html>%1<br />URL: <b>%2</b></html>"
 
-#: ktorrent/view/viewmodel.cpp:594
+#: ktorrent/view/viewmodel.cpp:589
 #, fuzzy
 #| msgid "Unable to contact a tracker."
 msgid "<br/><br/>Unable to contact a tracker."
