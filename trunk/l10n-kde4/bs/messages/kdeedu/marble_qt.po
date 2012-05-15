@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-14 04:58+0200\n"
+"POT-Creation-Date: 2012-05-15 05:11+0200\n"
 "PO-Revision-Date: 2011-03-23 09:29+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -590,19 +590,19 @@ msgstr "Otvori rutu"
 msgid "Simulates travelling along the current route."
 msgstr ""
 
-#: src/plugins/positionprovider/flightgear/FlightGearPositionProviderPlugin.cpp:36
+#: src/plugins/positionprovider/flightgear/FlightGearPositionProviderPlugin.cpp:35
 #, fuzzy
 #| msgid "GeoClue position provider Plugin"
 msgid "FlightGear position provider Plugin"
 msgstr "GeoClue priključak za dobavljanje pozicije"
 
-#: src/plugins/positionprovider/flightgear/FlightGearPositionProviderPlugin.cpp:46
+#: src/plugins/positionprovider/flightgear/FlightGearPositionProviderPlugin.cpp:45
 #, fuzzy
 #| msgid "light showers"
 msgid "FlightGear"
 msgstr "slabi pljuskovi"
 
-#: src/plugins/positionprovider/flightgear/FlightGearPositionProviderPlugin.cpp:56
+#: src/plugins/positionprovider/flightgear/FlightGearPositionProviderPlugin.cpp:55
 #, fuzzy
 #| msgid "Reports the position of a GPS device."
 msgid "Reports the position of running flightgear application."
@@ -770,7 +770,7 @@ msgstr "Izostavlja čuvar ekrana prilikom navigacije korak po korak"
 #: src/plugins/render/mapscale/MapScaleFloatItem.cpp:53
 #: src/plugins/render/mapscale/MapScaleFloatItem.cpp:238
 #: src/plugins/render/elevationprofilefloatitem/ElevationProfilePlotAxis.cpp:142
-#: src/lib/MarbleWidget.cpp:1194
+#: src/lib/MarbleWidget.cpp:1194 src/lib/CurrentLocationWidget.cpp:273
 msgid "km"
 msgstr "km"
 
@@ -795,7 +795,7 @@ msgstr "Programer"
 #: src/plugins/render/gpsinfo/GpsInfo.cpp:140
 #: src/plugins/render/elevationprofilefloatitem/ElevationProfilePlotAxis.cpp:145
 #: src/plugins/render/elevationprofilemarker/ElevationProfileMarker.cpp:169
-#: src/lib/CurrentLocationWidget.cpp:267
+#: src/lib/CurrentLocationWidget.cpp:269 src/lib/CurrentLocationWidget.cpp:270
 msgid "m"
 msgstr "m"
 
@@ -1083,13 +1083,6 @@ msgstr "&Rutiranje"
 msgid "Routing information and navigation controls"
 msgstr "Informacije o rutiranju i kontrola navigacije"
 
-#: src/plugins/render/satellites/SatellitesItem.cpp:68
-#, qt-format
-msgid ""
-"NORAD ID: %2 <br />Perigee: %3 km <br />Apogee: %4 km <br />Inclination: %5 "
-"degrees <br />Period: %6 minutes <br />Semi-major axis: %7 km"
-msgstr ""
-
 #: src/plugins/render/satellites/SatellitesConfigModel.cpp:132
 msgid "Category"
 msgstr ""
@@ -1153,6 +1146,13 @@ msgstr "Sateliti"
 msgid "Miscellaneous Satellites"
 msgstr ""
 
+#: src/plugins/render/satellites/SatellitesItem.cpp:68
+#, qt-format
+msgid ""
+"NORAD ID: %2 <br />Perigee: %3 km <br />Apogee: %4 km <br />Inclination: %5 "
+"degrees <br />Period: %6 minutes <br />Semi-major axis: %7 km"
+msgstr ""
+
 #: src/plugins/render/stars/StarsPlugin.cpp:58
 msgid "Stars"
 msgstr "Zvijezde"
@@ -1177,10 +1177,6 @@ msgstr "&twitter"
 msgid "show public twitts in their places"
 msgstr "prikaži javne twitt podatke na njihovim mjestima"
 
-#: src/plugins/render/weather/BBCParser.cpp:117
-msgid "The file is not a valid BBC answer."
-msgstr "Ova datoteka nije valjana BBC odgovor."
-
 #: src/plugins/render/weather/BBCWeatherItem.cpp:92
 msgid ""
 "Supported by <a href=\"http://backstage.bbc.co.uk\" target=\"_BLANK"
@@ -1188,6 +1184,91 @@ msgid ""
 msgstr ""
 "Podržalo <a href=\"http://backstage.bbc.co.uk\" target=\"_BLANK\">backstage."
 "bbc.co.uk</a>.<br>Podaci o vremenu iz UK MET ureda"
+
+#: src/plugins/render/weather/GeoNamesWeatherItem.cpp:37
+msgid ""
+"Supported by <a href=\"http://www.geonames.org/export/JSON-webservices.html"
+"\" target=\"_BLANK\">geonames.org</a>"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:55
+#: src/plugins/render/weather/WeatherPlugin.cpp:90
+msgid "Weather"
+msgstr "Vrijeme"
+
+#: src/plugins/render/weather/WeatherItem.cpp:109
+#, qt-format
+msgid "Station: %1\n"
+msgstr "Stanica: %1\n"
+
+#: src/plugins/render/weather/WeatherItem.cpp:119
+#, qt-format
+msgctxt "Wind: WindSpeed, WindDirection"
+msgid "Wind: %4, %5\n"
+msgstr "Vjetar: %4, %5\n"
+
+#: src/plugins/render/weather/WeatherItem.cpp:123
+#, qt-format
+msgctxt "Wind: WindSpeed"
+msgid "Wind: %4\n"
+msgstr "Vjetar: %4\n"
+
+#: src/plugins/render/weather/WeatherItem.cpp:126
+#, qt-format
+msgctxt "Wind: WindDirection"
+msgid "Wind: %4\n"
+msgstr "Vjetar: %4\n"
+
+#: src/plugins/render/weather/WeatherItem.cpp:130
+#, qt-format
+msgctxt "Pressure: Pressure, Development"
+msgid "Pressure: %6, %7"
+msgstr "Pritisak: %6, %7"
+
+#: src/plugins/render/weather/WeatherItem.cpp:134
+#, qt-format
+msgctxt "Pressure: Pressure"
+msgid "Pressure: %6"
+msgstr "Pritisak: %6"
+
+#: src/plugins/render/weather/WeatherItem.cpp:137
+#, qt-format
+msgctxt "Pressure Development"
+msgid "Pressure %7"
+msgstr "Pritisak %7"
+
+#: src/plugins/render/weather/WeatherItem.cpp:153
+#, qt-format
+msgctxt "DayOfWeek: Condition, MinTemp to MaxTemp"
+msgid "%1: %2, %3 to %4"
+msgstr "%1: %2, %3 do %4"
+
+#: src/plugins/render/weather/WeatherItem.cpp:223
+#, fuzzy
+#| msgid "&Remove Measure Points"
+msgid "Remove from Favorites"
+msgstr "&Ukloni mjerne tačke"
+
+#: src/plugins/render/weather/WeatherItem.cpp:224
+msgid "Add to Favorites"
+msgstr ""
+
+#: src/plugins/render/weather/WeatherItem.cpp:482
+#, qt-format
+msgid "Weather for %1"
+msgstr "Vrijeme za %1"
+
+#: src/plugins/render/weather/WeatherItem.cpp:484
+msgid "Current Observation"
+msgstr "Trenutno zapažanje"
+
+#: src/plugins/render/weather/WeatherItem.cpp:490
+msgid "Forecasts"
+msgstr "Prognoze"
+
+#: src/plugins/render/weather/BBCParser.cpp:117
+msgid "The file is not a valid BBC answer."
+msgstr "Ova datoteka nije valjana BBC odgovor."
 
 #: src/plugins/render/weather/StationListParser.cpp:48
 msgid "The file is not a valid file."
@@ -1326,7 +1407,7 @@ msgstr "ZJZ"
 #: src/plugins/render/weather/WeatherData.cpp:591
 #: src/plugins/render/gpsinfo/GpsInfo.cpp:138
 #: src/plugins/render/speedometer/Speedometer.cpp:137
-#: src/lib/CurrentLocationWidget.cpp:265
+#: src/lib/CurrentLocationWidget.cpp:267
 msgid "km/h"
 msgstr "km/h"
 
@@ -1433,87 +1514,6 @@ msgstr "Razvoj pritiska: %1<br>"
 msgid "Humidity: %1<br>"
 msgstr "Vlažnost: %1<br>"
 
-#: src/plugins/render/weather/GeoNamesWeatherItem.cpp:37
-msgid ""
-"Supported by <a href=\"http://www.geonames.org/export/JSON-webservices.html"
-"\" target=\"_BLANK\">geonames.org</a>"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:55
-#: src/plugins/render/weather/WeatherPlugin.cpp:90
-msgid "Weather"
-msgstr "Vrijeme"
-
-#: src/plugins/render/weather/WeatherItem.cpp:109
-#, qt-format
-msgid "Station: %1\n"
-msgstr "Stanica: %1\n"
-
-#: src/plugins/render/weather/WeatherItem.cpp:119
-#, qt-format
-msgctxt "Wind: WindSpeed, WindDirection"
-msgid "Wind: %4, %5\n"
-msgstr "Vjetar: %4, %5\n"
-
-#: src/plugins/render/weather/WeatherItem.cpp:123
-#, qt-format
-msgctxt "Wind: WindSpeed"
-msgid "Wind: %4\n"
-msgstr "Vjetar: %4\n"
-
-#: src/plugins/render/weather/WeatherItem.cpp:126
-#, qt-format
-msgctxt "Wind: WindDirection"
-msgid "Wind: %4\n"
-msgstr "Vjetar: %4\n"
-
-#: src/plugins/render/weather/WeatherItem.cpp:130
-#, qt-format
-msgctxt "Pressure: Pressure, Development"
-msgid "Pressure: %6, %7"
-msgstr "Pritisak: %6, %7"
-
-#: src/plugins/render/weather/WeatherItem.cpp:134
-#, qt-format
-msgctxt "Pressure: Pressure"
-msgid "Pressure: %6"
-msgstr "Pritisak: %6"
-
-#: src/plugins/render/weather/WeatherItem.cpp:137
-#, qt-format
-msgctxt "Pressure Development"
-msgid "Pressure %7"
-msgstr "Pritisak %7"
-
-#: src/plugins/render/weather/WeatherItem.cpp:153
-#, qt-format
-msgctxt "DayOfWeek: Condition, MinTemp to MaxTemp"
-msgid "%1: %2, %3 to %4"
-msgstr "%1: %2, %3 do %4"
-
-#: src/plugins/render/weather/WeatherItem.cpp:223
-#, fuzzy
-#| msgid "&Remove Measure Points"
-msgid "Remove from Favorites"
-msgstr "&Ukloni mjerne tačke"
-
-#: src/plugins/render/weather/WeatherItem.cpp:224
-msgid "Add to Favorites"
-msgstr ""
-
-#: src/plugins/render/weather/WeatherItem.cpp:482
-#, qt-format
-msgid "Weather for %1"
-msgstr "Vrijeme za %1"
-
-#: src/plugins/render/weather/WeatherItem.cpp:484
-msgid "Current Observation"
-msgstr "Trenutno zapažanje"
-
-#: src/plugins/render/weather/WeatherItem.cpp:490
-msgid "Forecasts"
-msgstr "Prognoze"
-
 #: src/plugins/render/weather/WeatherPlugin.cpp:95
 msgid "&Weather"
 msgstr "&Vrijeme"
@@ -1530,10 +1530,6 @@ msgid ""
 msgstr ""
 "Podržao backstage.bbc.co.uk.\n"
 "Podaci o vremenu it UK MET ureda"
-
-#: src/plugins/render/wikipedia/GeonamesParser.cpp:42
-msgid "The file is not a valid Geonames answer."
-msgstr "Datoteka nije važeći  Geonames odgovor."
 
 #: src/plugins/render/wikipedia/WikipediaItem.cpp:226
 #, qt-format
@@ -1565,6 +1561,10 @@ msgid ""
 msgstr ""
 "Geo pozicije sa geonames.org\n"
 "Tekstovi sa wikipedia.org"
+
+#: src/plugins/render/wikipedia/GeonamesParser.cpp:42
+msgid "The file is not a valid Geonames answer."
+msgstr "Datoteka nije važeći  Geonames odgovor."
 
 #: src/plugins/render/sun/SunPlugin.cpp:52
 #: src/plugins/render/sun/SunPlugin.cpp:57
@@ -1633,7 +1633,7 @@ msgstr "Ovo je plutajući predmet koji obezbjeđuje kompas"
 #: src/plugins/render/gpsinfo/GpsInfo.cpp:131
 #: src/plugins/render/elevationprofilefloatitem/ElevationProfilePlotAxis.cpp:155
 #: src/plugins/render/elevationprofilemarker/ElevationProfileMarker.cpp:177
-#: src/lib/CurrentLocationWidget.cpp:275
+#: src/lib/CurrentLocationWidget.cpp:282 src/lib/CurrentLocationWidget.cpp:283
 msgid "ft"
 msgstr "ft"
 
@@ -2524,44 +2524,44 @@ msgstr ""
 msgid "Unable to insert data into cache"
 msgstr "Nije moguće umetanje podataka u keš"
 
-#: src/lib/CurrentLocationWidget.cpp:206
+#: src/lib/CurrentLocationWidget.cpp:205
 msgid "Waiting for current location information..."
 msgstr "Čekanje informacija o trenutnoj lokaciji..."
 
-#: src/lib/CurrentLocationWidget.cpp:209
+#: src/lib/CurrentLocationWidget.cpp:208
 msgid "Initializing current location service..."
 msgstr "Pokrećem trenutnu uslugu lokacije"
 
-#: src/lib/CurrentLocationWidget.cpp:215
+#: src/lib/CurrentLocationWidget.cpp:214
 msgid "Error when determining current location: "
 msgstr "Greška u utvrđivanju trenutne lokacije: "
 
-#: src/lib/CurrentLocationWidget.cpp:273
+#: src/lib/CurrentLocationWidget.cpp:280
 msgid "m/h"
 msgstr "m/h"
 
-#: src/lib/CurrentLocationWidget.cpp:293
+#: src/lib/CurrentLocationWidget.cpp:304
 msgid "Disabled"
 msgstr "Isključeno"
 
-#: src/lib/CurrentLocationWidget.cpp:352
+#: src/lib/CurrentLocationWidget.cpp:363
 msgid "Save Track"
 msgstr ""
 
-#: src/lib/CurrentLocationWidget.cpp:354 src/lib/CurrentLocationWidget.cpp:366
+#: src/lib/CurrentLocationWidget.cpp:365 src/lib/CurrentLocationWidget.cpp:377
 #, fuzzy
 msgid "KML File (*.kml)"
 msgstr "KML datoteke (*.kml)"
 
-#: src/lib/CurrentLocationWidget.cpp:365
+#: src/lib/CurrentLocationWidget.cpp:376
 msgid "Open Track"
 msgstr ""
 
-#: src/lib/CurrentLocationWidget.cpp:377
+#: src/lib/CurrentLocationWidget.cpp:388
 msgid "Clear current track"
 msgstr ""
 
-#: src/lib/CurrentLocationWidget.cpp:378
+#: src/lib/CurrentLocationWidget.cpp:389
 #, fuzzy
 msgid "Are you sure you want to clear the current track?"
 msgstr "Da li ste sigurni da želite obrisati sve zabilješke?"
@@ -3652,6 +3652,66 @@ msgstr ""
 "<br />(c) 2009 Projekat Marble<br /><br /><a href=\"http://edu.kde.org/marble"
 "\">http://edu.kde.org/marble</a>"
 
+#: src/lib/Planet.cpp:62 src/lib/Planet.cpp:353
+msgctxt "a planet without data"
+msgid "Unknown Planet"
+msgstr "Nepoznata planeta"
+
+#: src/lib/Planet.cpp:326
+msgctxt "the planet"
+msgid "Mercury"
+msgstr "Merkur"
+
+#: src/lib/Planet.cpp:328
+msgctxt "the planet"
+msgid "Venus"
+msgstr "Venera"
+
+#: src/lib/Planet.cpp:330
+msgctxt "the planet"
+msgid "Earth"
+msgstr "Zemlja"
+
+#: src/lib/Planet.cpp:332
+msgctxt "the planet"
+msgid "Mars"
+msgstr "Mars"
+
+#: src/lib/Planet.cpp:334
+msgctxt "the planet"
+msgid "Jupiter"
+msgstr "Jupiter"
+
+#: src/lib/Planet.cpp:336
+msgctxt "the planet"
+msgid "Saturn"
+msgstr "Saturn"
+
+#: src/lib/Planet.cpp:338
+msgctxt "the planet"
+msgid "Uranus"
+msgstr "Uran"
+
+#: src/lib/Planet.cpp:340
+msgctxt "the planet"
+msgid "Neptune"
+msgstr "Neptun"
+
+#: src/lib/Planet.cpp:343
+msgctxt "the planet"
+msgid "Pluto"
+msgstr "Pluton"
+
+#: src/lib/Planet.cpp:346
+msgctxt "the earth's star"
+msgid "Sun"
+msgstr "Sunce"
+
+#: src/lib/Planet.cpp:348
+msgctxt "the earth's moon"
+msgid "Moon"
+msgstr "Mjesec"
+
 #: src/lib/NewstuffModel.cpp:600 src/lib/NewstuffModel.cpp:609
 msgid "Installation aborted by user."
 msgstr ""
@@ -3855,66 +3915,6 @@ msgstr ""
 "Odlučili ste se za pokretanje Marble-a sa različitim grafičkim sistemom.\n"
 "Da bi ova opcija stupila na snagu, Marble mora biti ponovo pokrenut.\n"
 "Molim zatvorite program i ponovo pokrenite Marble."
-
-#: src/lib/Planet.cpp:62 src/lib/Planet.cpp:353
-msgctxt "a planet without data"
-msgid "Unknown Planet"
-msgstr "Nepoznata planeta"
-
-#: src/lib/Planet.cpp:326
-msgctxt "the planet"
-msgid "Mercury"
-msgstr "Merkur"
-
-#: src/lib/Planet.cpp:328
-msgctxt "the planet"
-msgid "Venus"
-msgstr "Venera"
-
-#: src/lib/Planet.cpp:330
-msgctxt "the planet"
-msgid "Earth"
-msgstr "Zemlja"
-
-#: src/lib/Planet.cpp:332
-msgctxt "the planet"
-msgid "Mars"
-msgstr "Mars"
-
-#: src/lib/Planet.cpp:334
-msgctxt "the planet"
-msgid "Jupiter"
-msgstr "Jupiter"
-
-#: src/lib/Planet.cpp:336
-msgctxt "the planet"
-msgid "Saturn"
-msgstr "Saturn"
-
-#: src/lib/Planet.cpp:338
-msgctxt "the planet"
-msgid "Uranus"
-msgstr "Uran"
-
-#: src/lib/Planet.cpp:340
-msgctxt "the planet"
-msgid "Neptune"
-msgstr "Neptun"
-
-#: src/lib/Planet.cpp:343
-msgctxt "the planet"
-msgid "Pluto"
-msgstr "Pluton"
-
-#: src/lib/Planet.cpp:346
-msgctxt "the earth's star"
-msgid "Sun"
-msgstr "Sunce"
-
-#: src/lib/Planet.cpp:348
-msgctxt "the earth's moon"
-msgid "Moon"
-msgstr "Mjesec"
 
 #: src/lib/MarbleWidgetPopupMenu.cpp:50
 msgid "Copy Coordinates"
@@ -4333,9 +4333,8 @@ msgstr "LičniDirektorij"
 msgid "Choose Placemark"
 msgstr "Izbor oznake"
 
-#: src/lib/global.h:235
-msgid "not available"
-msgstr "nije dostupno"
+#~ msgid "not available"
+#~ msgstr "nije dostupno"
 
 #, fuzzy
 #~| msgid ""
