@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: konversation\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-06-08 07:17+0200\n"
+"POT-Creation-Date: 2012-06-11 04:35+0200\n"
 "PO-Revision-Date: 2011-05-08 01:46+0200\n"
 "Last-Translator: \n"
 "Language-Team:  <bs@li.org>\n"
@@ -1233,11 +1233,72 @@ msgstr "Dolazni prenosi"
 msgid "Outgoing Transfers"
 msgstr "Odlazni prenosi"
 
-#: src/dcc/transferpanel.h:51
-#, fuzzy, kde-format
-msgctxt "%1=filename"
-msgid "File Information for %1"
-msgstr "Informacije o datoteci"
+#: src/dcc/dcccommon.cpp:154
+msgid "No vacant port"
+msgstr "Nema slobodnih portova"
+
+#: src/dcc/dcccommon.cpp:165
+msgid "Could not open a socket"
+msgstr "Nisam mogao da otvorim soket"
+
+#: src/dcc/transferdetailedinfopanel.cpp:38
+msgid "Details"
+msgstr "Detalji"
+
+#: src/dcc/transferdetailedinfopanel.cpp:133
+msgid "DCC Send"
+msgstr "DCC slanje"
+
+#: src/dcc/transferdetailedinfopanel.cpp:133
+msgid "DCC Receive"
+msgstr "DCC primanje"
+
+#: src/dcc/transferdetailedinfopanel.cpp:136
+msgid " (Reverse DCC)"
+msgstr " (Obrnuti DCC)"
+
+#: src/dcc/transferdetailedinfopanel.cpp:153
+#: src/dcc/transferdetailedinfopanel.cpp:157
+msgid "Unknown server"
+msgstr "Nepoznat server"
+
+#: src/dcc/transferdetailedinfopanel.cpp:162
+#, kde-format
+msgctxt "%1=partnerNick, %2=IRC Servername, %3=partnerIP, %4=partnerPort"
+msgid "%1 on %2, %3 (port <numid>%4</numid>)"
+msgstr "%1 na %2, %3 (port <numid>%4</numid>)"
+
+#: src/dcc/transferdetailedinfopanel.cpp:168
+#, kde-format
+msgctxt "%1 = PartnerNick, %2 = Partner IRC Servername"
+msgid "%1 on %2"
+msgstr "%1 na %2"
+
+#: src/dcc/transferdetailedinfopanel.cpp:175
+#, kde-format
+msgctxt "%1=ownIP, %2=ownPort"
+msgid "%1 (port <numid>%2</numid>)"
+msgstr "%1 (port <numid>%2</numid>)"
+
+#: src/dcc/transferdetailedinfopanel.cpp:183
+#, kde-format
+msgctxt "%1=Transferstartposition"
+msgid "Yes, %1"
+msgstr "Da, %1"
+
+#: src/dcc/transferdetailedinfopanel.cpp:185
+msgctxt "no - not a resumed transfer"
+msgid "No"
+msgstr "Ne"
+
+#: src/dcc/transferdetailedinfopanel.cpp:251
+msgctxt "less than 1 sec"
+msgid "&lt; 1sec"
+msgstr "&lt; 1 sek."
+
+#: src/dcc/transferview.cpp:315
+msgid "Columns"
+msgstr "Kolone"
 
 #: src/dcc/transferpanel.cpp:45 src/viewer/viewcontainer.cpp:2182
 msgid "DCC Status"
@@ -1326,72 +1387,11 @@ msgstr[0] "Izvrši %1 datoteku"
 msgstr[1] "Izvrši %1 datoteke"
 msgstr[2] "Izvrši %1 datoteka"
 
-#: src/dcc/dcccommon.cpp:154
-msgid "No vacant port"
-msgstr "Nema slobodnih portova"
-
-#: src/dcc/dcccommon.cpp:165
-msgid "Could not open a socket"
-msgstr "Nisam mogao da otvorim soket"
-
-#: src/dcc/transferdetailedinfopanel.cpp:38
-msgid "Details"
-msgstr "Detalji"
-
-#: src/dcc/transferdetailedinfopanel.cpp:133
-msgid "DCC Send"
-msgstr "DCC slanje"
-
-#: src/dcc/transferdetailedinfopanel.cpp:133
-msgid "DCC Receive"
-msgstr "DCC primanje"
-
-#: src/dcc/transferdetailedinfopanel.cpp:136
-msgid " (Reverse DCC)"
-msgstr " (Obrnuti DCC)"
-
-#: src/dcc/transferdetailedinfopanel.cpp:153
-#: src/dcc/transferdetailedinfopanel.cpp:157
-msgid "Unknown server"
-msgstr "Nepoznat server"
-
-#: src/dcc/transferdetailedinfopanel.cpp:162
-#, kde-format
-msgctxt "%1=partnerNick, %2=IRC Servername, %3=partnerIP, %4=partnerPort"
-msgid "%1 on %2, %3 (port <numid>%4</numid>)"
-msgstr "%1 na %2, %3 (port <numid>%4</numid>)"
-
-#: src/dcc/transferdetailedinfopanel.cpp:168
-#, kde-format
-msgctxt "%1 = PartnerNick, %2 = Partner IRC Servername"
-msgid "%1 on %2"
-msgstr "%1 na %2"
-
-#: src/dcc/transferdetailedinfopanel.cpp:175
-#, kde-format
-msgctxt "%1=ownIP, %2=ownPort"
-msgid "%1 (port <numid>%2</numid>)"
-msgstr "%1 (port <numid>%2</numid>)"
-
-#: src/dcc/transferdetailedinfopanel.cpp:183
-#, kde-format
-msgctxt "%1=Transferstartposition"
-msgid "Yes, %1"
-msgstr "Da, %1"
-
-#: src/dcc/transferdetailedinfopanel.cpp:185
-msgctxt "no - not a resumed transfer"
-msgid "No"
-msgstr "Ne"
-
-#: src/dcc/transferdetailedinfopanel.cpp:251
-msgctxt "less than 1 sec"
-msgid "&lt; 1sec"
-msgstr "&lt; 1 sek."
-
-#: src/dcc/transferview.cpp:315
-msgid "Columns"
-msgstr "Kolone"
+#: src/dcc/transferpanel.h:51
+#, fuzzy, kde-format
+msgctxt "%1=filename"
+msgid "File Information for %1"
+msgstr "Informacije o datoteci"
 
 #: src/main.cpp:37 src/viewer/trayicon.cpp:24
 msgid "Konversation"
@@ -2058,12 +2058,12 @@ msgstr "Preuzimam \"%1\" (%2) od %3..."
 msgid "Notify"
 msgstr "Obavijesti"
 
-#: src/irc/server.cpp:2997 src/notificationhandler.cpp:308
+#: src/irc/server.cpp:2997 src/notificationhandler.cpp:321
 #, kde-format
 msgid "%1 is online (%2)."
 msgstr "%1 je na vezi. (%2)."
 
-#: src/irc/server.cpp:3014 src/notificationhandler.cpp:322
+#: src/irc/server.cpp:3014 src/notificationhandler.cpp:335
 #, kde-format
 msgid "%1 went offline (%2)."
 msgstr "%1 je otišao sa veze (%2)."
@@ -5968,94 +5968,100 @@ msgstr ""
 "*** na %1\n"
 "\n"
 
-#: src/notificationhandler.cpp:103
+#: src/notificationhandler.cpp:104
 #, fuzzy, kde-format
 msgid "[HighLight] (%1) &lt;%2&gt;"
 msgstr "[Istaknuto] (%1) &lt;%2&gt; %3"
 
-#: src/notificationhandler.cpp:117 src/notificationhandler.cpp:383
+#: src/notificationhandler.cpp:118 src/notificationhandler.cpp:396
 #, kde-format
 msgid "[HighLight] (%1) &lt;%2&gt; %3"
 msgstr "[Istaknuto] (%1) &lt;%2&gt; %3"
 
-#: src/notificationhandler.cpp:144
+#: src/notificationhandler.cpp:145
 #, fuzzy, kde-format
 msgid "[Query] &lt;%1&gt;"
 msgstr "[Upit] &lt;%1&gt; %2"
 
-#: src/notificationhandler.cpp:158
+#: src/notificationhandler.cpp:159
 #, kde-format
 msgid "[Query] &lt;%1&gt; %2"
 msgstr "[Upit] &lt;%1&gt; %2"
 
-#: src/notificationhandler.cpp:186 src/notificationhandler.cpp:193
+#: src/notificationhandler.cpp:187 src/notificationhandler.cpp:194
 #, kde-format
 msgid "%1 joined %2"
 msgstr "%1 se pridruži na %2"
 
-#: src/notificationhandler.cpp:205 src/notificationhandler.cpp:212
+#: src/notificationhandler.cpp:206 src/notificationhandler.cpp:213
 #, kde-format
 msgid "%1 parted %2"
 msgstr "%1 ode sa %2"
 
-#: src/notificationhandler.cpp:224
+#: src/notificationhandler.cpp:225
 #, kde-format
 msgid "%1 quit %2"
 msgstr "%1 napusti %2"
 
-#: src/notificationhandler.cpp:235
+#: src/notificationhandler.cpp:236
 #, kde-format
 msgid "%1 changed nickname to %2"
 msgstr "%1 promijenio nadimak u %2"
 
-#: src/notificationhandler.cpp:246
+#: src/notificationhandler.cpp:247
 #, kde-format
 msgid "%1 wants to send a file to you"
 msgstr "%1 želi da vam pošalje datoteku"
 
-#: src/notificationhandler.cpp:257
+#: src/notificationhandler.cpp:258
 #, fuzzy, kde-format
 msgid "An error has occurred in a DCC transfer: %1"
 msgstr "Došlo je do greške u DCC prijenosu: %1"
 
-#: src/notificationhandler.cpp:268
+#: src/notificationhandler.cpp:271 src/notificationhandler.cpp:276
 #, kde-format
 msgctxt "%1 - filename"
 msgid "%1 File Transfer is complete"
 msgstr "%1 Prijenos datoteke je završen"
 
-#: src/notificationhandler.cpp:280
+#: src/notificationhandler.cpp:278
+#, fuzzy
+msgctxt "Opens the file from the finished dcc transfer"
+msgid "Open"
+msgstr "&Otvori"
+
+#: src/notificationhandler.cpp:293
 #, fuzzy, kde-format
 #| msgid "%1 changed nickname to %2"
 msgid "%1 changed modes in %2: %3"
 msgstr "%1 promijenio nadimak u %2"
 
-#: src/notificationhandler.cpp:295
+#: src/notificationhandler.cpp:308
 #, kde-format
 msgid "%1 has started a conversation (query) with you."
 msgstr "%1 je započeo razgovor (upit) sa vama."
 
-#: src/notificationhandler.cpp:336
+#: src/notificationhandler.cpp:349
 #, kde-format
 msgid "You are kicked by %1 from %2"
 msgstr "%1 vas je izbacio sa kanala %2"
 
-#: src/notificationhandler.cpp:350
+#: src/notificationhandler.cpp:363
 #, fuzzy, kde-format
 msgid "%1 started a DCC chat with you"
 msgstr "%1 je započeo DCC razgovor sa vama"
 
-#: src/notificationhandler.cpp:380
+#: src/notificationhandler.cpp:393
 #, kde-format
 msgid "[HighLight] (%1) *** %2"
 msgstr "[Istaknuto] (%1) *** %2"
 
-#: src/notificationhandler.cpp:393
+#: src/notificationhandler.cpp:406
 #, kde-format
 msgid "Failed to connect to %1"
 msgstr "Neuspjelo povezivanje na %1"
 
-#: src/notificationhandler.cpp:406
+#: src/notificationhandler.cpp:419
 #, kde-format
 msgid "You have joined %1."
 msgstr "Pridruzili ste se %1."
