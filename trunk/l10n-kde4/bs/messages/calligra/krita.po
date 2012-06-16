@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: koffice\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-06-14 03:47+0200\n"
+"POT-Creation-Date: 2012-06-16 03:15+0200\n"
 "PO-Revision-Date: 2011-03-30 22:55+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -7655,13 +7655,13 @@ msgstr "Prikaži prvobitan sloj"
 
 #. i18n: file: ui/forms/kis_previewwidgetbase.ui:122
 #. i18n: ectx: property (toolTip), widget (KPushButton, btnZoomOut)
-#: rc.cpp:3201
+#: rc.cpp:3201 ui/input/kis_zoom_action.cpp:49
 msgid "Zoom Out"
 msgstr "Umanji"
 
 #. i18n: file: ui/forms/kis_previewwidgetbase.ui:135
 #. i18n: ectx: property (toolTip), widget (KPushButton, btnZoomIn)
-#: rc.cpp:3204
+#: rc.cpp:3204 ui/input/kis_zoom_action.cpp:48
 msgid "Zoom In"
 msgstr "Uveličaj"
 
@@ -13285,6 +13285,34 @@ msgid ""
 "<i>./0</i> represents the first child of the current layer"
 msgstr ""
 
+#: ui/tool/kis_tool_freehand_helper.cpp:127
+msgid "Freehand Stroke"
+msgstr ""
+
+#: ui/tool/kis_tool_freehand.cc:90
+msgid "Increase Brush Size"
+msgstr "Povećaj veličinu četke"
+
+#: ui/tool/kis_tool_freehand.cc:96
+msgid "Decrease Brush Size"
+msgstr "Smanji veličinu četke"
+
+#: ui/tool/kis_tool.cc:111
+msgid "Swap Foreground and Background Color"
+msgstr "Zamijeni boju iscrtavanja i pozadine"
+
+#: ui/tool/kis_tool.cc:117
+msgid "Reset Foreground and Background Color"
+msgstr "Resetuj boje iscrtavanja i pozadine"
+
+#: ui/tool/kis_tool.cc:519
+msgid "Clear"
+msgstr "Čisto"
+
+#: ui/tool/kis_tool.cc:547
+msgid "No options"
+msgstr "Bez opcija"
+
 #: ui/tool/kis_tool_paint.cc:92
 msgid "Make brush color lighter"
 msgstr ""
@@ -13304,34 +13332,6 @@ msgstr "Neprozirnost pregleda:"
 #| msgid "Preview opacity:"
 msgid "Decrease opacity"
 msgstr "Neprozirnost pregleda:"
-
-#: ui/tool/kis_tool_freehand_helper.cpp:127
-msgid "Freehand Stroke"
-msgstr ""
-
-#: ui/tool/kis_tool.cc:111
-msgid "Swap Foreground and Background Color"
-msgstr "Zamijeni boju iscrtavanja i pozadine"
-
-#: ui/tool/kis_tool.cc:117
-msgid "Reset Foreground and Background Color"
-msgstr "Resetuj boje iscrtavanja i pozadine"
-
-#: ui/tool/kis_tool.cc:595
-msgid "Clear"
-msgstr "Čisto"
-
-#: ui/tool/kis_tool.cc:623
-msgid "No options"
-msgstr "Bez opcija"
-
-#: ui/tool/kis_tool_freehand.cc:90
-msgid "Increase Brush Size"
-msgstr "Povećaj veličinu četke"
-
-#: ui/tool/kis_tool_freehand.cc:96
-msgid "Decrease Brush Size"
-msgstr "Smanji veličinu četke"
 
 #: ui/widgets/kis_channelflags_widget.cpp:39
 msgid ""
@@ -13449,6 +13449,137 @@ msgstr "Nova konfiguracija %1"
 msgid ""
 "Cannot start Colors Settings panel from KDE Control Center. Please check "
 "your system..."
+msgstr ""
+
+#: ui/input/kis_abstract_input_action.cpp:36
+#, fuzzy
+#| msgid "Active"
+msgid "Activate"
+msgstr "Aktivan"
+
+#: ui/input/kis_alternate_invocation_action.cpp:33
+#, fuzzy
+#| msgctxt "The gradient will repeat alternatingly"
+#| msgid "Alternating"
+msgid "Alternate Invocation"
+msgstr "Izmjenjujući"
+
+#: ui/input/kis_alternate_invocation_action.cpp:34
+msgid ""
+"Alternate Invocation performs an alternate action with the current tool. For "
+"example, using the brush tool it picks a color from the canvas."
+msgstr ""
+
+#: ui/input/kis_change_primary_setting_action.cpp:29
+msgid "Change Tool Primary Setting"
+msgstr ""
+
+#: ui/input/kis_change_primary_setting_action.cpp:30
+msgid ""
+"Changes a tool's \"Primary Setting\", for example the brush size for the "
+"brush tool."
+msgstr ""
+
+#: ui/input/kis_input_manager.cpp:100
+msgid "Set Mirror Axis"
+msgstr ""
+
+#: ui/input/kis_pan_action.cpp:47
+#, fuzzy
+#| msgid "Canvas Size"
+msgid "Pan Canvas"
+msgstr "Veličina platna"
+
+#: ui/input/kis_pan_action.cpp:50
+msgid "Toggle Pan Mode"
+msgstr ""
+
+#: ui/input/kis_pan_action.cpp:51
+#, fuzzy
+#| msgid "Left"
+msgid "Pan Left"
+msgstr "Lijevo"
+
+#: ui/input/kis_pan_action.cpp:52
+#, fuzzy
+#| msgid "Right"
+msgid "Pan Right"
+msgstr "Desno"
+
+#: ui/input/kis_pan_action.cpp:53
+msgid "Pan Up"
+msgstr ""
+
+#: ui/input/kis_pan_action.cpp:54
+msgid "Pan Down"
+msgstr ""
+
+#: ui/input/kis_rotate_canvas_action.cpp:44
+#, fuzzy
+#| msgid "Rotate Canvas Left"
+msgid "Rotate Canvas"
+msgstr "Rotiraj platno lijevo"
+
+#: ui/input/kis_rotate_canvas_action.cpp:46
+#, fuzzy
+#| msgid "Rotate Node"
+msgid "Toggle Rotate Mode"
+msgstr "Rotiraj čvor"
+
+#: ui/input/kis_rotate_canvas_action.cpp:47
+#, fuzzy
+#| msgid "Rotate Layer"
+msgid "Rotate Left"
+msgstr "Rotiraj sloj"
+
+#: ui/input/kis_rotate_canvas_action.cpp:48
+#, fuzzy
+#| msgid "Rotate Canvas Right"
+msgid "Rotate Right"
+msgstr "Rotiraj platno desno"
+
+#: ui/input/kis_rotate_canvas_action.cpp:49
+#, fuzzy
+#| msgid "Rotation"
+msgid "Reset Rotation"
+msgstr "Rotacija"
+
+#: ui/input/kis_show_palette_action.cpp:31
+#, fuzzy
+#| msgid "Choose Palette"
+msgid "Show Popup Palette"
+msgstr "Izaberite paletu"
+
+#: ui/input/kis_tool_invocation_action.cpp:49
+#, fuzzy
+#| msgid "Tool information"
+msgid "Tool Invocation"
+msgstr "Informacija o alatu"
+
+#: ui/input/kis_tool_invocation_action.cpp:50
+msgid ""
+"Tool Invocation invokes the current tool, for example, using the brush tool, "
+"it will start painting."
+msgstr ""
+
+#: ui/input/kis_zoom_action.cpp:44
+#, fuzzy
+#| msgid "Zoom In"
+msgid "Zoom Canvas"
+msgstr "Uveličaj"
+
+#: ui/input/kis_zoom_action.cpp:47
+msgid "Toggle Zoom Mode"
+msgstr ""
+
+#: ui/input/kis_zoom_action.cpp:50
+#, fuzzy
+#| msgid "Reselect"
+msgid "Reset Zoom to 100%"
+msgstr "Ponovo izaberi"
+
+#: ui/input/kis_zoom_action.cpp:51
+msgid "Fit to Page"
 msgstr ""
 
 #: main.cc:50
@@ -14575,9 +14706,6 @@ msgstr "Datoteke ili URL-ovi za otvaranje"
 
 #~ msgid "Resize Image to Size of Selection"
 #~ msgstr "Raširi slikuna veličinu izbora"
-
-#~ msgid "Choose Palette"
-#~ msgstr "Izaberite paletu"
 
 #~ msgid "Ok"
 #~ msgstr "U redu"
