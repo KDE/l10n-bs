@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kpackagekit\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-06-15 04:23+0200\n"
+"POT-Creation-Date: 2012-07-04 04:44+0200\n"
 "PO-Revision-Date: 2011-05-08 12:57+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -36,9 +36,9 @@ msgstr "Instaliranje datoteke"
 msgid "%1 has been installed successfully!"
 msgstr "Datoteka je uspješno instalirana"
 
-#: AppSetup/SetupWizard.cpp:107 libapper/PkTransaction.cpp:129
-#: libapper/PkTransaction.cpp:151 libapper/PkTransaction.cpp:174
-#: libapper/PkTransaction.cpp:195
+#: AppSetup/SetupWizard.cpp:107 libapper/PkTransaction.cpp:128
+#: libapper/PkTransaction.cpp:149 libapper/PkTransaction.cpp:171
+#: libapper/PkTransaction.cpp:191
 msgid "Error"
 msgstr "Greška"
 
@@ -682,6 +682,47 @@ msgstr ""
 msgid "The distribution upgrade process failed with an unknown error."
 msgstr "Proces distribucijske nadgradnje nije uspio uz nepoznatu grešku."
 
+#: ApperKCM/Updater/Updater.cpp:117
+#, fuzzy
+#| msgid "Show Versions"
+msgid "Show Current Versions"
+msgstr "Prikaži verzije"
+
+#: ApperKCM/Updater/Updater.cpp:255
+#, kde-format
+msgid "Estimated download size: %1"
+msgstr ""
+
+#: ApperKCM/Updater/Updater.cpp:292
+msgid "Your system is up to date"
+msgstr ""
+
+#: ApperKCM/Updater/Updater.cpp:293 ApperKCM/Updater/Updater.cpp:297
+#, kde-format
+msgid "Verified %1 ago"
+msgstr ""
+
+#: ApperKCM/Updater/Updater.cpp:296
+#, fuzzy
+#| msgid "You have one update"
+#| msgid_plural "You have %1 updates"
+msgid "You have no updates"
+msgstr "Imate %1 nadgradnju"
+
+#: ApperKCM/Updater/Updater.cpp:300
+msgid "Last check for updates was more than a month ago"
+msgstr ""
+
+#: ApperKCM/Updater/Updater.cpp:301
+msgid "It's strongly recommended that you check for new updates now"
+msgstr ""
+
+#. i18n: file: ApperKCM/ApperKCM.ui:230
+#. i18n: ectx: property (text), widget (QPushButton, checkUpdatesPB)
+#: ApperKCM/Updater/Updater.cpp:396 rc.cpp:143
+msgid "Check for new Updates"
+msgstr "Potraži nove nadgradnje."
+
 #: ApperKCM/Updater/UpdateDetails.cpp:177
 msgid "This update will add new features and expand functionality."
 msgstr "Ova nadgradnja će dodati nove sadržaje i proširiti funkcionalnost."
@@ -814,47 +855,6 @@ msgstr "Repozitorij:"
 #: ApperKCM/Updater/UpdateDetails.cpp:330
 msgid "No update description was found."
 msgstr "Opis nadgradnje nije pronađen."
-
-#: ApperKCM/Updater/Updater.cpp:117
-#, fuzzy
-#| msgid "Show Versions"
-msgid "Show Current Versions"
-msgstr "Prikaži verzije"
-
-#: ApperKCM/Updater/Updater.cpp:255
-#, kde-format
-msgid "Estimated download size: %1"
-msgstr ""
-
-#: ApperKCM/Updater/Updater.cpp:292
-msgid "Your system is up to date"
-msgstr ""
-
-#: ApperKCM/Updater/Updater.cpp:293 ApperKCM/Updater/Updater.cpp:297
-#, kde-format
-msgid "Verified %1 ago"
-msgstr ""
-
-#: ApperKCM/Updater/Updater.cpp:296
-#, fuzzy
-#| msgid "You have one update"
-#| msgid_plural "You have %1 updates"
-msgid "You have no updates"
-msgstr "Imate %1 nadgradnju"
-
-#: ApperKCM/Updater/Updater.cpp:300
-msgid "Last check for updates was more than a month ago"
-msgstr ""
-
-#: ApperKCM/Updater/Updater.cpp:301
-msgid "It's strongly recommended that you check for new updates now"
-msgstr ""
-
-#. i18n: file: ApperKCM/ApperKCM.ui:230
-#. i18n: ectx: property (text), widget (QPushButton, checkUpdatesPB)
-#: ApperKCM/Updater/Updater.cpp:396 rc.cpp:143
-msgid "Check for new Updates"
-msgstr "Potraži nove nadgradnje."
 
 #: Sentinel/DistroUpgrade.cpp:69
 msgid "Start upgrade now"
@@ -1470,7 +1470,7 @@ msgstr[2] "%2 želi da instalira pakete"
 msgid "Failed to start search file transaction"
 msgstr "Početak pretrage transakciju datoteka nije uspio"
 
-#: Sentinel/PkInstallProvideFiles.cpp:101 libapper/PkTransaction.cpp:257
+#: Sentinel/PkInstallProvideFiles.cpp:101 libapper/PkTransaction.cpp:253
 msgid "Failed to install file"
 msgid_plural "Failed to install files"
 msgstr[0] "Instalacija datoteke nije uspjela"
@@ -1833,7 +1833,7 @@ msgstr "Odobrenje potrebno za %1 od%2"
 msgid "Name"
 msgstr "Igre"
 
-#: libapper/PackageModel.cpp:184 libapper/SimulateModel.cpp:141
+#: libapper/PackageModel.cpp:184 libapper/SimulateModel.cpp:140
 msgid "Version"
 msgstr "Verzija"
 
@@ -2665,7 +2665,7 @@ msgstr "Paket nije u skladu sa sistemom"
 msgid "No space is left on the disk"
 msgstr "Nema više slobodnog prostora na disku"
 
-#: libapper/PkStrings.cpp:460 libapper/PkTransaction.cpp:570
+#: libapper/PkStrings.cpp:460 libapper/PkTransaction.cpp:566
 msgid "A media change is required"
 msgstr "Potrebna je izmjena medija"
 
@@ -3652,84 +3652,6 @@ msgstr "Nije moguće komunicirati sa packagekitd"
 msgid "An unknown error happened."
 msgstr "Desila se nepoznata greška"
 
-#: libapper/PkTransaction.cpp:125
-#, fuzzy
-#| msgid "Failed to simulate package install"
-msgid "Failed to simulate file install"
-msgstr "Simulacija instalacije paketa nije uspjela"
-
-#: libapper/PkTransaction.cpp:129
-#, fuzzy
-#| msgid "Current backend does not support installing packages."
-msgid "Current backend does not support installing files."
-msgstr "Postojeći backend ne podržava instaliranje paketa"
-
-#: libapper/PkTransaction.cpp:147
-msgid "Failed to simulate package install"
-msgstr "Simulacija instalacije paketa nije uspjela"
-
-#: libapper/PkTransaction.cpp:151
-msgid "Current backend does not support installing packages."
-msgstr "Postojeći backend ne podržava instaliranje paketa"
-
-#: libapper/PkTransaction.cpp:170
-msgid "Failed to simulate package removal"
-msgstr "Simulacija odstranjivanja paketa nije uspjela"
-
-#: libapper/PkTransaction.cpp:174
-msgid "The current backend does not support removing packages."
-msgstr "Postojeći backend ne podržava odstranjivanje paketa"
-
-#: libapper/PkTransaction.cpp:191
-msgid "Failed to simulate package update"
-msgstr "Simulacija nadogradnje paketa nije uspjela"
-
-#: libapper/PkTransaction.cpp:195
-msgid "The current backend does not support updating packages."
-msgstr "Postojeći backend ne podržava nadogradnju paketa"
-
-#: libapper/PkTransaction.cpp:205
-#, fuzzy
-#| msgid "Failed to remove package"
-msgid "Failed to refresh package cache"
-msgstr "Odstranjivanje paketa nije uspjelo"
-
-#: libapper/PkTransaction.cpp:245
-msgid "Failed to install package"
-msgstr "Instaliranje paketa nije uspjelo"
-
-#: libapper/PkTransaction.cpp:270
-msgid "Failed to remove package"
-msgstr "Odstranjivanje paketa nije uspjelo"
-
-#: libapper/PkTransaction.cpp:282
-msgid "Failed to update package"
-msgstr "Nadograđivanje paketa nije uspjelo"
-
-#: libapper/PkTransaction.cpp:450
-#, kde-format
-msgid "Downloading packages at %1/s"
-msgstr "Preuzimanje paketa pri %1/s"
-
-#: libapper/PkTransaction.cpp:498
-msgid ""
-"You are about to install unsigned packages that can compromise your system, "
-"as it is impossible to verify if the software came from a trusted source.\n"
-"\n"
-"Are you sure you want to proceed with the installation?"
-msgstr ""
-"Upravo trebate da instalirate nepotpisane pakete koji mogu ugroziti vaš "
-"sistem, pošto je nemoguće potvrditi da li je program došao iz pouzdanog "
-"izvora"
-
-#: libapper/PkTransaction.cpp:501
-msgid "Installing unsigned software"
-msgstr "Instaliram nepotpisan program"
-
-#: libapper/PkTransaction.cpp:555 libapper/PkTransaction.cpp:609
-msgid "Failed to install signature"
-msgstr "Instalacija potpisa nije uspjela"
-
 #: libapper/PkTransactionDialog.cpp:88
 msgid ""
 "Allows you to hide the window whilst keeping the transaction task running."
@@ -3786,7 +3708,97 @@ msgstr[0] "%1 paket za nadgradnju"
 msgstr[1] "%1 paketa za nadgradnju"
 msgstr[2] "%1 paketa za nadgradnju"
 
-#: libapper/SimulateModel.cpp:139
+#: libapper/PkTransaction.cpp:124
+#, fuzzy
+#| msgid "Failed to simulate package install"
+msgid "Failed to simulate file install"
+msgstr "Simulacija instalacije paketa nije uspjela"
+
+#: libapper/PkTransaction.cpp:128
+#, fuzzy
+#| msgid "Current backend does not support installing packages."
+msgid "Current backend does not support installing files."
+msgstr "Postojeći backend ne podržava instaliranje paketa"
+
+#: libapper/PkTransaction.cpp:145
+msgid "Failed to simulate package install"
+msgstr "Simulacija instalacije paketa nije uspjela"
+
+#: libapper/PkTransaction.cpp:149
+msgid "Current backend does not support installing packages."
+msgstr "Postojeći backend ne podržava instaliranje paketa"
+
+#: libapper/PkTransaction.cpp:167
+msgid "Failed to simulate package removal"
+msgstr "Simulacija odstranjivanja paketa nije uspjela"
+
+#: libapper/PkTransaction.cpp:171
+msgid "The current backend does not support removing packages."
+msgstr "Postojeći backend ne podržava odstranjivanje paketa"
+
+#: libapper/PkTransaction.cpp:187
+msgid "Failed to simulate package update"
+msgstr "Simulacija nadogradnje paketa nije uspjela"
+
+#: libapper/PkTransaction.cpp:191
+msgid "The current backend does not support updating packages."
+msgstr "Postojeći backend ne podržava nadogradnju paketa"
+
+#: libapper/PkTransaction.cpp:201
+#, fuzzy
+#| msgid "Failed to remove package"
+msgid "Failed to refresh package cache"
+msgstr "Odstranjivanje paketa nije uspjelo"
+
+#: libapper/PkTransaction.cpp:241
+msgid "Failed to install package"
+msgstr "Instaliranje paketa nije uspjelo"
+
+#: libapper/PkTransaction.cpp:266
+msgid "Failed to remove package"
+msgstr "Odstranjivanje paketa nije uspjelo"
+
+#: libapper/PkTransaction.cpp:278
+msgid "Failed to update package"
+msgstr "Nadograđivanje paketa nije uspjelo"
+
+#: libapper/PkTransaction.cpp:439
+#, fuzzy, kde-format
+#| msgid "Downloading packages at %1/s"
+msgid "Downloading packages at %1/s, %2 remaining"
+msgstr "Preuzimanje paketa pri %1/s"
+
+#: libapper/PkTransaction.cpp:443
+#, kde-format
+msgid "Downloading packages at %1/s"
+msgstr "Preuzimanje paketa pri %1/s"
+
+#: libapper/PkTransaction.cpp:446
+#, fuzzy, kde-format
+#| msgid "Downloading packages at %1/s"
+msgid "Downloading packages, %1 remaining"
+msgstr "Preuzimanje paketa pri %1/s"
+
+#: libapper/PkTransaction.cpp:494
+msgid ""
+"You are about to install unsigned packages that can compromise your system, "
+"as it is impossible to verify if the software came from a trusted source.\n"
+"\n"
+"Are you sure you want to proceed with the installation?"
+msgstr ""
+"Upravo trebate da instalirate nepotpisane pakete koji mogu ugroziti vaš "
+"sistem, pošto je nemoguće potvrditi da li je program došao iz pouzdanog "
+"izvora"
+
+#: libapper/PkTransaction.cpp:497
+msgid "Installing unsigned software"
+msgstr "Instaliram nepotpisan program"
+
+#: libapper/PkTransaction.cpp:551 libapper/PkTransaction.cpp:605
+msgid "Failed to install signature"
+msgstr "Instalacija potpisa nije uspjela"
+
+#: libapper/SimulateModel.cpp:138
 msgid "Package"
 msgstr "Paket"
 
