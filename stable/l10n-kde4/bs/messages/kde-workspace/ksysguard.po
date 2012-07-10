@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksysguard\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-06-07 14:20+0200\n"
+"POT-Creation-Date: 2012-07-10 20:11+0200\n"
 "PO-Revision-Date: 2011-04-09 22:49+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -24,6 +24,112 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
+# >> @title:window
+#: HostConnector.cpp:44
+msgid "Connect Host"
+msgstr "Povezivanje domaćina"
+
+#: HostConnector.cpp:55
+msgid "Host:"
+msgstr "Domaćin:"
+
+#: HostConnector.cpp:65
+msgid "Enter the name of the host you want to connect to."
+msgstr "Ime domaćina na koji želite da se povežete."
+
+#: HostConnector.cpp:71
+msgid "Connection Type"
+msgstr "Tip veze"
+
+#: HostConnector.cpp:77
+msgid "ssh"
+msgstr "SSH"
+
+#: HostConnector.cpp:80
+msgid "Select this to use the secure shell to login to the remote host."
+msgstr "Veza sa udaljenim domaćinom preko bezbjedne školjke."
+
+#: HostConnector.cpp:83
+msgid "rsh"
+msgstr "RSH"
+
+#: HostConnector.cpp:84
+msgid "Select this to use the remote shell to login to the remote host."
+msgstr "Veza sa udaljenim domaćinom preko udaljene školjke."
+
+#: HostConnector.cpp:87
+msgid "Daemon"
+msgstr "Demon"
+
+#: HostConnector.cpp:88
+msgid ""
+"Select this if you want to connect to a ksysguard daemon that is running on "
+"the machine you want to connect to, and is listening for client requests."
+msgstr ""
+"Veza sa demonom K‑sistembrana na računaru sa kojim želite da se povežete, a "
+"koja osluškuje klijentske zahtjeve."
+
+#: HostConnector.cpp:91
+msgid "Custom command"
+msgstr "Posebna naredba"
+
+#: HostConnector.cpp:92
+msgid ""
+"Select this to use the command you entered below to start ksysguardd on the "
+"remote host."
+msgstr ""
+"Demon K‑sistembrana pokreće se na udaljenom domaćinu naredbom koju unesete "
+"ispod."
+
+#: HostConnector.cpp:95
+msgid "Port:"
+msgstr "Port:"
+
+#: HostConnector.cpp:102
+msgid ""
+"Enter the port number on which the ksysguard daemon is listening for "
+"connections."
+msgstr "Broj porta na kome demon K‑sistembrana osluškuje veze."
+
+#: HostConnector.cpp:105
+msgid "e.g.  3112"
+msgstr "npr. 3112"
+
+#: HostConnector.cpp:108
+msgid "Command:"
+msgstr "Naredba:"
+
+#: HostConnector.cpp:117
+msgid "Enter the command that runs ksysguardd on the host you want to monitor."
+msgstr ""
+"Naredba za pokretanje demona K‑sistembrana na domaćinu koji želite da "
+"nadgledate."
+
+#: HostConnector.cpp:121
+msgid "e.g. ssh -l root remote.host.org ksysguardd"
+msgstr "npr. <icode>ssh -l root udaljeni.domacin.org ksysguardd</icode>"
+
+#: SensorBrowser.cpp:117
+msgid "Sensor Browser"
+msgstr "Pregledač senzora"
+
+#: SensorBrowser.cpp:474
+msgid "Drag sensors to empty cells of a worksheet "
+msgstr "Prevucite senzore u prazne ćelije radnog lista. "
+
+#: SensorBrowser.cpp:475
+msgid ""
+"The sensor browser lists the connected hosts and the sensors that they "
+"provide. Click and drag sensors into drop zones of a worksheet. A display "
+"will appear that visualizes the values provided by the sensor. Some sensor "
+"displays can display values of multiple sensors. Simply drag other sensors "
+"on to the display to add more sensors."
+msgstr ""
+"Pregledač senzora nabraja povezane domaćine i njihove senzore. Odavdje "
+"prevlačite senzore u ćelije radnog lista, čime se dobija vizuelni prikaz "
+"vrijednosti senzora. Neki od prikaza mogu davati vrijednosti i po nekoliko "
+"senzora: opet prevucite senzore na prikaz da biste dodali više njih."
+
 #: SensorDisplayLib/DancingBars.cpp:96 SensorDisplayLib/FancyPlotter.cpp:283
 msgid "OK"
 msgstr "U redu"
@@ -32,82 +138,6 @@ msgstr "U redu"
 #: SensorDisplayLib/FancyPlotter.cpp:519 SensorDisplayLib/FancyPlotter.cpp:597
 msgid "Error"
 msgstr "Greška"
-
-#: SensorDisplayLib/DummyDisplay.cpp:30 SensorDisplayLib/DummyDisplay.cpp:38
-msgid "Drop Sensor Here"
-msgstr "Privuci senzor ovdje"
-
-#: SensorDisplayLib/DummyDisplay.cpp:32
-msgid ""
-"This is an empty space in a worksheet. Drag a sensor from the Sensor Browser "
-"and drop it here. A sensor display will appear that allows you to monitor "
-"the values of the sensor over time."
-msgstr ""
-"Ovo je prazan prostor radnog lista. Prevucite ovamo senzor iz pregledača "
-"senzora, kada će se pojaviti prikaz u kojem možete pratiti vrijednosti "
-"senzora u stvarnom vremenu."
-
-#: SensorDisplayLib/ListViewSettings.cpp:30
-msgid "List View Settings"
-msgstr "Postavke prikaza spiska"
-
-#: SensorDisplayLib/MultiMeterSettings.cpp:31
-msgctxt ""
-"Multimeter is a sensor display that mimics 'digital multimeter' aparatus"
-msgid "Multimeter Settings"
-msgstr "Postavke multimetra"
-
-#: SensorDisplayLib/SensorDisplay.cpp:118
-#: SensorDisplayLib/SensorLogger.cpp:598
-msgid "&Properties"
-msgstr "&Svojstva"
-
-#: SensorDisplayLib/SensorDisplay.cpp:123
-#: SensorDisplayLib/SensorLogger.cpp:603
-msgid "&Remove Display"
-msgstr "&Ukloni prikaz"
-
-#: SensorDisplayLib/SensorDisplay.cpp:190
-#, kde-format
-msgid ""
-"<qt><p>This is a sensor display. To customize a sensor display click the "
-"right mouse button here and select the <i>Properties</i> entry from the "
-"popup menu. Select <i>Remove</i> to delete the display from the worksheet.</"
-"p>%1</qt>"
-msgstr ""
-"<qt><p>Ovo je prikaz senzora. Možete ga prilagoditi desnim klikom ovdje i "
-"izborom stavke <interface>Svojstva</interface> iz iskačućeg menija. "
-"Izaberite <interface>Ukloni senzor</interface> ako želite da uklonite prikaz "
-"sa radnog lista.</p>%1</qt>"
-
-#: SensorDisplayLib/SensorLoggerSettings.cpp:30
-msgid "Sensor Logger Settings"
-msgstr "Postavke bilježnika senzora"
-
-# >> @title:column
-#: SensorDisplayLib/SensorModel.cpp:166
-msgid "Host"
-msgstr "domaćin"
-
-# >> @title:column
-#: SensorDisplayLib/SensorModel.cpp:169
-msgid "Sensor"
-msgstr "senzor"
-
-# >> @title:column
-#: SensorDisplayLib/SensorModel.cpp:172
-msgid "Unit"
-msgstr "jedinica"
-
-# >> @title:column
-#: SensorDisplayLib/SensorModel.cpp:175
-msgid "Status"
-msgstr "stanje"
-
-# >> @title:column
-#: SensorDisplayLib/SensorModel.cpp:178
-msgid "Label"
-msgstr "etiketa"
 
 # >> @title:window
 #: SensorDisplayLib/DancingBarsSettings.cpp:43
@@ -123,14 +153,14 @@ msgstr "Opseg"
 #. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, titleFrame)
 #: SensorDisplayLib/DancingBarsSettings.cpp:57 WorkSheetSettings.cpp:50
-#: rc.cpp:5 rc.cpp:92
+#: rc.cpp:5 rc.cpp:116
 msgid "Title"
 msgstr "Naslov"
 
 #. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:35
 #. i18n: ectx: property (whatsThis), widget (KLineEdit, m_title)
 #: SensorDisplayLib/DancingBarsSettings.cpp:62
-#: SensorDisplayLib/FancyPlotterSettings.cpp:73 rc.cpp:23
+#: SensorDisplayLib/FancyPlotterSettings.cpp:73 rc.cpp:47
 msgid "Enter the title of the display here."
 msgstr "Unesite naslov prikaza."
 
@@ -170,7 +200,7 @@ msgstr "Alarmi"
 
 #. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:59
 #. i18n: ectx: property (title), widget (QGroupBox, GroupBox1)
-#: SensorDisplayLib/DancingBarsSettings.cpp:107 rc.cpp:68
+#: SensorDisplayLib/DancingBarsSettings.cpp:107 rc.cpp:92
 msgid "Alarm for Minimum Value"
 msgstr "Alarm za najmanju vrijednost"
 
@@ -183,19 +213,19 @@ msgstr "Uključi alarm"
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_lowerLimitActive)
 #. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:71
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_lowerLimitActive)
-#: SensorDisplayLib/DancingBarsSettings.cpp:113 rc.cpp:32 rc.cpp:74
+#: SensorDisplayLib/DancingBarsSettings.cpp:113 rc.cpp:56 rc.cpp:98
 msgid "Enable the minimum value alarm."
 msgstr "Uključi alarm za najmanju vrijednost."
 
 #. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:97
 #. i18n: ectx: property (text), widget (QLabel, m_lblLowerLimit)
-#: SensorDisplayLib/DancingBarsSettings.cpp:116 rc.cpp:77
+#: SensorDisplayLib/DancingBarsSettings.cpp:116 rc.cpp:101
 msgid "Lower limit:"
 msgstr "Donja granica:"
 
 #. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:123
 #. i18n: ectx: property (title), widget (QGroupBox, GroupBox1_2)
-#: SensorDisplayLib/DancingBarsSettings.cpp:130 rc.cpp:80
+#: SensorDisplayLib/DancingBarsSettings.cpp:130 rc.cpp:104
 msgid "Alarm for Maximum Value"
 msgstr "Alarm za najveću vrijednost"
 
@@ -203,13 +233,13 @@ msgstr "Alarm za najveću vrijednost"
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_upperLimitActive)
 #. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:135
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_upperLimitActive)
-#: SensorDisplayLib/DancingBarsSettings.cpp:136 rc.cpp:41 rc.cpp:86
+#: SensorDisplayLib/DancingBarsSettings.cpp:136 rc.cpp:65 rc.cpp:110
 msgid "Enable the maximum value alarm."
 msgstr "Uključi alarm za najveću vrijednost."
 
 #. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:161
 #. i18n: ectx: property (text), widget (QLabel, m_lblUpperLimit)
-#: SensorDisplayLib/DancingBarsSettings.cpp:139 rc.cpp:89
+#: SensorDisplayLib/DancingBarsSettings.cpp:139 rc.cpp:113
 msgid "Upper limit:"
 msgstr "Gornja granica:"
 
@@ -228,14 +258,14 @@ msgstr "Boja za van opsega:"
 
 #. i18n: file: SensorDisplayLib/ListViewSettingsWidget.ui:77
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:67
+#. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:228
 #. i18n: ectx: property (text), widget (QLabel, textLabel3_2)
 #. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:64
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:67
-#. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: SensorDisplayLib/DancingBarsSettings.cpp:175
-#: SensorDisplayLib/LogFile.cpp:100 rc.cpp:17 rc.cpp:56 rc.cpp:101 rc.cpp:116
+#: SensorDisplayLib/LogFile.cpp:100 rc.cpp:17 rc.cpp:29 rc.cpp:80 rc.cpp:125
 msgid "Background color:"
 msgstr "Boja pozadine:"
 
@@ -284,6 +314,97 @@ msgstr "Etiketa trakastog grafikona"
 #: SensorDisplayLib/DancingBarsSettings.cpp:367
 msgid "Enter new label:"
 msgstr "Nova etiketa:"
+
+#: SensorDisplayLib/DummyDisplay.cpp:30 SensorDisplayLib/DummyDisplay.cpp:38
+msgid "Drop Sensor Here"
+msgstr "Privuci senzor ovdje"
+
+#: SensorDisplayLib/DummyDisplay.cpp:32
+msgid ""
+"This is an empty space in a worksheet. Drag a sensor from the Sensor Browser "
+"and drop it here. A sensor display will appear that allows you to monitor "
+"the values of the sensor over time."
+msgstr ""
+"Ovo je prazan prostor radnog lista. Prevucite ovamo senzor iz pregledača "
+"senzora, kada će se pojaviti prikaz u kojem možete pratiti vrijednosti "
+"senzora u stvarnom vremenu."
+
+#: SensorDisplayLib/FancyPlotter.cpp:178
+msgctxt "Largest axis title"
+msgid "99999 XXXX"
+msgstr "99999 XXXX"
+
+#: SensorDisplayLib/FancyPlotter.cpp:515 SensorDisplayLib/FancyPlotter.cpp:586
+#: SensorDisplayLib/FancyPlotter.cpp:649
+#, kde-format
+msgctxt "units"
+msgid "%1%"
+msgstr "%1%"
+
+#: SensorDisplayLib/FancyPlotter.cpp:523
+#, kde-format
+msgctxt "%1 is what is being shown statistics for, like 'Memory', 'Swap', etc."
+msgid "<p><b>%1:</b><br>"
+msgstr "<p><b>%1:</b><br>"
+
+#: SensorDisplayLib/FancyPlotter.cpp:594
+#, kde-format
+msgid "%1 of %2%1"
+msgstr "%1 od %2%1"
+
+#: SensorDisplayLib/FancyPlotter.cpp:622
+#, kde-format
+msgctxt "units"
+msgid "%1 TiB"
+msgstr "%1 TiB"
+
+#: SensorDisplayLib/FancyPlotter.cpp:625
+#, kde-format
+msgctxt "units"
+msgid "%1 GiB"
+msgstr "%1 GiB"
+
+#: SensorDisplayLib/FancyPlotter.cpp:628
+#, kde-format
+msgctxt "units"
+msgid "%1 MiB"
+msgstr "%1 MiB"
+
+#: SensorDisplayLib/FancyPlotter.cpp:631
+#, kde-format
+msgctxt "units"
+msgid "%1 KiB"
+msgstr "%1 KiB"
+
+#: SensorDisplayLib/FancyPlotter.cpp:636
+#, kde-format
+msgctxt "units"
+msgid "%1 TiB/s"
+msgstr "%1 TiB/s"
+
+#: SensorDisplayLib/FancyPlotter.cpp:639
+#, kde-format
+msgctxt "units"
+msgid "%1 GiB/s"
+msgstr "%1 GiB/s"
+
+#: SensorDisplayLib/FancyPlotter.cpp:642
+#, kde-format
+msgctxt "units"
+msgid "%1 MiB/s"
+msgstr "%1 MiB/s"
+
+#: SensorDisplayLib/FancyPlotter.cpp:645
+#, kde-format
+msgctxt "units"
+msgid "%1 KiB/s"
+msgstr "%1 KiB/s"
+
+#: SensorDisplayLib/FancyPlotter.cpp:651
+#, kde-format
+msgctxt "unitless - just a number"
+msgid "%1"
+msgstr "%1"
 
 #: SensorDisplayLib/FancyPlotterSettings.cpp:51
 msgid "Plotter Settings"
@@ -481,15 +602,48 @@ msgstr "Gigabajta"
 msgid "Terabytes"
 msgstr "Terabajti"
 
+#: SensorDisplayLib/ListViewSettings.cpp:30
+msgid "List View Settings"
+msgstr "Postavke prikaza spiska"
+
 #: SensorDisplayLib/LogFile.cpp:92
 msgid "File logging settings"
 msgstr "Postavke bilježenja"
 
 #. i18n: file: SensorDisplayLib/LogFileSettings.ui:54
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: SensorDisplayLib/LogFile.cpp:98 rc.cpp:113
+#: SensorDisplayLib/LogFile.cpp:98 rc.cpp:26
 msgid "Foreground color:"
 msgstr "Boja ispisa:"
+
+#: SensorDisplayLib/MultiMeterSettings.cpp:31
+msgctxt ""
+"Multimeter is a sensor display that mimics 'digital multimeter' aparatus"
+msgid "Multimeter Settings"
+msgstr "Postavke multimetra"
+
+#: SensorDisplayLib/SensorDisplay.cpp:118
+#: SensorDisplayLib/SensorLogger.cpp:598
+msgid "&Properties"
+msgstr "&Svojstva"
+
+#: SensorDisplayLib/SensorDisplay.cpp:123
+#: SensorDisplayLib/SensorLogger.cpp:603
+msgid "&Remove Display"
+msgstr "&Ukloni prikaz"
+
+#: SensorDisplayLib/SensorDisplay.cpp:190
+#, kde-format
+msgid ""
+"<qt><p>This is a sensor display. To customize a sensor display click the "
+"right mouse button here and select the <i>Properties</i> entry from the "
+"popup menu. Select <i>Remove</i> to delete the display from the worksheet.</"
+"p>%1</qt>"
+msgstr ""
+"<qt><p>Ovo je prikaz senzora. Možete ga prilagoditi desnim klikom ovdje i "
+"izborom stavke <interface>Svojstva</interface> iz iskačućeg menija. "
+"Izaberite <interface>Ukloni senzor</interface> ako želite da uklonite prikaz "
+"sa radnog lista.</p>%1</qt>"
 
 # >> @title:column
 #: SensorDisplayLib/SensorLogger.cpp:138
@@ -499,7 +653,7 @@ msgstr "bilježenje"
 # >! Needs context: @title:column in SensorLogger.cc, @title:group in the other
 #. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:31
 #. i18n: ectx: property (title), widget (QGroupBox, timerFrame)
-#: SensorDisplayLib/SensorLogger.cpp:141 rc.cpp:62
+#: SensorDisplayLib/SensorLogger.cpp:141 rc.cpp:86
 msgid "Timer Interval"
 msgstr "Period odbrojavača"
 
@@ -540,230 +694,34 @@ msgstr "&Zaustavi bilježenje"
 msgid "S&tart Logging"
 msgstr "&Pokreni bilježenje"
 
-#: SensorDisplayLib/FancyPlotter.cpp:178
-msgctxt "Largest axis title"
-msgid "99999 XXXX"
-msgstr "99999 XXXX"
+#: SensorDisplayLib/SensorLoggerSettings.cpp:30
+msgid "Sensor Logger Settings"
+msgstr "Postavke bilježnika senzora"
 
-#: SensorDisplayLib/FancyPlotter.cpp:515 SensorDisplayLib/FancyPlotter.cpp:586
-#: SensorDisplayLib/FancyPlotter.cpp:649
-#, kde-format
-msgctxt "units"
-msgid "%1%"
-msgstr "%1%"
+# >> @title:column
+#: SensorDisplayLib/SensorModel.cpp:166
+msgid "Host"
+msgstr "domaćin"
 
-#: SensorDisplayLib/FancyPlotter.cpp:523
-#, kde-format
-msgctxt "%1 is what is being shown statistics for, like 'Memory', 'Swap', etc."
-msgid "<p><b>%1:</b><br>"
-msgstr "<p><b>%1:</b><br>"
+# >> @title:column
+#: SensorDisplayLib/SensorModel.cpp:169
+msgid "Sensor"
+msgstr "senzor"
 
-#: SensorDisplayLib/FancyPlotter.cpp:594
-#, kde-format
-msgid "%1 of %2%1"
-msgstr "%1 od %2%1"
+# >> @title:column
+#: SensorDisplayLib/SensorModel.cpp:172
+msgid "Unit"
+msgstr "jedinica"
 
-#: SensorDisplayLib/FancyPlotter.cpp:622
-#, kde-format
-msgctxt "units"
-msgid "%1 TiB"
-msgstr "%1 TiB"
+# >> @title:column
+#: SensorDisplayLib/SensorModel.cpp:175
+msgid "Status"
+msgstr "stanje"
 
-#: SensorDisplayLib/FancyPlotter.cpp:625
-#, kde-format
-msgctxt "units"
-msgid "%1 GiB"
-msgstr "%1 GiB"
-
-#: SensorDisplayLib/FancyPlotter.cpp:628
-#, kde-format
-msgctxt "units"
-msgid "%1 MiB"
-msgstr "%1 MiB"
-
-#: SensorDisplayLib/FancyPlotter.cpp:631
-#, kde-format
-msgctxt "units"
-msgid "%1 KiB"
-msgstr "%1 KiB"
-
-#: SensorDisplayLib/FancyPlotter.cpp:636
-#, kde-format
-msgctxt "units"
-msgid "%1 TiB/s"
-msgstr "%1 TiB/s"
-
-#: SensorDisplayLib/FancyPlotter.cpp:639
-#, kde-format
-msgctxt "units"
-msgid "%1 GiB/s"
-msgstr "%1 GiB/s"
-
-#: SensorDisplayLib/FancyPlotter.cpp:642
-#, kde-format
-msgctxt "units"
-msgid "%1 MiB/s"
-msgstr "%1 MiB/s"
-
-#: SensorDisplayLib/FancyPlotter.cpp:645
-#, kde-format
-msgctxt "units"
-msgid "%1 KiB/s"
-msgstr "%1 KiB/s"
-
-#: SensorDisplayLib/FancyPlotter.cpp:651
-#, kde-format
-msgctxt "unitless - just a number"
-msgid "%1"
-msgstr "%1"
-
-#: WorkSheetSettings.cpp:40
-msgid "Tab Properties"
-msgstr "Svojstva kartice"
-
-#: WorkSheetSettings.cpp:61
-msgid "Properties"
-msgstr "Svojstva"
-
-#: WorkSheetSettings.cpp:70
-msgid "Rows:"
-msgstr "Vrste:"
-
-#: WorkSheetSettings.cpp:79
-msgid "Columns:"
-msgstr "Kolone:"
-
-#: WorkSheetSettings.cpp:87
-msgid "Enter the number of rows the sheet should have."
-msgstr "Broj vrsta koje list treba da ima."
-
-#: WorkSheetSettings.cpp:88
-msgid "Enter the number of columns the sheet should have."
-msgstr "Broj kolona koje list treba da ima."
-
-#: WorkSheetSettings.cpp:90 TimerSettings.cpp:51
-msgid "Update interval:"
-msgstr "Period ažuriranja:"
-
-#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:49
-#. i18n: ectx: property (suffix), widget (KIntNumInput, m_timerInterval)
-#: WorkSheetSettings.cpp:94 TimerSettings.cpp:58 rc.cpp:65
-msgid " sec"
-msgstr " sek."
-
-#: WorkSheetSettings.cpp:100 TimerSettings.cpp:61
-msgid "All displays of the sheet are updated at the rate specified here."
-msgstr "Svi prikazi lista ažuriraju se učestanošću koju navedete ovdje."
-
-#: WorkSheetSettings.cpp:101
-msgid "Enter the title of the worksheet here."
-msgstr "Naslov radnog lista."
-
-# >> @title:window
-#: HostConnector.cpp:44
-msgid "Connect Host"
-msgstr "Povezivanje domaćina"
-
-#: HostConnector.cpp:55
-msgid "Host:"
-msgstr "Domaćin:"
-
-#: HostConnector.cpp:65
-msgid "Enter the name of the host you want to connect to."
-msgstr "Ime domaćina na koji želite da se povežete."
-
-#: HostConnector.cpp:71
-msgid "Connection Type"
-msgstr "Tip veze"
-
-#: HostConnector.cpp:77
-msgid "ssh"
-msgstr "SSH"
-
-#: HostConnector.cpp:80
-msgid "Select this to use the secure shell to login to the remote host."
-msgstr "Veza sa udaljenim domaćinom preko bezbjedne školjke."
-
-#: HostConnector.cpp:83
-msgid "rsh"
-msgstr "RSH"
-
-#: HostConnector.cpp:84
-msgid "Select this to use the remote shell to login to the remote host."
-msgstr "Veza sa udaljenim domaćinom preko udaljene školjke."
-
-#: HostConnector.cpp:87
-msgid "Daemon"
-msgstr "Demon"
-
-#: HostConnector.cpp:88
-msgid ""
-"Select this if you want to connect to a ksysguard daemon that is running on "
-"the machine you want to connect to, and is listening for client requests."
-msgstr ""
-"Veza sa demonom K‑sistembrana na računaru sa kojim želite da se povežete, a "
-"koja osluškuje klijentske zahtjeve."
-
-#: HostConnector.cpp:91
-msgid "Custom command"
-msgstr "Posebna naredba"
-
-#: HostConnector.cpp:92
-msgid ""
-"Select this to use the command you entered below to start ksysguardd on the "
-"remote host."
-msgstr ""
-"Demon K‑sistembrana pokreće se na udaljenom domaćinu naredbom koju unesete "
-"ispod."
-
-#: HostConnector.cpp:95
-msgid "Port:"
-msgstr "Port:"
-
-#: HostConnector.cpp:102
-msgid ""
-"Enter the port number on which the ksysguard daemon is listening for "
-"connections."
-msgstr "Broj porta na kome demon K‑sistembrana osluškuje veze."
-
-#: HostConnector.cpp:105
-msgid "e.g.  3112"
-msgstr "npr. 3112"
-
-#: HostConnector.cpp:108
-msgid "Command:"
-msgstr "Naredba:"
-
-#: HostConnector.cpp:117
-msgid "Enter the command that runs ksysguardd on the host you want to monitor."
-msgstr ""
-"Naredba za pokretanje demona K‑sistembrana na domaćinu koji želite da "
-"nadgledate."
-
-#: HostConnector.cpp:121
-msgid "e.g. ssh -l root remote.host.org ksysguardd"
-msgstr "npr. <icode>ssh -l root udaljeni.domacin.org ksysguardd</icode>"
-
-#: SensorBrowser.cpp:117
-msgid "Sensor Browser"
-msgstr "Pregledač senzora"
-
-#: SensorBrowser.cpp:474
-msgid "Drag sensors to empty cells of a worksheet "
-msgstr "Prevucite senzore u prazne ćelije radnog lista. "
-
-#: SensorBrowser.cpp:475
-msgid ""
-"The sensor browser lists the connected hosts and the sensors that they "
-"provide. Click and drag sensors into drop zones of a worksheet. A display "
-"will appear that visualizes the values provided by the sensor. Some sensor "
-"displays can display values of multiple sensors. Simply drag other sensors "
-"on to the display to add more sensors."
-msgstr ""
-"Pregledač senzora nabraja povezane domaćine i njihove senzore. Odavdje "
-"prevlačite senzore u ćelije radnog lista, čime se dobija vizuelni prikaz "
-"vrijednosti senzora. Neki od prikaza mogu davati vrijednosti i po nekoliko "
-"senzora: opet prevucite senzore na prikaz da biste dodali više njih."
+# >> @title:column
+#: SensorDisplayLib/SensorModel.cpp:178
+msgid "Label"
+msgstr "etiketa"
 
 #: TimerSettings.cpp:38
 msgid "Timer Settings"
@@ -773,57 +731,19 @@ msgstr "Postavke odbrojavača"
 msgid "Use update interval of worksheet"
 msgstr "Periodično ažuriranje radnog lista"
 
-#: Workspace.cpp:113
-#, kde-format
-msgid "Sheet %1"
-msgstr "list %1"
+#: TimerSettings.cpp:51 WorkSheetSettings.cpp:90
+msgid "Update interval:"
+msgstr "Period ažuriranja:"
 
-#: Workspace.cpp:172
-#, kde-format
-msgid ""
-"The tab '%1' contains unsaved data.\n"
-"Do you want to save the tab?"
-msgstr ""
-"Kartica „%1“ sadrži nesačuvane podatke.\n"
-"Želite li da ih sačuvate?"
+#. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:49
+#. i18n: ectx: property (suffix), widget (KIntNumInput, m_timerInterval)
+#: TimerSettings.cpp:58 WorkSheetSettings.cpp:94 rc.cpp:89
+msgid " sec"
+msgstr " sek."
 
-#: Workspace.cpp:187
-msgid "*.sgrd|Sensor Files (*.sgrd)"
-msgstr "*.sgrd|senzorske datoteke"
-
-#: Workspace.cpp:187
-msgid "Select Tab File to Import"
-msgstr "Uvoz sadržaja kartice iz datoteke"
-
-#: Workspace.cpp:215 Workspace.cpp:236
-msgid "You do not have a tab that could be saved."
-msgstr "Nema nijedne kartice koja se može sačuvati."
-
-# >> @title:window
-#: Workspace.cpp:243
-msgid "Export Tab"
-msgstr "Izvoz jezička"
-
-#: Workspace.cpp:261
-msgid "There are no tabs that could be deleted."
-msgstr "Nema nijedne kartice koja se može obrisati."
-
-#: Workspace.cpp:301
-#, kde-format
-msgid ""
-"<qt>To propose the current custom tab as a new System Monitor tab, email "
-"<br><a href=\"file:%1\">%2</a><br> to <a href=\"mailto:john.tapsell@kde.org?"
-"subject='System Monitor Tab'&attach='file://%2'\">john.tapsell@kde.org</a></"
-"qt>"
-msgstr ""
-"<qt>Ako želite da predložite tekuću posebnu karticu za novu karticu "
-"nadzornika sistema, pošaljite e‑poštom <br/><a href=\"file:%1\">%2</a><br/> "
-"na <a href=\"mailto:john.tapsell@kde.org?subject='System Monitor "
-"Tab'&attach='file://%2'\">john.tapsell@kde.org</a>.</qt>"
-
-#: Workspace.cpp:301
-msgid "Upload custom System Monitor tab"
-msgstr "Kačenje posebne kartice nadzornika sistema"
+#: TimerSettings.cpp:61 WorkSheetSettings.cpp:100
+msgid "All displays of the sheet are updated at the rate specified here."
+msgstr "Svi prikazi lista ažuriraju se učestanošću koju navedete ovdje."
 
 #: WorkSheet.cpp:88
 #, kde-format
@@ -891,6 +811,86 @@ msgstr "Uklanjanje prikaza"
 #: WorkSheet.cpp:572
 msgid "Dummy"
 msgstr "Lažni"
+
+#: WorkSheetSettings.cpp:40
+msgid "Tab Properties"
+msgstr "Svojstva kartice"
+
+#: WorkSheetSettings.cpp:61
+msgid "Properties"
+msgstr "Svojstva"
+
+#: WorkSheetSettings.cpp:70
+msgid "Rows:"
+msgstr "Vrste:"
+
+#: WorkSheetSettings.cpp:79
+msgid "Columns:"
+msgstr "Kolone:"
+
+#: WorkSheetSettings.cpp:87
+msgid "Enter the number of rows the sheet should have."
+msgstr "Broj vrsta koje list treba da ima."
+
+#: WorkSheetSettings.cpp:88
+msgid "Enter the number of columns the sheet should have."
+msgstr "Broj kolona koje list treba da ima."
+
+#: WorkSheetSettings.cpp:101
+msgid "Enter the title of the worksheet here."
+msgstr "Naslov radnog lista."
+
+#: Workspace.cpp:113
+#, kde-format
+msgid "Sheet %1"
+msgstr "list %1"
+
+#: Workspace.cpp:172
+#, kde-format
+msgid ""
+"The tab '%1' contains unsaved data.\n"
+"Do you want to save the tab?"
+msgstr ""
+"Kartica „%1“ sadrži nesačuvane podatke.\n"
+"Želite li da ih sačuvate?"
+
+#: Workspace.cpp:187
+msgid "*.sgrd|Sensor Files (*.sgrd)"
+msgstr "*.sgrd|senzorske datoteke"
+
+#: Workspace.cpp:187
+msgid "Select Tab File to Import"
+msgstr "Uvoz sadržaja kartice iz datoteke"
+
+#: Workspace.cpp:215 Workspace.cpp:236
+msgid "You do not have a tab that could be saved."
+msgstr "Nema nijedne kartice koja se može sačuvati."
+
+# >> @title:window
+#: Workspace.cpp:243
+msgid "Export Tab"
+msgstr "Izvoz jezička"
+
+#: Workspace.cpp:261
+msgid "There are no tabs that could be deleted."
+msgstr "Nema nijedne kartice koja se može obrisati."
+
+#: Workspace.cpp:301
+#, kde-format
+msgid ""
+"<qt>To propose the current custom tab as a new System Monitor tab, email "
+"<br><a href=\"file:%1\">%2</a><br> to <a href=\"mailto:john.tapsell@kde.org?"
+"subject='System Monitor Tab'&attach='file://%2'\">john.tapsell@kde.org</a></"
+"qt>"
+msgstr ""
+"<qt>Ako želite da predložite tekuću posebnu karticu za novu karticu "
+"nadzornika sistema, pošaljite e‑poštom <br/><a href=\"file:%1\">%2</a><br/> "
+"na <a href=\"mailto:john.tapsell@kde.org?subject='System Monitor "
+"Tab'&attach='file://%2'\">john.tapsell@kde.org</a>.</qt>"
+
+#: Workspace.cpp:301
+msgid "Upload custom System Monitor tab"
+msgstr "Kačenje posebne kartice nadzornika sistema"
 
 #: ksysguard.cpp:70
 msgid "KDE System Monitor"
@@ -1046,7 +1046,7 @@ msgstr ",,"
 #. i18n: ectx: property (title), widget (QGroupBox, colorFrame)
 #. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:37
 #. i18n: ectx: property (title), widget (QGroupBox, colorFrame)
-#: rc.cpp:8 rc.cpp:95
+#: rc.cpp:8 rc.cpp:119
 msgid "Colors"
 msgstr "Boje"
 
@@ -1054,7 +1054,7 @@ msgstr "Boje"
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:51
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: rc.cpp:11 rc.cpp:98
+#: rc.cpp:11 rc.cpp:122
 msgid "Text color:"
 msgstr "Boja teksta:"
 
@@ -1064,21 +1064,57 @@ msgstr "Boja teksta:"
 msgid "Grid color:"
 msgstr "Boja mreže:"
 
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:21
+#. i18n: ectx: attribute (title), widget (QWidget, textTab)
+#: rc.cpp:20
+msgid "&Text"
+msgstr "&Tekst"
+
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:29
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:23
+msgid "T&itle:"
+msgstr "&Naslov:"
+
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:139
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: rc.cpp:32
+msgid "Fi&lter"
+msgstr "&Filter"
+
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:160
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: rc.cpp:35
+msgid "&Add"
+msgstr "&Dodaj"
+
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:167
+#. i18n: ectx: property (text), widget (QPushButton, deleteButton)
+#: rc.cpp:38
+msgid "&Delete"
+msgstr "&Obriši"
+
+#. i18n: file: SensorDisplayLib/LogFileSettings.ui:174
+#. i18n: ectx: property (text), widget (QPushButton, changeButton)
+#: rc.cpp:41
+msgid "&Change"
+msgstr "&Izmijeni"
+
 #. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:25
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:20
+#: rc.cpp:44
 msgid "&Title:"
 msgstr "&Naslov:"
 
 #. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:42
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_showUnit)
-#: rc.cpp:26
+#: rc.cpp:50
 msgid "Enable this to append the unit to the title of the display."
 msgstr "Uključite da dodate mijernu jedinicu naslovu prikaza."
 
 #. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:45
 #. i18n: ectx: property (text), widget (QCheckBox, m_showUnit)
-#: rc.cpp:29
+#: rc.cpp:53
 msgid "&Show unit"
 msgstr "&Jedinica"
 
@@ -1086,13 +1122,13 @@ msgstr "&Jedinica"
 #. i18n: ectx: property (text), widget (QCheckBox, m_lowerLimitActive)
 #. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:68
 #. i18n: ectx: property (text), widget (QCheckBox, m_lowerLimitActive)
-#: rc.cpp:35 rc.cpp:71
+#: rc.cpp:59 rc.cpp:95
 msgid "&Enable alarm"
 msgstr "&Uključi alarm"
 
 #. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:85
 #. i18n: ectx: property (text), widget (QLabel, m_lblLowerLimit)
-#: rc.cpp:38
+#: rc.cpp:62
 msgid "Lo&wer limit:"
 msgstr "&Donja granica:"
 
@@ -1100,75 +1136,39 @@ msgstr "&Donja granica:"
 #. i18n: ectx: property (text), widget (QCheckBox, m_upperLimitActive)
 #. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:132
 #. i18n: ectx: property (text), widget (QCheckBox, m_upperLimitActive)
-#: rc.cpp:44 rc.cpp:83
+#: rc.cpp:68 rc.cpp:107
 msgid "E&nable alarm"
 msgstr "U&ključi alarm"
 
 #. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:144
 #. i18n: ectx: property (text), widget (QLabel, m_lblUpperLimit)
-#: rc.cpp:47
+#: rc.cpp:71
 msgid "&Upper limit:"
 msgstr "&Gornja granica:"
 
 #. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:174
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: rc.cpp:50
+#: rc.cpp:74
 msgid "Normal digit color:"
 msgstr "Normalna boja cifara:"
 
 #. i18n: file: SensorDisplayLib/MultiMeterSettingsWidget.ui:201
 #. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
-#: rc.cpp:53
+#: rc.cpp:77
 msgid "Alarm digit color:"
 msgstr "Boja cifara alarma:"
 
 #. i18n: file: SensorDisplayLib/SensorLoggerDlgWidget.ui:16
 #. i18n: ectx: property (title), widget (QGroupBox, fileFrame)
-#: rc.cpp:59
+#: rc.cpp:83
 msgid "File"
 msgstr "Datoteka"
 
 #. i18n: file: SensorDisplayLib/SensorLoggerSettingsWidget.ui:77
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: rc.cpp:104
+#: rc.cpp:128
 msgid "Alarm color:"
 msgstr "Boja alarma:"
-
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:21
-#. i18n: ectx: attribute (title), widget (QWidget, textTab)
-#: rc.cpp:107
-msgid "&Text"
-msgstr "&Tekst"
-
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:29
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: rc.cpp:110
-msgid "T&itle:"
-msgstr "&Naslov:"
-
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:139
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: rc.cpp:119
-msgid "Fi&lter"
-msgstr "&Filter"
-
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:160
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: rc.cpp:122
-msgid "&Add"
-msgstr "&Dodaj"
-
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:167
-#. i18n: ectx: property (text), widget (QPushButton, deleteButton)
-#: rc.cpp:125
-msgid "&Delete"
-msgstr "&Obriši"
-
-#. i18n: file: SensorDisplayLib/LogFileSettings.ui:174
-#. i18n: ectx: property (text), widget (QPushButton, changeButton)
-#: rc.cpp:128
-msgid "&Change"
-msgstr "&Izmijeni"
 
 #. i18n: file: ksysguardui.rc:4
 #. i18n: ectx: Menu (file)
