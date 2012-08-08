@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-06-14 06:04+0200\n"
+"POT-Creation-Date: 2012-08-07 21:36+0200\n"
 "PO-Revision-Date: 2011-05-16 22:35+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -904,28 +904,6 @@ msgstr ""
 msgid "Document to open"
 msgstr "Dokument za otvaranje"
 
-#: app/kateviewspace.cpp:277 app/kateviewspace.cpp:389
-#, kde-format
-msgid " Line: %1 Col: %2 "
-msgstr " red: %1 kol: %2 "
-
-#: app/kateviewspace.cpp:285 app/kateviewspace.cpp:395
-#, kde-format
-msgid " Characters: %1 "
-msgstr ""
-
-#: app/kateviewspace.cpp:298
-msgid " INS "
-msgstr " INS "
-
-#: app/kateviewspace.cpp:303 app/kateviewspace.cpp:404
-msgid " LINE "
-msgstr " RED "
-
-#: app/kateviewspace.cpp:404
-msgid " BLOCK "
-msgstr " BLOK "
-
 #: app/katemdi.cpp:122
 msgid "Tool &Views"
 msgstr "Prikazi &alatki"
@@ -997,6 +975,36 @@ msgstr ""
 "upotrijebite <interface>Prikaz->Prikazi alatki->Prikaži bočne trake</"
 "interface> iz menija. I dalje je moguće upotrijebiti dodijeljene prečice za "
 "prikazivanje i skrivanje.</qt>"
+
+#: app/kateviewspace.cpp:277 app/kateviewspace.cpp:389
+#, kde-format
+msgid " Line: %1 Col: %2 "
+msgstr " red: %1 kol: %2 "
+
+#: app/kateviewspace.cpp:285 app/kateviewspace.cpp:395
+#, kde-format
+msgid " Characters: %1 "
+msgstr ""
+
+#: app/kateviewspace.cpp:298
+msgid " INS "
+msgstr " INS "
+
+#: app/kateviewspace.cpp:303 app/kateviewspace.cpp:404
+msgid " LINE "
+msgstr " RED "
+
+#: app/kateviewspace.cpp:404
+msgid " BLOCK "
+msgstr " BLOK "
+
+#: app/kateapp.cpp:226 app/kateapp.cpp:352
+#, kde-format
+msgid ""
+"The file '%1' could not be opened: it is not a normal file, it is a folder."
+msgstr ""
+"Datoteka „%1“ ne može da se otvori jer nije obična datoteka već je "
+"direktorij."
 
 #: app/kateappcommands.cpp:89
 msgid "All documents written to disk"
@@ -1144,6 +1152,62 @@ msgstr ""
 "<p><b><tt>e[dit]</tt> — ponovo učitava tekući dokument</b></p><p>Upotreba: "
 "<tt><b>e[dit]</b></tt></p><p>Ponovo otpočinje uređivanje tekućeg dokumenta. "
 "Korisno u slučajevima kada neki drugi program izmijeni tekući fajl.</p>"
+
+#: app/katedocmanager.cpp:68
+msgid ""
+"A KDE text-editor component could not be found.\n"
+"Please check your KDE installation."
+msgstr ""
+
+#: app/katedocmanager.cpp:308
+#, kde-format
+msgid ""
+"The supposedly temporary file %1 has been modified. Do you want to delete it "
+"anyway?"
+msgstr ""
+"Navodno privremena datoteka %1 je izmijenjena. Želite li ipak da je obrišete?"
+
+#: app/katedocmanager.cpp:310
+msgid "Delete File?"
+msgstr "Obrisati datoteku?"
+
+#: app/katedocmanager.cpp:450
+#, kde-format
+msgid ""
+"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
+"save your changes or discard them?</p>"
+msgstr ""
+"<p>Dokument „%1“ je izmijenjen, ali nije sačuvan.</p><p>Želite li da "
+"sačuvate ili odbacite izmjene?</p>"
+
+#: app/katedocmanager.cpp:452
+msgid "Close Document"
+msgstr "Zatvori dokument"
+
+#: app/katedocmanager.cpp:459
+msgid "Save As"
+msgstr "Sačuvaj kao"
+
+#: app/katedocmanager.cpp:485 app/katemainwindow.cpp:432
+msgid "New file opened while trying to close Kate, closing aborted."
+msgstr ""
+"Otvorena je nova datoteka tokom zatvaranja Kate, pa je ono obustavljeno."
+
+#: app/katedocmanager.cpp:486 app/katemainwindow.cpp:433
+msgid "Closing Aborted"
+msgstr "Zatvaranje obustavljeno"
+
+#: app/katedocmanager.cpp:558
+msgid "Starting Up"
+msgstr "Pokretanje"
+
+#: app/katedocmanager.cpp:559
+msgid "Reopening files from the last session..."
+msgstr "Otvaram fajlove iz prošle sesije..."
+
+#: app/katedocmanager.cpp:738
+msgid "Errors/Warnings while opening documents"
+msgstr "Greške i upozorenja pri otvaranju dokumenata"
 
 #: app/katemainwindow.cpp:229
 msgid "Use this command to show or hide the view's statusbar"
@@ -1309,15 +1373,6 @@ msgstr ""
 msgid "Close all documents"
 msgstr "Zatvori sve dokumente"
 
-#: app/katemainwindow.cpp:432 app/katedocmanager.cpp:485
-msgid "New file opened while trying to close Kate, closing aborted."
-msgstr ""
-"Otvorena je nova datoteka tokom zatvaranja Kate, pa je ono obustavljeno."
-
-#: app/katemainwindow.cpp:433 app/katedocmanager.cpp:486
-msgid "Closing Aborted"
-msgstr "Zatvaranje obustavljeno"
-
 #: app/katemainwindow.cpp:725
 msgid "&Other..."
 msgstr "&Drugi..."
@@ -1330,61 +1385,6 @@ msgstr "Program „%1“ nije nađen."
 #: app/katemainwindow.cpp:751
 msgid "Application not found"
 msgstr "Program nije nađen"
-
-#: app/katedocmanager.cpp:68
-msgid ""
-"A KDE text-editor component could not be found.\n"
-"Please check your KDE installation."
-msgstr ""
-
-#: app/katedocmanager.cpp:308
-#, kde-format
-msgid ""
-"The supposedly temporary file %1 has been modified. Do you want to delete it "
-"anyway?"
-msgstr ""
-"Navodno privremena datoteka %1 je izmijenjena. Želite li ipak da je obrišete?"
-
-#: app/katedocmanager.cpp:310
-msgid "Delete File?"
-msgstr "Obrisati datoteku?"
-
-#: app/katedocmanager.cpp:450
-#, kde-format
-msgid ""
-"<p>The document '%1' has been modified, but not saved.</p><p>Do you want to "
-"save your changes or discard them?</p>"
-msgstr ""
-"<p>Dokument „%1“ je izmijenjen, ali nije sačuvan.</p><p>Želite li da "
-"sačuvate ili odbacite izmjene?</p>"
-
-#: app/katedocmanager.cpp:452
-msgid "Close Document"
-msgstr "Zatvori dokument"
-
-#: app/katedocmanager.cpp:459
-msgid "Save As"
-msgstr "Sačuvaj kao"
-
-#: app/katedocmanager.cpp:558
-msgid "Starting Up"
-msgstr "Pokretanje"
-
-#: app/katedocmanager.cpp:559
-msgid "Reopening files from the last session..."
-msgstr "Otvaram fajlove iz prošle sesije..."
-
-#: app/katedocmanager.cpp:738
-msgid "Errors/Warnings while opening documents"
-msgstr "Greške i upozorenja pri otvaranju dokumenata"
-
-#: app/kateapp.cpp:226 app/kateapp.cpp:352
-#, kde-format
-msgid ""
-"The file '%1' could not be opened: it is not a normal file, it is a folder."
-msgstr ""
-"Datoteka „%1“ ne može da se otvori jer nije obična datoteka već je "
-"direktorij."
 
 #: app/katemwmodonhddialog.cpp:65
 msgid "Documents Modified on Disk"

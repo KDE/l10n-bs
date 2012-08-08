@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgpgcertmanager\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-07-27 04:28+0200\n"
+"POT-Creation-Date: 2012-08-07 21:45+0200\n"
 "PO-Revision-Date: 2011-04-21 21:27+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -157,6 +157,22 @@ msgctxt "@title:window"
 msgid "Add User-ID Succeeded"
 msgstr "Dodavanje korisničkog ID je uspjelo"
 
+#: commands/certifycertificatecommand.cpp:182
+#, fuzzy
+msgctxt "@info"
+msgid ""
+"To certify other certificates, you first need to create an OpenPGP "
+"certificate for yourself. Choose <interface>File->New Certificate...</"
+"interface> to create one."
+msgstr ""
+"Da verifikujete druge certifikate, prvo morate da kreirate OpenPGP "
+"certifikat za sebe. Izaberite <interface>Datoteka->Novi certifikat...</"
+"interface> da ga kreirate."
+
+#: commands/certifycertificatecommand.cpp:183
+msgid "Certification Not Possible"
+msgstr "Certificiranje nije moguće"
+
 #: commands/changeexpirycommand.cpp:222
 #, kde-format
 msgid ""
@@ -198,6 +214,30 @@ msgstr "Povjerenje vlasnika je uspješno promijenjeno."
 #: commands/changeownertrustcommand.cpp:230
 msgid "Owner Trust Change Succeeded"
 msgstr "Promjena povjerenja vlasnika je uspjela"
+
+#: commands/changepassphrasecommand.cpp:185
+#, fuzzy, kde-format
+msgid ""
+"<p>An error occurred while trying to change the passphrase for <b>%1</b>:</"
+"p><p>%2</p>"
+msgstr ""
+"<p>Greška se dogodila prilikom pokušaja da se promijeni datum isteka za <b>"
+"%1</b>:</p><p>%2</p>"
+
+#: commands/changepassphrasecommand.cpp:189
+#, fuzzy
+msgid "Passphrase Change Error"
+msgstr "Greška u mijenjanju lozinke"
+
+#: commands/changepassphrasecommand.cpp:193
+#, fuzzy
+msgid "Passphrase changed successfully."
+msgstr "Lozinka promijenjena uspješno"
+
+#: commands/changepassphrasecommand.cpp:194
+#, fuzzy
+msgid "Passphrase Change Succeeded"
+msgstr "Promjena datuma isteka je uspjela"
 
 #: commands/checksumcreatefilescommand.cpp:154
 #: commands/checksumverifyfilescommand.cpp:154
@@ -277,6 +317,85 @@ msgstr "Greška u dešifrovanju/provjeri datoteka"
 #: commands/decryptverifyfilescommand.cpp:175
 msgid "Select One or More Files to Decrypt and/or Verify"
 msgstr "Odaberite jednu ili više datoteka za dešifrovanje i/ili provjeru"
+
+#: commands/deletecertificatescommand.cpp:98
+msgctxt "@title:window"
+msgid "Delete Certificates"
+msgstr "Obriši certifikate"
+
+#: commands/deletecertificatescommand.cpp:163
+msgid ""
+"Neither the OpenPGP nor the CMS backends support certificate deletion.\n"
+"Check your installation."
+msgstr ""
+"Ni OpenPGP ni CMS pozadine ne podrzavaju brisanje certifikata.\n"
+"Provjerite vašu instalaciju."
+
+#: commands/deletecertificatescommand.cpp:167
+msgid ""
+"The OpenPGP backend does not support certificate deletion.\n"
+"Check your installation.\n"
+"Only the selected CMS certificates will be deleted."
+msgstr ""
+"OpenPGP pozadina ne podržava brisanje certifikata.\n"
+"Provjerite vašu instalaciju.\n"
+"Samo odabrane CMS potvrde će biti izbrisane."
+
+#: commands/deletecertificatescommand.cpp:174
+#: commands/deletecertificatescommand.cpp:178
+msgid ""
+"The OpenPGP backend does not support certificate deletion.\n"
+"Check your installation."
+msgstr ""
+"OpenPGP pozadina ne podržava brisanje certifikata.\n"
+"Provjerite vašu instalaciju."
+
+#: commands/deletecertificatescommand.cpp:184
+msgid ""
+"The CMS backend does not support certificate deletion.\n"
+"Check your installation.\n"
+"Only the selected OpenPGP certificates will be deleted."
+msgstr ""
+"CMS pozadina ne podržava brisanje certifikata.\n"
+"Provjerite vašu instalaciju.\n"
+"Samo odabrani OpenPGP certifikati će biti izbrisani."
+
+#: commands/deletecertificatescommand.cpp:200
+#: commands/deletecertificatescommand.cpp:213
+msgid ""
+"The CMS backend does not support certificate deletion.\n"
+"Check your installation."
+msgstr ""
+"CMS pozadina ne podržava brisanje certifikata.\n"
+"Provjerite vašu instalaciju."
+
+#: commands/deletecertificatescommand.cpp:280
+#: commands/deletecertificatescommand.cpp:349
+msgid "Certificate Deletion Failed"
+msgstr "Brisanje certifikata nije uspelo"
+
+#: commands/deletecertificatescommand.cpp:281
+msgid "Certificate Deletion Problem"
+msgstr "Problem brisanja certifikata"
+
+#: commands/deletecertificatescommand.cpp:340
+#, kde-format
+msgid "OpenPGP backend: %1"
+msgstr "OpenPGP pozadina: %1"
+
+#: commands/deletecertificatescommand.cpp:343
+#, kde-format
+msgid "CMS backend: %1"
+msgstr "CMSpozadina: %1"
+
+#: commands/deletecertificatescommand.cpp:345
+#, kde-format
+msgid ""
+"<qt><p>An error occurred while trying to delete the certificate:</p><p><b>"
+"%1</b></p></qt>"
+msgstr ""
+"<qt><p>Greška se dogodila prilikom pokušaja brisanja certifikata:</p><p><b>"
+"%1</b></p></qt>"
 
 #: commands/dumpcertificatecommand.cpp:90 commands/dumpcrlcachecommand.cpp:87
 msgctxt "@action:button Update the log text widget"
@@ -496,6 +615,152 @@ msgstr "Nije u mogućnosti da odredi tip certifikata u sadržaju međuspremnika.
 msgid "Clipboard"
 msgstr "Klipbord"
 
+#: commands/importcertificatescommand.cpp:207
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Imported Certificates from %1"
+msgstr "Uvezeni certifikati iz %1"
+
+#: commands/importcertificatescommand.cpp:211
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Imported certificates from these sources:<br/>%1"
+msgstr "Uvezeni certifikati iz ovih izvora:<br/>%1"
+
+#: commands/importcertificatescommand.cpp:218
+msgctxt "@title:tab"
+msgid "Imported Certificates"
+msgstr "Uvezeni certifikati"
+
+#: commands/importcertificatescommand.cpp:231
+#, kde-format
+msgid "<tr><td align=\"right\">%1</td><td>%2</td></tr>"
+msgstr "<tr><td align=\"right\">%1</td><td>%2</td></tr>"
+
+#: commands/importcertificatescommand.cpp:232
+#, kde-format
+msgid "<tr><td align=\"right\"><b>%1</b></td><td>%2</td></tr>"
+msgstr "<tr><td align=\"right\"><b>%1</b></td><td>%2</td></tr>"
+
+#: commands/importcertificatescommand.cpp:233
+#, kde-format
+msgid "<tr><th colspan=\"2\" align=\"center\">%1</th></tr>"
+msgstr "<tr><th colspan=\"2\" align=\"center\">%1</th></tr>"
+
+#: commands/importcertificatescommand.cpp:240
+msgid "Total number processed:"
+msgstr "Ukupan broj obrađenih:"
+
+#: commands/importcertificatescommand.cpp:242
+msgid "Imported:"
+msgstr "Uvezenih:"
+
+#: commands/importcertificatescommand.cpp:245
+msgid "New signatures:"
+msgstr "Novi potpisi:"
+
+#: commands/importcertificatescommand.cpp:248
+msgid "New user IDs:"
+msgstr "Novi korisnički ID-ovi:"
+
+#: commands/importcertificatescommand.cpp:251
+msgid "Certificates without user IDs:"
+msgstr "Certifikati bez korisničkog ID:"
+
+#: commands/importcertificatescommand.cpp:254
+msgid "New subkeys:"
+msgstr "Novi podključevi:"
+
+#: commands/importcertificatescommand.cpp:257
+msgid "Newly revoked:"
+msgstr "Novoopozvanih:"
+
+#: commands/importcertificatescommand.cpp:260
+msgid "Not imported:"
+msgstr "Neuveženih:"
+
+#: commands/importcertificatescommand.cpp:263
+msgid "Unchanged:"
+msgstr "Neizmijenjenih:"
+
+#: commands/importcertificatescommand.cpp:266
+#, fuzzy
+msgid "Secret keys processed:"
+msgstr "Tajni certifikati obrađeni:"
+
+#: commands/importcertificatescommand.cpp:269
+#, fuzzy
+msgid "Secret keys imported:"
+msgstr "Tajni certifikati su uvezeni:"
+
+#: commands/importcertificatescommand.cpp:273
+#, fuzzy
+msgid "Secret keys <em>not</em> imported:"
+msgstr "Tajni certifikati <em>nisu</em> uvezeni:"
+
+#: commands/importcertificatescommand.cpp:276
+#, fuzzy
+msgid "Secret keys unchanged:"
+msgstr "Tajni certifikati neizmijenjeni:"
+
+#: commands/importcertificatescommand.cpp:289
+msgid "No imports (should not happen, please report a bug)."
+msgstr "Nema uvoza (ne bi se trebalo desiti, prijavite grešku)."
+
+#: commands/importcertificatescommand.cpp:293
+#: commands/importcertificatescommand.cpp:298
+#, kde-format
+msgid ""
+"<qt><p>Detailed results of certificate import:</p><table width=\"100%\">%1</"
+"table></qt>"
+msgstr ""
+"<qt><p>Detaljan rezultat uvoza certifikata:</p><table width=\"100%\">%1</"
+"table></qt>"
+
+#: commands/importcertificatescommand.cpp:295
+#, kde-format
+msgid ""
+"<qt><p>Detailed results of importing %1:</p><table width=\"100%\">%2</"
+"table></qt>"
+msgstr ""
+"<qt><p>Detaljan rezultat uvoza %1:</p><table width=\"100%\">%2</table></qt>"
+
+#: commands/importcertificatescommand.cpp:299
+msgid "Totals"
+msgstr "Ukupno"
+
+#: commands/importcertificatescommand.cpp:305
+#: commands/importcertificatescommand.cpp:313
+msgid "Certificate Import Result"
+msgstr "Rezultat uvoza certifikata"
+
+#: commands/importcertificatescommand.cpp:320
+#, kde-format
+msgid ""
+"<qt><p>An error occurred while trying to import the certificate:</p><p><b>"
+"%1</b></p></qt>"
+msgstr ""
+"<qt><p>Desila se greška pri pokušaju uvoza certifikata:</p><p><b>%1</b></p></"
+"qt>"
+
+#: commands/importcertificatescommand.cpp:324
+#, kde-format
+msgid ""
+"<qt><p>An error occurred while trying to import the certificate %1:</p><p><b>"
+"%2</b></p></qt>"
+msgstr ""
+"<qt><p>Došlo je do greške prilikom pokušaja uvoženja certifikata %1:</"
+"p><p><b>%2</b></p></qt>"
+
+#: commands/importcertificatescommand.cpp:399
+#: commands/importcertificatescommand.cpp:436
+#, kde-format
+msgid ""
+"The type of this certificate (%1) is not supported by this Kleopatra "
+"installation."
+msgstr ""
+"Tip ovog certifikata (%1) nije podržan od strane Kleopatra instalacija."
+
 #: commands/importcrlcommand.cpp:70
 #, fuzzy
 msgid ""
@@ -563,6 +828,81 @@ msgstr ""
 "<para>GPG ili GpgSM procesi koji su pokušali da instruiraju pametnu karticu "
 "završili su prerano zbog neočekivane greške.</para><para>Provjerite izlaz iz "
 "<icode>%1</icode> za detalje.</para>"
+
+#: commands/lookupcertificatescommand.cpp:210
+msgid ""
+"<p>You seem to be searching for a fingerprint or a key-id.</p><p>Different "
+"keyservers expect different ways to search for these. Some require a \"0x\" "
+"prefix, while others require there be no such prefix.</p><p>If your search "
+"does not yield any results, try removing the 0x prefix from your search.</p>"
+msgstr ""
+
+#: commands/lookupcertificatescommand.cpp:214
+msgid ""
+"<p>You seem to be searching for a fingerprint or a key-id.</p><p>Different "
+"keyservers expect different ways to search for these. Some require a \"0x\" "
+"prefix, while others require there be no such prefix.</p><p>If your search "
+"does not yield any results, try adding the 0x prefix to your search.</p>"
+msgstr ""
+
+#: commands/lookupcertificatescommand.cpp:218
+msgid "Hex-String Search"
+msgstr ""
+
+#: commands/lookupcertificatescommand.cpp:291
+#: commands/lookupcertificatescommand.cpp:296
+#, kde-format
+msgctxt "@title %1:\"OpenPGP\" or \"CMS\""
+msgid "%1 Certificate Server"
+msgstr "%1 certifikacijski Server"
+
+#: commands/lookupcertificatescommand.cpp:324
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to search on certificate server. The error returned was:\n"
+"%1"
+msgstr ""
+"Nije uspjela potraga na certifikacijskom serveru. Greška je vraćena:\n"
+"%1"
+
+#: commands/lookupcertificatescommand.cpp:332
+msgctxt "@info"
+msgid ""
+"<para>The query result has been truncated.</para><para>Either the local or a "
+"remote limit on the maximum number of returned hits has been exceeded.</"
+"para><para>You can try to increase the local limit in the configuration "
+"dialog, but if one of the configured servers is the limiting factor, you "
+"have to refine your search.</para>"
+msgstr ""
+"<para>Rezultat upita je sasječen.</para><para>Bilo lokalni ili udaljeni "
+"limit na maksimalnom broju vraćenih pogodaka je pređen.</para><para>Možete "
+"da pokušate da se poveća limit u lokalnom konfiguracijskom dijalogu , ali "
+"ako jedan od konfigurisanih  servera ograničavajući faktor, morate da "
+"precizirate svoju pretragu.</para>"
+
+#: commands/lookupcertificatescommand.cpp:340
+msgctxt "@title"
+msgid "Result Truncated"
+msgstr "Rezultat odsječen"
+
+#: commands/lookupcertificatescommand.cpp:369
+msgctxt "@info"
+msgid ""
+"<para>You do not have any directory servers configured.</para><para>You need "
+"to configure at least one directory server to search on one.</para><para>You "
+"can configure directory servers here: <interface>Settings->Configure "
+"Kleopatra</interface>.</para>"
+msgstr ""
+"<para>Nemate konfigurisane imeničke servere.</para><para>Morate "
+"konfigurisati barem jedan imenički server na komećete tražiti.</"
+"para><para>Imeničke serevere možete ovdje konfigurisati: <interface>Postavke-"
+">Konfiguriši Kleopatra</interface>.</para>"
+
+#: commands/lookupcertificatescommand.cpp:374
+msgctxt "@title"
+msgid "No Directory Servers Configured"
+msgstr "Nema konfigurisanih servera direktorija"
 
 #: commands/refreshopenpgpcertscommand.cpp:74
 msgctxt "@info"
@@ -721,346 +1061,6 @@ msgstr "Greška u datotekama za potpisivanje/šifriranje"
 #: commands/signencryptfilescommand.cpp:245
 msgid "Select One or More Files to Sign and/or Encrypt"
 msgstr "Izaberite jednu ili više datoteka za potpisati i/ili šifrirati"
-
-#: commands/changepassphrasecommand.cpp:185
-#, fuzzy, kde-format
-msgid ""
-"<p>An error occurred while trying to change the passphrase for <b>%1</b>:</"
-"p><p>%2</p>"
-msgstr ""
-"<p>Greška se dogodila prilikom pokušaja da se promijeni datum isteka za <b>"
-"%1</b>:</p><p>%2</p>"
-
-#: commands/changepassphrasecommand.cpp:189
-#, fuzzy
-msgid "Passphrase Change Error"
-msgstr "Greška u mijenjanju lozinke"
-
-#: commands/changepassphrasecommand.cpp:193
-#, fuzzy
-msgid "Passphrase changed successfully."
-msgstr "Lozinka promijenjena uspješno"
-
-#: commands/changepassphrasecommand.cpp:194
-#, fuzzy
-msgid "Passphrase Change Succeeded"
-msgstr "Promjena datuma isteka je uspjela"
-
-#: commands/certifycertificatecommand.cpp:182
-#, fuzzy
-msgctxt "@info"
-msgid ""
-"To certify other certificates, you first need to create an OpenPGP "
-"certificate for yourself. Choose <interface>File->New Certificate...</"
-"interface> to create one."
-msgstr ""
-"Da verifikujete druge certifikate, prvo morate da kreirate OpenPGP "
-"certifikat za sebe. Izaberite <interface>Datoteka->Novi certifikat...</"
-"interface> da ga kreirate."
-
-#: commands/certifycertificatecommand.cpp:183
-msgid "Certification Not Possible"
-msgstr "Certificiranje nije moguće"
-
-#: commands/deletecertificatescommand.cpp:98
-msgctxt "@title:window"
-msgid "Delete Certificates"
-msgstr "Obriši certifikate"
-
-#: commands/deletecertificatescommand.cpp:163
-msgid ""
-"Neither the OpenPGP nor the CMS backends support certificate deletion.\n"
-"Check your installation."
-msgstr ""
-"Ni OpenPGP ni CMS pozadine ne podrzavaju brisanje certifikata.\n"
-"Provjerite vašu instalaciju."
-
-#: commands/deletecertificatescommand.cpp:167
-msgid ""
-"The OpenPGP backend does not support certificate deletion.\n"
-"Check your installation.\n"
-"Only the selected CMS certificates will be deleted."
-msgstr ""
-"OpenPGP pozadina ne podržava brisanje certifikata.\n"
-"Provjerite vašu instalaciju.\n"
-"Samo odabrane CMS potvrde će biti izbrisane."
-
-#: commands/deletecertificatescommand.cpp:174
-#: commands/deletecertificatescommand.cpp:178
-msgid ""
-"The OpenPGP backend does not support certificate deletion.\n"
-"Check your installation."
-msgstr ""
-"OpenPGP pozadina ne podržava brisanje certifikata.\n"
-"Provjerite vašu instalaciju."
-
-#: commands/deletecertificatescommand.cpp:184
-msgid ""
-"The CMS backend does not support certificate deletion.\n"
-"Check your installation.\n"
-"Only the selected OpenPGP certificates will be deleted."
-msgstr ""
-"CMS pozadina ne podržava brisanje certifikata.\n"
-"Provjerite vašu instalaciju.\n"
-"Samo odabrani OpenPGP certifikati će biti izbrisani."
-
-#: commands/deletecertificatescommand.cpp:200
-#: commands/deletecertificatescommand.cpp:213
-msgid ""
-"The CMS backend does not support certificate deletion.\n"
-"Check your installation."
-msgstr ""
-"CMS pozadina ne podržava brisanje certifikata.\n"
-"Provjerite vašu instalaciju."
-
-#: commands/deletecertificatescommand.cpp:280
-#: commands/deletecertificatescommand.cpp:349
-msgid "Certificate Deletion Failed"
-msgstr "Brisanje certifikata nije uspelo"
-
-#: commands/deletecertificatescommand.cpp:281
-msgid "Certificate Deletion Problem"
-msgstr "Problem brisanja certifikata"
-
-#: commands/deletecertificatescommand.cpp:340
-#, kde-format
-msgid "OpenPGP backend: %1"
-msgstr "OpenPGP pozadina: %1"
-
-#: commands/deletecertificatescommand.cpp:343
-#, kde-format
-msgid "CMS backend: %1"
-msgstr "CMSpozadina: %1"
-
-#: commands/deletecertificatescommand.cpp:345
-#, kde-format
-msgid ""
-"<qt><p>An error occurred while trying to delete the certificate:</p><p><b>"
-"%1</b></p></qt>"
-msgstr ""
-"<qt><p>Greška se dogodila prilikom pokušaja brisanja certifikata:</p><p><b>"
-"%1</b></p></qt>"
-
-#: commands/importcertificatescommand.cpp:207
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Imported Certificates from %1"
-msgstr "Uvezeni certifikati iz %1"
-
-#: commands/importcertificatescommand.cpp:211
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Imported certificates from these sources:<br/>%1"
-msgstr "Uvezeni certifikati iz ovih izvora:<br/>%1"
-
-#: commands/importcertificatescommand.cpp:218
-msgctxt "@title:tab"
-msgid "Imported Certificates"
-msgstr "Uvezeni certifikati"
-
-#: commands/importcertificatescommand.cpp:231
-#, kde-format
-msgid "<tr><td align=\"right\">%1</td><td>%2</td></tr>"
-msgstr "<tr><td align=\"right\">%1</td><td>%2</td></tr>"
-
-#: commands/importcertificatescommand.cpp:232
-#, kde-format
-msgid "<tr><td align=\"right\"><b>%1</b></td><td>%2</td></tr>"
-msgstr "<tr><td align=\"right\"><b>%1</b></td><td>%2</td></tr>"
-
-#: commands/importcertificatescommand.cpp:233
-#, kde-format
-msgid "<tr><th colspan=\"2\" align=\"center\">%1</th></tr>"
-msgstr "<tr><th colspan=\"2\" align=\"center\">%1</th></tr>"
-
-#: commands/importcertificatescommand.cpp:240
-msgid "Total number processed:"
-msgstr "Ukupan broj obrađenih:"
-
-#: commands/importcertificatescommand.cpp:242
-msgid "Imported:"
-msgstr "Uvezenih:"
-
-#: commands/importcertificatescommand.cpp:245
-msgid "New signatures:"
-msgstr "Novi potpisi:"
-
-#: commands/importcertificatescommand.cpp:248
-msgid "New user IDs:"
-msgstr "Novi korisnički ID-ovi:"
-
-#: commands/importcertificatescommand.cpp:251
-msgid "Certificates without user IDs:"
-msgstr "Certifikati bez korisničkog ID:"
-
-#: commands/importcertificatescommand.cpp:254
-msgid "New subkeys:"
-msgstr "Novi podključevi:"
-
-#: commands/importcertificatescommand.cpp:257
-msgid "Newly revoked:"
-msgstr "Novoopozvanih:"
-
-#: commands/importcertificatescommand.cpp:260
-msgid "Not imported:"
-msgstr "Neuveženih:"
-
-#: commands/importcertificatescommand.cpp:263
-msgid "Unchanged:"
-msgstr "Neizmijenjenih:"
-
-#: commands/importcertificatescommand.cpp:266
-#, fuzzy
-msgid "Secret keys processed:"
-msgstr "Tajni certifikati obrađeni:"
-
-#: commands/importcertificatescommand.cpp:269
-#, fuzzy
-msgid "Secret keys imported:"
-msgstr "Tajni certifikati su uvezeni:"
-
-#: commands/importcertificatescommand.cpp:273
-#, fuzzy
-msgid "Secret keys <em>not</em> imported:"
-msgstr "Tajni certifikati <em>nisu</em> uvezeni:"
-
-#: commands/importcertificatescommand.cpp:276
-#, fuzzy
-msgid "Secret keys unchanged:"
-msgstr "Tajni certifikati neizmijenjeni:"
-
-#: commands/importcertificatescommand.cpp:289
-msgid "No imports (should not happen, please report a bug)."
-msgstr "Nema uvoza (ne bi se trebalo desiti, prijavite grešku)."
-
-#: commands/importcertificatescommand.cpp:293
-#: commands/importcertificatescommand.cpp:298
-#, kde-format
-msgid ""
-"<qt><p>Detailed results of certificate import:</p><table width=\"100%\">%1</"
-"table></qt>"
-msgstr ""
-"<qt><p>Detaljan rezultat uvoza certifikata:</p><table width=\"100%\">%1</"
-"table></qt>"
-
-#: commands/importcertificatescommand.cpp:295
-#, kde-format
-msgid ""
-"<qt><p>Detailed results of importing %1:</p><table width=\"100%\">%2</"
-"table></qt>"
-msgstr ""
-"<qt><p>Detaljan rezultat uvoza %1:</p><table width=\"100%\">%2</table></qt>"
-
-#: commands/importcertificatescommand.cpp:299
-msgid "Totals"
-msgstr "Ukupno"
-
-#: commands/importcertificatescommand.cpp:305
-#: commands/importcertificatescommand.cpp:313
-msgid "Certificate Import Result"
-msgstr "Rezultat uvoza certifikata"
-
-#: commands/importcertificatescommand.cpp:320
-#, kde-format
-msgid ""
-"<qt><p>An error occurred while trying to import the certificate:</p><p><b>"
-"%1</b></p></qt>"
-msgstr ""
-"<qt><p>Desila se greška pri pokušaju uvoza certifikata:</p><p><b>%1</b></p></"
-"qt>"
-
-#: commands/importcertificatescommand.cpp:324
-#, kde-format
-msgid ""
-"<qt><p>An error occurred while trying to import the certificate %1:</p><p><b>"
-"%2</b></p></qt>"
-msgstr ""
-"<qt><p>Došlo je do greške prilikom pokušaja uvoženja certifikata %1:</"
-"p><p><b>%2</b></p></qt>"
-
-#: commands/importcertificatescommand.cpp:399
-#: commands/importcertificatescommand.cpp:436
-#, kde-format
-msgid ""
-"The type of this certificate (%1) is not supported by this Kleopatra "
-"installation."
-msgstr ""
-"Tip ovog certifikata (%1) nije podržan od strane Kleopatra instalacija."
-
-#: commands/lookupcertificatescommand.cpp:210
-msgid ""
-"<p>You seem to be searching for a fingerprint or a key-id.</p><p>Different "
-"keyservers expect different ways to search for these. Some require a \"0x\" "
-"prefix, while others require there be no such prefix.</p><p>If your search "
-"does not yield any results, try removing the 0x prefix from your search.</p>"
-msgstr ""
-
-#: commands/lookupcertificatescommand.cpp:214
-msgid ""
-"<p>You seem to be searching for a fingerprint or a key-id.</p><p>Different "
-"keyservers expect different ways to search for these. Some require a \"0x\" "
-"prefix, while others require there be no such prefix.</p><p>If your search "
-"does not yield any results, try adding the 0x prefix to your search.</p>"
-msgstr ""
-
-#: commands/lookupcertificatescommand.cpp:218
-msgid "Hex-String Search"
-msgstr ""
-
-#: commands/lookupcertificatescommand.cpp:291
-#: commands/lookupcertificatescommand.cpp:296
-#, kde-format
-msgctxt "@title %1:\"OpenPGP\" or \"CMS\""
-msgid "%1 Certificate Server"
-msgstr "%1 certifikacijski Server"
-
-#: commands/lookupcertificatescommand.cpp:324
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Failed to search on certificate server. The error returned was:\n"
-"%1"
-msgstr ""
-"Nije uspjela potraga na certifikacijskom serveru. Greška je vraćena:\n"
-"%1"
-
-#: commands/lookupcertificatescommand.cpp:332
-msgctxt "@info"
-msgid ""
-"<para>The query result has been truncated.</para><para>Either the local or a "
-"remote limit on the maximum number of returned hits has been exceeded.</"
-"para><para>You can try to increase the local limit in the configuration "
-"dialog, but if one of the configured servers is the limiting factor, you "
-"have to refine your search.</para>"
-msgstr ""
-"<para>Rezultat upita je sasječen.</para><para>Bilo lokalni ili udaljeni "
-"limit na maksimalnom broju vraćenih pogodaka je pređen.</para><para>Možete "
-"da pokušate da se poveća limit u lokalnom konfiguracijskom dijalogu , ali "
-"ako jedan od konfigurisanih  servera ograničavajući faktor, morate da "
-"precizirate svoju pretragu.</para>"
-
-#: commands/lookupcertificatescommand.cpp:340
-msgctxt "@title"
-msgid "Result Truncated"
-msgstr "Rezultat odsječen"
-
-#: commands/lookupcertificatescommand.cpp:369
-msgctxt "@info"
-msgid ""
-"<para>You do not have any directory servers configured.</para><para>You need "
-"to configure at least one directory server to search on one.</para><para>You "
-"can configure directory servers here: <interface>Settings->Configure "
-"Kleopatra</interface>.</para>"
-msgstr ""
-"<para>Nemate konfigurisane imeničke servere.</para><para>Morate "
-"konfigurisati barem jedan imenički server na komećete tražiti.</"
-"para><para>Imeničke serevere možete ovdje konfigurisati: <interface>Postavke-"
-">Konfiguriši Kleopatra</interface>.</para>"
-
-#: commands/lookupcertificatescommand.cpp:374
-msgctxt "@title"
-msgid "No Directory Servers Configured"
-msgstr "Nema konfigurisanih servera direktorija"
 
 #: commands/exportcertificatecommand.cpp:212
 msgid "Export Certificates"
@@ -1236,6 +1236,317 @@ msgstr "bez proksija"
 msgid "(Current system setting: %1)"
 msgstr "(Trenutno podešavanje: %1)"
 
+#: crypto/decryptverifytask.cpp:180
+msgid "Error: Signature not verified"
+msgstr "Greška: Potpis nije provjeren"
+
+#: crypto/decryptverifytask.cpp:182
+msgid "Good signature"
+msgstr "Dobar potpis"
+
+#: crypto/decryptverifytask.cpp:184
+msgid "Bad signature"
+msgstr "Loš potpis"
+
+#: crypto/decryptverifytask.cpp:186
+msgid "Signing certificate revoked"
+msgstr "Opozvati certifikat za prijavljivanje"
+
+#: crypto/decryptverifytask.cpp:188
+msgid "Signing certificate expired"
+msgstr "Istekao certifikat za potpisivanje"
+
+#: crypto/decryptverifytask.cpp:190
+msgid "No public certificate to verify the signature"
+msgstr "Nema javnog certifikata za provjeru potpisa"
+
+#: crypto/decryptverifytask.cpp:192
+msgid "Signature expired"
+msgstr "Potpis je istekao"
+
+#: crypto/decryptverifytask.cpp:194
+msgid "Certificate missing"
+msgstr "Nedostaje certifikat"
+
+#: crypto/decryptverifytask.cpp:196
+msgid "CRL missing"
+msgstr "CRL nedostaje"
+
+#: crypto/decryptverifytask.cpp:198
+msgid "CRL too old"
+msgstr "CRL je previše star"
+
+#: crypto/decryptverifytask.cpp:200
+msgid "Bad policy"
+msgstr "Loša politika"
+
+#: crypto/decryptverifytask.cpp:202
+msgid "System error"
+msgstr "Sistemska greška"
+
+#: crypto/decryptverifytask.cpp:211
+msgid ""
+"The signature is valid but the trust in the certificate's validity is only "
+"marginal."
+msgstr ""
+"Potpis je ispravan, ali povjerenje u valjanost certifikata je samo "
+"marginalno."
+
+#: crypto/decryptverifytask.cpp:213
+msgid "The signature is valid and the certificate's validity is fully trusted."
+msgstr "Potpis je ispravan i valjanost certifikata je u potpunosti pouzdana."
+
+#: crypto/decryptverifytask.cpp:215
+msgid ""
+"The signature is valid and the certificate's validity is ultimately trusted."
+msgstr "Potpis je ispravan i valjanost certifikata je krajnje pouzdana."
+
+#: crypto/decryptverifytask.cpp:217
+msgid ""
+"The signature is valid but the certificate's validity is <em>not trusted</"
+"em>."
+msgstr ""
+"Potpis je ispravan ali valjanost certifikata je <em>nije pouzdana</em>."
+
+#: crypto/decryptverifytask.cpp:219
+msgid "The signature is valid but the certificate's validity is unknown."
+msgstr "Potpis je ispravan ali valjanost certifikata nije poznata."
+
+#: crypto/decryptverifytask.cpp:222
+msgid "The signature is valid but the certificate's validity is undefined."
+msgstr "Potpis je ispravan ali valjanost certifikata je nedefinisana."
+
+#: crypto/decryptverifytask.cpp:238 crypto/decryptverifytask.cpp:244
+msgid "Unknown certificate"
+msgstr "Nepoznat certifikat"
+
+#: crypto/decryptverifytask.cpp:263
+#, kde-format
+msgid "Signed on %1 with unknown certificate %2."
+msgstr "Potpisan na &%1 sa nepoznatim certifikatom %2"
+
+#: crypto/decryptverifytask.cpp:265
+#, kde-format
+msgid "Signed with unknown certificate %1."
+msgstr "Potpisan sa nepoznatim certifikatom %1."
+
+#: crypto/decryptverifytask.cpp:270
+#, kde-format
+msgctxt "date, key owner, key ID"
+msgid "Signed on %1 by %2 (Key ID: %3)."
+msgstr "Potpisao %1 sa %2 (Ključ ID: %3)."
+
+#: crypto/decryptverifytask.cpp:275
+#, kde-format
+msgid "Signed by %1 with certificate %2."
+msgstr "Potpisao %1 sa certifikatom %2."
+
+#: crypto/decryptverifytask.cpp:278
+#, kde-format
+msgid "Signed on %1 with certificate %2."
+msgstr "Potpisan na %1 sa certifikatom %2."
+
+#: crypto/decryptverifytask.cpp:279
+#, kde-format
+msgid "Signed with certificate %1."
+msgstr "Potpisan sa certifikatom %1."
+
+#: crypto/decryptverifytask.cpp:290 crypto/signencryptfilestask.cpp:74
+#, kde-format
+msgctxt "Input file --> Output file (rarr is arrow"
+msgid "%1 &rarr; %2"
+msgstr "%1 &rarr; %2"
+
+#: crypto/decryptverifytask.cpp:360
+msgid "<b>Verification canceled.</b>"
+msgstr "<b>Potvrđivanje otkazano</b>"
+
+#: crypto/decryptverifytask.cpp:362
+#, kde-format
+msgid "<b>Verification failed: %1.</b>"
+msgstr "<b>Potvrđivanje nije uspjelo: %1.</b>"
+
+#: crypto/decryptverifytask.cpp:368
+msgid "<b>No signatures found.</b>"
+msgstr "<b>Nema pronađenih potpisa.</b>"
+
+#: crypto/decryptverifytask.cpp:372
+#, kde-format
+msgid "<b>Invalid signature.</b>"
+msgid_plural "<b>%1 invalid signatures.</b>"
+msgstr[0] "<b>%1 pogrešan potpis.</b>"
+msgstr[1] "<b>%1 pogrešna potpisa.</b>"
+msgstr[2] "<b>%1 pogrešnih potpisa.</b>"
+
+#: crypto/decryptverifytask.cpp:376
+#, kde-format
+msgid "<b>Not enough information to check signature validity.</b>"
+msgid_plural "<b>%1 signatures could not be verified.</b>"
+msgstr[0] "<b>%1 potpis nije moguće potvrditi.</b>"
+msgstr[1] "<b>%1 potpisa nije moguće potvrditi.</b>"
+msgstr[2] "<b>%1 potpisa nije moguće potvrditi.</b>"
+
+#: crypto/decryptverifytask.cpp:383
+msgid "<b>Signature is valid.</b>"
+msgstr "<b>Potpis nije valjan</b>"
+
+#: crypto/decryptverifytask.cpp:384
+#, kde-format
+msgid "<b>Signed by %1</b>"
+msgstr "<b>Prijavljen sa %1</b>"
+
+#: crypto/decryptverifytask.cpp:387
+msgid "certificate"
+msgstr "certifikat"
+
+#: crypto/decryptverifytask.cpp:386
+#, kde-format
+msgid ""
+"<br/><b>Warning:</b> The sender's mail address is not stored in the %1 used "
+"for signing."
+msgstr ""
+"<br/><b>Upozorenje:</b> Adresa e-pošte od pošiljaoca nije pohranjena u %1 "
+"koji je korišten za prijavljivanje."
+
+#: crypto/decryptverifytask.cpp:390
+#, kde-format
+msgid "<b>Valid signature.</b>"
+msgid_plural "<b>%1 valid signatures.</b>"
+msgstr[0] "<b>%1 važeća signatura.</b>"
+msgstr[1] "<b>%1 važeće signature.</b>"
+msgstr[2] "<b>%1 važećih signature.</b>"
+
+#: crypto/decryptverifytask.cpp:392
+msgid ""
+"<br/><b>Warning:</b> The sender's mail address is not stored in the "
+"certificates used for signing."
+msgstr ""
+"<br/><b>Upozorenje:</b> Adresa e-pošte pošiljaoca nije smještena u "
+"certifikatma korištenim za prijavljivanje."
+
+#: crypto/decryptverifytask.cpp:403
+msgid "<b>Decryption canceled.</b>"
+msgstr "<b>Dešifrovanje prekinuto.</b>"
+
+#: crypto/decryptverifytask.cpp:405 crypto/decryptverifytask.cpp:407
+#, kde-format
+msgid "<b>Decryption failed: %1.</b>"
+msgstr "<b>Dešifrovanje neuspjelo: %1.</b>"
+
+#: crypto/decryptverifytask.cpp:408
+msgid "<b>Decryption succeeded.</b>"
+msgstr "<b>Dešifriranje uspjelo.</b>"
+
+#: crypto/decryptverifytask.cpp:423
+msgid "The signature is bad."
+msgstr "Potpis je loš."
+
+#: crypto/decryptverifytask.cpp:425
+msgid "The validity of the signature cannot be verified."
+msgstr "Ispravnost potpisa ne može biti potvrđena."
+
+#: crypto/decryptverifytask.cpp:426
+#, kde-format
+msgid "The signature is invalid: %1"
+msgstr "Potpis je važeći: %1"
+
+#: crypto/decryptverifytask.cpp:438 crypto/decryptverifytask.cpp:455
+#: crypto/signencryptfilestask.cpp:223 crypto/signencryptfilestask.cpp:235
+#, fuzzy, kde-format
+msgid "Input error: %1"
+msgstr "Ulazna datoteka:"
+
+#: crypto/decryptverifytask.cpp:448
+msgctxt "separator for a list of e-mail addresses"
+msgid ", "
+msgstr ", "
+
+#: crypto/decryptverifytask.cpp:448
+#, kde-format
+msgid ""
+"<p>The sender's address %1 is not stored in the certificate. Stored: %2</p>"
+msgstr ""
+"<p>Adresa pošiljaoca %1 nije pohranjena u certifikatima. Pohranjeno: %2</p>"
+
+#: crypto/decryptverifytask.cpp:461
+#, kde-format
+msgid "One unknown recipient."
+msgid_plural "%1 unknown recipients."
+msgstr[0] "%1 nepoznat primalac"
+msgstr[1] "%1 nepoznata primaoca"
+msgstr[2] "%1 nepoznatih primaoca"
+
+#: crypto/decryptverifytask.cpp:465
+msgid "Recipient:"
+msgid_plural "Recipients:"
+msgstr[0] "Primalac:"
+msgstr[1] "Primaoci:"
+msgstr[2] "Primaoci:"
+
+#: crypto/decryptverifytask.cpp:473
+#, kde-format
+msgid "One unknown recipient"
+msgid_plural "%1 unknown recipients"
+msgstr[0] "%1 nepoznat primalac"
+msgstr[1] "%1 nepoznata primaoca"
+msgstr[2] "%1 nepoznatih primaoca"
+
+#: crypto/decryptverifytask.cpp:689
+#, kde-format
+msgctxt "label: result example: foo.sig: Verification failed. "
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: crypto/decryptverifytask.cpp:811 crypto/decryptverifytask.cpp:908
+#: crypto/decryptverifytask.cpp:962 crypto/decryptverifytask.cpp:1061
+#: crypto/decryptverifytask.cpp:1114 crypto/decryptverifytask.cpp:1212
+#: crypto/decryptverifytask.cpp:1260 crypto/decryptverifytask.cpp:1346
+#, fuzzy, kde-format
+msgid "Caught exception: %1"
+msgstr "Uhvaćena neočekivan izuzetak: %1"
+
+#: crypto/decryptverifytask.cpp:814 crypto/decryptverifytask.cpp:910
+#: crypto/decryptverifytask.cpp:965 crypto/decryptverifytask.cpp:1063
+#: crypto/decryptverifytask.cpp:1117 crypto/decryptverifytask.cpp:1214
+#: crypto/decryptverifytask.cpp:1262 crypto/decryptverifytask.cpp:1348
+#: uiserver/assuanserverconnection.cpp:1426
+#: uiserver/assuanserverconnection.cpp:1472
+msgid "Caught unknown exception"
+msgstr "Uhvaćen neočekivan izuzetak"
+
+#: crypto/decryptverifytask.cpp:863
+msgid ""
+"Could not determine whether this is an S/MIME or an OpenPGP signature/"
+"ciphertext - maybe it is neither ciphertext nor a signature?"
+msgstr ""
+
+#: crypto/decryptverifytask.cpp:869 crypto/decryptverifytask.cpp:1020
+#, kde-format
+msgid "Decrypting: %1..."
+msgstr "Deširujem: %1..."
+
+#: crypto/decryptverifytask.cpp:1014
+msgid ""
+"Could not determine whether this was S/MIME- or OpenPGP-encrypted - maybe it "
+"is not ciphertext at all?"
+msgstr ""
+
+#: crypto/decryptverifytask.cpp:1166 crypto/decryptverifytask.cpp:1300
+msgid ""
+"Could not determine whether this is an S/MIME or an OpenPGP signature - "
+"maybe it is not a signature at all?"
+msgstr ""
+
+#: crypto/decryptverifytask.cpp:1172
+#, kde-format
+msgid "Verifying: %1..."
+msgstr "Provjeravam: %1..."
+
+#: crypto/decryptverifytask.cpp:1311
+#, kde-format
+msgid "Verifying signature: %1..."
+msgstr "Provjeravanje potpisa: %1..."
+
 #: crypto/encryptemailtask.cpp:85 crypto/signencryptfilestask.cpp:186
 msgid "Encryption canceled."
 msgstr "Šifriranje je otkazano."
@@ -1269,36 +1580,6 @@ msgstr "&Ulazna datoteka je samostojeći potpis"
 #: crypto/gui/encryptemailwizard.cpp:52
 msgid "Encrypt Mail Message"
 msgstr "Šifrirati šoruku za e-poštu"
-
-#: crypto/gui/resultitemwidget.cpp:104
-msgid "Hide Details"
-msgstr "Sakrij detalje"
-
-#: crypto/gui/resultitemwidget.cpp:104
-msgid "Show Details"
-msgstr "Prikaži detalje"
-
-#: crypto/gui/signemailwizard.cpp:82
-msgid "You need to select a signing certificate to proceed."
-msgstr "Treba da izaberete certifikat za potpisivanje da nastavite."
-
-#: crypto/gui/signemailwizard.cpp:88
-#, kde-format
-msgid "You need to select an %1 signing certificate to proceed."
-msgstr "Treba da izaberete %1 certifikat za potpisivanje da nastavite"
-
-#: crypto/gui/signemailwizard.cpp:90
-#, kde-format
-msgid "You need to select %1 and %2 signing certificates to proceed."
-msgstr "Treba da izaberete %1 i %2 certifikate za potpisivanje da nastavite"
-
-#: crypto/gui/signemailwizard.cpp:118
-msgid "Sign Mail Message"
-msgstr "Potpis poruke za e-poštu"
-
-#: crypto/gui/signingcertificateselectiondialog.cpp:49
-msgid "Select Signing Certificates"
-msgstr "Izabrati certifikat za potpisivanje"
 
 #: crypto/gui/newsignencryptfileswizard.cpp:134
 msgctxt "@title:window"
@@ -1491,12 +1772,38 @@ msgctxt "@title"
 msgid "Status and progress of the crypto operations is shown here."
 msgstr "Stanje i napredak šifro operacija je prikazan ovdje."
 
+#: crypto/gui/resultitemwidget.cpp:104
+msgid "Hide Details"
+msgstr "Sakrij detalje"
+
+#: crypto/gui/resultitemwidget.cpp:104
+msgid "Show Details"
+msgstr "Prikaži detalje"
+
 #: crypto/gui/resultlistwidget.cpp:224 crypto/gui/newresultpage.cpp:162
 #: crypto/gui/resultpage.cpp:151
 #, kde-format
 msgctxt "number, operation description"
 msgid "Operation %1: %2"
 msgstr "Operacija %1: %2"
+
+#: crypto/gui/signemailwizard.cpp:82
+msgid "You need to select a signing certificate to proceed."
+msgstr "Treba da izaberete certifikat za potpisivanje da nastavite."
+
+#: crypto/gui/signemailwizard.cpp:88
+#, kde-format
+msgid "You need to select an %1 signing certificate to proceed."
+msgstr "Treba da izaberete %1 certifikat za potpisivanje da nastavite"
+
+#: crypto/gui/signemailwizard.cpp:90
+#, kde-format
+msgid "You need to select %1 and %2 signing certificates to proceed."
+msgstr "Treba da izaberete %1 i %2 certifikate za potpisivanje da nastavite"
+
+#: crypto/gui/signemailwizard.cpp:118
+msgid "Sign Mail Message"
+msgstr "Potpis poruke za e-poštu"
 
 #: crypto/gui/signencryptemailconflictdialog.cpp:163
 #, fuzzy
@@ -1607,6 +1914,10 @@ msgstr ""
 #, fuzzy, kde-format
 msgid "Select Certificates For Message \"%1\""
 msgstr "Odaberite datoteku certifikata"
+
+#: crypto/gui/signingcertificateselectiondialog.cpp:49
+msgid "Select Signing Certificates"
+msgstr "Izabrati certifikat za potpisivanje"
 
 #: crypto/gui/decryptverifyfileswizard.cpp:207
 msgid "<b>Choose operations to be performed</b>"
@@ -1764,37 +2075,6 @@ msgstr "&Sljedeći"
 msgid "Back"
 msgstr "Nazad"
 
-#: crypto/gui/verifychecksumsdialog.cpp:228
-msgid "The following errors and warnings were recorded:"
-msgstr "Sljedeće greške i upozorenja su zabilježene:"
-
-#: crypto/gui/verifychecksumsdialog.cpp:229
-msgid "Checksum Verification Errors"
-msgstr "Greška pri verifikaciji certifikata"
-
-#: crypto/gui/verifychecksumsdialog.cpp:240
-#: crypto/gui/verifychecksumsdialog.cpp:264
-#, fuzzy
-msgid "No errors occurred"
-msgstr "Desila se greška: %1"
-
-#: crypto/gui/verifychecksumsdialog.cpp:242
-#, fuzzy, kde-format
-msgid "One error occurred"
-msgid_plural "%1 errors occurred"
-msgstr[0] "Desila se greška: %1"
-msgstr[1] "Desila se greška: %1"
-msgstr[2] "Desila se greška: %1"
-
-#: crypto/gui/verifychecksumsdialog.cpp:262
-msgid "Progress:"
-msgstr "Napredak:"
-
-#: crypto/gui/verifychecksumsdialog.cpp:265
-msgctxt "Show Errors"
-msgid "Show"
-msgstr "Prikaži"
-
 #: crypto/gui/newresultpage.cpp:103 crypto/gui/resultpage.cpp:104
 msgid "Keep open after operation completed"
 msgstr "Ostati otvoren nakon obavljene radnje"
@@ -1858,23 +2138,53 @@ msgstr "<qt><p>Primatelji predefinisani sa GnuPG postavkama:</p>%1"
 msgid "Sender"
 msgstr "Pošiljalac"
 
-#: crypto/signencryptfilestask.cpp:74 crypto/decryptverifytask.cpp:290
-#, kde-format
-msgctxt "Input file --> Output file (rarr is arrow"
-msgid "%1 &rarr; %2"
-msgstr "%1 &rarr; %2"
+#: crypto/gui/verifychecksumsdialog.cpp:228
+msgid "The following errors and warnings were recorded:"
+msgstr "Sljedeće greške i upozorenja su zabilježene:"
 
-#: crypto/signencryptfilestask.cpp:173 crypto/signemailtask.cpp:85
+#: crypto/gui/verifychecksumsdialog.cpp:229
+msgid "Checksum Verification Errors"
+msgstr "Greška pri verifikaciji certifikata"
+
+#: crypto/gui/verifychecksumsdialog.cpp:240
+#: crypto/gui/verifychecksumsdialog.cpp:264
+#, fuzzy
+msgid "No errors occurred"
+msgstr "Desila se greška: %1"
+
+#: crypto/gui/verifychecksumsdialog.cpp:242
+#, fuzzy, kde-format
+msgid "One error occurred"
+msgid_plural "%1 errors occurred"
+msgstr[0] "Desila se greška: %1"
+msgstr[1] "Desila se greška: %1"
+msgstr[2] "Desila se greška: %1"
+
+#: crypto/gui/verifychecksumsdialog.cpp:262
+msgid "Progress:"
+msgstr "Napredak:"
+
+#: crypto/gui/verifychecksumsdialog.cpp:265
+msgctxt "Show Errors"
+msgid "Show"
+msgstr "Prikaži"
+
+#: crypto/signemailtask.cpp:85 crypto/signencryptfilestask.cpp:173
 msgid "Signing canceled."
 msgstr "Potpisivanje otkazano."
+
+#: crypto/signemailtask.cpp:88
+#, kde-format
+msgid "Signing failed: %1"
+msgstr "Potpisivanje nije uspelo: %1"
+
+#: crypto/signemailtask.cpp:90 crypto/signencryptfilestask.cpp:177
+msgid "Signing succeeded."
+msgstr "Potpisivanje uspjeslo"
 
 #: crypto/signencryptfilestask.cpp:176
 msgid "Signing failed."
 msgstr "Potpisivanje nije uspjelo."
-
-#: crypto/signencryptfilestask.cpp:177 crypto/signemailtask.cpp:90
-msgid "Signing succeeded."
-msgstr "Potpisivanje uspjeslo"
 
 #: crypto/signencryptfilestask.cpp:189
 msgid "Encryption failed."
@@ -1883,12 +2193,6 @@ msgstr "Šifrovanje nije uspelo."
 #: crypto/signencryptfilestask.cpp:210
 msgid "Signing and encryption succeeded."
 msgstr "Potpisivanje i šifriranje je uspjelo."
-
-#: crypto/signencryptfilestask.cpp:223 crypto/signencryptfilestask.cpp:235
-#: crypto/decryptverifytask.cpp:438 crypto/decryptverifytask.cpp:455
-#, fuzzy, kde-format
-msgid "Input error: %1"
-msgstr "Ulazna datoteka:"
 
 #: crypto/signencryptfilestask.cpp:225 crypto/signencryptfilestask.cpp:237
 #, fuzzy, kde-format
@@ -1922,310 +2226,6 @@ msgstr "Ne moze odrediti postupak za zadatak"
 #: crypto/task.cpp:169
 msgid "Unknown exception in Task::start()"
 msgstr "Nepoznati izuzetak u Task::start()"
-
-#: crypto/decryptverifytask.cpp:180
-msgid "Error: Signature not verified"
-msgstr "Greška: Potpis nije provjeren"
-
-#: crypto/decryptverifytask.cpp:182
-msgid "Good signature"
-msgstr "Dobar potpis"
-
-#: crypto/decryptverifytask.cpp:184
-msgid "Bad signature"
-msgstr "Loš potpis"
-
-#: crypto/decryptverifytask.cpp:186
-msgid "Signing certificate revoked"
-msgstr "Opozvati certifikat za prijavljivanje"
-
-#: crypto/decryptverifytask.cpp:188
-msgid "Signing certificate expired"
-msgstr "Istekao certifikat za potpisivanje"
-
-#: crypto/decryptverifytask.cpp:190
-msgid "No public certificate to verify the signature"
-msgstr "Nema javnog certifikata za provjeru potpisa"
-
-#: crypto/decryptverifytask.cpp:192
-msgid "Signature expired"
-msgstr "Potpis je istekao"
-
-#: crypto/decryptverifytask.cpp:194
-msgid "Certificate missing"
-msgstr "Nedostaje certifikat"
-
-#: crypto/decryptverifytask.cpp:196
-msgid "CRL missing"
-msgstr "CRL nedostaje"
-
-#: crypto/decryptverifytask.cpp:198
-msgid "CRL too old"
-msgstr "CRL je previše star"
-
-#: crypto/decryptverifytask.cpp:200
-msgid "Bad policy"
-msgstr "Loša politika"
-
-#: crypto/decryptverifytask.cpp:202
-msgid "System error"
-msgstr "Sistemska greška"
-
-#: crypto/decryptverifytask.cpp:211
-msgid ""
-"The signature is valid but the trust in the certificate's validity is only "
-"marginal."
-msgstr ""
-"Potpis je ispravan, ali povjerenje u valjanost certifikata je samo "
-"marginalno."
-
-#: crypto/decryptverifytask.cpp:213
-msgid "The signature is valid and the certificate's validity is fully trusted."
-msgstr "Potpis je ispravan i valjanost certifikata je u potpunosti pouzdana."
-
-#: crypto/decryptverifytask.cpp:215
-msgid ""
-"The signature is valid and the certificate's validity is ultimately trusted."
-msgstr "Potpis je ispravan i valjanost certifikata je krajnje pouzdana."
-
-#: crypto/decryptverifytask.cpp:217
-msgid ""
-"The signature is valid but the certificate's validity is <em>not trusted</"
-"em>."
-msgstr ""
-"Potpis je ispravan ali valjanost certifikata je <em>nije pouzdana</em>."
-
-#: crypto/decryptverifytask.cpp:219
-msgid "The signature is valid but the certificate's validity is unknown."
-msgstr "Potpis je ispravan ali valjanost certifikata nije poznata."
-
-#: crypto/decryptverifytask.cpp:222
-msgid "The signature is valid but the certificate's validity is undefined."
-msgstr "Potpis je ispravan ali valjanost certifikata je nedefinisana."
-
-#: crypto/decryptverifytask.cpp:238 crypto/decryptverifytask.cpp:244
-msgid "Unknown certificate"
-msgstr "Nepoznat certifikat"
-
-#: crypto/decryptverifytask.cpp:263
-#, kde-format
-msgid "Signed on %1 with unknown certificate %2."
-msgstr "Potpisan na &%1 sa nepoznatim certifikatom %2"
-
-#: crypto/decryptverifytask.cpp:265
-#, kde-format
-msgid "Signed with unknown certificate %1."
-msgstr "Potpisan sa nepoznatim certifikatom %1."
-
-#: crypto/decryptverifytask.cpp:270
-#, kde-format
-msgctxt "date, key owner, key ID"
-msgid "Signed on %1 by %2 (Key ID: %3)."
-msgstr "Potpisao %1 sa %2 (Ključ ID: %3)."
-
-#: crypto/decryptverifytask.cpp:275
-#, kde-format
-msgid "Signed by %1 with certificate %2."
-msgstr "Potpisao %1 sa certifikatom %2."
-
-#: crypto/decryptverifytask.cpp:278
-#, kde-format
-msgid "Signed on %1 with certificate %2."
-msgstr "Potpisan na %1 sa certifikatom %2."
-
-#: crypto/decryptverifytask.cpp:279
-#, kde-format
-msgid "Signed with certificate %1."
-msgstr "Potpisan sa certifikatom %1."
-
-#: crypto/decryptverifytask.cpp:360
-msgid "<b>Verification canceled.</b>"
-msgstr "<b>Potvrđivanje otkazano</b>"
-
-#: crypto/decryptverifytask.cpp:362
-#, kde-format
-msgid "<b>Verification failed: %1.</b>"
-msgstr "<b>Potvrđivanje nije uspjelo: %1.</b>"
-
-#: crypto/decryptverifytask.cpp:368
-msgid "<b>No signatures found.</b>"
-msgstr "<b>Nema pronađenih potpisa.</b>"
-
-#: crypto/decryptverifytask.cpp:372
-#, kde-format
-msgid "<b>Invalid signature.</b>"
-msgid_plural "<b>%1 invalid signatures.</b>"
-msgstr[0] "<b>%1 pogrešan potpis.</b>"
-msgstr[1] "<b>%1 pogrešna potpisa.</b>"
-msgstr[2] "<b>%1 pogrešnih potpisa.</b>"
-
-#: crypto/decryptverifytask.cpp:376
-#, kde-format
-msgid "<b>Not enough information to check signature validity.</b>"
-msgid_plural "<b>%1 signatures could not be verified.</b>"
-msgstr[0] "<b>%1 potpis nije moguće potvrditi.</b>"
-msgstr[1] "<b>%1 potpisa nije moguće potvrditi.</b>"
-msgstr[2] "<b>%1 potpisa nije moguće potvrditi.</b>"
-
-#: crypto/decryptverifytask.cpp:383
-msgid "<b>Signature is valid.</b>"
-msgstr "<b>Potpis nije valjan</b>"
-
-#: crypto/decryptverifytask.cpp:384
-#, kde-format
-msgid "<b>Signed by %1</b>"
-msgstr "<b>Prijavljen sa %1</b>"
-
-#: crypto/decryptverifytask.cpp:387
-msgid "certificate"
-msgstr "certifikat"
-
-#: crypto/decryptverifytask.cpp:386
-#, kde-format
-msgid ""
-"<br/><b>Warning:</b> The sender's mail address is not stored in the %1 used "
-"for signing."
-msgstr ""
-"<br/><b>Upozorenje:</b> Adresa e-pošte od pošiljaoca nije pohranjena u %1 "
-"koji je korišten za prijavljivanje."
-
-#: crypto/decryptverifytask.cpp:390
-#, kde-format
-msgid "<b>Valid signature.</b>"
-msgid_plural "<b>%1 valid signatures.</b>"
-msgstr[0] "<b>%1 važeća signatura.</b>"
-msgstr[1] "<b>%1 važeće signature.</b>"
-msgstr[2] "<b>%1 važećih signature.</b>"
-
-#: crypto/decryptverifytask.cpp:392
-msgid ""
-"<br/><b>Warning:</b> The sender's mail address is not stored in the "
-"certificates used for signing."
-msgstr ""
-"<br/><b>Upozorenje:</b> Adresa e-pošte pošiljaoca nije smještena u "
-"certifikatma korištenim za prijavljivanje."
-
-#: crypto/decryptverifytask.cpp:403
-msgid "<b>Decryption canceled.</b>"
-msgstr "<b>Dešifrovanje prekinuto.</b>"
-
-#: crypto/decryptverifytask.cpp:405 crypto/decryptverifytask.cpp:407
-#, kde-format
-msgid "<b>Decryption failed: %1.</b>"
-msgstr "<b>Dešifrovanje neuspjelo: %1.</b>"
-
-#: crypto/decryptverifytask.cpp:408
-msgid "<b>Decryption succeeded.</b>"
-msgstr "<b>Dešifriranje uspjelo.</b>"
-
-#: crypto/decryptverifytask.cpp:423
-msgid "The signature is bad."
-msgstr "Potpis je loš."
-
-#: crypto/decryptverifytask.cpp:425
-msgid "The validity of the signature cannot be verified."
-msgstr "Ispravnost potpisa ne može biti potvrđena."
-
-#: crypto/decryptverifytask.cpp:426
-#, kde-format
-msgid "The signature is invalid: %1"
-msgstr "Potpis je važeći: %1"
-
-#: crypto/decryptverifytask.cpp:448
-msgctxt "separator for a list of e-mail addresses"
-msgid ", "
-msgstr ", "
-
-#: crypto/decryptverifytask.cpp:448
-#, kde-format
-msgid ""
-"<p>The sender's address %1 is not stored in the certificate. Stored: %2</p>"
-msgstr ""
-"<p>Adresa pošiljaoca %1 nije pohranjena u certifikatima. Pohranjeno: %2</p>"
-
-#: crypto/decryptverifytask.cpp:461
-#, kde-format
-msgid "One unknown recipient."
-msgid_plural "%1 unknown recipients."
-msgstr[0] "%1 nepoznat primalac"
-msgstr[1] "%1 nepoznata primaoca"
-msgstr[2] "%1 nepoznatih primaoca"
-
-#: crypto/decryptverifytask.cpp:465
-msgid "Recipient:"
-msgid_plural "Recipients:"
-msgstr[0] "Primalac:"
-msgstr[1] "Primaoci:"
-msgstr[2] "Primaoci:"
-
-#: crypto/decryptverifytask.cpp:473
-#, kde-format
-msgid "One unknown recipient"
-msgid_plural "%1 unknown recipients"
-msgstr[0] "%1 nepoznat primalac"
-msgstr[1] "%1 nepoznata primaoca"
-msgstr[2] "%1 nepoznatih primaoca"
-
-#: crypto/decryptverifytask.cpp:689
-#, kde-format
-msgctxt "label: result example: foo.sig: Verification failed. "
-msgid "%1: %2"
-msgstr "%1: %2"
-
-#: crypto/decryptverifytask.cpp:811 crypto/decryptverifytask.cpp:908
-#: crypto/decryptverifytask.cpp:962 crypto/decryptverifytask.cpp:1061
-#: crypto/decryptverifytask.cpp:1114 crypto/decryptverifytask.cpp:1212
-#: crypto/decryptverifytask.cpp:1260 crypto/decryptverifytask.cpp:1346
-#, fuzzy, kde-format
-msgid "Caught exception: %1"
-msgstr "Uhvaćena neočekivan izuzetak: %1"
-
-#: crypto/decryptverifytask.cpp:814 crypto/decryptverifytask.cpp:910
-#: crypto/decryptverifytask.cpp:965 crypto/decryptverifytask.cpp:1063
-#: crypto/decryptverifytask.cpp:1117 crypto/decryptverifytask.cpp:1214
-#: crypto/decryptverifytask.cpp:1262 crypto/decryptverifytask.cpp:1348
-#: uiserver/assuanserverconnection.cpp:1426
-#: uiserver/assuanserverconnection.cpp:1472
-msgid "Caught unknown exception"
-msgstr "Uhvaćen neočekivan izuzetak"
-
-#: crypto/decryptverifytask.cpp:863
-msgid ""
-"Could not determine whether this is an S/MIME or an OpenPGP signature/"
-"ciphertext - maybe it is neither ciphertext nor a signature?"
-msgstr ""
-
-#: crypto/decryptverifytask.cpp:869 crypto/decryptverifytask.cpp:1020
-#, kde-format
-msgid "Decrypting: %1..."
-msgstr "Deširujem: %1..."
-
-#: crypto/decryptverifytask.cpp:1014
-msgid ""
-"Could not determine whether this was S/MIME- or OpenPGP-encrypted - maybe it "
-"is not ciphertext at all?"
-msgstr ""
-
-#: crypto/decryptverifytask.cpp:1166 crypto/decryptverifytask.cpp:1300
-msgid ""
-"Could not determine whether this is an S/MIME or an OpenPGP signature - "
-"maybe it is not a signature at all?"
-msgstr ""
-
-#: crypto/decryptverifytask.cpp:1172
-#, kde-format
-msgid "Verifying: %1..."
-msgstr "Provjeravam: %1..."
-
-#: crypto/decryptverifytask.cpp:1311
-#, kde-format
-msgid "Verifying signature: %1..."
-msgstr "Provjeravanje potpisa: %1..."
-
-#: crypto/signemailtask.cpp:88
-#, kde-format
-msgid "Signing failed: %1"
-msgstr "Potpisivanje nije uspelo: %1"
 
 #: crypto/createchecksumscontroller.cpp:84
 #, fuzzy
@@ -2352,17 +2352,61 @@ msgstr "Nije moguće koristiti izlazne i potpisane podatke istovremeno"
 msgid "No backend support for %1"
 msgstr "Nema pozadinske podrške za %1"
 
+#: crypto/decryptverifyfilescontroller.cpp:141
+msgid "Cannot determine whether input data is OpenPGP or CMS"
+msgstr ""
+
+#: crypto/decryptverifyfilescontroller.cpp:197
+#, kde-format
+msgid ""
+"Caught unexpected exception in DecryptVerifyFilesController::Private::"
+"slotWizardOperationPrepared: %1"
+msgstr ""
+"Uhvaćen iznenadni izuzetak u DecryptVerifyFilesController::Private::"
+"slotWizardOperationPrepared: %1"
+
+#: crypto/decryptverifyfilescontroller.cpp:201
+msgid ""
+"Caught unknown exception in DecryptVerifyFilesController::Private::"
+"slotWizardOperationPrepared"
+msgstr ""
+"Uhvaćen nepoznati izuzetak u DecryptVerifyFilesController::Private::"
+"slotWizardOperationPrepared"
+
+#: crypto/decryptverifyfilescontroller.cpp:252
+msgid "Decrypt/Verify Files"
+msgstr "Dešifrirati/potvrditi datoteke"
+
+#: crypto/decryptverifyfilescontroller.cpp:380
+msgid "No usable inputs found"
+msgstr "Nije nađen nijedan koristan ulaz"
+
 #: crypto/encryptemailcontroller.cpp:150
 msgid "Call to EncryptEMailController::protocolAsString() is ambiguous."
 msgstr ""
 "Poziv ka SignEncryptFilesController::Private::slotWizardOperationPrepared je "
 "dvosmislen"
 
-#: crypto/encryptemailcontroller.cpp:169 crypto/signemailcontroller.cpp:180
-#: crypto/signencryptfilescontroller.cpp:278
+#: crypto/encryptemailcontroller.cpp:169
 #: crypto/newsignencryptemailcontroller.cpp:382
+#: crypto/signemailcontroller.cpp:180
+#: crypto/signencryptfilescontroller.cpp:278
 msgid "User cancel"
 msgstr "Korisnik ponisten"
+
+#: crypto/newsignencryptemailcontroller.cpp:297
+#, fuzzy
+msgid "Call to NewSignEncryptEMailController::protocolAsString() is ambiguous."
+msgstr ""
+"Poziv ka SignEncryptFilesController::Private::slotWizardOperationPrepared je "
+"dvosmislen"
+
+#: crypto/newsignencryptemailcontroller.cpp:517
+#: crypto/newsignencryptemailcontroller.cpp:522
+#, fuzzy
+msgctxt "@title:window"
+msgid "Error"
+msgstr "Greška"
 
 #: crypto/signencryptfilescontroller.cpp:144
 msgid "Archive and Sign Files"
@@ -2409,49 +2453,6 @@ msgstr ""
 #, kde-format
 msgid "Verifying checksums (%2) in %1"
 msgstr ""
-
-#: crypto/decryptverifyfilescontroller.cpp:141
-msgid "Cannot determine whether input data is OpenPGP or CMS"
-msgstr ""
-
-#: crypto/decryptverifyfilescontroller.cpp:197
-#, kde-format
-msgid ""
-"Caught unexpected exception in DecryptVerifyFilesController::Private::"
-"slotWizardOperationPrepared: %1"
-msgstr ""
-"Uhvaćen iznenadni izuzetak u DecryptVerifyFilesController::Private::"
-"slotWizardOperationPrepared: %1"
-
-#: crypto/decryptverifyfilescontroller.cpp:201
-msgid ""
-"Caught unknown exception in DecryptVerifyFilesController::Private::"
-"slotWizardOperationPrepared"
-msgstr ""
-"Uhvaćen nepoznati izuzetak u DecryptVerifyFilesController::Private::"
-"slotWizardOperationPrepared"
-
-#: crypto/decryptverifyfilescontroller.cpp:252
-msgid "Decrypt/Verify Files"
-msgstr "Dešifrirati/potvrditi datoteke"
-
-#: crypto/decryptverifyfilescontroller.cpp:380
-msgid "No usable inputs found"
-msgstr "Nije nađen nijedan koristan ulaz"
-
-#: crypto/newsignencryptemailcontroller.cpp:297
-#, fuzzy
-msgid "Call to NewSignEncryptEMailController::protocolAsString() is ambiguous."
-msgstr ""
-"Poziv ka SignEncryptFilesController::Private::slotWizardOperationPrepared je "
-"dvosmislen"
-
-#: crypto/newsignencryptemailcontroller.cpp:517
-#: crypto/newsignencryptemailcontroller.cpp:522
-#, fuzzy
-msgctxt "@title:window"
-msgid "Error"
-msgstr "Greška"
 
 #: dialogs/adduseriddialog.cpp:69 models/keylistmodel.cpp:250
 #: models/useridlistmodel.cpp:249
@@ -2545,6 +2546,138 @@ msgctxt "@info"
 msgid ""
 "<interface>%1</interface> is invalid.<nl/>Local Admin rule: <icode>%2</icode>"
 msgstr ""
+
+#: dialogs/certificateselectiondialog.cpp:110
+msgid "Please select one or more of the following certificates:"
+msgstr "Molim odaberite jedan ili više od sljedećih certifikata."
+
+#: dialogs/certificateselectiondialog.cpp:111
+msgid "Please select one of the following certificates:"
+msgstr "Molim odaberite jedan iod sljedećih certifikata."
+
+#: dialogs/certificateselectiondialog.cpp:148
+msgid "Reload"
+msgstr "Ponovo učitaj"
+
+#: dialogs/certificateselectiondialog.cpp:149
+msgid "Lookup..."
+msgstr "Pretraživanje..."
+
+#: dialogs/certificateselectiondialog.cpp:150
+msgid "New..."
+msgstr "Nova..."
+
+#: dialogs/certificateselectiondialog.cpp:152
+msgctxt "@info:tooltip"
+msgid "Lookup certificates on server"
+msgstr "Pregledaj certifikate na serveru"
+
+#: dialogs/certificateselectiondialog.cpp:153
+msgctxt "@info:tooltip"
+msgid "Refresh certificate list"
+msgstr "Osvježi listu certifikata"
+
+#: dialogs/certificateselectiondialog.cpp:154
+msgctxt "@info:tooltip"
+msgid "Create a new certificate"
+msgstr "Kreiraj novi certifikat"
+
+#: dialogs/certificateselectiondialog.cpp:180
+msgid "Certificate Selection"
+msgstr "Izbor certifikata"
+
+#: dialogs/certifycertificatedialog.cpp:131
+msgid "<b>Step 1:</b> Please select the user IDs you wish to certify."
+msgstr ""
+"<b>Korak 1:</b> Molim odaberite korisnićke ID koje želite certificirate."
+
+#: dialogs/certifycertificatedialog.cpp:140
+msgid "I have verified the fingerprint"
+msgstr ""
+
+#: dialogs/certifycertificatedialog.cpp:159
+#, fuzzy, kde-format
+msgid ""
+"Certificate: %1\n"
+"Fingerprint: %2"
+msgstr ""
+"Certifikate kreiran uspješno.\n"
+"Otisak: %1"
+
+#: dialogs/certifycertificatedialog.cpp:186
+#: newcertificatewizard/newcertificatewizard.cpp:1247
+msgid "Certify"
+msgstr "Provjeri"
+
+#. i18n: file: dialogs/certificationoptionswidget.ui:44
+#. i18n: ectx: property (text), widget (QLabel, singleKeyLabel)
+#: dialogs/certifycertificatedialog.cpp:199 rc.cpp:297
+#, no-c-format, kde-format
+msgid "Certification will be performed using certificate %1."
+msgstr "Certifikacija će se obaviti koristeći certifikat %1."
+
+#: dialogs/certifycertificatedialog.cpp:229
+msgid "Signed user IDs:"
+msgstr "ID potpisanog korisnika:"
+
+#: dialogs/certifycertificatedialog.cpp:232
+msgid "<b>Summary:</b>"
+msgstr "<b>Rezime:</b>"
+
+#: dialogs/certifycertificatedialog.cpp:236
+msgid "Check level:"
+msgstr "Nivo provjere:"
+
+#: dialogs/certifycertificatedialog.cpp:239
+#, fuzzy
+msgid "Selected secret key:"
+msgstr "Odabrani tajni certifikat:"
+
+#: dialogs/certifycertificatedialog.cpp:258
+msgid "Default certificate"
+msgstr "Podrazumijevani certifikat"
+
+#: dialogs/certifycertificatedialog.cpp:262
+msgid "No statement made"
+msgstr "Nema naredbe"
+
+#: dialogs/certifycertificatedialog.cpp:265
+msgid "Not checked"
+msgstr "Nije provjereno"
+
+#: dialogs/certifycertificatedialog.cpp:268
+msgid "Casually checked"
+msgstr "Povremeno provjereno"
+
+#: dialogs/certifycertificatedialog.cpp:271
+msgid "Thoroughly checked"
+msgstr "Detaljno provjereno"
+
+#: dialogs/certifycertificatedialog.cpp:286
+msgid ""
+"The certificate was not certified because it was already certified by the "
+"same certificate."
+msgstr ""
+"Certifikat nije certificiran je r je već certificiran istim certifikatom"
+
+#: dialogs/certifycertificatedialog.cpp:288
+#, kde-format
+msgid "The certificate could not be certified. <b>Error</b>: %1"
+msgstr "Certifikat se ne može certificirati <b>Greška</b>: %1"
+
+#: dialogs/certifycertificatedialog.cpp:290
+msgid "Certification canceled."
+msgstr "Certifikat otkazan"
+
+#: dialogs/certifycertificatedialog.cpp:292
+msgid "Certification successful."
+msgstr "Certificiranje uspješno."
+
+#: dialogs/certifycertificatedialog.cpp:365
+#, kde-format
+msgctxt "arg is name, email of certificate holder"
+msgid "Certify Certificate: %1"
+msgstr "Certificiraj certifikat: %1"
 
 #: dialogs/deletecertificatesdialog.cpp:94
 msgid "These are the certificates you have selected for deletion:"
@@ -2689,138 +2822,6 @@ msgstr "Desila se greška kada se postavljao PIN: <message>%1</message>."
 msgctxt "@info"
 msgid "PIN set successfully."
 msgstr "PIN uspješno postavljen."
-
-#: dialogs/certificateselectiondialog.cpp:110
-msgid "Please select one or more of the following certificates:"
-msgstr "Molim odaberite jedan ili više od sljedećih certifikata."
-
-#: dialogs/certificateselectiondialog.cpp:111
-msgid "Please select one of the following certificates:"
-msgstr "Molim odaberite jedan iod sljedećih certifikata."
-
-#: dialogs/certificateselectiondialog.cpp:148
-msgid "Reload"
-msgstr "Ponovo učitaj"
-
-#: dialogs/certificateselectiondialog.cpp:149
-msgid "Lookup..."
-msgstr "Pretraživanje..."
-
-#: dialogs/certificateselectiondialog.cpp:150
-msgid "New..."
-msgstr "Nova..."
-
-#: dialogs/certificateselectiondialog.cpp:152
-msgctxt "@info:tooltip"
-msgid "Lookup certificates on server"
-msgstr "Pregledaj certifikate na serveru"
-
-#: dialogs/certificateselectiondialog.cpp:153
-msgctxt "@info:tooltip"
-msgid "Refresh certificate list"
-msgstr "Osvježi listu certifikata"
-
-#: dialogs/certificateselectiondialog.cpp:154
-msgctxt "@info:tooltip"
-msgid "Create a new certificate"
-msgstr "Kreiraj novi certifikat"
-
-#: dialogs/certificateselectiondialog.cpp:180
-msgid "Certificate Selection"
-msgstr "Izbor certifikata"
-
-#: dialogs/certifycertificatedialog.cpp:131
-msgid "<b>Step 1:</b> Please select the user IDs you wish to certify."
-msgstr ""
-"<b>Korak 1:</b> Molim odaberite korisnićke ID koje želite certificirate."
-
-#: dialogs/certifycertificatedialog.cpp:140
-msgid "I have verified the fingerprint"
-msgstr ""
-
-#: dialogs/certifycertificatedialog.cpp:159
-#, fuzzy, kde-format
-msgid ""
-"Certificate: %1\n"
-"Fingerprint: %2"
-msgstr ""
-"Certifikate kreiran uspješno.\n"
-"Otisak: %1"
-
-#: dialogs/certifycertificatedialog.cpp:186
-#: newcertificatewizard/newcertificatewizard.cpp:1247
-msgid "Certify"
-msgstr "Provjeri"
-
-#. i18n: file: dialogs/certificationoptionswidget.ui:44
-#. i18n: ectx: property (text), widget (QLabel, singleKeyLabel)
-#: dialogs/certifycertificatedialog.cpp:199 rc.cpp:297
-#, no-c-format, kde-format
-msgid "Certification will be performed using certificate %1."
-msgstr "Certifikacija će se obaviti koristeći certifikat %1."
-
-#: dialogs/certifycertificatedialog.cpp:229
-msgid "Signed user IDs:"
-msgstr "ID potpisanog korisnika:"
-
-#: dialogs/certifycertificatedialog.cpp:232
-msgid "<b>Summary:</b>"
-msgstr "<b>Rezime:</b>"
-
-#: dialogs/certifycertificatedialog.cpp:236
-msgid "Check level:"
-msgstr "Nivo provjere:"
-
-#: dialogs/certifycertificatedialog.cpp:239
-#, fuzzy
-msgid "Selected secret key:"
-msgstr "Odabrani tajni certifikat:"
-
-#: dialogs/certifycertificatedialog.cpp:258
-msgid "Default certificate"
-msgstr "Podrazumijevani certifikat"
-
-#: dialogs/certifycertificatedialog.cpp:262
-msgid "No statement made"
-msgstr "Nema naredbe"
-
-#: dialogs/certifycertificatedialog.cpp:265
-msgid "Not checked"
-msgstr "Nije provjereno"
-
-#: dialogs/certifycertificatedialog.cpp:268
-msgid "Casually checked"
-msgstr "Povremeno provjereno"
-
-#: dialogs/certifycertificatedialog.cpp:271
-msgid "Thoroughly checked"
-msgstr "Detaljno provjereno"
-
-#: dialogs/certifycertificatedialog.cpp:286
-msgid ""
-"The certificate was not certified because it was already certified by the "
-"same certificate."
-msgstr ""
-"Certifikat nije certificiran je r je već certificiran istim certifikatom"
-
-#: dialogs/certifycertificatedialog.cpp:288
-#, kde-format
-msgid "The certificate could not be certified. <b>Error</b>: %1"
-msgstr "Certifikat se ne može certificirati <b>Greška</b>: %1"
-
-#: dialogs/certifycertificatedialog.cpp:290
-msgid "Certification canceled."
-msgstr "Certifikat otkazan"
-
-#: dialogs/certifycertificatedialog.cpp:292
-msgid "Certification successful."
-msgstr "Certificiranje uspješno."
-
-#: dialogs/certifycertificatedialog.cpp:365
-#, kde-format
-msgctxt "arg is name, email of certificate holder"
-msgid "Certify Certificate: %1"
-msgstr "Certificiraj certifikat: %1"
 
 #: dialogs/certificatedetailsdialog.cpp:230
 #, kde-format
@@ -3114,6 +3115,59 @@ msgstr "Greška tokom pisanja u datoteku %1."
 msgid "Save As"
 msgstr "Snimi kao"
 
+#: kleopatraapplication.cpp:93
+msgid "Run UI server only, hide main window"
+msgstr "Pokreni samo UI server, sakrij glavni prozor"
+
+#: kleopatraapplication.cpp:94
+msgid "Use OpenPGP for the following operation"
+msgstr "Koristi OpenPGP za sljedeću operaciju"
+
+#: kleopatraapplication.cpp:95
+msgid "Use CMS (X.509, S/MIME) for the following operation"
+msgstr "Koristi CMS (X.509, S/MIME) za sljedeću operaciju"
+
+#: kleopatraapplication.cpp:96
+msgid "Import certificate file(s)"
+msgstr "Uvesti certifikacijsku datoteku(e)"
+
+#: kleopatraapplication.cpp:97
+msgid "Encrypt file(s)"
+msgstr "Šifrirati datoteku(e)"
+
+#: kleopatraapplication.cpp:98
+msgid "Sign file(s)"
+msgstr "Potpiši datoteku(e)"
+
+#: kleopatraapplication.cpp:99
+#, fuzzy
+msgid "Sign and/or encrypt file(s)"
+msgstr "Potpisati/Šifrirati Datoteke"
+
+#: kleopatraapplication.cpp:100
+msgid "Same as --sign-encrypt, do not use"
+msgstr ""
+
+#: kleopatraapplication.cpp:101
+msgid "Decrypt file(s)"
+msgstr "Dešifruj datoteku(e)"
+
+#: kleopatraapplication.cpp:102
+msgid "Verify file/signature"
+msgstr "Ovjeri datoteku/potpis"
+
+#: kleopatraapplication.cpp:103
+msgid "Decrypt and/or verify file(s)"
+msgstr "Dešifriraj i/ili ovjeri datoteku(e)"
+
+#: kleopatraapplication.cpp:111
+msgid "Location of the socket the ui server is listening on"
+msgstr "Mjesto utičnice na kojoj ui server sluša"
+
+#: kleopatraapplication.cpp:118
+msgid "File(s) to process"
+msgstr "Obraditi datoteku(e)"
+
 #: kwatchgnupg/aboutdata.cpp:40
 msgid "GnuPG log viewer"
 msgstr "Pregledač GnuPG-ovog dnevnika"
@@ -3285,6 +3339,110 @@ msgstr "Piši preko datoteke"
 #, kde-format
 msgid "Could not save file %1: %2"
 msgstr "Nisam mogao da sačuvam datoteku %1: %2"
+
+#: mainwindow_desktop.cpp:121 mainwindow_mobile.cpp:151
+#, kde-format
+msgctxt "Quit [ApplicationName]"
+msgid "&Quit %1"
+msgstr "&Izlaz %1"
+
+#: mainwindow_desktop.cpp:127 mainwindow_mobile.cpp:157
+msgid "Only &Close Window"
+msgstr "Samo &zatvori prozor"
+
+#: mainwindow_desktop.cpp:159
+#, kde-format
+msgid ""
+"%1 may be used by other applications as a service.\n"
+"You may instead want to close this window without exiting %1."
+msgstr ""
+"%1 je možda kotišten od strane drugih aplikacija kao servis\n"
+"Možda želite zatvoriti ovaj prozor bez napuštanja %1."
+
+#: mainwindow_desktop.cpp:161
+msgid "Really Quit?"
+msgstr "Stvarno izađi?"
+
+#: mainwindow_desktop.cpp:188 mainwindow_mobile.cpp:203
+msgid ""
+"Could not start the GnuPG Log Viewer (kwatchgnupg). Please check your "
+"installation."
+msgstr ""
+"Ne mou pokrenuti GnuPG Log preglednik (kwatchgnupg). Provjerite vašu "
+"instalaciju."
+
+#: mainwindow_desktop.cpp:190 mainwindow_mobile.cpp:205
+msgid "Error Starting KWatchGnuPG"
+msgstr "Greška pri pokretanju KWatchGnuPG"
+
+#: mainwindow_desktop.cpp:195 mainwindow_mobile.cpp:210
+msgid ""
+"Could not start the GnuPG Administrative Console (kgpgconf). Please check "
+"your installation."
+msgstr ""
+"Ne mogu pokrenuti GnuPG Administrativnu konzolu (kgpgconf).  Provjerite vašu "
+"instalaciju."
+
+#: mainwindow_desktop.cpp:197 mainwindow_mobile.cpp:212
+msgid "Error Starting KGpgConf"
+msgstr "Greška u pokretanju KGpgConf"
+
+#: mainwindow_desktop.cpp:306
+msgid "GnuPG Log Viewer"
+msgstr "GnuPG Log Preglednik"
+
+#: mainwindow_desktop.cpp:310
+msgid "GnuPG Administrative Console"
+msgstr "GnuPG administrativna konzola"
+
+#: mainwindow_desktop.cpp:315
+msgid "Configure GnuPG Backend..."
+msgstr "Konfiguriši GnuPG pozadinu..."
+
+#: mainwindow_desktop.cpp:319 mainwindow_mobile.cpp:278
+msgid "Perform Self-Test"
+msgstr "Obavi samotestiranje"
+
+#: mainwindow_desktop.cpp:323
+msgid "About Gpg4win"
+msgstr "O Gpg4win"
+
+#: mainwindow_desktop.cpp:351
+msgid "Could not configure the cryptography backend (gpgconf tool not found)"
+msgstr ""
+"Nije moguće konfigurisati kriptografsku pozadinu (gpgconf alat nije pronađen)"
+
+#: mainwindow_desktop.cpp:351
+msgid "Configuration Error"
+msgstr "Greška podešavanja"
+
+#: mainwindow_desktop.cpp:383 mainwindow_mobile.cpp:345
+msgid ""
+"There are still some background operations ongoing. These will be terminated "
+"when closing the window. Proceed?"
+msgstr ""
+"I dalje postoje određene operacije u pozadini u toku. To će biti prekinuto "
+"kada zatvorite prozor. Nastaviti?"
+
+#: mainwindow_desktop.cpp:386 mainwindow_mobile.cpp:348
+msgid "Ongoing Background Tasks"
+msgstr "Pozadinski zadaci u toku"
+
+#: mainwindow_desktop.cpp:467
+msgid "Sign/Encrypt..."
+msgstr "Potpis/Šifrovanje..."
+
+#: mainwindow_desktop.cpp:468 systrayicon.cpp:190
+msgid "Decrypt/Verify..."
+msgstr "Dešifrirati/Potvrditi"
+
+#: mainwindow_desktop.cpp:472
+msgid "Import Certificates"
+msgstr "Uvezi certifikate"
+
+#: mainwindow_desktop.cpp:473
+msgid "Import CRLs"
+msgstr "Uvezi CRL-ove"
 
 #: models/keylistmodel.cpp:252
 msgid "E-Mail"
@@ -5305,163 +5463,6 @@ msgstr "Izdvoji CRL keš"
 #: view/keylistcontroller.cpp:391
 msgid "Import CRL From File..."
 msgstr "Uvezi CRL iz datoteke..."
-
-#: kleopatraapplication.cpp:93
-msgid "Run UI server only, hide main window"
-msgstr "Pokreni samo UI server, sakrij glavni prozor"
-
-#: kleopatraapplication.cpp:94
-msgid "Use OpenPGP for the following operation"
-msgstr "Koristi OpenPGP za sljedeću operaciju"
-
-#: kleopatraapplication.cpp:95
-msgid "Use CMS (X.509, S/MIME) for the following operation"
-msgstr "Koristi CMS (X.509, S/MIME) za sljedeću operaciju"
-
-#: kleopatraapplication.cpp:96
-msgid "Import certificate file(s)"
-msgstr "Uvesti certifikacijsku datoteku(e)"
-
-#: kleopatraapplication.cpp:97
-msgid "Encrypt file(s)"
-msgstr "Šifrirati datoteku(e)"
-
-#: kleopatraapplication.cpp:98
-msgid "Sign file(s)"
-msgstr "Potpiši datoteku(e)"
-
-#: kleopatraapplication.cpp:99
-#, fuzzy
-msgid "Sign and/or encrypt file(s)"
-msgstr "Potpisati/Šifrirati Datoteke"
-
-#: kleopatraapplication.cpp:100
-msgid "Same as --sign-encrypt, do not use"
-msgstr ""
-
-#: kleopatraapplication.cpp:101
-msgid "Decrypt file(s)"
-msgstr "Dešifruj datoteku(e)"
-
-#: kleopatraapplication.cpp:102
-msgid "Verify file/signature"
-msgstr "Ovjeri datoteku/potpis"
-
-#: kleopatraapplication.cpp:103
-msgid "Decrypt and/or verify file(s)"
-msgstr "Dešifriraj i/ili ovjeri datoteku(e)"
-
-#: kleopatraapplication.cpp:111
-msgid "Location of the socket the ui server is listening on"
-msgstr "Mjesto utičnice na kojoj ui server sluša"
-
-#: kleopatraapplication.cpp:118
-msgid "File(s) to process"
-msgstr "Obraditi datoteku(e)"
-
-#: mainwindow_desktop.cpp:121 mainwindow_mobile.cpp:151
-#, kde-format
-msgctxt "Quit [ApplicationName]"
-msgid "&Quit %1"
-msgstr "&Izlaz %1"
-
-#: mainwindow_desktop.cpp:127 mainwindow_mobile.cpp:157
-msgid "Only &Close Window"
-msgstr "Samo &zatvori prozor"
-
-#: mainwindow_desktop.cpp:159
-#, kde-format
-msgid ""
-"%1 may be used by other applications as a service.\n"
-"You may instead want to close this window without exiting %1."
-msgstr ""
-"%1 je možda kotišten od strane drugih aplikacija kao servis\n"
-"Možda želite zatvoriti ovaj prozor bez napuštanja %1."
-
-#: mainwindow_desktop.cpp:161
-msgid "Really Quit?"
-msgstr "Stvarno izađi?"
-
-#: mainwindow_desktop.cpp:188 mainwindow_mobile.cpp:203
-msgid ""
-"Could not start the GnuPG Log Viewer (kwatchgnupg). Please check your "
-"installation."
-msgstr ""
-"Ne mou pokrenuti GnuPG Log preglednik (kwatchgnupg). Provjerite vašu "
-"instalaciju."
-
-#: mainwindow_desktop.cpp:190 mainwindow_mobile.cpp:205
-msgid "Error Starting KWatchGnuPG"
-msgstr "Greška pri pokretanju KWatchGnuPG"
-
-#: mainwindow_desktop.cpp:195 mainwindow_mobile.cpp:210
-msgid ""
-"Could not start the GnuPG Administrative Console (kgpgconf). Please check "
-"your installation."
-msgstr ""
-"Ne mogu pokrenuti GnuPG Administrativnu konzolu (kgpgconf).  Provjerite vašu "
-"instalaciju."
-
-#: mainwindow_desktop.cpp:197 mainwindow_mobile.cpp:212
-msgid "Error Starting KGpgConf"
-msgstr "Greška u pokretanju KGpgConf"
-
-#: mainwindow_desktop.cpp:306
-msgid "GnuPG Log Viewer"
-msgstr "GnuPG Log Preglednik"
-
-#: mainwindow_desktop.cpp:310
-msgid "GnuPG Administrative Console"
-msgstr "GnuPG administrativna konzola"
-
-#: mainwindow_desktop.cpp:315
-msgid "Configure GnuPG Backend..."
-msgstr "Konfiguriši GnuPG pozadinu..."
-
-#: mainwindow_desktop.cpp:319 mainwindow_mobile.cpp:278
-msgid "Perform Self-Test"
-msgstr "Obavi samotestiranje"
-
-#: mainwindow_desktop.cpp:323
-msgid "About Gpg4win"
-msgstr "O Gpg4win"
-
-#: mainwindow_desktop.cpp:351
-msgid "Could not configure the cryptography backend (gpgconf tool not found)"
-msgstr ""
-"Nije moguće konfigurisati kriptografsku pozadinu (gpgconf alat nije pronađen)"
-
-#: mainwindow_desktop.cpp:351
-msgid "Configuration Error"
-msgstr "Greška podešavanja"
-
-#: mainwindow_desktop.cpp:383 mainwindow_mobile.cpp:345
-msgid ""
-"There are still some background operations ongoing. These will be terminated "
-"when closing the window. Proceed?"
-msgstr ""
-"I dalje postoje određene operacije u pozadini u toku. To će biti prekinuto "
-"kada zatvorite prozor. Nastaviti?"
-
-#: mainwindow_desktop.cpp:386 mainwindow_mobile.cpp:348
-msgid "Ongoing Background Tasks"
-msgstr "Pozadinski zadaci u toku"
-
-#: mainwindow_desktop.cpp:467
-msgid "Sign/Encrypt..."
-msgstr "Potpis/Šifrovanje..."
-
-#: mainwindow_desktop.cpp:468 systrayicon.cpp:190
-msgid "Decrypt/Verify..."
-msgstr "Dešifrirati/Potvrditi"
-
-#: mainwindow_desktop.cpp:472
-msgid "Import Certificates"
-msgstr "Uvezi certifikate"
-
-#: mainwindow_desktop.cpp:473
-msgid "Import CRLs"
-msgstr "Uvezi CRL-ove"
 
 #: crlview.cpp:61
 msgid "CRL cache dump:"

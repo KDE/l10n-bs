@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: __kde__kdemultimedia__kmix\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-05 04:26+0200\n"
+"POT-Creation-Date: 2012-08-07 21:43+0200\n"
 "PO-Revision-Date: 2011-03-09 15:24+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosanski <lokal@linux.org.ba>\n"
@@ -255,6 +255,43 @@ msgstr "Greška"
 msgid "No sound card is installed or currently plugged in."
 msgstr "Nijedna zvučna kartica nije instalirana ili trenutno priključena"
 
+#: backends/mixer_backend_i18n.cpp:24
+msgid "Recording level of the microphone input."
+msgstr "Nivo snimanja na ulazu mikrofona."
+
+#: backends/mixer_backend_i18n.cpp:25
+msgid ""
+"Controls the volume of the front speakers or all speakers (depending on your "
+"soundcard model). If you use a digital output, you might need to also use "
+"other controls like ADC or DAC. For headphones, soundcards often supply a "
+"Headphone control."
+msgstr ""
+"Upravlja jačinom prednjih ili svih zvučnika (u zavisnosti od modela zvučne "
+"kartice). Ako koristite digitalni izlaz, možda ćete morati da koristite i "
+"kontrole ADC‑a ili DAC‑a. Zvučne kartice obično daju i kontrolu za slušalice."
+
+#: backends/mixer_backend_i18n.cpp:26
+msgid ""
+"Most media, such as MP3s or Videos, are played back using the PCM channel. "
+"As such, the playback volume of such media is controlled by both this and "
+"the Master or Headphone channels."
+msgstr ""
+"Većina medijuma, poput MP3 numera ili filmova, puštaju se preko PCM kanala. "
+"Zato se jačinom zvuka za te medijume upravlja preko i ovog i glavnog kanala "
+"(ili kanala za slušalice)."
+
+#: backends/mixer_backend_i18n.cpp:27
+msgid ""
+"Controls the headphone volume. Some soundcards include a switch that must be "
+"manually activated to enable the headphone output."
+msgstr ""
+"Upravlja jačinom zvuka na slušalicama. Neke zvučne kartice imaju prekidač "
+"koji treba ručno aktivirati za izlaz na slušalice."
+
+#: backends/mixer_backend_i18n.cpp:28
+msgid "---"
+msgstr "---"
+
 #: backends/mixer_alsa9.cpp:891
 msgid ""
 "You do not have permission to access the alsa mixer device.\n"
@@ -303,43 +340,6 @@ msgstr ""
 msgid "kmix: Unknown error. Please report how you produced this error."
 msgstr ""
 "kmix: Nepoznata greška. Molim prijavite autoru kako ste izazvali ovu grešku."
-
-#: backends/mixer_backend_i18n.cpp:24
-msgid "Recording level of the microphone input."
-msgstr "Nivo snimanja na ulazu mikrofona."
-
-#: backends/mixer_backend_i18n.cpp:25
-msgid ""
-"Controls the volume of the front speakers or all speakers (depending on your "
-"soundcard model). If you use a digital output, you might need to also use "
-"other controls like ADC or DAC. For headphones, soundcards often supply a "
-"Headphone control."
-msgstr ""
-"Upravlja jačinom prednjih ili svih zvučnika (u zavisnosti od modela zvučne "
-"kartice). Ako koristite digitalni izlaz, možda ćete morati da koristite i "
-"kontrole ADC‑a ili DAC‑a. Zvučne kartice obično daju i kontrolu za slušalice."
-
-#: backends/mixer_backend_i18n.cpp:26
-msgid ""
-"Most media, such as MP3s or Videos, are played back using the PCM channel. "
-"As such, the playback volume of such media is controlled by both this and "
-"the Master or Headphone channels."
-msgstr ""
-"Većina medijuma, poput MP3 numera ili filmova, puštaju se preko PCM kanala. "
-"Zato se jačinom zvuka za te medijume upravlja preko i ovog i glavnog kanala "
-"(ili kanala za slušalice)."
-
-#: backends/mixer_backend_i18n.cpp:27
-msgid ""
-"Controls the headphone volume. Some soundcards include a switch that must be "
-"manually activated to enable the headphone output."
-msgstr ""
-"Upravlja jačinom zvuka na slušalicama. Neke zvučne kartice imaju prekidač "
-"koji treba ručno aktivirati za izlaz na slušalice."
-
-#: backends/mixer_backend_i18n.cpp:28
-msgid "---"
-msgstr "---"
 
 #: backends/mixer_mpris2.cpp:49 backends/mixer_pulse.cpp:1025
 msgid "Playback Streams"
@@ -696,25 +696,28 @@ msgstr "Postavke uređaja"
 msgid "Mixer"
 msgstr "Mikseri"
 
-#: gui/viewsliders.cpp:94
-msgid "Nothing is capturing audio."
-msgstr ""
-
-#: gui/viewsliders.cpp:96 gui/viewsliders.cpp:102
-msgid "Nothing is playing audio."
-msgstr ""
-
-#: gui/viewsliders.cpp:98
+#: gui/kmixdockwidget.cpp:68
 #, fuzzy
-#| msgid "Capture Devices"
-msgid "No capture devices."
-msgstr "Uređaji za hvatanje"
+#| msgid "All controls"
+msgid "Volume Control"
+msgstr "Sve kontrole"
 
-#: gui/viewsliders.cpp:100
-#, fuzzy
-#| msgid "Playback Devices"
-msgid "No playback devices."
-msgstr "Uređaji za reprodukciju"
+#: gui/kmixdockwidget.cpp:137
+msgid "M&ute"
+msgstr "&Ugašen zvuk"
+
+#: gui/kmixdockwidget.cpp:225
+msgid "Mixer cannot be found"
+msgstr "Ne mogu naći mikser"
+
+#: gui/kmixdockwidget.cpp:239
+#, kde-format
+msgid "Volume at %1%"
+msgstr "Jačina na %1%"
+
+#: gui/kmixdockwidget.cpp:241
+msgid " (Muted)"
+msgstr " (Ugašen zvuk)"
 
 #: gui/kmixprefdlg.cpp:55
 msgid "Behavior"
@@ -778,28 +781,25 @@ msgstr "&Vodoravno"
 msgid "&Vertical"
 msgstr "&Uspravno"
 
-#: gui/kmixdockwidget.cpp:68
+#: gui/viewsliders.cpp:94
+msgid "Nothing is capturing audio."
+msgstr ""
+
+#: gui/viewsliders.cpp:96 gui/viewsliders.cpp:102
+msgid "Nothing is playing audio."
+msgstr ""
+
+#: gui/viewsliders.cpp:98
 #, fuzzy
-#| msgid "All controls"
-msgid "Volume Control"
-msgstr "Sve kontrole"
+#| msgid "Capture Devices"
+msgid "No capture devices."
+msgstr "Uređaji za hvatanje"
 
-#: gui/kmixdockwidget.cpp:137
-msgid "M&ute"
-msgstr "&Ugašen zvuk"
-
-#: gui/kmixdockwidget.cpp:225
-msgid "Mixer cannot be found"
-msgstr "Ne mogu naći mikser"
-
-#: gui/kmixdockwidget.cpp:239
-#, kde-format
-msgid "Volume at %1%"
-msgstr "Jačina na %1%"
-
-#: gui/kmixdockwidget.cpp:241
-msgid " (Muted)"
-msgstr " (Ugašen zvuk)"
+#: gui/viewsliders.cpp:100
+#, fuzzy
+#| msgid "Playback Devices"
+msgid "No playback devices."
+msgstr "Uređaji za reprodukciju"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
