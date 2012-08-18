@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-07 08:56+0200\n"
+"POT-Creation-Date: 2012-08-18 04:22+0200\n"
 "PO-Revision-Date: 2011-05-18 10:02+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -75,6 +75,26 @@ msgstr "Akonadi Agent"
 #: agentbase.cpp:562
 msgid "Agent identifier"
 msgstr "Identifikator agenta"
+
+#: agentbase_p.h:59 resourcescheduler.cpp:235
+msgctxt "@info:status Application ready for work"
+msgid "Ready"
+msgstr "Spreman"
+
+#: agentbase_p.h:61
+msgctxt "@info:status"
+msgid "Offline"
+msgstr "Van mreže"
+
+#: agentbase_p.h:66
+msgctxt "@info:status"
+msgid "Syncing..."
+msgstr "Sinhronizujem..."
+
+#: agentbase_p.h:71
+msgctxt "@info:status"
+msgid "Error."
+msgstr "Greška."
 
 #: agentinstancecreatejob.cpp:89
 msgid "Unable to access D-Bus interface of created agent."
@@ -252,6 +272,54 @@ msgstr "&Kopiraj ovdje"
 msgid "Cancel"
 msgstr "Odustani"
 
+#: conflicthandling/conflicthandler.cpp:68
+msgid "Did not find other item for conflict handling"
+msgstr "Nije nađena druga stavka za obradu sukoba."
+
+#: conflicthandling/conflictresolvedialog.cpp:129
+msgid "Modification Time"
+msgstr "Vrijeme izmjene"
+
+#: conflicthandling/conflictresolvedialog.cpp:145
+msgid "Flags"
+msgstr "Indikatori"
+
+#: conflicthandling/conflictresolvedialog.cpp:163
+#: conflicthandling/conflictresolvedialog.cpp:170
+#: conflicthandling/conflictresolvedialog.cpp:179
+#, kde-format
+msgid "Attribute: %1"
+msgstr "atribut: %1"
+
+#: conflicthandling/conflictresolvedialog.cpp:190
+msgctxt "@title:window"
+msgid "Conflict Resolution"
+msgstr "Razrješenje konflikta"
+
+#: conflicthandling/conflictresolvedialog.cpp:194
+msgid "Take left one"
+msgstr "Uzmi lijevo"
+
+#: conflicthandling/conflictresolvedialog.cpp:195
+msgid "Take right one"
+msgstr "Uzmi desno"
+
+#: conflicthandling/conflictresolvedialog.cpp:196
+msgid "Keep both"
+msgstr "Zadrži oba"
+
+#: conflicthandling/conflictresolvedialog.cpp:205
+msgctxt "@label"
+msgid ""
+"Two updates conflict with each other.<nl/>Please choose which update(s) to "
+"apply."
+msgstr ""
+"Dve dopune međusobno su sukobljene.<nl/>Izaberite koju ćete primijeniti."
+
+#: conflicthandling/conflictresolvedialog.cpp:235
+msgid "Data"
+msgstr "Podaci"
+
 #: control.cpp:241
 msgid "Starting Akonadi server..."
 msgstr "Pokretanje Akonadi servera..."
@@ -383,6 +451,14 @@ msgstr "Korisnik je otkazao operaciju."
 msgid "Unknown error."
 msgstr "Nepoznata greška."
 
+#: linkjobimpl_p.h:49 movejobimpl_p.h:49
+msgid "No valid destination specified"
+msgstr "Nije navedeno dobro odredište"
+
+#: movejobimpl_p.h:43
+msgid "No objects specified for moving"
+msgstr "Nisu zadati objekti za premještanje"
+
 #: partfetcher.cpp:63
 msgid "Unable to fetch item for index"
 msgstr "Ne mogu dohvatiti predmet za index"
@@ -422,6 +498,10 @@ msgstr "Bezimeni dodatak"
 #: pluginloader.cpp:178
 msgid "No description available"
 msgstr "Nema dostupnog opisa"
+
+#: qtest_akonadi.h:44
+msgid "KDE Test Program"
+msgstr "Probni KDE program"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -688,11 +768,6 @@ msgstr "Sinhronizujem zbirku %1"
 #: resourcebase.cpp:771
 msgid "The requested item no longer exists"
 msgstr "Zahtijevana stavka više ne postoji."
-
-#: resourcescheduler.cpp:235 agentbase_p.h:59
-msgctxt "@info:status Application ready for work"
-msgid "Ready"
-msgstr "Spreman"
 
 #: resourcesynchronizationjob.cpp:145
 msgid "Resource synchronization timed out."
@@ -1126,12 +1201,12 @@ msgstr ""
 "Verzija protokola servera je %1, što je jednako ili novije od zahtevane %2."
 
 #: selftestdialog.cpp:492
-msgid "Resource agents found."
-msgstr "Agenti resursa nađeni."
-
-#: selftestdialog.cpp:492
 msgid "At least one resource agent has been found."
 msgstr "Nađen je bar jedan agent resursa."
+
+#: selftestdialog.cpp:492
+msgid "Resource agents found."
+msgstr "Agenti resursa nađeni."
 
 #: selftestdialog.cpp:494
 msgid "No resource agents found."
@@ -1265,16 +1340,16 @@ msgstr ""
 "zaštitio od ovih rizika."
 
 #: selftestdialog.cpp:566
-msgid "Akonadi is not running as root"
-msgstr "Akonadi ne radi kao root"
-
-#: selftestdialog.cpp:566
 msgid ""
 "Akonadi is not running as a root/administrator user, which is the "
 "recommended setup for a secure system."
 msgstr ""
 "Akonadi ne radi pod root (administratorskim) korisnikom, što je i "
 "preporučena postava za bezbjednost sistema."
+
+#: selftestdialog.cpp:566
+msgid "Akonadi is not running as root"
+msgstr "Akonadi ne radi kao root"
 
 #: selftestdialog.cpp:639
 msgid "Save Test Report"
@@ -1373,28 +1448,28 @@ msgid "Manage Local Subscriptions"
 msgstr "Upravljaj lokalnim pretplatama"
 
 #: standardactionmanager.cpp:96
-msgid "Add to Favorite Folders"
-msgstr "Dodaj u omiljeni direktorij"
-
-#: standardactionmanager.cpp:96
 msgid "Add to Favorite"
 msgstr "Dodaj u omiljene"
 
-#: standardactionmanager.cpp:97
-msgid "Remove from Favorite Folders"
-msgstr "Ukloni iz omiljenih direktorija"
+#: standardactionmanager.cpp:96
+msgid "Add to Favorite Folders"
+msgstr "Dodaj u omiljeni direktorij"
 
 #: standardactionmanager.cpp:97
 msgid "Remove from Favorite"
 msgstr "Ukloni iz omiljenih"
 
-#: standardactionmanager.cpp:98
-msgid "Rename Favorite..."
-msgstr "Preimenuj omiljenu..."
+#: standardactionmanager.cpp:97
+msgid "Remove from Favorite Folders"
+msgstr "Ukloni iz omiljenih direktorija"
 
 #: standardactionmanager.cpp:98
 msgid "Rename"
 msgstr "Preimenuj"
+
+#: standardactionmanager.cpp:98
+msgid "Rename Favorite..."
+msgstr "Preimenuj omiljenu..."
 
 #: standardactionmanager.cpp:99 standardactionmanager.cpp:110
 msgid "Copy Folder To..."
@@ -1778,23 +1853,23 @@ msgstr ""
 
 #: standardactionmanager.cpp:778
 #, kde-format
+msgid "Account \"%1\" is offline"
+msgstr ""
+
+#: standardactionmanager.cpp:778
+#, kde-format
 msgid ""
 "Before syncing folder \"%1\" it is necessary to have the resource online. Do "
 "you want to make it online?"
 msgstr ""
 
-#: standardactionmanager.cpp:778
-#, kde-format
-msgid "Account \"%1\" is offline"
-msgstr ""
+#: standardactionmanager.cpp:1313
+msgid "Copy to This Folder"
+msgstr "Kopiraj u ovaj direktorij"
 
 #: standardactionmanager.cpp:1313
 msgid "Move to This Folder"
 msgstr "Prebaci u ovaj direktorij"
-
-#: standardactionmanager.cpp:1313
-msgid "Copy to This Folder"
-msgstr "Kopiraj u ovaj direktorij"
 
 #: statisticsproxymodel.cpp:104
 msgid "Total Messages"
@@ -1872,78 +1947,3 @@ msgstr "Loš primjerak zbirke."
 #| msgid "Could not fetch root collection of resource %1."
 msgid "Could not find restore collection and restore resource is not available"
 msgstr "Ne mogu da dobavim korjenu zbirku resursa %1."
-
-#: agentbase_p.h:61
-msgctxt "@info:status"
-msgid "Offline"
-msgstr "Van mreže"
-
-#: agentbase_p.h:66
-msgctxt "@info:status"
-msgid "Syncing..."
-msgstr "Sinhronizujem..."
-
-#: agentbase_p.h:71
-msgctxt "@info:status"
-msgid "Error."
-msgstr "Greška."
-
-#: linkjobimpl_p.h:49 movejobimpl_p.h:49
-msgid "No valid destination specified"
-msgstr "Nije navedeno dobro odredište"
-
-#: movejobimpl_p.h:43
-msgid "No objects specified for moving"
-msgstr "Nisu zadati objekti za premještanje"
-
-#: qtest_akonadi.h:44
-msgid "KDE Test Program"
-msgstr "Probni KDE program"
-
-#: conflicthandling/conflicthandler.cpp:68
-msgid "Did not find other item for conflict handling"
-msgstr "Nije nađena druga stavka za obradu sukoba."
-
-#: conflicthandling/conflictresolvedialog.cpp:129
-msgid "Modification Time"
-msgstr "Vrijeme izmjene"
-
-#: conflicthandling/conflictresolvedialog.cpp:145
-msgid "Flags"
-msgstr "Indikatori"
-
-#: conflicthandling/conflictresolvedialog.cpp:163
-#: conflicthandling/conflictresolvedialog.cpp:170
-#: conflicthandling/conflictresolvedialog.cpp:179
-#, kde-format
-msgid "Attribute: %1"
-msgstr "atribut: %1"
-
-#: conflicthandling/conflictresolvedialog.cpp:190
-msgctxt "@title:window"
-msgid "Conflict Resolution"
-msgstr "Razrješenje konflikta"
-
-#: conflicthandling/conflictresolvedialog.cpp:194
-msgid "Take left one"
-msgstr "Uzmi lijevo"
-
-#: conflicthandling/conflictresolvedialog.cpp:195
-msgid "Take right one"
-msgstr "Uzmi desno"
-
-#: conflicthandling/conflictresolvedialog.cpp:196
-msgid "Keep both"
-msgstr "Zadrži oba"
-
-#: conflicthandling/conflictresolvedialog.cpp:205
-msgctxt "@label"
-msgid ""
-"Two updates conflict with each other.<nl/>Please choose which update(s) to "
-"apply."
-msgstr ""
-"Dve dopune međusobno su sukobljene.<nl/>Izaberite koju ćete primijeniti."
-
-#: conflicthandling/conflictresolvedialog.cpp:235
-msgid "Data"
-msgstr "Podaci"

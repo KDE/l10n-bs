@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-10 04:49+0200\n"
+"POT-Creation-Date: 2012-08-18 04:06+0200\n"
 "PO-Revision-Date: 2011-05-08 12:33+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -70,14 +70,6 @@ msgstr "Ne mogu da pretvorim %1 u cio broj"
 msgid "Torrent is incomplete."
 msgstr "Torent nije završen."
 
-#: src/datachecker/multidatachecker.cpp:209
-#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
-#: src/diskio/multifilecache.cpp:745 src/torrent/torrentcreator.cpp:124
-#: src/torrent/torrentcreator.cpp:255 src/torrent/torrentcreator.cpp:292
-#, kde-format
-msgid "Cannot open file %1: %2"
-msgstr "Ne mogu da otvorim datoteku %1: %2"
-
 #: src/datachecker/datacheckerjob.cpp:82
 msgid "Waiting for other data checks to finish"
 msgstr "Čekanje na završetak provjere drugih podataka"
@@ -90,24 +82,19 @@ msgstr "Provjeravam podatke"
 msgid "Checking Data"
 msgstr "Provjeravam podatke"
 
-#: src/diskio/movedatafilesjob.cpp:140
-msgid "Waiting for other move jobs to finish"
-msgstr "Čeklanje na završetak drugih poslova premještanja"
+#: src/datachecker/multidatachecker.cpp:209
+#: src/datachecker/singledatachecker.cpp:49 src/diskio/multifilecache.cpp:706
+#: src/diskio/multifilecache.cpp:745 src/torrent/torrentcreator.cpp:124
+#: src/torrent/torrentcreator.cpp:255 src/torrent/torrentcreator.cpp:292
+#, kde-format
+msgid "Cannot open file %1: %2"
+msgstr "Ne mogu da otvorim datoteku %1: %2"
 
-#: src/diskio/movedatafilesjob.cpp:141 src/diskio/movedatafilesjob.cpp:181
-msgctxt "The source of a file operation"
-msgid "Source"
-msgstr "Izvor"
-
-#: src/diskio/movedatafilesjob.cpp:142 src/diskio/movedatafilesjob.cpp:182
-msgctxt "The destination of a file operation"
-msgid "Destination"
-msgstr "Odredište"
-
-#: src/diskio/movedatafilesjob.cpp:180
-msgctxt "@title job"
-msgid "Moving"
-msgstr "Pomjeram"
+#: src/diskio/cache.cpp:170 src/diskio/multifilecache.cpp:118
+#: src/diskio/singlefilecache.cpp:85
+#, kde-format
+msgid "Failed to create %1: %2"
+msgstr "Ne mogu da napravim %1: %2"
 
 #: src/diskio/cachefile.cpp:94 src/util/fileops.cpp:354
 #: src/util/fileops.cpp:399
@@ -164,6 +151,11 @@ msgstr "Ne mogu da pišem u %1: %2"
 msgid "Cannot preallocate diskspace: %1"
 msgstr "Ne mogu da rezervišem prostor na disku: %1"
 
+#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
+#, kde-format
+msgid "Cannot open index file %1: %2"
+msgstr "Ne mogu da otvorim datoteku indeksa %1: %2"
+
 #: src/diskio/dndfile.cpp:89
 #, kde-format
 msgid "Cannot create file %1: %2"
@@ -179,25 +171,33 @@ msgstr "Ne mogu da upišem prvi komad u DND datoteku: %1"
 msgid "Failed to write last chunk to DND file: %1"
 msgstr "Ne mogu da upišem posljednji komad u DND datoteku: %1"
 
-#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
-msgid "Unable to write to a piece mapped read only"
-msgstr "Ne može se upisati komad jer je mapiran samo za čitanje"
+#: src/diskio/movedatafilesjob.cpp:140
+msgid "Waiting for other move jobs to finish"
+msgstr "Čeklanje na završetak drugih poslova premještanja"
+
+#: src/diskio/movedatafilesjob.cpp:141 src/diskio/movedatafilesjob.cpp:181
+msgctxt "The source of a file operation"
+msgid "Source"
+msgstr "Izvor"
+
+#: src/diskio/movedatafilesjob.cpp:142 src/diskio/movedatafilesjob.cpp:182
+msgctxt "The destination of a file operation"
+msgid "Destination"
+msgstr "Odredište"
+
+#: src/diskio/movedatafilesjob.cpp:180
+msgctxt "@title job"
+msgid "Moving"
+msgstr "Pomjeram"
 
 #: src/diskio/multifilecache.cpp:91 src/diskio/singlefilecache.cpp:74
 #, kde-format
 msgid "Failed to open %1: %2"
 msgstr "Ne mogu da otvorim %1: %2"
 
-#: src/diskio/multifilecache.cpp:118 src/diskio/singlefilecache.cpp:85
-#: src/diskio/cache.cpp:170
-#, kde-format
-msgid "Failed to create %1: %2"
-msgstr "Ne mogu da napravim %1: %2"
-
-#: src/diskio/chunkmanager.cpp:936 src/diskio/chunkmanager.cpp:962
-#, kde-format
-msgid "Cannot open index file %1: %2"
-msgstr "Ne mogu da otvorim datoteku indeksa %1: %2"
+#: src/diskio/piecedata.cpp:69 src/diskio/piecedata.cpp:108
+msgid "Unable to write to a piece mapped read only"
+msgstr "Ne može se upisati komad jer je mapiran samo za čitanje"
 
 #: src/download/chunkdownload.cpp:383
 #, kde-format
@@ -303,11 +303,6 @@ msgstr "Direktorij %1 ne postoji"
 msgid "Unknown client"
 msgstr "Nepoznat klijent"
 
-#: src/torrent/torrentcreator.cpp:361
-#, kde-format
-msgid "Cannot create index file: %1"
-msgstr "Ne mogu da napravim indeksnu datoteku: %1"
-
 #: src/torrent/torrent.cpp:100 src/torrent/torrent.cpp:174
 #: src/torrent/torrent.cpp:202 src/torrent/torrent.cpp:209
 #: src/torrent/torrent.cpp:217 src/torrent/torrent.cpp:221
@@ -319,59 +314,6 @@ msgstr "Oštećen torent."
 #, kde-format
 msgid "Unable to open torrent file %1: %2"
 msgstr " Ne mogu da otvorim torent datoteku %1: %2"
-
-#: src/torrent/torrentstats.cpp:73
-msgid "Not started"
-msgstr "Nije pokrenut"
-
-#: src/torrent/torrentstats.cpp:75
-msgid "Download completed"
-msgstr "Preuzimanje završeno"
-
-#: src/torrent/torrentstats.cpp:77
-msgid "Seeding completed"
-msgstr "Sijanje završeno"
-
-#: src/torrent/torrentstats.cpp:79
-msgctxt "Status of a torrent file"
-msgid "Seeding"
-msgstr "Sijem"
-
-#: src/torrent/torrentstats.cpp:81
-msgid "Downloading"
-msgstr "Preuzimam"
-
-#: src/torrent/torrentstats.cpp:83
-msgid "Stalled"
-msgstr "Zastoj"
-
-#: src/torrent/torrentstats.cpp:85
-msgid "Stopped"
-msgstr "Zaustavljen"
-
-#: src/torrent/torrentstats.cpp:89
-msgid "Allocating diskspace"
-msgstr "Rezervišem prostor na disku"
-
-#: src/torrent/torrentstats.cpp:91
-msgid "Queued for seeding"
-msgstr "U redu za sijanje"
-
-#: src/torrent/torrentstats.cpp:91
-msgid "Queued for downloading"
-msgstr "U redu za preuzimanje"
-
-#: src/torrent/torrentstats.cpp:95
-msgid "Stopped. No space left on device."
-msgstr "Zaustavljen. Nema slobodnog prostora."
-
-#: src/torrent/torrentstats.cpp:97
-msgid "Paused"
-msgstr "Pauzirano"
-
-#: src/torrent/torrentstats.cpp:99
-msgid "Superseeding"
-msgstr "Supersijanje"
 
 #: src/torrent/torrentcontrol.cpp:302
 msgid "Error writing to disk, do you have enough diskspace?"
@@ -410,20 +352,67 @@ msgstr ""
 msgid "You are already downloading the torrent <b>%1</b>."
 msgstr "Već preuzimate torent <b>%1</b>."
 
+#: src/torrent/torrentcreator.cpp:361
+#, kde-format
+msgid "Cannot create index file: %1"
+msgstr "Ne mogu da napravim indeksnu datoteku: %1"
+
+#: src/torrent/torrentstats.cpp:73
+msgid "Not started"
+msgstr "Nije pokrenut"
+
+#: src/torrent/torrentstats.cpp:75
+msgid "Download completed"
+msgstr "Preuzimanje završeno"
+
+#: src/torrent/torrentstats.cpp:77
+msgid "Seeding completed"
+msgstr "Sijanje završeno"
+
+#: src/torrent/torrentstats.cpp:79
+msgctxt "Status of a torrent file"
+msgid "Seeding"
+msgstr "Sijem"
+
+#: src/torrent/torrentstats.cpp:81
+msgid "Downloading"
+msgstr "Preuzimam"
+
+#: src/torrent/torrentstats.cpp:83
+msgid "Stalled"
+msgstr "Zastoj"
+
+#: src/torrent/torrentstats.cpp:85
+msgid "Stopped"
+msgstr "Zaustavljen"
+
+#: src/torrent/torrentstats.cpp:89
+msgid "Allocating diskspace"
+msgstr "Rezervišem prostor na disku"
+
+#: src/torrent/torrentstats.cpp:91
+msgid "Queued for downloading"
+msgstr "U redu za preuzimanje"
+
+#: src/torrent/torrentstats.cpp:91
+msgid "Queued for seeding"
+msgstr "U redu za sijanje"
+
+#: src/torrent/torrentstats.cpp:95
+msgid "Stopped. No space left on device."
+msgstr "Zaustavljen. Nema slobodnog prostora."
+
+#: src/torrent/torrentstats.cpp:97
+msgid "Paused"
+msgstr "Pauzirano"
+
+#: src/torrent/torrentstats.cpp:99
+msgid "Superseeding"
+msgstr "Supersijanje"
+
 #: src/tracker/httpannouncejob.cpp:142
 msgid "Redirect without a redirect location"
 msgstr "Preusmerenje bez lokacije preusmerenja"
-
-#: src/tracker/udptracker.cpp:364 src/tracker/udptracker.cpp:374
-#: src/tracker/httptracker.cpp:558
-#, kde-format
-msgid "Timeout contacting tracker %1"
-msgstr "Isteklo vrijeme za kontaktiranje pratioca %1"
-
-#: src/tracker/udptracker.cpp:401
-#, kde-format
-msgid "Unable to resolve hostname %1"
-msgstr "Ne mogu da razriješim ime domaćina %1"
 
 #: src/tracker/httptracker.cpp:287 src/tracker/httptracker.cpp:307
 #: src/tracker/httptracker.cpp:463
@@ -437,6 +426,17 @@ msgstr "Neispravni podaci sa pratioca"
 #: src/tracker/httptracker.cpp:480
 msgid "Invalid tracker URL"
 msgstr "Neispravan URL pratioca"
+
+#: src/tracker/httptracker.cpp:558 src/tracker/udptracker.cpp:364
+#: src/tracker/udptracker.cpp:374
+#, kde-format
+msgid "Timeout contacting tracker %1"
+msgstr "Isteklo vrijeme za kontaktiranje pratioca %1"
+
+#: src/tracker/udptracker.cpp:401
+#, kde-format
+msgid "Unable to resolve hostname %1"
+msgstr "Ne mogu da razriješim ime domaćina %1"
 
 #: src/upnp/httprequest.cpp:96
 msgid "Connection closed unexpectedly"
@@ -476,27 +476,6 @@ msgstr "Ne mogu da pišem u %1: %2"
 #, kde-format
 msgid "Cannot read from %1"
 msgstr "Ne mogu da čitam iz %1"
-
-#: src/util/functions.cpp:234
-#, kde-format
-msgid "%1/s"
-msgstr "%1/s"
-
-#: src/util/functions.cpp:245
-#, kde-format
-msgid "1 day "
-msgid_plural "%1 days "
-msgstr[0] "%1 dan "
-msgstr[1] "%1 dana "
-msgstr[2] "%1 dana "
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when writing to disk"
-msgstr "Greška u pisanju na disk"
-
-#: src/util/signalcatcher.cpp:80
-msgid "Error when reading from disk"
-msgstr "Greška pri čitanju s diska"
 
 #: src/util/fileops.cpp:94
 #, kde-format
@@ -549,6 +528,19 @@ msgstr "Ne mogu da raširim datoteku: %1"
 msgid "Cannot seek in file: %1"
 msgstr "Ne mogu da pozicioniram u datoteci: %1"
 
+#: src/util/functions.cpp:234
+#, kde-format
+msgid "%1/s"
+msgstr "%1/s"
+
+#: src/util/functions.cpp:245
+#, kde-format
+msgid "1 day "
+msgid_plural "%1 days "
+msgstr[0] "%1 dan "
+msgstr[1] "%1 dana "
+msgstr[2] "%1 dana "
+
 #: src/util/logsystemmanager.cpp:33
 msgid "General"
 msgstr "Opšte"
@@ -572,3 +564,11 @@ msgstr "Ulaz/izlaz diska"
 #: src/util/logsystemmanager.cpp:38
 msgid "µTP"
 msgstr "µTP"
+
+#: src/util/signalcatcher.cpp:80
+msgid "Error when reading from disk"
+msgstr "Greška pri čitanju s diska"
+
+#: src/util/signalcatcher.cpp:80
+msgid "Error when writing to disk"
+msgstr "Greška u pisanju na disk"
