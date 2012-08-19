@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdegames\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-18 04:17+0200\n"
+"POT-Creation-Date: 2012-08-19 05:13+0200\n"
 "PO-Revision-Date: 2010-10-08 09:27+0000\n"
 "Last-Translator: Launchpad Translations Administrators <rosetta@launchpad."
 "net>\n"
@@ -21,45 +21,100 @@ msgstr ""
 "X-Launchpad-Export-Date: 2011-04-22 07:12+0000\n"
 "X-Generator: Launchpad (build 12883)\n"
 
-#: game/game.cpp:327
+#: gui/widgets/setupwidget.cpp:64
+msgid " Stone"
+msgid_plural " Stones"
+msgstr[0] " kamen"
+msgstr[1] " kamena"
+msgstr[2] " kamenova"
+
+#: gui/widgets/setupwidget.cpp:168
 #, kde-format
-msgctxt "%1 stone coordinate"
-msgid "White %1"
-msgstr "Bijeli %1"
+msgctxt "Time limit of a game in minutes"
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
-#: game/game.cpp:330 game/game.cpp:400 gui/mainwindow.cpp:393
-msgid "White passed"
-msgstr "Bijeli propušta"
-
-#: game/game.cpp:336
+#: gui/widgets/setupwidget.cpp:170
 #, kde-format
-msgctxt "%1 stone coordinate"
-msgid "Black %1"
-msgstr "Crni %1"
+msgctxt "Time limit of a game, hours, minutes"
+msgid "%1 hour, %2"
+msgid_plural "%1 hours, %2"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
-#: game/game.cpp:339 game/game.cpp:402 gui/mainwindow.cpp:395
-msgid "Black passed"
-msgstr "Crni propušta"
-
-#: game/game.cpp:409
-msgid "White resigned"
-msgstr "Bijeli odustaje"
-
-#: game/game.cpp:411
-msgid "Black resigned"
-msgstr "Crni odustaje"
-
-#: game/game.cpp:419
+#: gui/widgets/setupwidget.cpp:192
 #, kde-format
-msgctxt "%1 response from Go engine"
-msgid "White %1"
-msgstr "Bijeli %1"
+msgid " of %1"
+msgstr " od %1"
 
-#: game/game.cpp:421
-#, kde-format
-msgctxt "%1 response from Go engine"
-msgid "Black %1"
-msgstr "Crni %1"
+#: gui/widgets/setupwidget.cpp:235
+#, fuzzy
+#| msgid "White Player"
+msgid "White to play"
+msgstr "Bijeli igrač"
+
+#. i18n: file: gui/widgets/setupwidget.ui:442
+#. i18n: ectx: property (text), widget (QLabel, playerLabel)
+#: gui/widgets/setupwidget.cpp:237 rc.cpp:122
+#, fuzzy
+#| msgid "Black Player"
+msgid "Black to play"
+msgstr "Crni igrač"
+
+#: gui/widgets/gamewidget.cpp:56 gui/widgets/gamewidget.cpp:61
+#, fuzzy, kde-format
+#| msgid "Computer (Level %1)"
+msgid "Computer (level %1)"
+msgstr "računar (nivo %1)"
+
+#: gui/widgets/gamewidget.cpp:64
+#, fuzzy, kde-format
+#| msgid " Stone"
+#| msgid_plural " Stones"
+msgid "%1 Stone"
+msgid_plural "%1 Stones"
+msgstr[0] " kamen"
+msgstr[1] " kamena"
+msgstr[2] " kamenova"
+
+#: gui/widgets/gamewidget.cpp:81
+#, fuzzy, kde-format
+#| msgid " (White %1)"
+msgctxt "Indication who played the last move"
+msgid "%1 (white)"
+msgstr " (bijeli %1)"
+
+#: gui/widgets/gamewidget.cpp:83
+#, fuzzy, kde-format
+#| msgid " (Black %1)"
+msgctxt "Indication who played the last move"
+msgid "%1 (black)"
+msgstr " (crni %1)"
+
+#: gui/widgets/gamewidget.cpp:92
+#, fuzzy
+#| msgid "White's move"
+msgid "White's turn"
+msgstr "Bijeli na potezu"
+
+#: gui/widgets/gamewidget.cpp:96
+#, fuzzy
+#| msgid "Black's move"
+msgid "Black's turn"
+msgstr "Crni na potezu"
+
+#: gui/widgets/gamewidget.cpp:101 gui/widgets/gamewidget.cpp:102
+#, fuzzy, kde-format
+#| msgid "Captures:"
+msgid "%1 capture"
+msgid_plural "%1 captures"
+msgstr[0] "Zarobljeno:"
+msgstr[1] "Zarobljeno:"
+msgstr[2] "Zarobljeno:"
 
 #: gui/mainwindow.cpp:106
 msgid "Set up a new game..."
@@ -116,6 +171,14 @@ msgstr "Teme"
 msgid "Backend was changed, restart necessary..."
 msgstr "Promijenjena pozadina, neophodno ponovno pokretanje..."
 
+#: gui/mainwindow.cpp:393 game/game.cpp:330 game/game.cpp:400
+msgid "White passed"
+msgstr "Bijeli propušta"
+
+#: gui/mainwindow.cpp:395 game/game.cpp:339 game/game.cpp:402
+msgid "Black passed"
+msgstr "Crni propušta"
+
 #: gui/mainwindow.cpp:405 gui/mainwindow.cpp:407
 msgctxt "@action"
 msgid "Get More Games..."
@@ -165,100 +228,37 @@ msgctxt "@title:window"
 msgid "Error"
 msgstr "Greška"
 
-#: gui/widgets/gamewidget.cpp:56 gui/widgets/gamewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Computer (Level %1)"
-msgid "Computer (level %1)"
-msgstr "računar (nivo %1)"
-
-#: gui/widgets/gamewidget.cpp:64
-#, fuzzy, kde-format
-#| msgid " Stone"
-#| msgid_plural " Stones"
-msgid "%1 Stone"
-msgid_plural "%1 Stones"
-msgstr[0] " kamen"
-msgstr[1] " kamena"
-msgstr[2] " kamenova"
-
-#: gui/widgets/gamewidget.cpp:81
-#, fuzzy, kde-format
-#| msgid " (White %1)"
-msgctxt "Indication who played the last move"
-msgid "%1 (white)"
-msgstr " (bijeli %1)"
-
-#: gui/widgets/gamewidget.cpp:83
-#, fuzzy, kde-format
-#| msgid " (Black %1)"
-msgctxt "Indication who played the last move"
-msgid "%1 (black)"
-msgstr " (crni %1)"
-
-#: gui/widgets/gamewidget.cpp:92
-#, fuzzy
-#| msgid "White's move"
-msgid "White's turn"
-msgstr "Bijeli na potezu"
-
-#: gui/widgets/gamewidget.cpp:96
-#, fuzzy
-#| msgid "Black's move"
-msgid "Black's turn"
-msgstr "Crni na potezu"
-
-#: gui/widgets/gamewidget.cpp:101 gui/widgets/gamewidget.cpp:102
-#, fuzzy, kde-format
-#| msgid "Captures:"
-msgid "%1 capture"
-msgid_plural "%1 captures"
-msgstr[0] "Zarobljeno:"
-msgstr[1] "Zarobljeno:"
-msgstr[2] "Zarobljeno:"
-
-#: gui/widgets/setupwidget.cpp:64
-msgid " Stone"
-msgid_plural " Stones"
-msgstr[0] " kamen"
-msgstr[1] " kamena"
-msgstr[2] " kamenova"
-
-#: gui/widgets/setupwidget.cpp:168
+#: game/game.cpp:327
 #, kde-format
-msgctxt "Time limit of a game in minutes"
-msgid "%1 minute"
-msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgctxt "%1 stone coordinate"
+msgid "White %1"
+msgstr "Bijeli %1"
 
-#: gui/widgets/setupwidget.cpp:170
+#: game/game.cpp:336
 #, kde-format
-msgctxt "Time limit of a game, hours, minutes"
-msgid "%1 hour, %2"
-msgid_plural "%1 hours, %2"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgctxt "%1 stone coordinate"
+msgid "Black %1"
+msgstr "Crni %1"
 
-#: gui/widgets/setupwidget.cpp:192
+#: game/game.cpp:409
+msgid "White resigned"
+msgstr "Bijeli odustaje"
+
+#: game/game.cpp:411
+msgid "Black resigned"
+msgstr "Crni odustaje"
+
+#: game/game.cpp:419
 #, kde-format
-msgid " of %1"
-msgstr " od %1"
+msgctxt "%1 response from Go engine"
+msgid "White %1"
+msgstr "Bijeli %1"
 
-#: gui/widgets/setupwidget.cpp:235
-#, fuzzy
-#| msgid "White Player"
-msgid "White to play"
-msgstr "Bijeli igrač"
-
-#. i18n: file: gui/widgets/setupwidget.ui:442
-#. i18n: ectx: property (text), widget (QLabel, playerLabel)
-#: gui/widgets/setupwidget.cpp:237 rc.cpp:122
-#, fuzzy
-#| msgid "Black Player"
-msgid "Black to play"
-msgstr "Crni igrač"
+#: game/game.cpp:421
+#, kde-format
+msgctxt "%1 response from Go engine"
+msgid "Black %1"
+msgstr "Crni %1"
 
 #: main.cpp:41
 msgid "Kigo"
@@ -273,20 +273,20 @@ msgid "Copyright (c) 2008-2010 Sascha Peilicke"
 msgstr "Copyright (c) 2008-2010 Sascha Peilicke"
 
 #: main.cpp:44
-msgid "Original author"
-msgstr "Prvobitni autor"
-
-#: main.cpp:44
 msgid "Sascha Peilicke (saschpe)"
 msgstr "Sascha Peilicke (saschpe)"
 
-#: main.cpp:46
-msgid "Documentation editor"
-msgstr "Urednik dokumentacije"
+#: main.cpp:44
+msgid "Original author"
+msgstr "Prvobitni autor"
 
 #: main.cpp:46
 msgid "Yuri Chornoivan"
 msgstr "Jurij Čornoivan"
+
+#: main.cpp:46
+msgid "Documentation editor"
+msgstr "Urednik dokumentacije"
 
 #: main.cpp:48
 msgid "Arturo Silva"
