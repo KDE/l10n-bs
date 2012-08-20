@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-19 05:50+0200\n"
+"POT-Creation-Date: 2012-08-20 05:37+0200\n"
 "PO-Revision-Date: 2010-10-06 23:03+0000\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -20,6 +20,14 @@ msgstr ""
 "X-Environment: kde\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr " ,Launchpad Contributions:,Chusslove Illich,Samir Ribić"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ",,caslav.ilic@gmx.net,"
 
 # >> @title:window
 #: ActionEditor.cpp:69
@@ -39,6 +47,113 @@ msgstr ""
 #: ActionEditor.cpp:170
 msgid "Invalid action"
 msgstr "Loša radnja"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:37
+msgid "Action icon, click to change it"
+msgstr "Ikona radnje, kliknite da je izmijenite."
+
+#. i18n: ectx: property (toolTip), widget (KLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:44
+msgid "Action name"
+msgstr "Ime radnje."
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:61
+msgid "Command: "
+msgstr "Naredba: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:73
+#, no-c-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"<p>Naredba koja okida radnju. Može sadržati sljedeća proširenja (bez "
+"razlikovanja veličine slova):</p><ul><li><icode>%f</icode> — tačka "
+"montiranja uređaja (samo za skladišne uređaje)</li><li><icode>%d</icode> — "
+"putanja do čvora uređaja (samo za blokovske uređaje)</li><li><icode>%i</"
+"icode> — identifikator uređaja</li></ul>"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:90
+msgid "Devices must match the following parameters for this action:"
+msgstr "Uređaji moraju poklopiti sljedeće parametre za ovu radnju:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:102
+msgid "Edit Parameter"
+msgstr "Uređivanje parametra"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:128
+msgid "Parameter type:"
+msgstr "Tip parametra:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, CbParameterType)
+#: ActionEditor.ui:136
+msgid "Property Match"
+msgstr "poklapanje svojstva"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, CbParameterType)
+#: ActionEditor.ui:141
+msgid "Content Conjunction"
+msgstr "konjunkcija sadržaja"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, CbParameterType)
+#: ActionEditor.ui:146
+msgid "Content Disjunction"
+msgstr "disjunkcija sadržaja"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, CbParameterType)
+#: ActionEditor.ui:151
+msgid "Device Interface Match"
+msgstr "poklapanje sučelja uređaja"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:181
+msgid "Device type:"
+msgstr "Tip uređaja:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:220
+msgid "Value name:"
+msgstr "Ime vrijednosti:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, CbValueMatch)
+#: ActionEditor.ui:260
+msgid "Equals"
+msgstr "jednako"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, CbValueMatch)
+#: ActionEditor.ui:265
+msgid "Contains"
+msgstr "sadrži"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:293
+msgid "Reset Parameter"
+msgstr "Resetuj parametar"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:300
+msgid "Save Parameter Changes"
+msgstr "Sačuvaj izmjene parametra"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+msgid "Action name:"
+msgstr "Ime radnje:"
+
+#. i18n: ectx: property (toolTip), widget (KLineEdit, LeActionName)
+#: AddAction.ui:26
+msgid "Enter the name for your new action"
+msgstr "Unesite ime za novu radnju."
 
 #: DesktopFileGenerator.cpp:36
 msgid "Solid Action Desktop File Generator"
@@ -93,160 +208,6 @@ msgstr "svojstvo uređaja %1 mora biti jednako %2"
 msgid "The device property %1 must contain %2"
 msgstr "svojstvo uređaja %1 mora sadržati %2"
 
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr " ,Launchpad Contributions:,Chusslove Illich,Samir Ribić"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ",,caslav.ilic@gmx.net,"
-
-#. i18n: file: ActionEditor.ui:37
-#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
-#: rc.cpp:5
-msgid "Action icon, click to change it"
-msgstr "Ikona radnje, kliknite da je izmijenite."
-
-#. i18n: file: ActionEditor.ui:44
-#. i18n: ectx: property (toolTip), widget (KLineEdit, LeActionFriendlyName)
-#: rc.cpp:8
-msgid "Action name"
-msgstr "Ime radnje."
-
-#. i18n: file: ActionEditor.ui:61
-#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
-#: rc.cpp:11
-msgid "Command: "
-msgstr "Naredba: "
-
-#. i18n: file: ActionEditor.ui:73
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
-#: rc.cpp:15
-#, no-c-format
-msgid ""
-"Command that will trigger the action\n"
-"This can include any or all of the following case insensitive expands:\n"
-"\n"
-"%f: The mountpoint for the device - Storage Access devices only\n"
-"%d: Path to the device node - Block devices only\n"
-"%i: The identifier of the device"
-msgstr ""
-"<p>Naredba koja okida radnju. Može sadržati sljedeća proširenja (bez "
-"razlikovanja veličine slova):</p><ul><li><icode>%f</icode> — tačka "
-"montiranja uređaja (samo za skladišne uređaje)</li><li><icode>%d</icode> — "
-"putanja do čvora uređaja (samo za blokovske uređaje)</li><li><icode>%i</"
-"icode> — identifikator uređaja</li></ul>"
-
-#. i18n: file: ActionEditor.ui:90
-#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
-#: rc.cpp:23
-msgid "Devices must match the following parameters for this action:"
-msgstr "Uređaji moraju poklopiti sljedeće parametre za ovu radnju:"
-
-#. i18n: file: ActionEditor.ui:102
-#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
-#: rc.cpp:26
-msgid "Edit Parameter"
-msgstr "Uređivanje parametra"
-
-#. i18n: file: ActionEditor.ui:128
-#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
-#: rc.cpp:29
-msgid "Parameter type:"
-msgstr "Tip parametra:"
-
-#. i18n: file: ActionEditor.ui:136
-#. i18n: ectx: property (text), item, widget (KComboBox, CbParameterType)
-#: rc.cpp:32
-msgid "Property Match"
-msgstr "poklapanje svojstva"
-
-#. i18n: file: ActionEditor.ui:141
-#. i18n: ectx: property (text), item, widget (KComboBox, CbParameterType)
-#: rc.cpp:35
-msgid "Content Conjunction"
-msgstr "konjunkcija sadržaja"
-
-#. i18n: file: ActionEditor.ui:146
-#. i18n: ectx: property (text), item, widget (KComboBox, CbParameterType)
-#: rc.cpp:38
-msgid "Content Disjunction"
-msgstr "disjunkcija sadržaja"
-
-#. i18n: file: ActionEditor.ui:151
-#. i18n: ectx: property (text), item, widget (KComboBox, CbParameterType)
-#: rc.cpp:41
-msgid "Device Interface Match"
-msgstr "poklapanje sučelja uređaja"
-
-#. i18n: file: ActionEditor.ui:181
-#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
-#: rc.cpp:44
-msgid "Device type:"
-msgstr "Tip uređaja:"
-
-#. i18n: file: ActionEditor.ui:220
-#. i18n: ectx: property (text), widget (QLabel, LblValueName)
-#: rc.cpp:47
-msgid "Value name:"
-msgstr "Ime vrijednosti:"
-
-#. i18n: file: ActionEditor.ui:260
-#. i18n: ectx: property (text), item, widget (KComboBox, CbValueMatch)
-#: rc.cpp:50
-msgid "Equals"
-msgstr "jednako"
-
-#. i18n: file: ActionEditor.ui:265
-#. i18n: ectx: property (text), item, widget (KComboBox, CbValueMatch)
-#: rc.cpp:53
-msgid "Contains"
-msgstr "sadrži"
-
-#. i18n: file: ActionEditor.ui:293
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
-#: rc.cpp:56
-msgid "Reset Parameter"
-msgstr "Resetuj parametar"
-
-#. i18n: file: ActionEditor.ui:300
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
-#: rc.cpp:59
-msgid "Save Parameter Changes"
-msgstr "Sačuvaj izmjene parametra"
-
-#. i18n: file: AddAction.ui:19
-#. i18n: ectx: property (text), widget (QLabel, LblActionName)
-#: rc.cpp:62
-msgid "Action name:"
-msgstr "Ime radnje:"
-
-#. i18n: file: AddAction.ui:26
-#. i18n: ectx: property (toolTip), widget (KLineEdit, LeActionName)
-#: rc.cpp:65
-msgid "Enter the name for your new action"
-msgstr "Unesite ime za novu radnju."
-
-#. i18n: file: SolidActions.ui:22
-#. i18n: ectx: property (text), widget (KPushButton, PbAddAction)
-#: rc.cpp:68
-msgid "Add..."
-msgstr "Dodaj..."
-
-#. i18n: file: SolidActions.ui:29
-#. i18n: ectx: property (text), widget (KPushButton, PbEditAction)
-#: rc.cpp:71
-msgid "Edit..."
-msgstr "Izmijeni..."
-
-#. i18n: file: SolidActions.ui:36
-#. i18n: ectx: property (text), widget (KPushButton, PbDeleteAction)
-#: rc.cpp:74
-msgid "Remove"
-msgstr "Ukloni"
-
 #: SolidActions.cpp:45
 msgid "Solid Device Actions Editor"
 msgstr "Uređivač Solidovih radnji uređaja"
@@ -274,3 +235,18 @@ msgstr "Nema izabrane radnje"
 #: SolidActions.cpp:225
 msgid "Cannot be deleted"
 msgstr "Ne može se obrisati"
+
+#. i18n: ectx: property (text), widget (KPushButton, PbAddAction)
+#: SolidActions.ui:22
+msgid "Add..."
+msgstr "Dodaj..."
+
+#. i18n: ectx: property (text), widget (KPushButton, PbEditAction)
+#: SolidActions.ui:29
+msgid "Edit..."
+msgstr "Izmijeni..."
+
+#. i18n: ectx: property (text), widget (KPushButton, PbDeleteAction)
+#: SolidActions.ui:36
+msgid "Remove"
+msgstr "Ukloni"
