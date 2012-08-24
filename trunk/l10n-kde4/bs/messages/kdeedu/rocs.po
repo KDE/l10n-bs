@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-19 05:09+0200\n"
+"POT-Creation-Date: 2012-08-24 04:54+0200\n"
 "PO-Revision-Date: 2011-04-09 23:07+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -80,7 +80,7 @@ msgstr "Stvara novi čvor na klik poziciju na području crtanja."
 msgid "Add %1"
 msgstr ""
 
-#: Actions/DeleteHandAction.cpp:36 Interface/MainWindow.cpp:431
+#: Actions/DeleteHandAction.cpp:36 Interface/MainWindow.cpp:424
 #, fuzzy
 #| msgid "Delete"
 msgctxt "@action:intoolbar"
@@ -134,7 +134,7 @@ msgstr ""
 msgid "Element"
 msgstr ""
 
-#: Core/DocumentManager.cpp:174
+#: Core/DocumentManager.cpp:176
 #, fuzzy
 #| msgid " Documents "
 msgctxt ""
@@ -551,26 +551,41 @@ msgctxt "@info:tooltip"
 msgid "Add a new data structure."
 msgstr "Grafička struktura"
 
-#: Interface/ImporterExporterManager.cpp:46
-#: Interface/ImporterExporterManager.cpp:89
+#: Interface/ImporterExporterManager.cpp:45
+#: Interface/ImporterExporterManager.cpp:103
 msgid "*|All files"
 msgstr "*|Sve datoteke"
 
-#: Interface/ImporterExporterManager.cpp:50
+#: Interface/ImporterExporterManager.cpp:49
 #, fuzzy
 #| msgid "Export"
 msgctxt "@action:button"
 msgid "Export"
 msgstr "Izvezi"
 
-#: Interface/ImporterExporterManager.cpp:51
+#: Interface/ImporterExporterManager.cpp:50
 #, fuzzy
 #| msgid "Export graphs to file"
 msgctxt "@info:tooltip"
 msgid "Export graphs to file"
 msgstr "Izvoz grafova u datoteku"
 
-#: Interface/ImporterExporterManager.cpp:92
+#: Interface/ImporterExporterManager.cpp:71
+#, kde-format
+msgid ""
+"<p>The file <br /><strong>'%1'</strong><br /> already exists; if you do not "
+"want to overwrite it, change the file name to something else.</p>"
+msgstr ""
+
+#: Interface/ImporterExporterManager.cpp:74
+msgid "File Exists"
+msgstr ""
+
+#: Interface/ImporterExporterManager.cpp:74
+msgid "Overwrite"
+msgstr ""
+
+#: Interface/ImporterExporterManager.cpp:106
 #, fuzzy
 msgctxt "@title:window"
 msgid "Import Graph File into Project"
@@ -643,7 +658,7 @@ msgctxt "@action:inmenu Debug execution"
 msgid "Interrupt at first line"
 msgstr ""
 
-#: Interface/MainWindow.cpp:336 Interface/MainWindow.cpp:579
+#: Interface/MainWindow.cpp:336 Interface/MainWindow.cpp:572
 #, fuzzy
 #| msgid "Node Properties"
 msgctxt "@action:button"
@@ -786,7 +801,7 @@ msgstr "Nova skripta"
 #, fuzzy
 #| msgid "Complete"
 msgctxt "@action:inmenu"
-msgid "Import Rocs Graph"
+msgid "Import Graph"
 msgstr "Kompletirano"
 
 #: Interface/MainWindow.cpp:413
@@ -798,9 +813,10 @@ msgstr "Snimi graf"
 
 #: Interface/MainWindow.cpp:414
 #, fuzzy
+#| msgid "Export graphs to file"
 msgctxt "@action:inmenu"
-msgid "Save Graph as"
-msgstr "Snimi graf"
+msgid "Export Graph"
+msgstr "Izvoz grafova u datoteku"
 
 #: Interface/MainWindow.cpp:415
 #, fuzzy
@@ -843,33 +859,19 @@ msgctxt "@action:inmenu"
 msgid "Save Script as"
 msgstr "Snimi skriptu"
 
-#: Interface/MainWindow.cpp:426
-#, fuzzy
-#| msgid "Complete"
-msgctxt "@action:inmenu"
-msgid "Import Graph"
-msgstr "Kompletirano"
-
-#: Interface/MainWindow.cpp:427
-#, fuzzy
-#| msgid "Export graphs to file"
-msgctxt "@action:inmenu"
-msgid "Export Graph"
-msgstr "Izvoz grafova u datoteku"
-
-#: Interface/MainWindow.cpp:463
+#: Interface/MainWindow.cpp:456
 #, fuzzy
 #| msgid "Includes"
 msgctxt "@title:tab"
 msgid "Include Manager"
 msgstr "Uključuje"
 
-#: Interface/MainWindow.cpp:464
+#: Interface/MainWindow.cpp:457
 msgctxt "@title:tab"
 msgid "Default Settings"
 msgstr ""
 
-#: Interface/MainWindow.cpp:684
+#: Interface/MainWindow.cpp:677
 msgid ""
 "*.graph|Graph files\n"
 "*|All files"
@@ -877,31 +879,31 @@ msgstr ""
 "*.graph|Grf datoteke\n"
 "*|Sve datoteke"
 
-#: Interface/MainWindow.cpp:686
+#: Interface/MainWindow.cpp:679
 msgctxt "@title:window"
 msgid "Add Existing Graph File to Project"
 msgstr ""
 
-#: Interface/MainWindow.cpp:705
+#: Interface/MainWindow.cpp:698
 msgctxt "@title:window"
 msgid "Add Existing Script File to Project"
 msgstr ""
 
-#: Interface/MainWindow.cpp:718
+#: Interface/MainWindow.cpp:711
 #, fuzzy
 #| msgid "This does not seem to be a graph file."
 msgctxt "@info"
 msgid "This does not seem to be a graph file."
 msgstr "Ovo ne izgleda kao datoteka grafa"
 
-#: Interface/MainWindow.cpp:718
+#: Interface/MainWindow.cpp:711
 #, fuzzy
 #| msgid "Invalid file"
 msgctxt "@title:window"
 msgid "Invalid File"
 msgstr "Neispravna datoteka"
 
-#: Interface/MainWindow.cpp:751 Interface/MainWindow.cpp:777
+#: Interface/MainWindow.cpp:744 Interface/MainWindow.cpp:770
 #, fuzzy
 #| msgid ""
 #| "*.graph|Graph files\n"
@@ -913,60 +915,60 @@ msgstr ""
 "*.graph|Grf datoteke\n"
 "*|Sve datoteke"
 
-#: Interface/MainWindow.cpp:753
+#: Interface/MainWindow.cpp:746
 #, fuzzy
 #| msgid "Save Script"
 msgctxt "@title:window"
 msgid "Save Project"
 msgstr "Snimi skriptu"
 
-#: Interface/MainWindow.cpp:779
+#: Interface/MainWindow.cpp:772
 #, fuzzy
 #| msgid "Node Properties"
 msgctxt "@title:window"
 msgid "Open Project Files"
 msgstr "Svojstva čvora"
 
-#: Interface/MainWindow.cpp:814
+#: Interface/MainWindow.cpp:807
 #, fuzzy
 #| msgid "Save Script"
 msgctxt "@title:window"
 msgid "Set Project Name"
 msgstr "Snimi skriptu"
 
-#: Interface/MainWindow.cpp:815
+#: Interface/MainWindow.cpp:808
 #, fuzzy
 #| msgid "Name:"
 msgctxt "@label:textbox name of the project"
 msgid "Name:"
 msgstr "Naziv:"
 
-#: Interface/MainWindow.cpp:832
+#: Interface/MainWindow.cpp:825
 #, fuzzy
 #| msgid "untitled"
 msgctxt "caption text for temporary project"
 msgid "[ untitled ]"
 msgstr "bez naslova"
 
-#: Interface/MainWindow.cpp:845 Interface/MainWindow.cpp:857
+#: Interface/MainWindow.cpp:838 Interface/MainWindow.cpp:850
 msgid ""
 "*.js|Rocs script documents\n"
 "*|All files"
 msgstr ""
 
-#: Interface/MainWindow.cpp:847
+#: Interface/MainWindow.cpp:840
 #, fuzzy
 #| msgid "Save Script"
 msgctxt "@title:window"
 msgid "Save Script Document"
 msgstr "Snimi skriptu"
 
-#: Interface/MainWindow.cpp:859
+#: Interface/MainWindow.cpp:852
 msgctxt "@title:window"
 msgid "Enter Filename for the New Script File"
 msgstr ""
 
-#: Interface/MainWindow.cpp:913 Interface/MainWindow.cpp:923
+#: Interface/MainWindow.cpp:906 Interface/MainWindow.cpp:916
 #, fuzzy
 #| msgid ""
 #| "*.graph|Graph files\n"
@@ -978,60 +980,60 @@ msgstr ""
 "*.graph|Grf datoteke\n"
 "*|Sve datoteke"
 
-#: Interface/MainWindow.cpp:915
+#: Interface/MainWindow.cpp:908
 #, fuzzy
 #| msgid "Save Graph"
 msgctxt "@title:window"
 msgid "Save Graph Document"
 msgstr "Snimi graf"
 
-#: Interface/MainWindow.cpp:925
+#: Interface/MainWindow.cpp:918
 #, fuzzy
 #| msgid "New Graph"
 msgctxt "@title:window"
 msgid "Enter Filename for the New Graph Document"
 msgstr "Novi graf"
 
-#: Interface/MainWindow.cpp:940
+#: Interface/MainWindow.cpp:933
 msgctxt "@info"
 msgid "Changes on your project are unsaved. Do you want to save your changes?"
 msgstr ""
 
-#: Interface/MainWindow.cpp:959
+#: Interface/MainWindow.cpp:952
 msgctxt "@info"
 msgid ""
 "Changes on your graph document are unsaved. Do you want to save your changes?"
 msgstr ""
 
-#: Interface/MainWindow.cpp:968
+#: Interface/MainWindow.cpp:961
 msgctxt "@info"
 msgid ""
 "Changes on your script files are unsaved. Do you want to save all unsaved "
 "scripts?"
 msgstr ""
 
-#: Interface/MainWindow.cpp:977
+#: Interface/MainWindow.cpp:970
 msgctxt "@info"
 msgid ""
 "Changes on your script files and on your graph document are unsaved. Do you "
 "want to save your graph document and all unsaved scripts?"
 msgstr ""
 
-#: Interface/MainWindow.cpp:1025 Interface/MainWindow.cpp:1071
+#: Interface/MainWindow.cpp:1018 Interface/MainWindow.cpp:1064
 msgid "*.tar.gz|Export as tar.gz Archive"
 msgstr ""
 
-#: Interface/MainWindow.cpp:1027
+#: Interface/MainWindow.cpp:1020
 msgctxt "@title:window"
 msgid "Project Archive to Import"
 msgstr ""
 
-#: Interface/MainWindow.cpp:1036
+#: Interface/MainWindow.cpp:1029
 msgctxt "@title:window"
 msgid "Select Project Directory for Import"
 msgstr ""
 
-#: Interface/MainWindow.cpp:1073
+#: Interface/MainWindow.cpp:1066
 #, fuzzy
 msgctxt "@title:window"
 msgid "Export Project"
@@ -1294,6 +1296,148 @@ msgctxt "@action:inmenu"
 msgid "Delete"
 msgstr "Obriši"
 
+#: LoadSave/Plugins/dotFileFormat/DotFileFormatPlugin.cpp:37
+#, fuzzy
+#| msgid "No active graph in this document."
+msgctxt "@title Displayed plugin name"
+msgid "Read and write Graphviz graph documents."
+msgstr "Nema aktivnog grafa u ovom dokumentu."
+
+#: LoadSave/Plugins/dotFileFormat/DotFileFormatPlugin.cpp:61
+#, fuzzy
+#| msgid "*.dot|Graphviz Files"
+msgid "*.dot|Graphviz Format"
+msgstr "*.dot|Graphviz datoteke"
+
+#: LoadSave/Plugins/dotFileFormat/DotFileFormatPlugin.cpp:67
+#: LoadSave/Plugins/gmlFileFormat/GmlFileFormatPlugin.cpp:64
+#: LoadSave/Plugins/kmlFileFormat/KmlFileFormatPlugin.cpp:138
+#, fuzzy
+#| msgid "Import"
+msgid "Import"
+msgstr "Uvezi"
+
+#: LoadSave/Plugins/dotFileFormat/DotFileFormatPlugin.cpp:73
+#: LoadSave/Plugins/gmlFileFormat/GmlFileFormatPlugin.cpp:70
+#: LoadSave/Plugins/tgfFileFormat/TgfFileFormatPlugin.cpp:69
+#: LoadSave/RocsGraphFileFormatPlugin.cpp:84
+#, fuzzy, kde-format
+#| msgid "Cannot open file %1: %2"
+msgid "Could not open file \"%1\" in read mode: %2"
+msgstr "Ne mogu da otvorim datoteku %1: %2"
+
+#: LoadSave/Plugins/dotFileFormat/DotFileFormatPlugin.cpp:79
+#: LoadSave/Plugins/gmlFileFormat/GmlFileFormatPlugin.cpp:76
+#, fuzzy, kde-format
+#| msgid "cannot parse the file %1."
+msgid "Could not parse file \"%1\"."
+msgstr "ne mogu analizirati datoteku %1."
+
+#: LoadSave/Plugins/dotFileFormat/DotFileFormatPlugin.cpp:95
+#: LoadSave/Plugins/gmlFileFormat/GmlFileFormatPlugin.cpp:90
+msgid "No active graph in this document."
+msgstr "Nema aktivnog grafa u ovom dokumentu."
+
+#: LoadSave/Plugins/dotFileFormat/DotFileFormatPlugin.cpp:102
+#: LoadSave/Plugins/gmlFileFormat/GmlFileFormatPlugin.cpp:97
+#, kde-format
+msgid "Cannot open file %1 to write document. Error: %2"
+msgstr "Ne mogu otvoriti datoteku %1 za pisanje dokumenta. Greška: %2"
+
+#: LoadSave/Plugins/gmlFileFormat/GmlFileFormatPlugin.cpp:35
+#, fuzzy
+#| msgid "Open and Save GML files"
+msgctxt "@title Displayed plugin name"
+msgid "Open and Save GML files"
+msgstr "Otvori i snimi GML datoteke"
+
+#: LoadSave/Plugins/gmlFileFormat/GmlFileFormatPlugin.cpp:58
+#, fuzzy
+#| msgid "*.gml|Graph Markup Language Files"
+msgid "*.gml|Graph Markup Language Format"
+msgstr "*.gml|Graph Markup Language datoteke"
+
+#: LoadSave/Plugins/kmlFileFormat/KmlFileFormatPlugin.cpp:38
+#, fuzzy
+#| msgid "Open and Save Keyhole Markup Language files"
+msgctxt "@title Display plugin name"
+msgid "Open and Save Keyhole Markup Language files"
+msgstr "Otvaranje i snimanje  datoteka Keyhole jezika za označavanje"
+
+#: LoadSave/Plugins/kmlFileFormat/KmlFileFormatPlugin.cpp:57
+#, fuzzy
+#| msgid "*.kml|Keyhole Markup Language Files"
+msgid "*.kml|Keyhole Markup Language Format"
+msgstr "*.kml|Datoteka Keyhole jezika za označavanje"
+
+#: LoadSave/Plugins/kmlFileFormat/KmlFileFormatPlugin.cpp:67
+#, kde-format
+msgid "Cannot open file %1: %2"
+msgstr "Ne mogu da otvorim datoteku %1: %2"
+
+#: LoadSave/Plugins/tgfFileFormat/TgfFileFormatPlugin.cpp:34
+msgid "Open and Save Graph Documents in Trivial Graph Format"
+msgstr ""
+
+#: LoadSave/Plugins/tgfFileFormat/TgfFileFormatPlugin.cpp:53
+msgid "*.tgf|Trivial Graph Format"
+msgstr ""
+
+#: LoadSave/Plugins/tgfFileFormat/TgfFileFormatPlugin.cpp:88
+#, kde-format
+msgid "Could not parse file. Identifier \"%1\" is used more than once."
+msgstr ""
+
+#: LoadSave/Plugins/tgfFileFormat/TgfFileFormatPlugin.cpp:100
+#, kde-format
+msgid "Could not parse file. Edge from \"%1\" to \"%2\" uses undefined nodes."
+msgstr ""
+
+#: LoadSave/Plugins/tgfFileFormat/TgfFileFormatPlugin.cpp:118
+#: LoadSave/Plugins/tikzFileFormat/TikzFileFormatPlugin.cpp:73
+#: LoadSave/RocsGraphFileFormatPlugin.cpp:273
+#, fuzzy, kde-format
+#| msgid "Cannot open file %1 to write document. Error: %2"
+msgid "Could not open file \"%1\" in write mode: %2"
+msgstr "Ne mogu otvoriti datoteku %1 za pisanje dokumenta. Greška: %2"
+
+#: LoadSave/Plugins/tgfFileFormat/TgfFileFormatPlugin.cpp:125
+#: LoadSave/Plugins/tikzFileFormat/TikzFileFormatPlugin.cpp:80
+#, fuzzy
+#| msgid "No active graph in this document."
+msgid "No data structure specified for output in this document."
+msgstr "Nema aktivnog grafa u ovom dokumentu."
+
+#: LoadSave/Plugins/tikzFileFormat/TikzFileFormatPlugin.cpp:32
+msgctxt "@title Display plugin name"
+msgid "Open and Save Graph Documents in PGF/TikZ Format"
+msgstr ""
+
+#: LoadSave/Plugins/tikzFileFormat/TikzFileFormatPlugin.cpp:51
+msgid "*.pgf|TikZ (PGF) Format"
+msgstr ""
+
+#: LoadSave/RocsGraphFileFormatPlugin.cpp:37
+#, fuzzy
+#| msgid "Open and Save Graphviz files"
+msgid "Open and Save Rocs Graph Files"
+msgstr "Otvaranje i snimanje Graphviz datoteka"
+
+#: LoadSave/RocsGraphFileFormatPlugin.cpp:69
+#, fuzzy
+#| msgid ""
+#| "*.graph|Graph files\n"
+#| "*|All files"
+msgid "*.graph|Rocs Graph File Format"
+msgstr ""
+"*.graph|Grf datoteke\n"
+"*|Sve datoteke"
+
+#: LoadSave/RocsGraphFileFormatPlugin.cpp:284
+#, kde-format
+msgid "Could not write data, aborting. Error: %1."
+msgstr ""
+
 #: Main.cpp:39
 #, fuzzy
 #| msgid "Rocs"
@@ -1532,7 +1676,7 @@ msgctxt ""
 msgid "Directed Multigraph"
 msgstr "Novi graf"
 
-#: Plugins/DataStructure/Graph/GraphStructure.cpp:308
+#: Plugins/DataStructure/Graph/GraphStructure.cpp:312
 msgid "This action will probably remove some edges. Do you want to continue?"
 msgstr ""
 
@@ -1576,101 +1720,6 @@ msgstr "Prikaži vrijednosti u:"
 #, kde-format
 msgid "There are cycles at node %1. Data will be lost by conversion."
 msgstr ""
-
-#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:41
-#: Plugins/FilePlugins/dotParser/DotParser.cpp:30
-#, fuzzy
-#| msgid "Open and Save Graphviz files"
-msgctxt "@title Displayed plugin name"
-msgid "Open and Save Graphviz files"
-msgstr "Otvaranje i snimanje Graphviz datoteka"
-
-#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:61
-#: Plugins/FilePlugins/dotParser/DotParser.cpp:53
-msgid "*.dot|Graphviz Files"
-msgstr "*.dot|Graphviz datoteke"
-
-#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:70
-#: Plugins/FilePlugins/dotParser/DotParser.cpp:64
-#: Plugins/FilePlugins/GMLParser/GMLParser.cpp:67
-#: Plugins/FilePlugins/TXTParser/PlainTxtFilePlugin.cpp:61
-#, kde-format
-msgid "Cannot open the file: %1. Error %2"
-msgstr "Ne mogu otvoriti datoteku: %1. Greška %2"
-
-#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:94
-#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:161
-#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:278
-msgid "Could not parse Graphviz file due to syntax errors."
-msgstr ""
-
-#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:155
-#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:272
-msgid "Graphviz parser returned unsuccessfully for file."
-msgstr ""
-
-#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:195
-#: Plugins/FilePlugins/DotFilePlugin/DotFilePlugin.cpp:313
-#, fuzzy
-#| msgid "Import"
-msgid "dotImport"
-msgstr "Uvezi"
-
-#: Plugins/FilePlugins/dotParser/DotParser.cpp:70
-#: Plugins/FilePlugins/GMLParser/GMLParser.cpp:73
-#, kde-format
-msgid "cannot parse the file %1."
-msgstr "ne mogu analizirati datoteku %1."
-
-#: Plugins/FilePlugins/dotParser/DotParser.cpp:117
-#: Plugins/FilePlugins/TXTParser/PlainTxtFilePlugin.cpp:113
-msgid "No active graph in this document."
-msgstr "Nema aktivnog grafa u ovom dokumentu."
-
-#: Plugins/FilePlugins/dotParser/DotParser.cpp:119
-#: Plugins/FilePlugins/GMLParser/GMLParser.cpp:120
-#: Plugins/FilePlugins/TXTParser/PlainTxtFilePlugin.cpp:115
-#, kde-format
-msgid "Cannot open file %1 to write document. Error: %2"
-msgstr "Ne mogu otvoriti datoteku %1 za pisanje dokumenta. Greška: %2"
-
-#: Plugins/FilePlugins/GMLParser/GMLParser.cpp:33
-#, fuzzy
-#| msgid "Open and Save GML files"
-msgctxt "@title Displayed plugin name"
-msgid "Open and Save GML files"
-msgstr "Otvori i snimi GML datoteke"
-
-#: Plugins/FilePlugins/GMLParser/GMLParser.cpp:56
-msgid "*.gml|Graph Markup Language Files"
-msgstr "*.gml|Graph Markup Language datoteke"
-
-#: Plugins/FilePlugins/kmlParser/KMLParser.cpp:35
-#, fuzzy
-#| msgid "Open and Save Keyhole Markup Language files"
-msgctxt "@title Displayed plugin name"
-msgid "Open and Save Keyhole Markup Language files"
-msgstr "Otvaranje i snimanje  datoteka Keyhole jezika za označavanje"
-
-#: Plugins/FilePlugins/kmlParser/KMLParser.cpp:56
-#, kde-format
-msgid "Cannot open file %1: %2"
-msgstr "Ne mogu da otvorim datoteku %1: %2"
-
-#: Plugins/FilePlugins/kmlParser/KMLParser.cpp:146
-msgid "*.kml|Keyhole Markup Language Files"
-msgstr "*.kml|Datoteka Keyhole jezika za označavanje"
-
-#: Plugins/FilePlugins/TXTParser/PlainTxtFilePlugin.cpp:30
-#, fuzzy
-#| msgid "Open and Save Plain TXT files"
-msgctxt "@title Displayed plugin name"
-msgid "Open and Save Plain TXT files"
-msgstr "Otvori i snimi obične TXT datoteke"
-
-#: Plugins/FilePlugins/TXTParser/PlainTxtFilePlugin.cpp:50
-msgid "*.txt|Plain TXT Files"
-msgstr "*.txt|obične TXT datoteke"
 
 #: Plugins/GenerateGraph/generategraphtoolsplugin.cpp:41
 #, fuzzy
@@ -1903,68 +1952,68 @@ msgid "Project"
 msgstr ""
 
 #. i18n: ectx: Menu (script)
-#: rocsui.rc:32
+#: rocsui.rc:31
 #, fuzzy
 #| msgid "Save Script"
 msgid "Script Document"
 msgstr "Snimi skriptu"
 
 #. i18n: ectx: Menu (script_file)
-#: rocsui.rc:34
+#: rocsui.rc:33
 #, fuzzy
 #| msgid "New Script"
 msgid "Script File"
 msgstr "Nova skripta"
 
 #. i18n: ectx: Menu (graph)
-#: rocsui.rc:44
+#: rocsui.rc:43
 #, fuzzy
 #| msgid "New Graph"
 msgid "Graph Document"
 msgstr "Novi graf"
 
 #. i18n: ectx: Menu (graph_file)
-#: rocsui.rc:46
+#: rocsui.rc:45
 #, fuzzy
 #| msgid "Graph Files"
 msgid "Graph File"
 msgstr "Datoteke grafova"
 
 #. i18n: ectx: Menu (conversions)
-#: rocsui.rc:53
+#: rocsui.rc:51
 #, fuzzy
 #| msgid " Conversions "
 msgid "Convert To"
 msgstr " Konverzije "
 
 #. i18n: ectx: Menu (graph_selected)
-#: rocsui.rc:57
+#: rocsui.rc:55
 #, fuzzy
 #| msgid "Select"
 msgid "Edit Selected Data"
 msgstr "Odaberi"
 
 #. i18n: ectx: Menu
-#: rocsui.rc:59
+#: rocsui.rc:57
 #, fuzzy
 #| msgid "Layout Toolbar"
 msgid "Layout"
 msgstr "Pozicija alatne trake"
 
 #. i18n: ectx: Menu
-#: rocsui.rc:72
+#: rocsui.rc:70
 #, fuzzy
 #| msgid " Tools "
 msgid "Tools"
 msgstr " Alati "
 
 #. i18n: ectx: ToolBar (main)
-#: rocsui.rc:79
+#: rocsui.rc:77
 msgid "Main Toolbar"
 msgstr "Glavna alatna traka"
 
 #. i18n: ectx: ToolBar (layout)
-#: rocsui.rc:87
+#: rocsui.rc:85
 msgid "Layout Toolbar"
 msgstr "Pozicija alatne trake"
 
@@ -1986,6 +2035,29 @@ msgstr ""
 #: UndoRedo/URAddNode.cpp:41
 msgid "Untitled"
 msgstr "Bez naslova"
+
+#, fuzzy
+#~| msgid "Complete"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Import Rocs Graph"
+#~ msgstr "Kompletirano"
+
+#, fuzzy
+#~ msgctxt "@action:inmenu"
+#~ msgid "Save Graph as"
+#~ msgstr "Snimi graf"
+
+#~ msgid "Cannot open the file: %1. Error %2"
+#~ msgstr "Ne mogu otvoriti datoteku: %1. Greška %2"
+
+#, fuzzy
+#~| msgid "Open and Save Plain TXT files"
+#~ msgctxt "@title Displayed plugin name"
+#~ msgid "Open and Save Plain TXT files"
+#~ msgstr "Otvori i snimi obične TXT datoteke"
+
+#~ msgid "*.txt|Plain TXT Files"
+#~ msgstr "*.txt|obične TXT datoteke"
 
 #, fuzzy
 #~| msgid "Add"
