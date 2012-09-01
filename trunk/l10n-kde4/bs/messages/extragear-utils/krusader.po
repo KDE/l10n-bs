@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krusader\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-30 04:17+0200\n"
+"POT-Creation-Date: 2012-09-01 04:40+0200\n"
 "PO-Revision-Date: 2011-01-05 10:55+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team:  <bhld@lists.linux.org.ba>\n"
@@ -77,7 +77,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "\n"
-"Make sure that the %1 binary are installed properly on your system."
+"Make sure that the %1 binary is installed properly on your system."
 msgstr ""
 
 #: krArc/krarc.cpp:1805 krArc/krarc.cpp:1830
@@ -394,8 +394,6 @@ msgstr "Postavi podrazumijevanu prečicu na tastaturi."
 
 #. i18n: ectx: property (text), widget (KKeySequenceWidget, KeyButtonShortcut)
 #: krusader/ActionMan/actionproperty.ui:374
-#: krusader/Konfigurator/kgpanel.cpp:235 krusader/Konfigurator/kgpanel.cpp:248
-#: krusader/Konfigurator/kgpanel.cpp:262
 msgid "None"
 msgstr "Ništa"
 
@@ -769,13 +767,15 @@ msgstr "Greška"
 
 #: krusader/BookMan/krbookmarkhandler.cpp:211
 #, fuzzy, kde-format
-msgid "%1 instead of "
+msgid "%1 instead of %2"
 msgstr " umjesto "
 
 #: krusader/BookMan/krbookmarkhandler.cpp:216
 #: krusader/BookMan/krbookmarkhandler.cpp:222
 #: krusader/BookMan/krbookmarkhandler.cpp:254
-msgid "missing tag "
+#, fuzzy, kde-format
+#| msgid "missing tag "
+msgid "missing tag %1"
 msgstr "nedostaje oznaka"
 
 #: krusader/BookMan/krbookmarkhandler.cpp:294
@@ -790,6 +790,7 @@ msgstr "Greška pri čitanju datoteke markera: %1"
 
 #: krusader/BookMan/krbookmarkhandler.cpp:364
 #: krusader/BookMan/krbookmarkhandler.cpp:527
+#: krusader/Dialogs/popularurls.cpp:274
 msgid "Popular URLs"
 msgstr "Popularni URL-ovi"
 
@@ -1156,7 +1157,7 @@ msgstr "Očisti"
 msgid "Clears the entire list of selections"
 msgstr "Briše cijelu listu izbora"
 
-#: krusader/Dialogs/krmaskchoice.cpp:135
+#: krusader/Dialogs/krmaskchoice.cpp:135 krusader/Dialogs/packguibase.cpp:311
 msgid "OK"
 msgstr "U redu"
 
@@ -1383,17 +1384,15 @@ msgstr "Kriptuj zaglavlja"
 msgid "Command line switches:"
 msgstr "Prekidači komandne linije:"
 
-#: krusader/Dialogs/packguibase.cpp:300
+#: krusader/Dialogs/packguibase.cpp:300 krusader/Dialogs/packguibase.cpp:346
 #, fuzzy
 msgid "&Advanced >>"
 msgstr "&Napredno"
 
-#: krusader/Dialogs/packguibase.cpp:311
-msgid "Ok"
-msgstr "U redu"
-
-#: krusader/Dialogs/packguibase.cpp:346 krusader/Filter/filtertabs.cpp:53
-msgid "&Advanced"
+#: krusader/Dialogs/packguibase.cpp:346
+#, fuzzy
+#| msgid "&Advanced"
+msgid "&Advanced <<"
 msgstr "&Napredno"
 
 #: krusader/Dialogs/packguibase.cpp:364
@@ -1441,17 +1440,16 @@ msgstr ""
 "Nezatvoren navodnik!"
 
 #: krusader/Dialogs/popularurls.cpp:93
-msgid "Saved 'Popular Urls' are invalid. List will be cleared"
+#, fuzzy
+#| msgid "Saved 'Popular Urls' are invalid. List will be cleared"
+msgid "The saved 'Popular URLs' are invalid. The list will be cleared."
 msgstr ""
 "Snimljena lista „Popularni URL-ovi“ je neispravna. Lista će biti izbrisana."
 
-#: krusader/Dialogs/popularurls.cpp:274
-msgid "Popular Urls"
-msgstr "Popularni URL-ovi"
-
 #: krusader/Dialogs/popularurls.cpp:293
-msgid " &Search: "
-msgstr " &Pretraži: "
+#, fuzzy
+msgid "&Search:"
+msgstr "Pretraga"
 
 #: krusader/DiskUsage/diskusage.cpp:112
 msgid "Loading Usage Information"
@@ -1728,9 +1726,13 @@ msgid "Group"
 msgstr "Grupa"
 
 #: krusader/DiskUsage/radialMap/builder.cpp:140
-#, kde-format
-msgid "%1 files: ~ %2"
-msgstr "%1 datoteke: ~ %2"
+#, fuzzy, kde-format
+#| msgid "%1 files: ~ %2"
+msgid "%1 file: ~ %2"
+msgid_plural "%1 files: ~ %2"
+msgstr[0] "%1 datoteke: ~ %2"
+msgstr[1] "%1 datoteke: ~ %2"
+msgstr[2] "%1 datoteke: ~ %2"
 
 #: krusader/DiskUsage/radialMap/segmentTip.cpp:126
 #, kde-format
@@ -1977,6 +1979,10 @@ msgstr "Krusader::Izaberite datoteke"
 #: krusader/Filter/filtertabs.cpp:48
 msgid "&General"
 msgstr "&Opšte"
+
+#: krusader/Filter/filtertabs.cpp:53
+msgid "&Advanced"
+msgstr "&Napredno"
 
 #: krusader/Filter/filtertabs.cpp:121
 #, fuzzy
@@ -2277,11 +2283,23 @@ msgid "Open the available media list"
 msgstr "Otvori listu dostupnih medija"
 
 #: krusader/GUI/mediabutton.cpp:145 krusader/GUI/mediabutton.cpp:577
-msgid "Remote Share"
+#, fuzzy, kde-format
+#| msgid "Remote Share"
+msgctxt "%1 is the mount point of the remote share"
+msgid "Remote Share [%1]"
 msgstr "Udaljeni dijeljeni folderi"
 
-#: krusader/GUI/mediabutton.cpp:167 krusader/GUI/mediabutton.cpp:170
-#: krusader/VFS/kiojobwrapper.cpp:258
+#: krusader/GUI/mediabutton.cpp:167
+#, fuzzy
+#| msgid "Unknown"
+msgctxt "Unknown label"
+msgid "Unknown"
+msgstr "Nepoznato"
+
+#: krusader/GUI/mediabutton.cpp:170
+#, fuzzy
+#| msgid "Unknown"
+msgctxt "Unknown media type"
 msgid "Unknown"
 msgstr "Nepoznato"
 
@@ -3194,7 +3212,9 @@ msgid "Add new atomic extension"
 msgstr "Dodaj novu atomsku ekstenziju"
 
 #: krusader/Konfigurator/kggeneral.cpp:318
-msgid "Extension: "
+#, fuzzy
+#| msgid "Extension: "
+msgid "Extension:"
 msgstr "Ekstenzija: "
 
 #: krusader/Konfigurator/kggeneral.cpp:322
@@ -3372,14 +3392,22 @@ msgstr "Brojač:"
 msgid "Frame Color:"
 msgstr ""
 
-#: krusader/Konfigurator/kgpanel.cpp:234 krusader/Konfigurator/kgpanel.cpp:247
-#: krusader/Konfigurator/kgpanel.cpp:261
+#: krusader/Konfigurator/kgpanel.cpp:234
 #, fuzzy
+msgctxt "Frame color"
 msgid "Defined by Layout"
 msgstr "Definisane veze"
 
+#: krusader/Konfigurator/kgpanel.cpp:235
+#, fuzzy
+#| msgid "None"
+msgctxt "Frame color"
+msgid "None"
+msgstr "Ništa"
+
 #: krusader/Konfigurator/kgpanel.cpp:236
 #, fuzzy
+msgctxt "Frame color"
 msgid "Statusbar"
 msgstr "Status"
 
@@ -3387,12 +3415,28 @@ msgstr "Status"
 msgid "Frame Shape:"
 msgstr ""
 
+#: krusader/Konfigurator/kgpanel.cpp:247
+#, fuzzy
+msgctxt "Frame shape"
+msgid "Defined by Layout"
+msgstr "Definisane veze"
+
+#: krusader/Konfigurator/kgpanel.cpp:248
+#, fuzzy
+#| msgid "None"
+msgctxt "Frame shape"
+msgid "None"
+msgstr "Ništa"
+
 #: krusader/Konfigurator/kgpanel.cpp:249
+msgctxt "Frame shape"
 msgid "Box"
 msgstr ""
 
 #: krusader/Konfigurator/kgpanel.cpp:250
-#: krusader/Konfigurator/konfigurator.cpp:143 krusader/paneltabbar.cpp:44
+#, fuzzy
+#| msgid "Panel"
+msgctxt "Frame shape"
 msgid "Panel"
 msgstr "Panel"
 
@@ -3400,13 +3444,28 @@ msgstr "Panel"
 msgid "Frame Shadow:"
 msgstr ""
 
+#: krusader/Konfigurator/kgpanel.cpp:261
+#, fuzzy
+msgctxt "Frame shadow"
+msgid "Defined by Layout"
+msgstr "Definisane veze"
+
+#: krusader/Konfigurator/kgpanel.cpp:262
+#, fuzzy
+#| msgid "None"
+msgctxt "Frame shadow"
+msgid "None"
+msgstr "Ništa"
+
 #: krusader/Konfigurator/kgpanel.cpp:263
 #, fuzzy
+msgctxt "Frame shadow"
 msgid "Raised"
 msgstr "Crvena"
 
 #: krusader/Konfigurator/kgpanel.cpp:264
 #, fuzzy
+msgctxt "Frame shadow"
 msgid "Sunken"
 msgstr "nepoznato"
 
@@ -4117,6 +4176,10 @@ msgstr "Pokretanje"
 #: krusader/Konfigurator/konfigurator.cpp:141
 msgid "Krusader's settings upon startup"
 msgstr "Krusader-ova podešavanja po pokretanju"
+
+#: krusader/Konfigurator/konfigurator.cpp:143 krusader/paneltabbar.cpp:44
+msgid "Panel"
+msgstr "Panel"
 
 #: krusader/Konfigurator/konfigurator.cpp:147
 msgid "Basic Operations"
@@ -6089,6 +6152,9 @@ msgid "Mt.Man: working ..."
 msgstr "Mt.Man: radim ..."
 
 #: krusader/Panel/listpanel.cpp:769
+#, fuzzy
+#| msgid "unknown"
+msgctxt "Unknown file system type"
 msgid "unknown"
 msgstr "nepoznato"
 
@@ -6123,7 +6189,7 @@ msgid "Link Here"
 msgstr "Poveži ovdje"
 
 #: krusader/Panel/listpanel.cpp:1065
-msgid "loading previews"
+msgid "loading previews: %p%"
 msgstr ""
 
 #: krusader/Panel/listpanel.cpp:1112
@@ -6131,11 +6197,15 @@ msgid ">> Reading..."
 msgstr ">> Čitam..."
 
 #: krusader/Panel/listpanel.cpp:1132
-msgid "Reading"
-msgstr "Čitam"
+#, fuzzy, kde-format
+#| msgid ">> Reading..."
+msgid ">> Reading: %1 % complete..."
+msgstr ">> Čitam..."
 
 #: krusader/Panel/listpanel.cpp:1138
-msgid "Reading: "
+#, fuzzy, kde-format
+#| msgid "Reading: "
+msgid ">> Reading: %1"
 msgstr "Čitam: "
 
 #: krusader/Panel/listpanel.cpp:1177
@@ -6620,9 +6690,9 @@ msgstr "Panel za pregled: pregledanje trenutne datoteke"
 msgid "Disk Usage Panel: view the usage of a directory"
 msgstr "Panel iskorištenosti diska: Pregledaj iskorištenost direktorijuma"
 
-#: krusader/Panel/panelpopup.cpp:369
-msgid "Disk Usage: "
-msgstr "Iskorištenost diska: "
+#: krusader/Panel/panelpopup.cpp:369 krusader/Panel/panelpopup.cpp:545
+msgid "Disk Usage:"
+msgstr "Iskorištenost diska:"
 
 #: krusader/Panel/panelpopup.cpp:379
 msgid "Quick Select"
@@ -6658,10 +6728,6 @@ msgstr "Brzo izabiranje:"
 #: krusader/Panel/panelpopup.cpp:538
 msgid "View:"
 msgstr "Pogled:"
-
-#: krusader/Panel/panelpopup.cpp:545
-msgid "Disk Usage:"
-msgstr "Iskorištenost diska:"
 
 #: krusader/Panel/panelpopup.cpp:567
 #, fuzzy, kde-format
@@ -6900,9 +6966,13 @@ msgid "&Results"
 msgstr "&Rezultati"
 
 #: krusader/Search/krsearchdialog.cpp:402
-#, kde-format
-msgid "Found %1 matches."
-msgstr "Pronađeno %1 pogodaka."
+#, fuzzy, kde-format
+#| msgid "Found %1 matches."
+msgid "Found %1 match."
+msgid_plural "Found %1 matches."
+msgstr[0] "Pronađeno %1 pogodaka."
+msgstr[1] "Pronađeno %1 pogodaka."
+msgstr[2] "Pronađeno %1 pogodaka."
 
 #: krusader/Search/krsearchdialog.cpp:427
 msgid ""
@@ -7171,9 +7241,12 @@ msgstr[2] ""
 #: krusader/Synchronizer/synchronizedialog.cpp:64
 #: krusader/Synchronizer/synchronizedialog.cpp:77
 #: krusader/Synchronizer/synchronizedialog.cpp:90
+#: krusader/Synchronizer/synchronizedialog.cpp:172
+#: krusader/Synchronizer/synchronizedialog.cpp:175
+#: krusader/Synchronizer/synchronizedialog.cpp:178
 #, fuzzy, kde-format
 msgid "\tReady: %2/1 file, %3/%4"
-msgid_plural "Ready: %2/%1 files, %3/%4"
+msgid_plural "\tReady: %2/%1 files, %3/%4"
 msgstr[0] "\tSpremno: %1/%2 datoteka, %3/%4"
 msgstr[1] "\tSpremno: %1/%2 datoteka, %3/%4"
 msgstr[2] "\tSpremno: %1/%2 datoteka, %3/%4"
@@ -7218,13 +7291,6 @@ msgstr "Pau&ziraj"
 #: krusader/Synchronizer/synchronizedialog.cpp:128
 msgid "&Close"
 msgstr "&Zatvori"
-
-#: krusader/Synchronizer/synchronizedialog.cpp:172
-#: krusader/Synchronizer/synchronizedialog.cpp:175
-#: krusader/Synchronizer/synchronizedialog.cpp:178
-#, kde-format
-msgid "\tReady: %1/%2 files, %3/%4"
-msgstr "\tSpremno: %1/%2 datoteka, %3/%4"
 
 #: krusader/Synchronizer/synchronizedialog.cpp:197
 #: krusader/Synchronizer/synchronizer.cpp:1291
@@ -8165,6 +8231,10 @@ msgstr "Direktorijumi"
 msgid "Unpack"
 msgstr "Raspakivanje"
 
+#: krusader/VFS/kiojobwrapper.cpp:258
+msgid "Unknown"
+msgstr "Nepoznato"
+
 #: krusader/VFS/kiojobwrapper.cpp:287
 #, fuzzy
 msgid "Target"
@@ -8227,8 +8297,10 @@ msgid "Failed to pack %1!"
 msgstr "Nisam uspio da zapakujem %1!"
 
 #: krusader/VFS/krarchandler.cpp:593
-msgid "Failed to pack: "
-msgstr "Greška u pakovanju: "
+#, fuzzy, kde-format
+#| msgid "Failed to pack %1!"
+msgid "Failed to pack: %1!"
+msgstr "Nisam uspio da zapakujem %1!"
 
 #: krusader/VFS/krarchandler.cpp:636
 msgid "This archive is encrypted, please supply the password:"
@@ -8335,6 +8407,27 @@ msgstr ""
 #, kde-format
 msgid "Writing to %1 is not supported"
 msgstr ""
+
+#~ msgid "Ok"
+#~ msgstr "U redu"
+
+#~ msgid "Popular Urls"
+#~ msgstr "Popularni URL-ovi"
+
+#~ msgid " &Search: "
+#~ msgstr " &Pretraži: "
+
+#~ msgid "Reading"
+#~ msgstr "Čitam"
+
+#~ msgid "Disk Usage: "
+#~ msgstr "Iskorištenost diska: "
+
+#~ msgid "\tReady: %1/%2 files, %3/%4"
+#~ msgstr "\tSpremno: %1/%2 datoteka, %3/%4"
+
+#~ msgid "Failed to pack: "
+#~ msgstr "Greška u pakovanju: "
 
 #~ msgid "="
 #~ msgstr "="
