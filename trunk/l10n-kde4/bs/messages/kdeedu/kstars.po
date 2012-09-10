@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-04 06:16+0200\n"
+"POT-Creation-Date: 2012-09-10 04:32+0200\n"
 "PO-Revision-Date: 2011-04-21 06:43+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -1213,7 +1213,7 @@ msgstr "Ne mogu poslati datoteku"
 msgid "KStars Exported Sky Image"
 msgstr "&Snimi sliku neba..."
 
-#: dialogs/exportimagedialog.cpp:177 main.cpp:95
+#: dialogs/exportimagedialog.cpp:177 main.cpp:96
 #: printing/foveditordialog.cpp:154
 #, kde-format
 msgid "Could not parse image format of %1; assuming PNG."
@@ -2624,53 +2624,49 @@ msgstr "Min."
 msgid "&Apply"
 msgstr "&Primijeni"
 
-#: fitsviewer/fitsimage.cpp:137
+#: fitsviewer/fitsimage.cpp:165
 msgid "Please hold while loading FITS file..."
 msgstr ""
 
-#: fitsviewer/fitsimage.cpp:137 oal/oal.h:39
-msgid "Cancel"
-msgstr "Odustani"
-
-#: fitsviewer/fitsimage.cpp:138
+#: fitsviewer/fitsimage.cpp:166
 msgid "Loading FITS"
 msgstr ""
 
-#: fitsviewer/fitsimage.cpp:147
+#: fitsviewer/fitsimage.cpp:177
 #, fuzzy, kde-format
 #| msgid "Could not open the file %1 for writing."
 msgid "Could not open file %1 (fits_get_img_param). Error %2"
 msgstr "Nisam mogao da otvorim datoteku %1 za pisanje ."
 
-#: fitsviewer/fitsimage.cpp:147 fitsviewer/fitsimage.cpp:162
-#: fitsviewer/fitsimage.cpp:168 fitsviewer/fitsimage.cpp:177
-#: fitsviewer/fitsimage.cpp:414
+#: fitsviewer/fitsimage.cpp:177 fitsviewer/fitsimage.cpp:194
+#: fitsviewer/fitsimage.cpp:200 fitsviewer/fitsimage.cpp:209
+#: fitsviewer/fitsimage.cpp:444
 msgid "FITS Open"
 msgstr ""
 
-#: fitsviewer/fitsimage.cpp:162
+#: fitsviewer/fitsimage.cpp:194
 #, kde-format
 msgid "FITS file open error (fits_get_img_param): %1"
 msgstr ""
 
-#: fitsviewer/fitsimage.cpp:168
+#: fitsviewer/fitsimage.cpp:200
 msgid "1D FITS images are not supported in KStars."
 msgstr ""
 
-#: fitsviewer/fitsimage.cpp:177
+#: fitsviewer/fitsimage.cpp:209
 #, kde-format
 msgid "FITS file open error (fits_get_img_type): %1"
 msgstr ""
 
-#: fitsviewer/fitsimage.cpp:414
+#: fitsviewer/fitsimage.cpp:444
 msgid "FITS image is saturated and cannot be displayed."
 msgstr ""
 
-#: fitsviewer/fitstab.cpp:53 fitsviewer/fitsviewer.cpp:339
+#: fitsviewer/fitstab.cpp:53 fitsviewer/fitsviewer.cpp:345
 msgid "Save Changes to FITS?"
 msgstr "Snimiti izmjene FITS-a?"
 
-#: fitsviewer/fitstab.cpp:54 fitsviewer/fitsviewer.cpp:340
+#: fitsviewer/fitstab.cpp:54 fitsviewer/fitsviewer.cpp:346
 msgid ""
 "The current FITS file has unsaved changes.  Would you like to save before "
 "closing it?"
@@ -2715,7 +2711,7 @@ msgstr "Dobrodošli u KStars-ov FITS prikazivač"
 msgid "Statistics"
 msgstr "Statistika"
 
-#: fitsviewer/fitsviewer.cpp:145 fitsviewer/fitsviewer.cpp:457
+#: fitsviewer/fitsviewer.cpp:145 fitsviewer/fitsviewer.cpp:463
 #, fuzzy
 #| msgid "Stars"
 msgid "Mark Stars"
@@ -2727,11 +2723,17 @@ msgstr "Zvijezde"
 msgid "KStars FITS Viewer"
 msgstr "Dobrodošli u KStars-ov FITS prikazivač"
 
-#: fitsviewer/fitsviewer.cpp:194
+#: fitsviewer/fitsviewer.cpp:196
 msgid "Focus"
 msgstr ""
 
-#: fitsviewer/fitsviewer.cpp:240 fitsviewer/fitsviewer.cpp:464
+#: fitsviewer/fitsviewer.cpp:200
+#, fuzzy
+#| msgid "Guides"
+msgid "Guide"
+msgstr "Vodilje"
+
+#: fitsviewer/fitsviewer.cpp:246 fitsviewer/fitsviewer.cpp:470
 #, kde-format
 msgid "%1 star detected."
 msgid_plural "%1 stars detected."
@@ -2739,7 +2741,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: fitsviewer/fitsviewer.cpp:462
+#: fitsviewer/fitsviewer.cpp:468
 msgid "Unmark Stars"
 msgstr ""
 
@@ -3057,6 +3059,15 @@ msgstr ""
 "Trenutno nije pokrenut nijedan INDI uređaj. Da pokrenete uređaje, molim "
 "izaberite ih pomoću Upravitelja uređaja na meniju sa uređajima."
 
+#: indi/indiccd.cpp:286 indi/servermanager.cpp:74
+msgid "Error making temporary filename."
+msgstr ""
+
+#: indi/indiccd.cpp:325
+#, kde-format
+msgid "FITS file saved to %1"
+msgstr "FITS datoteka je snimljena u %1"
+
 #: indi/indielement.cpp:322
 msgid "INDI DATA STREAM"
 msgstr ""
@@ -3126,15 +3137,6 @@ msgstr "%1 je na vezi."
 #, kde-format
 msgid "%1 is online and ready."
 msgstr "%1 je na vezi i spreman."
-
-#: indi/indistd.cpp:966 indi/servermanager.cpp:74
-msgid "Error making temporary filename."
-msgstr ""
-
-#: indi/indistd.cpp:1005
-#, kde-format
-msgid "FITS file saved to %1"
-msgstr "FITS datoteka je snimljena u %1"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, fitsLabel)
 #: indi/opsindi.ui:22
@@ -31160,7 +31162,9 @@ msgid "KStars"
 msgstr "KStars"
 
 #: main.cpp:47
-msgid "(c) 2001-2009, The KStars Team"
+#, fuzzy
+#| msgid "(c) 2001-2009, The KStars Team"
+msgid "(c) 2001-2012, The KStars Team"
 msgstr "(c) 2001-2009, The KStars Team"
 
 #: main.cpp:48
@@ -31248,64 +31252,75 @@ msgid "Technical documentation on Astronomy and KStars"
 msgstr ""
 
 #: main.cpp:67
+#, fuzzy
+#| msgctxt "City in Alabama USA"
+#| msgid "Alexander City"
+msgid "Alexander Stepanenko"
+msgstr "Alexander City"
+
+#: main.cpp:67
+msgid "Guiding code based on lin_guider"
+msgstr ""
+
+#: main.cpp:68
 msgid "Nuno Pinheiro"
 msgstr ""
 
-#: main.cpp:67
+#: main.cpp:68
 msgid "Artwork"
 msgstr ""
 
-#: main.cpp:71
+#: main.cpp:72
 msgid "Dump sky image to file"
 msgstr "Izbaci sliku neba u datoteku"
 
-#: main.cpp:72
+#: main.cpp:73
 msgid "Script to execute"
 msgstr "Skripta za izvršavanje"
 
-#: main.cpp:73
+#: main.cpp:74
 msgid "Width of sky image"
 msgstr "Širina slike neba"
 
-#: main.cpp:74
+#: main.cpp:75
 msgid "Height of sky image"
 msgstr "Visina slike neba"
 
-#: main.cpp:75
+#: main.cpp:76
 msgid "Filename for sky image"
 msgstr "Ime datoteke za sliku neba"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, InputComboBatch)
-#: main.cpp:76 tools/modcalcjd.ui:120
+#: main.cpp:77 tools/modcalcjd.ui:120
 msgid "Date and time"
 msgstr "Datum i vrijeme"
 
-#: main.cpp:77
+#: main.cpp:78
 msgid "Start with clock paused"
 msgstr "Počni sa zaustavljenim satom"
 
-#: main.cpp:84
+#: main.cpp:85
 msgid "Dumping sky image"
 msgstr "Ispisujem sliku neba"
 
-#: main.cpp:136 main.cpp:192
+#: main.cpp:137 main.cpp:193
 msgid "Using CPU date/time instead."
 msgstr "Koristim CPU datum/vreme."
 
-#: main.cpp:165
+#: main.cpp:166
 msgid "Script executed."
 msgstr "Skripta izvršena."
 
-#: main.cpp:167
+#: main.cpp:168
 msgid "Could not execute script."
 msgstr "Ne mogu izvršiti skriptu."
 
-#: main.cpp:176
+#: main.cpp:177
 #, kde-format
 msgid "Unable to save image: %1 "
 msgstr "Ne mogu snimiti sliku: %1 "
 
-#: main.cpp:177
+#: main.cpp:178
 #, kde-format
 msgid "Saved to file: %1"
 msgstr "Snimio datoteku: %1"
@@ -31700,6 +31715,10 @@ msgstr "Sljedeći >"
 #: oal/oal.h:39
 msgid "Overwrite"
 msgstr "Piši preko"
+
+#: oal/oal.h:39
+msgid "Cancel"
+msgstr "Odustani"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ObserverAdd)
 #. i18n: ectx: property (text), widget (QPushButton, AddObserver)
