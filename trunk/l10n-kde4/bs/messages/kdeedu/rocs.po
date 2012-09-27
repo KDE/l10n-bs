@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-25 06:05+0200\n"
+"POT-Creation-Date: 2012-09-27 04:48+0200\n"
 "PO-Revision-Date: 2011-04-09 23:07+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -50,7 +50,7 @@ msgid "Add %1"
 msgstr ""
 
 #: Actions/AddDataAction.cpp:33 Actions/AddDataHandAction.cpp:35
-#: Interface/MainWindow.cpp:362
+#: Interface/MainWindow.cpp:341
 #, fuzzy
 #| msgid "Data"
 msgctxt "@action:intoolbar"
@@ -80,7 +80,7 @@ msgstr "Stvara novi čvor na klik poziciju na području crtanja."
 msgid "Add %1"
 msgstr ""
 
-#: Actions/DeleteHandAction.cpp:36 Interface/MainWindow.cpp:423
+#: Actions/DeleteHandAction.cpp:36 Interface/MainWindow.cpp:407
 #, fuzzy
 #| msgid "Delete"
 msgctxt "@action:intoolbar"
@@ -184,7 +184,7 @@ msgstr ""
 msgid "Group"
 msgstr ""
 
-#: Core/PointerType.cpp:60
+#: Core/PointerType.cpp:68
 #, fuzzy
 #| msgid "Connection Type"
 msgid "Connection"
@@ -258,15 +258,16 @@ msgstr ""
 msgid "Show One Step Execution"
 msgstr ""
 
-#: Interface/DataPropertiesWidget.cpp:40
+#: Interface/DataPropertiesWidget.cpp:39
 #, fuzzy
 #| msgid "Select"
 msgid "Edit Data Types"
 msgstr "Odaberi"
 
-#: Interface/DataPropertiesWidget.cpp:46
+#: Interface/DataPropertiesWidget.cpp:45
 #, fuzzy
 #| msgid "Edge Properties"
+msgctxt "@title:window"
 msgid "Data Element Properties"
 msgstr "Svojstva ivica"
 
@@ -279,56 +280,61 @@ msgstr "Svojstva ivica"
 
 #. i18n: ectx: property (title), widget (QGroupBox, Appearance)
 #: Interface/DataPropertiesWidget.ui:38
+#: Interface/PointerPropertiesWidget.ui:38
 #, fuzzy
 #| msgid "Node Properties"
 msgid "Static Properties"
 msgstr "Svojstva čvora"
 
+#. i18n: ectx: property (toolTip), widget (KColorCombo, _color)
+#. i18n: ectx: property (toolTip), widget (QLabel, label_6)
+#: Interface/DataPropertiesWidget.ui:46 Interface/DataPropertiesWidget.ui:59
+#: Interface/PointerPropertiesWidget.ui:56
+#: Interface/PointerPropertiesWidget.ui:69
+msgid "Node color"
+msgstr "Boja čvora"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: Interface/DataPropertiesWidget.ui:62
+#: Interface/PointerPropertiesWidget.ui:72
+msgid "Color:"
+msgstr "Boja:"
+
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: Interface/DataPropertiesWidget.ui:88
+#: Interface/DataPropertiesWidget.ui:84
+#: Interface/PointerPropertiesWidget.ui:97
 #, fuzzy
 #| msgid "Type"
 msgid "Type:"
 msgstr "Tip"
 
-#. i18n: ectx: property (toolTip), widget (KColorCombo, _color)
-#. i18n: ectx: property (toolTip), widget (QLabel, label_6)
-#: Interface/DataPropertiesWidget.ui:106 Interface/DataPropertiesWidget.ui:119
-msgid "Node color"
-msgstr "Boja čvora"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: Interface/DataPropertiesWidget.ui:122
-#: Interface/PointerPropertiesWidget.ui:47
-msgid "Color:"
-msgstr "Boja:"
-
 #. i18n: ectx: property (title), widget (QGroupBox, DynamicProperties)
 #: Interface/DataPropertiesWidget.ui:150
+#: Interface/PointerPropertiesWidget.ui:163
 #, fuzzy
 #| msgid "Node Properties"
 msgid "Dynamic Properties"
 msgstr "Svojstva čvora"
 
 #. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: Interface/DataStructurePage.ui:19 Interface/DataTypePage.ui:127
-#: Interface/PointerPropertiesWidget.ui:20 Interface/PointerTypePage.ui:102
+#: Interface/DataStructurePage.ui:22 Interface/DataTypePage.ui:127
+#: Interface/PointerTypePage.ui:102
 msgid "Name:"
 msgstr "Naziv:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: Interface/DataStructurePage.ui:35
+#: Interface/DataStructurePage.ui:38
 #, fuzzy
 #| msgid "Graph Structure"
 msgid "Data Structure Plugin:"
 msgstr "Grafička struktura"
 
-#. i18n: ectx: property (text), widget (QCheckBox, dataStructureVisible)
-#: Interface/DataStructurePage.ui:51
-msgid "Visible"
-msgstr ""
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: Interface/DataStructurePage.ui:53
+#, fuzzy
+#| msgid "Graph Structure"
+msgid "Data Structure Plugin Properties"
+msgstr "Grafička struktura"
 
 #: Interface/DataStructurePropertiesDialog.cpp:50
 #, fuzzy
@@ -360,89 +366,37 @@ msgctxt "@title:window"
 msgid "Data Structure Properties"
 msgstr "Grafička struktura"
 
-#: Interface/DataStructurePropertiesWidget.cpp:165
-#: Interface/DataStructurePropertiesWidget.cpp:216
-#: Interface/VisualEditor/GraphScene.cpp:419
-#: Interface/VisualEditor/GraphScene.cpp:477
-#: Interface/VisualEditor/GraphScene.cpp:482
-#, fuzzy
-#| msgid "Node Properties"
-msgctxt "@action:inmenu"
-msgid "Properties"
-msgstr "Svojstva čvora"
-
-#: Interface/DataStructurePropertiesWidget.cpp:223
-#, fuzzy
-#| msgid "Show values in:"
-msgctxt "@info:tooltip"
-msgid "Set visibility of pointers"
-msgstr "Prikaži vrijednosti u:"
-
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, _dataStructureName)
-#: Interface/DataStructurePropertiesWidget.ui:56
-#, fuzzy
-#| msgid "Graph Structure"
-msgid "Data structure name"
-msgstr "Grafička struktura"
-
-#. i18n: ectx: property (toolTip), widget (KIconButton, _dataStructureDelete)
-#: Interface/DataStructurePropertiesWidget.ui:82
-#, fuzzy
-#| msgid "Graph Structure"
-msgid "Delete this data structure"
-msgstr "Grafička struktura"
-
-#. i18n: ectx: property (whatsThis), widget (KIconButton, _dataStructureDelete)
-#: Interface/DataStructurePropertiesWidget.ui:85
-#, fuzzy
-#| msgid "Delete the current active graph: delete all nodes and edges"
-msgid ""
-"Delete the current data structure: delete all data elements and all pointers"
-msgstr "Izbriši trenutni aktivni graf: brisanje svih čvorova i rubova"
-
-#. i18n: ectx: property (icon), widget (KIconButton, _dataStructureDelete)
-#: Interface/DataStructurePropertiesWidget.ui:91
-msgid "rocsdeletegrey"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, _displayOptionsLabel)
-#: Interface/DataStructurePropertiesWidget.ui:134
-msgid "Display Options:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (KPushButton, _showName)
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: Interface/DataTypePage.cpp:68 Interface/PointerPropertiesWidget.ui:121
-#: Interface/PointerPropertiesWidget.ui:165
+#: Interface/DataTypePage.cpp:68 Interface/PointerTypePage.cpp:68
 msgid "Name"
 msgstr "Naziv"
 
-#: Interface/DataTypePage.cpp:69
+#: Interface/DataTypePage.cpp:69 Interface/PointerTypePage.cpp:69
 #, fuzzy
 #| msgid "Data Color:"
 msgid "Default Value"
 msgstr "Boja podataka:"
 
-#: Interface/DataTypePage.cpp:70
+#: Interface/DataTypePage.cpp:70 Interface/PointerTypePage.cpp:70
 msgid "Display"
 msgstr ""
 
-#: Interface/DataTypePage.cpp:187 Interface/DataTypePage.cpp:309
-#: Interface/DataTypePage.cpp:322 Interface/PointerTypePage.cpp:88
-#: Interface/PointerTypePage.cpp:168
+#: Interface/DataTypePage.cpp:186 Interface/DataTypePage.cpp:310
+#: Interface/DataTypePage.cpp:323 Interface/PointerTypePage.cpp:199
+#: Interface/PointerTypePage.cpp:257 Interface/PointerTypePage.cpp:312
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "%1 (ID %2)"
 msgstr ""
 
-#: Interface/DataTypePage.cpp:234 Interface/DataTypePage.cpp:236
+#: Interface/DataTypePage.cpp:233 Interface/DataTypePage.cpp:235
+#: Interface/PointerTypePage.cpp:285 Interface/PointerTypePage.cpp:287
 #, fuzzy, kde-format
 #| msgid "Property"
 msgctxt "Property identifier, only a-Z and no spaces"
 msgid "property%1"
 msgstr "Svojstvo"
 
-#: Interface/DataTypePage.cpp:318
+#: Interface/DataTypePage.cpp:319
 #, fuzzy
 #| msgid "Select"
 msgctxt "@item:inlistbox"
@@ -496,55 +450,63 @@ msgctxt "@title:window"
 msgid "Document Properties"
 msgstr "Svojstva čvora"
 
-#: Interface/GraphLayers.cpp:46
+#: Interface/DocumentTypesWidget.cpp:140 Interface/DocumentTypesWidget.cpp:194
+#: Interface/VisualEditor/GraphScene.cpp:419
+#: Interface/VisualEditor/GraphScene.cpp:477
+#: Interface/VisualEditor/GraphScene.cpp:482
 #, fuzzy
-#| msgid "Graph Structure"
-msgctxt "@action:button"
-msgid "Add Data Structure"
-msgstr "Grafička struktura"
+#| msgid "Node Properties"
+msgctxt "@action:inmenu"
+msgid "Properties"
+msgstr "Svojstva čvora"
 
-#: Interface/GraphLayers.cpp:47
+#: Interface/DocumentTypesWidget.cpp:201
 #, fuzzy
-#| msgid "Graph Structure"
+#| msgid "Show values in:"
 msgctxt "@info:tooltip"
-msgid "Add a new data structure."
-msgstr "Grafička struktura"
+msgid "Set visibility of pointers"
+msgstr "Prikaži vrijednosti u:"
 
-#: Interface/ImporterExporterManager.cpp:45
-#: Interface/ImporterExporterManager.cpp:103
+#. i18n: ectx: property (text), widget (QLabel, _displayOptionsLabel)
+#: Interface/DocumentTypesWidget.ui:44
+msgid "Element Types:"
+msgstr ""
+
+#: Interface/ImporterExporterManager.cpp:46
+#: Interface/ImporterExporterManager.cpp:108
 msgid "*|All files"
 msgstr "*|Sve datoteke"
 
-#: Interface/ImporterExporterManager.cpp:49
+#: Interface/ImporterExporterManager.cpp:51
 #, fuzzy
 #| msgid "Export"
 msgctxt "@action:button"
 msgid "Export"
 msgstr "Izvezi"
 
-#: Interface/ImporterExporterManager.cpp:50
+#: Interface/ImporterExporterManager.cpp:52
 #, fuzzy
 #| msgid "Export graphs to file"
 msgctxt "@info:tooltip"
 msgid "Export graphs to file"
 msgstr "Izvoz grafova u datoteku"
 
-#: Interface/ImporterExporterManager.cpp:71
+#: Interface/ImporterExporterManager.cpp:73
 #, kde-format
 msgid ""
 "<p>The file <br /><strong>'%1'</strong><br /> already exists; if you do not "
 "want to overwrite it, change the file name to something else.</p>"
 msgstr ""
 
-#: Interface/ImporterExporterManager.cpp:74
+#: Interface/ImporterExporterManager.cpp:76
 msgid "File Exists"
 msgstr ""
 
-#: Interface/ImporterExporterManager.cpp:74
+#: Interface/ImporterExporterManager.cpp:76
 msgid "Overwrite"
 msgstr ""
 
-#: Interface/ImporterExporterManager.cpp:106
+#: Interface/ImporterExporterManager.cpp:111
 #, fuzzy
 msgctxt "@title:window"
 msgid "Import Graph File into Project"
@@ -626,282 +588,244 @@ msgctxt "@action:inmenu Debug execution"
 msgid "Interrupt at first line"
 msgstr ""
 
-#: Interface/MainWindow.cpp:334 Interface/MainWindow.cpp:571
-#, fuzzy
-#| msgid "Node Properties"
-msgctxt "@action:button"
-msgid "Properties"
-msgstr "Svojstva čvora"
-
-#: Interface/MainWindow.cpp:339
-#, fuzzy
-#| msgid "New Graph"
-msgctxt "@label:listbox"
-msgid "Graph Document:"
-msgstr "Novi graf"
-
-#: Interface/MainWindow.cpp:361
+#: Interface/MainWindow.cpp:340
 #, fuzzy
 #| msgid "Data"
 msgctxt "@title:menu"
 msgid "Add Data"
 msgstr "Podaci"
 
-#: Interface/MainWindow.cpp:363
+#: Interface/MainWindow.cpp:342
 #, fuzzy
 #| msgid "Show values in:"
 msgctxt "@info:tooltip"
 msgid "Add new data element"
 msgstr "Prikaži vrijednosti u:"
 
-#: Interface/MainWindow.cpp:367
+#: Interface/MainWindow.cpp:346
 #, fuzzy
 #| msgid "Connection Type"
 msgctxt "@title:menu"
 msgid "Add Connection"
 msgstr "Tip veze"
 
-#: Interface/MainWindow.cpp:368
+#: Interface/MainWindow.cpp:347
 #, fuzzy
 #| msgid "Connection Type"
 msgctxt "@action:intoolbar"
 msgid "Add Connection"
 msgstr "Tip veze"
 
-#: Interface/MainWindow.cpp:369
+#: Interface/MainWindow.cpp:348
 msgctxt "@info:tooltip"
 msgid "Add a new connection between two data elements of selected type"
 msgstr ""
 
-#: Interface/MainWindow.cpp:392
+#: Interface/MainWindow.cpp:371
 msgctxt "@action:intoolbar Alignment"
 msgid "Base"
 msgstr ""
 
-#: Interface/MainWindow.cpp:393 Interface/MainWindow.cpp:396
+#: Interface/MainWindow.cpp:372 Interface/MainWindow.cpp:375
 #, fuzzy
 #| msgid "Pointers"
 msgctxt "@action:intoolbar Alignment"
 msgid "Center"
 msgstr "Pokazivači"
 
-#: Interface/MainWindow.cpp:394
+#: Interface/MainWindow.cpp:373
 msgctxt "@action:intoolbar Alignment"
 msgid "Top"
 msgstr ""
 
-#: Interface/MainWindow.cpp:395
+#: Interface/MainWindow.cpp:374
 msgctxt "@action:intoolbar Alignment"
 msgid "Left"
 msgstr ""
 
-#: Interface/MainWindow.cpp:397
+#: Interface/MainWindow.cpp:376
 msgctxt "@action:intoolbar Alignment"
 msgid "Right"
 msgstr ""
 
-#: Interface/MainWindow.cpp:398
+#: Interface/MainWindow.cpp:377
 #, fuzzy
 #| msgid "Circular"
 msgctxt "@action:intoolbar Alignment"
 msgid "Circle"
 msgstr "Kružno"
 
-#: Interface/MainWindow.cpp:399
+#: Interface/MainWindow.cpp:378
 msgctxt "@action:intoolbar Alignment"
 msgid "Minimize Crossing Edges"
 msgstr ""
 
-#: Interface/MainWindow.cpp:402
+#: Interface/MainWindow.cpp:381
 #, fuzzy
 #| msgid "Node Properties"
 msgctxt "@action:inmenu"
 msgid "New Project"
 msgstr "Svojstva čvora"
 
-#: Interface/MainWindow.cpp:403
+#: Interface/MainWindow.cpp:382
 #, fuzzy
 #| msgid "Save Script"
 msgctxt "@action:inmenu"
 msgid "Save Project"
 msgstr "Snimi skriptu"
 
-#: Interface/MainWindow.cpp:404
+#: Interface/MainWindow.cpp:383
 #, fuzzy
 msgctxt "@action:inmenu"
 msgid "Open Project"
 msgstr "Otvori skriptu..."
 
-#: Interface/MainWindow.cpp:405
+#: Interface/MainWindow.cpp:386
 #, fuzzy
 msgctxt "@action:inmenu"
-msgid "Export Project"
+msgid "Recent Projects"
 msgstr "Otvori skriptu..."
 
-#: Interface/MainWindow.cpp:406
+#: Interface/MainWindow.cpp:391
 #, fuzzy
+#| msgid "Save Script"
 msgctxt "@action:inmenu"
-msgid "Import Project"
-msgstr "Otvori skriptu..."
+msgid "Save Project as"
+msgstr "Snimi skriptu"
 
-#: Interface/MainWindow.cpp:407
-#, fuzzy
-#| msgid "Name"
-msgctxt "@action:inmenu"
-msgid "Set Name"
-msgstr "Naziv"
-
-#: Interface/MainWindow.cpp:408
+#: Interface/MainWindow.cpp:392
 #, fuzzy
 #| msgid "New Graph"
 msgctxt "@action:inmenu"
 msgid "New Graph Document"
 msgstr "Novi graf"
 
-#: Interface/MainWindow.cpp:409
+#: Interface/MainWindow.cpp:393
 #, fuzzy
 #| msgid "New Script"
 msgctxt "@action:inmenu"
 msgid "New Script File"
 msgstr "Nova skripta"
 
-#: Interface/MainWindow.cpp:410
+#: Interface/MainWindow.cpp:394
 #, fuzzy
 #| msgid "Complete"
 msgctxt "@action:inmenu"
 msgid "Import Graph"
 msgstr "Kompletirano"
 
-#: Interface/MainWindow.cpp:411
-#, fuzzy
-#| msgid "Save Graph"
-msgctxt "@action:inmenu"
-msgid "Save Graph"
-msgstr "Snimi graf"
-
-#: Interface/MainWindow.cpp:412
+#: Interface/MainWindow.cpp:396
 #, fuzzy
 #| msgid "Export graphs to file"
 msgctxt "@action:inmenu"
-msgid "Export Graph"
+msgid "Export Graph as"
 msgstr "Izvoz grafova u datoteku"
 
-#: Interface/MainWindow.cpp:413
+#: Interface/MainWindow.cpp:397
 #, fuzzy
 #| msgid "Download Examples"
 msgctxt "@action:inmenu"
 msgid "Download Examples"
 msgstr "Preuzmi primjere"
 
-#: Interface/MainWindow.cpp:414
+#: Interface/MainWindow.cpp:398
 #, fuzzy
 #| msgid "Complete"
 msgctxt "@action:inmenu"
-msgid "Upload script"
+msgid "Upload project"
 msgstr "Kompletirano"
 
-#: Interface/MainWindow.cpp:416
+#: Interface/MainWindow.cpp:400
 #, fuzzy
 #| msgid "Possible Includes"
 msgctxt "@action:inmenu"
 msgid "Possible Includes"
 msgstr "Moguća uključenja"
 
-#: Interface/MainWindow.cpp:417
+#: Interface/MainWindow.cpp:401
 #, fuzzy
 #| msgid "Complete"
 msgctxt "@action:inmenu"
 msgid "Import Script"
 msgstr "Kompletirano"
 
-#: Interface/MainWindow.cpp:418
+#: Interface/MainWindow.cpp:403
 #, fuzzy
-#| msgid "Save Script"
+#| msgid "Complete"
 msgctxt "@action:inmenu"
-msgid "Save Script"
-msgstr "Snimi skriptu"
+msgid "Export Script as"
+msgstr "Kompletirano"
 
-#: Interface/MainWindow.cpp:419
-#, fuzzy
-msgctxt "@action:inmenu"
-msgid "Save Script as"
-msgstr "Snimi skriptu"
-
-#: Interface/MainWindow.cpp:420
+#: Interface/MainWindow.cpp:404
 msgctxt "@action:inmenu"
 msgid "Loaded Plugins"
 msgstr ""
 
-#: Interface/MainWindow.cpp:455
+#: Interface/MainWindow.cpp:439
 #, fuzzy
 #| msgid "Includes"
 msgctxt "@title:tab"
 msgid "Include Manager"
 msgstr "Uključuje"
 
-#: Interface/MainWindow.cpp:456
+#: Interface/MainWindow.cpp:440
 msgctxt "@title:tab"
 msgid "Default Settings"
 msgstr ""
 
-#: Interface/MainWindow.cpp:678
+#: Interface/MainWindow.cpp:642
 msgctxt "@title:window"
 msgid "Add Existing Script File to Project"
 msgstr ""
 
-#: Interface/MainWindow.cpp:691
+#: Interface/MainWindow.cpp:656
 #, fuzzy
 #| msgid "This does not seem to be a graph file."
 msgctxt "@info"
 msgid "This does not seem to be a graph file."
 msgstr "Ovo ne izgleda kao datoteka grafa"
 
-#: Interface/MainWindow.cpp:691
+#: Interface/MainWindow.cpp:656
 #, fuzzy
 #| msgid "Invalid file"
 msgctxt "@title:window"
 msgid "Invalid File"
 msgstr "Neispravna datoteka"
 
-#: Interface/MainWindow.cpp:724 Interface/MainWindow.cpp:750
+#: Interface/MainWindow.cpp:694
 #, fuzzy
 #| msgid ""
 #| "*.graph|Graph files\n"
 #| "*|All files"
 msgid ""
 "*.rocs|Rocs project files\n"
+"*.rocsz|Compressed Rocs project files\n"
 "*|All files"
 msgstr ""
 "*.graph|Grf datoteke\n"
 "*|Sve datoteke"
 
-#: Interface/MainWindow.cpp:726
+#: Interface/MainWindow.cpp:696
 #, fuzzy
 #| msgid "Save Script"
 msgctxt "@title:window"
 msgid "Save Project"
 msgstr "Snimi skriptu"
 
-#: Interface/MainWindow.cpp:752
+#: Interface/MainWindow.cpp:742
+msgid ""
+"*rocs,*.rocsz|All Rocs files\n"
+"*.rocs|Rocs project files\n"
+"*.rocsz|Compressed Rocs project files\n"
+"*|All files"
+msgstr ""
+
+#: Interface/MainWindow.cpp:744
 #, fuzzy
 #| msgid "Node Properties"
 msgctxt "@title:window"
 msgid "Open Project Files"
 msgstr "Svojstva čvora"
-
-#: Interface/MainWindow.cpp:787
-#, fuzzy
-#| msgid "Save Script"
-msgctxt "@title:window"
-msgid "Set Project Name"
-msgstr "Snimi skriptu"
-
-#: Interface/MainWindow.cpp:788
-#, fuzzy
-#| msgid "Name:"
-msgctxt "@label:textbox name of the project"
-msgid "Name:"
-msgstr "Naziv:"
 
 #: Interface/MainWindow.cpp:805
 #, fuzzy
@@ -910,25 +834,17 @@ msgctxt "caption text for temporary project"
 msgid "[ untitled ]"
 msgstr "bez naslova"
 
-#: Interface/MainWindow.cpp:818 Interface/MainWindow.cpp:830
-msgid ""
-"*.js|Rocs script documents\n"
-"*|All files"
-msgstr ""
-
-#: Interface/MainWindow.cpp:820
+#: Interface/MainWindow.cpp:829
 #, fuzzy
-#| msgid "Save Script"
-msgctxt "@title:window"
-msgid "Save Script Document"
-msgstr "Snimi skriptu"
+#| msgid "Script"
+msgid "ScriptName"
+msgstr "Skripta"
 
-#: Interface/MainWindow.cpp:832
-msgctxt "@title:window"
-msgid "Enter Filename for the New Script File"
+#: Interface/MainWindow.cpp:829
+msgid "Enter the name of your new script"
 msgstr ""
 
-#: Interface/MainWindow.cpp:886 Interface/MainWindow.cpp:896
+#: Interface/MainWindow.cpp:882
 #, fuzzy
 #| msgid ""
 #| "*.graph|Graph files\n"
@@ -940,191 +856,117 @@ msgstr ""
 "*.graph|Grf datoteke\n"
 "*|Sve datoteke"
 
-#: Interface/MainWindow.cpp:888
+#: Interface/MainWindow.cpp:884
 #, fuzzy
 #| msgid "Save Graph"
 msgctxt "@title:window"
 msgid "Save Graph Document"
 msgstr "Snimi graf"
 
-#: Interface/MainWindow.cpp:898
+#: Interface/MainWindow.cpp:891
+#, fuzzy
+#| msgid "Graph Files"
+msgid "Graph name"
+msgstr "Datoteke grafova"
+
+#: Interface/MainWindow.cpp:891
 #, fuzzy
 #| msgid "New Graph"
-msgctxt "@title:window"
-msgid "Enter Filename for the New Graph Document"
+msgid "Enter the name of the Graph"
 msgstr "Novi graf"
 
-#: Interface/MainWindow.cpp:913
+#: Interface/MainWindow.cpp:910
 msgctxt "@info"
 msgid "Changes on your project are unsaved. Do you want to save your changes?"
 msgstr ""
 
-#: Interface/MainWindow.cpp:932
+#: Interface/MainWindow.cpp:927
 msgctxt "@info"
 msgid ""
 "Changes on your graph document are unsaved. Do you want to save your changes?"
 msgstr ""
 
-#: Interface/MainWindow.cpp:941
+#: Interface/MainWindow.cpp:936
 msgctxt "@info"
 msgid ""
 "Changes on your script files are unsaved. Do you want to save all unsaved "
 "scripts?"
 msgstr ""
 
-#: Interface/MainWindow.cpp:950
+#: Interface/MainWindow.cpp:945
 msgctxt "@info"
 msgid ""
 "Changes on your script files and on your graph document are unsaved. Do you "
 "want to save your graph document and all unsaved scripts?"
 msgstr ""
 
-#: Interface/MainWindow.cpp:994
-msgid "*.tar.gz|Import from tar.gz Archive"
-msgstr ""
-
-#: Interface/MainWindow.cpp:996
-msgctxt "@title:window"
-msgid "Project Archive to Import"
-msgstr ""
-
-#: Interface/MainWindow.cpp:1005
-msgctxt "@title:window"
-msgid "Select Project Directory for Import"
-msgstr ""
-
-#: Interface/MainWindow.cpp:1040
-msgid "*.tar.gz|Export as tar.gz Archive"
-msgstr ""
-
-#: Interface/MainWindow.cpp:1042
-#, fuzzy
-msgctxt "@title:window"
-msgid "Export Project"
-msgstr "Otvori skriptu..."
-
 #. i18n: ectx: property (text), widget (KPushButton, _btnNewFile)
 #: Interface/OpenedFilesWidget.ui:22
 msgid "New File"
 msgstr "Nova datoteka"
 
-#: Interface/PointerPropertiesWidget.cpp:33
+#: Interface/PointerPropertiesWidget.cpp:37
+#, fuzzy
+#| msgid "Node Properties"
+msgid "Edit Pointer Types"
+msgstr "Svojstva čvora"
+
+#: Interface/PointerPropertiesWidget.cpp:43
+#, fuzzy
+#| msgid "Node Properties"
+msgctxt "@title:window"
+msgid "Pointer Properties"
+msgstr "Svojstva čvora"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, PointerPropertiesWidget)
+#: Interface/PointerPropertiesWidget.ui:26
 #, fuzzy
 #| msgid "Node Properties"
 msgid "Pointer Properties"
 msgstr "Svojstva čvora"
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, PointerPropertiesWidget)
-#: Interface/PointerPropertiesWidget.ui:14
-msgid "Edge Properties"
-msgstr "Svojstva ivica"
-
-#. i18n: ectx: property (toolTip), widget (KLineEdit, _name)
-#: Interface/PointerPropertiesWidget.ui:33
-msgid "Edge name"
-msgstr "Ime ivice"
-
-#. i18n: ectx: property (toolTip), widget (KColorCombo, _color)
-#: Interface/PointerPropertiesWidget.ui:60
-msgid "Edge color"
-msgstr "Boja ivice"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: Interface/PointerPropertiesWidget.ui:67
-msgid "Value:"
-msgstr "Vrijednost:"
-
-#. i18n: ectx: property (toolTip), widget (KLineEdit, _value)
-#: Interface/PointerPropertiesWidget.ui:80
-msgid "Edge value"
-msgstr "Vrijednost ivice"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, label_4)
-#: Interface/PointerPropertiesWidget.ui:87
-msgid "Edge width"
-msgstr "Širina ivice"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: Interface/PointerPropertiesWidget.ui:90
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: Interface/PointerPropertiesWidget.ui:46
 msgid "Width:"
 msgstr "Širina:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: Interface/PointerPropertiesWidget.ui:108
-msgid "Show"
-msgstr "Prikaži"
-
-#. i18n: ectx: property (toolTip), widget (KPushButton, _showName)
-#: Interface/PointerPropertiesWidget.ui:118
-msgid "Show/hide edge name"
-msgstr "Prikaži/sakrij ime ivice"
-
-#. i18n: ectx: property (toolTip), widget (KPushButton, _showValue)
-#: Interface/PointerPropertiesWidget.ui:131
-msgid "Show/add edge value"
-msgstr "Prikaži/dodaj vrijednost ivice"
-
-#. i18n: ectx: property (text), widget (KPushButton, _showValue)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: Interface/PointerPropertiesWidget.ui:134
-#: Interface/PointerPropertiesWidget.ui:178
-#: Models/model_GraphProperties.cpp:84
-msgid "Value"
-msgstr "Vrijednost"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: Interface/PointerPropertiesWidget.ui:159
-#, fuzzy
-msgid "Add Property"
-msgstr "Svojstvo"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: Interface/PointerPropertiesWidget.ui:198
-msgid "Global"
-msgstr "Globalno"
-
-#. i18n: ectx: property (text), widget (KPushButton, _addProperty)
-#: Interface/PointerPropertiesWidget.ui:218
-msgid "add"
-msgstr "dodaj"
-
-#: Interface/PointerTypePage.cpp:47
+#: Interface/PointerTypePage.cpp:154
 #, fuzzy
 #| msgid "solid"
 msgctxt "@item:inlistbox"
 msgid "solid line"
 msgstr "čvrsti"
 
-#: Interface/PointerTypePage.cpp:48
+#: Interface/PointerTypePage.cpp:155
 #, fuzzy
 #| msgid "dash"
 msgctxt "@item:inlistbox"
 msgid "dash line"
 msgstr "crta"
 
-#: Interface/PointerTypePage.cpp:49
+#: Interface/PointerTypePage.cpp:156
 msgctxt "@item:inlistbox"
 msgid "dot line "
 msgstr ""
 
-#: Interface/PointerTypePage.cpp:50
+#: Interface/PointerTypePage.cpp:157
 #, fuzzy
 #| msgid "dash dot"
 msgctxt "@item:inlistbox"
 msgid "dash dot line"
 msgstr "crta tačka"
 
-#: Interface/PointerTypePage.cpp:53
+#: Interface/PointerTypePage.cpp:160
 msgctxt "@item:inlistbox"
 msgid "Unidirectional"
 msgstr ""
 
-#: Interface/PointerTypePage.cpp:54
+#: Interface/PointerTypePage.cpp:161
 msgctxt "@item:inlistbox"
 msgid "Bidirectional"
 msgstr ""
 
-#: Interface/PointerTypePage.cpp:164
+#: Interface/PointerTypePage.cpp:308
 #, fuzzy
 #| msgid "Connection Type"
 msgctxt "@item:inlistbox"
@@ -1169,6 +1011,13 @@ msgstr ""
 #: Interface/PointerTypePage.ui:142
 msgid "Style:"
 msgstr "Stil:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: Interface/PointerTypePage.ui:166
+#, fuzzy
+#| msgid "Node Properties"
+msgid "Pointer Type Properties"
+msgstr "Svojstva čvora"
 
 #: Interface/PossibleIncludes.cpp:38
 #, fuzzy
@@ -1300,7 +1149,46 @@ msgctxt "@action:inmenu"
 msgid "Delete"
 msgstr "Obriši"
 
-#: Interface/VisualEditor/GraphVisualEditor.cpp:159
+#: Interface/VisualEditor/GraphVisualEditor.cpp:97
+#: Interface/VisualEditor/GraphVisualEditor.cpp:198
+#: Interface/VisualEditor/GraphVisualEditor.cpp:234
+#: Interface/VisualEditor/GraphVisualEditor.cpp:250
+#, fuzzy
+#| msgid "Node Properties"
+msgctxt "@action:button"
+msgid "Properties"
+msgstr "Svojstva čvora"
+
+#: Interface/VisualEditor/GraphVisualEditor.cpp:120
+#, fuzzy
+#| msgid "New Graph"
+msgctxt "@label:listbox"
+msgid "Graph Document:"
+msgstr "Novi graf"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: Interface/VisualEditor/GraphVisualEditor.cpp:130
+#: Plugins/TransformEdges/transformedgeswidget.ui:20
+#, fuzzy
+#| msgid "Graph Structure"
+msgid "Data Structure:"
+msgstr "Grafička struktura"
+
+#: Interface/VisualEditor/GraphVisualEditor.cpp:141
+#, fuzzy
+#| msgid "Graph Structure"
+msgctxt "@info:tooltip"
+msgid "Add a new data structure."
+msgstr "Grafička struktura"
+
+#: Interface/VisualEditor/GraphVisualEditor.cpp:147
+#, fuzzy
+#| msgid "Select"
+msgctxt "@info:tooltip"
+msgid "Remove selected data structure."
+msgstr "Odaberi"
+
+#: Interface/VisualEditor/GraphVisualEditor.cpp:287
 #, kde-format
 msgctxt "@info:tooltip current zoom factor for graph editor"
 msgid "Zoom: %1\\%"
@@ -1424,7 +1312,7 @@ msgstr ""
 
 #: LoadSave/Plugins/tgfFileFormat/TgfFileFormatPlugin.cpp:122
 #: LoadSave/Plugins/tikzFileFormat/TikzFileFormatPlugin.cpp:76
-#: LoadSave/RocsGraphFileFormatPlugin.cpp:276
+#: LoadSave/RocsGraphFileFormatPlugin.cpp:275
 #, fuzzy, kde-format
 #| msgid "Cannot open file %1 to write document. Error: %2"
 msgid "Could not open file \"%1\" in write mode: %2"
@@ -1477,7 +1365,7 @@ msgstr ""
 "*.graph|Grf datoteke\n"
 "*|Sve datoteke"
 
-#: LoadSave/RocsGraphFileFormatPlugin.cpp:287
+#: LoadSave/RocsGraphFileFormatPlugin.cpp:286
 #, kde-format
 msgid "Could not write data, aborting. Error: %1."
 msgstr ""
@@ -1561,6 +1449,10 @@ msgstr "Neimenovano%1"
 #: Models/model_GraphProperties.cpp:83
 msgid "Property"
 msgstr "Svojstvo"
+
+#: Models/model_GraphProperties.cpp:84
+msgid "Value"
+msgstr "Vrijednost"
 
 #: Plugins/AssignValues/assignvaluestoolsplugin.cpp:42
 #, fuzzy
@@ -1874,13 +1766,6 @@ msgstr ""
 msgid "Transform Edges"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: Plugins/TransformEdges/transformedgeswidget.ui:20
-#, fuzzy
-#| msgid "Graph Structure"
-msgid "Data Structure:"
-msgstr "Grafička struktura"
-
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioButtonMakeComplete)
 #: Plugins/TransformEdges/transformedgeswidget.ui:47
 msgid ""
@@ -1947,45 +1832,45 @@ msgid "Show text beside icon"
 msgstr "Prikaži tekst pored slike"
 
 #. i18n: ectx: label, entry (includePath), group (IncludeManager)
-#: rocs.kcfg:41
+#: rocs.kcfg:44
 msgid "Path where include manager seek for includes."
 msgstr "Staza gdje menadžer uključenja traži nešto za uključiti"
 
 #. i18n: ectx: label, entry (dataNodeDisplay), group (DefaultElementDisplay)
-#: rocs.kcfg:46
+#: rocs.kcfg:49
 msgid "Position where name and value of a node shall be shown."
 msgstr ""
 
 #. i18n: ectx: label, entry (dataEdgeDisplay), group (DefaultElementDisplay)
-#: rocs.kcfg:49
+#: rocs.kcfg:52
 msgid "Position where name and value of an edge shall be shown."
 msgstr ""
 
 #. i18n: ectx: label, entry (excutionModeDebugVisible), group (DefaultExecutionModeDisplay)
-#: rocs.kcfg:54
+#: rocs.kcfg:57
 msgid "Specifies whether execution button for debug execution shall be shown."
 msgstr ""
 
 #. i18n: ectx: label, entry (excutionModeOneStepVisible), group (DefaultExecutionModeDisplay)
-#: rocs.kcfg:57
+#: rocs.kcfg:60
 msgid ""
 "Specifies whether execution button for stepped execution shall be shown."
 msgstr ""
 
 #. i18n: ectx: Menu (project)
-#: rocsui.rc:21
+#: rocsui.rc:23
 msgid "Project"
 msgstr ""
 
 #. i18n: ectx: Menu (script)
-#: rocsui.rc:31
+#: rocsui.rc:29
 #, fuzzy
 #| msgid "Save Script"
 msgid "Script Document"
 msgstr "Snimi skriptu"
 
 #. i18n: ectx: Menu (script_file)
-#: rocsui.rc:33
+#: rocsui.rc:35
 #, fuzzy
 #| msgid "New Script"
 msgid "Script File"
@@ -1999,52 +1884,52 @@ msgid "Graph Document"
 msgstr "Novi graf"
 
 #. i18n: ectx: Menu (graph_file)
-#: rocsui.rc:45
+#: rocsui.rc:49
 #, fuzzy
 #| msgid "Graph Files"
 msgid "Graph File"
 msgstr "Datoteke grafova"
 
 #. i18n: ectx: Menu (conversions)
-#: rocsui.rc:51
+#: rocsui.rc:53
 #, fuzzy
 #| msgid " Conversions "
 msgid "Convert To"
 msgstr " Konverzije "
 
 #. i18n: ectx: Menu (graph_selected)
-#: rocsui.rc:55
+#: rocsui.rc:57
 #, fuzzy
 #| msgid "Select"
 msgid "Edit Selected Data"
 msgstr "Odaberi"
 
 #. i18n: ectx: Menu
-#: rocsui.rc:57
+#: rocsui.rc:59
 #, fuzzy
 #| msgid "Layout Toolbar"
 msgid "Layout"
 msgstr "Pozicija alatne trake"
 
 #. i18n: ectx: Menu
-#: rocsui.rc:70
+#: rocsui.rc:72
 #, fuzzy
 #| msgid " Tools "
 msgid "Tools"
 msgstr " Alati "
 
 #. i18n: ectx: Menu (help)
-#: rocsui.rc:75
+#: rocsui.rc:77
 msgid "Help"
 msgstr ""
 
 #. i18n: ectx: ToolBar (main)
-#: rocsui.rc:81
+#: rocsui.rc:83
 msgid "Main Toolbar"
 msgstr "Glavna alatna traka"
 
 #. i18n: ectx: ToolBar (layout)
-#: rocsui.rc:89
+#: rocsui.rc:91
 msgid "Layout Toolbar"
 msgstr "Pozicija alatne trake"
 
@@ -2066,6 +1951,122 @@ msgstr ""
 #: UndoRedo/URAddNode.cpp:41
 msgid "Untitled"
 msgstr "Bez naslova"
+
+#, fuzzy
+#~| msgid "Graph Structure"
+#~ msgid "Data structure name"
+#~ msgstr "Grafička struktura"
+
+#, fuzzy
+#~| msgid "Graph Structure"
+#~ msgid "Delete this data structure"
+#~ msgstr "Grafička struktura"
+
+#, fuzzy
+#~| msgid "Delete the current active graph: delete all nodes and edges"
+#~ msgid ""
+#~ "Delete the current data structure: delete all data elements and all "
+#~ "pointers"
+#~ msgstr "Izbriši trenutni aktivni graf: brisanje svih čvorova i rubova"
+
+#, fuzzy
+#~| msgid "Graph Structure"
+#~ msgctxt "@action:button"
+#~ msgid "Add Data Structure"
+#~ msgstr "Grafička struktura"
+
+#, fuzzy
+#~ msgctxt "@action:inmenu"
+#~ msgid "Export Project"
+#~ msgstr "Otvori skriptu..."
+
+#, fuzzy
+#~ msgctxt "@action:inmenu"
+#~ msgid "Import Project"
+#~ msgstr "Otvori skriptu..."
+
+#, fuzzy
+#~| msgid "Name"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Set Name"
+#~ msgstr "Naziv"
+
+#, fuzzy
+#~| msgid "Save Graph"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Save Graph"
+#~ msgstr "Snimi graf"
+
+#, fuzzy
+#~| msgid "Save Script"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Save Script"
+#~ msgstr "Snimi skriptu"
+
+#, fuzzy
+#~ msgctxt "@action:inmenu"
+#~ msgid "Save Script as"
+#~ msgstr "Snimi skriptu"
+
+#, fuzzy
+#~| msgid "Save Script"
+#~ msgctxt "@title:window"
+#~ msgid "Set Project Name"
+#~ msgstr "Snimi skriptu"
+
+#, fuzzy
+#~| msgid "Name:"
+#~ msgctxt "@label:textbox name of the project"
+#~ msgid "Name:"
+#~ msgstr "Naziv:"
+
+#, fuzzy
+#~| msgid "Save Script"
+#~ msgctxt "@title:window"
+#~ msgid "Save Script Document"
+#~ msgstr "Snimi skriptu"
+
+#, fuzzy
+#~ msgctxt "@title:window"
+#~ msgid "Export Project"
+#~ msgstr "Otvori skriptu..."
+
+#~ msgid "Edge Properties"
+#~ msgstr "Svojstva ivica"
+
+#~ msgid "Edge name"
+#~ msgstr "Ime ivice"
+
+#~ msgid "Edge color"
+#~ msgstr "Boja ivice"
+
+#~ msgid "Value:"
+#~ msgstr "Vrijednost:"
+
+#~ msgid "Edge value"
+#~ msgstr "Vrijednost ivice"
+
+#~ msgid "Edge width"
+#~ msgstr "Širina ivice"
+
+#~ msgid "Show"
+#~ msgstr "Prikaži"
+
+#~ msgid "Show/hide edge name"
+#~ msgstr "Prikaži/sakrij ime ivice"
+
+#~ msgid "Show/add edge value"
+#~ msgstr "Prikaži/dodaj vrijednost ivice"
+
+#, fuzzy
+#~ msgid "Add Property"
+#~ msgstr "Svojstvo"
+
+#~ msgid "Global"
+#~ msgstr "Globalno"
+
+#~ msgid "add"
+#~ msgstr "dodaj"
 
 #, fuzzy
 #~| msgid "Untitled%1"
@@ -2215,9 +2216,6 @@ msgstr "Bez naslova"
 #, fuzzy
 #~ msgid "Open Script"
 #~ msgstr "Otvori skriptu..."
-
-#~ msgid "Script"
-#~ msgstr "Skripta"
 
 #, fuzzy
 #~| msgid "Editor"
