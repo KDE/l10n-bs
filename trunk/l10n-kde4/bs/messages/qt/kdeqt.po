@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeqt\n"
 "Report-Msgid-Bugs-To: qt-bugs@trolltech.com\n"
-"POT-Creation-Date: 2012-09-28 02:38+0200\n"
+"POT-Creation-Date: 2012-09-30 04:49+0200\n"
 "PO-Revision-Date: 2011-03-26 15:24+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1607,6 +1607,15 @@ msgctxt "QIODevice"
 msgid "No space left on device"
 msgstr "Nema više prostora na uređaju"
 
+#: corelib/io/qiodevice.cpp:1630 corelib/plugin/qpluginloader.cpp:367
+#: corelib/plugin/qlibrary.cpp:1236
+#: corelib/statemachine/qstatemachine.cpp:1046
+#: network/kernel/qhostinfo_unix.cpp:301
+#: network/socket/qnativesocketengine.cpp:276
+#: network/socket/qsymbiansocketengine.cpp:1435 network/ssl/qsslerror.cpp:289
+msgid "Unknown error"
+msgstr "Nepoznata greška"
+
 #: corelib/io/qprocess.cpp:884 corelib/io/qprocess.cpp:936
 #: corelib/io/qprocess_win.cpp:601 corelib/io/qprocess_win.cpp:651
 msgid "Error reading from process"
@@ -1624,15 +1633,6 @@ msgstr "Proces se srušio"
 #: corelib/io/qprocess.cpp:2054
 msgid "No program defined"
 msgstr "Program nije definisan"
-
-#: corelib/io/qiodevice.cpp:1630 corelib/plugin/qlibrary.cpp:1236
-#: corelib/plugin/qpluginloader.cpp:367
-#: corelib/statemachine/qstatemachine.cpp:1046
-#: network/kernel/qhostinfo_unix.cpp:301
-#: network/socket/qnativesocketengine.cpp:276
-#: network/socket/qsymbiansocketengine.cpp:1435 network/ssl/qsslerror.cpp:289
-msgid "Unknown error"
-msgstr "Nepoznata greška"
 
 #: corelib/io/qprocess_win.cpp:138 corelib/io/qprocess_unix.cpp:402
 msgid "Could not open input redirection for reading"
@@ -1869,6 +1869,30 @@ msgctxt "QSystemSemaphore"
 msgid "%1: ftok failed"
 msgstr "%1: neuspjelo ftok"
 
+#: corelib/plugin/qlibrary_unix.cpp:261 corelib/plugin/qlibrary_win.cpp:136
+#, qt-format
+msgid "Cannot load library %1: %2"
+msgstr "Ne mogu da učitam biblioteku %1: %2"
+
+#: corelib/plugin/qlibrary_unix.cpp:278 corelib/plugin/qlibrary_win.cpp:158
+#, qt-format
+msgid "Cannot unload library %1: %2"
+msgstr "Ne mogu da odučitam biblioteku %1: %2"
+
+#: corelib/plugin/qlibrary_unix.cpp:312 corelib/plugin/qlibrary_win.cpp:173
+#, qt-format
+msgid "Cannot resolve symbol \"%1\" in %2: %3"
+msgstr "Ne mogu da razriješim simbol ‘%1’ u %2: %3"
+
+#: corelib/plugin/qpluginloader.cpp:254
+msgid "The plugin was not loaded."
+msgstr "Priključak nije učitan."
+
+#: corelib/plugin/qpluginloader.cpp:343 corelib/plugin/qlibrary.cpp:682
+#: corelib/plugin/qlibrary.cpp:828
+msgid "The shared library was not found."
+msgstr "Dijeljena biblioteka nije nađena."
+
 #: corelib/plugin/qelfparser_p.cpp:77
 #, qt-format
 msgid "'%1' is not an ELF object (%2)"
@@ -1895,11 +1919,6 @@ msgstr "%1 nije valjano %2"
 #, qt-format
 msgid "Plugin verification data mismatch in '%1'"
 msgstr "Nepoklapanje ovjere priključka u „%1“"
-
-#: corelib/plugin/qlibrary.cpp:682 corelib/plugin/qlibrary.cpp:828
-#: corelib/plugin/qpluginloader.cpp:343
-msgid "The shared library was not found."
-msgstr "Dijeljena biblioteka nije nađena."
 
 #: corelib/plugin/qlibrary.cpp:830
 #, qt-format
@@ -1928,25 +1947,6 @@ msgid ""
 msgstr ""
 "Priključak „%1“ koristi nesaglasnu biblioteku Qt‑a. (Ne mogu se miješati "
 "ispravljački i prometne biblioteke.)"
-
-#: corelib/plugin/qlibrary_unix.cpp:261 corelib/plugin/qlibrary_win.cpp:136
-#, qt-format
-msgid "Cannot load library %1: %2"
-msgstr "Ne mogu da učitam biblioteku %1: %2"
-
-#: corelib/plugin/qlibrary_unix.cpp:278 corelib/plugin/qlibrary_win.cpp:158
-#, qt-format
-msgid "Cannot unload library %1: %2"
-msgstr "Ne mogu da odučitam biblioteku %1: %2"
-
-#: corelib/plugin/qlibrary_unix.cpp:312 corelib/plugin/qlibrary_win.cpp:173
-#, qt-format
-msgid "Cannot resolve symbol \"%1\" in %2: %3"
-msgstr "Ne mogu da razriješim simbol ‘%1’ u %2: %3"
-
-#: corelib/plugin/qpluginloader.cpp:254
-msgid "The plugin was not loaded."
-msgstr "Priključak nije učitan."
 
 #: corelib/statemachine/qstatemachine.cpp:1028
 #, qt-format
@@ -2157,12 +2157,12 @@ msgstr "KeyNavigation je dostupan jedino preko dodijeljenih osobina"
 msgid "Loader does not support loading non-visual elements."
 msgstr "Loader ne podržava učitavanje ne-vizuelnih elemenata."
 
-#: declarative/graphicsitems/qdeclarativetextinput.cpp:962
-#: declarative/graphicsitems/qdeclarativetextinput.cpp:970
+#: declarative/graphicsitems/qdeclarativetextinput.cpp:961
+#: declarative/graphicsitems/qdeclarativetextinput.cpp:969
 msgid "Could not load cursor delegate"
 msgstr "Neuspjelo učitavanje delegata kursora."
 
-#: declarative/graphicsitems/qdeclarativetextinput.cpp:981
+#: declarative/graphicsitems/qdeclarativetextinput.cpp:980
 msgid "Could not instantiate cursor delegate"
 msgstr "Neuspjelo davanje primjera delegata kursora."
 
@@ -3021,22 +3021,6 @@ msgstr "Neuspjelo očuvanje izgleda pod neravnomjernim razmjerom"
 msgid "Unable to preserve appearance under scale of 0"
 msgstr "Neuspjelo očuvanje izgleda pod razmjerom 0"
 
-#: declarative/util/qdeclarativexmllistmodel.cpp:581
-#, qt-format
-msgid "\"%1\" duplicates a previous role name and will be disabled."
-msgstr "\"%1\" duplicira ime prethodne uloge i deaktivira ga."
-
-#: declarative/util/qdeclarativexmllistmodel.cpp:826
-msgctxt "QDeclarativeXmlRoleList"
-msgid "An XmlListModel query must start with '/' or \"//\""
-msgstr "XmlListModel upit mora početi sa '/' ili sa \"//\""
-
-#: declarative/util/qdeclarativexmllistmodel.cpp:1105
-#: declarative/util/qdeclarativexmllistmodel.cpp:1109
-#, qt-format
-msgid "invalid query: \"%1\""
-msgstr "Nevažeći upit: \"%1\""
-
 #: declarative/util/qdeclarativeutilmodule.cpp:80
 #, fuzzy
 #| msgid "Animation is an abstract class"
@@ -3056,6 +3040,22 @@ msgctxt "QDeclarativeXmlListModel"
 msgid "Qt was built without support for xmlpatterns"
 msgstr "Qt napravljen uz podršku xmlpatterns-a"
 
+#: declarative/util/qdeclarativexmllistmodel.cpp:581
+#, qt-format
+msgid "\"%1\" duplicates a previous role name and will be disabled."
+msgstr "\"%1\" duplicira ime prethodne uloge i deaktivira ga."
+
+#: declarative/util/qdeclarativexmllistmodel.cpp:826
+msgctxt "QDeclarativeXmlRoleList"
+msgid "An XmlListModel query must start with '/' or \"//\""
+msgstr "XmlListModel upit mora početi sa '/' ili sa \"//\""
+
+#: declarative/util/qdeclarativexmllistmodel.cpp:1105
+#: declarative/util/qdeclarativexmllistmodel.cpp:1109
+#, qt-format
+msgid "invalid query: \"%1\""
+msgstr "Nevažeći upit: \"%1\""
+
 #: declarative/util/qdeclarativeconnections.cpp:217
 msgid "Connections: nested objects not allowed"
 msgstr "Konekcije: ugniježđeni objekti nedozvoljeni"
@@ -3067,6 +3067,10 @@ msgstr "Konekcije: sintaksička greška"
 #: declarative/util/qdeclarativeconnections.cpp:228
 msgid "Connections: script expected"
 msgstr "Konekcije:"
+
+#: declarative/util/qdeclarativebehavior.cpp:127
+msgid "Cannot change the animation assigned to a Behavior."
+msgstr "Nemoguće promjeniti animaciju."
 
 #: declarative/util/qdeclarativeanimation.cpp:172
 #, qt-format
@@ -3083,10 +3087,6 @@ msgstr "Nemoguće animirati fiksnu osobinu \"%1\""
 #: declarative/util/qdeclarativeanimation.cpp:2867
 msgid "Cannot set a duration of < 0"
 msgstr "Nemoguće odrediti trajanje <0"
-
-#: declarative/util/qdeclarativebehavior.cpp:127
-msgid "Cannot change the animation assigned to a Behavior."
-msgstr "Nemoguće promjeniti animaciju."
 
 #: gui/accessible/qaccessibleobject.cpp:374
 #: plugins/accessible/widgets/complexwidgets.cpp:1617
@@ -3265,9 +3265,9 @@ msgid ""
 "terms of the GNU GPL version 3.0 or where you are otherwise willing to "
 "comply with the terms of the GNU GPL version 3.0.</p><p>Please see <a href="
 "\"http://qt.nokia.com/products/licensing\">qt.nokia.com/products/licensing</"
-"a> for an overview of Qt licensing.</p><p>Copyright (C) 2012 Nokia "
-"Corporation and/or its subsidiary(-ies).</p><p>Qt is a Nokia product. See <a "
-"href=\"http://qt.nokia.com/\">qt.nokia.com</a> for more information.</p>"
+"a> for an overview of Qt licensing.</p><p>Copyright (C) 2012 Digia Plc and/"
+"or its subsidiary(-ies).</p><p>Qt is a Nokia product. See <a href=\"http://"
+"qt.nokia.com/\">qt.nokia.com</a> for more information.</p>"
 msgstr ""
 "<p>QT je C ++ alat za višeplatformski razvoj aplikacija.</p><p>QT "
 "obezbjeđuje jednim izvorom prenosivost preko MS Windows, Mac OS X Linux, i "
@@ -3528,16 +3528,6 @@ msgstr "vrijednost"
 msgid "Cancel"
 msgstr "Odustani"
 
-#: gui/dialogs/qabstractpagesetupdialog.cpp:68
-#: gui/dialogs/qabstractpagesetupdialog.cpp:80
-msgctxt "QPrintPreviewDialog"
-msgid "Page Setup"
-msgstr "Postavka stranice"
-
-#: gui/dialogs/qsidebar.cpp:442
-msgid "Remove"
-msgstr "Ukloni"
-
 #: gui/dialogs/qwizard.cpp:688
 msgid "Go Back"
 msgstr "Idi nazad"
@@ -3581,9 +3571,11 @@ msgstr "Pomoć"
 msgid "&Help"
 msgstr "P&omoć"
 
-#: gui/dialogs/qdialog.cpp:653 gui/kernel/qwhatsthis.cpp:527
-msgid "What's This?"
-msgstr "Šta je ovo?"
+#: gui/dialogs/qabstractpagesetupdialog.cpp:68
+#: gui/dialogs/qabstractpagesetupdialog.cpp:80
+msgctxt "QPrintPreviewDialog"
+msgid "Page Setup"
+msgstr "Postavka stranice"
 
 # >> @title:window
 #: gui/dialogs/qabstractprintdialog.cpp:116
@@ -3591,6 +3583,14 @@ msgstr "Šta je ovo?"
 msgctxt "QPrintDialog"
 msgid "Print"
 msgstr "Štampanje"
+
+#: gui/dialogs/qsidebar.cpp:442
+msgid "Remove"
+msgstr "Ukloni"
+
+#: gui/dialogs/qdialog.cpp:653 gui/kernel/qwhatsthis.cpp:527
+msgid "What's This?"
+msgstr "Šta je ovo?"
 
 #: gui/dialogs/qprintdialog_qws.cpp:148
 msgid "File exists"
@@ -3863,14 +3863,6 @@ msgstr "MacOS‑ov način unosa"
 msgid "S60 FEP input method"
 msgstr "S60 FEP način unosa"
 
-#: gui/itemviews/qitemeditorfactory.cpp:556 qt3support/sql/q3datatable.cpp:286
-msgid "False"
-msgstr "netačno"
-
-#: gui/itemviews/qitemeditorfactory.cpp:557 qt3support/sql/q3datatable.cpp:285
-msgid "True"
-msgstr "tačno"
-
 #: gui/itemviews/qdirmodel.cpp:852
 msgctxt "QFileDialog"
 msgid "My Computer"
@@ -3918,6 +3910,14 @@ msgstr "Prečica"
 msgctxt "QFileDialog"
 msgid "Unknown"
 msgstr "Nepoznato"
+
+#: gui/itemviews/qitemeditorfactory.cpp:556 qt3support/sql/q3datatable.cpp:286
+msgid "False"
+msgstr "netačno"
+
+#: gui/itemviews/qitemeditorfactory.cpp:557 qt3support/sql/q3datatable.cpp:285
+msgid "True"
+msgstr "tačno"
 
 #: gui/kernel/qapplication.cpp:2428
 msgctxt ""
@@ -5622,7 +5622,7 @@ msgstr "Obnovi"
 #: gui/widgets/qmdisubwindow.cpp:352 gui/widgets/qworkspace.cpp:113
 #: plugins/accessible/compat/q3complexwidgets.cpp:256
 #: plugins/accessible/widgets/complexwidgets.cpp:1614
-#: plugins/accessible/widgets/complexwidgets.cpp:1910
+#: plugins/accessible/widgets/complexwidgets.cpp:1912
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:157
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:382
 #: plugins/accessible/widgets/qaccessiblewidgets.cpp:1329
@@ -5912,6 +5912,103 @@ msgstr "Nije dato ime domaćina"
 msgid "Invalid hostname"
 msgstr "Loše ime domaćina"
 
+#: network/socket/qsocks5socketengine.cpp:623
+msgid "Connection to proxy refused"
+msgstr "Veza s proksijem odbijena"
+
+#: network/socket/qsocks5socketengine.cpp:627
+msgid "Connection to proxy closed prematurely"
+msgstr "Veza s proksijem prerano okončana"
+
+#: network/socket/qsocks5socketengine.cpp:631
+msgid "Proxy host not found"
+msgstr "Domaćin proksija nije nađen"
+
+#: network/socket/qsocks5socketengine.cpp:636
+msgid "Connection to proxy timed out"
+msgstr "Vezi s proksijem isteklo vrijeme"
+
+#: network/socket/qsocks5socketengine.cpp:653
+msgid "Proxy authentication failed"
+msgstr "Neuspješna autentifikacija proksija"
+
+#: network/socket/qsocks5socketengine.cpp:654
+#, qt-format
+msgid "Proxy authentication failed: %1"
+msgstr "Neuspješna autentifikacija proksija: %1"
+
+#: network/socket/qsocks5socketengine.cpp:663
+msgid "SOCKS version 5 protocol error"
+msgstr "Greška protokola SOCKS verzije 5"
+
+#: network/socket/qsocks5socketengine.cpp:682
+msgid "General SOCKSv5 server failure"
+msgstr "Opšti krah SOCKS (v5) servera"
+
+#: network/socket/qsocks5socketengine.cpp:686
+msgid "Connection not allowed by SOCKSv5 server"
+msgstr "SOCKS (v5) server ne dozvoljava vezu"
+
+#: network/socket/qsocks5socketengine.cpp:690
+#: network/socket/qnativesocketengine.cpp:231
+#: network/socket/qsymbiansocketengine.cpp:1384
+msgid "Network unreachable"
+msgstr "Mreža je nedostižna"
+
+#: network/socket/qsocks5socketengine.cpp:698
+#: network/socket/qabstractsocket.cpp:968
+#: network/socket/qnativesocketengine.cpp:240
+#: network/socket/qsymbiansocketengine.cpp:1393
+msgid "Connection refused"
+msgstr "Veza odbijena"
+
+#: network/socket/qsocks5socketengine.cpp:702
+msgid "TTL expired"
+msgstr "TTL istekao"
+
+#: network/socket/qsocks5socketengine.cpp:706
+msgid "SOCKSv5 command not supported"
+msgstr "SOCKS (v5) naredba nije podržana"
+
+#: network/socket/qsocks5socketengine.cpp:710
+msgid "Address type not supported"
+msgstr "Tip adrese nije podržan"
+
+#: network/socket/qsocks5socketengine.cpp:715
+#, qt-format
+msgid "Unknown SOCKSv5 proxy error code 0x%1"
+msgstr "Nepoznat kȏ̑d greške 0x%1 SOCKS (v5) proksija"
+
+#: network/socket/qsocks5socketengine.cpp:1409
+msgctxt "QSocks5SocketEngine"
+msgid "Network operation timed out"
+msgstr "Mrežnoj aktivnosti isteklo vrijeme"
+
+#: network/socket/qudpsocket.cpp:199
+msgid "This platform does not support IPv6"
+msgstr "Ova platforma ne podržava IPv6"
+
+#: network/socket/qabstractsocket.cpp:555
+#: network/socket/qabstractsocket.cpp:1382
+#: network/socket/qabstractsocket.cpp:1607 network/socket/qtcpserver.cpp:292
+#: network/socket/qtcpserver.cpp:421
+msgid "Operation on socket is not supported"
+msgstr "Postupak nad soketom nije podržan"
+
+#: network/socket/qabstractsocket.cpp:1110
+#: network/socket/qnativesocketengine.cpp:237
+#: network/socket/qsymbiansocketengine.cpp:1390
+msgid "Connection timed out"
+msgstr "Vezi isteklo vrijeme"
+
+#: network/socket/qabstractsocket.cpp:1826
+msgid "Socket operation timed out"
+msgstr "Postupku soketa isteklo vrijeme"
+
+#: network/socket/qabstractsocket.cpp:2263
+msgid "Socket is not connected"
+msgstr "Soket nije povezan"
+
 #: network/socket/qnativesocketengine.cpp:201
 #: network/socket/qsymbiansocketengine.cpp:1354
 msgid "Unable to initialize non-blocking socket"
@@ -5961,25 +6058,6 @@ msgstr "Loš opisnik soketa"
 #: network/socket/qsymbiansocketengine.cpp:1381
 msgid "Host unreachable"
 msgstr "Domaćin je nedostižan"
-
-#: network/socket/qnativesocketengine.cpp:231
-#: network/socket/qsocks5socketengine.cpp:690
-#: network/socket/qsymbiansocketengine.cpp:1384
-msgid "Network unreachable"
-msgstr "Mreža je nedostižna"
-
-#: network/socket/qnativesocketengine.cpp:237
-#: network/socket/qsymbiansocketengine.cpp:1390
-#: network/socket/qabstractsocket.cpp:1110
-msgid "Connection timed out"
-msgstr "Vezi isteklo vrijeme"
-
-#: network/socket/qnativesocketengine.cpp:240
-#: network/socket/qsocks5socketengine.cpp:698
-#: network/socket/qsymbiansocketengine.cpp:1393
-#: network/socket/qabstractsocket.cpp:968
-msgid "Connection refused"
-msgstr "Veza odbijena"
 
 #: network/socket/qnativesocketengine.cpp:243
 #: network/socket/qsymbiansocketengine.cpp:1396
@@ -6036,65 +6114,6 @@ msgstr "Postupak nad ne‑soketom"
 msgid "The proxy type is invalid for this operation"
 msgstr "Tip proksija nije valjan za ovaj postupak"
 
-#: network/socket/qsocks5socketengine.cpp:623
-msgid "Connection to proxy refused"
-msgstr "Veza s proksijem odbijena"
-
-#: network/socket/qsocks5socketengine.cpp:627
-msgid "Connection to proxy closed prematurely"
-msgstr "Veza s proksijem prerano okončana"
-
-#: network/socket/qsocks5socketengine.cpp:631
-msgid "Proxy host not found"
-msgstr "Domaćin proksija nije nađen"
-
-#: network/socket/qsocks5socketengine.cpp:636
-msgid "Connection to proxy timed out"
-msgstr "Vezi s proksijem isteklo vrijeme"
-
-#: network/socket/qsocks5socketengine.cpp:653
-msgid "Proxy authentication failed"
-msgstr "Neuspješna autentifikacija proksija"
-
-#: network/socket/qsocks5socketengine.cpp:654
-#, qt-format
-msgid "Proxy authentication failed: %1"
-msgstr "Neuspješna autentifikacija proksija: %1"
-
-#: network/socket/qsocks5socketengine.cpp:663
-msgid "SOCKS version 5 protocol error"
-msgstr "Greška protokola SOCKS verzije 5"
-
-#: network/socket/qsocks5socketengine.cpp:682
-msgid "General SOCKSv5 server failure"
-msgstr "Opšti krah SOCKS (v5) servera"
-
-#: network/socket/qsocks5socketengine.cpp:686
-msgid "Connection not allowed by SOCKSv5 server"
-msgstr "SOCKS (v5) server ne dozvoljava vezu"
-
-#: network/socket/qsocks5socketengine.cpp:702
-msgid "TTL expired"
-msgstr "TTL istekao"
-
-#: network/socket/qsocks5socketengine.cpp:706
-msgid "SOCKSv5 command not supported"
-msgstr "SOCKS (v5) naredba nije podržana"
-
-#: network/socket/qsocks5socketengine.cpp:710
-msgid "Address type not supported"
-msgstr "Tip adrese nije podržan"
-
-#: network/socket/qsocks5socketengine.cpp:715
-#, qt-format
-msgid "Unknown SOCKSv5 proxy error code 0x%1"
-msgstr "Nepoznat kȏ̑d greške 0x%1 SOCKS (v5) proksija"
-
-#: network/socket/qsocks5socketengine.cpp:1409
-msgctxt "QSocks5SocketEngine"
-msgid "Network operation timed out"
-msgstr "Mrežnoj aktivnosti isteklo vrijeme"
-
 #: network/socket/qsymbiansocketengine.cpp:1429
 #, fuzzy
 #| msgid "The proxy type is invalid for this operation"
@@ -6106,86 +6125,6 @@ msgstr "Tip proksija nije valjan za ovaj postupak"
 #| msgid "The specified configuration cannot be used."
 msgid "The specified network session is not opened"
 msgstr "Navedena konfiguracija ne može biti korištena."
-
-#: network/socket/qtcpserver.cpp:292 network/socket/qtcpserver.cpp:421
-#: network/socket/qabstractsocket.cpp:555
-#: network/socket/qabstractsocket.cpp:1382
-#: network/socket/qabstractsocket.cpp:1607
-msgid "Operation on socket is not supported"
-msgstr "Postupak nad soketom nije podržan"
-
-#: network/socket/qudpsocket.cpp:199
-msgid "This platform does not support IPv6"
-msgstr "Ova platforma ne podržava IPv6"
-
-#: network/socket/qabstractsocket.cpp:1826
-msgid "Socket operation timed out"
-msgstr "Postupku soketa isteklo vrijeme"
-
-#: network/socket/qabstractsocket.cpp:2263
-msgid "Socket is not connected"
-msgstr "Soket nije povezan"
-
-#: network/ssl/qsslsocket_openssl.cpp:287
-#, qt-format
-msgid "Error creating SSL context (%1)"
-msgstr "Greška pri stvaranju SSL konteksta (%1)"
-
-#: network/ssl/qsslsocket_openssl.cpp:341
-#, qt-format
-msgid "Invalid or empty cipher list (%1)"
-msgstr "Loš ili prazan spisak šifrara (%1)"
-
-#: network/ssl/qsslsocket_openssl.cpp:385
-#, qt-format
-msgid "Cannot provide a certificate with no key, %1"
-msgstr "Ne mogu da dam sertifikat bez ključa, %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:392
-#, qt-format
-msgid "Error loading local certificate, %1"
-msgstr "Greška pri učitavanju lokalnog sertifikata, %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:407
-#, qt-format
-msgid "Error loading private key, %1"
-msgstr "Greška pri učitavanju privatnog ključa, %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:414
-#, qt-format
-msgid "Private key does not certify public key, %1"
-msgstr "Privatni ključ ne ovjerava javni, %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:434
-#, qt-format
-msgid "Error creating SSL session, %1"
-msgstr "Greška pri stvaranju SSL sesije, %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:470
-#, qt-format
-msgid "Error creating SSL session: %1"
-msgstr "greška pri stvaranju SSL sesije: %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:1023
-#, qt-format
-msgid "Unable to write data: %1"
-msgstr "Ne mogu da upišem podatke: %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:1093
-#, qt-format
-msgid "Unable to decrypt data: %1"
-msgstr "Ne mogu da dešifrujem podatke: %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:1171
-#: network/ssl/qsslsocket_openssl.cpp:1181
-#, qt-format
-msgid "Error while reading: %1"
-msgstr "Greška tokom čitanja: %1"
-
-#: network/ssl/qsslsocket_openssl.cpp:1276
-#, qt-format
-msgid "Error during SSL handshake: %1"
-msgstr "Greška tokom SSL rukovanja: %1"
 
 #: network/ssl/qsslerror.cpp:217
 msgid "The issuer certificate could not be found"
@@ -6293,6 +6232,67 @@ msgstr ""
 msgid "The peer certificate is blacklisted"
 msgstr "Certifikat sugovornika je na crnoj listi"
 
+#: network/ssl/qsslsocket_openssl.cpp:287
+#, qt-format
+msgid "Error creating SSL context (%1)"
+msgstr "Greška pri stvaranju SSL konteksta (%1)"
+
+#: network/ssl/qsslsocket_openssl.cpp:341
+#, qt-format
+msgid "Invalid or empty cipher list (%1)"
+msgstr "Loš ili prazan spisak šifrara (%1)"
+
+#: network/ssl/qsslsocket_openssl.cpp:385
+#, qt-format
+msgid "Cannot provide a certificate with no key, %1"
+msgstr "Ne mogu da dam sertifikat bez ključa, %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:392
+#, qt-format
+msgid "Error loading local certificate, %1"
+msgstr "Greška pri učitavanju lokalnog sertifikata, %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:407
+#, qt-format
+msgid "Error loading private key, %1"
+msgstr "Greška pri učitavanju privatnog ključa, %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:414
+#, qt-format
+msgid "Private key does not certify public key, %1"
+msgstr "Privatni ključ ne ovjerava javni, %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:434
+#, qt-format
+msgid "Error creating SSL session, %1"
+msgstr "Greška pri stvaranju SSL sesije, %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:470
+#, qt-format
+msgid "Error creating SSL session: %1"
+msgstr "greška pri stvaranju SSL sesije: %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:1023
+#, qt-format
+msgid "Unable to write data: %1"
+msgstr "Ne mogu da upišem podatke: %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:1093
+#, qt-format
+msgid "Unable to decrypt data: %1"
+msgstr "Ne mogu da dešifrujem podatke: %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:1171
+#: network/ssl/qsslsocket_openssl.cpp:1181
+#, qt-format
+msgid "Error while reading: %1"
+msgstr "Greška tokom čitanja: %1"
+
+#: network/ssl/qsslsocket_openssl.cpp:1276
+#, qt-format
+msgid "Error during SSL handshake: %1"
+msgstr "Greška tokom SSL rukovanja: %1"
+
 #: plugins/accessible/compat/q3complexwidgets.cpp:246
 msgid "System"
 msgstr "Sistem"
@@ -6360,8 +6360,8 @@ msgstr "Zatvori karticu"
 msgid "Activate the tab"
 msgstr "Aktiviraj"
 
-#: plugins/accessible/widgets/complexwidgets.cpp:1844
-#: plugins/accessible/widgets/complexwidgets.cpp:1910
+#: plugins/accessible/widgets/complexwidgets.cpp:1846
+#: plugins/accessible/widgets/complexwidgets.cpp:1912
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:158
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:383
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:437
@@ -6376,6 +6376,14 @@ msgstr "Otvori"
 #: plugins/accessible/widgets/qaccessiblemenu.cpp:438
 msgid "Execute"
 msgstr "Izvrši"
+
+#: plugins/accessible/widgets/qaccessiblewidgets.cpp:1331
+msgid "Dock"
+msgstr "Usidri"
+
+#: plugins/accessible/widgets/qaccessiblewidgets.cpp:1332
+msgid "Float"
+msgstr "Plutaj"
 
 #: plugins/accessible/widgets/rangecontrols.cpp:149
 #: plugins/accessible/widgets/rangecontrols.cpp:412
@@ -6414,14 +6422,6 @@ msgstr "Brzinometar"
 #: plugins/accessible/widgets/rangecontrols.cpp:937
 msgid "SliderHandle"
 msgstr "Ručka klizača"
-
-#: plugins/accessible/widgets/qaccessiblewidgets.cpp:1331
-msgid "Dock"
-msgstr "Usidri"
-
-#: plugins/accessible/widgets/qaccessiblewidgets.cpp:1332
-msgid "Float"
-msgstr "Plutaj"
 
 #: plugins/accessible/widgets/simplewidgets.cpp:123
 #: plugins/accessible/widgets/simplewidgets.cpp:268
@@ -6546,9 +6546,37 @@ msgstr ""
 "Mjenjač metoda unosa koji koristi kontekstni meni tekstualnih grafičke "
 "kontrole"
 
-#: plugins/platforms/blackberry/qbbinputcontext_imf.cpp:889
+#: plugins/platforms/blackberry/qbbinputcontext_imf.cpp:893
 msgid "PlayBook IMF"
 msgstr ""
+
+#: plugins/qmltooling/qmldbg_inspector/editor/liveselectiontool.cpp:143
+msgid "Items"
+msgstr ""
+
+#: plugins/qmltooling/qmldbg_inspector/editor/toolbarcolorbox.cpp:65
+#, fuzzy
+#| msgid "Color"
+msgid "Copy Color"
+msgstr "Boja"
+
+#: plugins/qmltooling/qmldbg_inspector/editor/zoomtool.cpp:63
+msgid "Zoom to &100%"
+msgstr ""
+
+#: plugins/qmltooling/qmldbg_inspector/editor/zoomtool.cpp:64
+#, fuzzy
+#| msgctxt "QShortcut"
+#| msgid "Zoom In"
+msgid "Zoom In"
+msgstr "uveličaj"
+
+#: plugins/qmltooling/qmldbg_inspector/editor/zoomtool.cpp:65
+#, fuzzy
+#| msgctxt "QShortcut"
+#| msgid "Zoom Out"
+msgid "Zoom Out"
+msgstr "umanji"
 
 #: plugins/qmltooling/qmldbg_inspector/editor/qmltoolbar.cpp:65
 #, fuzzy
@@ -6615,34 +6643,6 @@ msgstr ""
 msgid "0.1x"
 msgstr ""
 
-#: plugins/qmltooling/qmldbg_inspector/editor/toolbarcolorbox.cpp:65
-#, fuzzy
-#| msgid "Color"
-msgid "Copy Color"
-msgstr "Boja"
-
-#: plugins/qmltooling/qmldbg_inspector/editor/zoomtool.cpp:63
-msgid "Zoom to &100%"
-msgstr ""
-
-#: plugins/qmltooling/qmldbg_inspector/editor/zoomtool.cpp:64
-#, fuzzy
-#| msgctxt "QShortcut"
-#| msgid "Zoom In"
-msgid "Zoom In"
-msgstr "uveličaj"
-
-#: plugins/qmltooling/qmldbg_inspector/editor/zoomtool.cpp:65
-#, fuzzy
-#| msgctxt "QShortcut"
-#| msgid "Zoom Out"
-msgid "Zoom Out"
-msgstr "umanji"
-
-#: plugins/qmltooling/qmldbg_inspector/editor/liveselectiontool.cpp:143
-msgid "Items"
-msgstr ""
-
 #: qt3support/dialogs/q3tabdialog.cpp:648
 msgid "Apply"
 msgstr "Primijeni"
@@ -6668,14 +6668,6 @@ msgstr "%1, %2 nije definisano"
 #, qt-format
 msgid "Ambiguous %1 not handled"
 msgstr "Dvosmisleno %1 nije obrađeno"
-
-#: qt3support/sql/q3datatable.cpp:791
-msgid "Insert"
-msgstr "Umetni"
-
-#: qt3support/sql/q3datatable.cpp:792
-msgid "Update"
-msgstr "Ažuriraj"
 
 #: qt3support/sql/q3sqlmanager_p.cpp:890
 msgctxt "QSql"
@@ -6729,17 +6721,25 @@ msgctxt "QSql"
 msgid "Cancel your edits?"
 msgstr "Odbaciti izmjene?"
 
+#: qt3support/sql/q3datatable.cpp:791
+msgid "Insert"
+msgstr "Umetni"
+
+#: qt3support/sql/q3datatable.cpp:792
+msgid "Update"
+msgstr "Ažuriraj"
+
 #: qt3support/text/q3textedit.cpp:5441
 msgid "Clear"
 msgstr "Očisti"
 
-#: qt3support/widgets/q3toolbar.cpp:692
-msgid "More..."
-msgstr "Više..."
-
 #: qt3support/widgets/q3mainwindow.cpp:2053
 msgid "Customize..."
 msgstr "Prilagodi..."
+
+#: qt3support/widgets/q3toolbar.cpp:692
+msgid "More..."
+msgstr "Više..."
 
 # >> @title:column
 #: scripttools/debugging/qscriptbreakpointsmodel.cpp:455
@@ -8040,15 +8040,6 @@ msgstr "Proslijeđen je parametar %1, ali ne postoji odgovarajući %2."
 msgid "The parameter %1 is required, but no corresponding %2 is supplied."
 msgstr "Zahtijevan je parametar %1, ali nije zadat odgovarajući %2."
 
-#: xmlpatterns/functions/qcontextnodechecker.cpp:54
-#, qt-format
-msgid ""
-"The root node of the second argument to function %1 must be a document node. "
-"%2 is not a document node."
-msgstr ""
-"Korjeni čvor drugog argumenta funkcije %1 mora biti dokument‑čvor. %2 to "
-"nije."
-
 #: xmlpatterns/functions/qdatetimefn.cpp:86
 #, qt-format
 msgid ""
@@ -8199,6 +8190,15 @@ msgstr "%1 nije valjan znak u XML‑u 1.0."
 #, qt-format
 msgid "The first argument to %1 cannot be of type %2."
 msgstr "Prvi argument za %1 ne može biti tipa %2."
+
+#: xmlpatterns/functions/qcontextnodechecker.cpp:54
+#, qt-format
+msgid ""
+"The root node of the second argument to function %1 must be a document node. "
+"%2 is not a document node."
+msgstr ""
+"Korjeni čvor drugog argumenta funkcije %1 mora biti dokument‑čvor. %2 to "
+"nije."
 
 #: xmlpatterns/janitors/qcardinalityverifier.cpp:58
 #, qt-format
@@ -9549,76 +9549,76 @@ msgstr ""
 
 #: xmlpatterns/schema/qxsdschemaparser.cpp:1584
 #: xmlpatterns/schema/qxsdschemaparser.cpp:1703
-#: xmlpatterns/schema/qxsdschemaparser.cpp:1795
+#: xmlpatterns/schema/qxsdschemaparser.cpp:1792
 #, qt-format
 msgid "%1 element has neither %2 attribute nor %3 child element."
 msgstr "Element %1 nema ni atribut %2 ni dečiji element %3."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:2630
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4104
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4336
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4343
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4603
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4620
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4878
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4884
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4901
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4907
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4924
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4935
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4946
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4957
+#: xmlpatterns/schema/qxsdschemaparser.cpp:2627
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4101
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4333
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4340
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4600
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4617
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4875
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4881
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4898
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4904
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4921
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4932
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4943
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4954
 #, qt-format
 msgid "%1 element with %2 child element must not have a %3 attribute."
 msgstr "Element %1 sa dečijim elementom %2 ne može imati atribut %3."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:3632
+#: xmlpatterns/schema/qxsdschemaparser.cpp:3629
 #, qt-format
 msgid "%1 attribute of %2 element must be %3 or %4."
 msgstr "Atribut %1 elementa %2 mora biti %3 ili %4."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:3668
+#: xmlpatterns/schema/qxsdschemaparser.cpp:3665
 #, qt-format
 msgid "%1 attribute of %2 element must have a value of %3."
 msgstr "Atribut %1 elementa %2 mora imati vrijednost %3."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:3675
-#: xmlpatterns/schema/qxsdschemaparser.cpp:3709
+#: xmlpatterns/schema/qxsdschemaparser.cpp:3672
+#: xmlpatterns/schema/qxsdschemaparser.cpp:3706
 #, qt-format
 msgid "%1 attribute of %2 element must have a value of %3 or %4."
 msgstr "Atribut %1 elementa %2 mora imati vrijednost %3 ili %4."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4028
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4157
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4166
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4173
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4180
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4507
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4710
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4716
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4722
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4728
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4734
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4740
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4746
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4823
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4025
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4154
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4163
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4170
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4177
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4504
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4707
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4713
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4719
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4725
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4731
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4737
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4743
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4820
 #, qt-format
 msgid "%1 element must not have %2 and %3 attribute together."
 msgstr "Element %1 ne može imati istovremeno atribute %2 i %3."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4055
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4277
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4052
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4274
 #, qt-format
 msgid "Content of %1 attribute of %2 element must not be from namespace %3."
 msgstr "Sadržaj atributa %1 elementa %2 ne može biti iz imenskog prostora %3."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4062
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4284
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4059
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4281
 #, qt-format
 msgid "%1 attribute of %2 element must not be %3."
 msgstr "Atribut %1 elementa %2 ne može biti %3."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4220
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4217
 #, qt-format
 msgid ""
 "%1 attribute of %2 element must have the value %3 because the %4 attribute "
@@ -9627,98 +9627,98 @@ msgstr ""
 "Atribut %1 elementa %2 mora imati vrijednost %3 zato što je postavljen "
 "atribut %4."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4407
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4404
 msgid "Specifying use='prohibited' inside an attribute group has no effect."
 msgstr "Navođenje use='prohibited' nema uticaja unutar grupe atributa."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:4760
+#: xmlpatterns/schema/qxsdschemaparser.cpp:4757
 #, qt-format
 msgid "%1 element must have either %2 or %3 attribute."
 msgstr "Element %1 mora imati ili atribut %2 ili %3."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5314
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5311
 #, qt-format
 msgid "%1 element must have either %2 attribute or %3 or %4 as child element."
 msgstr "Element %1 mora imati ili atribut %2 ili %3 ili %4 za dečiji element."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5369
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5366
 #, qt-format
 msgid "%1 element requires either %2 or %3 attribute."
 msgstr "Element %1 zahtjeva ili atribut %2 ili %3."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5388
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5385
 #, qt-format
 msgid "Text or entity references not allowed inside %1 element"
 msgstr "Tekst i upućivači na entitete nisu dozvoljeni u elementu %1"
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5429
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5541
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5426
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5538
 #, qt-format
 msgid "%1 attribute of %2 element must contain %3, %4 or a list of URIs."
 msgstr "Atribut %1 elementa %2 mora sadržati %3, %4 ili listu URI‑ja."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5667
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5664
 #, qt-format
 msgid "%1 element is not allowed in this context."
 msgstr "Element %1 nije dozvoljen u ovom kontekstu."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5720
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5717
 #, qt-format
 msgid "%1 attribute of %2 element has larger value than %3 attribute."
 msgstr "Atribut %1 elementa %2 ima veću vrijednost od atributa %3."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5745
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5742
 #, qt-format
 msgid "Prefix of qualified name %1 is not defined."
 msgstr "Prefiks kvalifikovanog imena %1 nije definisan."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5810
-#: xmlpatterns/schema/qxsdschemaparser.cpp:5871
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5807
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5868
 #, qt-format
 msgid "%1 attribute of %2 element must either contain %3 or the other values."
 msgstr "Atribut %1 elementa %2 mora sadržati ili %3 ili druge vrijednosti."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6002
+#: xmlpatterns/schema/qxsdschemaparser.cpp:5999
 #, qt-format
 msgid "Component with ID %1 has been defined previously."
 msgstr "Komponenta sa ID‑om %1 definisana je ranije."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6019
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6016
 #, qt-format
 msgid "Element %1 already defined."
 msgstr "Element %1 je već definisan."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6030
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6027
 #, qt-format
 msgid "Attribute %1 already defined."
 msgstr "Atribut %1 je već definisan."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6045
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6042
 #, qt-format
 msgid "Type %1 already defined."
 msgstr "Tip %1 je već definisan."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6068
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6065
 #, qt-format
 msgid "Attribute group %1 already defined."
 msgstr "Grupa atributa %1 je već definisana."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6079
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6076
 #, qt-format
 msgid "Element group %1 already defined."
 msgstr "Grupa elemenata %1 je već definisana."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6090
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6087
 #, qt-format
 msgid "Notation %1 already defined."
 msgstr "Notacija %1 je već definisana."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6101
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6098
 #, qt-format
 msgid "Identity constraint %1 already defined."
 msgstr "Ograničenje identiteta %1 je već definisano."
 
-#: xmlpatterns/schema/qxsdschemaparser.cpp:6112
+#: xmlpatterns/schema/qxsdschemaparser.cpp:6109
 #, qt-format
 msgid "Duplicated facets in simple type %1."
 msgstr "Udvostručeni aspekti u jednostavnom tipu %1."
