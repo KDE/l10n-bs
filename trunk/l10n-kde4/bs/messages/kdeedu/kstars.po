@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-30 04:22+0200\n"
+"POT-Creation-Date: 2012-10-01 04:23+0200\n"
 "PO-Revision-Date: 2011-04-21 06:43+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -217,7 +217,7 @@ msgstr ""
 
 #: colorscheme.cpp:233 colorscheme.cpp:248 dialogs/locationdialog.cpp:265
 #: indi/drivermanager.cpp:1308 indi/indidriver.cpp:936 kstarsactions.cpp:652
-#: oal/execute.cpp:278 options/opscolors.cpp:199 skymap.cpp:1106
+#: oal/execute.cpp:278 options/opscolors.cpp:199 skymap.cpp:1093
 #: tools/modcalcaltaz.cpp:238 tools/modcalcangdist.cpp:128
 #: tools/modcalcapcoord.cpp:151 tools/modcalcdaylength.cpp:246
 #: tools/modcalceclipticcoords.cpp:203 tools/modcalcgalcoord.cpp:193
@@ -583,7 +583,7 @@ msgid "Check URL"
 msgstr "Provjeri URL"
 
 #. i18n: ectx: property (text), widget (KPushButton, DetailButton)
-#: dialogs/detaildialog.cpp:84 skymap.cpp:756 tools/wutdialog.ui:480
+#: dialogs/detaildialog.cpp:84 skymap.cpp:743 tools/wutdialog.ui:480
 msgid "Object Details"
 msgstr "Detalji objekta"
 
@@ -3000,9 +3000,29 @@ msgstr ""
 msgid "Cannot start INDI server: port error."
 msgstr "Ne mogu da pokrenem INDI server: greška porta."
 
+#: indi/drivermanager.cpp:392
+#, kde-format
+msgid "Connection to INDI server locally on port %1 failed."
+msgstr ""
+
 #: indi/drivermanager.cpp:547 indi/indidriver.cpp:308
 #, kde-format
 msgid "Invalid port entry: %1"
+msgstr ""
+
+#: indi/drivermanager.cpp:573
+#, kde-format
+msgid "Connection to INDI host at %1 on port %2 lost. Server disconnected."
+msgstr ""
+
+#: indi/drivermanager.cpp:608
+#, kde-format
+msgid "Connection to INDI host at %1 on port %2 encountered an error: %3."
+msgstr ""
+
+#: indi/drivermanager.cpp:683
+#, kde-format
+msgid "Connection to INDI server at host %1 with port %2 failed."
 msgstr ""
 
 #: indi/drivermanager.cpp:873 indi/indidriver.cpp:498
@@ -3818,13 +3838,13 @@ msgstr "Pređi u horizontalni pogled (Horizontalne &Koordinate)"
 msgid "Switch to star globe view (Equatorial &Coordinates)"
 msgstr "Pređi u pogled zvjezdanog globusa (Ekvatorialne &Koordinate)"
 
-#: kstars.cpp:170 kstarsinit.cpp:238 skymap.cpp:1185
+#: kstars.cpp:170 kstarsinit.cpp:238 skymap.cpp:1172
 msgid "Switch to QPainter backend"
 msgstr "Pređi na QPainter pozadinu"
 
 #. i18n: ectx: label, entry (UseGL), group (View)
-#: kstars.cpp:170 kstars.kcfg:712 kstarsinit.cpp:238 skymap.cpp:1163
-#: skymap.cpp:1171 skymap.cpp:1179
+#: kstars.cpp:170 kstars.kcfg:712 kstarsinit.cpp:238 skymap.cpp:1150
+#: skymap.cpp:1158 skymap.cpp:1166
 msgid "Switch to OpenGL backend"
 msgstr "Pređi na OpenGL pozadinu"
 
@@ -5286,7 +5306,7 @@ msgid "The maximum solar distance for drawing comets."
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (UseGL), group (View)
-#: kstars.kcfg:713 skymap.cpp:1167
+#: kstars.kcfg:713 skymap.cpp:1154
 msgid ""
 "This version of KStars comes with new experimental OpenGL support. Our "
 "experience is that OpenGL works much faster on machines with hardware "
@@ -30332,6 +30352,12 @@ msgstr "Xplanet"
 msgid "KStars::slotFind() - Not enough memory for dialog"
 msgstr "KStars::slotFind() - Nema dovoljno memorije za dijalog"
 
+#: kstarsactions.cpp:586 kstarsactions.cpp:603 kstarsactions.cpp:610
+#: tools/scriptbuilder.cpp:974 tools/scriptbuilder.cpp:1029
+msgctxt "Filter by file type: KStars Scripts."
+msgid "KStars Scripts (*.kstars)"
+msgstr ""
+
 #: kstarsactions.cpp:593
 msgid ""
 "Warning:  You are about to execute a remote shell script on your machine. "
@@ -31115,7 +31141,7 @@ msgstr "Traka alata prikaza"
 msgid "&Toolbars"
 msgstr "&Trake s alatima"
 
-#: ksutils.cpp:140 ksutils.cpp:156
+#: ksutils.cpp:138 ksutils.cpp:154
 #, fuzzy
 #| msgctxt "North"
 #| msgid "N"
@@ -31123,7 +31149,7 @@ msgctxt "Abbreviated cardinal / intercardinal etc. direction"
 msgid "N"
 msgstr "S"
 
-#: ksutils.cpp:141
+#: ksutils.cpp:139
 #, fuzzy
 #| msgctxt "Northeast"
 #| msgid "NE"
@@ -31131,7 +31157,7 @@ msgctxt "Abbreviated cardinal / intercardinal etc. direction"
 msgid "NNE"
 msgstr "SI"
 
-#: ksutils.cpp:142
+#: ksutils.cpp:140
 #, fuzzy
 #| msgctxt "Northeast"
 #| msgid "NE"
@@ -31139,7 +31165,7 @@ msgctxt "Abbreviated cardinal / intercardinal etc. direction"
 msgid "NE"
 msgstr "SI"
 
-#: ksutils.cpp:143
+#: ksutils.cpp:141
 #, fuzzy
 #| msgctxt "Northeast"
 #| msgid "NE"
@@ -31147,7 +31173,7 @@ msgctxt "Abbreviated cardinal / intercardinal etc. direction"
 msgid "ENE"
 msgstr "SI"
 
-#: ksutils.cpp:144
+#: ksutils.cpp:142
 #, fuzzy
 #| msgctxt "East"
 #| msgid "E"
@@ -31155,7 +31181,7 @@ msgctxt "Abbreviated cardinal / intercardinal etc. direction"
 msgid "E"
 msgstr "I"
 
-#: ksutils.cpp:145
+#: ksutils.cpp:143
 #, fuzzy
 #| msgctxt "Southeast"
 #| msgid "SE"
@@ -31163,7 +31189,7 @@ msgctxt "Abbreviated cardinal / intercardinal etc. direction"
 msgid "ESE"
 msgstr "JI"
 
-#: ksutils.cpp:146
+#: ksutils.cpp:144
 #, fuzzy
 #| msgctxt "Southeast"
 #| msgid "SE"
@@ -31171,7 +31197,7 @@ msgctxt "Abbreviated cardinal / intercardinal etc. direction"
 msgid "SE"
 msgstr "JI"
 
-#: ksutils.cpp:147
+#: ksutils.cpp:145
 #, fuzzy
 #| msgctxt "Southeast"
 #| msgid "SE"
@@ -31179,7 +31205,7 @@ msgctxt "Abbreviated cardinal / intercardinal etc. direction"
 msgid "SSE"
 msgstr "JI"
 
-#: ksutils.cpp:148
+#: ksutils.cpp:146
 #, fuzzy
 #| msgctxt "South"
 #| msgid "S"
@@ -31187,7 +31213,7 @@ msgctxt "Abbreviated cardinal / intercardinal etc. direction"
 msgid "S"
 msgstr "J"
 
-#: ksutils.cpp:149
+#: ksutils.cpp:147
 #, fuzzy
 #| msgctxt "Southwest"
 #| msgid "SW"
@@ -31195,7 +31221,7 @@ msgctxt "Abbreviated cardinal / intercardinal etc. direction"
 msgid "SSW"
 msgstr "SZ"
 
-#: ksutils.cpp:150
+#: ksutils.cpp:148
 #, fuzzy
 #| msgctxt "Southwest"
 #| msgid "SW"
@@ -31203,7 +31229,7 @@ msgctxt "Abbreviated cardinal / intercardinal etc. direction"
 msgid "SW"
 msgstr "SZ"
 
-#: ksutils.cpp:151
+#: ksutils.cpp:149
 #, fuzzy
 #| msgctxt "Southwest"
 #| msgid "SW"
@@ -31211,7 +31237,7 @@ msgctxt "Abbreviated cardinal / intercardinal etc. direction"
 msgid "WSW"
 msgstr "SZ"
 
-#: ksutils.cpp:152
+#: ksutils.cpp:150
 #, fuzzy
 #| msgctxt "West"
 #| msgid "W"
@@ -31219,7 +31245,7 @@ msgctxt "Abbreviated cardinal / intercardinal etc. direction"
 msgid "W"
 msgstr "Z"
 
-#: ksutils.cpp:153
+#: ksutils.cpp:151
 #, fuzzy
 #| msgctxt "Northwest"
 #| msgid "NW"
@@ -31227,7 +31253,7 @@ msgctxt "Abbreviated cardinal / intercardinal etc. direction"
 msgid "WNW"
 msgstr "SZ"
 
-#: ksutils.cpp:154
+#: ksutils.cpp:152
 #, fuzzy
 #| msgctxt "Northwest"
 #| msgid "NW"
@@ -31235,7 +31261,7 @@ msgctxt "Abbreviated cardinal / intercardinal etc. direction"
 msgid "NW"
 msgstr "SZ"
 
-#: ksutils.cpp:155
+#: ksutils.cpp:153
 #, fuzzy
 #| msgctxt "Northwest"
 #| msgid "NW"
@@ -34553,48 +34579,48 @@ msgstr "Ipak idi"
 msgid "Keep Position"
 msgstr "Zadrži položaj"
 
-#: skymap.cpp:460
+#: skymap.cpp:454
 msgid ""
 "Digitized Sky Survey image provided by the Space Telescope Science Institute "
 "[public domain]."
 msgstr ""
 
-#: skymap.cpp:503
+#: skymap.cpp:490
 msgid ""
 "Sloan Digital Sky Survey image provided by the Astrophysical Research "
 "Consortium [free for non-commercial use]."
 msgstr ""
 
-#: skymap.cpp:559
+#: skymap.cpp:546
 #, kde-format
 msgid "Angular distance: %1"
 msgstr ""
 
-#: skymap.cpp:589
+#: skymap.cpp:576
 #, fuzzy
 #| msgid "Select a shape for the field-of-view symbol"
 msgid "Star Hopper: Choose a field-of-view"
 msgstr "Izaberite oblik simbola vidnog polja"
 
-#: skymap.cpp:589
+#: skymap.cpp:576
 msgid "FOV to use for star hopping:"
 msgstr ""
 
-#: skymap.cpp:593
+#: skymap.cpp:580
 #, fuzzy
 #| msgid "Select a shape for the field-of-view symbol"
 msgid "Star Hopper: Enter field-of-view to use"
 msgstr "Izaberite oblik simbola vidnog polja"
 
-#: skymap.cpp:593
+#: skymap.cpp:580
 msgid "FOV to use for star hopping (in arcminutes):"
 msgstr ""
 
-#: skymap.cpp:756
+#: skymap.cpp:743
 msgid "No object selected."
 msgstr "Nije izabran nijedan objekat."
 
-#: skymap.cpp:1105
+#: skymap.cpp:1092
 msgid ""
 "Custom image-links file could not be opened.\n"
 "Link cannot be recorded for future sessions."
@@ -34602,7 +34628,7 @@ msgstr ""
 "Ne mogu otvoriti proizvoljnu datoteku slika-linkova.\n"
 "Link se ne može zapamtiti za buduće korištenje."
 
-#: skymap.cpp:1124
+#: skymap.cpp:1111
 msgid ""
 "Custom information-links file could not be opened.\n"
 "Link cannot be recorded for future sessions."
@@ -34610,21 +34636,21 @@ msgstr ""
 "Ne mogu otvoriti proizvoljnu datoteku informacija-linkova.\n"
 "Link se ne može zapamtiti za buduće korištenje."
 
-#: skymap.cpp:1125
+#: skymap.cpp:1112
 msgid "Could not Open File"
 msgstr "Ne mogu otvoriti datoteku"
 
-#: skymap.cpp:1178
+#: skymap.cpp:1165
 msgid ""
 "Infoboxes will be disabled as they do not work correctly when using OpenGL "
 "backends as of this version"
 msgstr ""
 
-#: skymap.cpp:1200
+#: skymap.cpp:1187
 msgid "Xplanet binary path is empty in config panel."
 msgstr ""
 
-#: skymap.cpp:1305
+#: skymap.cpp:1292
 #, kde-format
 msgid "Run : %1"
 msgstr ""
