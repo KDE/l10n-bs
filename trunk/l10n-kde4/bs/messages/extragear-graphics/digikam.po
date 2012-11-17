@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: digikam\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-11-16 02:10+0100\n"
+"POT-Creation-Date: 2012-11-17 02:15+0100\n"
 "PO-Revision-Date: 2011-04-18 09:44+0000\n"
 "Last-Translator: Kenan Dervišević <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -2898,9 +2898,9 @@ msgstr "%1 (%2)"
 #: digikam/utils/tooltipfiller.cpp:101
 #: imageplugins/decorate/texturetool.cpp:126
 #: imageplugins/filters/blurfxtool.cpp:124
-#: imageplugins/filters/colorfxtool.cpp:146
 #: imageplugins/filters/distortionfxtool.cpp:130
 #: libs/dimg/filters/decorate/bordersettings.cpp:132
+#: libs/dimg/filters/fx/colorfxsettings.cpp:82
 #: libs/widgets/q3support/thumbbar.cpp:1402
 #: utilities/importui/items/importtooltipfiller.cpp:92
 msgid "Type:"
@@ -4736,64 +4736,34 @@ msgid ""
 "This value controls the smoothing effect of the pencil under the canvas."
 msgstr ""
 
-#: imageplugins/filters/colorfxtool.cpp:128
+#: imageplugins/filters/colorfxtool.cpp:106
+#: utilities/queuemanager/basetools/filters/colorfx.cpp:43
 msgid "Color Effects"
 msgstr "Efekat bojenja"
 
-#: imageplugins/filters/colorfxtool.cpp:134
+#: imageplugins/filters/colorfxtool.cpp:112
 msgid "This is the color effects preview"
 msgstr ""
 
-#: imageplugins/filters/colorfxtool.cpp:148
-#: imageplugins/filters/colorfxtool.cpp:375
+#: imageplugins/filters/colorfxtool.cpp:224
+#: libs/dimg/filters/fx/colorfxsettings.cpp:84
 msgid "Solarize"
 msgstr "Sunčano"
 
-#: imageplugins/filters/colorfxtool.cpp:149
-#: imageplugins/filters/colorfxtool.cpp:379
+#: imageplugins/filters/colorfxtool.cpp:228
+#: libs/dimg/filters/fx/colorfxsettings.cpp:85
 msgid "Vivid"
 msgstr "Živopisno"
 
-#: imageplugins/filters/colorfxtool.cpp:150
-#: imageplugins/filters/colorfxtool.cpp:383
+#: imageplugins/filters/colorfxtool.cpp:232
+#: libs/dimg/filters/fx/colorfxsettings.cpp:86
 msgid "Neon"
 msgstr "Neon"
 
-#: imageplugins/filters/colorfxtool.cpp:151
-#: imageplugins/filters/colorfxtool.cpp:387
+#: imageplugins/filters/colorfxtool.cpp:236
+#: libs/dimg/filters/fx/colorfxsettings.cpp:87
 msgid "Find Edges"
 msgstr "Nađi ivice"
-
-#: imageplugins/filters/colorfxtool.cpp:153
-msgid ""
-"<p>Select the effect type to apply to the image here.</p><p><b>Solarize</b>: "
-"simulates solarization of photograph.</p><p><b>Vivid</b>: simulates the "
-"Velvia(tm) slide film colors.</p><p><b>Neon</b>: coloring the edges in a "
-"photograph to reproduce a fluorescent light effect.</p><p><b>Find Edges</b>: "
-"detects the edges in a photograph and their strength.</p>"
-msgstr ""
-
-#: imageplugins/filters/colorfxtool.cpp:161
-#: imageplugins/filters/distortionfxtool.cpp:174
-msgctxt "level of the effect"
-msgid "Level:"
-msgstr "Nivo:"
-
-#: imageplugins/filters/colorfxtool.cpp:166
-#: imageplugins/filters/distortionfxtool.cpp:179
-msgid "Set here the level of the effect."
-msgstr ""
-
-#: imageplugins/filters/colorfxtool.cpp:168
-#: imageplugins/filters/distortionfxtool.cpp:181
-msgid "Iteration:"
-msgstr "Iteracija:"
-
-#: imageplugins/filters/colorfxtool.cpp:173
-msgid ""
-"This value controls the number of iterations to use with the Neon and Find "
-"Edges effects."
-msgstr ""
 
 #. i18n: ectx: Menu (Filters)
 #: imageplugins/filters/digikamimageplugin_fxfilters_ui.rc:6
@@ -4899,6 +4869,22 @@ msgid ""
 "splits the photograph into square blocks and moves them randomly inside the "
 "image.</p>"
 msgstr ""
+
+#: imageplugins/filters/distortionfxtool.cpp:174
+#: libs/dimg/filters/fx/colorfxsettings.cpp:97
+msgctxt "level of the effect"
+msgid "Level:"
+msgstr "Nivo:"
+
+#: imageplugins/filters/distortionfxtool.cpp:179
+#: libs/dimg/filters/fx/colorfxsettings.cpp:102
+msgid "Set here the level of the effect."
+msgstr ""
+
+#: imageplugins/filters/distortionfxtool.cpp:181
+#: libs/dimg/filters/fx/colorfxsettings.cpp:104
+msgid "Iteration:"
+msgstr "Iteracija:"
 
 #: imageplugins/filters/distortionfxtool.cpp:186
 msgid ""
@@ -7944,10 +7930,25 @@ msgstr "Zeleni filter"
 msgid "Charcoal Effect"
 msgstr "Efekat bojenja"
 
-#: libs/dimg/filters/fx/colorfxfilter.h:60
+#: libs/dimg/filters/fx/colorfxfilter.h:97
 #, fuzzy
 msgid "Color FX Filter"
 msgstr "Žuti filter"
+
+#: libs/dimg/filters/fx/colorfxsettings.cpp:89
+msgid ""
+"<p>Select the effect type to apply to the image here.</p><p><b>Solarize</b>: "
+"simulates solarization of photograph.</p><p><b>Vivid</b>: simulates the "
+"Velvia(tm) slide film colors.</p><p><b>Neon</b>: coloring the edges in a "
+"photograph to reproduce a fluorescent light effect.</p><p><b>Find Edges</b>: "
+"detects the edges in a photograph and their strength.</p>"
+msgstr ""
+
+#: libs/dimg/filters/fx/colorfxsettings.cpp:109
+msgid ""
+"This value controls the number of iterations to use with the Neon and Find "
+"Edges effects."
+msgstr ""
 
 #: libs/dimg/filters/fx/distortionfxfilter.h:63
 #, fuzzy
@@ -16192,6 +16193,12 @@ msgstr ""
 #| msgid "Save Images"
 msgid "Sharpen images"
 msgstr "Snimi slike"
+
+#: utilities/queuemanager/basetools/filters/colorfx.cpp:44
+#, fuzzy
+#| msgid "Color Effects"
+msgid "Apply color effects"
+msgstr "Efekat bojenja"
 
 #: utilities/queuemanager/basetools/filters/filmgrain.cpp:51
 #, fuzzy
