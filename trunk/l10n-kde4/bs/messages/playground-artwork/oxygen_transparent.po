@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-11-21 02:53+0100\n"
+"POT-Creation-Date: 2013-01-09 04:02+0100\n"
 "PO-Revision-Date: 2012-12-28 10:38+0100\n"
 "Last-Translator: Samir Ribic <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -64,41 +64,28 @@ msgstr ""
 "Konfigurisanje animacije naslova prozora kada su prozori grupisani / "
 "razgrupisani"
 
-#: decoration/config/oxygenconfigurationui.cpp:150
-#: style/config/oxygenstyleconfig.cpp:196
+#: decoration/config/oxygenconfigwidget.cpp:173
+#: style/config/oxygenstyleconfig.cpp:195
 msgid "Hide Advanced Configuration Options"
 msgstr "Sakrij opcije za naprednu konfiguraciju"
 
-#: decoration/config/oxygenconfigurationui.cpp:150
-#: style/config/oxygenstyleconfig.cpp:196
+#: decoration/config/oxygenconfigwidget.cpp:173
+#: style/config/oxygenstyleconfig.cpp:195
 msgid "Show Advanced Configuration Options"
 msgstr "Prikaži opcije za naprednu konfiguraciju"
 
 # >> @item:inlistbox System icons
-#: decoration/config/oxygenconfigurationui.cpp:168
-#: style/config/oxygenstyleconfig.cpp:214
+#: decoration/config/oxygenconfigwidget.cpp:190
+#: style/config/oxygenstyleconfig.cpp:213
 msgid "Animations"
 msgstr "animacije"
 
-#: decoration/config/oxygenexceptiondialog.cpp:92
-#: decoration/config/oxygenexceptiondialog.cpp:118
-#: decoration/config/oxygenexceptiondialog.cpp:148
-msgctxt "outline window title"
-msgid "Enabled"
-msgstr "uključen"
-
-#: decoration/config/oxygenexceptiondialog.cpp:92
-#: decoration/config/oxygenexceptiondialog.cpp:118
-msgctxt "outline window title"
-msgid "Disabled"
-msgstr "isključen"
-
-#: decoration/config/oxygenexceptionlistwidget.cpp:208
+#: decoration/config/oxygenexceptionlistwidget.cpp:189
 #: style/config/oxygenblacklistdialog.cpp:200
 msgid "Remove selected exception?"
 msgstr "Ukloniti izabrani izuzetak?"
 
-#: decoration/config/oxygenexceptionlistwidget.cpp:347
+#: decoration/config/oxygenexceptionlistwidget.cpp:330
 msgid "Regular Expression syntax is incorrect"
 msgstr "Loša sintaksa regularnog izraza"
 
@@ -112,7 +99,21 @@ msgstr "tip izuzetka"
 msgid "Regular Expression"
 msgstr "regularni izraz"
 
-#: decoration/config/oxygenexceptionmodel.cpp:67
+# >> @item window property type
+#. i18n: ectx: property (text), item, widget (KComboBox, exceptionType)
+#: decoration/config/oxygenexceptionmodel.cpp:61
+#: decoration/config/ui/oxygenexceptiondialog.ui:69
+msgid "Window Title"
+msgstr "naslov prozora"
+
+# >> @item window property type
+#. i18n: ectx: property (text), item, widget (KComboBox, exceptionType)
+#: decoration/config/oxygenexceptionmodel.cpp:65
+#: decoration/config/ui/oxygenexceptiondialog.ui:64
+msgid "Window Class Name"
+msgstr "ime klase prozora"
+
+#: decoration/config/oxygenexceptionmodel.cpp:81
 msgid "Enable/disable this exception"
 msgstr "Uključi/isključi ovaj izuzetak"
 
@@ -123,124 +124,280 @@ msgstr "Uključi/isključi ovaj izuzetak"
 msgid "General"
 msgstr "Opšte"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: decoration/config/ui/oxygenconfigurationui.ui:47
-msgid "Title alignment:"
-msgstr "Ravnanje naslova:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: decoration/config/ui/oxygenconfigurationui.ui:60
-msgid "Button size:"
-msgstr "Veličina dugmadi:"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: ectx: property (text), widget (QCheckBox, frameBorderCheckBox)
-#: decoration/config/ui/oxygenconfigurationui.ui:76
-#: decoration/config/ui/oxygenexceptiondialog.ui:75
-msgid "Border size:"
-msgstr "Veličina ivica:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, animationsEnabled)
-#. i18n: ectx: property (text), widget (QCheckBox, _animationsEnabled)
-#: decoration/config/ui/oxygenconfigurationui.ui:106
-#: libs/ui/oxygenanimationconfigwidget.ui:23
-#: style/config/ui/oxygenstyleconfig.ui:79
-msgid "Enable animations"
-msgstr "Omogući animacije"
-
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: decoration/config/ui/oxygenconfigurationui.ui:115
+#: decoration/config/ui/oxygenconfigurationui.ui:39
 #: style/config/ui/oxygenstyleconfig.ui:179
 msgid "Background Opacity"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, opacityFromStyle)
-#: decoration/config/ui/oxygenconfigurationui.ui:121
+#: decoration/config/ui/oxygenconfigurationui.ui:45
 msgid "Use widget style opacity settings"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: decoration/config/ui/oxygenconfigurationui.ui:134
+#: decoration/config/ui/oxygenconfigurationui.ui:58
 #: style/config/ui/oxygenstyleconfig.ui:187
 msgid "Transparent"
 msgstr "Providno"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: decoration/config/ui/oxygenconfigurationui.ui:157
+#: decoration/config/ui/oxygenconfigurationui.ui:81
 #: style/config/ui/oxygenstyleconfig.ui:210
 msgid "Opaque"
 msgstr "Neprozirno"
 
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorder)
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorderComboBox)
+#: decoration/config/ui/oxygenconfigurationui.ui:113
+#: decoration/config/ui/oxygenexceptiondialog.ui:125
+#, fuzzy
+#| msgctxt "@item:inlistbox Border size:"
+#| msgid "No Border"
+msgid "No Border"
+msgstr "bez ivice"
+
+# >> @item border size
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorder)
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorderComboBox)
+#: decoration/config/ui/oxygenconfigurationui.ui:118
+#: decoration/config/ui/oxygenexceptiondialog.ui:130
+#, fuzzy
+#| msgctxt "@item:inlistbox Border size:"
+#| msgid "No Side Border"
+msgid "No Side Borders"
+msgstr "bez bočne ivice"
+
+# >> @item:inlistbox Triangle size:
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorder)
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorderComboBox)
+#. i18n: ectx: property (text), item, widget (KComboBox, _viewTriangularExpanderSize)
+#: decoration/config/ui/oxygenconfigurationui.ui:123
+#: decoration/config/ui/oxygenexceptiondialog.ui:135
+#: style/config/ui/oxygenstyleconfig.ui:323
+msgid "Tiny"
+msgstr "sićušan"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorder)
+#. i18n: ectx: property (text), item, widget (KComboBox, buttonSize)
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorderComboBox)
+#. i18n: ectx: property (text), item, widget (KComboBox, _viewTriangularExpanderSize)
+#: decoration/config/ui/oxygenconfigurationui.ui:128
+#: decoration/config/ui/oxygenconfigurationui.ui:217
+#: decoration/config/ui/oxygenexceptiondialog.ui:140
+#: style/config/ui/oxygenstyleconfig.ui:333
+msgid "Normal"
+msgstr "Običan"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorder)
+#. i18n: ectx: property (text), item, widget (KComboBox, buttonSize)
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorderComboBox)
+#: decoration/config/ui/oxygenconfigurationui.ui:133
+#: decoration/config/ui/oxygenconfigurationui.ui:222
+#: decoration/config/ui/oxygenexceptiondialog.ui:145
+#, fuzzy
+#| msgctxt "@item:inlistbox Button size:"
+#| msgid "Large"
+msgid "Large"
+msgstr "velika"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorder)
+#. i18n: ectx: property (text), item, widget (KComboBox, buttonSize)
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorderComboBox)
+#: decoration/config/ui/oxygenconfigurationui.ui:138
+#: decoration/config/ui/oxygenconfigurationui.ui:227
+#: decoration/config/ui/oxygenexceptiondialog.ui:150
+#, fuzzy
+#| msgctxt "@item:inlistbox Button size:"
+#| msgid "Very Large"
+msgid "Very Large"
+msgstr "vrlo velika"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorder)
+#. i18n: ectx: property (text), item, widget (KComboBox, buttonSize)
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorderComboBox)
+#: decoration/config/ui/oxygenconfigurationui.ui:143
+#: decoration/config/ui/oxygenconfigurationui.ui:232
+#: decoration/config/ui/oxygenexceptiondialog.ui:155
+#, fuzzy
+#| msgctxt "@item:inlistbox Button size:"
+#| msgid "Huge"
+msgid "Huge"
+msgstr "ogromna"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorder)
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorderComboBox)
+#: decoration/config/ui/oxygenconfigurationui.ui:148
+#: decoration/config/ui/oxygenexceptiondialog.ui:160
+#, fuzzy
+#| msgctxt "@item:inlistbox Border size:"
+#| msgid "Very Huge"
+msgid "Very Huge"
+msgstr "vrlo ogromne"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorder)
+#. i18n: ectx: property (text), item, widget (KComboBox, frameBorderComboBox)
+#: decoration/config/ui/oxygenconfigurationui.ui:153
+#: decoration/config/ui/oxygenexceptiondialog.ui:165
+#, fuzzy
+#| msgctxt "@item:inlistbox Border size:"
+#| msgid "Oversized"
+msgid "Oversized"
+msgstr "neizmijerne"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, titleAlignment)
+#: decoration/config/ui/oxygenconfigurationui.ui:162
+msgid "Left"
+msgstr "Lijevo"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, titleAlignment)
+#: decoration/config/ui/oxygenconfigurationui.ui:167
+msgid "Center"
+msgstr "Centralni"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, titleAlignment)
+#: decoration/config/ui/oxygenconfigurationui.ui:172
+msgid "Center (Full Width)"
+msgstr "Centriraj (puna širina)"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, titleAlignment)
+#: decoration/config/ui/oxygenconfigurationui.ui:177
+msgid "Right"
+msgstr "Desno"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: decoration/config/ui/oxygenconfigurationui.ui:185
+msgid "Title alignment:"
+msgstr "Ravnanje naslova:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: decoration/config/ui/oxygenconfigurationui.ui:198
+msgid "Button size:"
+msgstr "Veličina dugmadi:"
+
+# >> @item:inlistbox Triangle size:
+#. i18n: ectx: property (text), item, widget (KComboBox, buttonSize)
+#. i18n: ectx: property (text), item, widget (KComboBox, _viewTriangularExpanderSize)
+#: decoration/config/ui/oxygenconfigurationui.ui:212
+#: style/config/ui/oxygenstyleconfig.ui:328
+msgid "Small"
+msgstr "mali"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QCheckBox, frameBorderCheckBox)
+#: decoration/config/ui/oxygenconfigurationui.ui:240
+#: decoration/config/ui/oxygenexceptiondialog.ui:86
+msgid "Border size:"
+msgstr "Veličina ivica:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, animationsEnabled)
+#. i18n: ectx: property (text), widget (QCheckBox, _animationsEnabled)
+#: decoration/config/ui/oxygenconfigurationui.ui:270
+#: libs/ui/oxygenanimationconfigwidget.ui:23
+#: style/config/ui/oxygenstyleconfig.ui:79
+msgid "Enable animations"
+msgstr "Omogući animacije"
+
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: decoration/config/ui/oxygenconfigurationui.ui:187
+#: decoration/config/ui/oxygenconfigurationui.ui:280
 msgid "Fine Tuning"
 msgstr "Fino podešavanje"
 
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: decoration/config/ui/oxygenconfigurationui.ui:196
-msgid "Background style: "
-msgstr "Stil pozadine: "
-
-#. i18n: ectx: property (text), widget (QCheckBox, titleOutline)
-#: decoration/config/ui/oxygenconfigurationui.ui:225
-msgid "Outline active window title"
-msgstr "Ocrtan naslov aktivnog prozora"
-
-#. i18n: ectx: property (text), widget (QCheckBox, narrowButtonSpacing)
-#: decoration/config/ui/oxygenconfigurationui.ui:232
-msgid "Use narrow space between decoration buttons"
-msgstr "Uzak razmak između dugmadi dekoracije"
-
-#. i18n: ectx: property (text), widget (QLabel, sizeGripModeLabel)
-#: decoration/config/ui/oxygenconfigurationui.ui:255
-msgid "Extra size grip display: "
-msgstr "Dodatna ručka veličine: "
-
 #. i18n: ectx: property (text), item, widget (KComboBox, separatorMode)
 #. i18n: ectx: property (text), item, widget (KComboBox, separatorComboBox)
-#: decoration/config/ui/oxygenconfigurationui.ui:269
-#: decoration/config/ui/oxygenexceptiondialog.ui:123
+#: decoration/config/ui/oxygenconfigurationui.ui:290
+#: decoration/config/ui/oxygenexceptiondialog.ui:233
 msgid "Never Draw Separator"
 msgstr "Nikad ne crtaj separator"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, separatorMode)
 #. i18n: ectx: property (text), item, widget (KComboBox, separatorComboBox)
-#: decoration/config/ui/oxygenconfigurationui.ui:274
-#: decoration/config/ui/oxygenexceptiondialog.ui:128
+#: decoration/config/ui/oxygenconfigurationui.ui:295
+#: decoration/config/ui/oxygenexceptiondialog.ui:238
 msgid "Draw Separator When Window is Active"
 msgstr "Crtaj separator kada je prozor aktivan"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, separatorMode)
 #. i18n: ectx: property (text), item, widget (KComboBox, separatorComboBox)
-#: decoration/config/ui/oxygenconfigurationui.ui:279
-#: decoration/config/ui/oxygenexceptiondialog.ui:133
+#: decoration/config/ui/oxygenconfigurationui.ui:300
+#: decoration/config/ui/oxygenexceptiondialog.ui:243
 msgid "Always Draw Separator"
 msgstr "Uvijek crtaj separator"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QCheckBox, separatorCheckBox)
-#: decoration/config/ui/oxygenconfigurationui.ui:287
-#: decoration/config/ui/oxygenexceptiondialog.ui:96
+#: decoration/config/ui/oxygenconfigurationui.ui:308
+#: decoration/config/ui/oxygenexceptiondialog.ui:107
 msgid "Separator display:"
 msgstr "Prikaz separatora;"
 
+# >> @item blending type
+#. i18n: ectx: property (text), item, widget (KComboBox, blendColor)
+#. i18n: ectx: property (text), item, widget (KComboBox, blendColorComboBox)
+#: decoration/config/ui/oxygenconfigurationui.ui:322
+#: decoration/config/ui/oxygenexceptiondialog.ui:177
+msgid "Solid Color"
+msgstr "puna boja"
+
+# >> @item blending type
+#. i18n: ectx: property (text), item, widget (KComboBox, blendColor)
+#. i18n: ectx: property (text), item, widget (KComboBox, blendColorComboBox)
+#: decoration/config/ui/oxygenconfigurationui.ui:327
+#: decoration/config/ui/oxygenexceptiondialog.ui:182
+msgid "Radial Gradient"
+msgstr "kružni priliv"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, blendColor)
+#. i18n: ectx: property (text), item, widget (KComboBox, blendColorComboBox)
+#: decoration/config/ui/oxygenconfigurationui.ui:332
+#: decoration/config/ui/oxygenexceptiondialog.ui:187
+msgid "Follow Style Hint"
+msgstr "Prati savjet stila"
+
+#. i18n: ectx: property (text), widget (QCheckBox, titleOutline)
+#: decoration/config/ui/oxygenconfigurationui.ui:353
+msgid "Outline active window title"
+msgstr "Ocrtan naslov aktivnog prozora"
+
+#. i18n: ectx: property (text), widget (QCheckBox, narrowButtonSpacing)
+#: decoration/config/ui/oxygenconfigurationui.ui:373
+msgid "Use narrow space between decoration buttons"
+msgstr "Uzak razmak između dugmadi dekoracije"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: decoration/config/ui/oxygenconfigurationui.ui:380
+msgid "Background style: "
+msgstr "Stil pozadine: "
+
+#. i18n: ectx: property (text), widget (QCheckBox, closeFromMenuButton)
+#: decoration/config/ui/oxygenconfigurationui.ui:393
+msgid "Close windows by double clicking the menu button"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, drawSizeGrip)
+#. i18n: ectx: property (text), widget (QCheckBox, sizeGripCheckBox)
+#: decoration/config/ui/oxygenconfigurationui.ui:400
+#: decoration/config/ui/oxygenexceptiondialog.ui:93
+msgid "Add handle to resize windows with no border"
+msgstr ""
+
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: decoration/config/ui/oxygenconfigurationui.ui:301
+#: decoration/config/ui/oxygenconfigurationui.ui:408
 msgid "Shadows"
 msgstr "Sijenke"
 
-#. i18n: ectx: property (title), widget (Oxygen::ShadowConfigurationUi, inactiveShadowConfiguration)
-#: decoration/config/ui/oxygenconfigurationui.ui:309
+#. i18n: ectx: property (title), widget (Oxygen::ShadowConfigWidget, inactiveShadowConfiguration)
+#: decoration/config/ui/oxygenconfigurationui.ui:416
 msgid "Window Drop-Down Shadow"
 msgstr "Padajuća sijenka prozora"
 
-#. i18n: ectx: property (title), widget (Oxygen::ShadowConfigurationUi, activeShadowConfiguration)
-#: decoration/config/ui/oxygenconfigurationui.ui:319
+#. i18n: ectx: property (title), widget (Oxygen::ShadowConfigWidget, activeShadowConfiguration)
+#: decoration/config/ui/oxygenconfigurationui.ui:426
 msgid "Active Window Glow"
 msgstr "Sjaj aktivnog prozora"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
-#: decoration/config/ui/oxygenconfigurationui.ui:345
+#: decoration/config/ui/oxygenconfigurationui.ui:452
 msgid "Window-Specific Overrides"
 msgstr "Potiskivanja posebna po prozoru"
 
@@ -295,32 +452,57 @@ msgid "Detect Window Properties"
 msgstr "Otkrij svojstva prozora"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: decoration/config/ui/oxygenexceptiondialog.ui:69
+#: decoration/config/ui/oxygenexceptiondialog.ui:80
 msgid "Decoration Options"
 msgstr "Opcije dekoracije"
 
-#. i18n: ectx: property (text), widget (QCheckBox, sizeGripCheckBox)
-#: decoration/config/ui/oxygenexceptiondialog.ui:82
-msgid "Extra size grip display:"
-msgstr "Dodatna ručka veličine:"
-
 #. i18n: ectx: property (text), widget (QCheckBox, titleOutlineCheckBox)
-#: decoration/config/ui/oxygenexceptiondialog.ui:89
+#: decoration/config/ui/oxygenexceptiondialog.ui:100
 msgid "Outline active window title:"
 msgstr "Ocrtan naslov aktivnog prozora:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, blendColorCheckBox)
-#: decoration/config/ui/oxygenexceptiondialog.ui:103
+#: decoration/config/ui/oxygenexceptiondialog.ui:114
 msgid "Background style:"
 msgstr "Stil pozadine:"
 
+#. i18n: ectx: property (text), item, widget (KComboBox, sizeGripComboBox)
+#: decoration/config/ui/oxygenexceptiondialog.ui:199
+#, fuzzy
+#| msgctxt "outline window title"
+#| msgid "Disabled"
+msgctxt "Add handle to resize windows with no border"
+msgid "Disabled"
+msgstr "isključen"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, sizeGripComboBox)
+#: decoration/config/ui/oxygenexceptiondialog.ui:204
+#, fuzzy
+#| msgctxt "outline window title"
+#| msgid "Enabled"
+msgctxt "Add handle to resize windows with no border"
+msgid "Enabled"
+msgstr "uključen"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, titleOutlineComboBox)
+#: decoration/config/ui/oxygenexceptiondialog.ui:216
+msgctxt "outline window title"
+msgid "Disabled"
+msgstr "isključen"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, titleOutlineComboBox)
+#: decoration/config/ui/oxygenexceptiondialog.ui:221
+msgctxt "outline window title"
+msgid "Enabled"
+msgstr "uključen"
+
 #. i18n: ectx: property (text), widget (QCheckBox, transparencyDisabled)
-#: decoration/config/ui/oxygenexceptiondialog.ui:141
+#: decoration/config/ui/oxygenexceptiondialog.ui:251
 msgid "Disable background translucency"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, hideTitleBar)
-#: decoration/config/ui/oxygenexceptiondialog.ui:158
+#: decoration/config/ui/oxygenexceptiondialog.ui:268
 msgid "Hide window title bar"
 msgstr "Bez naslovne trake prozora"
 
@@ -352,199 +534,49 @@ msgstr "Ukloni"
 msgid "Edit"
 msgstr "Izmijeni"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: decoration/config/ui/oxygenshadowconfigurationui.ui:23
-msgid "Inner Color:"
-msgstr "Unutrašnja boja:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: decoration/config/ui/oxygenshadowconfigurationui.ui:42
-msgid "Outer Color:"
-msgstr "Spoljašnja boja:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: decoration/config/ui/oxygenshadowconfigurationui.ui:69
-msgid "Vertical Offset:"
-msgstr "Uspravni pomak:"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: decoration/config/ui/oxygenshadowconfigurationui.ui:82
-msgid "Size: "
-msgstr "Veličina: "
-
-#. i18n: ectx: property (suffix), widget (KIntSpinBox, shadowSize)
-#. i18n: ectx: property (suffix), widget (KIntSpinBox, verticalOffset)
-#. i18n: ectx: property (suffix), widget (KIntSpinBox, _scrollBarWidth)
-#: decoration/config/ui/oxygenshadowconfigurationui.ui:95
-#: decoration/config/ui/oxygenshadowconfigurationui.ui:102
-#: style/config/ui/oxygenstyleconfig.ui:458
-msgid "px"
-msgstr "px"
-
 #: decoration/oxygenclient.cpp:83
 msgid "Oxygen Transparent"
 msgstr ""
 
-#: decoration/oxygenclient.cpp:218
+#: decoration/oxygenclient.cpp:221
 msgid "Window Actions Menu"
 msgstr ""
 
-#: decoration/oxygenclient.cpp:221
+#: decoration/oxygenclient.cpp:224
 msgid "Application Menu"
 msgstr ""
 
-#: decoration/oxygenclient.cpp:224
+#: decoration/oxygenclient.cpp:227
 msgid "Help"
 msgstr "Pomoć"
 
-#: decoration/oxygenclient.cpp:227
+#: decoration/oxygenclient.cpp:230
 msgid "Minimize"
 msgstr "Minimiziraj"
 
-#: decoration/oxygenclient.cpp:230
+#: decoration/oxygenclient.cpp:233
 msgid "Maximize"
 msgstr "Maksimizuj"
 
-#: decoration/oxygenclient.cpp:233
+#: decoration/oxygenclient.cpp:236
 msgid "Close"
 msgstr "Zatvori"
 
-#: decoration/oxygenclient.cpp:236
+#: decoration/oxygenclient.cpp:239
 msgid "Keep Above Others"
 msgstr "Drži iznad ostalih"
 
-#: decoration/oxygenclient.cpp:239
+#: decoration/oxygenclient.cpp:242
 msgid "Keep Below Others"
 msgstr "Drži ispod ostalih"
 
-#: decoration/oxygenclient.cpp:242
+#: decoration/oxygenclient.cpp:245
 msgid "On All Desktops"
 msgstr "Na svim površima"
 
-#: decoration/oxygenclient.cpp:245
+#: decoration/oxygenclient.cpp:248
 msgid "Shade Button"
 msgstr "Dugme za namotavanje"
-
-#: decoration/oxygenconfiguration.cpp:285
-msgid "Left"
-msgstr "Lijevo"
-
-#: decoration/oxygenconfiguration.cpp:289
-msgid "Center (Full Width)"
-msgstr "Centriraj (puna širina)"
-
-#: decoration/oxygenconfiguration.cpp:290
-msgid "Center"
-msgstr "Centralni"
-
-#: decoration/oxygenconfiguration.cpp:293
-msgid "Right"
-msgstr "Desno"
-
-#: decoration/oxygenconfiguration.cpp:316
-msgctxt "@item:inlistbox Button size:"
-msgid "Small"
-msgstr "mala"
-
-#: decoration/oxygenconfiguration.cpp:317
-msgctxt "@item:inlistbox Button size:"
-msgid "Normal"
-msgstr "normalna"
-
-#: decoration/oxygenconfiguration.cpp:318
-msgctxt "@item:inlistbox Button size:"
-msgid "Large"
-msgstr "velika"
-
-#: decoration/oxygenconfiguration.cpp:319
-msgctxt "@item:inlistbox Button size:"
-msgid "Very Large"
-msgstr "vrlo velika"
-
-#: decoration/oxygenconfiguration.cpp:320
-msgctxt "@item:inlistbox Button size:"
-msgid "Huge"
-msgstr "ogromna"
-
-#: decoration/oxygenconfiguration.cpp:360
-msgctxt "@item:inlistbox Border size:"
-msgid "No Border"
-msgstr "bez ivice"
-
-# >> @item border size
-#: decoration/oxygenconfiguration.cpp:361
-msgctxt "@item:inlistbox Border size:"
-msgid "No Side Border"
-msgstr "bez bočne ivice"
-
-#: decoration/oxygenconfiguration.cpp:362
-msgctxt "@item:inlistbox Border size:"
-msgid "Tiny"
-msgstr "sićušne"
-
-#: decoration/oxygenconfiguration.cpp:363
-msgctxt "@item:inlistbox Border size:"
-msgid "Normal"
-msgstr "normalne"
-
-#: decoration/oxygenconfiguration.cpp:364
-msgctxt "@item:inlistbox Border size:"
-msgid "Large"
-msgstr "velike"
-
-#: decoration/oxygenconfiguration.cpp:365
-msgctxt "@item:inlistbox Border size:"
-msgid "Very Large"
-msgstr "vrlo velike"
-
-#: decoration/oxygenconfiguration.cpp:366
-msgctxt "@item:inlistbox Border size:"
-msgid "Huge"
-msgstr "ogromne"
-
-#: decoration/oxygenconfiguration.cpp:367
-msgctxt "@item:inlistbox Border size:"
-msgid "Very Huge"
-msgstr "vrlo ogromne"
-
-#: decoration/oxygenconfiguration.cpp:368
-msgctxt "@item:inlistbox Border size:"
-msgid "Oversized"
-msgstr "neizmijerne"
-
-# >> @item blending type
-#: decoration/oxygenconfiguration.cpp:397
-msgid "Solid Color"
-msgstr "puna boja"
-
-# >> @item blending type
-#: decoration/oxygenconfiguration.cpp:398
-msgid "Radial Gradient"
-msgstr "kružni priliv"
-
-#: decoration/oxygenconfiguration.cpp:399
-msgid "Follow Style Hint"
-msgstr "Prati savjet stila"
-
-# >> @item size-grip visibility
-#: decoration/oxygenconfiguration.cpp:422
-msgid "Always Hide Extra Size Grip"
-msgstr "dodatna ručka veličine uvijek skrivena"
-
-# >> @item size-grip visibility
-#: decoration/oxygenconfiguration.cpp:423
-msgid "Show Extra Size Grip When Needed"
-msgstr "dodatna ručka veličine samo kad je potrebna"
-
-# >> @item window property type
-#: decoration/oxygenexception.cpp:79
-msgid "Window Title"
-msgstr "naslov prozora"
-
-# >> @item window property type
-#: decoration/oxygenexception.cpp:80
-msgid "Window Class Name"
-msgstr "ime klase prozora"
 
 #: libs/oxygenanimationconfigitem.cpp:104
 msgid "oxygen-settings - information"
@@ -582,8 +614,37 @@ msgstr "Trajanje:"
 msgid "ms"
 msgstr "ms"
 
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: libs/ui/oxygenshadowconfigurationui.ui:23
+msgid "Inner Color:"
+msgstr "Unutrašnja boja:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: libs/ui/oxygenshadowconfigurationui.ui:42
+msgid "Outer Color:"
+msgstr "Spoljašnja boja:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: libs/ui/oxygenshadowconfigurationui.ui:69
+msgid "Vertical Offset:"
+msgstr "Uspravni pomak:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: libs/ui/oxygenshadowconfigurationui.ui:82
+msgid "Size: "
+msgstr "Veličina: "
+
+#. i18n: ectx: property (suffix), widget (KIntSpinBox, shadowSize)
+#. i18n: ectx: property (suffix), widget (KIntSpinBox, verticalOffset)
+#. i18n: ectx: property (suffix), widget (KIntSpinBox, _scrollBarWidth)
+#: libs/ui/oxygenshadowconfigurationui.ui:95
+#: libs/ui/oxygenshadowconfigurationui.ui:102
+#: style/config/ui/oxygenstyleconfig.ui:458
+msgid "px"
+msgstr "px"
+
 #: style/config/main.cpp:38 style/config/oxygenconfigdialog.cpp:56
-#: style/config/oxygenconfigdialog.cpp:169
+#: style/config/oxygenconfigdialog.cpp:158
 msgid "Oxygen Settings"
 msgstr "Postavke Kiseonika"
 
@@ -732,13 +793,13 @@ msgstr "Dekoracije prozora"
 msgid "Modify the appearance of window decorations"
 msgstr "Izmijenite izgled dekoracija prozora."
 
-#: style/config/oxygenconfigdialog.cpp:202
-#: style/config/oxygenconfigdialog.cpp:212
+#: style/config/oxygenconfigdialog.cpp:191
+#: style/config/oxygenconfigdialog.cpp:201
 msgid "Unable to find oxygen style configuration plugin"
 msgstr "Ne mogu da nađem priključak za podešavanje stila Kiseonika."
 
-#: style/config/oxygenconfigdialog.cpp:248
-#: style/config/oxygenconfigdialog.cpp:258
+#: style/config/oxygenconfigdialog.cpp:237
+#: style/config/oxygenconfigdialog.cpp:247
 msgid "Unable to find oxygen decoration configuration plugin"
 msgstr "Ne mogu da nađem priključak za podešavanje dekoracije Kiseonika."
 
@@ -868,23 +929,6 @@ msgstr "Trougao kao proširivač stabla umjesto plus‑minusa"
 msgid "Triangle size:"
 msgstr "Veličina trougla:"
 
-# >> @item:inlistbox Triangle size:
-#. i18n: ectx: property (text), item, widget (KComboBox, _viewTriangularExpanderSize)
-#: style/config/ui/oxygenstyleconfig.ui:323
-msgid "Tiny"
-msgstr "sićušan"
-
-# >> @item:inlistbox Triangle size:
-#. i18n: ectx: property (text), item, widget (KComboBox, _viewTriangularExpanderSize)
-#: style/config/ui/oxygenstyleconfig.ui:328
-msgid "Small"
-msgstr "mali"
-
-#. i18n: ectx: property (text), item, widget (KComboBox, _viewTriangularExpanderSize)
-#: style/config/ui/oxygenstyleconfig.ui:333
-msgid "Normal"
-msgstr "Običan"
-
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: style/config/ui/oxygenstyleconfig.ui:371
 msgid "Tabs"
@@ -971,3 +1015,45 @@ msgstr "Prema boji izbora (obično)"
 #: style/config/ui/oxygenstyleconfig.ui:595
 msgid "Use selection color (subtle)"
 msgstr "Prema boji izbora (fino)"
+
+#~ msgid "Extra size grip display: "
+#~ msgstr "Dodatna ručka veličine: "
+
+#~ msgid "Extra size grip display:"
+#~ msgstr "Dodatna ručka veličine:"
+
+#~ msgctxt "@item:inlistbox Button size:"
+#~ msgid "Small"
+#~ msgstr "mala"
+
+#~ msgctxt "@item:inlistbox Button size:"
+#~ msgid "Normal"
+#~ msgstr "normalna"
+
+#~ msgctxt "@item:inlistbox Border size:"
+#~ msgid "Tiny"
+#~ msgstr "sićušne"
+
+#~ msgctxt "@item:inlistbox Border size:"
+#~ msgid "Normal"
+#~ msgstr "normalne"
+
+#~ msgctxt "@item:inlistbox Border size:"
+#~ msgid "Large"
+#~ msgstr "velike"
+
+#~ msgctxt "@item:inlistbox Border size:"
+#~ msgid "Very Large"
+#~ msgstr "vrlo velike"
+
+#~ msgctxt "@item:inlistbox Border size:"
+#~ msgid "Huge"
+#~ msgstr "ogromne"
+
+# >> @item size-grip visibility
+#~ msgid "Always Hide Extra Size Grip"
+#~ msgstr "dodatna ručka veličine uvijek skrivena"
+
+# >> @item size-grip visibility
+#~ msgid "Show Extra Size Grip When Needed"
+#~ msgstr "dodatna ručka veličine samo kad je potrebna"
