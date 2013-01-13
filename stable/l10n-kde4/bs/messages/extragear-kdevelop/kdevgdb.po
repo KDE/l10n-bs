@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevelop\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-09-01 13:05+0200\n"
+"POT-Creation-Date: 2013-01-13 09:19+0100\n"
 "PO-Revision-Date: 2012-10-28 08:28+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -28,14 +28,6 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "samir.ribic@etf.unsa.ba"
 
-#: _watchitem.cpp:41
-msgid "Watches"
-msgstr "Posmatranja"
-
-#: _watchitem.cpp:59
-msgid "Recent"
-msgstr "Skorašnji"
-
 #: breakpointcontroller.cpp:505
 #, kde-format
 msgid "<br>Old value: %1"
@@ -51,18 +43,18 @@ msgstr "<br>Nova vrijednost: %1"
 msgid "Debugger Configuration"
 msgstr "Debugger konfiguracija"
 
-#. i18n: ectx: property (text), widget (QLabel, gdbPath_label)
-#: debuggerconfigwidget.ui:32
-msgid "Debugger executable:"
-msgstr "Debugger izvršni program"
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: debuggerconfigwidget.ui:26 debuggerplugin.cpp:429
+msgid "Debugger"
+msgstr "Ispravljač grešaka"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_gdbPath)
-#: debuggerconfigwidget.ui:45
+#: debuggerconfigwidget.ui:32
 msgid "Gdb executable"
 msgstr "Gdb izvršni program"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_gdbPath)
-#: debuggerconfigwidget.ui:48
+#: debuggerconfigwidget.ui:35
 msgid ""
 "To run \"gdb\" binary from $PATH, leave this field empty. To run custom gdb, "
 "for example, for a different architecture, enter the executable name here. "
@@ -74,30 +66,14 @@ msgstr ""
 "pokrenuti gdb iz $PATH, ali s drugim imenom (na primjer, \"arm-gdb\"), "
 "unošenjem imena ovdje, ili navođenjem pune staze do gdb programa."
 
-#. i18n: ectx: property (toolTip), widget (QLabel, debuggingShell_label)
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_debuggingShell)
-#: debuggerconfigwidget.ui:61 debuggerconfigwidget.ui:80
+#. i18n: ectx: property (toolTip), widget (QLabel, debuggingShell_label)
+#: debuggerconfigwidget.ui:42 debuggerconfigwidget.ui:77
 msgid "Run gdb in a special shell (mainly for automake projects)"
 msgstr "Pokreni gdb u posebnoj školjci (prvenstveno za automake projekte)"
 
-#. i18n: ectx: property (whatsThis), widget (QLabel, debuggingShell_label)
-#: debuggerconfigwidget.ui:64
-msgid ""
-"If you want gdb to be executed by a special shell or tool insert it here. "
-"The main use-case is for Automake based projects where the application is "
-"actually only a script and libtool is needed to get it to run inside gdb."
-msgstr ""
-"Ako želite da posebna školjka ili alat izvršava GDB unesite ovdje. Glavni "
-"slučaj upotrebe je za Automake zasnivane projekte gde je aplikacija u stvari "
-"samo skripta i potreban je libtool za njen rad u GDB."
-
-#. i18n: ectx: property (text), widget (QLabel, debuggingShell_label)
-#: debuggerconfigwidget.ui:67
-msgid "Debugging &shell:"
-msgstr "Debagerska &školjka:"
-
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_debuggingShell)
-#: debuggerconfigwidget.ui:83
+#: debuggerconfigwidget.ui:45
 msgid ""
 "If you want gdb to be executed by a special shell or tool insert it here. "
 "The main use-case is for Automake based projects where the application is "
@@ -108,18 +84,39 @@ msgstr ""
 "slučaj upotrebe je za Automake zasnivane projekte gde je aplikacija u stvari "
 "samo skripta i potreban je <b>libtool</b> i za njen rad u GDB."
 
+#. i18n: ectx: property (text), widget (QLabel, gdbPath_label)
+#: debuggerconfigwidget.ui:58
+msgid "Debugger executable:"
+msgstr "Debugger izvršni program"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, debuggingShell_label)
+#: debuggerconfigwidget.ui:80
+msgid ""
+"If you want gdb to be executed by a special shell or tool insert it here. "
+"The main use-case is for Automake based projects where the application is "
+"actually only a script and libtool is needed to get it to run inside gdb."
+msgstr ""
+"Ako želite da posebna školjka ili alat izvršava GDB unesite ovdje. Glavni "
+"slučaj upotrebe je za Automake zasnivane projekte gde je aplikacija u stvari "
+"samo skripta i potreban je libtool za njen rad u GDB."
+
+#. i18n: ectx: property (text), widget (QLabel, debuggingShell_label)
+#: debuggerconfigwidget.ui:83
+msgid "Debugging &shell:"
+msgstr "Debagerska &školjka:"
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: debuggerconfigwidget.ui:92
+#: debuggerconfigwidget.ui:99
 msgid "Options"
 msgstr "Opcije"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: debuggerconfigwidget.ui:101
+#: debuggerconfigwidget.ui:108
 msgid "Display static &members:"
 msgstr "Prikaži statičke &članoves:"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_displayStaticMembers)
-#: debuggerconfigwidget.ui:116
+#: debuggerconfigwidget.ui:123
 msgid ""
 "Displaying static members makes GDB slower in\n"
 "producing data within KDE and Qt.\n"
@@ -136,12 +133,12 @@ msgstr ""
 "provjerite ovu opciju."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: debuggerconfigwidget.ui:126
+#: debuggerconfigwidget.ui:133
 msgid "Display &demangled names:"
 msgstr "Prikaži &dešifrovana imena:"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_asmDemangle)
-#: debuggerconfigwidget.ui:138
+#: debuggerconfigwidget.ui:145
 msgid ""
 "When displaying the disassembled code you\n"
 "can select to see the methods' mangled names.\n"
@@ -152,27 +149,27 @@ msgstr ""
 "Ipak, nešifrovana imena su lakša za čitanje."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: debuggerconfigwidget.ui:148
+#: debuggerconfigwidget.ui:155
 msgid "Start Debugger with:"
 msgstr "Pokreni debager sa:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startWith)
-#: debuggerconfigwidget.ui:159
+#: debuggerconfigwidget.ui:166
 msgid "Application Output"
 msgstr "Izlaz aplikacije"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startWith)
-#: debuggerconfigwidget.ui:164
+#: debuggerconfigwidget.ui:171
 msgid "GDB Console"
 msgstr "GDB konzola"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startWith)
-#: debuggerconfigwidget.ui:169
+#: debuggerconfigwidget.ui:176
 msgid "Frame Stack"
 msgstr "Stek okvira"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox)
-#: debuggerconfigwidget.ui:185
+#: debuggerconfigwidget.ui:190
 msgid ""
 "This script is intended for the actual commands needed to connect to a "
 "remotely running executable.\n"
@@ -187,38 +184,23 @@ msgstr ""
 "\tcontinue\t[optional] uradi debager s prve prekidne tačke"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: debuggerconfigwidget.ui:188
+#: debuggerconfigwidget.ui:193
 msgid "Remote Debugging"
 msgstr "Udaljeni debager"
 
-#. i18n: ectx: property (text), widget (QLabel, configGdbScript_label)
-#: debuggerconfigwidget.ui:194
-msgid "&Config gdb script:"
-msgstr "&konfiguriši gdb skriptu:"
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_configGdbScript)
-#: debuggerconfigwidget.ui:207
-msgid "Gdb configure script"
-msgstr "Gdb konfiguracijska skripta"
-
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_configGdbScript)
-#: debuggerconfigwidget.ui:210
-msgid "This script is sourced by gdb when the debugging starts."
-msgstr "Ovu skriptu je generisao gdb kada počne debagiranje."
-
 #. i18n: ectx: property (text), widget (QLabel, runShellScript_label)
-#: debuggerconfigwidget.ui:220
+#: debuggerconfigwidget.ui:202
 msgctxt "Shell script to be executed at run time"
 msgid "R&un shell script:"
 msgstr "Pokreni skript&u školjke:"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_runShellScript)
-#: debuggerconfigwidget.ui:233
+#: debuggerconfigwidget.ui:215
 msgid "Script to start remote application"
 msgstr "Skripta za pokretanje udaljenog programa"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_runShellScript)
-#: debuggerconfigwidget.ui:242
+#: debuggerconfigwidget.ui:224
 msgid ""
 "This shell script is run after the Config gdb script has been sourced by "
 "gdb.\n"
@@ -241,19 +223,18 @@ msgstr ""
 "ili ako vaš izvršni sadrži GDB klica\n"
 "2b) Izvršite \"Application\" na metu."
 
-#. i18n: ectx: property (text), widget (QLabel, runGdbScript_label)
-#: debuggerconfigwidget.ui:249
-msgctxt "Gdb script to be executed at run time."
-msgid "Run &gdb script:"
-msgstr "Pokreni &gdb skriptu:"
+#. i18n: ectx: property (text), widget (QLabel, configGdbScript_label)
+#: debuggerconfigwidget.ui:231
+msgid "&Config gdb script:"
+msgstr "&konfiguriši gdb skriptu:"
 
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_runGdbScript)
-#: debuggerconfigwidget.ui:262
+#: debuggerconfigwidget.ui:244
 msgid "Script to connect with remote application"
 msgstr "Skripta za povezivanje s udaljenim programom"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_runGdbScript)
-#: debuggerconfigwidget.ui:269
+#: debuggerconfigwidget.ui:251
 msgid ""
 "This script is sourced by gdb after the two preceding scripts have been "
 "executed.\n"
@@ -270,6 +251,22 @@ msgstr ""
 "\tshell sleep 5\tsačekajte da se udaljeni program pokrene\n"
 "\ttarget remote ...\tpoveži se na udaljeni debager\n"
 "\tcontinue\t[optional] pokreni debager na prvu prekidnu tačku"
+
+#. i18n: ectx: property (text), widget (QLabel, runGdbScript_label)
+#: debuggerconfigwidget.ui:258
+msgctxt "Gdb script to be executed at run time."
+msgid "Run &gdb script:"
+msgstr "Pokreni &gdb skriptu:"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_configGdbScript)
+#: debuggerconfigwidget.ui:271
+msgid "Gdb configure script"
+msgstr "Gdb konfiguracijska skripta"
+
+#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_configGdbScript)
+#: debuggerconfigwidget.ui:274
+msgid "This script is sourced by gdb when the debugging starts."
+msgstr "Ovu skriptu je generisao gdb kada počne debagiranje."
 
 #: debuggerplugin.cpp:93
 msgid "GDB Support"
@@ -379,10 +376,6 @@ msgstr "Kačenje na proces %1"
 #, kde-format
 msgid "Debug process %1"
 msgstr "Traženje grešaka u procesu %1"
-
-#: debuggerplugin.cpp:429
-msgid "Debugger"
-msgstr "Ispravljač grešaka"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, DebuggerTracingDialog)
 #: debuggertracingdialog.ui:13
@@ -643,27 +636,27 @@ msgstr ""
 "dugmad na debagerskoj alatnoj traci  instrukcije \"korak preko\" i "
 "instrukcije \"korak unutra\"."
 
-#: disassemblewidget.cpp:162
+#: disassemblewidget.cpp:163
 msgid "Address"
 msgstr "Adresa"
 
-#: disassemblewidget.cpp:162
+#: disassemblewidget.cpp:163
 msgid "Function"
 msgstr "Funkcija"
 
-#: disassemblewidget.cpp:163
+#: disassemblewidget.cpp:164
 msgid "Offset"
 msgstr "Pomak"
 
-#: disassemblewidget.cpp:163
+#: disassemblewidget.cpp:164
 msgid "Instruction"
 msgstr "Instrukcija"
 
-#: disassemblewidget.cpp:173
+#: disassemblewidget.cpp:174
 msgid "Disassemble View"
 msgstr "Disasemblirani pogled"
 
-#: disassemblewidget.cpp:185
+#: disassemblewidget.cpp:186
 msgid "Change &address"
 msgstr "Promijeni &adresu"
 
@@ -676,7 +669,7 @@ msgstr "Nije moguće pronaći za školjku za otklanjanje grešaka '%1'."
 msgid "Debugging Shell Not Found"
 msgstr "Školjka za otklanjanje grešaka nije nađena"
 
-#: gdb.cpp:330
+#: gdb.cpp:331
 msgctxt "<b>Internal debugger error</b>"
 msgid ""
 "<p>The debugger component encountered internal error while processing reply "
@@ -685,7 +678,7 @@ msgstr ""
 "<p>Debager komponenta je naišlana internu grešku prilikom obrade odgovora od "
 "GDB. Molimo Vas da pošaljete izveštaj o grešci."
 
-#: gdb.cpp:332
+#: gdb.cpp:333
 #, kde-format
 msgid ""
 "The exception is: %1\n"
@@ -694,11 +687,11 @@ msgstr ""
 "Izuzetak je: %1\n"
 "MI odgovor je: %2"
 
-#: gdb.cpp:335
+#: gdb.cpp:336
 msgid "Internal debugger error"
 msgstr "Interna debagerska greška"
 
-#: gdb.cpp:387
+#: gdb.cpp:388
 #, kde-format
 msgid ""
 "<b>Could not start debugger.</b><p>Could not run '%1'. Make sure that the "
@@ -707,11 +700,11 @@ msgstr ""
 "<b>Ne mogu pokrenuti debager.</b><p>Ne mogu pokrenuti '%1'. Uvjerite se da "
 "je ime staze ispravno navedeno."
 
-#: gdb.cpp:391
+#: gdb.cpp:392
 msgid "Could not start debugger"
 msgstr "Ne mogu pokrenuti debager"
 
-#: gdb.cpp:408
+#: gdb.cpp:409
 msgid ""
 "<b>Gdb crashed.</b><p>Because of that the debug session has to be ended."
 "<br>Try to reproduce the crash with plain gdb and report a bug.<br>"
@@ -719,7 +712,7 @@ msgstr ""
 "<b>Gdb pao.</b><p>Zbog toga je sesija traženja grešaka prekinuta."
 "<br>Pokušajte reprodukovati pad običnm gdb i prijavite grešku.<br>"
 
-#: gdb.cpp:411
+#: gdb.cpp:412
 msgid "Gdb crashed"
 msgstr "Gdb pao"
 
@@ -849,6 +842,12 @@ msgstr "Datoteka jezgra:"
 msgid "Select Core File"
 msgstr "Izaberi datoteku jezgra"
 
-#: stty.cpp:333
+#: stty.cpp:332
 msgid "kdevelop: Debug application console"
 msgstr "kdevelop: Debug aplikacijska konzola"
+
+#~ msgid "Watches"
+#~ msgstr "Posmatranja"
+
+#~ msgid "Recent"
+#~ msgstr "Skorašnji"
