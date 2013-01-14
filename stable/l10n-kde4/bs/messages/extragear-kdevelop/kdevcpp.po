@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevelop\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-01-13 09:19+0100\n"
+"POT-Creation-Date: 2013-01-14 09:47+0100\n"
 "PO-Revision-Date: 2012-12-19 19:44+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -155,7 +155,7 @@ msgstr ""
 "Upozorenje. Ne preporučuje se pomicanje inicijalizacije liste na privatni "
 "konstruktor kada je više konstruktora definirano."
 
-#: codegen/progressdialogs.cpp:56 codegen/simplerefactoring.cpp:471
+#: codegen/progressdialogs.cpp:56 codegen/simplerefactoring.cpp:497
 msgid "Cancel"
 msgstr "Odustani"
 
@@ -178,7 +178,7 @@ msgstr ""
 "Refaktorisanje je eksperimentalna funkcija, to može da ošteti vaš kod. Prije "
 "nego što ga koristite, postarajte se da napravite rezervnu kopiju."
 
-#: codegen/simplerefactoring.cpp:122 codegen/simplerefactoring.cpp:445
+#: codegen/simplerefactoring.cpp:122 codegen/simplerefactoring.cpp:471
 #, kde-format
 msgid "Rename %1"
 msgstr "Preimenuj %1"
@@ -188,55 +188,61 @@ msgstr "Preimenuj %1"
 msgid "Create separate definition for %1"
 msgstr "Kreiraj posebnu definiciju za %1"
 
-#: codegen/simplerefactoring.cpp:156 codegen/simplerefactoring.cpp:396
+#: codegen/simplerefactoring.cpp:151 codegen/simplerefactoring.cpp:422
 msgid "No declaration under cursor"
 msgstr "Nema deklaracije pod kurzorom"
 
-#: codegen/simplerefactoring.cpp:167
+#: codegen/simplerefactoring.cpp:161
 #, kde-format
 msgid "No source file available for %1."
 msgstr "Nema izvorne datoteke dostupne za %1."
 
-#: codegen/simplerefactoring.cpp:181
-#, kde-format
-msgid "Failed to update DU chain for %1."
+#: codegen/simplerefactoring.cpp:173
+#, fuzzy, kde-format
+#| msgid "Failed to update DU chain for %1."
+msgid "Failed to update DUChain for %1."
 msgstr "Neuspjelo ažuriranje lanca definicije i upotrebe za %1."
 
-#: codegen/simplerefactoring.cpp:192
+#: codegen/simplerefactoring.cpp:177
+#, fuzzy
+#| msgid "Declaration lost while updating"
+msgid "Declaration lost while updating."
+msgstr "Deklaracija izgubljena pri ažuriranju"
+
+#: codegen/simplerefactoring.cpp:187
 msgid "Cannot create definition for this declaration."
 msgstr "ne mogu kreirati definiciju za ovu deklaraciju"
 
-#: codegen/simplerefactoring.cpp:220
-msgid "Insertion failed"
-msgstr "Ubacivanje nije uspjelo"
-
-#: codegen/simplerefactoring.cpp:228
-msgid "Applying changes failed"
-msgstr "Primjena promjena nije uspjela"
-
-#: codegen/simplerefactoring.cpp:237
+#: codegen/simplerefactoring.cpp:192
 #, kde-format
 msgid "No document for %1"
 msgstr "Nema dokumenta za %1"
 
-#: codegen/simplerefactoring.cpp:241
-msgid "Declaration lost while updating"
-msgstr "Deklaracija izgubljena pri ažuriranju"
+#: codegen/simplerefactoring.cpp:237
+msgid "Insertion failed"
+msgstr "Ubacivanje nije uspjelo"
 
-#: codegen/simplerefactoring.cpp:402
+#: codegen/simplerefactoring.cpp:242 codegen/simplerefactoring.cpp:250
+#: codegen/simplerefactoring.cpp:545 codegen/simplerefactoring.cpp:553
+#: codegen/simplerefactoring.cpp:572
+#, kde-format
+msgid "Applying changes failed: %1"
+msgstr "Primjena promjena nije uspjela: %1"
+
+#: codegen/simplerefactoring.cpp:428
 #, kde-format
 msgid "Declaration is located in non-writeable file %1."
 msgstr "Deklaracija se nalazi u neupisivoj datoteci %1."
 
-#: codegen/simplerefactoring.cpp:452
+#: codegen/simplerefactoring.cpp:478
 msgid "New name:"
 msgstr "Novo ime:"
 
-#: codegen/simplerefactoring.cpp:466
+#: codegen/simplerefactoring.cpp:492
 msgid "Rename"
 msgstr "Preimenuj"
 
-#: codegen/simplerefactoring.cpp:467
+#: codegen/simplerefactoring.cpp:493
 msgid ""
 "Note: All overloaded functions, overloads, forward-declarations, etc. will "
 "be renamed too"
@@ -244,24 +250,18 @@ msgstr ""
 "Napomena: Sve preopterećene funkcije, preopterećenja, deklaracije itd, će "
 "također biti preimenovane"
 
-#: codegen/simplerefactoring.cpp:477
+#: codegen/simplerefactoring.cpp:503
 msgid "Uses"
 msgstr "Upotrebe"
 
-#: codegen/simplerefactoring.cpp:479
+#: codegen/simplerefactoring.cpp:505
 msgid "Declaration Info"
 msgstr "Informacija o deklaraciji"
 
-#: codegen/simplerefactoring.cpp:499
+#: codegen/simplerefactoring.cpp:525
 #, kde-format
 msgid "Renaming \"%1\" to \"%2\""
 msgstr "Preimenujem \"%1\" u \"%2\""
-
-#: codegen/simplerefactoring.cpp:519 codegen/simplerefactoring.cpp:527
-#: codegen/simplerefactoring.cpp:546
-#, kde-format
-msgid "Applying changes failed: %1"
-msgstr "Primjena promjena nije uspjela: %1"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: codegen/ui/cppnewclass.ui:16
@@ -952,6 +952,9 @@ msgstr "Staza uključenja"
 #: quickopen.cpp:411 quickopen.cpp:418
 msgid "Includers"
 msgstr "Uključioci"
+
+#~ msgid "Applying changes failed"
+#~ msgstr "Primjena promjena nije uspjela"
 
 #~ msgid "Default Methods"
 #~ msgstr "Podrazumijevane metode"
