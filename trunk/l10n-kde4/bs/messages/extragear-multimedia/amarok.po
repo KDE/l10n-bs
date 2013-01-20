@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-01-17 02:42+0100\n"
+"POT-Creation-Date: 2013-01-20 02:27+0100\n"
 "PO-Revision-Date: 2011-05-21 22:47+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -240,7 +240,7 @@ msgstr "Posjeti profil doprinosioca na Stakoverflouu"
 #. i18n: ectx: property (text), widget (QLabel, labelName)
 #. i18n: ectx: property (text), widget (QTableWidget, serverList)
 #: aboutdialog/OcsPersonItem.ui:137 amarokurls/BookmarkModel.cpp:265
-#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:410
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:415
 #: network/NetworkRequests.ui:89 network/NetworkRequests.ui:103
 #: playlistgenerator/TreeModel.cpp:64
 #: services/amazon/AmazonItemTreeModel.cpp:168
@@ -1518,7 +1518,7 @@ msgstr "Dodaj pozicioni obilježivač"
 
 # >> @title:column
 #: amarokurls/BookmarkModel.cpp:86
-#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:411
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:416
 msgid "Group"
 msgstr "grupa"
 
@@ -2351,7 +2351,7 @@ msgstr "Novi direktorij"
 msgid "Create empty playlist"
 msgstr "Napravi pametnu listu"
 
-#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:143
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:144
 #, kde-format
 msgctxt "number of playlists from one source"
 msgid "One Playlist"
@@ -2360,7 +2360,14 @@ msgstr[0] "%1 lista numera"
 msgstr[1] "%1 liste numera"
 msgstr[2] "%1 listi numera"
 
-#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:185
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:149
+#, fuzzy
+#| msgid "Loading"
+msgctxt "normally number of playlists, but they are still loading"
+msgid "Loading..."
+msgstr "Učitavam"
+
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:190
 #, fuzzy, kde-format
 msgctxt "number of playlists from one source"
 msgid "One playlist"
@@ -2370,7 +2377,7 @@ msgstr[1] "%1 liste numera"
 msgstr[2] "%1 listi numera"
 
 # >> @title:column
-#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:412
+#: browsers/playlistbrowser/PlaylistBrowserModel.cpp:417
 msgid "Source"
 msgstr "izvor"
 
@@ -4496,56 +4503,46 @@ msgstr "sa turneje"
 msgid "dates"
 msgstr "datumi"
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:195
-#: context/engines/wikipedia/WikipediaEngine.cpp:271
-#: context/engines/wikipedia/WikipediaEngine.cpp:404
+#: context/engines/wikipedia/WikipediaEngine.cpp:196
+#: context/engines/wikipedia/WikipediaEngine.cpp:272
+#: context/engines/wikipedia/WikipediaEngine.cpp:405
 #, kde-format
 msgid "Unable to retrieve Wikipedia information: %1"
 msgstr "Ne mogu da dobavim podatke sa Vikipedije: %1"
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:211
-#: context/engines/wikipedia/WikipediaEngine.cpp:380
-#: context/engines/wikipedia/WikipediaEngine.cpp:442
+#: context/engines/wikipedia/WikipediaEngine.cpp:212
+#: context/engines/wikipedia/WikipediaEngine.cpp:381
+#: context/engines/wikipedia/WikipediaEngine.cpp:443
 msgid "No information found..."
 msgstr "Podaci nisu nađeni..."
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:452
+#: context/engines/wikipedia/WikipediaEngine.cpp:453
 msgctxt "Search pattern for an artist or band"
 msgid ".*\\(.*(artist|band).*\\))"
 msgstr ""
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:455
+#: context/engines/wikipedia/WikipediaEngine.cpp:456
 msgctxt "Search pattern for a composer"
 msgid ".*\\(.*(composer|musician).*\\))"
 msgstr ""
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:458
+#: context/engines/wikipedia/WikipediaEngine.cpp:459
 msgctxt "Search pattern for an album"
 msgid ".*\\(.*(album|score|soundtrack).*\\)"
 msgstr ""
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:462
+#: context/engines/wikipedia/WikipediaEngine.cpp:463
 msgctxt "Search pattern for a song"
 msgid ".*\\(.*(song|track).*\\)"
 msgstr ""
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:630
-msgid "The name of the artist is required for searching Wikipedia..."
+#: context/engines/wikipedia/WikipediaEngine.cpp:631
+#, kde-format
+msgctxt "%1 is field name such as 'Artist Name'"
+msgid "%1 is needed for searching Wikipedia."
 msgstr ""
 
-#: context/engines/wikipedia/WikipediaEngine.cpp:650
-msgid "The name of the composer is needed before searching wikipedia"
-msgstr ""
-
-#: context/engines/wikipedia/WikipediaEngine.cpp:667
-msgid "The name of this songs album is needed before searching Wikipedia"
-msgstr ""
-
-#: context/engines/wikipedia/WikipediaEngine.cpp:684
-msgid "The name of this track is needed before searching Wikipedia"
-msgstr ""
-
-#: context/engines/wikipedia/WikipediaEngine.cpp:860
+#: context/engines/wikipedia/WikipediaEngine.cpp:873
 msgid "Choose Language"
 msgstr "Odaberi jezik"
 
@@ -4958,10 +4955,16 @@ msgstr "Prekid skanera sa greškom: %1"
 msgid "Scanner aborted."
 msgstr "Skaner prekinut"
 
-#: core-impl/collections/db/ScanManager.cpp:717
+#: core-impl/collections/db/ScanManager.cpp:722
+#, fuzzy, kde-format
+#| msgid ""
+#| "The collection scan had to be aborted. Too many errors were encountered "
+#| "during the scan."
 msgid ""
-"The collection scan had to be aborted. Too many errors were encountered "
-"during the scan."
+"The collection scan had to be aborted. Too many crashes (%1) were "
+"encountered during the scan. Following files caused the crashes:\n"
+"\n"
+"%2"
 msgstr ""
 "Skeniranje kolekcije treba da bude prekinuto. Previše grešaka se desilo u "
 "toku skeniranja."
@@ -5030,13 +5033,13 @@ msgid ""
 msgstr ""
 
 #: core-impl/collections/ipodcollection/IpodCollection.cpp:109
-#: core-impl/collections/umscollection/UmsCollection.cpp:241
+#: core-impl/collections/umscollection/UmsCollection.cpp:239
 #, fuzzy
 msgid "&Configure Device"
 msgstr "Podesi multimedijalni uređaj"
 
 #: core-impl/collections/ipodcollection/IpodCollection.cpp:113
-#: core-impl/collections/umscollection/UmsCollection.cpp:249
+#: core-impl/collections/umscollection/UmsCollection.cpp:247
 #, fuzzy
 msgid "&Eject Device"
 msgstr "Prekini vezu sa &uređajem"
@@ -5791,12 +5794,19 @@ msgstr "Da, obriši sa %1."
 msgid "&Delete Channel and Episodes"
 msgstr "&Obriši kanal i epizode"
 
-#: core-impl/collections/umscollection/UmsCollection.cpp:245
+#: core-impl/collections/umscollection/UmsCollection.cpp:243
 #, fuzzy
 msgid "&Activate This Collection"
 msgstr "&Koristi kao zbirku"
 
-#: core-impl/collections/umscollection/UmsCollection.cpp:383
+#: core-impl/collections/umscollection/UmsCollection.cpp:279
+#, kde-format
+msgid ""
+"File <i>%1</i> suggests that we should use <i>%2</i> as music folder on the "
+"device, but it doesn't exist. Falling back to <i>%3</i> instead"
+msgstr ""
+
+#: core-impl/collections/umscollection/UmsCollection.cpp:384
 #, kde-format
 msgctxt ""
 "Name of the USB Mass Storage collection that has not yet been activated. See "
@@ -5805,7 +5815,7 @@ msgid "%1 (not activated)"
 msgstr ""
 
 # >> @title:window
-#: core-impl/collections/umscollection/UmsCollection.cpp:626
+#: core-impl/collections/umscollection/UmsCollection.cpp:627
 msgid "Configure USB Mass Storage Device"
 msgstr "Podešavanje USB uređaja za opšte skladištenje"
 
@@ -7818,9 +7828,13 @@ msgid "Could not open file \"%1\"."
 msgstr "Nisam mogao da otvorim datoteku \"%1\"."
 
 #: databaseimporter/sqlbatch/SqlBatchImporterConfig.cpp:37
+#, fuzzy
+#| msgid ""
+#| "Input file produced by amarokcollectionscanner.<br>See <a href=\"http://"
+#| "amarok.kde.org/wiki/Batch_Mode\">Batch Mode</a>."
 msgid ""
 "Input file produced by amarokcollectionscanner.<br>See <a href=\"http://"
-"amarok.kde.org/wiki/Batch_Mode\">Batch Mode</a>."
+"community.kde.org/Amarok/Development/BatchMode\">Batch Mode</a>."
 msgstr ""
 "Ulazna datoteka koju je napravio amarokcollectionscanner.<br>Vidi <a href="
 "\"http://amarok.kde.org/wiki/Batch_Mode\">Batch Mode</a>."
@@ -11082,6 +11096,10 @@ msgstr "LastFM: voli tekuću numeru"
 msgid "Last.fm: Ban Current Track"
 msgstr "LastFM: zabrani tekuću numeru"
 
+#: MainWindow.cpp:897
+msgid "Last.fm: Skip Current Track"
+msgstr "LastFM: preskoči tekuću numeru"
+
 #: MainWindow.cpp:902 playlist/view/PlaylistViewCommon.cpp:114
 msgid "Queue Track"
 msgstr "Stavi u red"
@@ -11945,7 +11963,9 @@ msgid "Tracks Removed"
 msgstr "Uklonjene numere"
 
 #: playlist/UndoCommands.cpp:76
-msgid "Track moved"
+#, fuzzy
+#| msgid "Track moved"
+msgid "Tracks moved"
 msgstr "Numera premještena"
 
 #: playlist/view/listview/SourceSelectionPopup.cpp:35
@@ -14006,11 +14026,15 @@ msgstr "Prijateljev voljeni radio"
 msgid "Friends' Personal Radio"
 msgstr "Prijateljev lični radio"
 
-#: services/lastfm/LastFmServiceConfig.cpp:236
+#: services/lastfm/LastFmServiceConfig.cpp:188
+msgid "Failed to open KDE Wallet to read Last.fm credentials"
+msgstr ""
+
+#: services/lastfm/LastFmServiceConfig.cpp:238
 msgid "Last.fm credentials"
 msgstr "Akreditivi na LastFM‑u"
 
-#: services/lastfm/LastFmServiceConfig.cpp:237
+#: services/lastfm/LastFmServiceConfig.cpp:239
 msgid ""
 "No running KWallet found. Would you like Amarok to save your Last.fm "
 "credentials in plaintext?"
@@ -14031,6 +14055,21 @@ msgstr "Proba prijave"
 #: services/lastfm/LastFmServiceSettings.cpp:166
 msgid "Unable to connect to Last.fm service."
 msgstr "Ne mogu se povezati na Last.fm servis."
+
+#: services/lastfm/LastFmTreeModel.cpp:173
+#, fuzzy, kde-format
+msgctxt "%1 is Last.fm tag name, %2 is its usage count"
+msgid "%1 (%2)"
+msgstr "%1 numera (%2)"
+
+#: services/lastfm/LastFmTreeModel.cpp:224
+#, kde-format
+msgctxt "%2 is artist name, %1 is number of plays"
+msgid "%2 (%1 play)"
+msgid_plural "%2 (%1 plays)"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: services/lastfm/LastFmTreeModel.cpp:241
 msgid "Personal Radio"
@@ -14083,6 +14122,18 @@ msgstr "Ctrl+B"
 #: services/lastfm/meta/LastFmMeta.cpp:83
 msgid "Ban this track"
 msgstr "Zabrani ovu numeru"
+
+#: services/lastfm/meta/LastFmMeta.cpp:87
+msgid "Last.fm: &Skip"
+msgstr "LastFM: &Preskoči"
+
+#: services/lastfm/meta/LastFmMeta.cpp:88
+msgid "Ctrl+S"
+msgstr "Ctrl+S"
+
+#: services/lastfm/meta/LastFmMeta.cpp:89
+msgid "Skip this track"
+msgstr "Preskoči ovu numeru"
 
 #: services/lastfm/meta/LastFmMeta.cpp:135
 #: services/lastfm/meta/LastFmMeta.cpp:357
@@ -14976,9 +15027,9 @@ msgid "Add an OPML file to the list."
 msgstr "Dodaj OPML datoteku na listu."
 
 #: services/scriptable/ScriptableServiceInfoParser.cpp:44
-#: services/scriptable/ScriptableServiceInfoParser.cpp:62
-#: services/scriptable/ScriptableServiceInfoParser.cpp:78
-#: services/scriptable/ScriptableServiceInfoParser.cpp:94
+#: services/scriptable/ScriptableServiceInfoParser.cpp:59
+#: services/scriptable/ScriptableServiceInfoParser.cpp:74
+#: services/scriptable/ScriptableServiceInfoParser.cpp:88
 msgid "Loading info..."
 msgstr "Učitavam podatke..."
 
@@ -15943,9 +15994,6 @@ msgstr "Jačina: %1%"
 #~ msgid "Spectrum Analyzer Settings"
 #~ msgstr "Postavke apleta albuma"
 
-#~ msgid "Ctrl+S"
-#~ msgstr "Ctrl+S"
-
 #~ msgctxt "As in, lastfm"
 #~ msgid "Loved Track: %1"
 #~ msgstr "Voljena numera: %1"
@@ -16040,15 +16088,6 @@ msgstr "Jačina: %1%"
 
 #~ msgid "Ok"
 #~ msgstr "U redu"
-
-#~ msgid "Last.fm: Skip Current Track"
-#~ msgstr "LastFM: preskoči tekuću numeru"
-
-#~ msgid "Last.fm: &Skip"
-#~ msgstr "LastFM: &Preskoči"
-
-#~ msgid "Skip this track"
-#~ msgstr "Preskoči ovu numeru"
 
 #, fuzzy
 #~| msgid "Format"
