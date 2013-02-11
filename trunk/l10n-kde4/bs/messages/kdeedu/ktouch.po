@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-02-11 03:40+0100\n"
+"POT-Creation-Date: 2013-01-25 03:15+0100\n"
 "PO-Revision-Date: 2012-10-28 19:38+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -128,8 +128,9 @@ msgstr "neimenovan raspored tastature"
 msgid "Template"
 msgstr "Šablon"
 
+#. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
 #: src/editor/resourceeditor.cpp:62 src/qml/ProfileDetailsItem.qml:149
-#: src/qml/ProfileDetailsItem.qml:207
+#: src/qml/ProfileDetailsItem.qml:207 src/ui/keyboardlayouteditor.ui:82
 #, fuzzy
 msgid "Delete"
 msgstr "Izbriši tipku"
@@ -266,6 +267,53 @@ msgstr "Rasporedi &tastature"
 #, fuzzy
 msgid "Choose Keyboard Layout"
 msgstr "Snimi raspored tastature"
+
+#. i18n: ectx: label, entry (KeyboardLayoutName), group (General)
+#: src/ktouch.kcfg:9
+msgid "The keyboard layout to use on non-X11 platforms"
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowKeyboard), group (Training)
+#: src/ktouch.kcfg:15
+msgid "Controls the visibility of the keyboard during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowStatistics), group (Training)
+#: src/ktouch.kcfg:19
+msgid "Controls the visibility of realtime statistics during training."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithReturn), group (Training)
+#: src/ktouch.kcfg:23
+msgid "Return key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (NextLineWithSpace), group (Training)
+#: src/ktouch.kcfg:27
+msgid "Space key at the end of a line will switch to next line."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredStrokesPerMinute), group (Training)
+#: src/ktouch.kcfg:31
+msgid ""
+"The minimum required amount of strokes per minute to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (RequiredAccuracy), group (Training)
+#: src/ktouch.kcfg:37
+msgid ""
+"The minimum required typing accuracy in percent to unlock the next lesson."
+msgstr ""
+
+#. i18n: ectx: label, entry (FingerColor$(Index)), group (Colors)
+#: src/ktouch.kcfg:46
+msgid "The keyboard tinting color to highlight keys for each finger."
+msgstr ""
+
+#. i18n: ectx: label, entry (LastUsedProfileId), group (Session)
+#: src/ktouch.kcfg:59
+msgid "The ID of the last used profile."
+msgstr ""
 
 #: src/main.cpp:28
 msgid "Learn and practice typewriting"
@@ -637,6 +685,382 @@ msgstr ""
 "Trenažna sesija je pauzirana. Nastavlja se pri sljedećem pritisku na "
 "taster..."
 
+#. i18n: ectx: property (title), widget (QGroupBox, fingersGroupBox)
+#: src/ui/colorsconfigwidget.ui:17
+#, fuzzy
+msgid "Fingers"
+msgstr "Prst tipka"
+
+#. i18n: ectx: property (text), widget (QLabel, leftHandLabel)
+#: src/ui/colorsconfigwidget.ui:44
+msgid "Left Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel3)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel4)
+#: src/ui/colorsconfigwidget.ui:72 src/ui/colorsconfigwidget.ui:218
+#, fuzzy
+msgid "Index finger:"
+msgstr "Linija kucanja"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel2)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel5)
+#: src/ui/colorsconfigwidget.ui:88 src/ui/colorsconfigwidget.ui:234
+#, fuzzy
+msgid "Middle finger"
+msgstr "Odaberi  tipku za prst"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel1)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel6)
+#: src/ui/colorsconfigwidget.ui:104 src/ui/colorsconfigwidget.ui:250
+#, fuzzy
+msgid "Ring finger:"
+msgstr "Linija kucanja"
+
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel0)
+#. i18n: ectx: property (text), widget (QLabel, fingerLabel7)
+#: src/ui/colorsconfigwidget.ui:120 src/ui/colorsconfigwidget.ui:266
+#, fuzzy
+msgid "Little finger:"
+msgstr "Odaberi  tipku za prst"
+
+#. i18n: ectx: property (text), widget (QLabel, rightHandLabel)
+#: src/ui/colorsconfigwidget.ui:190
+msgid "Right Hand"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_titleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
+#: src/ui/courseeditor.ui:40 src/ui/courseeditor.ui:300
+#: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
+#: src/ui/newkeyboardlayoutwidget.ui:51
+msgid "Title:"
+msgstr "Naslov:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutLabel)
+#: src/ui/courseeditor.ui:53 src/ui/newcoursewidget.ui:38
+#, fuzzy
+msgid "Keyboard layout:"
+msgstr "Rasporedi &tastature"
+
+#. i18n: ectx: property (text), widget (QLabel, m_descriptionLabel)
+#: src/ui/courseeditor.ui:73 src/ui/newcoursewidget.ui:58
+msgid "Description:"
+msgstr "Opis:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lessonsLabel)
+#: src/ui/courseeditor.ui:150
+#, fuzzy
+msgid "Lessons:"
+msgstr "Sesije"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addLessonButton)
+#: src/ui/courseeditor.ui:179
+msgid "Add new lesson"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeLessonButton)
+#: src/ui/courseeditor.ui:194 src/undocommands/coursecommands.cpp:178
+#, fuzzy
+msgid "Remove lesson"
+msgstr "Ukloni"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonUpButton)
+#: src/ui/courseeditor.ui:225
+#, fuzzy
+msgid "Move lesson up"
+msgstr "Ukloni"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_moveLessonDownButton)
+#: src/ui/courseeditor.ui:240
+#, fuzzy
+msgid "Move lesson down"
+msgstr "Ukloni"
+
+#. i18n: ectx: property (text), widget (QLabel, m_newCharactersLabel)
+#: src/ui/courseeditor.ui:317
+#, fuzzy
+msgid "New characters:"
+msgstr "novi znakovi"
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/courseeditor.ui:370
+#, fuzzy
+msgid "0 Characters"
+msgstr "Znak"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:34
+#, fuzzy
+msgid "Create new normal key"
+msgstr "Kreiraj novu tastaturu"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:37
+#, fuzzy
+msgid "Normal Key"
+msgstr "Normalna tipka"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:55
+#, fuzzy
+msgid "Create new special key"
+msgstr "Napravi novu lekciju"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_newSpecialKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:58
+msgid "Special Key"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_deleteKeyToolButton)
+#: src/ui/keyboardlayouteditor.ui:79
+#, fuzzy
+msgid "Delete selected key"
+msgstr "Izbriši tipku"
+
+#. i18n: ectx: property (text), widget (QLabel, m_zoomFactorLabel)
+#: src/ui/keyboardlayouteditor.ui:147
+#, no-c-format
+msgid "100%"
+msgstr "100%"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_keyboardGroupBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:36
+#, fuzzy
+msgid "Keyboard"
+msgstr "Snimi tastaturu"
+
+#. i18n: ectx: property (text), widget (QLabel, m_nameLabel)
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutNameLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:79
+#: src/ui/newkeyboardlayoutwidget.ui:22
+msgid "Name:"
+msgstr "Ime:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutWidthLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/keyboardlayoutpropertieswidget.ui:109
+#: src/ui/keyboardlayoutpropertieswidget.ui:276
+msgid "Width:"
+msgstr "Širina:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyboardLayoutHeightLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/keyboardlayoutpropertieswidget.ui:138
+#: src/ui/keyboardlayoutpropertieswidget.ui:305
+msgid "Height:"
+msgstr "Visina:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/ui/keyboardlayoutpropertieswidget.ui:185
+#, fuzzy
+msgid "Geometry"
+msgstr "Geometrija tastera"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/keyboardlayoutpropertieswidget.ui:211
+msgid "Left:"
+msgstr "Lijevo:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/keyboardlayoutpropertieswidget.ui:221
+msgid "Top:"
+msgstr "Vrh:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/ui/keyboardlayoutpropertieswidget.ui:361
+#: src/ui/keyboardlayoutpropertieswidget.ui:550
+msgid "Key"
+msgstr "Ključ"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyFingerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:379
+#, fuzzy
+msgid "Finger:"
+msgstr "Prst tipka"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:396
+#, fuzzy
+msgid "Left little finger"
+msgstr "Odaberi  tipku za prst"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:401
+#, fuzzy
+msgid "Left ring finger"
+msgstr "Linija kucanja"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:406
+#, fuzzy
+msgid "Left middle finger"
+msgstr "Odaberi  tipku za prst"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:411
+#, fuzzy
+msgid "Left index finger"
+msgstr "Odaberi  tipku za prst"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:416
+#, fuzzy
+msgid "Right index finger"
+msgstr "Linija kucanja"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:421
+#, fuzzy
+msgid "Right middle finger"
+msgstr "Odaberi  tipku za prst"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:426
+#, fuzzy
+msgid "Right ring finger"
+msgstr "Linija kucanja"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_keyFingerComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:431
+#, fuzzy
+msgid "Right little finger"
+msgstr "Linija kucanja"
+
+#. i18n: ectx: property (text), widget (QLabel, m_keyHapticMarkerLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:439
+msgid "Haptic Marker:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/ui/keyboardlayoutpropertieswidget.ui:465
+#, fuzzy
+msgid "Characters"
+msgstr "Znak"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_addCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:501
+#, fuzzy
+msgid "Add new character"
+msgstr "novi znakovi"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_removeCharacterButton)
+#: src/ui/keyboardlayoutpropertieswidget.ui:513
+#, fuzzy
+msgid "Remove character"
+msgstr "Znakovi tipke"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyTypeLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:562
+#, fuzzy
+msgid "Type:"
+msgstr "Vrh:"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:579
+msgid "Tab"
+msgstr "Tabulator"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:584
+msgid "Capslock"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:589
+msgid "Shift"
+msgstr "Shift"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:594
+msgid "Backspace"
+msgstr "Brisanje"
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithReturn)
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:599
+#: src/ui/trainingconfigwidget.ui:81
+msgid "Return"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, kcfg_NextLineWithSpace)
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:604
+#: src/ui/trainingconfigwidget.ui:88
+#, fuzzy
+msgid "Space"
+msgstr "Rezultat"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, m_specialKeyTypeComboBox)
+#: src/ui/keyboardlayoutpropertieswidget.ui:609
+msgid "Other"
+msgstr "Drugo"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyLabelLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:617
+#, fuzzy
+msgid "Label:"
+msgstr "Nivo:"
+
+#. i18n: ectx: property (text), widget (QLabel, m_specialKeyModifierIdLabel)
+#: src/ui/keyboardlayoutpropertieswidget.ui:630
+#, fuzzy
+msgid "Modifier ID:"
+msgstr "Modifikatorska tipka"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
+#: src/ui/newkeyboardlayoutwidget.ui:37
+#, fuzzy
+msgid "Paste current system keyboard layout name"
+msgstr "neimenovan raspored tastature"
+
+#. i18n: ectx: property (text), widget (QLabel, trainingLabel)
+#: src/ui/trainingconfigwidget.ui:31
+#, fuzzy
+msgid "During training:"
+msgstr "T&rening"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowKeyboard)
+#: src/ui/trainingconfigwidget.ui:44
+msgid "Show keyboard"
+msgstr "Prikaži tastaturu"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShowStatistics)
+#: src/ui/trainingconfigwidget.ui:51
+#, fuzzy
+msgid "Show real-time statistics"
+msgstr "Opšte statistike"
+
+#. i18n: ectx: property (text), widget (QLabel, nextLineLabel)
+#: src/ui/trainingconfigwidget.ui:74
+msgid "Go to next line with:"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/ui/trainingconfigwidget.ui:119
+msgid "Lesson unlocking limits"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, requiredStrokesPerMinuteLabel)
+#: src/ui/trainingconfigwidget.ui:128
+#, fuzzy
+msgid "Minimum strokes per minute:"
+msgstr "Riječi u minuti:"
+
+#. i18n: ectx: property (text), widget (QLabel, requiredAccuracyLabel)
+#: src/ui/trainingconfigwidget.ui:163
+#, fuzzy
+msgid "Minimum accuracy:"
+msgstr "Preciznost"
+
+#. i18n: ectx: property (suffix), widget (KDoubleNumInput, kcfg_RequiredAccuracy)
+#: src/ui/trainingconfigwidget.ui:191
+#, no-c-format
+msgid "%"
+msgstr "%"
+
 #: src/undocommands/coursecommands.cpp:32
 msgid "Set title"
 msgstr ""
@@ -653,11 +1077,6 @@ msgstr ""
 #: src/undocommands/coursecommands.cpp:137
 msgid "Add lesson"
 msgstr ""
-
-#: src/undocommands/coursecommands.cpp:178
-#, fuzzy
-msgid "Remove lesson"
-msgstr "Ukloni"
 
 #: src/undocommands/coursecommands.cpp:229
 msgid "Move lesson"
@@ -752,147 +1171,6 @@ msgstr ""
 #: src/undocommands/keyboardlayoutcommands.cpp:724
 msgid "Set special key modifier ID"
 msgstr ""
-
-#, fuzzy
-#~ msgid "Fingers"
-#~ msgstr "Prst tipka"
-
-#, fuzzy
-#~ msgid "Middle finger"
-#~ msgstr "Odaberi  tipku za prst"
-
-#, fuzzy
-#~ msgid "Ring finger:"
-#~ msgstr "Linija kucanja"
-
-#~ msgid "Title:"
-#~ msgstr "Naslov:"
-
-#, fuzzy
-#~ msgid "Keyboard layout:"
-#~ msgstr "Rasporedi &tastature"
-
-#~ msgid "Description:"
-#~ msgstr "Opis:"
-
-#, fuzzy
-#~ msgid "Lessons:"
-#~ msgstr "Sesije"
-
-#, fuzzy
-#~ msgid "New characters:"
-#~ msgstr "novi znakovi"
-
-#, fuzzy
-#~ msgid "0 Characters"
-#~ msgstr "Znak"
-
-#, fuzzy
-#~ msgid "Create new normal key"
-#~ msgstr "Kreiraj novu tastaturu"
-
-#, fuzzy
-#~ msgid "Normal Key"
-#~ msgstr "Normalna tipka"
-
-#, fuzzy
-#~ msgid "Create new special key"
-#~ msgstr "Napravi novu lekciju"
-
-#, fuzzy
-#~ msgid "Delete selected key"
-#~ msgstr "Izbriši tipku"
-
-#~ msgid "100%"
-#~ msgstr "100%"
-
-#, fuzzy
-#~ msgid "Keyboard"
-#~ msgstr "Snimi tastaturu"
-
-#~ msgid "Name:"
-#~ msgstr "Ime:"
-
-#~ msgid "Width:"
-#~ msgstr "Širina:"
-
-#~ msgid "Height:"
-#~ msgstr "Visina:"
-
-#, fuzzy
-#~ msgid "Geometry"
-#~ msgstr "Geometrija tastera"
-
-#~ msgid "Left:"
-#~ msgstr "Lijevo:"
-
-#~ msgid "Top:"
-#~ msgstr "Vrh:"
-
-#~ msgid "Key"
-#~ msgstr "Ključ"
-
-#, fuzzy
-#~ msgid "Finger:"
-#~ msgstr "Prst tipka"
-
-#, fuzzy
-#~ msgid "Characters"
-#~ msgstr "Znak"
-
-#, fuzzy
-#~ msgid "Add new character"
-#~ msgstr "novi znakovi"
-
-#, fuzzy
-#~ msgid "Remove character"
-#~ msgstr "Znakovi tipke"
-
-#, fuzzy
-#~ msgid "Type:"
-#~ msgstr "Vrh:"
-
-#~ msgid "Tab"
-#~ msgstr "Tabulator"
-
-#~ msgid "Shift"
-#~ msgstr "Shift"
-
-#~ msgid "Backspace"
-#~ msgstr "Brisanje"
-
-#, fuzzy
-#~ msgid "Space"
-#~ msgstr "Rezultat"
-
-#~ msgid "Other"
-#~ msgstr "Drugo"
-
-#, fuzzy
-#~ msgid "Label:"
-#~ msgstr "Nivo:"
-
-#, fuzzy
-#~ msgid "Modifier ID:"
-#~ msgstr "Modifikatorska tipka"
-
-#, fuzzy
-#~ msgid "Paste current system keyboard layout name"
-#~ msgstr "neimenovan raspored tastature"
-
-#~ msgid "Show keyboard"
-#~ msgstr "Prikaži tastaturu"
-
-#, fuzzy
-#~ msgid "Show real-time statistics"
-#~ msgstr "Opšte statistike"
-
-#, fuzzy
-#~ msgid "Minimum strokes per minute:"
-#~ msgstr "Riječi u minuti:"
-
-#~ msgid "%"
-#~ msgstr "%"
 
 #~ msgctxt "Keyboard Layout Name"
 #~ msgid "Arabic"

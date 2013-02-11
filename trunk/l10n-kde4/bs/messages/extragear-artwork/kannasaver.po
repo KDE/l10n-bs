@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kannasaver.po\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-02-11 02:50+0100\n"
+"POT-Creation-Date: 2012-08-20 02:35+0200\n"
 "PO-Revision-Date: 2011-05-13 22:35+0200\n"
 "Last-Translator: Samir Ribic <megaribi@epn.ba>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -17,6 +17,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#. i18n: ectx: label, entry (mode), group (kannasaver)
+#: src/kannasaver.kcfg:11
+msgid "How many characters should be shown."
+msgstr ""
+
+#. i18n: ectx: label, entry (style), group (kannasaver)
+#: src/kannasaver.kcfg:20
+msgid "Which writing system should be used."
+msgstr ""
+
+#. i18n: ectx: label, entry (font), group (kannasaver)
+#: src/kannasaver.kcfg:40
+msgid "The font used to display the Romaji characters."
+msgstr ""
+
+#. i18n: ectx: label, entry (kanaFont), group (kannasaver)
+#: src/kannasaver.kcfg:57
+msgid "The font used to display the Kana characters."
+msgstr ""
 
 #: src/main.cpp:47
 msgid "Kannasaver"
@@ -60,38 +80,99 @@ msgstr ""
 msgid "General"
 msgstr "Opšte"
 
-#~ msgid "Mode:"
-#~ msgstr "Režim:"
+#. i18n: ectx: property (windowTitle), widget (QWidget, SettingsWidget)
+#: src/settingswidget.ui:15
+#, fuzzy
+#| msgid "Kannasaver"
+msgid "Kannasaver Setup"
+msgstr "Kannasaver"
 
-#~ msgid "Basic"
-#~ msgstr "Osnovna"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: src/settingswidget.ui:25
+msgid "Mode:"
+msgstr "Režim:"
 
-#~ msgid "Style:"
-#~ msgstr "Stil:"
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_mode)
+#: src/settingswidget.ui:33
+msgid "Basic"
+msgstr "Osnovna"
 
-#~ msgid "Hiragana"
-#~ msgstr "hiragana"
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_mode)
+#: src/settingswidget.ui:38
+msgid "Basic + Extended"
+msgstr ""
 
-#~ msgid "Katakana"
-#~ msgstr "katakana"
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_mode)
+#: src/settingswidget.ui:43
+msgid "Basic + Extended + Compound"
+msgstr ""
 
-#~ msgid "Background Color:"
-#~ msgstr "Boja pozadine:"
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/settingswidget.ui:51
+msgid "Style:"
+msgstr "Stil:"
 
-#~ msgid " Seconds"
-#~ msgstr " sekundi"
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_style)
+#: src/settingswidget.ui:59
+msgid "Hiragana"
+msgstr "hiragana"
 
-#~ msgid "Font:"
-#~ msgstr "Font:"
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_style)
+#: src/settingswidget.ui:64
+msgid "Katakana"
+msgstr "katakana"
 
-#~ msgid "Size:"
-#~ msgstr "Veličina:"
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/settingswidget.ui:72
+msgid "Background Color:"
+msgstr "Boja pozadine:"
 
-#~ msgid " %"
-#~ msgstr " %"
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/settingswidget.ui:82
+msgid "Timer:"
+msgstr ""
 
-#~ msgid "Color:"
-#~ msgstr "Boja:"
+#. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_timer)
+#: src/settingswidget.ui:89
+msgid " Seconds"
+msgstr " sekundi"
 
-#~ msgid "Preview"
-#~ msgstr "Pregled"
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/settingswidget.ui:110
+msgid "Romaji Font"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: src/settingswidget.ui:119 src/settingswidget.ui:177
+msgid "Font:"
+msgstr "Font:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#. i18n: ectx: property (text), widget (QLabel, label_12)
+#: src/settingswidget.ui:129 src/settingswidget.ui:187
+msgid "Size:"
+msgstr "Veličina:"
+
+#. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_fontSize)
+#. i18n: ectx: property (suffix), widget (KIntSpinBox, kcfg_kanaFontSize)
+#: src/settingswidget.ui:136 src/settingswidget.ui:194
+#, no-c-format
+msgid " %"
+msgstr " %"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#. i18n: ectx: property (text), widget (QLabel, label_13)
+#: src/settingswidget.ui:155 src/settingswidget.ui:213
+msgid "Color:"
+msgstr "Boja:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/settingswidget.ui:168
+msgid "Kana Font"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: src/settingswidget.ui:243
+msgid "Preview"
+msgstr "Pregled"

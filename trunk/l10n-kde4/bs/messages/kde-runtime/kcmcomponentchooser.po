@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-02-11 03:48+0100\n"
+"POT-Creation-Date: 2012-08-20 04:50+0200\n"
 "PO-Revision-Date: 2012-09-03 13:46+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -29,6 +29,30 @@ msgstr "Samir Ribić"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "samir.ribic@etf.unsa.ba"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: browserconfig_ui.ui:12
+msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
+msgstr "<qt>Otvaraj <b>HTTP</b> i <b>HTTPS</b> URL‑ove</qt>"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioKIO)
+#: browserconfig_ui.ui:19
+msgid "in an application based on the contents of the URL"
+msgstr "u programu na osnovu sadržaja URL‑a"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioExec)
+#: browserconfig_ui.ui:29
+msgid "in the following browser:"
+msgstr "u sljedećem pregledniku:"
+
+#. i18n: ectx: property (text), widget (QToolButton, btnSelectBrowser)
+#. i18n: ectx: property (text), widget (QToolButton, btnSelectEmail)
+#. i18n: ectx: property (text), widget (QToolButton, btnSelectFileManager)
+#. i18n: ectx: property (text), widget (QToolButton, btnSelectTerminal)
+#: browserconfig_ui.ui:64 emailclientconfig_ui.ui:69
+#: filemanagerconfig_ui.ui:41 terminalemulatorconfig_ui.ui:60
+msgid "..."
+msgstr "..."
 
 #: componentchooser.cpp:135
 msgid "Unknown"
@@ -54,6 +78,50 @@ msgid ""
 msgstr ""
 "Izaberite sa donjeg spiska komponentu koja će se koristiti kao "
 "podrazumijevana za servis %1."
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, GroupBox1)
+#: componentchooser_ui.ui:26
+msgid ""
+"Here you can change the component program. Components are programs that "
+"handle basic tasks, like the terminal emulator, the text editor and the "
+"email client. Different KDE applications sometimes need to invoke a console "
+"emulator, send a mail or display some text. To do so consistently, these "
+"applications always call the same components. You can choose here which "
+"programs these components are."
+msgstr ""
+"Ovdje možete promijeniti komponente, odnosno programe koji služe osnovnim "
+"radnjama, kao što su emulator terminala, uređivač teksta i klijent e‑pošte. "
+"Pojedini KDE programi ponekad imaju potrebu da pozovu emulator terminala, da "
+"pošalju e‑poruku ili prikažu neki tekst. Da bi to radili usaglašeno, svi oni "
+"uvijek pozivaju iste komponente. Ovdje možete izabrati koji su programi te "
+"komponente."
+
+#. i18n: ectx: property (title), widget (QGroupBox, GroupBox1)
+#: componentchooser_ui.ui:29
+msgid "Default Component"
+msgstr "Podrazumijevana komponenta"
+
+#. i18n: ectx: property (whatsThis), widget (KListWidget, ServiceChooser)
+#: componentchooser_ui.ui:44
+msgid ""
+"<qt>\n"
+"<p>This list shows the configurable component types. Click the component you "
+"want to configure.</p>\n"
+"<p>In this dialog you can change KDE default components. Components are "
+"programs that handle basic tasks, like the terminal emulator, the text "
+"editor and the email client. Different KDE applications sometimes need to "
+"invoke a console emulator, send a mail or display some text. To do so "
+"consistently, these applications always call the same components. Here you "
+"can select which programs these components are.</p>\n"
+"</qt>"
+msgstr ""
+"<qt><p>Ovaj spisak prikazuje podesive tipove komponenti. Kliknite na "
+"komponentu koju želite da podesite.</p><p>U ovom dijalogu možete promijeniti "
+"podrazumijevane komponente KDE‑a, odnosno programe koji služe osnovnim "
+"radnjama, kao što su emulator terminala, uređivač teksta i klijent e‑pošte. "
+"Pojedini KDE programi ponekad imaju potrebu da pozovu emulator terminala, da "
+"pošalju e‑poruku ili prikažu neki tekst. Da bi to radili usaglašeno, svi oni "
+"uvijek pozivaju iste komponente.</p></qt>"
 
 #: componentchooserbrowser.cpp:103
 msgid "Select preferred Web browser application:"
@@ -136,6 +204,88 @@ msgstr ""
 msgid "Running the configuration tool failed"
 msgstr "Propalo izvršavanje postavne alatke"
 
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, kmailCB)
+#: emailclientconfig_ui.ui:12
+msgid "Kmail is the standard Mail program for the KDE desktop."
+msgstr "K‑pošta je standardni poštanski program za KDE."
+
+#. i18n: ectx: property (text), widget (QRadioButton, kmailCB)
+#: emailclientconfig_ui.ui:15
+msgid "&Use KMail as preferred email client"
+msgstr "K‑pošta &kao podrazumijevani klijent e‑pošte"
+
+#. i18n: ectx: property (whatsThis), widget (QRadioButton, otherCB)
+#: emailclientconfig_ui.ui:22
+msgid "Select this option if you want to use any other mail program."
+msgstr "Izaberite ovo ako želite da koristite neki drugi program za e‑poštu."
+
+#. i18n: ectx: property (text), widget (QRadioButton, otherCB)
+#: emailclientconfig_ui.ui:25
+msgid "Use a different &email client:"
+msgstr "Neki drugi klijent &e‑pošte:"
+
+#. i18n: ectx: property (toolTip), widget (KLineEdit, txtEMailClient)
+#: emailclientconfig_ui.ui:53
+#, no-c-format
+msgid ""
+"<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon "
+"Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
+"text</li> <li>%A: Attachment </li> <li>%u: Full mailto: URL </li></ul>"
+msgstr ""
+"<qt><ul><li>%t: adresa primaoca</li><li>%s: tema</li><li>%c: kopija (CC)</"
+"li><li>%b: nevidljiva kopija (BCC)</li><li>%B: šablonsko tijelo teksta</"
+"li><li>%A: prilog</li><li>%u: pun URL <icode>mailto:</icode></li></ul></qt>"
+
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, txtEMailClient)
+#: emailclientconfig_ui.ui:56
+#, no-c-format
+msgid ""
+"Press this button to select your favorite email client. Please note that the "
+"file you select has to have the executable attribute set in order to be "
+"accepted.<br/> You can also use several placeholders which will be replaced "
+"with the actual values when the email client is called:<ul> <li>%t: "
+"Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy (CC)</li> "
+"<li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body text</li> <li>%A: "
+"Attachment </li> </ul>"
+msgstr ""
+"<qt><p>Kliknite ovdje da izaberete željeni klijent e‑pošte. Da bi bio "
+"prihvaćen, fajl koji izaberete mora imati postavljen izvršni atribut.</"
+"p><p>Takođe možete koristiti nekoliko mjestodržača koji će biti zamijenjeni "
+"stvarnim vrijednostima kada se klijent pozove:</p><ul> <li>%t: adresa "
+"primaoca</li><li>%s: tema</li><li>%c: kopija (CC)</li><li>%b: nevidljiva "
+"kopija (BCC)</li><li>%B: šablonsko tijelo teksta</li><li>%A: prilog</li></"
+"ul></qt>"
+
+#. i18n: ectx: property (whatsThis), widget (QToolButton, btnSelectEmail)
+#: emailclientconfig_ui.ui:66
+msgid "Click here to browse for the mail program file."
+msgstr "Kliknite ovdje da potražite izvršni fajl programa."
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, chkRunTerminal)
+#: emailclientconfig_ui.ui:99
+msgid ""
+"Activate this option if you want the selected email client to be executed in "
+"a terminal (e.g. <em>Konsole</em>)."
+msgstr ""
+"Uključite ako želite da se izabrani klijent e‑pošte izvršava u terminalu "
+"(npr. u Konsoli)."
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkRunTerminal)
+#: emailclientconfig_ui.ui:102
+msgid "&Run in terminal"
+msgstr "Pokreni u &terminalu"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: filemanagerconfig_ui.ui:12
+msgid "Browse directories using the following file manager:"
+msgstr "Pregledaj fascikle sljedećim menadžerom fajlova:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioExec)
+#: filemanagerconfig_ui.ui:24
+msgid "Other: click Add... in the dialog shown here:"
+msgstr ""
+"Drugi: kliknite na <interface>Dodaj...</interface> u dijalogu datom ovdje:"
+
 #: kcm_componentchooser.cpp:46
 msgid "kcmcomponentchooser"
 msgstr "KCM‑birač-komponenti"
@@ -160,150 +310,54 @@ msgstr[0] "Još %1 sekunda:"
 msgstr[1] "Još %1 sekunde:"
 msgstr[2] "Još %1 sekundi:"
 
-#~ msgid "<qt>Open <b>http</b> and <b>https</b> URLs</qt>"
-#~ msgstr "<qt>Otvaraj <b>HTTP</b> i <b>HTTPS</b> URL‑ove</qt>"
+#. i18n: ectx: property (text), widget (QRadioButton, terminalCB)
+#: terminalemulatorconfig_ui.ui:12
+msgid "&Use Konsole as terminal application"
+msgstr "Konsole kao &terminalski program"
 
-#~ msgid "in an application based on the contents of the URL"
-#~ msgstr "u programu na osnovu sadržaja URL‑a"
+#. i18n: ectx: property (text), widget (QRadioButton, otherCB)
+#: terminalemulatorconfig_ui.ui:19
+msgid "Use a different &terminal program:"
+msgstr "Neki drugi &terminalski program:"
 
-#~ msgid "in the following browser:"
-#~ msgstr "u sljedećem pregledniku:"
+#. i18n: ectx: property (whatsThis), widget (KLineEdit, terminalLE)
+#: terminalemulatorconfig_ui.ui:47
+msgid ""
+"Press this button to select your favorite terminal client. Please note that "
+"the file you select has to have the executable attribute set in order to be "
+"accepted.<br/> Also note that some programs that utilize Terminal Emulator "
+"will not work if you add command line arguments (Example: konsole -ls)."
+msgstr ""
+"<qt><p>Kliknite ovdje da izaberete podrazumijevani terminalski klijent. Da "
+"bi bio prihvaćen, fajl koji izaberete mora imati postavljen izvršni atribut."
+"</p><p>Takođe imajte na umu da neki programi koji koriste emulator terminala "
+"neće raditi ako dodate argumente komandne linije (npr: <icode>konsole -ls</"
+"icode>).</p></qt>"
 
-#~ msgid "..."
-#~ msgstr "..."
+#. i18n: ectx: property (whatsThis), widget (QToolButton, btnSelectTerminal)
+#: terminalemulatorconfig_ui.ui:57
+msgid "Click here to browse for terminal program."
+msgstr "Kliknite ovdje da potražite terminalski program."
 
-#~ msgid ""
-#~ "Here you can change the component program. Components are programs that "
-#~ "handle basic tasks, like the terminal emulator, the text editor and the "
-#~ "email client. Different KDE applications sometimes need to invoke a "
-#~ "console emulator, send a mail or display some text. To do so "
-#~ "consistently, these applications always call the same components. You can "
-#~ "choose here which programs these components are."
-#~ msgstr ""
-#~ "Ovdje možete promijeniti komponente, odnosno programe koji služe osnovnim "
-#~ "radnjama, kao što su emulator terminala, uređivač teksta i klijent "
-#~ "e‑pošte. Pojedini KDE programi ponekad imaju potrebu da pozovu emulator "
-#~ "terminala, da pošalju e‑poruku ili prikažu neki tekst. Da bi to radili "
-#~ "usaglašeno, svi oni uvijek pozivaju iste komponente. Ovdje možete "
-#~ "izabrati koji su programi te komponente."
+#. i18n: ectx: property (text), widget (QRadioButton, kwinRB)
+#: wmconfig_ui.ui:12
+msgid "&Use the default KDE window manager (KWin)"
+msgstr "KDE‑ov podrazumijevani &menadžer prozora (KWin)"
 
-#~ msgid "Default Component"
-#~ msgstr "Podrazumijevana komponenta"
+#. i18n: ectx: property (text), widget (QRadioButton, differentRB)
+#: wmconfig_ui.ui:19
+msgid "Use a different &window manager:"
+msgstr "Neki drugi menadžer &prozora:"
 
-#~ msgid ""
-#~ "<qt>\n"
-#~ "<p>This list shows the configurable component types. Click the component "
-#~ "you want to configure.</p>\n"
-#~ "<p>In this dialog you can change KDE default components. Components are "
-#~ "programs that handle basic tasks, like the terminal emulator, the text "
-#~ "editor and the email client. Different KDE applications sometimes need to "
-#~ "invoke a console emulator, send a mail or display some text. To do so "
-#~ "consistently, these applications always call the same components. Here "
-#~ "you can select which programs these components are.</p>\n"
-#~ "</qt>"
-#~ msgstr ""
-#~ "<qt><p>Ovaj spisak prikazuje podesive tipove komponenti. Kliknite na "
-#~ "komponentu koju želite da podesite.</p><p>U ovom dijalogu možete "
-#~ "promijeniti podrazumijevane komponente KDE‑a, odnosno programe koji služe "
-#~ "osnovnim radnjama, kao što su emulator terminala, uređivač teksta i "
-#~ "klijent e‑pošte. Pojedini KDE programi ponekad imaju potrebu da pozovu "
-#~ "emulator terminala, da pošalju e‑poruku ili prikažu neki tekst. Da bi to "
-#~ "radili usaglašeno, svi oni uvijek pozivaju iste komponente.</p></qt>"
+#. i18n: ectx: property (text), widget (KPushButton, configureButton)
+#: wmconfig_ui.ui:60
+msgid "Configure"
+msgstr "Podesi"
 
-#~ msgid "Kmail is the standard Mail program for the KDE desktop."
-#~ msgstr "K‑pošta je standardni poštanski program za KDE."
-
-#~ msgid "&Use KMail as preferred email client"
-#~ msgstr "K‑pošta &kao podrazumijevani klijent e‑pošte"
-
-#~ msgid "Select this option if you want to use any other mail program."
-#~ msgstr ""
-#~ "Izaberite ovo ako želite da koristite neki drugi program za e‑poštu."
-
-#~ msgid "Use a different &email client:"
-#~ msgstr "Neki drugi klijent &e‑pošte:"
-
-#~ msgid ""
-#~ "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon "
-#~ "Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
-#~ "text</li> <li>%A: Attachment </li> <li>%u: Full mailto: URL </li></ul>"
-#~ msgstr ""
-#~ "<qt><ul><li>%t: adresa primaoca</li><li>%s: tema</li><li>%c: kopija (CC)</"
-#~ "li><li>%b: nevidljiva kopija (BCC)</li><li>%B: šablonsko tijelo teksta</"
-#~ "li><li>%A: prilog</li><li>%u: pun URL <icode>mailto:</icode></li></ul></"
-#~ "qt>"
-
-#~ msgid ""
-#~ "Press this button to select your favorite email client. Please note that "
-#~ "the file you select has to have the executable attribute set in order to "
-#~ "be accepted.<br/> You can also use several placeholders which will be "
-#~ "replaced with the actual values when the email client is called:<ul> <li>"
-#~ "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy (CC)"
-#~ "</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body text</"
-#~ "li> <li>%A: Attachment </li> </ul>"
-#~ msgstr ""
-#~ "<qt><p>Kliknite ovdje da izaberete željeni klijent e‑pošte. Da bi bio "
-#~ "prihvaćen, fajl koji izaberete mora imati postavljen izvršni atribut.</"
-#~ "p><p>Takođe možete koristiti nekoliko mjestodržača koji će biti "
-#~ "zamijenjeni stvarnim vrijednostima kada se klijent pozove:</p><ul> <li>"
-#~ "%t: adresa primaoca</li><li>%s: tema</li><li>%c: kopija (CC)</li><li>%b: "
-#~ "nevidljiva kopija (BCC)</li><li>%B: šablonsko tijelo teksta</li><li>%A: "
-#~ "prilog</li></ul></qt>"
-
-#~ msgid "Click here to browse for the mail program file."
-#~ msgstr "Kliknite ovdje da potražite izvršni fajl programa."
-
-#~ msgid ""
-#~ "Activate this option if you want the selected email client to be executed "
-#~ "in a terminal (e.g. <em>Konsole</em>)."
-#~ msgstr ""
-#~ "Uključite ako želite da se izabrani klijent e‑pošte izvršava u terminalu "
-#~ "(npr. u Konsoli)."
-
-#~ msgid "&Run in terminal"
-#~ msgstr "Pokreni u &terminalu"
-
-#~ msgid "Browse directories using the following file manager:"
-#~ msgstr "Pregledaj fascikle sljedećim menadžerom fajlova:"
-
-#~ msgid "Other: click Add... in the dialog shown here:"
-#~ msgstr ""
-#~ "Drugi: kliknite na <interface>Dodaj...</interface> u dijalogu datom ovdje:"
-
-#~ msgid "&Use Konsole as terminal application"
-#~ msgstr "Konsole kao &terminalski program"
-
-#~ msgid "Use a different &terminal program:"
-#~ msgstr "Neki drugi &terminalski program:"
-
-#~ msgid ""
-#~ "Press this button to select your favorite terminal client. Please note "
-#~ "that the file you select has to have the executable attribute set in "
-#~ "order to be accepted.<br/> Also note that some programs that utilize "
-#~ "Terminal Emulator will not work if you add command line arguments "
-#~ "(Example: konsole -ls)."
-#~ msgstr ""
-#~ "<qt><p>Kliknite ovdje da izaberete podrazumijevani terminalski klijent. "
-#~ "Da bi bio prihvaćen, fajl koji izaberete mora imati postavljen izvršni "
-#~ "atribut.</p><p>Takođe imajte na umu da neki programi koji koriste "
-#~ "emulator terminala neće raditi ako dodate argumente komandne linije (npr: "
-#~ "<icode>konsole -ls</icode>).</p></qt>"
-
-#~ msgid "Click here to browse for terminal program."
-#~ msgstr "Kliknite ovdje da potražite terminalski program."
-
-#~ msgid "&Use the default KDE window manager (KWin)"
-#~ msgstr "KDE‑ov podrazumijevani &menadžer prozora (KWin)"
-
-#~ msgid "Use a different &window manager:"
-#~ msgstr "Neki drugi menadžer &prozora:"
-
-#~ msgid "Configure"
-#~ msgstr "Podesi"
-
-#~ msgid ""
-#~ "Note: Most window managers have their own configuration and do not follow "
-#~ "KDE settings."
-#~ msgstr ""
-#~ "Napomena: Većina menadžera ima sopstvenu postavu i ne prati postavke "
-#~ "KDE‑a."
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: wmconfig_ui.ui:87
+msgid ""
+"Note: Most window managers have their own configuration and do not follow "
+"KDE settings."
+msgstr ""
+"Napomena: Većina menadžera ima sopstvenu postavu i ne prati postavke KDE‑a."
