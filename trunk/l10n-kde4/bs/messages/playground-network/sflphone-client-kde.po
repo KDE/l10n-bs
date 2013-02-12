@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-02-11 17:55+0100\n"
+"POT-Creation-Date: 2013-02-12 14:22+0100\n"
 "PO-Revision-Date: 2012-12-28 10:37+0100\n"
 "Last-Translator: Samir Ribic <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -41,7 +41,7 @@ msgstr "Pogled"
 msgid "Settings"
 msgstr "Postavke"
 
-#: src/accountwizard.cpp:187 src/accountwizard.cpp:349 src/sflphone.cpp:363
+#: src/accountwizard.cpp:187 src/accountwizard.cpp:349 src/sflphone.cpp:352
 msgid "Account creation wizard"
 msgstr ""
 
@@ -234,22 +234,22 @@ msgstr ""
 msgid "Default account"
 msgstr ""
 
-#: src/callview.cpp:281
+#: src/callview.cpp:80
 msgid "Enter transfer number"
 msgstr ""
 
-#: src/callview.cpp:289
+#: src/callview.cpp:88
 msgid "Please enter a transfer number and press Enter, press Escape to cancel"
 msgstr ""
 
-#: src/callview.cpp:482 src/widgets/bookmarkdock.cpp:130
-#: src/widgets/bookmarkdock.cpp:131 src/widgets/historytreeitem.cpp:581
-#: src/widgets/historytreeitem.cpp:624
+#: src/callview.cpp:281 src/widgets/bookmarkdock.cpp:130
+#: src/widgets/bookmarkdock.cpp:131 src/widgets/historytreeitem.cpp:579
+#: src/widgets/historytreeitem.cpp:622
 msgctxt "Unknown peer"
 msgid "Unknown"
 msgstr ""
 
-#: src/callview.cpp:654
+#: src/callview.cpp:444
 #, kde-format
 msgid "Your call have been transferred to %1"
 msgstr ""
@@ -1210,6 +1210,27 @@ msgstr "Rezolucija"
 msgid "Rate"
 msgstr "protok"
 
+#: src/errormessage.cpp:21
+msgid ""
+"An unknown error occurred. SFLPhone KDE will now exit. If the problem "
+"persist, please report a bug.\n"
+"\n"
+"It is known that this message can be caused by trying to open SFLPhone KDE "
+"while the SFLPhone daemon is exiting. If so, waiting 15 seconds and trying "
+"again will solve the issue."
+msgstr ""
+
+#: src/errormessage.cpp:26
+msgid ""
+"The SFLPhone daemon (sflphoned) is not available. Please be sure it is "
+"installed correctly or launch it manually. \n"
+"\n"
+"Check in your distribution repository if the sflphone daemon (sometime "
+"called \"sflphone-common\") is available.\n"
+"Help for building SFLPhone daemon from source are present at https://"
+"projects.savoirfairelinux.com/projects/sflphone/wiki/How_to_build"
+msgstr ""
+
 #: src/klib/dataengine/sflphoneengine.cpp:282
 msgid "Current_account"
 msgstr ""
@@ -1221,7 +1242,7 @@ msgid_plural "%1 numbers"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/klib/helperfunctions.cpp:80 src/sflphoneview.cpp:680
+#: src/klib/helperfunctions.cpp:80 src/sflphoneview.cpp:679
 msgid "No registered accounts"
 msgstr ""
 
@@ -1463,7 +1484,7 @@ msgid "New call"
 msgstr ""
 
 #: src/lib/sflphone_const.h:41 src/lib/sflphone_const.h:46
-#: src/sflphone.cpp:109
+#: src/sflphone.cpp:110
 msgid "Hang up"
 msgstr "Prekini vezu"
 
@@ -1471,13 +1492,13 @@ msgstr "Prekini vezu"
 msgid "Hold on"
 msgstr ""
 
-#: src/lib/sflphone_const.h:43 src/sflphone.cpp:104
+#: src/lib/sflphone_const.h:43 src/sflphone.cpp:105
 #: src/widgets/calltreeitem.cpp:299 src/widgets/contactitemwidget.cpp:107
 #: src/widgets/historytreeitem.cpp:190
 msgid "Transfer"
 msgstr "Prijenos"
 
-#: src/lib/sflphone_const.h:44 src/sflphone.cpp:105
+#: src/lib/sflphone_const.h:44 src/sflphone.cpp:106
 msgid "Record"
 msgstr "Zapis"
 
@@ -1501,135 +1522,124 @@ msgstr ""
 msgid "Voicemail"
 msgstr ""
 
-#: src/main.cpp:67
+#: src/main.cpp:59
 msgid "SFLphone KDE Client"
 msgstr ""
 
-#: src/main.cpp:71
-msgid "(C) 2009-2012 Savoir-faire Linux"
+#: src/main.cpp:63
+msgid "(C) 2009-2013 Savoir-faire Linux"
 msgstr ""
 
-#: src/main.cpp:76
+#: src/main.cpp:68
+msgid "Emmanuel Lepage Vallée"
+msgstr ""
+
+#: src/main.cpp:69
 msgid "Jérémy Quentin"
 msgstr ""
 
-#: src/main.cpp:77
-msgid "Emmanuel Lepage Vallee"
-msgstr ""
-
-#: src/sflphone.cpp:106
+#: src/sflphone.cpp:107
 msgid "Hold"
 msgstr "Zadrži"
 
-#: src/sflphone.cpp:107
+#: src/sflphone.cpp:108
 msgid "Refuse"
 msgstr ""
 
-#: src/sflphone.cpp:108 src/sflphoneview.cpp:938
+#: src/sflphone.cpp:109 src/sflphoneview.cpp:938
 msgid "Mute"
 msgstr "Ugašen zvuk"
 
-#: src/sflphone.cpp:110
+#: src/sflphone.cpp:111
 msgid "Unhold"
 msgstr ""
 
-#: src/sflphone.cpp:111
+#: src/sflphone.cpp:112
 msgid "Pickup"
 msgstr ""
 
-#: src/sflphone.cpp:184 src/sflphone.cpp:239 src/sflphone.cpp:665
+#: src/sflphone.cpp:181 src/sflphone.cpp:236 src/sflphone.cpp:653
 msgid "Call"
 msgstr "Poziv"
 
-#: src/sflphone.cpp:248
+#: src/sflphone.cpp:245
 msgid "SFLphone"
 msgstr ""
 
-#: src/sflphone.cpp:290
+#: src/sflphone.cpp:287
 msgid "Current account:"
 msgstr ""
 
-#: src/sflphone.cpp:317
+#: src/sflphone.cpp:306
 msgid ""
 "The SFLPhone daemon (sflphoned) is not available. Please be sure it is "
 "installed correctly or launch it manually"
 msgstr ""
 
-#: src/sflphone.cpp:353 src/sflphone.cpp:368
+#: src/sflphone.cpp:342 src/sflphone.cpp:356
 msgid "Configure SFLphone"
 msgstr ""
 
-#: src/sflphone.cpp:355
+#: src/sflphone.cpp:344
 msgid "Display dialpad"
 msgstr ""
 
-#: src/sflphone.cpp:356
+#: src/sflphone.cpp:345
 msgid "Display text message box"
 msgstr ""
 
-#: src/sflphone.cpp:357
+#: src/sflphone.cpp:346
 msgid "Display volume controls"
 msgstr ""
 
-#: src/sflphone.cpp:358
+#: src/sflphone.cpp:347
 msgid "Paste"
 msgstr "Umetni"
 
-#: src/sflphone.cpp:359
+#: src/sflphone.cpp:348
 msgid "Display Contact"
 msgstr ""
 
-#: src/sflphone.cpp:360 src/widgets/contactdock.cpp:148
+#: src/sflphone.cpp:349 src/widgets/contactdock.cpp:148
 msgid "Display history"
 msgstr ""
 
-#: src/sflphone.cpp:361
+#: src/sflphone.cpp:350
 msgid "Display bookmark"
 msgstr ""
 
-#: src/sflphone.cpp:362
+#: src/sflphone.cpp:351
 msgid "Configure Toolbars"
 msgstr ""
 
-#: src/sflphone.cpp:389
+#: src/sflphone.cpp:377
 msgid "Configure Shortcut"
 msgstr ""
 
-#: src/sflphone.cpp:630 src/sflphone.cpp:632
+#: src/sflphone.cpp:618 src/sflphone.cpp:620
 msgid "New incoming call"
 msgstr ""
 
-#: src/sflphone.cpp:630 src/sflphone.cpp:632
+#: src/sflphone.cpp:618 src/sflphone.cpp:620
 #, kde-format
 msgid ""
 "New call from:\n"
 "%1"
 msgstr ""
 
-#: src/sflphone.cpp:668 src/widgets/bookmarkdock.cpp:96
+#: src/sflphone.cpp:656 src/widgets/bookmarkdock.cpp:96
 #: src/widgets/bookmarkdock.cpp:97 src/widgets/contactitemwidget.cpp:95
 #: src/widgets/historytreeitem.cpp:125 src/widgets/historytreeitem.cpp:127
 msgid "Bookmark"
 msgstr "Zabilješka"
 
-#: src/sflphone.cpp:671 src/widgets/contactdock.cpp:176
+#: src/sflphone.cpp:659 src/widgets/contactdock.cpp:176
 msgid "Contact"
 msgstr "Osoba"
 
-#: src/sflphone.cpp:674 src/widgets/historydock.cpp:143
+#: src/sflphone.cpp:662 src/widgets/historydock.cpp:143
 msgid "History"
 msgstr "Historijat"
-
-#: src/sflphone.cpp:714
-msgid ""
-"The SFLPhone daemon (sflphoned) is not available. Please be sure it is "
-"installed correctly or launch it manually. \n"
-"\n"
-"Check in your distribution repository if the sflphone daemon (sometime "
-"called \"sflphone-common\") is available.\n"
-"Help for building SFLPhone daemon from source are present at https://"
-"projects.savoirfairelinux.com/projects/sflphone/wiki/How_to_build"
-msgstr ""
 
 #: src/sflphoneaccessibility.cpp:33
 msgid "List all current calls"
@@ -1676,30 +1686,24 @@ msgstr ""
 msgid " and you have been talking since %1 seconds"
 msgstr ""
 
-#: src/sflphoneapplication.cpp:106
-msgid ""
-"An unknown error occurred. SFLPhone KDE will now exit. If the problem "
-"persist, please report a bug.\n"
-"\n"
-"It is known that this message can be caused by trying to open SFLPhone KDE "
-"while the SFLPhone daemon is exiting. If so, waiting 15 seconds and trying "
-"again will solve the issue."
+#: src/sflphonecmd.cpp:27
+msgid "Place a call to a given number"
 msgstr ""
 
 #: src/sflphoneview.cpp:124 src/widgets/historydock.cpp:111
 msgid "Calls"
 msgstr "Pozivi"
 
-#: src/sflphoneview.cpp:379 src/widgets/contactitemwidget.cpp:328
+#: src/sflphoneview.cpp:378 src/widgets/contactitemwidget.cpp:328
 msgid "Select phone number"
 msgstr ""
 
-#: src/sflphoneview.cpp:379 src/widgets/contactitemwidget.cpp:328
+#: src/sflphoneview.cpp:378 src/widgets/contactitemwidget.cpp:328
 msgid ""
 "This contact has many phone numbers, please select the one you wish to call"
 msgstr ""
 
-#: src/sflphoneview.cpp:683
+#: src/sflphoneview.cpp:682
 #, kde-format
 msgid "Using account '%1' (%2)"
 msgstr ""
@@ -1867,11 +1871,11 @@ msgstr "Dodaj kontakt"
 msgid "Remove bookmark"
 msgstr ""
 
-#: src/widgets/historytreeitem.cpp:336
+#: src/widgets/historytreeitem.cpp:337
 msgid "Are you sure you want to delete this recording?"
 msgstr ""
 
-#: src/widgets/historytreeitem.cpp:336
+#: src/widgets/historytreeitem.cpp:337
 msgid "Delete recording"
 msgstr ""
 
@@ -1892,10 +1896,10 @@ msgid ""
 "Use thasdasde dialpad below or sasdasdtart typing a number. "
 msgstr ""
 
-#: src/widgets/tips/tipcollection.cpp:73
+#: src/widgets/tips/tipcollection.cpp:76
 msgid "Call ended"
 msgstr ""
 
-#: src/widgets/tips/tipcollection.cpp:82
+#: src/widgets/tips/tipcollection.cpp:86
 msgid "Peer is busy"
 msgstr ""
