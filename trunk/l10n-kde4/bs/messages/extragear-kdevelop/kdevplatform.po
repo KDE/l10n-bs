@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-02-15 03:03+0100\n"
+"POT-Creation-Date: 2013-02-16 02:52+0100\n"
 "PO-Revision-Date: 2012-12-20 00:36+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -128,7 +128,7 @@ msgid "Type"
 msgstr "Vrsta:"
 
 #: debugger/breakpoint/breakpointmodel.cpp:170
-#: vcs/models/vcsitemeventmodel.cpp:42
+#: vcs/models/vcsitemeventmodel.cpp:90
 msgid "Location"
 msgstr "Lokacija"
 
@@ -2506,7 +2506,7 @@ msgstr "Otvori konfiguraciju...."
 msgid "Commit Current Project..."
 msgstr "Potvrdi trenutni projekt..."
 
-#: shell/projectcontroller.cpp:522 vcs/vcspluginhelper.cpp:102
+#: shell/projectcontroller.cpp:522 vcs/vcspluginhelper.cpp:105
 msgid "Commit..."
 msgstr "Upis..."
 
@@ -4336,24 +4336,16 @@ msgstr "Komanda završena sa greškom %1."
 msgid "Command exited with value %1."
 msgstr "KOmanda izašla s vrijednmošću %1."
 
-#: vcs/dvcs/dvcsplugin.cpp:122
-msgid "Push"
-msgstr "Gurni"
-
-#: vcs/dvcs/dvcsplugin.cpp:123
-msgid "Pull"
-msgstr "Povuci"
-
-#: vcs/dvcs/dvcsplugin.cpp:124
+#: vcs/dvcs/dvcsplugin.cpp:108
 msgid "Branches..."
 msgstr "Grane..."
 
-#: vcs/dvcs/dvcsplugin.cpp:125
+#: vcs/dvcs/dvcsplugin.cpp:109
 #, fuzzy
 msgid "Revision Graph..."
 msgstr "Historija revizije..."
 
-#: vcs/dvcs/dvcsplugin.cpp:186
+#: vcs/dvcs/dvcsplugin.cpp:137
 msgid "Could not show the Branch Manager, current branch is unavailable."
 msgstr "Ne mogu prikayati menad\\er grana, trenutna grana je nedostupna"
 
@@ -4418,10 +4410,6 @@ msgstr "Izdvoji u odabranu granu"
 msgid "Checkout"
 msgstr "Izdvajanje"
 
-#: vcs/dvcs/ui/dvcsgenericoutputview.cpp:56
-msgid "Job exited normally"
-msgstr "Program napušten normalno"
-
 #. i18n: ectx: property (windowTitle), widget (QWidget, ImportMetadataWidget)
 #: vcs/dvcs/ui/importmetadatawidget.ui:13
 msgid "Import"
@@ -4431,32 +4419,6 @@ msgstr "Uvoz"
 #: vcs/dvcs/ui/importmetadatawidget.ui:19
 msgid "Source Directory:"
 msgstr "Izvorni direktorij:"
-
-#: vcs/dvcs/ui/logview.cpp:45
-msgid "Listing the log of the files failed"
-msgstr "Spisak dnevnika datoteke neuspio"
-
-#: vcs/dvcs/ui/logview.cpp:58
-msgid "No log information found"
-msgstr "Nema dnevničkih informacija"
-
-#: vcs/dvcs/ui/logview.cpp:63
-msgctxt "The term for commit (not action)"
-msgid "Commit"
-msgstr "Predaj"
-
-#: vcs/dvcs/ui/logview.cpp:64 vcs/models/vcseventmodel.cpp:101
-msgid "Author"
-msgstr "Autor"
-
-#: vcs/dvcs/ui/logview.cpp:65 vcs/models/vcseventmodel.cpp:104
-msgid "Date"
-msgstr "Datum"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, LogViewBase)
-#: vcs/dvcs/ui/logview.ui:13
-msgid "Log"
-msgstr "Dnevnik"
 
 #: vcs/models/brancheslistmodel.cpp:62
 #, kde-format
@@ -4468,11 +4430,7 @@ msgstr "Grana \"%1\" već postoji."
 msgid "Are you sure you want to rename \"%1\" to \"%2\"?"
 msgstr "Jeste li sigurni da želite preimenovati \"%1\" u \"%2\"?"
 
-#: vcs/models/projectchangesmodel.cpp:85
-msgid "No Version Control support for this project."
-msgstr "Nema podrške za kontrolu verzija za ovaj projekt"
-
-#: vcs/models/projectchangesmodel.cpp:247
+#: vcs/models/projectchangesmodel.cpp:244
 #, fuzzy, kde-format
 #| msgid "<b>%1</b> (%2)"
 msgctxt "project name (branch name)"
@@ -4490,11 +4448,19 @@ msgstr ""
 "Datum: %2\n"
 "Poruka upisa: %3"
 
-#: vcs/models/vcseventmodel.cpp:98
+#: vcs/models/vcseventmodel.cpp:112
 msgid "Revision"
 msgstr "Revizija"
 
-#: vcs/models/vcseventmodel.cpp:107
+#: vcs/models/vcseventmodel.cpp:115
+msgid "Author"
+msgstr "Autor"
+
+#: vcs/models/vcseventmodel.cpp:118
+msgid "Date"
+msgstr "Datum"
+
+#: vcs/models/vcseventmodel.cpp:121
 msgid "Message"
 msgstr "Poruka"
 
@@ -4541,90 +4507,98 @@ msgstr "Ime datoteke"
 msgid "Status"
 msgstr "Status"
 
-#: vcs/models/vcsitemeventmodel.cpp:43
-msgid "Actions"
-msgstr "Akcije"
-
-#: vcs/models/vcsitemeventmodel.cpp:44
-msgid "Source Location"
-msgstr "Lokacija izvora"
-
-#: vcs/models/vcsitemeventmodel.cpp:45
-msgid "Source Revision"
-msgstr "Revizija izvora"
-
-#: vcs/models/vcsitemeventmodel.cpp:59
+#: vcs/models/vcsitemeventmodel.cpp:57
 msgid "Added"
 msgstr "Dodato"
 
-#: vcs/models/vcsitemeventmodel.cpp:61
+#: vcs/models/vcsitemeventmodel.cpp:59
 msgid "Deleted"
 msgstr "Obrisano"
 
-#: vcs/models/vcsitemeventmodel.cpp:63
+#: vcs/models/vcsitemeventmodel.cpp:61
 msgid "Modified"
 msgstr "Promijenjeno"
 
-#: vcs/models/vcsitemeventmodel.cpp:65
+#: vcs/models/vcsitemeventmodel.cpp:63
 msgid "Copied"
 msgstr "Kopirano"
 
-#: vcs/models/vcsitemeventmodel.cpp:69
+#: vcs/models/vcsitemeventmodel.cpp:67
 msgctxt "separes an action list"
 msgid ", "
 msgstr ", "
 
-#: vcs/vcspluginhelper.cpp:103
+#: vcs/models/vcsitemeventmodel.cpp:91
+msgid "Actions"
+msgstr "Akcije"
+
+#: vcs/models/vcsitemeventmodel.cpp:92
+msgid "Source Location"
+msgstr "Lokacija izvora"
+
+#: vcs/models/vcsitemeventmodel.cpp:93
+msgid "Source Revision"
+msgstr "Revizija izvora"
+
+#: vcs/vcspluginhelper.cpp:106
 msgid "Update"
 msgstr "Ažuriraj"
 
-#: vcs/vcspluginhelper.cpp:104
+#: vcs/vcspluginhelper.cpp:107
 msgid "Add"
 msgstr "Dodaj"
 
-#: vcs/vcspluginhelper.cpp:105
+#: vcs/vcspluginhelper.cpp:108
 msgid "Show Differences..."
 msgstr "Prikaži razlike..."
 
-#: vcs/vcspluginhelper.cpp:106
+#: vcs/vcspluginhelper.cpp:109
 msgid "Revert"
 msgstr "Vrati"
 
-#: vcs/vcspluginhelper.cpp:107 vcs/vcspluginhelper.cpp:445
+#: vcs/vcspluginhelper.cpp:110 vcs/vcspluginhelper.cpp:449
 msgid "History..."
 msgstr "Historija..."
 
-#: vcs/vcspluginhelper.cpp:108
+#: vcs/vcspluginhelper.cpp:111
 msgid "Annotation..."
 msgstr "Anotacija..."
 
-#: vcs/vcspluginhelper.cpp:109
+#: vcs/vcspluginhelper.cpp:112
 msgid "Show Diff..."
 msgstr "Prikaži razlike..."
 
-#: vcs/vcspluginhelper.cpp:110
+#: vcs/vcspluginhelper.cpp:113
 msgid "Show Diff (all files)..."
 msgstr "Prikaži razlike (sve datoteke)..."
 
-#: vcs/vcspluginhelper.cpp:300
+#: vcs/vcspluginhelper.cpp:114
+msgid "Push"
+msgstr "Gurni"
+
+#: vcs/vcspluginhelper.cpp:115
+msgid "Pull"
+msgstr "Povuci"
+
+#: vcs/vcspluginhelper.cpp:310
 msgid "There are no differences."
 msgstr "Nema razlika"
 
-#: vcs/vcspluginhelper.cpp:301
+#: vcs/vcspluginhelper.cpp:311
 msgid "VCS support"
 msgstr "VCS podrška"
 
-#: vcs/vcspluginhelper.cpp:307
+#: vcs/vcspluginhelper.cpp:317
 msgid "Unable to get difference."
 msgstr "Ne mogu dobaviti razliku"
 
-#: vcs/vcspluginhelper.cpp:359
+#: vcs/vcspluginhelper.cpp:365
 #, fuzzy, kde-format
 msgctxt "%1: path or URL, %2: name of a version control system"
 msgid "%2 History (%1)"
 msgstr "%2 Historija (%1)"
 
-#: vcs/vcspluginhelper.cpp:396
+#: vcs/vcspluginhelper.cpp:400
 msgid ""
 "Cannot display annotations, missing interface KTextEditor::"
 "AnnotationInterface for the editor."
@@ -4632,7 +4606,7 @@ msgstr ""
 "Ne mogu prikazati pribilješke, nedostaje interfejs KTextEditor::"
 "AnnotationInterface za editor."
 
-#: vcs/vcspluginhelper.cpp:400
+#: vcs/vcspluginhelper.cpp:404
 #, kde-format
 msgid ""
 "Cannot execute annotate action because the document was not found, or was "
@@ -4643,7 +4617,7 @@ msgstr ""
 "tekstualni dokument\n"
 "%1"
 
-#: vcs/vcspluginhelper.cpp:444
+#: vcs/vcspluginhelper.cpp:448
 msgid "Copy Revision"
 msgstr "Kopiraj reviziju"
 
@@ -4706,19 +4680,25 @@ msgstr "Razlika između revizije %1 i %2:"
 msgid "Difference between revisions"
 msgstr "Razlika između revizija"
 
-#: vcs/widgets/vcseventwidget.cpp:84
+#: vcs/widgets/vcseventwidget.cpp:59
+#, fuzzy
+#| msgid "Copy Revision"
+msgid "Copy revision number"
+msgstr "Kopiraj reviziju"
+
+#: vcs/widgets/vcseventwidget.cpp:91
 msgid "Diff to previous revision"
 msgstr "Razlika za prethodnu reviziju"
 
-#: vcs/widgets/vcseventwidget.cpp:87
+#: vcs/widgets/vcseventwidget.cpp:92
 msgid "Diff between revisions"
 msgstr "Razlika između revizija"
 
-#: vcs/widgets/vcseventwidget.cpp:146
+#: vcs/widgets/vcseventwidget.cpp:137
 msgid "Difference To Previous"
 msgstr "Razlika u odnosu na prethodnu"
 
-#: vcs/widgets/vcseventwidget.cpp:162
+#: vcs/widgets/vcseventwidget.cpp:153
 msgid "Difference between Revisions"
 msgstr "Razlika između revizija"
 
@@ -4738,9 +4718,28 @@ msgid "Event Details:"
 msgstr "Detalji događaja:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: vcs/widgets/vcseventwidget.ui:99
+#: vcs/widgets/vcseventwidget.ui:74
 msgid "Message:"
 msgstr "Poruka:"
+
+#~ msgid "Job exited normally"
+#~ msgstr "Program napušten normalno"
+
+#~ msgid "Listing the log of the files failed"
+#~ msgstr "Spisak dnevnika datoteke neuspio"
+
+#~ msgid "No log information found"
+#~ msgstr "Nema dnevničkih informacija"
+
+#~ msgctxt "The term for commit (not action)"
+#~ msgid "Commit"
+#~ msgstr "Predaj"
+
+#~ msgid "Log"
+#~ msgstr "Dnevnik"
+
+#~ msgid "No Version Control support for this project."
+#~ msgstr "Nema podrške za kontrolu verzija za ovaj projekt"
 
 #~ msgid "Git"
 #~ msgstr "Git"
