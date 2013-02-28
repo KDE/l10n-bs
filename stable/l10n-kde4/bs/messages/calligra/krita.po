@@ -1827,6 +1827,7 @@ msgstr "Koristi kompenzaciju &crnom tačkom"
 msgid ""
 "Allow Little CMS optimizations (uncheck when using linear light RGB or XYZ)"
 msgstr ""
+"Dopusti male CMS optimizacije (isključi pri korištenu RGB s linearnim svjetlom ili XYZ)"
 
 #: plugins/extensions/compose/dlg_compose.cpp:37
 msgid "compose Layer"
@@ -2640,7 +2641,8 @@ msgid ""
 "Select the amount of gamma modification for display. This does not affect "
 "the pixels of your image."
 msgstr ""
-
+"Odaberite iznos gama modifikacije za prikaz. To ne utiče na piksele "
+"vaše slike-"
 #: plugins/extensions/dockers/lut/lutdocker_dock.cpp:166
 msgid "Luminance"
 msgstr "Osvjetljenost"
@@ -5214,6 +5216,8 @@ msgid ""
 "This image contains vector, clone or generated layers..\n"
 "These layers will be saved as raster layers."
 msgstr ""
+"Ova slika sadrži vektorske, klonirane ili generisanje slojeve..\n"
+"Ovi slojevi če biti snimljeni kao rasterski slojevi."
 
 #: plugins/formats/ora/ora_export.cc:98
 msgid "Warning"
@@ -5440,11 +5444,18 @@ msgid ""
 "<span style=\" font-style:italic;\">enable</span> this option.</p></body></"
 "html>"
 msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">PNG</span> datoteke "
+"imaju <span style=\" font-style:italic;\">dvije</span> opcije za snimanje <span "
+"style=\" font-weight:600;\">sRGB</span> informacija: kao oznaku ili kao "
+"eksplicitan profil. Za upotrebu na websajtovima, <span style=\" font-style:italic;"
+"\">isključite</span> ovu opciju. Za razmjenu s drugim aplikacijama, "
+"<span style=\" font-style:italic;\">uključite</span> ovui opciju.</p></body></"
+"html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkSRGB)
 #: plugins/formats/png/kis_wdg_options_png.ui:204
 msgid "save sRGB profile"
-msgstr ""
+msgstr "snimi sRGB profil"
 
 #: plugins/formats/ppm/kis_ppm_export.cpp:155
 msgid "PPM Export Options"
@@ -5471,6 +5482,9 @@ msgid ""
 "The Photoshop format only supports images that are smaller than 30000x3000 "
 "pixels."
 msgstr ""
+"Ne mogu snimiti u Photoshop format.\n"
+"Photoshop format podržava samo slike koje su manje od 30000x3000 "
+"piksela."
 
 #: plugins/formats/psd/psd_loader.cpp:150
 msgid "Duotone Colormode Block"
@@ -6765,6 +6779,11 @@ msgid ""
 "\n"
 "Optimal for very big brushes"
 msgstr ""
+"Nivo preciznosti 1 (najbrži)\n"
+"Preciznost podpiksela: isključena\n"
+"Preciznost veličine četke: 5%\n"
+"\n"
+"Optimalno za vrlo velike četke"
 
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:220
 msgid ""
@@ -6774,6 +6793,11 @@ msgid ""
 "\n"
 "Optimal for big brushes"
 msgstr ""
+"Nivo preciznosti 2 \n"
+"Preciznost podpiksela: isključena\n"
+"Preciznost veličine četke: 1%\n"
+"\n"
+"Optimalno za vrlo četke"
 
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:228
 msgid ""
@@ -6781,6 +6805,9 @@ msgid ""
 "Subpixel precision: disabled\n"
 "Brush size precision: exact"
 msgstr ""
+"Nivo preciznosti 3\n"
+"Preciznost podpiksela: isključena\n"
+"Preciznost veličine četke: tačno"
 
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:234
 msgid ""
@@ -6790,6 +6817,11 @@ msgid ""
 "\n"
 "Gives up to 50% better performance in comparison to Level 5"
 msgstr ""
+"Nivo preciznosti 4\n"
+"Preciznost podpiksela: 50%\n"
+"Preciznost veličine četke: tačno\n"
+"\n"
+"Daje do 50% bolje pefomanse u poređenju s nivoom 5"
 
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:242
 msgid ""
@@ -6799,6 +6831,11 @@ msgid ""
 "\n"
 "The slowest performance. Best quality."
 msgstr ""
+"Nivo preciznosti 1 (najbolji kvalitet)\n"
+"Preciznost podpiksela: tačno\n"
+"Preciznost veličine četke: tačno%\n"
+"\n"
+"Najsporije performanse. Najbolji kvalitet."
 
 #: plugins/paintops/libpaintop/kis_brush_size_option.cpp:38
 msgid "Brush tip"
@@ -9094,11 +9131,13 @@ msgid ""
 "OpenColorIO supports on the fly selection of LUTs, exposure and gamma for "
 "HDR images. (16 and 32 bit floating point.)."
 msgstr ""
+"OpenColorIO podržava u letu izbor LUT, ekspozicije i gama za "
+"HDR slike. (16 i 32 bitni broj u pokretnom zarezu.)."
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkOcioUseEnvironment)
 #: ui/forms/wdgcolorsettings.ui:317
 msgid "Use the OpenColorIO environment variable (OCIO)"
-msgstr ""
+msgstr "Koristi OpenColorIO varijablu okruženja (OCIO)"
 
 #. i18n: ectx: property (text), widget (QLabel, lblOcioConfig)
 #: ui/forms/wdgcolorsettings.ui:329
@@ -10383,11 +10422,11 @@ msgstr "&Spljošti sliku"
 
 #: ui/kis_layer_manager.cc:935
 msgid "Convert Invisible Groups"
-msgstr ""
+msgstr "Prevedi nevidljive grupe"
 
 #: ui/kis_layer_manager.cc:938
 msgid "Export Only Toplevel Groups"
-msgstr ""
+msgstr "Izvezi samo grupe na najvišem nivou"
 
 #: ui/kis_mask_manager.cc:65
 msgid "Mask To Selection"
@@ -10833,7 +10872,7 @@ msgstr "Smanji veličinu četke"
 
 #: ui/tool/kis_tool_freehand.cc:219
 msgid "Can't paint on vector layer."
-msgstr ""
+msgstr "Ne mogu slikati na vektorskom sloju."
 
 #: ui/tool/kis_tool_freehand_helper.cpp:127
 msgid "Freehand Stroke"
@@ -10945,149 +10984,3 @@ msgstr "Radna površina"
 msgid "Workspace %1"
 msgstr "Radna površina %1"
 
-#~ msgid "1-All Color for good colors choice"
-#~ msgstr "1-svih boja za dobar izbor boja"
-
-#~ msgid "1-classic-kit"
-#~ msgstr "1-clasična-oprema"
-
-#~ msgid "bugslife_final.png-10"
-#~ msgstr "bugslife_final.png-10"
-
-#~ msgid "color_wheel-2-rgb.aco"
-#~ msgstr "krug_boja-2-rgb.aco"
-
-#~ msgid "Fabric_colored"
-#~ msgstr "Tkanina_obojena"
-
-#~ msgid "Fabric_jeans"
-#~ msgstr "Tkanina_džins"
-
-#~ msgid "Human_eyes"
-#~ msgstr "Čovječije_oči"
-
-#~ msgid "Human_Hair"
-#~ msgstr "Čovječija_kosa"
-
-#~ msgid "Human_lips"
-#~ msgstr "Čovječije_usne"
-
-#~ msgid "Human_Skin"
-#~ msgstr "Čovječija_koža"
-
-#~ msgid "mi paleta 2009.aco"
-#~ msgstr "mi paleta 2009.aco"
-
-#~ msgid "Named Colors"
-#~ msgstr "Imenovane boje"
-
-#~ msgid "Nature_flowers"
-#~ msgstr "Priroda_cvjetovi"
-
-#~ msgid "Nature_Grass"
-#~ msgstr "Priroda_Trava"
-
-#~ msgid "Nature_stones"
-#~ msgstr "Priroda_kamenje"
-
-#~ msgid "Nature_Water_Sky"
-#~ msgstr "Priroda_voda_nebo"
-
-#~ msgid "Nature_wood"
-#~ msgstr "Priroda_drvo"
-
-#~ msgid "NESPAL.gpl"
-#~ msgstr "NESPAL.gpl"
-
-#~ msgid "KDE (new)"
-#~ msgstr "KDE (novo)"
-
-#~ msgid "Paletilla"
-#~ msgstr "Oštrica"
-
-#~ msgid "photoshop-swatches-sketchlings-swatches.aco"
-#~ msgstr "photoshp-mustre-sketchlings-mustre.aco"
-
-#~ msgid "Skin.gpl.txt"
-#~ msgstr "Koza.gpl.txt"
-
-#~ msgid "testgimp_swatches.aco"
-#~ msgstr "testgimp_mustre.aco"
-
-#~ msgid "Ella palette"
-#~ msgstr "Ella paleta"
-
-#~ msgid "Edit Palette..."
-#~ msgstr "Uredi paletu..."
-
-#~ msgid "Edit Palette"
-#~ msgstr "Uredi paletu"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Generator"
-#~ msgstr "Generator promjena"
-
-#~ msgid "View"
-#~ msgstr "Pogled"
-
-#~ msgid "Edit"
-#~ msgstr "Izmijeni"
-
-#~ msgid "Navigation"
-#~ msgstr "Navigacija"
-
-#~ msgid "RGB (16-bit float/channel) for High Dynamic Range imaging"
-#~ msgstr "RGB (16-bita float/kanal) za slike visokog dinamičkog opsega"
-
-#~ msgid "XYZ (16-bit float/channel) for High Dynamic Range imaging"
-#~ msgstr "XYZ (16-bit float/kanal) za slike visokog dinamičkog ranga"
-
-#~ msgid "Alpha darken"
-#~ msgstr "Alfa potamniti"
-
-#~ msgid "Erase"
-#~ msgstr "Briši"
-
-#~ msgid "Float"
-#~ msgstr "Plutajuće"
-
-#~ msgid "Overview"
-#~ msgstr "Pregled"
-
-#~ msgid "X:"
-#~ msgstr "X:"
-
-#~ msgid "00000"
-#~ msgstr "00000"
-
-#~ msgid "Y:"
-#~ msgstr "Y:"
-
-#~ msgid "1:1"
-#~ msgstr "1:1"
-
-#~ msgid "Smooth shapes"
-#~ msgstr "Glatki oblici"
-
-#~ msgid "WateryMix options"
-#~ msgstr "Opcije vodenog miješanja"
-
-#~ msgid "Watery Mixbrush"
-#~ msgstr "Vodena četka mješalica"
-
-#~ msgid "EMPTY, TO BE FILLED WITH A GREAT GUI"
-#~ msgstr "PRAZNO DA SE NAPUNI LIJEPIM SUČELJEM"
-
-#~ msgid "&Themes"
-#~ msgstr "&Teme"
-
-#~ msgctxt "default theme name"
-#~ msgid "Default"
-#~ msgstr "Fabrička"
-
-#~ msgid ""
-#~ "Cannot start Colors Settings panel from KDE Control Center. Please check "
-#~ "your system..."
-#~ msgstr ""
-#~ "Ne može se startati tabla sa podešavanjima za boje iz KDE Control Center-"
-#~ "a. Molimo, provjerite vas sistem..."

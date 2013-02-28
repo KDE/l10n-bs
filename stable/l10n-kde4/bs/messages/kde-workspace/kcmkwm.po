@@ -599,6 +599,24 @@ msgid ""
 "certain features such as the Alt+Tab walk through windows dialog in the KDE "
 "mode from working properly."
 msgstr ""
+"Pravila fokusa se koriste za određivanje aktivnog prozora, tj. prozora u "
+"kome radite. <ul>\n"
+"<li><em>Klik na fokus:</em> Prozor postaje aktivan kada kliknete na njega. "
+"To ponašanje poznajete iz drugih operativnih sistema.</li> "
+"<li><em>Fokus prati miša:</em> Pomijeranje pokazivača miša aktivno na  "
+"normalni prozor ga aktivira. Novi prozori će primiti fokus, bez posebnog "
+"klika na njega. Veoma praktično ako se "
+"miš mnogo koristi.</li>\n"
+"<li><em>Fokus pod mišom:</em> Prozor ispod pokazivača mipa je aktivan "
+"Ako miš ne pokazuje nigdje, zadnji prozor koji je ispod miša ima fokus. "
+"Novi prozori neće automatski dobiti "
+"fokus.</li>\n"
+"<li><em>Fokus striktno ispod miša:</em> Samo prozor pod pokazivačem "
+"miša je aktivan. Ako miš nigdje ne pokazuje, ništa nema fokus.</li>\n"
+"</ul>\n"
+"Primijetite da 'Fokus ispod miša' i 'Fokus striktno ispod miša' sprečavaju da  "
+"sprečavaju da neke mogućnosti poput Alt+Tab idu kroz prozor dijaloga u KDE "
+"režimu d ispravno rade."
 
 #. i18n: ectx: property (text), item, widget (KComboBox, focusCombo)
 #: focus.ui:60
@@ -651,6 +669,28 @@ msgid ""
 "attention, which by default means their taskbar entry will be highlighted. "
 "This can be changed in the Notifications control module.</p>"
 msgstr ""
+"<p>Ova opcija određuje koliko će KWin probati spriječiti neželjeno preuzimanje "
+"fokusa koju izaziva neočekivana aktivacija novog prozora. (Napomena: Ova mogućnost "
+"neće raditi s pravilima Fokus ispod miša ili Fokus striktno ispod  "
+"miša.)\n"
+"<ul>\n"
+"<li><em>Ništa:</em> Sprečavanje je isključeno i novi prozori se uvijek "
+"aktiviraju.</li>\n"
+"<li><em>Nisko:</em> Sprečavanje je uključeno; kada prozor nema podršku za "
+"podložni mehanizam i KWin ne može pouzdano odrediti da li da "
+"aktivira prozor ili ne, on će biti aktiviran. Ova postavka "
+"moće imati bolje ili lošije rezultate nego srednji nivo, zavisno od "
+"aplikacija.</li>\n"
+"<li><em>Srednje:</em> Sprečavanje je omogućeno.</li>\n"
+"<li><em>Visoko:</em> Novi prozori se aktiviraju samo ako nijedan prozor nije "
+"trenutno aktivan ili priipadaju trenutno aktivnoj aplikaciji. Ova postavka "
+"vjerovatno nije upotrebljiva kada se ne koriste pravila fokusa miša.</li>\n"
+"<li><em>Ekstremno:</em> Sve prozore mora korisnik eksplicitno aktivirati.</"
+"li>\n"
+"</ul></p>\n"
+"<p>Prozoti kojima je sprečeno preuzimanje fokusa su označeni kao da traže "
+"pažnju, čime će njihovo mjesto na traci zadataka biti označeno. "
+"To se može promijeniti u kontrolnom modulu napomena.</p>"
 
 #. i18n: Focus Stealing Prevention Level
 #. i18n: ectx: property (text), item, widget (KComboBox, focusStealing)
@@ -731,7 +771,9 @@ msgid ""
 "when you click somewhere into the window contents. To change it for inactive "
 "windows, you need to change the settings in the Actions tab."
 msgstr ""
-
+"Kada je ova opcija omogućena, aktivni prozor će biti prebačen u prednji plan "
+"kada kliknete u sadržaj prozora. Da to promijenite za neaktive prozore, morate "
+"postaviti postavke u kartici akcija."
 #. i18n: ectx: property (text), widget (QCheckBox, clickRaiseOn)
 #: focus.ui:231
 msgid "C&lick raises active window"
@@ -760,6 +802,11 @@ msgid ""
 "window. By default this option is disabled for Click to focus and enabled "
 "for other focus policies."
 msgstr ""
+"Kada je ova opcija uključena, aktivni Xinerama ekran (gdje se novi prozori "
+"pojavljuju, na primjer) je ekran koji sarži pokazivač miša. Kada je "
+"isključeno, aktivni Xinerama ekran je ekran koji sadrži fokusirani  "
+"prozor. Podrazumijevano, ova opcija je onemogućena u Klik na fokus i omogućena "
+"za druga pravila fokusa."
 
 #. i18n: ectx: property (text), widget (QCheckBox, activeMouseScreen)
 #: focus.ui:251
@@ -1072,7 +1119,9 @@ msgid ""
 "is being moved or resized. The window position relative to the top-left "
 "corner of the screen is displayed together with its size."
 msgstr ""
-
+"Uključite ocu opciju ako želite da se geometrija prozora prikazuje dok se on "
+"pomijera ili mu mijenja veličina. Pozicija prozora relativno od gornjeg lijevog "
+"ugla ekrana se prikazuje zajednos njegovom veličinom."
 #. i18n: ectx: property (text), widget (QCheckBox, geometryTipOn)
 #: moving.ui:48
 msgid "Display window &geometry when moving or resizing"
@@ -1084,16 +1133,17 @@ msgid ""
 "When enabled, this feature activates the border of maximized windows and "
 "allows you to move or resize them, just like for normal windows"
 msgstr ""
-
+"Kada je uključeno, ova opcija aktivira ivicu maksimiranih prozora i dopušta "
+"vam da pomjerite ih ili im promijenite veličinu, kao normalnim prozorima "
 #. i18n: ectx: property (text), widget (QCheckBox, moveResizeMaximized)
 #: moving.ui:71
 msgid "Display borders on &maximized windows"
-msgstr ""
+msgstr "Prikaži ivice na &maksimiziranim prozorima"
 
 #. i18n: ectx: property (text), widget (QLabel, borderSnapLabel)
 #: moving.ui:85
 msgid "&Border snap zone:"
-msgstr ""
+msgstr "Nona &namiještanja ivica"
 
 #. i18n: ectx: property (whatsThis), widget (KIntNumInput, borderSnap)
 #: moving.ui:104
@@ -1102,23 +1152,25 @@ msgid ""
 "the magnetic field which will make windows snap to the border when moved "
 "near it."
 msgstr ""
-
+"Ovdje možete postaviti zonu namiještanja za ivice ekrana, tj. 'jačinu' "
+"magnetnog polja koje čini da se prozori namjeste na ivicu kada se pomiču "
+"blizu nje."
 #. i18n: ectx: property (suffix), widget (KIntNumInput, borderSnap)
 #. i18n: ectx: property (suffix), widget (KIntNumInput, windowSnap)
 #. i18n: ectx: property (suffix), widget (KIntNumInput, centerSnap)
 #: moving.ui:116 moving.ui:157 moving.ui:198
 msgid " pixel"
-msgstr ""
+msgstr " piksel"
 
 #. i18n: ectx: property (specialValueText), widget (KIntNumInput, borderSnap)
 #: moving.ui:119
 msgid "no border snap zone"
-msgstr ""
+msgstr "nema zone namiještanja ivice"
 
 #. i18n: ectx: property (text), widget (QLabel, windowSnapLabel)
 #: moving.ui:126
 msgid "&Window snap zone:"
-msgstr ""
+msgstr "&Zona namiještanja prozora:"
 
 #. i18n: ectx: property (whatsThis), widget (KIntNumInput, windowSnap)
 #: moving.ui:145
@@ -1127,16 +1179,19 @@ msgid ""
 "magnetic field which will make windows snap to each other when they are "
 "moved near another window."
 msgstr ""
+"Ovdje možete postaviti zonu namiještanja za prozori, tj. 'jačinu' "
+"magnetnog polja koje čini da se prozori namjeste jedan na drugog kada se pomiču "
+"blizu drugog prozora."
 
 #. i18n: ectx: property (specialValueText), widget (KIntNumInput, windowSnap)
 #: moving.ui:160
 msgid "no window snap zone"
-msgstr ""
+msgstr "nema zone namiještanja prozora"
 
 #. i18n: ectx: property (text), widget (QLabel, centerSnapLabel)
 #: moving.ui:167
 msgid "&Center snap zone:"
-msgstr ""
+msgstr "&Centralna zona namiještanja:"
 
 #. i18n: ectx: property (whatsThis), widget (KIntNumInput, centerSnap)
 #: moving.ui:186
@@ -1145,11 +1200,14 @@ msgid ""
 "the magnetic field which will make windows snap to the center of the screen "
 "when moved near it."
 msgstr ""
+"Ovdje možete postaviti zonu namiještanja za centar ekrana, tj. 'jačinu' "
+"magnetnog polja koje čini da se prozori namjeste na centar ekrana kada se pomiču "
+"blizu njega."
 
 #. i18n: ectx: property (specialValueText), widget (KIntNumInput, centerSnap)
 #: moving.ui:201
 msgid "no center snap zone"
-msgstr ""
+msgstr "nema centralne zone namiještanja"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, OverlapSnap)
 #: moving.ui:221
@@ -1158,11 +1216,13 @@ msgid ""
 "them, i.e. they will not be snapped if the windows comes only near another "
 "window or border."
 msgstr ""
+"Ovdje možete postaviti da se prozori namjeste samo ako ih pokušate preklopiti, "
+"tj, neće se namjestiti ako budu samo blizu drugog prozora ili ivice."
 
 #. i18n: ectx: property (text), widget (QCheckBox, OverlapSnap)
 #: moving.ui:224
 msgid "Snap windows onl&y when overlapping"
-msgstr ""
+msgstr "Namjesti prozore samo pri &preklapanju"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: moving.ui:244
@@ -1172,4 +1232,4 @@ msgstr "Prozori"
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: moving.ui:257
 msgid "Snap Zones"
-msgstr ""
+msgstr "Zone namiještanja"
