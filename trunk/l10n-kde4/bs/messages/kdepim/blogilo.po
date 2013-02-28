@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-02-27 03:36+0100\n"
+"POT-Creation-Date: 2013-02-28 03:19+0100\n"
 "PO-Revision-Date: 2012-10-06 21:24+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -121,7 +121,7 @@ msgstr ""
 "Provjerite internetsku vezu."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, localEntries)
-#: src/addeditblog.cpp:377 src/ui/toolboxbase.ui:547
+#: src/addeditblog.cpp:377 src/blogsettings.cpp:44 src/ui/toolboxbase.ui:547
 #, fuzzy
 #| msgctxt "Blog Title"
 #| msgid "Title"
@@ -275,7 +275,14 @@ msgstr "Postavke"
 msgid "Toolbar"
 msgstr "Alatna traka"
 
-#: src/blogsettings.cpp:96
+#: src/blogsettings.cpp:44
+#, fuzzy
+#| msgctxt "Blog URL"
+#| msgid "URL"
+msgid "URL"
+msgstr "URL"
+
+#: src/blogsettings.cpp:101
 msgid "Are you sure you want to remove the selected blog?"
 msgstr "Jeste li sigurni da želite ukloniti izabrani blog?"
 
@@ -393,7 +400,7 @@ msgstr "Nema upisa s zahtijevanim ID"
 msgid "There is no local post with the requested ID "
 msgstr "Nema lokalnog upisa sa zahtijevanim ID "
 
-#: src/main.cpp:34 src/mainwindow.cpp:400
+#: src/main.cpp:34 src/mainwindow.cpp:397
 msgid "A KDE Blogging Client"
 msgstr "KDE klijent za bloganje"
 
@@ -441,83 +448,83 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "samir.ribic@etf.unsa.ba"
 
-#: src/mainwindow.cpp:76 src/mainwindow.cpp:400
+#: src/mainwindow.cpp:75 src/mainwindow.cpp:397
 msgid "Blogilo"
 msgstr "Blogilo"
 
-#: src/mainwindow.cpp:86
+#: src/mainwindow.cpp:85
 msgid "Toolbox"
 msgstr "Kutija sa Alatima"
 
-#: src/mainwindow.cpp:169
+#: src/mainwindow.cpp:166
 msgid "New Post"
 msgstr "Novi zapis"
 
-#: src/mainwindow.cpp:174
+#: src/mainwindow.cpp:171
 msgid "Add Blog..."
 msgstr "Dodaj Blog..."
 
-#: src/mainwindow.cpp:178
+#: src/mainwindow.cpp:175
 msgid "Submit..."
 msgstr "Pošalji..."
 
-#: src/mainwindow.cpp:182 src/uploadmediadialog.cpp:51
+#: src/mainwindow.cpp:179 src/uploadmediadialog.cpp:50
 msgid "Upload Media..."
 msgstr "Ažuriranje medija..."
 
-#: src/mainwindow.cpp:186
+#: src/mainwindow.cpp:183
 msgid "Save Locally"
 msgstr "Snimi lokalno"
 
-#: src/mainwindow.cpp:191
+#: src/mainwindow.cpp:188
 msgid "Show Toolbox"
 msgstr "Prikaži alatnu kutiju"
 
-#: src/mainwindow.cpp:202 src/toolbox.cpp:492
+#: src/mainwindow.cpp:199 src/toolbox.cpp:492
 msgid "Open in browser"
 msgstr "Otvori u pregledniku"
 
-#: src/mainwindow.cpp:204
+#: src/mainwindow.cpp:201
 msgid "Open current blog in browser"
 msgstr "Otvori trenutni blog u pregledniku"
 
-#: src/mainwindow.cpp:318
+#: src/mainwindow.cpp:315
 msgctxt "Configure Page"
 msgid "General"
 msgstr "Opšte"
 
-#: src/mainwindow.cpp:319
+#: src/mainwindow.cpp:316
 msgctxt "Configure Page"
 msgid "Blogs"
 msgstr "Blogovi"
 
-#: src/mainwindow.cpp:320
+#: src/mainwindow.cpp:317
 msgctxt "Configure Page"
 msgid "Editor"
 msgstr "Uređivač"
 
-#: src/mainwindow.cpp:321
+#: src/mainwindow.cpp:318
 msgctxt "Configure Page"
 msgid "Advanced"
 msgstr "Napredno"
 
-#: src/mainwindow.cpp:458
+#: src/mainwindow.cpp:455
 msgid "You have to select a blog to publish this post to."
 msgstr "Morate odabrati blog da bi objavili ovu poruku."
 
-#: src/mainwindow.cpp:462
+#: src/mainwindow.cpp:459
 msgid "There is no open post to submit."
 msgstr "Nema otvorene poruke za podnošenje."
 
-#: src/mainwindow.cpp:537
+#: src/mainwindow.cpp:534
 msgid "An error occurred in the last transaction."
 msgstr "Došlo je do pogreške u toku posljednje transakcije."
 
-#: src/mainwindow.cpp:584
+#: src/mainwindow.cpp:581
 msgid "Submitting post failed"
 msgstr "Slanje poruke nije uspjelo"
 
-#: src/mainwindow.cpp:588
+#: src/mainwindow.cpp:585
 #, kde-format
 msgid ""
 "%1\n"
@@ -526,7 +533,7 @@ msgstr ""
 "%1\n"
 "Želite li zadržati poruku otvorenom?"
 
-#: src/mainwindow.cpp:674
+#: src/mainwindow.cpp:671
 msgid "Cannot find current blog URL."
 msgstr "Ne možete pronaći trenutni blog URL."
 
@@ -793,8 +800,8 @@ msgstr "Naslov:"
 msgid "Blog/Homepage URL:"
 msgstr "Blog/stranica URL:"
 
-#. i18n: ectx: property (text), widget (KLineEdit, txtUrl)
 #. i18n: ectx: property (text), widget (KLineEdit, kcfg_httpUrl)
+#. i18n: ectx: property (text), widget (KLineEdit, txtUrl)
 #: src/ui/addeditblogbase.ui:92 src/ui/uploadmediabase.ui:132
 msgid "http://"
 msgstr "http://"
@@ -957,30 +964,18 @@ msgstr ""
 msgid "Change \\n to <br/> on posts retrieved from server"
 msgstr "Promijeni \\n u <br/> na porukama preuzetim sa servera"
 
-#. i18n: ectx: property (text), widget (QTableWidget, blogsTable)
-#: src/ui/blogsettingsbase.ui:45
-msgctxt "Blog Title"
-msgid "Title"
-msgstr "Naslov"
-
-#. i18n: ectx: property (text), widget (QTableWidget, blogsTable)
-#: src/ui/blogsettingsbase.ui:50
-msgctxt "Blog URL"
-msgid "URL"
-msgstr "URL"
-
 #. i18n: ectx: property (text), widget (KPushButton, btnAdd)
-#: src/ui/blogsettingsbase.ui:76
+#: src/ui/blogsettingsbase.ui:41
 msgid "&Add..."
 msgstr "&Dodaj..."
 
 #. i18n: ectx: property (text), widget (KPushButton, btnEdit)
-#: src/ui/blogsettingsbase.ui:86
+#: src/ui/blogsettingsbase.ui:51
 msgid "&Modify..."
 msgstr "&Izmijeni..."
 
 #. i18n: ectx: property (text), widget (KPushButton, btnRemove)
-#: src/ui/blogsettingsbase.ui:96
+#: src/ui/blogsettingsbase.ui:61
 msgid "&Remove"
 msgstr "&Ukloni"
 
@@ -1231,27 +1226,27 @@ msgstr "npr. sftp://domain.com/user/images/"
 msgid "e.g. http://domain.com/images/"
 msgstr "npr.  http://domain.com/images/"
 
-#: src/uploadmediadialog.cpp:50
+#: src/uploadmediadialog.cpp:49
 msgid "Upload"
 msgstr "Pošalji"
 
-#: src/uploadmediadialog.cpp:79
+#: src/uploadmediadialog.cpp:77
 msgid "Blog API"
 msgstr "Blog API"
 
-#: src/uploadmediadialog.cpp:82
+#: src/uploadmediadialog.cpp:80
 msgid "FTP"
 msgstr "FTP"
 
-#: src/uploadmediadialog.cpp:96
+#: src/uploadmediadialog.cpp:94
 msgid "Select Media to Upload"
 msgstr "Odaberij medij za slanje"
 
-#: src/uploadmediadialog.cpp:137
+#: src/uploadmediadialog.cpp:135
 msgid "Please insert FTP URL."
 msgstr "Navedite FTP URL."
 
-#: src/uploadmediadialog.cpp:154
+#: src/uploadmediadialog.cpp:152
 #, fuzzy
 #| msgid ""
 #| "Inserted FTP URL is not a valid URL.\n"
@@ -1266,7 +1261,7 @@ msgstr ""
 "Napomena: URL mora početi s \"ftp\" ili \"sftp\", i završiti sa \"/\" što "
 "označava direktorij u kojem bi datoteke trebale biti poslane."
 
-#: src/uploadmediadialog.cpp:182 src/uploadmediadialog.cpp:199
+#: src/uploadmediadialog.cpp:180 src/uploadmediadialog.cpp:197
 #, kde-format
 msgid ""
 "Media uploaded, and URL copied to clipboard.\n"
@@ -1277,7 +1272,7 @@ msgstr ""
 "Možete naći ovdje:\n"
 "%1"
 
-#: src/uploadmediadialog.cpp:185 src/uploadmediadialog.cpp:202
+#: src/uploadmediadialog.cpp:183 src/uploadmediadialog.cpp:200
 #, kde-format
 msgid ""
 "Media uploaded.\n"
@@ -1288,11 +1283,11 @@ msgstr ""
 "Možete naći ovdje:\n"
 "%1"
 
-#: src/uploadmediadialog.cpp:188 src/uploadmediadialog.cpp:205
+#: src/uploadmediadialog.cpp:186 src/uploadmediadialog.cpp:203
 msgid "Successfully uploaded"
 msgstr "Uspješno poslano"
 
-#: src/uploadmediadialog.cpp:212
+#: src/uploadmediadialog.cpp:210
 #, kde-format
 msgid ""
 "Media uploading failed with this result:\n"
@@ -1302,6 +1297,10 @@ msgstr ""
 "Mediji slanje nije uspjelo s tim rezultatom:\n"
 "%1\n"
 "Pokušajte ponovo?"
+
+#~ msgctxt "Blog Title"
+#~ msgid "Title"
+#~ msgstr "Naslov"
 
 #~ msgctxt "Post title"
 #~ msgid "Title"
