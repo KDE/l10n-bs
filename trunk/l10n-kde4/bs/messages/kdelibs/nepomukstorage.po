@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nepomukstorage\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-22 03:51+0100\n"
+"POT-Creation-Date: 2013-05-21 08:14+0000\n"
 "PO-Revision-Date: 2012-09-03 13:56+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -31,8 +31,8 @@ msgid "Your emails"
 msgstr "megaribi@epn.ba"
 
 #: backup/gui/backupwizardpages.cpp:45 backup/gui/backupwizardpages.cpp:77
-#: backup/gui/backupwizardpages.cpp:254 backup/gui/backupwizardpages.cpp:310
-#: backup/gui/backupwizardpages.cpp:354
+#: backup/gui/backupwizardpages.cpp:251 backup/gui/backupwizardpages.cpp:307
+#: backup/gui/backupwizardpages.cpp:341
 msgid "Nepomuk Backup"
 msgstr "Nepomuk Backup"
 
@@ -77,17 +77,17 @@ msgstr "Obnova rezervne kopije"
 msgid "The backup is being restored..."
 msgstr "Rezervna kopija je obnovljena"
 
-#: backup/gui/backupwizardpages.cpp:255
+#: backup/gui/backupwizardpages.cpp:252
 msgid "Please configure the Nepomuk backup"
 msgstr "Molim konfigurišite Nepomuk program za kopiranje"
 
-#: backup/gui/backupwizardpages.cpp:311
+#: backup/gui/backupwizardpages.cpp:308
 msgid ""
 "The following files were not found. Please either discard them or find them "
 "manually"
 msgstr ""
 
-#: backup/gui/backupwizardpages.cpp:355
+#: backup/gui/backupwizardpages.cpp:342
 msgid "The Backup has been successfully restored"
 msgstr ""
 
@@ -99,7 +99,7 @@ msgstr "Odbaci"
 msgid "Resolve"
 msgstr "Riješi"
 
-#: backup/gui/fileconflictwidget.cpp:140
+#: backup/gui/fileconflictwidget.cpp:147
 msgid "Find the url"
 msgstr ""
 
@@ -115,19 +115,19 @@ msgstr "Nepomuk alat za rezervne kopije"
 msgid "(c) 2010, Nepomuk-KDE Team"
 msgstr "(c) 2010, Nepomuk-KDE Team"
 
-#: backup/gui/main.cpp:47 storage.cpp:92
+#: backup/gui/main.cpp:47 migrator/main.cpp:46 storage.cpp:365
 msgid "Vishesh Handa"
 msgstr "Vishesh Handa"
 
-#: backup/gui/main.cpp:47 storage.cpp:92
+#: backup/gui/main.cpp:47 migrator/main.cpp:46 storage.cpp:365
 msgid "Maintainer"
 msgstr "Održava"
 
-#: backup/gui/main.cpp:48 storage.cpp:91
+#: backup/gui/main.cpp:48 storage.cpp:364
 msgid "Sebastian Trüg"
 msgstr "Sebastijan Trig"
 
-#: backup/gui/main.cpp:48 storage.cpp:91
+#: backup/gui/main.cpp:48 storage.cpp:364
 msgid "Developer"
 msgstr "Programer"
 
@@ -149,18 +149,70 @@ msgid ""
 "Nepomuk does not seem to be running. Backups cannot be handled without it."
 msgstr ""
 
-#: modelcopyjob.cpp:127
-msgctxt "@title job"
-msgid "Converting Nepomuk database"
-msgstr "Pretvaram Nepomukovu bazu"
+#: migrator/main.cpp:39
+#, fuzzy
+#| msgid "Nepomuk Backup"
+msgid "NepomukMigrator"
+msgstr "Nepomuk Backup"
 
-#: modelcopyjob.cpp:128
-msgid "Old backend"
-msgstr "Stara pozadina"
+#: migrator/main.cpp:41
+#, fuzzy
+#| msgid "Nepomuk Backup Tool"
+msgid "Nepomuk Data Migration Tool"
+msgstr "Nepomuk alat za rezervne kopije"
 
-#: modelcopyjob.cpp:129
-msgid "New backend"
-msgstr "Nova pozadina"
+#: migrator/main.cpp:43
+#, fuzzy
+#| msgid "(c) 2010, Nepomuk-KDE Team"
+msgid "(c) 2013, Nepomuk-KDE Team"
+msgstr "(c) 2010, Nepomuk-KDE Team"
+
+#: migrator/main.cpp:51
+msgid "Opens the advanced menu for migration"
+msgstr ""
+
+#: migrator/main.cpp:65
+msgctxt "@info"
+msgid ""
+"Nepomuk does not seem to be running. <br/>Cannot migrate the data without it"
+msgstr ""
+
+#: migrator/systray.cpp:36 migrator/systray.cpp:37
+msgid "Optimizing search database"
+msgstr ""
+
+#: migrator/systray.cpp:55
+msgid "In Progress"
+msgstr ""
+
+#: migrator/systray.cpp:57
+#, kde-format
+msgid "Progress: %1%"
+msgstr ""
+
+#: migrator/wizard.cpp:75
+msgid "Nepomuk Data Migration"
+msgstr ""
+
+#: migrator/wizard.cpp:80
+msgid ""
+"With this new release Nepomuk has migrated its internal data format. You "
+"have launched this wizard because you wish to migrate your data and not go "
+"with the recommended method of backup and restore. This migration can take "
+"several hours"
+msgstr ""
+
+#: migrator/wizard.cpp:107
+msgid "The internal data is being migrated"
+msgstr ""
+
+#: migrator/wizard.cpp:108
+msgid "This process could take a while"
+msgstr ""
+
+#: migrator/wizard.cpp:158
+msgid "Data has been successfully migrated"
+msgstr ""
 
 #: ontologyloader.cpp:142
 #, kde-format
@@ -198,46 +250,52 @@ msgstr ""
 "podataka. Za korišćenje Nepomuka moraju se instalirati server Virtuoso i "
 "ODBC drajver."
 
-#: repository.cpp:264
-#, kde-format
-msgctxt "@info - notification message"
-msgid ""
-"Nepomuk was not able to find the configured database backend '%1'. Existing "
-"data can thus not be accessed. For data security reasons Nepomuk will be "
-"disabled until the situation has been resolved manually."
-msgstr ""
-"Nepomuk ne može da nađe podešenu pozadinu za bazu „%1“. Postojećim podacima "
-"zato se ne može pristupiti. Radi bezbjednosti podataka, Nepomuk će biti "
-"isključen dok se ovaj problem ručno ne razriješi."
-
-#: repository.cpp:298
-msgctxt "@info - notification message"
-msgid "Converting Nepomuk data to a new backend. This might take a while."
-msgstr "Pretvaram podatke Nepomuka za novu pozadinu. Može potrajati."
-
-#: repository.cpp:311
-msgctxt "@info - notification message"
-msgid ""
-"Converting Nepomuk data to the new backend failed. For data security reasons "
-"Nepomuk will be disabled until the situation has been resolved manually."
-msgstr ""
-"Neuspjello pretvaranje Nepomukovih podataka za novu pozadinu. Radi "
-"bezbjednosti podataka, Nepomuk će biti isključen dok se ovaj problem ručno "
-"ne razriješi."
-
-#: repository.cpp:325
-msgctxt "@info - notification message"
-msgid "Successfully converted Nepomuk data to the new backend."
-msgstr "Podaci Nepomuka uspješno pretvoreni za novu pozadinu."
-
-#: storage.cpp:84 storage.cpp:86
+#: storage.cpp:357 storage.cpp:359
 #, fuzzy
 #| msgid "Nepomuk Backup"
 msgid "Nepomuk Storage"
 msgstr "Nepomuk Backup"
 
-#: storage.cpp:88
+#: storage.cpp:361
 #, fuzzy
 #| msgid "Sebastian Trüg"
 msgid "(c) 2008-2013, Sebastian Trüg"
 msgstr "Sebastijan Trig"
+
+#~ msgctxt "@title job"
+#~ msgid "Converting Nepomuk database"
+#~ msgstr "Pretvaram Nepomukovu bazu"
+
+#~ msgid "Old backend"
+#~ msgstr "Stara pozadina"
+
+#~ msgid "New backend"
+#~ msgstr "Nova pozadina"
+
+#~ msgctxt "@info - notification message"
+#~ msgid ""
+#~ "Nepomuk was not able to find the configured database backend '%1'. "
+#~ "Existing data can thus not be accessed. For data security reasons Nepomuk "
+#~ "will be disabled until the situation has been resolved manually."
+#~ msgstr ""
+#~ "Nepomuk ne može da nađe podešenu pozadinu za bazu „%1“. Postojećim "
+#~ "podacima zato se ne može pristupiti. Radi bezbjednosti podataka, Nepomuk "
+#~ "će biti isključen dok se ovaj problem ručno ne razriješi."
+
+#~ msgctxt "@info - notification message"
+#~ msgid "Converting Nepomuk data to a new backend. This might take a while."
+#~ msgstr "Pretvaram podatke Nepomuka za novu pozadinu. Može potrajati."
+
+#~ msgctxt "@info - notification message"
+#~ msgid ""
+#~ "Converting Nepomuk data to the new backend failed. For data security "
+#~ "reasons Nepomuk will be disabled until the situation has been resolved "
+#~ "manually."
+#~ msgstr ""
+#~ "Neuspjello pretvaranje Nepomukovih podataka za novu pozadinu. Radi "
+#~ "bezbjednosti podataka, Nepomuk će biti isključen dok se ovaj problem "
+#~ "ručno ne razriješi."
+
+#~ msgctxt "@info - notification message"
+#~ msgid "Successfully converted Nepomuk data to the new backend."
+#~ msgstr "Podaci Nepomuka uspješno pretvoreni za novu pozadinu."
