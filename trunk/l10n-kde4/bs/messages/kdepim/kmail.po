@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-20 03:43+0200\n"
+"POT-Creation-Date: 2013-05-23 01:32+0000\n"
 "PO-Revision-Date: 2012-12-08 20:35+0000\n"
 "Last-Translator: Adis Bajric <abajric1@hotmail.com>\n"
 "Language-Team: Bosanski <bs@li.org>\n"
@@ -4893,7 +4893,7 @@ msgctxt "Message->"
 msgid "&Reply"
 msgstr "&Odgovori"
 
-#: messageactions.cpp:83 searchwindow.cpp:297
+#: messageactions.cpp:83 searchwindow.cpp:236
 msgid "&Reply..."
 msgstr "Odgovo&ri..."
 
@@ -4901,11 +4901,11 @@ msgstr "Odgovo&ri..."
 msgid "Reply to A&uthor..."
 msgstr "Odgovori a&utoru..."
 
-#: messageactions.cpp:97 searchwindow.cpp:301
+#: messageactions.cpp:97 searchwindow.cpp:240
 msgid "Reply to &All..."
 msgstr "Odgovori svim&a..."
 
-#: messageactions.cpp:104 searchwindow.cpp:305
+#: messageactions.cpp:104 searchwindow.cpp:244
 msgid "Reply to Mailing-&List..."
 msgstr "Odgovori na mailing &listu..."
 
@@ -4952,7 +4952,7 @@ msgstr "&Edituj poruku"
 msgid "Add Note..."
 msgstr "Dodaj bilješku..."
 
-#: messageactions.cpp:168 searchwindow.cpp:309
+#: messageactions.cpp:168 searchwindow.cpp:248
 msgctxt "Message->"
 msgid "&Forward"
 msgstr "&Proslijedi"
@@ -5065,62 +5065,38 @@ msgctxt "@action:button Search for messages"
 msgid "&Search"
 msgstr "&Traži"
 
-#: searchwindow.cpp:111
-msgid "Search in &all folders"
-msgstr "Traži u &svim mapama"
-
-#: searchwindow.cpp:115
-msgid "Search &only in:"
-msgstr "Traži s&amo u:"
-
-#: searchwindow.cpp:122
-msgid "I&nclude sub-folders"
-msgstr "&Uključi pod-fascikle"
-
-#: searchwindow.cpp:218
-msgid "Search folder &name:"
-msgstr "Ime fascikla za &pretragu:"
-
-#: searchwindow.cpp:228 searchwindow.cpp:456
+#: searchwindow.cpp:188 searchwindow.cpp:395
 msgid "Last Search"
 msgstr "Posljednja pretraga"
 
-#: searchwindow.cpp:238
-msgid "Op&en Search Folder"
-msgstr "Otvori Pretragu Direktorija"
-
-#: searchwindow.cpp:247
-msgid "Open &Message"
-msgstr "Otvori &Poruku"
-
-#: searchwindow.cpp:258
+#: searchwindow.cpp:207
 msgid "AMiddleLengthText..."
 msgstr "TekstSrednjeDužine..."
 
-#: searchwindow.cpp:259
+#: searchwindow.cpp:208
 msgctxt "@info:status finished searching."
 msgid "Ready."
 msgstr "Spreman"
 
-#: searchwindow.cpp:314
+#: searchwindow.cpp:253
 msgctxt "@action:inmenu Forward message inline."
 msgid "&Inline..."
 msgstr "&U sastavu poruke..."
 
-#: searchwindow.cpp:319
+#: searchwindow.cpp:258
 msgctxt "Message->Forward->"
 msgid "As &Attachment..."
 msgstr "Kao &prilog..."
 
-#: searchwindow.cpp:333
+#: searchwindow.cpp:272
 msgid "Save Attachments..."
 msgstr "&Snimi priloge..."
 
-#: searchwindow.cpp:339
+#: searchwindow.cpp:278
 msgid "Clear Selection"
 msgstr "Očisti izbor"
 
-#: searchwindow.cpp:423
+#: searchwindow.cpp:362
 #, kde-format
 msgid "%1 match"
 msgid_plural "%1 matches"
@@ -5128,12 +5104,12 @@ msgstr[0] "%1 podudarnost"
 msgstr[1] "%1 podudarnosti"
 msgstr[2] "%1 podudarnosti"
 
-#: searchwindow.cpp:524
+#: searchwindow.cpp:463
 #, kde-format
 msgid "Can not get search result. %1"
 msgstr "Ne mogu naći rezultate pretrage. %1"
 
-#: searchwindow.cpp:639
+#: searchwindow.cpp:578
 msgid ""
 "There was a problem renaming your search folder. A common reason for this is "
 "that another search folder with the same name already exists."
@@ -5141,7 +5117,7 @@ msgstr ""
 "Došlo je do problema preimenovanje fascikli za pretragu. Razlog za ovo je da "
 "druga fascikla za pretragu  sa istim imenom već postoji."
 
-#: searchwindow.cpp:746
+#: searchwindow.cpp:685
 #, kde-format
 msgid "Copy Message"
 msgid_plural "Copy %1 Messages"
@@ -5149,7 +5125,7 @@ msgstr[0] "Kopiraj %1 poruku"
 msgstr[1] "Kopiraj %1 poruke"
 msgstr[2] "Kopiraj %1 poruka"
 
-#: searchwindow.cpp:749
+#: searchwindow.cpp:688
 #, kde-format
 msgid "Cut Message"
 msgid_plural "Cut %1 Messages"
@@ -5682,6 +5658,40 @@ msgstr "Isprazni lokalnu fasciklu za &smeće pri izlasku iz programa"
 #: ui/miscpagemaintab.ui:187
 msgid "Print only selected text"
 msgstr "Štampaj samo označeni tekst"
+
+#. i18n: ectx: property (text), widget (QRadioButton, mChkbxAllFolders)
+#: ui/searchwindow.ui:17
+msgid "Search in &all folders"
+msgstr "Traži u &svim mapama"
+
+#. i18n: ectx: property (text), widget (QRadioButton, mChkbxSpecificFolders)
+#: ui/searchwindow.ui:26
+msgid "Search &only in:"
+msgstr "Traži s&amo u:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, mChkSubFolders)
+#: ui/searchwindow.ui:39
+#, fuzzy
+#| msgid "I&nclude sub-folders"
+msgid "&Include sub-folders"
+msgstr "&Uključi pod-fascikle"
+
+#. i18n: ectx: property (text), widget (QLabel, mSearchFolderLbl)
+#: ui/searchwindow.ui:93
+msgid "Search folder &name:"
+msgstr "Ime fascikla za &pretragu:"
+
+#. i18n: ectx: property (text), widget (KPushButton, mSearchFolderOpenBtn)
+#: ui/searchwindow.ui:113
+#, fuzzy
+#| msgid "Op&en Search Folder"
+msgid "Open &Search Folder"
+msgstr "Otvori Pretragu Direktorija"
+
+#. i18n: ectx: property (text), widget (KPushButton, mSearchResultOpenBtn)
+#: ui/searchwindow.ui:123
+msgid "Open &Message"
+msgstr "Otvori &Poruku"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: ui/securitypagegeneraltab.ui:17
