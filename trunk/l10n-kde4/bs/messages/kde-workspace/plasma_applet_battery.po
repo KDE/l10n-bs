@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-17 04:15+0200\n"
+"POT-Creation-Date: 2013-06-05 02:14+0000\n"
 "PO-Revision-Date: 2012-10-27 23:10+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -23,108 +23,68 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: contents/code/logic.js:61
-#, fuzzy, kde-format
-#| msgid "%1% (charged)"
-msgid "%1% (charged)"
-msgstr "%1% (napunjena)"
-
-#: contents/code/logic.js:62
-#, fuzzy, kde-format
-#| msgid "%1% (discharging)"
-msgid "%1% (discharging)"
-msgstr "%1% (prazni se)"
-
-#: contents/code/logic.js:63
-#, fuzzy, kde-format
+#: contents/code/logic.js:99
+#, fuzzy
 #| msgid "%1% (charging)"
-msgid "%1% (charging)"
+msgid "Not Charging"
 msgstr "%1% (puni se)"
 
-#: contents/code/logic.js:66
-#, fuzzy, kde-format
-#| msgctxt "overlay on the battery, needs to be really tiny"
-#| msgid "%1%"
-msgid "%1%"
-msgstr "%1%"
+#: contents/code/logic.js:100
+#, fuzzy
+#| msgid "%1% (discharging)"
+msgid "Discharging"
+msgstr "%1% (prazni se)"
 
-#: contents/code/logic.js:69
+#: contents/code/logic.js:101
+msgid "Fully Charged"
+msgstr ""
+
+#: contents/code/logic.js:102
+#, fuzzy
+#| msgid "%1% (charging)"
+msgid "Charging"
+msgstr "%1% (puni se)"
+
+#: contents/code/logic.js:105
 #, fuzzy
 #| msgctxt "Battery is not plugged in"
 #| msgid "Not present"
-msgctxt "Battery is not plugged in"
+msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "nema je"
 
-#: contents/code/logic.js:96
-#, fuzzy
-#| msgid "AC Adapter:"
-msgctxt "tooltip"
-msgid "AC Adapter:"
-msgstr "AC ispravljač:"
+#: contents/code/logic.js:154
+msgid "No batteries available"
+msgstr ""
 
-#: contents/code/logic.js:97
-#, fuzzy
-#| msgid "Plugged in"
-msgctxt "tooltip"
-msgid "<b>Plugged in</b>"
-msgstr "Utaknut"
+#: contents/code/logic.js:163
+#, fuzzy, kde-format
+#| msgctxt "overlay on the battery, needs to be really tiny"
+#| msgid "%1%"
+msgctxt "Placeholder is battery name"
+msgid "%1:"
+msgstr "%1%"
 
-#: contents/code/logic.js:97
-#, fuzzy
-#| msgid "Not plugged in"
-msgctxt "tooltip"
-msgid "<b>Not plugged in</b>"
-msgstr "Nije utaknut"
-
-#: contents/ui/batterymonitor.qml:122
-#, kde-format
-msgctxt "overlay on the battery, needs to be really tiny"
+#: contents/code/logic.js:166 contents/ui/BatteryItem.qml:180
+#, fuzzy, kde-format
+#| msgctxt "overlay on the battery, needs to be really tiny"
+#| msgid "%1%"
+msgctxt "Placeholder is battery percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/batterymonitor.qml:243
-msgid "The battery applet has enabled system-wide inhibition"
-msgstr "Baterija aplet ima omogućenu sistemsku inhibiciju"
+#: contents/code/logic.js:168
+msgid "N/A"
+msgstr ""
 
-# >> @title:window
-#. i18n: ectx: property (windowTitle), widget (QWidget, batteryConfig)
-#: contents/ui/config.ui:14
-msgid "Configure Battery Monitor"
-msgstr "Podešavanje nadzora baterije"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showBatteryString)
-#: contents/ui/config.ui:23
-msgid "Show charge &information"
-msgstr "Podaci o &popunjenosti"
-
-#: contents/ui/PopupDialog.qml:62
-msgid "AC Adapter:"
-msgstr "AC ispravljač:"
-
-#: contents/ui/PopupDialog.qml:68
-msgctxt "Label for remaining time"
-msgid "Time Remaining:"
-msgstr "Preostalo vrijeme:"
-
-#: contents/ui/PopupDialog.qml:74
-msgctxt "Label for power management inhibition"
-msgid "Power management enabled:"
+#: contents/code/logic.js:189
+#, fuzzy
+#| msgctxt "Label for power management inhibition"
+#| msgid "Power management enabled:"
+msgid "Power management is disabled"
 msgstr "Omogućen menadžer napajanja:"
 
-#: contents/ui/PopupDialog.qml:79
-msgid "Screen Brightness:"
-msgstr "Osvjetljaj ekrana:"
-
-#: contents/ui/PopupDialog.qml:110
-msgid "Plugged in"
-msgstr "Utaknut"
-
-#: contents/ui/PopupDialog.qml:110
-msgid "Not plugged in"
-msgstr "Nije utaknut"
-
-#: contents/ui/PopupDialog.qml:157
+#: contents/code/logic.js:220
 #, fuzzy, kde-format
 msgid "1 hour "
 msgid_plural "%1 hours "
@@ -132,7 +92,7 @@ msgstr[0] "%1 sat"
 msgstr[1] "%1 sata"
 msgstr[2] "%1 sati"
 
-#: contents/ui/PopupDialog.qml:158
+#: contents/code/logic.js:221
 #, kde-format
 msgid "1 minute"
 msgid_plural "%1 minutes"
@@ -140,15 +100,146 @@ msgstr[0] "%1 minuta"
 msgstr[1] "%1 minute"
 msgstr[2] "%1 minuta"
 
-#: contents/ui/PopupDialog.qml:172
-msgctxt "Suspend the computer to RAM; translation should be short"
-msgid "Sleep"
-msgstr "Spavaj"
+#: contents/ui/AcAdapterItem.qml:58
+#, fuzzy
+#| msgid "AC Adapter:"
+msgid "AC Adapter"
+msgstr "AC ispravljač:"
 
-#: contents/ui/PopupDialog.qml:179
-msgctxt "Suspend the computer to disk; translation should be short"
-msgid "Hibernate"
-msgstr "Hibernacija"
+#: contents/ui/AcAdapterItem.qml:70
+#, fuzzy
+#| msgid "Plugged in"
+msgid "Plugged In"
+msgstr "Utaknut"
+
+#: contents/ui/AcAdapterItem.qml:70
+#, fuzzy
+#| msgid "Not plugged in"
+msgid "Not Plugged In"
+msgstr "Nije utaknut"
+
+#: contents/ui/AcAdapterItem.qml:83
+#, fuzzy, kde-format
+#| msgctxt "Label for remaining time"
+#| msgid "Time Remaining:"
+msgid "Time remaining until full: %1"
+msgstr "Preostalo vrijeme:"
+
+#: contents/ui/AcAdapterItem.qml:83
+#, fuzzy, kde-format
+#| msgctxt "Label for remaining time"
+#| msgid "Time Remaining:"
+msgid "Time remaining until empty: %1"
+msgstr "Preostalo vrijeme:"
+
+#: contents/ui/BatteryItem.qml:224
+msgid "Time To Full:"
+msgstr ""
+
+#: contents/ui/BatteryItem.qml:224
+msgid "Time To Empty:"
+msgstr ""
+
+#: contents/ui/BatteryItem.qml:236
+msgid "Capacity:"
+msgstr ""
+
+#: contents/ui/BatteryItem.qml:248
+msgid "Vendor:"
+msgstr ""
+
+#: contents/ui/BatteryItem.qml:260
+msgid "Model:"
+msgstr ""
+
+#: contents/ui/BatteryItem.qml:283
+#, fuzzy, kde-format
+#| msgctxt "overlay on the battery, needs to be really tiny"
+#| msgid "%1%"
+msgctxt "Placeholder is battery capacity"
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/ui/batterymonitor.qml:156
+msgid "The battery applet has enabled system-wide inhibition"
+msgstr "Baterija aplet ima omogućenu sistemsku inhibiciju"
+
+#: contents/ui/BrightnessItem.qml:86
+#, fuzzy, kde-format
+#| msgctxt "overlay on the battery, needs to be really tiny"
+#| msgid "%1%"
+msgctxt "Placeholder is brightness percentage"
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/ui/CompactRepresentation.qml:92
+#, fuzzy, kde-format
+#| msgctxt "overlay on the battery, needs to be really tiny"
+#| msgid "%1%"
+msgctxt "battery percentage below battery icon"
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/ui/PopupDialog.qml:86
+#, fuzzy
+#| msgid "Screen Brightness:"
+msgid "Display Brightness"
+msgstr "Osvjetljaj ekrana:"
+
+#: contents/ui/PopupDialog.qml:95
+#, fuzzy
+#| msgid "Screen Brightness:"
+msgid "Keyboard Brightness"
+msgstr "Osvjetljaj ekrana:"
+
+#: contents/ui/PowerManagementItem.qml:54
+#, fuzzy
+#| msgctxt "Label for power management inhibition"
+#| msgid "Power management enabled:"
+msgid "Enable Power Management"
+msgstr "Omogućen menadžer napajanja:"
+
+#, fuzzy
+#~| msgid "%1% (charged)"
+#~ msgid "%1% (charged)"
+#~ msgstr "%1% (napunjena)"
+
+#, fuzzy
+#~| msgid "AC Adapter:"
+#~ msgctxt "tooltip"
+#~ msgid "AC Adapter:"
+#~ msgstr "AC ispravljač:"
+
+#, fuzzy
+#~| msgid "Plugged in"
+#~ msgctxt "tooltip"
+#~ msgid "<b>Plugged in</b>"
+#~ msgstr "Utaknut"
+
+#, fuzzy
+#~| msgid "Not plugged in"
+#~ msgctxt "tooltip"
+#~ msgid "<b>Not plugged in</b>"
+#~ msgstr "Nije utaknut"
+
+#~ msgctxt "overlay on the battery, needs to be really tiny"
+#~ msgid "%1%"
+#~ msgstr "%1%"
+
+# >> @title:window
+#~ msgid "Configure Battery Monitor"
+#~ msgstr "Podešavanje nadzora baterije"
+
+#~ msgid "Show charge &information"
+#~ msgstr "Podaci o &popunjenosti"
+
+#~ msgctxt "Suspend the computer to RAM; translation should be short"
+#~ msgid "Sleep"
+#~ msgstr "Spavaj"
+
+#~ msgctxt "Suspend the computer to disk; translation should be short"
+#~ msgid "Hibernate"
+#~ msgstr "Hibernacija"
 
 #~ msgid "Battery:"
 #~ msgstr "Baterija:"
