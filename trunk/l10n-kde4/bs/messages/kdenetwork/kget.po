@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kget\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-06-07 01:35+0000\n"
+"POT-Creation-Date: 2013-06-09 01:37+0000\n"
 "PO-Revision-Date: 2012-12-09 00:04+0000\n"
 "Last-Translator: Admir Salkanović <asalkanovi2@etf.unsa.ba>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -419,6 +419,8 @@ msgstr "Serveri ključeva:"
 
 #: core/datasourcefactory.cpp:279 core/datasourcefactory.cpp:624
 #: core/kget.cpp:1393 transfer-plugins/metalink/metalink.cpp:202
+#: transfer-plugins/metalink/metalinkhttp.cpp:224
+#: transfer-plugins/metalink/metalinkxml.cpp:199
 #: ui/metalinkcreator/metalinkcreator.cpp:161
 #: ui/metalinkcreator/metalinkcreator.cpp:178
 msgid "Error"
@@ -651,7 +653,8 @@ msgid "You are already downloading the same file"
 msgstr "Već preuzimate istu datoteku"
 
 #: core/kget.cpp:1123 core/kget.cpp:1126 core/urlchecker.cpp:648
-#: core/urlchecker.cpp:744 transfer-plugins/metalink/metalink.cpp:720
+#: core/urlchecker.cpp:744 transfer-plugins/metalink/abstractmetalink.cpp:483
+#: transfer-plugins/metalink/metalink.cpp:720
 msgid "File already exists"
 msgstr "Datoteka već postoji"
 
@@ -1367,7 +1370,7 @@ msgstr "Napredni download menadžer za KDE"
 #| "(C) 2002, Carsten Pfeiffer\n"
 #| "(C) 1998 - 2000, Matej Koss"
 msgid ""
-"(C) 2005 - 2011, The KGet developers\n"
+"(C) 2005 - 2012, The KGet developers\n"
 "(C) 2001 - 2002, Patrick Charbonnier\n"
 "(C) 2002, Carsten Pfeiffer\n"
 "(C) 1998 - 2000, Matej Koss"
@@ -1422,62 +1425,70 @@ msgid "Developer"
 msgstr "Programer"
 
 #: main.cpp:120
+msgid "Aish Raj Dahal"
+msgstr ""
+
+#: main.cpp:120
+msgid "Google Summer of Code Student"
+msgstr ""
+
+#: main.cpp:121
 msgid "Ernesto Rodriguez Ortiz"
 msgstr "Ernesto Rodriguez Ortiz"
 
-#: main.cpp:120
+#: main.cpp:121
 msgid "Mms Plugin Author"
 msgstr "Autor MMS dodatka"
 
-#: main.cpp:121
+#: main.cpp:122
 msgid "Patrick Charbonnier"
 msgstr "Patrick Charbonnier"
 
-#: main.cpp:121 main.cpp:122 main.cpp:123
+#: main.cpp:122 main.cpp:123 main.cpp:124
 msgid "Former Developer"
 msgstr "Bivši programer"
 
-#: main.cpp:122
+#: main.cpp:123
 msgid "Carsten Pfeiffer"
 msgstr "Carsten Pfeiffer"
 
-#: main.cpp:123
+#: main.cpp:124
 msgid "Matej Koss"
 msgstr "Matej Koss"
 
-#: main.cpp:124
+#: main.cpp:125
 msgid "Joris Guisson"
 msgstr "Joris Guisson"
 
-#: main.cpp:124
+#: main.cpp:125
 msgid "BTCore (KTorrent) Developer"
 msgstr "programer BTCore (KTorrenta)"
 
-#: main.cpp:125
+#: main.cpp:126
 msgid "Mensur Zahirovic (Nookie)"
 msgstr "Mensur Zahirovic (Nookie)"
 
-#: main.cpp:125
+#: main.cpp:126
 msgid "Design of Web Interface"
 msgstr "Dizajn web interfejsa"
 
-#: main.cpp:130
+#: main.cpp:131
 msgid "Start KGet with drop target"
 msgstr "Pokreni KGet sa metom za prevlačenje"
 
-#: main.cpp:131
+#: main.cpp:132
 msgid "Start KGet with hidden main window"
 msgstr "Pokreni KGet sa skrivenim glavnim prozorom"
 
-#: main.cpp:132
+#: main.cpp:133
 msgid "Start KGet without drop target animation"
 msgstr "Pokreni KGet bez animacije mjesta za spuštanje"
 
-#: main.cpp:134
+#: main.cpp:135
 msgid "Execute Unit Testing"
 msgstr "Izvrši jedinične probe"
 
-#: main.cpp:136
+#: main.cpp:137
 msgid "URL(s) to download"
 msgstr "URL(ovi) za download"
 
@@ -2837,6 +2848,15 @@ msgstr "Preuzimanje (%1) se ne može ovjeriti. Želite li ga preuzeti ponovo?"
 msgid "Verification failed."
 msgstr "Ovjera je propala."
 
+#: transfer-plugins/metalink/abstractmetalink.cpp:219
+#: transfer-plugins/metalink/metalink.cpp:493
+msgid ""
+"The download could not be verified, do you want to repair (if repairing does "
+"not work the download would be restarted) it?"
+msgstr ""
+"Preuzimanje se ne može ovjeriti, želite li ga popraviti? (Ako ne može da se "
+"popravi, preuzimanje će početi iz početka.)"
+
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: transfer-plugins/metalink/dlgmetalink.ui:22
 msgid "Number of simultaneous file downloads:"
@@ -2865,29 +2885,32 @@ msgid "File Selection"
 msgstr "Odabir datoteke"
 
 #: transfer-plugins/metalink/metalink.cpp:83
+#: transfer-plugins/metalink/metalinkxml.cpp:79
 msgid "Downloading Metalink File...."
 msgstr "Preuzimam datoteku metaveze..."
 
 #: transfer-plugins/metalink/metalink.cpp:117
+#: transfer-plugins/metalink/metalinkxml.cpp:113
 msgid ""
 "A newer version of this Metalink might exist, do you want to download it?"
 msgstr "Možda je dostupna nova verzija ove metaveze, želite li je preuzeti?"
 
 #: transfer-plugins/metalink/metalink.cpp:118
+#: transfer-plugins/metalink/metalinkxml.cpp:114
 msgid "Redownload Metalink"
 msgstr "Ponovno preuzimanje metaveze"
 
 #: transfer-plugins/metalink/metalink.cpp:202
+#: transfer-plugins/metalink/metalinkhttp.cpp:224
+#: transfer-plugins/metalink/metalinkxml.cpp:199
 msgid "Download failed, no working URLs were found."
 msgstr "Preuzimanje propalo, nijedan URL ne radi."
 
-#: transfer-plugins/metalink/metalink.cpp:493
-msgid ""
-"The download could not be verified, do you want to repair (if repairing does "
-"not work the download would be restarted) it?"
-msgstr ""
-"Preuzimanje se ne može ovjeriti, želite li ga popraviti? (Ako ne može da se "
-"popravi, preuzimanje će početi iz početka.)"
+#: transfer-plugins/metalink/metalinkhttp.cpp:143
+#, fuzzy
+#| msgid "The download (%1) could not be verified. Do you want to repair it?"
+msgid "The download could not be verified, try to repair it?"
+msgstr "Preuzimanje (%1) se ne može ovjeriti. Želite li ga popraviti?"
 
 #. i18n: ectx: property (text), widget (QLabel, engineNameLabel)
 #: transfer-plugins/mirrorsearch/dlgengineediting.ui:16
@@ -4149,8 +4172,3 @@ msgstr "&Provjeri"
 #: ui/verificationdialog.ui:71
 msgid "Verifying:"
 msgstr "Ovjeravam:"
-
-#, fuzzy
-#~| msgid "The download (%1) could not be verified. Do you want to repair it?"
-#~ msgid "The download could not be verified, try to repair it?"
-#~ msgstr "Preuzimanje (%1) se ne može ovjeriti. Želite li ga popraviti?"
