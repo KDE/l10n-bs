@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: rekonq\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-06-27 01:29+0000\n"
+"POT-Creation-Date: 2013-07-09 21:13+0000\n"
 "PO-Revision-Date: 2012-12-15 13:59+0000\n"
 "Last-Translator: Arnis Mustafić <amustafic2@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -1602,40 +1602,40 @@ msgstr "Aktivira podršku za mogućnost keširanja veb programa HTML 5."
 msgid "Enables support for the HTML 5 local storage feature."
 msgstr "Aktivira podršku za mogućnost lokalnog skladištenja HTML‑a 5."
 
-#: sync/ftpsynchandler.cpp:148
+#: sync/ftpsynchandler.cpp:148 sync/sshsynchandler.cpp:149
 #, fuzzy
 #| msgid "Remote bookmarks file does NOT exists. Exporting local copy..."
 msgid "Remote bookmarks file does not exists. Exporting local copy..."
 msgstr ""
 "Datoteka s udaljenim zabilješkama ne postoji. Izvozim lokalnu kopiju..."
 
-#: sync/ftpsynchandler.cpp:161
+#: sync/ftpsynchandler.cpp:161 sync/sshsynchandler.cpp:162
 #, fuzzy
 #| msgid "Remote bookmarks file exists! Syncing local copy..."
 msgid "Remote bookmarks file exists. Syncing local copy..."
 msgstr ""
 "Datoteka s udaljenim zabilješkama postoji. Sinhronizujem lokalnu kopiju..."
 
-#: sync/ftpsynchandler.cpp:204
+#: sync/ftpsynchandler.cpp:204 sync/sshsynchandler.cpp:205
 #, fuzzy
 #| msgid "Remote history file does NOT exists. Exporting local copy..."
 msgid "Remote history file does not exists. Exporting local copy..."
 msgstr "Datoteka s udaljenom historijom ne postoji. Izvozim lokalnu kopiju..."
 
-#: sync/ftpsynchandler.cpp:217
+#: sync/ftpsynchandler.cpp:217 sync/sshsynchandler.cpp:218
 #, fuzzy
 #| msgid "Remote history file exists! Syncing local copy..."
 msgid "Remote history file exists. Syncing local copy..."
 msgstr ""
 "Datoteka s udaljenom historijom postoji. Sinhronizujem lokalnu kopiju..."
 
-#: sync/ftpsynchandler.cpp:260
+#: sync/ftpsynchandler.cpp:260 sync/sshsynchandler.cpp:261
 #, fuzzy
 #| msgid "Remote passwords file does NOT exists. Exporting local copy..."
 msgid "Remote passwords file does not exists. Exporting local copy..."
 msgstr "Datoteka s udaljenim lozinkama ne postoji. Izvozim lokalnu kopiju..."
 
-#: sync/ftpsynchandler.cpp:273
+#: sync/ftpsynchandler.cpp:273 sync/sshsynchandler.cpp:274
 #, fuzzy
 #| msgid "Remote passwords file exists! Syncing local copy..."
 msgid "Remote passwords file exists. Syncing local copy..."
@@ -1750,29 +1750,29 @@ msgid "Remote FTP Host Settings"
 msgstr "postavke udaljenog FTP hosta"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: sync/sync_ftp_settings.ui:23
+#: sync/sync_ftp_settings.ui:23 sync/sync_ssh_settings.ui:26
 msgid "Server:"
 msgstr "Server:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: sync/sync_ftp_settings.ui:33 sync/sync_google_settings.ui:26
-#: sync/sync_opera_settings.ui:26
+#: sync/sync_opera_settings.ui:26 sync/sync_ssh_settings.ui:36
 msgid "Username:"
 msgstr "Korisničko ime:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: sync/sync_ftp_settings.ui:43 sync/sync_google_settings.ui:36
-#: sync/sync_opera_settings.ui:36
+#: sync/sync_opera_settings.ui:36 sync/sync_ssh_settings.ui:46
 msgid "Password:"
 msgstr "Šifra:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: sync/sync_ftp_settings.ui:56
+#: sync/sync_ftp_settings.ui:56 sync/sync_ssh_settings.ui:63
 msgid "Path:"
 msgstr "Putanja:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: sync/sync_ftp_settings.ui:66
+#: sync/sync_ftp_settings.ui:66 sync/sync_ssh_settings.ui:73
 msgid "Port:"
 msgstr "Priključak:"
 
@@ -1804,19 +1804,27 @@ msgstr "sync host type"
 msgid "FTP"
 msgstr "FTP"
 
+#. i18n: ectx: property (text), widget (QRadioButton, sshRadioButton)
+#: sync/sync_host_type.ui:37 sync/synccheckwidget.cpp:73
+#, fuzzy
+#| msgctxt "Secure Sockets Layer"
+#| msgid "SSL"
+msgid "SSH"
+msgstr "SSL"
+
 #. i18n: ectx: property (text), widget (QRadioButton, googleRadioButton)
-#: sync/sync_host_type.ui:37
+#: sync/sync_host_type.ui:44
 msgid "Google Sync"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, operaRadioButton)
-#: sync/sync_host_type.ui:44
+#: sync/sync_host_type.ui:51
 #, fuzzy
 msgid "Opera Sync"
 msgstr "Opera"
 
 #. i18n: ectx: property (text), widget (QRadioButton, nullRadioButton)
-#: sync/sync_host_type.ui:51
+#: sync/sync_host_type.ui:58
 msgid "/dev/null"
 msgstr "/dev/null"
 
@@ -1826,7 +1834,19 @@ msgstr "/dev/null"
 msgid "Opera Account Settings"
 msgstr "Postavke korisničkog agenta"
 
-#: sync/syncassistant.cpp:44
+#. i18n: ectx: property (title), widget (QGroupBox, sshGroupBox)
+#: sync/sync_ssh_settings.ui:17
+#, fuzzy
+#| msgid "remote FTP host settings"
+msgid "SSH Host Settings"
+msgstr "postavke udaljenog FTP hosta"
+
+#. i18n: ectx: property (text), widget (QCheckBox, syncWithSSHKeys)
+#: sync/sync_ssh_settings.ui:56
+msgid "Use system ssh keys to login"
+msgstr ""
+
+#: sync/syncassistant.cpp:45
 #, fuzzy
 #| msgid "sync assistant"
 msgid "Sync Assistant"
@@ -1841,11 +1861,11 @@ msgstr "Gugl‑čitač"
 msgid "Opera"
 msgstr "Opera"
 
-#: sync/synccheckwidget.cpp:73
+#: sync/synccheckwidget.cpp:78
 msgid "No sync"
 msgstr "Nema sinhronizacije"
 
-#: sync/synccheckwidget.cpp:74
+#: sync/synccheckwidget.cpp:79
 msgctxt "no host"
 msgid "None"
 msgstr ""
