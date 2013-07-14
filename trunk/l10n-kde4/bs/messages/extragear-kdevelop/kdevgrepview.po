@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-20 10:27+0100\n"
+"POT-Creation-Date: 2013-07-07 01:33+0000\n"
 "PO-Revision-Date: 2013-01-26 14:23+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: bs\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2013-01-26 22:18+0000\n"
 "X-Generator: Launchpad (build 16451)\n"
 
@@ -40,11 +40,12 @@ msgstr "Svi otvoreni projekti"
 msgid "Search..."
 msgstr "Traži..."
 
-#: grepdialog.cpp:117 grepviewplugin.cpp:48
-msgid "Find/Replace In Files"
+#: grepdialog.cpp:117 grepdialog.cpp:438 grepviewplugin.cpp:48
+#: grepviewplugin.cpp:73
+msgid "Find/Replace in Files"
 msgstr "Nađi/zamijeni u datotekama"
 
-#: grepdialog.cpp:433
+#: grepdialog.cpp:435
 #, kde-format
 msgid "%2, and %1 more item"
 msgid_plural "%2, and %1 more items"
@@ -52,30 +53,26 @@ msgstr[0] "%2, i još %1 stavka"
 msgstr[1] "%2, i još %1 stavke"
 msgstr[2] "%2, i još %1 stavki"
 
-#: grepdialog.cpp:436 grepviewplugin.cpp:74
-msgid "Find/Replace in Files"
-msgstr "Nađi/zamijeni u datotekama"
-
-#: grepjob.cpp:100
+#: grepjob.cpp:107
 msgid "Find in Files"
 msgstr "Pronađi u datotekama"
 
-#: grepjob.cpp:115 grepjob.cpp:217
+#: grepjob.cpp:122 grepjob.cpp:224
 msgid "Search aborted"
 msgstr "Traženje prekinuto"
 
-#: grepjob.cpp:124
+#: grepjob.cpp:131
 msgid "No files found matching the wildcard patterns"
 msgstr "Nisu nađene datoteke koje se slažu s džoker-uzorkom"
 
-#: grepjob.cpp:142
+#: grepjob.cpp:149
 msgctxt ""
 "Capture is the text which is \"captured\" with () in regular expressions see "
 "http://doc.trolltech.com/qregexp.html#capturedTexts"
 msgid "Captures are not allowed in pattern string"
 msgstr "Kapture nisu dopuštene u džoker-uzorku"
 
-#: grepjob.cpp:162
+#: grepjob.cpp:169
 #, kde-format
 msgid "Searching for <b>%2</b> in one file"
 msgid_plural "Searching for <b>%2</b> in %1 files"
@@ -83,20 +80,20 @@ msgstr[0] "Tražim <b>%2</b> u %1 datoteci"
 msgstr[1] "Tražim <b>%2</b> u %1 datoteka"
 msgstr[2] "Tražim <b>%2</b> u %1 datoteka"
 
-#: grepjob.cpp:183
+#: grepjob.cpp:190
 msgid "Collecting files..."
 msgstr "Skupljam datoteke..."
 
-#: grepjob.cpp:262
+#: grepjob.cpp:269
 #, kde-format
 msgid "Failed: %1"
 msgstr "Neuspjelo: %1"
 
-#: grepjob.cpp:265
+#: grepjob.cpp:272
 msgid "No results found"
 msgstr "Bez rezultata"
 
-#: grepjob.cpp:324
+#: grepjob.cpp:331
 #, kde-format
 msgid "Grep: %1"
 msgstr "Grep: %1"
@@ -174,8 +171,9 @@ msgid "Clear Search History"
 msgstr "Očisti historijat pretrage"
 
 #: grepoutputview.cpp:181
-#, kde-format
-msgid "Search %1 in %2 (at time %3)"
+#, fuzzy, kde-format
+#| msgid "Search %1 in %2 (at time %3)"
+msgid "Search \"%1\" in %2 (at time %3)"
 msgstr "Traži %1 u %2 (za vrijemee %3)"
 
 #: grepoutputview.cpp:254
@@ -223,22 +221,31 @@ msgid "Search for expressions over several files"
 msgstr "Traži izraze u više datoteka"
 
 #: grepviewplugin.cpp:63
+#, fuzzy
+#| msgid ""
+#| "<b>Find/Replace in files</b><p>Opens the 'Find/Replace in files' dialog. "
+#| "There you can enter a regular expression which is then searched for "
+#| "within all files in the directories you specify. Matches will be "
+#| "displayed, you can switch to a match directly. You can also do "
+#| "replacement.</p>"
 msgid ""
-"<b>Find/Replace in files</b><p>Opens the 'Find/Replace in files' dialog. "
-"There you can enter a regular expression which is then searched for within "
-"all files in the directories you specify. Matches will be displayed, you can "
-"switch to a match directly. You can also do replacement.</p>"
+"Opens the 'Find/Replace in files' dialog. There you can enter a regular "
+"expression which is then searched for within all files in the directories "
+"you specify. Matches will be displayed, you can switch to a match directly. "
+"You can also do replacement."
 msgstr ""
 "<b>Traži i zamijeni u datotekama</b><p>Otvara traženje i zamjenu u "
 "datotekama. Tu možete da unesete regularni izraz koji je tada traži u svim "
 "datoteka u direktorijumu koji ste naveli. Slaganje će biti prikazano, možete "
 "se prebaciti na slaganje direktno. Takođe možete uraditi zamjenu.</p>"
 
-#: grepviewplugin.cpp:104 grepviewplugin.cpp:125
-msgid "Find and replace in this folder"
+#: grepviewplugin.cpp:103 grepviewplugin.cpp:124
+#, fuzzy
+#| msgid "Find and replace in this folder"
+msgid "Find/Replace in This Folder"
 msgstr "Traži i zamijeni u ovom direktoriju"
 
-#: grepviewplugin.cpp:115
+#: grepviewplugin.cpp:114
 msgid "&Find/Replace in Files"
 msgstr "&Traži/zamijeni u datotekama"
 
@@ -486,28 +493,34 @@ msgstr ""
 msgid "Synchronize with current document directory."
 msgstr "Sinhronizuj s trenutnim direktorijem dokumenta"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
+#. i18n: ectx: property (text), widget (QLabel, depthLabel)
 #: grepwidget.ui:217
-msgid "Recursive:"
-msgstr "Rekurzivno:"
+msgid "Depth:"
+msgstr ""
+
+#. i18n: Full recursion will be used. For folder-based searches, that means searching in the target folder and all the subfolders, their subfolders, and so on.
+#. i18n: ectx: property (specialValueText), widget (QSpinBox, depthSpin)
+#: grepwidget.ui:233
+msgid "Full"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, limitToProjectLabel)
-#: grepwidget.ui:240
+#: grepwidget.ui:246
 msgid "Limit to project files:"
 msgstr "Ograniči na projektne datoteke:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: grepwidget.ui:269
+#: grepwidget.ui:275
 msgid "Files:"
 msgstr "Datoteke:"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, filesCombo)
-#: grepwidget.ui:282
+#: grepwidget.ui:288
 msgid "Files filter."
 msgstr "Datotečni filter"
 
 #. i18n: ectx: property (whatsThis), widget (KComboBox, filesCombo)
-#: grepwidget.ui:285
+#: grepwidget.ui:291
 msgid ""
 "Enter the file name pattern of the files to search here. You may give "
 "several patterns separated by commas or spaces."
@@ -516,17 +529,17 @@ msgstr ""
 "nekoliko uzoraka razdvojenih zarezima ili razmacima."
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: grepwidget.ui:298
+#: grepwidget.ui:304
 msgid "Exclude:"
 msgstr "Isključi"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, excludeCombo)
-#: grepwidget.ui:311
+#: grepwidget.ui:317
 msgid "Files pattern to exclude"
 msgstr "Uzorak datoteka za isključiti"
 
 #. i18n: ectx: property (whatsThis), widget (KComboBox, excludeCombo)
-#: grepwidget.ui:314
+#: grepwidget.ui:320
 msgid ""
 "Enter the file name pattern of the files to exclude from the search here. "
 "You may give several patterns separated by commas or spaces.<p>Every pattern "
@@ -539,12 +552,12 @@ msgstr ""
 "dijelovima staza datoteka. </p>"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, replacementTemplateEdit)
-#: grepwidget.ui:391
+#: grepwidget.ui:397
 msgid "Enter the replacement template."
 msgstr "Unesi predložak za zamjenu"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: grepwidget.ui:398
+#: grepwidget.ui:404
 msgid "Replacement Template:"
 msgstr "Šablon za zamjenu"
 
@@ -553,3 +566,9 @@ msgstr "Šablon za zamjenu"
 msgctxt "@title:menu"
 msgid "Edit"
 msgstr "Izmijeni"
+
+#~ msgid "Find/Replace In Files"
+#~ msgstr "Nađi/zamijeni u datotekama"
+
+#~ msgid "Recursive:"
+#~ msgstr "Rekurzivno:"
