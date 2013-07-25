@@ -6227,7 +6227,7 @@ msgstr "Traka s alatima za format"
 
 #: plugins/cryptography/cryptographyguiclient.cpp:56
 msgid "Cryptography"
-msgstr ""
+msgstr "Kriptografija"
 
 #: plugins/cryptography/cryptographyguiclient.cpp:81
 #, fuzzy
@@ -6250,12 +6250,15 @@ msgctxt "@action toggle action"
 msgid "Export Contacts' Keys to Address Book"
 msgstr "Izvezi detalje kontakta u KDE adresar"
 
+# rewrite-msgid: /preferences dialog/configuration dialog/
 #: plugins/cryptography/cryptographyguiclient.cpp:109
 msgctxt "@info"
 msgid ""
 "You have not selected a private key for yourself, so signing is not "
 "possible. Please select a private key in the Cryptography preferences dialog."
 msgstr ""
+"Niste izabrali svoj privatni ključ pa potpisivanje nije moguće. Izaberite "
+"privatni ključ u dijalogu za podešavanje kriptografije."
 
 #: plugins/cryptography/cryptographyguiclient.cpp:110
 #, fuzzy
@@ -6271,6 +6274,10 @@ msgid ""
 "to their length. To avoid being signed off or your account being warned or "
 "temporarily suspended, turn off encryption."
 msgstr ""
+"Ovaj protokol možda neće raditi sa šifrovanim porukama. To je zato što "
+"server ili primalac mogu odbaciti šifrovane poruke jer su veoma dugačke. Da "
+"biste izbjegli da vas odjave sa naloga, upozore ili privremeno suspenduju, "
+"isključite šifrovanje."
 
 #: plugins/cryptography/cryptographyguiclient.cpp:165
 #, fuzzy
@@ -6314,7 +6321,7 @@ msgid "&Export Public Keys To Address Book..."
 msgstr "Izvezi u adresar"
 
 #: plugins/cryptography/cryptographyplugin.cpp:382
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid ""
 "This protocol %1 may not work with messages that are encrypted. This is "
@@ -6322,6 +6329,10 @@ msgid ""
 "them due to their length. To avoid being signed off or your account being "
 "warned or temporarily suspended, turn off encryption."
 msgstr ""
+"Ovaj protokol možda neće raditi sa šifrovanim porukama. To je zato što "
+"server ili primalac mogu odbaciti šifrovane poruke jer su veoma dugačke. Da "
+"biste izbjegli da vas odjave sa naloga, upozore ili privremeno suspenduju, "
+"isključite šifrovanje."
 
 #: plugins/cryptography/cryptographyplugin.cpp:383
 #, fuzzy, kde-format
@@ -6336,14 +6347,16 @@ msgid ""
 "Cryptography plugin has found an encryption key for %1 (%2) in your KDE "
 "address book. Do you want to use key %3 as this contact's public key? "
 msgstr ""
+"Priključak za kriptografiju je našao šifrarski ključ za %1 (%2) u vašem "
+"adresaru. Želite li da koristite %3 kao javni ključ ovog kontakta? "
 
 #: plugins/cryptography/cryptographyplugin.cpp:420
 msgid "Public Key Found"
-msgstr ""
+msgstr "Nađen javni ključ"
 
 #: plugins/cryptography/cryptographyplugin.cpp:431
 msgid "Public Keys Found"
-msgstr ""
+msgstr "Nađeni javni ključevi"
 
 #: plugins/cryptography/cryptographyplugin.cpp:434
 #, kde-format
@@ -6352,6 +6365,9 @@ msgid ""
 "Cryptography plugin has found multiple encryption keys for %1 (%2) in your "
 "KDE address book. To use one of these keys, select it and choose OK."
 msgstr ""
+"Priključak za kriptografiju je našao više šifrarskih ključeva za %1 (%2) u "
+"vašem adresaru. Da biste koristili jedan od njih, izaberite ga pa kliknite "
+"na <interface>U redu</interface>."
 
 #: plugins/cryptography/cryptographypreferences.cpp:43
 #, fuzzy
@@ -6375,7 +6391,7 @@ msgstr "Stari utkani PGP format za potpisane i šifrovane poruke"
 #: plugins/cryptography/cryptographypreferences.cpp:48
 msgctxt "@info:tooltip"
 msgid "The private key used for decryption and signing"
-msgstr ""
+msgstr "Privatni ključ za dešifrovanje i potpisivanje"
 
 #: plugins/cryptography/cryptographypreferences.cpp:49
 msgctxt "@info:whatsthis"
@@ -6383,7 +6399,10 @@ msgid ""
 "View and change the private key used for signing and encrypting messages "
 "using the Cryptography plugin"
 msgstr ""
+"Pregled i izmjena privatnog ključa za potpisivanje i šifrovanje poruka "
+"pomoću priključka za kriptografiju."
 
+# >! ui: Select Public Key --> ?
 #: plugins/cryptography/cryptographypreferences.cpp:51
 msgctxt "@info"
 msgid ""
@@ -6392,10 +6411,14 @@ msgid ""
 "messages to someone, you must select their public key by right-clicking on "
 "their name in your contact list and choosing \"Select Public Key\".</para>"
 msgstr ""
+"<para>Pre potpisivanja ili primanja šifrovanih poruka, morate izabrati svoj "
+"privatni ključ.</para><para>Da biste mogli da šaljete šifrovane poruke nekom "
+"kontaktu, morate postaviti njegov javni ključ desnim klikom na ime u listi "
+"kontakata i izborom <interface>Izaberi javni ključ</interface>.</para>"
 
 #: plugins/cryptography/cryptographypreferences.cpp:54
 msgid "Sign messages in clearsign mode"
-msgstr ""
+msgstr "Potpisuj poruke jasnim potpisom"
 
 #: plugins/cryptography/cryptographyselectuserkey.cpp:40
 #, fuzzy
@@ -6406,7 +6429,7 @@ msgstr "Izaberite kontakt"
 #: plugins/cryptography/cryptographyselectuserkey.cpp:49
 msgctxt "@label:chooser"
 msgid "Select the key you want to use encrypt messages to the recipient"
-msgstr ""
+msgstr "Izaberite ključ kojim želite da šifrujete poruke za primaoca"
 
 #: plugins/cryptography/cryptographyselectuserkey.cpp:50
 #, fuzzy
@@ -6418,7 +6441,7 @@ msgstr "Izaberi resurs"
 #, kde-format
 msgctxt "@label:chooser"
 msgid "Select public key for %1"
-msgstr ""
+msgstr "Izaberite javni ključ za %1"
 
 #. i18n: ectx: label, entry, group (Cryptography Plugin)
 #: plugins/cryptography/cryptographysettings.kcfg:12
@@ -6430,11 +6453,12 @@ msgstr "Ovjeri otisak"
 #. i18n: ectx: label, entry, group (Cryptography Plugin)
 #: plugins/cryptography/cryptographysettings.kcfg:16
 msgid "Sign messages in clearsign mode."
-msgstr ""
+msgstr "Potpisuj poruke jasnim potpisom."
 
+# >> @title:window
 #: plugins/cryptography/exportkeys.cpp:40
 msgid "Export Public Keys"
-msgstr ""
+msgstr "Izvoz javnih ključeva"
 
 #: plugins/cryptography/exportkeys.cpp:42
 #, fuzzy
@@ -6459,10 +6483,14 @@ msgstr "Nema kontakata sa podrskom za slike"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/cryptography/exportkeysbase.ui:17
+#, fuzzy
 msgid ""
 "Cryptography plugin will export keys for the chosen metacontacts. If no "
 "address book entry has been linked to each metacontact, one will be created."
 msgstr ""
+"Priključak za kriptografiju će izvesti ključeve za izabrane metakontakte. "
+"Ako za neki metakontakt još uvijek ne postoji unos u adresaru, biće "
+"napravljen."
 
 #. i18n: ectx: property (toolTip), widget (KListWidget, keyList)
 #: plugins/cryptography/exportkeysbase.ui:27
@@ -6477,6 +6505,8 @@ msgid ""
 "Check the box next to the name and key of each user that you want to export "
 "to the address book."
 msgstr ""
+"Popunite kućicu pored imena i ključa svakog korisnika kojeg želite da "
+"izvezete u adresar."
 
 #. i18n: ectx: property (toolTip), widget (KListWidget, keyList)
 #: plugins/cryptography/kabckeyselectorbase.ui:27
