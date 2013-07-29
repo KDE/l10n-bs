@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kipiplugin_expoblending\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-06-17 01:29+0000\n"
+"POT-Creation-Date: 2013-07-29 01:30+0000\n"
 "PO-Revision-Date: 2011-05-08 12:14+0200\n"
 "Last-Translator: KDE 4 <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -38,7 +38,7 @@ msgstr "U proces"
 msgid "File Name"
 msgstr "Ime datoteke"
 
-#: blendingdlg/bracketstack.cpp:143 importwizard/itemspage.cpp:85
+#: blendingdlg/bracketstack.cpp:143 importwizard/itemspage.cpp:86
 msgid "Exposure (EV)"
 msgstr "Ekspozicija (EV)"
 
@@ -233,7 +233,7 @@ msgstr "Prekini trenutni proces"
 msgid "Exit this tool"
 msgstr "Napusti ovaj alat"
 
-#: blendingdlg/expoblendingdlg.cpp:167 importwizard/preprocessingpage.cpp:115
+#: blendingdlg/expoblendingdlg.cpp:167 importwizard/preprocessingpage.cpp:117
 msgid "Details..."
 msgstr "Detalji..."
 
@@ -286,7 +286,7 @@ msgstr "Neuspješno procesiranje pregleda uzastopnih slika"
 msgid "Failed to process targets of bracketed images"
 msgstr "Neuspješno procesiranje odredišta uzastopnih slika"
 
-#: importwizard/importwizarddlg.cpp:78
+#: importwizard/importwizarddlg.cpp:77
 msgid "Exposure Blending Import Wizard"
 msgstr "Čarobnjak za uvoz miješanja izloženosti"
 
@@ -366,16 +366,15 @@ msgstr "<b>Pre-procesiranje uzastopne slike</b>"
 msgid "Align bracketed images"
 msgstr "Poravnaj uzastopne slike"
 
-#: importwizard/preprocessingpage.cpp:160
+#: importwizard/preprocessingpage.cpp:164
 #, fuzzy, kde-format
 msgid ""
 "<qt><p>Now, we will pre-process bracketed images before fusing them.</"
 "p><p>To perform auto-alignment, the <b>%1</b> program from the <a href='%2'>"
 "%3</a> project will be used. Alignment must be performed if you have not "
 "used a tripod to take bracketed images. Alignment operations can take a "
-"while.</p><p>Pre-processing operations include Raw demosaicing. Raw images "
-"will be converted to 16-bit sRGB images with auto-gamma.</p><p>Press \"Next"
-"\" to start pre-processing.</p></qt>"
+"while.</p><p>Raw Demosiacking must be performed if the input images are in "
+"RAW format/./p><p>Press \"Next\" to start pre-processing.</p></qt>"
 msgstr ""
 "<qt><p>Sada ćemo predprocesirati ugniježdene slike prije njihovog spajanja.</"
 "p><p>Da se obavi automatsko poravnanje <b>%1</b> program iz projekta <a "
@@ -385,7 +384,7 @@ msgstr ""
 "sirovih slika. Sirove slike se prevode u 16-bitne sRGB slike sa auto-gama."
 "<p>Pritisnite \"Dalje\" da započnete predprocesiranje.</p></qt>"
 
-#: importwizard/preprocessingpage.cpp:179
+#: importwizard/preprocessingpage.cpp:182
 #, fuzzy
 msgid ""
 "<qt><p>Pre-processing is under progress, please wait.</p><p>This can take a "
@@ -394,32 +393,17 @@ msgstr ""
 "<qt><p>Pre-obrada je u toku, molimo pričekajte.<p><p>To može trajati...</p></"
 "qt>"
 
-#: importwizard/preprocessingpage.cpp:221
+#: importwizard/preprocessingpage.cpp:224
 msgid "Pre-Processing Messages"
 msgstr "Pre-procesiranje poruka"
 
-#: importwizard/preprocessingpage.cpp:240
+#: importwizard/preprocessingpage.cpp:243
 msgid ""
 "<qt><p>Pre-processing has failed.</p><p>Please check your bracketed images "
 "stack...</p><p>Press \"Details\" to show processing messages.</p></qt>"
 msgstr ""
 "<qt><p>Predprocesiranje je neuspjelo.</p><p>Provjerite gomilu ugniježdenih "
 "slika...</p><p>Pritisnite \"Detalji\" da vidite poruke procesa.</p></qt>"
-
-#: manager/actionthread.cpp:308
-msgid "unknown"
-msgstr "nepoznato"
-
-#: manager/actionthread.cpp:807
-#, kde-format
-msgid ""
-"Cannot run %1:\n"
-"\n"
-" %2"
-msgstr ""
-"Ne mogu pokrenuti %1:\n"
-"\n"
-" %2"
 
 #: plugin/aboutdata.h:43
 msgid "A tool to blend bracketed images"
@@ -464,6 +448,37 @@ msgstr "Glavna alatna traka"
 #, fuzzy
 msgid "Blend Bracketed Images..."
 msgstr "Pomiješajte uzastopne slike..."
+
+#: tasks/generictask.cpp:115
+msgid "unknown"
+msgstr "nepoznato"
+
+#: tasks/generictask.cpp:332 tasks/preprocesstask.cpp:347 tasks/task.cpp:68
+#, kde-format
+msgid ""
+"Cannot run %1:\n"
+"\n"
+" %2"
+msgstr ""
+"Ne mogu pokrenuti %1:\n"
+"\n"
+" %2"
+
+#: tasks/preprocesstask.cpp:232
+msgid "Input image cannot be loaded for preview generation"
+msgstr ""
+
+#: tasks/preprocesstask.cpp:294
+msgid "Operation canceled."
+msgstr ""
+
+#: tasks/preprocesstask.cpp:324
+msgid "Tiff image creation failed."
+msgstr ""
+
+#: tasks/preprocesstask.cpp:334
+msgid "Raw file conversion failed."
+msgstr ""
 
 #~ msgid "Handbook"
 #~ msgstr "Priručnik"
