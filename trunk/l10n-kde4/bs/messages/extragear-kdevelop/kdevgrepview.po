@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-07-27 01:33+0000\n"
+"POT-Creation-Date: 2013-07-31 01:30+0000\n"
 "PO-Revision-Date: 2013-01-26 14:23+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -28,24 +28,24 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "samir.ribic@etf.unsa.ba"
 
-#: grepdialog.cpp:55
+#: grepdialog.cpp:54
 msgid "All Open Files"
 msgstr "Sve otvorene datoteke"
 
-#: grepdialog.cpp:56
+#: grepdialog.cpp:55
 msgid "All Open Projects"
 msgstr "Svi otvoreni projekti"
 
-#: grepdialog.cpp:115
+#: grepdialog.cpp:119
 msgid "Search..."
 msgstr "Traži..."
 
-#: grepdialog.cpp:117 grepdialog.cpp:439 grepviewplugin.cpp:48
+#: grepdialog.cpp:121 grepdialog.cpp:469 grepviewplugin.cpp:48
 #: grepviewplugin.cpp:73
 msgid "Find/Replace in Files"
 msgstr "Nađi/zamijeni u datotekama"
 
-#: grepdialog.cpp:436
+#: grepdialog.cpp:466
 #, kde-format
 msgid "%2, and %1 more item"
 msgid_plural "%2, and %1 more items"
@@ -246,18 +246,13 @@ msgstr "&Traži/zamijeni u datotekama"
 msgid "Find-Replace In Files"
 msgstr "Nađi izamijeni u datotekama"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: grepwidget.ui:38
-msgid "Pattern:"
-msgstr "Uzorak:"
-
 #. i18n: ectx: property (toolTip), widget (KComboBox, patternCombo)
-#: grepwidget.ui:57
+#: grepwidget.ui:44
 msgid "Enter the regular expression you want to search for here."
 msgstr "Unesite regularni izraz koji ovdje želite pretraživati"
 
 #. i18n: ectx: property (whatsThis), widget (KComboBox, patternCombo)
-#: grepwidget.ui:81
+#: grepwidget.ui:68
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
 "REC-html40/strict.dtd\">\n"
@@ -427,17 +422,17 @@ msgstr ""
 "style:italic;\">man pcresyntax.</span></p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: grepwidget.ui:94
+#: grepwidget.ui:81
 msgid "Template:"
 msgstr "Šablon:"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, templateEdit)
-#: grepwidget.ui:107
+#: grepwidget.ui:94
 msgid "This is the regular expression template."
 msgstr "Ovo je uzorak za regularne izraze"
 
 #. i18n: ectx: property (whatsThis), widget (KComboBox, templateEdit)
-#: grepwidget.ui:110
+#: grepwidget.ui:97
 #, no-c-format
 msgid ""
 "This is the regular expression template. <i>%s</i> will be replaced by the "
@@ -446,65 +441,61 @@ msgstr ""
 "Ovo je uzorak za regularne izraze. <i>%s</i> će biti zamijenjen uzorkom dok "
 "će <i>%%</i> biti zamijenjen sa <i>%</i>."
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: grepwidget.ui:120
-msgid "Regular Expression:"
-msgstr "Regularni izraz:"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, regexCheck)
-#: grepwidget.ui:133
-msgid "Enable or disable regular expression."
-msgstr "Omogući ili onemogući regularni izraz"
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: grepwidget.ui:146
-msgid "Case Sensitive:"
-msgstr "Razlikovanje velikih i malih slova"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, caseSensitiveCheck)
-#: grepwidget.ui:165
-msgid "Case-sensitive searching."
-msgstr "Pretraga uz razlikovanje velikih i malih slova"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: grepwidget.ui:178
-msgid "Location(s):"
-msgstr "Lokacije:"
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, directoryRequester)
-#: grepwidget.ui:197
-msgid ""
-"Select the location where you want to search. It can be a directory, a file, "
-"or a semicolon separated list of directories/files."
-msgstr ""
-"Odaberite mjesto gdje želite pretraživati. To može biti direktorij, "
-"datoteka, ili tačkazarezima odvojen popis direktorija / datoteke."
-
 #. i18n: ectx: property (toolTip), widget (KPushButton, syncButton)
-#: grepwidget.ui:210
+#: grepwidget.ui:110
 msgid "Synchronize with current document directory."
 msgstr "Sinhronizuj s trenutnim direktorijem dokumenta"
 
 #. i18n: ectx: property (text), widget (QLabel, depthLabel)
-#: grepwidget.ui:217
+#: grepwidget.ui:117
 msgid "Depth:"
 msgstr ""
 
 #. i18n: Full recursion will be used. For folder-based searches, that means searching in the target folder and all the subfolders, their subfolders, and so on.
 #. i18n: ectx: property (specialValueText), widget (QSpinBox, depthSpin)
-#: grepwidget.ui:233
+#: grepwidget.ui:133
 msgid "Full"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, limitToProjectLabel)
-#: grepwidget.ui:246
-msgid "Limit to project files:"
-msgstr "Ograniči na projektne datoteke:"
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: grepwidget.ui:146
+msgid "Pattern:"
+msgstr "Uzorak:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: grepwidget.ui:275
+#: grepwidget.ui:159
 msgid "Files:"
 msgstr "Datoteke:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: grepwidget.ui:172
+msgid "Case Sensitive:"
+msgstr "Razlikovanje velikih i malih slova"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, caseSensitiveCheck)
+#: grepwidget.ui:191
+msgid "Case-sensitive searching."
+msgstr "Pretraga uz razlikovanje velikih i malih slova"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: grepwidget.ui:204
+msgid "Location(s):"
+msgstr "Lokacije:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: grepwidget.ui:233
+msgid "Regular Expression:"
+msgstr "Regularni izraz:"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, regexCheck)
+#: grepwidget.ui:246
+msgid "Enable or disable regular expression."
+msgstr "Omogući ili onemogući regularni izraz"
+
+#. i18n: ectx: property (text), widget (QLabel, limitToProjectLabel)
+#: grepwidget.ui:259
+msgid "Limit to project files:"
+msgstr "Ograniči na projektne datoteke:"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, filesCombo)
 #: grepwidget.ui:288
@@ -544,14 +535,37 @@ msgstr ""
 "dijelovima staza datoteka. </p>"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, replacementTemplateEdit)
-#: grepwidget.ui:397
+#: grepwidget.ui:381
 msgid "Enter the replacement template."
 msgstr "Unesi predložak za zamjenu"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: grepwidget.ui:404
+#: grepwidget.ui:388
 msgid "Replacement Template:"
 msgstr "Šablon za zamjenu"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, searchPaths)
+#: grepwidget.ui:401
+#, fuzzy
+#| msgid ""
+#| "Select the location where you want to search. It can be a directory, a "
+#| "file, or a semicolon separated list of directories/files."
+msgid ""
+"Select the location where you want to search. It can be a directory, a file, "
+"or a semicolon separated(without spaces) list of directories/files."
+msgstr ""
+"Odaberite mjesto gdje želite pretraživati. To može biti direktorij, "
+"datoteka, ili tačkazarezima odvojen popis direktorija / datoteke."
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, directorySelector)
+#: grepwidget.ui:432
+msgid "Select a directory to search in."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, directorySelector)
+#: grepwidget.ui:435
+msgid "..."
+msgstr ""
 
 #. i18n: ectx: Menu (edit)
 #: kdevgrepview.rc:5

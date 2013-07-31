@@ -15,7 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
@@ -77,42 +78,86 @@ msgstr ""
 
 #: javascriptcompletionmodel.cpp:179
 msgctxt "@info The description for the 'network' object"
-msgid "The <emphasis>network</emphasis> object is used request documents from the internet.<nl/>"
+msgid ""
+"The <emphasis>network</emphasis> object is used request documents from the "
+"internet.<nl/>"
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:184
 msgctxt "@info The description for the 'storage' object"
-msgid "The <emphasis>storage</emphasis> object can be used to store some script specific values in memory or on disk.<nl/>"
+msgid ""
+"The <emphasis>storage</emphasis> object can be used to store some script "
+"specific values in memory or on disk.<nl/>"
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:189
 msgctxt "@info The description for the 'result' object"
-msgid "The result object is used to store all parsed departure/arrival/journey items. Call <emphasis>result.addData({Target: 'Sample', DepartureDateTime: new Date()})</emphasis> to add new data."
+msgid ""
+"The result object is used to store all parsed departure/arrival/journey "
+"items. Call <emphasis>result.addData({Target: 'Sample', DepartureDateTime: "
+"new Date()})</emphasis> to add new data."
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:251
 msgctxt "@info The description for the 'features' function"
-msgid "Should be implemented to tell which features the script supports.<nl/>This function is called by the data engine."
+msgid ""
+"Should be implemented to tell which features the script supports.<nl/>This "
+"function is called by the data engine."
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:269
 msgctxt "@info The description for the 'getTimetable' function"
-msgid "Requests and parses departure/arrival documents. The argument has the following properties: stop, dateTime (Date object), count, dataType ('departures' or 'arrivals'), city.<nl/>This function is called by the data engine. Found departures/arrivals can be handed over to the data engine like this:<nl/><icode>  // Add timetable data to the result set</icode><nl/><icode>  result.addData( {TransportLine: '603',</icode><nl/><icode>                   TypeOfVehicle: 'bus',</icode><nl/><icode>                   Target: 'Samplestreet',</icode><nl/><icode>                   DepartureDateTime: new Date(),</icode><nl/><icode>                   Delay: 4} );</icode><nl/><nl/><note>You <emphasis>can</emphasis> return a string array with keywords that affect all departures/arrivals. Currently only one such keyword is supported: <emphasis>'no delays'</emphasis>, used to indicate that there is no delay information for the given stop. The data engine can then use a higher timeout for the next data update. When delay information is available updates are done more often, because delays may change.</note>"
+msgid ""
+"Requests and parses departure/arrival documents. The argument has the "
+"following properties: stop, dateTime (Date object), count, dataType "
+"('departures' or 'arrivals'), city.<nl/>This function is called by the data "
+"engine. Found departures/arrivals can be handed over to the data engine like "
+"this:<nl/><icode>  // Add timetable data to the result set</icode><nl/"
+"><icode>  result.addData( {TransportLine: '603',</icode><nl/"
+"><icode>                   TypeOfVehicle: 'bus',</icode><nl/"
+"><icode>                   Target: 'Samplestreet',</icode><nl/"
+"><icode>                   DepartureDateTime: new Date(),</icode><nl/"
+"><icode>                   Delay: 4} );</icode><nl/><nl/><note>You "
+"<emphasis>can</emphasis> return a string array with keywords that affect all "
+"departures/arrivals. Currently only one such keyword is supported: "
+"<emphasis>'no delays'</emphasis>, used to indicate that there is no delay "
+"information for the given stop. The data engine can then use a higher "
+"timeout for the next data update. When delay information is available "
+"updates are done more often, because delays may change.</note>"
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:321
 msgctxt "@info The description for the 'getJourneys' function"
-msgid "Requests and parses journey documents. The argument has the following properties: originStop, targetStop, dateTime (Date object), count, dataType, city.<nl/>This function is called by the data engine. Found journeys can be handed over to the data engine like this:<nl/><icode>  // Add timetable data to the result set</icode><nl/><icode>  result.addData( {StartStopName: 'A',</icode><nl/><icode>                   TargetStopName: 'B',</icode><nl/><icode>                   Target: 'Samplestreet',</icode><nl/><icode>                   DepartureDateTime: new Date(),</icode><nl/><icode>                   ArrivalDateTime: new Date(),</icode><nl/><icode>                   Changes: 3,</icode><nl/><icode>                   Pricing: '2,30 €'} );</icode><nl/><nl/>"
+msgid ""
+"Requests and parses journey documents. The argument has the following "
+"properties: originStop, targetStop, dateTime (Date object), count, dataType, "
+"city.<nl/>This function is called by the data engine. Found journeys can be "
+"handed over to the data engine like this:<nl/><icode>  // Add timetable data "
+"to the result set</icode><nl/><icode>  result.addData( {StartStopName: 'A',</"
+"icode><nl/><icode>                   TargetStopName: 'B',</icode><nl/"
+"><icode>                   Target: 'Samplestreet',</icode><nl/"
+"><icode>                   DepartureDateTime: new Date(),</icode><nl/"
+"><icode>                   ArrivalDateTime: new Date(),</icode><nl/"
+"><icode>                   Changes: 3,</icode><nl/><icode>                   "
+"Pricing: '2,30 €'} );</icode><nl/><nl/>"
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:346
 msgctxt "@info The description for the 'getStopSuggestions' function"
-msgid "Requests and parses stop suggestion documents. The argument has the following properties: stop, count, city.<nl/>This function is called by the data engine. The parameter contains the contents of the document body. Found stop data can be handed over to the data engine like this:<nl/><icode>  // Add timetable data to the result set</icode><nl/><icode>  result.addData( {StopName: 'TestName', StopID: 100} );</icode>"
+msgid ""
+"Requests and parses stop suggestion documents. The argument has the "
+"following properties: stop, count, city.<nl/>This function is called by the "
+"data engine. The parameter contains the contents of the document body. Found "
+"stop data can be handed over to the data engine like this:<nl/><icode>  // "
+"Add timetable data to the result set</icode><nl/><icode>  result.addData"
+"( {StopName: 'TestName', StopID: 100} );</icode>"
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:365
 msgctxt "@info The description for the 'DepartureDateTime' info"
-msgid "The date and time of the departure. Can be a ECMAScript Date object. Use this information instead of DepartureDate and DepartureTime if possible."
+msgid ""
+"The date and time of the departure. Can be a ECMAScript Date object. Use "
+"this information instead of DepartureDate and DepartureTime if possible."
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:368
@@ -141,11 +186,11 @@ msgstr "Tip alarma"
 
 #: javascriptcompletionmodel.cpp:381
 msgctxt "@info The description for the 'TransportLine' info"
-msgid "The name of the public transport line, e.g. '4', '6S', 'S 5', 'RB 24122.'"
+msgid ""
+"The name of the public transport line, e.g. '4', '6S', 'S 5', 'RB 24122.'"
 msgstr ""
 
-#: javascriptcompletionmodel.cpp:384
-#: javascriptcompletionmodel.cpp:393
+#: javascriptcompletionmodel.cpp:384 javascriptcompletionmodel.cpp:393
 #, fuzzy
 msgctxt "@info/plain"
 msgid "Needed for Departures"
@@ -189,7 +234,10 @@ msgstr ""
 
 #: javascriptcompletionmodel.cpp:416
 msgctxt "@info The description for the 'JourneyNewsLink' info"
-msgid "A link to an html page with journey news.<nl/><note>The url of the service provider is prepended, if a relative path has been matched (starting with '/').</note>"
+msgid ""
+"A link to an html page with journey news.<nl/><note>The url of the service "
+"provider is prepended, if a relative path has been matched (starting with "
+"'/').</note>"
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:422
@@ -199,7 +247,9 @@ msgstr ""
 
 #: javascriptcompletionmodel.cpp:425
 msgctxt "@info The description for the 'Status' info"
-msgid "The current status of the departure / arrival. Currently only used for planes."
+msgid ""
+"The current status of the departure / arrival. Currently only used for "
+"planes."
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:429
@@ -209,27 +259,53 @@ msgstr ""
 
 #: javascriptcompletionmodel.cpp:434
 msgctxt "@info The description for the 'RouteStops' info"
-msgid "A list of stops of the departure/arrival to it's destination stop or a list of stops of the journey from it's start to it's destination stop.<nl/>If <emphasis>RouteStops</emphasis> and <emphasis>RouteTimes</emphasis> are both set, they should contain the same number of elements. And elements with equal indices should be associated (the times at which the vehicle is at the stops).<nl/><note>For journeys <emphasis>RouteTimesDeparture</emphasis> and <emphasis>RouteTimesArrival</emphasis> should be used instead of <emphasis>RouteTimes</emphasis>.</note>"
+msgid ""
+"A list of stops of the departure/arrival to it's destination stop or a list "
+"of stops of the journey from it's start to it's destination stop.<nl/>If "
+"<emphasis>RouteStops</emphasis> and <emphasis>RouteTimes</emphasis> are both "
+"set, they should contain the same number of elements. And elements with "
+"equal indices should be associated (the times at which the vehicle is at the "
+"stops).<nl/><note>For journeys <emphasis>RouteTimesDeparture</emphasis> and "
+"<emphasis>RouteTimesArrival</emphasis> should be used instead of "
+"<emphasis>RouteTimes</emphasis>.</note>"
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:446
 msgctxt "@info The description for the 'RouteTimes' info"
-msgid "A list of times of the departure/arrival to it's destination stop.<nl/>If <emphasis>RouteStops</emphasis> and <emphasis>RouteTimes</emphasis> are both set, they should contain the same number of elements. And elements with equal indices should be associated (the times at which the vehicle is at the stops)."
+msgid ""
+"A list of times of the departure/arrival to it's destination stop.<nl/>If "
+"<emphasis>RouteStops</emphasis> and <emphasis>RouteTimes</emphasis> are both "
+"set, they should contain the same number of elements. And elements with "
+"equal indices should be associated (the times at which the vehicle is at the "
+"stops)."
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:457
 msgctxt "@info The description for the 'RouteTimesDeparture' info"
-msgid "A list of departure times of the journey.<nl/>If <emphasis>RouteStops</emphasis> and <emphasis>RouteTimesDeparture</emphasis> are both set, the latter should contain one element less (because the last stop has no departure, only an arrival time). Elements with equal indices should be associated (the times at which the vehicle departs from the stops)."
+msgid ""
+"A list of departure times of the journey.<nl/>If <emphasis>RouteStops</"
+"emphasis> and <emphasis>RouteTimesDeparture</emphasis> are both set, the "
+"latter should contain one element less (because the last stop has no "
+"departure, only an arrival time). Elements with equal indices should be "
+"associated (the times at which the vehicle departs from the stops)."
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:466
 msgctxt "@info The description for the 'RouteTimesArrival' info"
-msgid "A list of arrival times of the journey.<nl/>If <emphasis>RouteStops</emphasis> and <emphasis>RouteTimesArrival</emphasis> are both set, the latter should contain one element less (because the first stop has no arrival, only a departure time). Elements with equal indices should be associated (the times at which the vehicle arrives at the stops)."
+msgid ""
+"A list of arrival times of the journey.<nl/>If <emphasis>RouteStops</"
+"emphasis> and <emphasis>RouteTimesArrival</emphasis> are both set, the "
+"latter should contain one element less (because the first stop has no "
+"arrival, only a departure time). Elements with equal indices should be "
+"associated (the times at which the vehicle arrives at the stops)."
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:474
 msgctxt "@info The description for the 'RouteExactStops' info"
-msgid "The number of exact route stops.<nl/>The route stop list in <emphasis>RouteStops</emphasis> is not complete from the last exact route stop."
+msgid ""
+"The number of exact route stops.<nl/>The route stop list in "
+"<emphasis>RouteStops</emphasis> is not complete from the last exact route "
+"stop."
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:480
@@ -244,22 +320,40 @@ msgstr ""
 
 #: javascriptcompletionmodel.cpp:490
 msgctxt "@info The description for the 'RoutePlatformsDeparture' info"
-msgid "The platforms of departures used for each 'sub-journey' of a journey.<nl/>If <emphasis>RouteStops</emphasis> and <emphasis>RoutePlatformsDeparture</emphasis> are both set, the latter should contain one element less (because the last stop has no departure, only an arrival platform). Elements with equal indices should be associated (the platforms from which the vehicle departs from the stops)."
+msgid ""
+"The platforms of departures used for each 'sub-journey' of a journey.<nl/>If "
+"<emphasis>RouteStops</emphasis> and <emphasis>RoutePlatformsDeparture</"
+"emphasis> are both set, the latter should contain one element less (because "
+"the last stop has no departure, only an arrival platform). Elements with "
+"equal indices should be associated (the platforms from which the vehicle "
+"departs from the stops)."
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:500
 msgctxt "@info The description for the 'RoutePlatformsArrival' info"
-msgid "The platforms of arrivals used for each 'sub-journey' of a journey.<nl/>If <emphasis>RouteStops</emphasis> and <emphasis>RoutePlatformsArrival</emphasis> are both set, the latter should contain one element less (because the first stop has no arrival, only a departure platform). Elements with equal indices should be associated (the platforms at which the vehicle arrives at the stops)"
+msgid ""
+"The platforms of arrivals used for each 'sub-journey' of a journey.<nl/>If "
+"<emphasis>RouteStops</emphasis> and <emphasis>RoutePlatformsArrival</"
+"emphasis> are both set, the latter should contain one element less (because "
+"the first stop has no arrival, only a departure platform). Elements with "
+"equal indices should be associated (the platforms at which the vehicle "
+"arrives at the stops)"
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:510
 msgctxt "@info The description for the 'RouteTimesDepartureDelay' info"
-msgid "A list of delays in minutes for each departure time of a route (see <emphasis>RouteTimesDeparture</emphasis>).<nl/>If set it should contain the same number of elements as 'RouteTimesDeparture'."
+msgid ""
+"A list of delays in minutes for each departure time of a route (see "
+"<emphasis>RouteTimesDeparture</emphasis>).<nl/>If set it should contain the "
+"same number of elements as 'RouteTimesDeparture'."
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:517
 msgctxt "@info The description for the 'RouteTimesArrivalDelay' info"
-msgid "A list of delays in minutes for each arrival time of a route (see <emphasis>RouteTimesArrival</emphasis>).<nl/>If set it should contain the same number of elements as 'RouteTimesArrival'."
+msgid ""
+"A list of delays in minutes for each arrival time of a route (see "
+"<emphasis>RouteTimesArrival</emphasis>).<nl/>If set it should contain the "
+"same number of elements as 'RouteTimesArrival'."
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:523
@@ -273,8 +367,7 @@ msgctxt "@info The description for the 'StartStopName' info"
 msgid "The name of the starting stop of a journey."
 msgstr ""
 
-#: javascriptcompletionmodel.cpp:529
-#: javascriptcompletionmodel.cpp:537
+#: javascriptcompletionmodel.cpp:529 javascriptcompletionmodel.cpp:537
 #, fuzzy
 msgctxt "@info/plain"
 msgid "Needed for Journeys"
@@ -298,7 +391,9 @@ msgstr ""
 
 #: javascriptcompletionmodel.cpp:544
 msgctxt "@info The description for the 'ArrivalDateTime' info"
-msgid "The date and time of the arrival. Can be a ECMAScript Date object. Use this information instead of ArrivalDate and ArrivalTime if possible."
+msgid ""
+"The date and time of the arrival. Can be a ECMAScript Date object. Use this "
+"information instead of ArrivalDate and ArrivalTime if possible."
 msgstr ""
 
 #: javascriptcompletionmodel.cpp:549
@@ -445,12 +540,8 @@ msgid_plural "%1 functions:"
 msgstr[0] "Funkcija: %1"
 msgstr[1] ""
 
-#: javascriptparser.cpp:123
-#: javascriptparser.cpp:323
-#: javascriptparser.cpp:476
-#: javascriptparser.cpp:489
-#: javascriptparser.cpp:492
-#: javascriptparser.cpp:495
+#: javascriptparser.cpp:123 javascriptparser.cpp:323 javascriptparser.cpp:476
+#: javascriptparser.cpp:489 javascriptparser.cpp:492 javascriptparser.cpp:495
 #, fuzzy
 msgctxt "@info/plain"
 msgid "Unexpected end of file."
@@ -462,8 +553,7 @@ msgctxt "@info/plain"
 msgid "Unclosed multiline comment"
 msgstr "Otvoren komentar na kraju datoteke"
 
-#: javascriptparser.cpp:235
-#: javascriptparser.cpp:260
+#: javascriptparser.cpp:235 javascriptparser.cpp:260
 #, fuzzy, kde-format
 msgctxt "@info/plain"
 msgid "Unclosed bracket, expected '%1'."
@@ -487,8 +577,7 @@ msgctxt "@info/plain"
 msgid "The object '%1' has no method '%2' (available methods: %3)."
 msgstr ""
 
-#: javascriptparser.cpp:581
-#: javascriptparser.cpp:603
+#: javascriptparser.cpp:581 javascriptparser.cpp:603
 #, fuzzy
 msgctxt "@info/plain"
 msgid "Expected argument or ')'."
@@ -512,8 +601,7 @@ msgctxt "@info/plain"
 msgid "Expected '('."
 msgstr "Očekivano "
 
-#: javascriptparser.cpp:658
-#: javascriptparser.cpp:738
+#: javascriptparser.cpp:658 javascriptparser.cpp:738
 #, fuzzy
 msgctxt "@info/plain"
 msgid "Internal JavaScript parser error"
@@ -573,8 +661,7 @@ msgid "Word Completion"
 msgstr "Dovršavanje riječi"
 
 #. i18n: ectx: ToolBar (mainToolBar)
-#: katepartui.rc:127
-#: timetablemateui.rc:103
+#: katepartui.rc:127 timetablemateui.rc:103
 msgid "Main Toolbar"
 msgstr "Glavna alatna traka"
 
@@ -596,7 +683,9 @@ msgid "Empty reply"
 msgstr "Odgovor-na:"
 
 #: main.cpp:29
-msgid "A little IDE for adding support for new service providers to the plasma data engine 'PublicTransport'."
+msgid ""
+"A little IDE for adding support for new service providers to the plasma data "
+"engine 'PublicTransport'."
 msgstr ""
 
 #: main.cpp:36
@@ -779,17 +868,26 @@ msgstr "Greška %1 u %2, kod reda %3 kolona %4: %5"
 #: project.cpp:1004
 #, kde-format
 msgctxt "@info"
-msgid "Could not open project source document <filename>%1</filename> could not be found."
+msgid ""
+"Could not open project source document <filename>%1</filename> could not be "
+"found."
 msgstr ""
 
 #: project.cpp:1328
 msgctxt "@info"
-msgid "Test results cannot be seen for non-active projects.<nl />Do you want to make this project active now?"
+msgid ""
+"Test results cannot be seen for non-active projects.<nl />Do you want to "
+"make this project active now?"
 msgstr ""
 
 #: project.cpp:1333
 msgctxt "@info"
-msgid "Docks like <interface>Variables</interface>, <interface>Backtrace</interface> or <interface>Output</interface> only show data for the active project. Toolbar/menu actions only control the active project, but the project context menu can be used to eg. control the debugger of an inactive project.<nl />Do you want to make this project active now?"
+msgid ""
+"Docks like <interface>Variables</interface>, <interface>Backtrace</"
+"interface> or <interface>Output</interface> only show data for the active "
+"project. Toolbar/menu actions only control the active project, but the "
+"project context menu can be used to eg. control the debugger of an inactive "
+"project.<nl />Do you want to make this project active now?"
 msgstr ""
 
 #: project.cpp:1347
@@ -826,7 +924,9 @@ msgstr "Proces je zavrsio sa greškama"
 #, fuzzy, kde-format
 msgctxt "@info"
 msgid "Test of %1 could not be started"
-msgstr "<p><strong>CNaredba:</strong> %1</p><strong>Naredba se ne može pokrenuti</strong>"
+msgstr ""
+"<p><strong>CNaredba:</strong> %1</p><strong>Naredba se ne može pokrenuti</"
+"strong>"
 
 #: project.cpp:1490
 #, fuzzy, kde-format
@@ -848,7 +948,9 @@ msgstr "Operacija je neočekivano prekinuta."
 
 #: project.cpp:1536
 msgctxt "@info"
-msgid "<title>Test was aborted</title> <para>The test was aborted while it was running, no results available.</para>"
+msgid ""
+"<title>Test was aborted</title> <para>The test was aborted while it was "
+"running, no results available.</para>"
 msgstr ""
 
 #: project.cpp:1554
@@ -859,7 +961,10 @@ msgstr "Tačka pomoću koordinata"
 
 #: project.cpp:1555
 msgctxt "@info"
-msgid "<title>Missing sample stop coordinates</title> <para>Cannot run script execution tests for stops by geo position. Open the project settings and add one or more <interface>Sample Stop Coordinates</interface></para>"
+msgid ""
+"<title>Missing sample stop coordinates</title> <para>Cannot run script "
+"execution tests for stops by geo position. Open the project settings and add "
+"one or more <interface>Sample Stop Coordinates</interface></para>"
 msgstr ""
 
 #: project.cpp:1578
@@ -870,7 +975,10 @@ msgstr "<li><i>Ime</i> polje nedostaje.</li>"
 
 #: project.cpp:1579
 msgctxt "@info"
-msgid "<title>Missing sample stop name</title> <para>Cannot run the test without sample data. Open the project settings and add one or more <interface>Sample Stop Names</interface></para>"
+msgid ""
+"<title>Missing sample stop name</title> <para>Cannot run the test without "
+"sample data. Open the project settings and add one or more <interface>Sample "
+"Stop Names</interface></para>"
 msgstr ""
 
 #: project.cpp:1589
@@ -881,7 +989,10 @@ msgstr "Grad po noći"
 
 #: project.cpp:1590
 msgctxt "@info"
-msgid "<title>Missing sample city</title> <para>Cannot run the test without sample data. Open the project settings and add a <interface>Sample City</interface></para>"
+msgid ""
+"<title>Missing sample city</title> <para>Cannot run the test without sample "
+"data. Open the project settings and add a <interface>Sample City</"
+"interface></para>"
 msgstr ""
 
 #: project.cpp:1609
@@ -891,7 +1002,10 @@ msgstr ""
 
 #: project.cpp:1610
 msgctxt "@info"
-msgid "<title>To test journeys at least two sample stop names are needed</title> <para>Cannot run journey test. Open the project settings and add another stop name to the <interface>Sample Stop Names</interface></para>"
+msgid ""
+"<title>To test journeys at least two sample stop names are needed</title> "
+"<para>Cannot run journey test. Open the project settings and add another "
+"stop name to the <interface>Sample Stop Names</interface></para>"
 msgstr ""
 
 #: project.cpp:1650
@@ -909,11 +1023,12 @@ msgstr ""
 #: project.cpp:1671
 #, kde-format
 msgctxt "@info"
-msgid "<title>Dependency not met</title> <para>This test depends on the \"%1\" test, but it was not successful.</para>"
+msgid ""
+"<title>Dependency not met</title> <para>This test depends on the \"%1\" "
+"test, but it was not successful.</para>"
 msgstr ""
 
-#: project.cpp:1700
-#: project.cpp:1743
+#: project.cpp:1700 project.cpp:1743
 #, kde-format
 msgctxt "@info/plain"
 msgid "You need to implement a '%1' script function"
@@ -922,7 +1037,10 @@ msgstr ""
 #: project.cpp:1701
 #, kde-format
 msgctxt "@info"
-msgid "<title>You need to implement a '%1' script function</title> <para>Service provider plugins that only support journeys are currently not accepted by the data engine, but that may change.</para>"
+msgid ""
+"<title>You need to implement a '%1' script function</title> <para>Service "
+"provider plugins that only support journeys are currently not accepted by "
+"the data engine, but that may change.</para>"
 msgstr ""
 
 #: project.cpp:1716
@@ -939,13 +1057,18 @@ msgstr "Funkcije <icode>%1</icode> nema u skripti <filename>%2</filename>"
 #: project.cpp:1724
 #, kde-format
 msgctxt "@info"
-msgid "<title>You can implement a '%1' script function</title> <para>This can be used to load additional data for single departures or arrivals.</para>"
+msgid ""
+"<title>You can implement a '%1' script function</title> <para>This can be "
+"used to load additional data for single departures or arrivals.</para>"
 msgstr ""
 
 #: project.cpp:1744
 #, kde-format
 msgctxt "@info"
-msgid "<title>You need to implement a '%1' script function</title> <para>Without stop suggestions it can be very hard for users to find a valid stop name. Therefore this function is needed.</para>"
+msgid ""
+"<title>You need to implement a '%1' script function</title> <para>Without "
+"stop suggestions it can be very hard for users to find a valid stop name. "
+"Therefore this function is needed.</para>"
 msgstr ""
 
 #: project.cpp:1751
@@ -957,7 +1080,10 @@ msgstr ""
 #: project.cpp:1752
 #, kde-format
 msgctxt "@info"
-msgid "<title>For journeys, you need to implement a '%1' script function</title> <para>If you do not implement the function, journeys will not work with the plugin.</para>"
+msgid ""
+"<title>For journeys, you need to implement a '%1' script function</title> "
+"<para>If you do not implement the function, journeys will not work with the "
+"plugin.</para>"
 msgstr ""
 
 #: project.cpp:1758
@@ -969,7 +1095,15 @@ msgstr ""
 #: project.cpp:1759
 #, kde-format
 msgctxt "@info"
-msgid "<title>You should implement a '%1' script function</title> <para>This function is used to know what information the plugin parses from documents. Without adding the appropriate TimetableInformation names to the return value of this function, the associated data will be unused or associated features will be disabled.</para><para>If, for example, the script can parse Arrivals, 'Arrivals' should be added to the return value. If the script parses route stops or stop IDs, add 'RouteStops' or 'StopID' to the return value, etc.</para>"
+msgid ""
+"<title>You should implement a '%1' script function</title> <para>This "
+"function is used to know what information the plugin parses from documents. "
+"Without adding the appropriate TimetableInformation names to the return "
+"value of this function, the associated data will be unused or associated "
+"features will be disabled.</para><para>If, for example, the script can parse "
+"Arrivals, 'Arrivals' should be added to the return value. If the script "
+"parses route stops or stop IDs, add 'RouteStops' or 'StopID' to the return "
+"value, etc.</para>"
 msgstr ""
 
 #: project.cpp:1823
@@ -1011,8 +1145,12 @@ msgstr "Izmjenjeno: %1"
 #: project.cpp:2111
 #, fuzzy, kde-format
 msgctxt "@info"
-msgid "Could not write the script file to <filename>%1</filename>: <message>%2</message>"
-msgstr "Ne mogu kreirati privremenu datoteku <filename>%1</filename> u datoteku <filename>%2</filename>: <message>%3</message>"
+msgid ""
+"Could not write the script file to <filename>%1</filename>: <message>%2</"
+"message>"
+msgstr ""
+"Ne mogu kreirati privremenu datoteku <filename>%1</filename> u datoteku "
+"<filename>%2</filename>: <message>%3</message>"
 
 #: project.cpp:2169
 #, fuzzy
@@ -1032,8 +1170,7 @@ msgctxt "@info"
 msgid "Project could not be installed locally as <filename>%1</filename>"
 msgstr ""
 
-#: project.cpp:2211
-#: project.cpp:2217
+#: project.cpp:2211 project.cpp:2217
 #, kde-format
 msgctxt "@info"
 msgid "Project could not be uninstalled locally, file <filename>%1</filename>"
@@ -1054,18 +1191,24 @@ msgstr "modul \"%1\" verzije %2.%3 nije instaliran"
 #: project.cpp:2275
 #, kde-format
 msgctxt "@info"
-msgid "Service provider plugin could not be installed globally in <filename>%1</filename>: %2 <message>%3</message>"
+msgid ""
+"Service provider plugin could not be installed globally in <filename>%1</"
+"filename>: %2 <message>%3</message>"
 msgstr ""
 
 #: project.cpp:2278
 #, kde-format
 msgctxt "@info"
-msgid "Service provider plugin could not be uninstalled globally from <filename>%1</filename>: %2 <message>%3</message>"
+msgid ""
+"Service provider plugin could not be uninstalled globally from <filename>%1</"
+"filename>: %2 <message>%3</message>"
 msgstr ""
 
 #: project.cpp:2289
 msgctxt "@info"
-msgid "Could not find the authentication action. If you just installed TimetableMate, you might need to restart D-Bus."
+msgid ""
+"Could not find the authentication action. If you just installed "
+"TimetableMate, you might need to restart D-Bus."
 msgstr ""
 
 #: project.cpp:2295
@@ -1098,7 +1241,10 @@ msgstr "Crtač matematičkih funkcija"
 #: project.cpp:2373
 #, kde-format
 msgctxt "@info"
-msgid "<title>Feature function needed</title> <para>The <icode>features()</icode> function is needed to indicate support for this test. It should return at least these features for this test to run: %1.</para>"
+msgid ""
+"<title>Feature function needed</title> <para>The <icode>features()</icode> "
+"function is needed to indicate support for this test. It should return at "
+"least these features for this test to run: %1.</para>"
 msgstr ""
 
 #: project.cpp:2398
@@ -1110,7 +1256,9 @@ msgstr "Nije podržan/nepoznat: %1"
 #: project.cpp:2399
 #, kde-format
 msgctxt "@info"
-msgid "<title>Feature \"%1\" not supported</title> <para>The <icode>features()</icode> function did not return <icode>PublicTransport.%1</icode>.</para>"
+msgid ""
+"<title>Feature \"%1\" not supported</title> <para>The <icode>features()</"
+"icode> function did not return <icode>PublicTransport.%1</icode>.</para>"
 msgstr ""
 
 #: project.cpp:2679
@@ -1145,8 +1293,11 @@ msgstr "Informacija"
 
 #: project.cpp:2719
 #, kde-format
-msgctxt "@info %1 is the translation of 'Error'/'Warning'/'Information', %3 is the script file name"
-msgid "<emphasis strong='1'>%1 in line %2 (%3):</emphasis> <message>%4</message>"
+msgctxt ""
+"@info %1 is the translation of 'Error'/'Warning'/'Information', %3 is the "
+"script file name"
+msgid ""
+"<emphasis strong='1'>%1 in line %2 (%3):</emphasis> <message>%4</message>"
 msgstr ""
 
 #: project.cpp:2724
@@ -1506,7 +1657,8 @@ msgstr "Pokazuje izgled grafičke kontrole jezičaka."
 
 #: project.cpp:3650
 msgctxt "@info:tooltip"
-msgid "Opens the <emphasis>home page</emphasis> of the service provider in a tab."
+msgid ""
+"Opens the <emphasis>home page</emphasis> of the service provider in a tab."
 msgstr ""
 
 #: project.cpp:3655
@@ -1531,7 +1683,9 @@ msgstr ""
 
 #: project.cpp:3673
 msgctxt "@info:tooltip"
-msgid "Updates the GTFS database by downloading and importing a new version of the GTFS feed."
+msgid ""
+"Updates the GTFS database by downloading and importing a new version of the "
+"GTFS feed."
 msgstr ""
 
 #: project.cpp:3678
@@ -1547,12 +1701,15 @@ msgstr ""
 
 #: project.cpp:3688
 msgctxt "@info:tooltip"
-msgid "Opens the project in a PublicTransport applet in a <emphasis>Plasma preview</emphasis> tab."
+msgid ""
+"Opens the project in a PublicTransport applet in a <emphasis>Plasma preview</"
+"emphasis> tab."
 msgstr ""
 
 #: project.cpp:3695
 msgctxt "@info:tooltip"
-msgid "Runs all tests for the active project, eg. syntax errors, correct results."
+msgid ""
+"Runs all tests for the active project, eg. syntax errors, correct results."
 msgstr ""
 
 #: project.cpp:3699
@@ -1612,7 +1769,9 @@ msgstr ""
 
 #: project.cpp:3794
 msgctxt "@info:tooltip"
-msgid "Continue script execution, only interrupt on breakpoints or uncaught exceptions."
+msgid ""
+"Continue script execution, only interrupt on breakpoints or uncaught "
+"exceptions."
 msgstr ""
 
 #: project.cpp:3800
@@ -1653,7 +1812,9 @@ msgstr "Nema takve skriptne funkcije"
 
 #: project.cpp:3837
 msgctxt "@info:tooltip"
-msgid "Runs the script function 'getStopSuggestions()' with a geo position as argument"
+msgid ""
+"Runs the script function 'getStopSuggestions()' with a geo position as "
+"argument"
 msgstr ""
 
 #: project.cpp:3843
@@ -1680,7 +1841,9 @@ msgstr ""
 
 #: project.cpp:3871
 msgctxt "@info:tooltip"
-msgid "Runs the script function 'getStopSuggestions()' in a debugger with a geo position as argument"
+msgid ""
+"Runs the script function 'getStopSuggestions()' in a debugger with a geo "
+"position as argument"
 msgstr ""
 
 #: project.cpp:3877
@@ -1696,7 +1859,11 @@ msgstr ""
 #: project.cpp:4384
 #, kde-format
 msgctxt "@info"
-msgid "<title>Delete GTFS database</title><para>Do you really want to delete the GTFS database? You will need to import the GTFS feed again to use this service provider again.</para><para>By deleting the database %1 disk space get freed.</para>"
+msgid ""
+"<title>Delete GTFS database</title><para>Do you really want to delete the "
+"GTFS database? You will need to import the GTFS feed again to use this "
+"service provider again.</para><para>By deleting the database %1 disk space "
+"get freed.</para>"
 msgstr ""
 
 #: project.cpp:4650
@@ -1762,7 +1929,8 @@ msgstr "Greška pri dobavljanju poruke."
 #: project.cpp:4759
 #, kde-format
 msgctxt "@info"
-msgid "Script execution has finished without results and returned <icode>%1</icode>."
+msgid ""
+"Script execution has finished without results and returned <icode>%1</icode>."
 msgstr ""
 
 #: project.cpp:4763
@@ -1773,8 +1941,10 @@ msgstr ""
 #: project.cpp:4768
 #, kde-format
 msgctxt "@info"
-msgid "Script execution has finished with %1 result and returned <icode>%2</icode>."
-msgid_plural "Script execution has finished with %1 results and returned <icode>%2</icode>."
+msgid ""
+"Script execution has finished with %1 result and returned <icode>%2</icode>."
+msgid_plural ""
+"Script execution has finished with %1 results and returned <icode>%2</icode>."
 msgstr[0] ""
 msgstr[1] ""
 
@@ -1796,9 +1966,7 @@ msgctxt "@info/plain"
 msgid "Arrivals"
 msgstr ""
 
-#: project.cpp:4906
-#: project.cpp:4953
-#: project.cpp:5035
+#: project.cpp:4906 project.cpp:4953 project.cpp:5035
 #, fuzzy
 msgctxt "@info"
 msgid "City:"
@@ -1816,8 +1984,7 @@ msgctxt "@info"
 msgid "Data Type:"
 msgstr "tip podatka"
 
-#: project.cpp:4910
-#: project.cpp:5039
+#: project.cpp:4910 project.cpp:5039
 #, fuzzy
 msgctxt "@info"
 msgid "Time:"
@@ -1938,7 +2105,9 @@ msgstr "Primljeni kontakt zahtjev"
 
 #: project.cpp:5222
 #, fuzzy, kde-format
-msgctxt "@info %1 is a formatted byte size string, %2 a translated details string (how much was downloaded in synchronous/asynchronous requests)"
+msgctxt ""
+"@info %1 is a formatted byte size string, %2 a translated details string "
+"(how much was downloaded in synchronous/asynchronous requests)"
 msgid "- %1 downloaded (%2)"
 msgstr "Preuzeto"
 
@@ -1963,13 +2132,17 @@ msgstr "Isteklo vrijeme čekanja na odziv servera."
 #: project.cpp:5262
 #, kde-format
 msgctxt "@info For the script output dock"
-msgid "<emphasis strong='1'>Uncaught exception at %1:</emphasis> <message>%2</message>"
+msgid ""
+"<emphasis strong='1'>Uncaught exception at %1:</emphasis> <message>%2</"
+"message>"
 msgstr ""
 
 #: project.cpp:5268
 #, kde-format
 msgctxt "@info For the script output dock"
-msgid "<emphasis strong='1'>Uncaught exception in script <filename>%1</filename> at %2:</emphasis> <message>%3</message>"
+msgid ""
+"<emphasis strong='1'>Uncaught exception in script <filename>%1</filename> at "
+"%2:</emphasis> <message>%3</message>"
 msgstr ""
 
 #: project.cpp:5486
@@ -1990,9 +2163,7 @@ msgctxt "@info"
 msgid "Cannot create dashboard widget"
 msgstr "Neuspjeh stvaranja grafičke kontrole."
 
-#: project.cpp:5553
-#: project.cpp:5632
-#: project.cpp:5680
+#: project.cpp:5553 project.cpp:5632 project.cpp:5680
 #, fuzzy
 msgctxt "@info"
 msgid "Service katepart.desktop not found"
@@ -2069,19 +2240,24 @@ msgstr ""
 
 #: project.cpp:6187
 msgctxt "@ịnfo"
-msgid "An updated version of the GTFS feed is available. Please import the new version into the database before publishing your plugin."
+msgid ""
+"An updated version of the GTFS feed is available. Please import the new "
+"version into the database before publishing your plugin."
 msgstr ""
 
 #: project.cpp:6194
 #, kde-format
 msgctxt "@ịnfo"
-msgid "Wait for the GTFS feed import to finish before publishing your plugin (%1%)."
+msgid ""
+"Wait for the GTFS feed import to finish before publishing your plugin (%1%)."
 msgstr ""
 
 #: project.cpp:6200
 #, kde-format
 msgctxt "@ịnfo"
-msgid "There was an error importing the GTFS feed: <message>%1</message>. Fix this before publishing your plugin."
+msgid ""
+"There was an error importing the GTFS feed: <message>%1</message>. Fix this "
+"before publishing your plugin."
 msgstr ""
 
 #: project.cpp:6207
@@ -2092,21 +2268,33 @@ msgstr ""
 #: project.cpp:6231
 #, kde-format
 msgctxt "@ịnfo"
-msgid "The %1 test case did not finish successfully. Please fix it using the <interface>Project Settings</interface> dialog before publishing your plugin."
+msgid ""
+"The %1 test case did not finish successfully. Please fix it using the "
+"<interface>Project Settings</interface> dialog before publishing your plugin."
 msgstr ""
 
 #: project.cpp:6244
 msgctxt "@ịnfo"
-msgid "A sample stop is needed to generate a preview image of the provider being used in the PublicTransport applet. Please add at least one sample stop using the <interface>Project Settings</interface> dialog before publishing your plugin."
+msgid ""
+"A sample stop is needed to generate a preview image of the provider being "
+"used in the PublicTransport applet. Please add at least one sample stop "
+"using the <interface>Project Settings</interface> dialog before publishing "
+"your plugin."
 msgstr ""
 
 #: project.cpp:6269
 msgctxt "@info"
-msgid "<title>Publish Your Provider Plugin</title><para>Please make sure your plugin is working and run all tests with it before publishing your plugin.</para><para>The first preview image should be a map showing supported regions. The second preview should have been generated automatically and show the PublicTransport applet using this provider plugin. <warning>You need to install the provider and make it ready (eg. import the GTFS feed) for the preview image to be generated correctly.</warning></para>"
+msgid ""
+"<title>Publish Your Provider Plugin</title><para>Please make sure your "
+"plugin is working and run all tests with it before publishing your plugin.</"
+"para><para>The first preview image should be a map showing supported "
+"regions. The second preview should have been generated automatically and "
+"show the PublicTransport applet using this provider plugin. <warning>You "
+"need to install the provider and make it ready (eg. import the GTFS feed) "
+"for the preview image to be generated correctly.</warning></para>"
 msgstr ""
 
-#: project.cpp:6299
-#: project.cpp:6320
+#: project.cpp:6299 project.cpp:6320
 #, fuzzy, kde-format
 msgctxt "@info"
 msgid "Could not create upload file <filename>%1</filename>"
@@ -2121,13 +2309,17 @@ msgstr "Datoteka nije spremljena."
 #: project.cpp:6448
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Project is opened from local installation directory at <filename>%1</filename>"
+msgid ""
+"Project is opened from local installation directory at <filename>%1</"
+"filename>"
 msgstr ""
 
 #: project.cpp:6451
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Project is opened from global installation directory at <filename>%1</filename>"
+msgid ""
+"Project is opened from global installation directory at <filename>%1</"
+"filename>"
 msgstr ""
 
 #: project.cpp:6455
@@ -2204,12 +2396,15 @@ msgstr ""
 
 #: projectmodel.cpp:235
 msgctxt "@info:tooltip"
-msgid "Shows the GTFS database and allows to start its import from the GTFS feed."
+msgid ""
+"Shows the GTFS database and allows to start its import from the GTFS feed."
 msgstr ""
 
 #: projectmodel.cpp:242
 msgctxt "@info:tooltip"
-msgid "Edit project settings directly in the XML source document. Intended for experts, normally the settings dialog should be used instead."
+msgid ""
+"Edit project settings directly in the XML source document. Intended for "
+"experts, normally the settings dialog should be used instead."
 msgstr ""
 
 #: projectmodel.cpp:246
@@ -2351,7 +2546,9 @@ msgstr "Sve zavisnosti su zadovoljene"
 #: projectsettingsdialog.cpp:630
 #, kde-format
 msgctxt "@info"
-msgid "The new changelog entry references a newer version than the current project version. Do you want to update the project version to %1?"
+msgid ""
+"The new changelog entry references a newer version than the current project "
+"version. Do you want to update the project version to %1?"
 msgstr ""
 
 #: projectsettingsdialog.cpp:647
@@ -2360,16 +2557,19 @@ msgctxt "@info/plain Default changelog entry for the first version"
 msgid "Initial version"
 msgstr "Kolab Verzija:"
 
-#: projectsettingsdialog.cpp:747
-#: projectsettingsdialog.cpp:812
+#: projectsettingsdialog.cpp:747 projectsettingsdialog.cpp:812
 msgctxt "@info/plain"
-msgid "Please save the XML file first. The script file needs to be in the same folder."
+msgid ""
+"Please save the XML file first. The script file needs to be in the same "
+"folder."
 msgstr ""
 
 #: projectsettingsdialog.cpp:763
 #, kde-format
 msgctxt "@info/plain"
-msgid "The script file <filename>%1</filename> already exists.<nl/>Do you want to overwrite it or open and use it as script file?"
+msgid ""
+"The script file <filename>%1</filename> already exists.<nl/>Do you want to "
+"overwrite it or open and use it as script file?"
 msgstr ""
 
 #: projectsettingsdialog.cpp:765
@@ -2381,7 +2581,8 @@ msgstr "Datoteka već postoji"
 #: projectsettingsdialog.cpp:777
 #, kde-format
 msgctxt "@info/plain"
-msgid "A new script file with the name <filename>%1</filename> could not be created."
+msgid ""
+"A new script file with the name <filename>%1</filename> could not be created."
 msgstr ""
 
 #: projectsettingsdialog.cpp:785
@@ -2411,7 +2612,13 @@ msgstr "Pomoćnik za pokretanje vanjske skript datoteke"
 #: projectsettingsdialog.cpp:876
 #, kde-format
 msgctxt "@info"
-msgid "<title>Invalid Provider Plugin Format Version</title><para>The provider plugin format version has been set to <emphasize strong='1'>1.1</emphasize>, because the specified version <emphasize strong='1'>%1</emphasize> is not supported.</para><para>Please make sure that the plugin complies with that version and update it if necessary.</para><para><note>You can cancel the settings dialog to not change anything.</note></para>"
+msgid ""
+"<title>Invalid Provider Plugin Format Version</title><para>The provider "
+"plugin format version has been set to <emphasize strong='1'>1.1</emphasize>, "
+"because the specified version <emphasize strong='1'>%1</emphasize> is not "
+"supported.</para><para>Please make sure that the plugin complies with that "
+"version and update it if necessary.</para><para><note>You can cancel the "
+"settings dialog to not change anything.</note></para>"
 msgstr ""
 
 #: projectsettingsdialog.cpp:975
@@ -2426,7 +2633,10 @@ msgstr ""
 
 #: serviceproviderdatatester.cpp:141
 msgctxt "@info"
-msgid "<title>You need to specify a name for your project in the project settings</title> <para>Applets show this name in a service provider selector widget.</para>"
+msgid ""
+"<title>You need to specify a name for your project in the project settings</"
+"title> <para>Applets show this name in a service provider selector widget.</"
+"para>"
 msgstr ""
 
 #: serviceproviderdatatester.cpp:159
@@ -2436,18 +2646,21 @@ msgstr ""
 
 #: serviceproviderdatatester.cpp:162
 msgctxt "@info"
-msgid "<title>Project Version Missing</title><para>This helps to distinguish between different versions and makes it possible to say for example: \"You need at least version 1.3 of that service provider plugin for that feature to work\". Open the project settings to add a <interface>Version</interface>.</para>"
+msgid ""
+"<title>Project Version Missing</title><para>This helps to distinguish "
+"between different versions and makes it possible to say for example: \"You "
+"need at least version 1.3 of that service provider plugin for that feature "
+"to work\". Open the project settings to add a <interface>Version</interface>."
+"</para>"
 msgstr ""
 
-#: serviceproviderdatatester.cpp:177
-#: serviceproviderdatatester.cpp:216
+#: serviceproviderdatatester.cpp:177 serviceproviderdatatester.cpp:216
 #, fuzzy
 msgctxt "@info/plain"
 msgid "The version string is invalid"
 msgstr "Loša niska verzije XML‑a."
 
-#: serviceproviderdatatester.cpp:180
-#: serviceproviderdatatester.cpp:219
+#: serviceproviderdatatester.cpp:180 serviceproviderdatatester.cpp:219
 msgctxt "@info"
 msgid "<title>The version string is invalid</title>"
 msgstr ""
@@ -2459,7 +2672,9 @@ msgstr ""
 
 #: serviceproviderdatatester.cpp:203
 msgctxt "@info"
-msgid "<title>Unsupported Plugin Format Version</title><para>The only currently supported provider plugin format version is 1.1.</para>"
+msgid ""
+"<title>Unsupported Plugin Format Version</title><para>The only currently "
+"supported provider plugin format version is 1.1.</para>"
 msgstr ""
 
 #: serviceproviderdatatester.cpp:236
@@ -2469,7 +2684,12 @@ msgstr ""
 
 #: serviceproviderdatatester.cpp:241
 msgctxt "@info"
-msgid "<title>You should provide your email address as author of the project</title> <para>You may create a new address if you do not want to use your private one. Without an email address, no one can contact you if something is wrong with your project. Open the project settings and specify your <interface>E-Mail</interface> address.</para>"
+msgid ""
+"<title>You should provide your email address as author of the project</"
+"title> <para>You may create a new address if you do not want to use your "
+"private one. Without an email address, no one can contact you if something "
+"is wrong with your project. Open the project settings and specify your "
+"<interface>E-Mail</interface> address.</para>"
 msgstr ""
 
 #: serviceproviderdatatester.cpp:257
@@ -2491,17 +2711,24 @@ msgstr ""
 
 #: serviceproviderdatatester.cpp:282
 msgctxt "@info"
-msgid "<title>You should provide your name as author of the project</title> <para>Open the project settings and specify an <interface>Author</interface>.</para>"
+msgid ""
+"<title>You should provide your name as author of the project</title> "
+"<para>Open the project settings and specify an <interface>Author</interface>."
+"</para>"
 msgstr ""
 
 #: serviceproviderdatatester.cpp:301
 msgctxt "@info/plain"
-msgid "You should provide a short version of your name as author of the project"
+msgid ""
+"You should provide a short version of your name as author of the project"
 msgstr ""
 
 #: serviceproviderdatatester.cpp:306
 msgctxt "@info"
-msgid "<title>You should provide a short version of your name as author of the project</title> <para>Open the project settings and specify a <interface>Short Author Name</interface>.</para>"
+msgid ""
+"<title>You should provide a short version of your name as author of the "
+"project</title> <para>Open the project settings and specify a "
+"<interface>Short Author Name</interface>.</para>"
 msgstr ""
 
 #: serviceproviderdatatester.cpp:324
@@ -2511,17 +2738,29 @@ msgstr ""
 
 #: serviceproviderdatatester.cpp:329
 msgctxt "@info"
-msgid "<title>You should provide the URL to the home page of the service provider</title> <para>Since the service providers are running servers for the timetable service they will want to get some credit. Applets should show a link to the home page. Open the project settings and add a <interface>Home Page URL</interface>.</para>"
+msgid ""
+"<title>You should provide the URL to the home page of the service provider</"
+"title> <para>Since the service providers are running servers for the "
+"timetable service they will want to get some credit. Applets should show a "
+"link to the home page. Open the project settings and add a <interface>Home "
+"Page URL</interface>.</para>"
 msgstr ""
 
 #: serviceproviderdatatester.cpp:348
 msgctxt "@info/plain"
-msgid "You should provide a short version of the URL to the home page of the service provider"
+msgid ""
+"You should provide a short version of the URL to the home page of the "
+"service provider"
 msgstr ""
 
 #: serviceproviderdatatester.cpp:353
 msgctxt "@info"
-msgid "<title>You should provide a short version of the URL to the home page of the service provider</title> <para>Applets may want to show the short URL as display text for the home page link, to save space. The result would be that nothing is shown. Open the project settings to add a <interface>Short URL</interface>.</para>"
+msgid ""
+"<title>You should provide a short version of the URL to the home page of the "
+"service provider</title> <para>Applets may want to show the short URL as "
+"display text for the home page link, to save space. The result would be that "
+"nothing is shown. Open the project settings to add a <interface>Short URL</"
+"interface>.</para>"
 msgstr ""
 
 #: serviceproviderdatatester.cpp:373
@@ -2531,7 +2770,11 @@ msgstr ""
 
 #: serviceproviderdatatester.cpp:377
 msgctxt "@info/plain"
-msgid "<title>You should give a description for your project</title> <para>Describe what cities/countries/vehicles are supported and what limitations there possibly are when using the service provider. Open the project settings to add a <interface>Description</interface>.</para>"
+msgid ""
+"<title>You should give a description for your project</title> <para>Describe "
+"what cities/countries/vehicles are supported and what limitations there "
+"possibly are when using the service provider. Open the project settings to "
+"add a <interface>Description</interface>.</para>"
 msgstr ""
 
 #: serviceproviderdatatester.cpp:395
@@ -2541,7 +2784,11 @@ msgstr ""
 
 #: serviceproviderdatatester.cpp:399
 msgctxt "@info/plain"
-msgid "<title>No script file created for the project</title> <para>The script does the actual work of the project, ie. it requests and parses documents from the service provider. Open the script tab to create a new script from a template, implement the functions and save it.</para>"
+msgid ""
+"<title>No script file created for the project</title> <para>The script does "
+"the actual work of the project, ie. it requests and parses documents from "
+"the service provider. Open the script tab to create a new script from a "
+"template, implement the functions and save it.</para>"
 msgstr ""
 
 #: serviceproviderdatatester.cpp:410
@@ -2668,7 +2915,9 @@ msgstr "Pružatelj usluga za KHangMan"
 
 #: testmodel.cpp:922
 msgctxt "@info"
-msgid "<title>Test not Applicable</title> <para>This test is only applicable for scripted provider plugins.</para>"
+msgid ""
+"<title>Test not Applicable</title> <para>This test is only applicable for "
+"scripted provider plugins.</para>"
 msgstr ""
 
 #: testmodel.cpp:937
@@ -2679,7 +2928,9 @@ msgstr "Pružatelj usluga za KHangMan"
 
 #: testmodel.cpp:940
 msgctxt "@info"
-msgid "<title>Test not Applicable</title> <para>This test is only applicable for GTFS provider plugins.</para>"
+msgid ""
+"<title>Test not Applicable</title> <para>This test is only applicable for "
+"GTFS provider plugins.</para>"
 msgstr ""
 
 #: testmodel.cpp:1089
@@ -2963,13 +3214,17 @@ msgstr ""
 #: testmodel.cpp:1222
 #, kde-format
 msgctxt "@info/plain"
-msgid "Runs the %1() script function with a stop name part as argument and tests collected stop suggestions"
+msgid ""
+"Runs the %1() script function with a stop name part as argument and tests "
+"collected stop suggestions"
 msgstr ""
 
 #: testmodel.cpp:1226
 #, kde-format
 msgctxt "@info/plain"
-msgid "Runs the %1() script function with a geo position as argument and tests collected stop suggestions"
+msgid ""
+"Runs the %1() script function with a geo position as argument and tests "
+"collected stop suggestions"
 msgstr ""
 
 #: testmodel.cpp:1230
@@ -2981,7 +3236,9 @@ msgstr ""
 #: testmodel.cpp:1233
 #, kde-format
 msgctxt "@info/plain"
-msgid "Runs the %1() script function and tests the returned list of strings, which should name TimetableInformation enumerables"
+msgid ""
+"Runs the %1() script function and tests the returned list of strings, which "
+"should name TimetableInformation enumerables"
 msgstr ""
 
 #: testmodel.cpp:1249
@@ -3001,7 +3258,11 @@ msgstr ""
 
 #: timetablemate.cpp:226
 msgctxt "@info"
-msgid "<title>Initialization Error</title><para>There seems to be a problem with your installation. The UI will not be complete and there may be errors if you continue now.</para><para><emphasis strong='1'>Possible Solution:</emphasis> Please reinstall TimetableMate and try again.</para>"
+msgid ""
+"<title>Initialization Error</title><para>There seems to be a problem with "
+"your installation. The UI will not be complete and there may be errors if "
+"you continue now.</para><para><emphasis strong='1'>Possible Solution:</"
+"emphasis> Please reinstall TimetableMate and try again.</para>"
 msgstr ""
 
 #: timetablemate.cpp:231
@@ -3023,7 +3284,10 @@ msgstr "Ne mogu da otvorim %1: %2"
 
 #: timetablemate.cpp:500
 msgctxt "@info"
-msgid "<title>Last Session Crashed - Sorry</title><para><warning>Restoring previously opened projects and tabs might result in another crash.</warning></para><para>Do you want to nevertheless restore projects?</para>"
+msgid ""
+"<title>Last Session Crashed - Sorry</title><para><warning>Restoring "
+"previously opened projects and tabs might result in another crash.</"
+"warning></para><para>Do you want to nevertheless restore projects?</para>"
 msgstr ""
 
 #: timetablemate.cpp:504
@@ -3086,8 +3350,7 @@ msgctxt "@action"
 msgid "&Docks Shown"
 msgstr "Prikazani predpregledi"
 
-#: timetablemate.cpp:896
-#: timetablemate.cpp:1607
+#: timetablemate.cpp:896 timetablemate.cpp:1607
 #, fuzzy
 msgctxt "@action"
 msgid "&Active Project"
@@ -3155,7 +3418,9 @@ msgstr ""
 #, fuzzy
 msgctxt "@info"
 msgid "The following documents were modified. Do you want to save them now?"
-msgstr "<qt>Sljedeći dokumenti su izmijenjeni. Želite li da ih sačuvate prije zatvaranja?</qt>"
+msgstr ""
+"<qt>Sljedeći dokumenti su izmijenjeni. Želite li da ih sačuvate prije "
+"zatvaranja?</qt>"
 
 #: timetablemate.cpp:1236
 #, fuzzy
@@ -3175,10 +3440,11 @@ msgctxt "@info/plain"
 msgid "Do not Close"
 msgstr "Ne vraćaj"
 
-#: timetablemate.cpp:1301
-#: timetablemate.cpp:2207
+#: timetablemate.cpp:1301 timetablemate.cpp:2207
 #, fuzzy, kde-format
-msgctxt "@info/plain This string is displayed instead of the full path for globally installed service provider plugins."
+msgctxt ""
+"@info/plain This string is displayed instead of the full path for globally "
+"installed service provider plugins."
 msgid "Global: %1"
 msgstr "Globalno"
 
@@ -3245,12 +3511,28 @@ msgstr "Preuzmi najviše:"
 #: timetablemate.cpp:1719
 #, kde-format
 msgctxt "@info"
-msgid "Uncaught exception in <filename>%1</filename> at %2: <message>%3</message>"
+msgid ""
+"Uncaught exception in <filename>%1</filename> at %2: <message>%3</message>"
 msgstr ""
 
 #: timetablemate.cpp:1783
 msgctxt "@info:whatsthis"
-msgid "<title>Create New Provider Plugin</title><para>To create a new provider plugin first choose the type of the plugin. Currently <emphasize>Scripted</emphasize> and <emphasize>GTFS</emphasize> (since version 0.11) types are available. Your version of TimetableMate may be compiled without support for one of these types.</para><para>The <emphasize>Scripted</emphasize> type can be used for a variety of providers publishing their timetable data in web sites. Helper functions are provided to easily parse HTML sites for timetable data in the script (QtScript, ie. JavaScript, by using the Kross script extension Python and Ruby are also available). The script extension \"qt.xml\" helps parsing XML data sources. For providers using the HAFAS API there is a base script available, use <icode>include( \"base_hafas.js\" );</icode></para><para>If a <emphasize>GTFS</emphasize> feed is available a provider plugin can be created much easier, ie. without writing a script. Only the URL to the GTFS feed is needed. <emphasize>GTFS-realtime</emphasize> TripUpdates and Alerts URLs can also be specified.</para>"
+msgid ""
+"<title>Create New Provider Plugin</title><para>To create a new provider "
+"plugin first choose the type of the plugin. Currently <emphasize>Scripted</"
+"emphasize> and <emphasize>GTFS</emphasize> (since version 0.11) types are "
+"available. Your version of TimetableMate may be compiled without support for "
+"one of these types.</para><para>The <emphasize>Scripted</emphasize> type can "
+"be used for a variety of providers publishing their timetable data in web "
+"sites. Helper functions are provided to easily parse HTML sites for "
+"timetable data in the script (QtScript, ie. JavaScript, by using the Kross "
+"script extension Python and Ruby are also available). The script extension "
+"\"qt.xml\" helps parsing XML data sources. For providers using the HAFAS API "
+"there is a base script available, use <icode>include( \"base_hafas.js\" );</"
+"icode></para><para>If a <emphasize>GTFS</emphasize> feed is available a "
+"provider plugin can be created much easier, ie. without writing a script. "
+"Only the URL to the GTFS feed is needed. <emphasize>GTFS-realtime</"
+"emphasize> TripUpdates and Alerts URLs can also be specified.</para>"
 msgstr ""
 
 #: timetablemate.cpp:1805
@@ -3273,7 +3555,9 @@ msgstr "FlightGear pozicija davatelja dodataka"
 
 #: timetablemate.cpp:2190
 msgctxt "@info/plain"
-msgid "There are no installed service provider plugins. You need to install the PublicTransport data engine."
+msgid ""
+"There are no installed service provider plugins. You need to install the "
+"PublicTransport data engine."
 msgstr ""
 
 #: timetablemate.cpp:2216
@@ -3289,7 +3573,9 @@ msgstr "FlightGear pozicija davatelja dodataka"
 
 #: timetablemate.cpp:2277
 msgctxt "@info"
-msgid "The following provider plugins have been fetched. Do you want to open them now?"
+msgid ""
+"The following provider plugins have been fetched. Do you want to open them "
+"now?"
 msgstr ""
 
 #: timetablemate.cpp:2289
@@ -3306,7 +3592,9 @@ msgstr "Opšte"
 
 #: timetablemate.cpp:2332
 msgctxt "@info"
-msgid "The <interface>Home Page URL</interface> is empty.<nl/>Please set it in the project settings dialog first."
+msgid ""
+"The <interface>Home Page URL</interface> is empty.<nl/>Please set it in the "
+"project settings dialog first."
 msgstr ""
 
 #: timetablematehelper.cpp:48
@@ -3357,4 +3645,3 @@ msgstr "&Postavke"
 #: timetablemateui.rc:118
 msgid "Debugger"
 msgstr "Ispravljač grešaka"
-
