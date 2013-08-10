@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: partitionmanager\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-06-24 01:33+0000\n"
+"POT-Creation-Date: 2013-08-10 01:37+0000\n"
 "PO-Revision-Date: 2011-01-05 10:55+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian<kde-i18n-bs@kde.org>\n"
@@ -1737,8 +1737,13 @@ msgctxt "@title:menu"
 msgid "Deactivate swap"
 msgstr "Deaktiviraj razmjenu"
 
+#: fs/luks.cpp:91
+msgctxt "@title:menu"
+msgid "Decrypt"
+msgstr ""
+
 # >> @action
-#: fs/luks.cpp:89
+#: fs/luks.cpp:96
 #, fuzzy
 msgctxt "@title:menu"
 msgid "Deactivate"
@@ -2062,6 +2067,30 @@ msgstr "(ikona)"
 #: gui/createpartitiontablewidgetbase.ui:79
 msgid "<b>Warning:</b> This will destroy all data on the device!"
 msgstr "<b>Pažnja:</b> Ovo će uništiti sve podatke na uređaju!"
+
+# >> Job description, used as tooltip and in job lists.
+#: gui/decryptluksdialog.cpp:37
+#, fuzzy, kde-format
+#| msgctxt "@info/plain"
+#| msgid "Delete the partition <filename>%1</filename>"
+msgctxt "@title:window"
+msgid "Decrypt LUKS partition on <filename>%1</filename>"
+msgstr "Brisanje particije <filename>%1</filename>"
+
+#: gui/decryptluksdialog.cpp:38
+msgctxt "@action:button"
+msgid "&Decrypt"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_Name)
+#: gui/decryptluksdialogwidgetbase.ui:22
+msgid "&Name:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_Pass)
+#: gui/decryptluksdialogwidgetbase.ui:35
+msgid "&Passphrase:"
+msgstr ""
 
 #: gui/devicepropsdialog.cpp:52
 #, fuzzy, kde-format
@@ -5419,20 +5448,28 @@ msgctxt "@info/plain unit"
 msgid "(unknown unit)"
 msgstr "(nepoznata jedinica)"
 
-#: util/externalcommand.cpp:81
-#, kde-format
+#: util/externalcommand.cpp:126
+#, fuzzy, kde-format
+#| msgctxt "@info/plain"
+#| msgid "Command: %1 %2"
 msgctxt "@info/plain"
-msgid "Command: %1 %2"
+msgid "Command: %1"
 msgstr "Naredba: %1 %2"
 
-#: util/externalcommand.cpp:86
+#: util/externalcommand.cpp:134
+#, fuzzy, kde-format
+#| msgctxt "@info/plain"
+#| msgid "(Command timeout while starting)"
 msgctxt "@info/plain"
-msgid "(Command timeout while starting)"
+msgid "(Command timeout while starting \"%1\")"
 msgstr "(Prekovreme naredbe pri pokretanju)"
 
-#: util/externalcommand.cpp:104
+#: util/externalcommand.cpp:156
+#, fuzzy, kde-format
+#| msgctxt "@info/plain"
+#| msgid "(Command timeout while running)"
 msgctxt "@info/plain"
-msgid "(Command timeout while running)"
+msgid "(Command timeout while running \"%1\")"
 msgstr "(Prekovreme naredbe tokom izvršavanja)"
 
 # >! Put application nami into the message.
