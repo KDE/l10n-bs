@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-09-18 01:46+0000\n"
+"POT-Creation-Date: 2013-09-19 01:39+0000\n"
 "PO-Revision-Date: 2013-07-20 23:14+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosanski <bs@li.org>\n"
@@ -2700,9 +2700,32 @@ msgstr ""
 msgid "Edit..."
 msgstr "Izmijeni..."
 
-#: identity/identityeditvcarddialog.cpp:31
+#: identity/identityeditvcarddialog.cpp:32
 msgid "Edit own vCard"
 msgstr "Izmijeni vizitkartu"
+
+#: identity/identityeditvcarddialog.cpp:34
+#, fuzzy
+#| msgid "Delete T&hread"
+msgid "Delete current vcard"
+msgstr "Obriši &lanac"
+
+#: identity/identityeditvcarddialog.cpp:54
+#, fuzzy
+#| msgid "Are you sure you want to empty the trash folder?"
+msgid "Are you sure to want to delete this vcard?"
+msgstr "Da li ste sigurni da želite isprazniti fascikl sa smećem?"
+
+#: identity/identityeditvcarddialog.cpp:54
+#: identity/identityeditvcarddialog.cpp:66
+#, fuzzy
+#| msgid "Delete Search"
+msgid "Delete vcard"
+msgstr "Obriši pretragu"
+
+#: identity/identityeditvcarddialog.cpp:66
+msgid "We can not delete vcard file."
+msgstr ""
 
 #: identity/identitylistview.cpp:98
 #, kde-format
@@ -3582,7 +3605,7 @@ msgstr "Sklanjanje poruka u smeće otkazano."
 msgid "Jump to Folder"
 msgstr "Skoči do fascikla"
 
-#: kmmainwidget.cpp:2396
+#: kmmainwidget.cpp:2396 vacationmanager.cpp:59
 msgid ""
 "KMail's Out of Office Reply functionality relies on server-side filtering. "
 "You have not yet configured an IMAP server for this.\n"
@@ -3593,7 +3616,7 @@ msgstr ""
 "Možete ovo uraditi koristeći karticu \"Filtriranje\" na konfiguraciji IMAP "
 "računa."
 
-#: kmmainwidget.cpp:2401
+#: kmmainwidget.cpp:2401 vacationmanager.cpp:64
 msgid "No Server-Side Filtering Configured"
 msgstr "Nije podešeno serversko filtriranje"
 
@@ -4107,7 +4130,9 @@ msgid "Filter %1"
 msgstr "Akcija filtriranja %1"
 
 #: kmmainwidget.cpp:4484
-msgid "Out of office reply active"
+#, fuzzy, kde-format
+#| msgid "Out of office reply active"
+msgid "Out of office reply active on server \"%1\""
 msgstr "Odgovor „van kancelarije“ aktivan"
 
 #: kmmainwidget.cpp:4589
@@ -4429,7 +4454,7 @@ msgctxt "Message->"
 msgid "&Reply"
 msgstr "&Odgovori"
 
-#: messageactions.cpp:84 searchdialog/searchwindow.cpp:236
+#: messageactions.cpp:84 searchdialog/searchwindow.cpp:240
 msgid "&Reply..."
 msgstr "Odgovo&ri..."
 
@@ -4437,11 +4462,11 @@ msgstr "Odgovo&ri..."
 msgid "Reply to A&uthor..."
 msgstr "Odgovori a&utoru..."
 
-#: messageactions.cpp:98 searchdialog/searchwindow.cpp:240
+#: messageactions.cpp:98 searchdialog/searchwindow.cpp:244
 msgid "Reply to &All..."
 msgstr "Odgovori svim&a..."
 
-#: messageactions.cpp:105 searchdialog/searchwindow.cpp:244
+#: messageactions.cpp:105 searchdialog/searchwindow.cpp:248
 msgid "Reply to Mailing-&List..."
 msgstr "Odgovori na mailing &listu..."
 
@@ -4488,7 +4513,7 @@ msgstr "&Edituj poruku"
 msgid "Add Note..."
 msgstr "Dodaj bilješku..."
 
-#: messageactions.cpp:174 searchdialog/searchwindow.cpp:248
+#: messageactions.cpp:174 searchdialog/searchwindow.cpp:252
 msgctxt "Message->"
 msgid "&Forward"
 msgstr "&Proslijedi"
@@ -4696,38 +4721,38 @@ msgstr ""
 msgid "Find Messages"
 msgstr "Nađi poruke"
 
-#: searchdialog/searchwindow.cpp:107
+#: searchdialog/searchwindow.cpp:111
 msgctxt "@action:button Search for messages"
 msgid "&Search"
 msgstr "&Traži"
 
-#: searchdialog/searchwindow.cpp:112
+#: searchdialog/searchwindow.cpp:116
 msgid "Debug query"
 msgstr ""
 
-#: searchdialog/searchwindow.cpp:198 searchdialog/searchwindow.cpp:391
+#: searchdialog/searchwindow.cpp:202 searchdialog/searchwindow.cpp:395
 msgid "Last Search"
 msgstr "Posljednja pretraga"
 
-#: searchdialog/searchwindow.cpp:253
+#: searchdialog/searchwindow.cpp:257
 msgctxt "@action:inmenu Forward message inline."
 msgid "&Inline..."
 msgstr "&U sastavu poruke..."
 
-#: searchdialog/searchwindow.cpp:258
+#: searchdialog/searchwindow.cpp:262
 msgctxt "Message->Forward->"
 msgid "As &Attachment..."
 msgstr "Kao &prilog..."
 
-#: searchdialog/searchwindow.cpp:272
+#: searchdialog/searchwindow.cpp:276
 msgid "Save Attachments..."
 msgstr "&Snimi priloge..."
 
-#: searchdialog/searchwindow.cpp:278
+#: searchdialog/searchwindow.cpp:282
 msgid "Clear Selection"
 msgstr "Očisti izbor"
 
-#: searchdialog/searchwindow.cpp:362
+#: searchdialog/searchwindow.cpp:366
 #, kde-format
 msgid "%1 match"
 msgid_plural "%1 matches"
@@ -4735,35 +4760,35 @@ msgstr[0] "%1 podudarnost"
 msgstr[1] "%1 podudarnosti"
 msgstr[2] "%1 podudarnosti"
 
-#: searchdialog/searchwindow.cpp:415
+#: searchdialog/searchwindow.cpp:419
 msgid "You did not selected a valid folder."
 msgstr ""
 
-#: searchdialog/searchwindow.cpp:443
+#: searchdialog/searchwindow.cpp:447
 msgid "You forgot to define condition."
 msgstr ""
 
-#: searchdialog/searchwindow.cpp:448
+#: searchdialog/searchwindow.cpp:452
 msgid "All folders selected are empty or were not indexed."
 msgstr ""
 
-#: searchdialog/searchwindow.cpp:454
+#: searchdialog/searchwindow.cpp:458
 #, fuzzy
 #| msgid "Message Body"
 msgid "No message found."
 msgstr "Tijelo poruke"
 
-#: searchdialog/searchwindow.cpp:478
+#: searchdialog/searchwindow.cpp:482
 msgid "Searching..."
 msgstr "Tražim..."
 
-#: searchdialog/searchwindow.cpp:486
+#: searchdialog/searchwindow.cpp:490
 #, fuzzy, kde-format
 #| msgid "Can not get search result. %1"
 msgid "Cannot get search result. %1"
 msgstr "Ne mogu naći rezultate pretrage. %1"
 
-#: searchdialog/searchwindow.cpp:600
+#: searchdialog/searchwindow.cpp:604
 #, fuzzy, kde-format
 #| msgid ""
 #| "There was a problem renaming your search folder. A common reason for this "
@@ -4776,7 +4801,7 @@ msgstr ""
 "Došlo je do problema preimenovanje fascikli za pretragu. Razlog za ovo je da "
 "druga fascikla za pretragu  sa istim imenom već postoji."
 
-#: searchdialog/searchwindow.cpp:706
+#: searchdialog/searchwindow.cpp:710
 #, kde-format
 msgid "Copy Message"
 msgid_plural "Copy %1 Messages"
@@ -4784,7 +4809,7 @@ msgstr[0] "Kopiraj %1 poruku"
 msgstr[1] "Kopiraj %1 poruke"
 msgstr[2] "Kopiraj %1 poruka"
 
-#: searchdialog/searchwindow.cpp:709
+#: searchdialog/searchwindow.cpp:713
 #, kde-format
 msgid "Cut Message"
 msgid_plural "Cut %1 Messages"
