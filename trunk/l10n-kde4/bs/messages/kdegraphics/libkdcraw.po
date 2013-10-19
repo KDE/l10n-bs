@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkdcraw\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-26 01:33+0000\n"
+"POT-Creation-Date: 2013-10-19 01:34+0000\n"
 "PO-Revision-Date: 2012-12-15 09:25+0000\n"
 "Last-Translator: Elmaza Kurtanović <elmazza_92@hotmail.com>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -147,12 +147,52 @@ msgctxt "@item:inlistbox Quality"
 msgid "LMMSE"
 msgstr "LMMSE"
 
-#: libkdcraw/dcrawsettingswidget.cpp:288
+#: libkdcraw/dcrawsettingswidget.cpp:289
 msgctxt "@item:inlistbox Quality"
 msgid "AMaZE"
 msgstr "AMaZE"
 
-#: libkdcraw/dcrawsettingswidget.cpp:291
+#: libkdcraw/dcrawsettingswidget.cpp:306
+#, fuzzy
+#| msgctxt "@info:whatsthis"
+#| msgid ""
+#| "<title>Quality (interpolation)</title><para>Select here the demosaicing "
+#| "method to use when decoding RAW images. A demosaicing algorithm is a "
+#| "digital image process used to interpolate a complete image from the "
+#| "partial raw data received from the color-filtered image sensor, internal "
+#| "to many digital cameras, in form of a matrix of colored pixels. Also "
+#| "known as CFA interpolation or color reconstruction, another common "
+#| "spelling is demosaicing. The following methods are available for "
+#| "demosaicing RAW images:</para><para><list><item><emphasis "
+#| "strong='true'>Bilinear</emphasis>: use high-speed but low-quality "
+#| "bilinear interpolation (default - for slow computers). In this method, "
+#| "the red value of a non-red pixel is computed as the average of the "
+#| "adjacent red pixels, and similarly for blue and green.</"
+#| "item><item><emphasis strong='true'>VNG</emphasis>: use Variable Number of "
+#| "Gradients interpolation. This method computes gradients near the pixel of "
+#| "interest and uses the lower gradients (representing smoother and more "
+#| "similar parts of the image) to make an estimate.</item><item><emphasis "
+#| "strong='true'>PPG</emphasis>: use Patterned-Pixel-Grouping interpolation. "
+#| "Pixel Grouping uses assumptions about natural scenery in making "
+#| "estimates. It has fewer color artifacts on natural images than the "
+#| "Variable Number of Gradients method.</item><item><emphasis "
+#| "strong='true'>AHD</emphasis>: use Adaptive Homogeneity-Directed "
+#| "interpolation. This method selects the direction of interpolation so as "
+#| "to maximize a homogeneity metric, thus typically minimizing color "
+#| "artifacts.</item><item><emphasis strong='true'>DCB</emphasis>: DCB "
+#| "interpolation from linuxphoto.org project.</item><item><emphasis "
+#| "strong='true'>AHD v2</emphasis>: modified AHD interpolation using "
+#| "Variance of Color Differences method.</item><item><emphasis "
+#| "strong='true'>AFD</emphasis>: Adaptive Filtered Demosaicing interpolation "
+#| "through 5 pass median filter from PerfectRaw project.</"
+#| "item><item><emphasis strong='true'>VCD</emphasis>: Variance of Color "
+#| "Differences interpolation.</item><item><emphasis strong='true'>VCD & AHD</"
+#| "emphasis>: Mixed demosaicing between VCD and AHD.</item><item><emphasis "
+#| "strong='true'>LMMSE</emphasis>: color demosaicing via directional linear "
+#| "minimum mean-square error estimation interpolation from PerfectRaw.</"
+#| "item><item><emphasis strong='true'>AMaZE</emphasis>: Aliasing "
+#| "Minimization interpolation and Zipper Elimination to apply color "
+#| "aberration removal from RawTherapee project.</item></list></para>"
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Quality (interpolation)</title><para>Select here the demosaicing "
@@ -189,7 +229,8 @@ msgid ""
 "minimum mean-square error estimation interpolation from PerfectRaw.</"
 "item><item><emphasis strong='true'>AMaZE</emphasis>: Aliasing Minimization "
 "interpolation and Zipper Elimination to apply color aberration removal from "
-"RawTherapee project.</item></list></para>"
+"RawTherapee project.</item></list></para><para>Note: some methods can be "
+"unavailable if RAW decoder have been built without extention packs.</para>"
 msgstr ""
 "<title>Kvalitet (interpolacija)</title><para>Odaberite metod demozaika pri "
 "obradi RAW slika. Algoritam demozaika je proces digitalne obrade korišten za "
@@ -227,12 +268,12 @@ msgstr ""
 "eliminacija da se primijeni uklanjanje nagiba boja iz RawTherapee projekta.</"
 "item></list></para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:358
+#: libkdcraw/dcrawsettingswidget.cpp:376
 msgctxt "@label:slider"
 msgid "Pass:"
 msgstr "Prolaz:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:359
+#: libkdcraw/dcrawsettingswidget.cpp:377
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Pass</title><para>Set here the passes used by the median filter "
@@ -251,12 +292,12 @@ msgstr ""
 "strong='true'>AHD</emphasis>, <emphasis strong='true'>DCB</emphasis>, and "
 "<emphasis strong='true'>VCD & AHD</emphasis>.</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:371
+#: libkdcraw/dcrawsettingswidget.cpp:389
 msgctxt "@option:check"
 msgid "Refine interpolation"
 msgstr "Doradi interpolaciju"
 
-#: libkdcraw/dcrawsettingswidget.cpp:372
+#: libkdcraw/dcrawsettingswidget.cpp:390
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Refine interpolation</title><para>This setting is available only for "
@@ -273,37 +314,37 @@ msgstr ""
 "poboljšanu efektivnu interpolaciju boja  (EECI) za povećanje oštrine.</"
 "item></list></para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:381
+#: libkdcraw/dcrawsettingswidget.cpp:407
 msgctxt "@label"
 msgid "Demosaicing"
 msgstr "Ukidanje mozaika"
 
-#: libkdcraw/dcrawsettingswidget.cpp:389
+#: libkdcraw/dcrawsettingswidget.cpp:415
 msgctxt "@label:listbox"
 msgid "Method:"
 msgstr "Metoda:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:391
+#: libkdcraw/dcrawsettingswidget.cpp:417
 msgctxt "@item:inlistbox"
 msgid "Default D65"
 msgstr "Podrazumijevano D65"
 
-#: libkdcraw/dcrawsettingswidget.cpp:392
+#: libkdcraw/dcrawsettingswidget.cpp:418
 msgctxt "@item:inlistbox"
 msgid "Camera"
 msgstr "Kamera"
 
-#: libkdcraw/dcrawsettingswidget.cpp:393
+#: libkdcraw/dcrawsettingswidget.cpp:419
 msgctxt "@item:inlistbox set while balance automatically"
 msgid "Automatic"
 msgstr "Automatski"
 
-#: libkdcraw/dcrawsettingswidget.cpp:394
+#: libkdcraw/dcrawsettingswidget.cpp:420
 msgctxt "@item:inlistbox set white balance manually"
 msgid "Manual"
 msgstr "Ručno"
 
-#: libkdcraw/dcrawsettingswidget.cpp:396
+#: libkdcraw/dcrawsettingswidget.cpp:422
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>White Balance</title><para>Configure the raw white balance:</"
@@ -326,12 +367,12 @@ msgstr ""
 "item><item><emphasis strong='true'>Ručno</emphasis>: Postavlja temperaturu i "
 "nivoe zelenog.</item></list></para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:412
+#: libkdcraw/dcrawsettingswidget.cpp:438
 msgctxt "@label:slider"
 msgid "T(K):"
 msgstr "T(K):"
 
-#: libkdcraw/dcrawsettingswidget.cpp:413
+#: libkdcraw/dcrawsettingswidget.cpp:439
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Temperature</title><para>Set here the color temperature in Kelvin.</"
@@ -339,12 +380,12 @@ msgid ""
 msgstr ""
 "<title>Temperatura</title><para>Postavi temperaturu boje u kelvinima.</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:420
+#: libkdcraw/dcrawsettingswidget.cpp:446
 msgctxt "@label:slider Green component"
 msgid "Green:"
 msgstr "Zelena:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:421
+#: libkdcraw/dcrawsettingswidget.cpp:447
 msgctxt "@info:whatsthis"
 msgid ""
 "<para>Set here the green component to set magenta color cast removal level.</"
@@ -353,32 +394,32 @@ msgstr ""
 "<para>Postavite ovdje zelenu komponentu da podesite nivo uklanjanja magenta "
 "boje.</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:424
+#: libkdcraw/dcrawsettingswidget.cpp:450
 msgctxt "@label:listbox"
 msgid "Highlights:"
 msgstr "Obasjanja:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:426
+#: libkdcraw/dcrawsettingswidget.cpp:452
 msgctxt "@item:inlistbox"
 msgid "Solid white"
 msgstr "Puna bijela"
 
-#: libkdcraw/dcrawsettingswidget.cpp:427
+#: libkdcraw/dcrawsettingswidget.cpp:453
 msgctxt "@item:inlistbox"
 msgid "Unclip"
 msgstr "Ne sijeci"
 
-#: libkdcraw/dcrawsettingswidget.cpp:428
+#: libkdcraw/dcrawsettingswidget.cpp:454
 msgctxt "@item:inlistbox"
 msgid "Blend"
 msgstr "Stapanje"
 
-#: libkdcraw/dcrawsettingswidget.cpp:429
+#: libkdcraw/dcrawsettingswidget.cpp:455
 msgctxt "@item:inlistbox"
 msgid "Rebuild"
 msgstr "Obnovi"
 
-#: libkdcraw/dcrawsettingswidget.cpp:431
+#: libkdcraw/dcrawsettingswidget.cpp:457
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Highlights</title><para>Select here the highlight clipping method:</"
@@ -399,12 +440,12 @@ msgstr ""
 "item><item><emphasis strong='true'>Obnovi</emphasis>: rekonstruiši isticanja "
 "koristeći vrijednost nivoa</item></list></para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:442
+#: libkdcraw/dcrawsettingswidget.cpp:468
 msgctxt "@label:slider Highlight reconstruct level"
 msgid "Level:"
 msgstr "Nivo:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:447
+#: libkdcraw/dcrawsettingswidget.cpp:473
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Level</title><para>Specify the reconstruct highlight level. Low "
@@ -413,22 +454,22 @@ msgstr ""
 "<title>Nivo</title><para>Odredite nivo rekonstruisanog  isticanja. Niske "
 "vrijednosti favoriziraju bijele i visoke vrijednosti  boje.</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:451
+#: libkdcraw/dcrawsettingswidget.cpp:477
 msgctxt "@option:check"
 msgid "Exposure Correction (E.V)"
 msgstr "Korekcija ekspozicije (E.V.)"
 
-#: libkdcraw/dcrawsettingswidget.cpp:452
+#: libkdcraw/dcrawsettingswidget.cpp:478
 msgctxt "@info:whatsthis"
 msgid "<para>Turn on the exposure correction before interpolation.</para>"
 msgstr "<para>Uključi korekciju ekspozicije prije interpolacije.</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:455
+#: libkdcraw/dcrawsettingswidget.cpp:481
 msgctxt "@label:slider"
 msgid "Linear Shift:"
 msgstr "Linearni pomak:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:460
+#: libkdcraw/dcrawsettingswidget.cpp:486
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Shift</title><para>Linear Shift of exposure correction before "
@@ -437,12 +478,12 @@ msgstr ""
 "<title>Pomak</title><para>Pomak korekcije ekspozicije prije interpolacije u "
 "E.V.</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:463
+#: libkdcraw/dcrawsettingswidget.cpp:489
 msgctxt "@label:slider"
 msgid "Highlight:"
 msgstr "Isticanje:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:468
+#: libkdcraw/dcrawsettingswidget.cpp:494
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Highlight</title><para>Amount of highlight preservation for exposure "
@@ -453,12 +494,12 @@ msgstr ""
 "ekspozicije prije  interpolacije u E.V. Jedino što ima efekta u korekciji "
 "pomaka je > 1.0 E.V</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:472
+#: libkdcraw/dcrawsettingswidget.cpp:498
 msgctxt "@option:check"
 msgid "Correct false colors in highlights"
 msgstr "Prepravi lažne boje u obasjanja"
 
-#: libkdcraw/dcrawsettingswidget.cpp:473
+#: libkdcraw/dcrawsettingswidget.cpp:499
 msgctxt "@info:whatsthis"
 msgid ""
 "<para>If enabled, images with overblown channels are processed much more "
@@ -469,12 +510,12 @@ msgstr ""
 "preciznije, bez \"rozih oblaka\" (i plavih naglašavanja pod volfram "
 "sijalicom).</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:477
+#: libkdcraw/dcrawsettingswidget.cpp:503
 msgctxt "@option:check"
 msgid "Auto Brightness"
 msgstr "Auto obasjanje"
 
-#: libkdcraw/dcrawsettingswidget.cpp:478
+#: libkdcraw/dcrawsettingswidget.cpp:504
 msgctxt "@info:whatsthis"
 msgid ""
 "<para>If disable, use a fixed white level and ignore the image histogram to "
@@ -483,12 +524,12 @@ msgstr ""
 "<para>Ako je onemogućeno, koristi fiksni nivo bijelog i ignoriši histogram "
 "slike radi prilagođenja .</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:481
+#: libkdcraw/dcrawsettingswidget.cpp:507
 msgctxt "@label:slider"
 msgid "Brightness:"
 msgstr "Osvjetljenje:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:486
+#: libkdcraw/dcrawsettingswidget.cpp:512
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Brightness</title><para>Specify the brightness level of output image. "
@@ -497,12 +538,12 @@ msgstr ""
 "<title>Osvjetljenje</title><para>Navedi nivo osvijetljenosti izlazne slike. "
 "Podrazumijevana vrijednost je 1.0 (radi u  8-bitnom režimu).</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:496
+#: libkdcraw/dcrawsettingswidget.cpp:522
 msgctxt "@option:check Black point"
 msgid "Black:"
 msgstr "Crna:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:497
+#: libkdcraw/dcrawsettingswidget.cpp:523
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Black point</title><para>Use a specific black point value to decode "
@@ -513,7 +554,7 @@ msgstr ""
 "radi dekodiranja RAW slika. Ako isključite ovu opciju, vrijednost crne tačke "
 "se automatski računa.</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:505
+#: libkdcraw/dcrawsettingswidget.cpp:531
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Black point value</title><para>Specify specific black point value of "
@@ -522,12 +563,12 @@ msgstr ""
 "<title>Vrijednost crne tačke</title><para>Navedite odgovarajuću vrijednost "
 "crne tačke izlazne slike.</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:508
+#: libkdcraw/dcrawsettingswidget.cpp:534
 msgctxt "@option:check White point"
 msgid "White:"
 msgstr "Bijela:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:509
+#: libkdcraw/dcrawsettingswidget.cpp:535
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>White point</title><para>Use a specific white point value to decode "
@@ -538,7 +579,7 @@ msgstr ""
 "tačke radi dekodiranja RAW slika. Ako isključite ovu opciju, vrijednost "
 "bijele tačke se automatski računa.</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:517
+#: libkdcraw/dcrawsettingswidget.cpp:543
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>White point value</title><para>Specify specific white point value of "
@@ -547,42 +588,42 @@ msgstr ""
 "<title>Vrijednost bijele tačke</title><para>Navedite odgovarajuću vrijednost "
 "bijele tačke izlazne slike.</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:554
+#: libkdcraw/dcrawsettingswidget.cpp:580
 msgctxt "@label"
 msgid "White Balance"
 msgstr "Balans bijelog"
 
-#: libkdcraw/dcrawsettingswidget.cpp:562
+#: libkdcraw/dcrawsettingswidget.cpp:588
 msgctxt "@label:listbox"
 msgid "Noise reduction:"
 msgstr "Redukcija šuma:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:564
+#: libkdcraw/dcrawsettingswidget.cpp:590
 msgctxt "@item:inlistbox Noise Reduction"
 msgid "None"
 msgstr "Ništa"
 
-#: libkdcraw/dcrawsettingswidget.cpp:565
+#: libkdcraw/dcrawsettingswidget.cpp:591
 msgctxt "@item:inlistbox Noise Reduction"
 msgid "Wavelets"
 msgstr "Talasići"
 
-#: libkdcraw/dcrawsettingswidget.cpp:566
+#: libkdcraw/dcrawsettingswidget.cpp:592
 msgctxt "@item:inlistbox Noise Reduction"
 msgid "FBDD"
 msgstr "FBDD"
 
-#: libkdcraw/dcrawsettingswidget.cpp:567
+#: libkdcraw/dcrawsettingswidget.cpp:593
 msgctxt "@item:inlistbox Noise Reduction"
 msgid "CFA Line Denoise"
 msgstr "CFA linijsko uklanjanje šuma"
 
-#: libkdcraw/dcrawsettingswidget.cpp:568
+#: libkdcraw/dcrawsettingswidget.cpp:594
 msgctxt "@item:inlistbox Noise Reduction"
 msgid "Impulse Denoise"
 msgstr "Impulsno smanjenje šuma"
 
-#: libkdcraw/dcrawsettingswidget.cpp:570
+#: libkdcraw/dcrawsettingswidget.cpp:596
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Noise Reduction</title><para>Select here the noise reduction method "
@@ -609,12 +650,12 @@ msgstr ""
 "strong='true'>Impulsno uklanjanje šuma</emphasis>: Impulsno smanjenje šuma. "
 "Primjenjuje se nakon interpolacije</item></list></para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:598
+#: libkdcraw/dcrawsettingswidget.cpp:624
 msgctxt "@option:check"
 msgid "Enable Chromatic Aberration correction"
 msgstr "Omogući ispravak  hromatske aberacije"
 
-#: libkdcraw/dcrawsettingswidget.cpp:599
+#: libkdcraw/dcrawsettingswidget.cpp:625
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Enable Chromatic Aberration correction</title><para>Enlarge the raw "
@@ -625,12 +666,12 @@ msgstr ""
 "crveno-zelene i plavo-žute ose datoi faktorom (automatski po defaultu).</"
 "para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:604
+#: libkdcraw/dcrawsettingswidget.cpp:630
 msgctxt "@option:check"
 msgid "Automatic color axis adjustments"
 msgstr "Automatsko prilagođenje osa boje"
 
-#: libkdcraw/dcrawsettingswidget.cpp:605
+#: libkdcraw/dcrawsettingswidget.cpp:631
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Automatic Chromatic Aberration correction</title><para>If this option "
@@ -645,12 +686,12 @@ msgstr ""
 "model, metod možda neće uspeti. U ovom slučaju, onemogućite ovu opciju i "
 "podesite ručno faktore boja.</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:612
+#: libkdcraw/dcrawsettingswidget.cpp:638
 msgctxt "@label:slider"
 msgid "Red-Green:"
 msgstr "Crveno-zeleno:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:617
+#: libkdcraw/dcrawsettingswidget.cpp:643
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Red-Green multiplier</title><para>Set here the amount of correction "
@@ -659,12 +700,12 @@ msgstr ""
 "<title>Crveno-zeleni množač</title><para>Postavlja iznos korekcije na crveno-"
 "zelenoj osi</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:620
+#: libkdcraw/dcrawsettingswidget.cpp:646
 msgctxt "@label:slider"
 msgid "Blue-Yellow:"
 msgstr "Plavo-žuti"
 
-#: libkdcraw/dcrawsettingswidget.cpp:625
+#: libkdcraw/dcrawsettingswidget.cpp:651
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Blue-Yellow multiplier</title><para>Set here the amount of correction "
@@ -673,32 +714,32 @@ msgstr ""
 "<title>Plavo-žuti množač</title><para>Postavite ovdje nivo korekcije na "
 "plavo-žutoj osi</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:644
+#: libkdcraw/dcrawsettingswidget.cpp:670
 msgctxt "@label"
 msgid "Corrections"
 msgstr "Ispravke"
 
-#: libkdcraw/dcrawsettingswidget.cpp:652
+#: libkdcraw/dcrawsettingswidget.cpp:678
 msgctxt "@label:listbox"
 msgid "Camera Profile:"
 msgstr "Profil kamere"
 
-#: libkdcraw/dcrawsettingswidget.cpp:654
+#: libkdcraw/dcrawsettingswidget.cpp:680
 msgctxt "@item:inlistbox Camera Profile"
 msgid "None"
 msgstr "Ništa"
 
-#: libkdcraw/dcrawsettingswidget.cpp:655
+#: libkdcraw/dcrawsettingswidget.cpp:681
 msgctxt "@item:inlistbox Camera Profile"
 msgid "Embedded"
 msgstr "Ugrađen"
 
-#: libkdcraw/dcrawsettingswidget.cpp:656
+#: libkdcraw/dcrawsettingswidget.cpp:682
 msgctxt "@item:inlistbox Camera Profile"
 msgid "Custom"
 msgstr "Prilagođen"
 
-#: libkdcraw/dcrawsettingswidget.cpp:658
+#: libkdcraw/dcrawsettingswidget.cpp:684
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Camera Profile</title><para>Select here the input color space used to "
@@ -717,46 +758,46 @@ msgstr ""
 "item><item><emphasis strong='true'>Vlastiti</emphasis>: koristi profil "
 "vlastitog ulaznog prostora boja.</item></list></para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:669 libkdcraw/dcrawsettingswidget.cpp:703
+#: libkdcraw/dcrawsettingswidget.cpp:695 libkdcraw/dcrawsettingswidget.cpp:729
 msgid "ICC Files (*.icc; *.icm)"
 msgstr "ICC datoteke (*.icc; *.icm)"
 
-#: libkdcraw/dcrawsettingswidget.cpp:671
+#: libkdcraw/dcrawsettingswidget.cpp:697
 msgctxt "@label:listbox"
 msgid "Workspace:"
 msgstr "Radni prostor:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:673
+#: libkdcraw/dcrawsettingswidget.cpp:699
 msgctxt "@item:inlistbox Workspace"
 msgid "Raw (no profile)"
 msgstr "Sirovo (bez profila)"
 
-#: libkdcraw/dcrawsettingswidget.cpp:674
+#: libkdcraw/dcrawsettingswidget.cpp:700
 msgctxt "@item:inlistbox Workspace"
 msgid "sRGB"
 msgstr "sRGB"
 
-#: libkdcraw/dcrawsettingswidget.cpp:675
+#: libkdcraw/dcrawsettingswidget.cpp:701
 msgctxt "@item:inlistbox Workspace"
 msgid "Adobe RGB"
 msgstr "Adobe RGB"
 
-#: libkdcraw/dcrawsettingswidget.cpp:676
+#: libkdcraw/dcrawsettingswidget.cpp:702
 msgctxt "@item:inlistbox Workspace"
 msgid "Wide Gamut"
 msgstr "Široka paleta"
 
-#: libkdcraw/dcrawsettingswidget.cpp:677
+#: libkdcraw/dcrawsettingswidget.cpp:703
 msgctxt "@item:inlistbox Workspace"
 msgid "Pro-Photo"
 msgstr "Pro-Photo"
 
-#: libkdcraw/dcrawsettingswidget.cpp:678
+#: libkdcraw/dcrawsettingswidget.cpp:704
 msgctxt "@item:inlistbox Workspace"
 msgid "Custom"
 msgstr "Prilagođen"
 
-#: libkdcraw/dcrawsettingswidget.cpp:680
+#: libkdcraw/dcrawsettingswidget.cpp:706
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Workspace</title><para>Select here the output color space used to "
@@ -792,17 +833,17 @@ msgstr ""
 "strong='true'>Vlastito</emphasis>:koristi vlastiti izlazni profil prostora "
 "boja.</item></list></para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:715
+#: libkdcraw/dcrawsettingswidget.cpp:741
 msgctxt "@label"
 msgid "Color Management"
 msgstr "Upravljanje bojama"
 
-#: libkdcraw/dcrawsettingswidget.cpp:929
+#: libkdcraw/dcrawsettingswidget.cpp:955
 msgctxt "@label"
 msgid "Threshold:"
 msgstr "Prag:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:930
+#: libkdcraw/dcrawsettingswidget.cpp:956
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Threshold</title><para>Set here the noise reduction threshold value "
@@ -811,12 +852,12 @@ msgstr ""
 "<title>Prag</title><para>Postavite ovdje vrijednost praga redukcije šuma.</"
 "para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:943
+#: libkdcraw/dcrawsettingswidget.cpp:969
 msgctxt "@label"
 msgid "Luminance:"
 msgstr "Osvijetljenost:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:944
+#: libkdcraw/dcrawsettingswidget.cpp:970
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Luminance</title><para>Amount of Luminance impulse noise reduction.</"
@@ -825,12 +866,12 @@ msgstr ""
 "<title>Osvijetljenost</title><para>Iznos impulsa osvjetljenja u redukciji "
 "šuma.</para>"
 
-#: libkdcraw/dcrawsettingswidget.cpp:946
+#: libkdcraw/dcrawsettingswidget.cpp:972
 msgctxt "@label"
 msgid "Chrominance:"
 msgstr "Hrominansa:"
 
-#: libkdcraw/dcrawsettingswidget.cpp:947
+#: libkdcraw/dcrawsettingswidget.cpp:973
 msgctxt "@info:whatsthis"
 msgid ""
 "<title>Chrominance</title><para>Amount of Chrominance impulse noise "
