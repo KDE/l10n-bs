@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktouch\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-21 01:47+0000\n"
+"POT-Creation-Date: 2013-10-30 01:34+0000\n"
 "PO-Revision-Date: 2013-01-26 19:16+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -34,6 +34,16 @@ msgstr "vljubovic@smartnet.ba,lalic@etf.ba,samir.ribic@etf.unsa.ba"
 #, kde-format
 msgid "Invalid database version '%1'."
 msgstr "Pogrešna verzija baze podataka '%1'."
+
+#: src/core/profiledataaccess.cpp:628
+#, fuzzy
+#| msgid "Restart Lesson"
+msgid "Custom Lessons"
+msgstr "Ponovo pokreni lekciju"
+
+#: src/core/profiledataaccess.cpp:629
+msgid "A place to store personal lesson texts"
+msgstr ""
 
 #: src/core/userdataaccess.cpp:124
 #, kde-format
@@ -65,22 +75,14 @@ msgstr "Dolje lijevo"
 msgid "Bottom right"
 msgstr "Dolje desno"
 
-#: src/editor/courseeditor.cpp:94 src/editor/resourceeditor.cpp:178
+#: src/editor/courseeditor.cpp:91 src/editor/resourceeditor.cpp:178
 #: src/editor/resourceeditor.cpp:258
 msgid "Error while opening course"
 msgstr "Greška pri otvaranju kursa"
 
-#: src/editor/courseeditor.cpp:101
+#: src/editor/courseeditor.cpp:98
 msgid "Built-in courses can only be viewed."
 msgstr "Ugrađeni kursevi se mogu samo gledati."
-
-#: src/editor/courseeditor.cpp:338
-#, kde-format
-msgid "%1 Character"
-msgid_plural "%1 Characters"
-msgstr[0] "%1 znak"
-msgstr[1] "%1 znaka"
-msgstr[2] "%1 znakova"
 
 #: src/editor/keyboardlayouteditor.cpp:86 src/editor/resourceeditor.cpp:201
 #: src/editor/resourceeditor.cpp:286
@@ -95,6 +97,20 @@ msgstr "Ugrađeni rasporedi tastature se mogu samo gledati"
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
+
+#: src/editor/lessontexteditor.cpp:74
+#, kde-format
+msgid "%1 Character"
+msgid_plural "%1 Characters"
+msgstr[0] "%1 znak"
+msgstr[1] "%1 znaka"
+msgstr[2] "%1 znakova"
+
+#: src/editor/lessontexteditor.cpp:88
+#, fuzzy
+#| msgid "The selected file could not be imported."
+msgid "The selected file could not be opened"
+msgstr "Izabrana datoteka se ne može uvesti"
 
 #: src/editor/newkeyboardlayoutwidget.cpp:92
 msgid "There is already a keyboard layout with the same name."
@@ -121,8 +137,9 @@ msgid "Template"
 msgstr "Šablon"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_deleteKeyToolButton)
-#: src/editor/resourceeditor.cpp:62 src/qml/ProfileDetailsItem.qml:149
-#: src/qml/ProfileDetailsItem.qml:207 src/ui/keyboardlayouteditor.ui:82
+#: src/editor/resourceeditor.cpp:62 src/qml/CustomLessonSelector.qml:177
+#: src/qml/ProfileDetailsItem.qml:149 src/qml/ProfileDetailsItem.qml:207
+#: src/ui/keyboardlayouteditor.ui:82
 msgid "Delete"
 msgstr "Obriši"
 
@@ -225,7 +242,7 @@ msgstr ""
 msgid "Restore"
 msgstr "Obnovi"
 
-#: src/editor/resourceeditorwidget.cpp:30
+#: src/editor/resourceeditorwidget.cpp:30 src/qml/CustomLessonSelector.qml:218
 msgid "Dismiss"
 msgstr "Odbaci"
 
@@ -367,31 +384,37 @@ msgstr "Koristi OpenGL za iscrtavanje (eksperimentalno)"
 msgid "Launch the course and keyboard layout editor"
 msgstr "Pokreni uređivač kursa i rasporeda tastature"
 
-#: src/mainwindow.cpp:139
+#: src/mainwindow.cpp:135
+#, fuzzy
+#| msgid "This Lesson"
+msgid "Edit Custom Lesson"
+msgstr "Ova lekcija"
+
+#: src/mainwindow.cpp:161
 msgid "Training"
 msgstr "Trening"
 
-#: src/mainwindow.cpp:139
+#: src/mainwindow.cpp:161
 msgid "Training Settings"
 msgstr "Postavke treninga"
 
-#: src/mainwindow.cpp:140
+#: src/mainwindow.cpp:162
 msgid "Colors"
 msgstr "Boje"
 
-#: src/mainwindow.cpp:140
+#: src/mainwindow.cpp:162
 msgid "Color Settings"
 msgstr "Opcije boja"
 
-#: src/mainwindow.cpp:153
+#: src/mainwindow.cpp:175
 msgid "Configure Keyboard"
 msgstr "Podesi tastaturu"
 
-#: src/mainwindow.cpp:170
+#: src/mainwindow.cpp:192
 msgid "Course and Keyboard Layout Editor..."
 msgstr "Uređivač kurseva i rasporeda tastature"
 
-#: src/mainwindow.cpp:180
+#: src/mainwindow.cpp:202
 msgid "Configure Keyboard..."
 msgstr "Podesi tastaturu..."
 
@@ -442,6 +465,25 @@ msgstr "Preciznost"
 msgid "Characters per Minute"
 msgstr "Slova u minuti"
 
+#: src/qml/CustomLessonSelector.qml:138
+#, fuzzy
+#| msgid "Create new normal key"
+msgid "Create New Custom Lesson"
+msgstr "Kreiraj novi normalni taster"
+
+#: src/qml/CustomLessonSelector.qml:171 src/qml/ProfileDetailsItem.qml:144
+msgid "Edit"
+msgstr "Izmijeni"
+
+#: src/qml/CustomLessonSelector.qml:204
+#, kde-format
+msgid "'%1' deleted."
+msgstr ""
+
+#: src/qml/CustomLessonSelector.qml:212
+msgid "Undo"
+msgstr ""
+
 #: src/qml/ElapsedTimeMeter.qml:29
 msgid "Elapsed time"
 msgstr "Proteklo vrijeme"
@@ -450,7 +492,7 @@ msgstr "Proteklo vrijeme"
 msgid "Welcome to Typewriting Trainer"
 msgstr "Dobrodošli u učenje kucanja"
 
-#: src/qml/InitialProfileForm.qml:100 src/qml/LessonSelector.qml:149
+#: src/qml/InitialProfileForm.qml:100 src/qml/LessonSelectorBase.qml:70
 msgid "Start Training"
 msgstr "Počni učenje"
 
@@ -493,10 +535,6 @@ msgstr "Zadnje vježbanje:"
 #: src/qml/ProfileDetailsItem.qml:130
 msgid "Never"
 msgstr "Nikad"
-
-#: src/qml/ProfileDetailsItem.qml:144
-msgid "Edit"
-msgstr "Izmijeni"
 
 #: src/qml/ProfileDetailsItem.qml:196
 #, kde-format
@@ -683,6 +721,7 @@ msgstr "Desna ruka"
 #. i18n: ectx: property (text), widget (QLabel, m_lessonTitleLabel)
 #. i18n: ectx: property (text), widget (QLabel, m_keyboardLayouttTitleLabel)
 #: src/ui/courseeditor.ui:40 src/ui/courseeditor.ui:300
+#: src/ui/customlessoneditorwidget.ui:25
 #: src/ui/keyboardlayoutpropertieswidget.ui:59 src/ui/newcoursewidget.ui:25
 #: src/ui/newkeyboardlayoutwidget.ui:51
 msgid "Title:"
@@ -727,11 +766,6 @@ msgstr "Pomjeri lekciju gore"
 #: src/ui/courseeditor.ui:317
 msgid "New characters:"
 msgstr "Novi znakovi"
-
-#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
-#: src/ui/courseeditor.ui:370
-msgid "0 Characters"
-msgstr "0 znakova"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_newKeyToolButton)
 #: src/ui/keyboardlayouteditor.ui:34
@@ -930,6 +964,26 @@ msgstr "Oznaka:"
 #: src/ui/keyboardlayoutpropertieswidget.ui:630
 msgid "Modifier ID:"
 msgstr "Modifikatorski ID:"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, LessonTextEditor)
+#: src/ui/lessontexteditor.ui:14
+msgid "Form"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_openTextFileButton)
+#: src/ui/lessontexteditor.ui:34
+msgid "Open a text file..."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_reformatLessonTextButton)
+#: src/ui/lessontexteditor.ui:49
+msgid "Wrap lines automatically"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_characterCountLabel)
+#: src/ui/lessontexteditor.ui:77
+msgid "0 Characters"
+msgstr "0 znakova"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, m_pasteCurrentNameButton)
 #: src/ui/newkeyboardlayoutwidget.ui:37
