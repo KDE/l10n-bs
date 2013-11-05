@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: massif-visualizer.po\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-10-29 01:26+0000\n"
+"POT-Creation-Date: 2013-11-05 08:17+0000\n"
 "PO-Revision-Date: 2013-01-26 14:19+0000\n"
 "Last-Translator: Admir Salkanović <asalkanovi2@etf.unsa.ba>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -35,7 +35,7 @@ msgstr "Preciznost troška:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ShortenTemplates)
 #. i18n: ectx: label, entry (ShortenTemplates), group (Settings)
-#: app/config.ui:27 app/mainwindow.cpp:310
+#: app/config.ui:27 app/mainwindow.cpp:202
 #: app/massif-visualizer-settings.kcfg:14
 msgid "Shorten Templates"
 msgstr "Skraćeni predlošci"
@@ -44,7 +44,48 @@ msgstr "Skraćeni predlošci"
 msgid "Settings"
 msgstr "Postavke akcije"
 
-#: app/main.cpp:36 app/mainwindow.cpp:151 app/mainwindow.cpp:775
+#: app/documentwidget.cpp:166
+msgid "&Evolution of Memory Consumption"
+msgstr "&Evolucija potrošnje memorije"
+
+#: app/documentwidget.cpp:171
+msgid "&Detailed Snapshot Analysis"
+msgstr "&Detalji analize snimaka"
+
+#: app/documentwidget.cpp:196
+msgid "loading..."
+msgstr ""
+
+#: app/documentwidget.cpp:401
+#, kde-format
+msgid "time in %1"
+msgstr "vrijeme u %1"
+
+#: app/documentwidget.cpp:408
+#, fuzzy
+msgid "memory heap size in kilobytes"
+msgstr "heap memorije u bajtima"
+
+#: app/documentwidget.cpp:500
+#, kde-format
+msgid "Memory consumption of %1"
+msgstr "Potrošnja memorije od %1"
+
+#: app/documentwidget.cpp:501
+#, kde-format
+msgid "Peak of %1 at snapshot #%2"
+msgstr "Vrhunac od %1 na snimku #%2"
+
+#: app/documentwidget.cpp:503
+#, kde-format
+msgid ""
+"Command: %1\n"
+"Valgrind Options: %2"
+msgstr ""
+"Komanda: %1\n"
+"Valgrind opcije: %2"
+
+#: app/main.cpp:36 app/mainwindow.cpp:104 app/mainwindow.cpp:749
 msgid "Massif Visualizer"
 msgstr "Massif prikazivač"
 
@@ -60,153 +101,112 @@ msgstr "Autorska prava 2010, Milian Wolff <mail@milianw.de>"
 msgid "Opens given output file and visualize it."
 msgstr "Otvara datu output datoteku i prikazuje je."
 
-#: app/mainwindow.cpp:299
+#: app/mainwindow.cpp:191
 msgid "Stop Parser"
 msgstr ""
 
-#: app/mainwindow.cpp:316
+#: app/mainwindow.cpp:208
 msgid "Toggle total cost graph"
 msgstr "Prikazi graf totalnog troška"
 
-#: app/mainwindow.cpp:323
+#: app/mainwindow.cpp:215
 msgid "Toggle detailed cost graph"
 msgstr "Prikazi graf detaljnog troška"
 
-#: app/mainwindow.cpp:336
+#: app/mainwindow.cpp:229
 msgid "Focus most expensive node"
 msgstr "Fokusiraj najskuplji čvor"
 
-#: app/mainwindow.cpp:343
+#: app/mainwindow.cpp:236
 msgid "Select peak snapshot"
 msgstr "Odaberi snimak vrhunca"
 
-#: app/mainwindow.cpp:349
+#: app/mainwindow.cpp:242
 msgid "Stacked diagrams"
 msgstr "Složeni dijagrami"
 
-#: app/mainwindow.cpp:352
+#: app/mainwindow.cpp:245
 msgid "Stacked diagrams:"
 msgstr "Složeni dijagrami:"
 
-#: app/mainwindow.cpp:363
+#: app/mainwindow.cpp:256
 msgid "add"
 msgstr "dodaj"
 
-#: app/mainwindow.cpp:364
+#: app/mainwindow.cpp:257
 msgid "add custom allocator"
 msgstr "dodaj poručeni alokator"
 
-#: app/mainwindow.cpp:367
+#: app/mainwindow.cpp:260
 msgid "remove"
 msgstr "ukloni"
 
-#: app/mainwindow.cpp:369
+#: app/mainwindow.cpp:262
 msgid "remove selected allocator"
 msgstr "ukloni izabrani alokator"
 
-#: app/mainwindow.cpp:376
+#: app/mainwindow.cpp:269
 msgid "mark as custom allocator"
 msgstr "markiraj kao poručeni alokator"
 
-#: app/mainwindow.cpp:382
+#: app/mainwindow.cpp:275
 msgid "hide function"
 msgstr "sakrij funkciju"
 
-#: app/mainwindow.cpp:385
+#: app/mainwindow.cpp:278
 msgid "hide other functions"
 msgstr "sakrij ostale funkcije"
 
-#: app/mainwindow.cpp:396
+#: app/mainwindow.cpp:289
 msgid "Open Massif Data File"
 msgstr "Otvori Massif datoteku"
 
-#: app/mainwindow.cpp:435
+#: app/mainwindow.cpp:324
 msgid "Open Massif Output File"
 msgstr "Otvori Massif Output datoteku"
 
-#: app/mainwindow.cpp:468
+#: app/mainwindow.cpp:365
 #, fuzzy, kde-format
 msgid "loading file <i>%1</i>..."
 msgstr "Prazna datoteka  <i>%1</i>."
 
-#: app/mainwindow.cpp:527
+#: app/mainwindow.cpp:602
+msgid "Add Custom Allocator"
+msgstr "Dodaj poručeni alokator"
+
+#: app/mainwindow.cpp:602
+msgid "allocator:"
+msgstr "alokator:"
+
+#: app/mainwindow.cpp:731
+msgid "Massif Chart Print Preview"
+msgstr ""
+
+#: app/mainwindow.cpp:747
 #, kde-format
 msgid "Massif Visualizer - evaluation of %1 (%2)"
 msgstr "Massif Visualizer - procjena od %1 (%2 )"
 
-#: app/mainwindow.cpp:543
-#, kde-format
-msgid "time in %1"
-msgstr "vrijeme u %1"
-
-#: app/mainwindow.cpp:550
-#, fuzzy
-msgid "memory heap size in kilobytes"
-msgstr "heap memorije u bajtima"
-
-#: app/mainwindow.cpp:609
-#, kde-format
-msgid "Memory consumption of %1"
-msgstr "Potrošnja memorije od %1"
-
-#: app/mainwindow.cpp:610
-#, kde-format
-msgid "Peak of %1 at snapshot #%2"
-msgstr "Vrhunac od %1 na snimku #%2"
-
-#: app/mainwindow.cpp:612
-#, kde-format
-msgid ""
-"Command: %1\n"
-"Valgrind Options: %2"
-msgstr ""
-"Komanda: %1\n"
-"Valgrind opcije: %2"
-
-#: app/mainwindow.cpp:967
-msgid "Add Custom Allocator"
-msgstr "Dodaj poručeni alokator"
-
-#: app/mainwindow.cpp:967
-msgid "allocator:"
-msgstr "alokator:"
-
-#: app/mainwindow.cpp:1096
-msgid "Massif Chart Print Preview"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, plotterTab)
-#: app/mainwindow.ui:29
-msgid "&Evolution of Memory Consumption"
-msgstr "&Evolucija potrošnje memorije"
-
-#. i18n: ectx: attribute (title), widget (QWidget, dotGraphTab)
-#: app/mainwindow.ui:39
-msgid "&Detailed Snapshot Analysis"
-msgstr "&Detalji analize snimaka"
-
 #. i18n: ectx: property (text), widget (QToolButton, openFile)
-#. i18n: ectx: property (text), widget (QToolButton, stopParsing)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: app/mainwindow.ui:72 app/mainwindow.ui:138
-#: kdchart/src/KDChartDatasetSelector.ui:64
+#: app/mainwindow.ui:67 kdchart/src/KDChartDatasetSelector.ui:64
 #: kdchart/src/KDChartDatasetSelector.ui:100
 msgid "..."
 msgstr "..."
 
 #. i18n: ectx: property (windowTitle), widget (QDockWidget, dataTreeDock)
-#: app/mainwindow.ui:180
+#: app/mainwindow.ui:109
 msgid "Massif Data"
 msgstr "Massif Data"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterDataTree)
-#: app/mainwindow.ui:193
+#: app/mainwindow.ui:122
 msgid "filter"
 msgstr "filter"
 
 #. i18n: ectx: property (windowTitle), widget (QDockWidget, allocatorDock)
-#: app/mainwindow.ui:208
+#: app/mainwindow.ui:137
 msgid "Custom Allocators"
 msgstr "Poručeni alokatori"
 
