@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pate\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-11-07 01:24+0000\n"
+"POT-Creation-Date: 2013-11-12 01:24+0000\n"
 "PO-Revision-Date: 2013-07-22 22:20+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -26,32 +26,55 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "megaribi@epn.ba"
 
-#. i18n: ectx: property (text), widget (QTreeWidget, cacheItems)
-#: src/engine.cpp:208
-#: src/plugins/cmake_utils/cmake_utils_toolview_cacheview_page.ui:43
+#: src/engine.cpp:190
+msgctxt "@info:tooltip "
+msgid "Cannot load built-in <icode>pate</icode> module"
+msgstr ""
+
+#: src/engine.cpp:202
+msgctxt "@info:tooltip "
+msgid "Cannot get Python paths"
+msgstr ""
+
+#: src/engine.cpp:205 src/engine.cpp:210
+msgctxt "@info:tooltip "
+msgid "Cannot update Python paths"
+msgstr ""
+
+#: src/engine.cpp:233
+msgctxt "@info:tooltip "
+msgid "No <icode>pate</icode> built-in module"
+msgstr ""
+
+#: src/engine.cpp:248
+msgctxt "@info:tooltip "
+msgid "Cannot load <icode>kate</icode> module"
+msgstr ""
+
+#: src/engine.cpp:288
+#, fuzzy
+#| msgid "Name"
+msgctxt "@title:column"
 msgid "Name"
 msgstr "Ime"
 
-#: src/engine.cpp:208
+#: src/engine.cpp:290
+#, fuzzy
+#| msgid "Comment"
+msgctxt "@title:column"
 msgid "Comment"
 msgstr "Komentar"
 
-#: src/engine.cpp:318
-msgid "Hidden"
-msgstr "Skriveno"
+#: src/engine.cpp:460
+msgctxt "@info:tooltip"
+msgid "Module is not exists at path specified or not a readable file"
+msgstr ""
 
-#: src/engine.cpp:416
-#, kde-format
-msgid "Missing plugin file %1"
-msgstr "Nedostaje datoteka s dodatkom %1"
-
-#: src/engine.cpp:434
-msgid "Loaded"
-msgstr "Učitano"
-
-#: src/engine.cpp:439
-#, kde-format
-msgid "Not Loaded: %1"
+#: src/engine.cpp:533
+#, fuzzy, kde-format
+#| msgid "Not Loaded: %1"
+msgctxt "@info:tooltip/plain"
+msgid "Module not loaded: %1"
 msgstr "Nije učitano: %1"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
@@ -166,14 +189,16 @@ msgstr "Programerska referenca"
 msgid "Select a Plugin or Built-in Module"
 msgstr "Odaberite priključak ili ugrađeni moduk"
 
-#: src/kate/__init__.py:314
+#: src/kate/__init__.py:312
 msgctxt "@title:window"
 msgid "Error in action <icode>%1</icode>"
 msgstr "Greška u akciji <icode>%1</icode>"
 
 #. i18n: ectx: property (text), widget (QLabel, errorLabel)
 #: src/manager.ui:15
-msgid "ERROR: The Python engine could not be initialized"
+#, fuzzy
+#| msgid "ERROR: The Python engine could not be initialized"
+msgid "Error: The Python engine could not be initialized"
 msgstr "GREŠKA: Python pogon se ne može inicijalizirati"
 
 #. i18n: ectx: attribute (title), widget (QWidget, manageTab)
@@ -181,82 +206,99 @@ msgstr "GREŠKA: Python pogon se ne može inicijalizirati"
 msgid "Manager"
 msgstr "Menadžer"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: src/manager.ui:29
+#. i18n: ectx: property (toolTip), widget (KPushButton, reload)
+#: src/manager.ui:69
+#, fuzzy
+#| msgid ""
+#| "Reloading a running plugin may have unpredictable effects. Consider "
+#| "saving your work before using this command."
 msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Caution:</span> "
 "Reloading a running plugin may have unpredictable effects. Consider saving "
-"your work before using this command."
+"your work before using this command.</p></body></html>"
 msgstr ""
 "Ponovno učitavanje pokrenutog priključka može imati nepredvidljive efekte. "
 "Razmislite o snimanju vašeg rada prije upotrebe ove komande."
 
 #. i18n: ectx: property (text), widget (KPushButton, reload)
-#: src/manager.ui:39
+#: src/manager.ui:72
 msgid "Reload Plugins"
 msgstr "Ponovo učitaj priključke"
 
-#: src/plugin.cpp:83 src/plugin.cpp:114
+#: src/plugin.cpp:128
+#, fuzzy
+#| msgid "Pate engine could not be initialised"
+msgctxt "@title:window"
 msgid "Pate engine could not be initialised"
 msgstr "Pagte pogon se ne može inicijalizirati"
 
-#: src/plugin.cpp:190
+#: src/plugin.cpp:205
+#, fuzzy
+#| msgid "Python Plugins"
+msgctxt "@title:row"
 msgid "Python Plugins"
 msgstr "Python priključci"
 
-#: src/plugin.cpp:206
+#: src/plugin.cpp:221
+#, fuzzy
+#| msgid "Pâté host for Python plugins"
+msgctxt "@title:tab"
 msgid "Pâté host for Python plugins"
 msgstr "Pâté host za Python priključke"
 
-#: src/plugin.cpp:268
+#: src/plugin.cpp:308
+#, fuzzy
+#| msgid "Documentation"
+msgctxt "@title:tab"
 msgid "Documentation"
 msgstr "Dokumentacija"
 
-#: src/plugins/block.py:31
+#: src/plugins/block.py:30
 msgctxt "@action:inmenu"
 msgid "Insert Char From Line Above"
 msgstr "Ubaci znak iz linije iznad"
 
-#: src/plugins/block.py:51
+#: src/plugins/block.py:50
 msgctxt "@action:inmenu"
 msgid "Insert Char From Line Below"
 msgstr "Ubaci znak iz linije ispod"
 
-#: src/plugins/block.py:71
+#: src/plugins/block.py:70
 msgctxt "@action:inmenu"
 msgid "Kill Text After Cursor"
 msgstr "Obriši tekst iza kursora"
 
-#: src/plugins/block.py:86
+#: src/plugins/block.py:85
 msgctxt "@action:inmenu"
 msgid "Kill Text Before Cursor"
 msgstr "Obriši tekst prije kursora"
 
-#: src/plugins/block.py:172
+#: src/plugins/block.py:171
 msgctxt "@action:inmenu"
 msgid "Wrap into Round Brackets"
 msgstr "Umotaj u oble zagrade"
 
-#: src/plugins/block.py:177
+#: src/plugins/block.py:176
 msgctxt "@action:inmenu"
 msgid "Wrap into Square Brackets"
 msgstr "Umotaj u uglaste zagrade"
 
-#: src/plugins/block.py:182
+#: src/plugins/block.py:181
 msgctxt "@action:inmenu"
 msgid "Wrap into Curve Brackets"
 msgstr "Umotaj u vitičaste zagrade"
 
-#: src/plugins/block.py:187
+#: src/plugins/block.py:186
 msgctxt "@action:inmenu"
 msgid "Wrap into Angle Brackets"
 msgstr "Umotaj u ugaone zagrade"
 
-#: src/plugins/block.py:192
+#: src/plugins/block.py:191
 msgctxt "@action:inmenu"
 msgid "Wrap into Double Quotes"
 msgstr "Umotaj u dvostruke navodnike"
 
-#: src/plugins/block.py:197
+#: src/plugins/block.py:196
 msgctxt "@action:inmenu"
 msgid "Wrap into Quotes"
 msgstr "Umotaj u navodnike"
@@ -292,7 +334,7 @@ msgstr "Navedena staza %1 ne izgleda kao CMake direktorij za gradnju"
 #: src/plugins/cmake_utils/cmake_utils.py:168
 #: src/plugins/cmake_utils/cmake_utils.py:198
 #: src/plugins/cmake_utils/cmake_utils.py:595
-#: src/plugins/cmake_utils/cmake_utils.py:824 src/plugins/expand.py:257
+#: src/plugins/cmake_utils/cmake_utils.py:831 src/plugins/expand.py:257
 #: src/plugins/expand.py:315
 msgctxt "@title:window"
 msgid "Error"
@@ -373,62 +415,62 @@ msgctxt "@title:tab"
 msgid "Tool View Settings"
 msgstr "Postavke pogleda alata"
 
-#: src/plugins/cmake_utils/cmake_utils.py:596
+#: src/plugins/cmake_utils/cmake_utils.py:598
 msgctxt "@info:tooltip"
 msgid "Unable to get CMake cache content:<nl/><message>%1</message>"
 msgstr "Ne mogu dobaviti sadržaj CMake keša:<nl/><message>%1</message>"
 
-#: src/plugins/cmake_utils/cmake_utils.py:615
+#: src/plugins/cmake_utils/cmake_utils.py:619
 msgctxt "@item::inlistbox/plain"
 msgid "Commands"
 msgstr "Komande"
 
-#: src/plugins/cmake_utils/cmake_utils.py:643
+#: src/plugins/cmake_utils/cmake_utils.py:647
 msgctxt "@item:inlistbox"
 msgid "Modules from %1 (%2)"
 msgstr "Moduli od %1 (%2)"
 
-#: src/plugins/cmake_utils/cmake_utils.py:647
+#: src/plugins/cmake_utils/cmake_utils.py:651
 msgctxt "@item:inlistbox"
 msgid "Standard modules (%1)"
 msgstr "Standardni moduli (%1)"
 
-#: src/plugins/cmake_utils/cmake_utils.py:652
+#: src/plugins/cmake_utils/cmake_utils.py:656
 msgctxt "@item::inlistbox/plain"
 msgid "Modules (%1)"
 msgstr "Moduli (%1)"
 
-#: src/plugins/cmake_utils/cmake_utils.py:671
+#: src/plugins/cmake_utils/cmake_utils.py:675
 msgctxt "@item::inlistbox/plain"
 msgid "Policies"
 msgstr "Pravila"
 
-#: src/plugins/cmake_utils/cmake_utils.py:684
+#: src/plugins/cmake_utils/cmake_utils.py:688
 msgctxt "@item::inlistbox/plain"
 msgid "Properties"
 msgstr "Svojstva"
 
-#: src/plugins/cmake_utils/cmake_utils.py:704
+#: src/plugins/cmake_utils/cmake_utils.py:708
 msgctxt "@item::inlistbox/plain"
 msgid "Variables"
 msgstr "Promjenjive"
 
-#: src/plugins/cmake_utils/cmake_utils.py:825
+#: src/plugins/cmake_utils/cmake_utils.py:832
 msgctxt "@info:tooltip"
 msgid "CMake executable test run failed:<nl/><message>%1</message>"
 msgstr "Test izvršnog programa za CMake nije uspio:<nl/><message>%1</message>"
 
-#: src/plugins/cmake_utils/cmake_utils.py:864
+#: src/plugins/cmake_utils/cmake_utils.py:871
 msgctxt "@title:window"
 msgid "Select a Directory with CMake Modules"
 msgstr "Oadberite direktorij s CMake Modulima"
 
-#: src/plugins/cmake_utils/cmake_utils.py:898
+#: src/plugins/cmake_utils/cmake_utils.py:905
 msgctxt "@action:inmenu"
 msgid "CMake Helper Plugin"
 msgstr "Priključak za CMake pomoć"
 
-#: src/plugins/cmake_utils/cmake_utils.py:899
+#: src/plugins/cmake_utils/cmake_utils.py:906
 msgctxt "@title:group"
 msgid "CMake Helper Settings"
 msgstr "Postavke CMake pomagača"
@@ -547,6 +589,11 @@ msgid "<p>Select <i>top build dir</i> controlled by CMake</p>"
 msgstr "<p>Izaberite <i>vršni direktorij</i> koga kontroliše CMake</p>"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, cacheItems)
+#: src/plugins/cmake_utils/cmake_utils_toolview_cacheview_page.ui:43
+msgid "Name"
+msgstr "Ime"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, cacheItems)
 #: src/plugins/cmake_utils/cmake_utils_toolview_cacheview_page.ui:48
 msgid "Type"
 msgstr "Tip"
@@ -627,33 +674,33 @@ msgstr "Reskaniraj trenutni dokument za #colors"
 msgid "Update"
 msgstr "Ažuriraj"
 
-#: src/plugins/commentar.py:171
+#: src/plugins/commentar.py:170
 msgctxt "@action:inmenu"
 msgid "Inline Comment"
 msgstr "Ugrađeni komentar"
 
-#: src/plugins/commentar.py:231
+#: src/plugins/commentar.py:230
 msgctxt "@action:inmenu"
 msgid "Move Comment Above"
 msgstr "Pomjeri komentar iznad"
 
-#: src/plugins/commentar.py:282
+#: src/plugins/commentar.py:281
 msgctxt "@action:inmenu"
 msgid "Move Comment Inline"
 msgstr "Pomjeri komentar ugrađeno"
 
-#: src/plugins/commentar.py:358
+#: src/plugins/commentar.py:357
 msgctxt "@action:inmenu"
 msgid "Comment Block with <command>#if0</command>"
 msgstr "Zakomentiraj blok naredbom <command>#if0</command>"
 
-#: src/plugins/commentar.py:392
+#: src/plugins/commentar.py:391
 msgctxt "@action:inmenu"
 msgid "Toggle <icode>#if0</icode>/<icode>#if1</icode> Block"
 msgstr "Razmijeni <icode>#if0</icode>/<icode>#if1</icode> Blok"
 
-#: src/plugins/commentar.py:431 src/plugins/commentar.py:485
-#: src/plugins/commentar.py:517 src/plugins/commentar.py:677
+#: src/plugins/commentar.py:430 src/plugins/commentar.py:484
+#: src/plugins/commentar.py:516 src/plugins/commentar.py:676
 #: src/plugins/format.py:325 src/plugins/format.py:336
 #: src/plugins/format.py:352 src/plugins/format.py:399
 #: src/plugins/format.py:410 src/plugins/format.py:426
@@ -664,8 +711,8 @@ msgctxt "@title:window"
 msgid "Alert"
 msgstr "Alarm"
 
-#: src/plugins/commentar.py:434 src/plugins/commentar.py:488
-#: src/plugins/commentar.py:520
+#: src/plugins/commentar.py:433 src/plugins/commentar.py:487
+#: src/plugins/commentar.py:519
 msgctxt "@info:tooltip"
 msgid ""
 "The cursor is not positioned in any <icode>#if0</icode>/<icode>#if1</icode> "
@@ -674,42 +721,42 @@ msgstr ""
 "Kursor nije pozicioniran ni u jednom <icode>#if0</icode>/<icode>#if1</icode> "
 "bloku"
 
-#: src/plugins/commentar.py:440
+#: src/plugins/commentar.py:439
 msgctxt "@action:inmenu"
 msgid "Remove <icode>#if0</icode> Block"
 msgstr "Ukloni <icode>#if0</icode> Blok"
 
-#: src/plugins/commentar.py:495
+#: src/plugins/commentar.py:494
 msgctxt "@action:inmenu"
 msgid "Select Current <icode>#if0</icode>/<icode>#if1</icode> Block"
 msgstr "Odaberi trenutni <icode>#if0</icode>/<icode>#if1</icode> Blok"
 
-#: src/plugins/commentar.py:623
+#: src/plugins/commentar.py:622
 msgctxt "@action:inmenu"
 msgid "Transform Doxygen Comments"
 msgstr "Transformiši Doxygen komentare"
 
-#: src/plugins/commentar.py:680
+#: src/plugins/commentar.py:679
 msgctxt "@info:tooltip"
 msgid "Unable to detect a commented paragraph at cursor..."
 msgstr "Ne mogu detektkovati komentirani pasus na kursoru..."
 
-#: src/plugins/commentar.py:736
+#: src/plugins/commentar.py:735
 msgctxt "@action:inmenu"
 msgid "Shrink Comment Paragraph"
 msgstr "Sabij komentarski pasus"
 
-#: src/plugins/commentar.py:744
+#: src/plugins/commentar.py:743
 msgctxt "@action:inmenu"
 msgid "Extend Comment Paragraph"
 msgstr "Proširi komentarski pasus"
 
-#: src/plugins/commentar.py:804
+#: src/plugins/commentar.py:803
 msgctxt "@action:inmenu"
 msgid "Commentar Plugin"
 msgstr "Priključak za komentare"
 
-#: src/plugins/commentar.py:805
+#: src/plugins/commentar.py:804
 msgctxt "@title:group"
 msgid "Commentar Plugin Settings"
 msgstr "Postavke priključka za komentare"
@@ -1024,83 +1071,83 @@ msgid "Use .h;.hxx to highlight files which may contain declarations."
 msgstr ""
 "Koristi .h;.hxx za označavanje datoteka koje mogu sadržati deklaracije."
 
-#: src/plugins/gid/gid.py:195
+#: src/plugins/gid/gid.py:194
 msgid "File"
 msgstr "Datoteka"
 
-#: src/plugins/gid/gid.py:195
+#: src/plugins/gid/gid.py:194
 msgid "Match"
 msgstr "Slaganje"
 
-#: src/plugins/gid/gid.py:361
+#: src/plugins/gid/gid.py:360
 msgid "Filter '%1' is not a valid regular expression"
 msgstr "Filter '%1' nije ispravan regularni izraz"
 
-#: src/plugins/gid/gid.py:361
+#: src/plugins/gid/gid.py:360
 msgid "Invalid filter"
 msgstr "Pogrešan filter"
 
-#: src/plugins/gid/gid.py:393
+#: src/plugins/gid/gid.py:392
 msgid "Scanned %1 of %2 files in %3 seconds"
 msgstr "Pregledano %1 od %2 datoteka u %3 sekundi"
 
-#: src/plugins/gid/gid.py:394
+#: src/plugins/gid/gid.py:393
 msgid "Scan more files?"
 msgstr "Pregledati još datoteka?"
 
-#: src/plugins/gid/gid.py:394
+#: src/plugins/gid/gid.py:393
 msgid "All Files"
 msgstr "Sve datoteke"
 
-#: src/plugins/gid/gid.py:394
+#: src/plugins/gid/gid.py:393
 msgid "More Files"
 msgstr "Još datoteka"
 
-#: src/plugins/gid/gid.py:479
+#: src/plugins/gid/gid.py:478
 msgid "gid Search"
 msgstr "gid pretraga"
 
-#: src/plugins/gid/gid.py:618
+#: src/plugins/gid/gid.py:617
 msgid "ID database error"
 msgstr "Greška ID baze podatka"
 
-#: src/plugins/gid/gid.py:635
+#: src/plugins/gid/gid.py:634
 #, no-python-format
 msgid "'%1' does not contain '%2'"
 msgstr "'%1' ne sadrži '%2'"
 
-#: src/plugins/gid/gid.py:635
+#: src/plugins/gid/gid.py:634
 #, python-format
 msgid "Cannot use %i"
 msgstr "Ne mogu koristiti %i"
 
-#: src/plugins/gid/gid.py:672
+#: src/plugins/gid/gid.py:671
 msgctxt "@action:inmenu"
 msgid "Browse Tokens"
 msgstr "Pregledaj tokene"
 
-#: src/plugins/gid/gid.py:672 src/plugins/gid/gid.py:688
-#: src/plugins/gid/gid.py:705
+#: src/plugins/gid/gid.py:671 src/plugins/gid/gid.py:687
+#: src/plugins/gid/gid.py:704
 msgctxt "@action:inmenu"
 msgid "&Gid"
 msgstr "&Gid"
 
-#: src/plugins/gid/gid.py:688
+#: src/plugins/gid/gid.py:687
 msgctxt "@action:inmenu"
 msgid "Lookup Current Token"
 msgstr "Traži trenutni token"
 
-#: src/plugins/gid/gid.py:705
+#: src/plugins/gid/gid.py:704
 msgctxt "@action:inmenu"
 msgid "Go to Definition"
 msgstr "Idi na definiciju"
 
-#: src/plugins/gid/gid.py:715
+#: src/plugins/gid/gid.py:714
 msgctxt "@action:inmenu"
 msgid "gid"
 msgstr "gid"
 
-#: src/plugins/gid/gid.py:715
+#: src/plugins/gid/gid.py:714
 msgctxt "@title:group"
 msgid "gid(1) token Lookup and Navigation"
 msgstr "gid(1) pregled tokena i navigacija"
@@ -1603,3 +1650,12 @@ msgstr "Novi red:"
 #: src/plugins/xml_pretty.ui:36 src/plugins/xml_pretty.ui:46
 msgid "\\\\t"
 msgstr "\\\\t"
+
+#~ msgid "Hidden"
+#~ msgstr "Skriveno"
+
+#~ msgid "Missing plugin file %1"
+#~ msgstr "Nedostaje datoteka s dodatkom %1"
+
+#~ msgid "Loaded"
+#~ msgstr "Učitano"
