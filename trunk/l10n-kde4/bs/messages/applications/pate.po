@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pate\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-11-16 01:21+0000\n"
+"POT-Creation-Date: 2013-11-17 01:23+0000\n"
 "PO-Revision-Date: 2013-07-22 22:20+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -26,53 +26,50 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "megaribi@epn.ba"
 
-#: src/engine.cpp:212
+#: src/engine.cpp:215
 msgctxt "@info:tooltip "
 msgid "Cannot load built-in <icode>pate</icode> module"
 msgstr ""
 
-#: src/engine.cpp:228
+#: src/engine.cpp:231
 msgctxt "@info:tooltip "
 msgid "Cannot update Python paths"
 msgstr ""
 
-#: src/engine.cpp:244
+#: src/engine.cpp:247
 msgctxt "@info:tooltip "
 msgid "No <icode>pate</icode> built-in module"
 msgstr ""
 
-#: src/engine.cpp:263
-msgctxt "@info:tooltip "
-msgid "Cannot load <icode>kate</icode> module"
-msgstr ""
-
-#: src/engine.cpp:305
+#: src/engine.cpp:303
 #, fuzzy
 #| msgid "Name"
 msgctxt "@title:column"
 msgid "Name"
 msgstr "Ime"
 
-#: src/engine.cpp:307
+#: src/engine.cpp:305
 #, fuzzy
 #| msgid "Comment"
 msgctxt "@title:column"
 msgid "Comment"
 msgstr "Komentar"
 
-#: src/engine.cpp:493
+#: src/engine.cpp:501
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Unable to find the module specified <application>%1</application>"
 msgstr ""
 
-#: src/engine.cpp:520
+#: src/engine.cpp:556
 #, kde-format
 msgctxt "@info:tooltip"
-msgid "Failure on checking dependency <application>%1</application>:<nl/>%2"
+msgid ""
+"<qt>Failure on checking dependency <code>%1</code> (<code>%2</code>):<br/"
+"><pre>%3</pre></qt>"
 msgstr ""
 
-#: src/engine.cpp:583
+#: src/engine.cpp:620
 #, fuzzy, kde-format
 #| msgid "Not Loaded: %1"
 msgctxt "@info:tooltip"
@@ -191,7 +188,7 @@ msgstr "Programerska referenca"
 msgid "Select a Plugin or Built-in Module"
 msgstr "Odaberite priključak ili ugrađeni moduk"
 
-#: src/kate/decorators.py:206
+#: src/kate/decorators.py:219
 msgctxt "@title:window"
 msgid "Error in action <icode>%1</icode>"
 msgstr "Greška u akciji <icode>%1</icode>"
@@ -222,19 +219,24 @@ msgctxt "@title:window"
 msgid "Pate engine could not be initialised"
 msgstr "Pagte pogon se ne može inicijalizirati"
 
-#: src/plugin.cpp:220
+#: src/plugin.cpp:218
 #, fuzzy
 #| msgid "Python Plugins"
 msgctxt "@title:row"
 msgid "Python Plugins"
 msgstr "Python priključci"
 
-#: src/plugin.cpp:235
+#: src/plugin.cpp:233
 #, fuzzy
 #| msgid "Pâté host for Python plugins"
 msgctxt "@title:tab"
 msgid "Pâté host for Python plugins"
 msgstr "Pâté host za Python priključke"
+
+#: src/plugin.cpp:312
+msgctxt "@info:tooltip "
+msgid "Cannot load <icode>kate</icode> module"
+msgstr ""
 
 #. i18n: ectx: Menu (pate)
 #: src/plugins/block_ui.rc:10 src/plugins/commentar_ui.rc:10
@@ -250,8 +252,8 @@ msgstr ""
 #: src/plugins/cmake_utils/__init__.py:167
 #: src/plugins/cmake_utils/__init__.py:197
 #: src/plugins/cmake_utils/__init__.py:594
-#: src/plugins/cmake_utils/__init__.py:830 src/plugins/expand.py:255
-#: src/plugins/expand.py:313
+#: src/plugins/cmake_utils/__init__.py:830 src/plugins/expand.py:256
+#: src/plugins/expand.py:314 src/plugins/libkatepate/errors.py:77
 msgctxt "@title:window"
 msgid "Error"
 msgstr "Greška"
@@ -377,7 +379,10 @@ msgid "Select a Directory with CMake Modules"
 msgstr "Oadberite direktorij s CMake Modulima"
 
 #: src/plugins/cmake_utils/__init__.py:904
-msgctxt "@action:inmenu"
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "CMake Helper Plugin"
+msgctxt "@item:inmenu"
 msgid "CMake Helper Plugin"
 msgstr "Priključak za CMake pomoć"
 
@@ -615,8 +620,8 @@ msgstr "Reskaniraj trenutni dokument za #colors"
 msgid "Update"
 msgstr "Ažuriraj"
 
-#: src/plugins/commentar.py:427 src/plugins/commentar.py:481
-#: src/plugins/commentar.py:509 src/plugins/commentar.py:669
+#: src/plugins/commentar.py:419 src/plugins/commentar.py:471
+#: src/plugins/commentar.py:497 src/plugins/commentar.py:656
 #: src/plugins/format.py:324 src/plugins/format.py:335
 #: src/plugins/format.py:351 src/plugins/format.py:398
 #: src/plugins/format.py:409 src/plugins/format.py:425
@@ -627,8 +632,8 @@ msgctxt "@title:window"
 msgid "Alert"
 msgstr "Alarm"
 
-#: src/plugins/commentar.py:430 src/plugins/commentar.py:484
-#: src/plugins/commentar.py:512
+#: src/plugins/commentar.py:422 src/plugins/commentar.py:474
+#: src/plugins/commentar.py:500
 msgctxt "@info:tooltip"
 msgid ""
 "The cursor is not positioned in any <icode>#if0</icode>/<icode>#if1</icode> "
@@ -637,17 +642,20 @@ msgstr ""
 "Kursor nije pozicioniran ni u jednom <icode>#if0</icode>/<icode>#if1</icode> "
 "bloku"
 
-#: src/plugins/commentar.py:672
+#: src/plugins/commentar.py:659
 msgctxt "@info:tooltip"
 msgid "Unable to detect a commented paragraph at cursor..."
 msgstr "Ne mogu detektkovati komentirani pasus na kursoru..."
 
-#: src/plugins/commentar.py:796
-msgctxt "@action:inmenu"
+#: src/plugins/commentar.py:779
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Commentar Plugin"
+msgctxt "@item:inmenu"
 msgid "Commentar Plugin"
 msgstr "Priključak za komentare"
 
-#: src/plugins/commentar.py:797
+#: src/plugins/commentar.py:780
 msgctxt "@title:group"
 msgid "Commentar Plugin Settings"
 msgstr "Postavke priključka za komentare"
@@ -718,37 +726,37 @@ msgstr "Forma modela šablona"
 msgid "Pattern Model"
 msgstr "Model šablona"
 
-#: src/plugins/expand.py:148
+#: src/plugins/expand.py:149
 msgctxt "@info"
 msgid "end of file reached"
 msgstr "dosegnut kraj datoteke"
 
-#: src/plugins/expand.py:154
+#: src/plugins/expand.py:155
 msgctxt "@info"
 msgid "end of line reached while searching for <icode>%1</icode>"
 msgstr "dosegnut kraj datoteke tražeći <icode>%1</icode>"
 
-#: src/plugins/expand.py:219 src/plugins/expand.py:247
+#: src/plugins/expand.py:220 src/plugins/expand.py:248
 msgctxt "@title:window"
 msgid "Parse error"
 msgstr "Greška analiziranja"
 
-#: src/plugins/expand.py:256
+#: src/plugins/expand.py:257
 msgctxt "@info:tooltip"
 msgid "Expansion \"<icode>%1</icode>\" not found"
 msgstr "Proširenje \"<icode>%1</icode>\" nuije nađeno"
 
-#: src/plugins/expand.py:293
+#: src/plugins/expand.py:294
 msgctxt "@info"
 msgid "Traceback (most recent call last):<nl/>"
 msgstr "Trag (najnoviji poziv):<nl/>"
 
-#: src/plugins/expand.py:302
+#: src/plugins/expand.py:303
 msgctxt "@info"
 msgid "<link url=\"%1\">%2</link>"
 msgstr "<link url=\"%1\">%2</link>"
 
-#: src/plugins/expand.py:307
+#: src/plugins/expand.py:308
 msgctxt "@info"
 msgid ""
 "File <filename>\"(/[^\n"
@@ -757,12 +765,12 @@ msgstr ""
 "Datoteka <filename>\"(/[^\n"
 "]+)\"</filename>, linija"
 
-#: src/plugins/expand.py:314
+#: src/plugins/expand.py:315
 msgctxt "@info:tooltip"
 msgid "<bcode>%1</bcode>"
 msgstr "<bcode>%1</bcode>"
 
-#: src/plugins/expand.py:330
+#: src/plugins/expand.py:331
 msgctxt "@label:listbox"
 msgid "Expands Available"
 msgstr "Dostupno proširenje"
@@ -840,12 +848,12 @@ msgstr "'%1' ne sadrži '%2'"
 msgid "Cannot use %i"
 msgstr "Ne mogu koristiti %i"
 
-#: src/plugins/gid/__init__.py:714
-msgctxt "@action:inmenu"
+#: src/plugins/gid/__init__.py:715
+msgctxt "@item:inmenu"
 msgid "GNU idutils"
 msgstr ""
 
-#: src/plugins/gid/__init__.py:714
+#: src/plugins/gid/__init__.py:716
 #, fuzzy
 #| msgctxt "@title:group"
 #| msgid "gid(1) token Lookup and Navigation"
@@ -1072,11 +1080,18 @@ msgstr "Stek prethodnih lokacija. Aktivirajte stavku za skok u nju."
 msgid "Filter:"
 msgstr "Filter:"
 
-#: src/plugins/js_utils/__init__.py:39
+#: src/plugins/js_utils/__init__.py:41
+#, fuzzy
+#| msgid "JavaScript Utils"
+msgctxt "@item:inmenu"
+msgid "JavaScript Utilities"
+msgstr "JavaScript alati"
+
+#: src/plugins/js_utils/__init__.py:42
 #, fuzzy
 #| msgid "JavaScript Utils"
 msgctxt "@title:group"
-msgid "JavaScript Utilites"
+msgid "JavaScript Utilities Options"
 msgstr "JavaScript alati"
 
 #: src/plugins/js_utils/js_autocomplete.py:33
@@ -1093,12 +1108,12 @@ msgctxt "@title:menu"
 msgid "jQuery autocomplete"
 msgstr "jQuery autokompletiranje"
 
-#: src/plugins/js_utils/js_lint.py:72
+#: src/plugins/js_utils/js_lint.py:70
 msgctxt "@info:status"
 msgid "<application>%1</application> OK"
 msgstr ""
 
-#: src/plugins/js_utils/js_lint.py:88
+#: src/plugins/js_utils/js_lint.py:86
 msgctxt "@info:status"
 msgid "<application>%1</application> Errors:"
 msgstr ""
@@ -1170,14 +1185,7 @@ msgstr "Spreman jQuery isječak"
 msgid "&JavaScript"
 msgstr "JavaScript alati"
 
-#: src/plugins/js_utils/json_pretty.py:45
-#, fuzzy
-#| msgid "Please select JSON text and press: %1"
-msgctxt "@info:status"
-msgid "Please select JSON text and press: <shortcut>%1</shortcut>"
-msgstr "Molim odaberite JSON tekst i pritisnite: %1"
-
-#: src/plugins/js_utils/json_pretty.py:60
+#: src/plugins/js_utils/json_pretty.py:55
 #, fuzzy
 #| msgid "This selected text is not valid JSON: %1"
 msgctxt "@info:status"
@@ -1223,15 +1231,7 @@ msgctxt "@info:tooltip"
 msgid "Text must be selected to perform this operation"
 msgstr "Tekst se mora izabrati za ovu operaciju"
 
-#: src/plugins/libkatepate/errors.py:45
-msgid "You need install the following packages:\n"
-msgstr "Morate izabrati sljedeće pakete:\n"
-
-#: src/plugins/libkatepate/errors.py:55
-msgid "\t%1. Use easy_install (or pip install) %1==%2"
-msgstr "\t%1. Koristite easy_install (ili pip install) %1==%2"
-
-#: src/plugins/libkatepate/errors.py:114
+#: src/plugins/libkatepate/errors.py:72
 msgid ""
 "\n"
 "\n"
@@ -1241,27 +1241,28 @@ msgstr ""
 "\n"
 "I druge greške"
 
-#: src/plugins/libkatepate/errors.py:147
+#: src/plugins/libkatepate/errors.py:81
+msgctxt "@title:window"
+msgid "Success"
+msgstr ""
+
+#: src/plugins/libkatepate/errors.py:105
 msgid "~*~ Position: (%1, %2)"
 msgstr "~*~ Pozicija: (%1, %2)"
 
-#: src/plugins/libkatepate/errors.py:149
+#: src/plugins/libkatepate/errors.py:107
 msgid "~*~ Line: %1"
 msgstr "~*~ Linija: %1"
 
-#: src/plugins/python_autocomplete/python_autocomplete.py:25
-msgid "The Python autocomplete plugin only is available for Python 2"
-msgstr "Python dodatak za autokompletiranje je dostupan samo za Python 2"
-
-#: src/plugins/python_autocomplete/python_autocomplete.py:57
+#: src/plugins/python_autocomplete/python_autocomplete.py:52
 msgid "Python autocomplete"
 msgstr "Python autokompletiranje"
 
-#: src/plugins/python_autocomplete/python_autocomplete.py:145
+#: src/plugins/python_autocomplete/python_autocomplete.py:140
 msgid "There was a syntax error in this file:"
 msgstr "Bila je sintaksna greška u ovoj datoteci:"
 
-#: src/plugins/python_autocomplete/python_autocomplete.py:147
+#: src/plugins/python_autocomplete/python_autocomplete.py:142
 msgctxt "%1 is error message"
 msgid ""
 "%1\n"
@@ -1270,7 +1271,7 @@ msgstr ""
 "%1\n"
 "  * datoteka: %2"
 
-#: src/plugins/python_autocomplete/python_autocomplete.py:149
+#: src/plugins/python_autocomplete/python_autocomplete.py:144
 msgctxt "%1 is error message"
 msgid ""
 "%1\n"
@@ -1279,7 +1280,7 @@ msgstr ""
 "%1\n"
 "  * tekst: %2"
 
-#: src/plugins/python_autocomplete/python_autocomplete.py:151
+#: src/plugins/python_autocomplete/python_autocomplete.py:146
 msgctxt "%1 is error message"
 msgid ""
 "%1\n"
@@ -1287,6 +1288,13 @@ msgid ""
 msgstr ""
 "%1\n"
 "  * linija: %2"
+
+#: src/plugins/python_autocomplete_jedi.py:74
+#, fuzzy
+#| msgid "Python autocomplete"
+msgctxt "@label:listbox"
+msgid "Python Jedi autocomplete"
+msgstr "Python autokompletiranje"
 
 #. i18n: ectx: attribute (title), widget (QWidget, generalTab)
 #: src/plugins/python_console_classic/config.ui:10
@@ -1371,7 +1379,28 @@ msgstr ""
 "Otkucajte help(object) za pomoć o objektu.\n"
 "Unesite izraz za račun izraza."
 
-#: src/plugins/python_console_ipython/python_console_ipython.py:137
+#: src/plugins/python_console_classic/python_console_classic.py:552
+#, fuzzy
+#| msgid "Python autocomplete"
+msgctxt "@title:tab"
+msgid "Python Console"
+msgstr "Python autokompletiranje"
+
+#: src/plugins/python_console_classic/python_console_classic.py:558
+#, fuzzy
+#| msgid "Python autocomplete"
+msgctxt "@item:inmenu"
+msgid "Python Console"
+msgstr "Python autokompletiranje"
+
+#: src/plugins/python_console_classic/python_console_classic.py:559
+#, fuzzy
+#| msgid "Tool View Settings"
+msgctxt "@title:group"
+msgid "Python Console Settings"
+msgstr "Postavke alatnog pogleda"
+
+#: src/plugins/python_console_ipython/python_console_ipython.py:128
 msgid ""
 "\n"
 "Failed to import “%1” from “%2” reason: %3"
@@ -1379,7 +1408,7 @@ msgstr ""
 "\n"
 "Neuspio uviz “%1” iz “%2” razlog: %3"
 
-#: src/plugins/python_console_ipython/python_console_ipython.py:140
+#: src/plugins/python_console_ipython/python_console_ipython.py:131
 msgid ""
 "\n"
 "From “%1” autoload: %2"
@@ -1387,7 +1416,7 @@ msgstr ""
 "\n"
 "Od “%1” autoučitavanje: %2"
 
-#: src/plugins/python_console_ipython/python_console_ipython.py:157
+#: src/plugins/python_console_ipython/python_console_ipython.py:148
 msgid ""
 "\n"
 "\n"
@@ -1397,7 +1426,7 @@ msgstr ""
 "\n"
 "Ne mogu učitati ovaj projekt: %1. Python Verzija nekompatibilna"
 
-#: src/plugins/python_console_ipython/python_console_ipython.py:165
+#: src/plugins/python_console_ipython/python_console_ipython.py:156
 msgid ""
 "\n"
 "\n"
@@ -1407,7 +1436,7 @@ msgstr ""
 "\n"
 "Učitavanje projekta: %1"
 
-#: src/plugins/python_console_ipython/python_console_ipython.py:189
+#: src/plugins/python_console_ipython/python_console_ipython.py:180
 msgid ""
 "\n"
 "Available variables are everything from pylab, “%1”, and this console as "
@@ -1415,6 +1444,27 @@ msgid ""
 msgstr ""
 "\n"
 "Dostupne varijable su sve iz pylab, “%1”, i ova konzola kao “console”"
+
+#: src/plugins/python_console_ipython/python_console_ipython.py:267
+#, fuzzy
+#| msgid "Python autocomplete"
+msgctxt "@item:inmenu"
+msgid "IPython Console"
+msgstr "Python autokompletiranje"
+
+#: src/plugins/python_console_ipython/python_console_ipython.py:268
+#, fuzzy
+#| msgid "Tool View Settings"
+msgctxt "@title:group"
+msgid "IPython Console Settings"
+msgstr "Postavke alatnog pogleda"
+
+#: src/plugins/python_console_ipython/python_console_ipython.py:283
+#, fuzzy
+#| msgid "Python autocomplete"
+msgctxt "@title:tab"
+msgid "IPython Console"
+msgstr "Python autokompletiranje"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/plugins/python_console_ipython/python_console_ipython.ui:9
@@ -1437,7 +1487,7 @@ msgstr "Padajuća lista"
 msgid "Normal"
 msgstr "Normalno"
 
-#: src/plugins/python_utils/python_checkers/all_checker.py:82
+#: src/plugins/python_utils/python_checkers/all_checker.py:62
 #: src/plugins/python_utils/python_checkers/pep8_checker.py:84
 msgid "You must save the file first"
 msgstr "Morate prvo snimiti datoteku"
@@ -1567,6 +1617,21 @@ msgstr ""
 #| msgid "Help:"
 msgid "&Help"
 msgstr "Pomoć:"
+
+#, fuzzy
+#~| msgid "Please select JSON text and press: %1"
+#~ msgctxt "@info:status"
+#~ msgid "Please select JSON text and press: <shortcut>%1</shortcut>"
+#~ msgstr "Molim odaberite JSON tekst i pritisnite: %1"
+
+#~ msgid "You need install the following packages:\n"
+#~ msgstr "Morate izabrati sljedeće pakete:\n"
+
+#~ msgid "\t%1. Use easy_install (or pip install) %1==%2"
+#~ msgstr "\t%1. Koristite easy_install (ili pip install) %1==%2"
+
+#~ msgid "The Python autocomplete plugin only is available for Python 2"
+#~ msgstr "Python dodatak za autokompletiranje je dostupan samo za Python 2"
 
 #~ msgid "Manager"
 #~ msgstr "Menadžer"
