@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libeventviews.po\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-11-12 01:35+0000\n"
-"PO-Revision-Date: 2013-07-20 23:02+0100\n"
+"POT-Creation-Date: 2013-11-04 01:35+0000\n"
+"PO-Revision-Date: 2013-11-09 21:45+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bs <bs@kde.org>\n"
 "Language: \n"
@@ -92,6 +92,10 @@ msgstr "Ne mogu da izmijenim ovu obavezu, jer se ne može zaključati."
 #, kde-format
 msgid "Unable to save %1 \"%2\"."
 msgstr "Ne mogu da snimim %1 „%2“."
+
+#: agenda/cellitem.cpp:33
+msgid "<placeholder>undefined</placeholder>"
+msgstr "<placeholder>nedefinisano</placeholder>"
 
 #: agenda/timelabels.cpp:68
 msgid "Timezone:"
@@ -1575,16 +1579,12 @@ msgid "Complete"
 msgstr "ZavršenoPotvrdite brisanje"
 
 #: todo/todomodel.cpp:633
-#, fuzzy
-#| msgid "Start Date/Time"
 msgid "Start Date"
-msgstr "Početni datum/vrijeme"
+msgstr "Početni datum"
 
 #: todo/todomodel.cpp:635
-#, fuzzy
-#| msgid "Due Date/Time"
 msgid "Due Date"
-msgstr "Rok datum/vrijeme"
+msgstr "Rok datum"
 
 #: todo/todomodel.cpp:639
 msgid "Description"
@@ -1874,50 +1874,42 @@ msgstr "Opciona lista prikaznih imena za realizaciju"
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: viewerapp/mainwindow.ui:14
 msgid "CalendarViews Viewer"
-msgstr ""
+msgstr "CalendarViews Viewer"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: viewerapp/mainwindow.ui:25
 msgid "Tab 1"
-msgstr ""
+msgstr "Kartica 1"
 
 #. i18n: ectx: property (title), widget (QMenu, addViewMenu)
 #: viewerapp/mainwindow.ui:43
 msgid "Add View"
-msgstr ""
+msgstr "Dodaj pogled"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
 #: viewerapp/mainwindow.ui:55
-#, fuzzy
-#| msgid "Agenda %1"
 msgid "Agenda"
-msgstr "Agenda %1"
+msgstr "Agenda"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
 #: viewerapp/mainwindow.ui:60
-#, fuzzy
-#| msgid "Agenda %1"
 msgid "MultiAgenda"
-msgstr "Agenda %1"
+msgstr "Višestruka agenda"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
 #: viewerapp/mainwindow.ui:65
-#, fuzzy
-#| msgid "Month view"
 msgid "Month"
-msgstr "Pregled mjeseci"
+msgstr "Mjesec"
 
 #. i18n: ectx: property (text), widget (QStatusBar, statusbar)
 #: viewerapp/mainwindow.ui:70
-#, fuzzy
-#| msgid "Timezone"
 msgid "Timeline"
-msgstr "Vremenska zona"
+msgstr "Vremenska zlinija"
 
 #. i18n: ectx: label, entry, group (Colors)
 #: viewerapp/settings.kcfg:242
 msgid "\"No category\" color (for \"Only category\" drawing schemes)"
-msgstr ""
+msgstr "Boja kada \"Nema kategorije\" (za \"Samo kategorije\" šeme crtanja)"
 
 #. i18n: ectx: whatsthis, entry, group (Colors)
 #: viewerapp/settings.kcfg:243
@@ -1927,16 +1919,20 @@ msgid ""
 "when drawing items in the agenda or month views using the \"Only category\" "
 "scheme."
 msgstr ""
+"Odaberite boju za upotrebu u situacijama \"nema kategorije\" ili "
+"\"nepostavljena kategorija\" kada stavka ne pripada ni jednoj kategoriji. "
+"Ova boja se koristi pri crtanju stavki u agendi ili pogledima mjeseci "
+"koristeći \"Samo kategorija\" šemu."
 
 #. i18n: ectx: tooltip, entry, group (Colors)
 #: viewerapp/settings.kcfg:244
 msgid "Use this color when drawing items without a category"
-msgstr ""
+msgstr "Koristite boju pri crtanju elemenata bez kategorije"
 
 #. i18n: ectx: label, entry, group (Group Scheduling)
 #: viewerapp/settings.kcfg:275
 msgid "Use Groupware communication"
-msgstr ""
+msgstr "Koristi grupnu komunikaciju"
 
 #. i18n: ectx: whatsthis, entry, group (Group Scheduling)
 #: viewerapp/settings.kcfg:276
@@ -1946,6 +1942,10 @@ msgid ""
 "should check this box if you want to use the groupware functionality (e.g. "
 "Configuring Kontact as a KDE Kolab client)."
 msgstr ""
+"Označite ovo za automatsko generisanje pošte pri kreiranju, ažuriranju ili "
+"brisanju događaja (ili budućih zadataka) koji su vezani za druge učesnike. "
+"Trebate ovo označiti za grupnu funkcionalnost (npr. konfigurisati Kontact "
+"kao KDE Kolab klijenta)"
 
 #: whatsnext/whatsnextview.cpp:84
 msgid "What's Next?"
@@ -1980,9 +1980,6 @@ msgstr "%1, %2 - %3"
 msgctxt "to-do due date"
 msgid "  (Due: %1)"
 msgstr "  (Rok: %1)"
-
-#~ msgid "<placeholder>undefined</placeholder>"
-#~ msgstr "<placeholder>nedefinisano</placeholder>"
 
 #~ msgctxt "@label an elipsis"
 #~ msgid "..."

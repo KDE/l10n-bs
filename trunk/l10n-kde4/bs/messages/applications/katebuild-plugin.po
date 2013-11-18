@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: katebuild-plugin\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-11-17 01:23+0000\n"
+"POT-Creation-Date: 2012-11-06 02:49+0100\n"
 "PO-Revision-Date: 2013-01-26 14:22+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -73,83 +73,76 @@ msgstr "Poruka"
 msgid "Output"
 msgstr "Izlaz"
 
-#: plugin_katebuild.cpp:71 plugin_katebuild.cpp:73
+#: plugin_katebuild.cpp:67 plugin_katebuild.cpp:69
 msgid "Build Plugin"
 msgstr "Izgradi priključak"
 
-#: plugin_katebuild.cpp:102
+#: plugin_katebuild.cpp:98
 msgid "Build Output"
 msgstr "Izgradi Izlaz"
 
-#: plugin_katebuild.cpp:112
-#, fuzzy
-#| msgid "Build failed."
-msgid "Build default target"
-msgstr "Gradnja neuspjela."
+#: plugin_katebuild.cpp:110 plugin_katebuild.cpp:241 plugin_katebuild.cpp:838
+#: targets.cpp:56
+msgid "Build"
+msgstr "Izgradi"
 
-#: plugin_katebuild.cpp:116
+#: plugin_katebuild.cpp:114 targets.cpp:60
 msgid "Clean"
 msgstr "Očisti"
 
-#: plugin_katebuild.cpp:120
+#: plugin_katebuild.cpp:118
+msgid "Quick Compile"
+msgstr "Brzo prevedi"
+
+#: plugin_katebuild.cpp:122
 msgid "Stop"
 msgstr "Zaustavi"
 
-#: plugin_katebuild.cpp:124
-#, fuzzy
-#| msgid "Build failed."
-msgid "Build Target..."
-msgstr "Gradnja neuspjela."
-
-#: plugin_katebuild.cpp:128
-msgid "Build previous target again"
-msgstr ""
-
-#: plugin_katebuild.cpp:132
+#: plugin_katebuild.cpp:126
 msgid "Next Error"
 msgstr "Sljedeća greška"
 
-#: plugin_katebuild.cpp:137
+#: plugin_katebuild.cpp:131
 msgid "Previous Error"
 msgstr "Prethodna greška"
 
-#: plugin_katebuild.cpp:142
-#, fuzzy
-#| msgid "Next Target"
-msgid "Sets of Targets"
+#: plugin_katebuild.cpp:136
+msgid "Targets"
+msgstr "Odredišta"
+
+#: plugin_katebuild.cpp:140
+msgid "Next Target"
 msgstr "Sljedeće odredište"
 
 #: plugin_katebuild.cpp:146
-#, fuzzy
-#| msgid "Next Target"
-msgid "Next Set of Targets"
-msgstr "Sljedeće odredište"
-
-#: plugin_katebuild.cpp:152
 msgctxt "Tab label"
 msgid "Target Settings"
 msgstr "Postavke odredišta"
 
-#: plugin_katebuild.cpp:438
+#: plugin_katebuild.cpp:233 plugin_katebuild.cpp:830
+msgid "Config"
+msgstr "Konfiguracija"
+
+#: plugin_katebuild.cpp:377
 msgctxt "The same word as 'make' uses to mark an error."
 msgid "error"
 msgstr "greška"
 
-#: plugin_katebuild.cpp:440
+#: plugin_katebuild.cpp:379
 msgctxt "The same word as 'ld' uses to mark an ..."
 msgid "undefined reference"
 msgstr "nedefinisana referenca"
 
-#: plugin_katebuild.cpp:449
+#: plugin_katebuild.cpp:388
 msgctxt "The same word as 'make' uses to mark a warning."
 msgid "warning"
 msgstr "upozorenje"
 
-#: plugin_katebuild.cpp:502
+#: plugin_katebuild.cpp:441
 msgid "There is no file or directory specified for building."
 msgstr "NIje označena takva datoteka ili direktorij za pravljenje."
 
-#: plugin_katebuild.cpp:506
+#: plugin_katebuild.cpp:445
 #, kde-format
 msgid ""
 "The file \"%1\" is not a local file. Non-local files cannot be compiled."
@@ -157,29 +150,16 @@ msgstr ""
 "Datoteka \"%1\" nije lokalna datoteka. Ne lokalne datoteke nije moguće "
 "kompjalirati."
 
-#: plugin_katebuild.cpp:523
-msgid "No previous target."
-msgstr ""
+#: plugin_katebuild.cpp:490
+msgid "The custom command is empty."
+msgstr "Vlastita naredba je prazna."
 
-#: plugin_katebuild.cpp:540
-msgid "No target set as default target."
-msgstr ""
-
-#: plugin_katebuild.cpp:556
-msgid "No target set as clean target."
-msgstr ""
-
-#: plugin_katebuild.cpp:591
+#: plugin_katebuild.cpp:536
 #, kde-format
 msgid "Failed to run \"%1\". exitStatus = %2"
 msgstr "Neuspjelo izvršavanje „%1“. Izlazni status: %2"
 
-#: plugin_katebuild.cpp:653
-#, kde-format
-msgid "Target \"%1\" not found for building."
-msgstr ""
-
-#: plugin_katebuild.cpp:712
+#: plugin_katebuild.cpp:573
 #, kde-format
 msgid "Found one error."
 msgid_plural "Found %1 errors."
@@ -187,7 +167,7 @@ msgstr[0] "Nađena %1 greška"
 msgstr[1] "Nađene %1 greške"
 msgstr[2] "Nađeno %1 grešaka"
 
-#: plugin_katebuild.cpp:715
+#: plugin_katebuild.cpp:576
 #, kde-format
 msgid "Found one warning."
 msgid_plural "Found %1 warnings."
@@ -195,129 +175,65 @@ msgstr[0] "Nađeno %1 upozorenje"
 msgstr[1] "Nađena %1 upozorenja"
 msgstr[2] "Nađeno %1 upozorenja"
 
-#: plugin_katebuild.cpp:717 plugin_katebuild.cpp:720 plugin_katebuild.cpp:723
+#: plugin_katebuild.cpp:578 plugin_katebuild.cpp:581 plugin_katebuild.cpp:584
 msgid "Make Results"
 msgstr "Rezultati make-a"
 
-#: plugin_katebuild.cpp:720
+#: plugin_katebuild.cpp:581
 msgid "Build failed."
 msgstr "Gradnja neuspjela."
 
-#: plugin_katebuild.cpp:723
+#: plugin_katebuild.cpp:584
 msgid "Build completed without problems."
 msgstr "Gradnja završena bez problema."
 
-#: plugin_katebuild.cpp:1014
+#: plugin_katebuild.cpp:775 plugin_katebuild.cpp:794
 #, kde-format
-msgid "Really delete target %1 ?"
-msgstr ""
-
-#: plugin_katebuild.cpp:1116
-#, fuzzy, kde-format
-#| msgid "Target %1"
-msgid "Target Set %1"
+msgid "Target %1"
 msgstr "Odredište %1"
 
-#: plugin_katebuild.cpp:1186
-#, fuzzy
-#| msgid "Targets"
-msgid "Target"
-msgstr "Odredišta"
-
-#: plugin_katebuild.cpp:1339 plugin_katebuild.cpp:1378
-#, fuzzy
-#| msgid "Project Plugin Target"
-msgid "Project Plugin Targets"
+#: plugin_katebuild.cpp:991 plugin_katebuild.cpp:1016
+msgid "Project Plugin Target"
 msgstr "Odredište dodatka projekta"
 
-#: selecttargetdialog.cpp:43
-#, fuzzy
-#| msgid "Targets"
-msgid "Target:"
-msgstr "Odredišta"
+#: targets.cpp:35
+msgid "New"
+msgstr "Novo"
 
-#: selecttargetdialog.cpp:47
-msgid "from"
-msgstr ""
+#: targets.cpp:39
+msgid "Copy"
+msgstr "Kopija"
 
-#: selecttargetdialog.cpp:53
-msgid "Command:"
-msgstr ""
+#: targets.cpp:43
+msgid "Delete"
+msgstr "Brisanje"
 
-#: targets.cpp:31
-#, fuzzy
-#| msgid "Targets"
-msgid "Target set"
-msgstr "Odredišta"
-
-#: targets.cpp:40
-msgid "Create new set of targets"
-msgstr ""
-
-#: targets.cpp:44
-msgid "Copy set of targets"
-msgstr ""
-
-#: targets.cpp:48
-msgid "Delete current set of targets"
-msgstr ""
-
-#: targets.cpp:51
+#: targets.cpp:49
 msgid "Working directory"
 msgstr "Radni direktorij"
 
-#: targets.cpp:53
+#: targets.cpp:51
 msgid "Leave empty to use the directory of the current document. "
 msgstr "Ostavite prazno da bi se uzeo direktorij tekućeg dokumenta. "
 
-#: targets.cpp:75
-msgid "Add new target"
-msgstr ""
+#: targets.cpp:64
+msgid "Quick compile"
+msgstr "Brzo prevođenje"
 
-#: targets.cpp:79
-msgid "Delete selected target"
+#: targets.cpp:66
+#, c-format
+msgid ""
+"Use:\n"
+"\"%f\" for current file\n"
+"\"%d\" for directory of current file\n"
+"\"%n\" for current file name without suffix"
 msgstr ""
-
-#: targets.cpp:83
-msgid "Build selected target"
-msgstr ""
+"Koristite:\n"
+"\"%f\" za trenutnu datoteku\n"
+"\"%d\" za direktorij trenutne datoteke\"%n\" za trenutno ime datoteke bez "
+"sufiksa"
 
 #. i18n: ectx: Menu (Build)
 #: ui.rc:4
 msgid "&Build"
 msgstr "&Izgradi"
-
-#~ msgid "Build"
-#~ msgstr "Izgradi"
-
-#~ msgid "Quick Compile"
-#~ msgstr "Brzo prevedi"
-
-#~ msgid "Config"
-#~ msgstr "Konfiguracija"
-
-#~ msgid "The custom command is empty."
-#~ msgstr "Vlastita naredba je prazna."
-
-#~ msgid "New"
-#~ msgstr "Novo"
-
-#~ msgid "Copy"
-#~ msgstr "Kopija"
-
-#~ msgid "Delete"
-#~ msgstr "Brisanje"
-
-#~ msgid "Quick compile"
-#~ msgstr "Brzo prevođenje"
-
-#~ msgid ""
-#~ "Use:\n"
-#~ "\"%f\" for current file\n"
-#~ "\"%d\" for directory of current file\n"
-#~ "\"%n\" for current file name without suffix"
-#~ msgstr ""
-#~ "Koristite:\n"
-#~ "\"%f\" za trenutnu datoteku\n"
-#~ "\"%d\" za direktorij trenutne datoteke\"%n\" za trenutno ime datoteke bez "
-#~ "sufiksa"
