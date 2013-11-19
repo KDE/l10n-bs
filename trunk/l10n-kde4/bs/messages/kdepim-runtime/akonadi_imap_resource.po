@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-runtime\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-11-17 05:20+0000\n"
+"POT-Creation-Date: 2013-11-19 01:33+0000\n"
 "PO-Revision-Date: 2013-11-12 23:12+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -26,7 +26,14 @@ msgid "Cannot add IMAP folder '%1' for a non-existing parent folder '%2'."
 msgstr ""
 "Nije moguće dodati IMAP folder '%1' za nepostojeći roditeljski folder '%2'."
 
-#: addcollectiontask.cpp:102 movecollectiontask.cpp:107
+#: addcollectiontask.cpp:84
+#, fuzzy, kde-format
+#| msgid "Failed to write some ACLs for '%1' on the IMAP server. %2"
+msgid "Failed to create the folder '%1' on the IMAP server. "
+msgstr ""
+"Neuspjelo pisanje nekih listi kontrola pristupa za '%1' na IMAP serveru. %2"
+
+#: addcollectiontask.cpp:104 movecollectiontask.cpp:107
 #, kde-format
 msgid ""
 "Failed to subscribe to the folder '%1' on the IMAP server. It will disappear "
@@ -36,7 +43,7 @@ msgstr ""
 "sljedećoj sinhronizaciji. Koristite dijaloški prozor pretplate da to "
 "prevaziđete."
 
-#: addcollectiontask.cpp:146 changecollectiontask.cpp:279
+#: addcollectiontask.cpp:148 changecollectiontask.cpp:278
 #, kde-format
 msgid "Failed to write some annotations for '%1' on the IMAP server. %2"
 msgstr "Neuspjelo pisanje nekih napomena za '%1' na IMAP serveru %2"
@@ -59,11 +66,11 @@ msgid ""
 msgstr ""
 "ACL za '%1' treba prvo da se preuzmu s IMAP servera. Preskače se izmjena ACL"
 
-#: changecollectiontask.cpp:239
+#: changecollectiontask.cpp:238
 msgid "Failed to rename the folder, restoring folder list."
 msgstr "Neuspjelo preimenovanje fascikle, vraća se lista fascikli."
 
-#: changecollectiontask.cpp:258
+#: changecollectiontask.cpp:257
 #, kde-format
 msgid ""
 "Failed to subscribe to the renamed folder '%1' on the IMAP server. It will "
@@ -73,7 +80,7 @@ msgstr ""
 "pri sljedećoj sinhronizaciji.  Koristite dijaloški prozor pretplate da to "
 "prevaziđete."
 
-#: changecollectiontask.cpp:269
+#: changecollectiontask.cpp:268
 #, kde-format
 msgid "Failed to write some ACLs for '%1' on the IMAP server. %2"
 msgstr ""
@@ -134,37 +141,31 @@ msgctxt "@info:status"
 msgid "Retrieving folders"
 msgstr "Preuzimam direktorije"
 
-#: imapresource.cpp:473
-#, kde-format
-msgctxt "@info:status"
-msgid "Retrieving folder attributes for '%1'"
-msgstr "Preuzimam atribute direktorija za '%1'"
-
-#: imapresource.cpp:486
+#: imapresource.cpp:474
 #, kde-format
 msgctxt "@info:status"
 msgid "Retrieving extra folder information for '%1'"
 msgstr "Preuzimam dodatne informacije direktorija za '%1'"
 
-#: imapresource.cpp:518
+#: imapresource.cpp:506
 #, kde-format
 msgctxt "@info:status"
 msgid "Creating folder '%1'"
 msgstr "Kreiram direktorij '%1'"
 
-#: imapresource.cpp:527
+#: imapresource.cpp:515
 #, kde-format
 msgctxt "@info:status"
 msgid "Updating folder '%1'"
 msgstr "Ažuriram direktorij '%1'"
 
-#: imapresource.cpp:544
+#: imapresource.cpp:532
 #, kde-format
 msgctxt "@info:status"
 msgid "Removing folder '%1'"
 msgstr "Uklanjam direktorij '%1'"
 
-#: imapresource.cpp:555
+#: imapresource.cpp:543
 #, kde-format
 msgctxt "@info:status"
 msgid "Moving folder '%1' from '%2' to '%3'"
@@ -347,13 +348,13 @@ msgstr ""
 "Ne mogu označiti poruku s '%1' za brisanje s IMAP servera.Ponovo će se "
 "pojaviti pri sljedećoj sinhronizaciji."
 
-#: removecollectionrecursivetask.cpp:133 removecollectionrecursivetask.cpp:150
-#: removecollectionrecursivetask.cpp:163 removecollectiontask.cpp:61
+#: removecollectionrecursivetask.cpp:134 removecollectionrecursivetask.cpp:151
+#: removecollectionrecursivetask.cpp:164 removecollectiontask.cpp:61
 #: removecollectiontask.cpp:88
 msgid "Failed to delete the folder, restoring folder list."
 msgstr "Neuspjelo brisanje fascikle, vraća se lista fascikli."
 
-#: removecollectionrecursivetask.cpp:168
+#: removecollectionrecursivetask.cpp:169
 msgid "Failed to find the folder to be deleted, restoring folder list."
 msgstr "Neuspjelo traženje fascikle za brisanje, vraćam listu fascikli."
 
@@ -369,11 +370,11 @@ msgstr "Trenutno nema dostupne sesije za IMAP server"
 msgid "Connection lost"
 msgstr "Veza prekinuta"
 
-#: resourcetask.cpp:425
+#: resourcetask.cpp:419
 msgid "killed"
 msgstr "ubijen"
 
-#: retrievecollectionmetadatatask.cpp:283
+#: retrievecollectionmetadatatask.cpp:232
 #, kde-format
 msgid ""
 "<p>Your access rights to folder <b>%1</b> have been restricted, it will no "
@@ -382,7 +383,7 @@ msgstr ""
 "<p>Vaša prava pristupa direkoriju <b>%1</b> su ograničena, zbog čega više "
 "neće biti moguće dodavati poruke u njega.</p>"
 
-#: retrievecollectionmetadatatask.cpp:286
+#: retrievecollectionmetadatatask.cpp:235
 msgid "Access rights revoked"
 msgstr "Prava pristupa opozvana"
 
@@ -1028,6 +1029,10 @@ msgstr "Traži:"
 msgctxt "@option:check"
 msgid "Subscribed only"
 msgstr "Samo potpisani"
+
+#~ msgctxt "@info:status"
+#~ msgid "Retrieving folder attributes for '%1'"
+#~ msgstr "Preuzimam atribute direktorija za '%1'"
 
 #~ msgid " "
 #~ msgstr " "
