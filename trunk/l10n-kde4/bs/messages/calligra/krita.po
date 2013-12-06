@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-05 01:22+0000\n"
+"POT-Creation-Date: 2013-12-06 01:31+0000\n"
 "PO-Revision-Date: 2013-08-11 23:24+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1085,38 +1085,42 @@ msgstr "Skaliraj sliku"
 msgid "Change Image Resolution"
 msgstr "Promijeni rezoluciju slike"
 
-#: image/kis_image.cc:600 plugins/extensions/rotateimage/rotateimage.cc:155
+#: image/kis_image.cc:528
+msgid "Scale Layer"
+msgstr "Skaliraj sloj"
+
+#: image/kis_image.cc:622 plugins/extensions/rotateimage/rotateimage.cc:155
 msgid "Rotate Layer"
 msgstr "Okreni sloj"
 
-#: image/kis_image.cc:667
+#: image/kis_image.cc:689
 msgid "Shear layer"
 msgstr "Smakni sloj"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgShearImage)
-#: image/kis_image.cc:673 plugins/extensions/shearimage/dlg_shearimage.cc:32
+#: image/kis_image.cc:695 plugins/extensions/shearimage/dlg_shearimage.cc:32
 #: plugins/extensions/shearimage/shearimage.cc:64
 #: plugins/extensions/shearimage/wdg_shearimage.ui:14
 msgid "Shear Image"
 msgstr "Smakni sliku"
 
-#: image/kis_image.cc:686
+#: image/kis_image.cc:708
 msgid "Convert Image Color Space"
 msgstr "Konvertuj prostor boja slike"
 
-#: image/kis_image.cc:720
+#: image/kis_image.cc:742
 msgid "Convert Projection Color Space"
 msgstr "Konvertuj prostor boja projekcije"
 
-#: image/kis_image.cc:899 ui/kis_layer_manager.cc:728
+#: image/kis_image.cc:921 ui/kis_layer_manager.cc:707
 msgid "Flatten Image"
 msgstr "Spljošti sliku"
 
-#: image/kis_image.cc:975
+#: image/kis_image.cc:997
 msgid "Merge with Layer Below"
 msgstr "Stopi sa slojem ispod"
 
-#: image/kis_image.cc:1021
+#: image/kis_image.cc:1043
 msgid "Flatten Layer"
 msgstr "Izravnaj sloj"
 
@@ -1191,10 +1195,6 @@ msgstr "Obrnuto označavanje"
 #: image/kis_selection_mask.cpp:106 ui/kis_node_model.cpp:422
 msgid "Active"
 msgstr "Aktivan"
-
-#: image/kis_transform_visitor.h:158
-msgid "Rotate Node"
-msgstr "Okreni čvor"
 
 #: image/metadata/kis_meta_data_filter_p.cc:51
 msgid "Anonymizer"
@@ -2455,7 +2455,7 @@ msgid "&Select Opaque"
 msgstr "&Izaberi neprozirno"
 
 #: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:458
-#: ui/kis_layer_manager.cc:283
+#: ui/kis_layer_manager.cc:285
 msgid "&Merge with Layer Below"
 msgstr "&Stopi sa slojem ispod"
 
@@ -3145,29 +3145,28 @@ msgstr "Skaliraj na nove veličine"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgLayerSize)
 #: plugins/extensions/imagesize/dlg_layersize.cc:46
-#: plugins/extensions/imagesize/imagesize.cc:135
+#: plugins/extensions/imagesize/imagesize.cc:130
 #: plugins/extensions/imagesize/wdg_layersize.ui:14
 msgid "Layer Size"
 msgstr "Veličina sloja"
 
-#: plugins/extensions/imagesize/imagesize.cc:56
+#: plugins/extensions/imagesize/imagesize.cc:51
 msgid "Scale To New Size..."
 msgstr "Skaliraj na novu veličinu..."
 
-#: plugins/extensions/imagesize/imagesize.cc:60
+#: plugins/extensions/imagesize/imagesize.cc:55
 msgid "Size Canvas..."
 msgstr "Veličina platna..."
 
-#: plugins/extensions/imagesize/imagesize.cc:64
+#: plugins/extensions/imagesize/imagesize.cc:59
 msgid "Scale &Layer..."
 msgstr "Skaliraj S&loj..."
 
-#: plugins/extensions/imagesize/imagesize.cc:70
+#: plugins/extensions/imagesize/imagesize.cc:65
 msgid "&Scale..."
 msgstr "&Skaliraj..."
 
-#: plugins/extensions/imagesize/imagesize.cc:165
-#: plugins/extensions/imagesize/imagesize.cc:172
+#: plugins/extensions/imagesize/imagesize.cc:159
 msgid "Scale Selection"
 msgstr "Skaliraj izabor"
 
@@ -8768,7 +8767,7 @@ msgstr "Izbor sličnog"
 msgid "Select similar colors"
 msgstr "Izaberi slične boje"
 
-#: plugins/tools/tool_crop/kis_tool_crop.h:200
+#: plugins/tools/tool_crop/kis_tool_crop.h:201
 msgid "Crop the image to an area"
 msgstr "Izreži sliku u oblast"
 
@@ -11333,77 +11332,73 @@ msgstr "Svojstva..."
 msgid "Import Image"
 msgstr "Uvezi sliku"
 
-#: ui/kis_layer_manager.cc:278
+#: ui/kis_layer_manager.cc:280
 msgid "&Flatten image"
 msgstr "S&pljošti sliku"
 
-#: ui/kis_layer_manager.cc:288
+#: ui/kis_layer_manager.cc:290
 msgid "&Flatten Layer"
 msgstr "&Izravnaj sloj"
 
-#: ui/kis_layer_manager.cc:292 ui/kis_layer_manager.cc:797
+#: ui/kis_layer_manager.cc:294 ui/kis_layer_manager.cc:776
 msgid "Rasterize Layer"
 msgstr "Rasteriziraj sloj"
 
-#: ui/kis_layer_manager.cc:298
+#: ui/kis_layer_manager.cc:300
 msgid "Save Group Layers..."
 msgstr "Snimi grupne slojeve..."
 
-#: ui/kis_layer_manager.cc:302
+#: ui/kis_layer_manager.cc:304
 msgid "Size Canvas to Size of Current Layer"
 msgstr "Razvuci platno na veličinu trenutnog sloja"
 
-#: ui/kis_layer_manager.cc:357
+#: ui/kis_layer_manager.cc:359
 msgid "Filter Layer Properties"
 msgstr "Svojstva filterskog sloja"
 
-#: ui/kis_layer_manager.cc:402
+#: ui/kis_layer_manager.cc:404
 msgid "Generator Layer Properties"
 msgstr "Svojstva generatorskog sloja"
 
-#: ui/kis_layer_manager.cc:480
+#: ui/kis_layer_manager.cc:482
 #, fuzzy
 #| msgid "Convert Current Layer From"
 msgid "Convert to a Paint Layer"
 msgstr "Pretvori tekući sloj iz"
 
-#: ui/kis_layer_manager.cc:559
+#: ui/kis_layer_manager.cc:561
 msgid "New Filter Layer"
 msgstr "Novi filterski sloj"
 
-#: ui/kis_layer_manager.cc:618
+#: ui/kis_layer_manager.cc:620
 msgid "Could not add layer to image."
 msgstr "Nisam mogao da dodam sloj slici."
 
-#: ui/kis_layer_manager.cc:618
+#: ui/kis_layer_manager.cc:620
 msgid "Layer Error"
 msgstr "Greška u sloju"
 
-#: ui/kis_layer_manager.cc:685
-msgid "Scale Layer"
-msgstr "Skaliraj sloj"
-
-#: ui/kis_layer_manager.cc:727
+#: ui/kis_layer_manager.cc:706
 msgid "The image contains hidden layers that will be lost."
 msgstr "Slika sadrži skrivene slojeve, koji će biti izgubljeni."
 
-#: ui/kis_layer_manager.cc:729
+#: ui/kis_layer_manager.cc:708
 msgid "&Flatten Image"
 msgstr "&Spljošti sliku"
 
-#: ui/kis_layer_manager.cc:833
+#: ui/kis_layer_manager.cc:812
 msgid "Convert Invisible Groups"
 msgstr "Prevedi nevidljive grupe"
 
-#: ui/kis_layer_manager.cc:836
+#: ui/kis_layer_manager.cc:815
 msgid "Export Only Toplevel Groups"
 msgstr "Izvezi samo grupe na najvišem nivou"
 
-#: ui/kis_layer_manager.cc:894
+#: ui/kis_layer_manager.cc:873
 msgid "No file name specified."
 msgstr "Ime datoteke nije navedeno"
 
-#: ui/kis_layer_manager.cc:894
+#: ui/kis_layer_manager.cc:873
 msgid "No file specified"
 msgstr "Datoteka nije navedena"
 
@@ -11575,7 +11570,7 @@ msgstr "Sloj Y u ogledalu"
 msgid "Mirror Mask Y"
 msgstr "Ogledaj masku Y"
 
-#: ui/kis_node_manager.cpp:764
+#: ui/kis_node_manager.cpp:768
 msgid "Export Node"
 msgstr "Izvezi sloj:"
 
@@ -12097,6 +12092,9 @@ msgstr "Radna površina"
 #, kde-format
 msgid "Workspace %1"
 msgstr "Radna površina %1"
+
+#~ msgid "Rotate Node"
+#~ msgstr "Okreni čvor"
 
 #~ msgid "File size:"
 #~ msgstr "Veličina datoteke:"
