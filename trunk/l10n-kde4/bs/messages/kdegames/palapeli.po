@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: palapeli\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-30 01:33+0000\n"
+"POT-Creation-Date: 2014-01-02 01:29+0000\n"
 "PO-Revision-Date: 2013-01-26 14:19+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -307,6 +307,21 @@ msgctxt "Description (used like a name) for a mouse interaction method"
 msgid "Toggle lock state of the puzzle table area"
 msgstr "Promjena zaključanosti površi slagačke table"
 
+#: src/engine/puzzlepreview.cpp:40
+msgctxt "Window title"
+msgid "Preview of completed puzzle"
+msgstr ""
+
+#: src/engine/puzzlepreview.cpp:47
+msgctxt "text in preview window"
+msgid "Image is not available."
+msgstr ""
+
+#: src/engine/puzzlepreview.cpp:75
+#, kde-format
+msgid "%1 - Preview"
+msgstr ""
+
 #: src/engine/scene.cpp:299
 msgid ""
 "You have finished the puzzle the last time. Do you want to restart it now?"
@@ -462,11 +477,19 @@ msgstr "Copyright 2009, 2010, Stefan Majewsky"
 msgid "Stefan Majewsky"
 msgstr "Stefan Majewsky"
 
-#: src/main.cpp:36
+#: src/main.cpp:33
+msgid "Johannes Loehnert"
+msgstr ""
+
+#: src/main.cpp:34
+msgid "The option to preview the completed puzzle"
+msgstr ""
+
+#: src/main.cpp:39
 msgid "Path to puzzle file (will be opened if -i is not given)"
 msgstr "Staza do datoteke slagalice (biće otvoren ako se ne zada -i)"
 
-#: src/main.cpp:37
+#: src/main.cpp:40
 msgid ""
 "Import the given puzzle file into the local collection (does nothing if no "
 "puzzle file is given)"
@@ -474,7 +497,7 @@ msgstr ""
 "Uvezi navedenu datoteku slagalice u lokalnu zbirku (ne radi ništa ako "
 "datoteka nije zadata)"
 
-#: src/main.cpp:38
+#: src/main.cpp:41
 msgid ""
 "If the -i/--import option is specified, the main window will not be shown "
 "after importing the given puzzle."
@@ -532,8 +555,18 @@ msgstr ""
 "Da li da crtati ispupčenja na slagalici. Isključite ovo bi poboljšali brzinu "
 "iscrtavanja."
 
+#. i18n: ectx: label, entry (PuzzlePreviewVisible), group (PuzzlePreview)
+#: src/palapeli.kcfg:34
+msgid "Whether the preview window was switched on last time Palapeli was run."
+msgstr ""
+
+#. i18n: ectx: label, entry (PuzzlePreviewGeometry), group (PuzzlePreview)
+#: src/palapeli.kcfg:38
+msgid "Last position and size of puzzle preview."
+msgstr ""
+
 #. i18n: ectx: ToolBar (mainToolBar)
-#: src/palapeliui.rc:21
+#: src/palapeliui.rc:24
 msgid "Main toolbar"
 msgstr "Glavna alatna traka"
 
@@ -597,63 +630,77 @@ msgctxt "@item:inrange description for the \"snapping precision\" setting"
 msgid "Unprecise (easier)"
 msgstr "neprecizno (lakše)"
 
-#: src/window/mainwindow.cpp:79
+#: src/window/mainwindow.cpp:86
 msgid "Show statusbar of puzzle table"
 msgstr "Prikaži traku stanja slagačke table"
 
-#: src/window/mainwindow.cpp:81
+#: src/window/mainwindow.cpp:88
 msgid "Back to &collection"
 msgstr "Nazad u &zbirku"
 
-#: src/window/mainwindow.cpp:82
+#: src/window/mainwindow.cpp:89
 msgid "Go back to the collection to choose another puzzle"
 msgstr "Nazad do zbirke da se izabere druga zagonetka"
 
-#: src/window/mainwindow.cpp:87
+#: src/window/mainwindow.cpp:94
 msgid "Create &new puzzle..."
 msgstr "Napravi &novu slagalicu..."
 
-#: src/window/mainwindow.cpp:89
+#: src/window/mainwindow.cpp:96
 msgid "Create a new puzzle using an image file from your disk"
 msgstr "Napravite slagalicu na osnovu datoteke slike sa diska."
 
-#: src/window/mainwindow.cpp:93
+#: src/window/mainwindow.cpp:100
 msgid "&Delete"
 msgstr "&Obriši"
 
-#: src/window/mainwindow.cpp:95
+#: src/window/mainwindow.cpp:102
 msgid "Delete the selected puzzle from your collection"
 msgstr "Obrišite izabranu slagalicu iz svoje zbirke."
 
-#: src/window/mainwindow.cpp:100
+#: src/window/mainwindow.cpp:107
 msgid "&Import from file..."
 msgstr "&Uvezi iz datoteke..."
 
-#: src/window/mainwindow.cpp:101
+#: src/window/mainwindow.cpp:108
 msgid "Import a new puzzle from a file into your collection"
 msgstr "Uvezite novu slagalicu iz datoteke u svoju zbirku."
 
-#: src/window/mainwindow.cpp:105
+#: src/window/mainwindow.cpp:112
 msgid "&Export to file..."
 msgstr "&Izvezi u datoteku..."
 
-#: src/window/mainwindow.cpp:107
+#: src/window/mainwindow.cpp:114
 msgid "Export the selected puzzle from your collection into a file"
 msgstr "Izvezite izabranu slagalicu iz svoje zbirke u datoteku."
 
-#: src/window/mainwindow.cpp:112
+#: src/window/mainwindow.cpp:119
 msgid "&Restart puzzle..."
 msgstr "&Slaži iz početka..."
 
-#: src/window/mainwindow.cpp:113
+#: src/window/mainwindow.cpp:120
 msgid "Delete the saved progress"
 msgstr "Obrišite sačuvani napredak."
 
-#: src/window/mainwindow.cpp:173
+#: src/window/mainwindow.cpp:126
+msgctxt "Preview is a noun here"
+msgid "&Preview"
+msgstr ""
+
+#: src/window/mainwindow.cpp:128
+msgctxt "Preview is a noun here"
+msgid "Preview"
+msgstr ""
+
+#: src/window/mainwindow.cpp:129
+msgid "Shows or hides the image of the completed puzzle"
+msgstr ""
+
+#: src/window/mainwindow.cpp:221
 msgid "The following puzzles will be deleted. This action cannot be undone."
 msgstr "Sljedeće zagonetke će biti obrisane. Ova akcija se ne može poništiti."
 
-#: src/window/mainwindow.cpp:184 src/window/mainwindow.cpp:207
+#: src/window/mainwindow.cpp:232 src/window/mainwindow.cpp:255
 msgctxt "Filter for a file dialog"
 msgid "*.puzzle|Palapeli puzzles (*.puzzle)"
 msgstr "*.puzzle|Palapelijeve slagalice"
