@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-12-20 01:32+0000\n"
+"POT-Creation-Date: 2014-01-09 01:30+0000\n"
 "PO-Revision-Date: 2013-11-12 07:58+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -97,10 +97,59 @@ msgstr "Datoteke su identične."
 msgid "Could not write to the temporary file."
 msgstr "Nisam mogao da pišem u privremenu datoteku."
 
-#. i18n: ectx: property (text), item, widget (QComboBox, patchSelection)
-#: localpatchsource.cpp:38 patchreview.ui:152
+#: localpatchsource.cpp:43
 msgid "Custom Patch"
 msgstr "Vlasitta zakrpa"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, LocalPatchWidget)
+#: localpatchwidget.ui:14
+msgid "Form"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, localPatchOptions)
+#: localpatchwidget.ui:20
+msgid "Patch"
+msgstr "Zakrpa"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: localpatchwidget.ui:29
+msgid "Base:"
+msgstr "Osnova:"
+
+#. i18n: ectx: property (clickMessage), widget (KUrlRequester, baseDir)
+#: localpatchwidget.ui:36
+msgid "Patch base..."
+msgstr "Baza zakrpa"
+
+#. i18n: ectx: attribute (title), widget (QWidget, fileTab)
+#: localpatchwidget.ui:47
+msgid "From File"
+msgstr "Iz datoteke"
+
+#. i18n: ectx: property (clickMessage), widget (KUrlRequester, filename)
+#: localpatchwidget.ui:53
+msgid "Patch location..."
+msgstr "Lokacija zakrpe..."
+
+#. i18n: ectx: attribute (title), widget (QWidget, commandTab)
+#: localpatchwidget.ui:61
+msgid "From Command"
+msgstr "Iz komande"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, command)
+#: localpatchwidget.ui:67
+msgid "Command's output..."
+msgstr "Izlaz komande..."
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, applied)
+#: localpatchwidget.ui:78
+msgid "Patch is already applied on local version"
+msgstr "Zakrpa je već primijenjena na lokalnu verziju"
+
+#. i18n: ectx: property (text), widget (QCheckBox, applied)
+#: localpatchwidget.ui:81
+msgid "Already applied"
+msgstr "Već primjenjena"
 
 #: patchhighlighter.cpp:74
 msgid "<b><span style=\"color:red\">Conflict</span></b><br/>"
@@ -147,21 +196,26 @@ msgstr "Uklanjanje"
 msgid "Change"
 msgstr "Promijeni"
 
-#: patchreview.cpp:271 patchreview.cpp:273
+#: patchreview.cpp:272 patchreview.cpp:274
 msgid "Kompare Model Update"
 msgstr "Ažuriranje Kompare modela"
 
-#: patchreview.cpp:284 patchreview.cpp:478 patchreview.cpp:514
+#: patchreview.cpp:285 patchreview.cpp:467 patchreview.cpp:506
 msgid "Patch Review"
 msgstr "Pregled zakrpa"
 
-#: patchreview.cpp:284
+#: patchreview.cpp:285
 msgid "Highlights code affected by a patch"
 msgstr "Označava kod na koji utiče zakrpa"
 
-#: patchreview.cpp:440
+#: patchreview.cpp:429
 msgid "Overview"
 msgstr "Pregled"
+
+#. i18n: ectx: property (text), widget (QToolButton, finishReview)
+#: patchreview.cpp:492 patchreview.ui:134
+msgid "Finish Review"
+msgstr "Završi recenziju"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, EditPatch)
 #: patchreview.ui:14
@@ -169,7 +223,7 @@ msgid "Edit Patch"
 msgstr "Uredi zakrpu"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, previousFile)
-#: patchreview.ui:22
+#: patchreview.ui:24
 msgid "Previous file"
 msgstr "Prethodna datoteka"
 
@@ -177,102 +231,47 @@ msgstr "Prethodna datoteka"
 #. i18n: ectx: property (text), widget (QToolButton, previousHunk)
 #. i18n: ectx: property (text), widget (QToolButton, nextHunk)
 #. i18n: ectx: property (text), widget (QToolButton, nextFile)
-#: patchreview.ui:25 patchreview.ui:35 patchreview.ui:45 patchreview.ui:55
+#: patchreview.ui:27 patchreview.ui:37 patchreview.ui:47 patchreview.ui:57
 msgid "..."
 msgstr "..."
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, previousHunk)
-#: patchreview.ui:32
+#: patchreview.ui:34
 msgid "Previous difference"
 msgstr "Prethodna razlila"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, nextHunk)
-#: patchreview.ui:42
+#: patchreview.ui:44
 msgid "Next difference"
 msgstr "Naredna razlika"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, nextFile)
-#: patchreview.ui:52
+#: patchreview.ui:54
 msgid "Next file"
 msgstr "Naredna datoteka"
 
 #. i18n: ectx: property (text), widget (QPushButton, updateButton)
-#: patchreview.ui:81
+#: patchreview.ui:83
 msgid "Update"
 msgstr "Nadogradnja"
 
 #. i18n: ectx: property (text), widget (QPushButton, testsButton)
-#: patchreview.ui:88
+#: patchreview.ui:90
 msgid "Run Tests"
 msgstr "Pokreni testove"
 
 #. i18n: ectx: property (text), widget (QToolButton, exportReview)
-#: patchreview.ui:111
+#: patchreview.ui:117
 msgid "Export Diff..."
 msgstr "Izvezi Diff..."
 
 #. i18n: ectx: property (text), widget (QPushButton, cancelReview)
-#: patchreview.ui:121
+#: patchreview.ui:127
 msgid "Cancel Review"
 msgstr "Otkaži recenziju"
 
-#. i18n: ectx: property (text), widget (QToolButton, finishReview)
-#: patchreview.ui:128 patchreviewtoolview.cpp:156
-msgid "Finish Review"
-msgstr "Završi recenziju"
-
-#. i18n: ectx: property (title), widget (QGroupBox, localPatchOptions)
-#: patchreview.ui:143
-msgid "Patch"
-msgstr "Zakrpa"
-
-#. i18n: ectx: property (text), widget (QPushButton, showButton)
-#: patchreview.ui:166
-msgid "Show"
-msgstr "Prikaži"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: patchreview.ui:175
-msgid "Base:"
-msgstr "Osnova:"
-
-#. i18n: ectx: property (clickMessage), widget (KUrlRequester, baseDir)
-#: patchreview.ui:182
-msgid "Patch base..."
-msgstr "Baza zakrpa"
-
-#. i18n: ectx: attribute (title), widget (QWidget, fileTab)
-#: patchreview.ui:193
-msgid "From File"
-msgstr "Iz datoteke"
-
-#. i18n: ectx: property (clickMessage), widget (KUrlRequester, filename)
-#: patchreview.ui:199
-msgid "Patch location..."
-msgstr "Lokacija zakrpe..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, commandTab)
-#: patchreview.ui:207
-msgid "From Command"
-msgstr "Iz komande"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, command)
-#: patchreview.ui:213
-msgid "Command's output..."
-msgstr "Izlaz komande..."
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, applied)
-#: patchreview.ui:224
-msgid "Patch is already applied on local version"
-msgstr "Zakrpa je već primijenjena na lokalnu verziju"
-
-#. i18n: ectx: property (text), widget (QCheckBox, applied)
-#: patchreview.ui:227
-msgid "Already applied"
-msgstr "Već primjenjena"
-
 #. i18n: ectx: property (title), widget (QGroupBox, filesGroup)
-#: patchreview.ui:250
+#: patchreview.ui:153
 msgid "Changes"
 msgstr "Izmjene"
 
@@ -285,19 +284,19 @@ msgstr[0] "%2 (%1 komad)"
 msgstr[1] "%2 (%1 komada)"
 msgstr[2] "%2 (%1 komada)"
 
-#: patchreviewtoolview.cpp:291
+#: patchreviewtoolview.cpp:229
 msgid "Select All"
 msgstr "Izaberi sve"
 
-#: patchreviewtoolview.cpp:293
+#: patchreviewtoolview.cpp:231
 msgid "Deselect All"
 msgstr "Poništi izbor"
 
-#: patchreviewtoolview.cpp:571
+#: patchreviewtoolview.cpp:509
 msgid "Running tests: %p%"
 msgstr "Pokrećem testove: %p%"
 
-#: patchreviewtoolview.cpp:599
+#: patchreviewtoolview.cpp:537
 #, kde-format
 msgid "Test passed"
 msgid_plural "All %1 tests passed"
@@ -305,7 +304,7 @@ msgstr[0] "%1 test prošao"
 msgstr[1] "%1 testa prošla"
 msgstr[2] "%1 testova prošlo"
 
-#: patchreviewtoolview.cpp:603
+#: patchreviewtoolview.cpp:541
 #, kde-format
 msgid "Test results: %1 passed, %2 failed, %3 errors"
 msgstr "Rezultati testa: %1 prošlo, %2 neuspjelo, %3 greške"
@@ -325,3 +324,6 @@ msgstr "Pošalji kontakt osobi..."
 #: standardpatchexport.cpp:89
 msgid "Side view (Kompare)..."
 msgstr "Bočni pogled (Kompare)..."
+
+#~ msgid "Show"
+#~ msgstr "Prikaži"
