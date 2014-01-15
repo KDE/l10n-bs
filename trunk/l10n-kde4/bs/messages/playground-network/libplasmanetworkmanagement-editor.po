@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenm\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-01-03 02:15+0000\n"
+"POT-Creation-Date: 2014-01-15 01:44+0000\n"
 "PO-Revision-Date: 2013-08-01 14:07+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: bondwidget.cpp:47 bridgewidget.cpp:44
+#: bondwidget.cpp:47 bridgewidget.cpp:44 teamwidget.cpp:44
 msgid "Ethernet"
 msgstr "Eternet"
 
@@ -69,20 +69,20 @@ msgctxt "bond link monitoring"
 msgid "ARP"
 msgstr "ARP"
 
-#: bondwidget.cpp:243 bridgewidget.cpp:193
+#: bondwidget.cpp:243 bridgewidget.cpp:193 teamwidget.cpp:178
 #, kde-format
 msgid "Do you want to remove the connection '%1'?"
 msgstr "Želite li da uklonite konekciju  %1?"
 
-#: bondwidget.cpp:243 bridgewidget.cpp:193
+#: bondwidget.cpp:243 bridgewidget.cpp:193 teamwidget.cpp:178
 msgid "Remove Connection"
 msgstr "Ukloni vezu"
 
-#: bridgewidget.cpp:47
+#: bridgewidget.cpp:47 teamwidget.cpp:53
 msgid "VLAN"
 msgstr "VLAN"
 
-#: bridgewidget.cpp:50 connectiondetaileditor.cpp:276
+#: bridgewidget.cpp:50 connectiondetaileditor.cpp:279 teamwidget.cpp:50
 #, fuzzy
 msgid "Wireless"
 msgstr "Wireless"
@@ -95,94 +95,98 @@ msgstr "Alat za pristup Internetu preko telefonskog poziva"
 msgid "PAN (personal area network)"
 msgstr "Personalna mreža(PANU)"
 
-#: connectiondetaileditor.cpp:93
+#: connectiondetaileditor.cpp:96
 #, fuzzy
 msgid "my_shared_connection"
 msgstr "Dijeljena žičana konekcija"
 
-#: connectiondetaileditor.cpp:236
+#: connectiondetaileditor.cpp:239
 #, fuzzy, kde-format
 msgid "New Connection (%1)"
 msgstr "&Nova veza"
 
-#: connectiondetaileditor.cpp:237
+#: connectiondetaileditor.cpp:240
 #, fuzzy, kde-format
 msgid "New %1 connection"
 msgstr "&Nova veza"
 
-#: connectiondetaileditor.cpp:239
+#: connectiondetaileditor.cpp:242
 #, fuzzy, kde-format
 msgid "Edit Connection '%1'"
 msgstr "Izmijeni vezu..."
 
-#: connectiondetaileditor.cpp:262
+#: connectiondetaileditor.cpp:265
 msgid "General"
 msgstr "Općenito"
 
-#: connectiondetaileditor.cpp:271 connectiondetaileditor.cpp:285
+#: connectiondetaileditor.cpp:274 connectiondetaileditor.cpp:288
 msgid "Wired"
 msgstr "Žičana"
 
-#: connectiondetaileditor.cpp:273
+#: connectiondetaileditor.cpp:276
 msgid "802.1x Security"
 msgstr "802.1x Sigurnost"
 
-#: connectiondetaileditor.cpp:280
+#: connectiondetaileditor.cpp:283
 msgid "Wireless Security"
 msgstr "Bežična bezbjednost"
 
-#: connectiondetaileditor.cpp:283
+#: connectiondetaileditor.cpp:286
 msgid "DSL"
 msgstr "DSL"
 
-#: connectiondetaileditor.cpp:288 connectiondetaileditor.cpp:291
+#: connectiondetaileditor.cpp:291 connectiondetaileditor.cpp:294
 #, kde-format
 msgid "Mobile Broadband (%1)"
 msgstr "Mobilna širokopojasna (%1)"
 
-#: connectiondetaileditor.cpp:294
+#: connectiondetaileditor.cpp:297
 msgid "Bluetooth"
 msgstr "Blutut"
 
-#: connectiondetaileditor.cpp:298
+#: connectiondetaileditor.cpp:301
 msgid "GSM"
 msgstr "GSM"
 
-#: connectiondetaileditor.cpp:300 connectiondetaileditor.cpp:350
+#: connectiondetaileditor.cpp:303 connectiondetaileditor.cpp:358
 msgid "PPP"
 msgstr "PPP"
 
-#: connectiondetaileditor.cpp:304
+#: connectiondetaileditor.cpp:307 teamwidget.cpp:47
 msgid "Infiniband"
 msgstr "InfiniBand"
 
-#: connectiondetaileditor.cpp:307
+#: connectiondetaileditor.cpp:310
 #, fuzzy
 msgid "Bond"
 msgstr "Obveznice"
 
-#: connectiondetaileditor.cpp:310
+#: connectiondetaileditor.cpp:313
 msgid "Bridge"
 msgstr "Most"
 
-#: connectiondetaileditor.cpp:313
+#: connectiondetaileditor.cpp:316
 msgid "Vlan"
 msgstr "Vlan"
 
-#: connectiondetaileditor.cpp:316
+#: connectiondetaileditor.cpp:320
+msgid "Team"
+msgstr ""
+
+#: connectiondetaileditor.cpp:324
 msgid "Wimax"
 msgstr "Wimax"
 
-#: connectiondetaileditor.cpp:340
+#: connectiondetaileditor.cpp:348
 #, kde-format
 msgid "VPN (%1)"
 msgstr "VPN (%1)"
 
-#: connectiondetaileditor.cpp:356
+#: connectiondetaileditor.cpp:364
 msgid "IPv4"
 msgstr "IPv4"
 
-#: connectiondetaileditor.cpp:368
+#: connectiondetaileditor.cpp:379
 msgid "IPv6"
 msgstr "IPv6"
 
@@ -536,7 +540,7 @@ msgid "Users allowed to activate the connection"
 msgstr "Korisnici kojima je dopušteno da aktiviraju konekciju"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: ui/bond.ui:18 ui/bridge.ui:18
+#: ui/bond.ui:18 ui/bridge.ui:18 ui/team.ui:18
 msgid "Interface name:"
 msgstr "ime interfejsa"
 
@@ -547,17 +551,17 @@ msgid "Bonded connections:"
 msgstr "Konekcije mreže"
 
 #. i18n: ectx: property (text), widget (KPushButton, btnAdd)
-#: ui/bond.ui:56 ui/bridge.ui:56
+#: ui/bond.ui:56 ui/bridge.ui:56 ui/team.ui:56
 msgid "Add..."
 msgstr "Dodaj..."
 
 #. i18n: ectx: property (text), widget (KPushButton, btnEdit)
-#: ui/bond.ui:71 ui/bridge.ui:71
+#: ui/bond.ui:71 ui/bridge.ui:71 ui/team.ui:71
 msgid "Edit..."
 msgstr "Izmijeni..."
 
 #. i18n: ectx: property (text), widget (KPushButton, btnDelete)
-#: ui/bond.ui:86 ui/bridge.ui:86
+#: ui/bond.ui:86 ui/bridge.ui:86 ui/team.ui:86
 msgid "Delete"
 msgstr "Obriši"
 
@@ -1100,6 +1104,22 @@ msgstr "Šalji PPP eho pakete"
 #, fuzzy
 msgid "Service:"
 msgstr "Usluga:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: ui/team.ui:31
+#, fuzzy
+msgid "Teamed connections:"
+msgstr "Konekcije mreže"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/team.ui:113
+msgid "JSON config:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, btnImport)
+#: ui/team.ui:123
+msgid "Import configuration from file..."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/vlan.ui:21
