@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: palapeli\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-01-17 01:40+0000\n"
+"POT-Creation-Date: 2014-01-24 18:54+0000\n"
 "PO-Revision-Date: 2013-01-26 14:19+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -131,13 +131,42 @@ msgstr "Raznovrsnost veličine komada"
 msgid "Dump grid image"
 msgstr "Izdvoji sliku rešetke"
 
-#: src/config/configdialog.cpp:67
+#: src/config/configdialog.cpp:73
 msgid "General settings"
 msgstr "Opšte postavke"
 
-#: src/config/configdialog.cpp:69
+#: src/config/configdialog.cpp:76
 msgid "Mouse interaction"
 msgstr "Dejstvo miša"
+
+#: src/config/configdialog.cpp:123
+msgid "Center"
+msgstr ""
+
+#: src/config/configdialog.cpp:124
+#, fuzzy
+#| msgctxt ""
+#| "This is used for describing that no mouse action has been assigned to "
+#| "this interaction plugin."
+#| msgid "None"
+msgid "None"
+msgstr "Nikakva"
+
+#: src/config/configdialog.cpp:125
+msgid "Top Left"
+msgstr ""
+
+#: src/config/configdialog.cpp:126
+msgid "Top Right"
+msgstr ""
+
+#: src/config/configdialog.cpp:127
+msgid "Bottom Left"
+msgstr ""
+
+#: src/config/configdialog.cpp:128
+msgid "Bottom Right"
+msgstr ""
 
 #: src/config/mouseinputbutton.cpp:57
 msgid "Remove this trigger"
@@ -267,21 +296,23 @@ msgstr ""
 msgid "Change size of puzzle table area by dragging its edges"
 msgstr "Menjanje veličine površi slagačke table prevlačenjem ivica"
 
-#: src/engine/gameplay.cpp:211
+#: src/engine/gameplay.cpp:123 src/engine/gameplay.cpp:606
+#, fuzzy
+#| msgid ""
+#| "You have finished the puzzle the last time. Do you want to restart it now?"
+msgid "You have finished the puzzle. Do you want to restart it now?"
+msgstr "Prošli put ste završili slagalicu. Želite li da krenete iz početka?"
+
+#: src/engine/gameplay.cpp:237
 msgid "The following puzzles will be deleted. This action cannot be undone."
 msgstr "Sljedeće zagonetke će biti obrisane. Ova akcija se ne može poništiti."
 
-#: src/engine/gameplay.cpp:224 src/engine/gameplay.cpp:249
+#: src/engine/gameplay.cpp:250 src/engine/gameplay.cpp:275
 msgctxt "Filter for a file dialog"
 msgid "*.puzzle|Palapeli puzzles (*.puzzle)"
 msgstr "*.puzzle|Palapelijeve slagalice"
 
-#: src/engine/gameplay.cpp:477
-msgid ""
-"You have finished the puzzle the last time. Do you want to restart it now?"
-msgstr "Prošli put ste završili slagalicu. Želite li da krenete iz početka?"
-
-#: src/engine/gameplay.cpp:523
+#: src/engine/gameplay.cpp:652
 msgid "Great! You have finished the puzzle."
 msgstr "Sjajno! Završili ste slagalicu."
 
@@ -408,11 +439,11 @@ msgstr "Vodoravno klizanje"
 msgid "Vertical-Scroll"
 msgstr "Uspravno klizanje"
 
-#: src/engine/view.cpp:222
+#: src/engine/view.cpp:243
 msgid "Your progress is saved automatically while you play."
 msgstr "Vaš napredak se upisuje automatski dok igrate."
 
-#: src/engine/view.cpp:222
+#: src/engine/view.cpp:243
 msgctxt "used as caption for a dialog that explains the autosave feature"
 msgid "Automatic saving"
 msgstr "Automatsko snimanje"
@@ -537,8 +568,15 @@ msgstr ""
 "Željena boja pozadine u prikazu (ako je ključ ViewBackgroundColor postavljen "
 "na__color__)."
 
-#. i18n: ectx: label, entry (ShowStatusBar), group (Appearance)
+#. i18n: ectx: label, entry (SolutionArea), group (Appearance)
 #: src/palapeli.kcfg:20
+msgid ""
+"Where to reserve space on the puzzle table for the solution, when shuffling "
+"or re-shuffling the pieces."
+msgstr ""
+
+#. i18n: ectx: label, entry (ShowStatusBar), group (Appearance)
+#: src/palapeli.kcfg:24
 msgid ""
 "Whether to show the status bar on the puzzle table. (It is not a real status "
 "bar, but the position and provided functionality is similar.)"
@@ -547,7 +585,7 @@ msgstr ""
 "stanja, ali su položaj i funkcionalnost slični.)"
 
 #. i18n: ectx: label, entry (PieceShadowsEnabled), group (Appearance)
-#: src/palapeli.kcfg:24
+#: src/palapeli.kcfg:28
 msgid ""
 "Whether to render shadows below the puzzle pieces. Turning this off might "
 "improve rendering performance."
@@ -556,7 +594,7 @@ msgstr ""
 "poboljšali brzinu iscrtavanja."
 
 #. i18n: ectx: label, entry (PieceBevelsEnabled), group (Appearance)
-#: src/palapeli.kcfg:28
+#: src/palapeli.kcfg:32
 msgid ""
 "Whether to render bevels on the puzzle pieces. Turning this off might "
 "improve puzzle loading performance."
@@ -565,12 +603,12 @@ msgstr ""
 "iscrtavanja."
 
 #. i18n: ectx: label, entry (PuzzlePreviewVisible), group (PuzzlePreview)
-#: src/palapeli.kcfg:34
+#: src/palapeli.kcfg:38
 msgid "Whether the preview window was switched on last time Palapeli was run."
 msgstr ""
 
 #. i18n: ectx: label, entry (PuzzlePreviewGeometry), group (PuzzlePreview)
-#: src/palapeli.kcfg:38
+#: src/palapeli.kcfg:42
 msgid "Last position and size of puzzle preview."
 msgstr ""
 
@@ -586,28 +624,30 @@ msgid "Puzzle table"
 msgstr "Slagačka tabla"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: src/settings.ui:23
+#: src/settings.ui:25
 msgctxt "@label:chooser for different types of background textures"
 msgid "Background:"
 msgstr "Pozadina:"
 
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/settings.ui:60
+msgid "Space for Solution:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/settings.ui:79
+msgid ""
+"No space is provided with puzzles of less than 20 pieces. Changes will take "
+"effect when a puzzle is created or re-started."
+msgstr ""
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: src/settings.ui:54
+#: src/settings.ui:92
 msgid "Piece appearance"
 msgstr "Izgled komada"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PieceBevelsEnabled)
-#: src/settings.ui:60
-msgid "Draw bevels to create a 3-dimensional appearance"
-msgstr "Crttaj ispupčenja da se dobije trodimenzionalni izgled"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PieceShadowsEnabled)
-#: src/settings.ui:70
-msgid "Draw shadows below pieces"
-msgstr "Crtaj sjenke ispod likova"
-
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: src/settings.ui:80
+#: src/settings.ui:98
 msgid ""
 "These options can be disabled when Palapeli is running very slowly. Changes "
 "will take effect only when a new puzzle is started."
@@ -615,26 +655,36 @@ msgstr ""
 "Ove opcije mogu biti onemogućene kada Palapeli radi veoma sporo. Izmjene će "
 "stupiti na snagu tek kada nova zagonetka započne."
 
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PieceBevelsEnabled)
+#: src/settings.ui:108
+msgid "Draw bevels to create a 3-dimensional appearance"
+msgstr "Crttaj ispupčenja da se dobije trodimenzionalni izgled"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PieceShadowsEnabled)
+#: src/settings.ui:118
+msgid "Draw shadows below pieces"
+msgstr "Crtaj sjenke ispod likova"
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: src/settings.ui:93
+#: src/settings.ui:131
 msgctxt "@title:group"
 msgid "Piece behavior"
 msgstr "Ponašanje dijelova"
 
 #. i18n: ectx: property (text), widget (QLabel, label_1)
-#: src/settings.ui:102
+#: src/settings.ui:137
 msgctxt "@label:slider"
 msgid "Snapping precision:"
 msgstr "Tačnost uklapanja:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: src/settings.ui:142
+#: src/settings.ui:177
 msgctxt "@item:inrange description for the \"snapping precision\" setting"
 msgid "Very precise (harder)"
 msgstr "vrlo precizno (teže)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: src/settings.ui:171
+#: src/settings.ui:206
 msgctxt "@item:inrange description for the \"snapping precision\" setting"
 msgid "Unprecise (easier)"
 msgstr "neprecizno (lakše)"
