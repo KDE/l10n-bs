@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-01-03 01:56+0000\n"
+"POT-Creation-Date: 2014-02-10 01:29+0000\n"
 "PO-Revision-Date: 2014-01-10 19:58+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -1158,9 +1158,10 @@ msgstr "Korisničko ime za povezivanje sa Audioscrobbler-om"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPassword)
 #. i18n: ectx: property (text), widget (QTableWidget, serverList)
+#. i18n: ectx: property (text), widget (QLabel, m_passwordLabel)
 #. i18n: ectx: label, entry, group (Scrobbler)
-#: amarokconfig.kcfg:457
-#: databaseimporter/amarok14/FastForwardImporterConfig.cpp:57
+#: amarokconfig.kcfg:457 importers/amarok/AmarokConfigWidget.ui:38
+#: importers/fastforward/FastForwardConfigWidget.ui:46
 #: services/ampache/AmpacheConfigWidget.ui:68
 #: services/ampache/NewServerWidget.ui:60
 msgid "Password"
@@ -2819,37 +2820,37 @@ msgstr "radostan"
 msgid "Normal"
 msgstr "Normalno"
 
-#: configdialog/dialogs/MetadataConfig.cpp:33
+#: configdialog/dialogs/MetadataConfig.cpp:34
 msgctxt "Maximum cover size option"
 msgid "Small (200 px)"
 msgstr "Mala (200 px)"
 
-#: configdialog/dialogs/MetadataConfig.cpp:35
+#: configdialog/dialogs/MetadataConfig.cpp:36
 msgctxt "Maximum cover size option"
 msgid "Medium (400 px)"
 msgstr "Srednja (400 px)"
 
-#: configdialog/dialogs/MetadataConfig.cpp:37
+#: configdialog/dialogs/MetadataConfig.cpp:38
 msgctxt "Maximum cover size option"
 msgid "Large (800 px)"
 msgstr "Velika (800 px)"
 
-#: configdialog/dialogs/MetadataConfig.cpp:39
+#: configdialog/dialogs/MetadataConfig.cpp:40
 msgctxt "Maximum cover size option"
 msgid "Huge (1600 px)"
 msgstr "Ogromna (1600 px)"
 
-#: configdialog/dialogs/MetadataConfig.cpp:85
+#: configdialog/dialogs/MetadataConfig.cpp:101
 msgid "Synchronize Labels"
 msgstr "Uskladi naljepnice"
 
-#: configdialog/dialogs/MetadataConfig.cpp:103
+#: configdialog/dialogs/MetadataConfig.cpp:119
 #, kde-format
 msgctxt "%1 is field name such as Play Count"
 msgid "Synchronize %1"
 msgstr "Uskladi %1"
 
-#: configdialog/dialogs/MetadataConfig.cpp:191
+#: configdialog/dialogs/MetadataConfig.cpp:207
 #, kde-format
 msgid "(%2one exception%3)"
 msgid_plural "(%2%1 exceptions%3)"
@@ -2945,15 +2946,29 @@ msgstr ""
 "dijeljenje numera sviranih na iPod-ima ako imate Last.fm dodatke "
 "konfigurisane"
 
-#. i18n: ectx: property (text), widget (QPushButton, m_forgetCollectionsButton)
+#. i18n: ectx: property (text), widget (QPushButton, m_forgetTargetsButton)
 #: configdialog/dialogs/MetadataConfig.ui:128
-msgid "Forget about Selected Collections"
-msgstr "Zaboravi odabrane kolekcije"
+msgid "Forget"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, m_configureTargetButton)
+#: configdialog/dialogs/MetadataConfig.ui:138
+#, fuzzy
+#| msgid "&Configure"
+msgid "Configure…"
+msgstr "Po&desi"
+
+#. i18n: ectx: property (text), widget (QPushButton, m_addTargetButton)
+#: configdialog/dialogs/MetadataConfig.ui:145
+msgid "Add…"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, m_synchronizeButton)
-#: configdialog/dialogs/MetadataConfig.ui:135
-msgid "Perform Synchronization..."
-msgstr "Izvođenje sinhronizacije ..."
+#: configdialog/dialogs/MetadataConfig.ui:155
+#, fuzzy
+#| msgid "Synchronize"
+msgid "Synchronize…"
+msgstr "Uskladi"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: configdialog/dialogs/NotificationsConfig.ui:17
@@ -3205,6 +3220,12 @@ msgstr "Kolekcije"
 #: configdialog/dialogs/PluginsConfig.cpp:48
 msgid "Internet Services"
 msgstr "Internet servisi"
+
+#: configdialog/dialogs/PluginsConfig.cpp:52
+#, fuzzy
+#| msgid "Statistics"
+msgid "Statistics importers"
+msgstr "Statistika"
 
 #: configdialog/dialogs/ScriptsConfig.cpp:50
 msgid "Generic"
@@ -7581,159 +7602,12 @@ msgstr "Nema izvođača"
 msgid "Cover View"
 msgstr "Prikaz omota"
 
-#: databaseimporter/amarok14/FastForwardImporterConfig.cpp:39
-msgid "Connection"
-msgstr "Veza"
-
-#: databaseimporter/amarok14/FastForwardImporterConfig.cpp:45
-#: databaseimporter/itunes/ITunesImporterConfig.cpp:37
-msgid "Database Location"
-msgstr "Lokacija baze"
-
-#. i18n: ectx: property (text), widget (QLabel, labelUsername)
-#. i18n: ectx: property (text), widget (QTableWidget, serverList)
-#: databaseimporter/amarok14/FastForwardImporterConfig.cpp:53
-#: services/ampache/AmpacheConfigWidget.ui:63
-#: services/ampache/NewServerWidget.ui:50
-msgid "Username"
-msgstr "Korisničko ime"
-
-#: databaseimporter/amarok14/FastForwardImporterConfig.cpp:62
-msgid "Database Name"
-msgstr "Naziv baze"
-
-#: databaseimporter/amarok14/FastForwardImporterConfig.cpp:66
-msgid "Hostname"
-msgstr "Ime domaćina"
-
-# >> @option:check
-#: databaseimporter/amarok14/FastForwardImporterConfig.cpp:92
-msgid "Match tracks by meta tags"
-msgstr "Poklapaj numere po metaoznakama"
-
-#: databaseimporter/amarok14/FastForwardImporterConfig.cpp:93
-msgid ""
-"Perform meta information search on non-existing files, possibly detecting "
-"file renames. See <b>What's This</b>"
-msgstr ""
-"Izvršava pretragu po metapodacima za nepostojeće datoteke, da bi se otkrila "
-"moguća preimenovanja datoteka. Pogledajte i šta‑je‑ovo."
-
-#: databaseimporter/amarok14/FastForwardImporterConfig.cpp:95
-msgid ""
-"If enabled, tracks from the old collection that do not exist anymore in the "
-"file system are searched for (by metadata) in the current collection. If a "
-"match is found, statistics for the matched track are updated, even if the "
-"file locations differ."
-msgstr ""
-"Ako je omogućena, numere iz stare kolekcije koje više ne postoje u sistemu "
-"datoteka za kojim se traga  (po metapodacima) u aktuelne kolekcije. Ukoliko "
-"se pronađe podudaranje, statistike za uparenu numeru se ažuriraju, čak i ako "
-"datoteke lokacije razlikuju."
-
-#: databaseimporter/amarok14/FastForwardImporterConfig.cpp:101
-msgid "Import downloaded artwork"
-msgstr "Uvezi preuzete omote"
-
-#: databaseimporter/amarok14/FastForwardImporterConfig.cpp:110
-msgid "Artwork directory"
-msgstr "Direktorij omota"
-
-#: databaseimporter/amarok14/FastForwardWorker.cpp:81
-msgid "No database driver was selected"
-msgstr "Nije izabran drajver za bazu"
-
-#: databaseimporter/amarok14/FastForwardWorker.cpp:87
-#, kde-format
-msgid "Database could not be found at: %1"
-msgstr "Baza nije pronađena na: %1"
-
-#: databaseimporter/amarok14/FastForwardWorker.cpp:122
-#, kde-format
-msgid "Could not open Amarok 1.4 database: %1"
-msgstr "Ne mogu da otvorim bazu iz Amaroka 1.4: %1"
-
-#: databaseimporter/amarok14/FastForwardWorker.cpp:152
-#, kde-format
-msgid "Could not execute import query: %1"
-msgstr "Ne mogu da izvršim upit uvoza: %1"
-
-#: databaseimporter/amarok14/FastForwardWorker.cpp:236
-msgid ""
-"(track exists, but does not belong in any of your configured collection "
-"folders)"
-msgstr ""
-"(numera postoji, ali ne spada u nijednu od Vaših konfigurisanih  fascikli "
-"kolekcija)"
-
-#: databaseimporter/amarok14/FastForwardWorker.cpp:270
-#, kde-format
-msgid "Adding <b>1 new track</b> to Amarok collection <b>%2</b>."
-msgid_plural "Adding <b>%1 new tracks</b> to Amarok collection <b>%2</b>."
-msgstr[0] "Dodavanje<b>%1 nove numere</b> u Amarok kolekciju <b>%2</b>."
-msgstr[1] "Dodavanje<b>%1 nove numere</b> u Amarok kolekciju <b>%2</b>."
-msgstr[2] "Dodavanje<b>%1 novih numera</b> u Amarok kolekciju <b>%2</b>."
-
-#: databaseimporter/amarok14/FastForwardWorker.cpp:408
-#, kde-format
-msgid "Could not execute labels import query: %1; query was: %2"
-msgstr "Ne mogu da izvršim upit uvoza etiketa: %1; upit je: %2"
-
-#: databaseimporter/amarok14/FastForwardWorker.cpp:431
-#, kde-format
-msgid "Updating cached lyrics and labels for 1 track..."
-msgid_plural "Updating cached lyrics and labels for %1 tracks..."
-msgstr[0] "Ažuriranje zapamćenih tekstova i oznaka za %1 numeru..."
-msgstr[1] "Ažuriranje zapamćenih tekstova i oznaka za %1 numere..."
-msgstr[2] "Ažuriranje zapamćenih tekstova i oznaka za %1 numera..."
-
-#: databaseimporter/amarok14/FastForwardWorker.cpp:447
-#, kde-format
-msgid "Failed to update lyrics/labels for track %1"
-msgstr "Ne mogu da ažuriram stihove ili etikete za numeru %1"
-
-#: databaseimporter/amarok14/FastForwardWorker.cpp:467
-#, kde-format
-msgid "Cached lyrics updated for 1 track"
-msgid_plural "Cached lyrics updated for %1 tracks"
-msgstr[0] "Zapamćeni tekstovi i oznake ažurirani za %1 numeru..."
-msgstr[1] "Zapamćeni tekstovi i oznake ažurirani za %1 numere..."
-msgstr[2] "Zapamćeni tekstovi i oznake ažurirani za %1 numera..."
-
-#: databaseimporter/amarok14/FastForwardWorker.cpp:471
-#, kde-format
-msgid "labels added to 1 track"
-msgid_plural "labels added to %1 tracks"
-msgstr[0] "oznake dodane za %1 numeru"
-msgstr[1] "oznake dodane za %1 numere"
-msgstr[2] "oznake dodane za %1 numera"
-
-#: databaseimporter/amarok14/FastForwardWorker.cpp:477
-#, kde-format
-msgctxt ""
-"%1 is e.g. Cached lyrics updated for 2 tracks, %2 is e.g. labels added to 3 "
-"tracks"
-msgid "%1, %2."
-msgstr "%1, %2."
-
-#: databaseimporter/amarok14/FastForwardWorker.cpp:484
-msgid "Importing downloaded album art..."
-msgstr "Uvozim preuzete omote..."
-
-#: databaseimporter/amarok14/FastForwardWorker.cpp:518
-#, kde-format
-msgid "Copied 1 cover image."
-msgid_plural "Copied %1 cover images."
-msgstr[0] "Kopirana %1 naslovna slika."
-msgstr[1] "Kopirane %1 naslovne slike."
-msgstr[2] "Kopirano %1 naslovnih slika."
-
-#: databaseimporter/sqlbatch/SqlBatchImporter.cpp:74
+#: databaseimporter/SqlBatchImporter.cpp:81
 #, kde-format
 msgid "Could not open file \"%1\"."
 msgstr "Nisam mogao da otvorim datoteku \"%1\"."
 
-#: databaseimporter/sqlbatch/SqlBatchImporterConfig.cpp:37
+#: databaseimporter/SqlBatchImporterConfig.cpp:37
 msgid ""
 "Input file produced by amarokcollectionscanner.<br>See <a href=\"http://"
 "community.kde.org/Amarok/Development/BatchMode\">Batch Mode</a>."
@@ -7741,7 +7615,7 @@ msgstr ""
 "Ulazna datoteka u produkciji amarokcollectionscanner.<br>Pogledajte<a href="
 "\"http://community.kde.org/Amarok/Development/BatchMode\">Batch Mode</a>."
 
-#: databaseimporter/sqlbatch/SqlBatchImporterConfig.cpp:43
+#: databaseimporter/SqlBatchImporterConfig.cpp:44
 msgid "Input file"
 msgstr "Ulazna datoteka"
 
@@ -7755,16 +7629,16 @@ msgid ""
 msgstr "Ponovo pretražuje cijelu zbirku. Ovo <i>neće</i> brisati statistiku."
 
 #: dialogs/CollectionSetup.cpp:70
-msgid "Import"
-msgstr "Uvoz"
+#, fuzzy
+#| msgid "Import OPML File"
+msgid "Import batch file..."
+msgstr "Uvezi OPML datoteku"
 
 #: dialogs/CollectionSetup.cpp:71
-msgid ""
-"Import collection and/or statistics from older Amarok versions, the batch "
-"scanner or media players."
-msgstr ""
-"Uvoz kolekcije i / ili statistike iz starijih verzija Amaroka, grupnog "
-"skenera ili medija plejeri."
+#, fuzzy
+#| msgid "Could not find amarokcollectionscanner!"
+msgid "Import collection from file produced by amarokcollectionscanner."
+msgstr "Ne mogu pronaći amarokcollectionscanner!"
 
 #: dialogs/CollectionSetup.cpp:79
 msgid "&Scan folders recursively (requires full rescan if newly checked)"
@@ -7794,58 +7668,25 @@ msgid "Rescan '%1'"
 msgstr "Ponovo pretraži „%1“"
 
 # >! Contexts.
-#: dialogs/DatabaseImporterDialog.cpp:40
+#: dialogs/DatabaseImporterDialog.cpp:39
 msgid "Import Collection"
 msgstr "Uvezi zbirku"
 
-#: dialogs/DatabaseImporterDialog.cpp:45
-msgid ""
-"This tool allows you to import track information and<br>statistical data "
-"from another music application.<br><br>Any statistical data in your database "
-"will be <i>overwritten</i>"
-msgstr ""
-"Ovaj alat vam omogućava da uvezete informacije i pratite<br>statističke "
-"podatke iz druge muzičke aplikacije.<br><br>Svi statistički podaci u bazi "
-"podataka će biti<i>zamijenjeni</i>"
+#: dialogs/DatabaseImporterDialog.cpp:47
+#, fuzzy
+#| msgid "Podcast Configuration"
+msgid "Import configuration"
+msgstr "Podešavanje podemisije"
 
-#: dialogs/DatabaseImporterDialog.cpp:56
-msgid "Amarok collection scanner"
-msgstr "Amarok kolekcijski skener"
-
-#: dialogs/DatabaseImporterDialog.cpp:57
-msgid "Amarok 1.4"
-msgstr "Amarok 1.4"
-
-#: dialogs/DatabaseImporterDialog.cpp:58
-msgid "iTunes"
-msgstr "I‑Tjuns"
-
-#: dialogs/DatabaseImporterDialog.cpp:59
-msgid "Banshee"
-msgstr "Banši"
-
-#: dialogs/DatabaseImporterDialog.cpp:60
-msgid "Rhythmbox"
-msgstr "Ritam mašina"
-
-# >> @title:window
-#: dialogs/DatabaseImporterDialog.cpp:81
-msgid "Select Importer"
-msgstr "Izbor uvoznika"
-
-#: dialogs/DatabaseImporterDialog.cpp:86
-msgid "Configuration"
-msgstr "Podešavanje"
-
-#: dialogs/DatabaseImporterDialog.cpp:95
+#: dialogs/DatabaseImporterDialog.cpp:69
 msgid "Migrating"
 msgstr "Migracija"
 
-#: dialogs/DatabaseImporterDialog.cpp:162
+#: dialogs/DatabaseImporterDialog.cpp:100
 msgid "<b><font color='red'>Failed:</font></b> No tracks were imported"
 msgstr "<b><font color='red'>Neuspeh:</font></b> nijedna numera nije uvezena"
 
-#: dialogs/DatabaseImporterDialog.cpp:164
+#: dialogs/DatabaseImporterDialog.cpp:102
 #, kde-format
 msgid "<b><font color='green'>Success:</font></b> Imported %1 track"
 msgid_plural "<b><font color='green'>Success:</font></b> Imported %1 tracks"
@@ -7853,40 +7694,40 @@ msgstr[0] "<b><font color='green'>Uspjeh:</font></b> uvezena %1 numera"
 msgstr[1] "<b><font color='green'>Uspjeh:</font></b> uvezene %1 numere"
 msgstr[2] "<b><font color='green'>Uspjeh:</font></b> uvezeno %1 numera"
 
-#: dialogs/DatabaseImporterDialog.cpp:175
+#: dialogs/DatabaseImporterDialog.cpp:113
 msgid "<b><font color='red'>Failed:</font></b> Unable to import statistics"
 msgstr "<b><font color='red'>Neuspjeh:</font></b> ne mogu da uvezem statistiku"
 
-#: dialogs/DatabaseImporterDialog.cpp:190
+#: dialogs/DatabaseImporterDialog.cpp:128
 #, kde-format
 msgid "<b><font color='red'>Error:</font></b> %1"
 msgstr "<b><font color='red'>Greška:</font></b> %1"
 
-#: dialogs/DatabaseImporterDialog.cpp:205
+#: dialogs/DatabaseImporterDialog.cpp:143
 #, kde-format
 msgctxt "Track has been imported, format: Track"
 msgid "Imported <b>%1</b>"
 msgstr "Uvezen <b>%1</b>"
 
-#: dialogs/DatabaseImporterDialog.cpp:208
+#: dialogs/DatabaseImporterDialog.cpp:146
 #, kde-format
 msgctxt "Track has been imported, format: Artist - Track"
 msgid "Imported <b>%1 - %2</b>"
 msgstr "Uvezeno <b>%1 — %2</b>"
 
-#: dialogs/DatabaseImporterDialog.cpp:211
+#: dialogs/DatabaseImporterDialog.cpp:149
 #, kde-format
 msgctxt "Track has been imported, format: Artist - Track (Album)"
 msgid "Imported <b>%1 - %2 (%3)</b>"
 msgstr "Uvezeno <b>%1 — %2 (%3)</b>"
 
-#: dialogs/DatabaseImporterDialog.cpp:220
+#: dialogs/DatabaseImporterDialog.cpp:158
 #, kde-format
 msgctxt "Track has been discarded, format: Url"
 msgid "Discarded <b><font color='gray'>%1</font></b>"
 msgstr "Odbačena: <b><font color='gray'>%1</font></b>"
 
-#: dialogs/DatabaseImporterDialog.cpp:235
+#: dialogs/DatabaseImporterDialog.cpp:173
 #, kde-format
 msgctxt "Track has been imported by tags, format: Track, from Url, to Url"
 msgid ""
@@ -7896,7 +7737,7 @@ msgstr ""
 "Uvezena <b><font color='green'>%1</font></b><br/>&nbsp;&nbsp;iz %2<br/>&nbsp;"
 "&nbsp;u %3"
 
-#: dialogs/DatabaseImporterDialog.cpp:238
+#: dialogs/DatabaseImporterDialog.cpp:176
 #, kde-format
 msgctxt ""
 "Track has been imported by tags, format: Artist - Track, from Url, to Url"
@@ -7907,7 +7748,7 @@ msgstr ""
 "Uvezena: <b><font color='green'>%1 — %2</font></b><br/>&nbsp;&nbsp;sa %3<br/"
 ">&nbsp;&nbsp;u %4"
 
-#: dialogs/DatabaseImporterDialog.cpp:241
+#: dialogs/DatabaseImporterDialog.cpp:179
 #, kde-format
 msgctxt ""
 "Track has been imported by tags, format: Artist - Track (Album), from Url, "
@@ -7919,7 +7760,7 @@ msgstr ""
 "Uvezena: <b><font color='green'>%1 — %2 (%3)</font></b><br/>&nbsp;&nbsp;sa "
 "%4<br/>&nbsp;&nbsp;u %5"
 
-#: dialogs/DatabaseImporterDialog.cpp:253
+#: dialogs/DatabaseImporterDialog.cpp:191
 #, kde-format
 msgctxt "Track has been matched ambigously, format: Url"
 msgid ""
@@ -9573,6 +9414,154 @@ msgstr "Tehno"
 #: equalizer/EqualizerPresets.cpp:103
 msgid "Zero"
 msgstr "Nula"
+
+#: importers/amarok/AmarokConfigWidget.cpp:81
+#, fuzzy
+#| msgctxt "One word translation used in the collection filter"
+#| msgid "added"
+msgctxt "Database type"
+msgid "embedded"
+msgstr "dodato"
+
+#: importers/amarok/AmarokConfigWidget.cpp:82
+msgctxt "Database type"
+msgid "external"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, labelUsername)
+#. i18n: ectx: property (text), widget (QTableWidget, serverList)
+#. i18n: ectx: property (text), widget (QLabel, m_usernameLabel)
+#: importers/amarok/AmarokConfigWidget.ui:9
+#: importers/fastforward/FastForwardConfigWidget.ui:17
+#: services/ampache/AmpacheConfigWidget.ui:63
+#: services/ampache/NewServerWidget.ui:50
+msgid "Username"
+msgstr "Korisničko ime"
+
+#. i18n: ectx: property (text), widget (QLabel, m_connectionTypeLabel)
+#: importers/amarok/AmarokConfigWidget.ui:58
+#, fuzzy
+#| msgid "Database Name"
+msgid "Database type"
+msgstr "Naziv baze"
+
+#. i18n: ectx: property (text), widget (QLabel, m_databaseLocationLabel)
+#: importers/amarok/AmarokConfigWidget.ui:71
+#: importers/banshee/BansheeConfigWidget.cpp:35
+#: importers/clementine/ClementineConfigWidget.cpp:35
+#: importers/fastforward/FastForwardConfigWidget.ui:79
+#: importers/itunes/ITunesConfigWidget.cpp:30
+#: importers/rhythmbox/RhythmboxConfigWidget.cpp:35
+#, fuzzy
+#| msgid "Database Location"
+msgid "Database location"
+msgstr "Lokacija baze"
+
+#. i18n: ectx: property (text), widget (QLabel, m_targetNameLabel)
+#: importers/amarok/AmarokConfigWidget.ui:91
+#: importers/fastforward/FastForwardConfigWidget.ui:99
+#, fuzzy
+#| msgid "artist name"
+msgid "Target name"
+msgstr "ime izvođača"
+
+#. i18n: ectx: property (text), widget (QLabel, m_hostnameLabel)
+#: importers/amarok/AmarokConfigWidget.ui:104
+#: importers/fastforward/FastForwardConfigWidget.ui:112
+msgid "Hostname"
+msgstr "Ime domaćina"
+
+#. i18n: ectx: property (text), widget (QLabel, m_portLabel)
+#: importers/amarok/AmarokConfigWidget.ui:117
+#: importers/fastforward/FastForwardConfigWidget.ui:125
+msgid "Port"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_databaseNameLabel)
+#: importers/amarok/AmarokConfigWidget.ui:127
+#: importers/fastforward/FastForwardConfigWidget.ui:135
+#, fuzzy
+#| msgid "Database Name"
+msgid "Database name"
+msgstr "Naziv baze"
+
+#. i18n: ectx: property (text), widget (QLabel, m_mysqlBinaryLabel)
+#: importers/amarok/AmarokConfigWidget.ui:163
+msgid "MySQL server binary"
+msgstr ""
+
+#. i18n: ectx: property (filter), widget (KUrlRequester, m_mysqlBinary)
+#: importers/amarok/AmarokConfigWidget.ui:170
+msgid "mysqld"
+msgstr ""
+
+#: importers/amarok/AmarokManager.cpp:50
+#, fuzzy
+#| msgid "Amarok 1.4"
+msgid "Amarok 2.x"
+msgstr "Amarok 1.4"
+
+#: importers/amarok/AmarokManager.cpp:56
+msgid "Amarok 2.x Statistics Importer"
+msgstr ""
+
+#: importers/banshee/BansheeManager.cpp:24
+msgid "Banshee"
+msgstr "Banši"
+
+#: importers/banshee/BansheeManager.cpp:25
+msgid "Banshee Statistics Importer"
+msgstr ""
+
+#: importers/clementine/ClementineManager.cpp:24
+msgid "Clementine"
+msgstr ""
+
+#: importers/clementine/ClementineManager.cpp:25
+msgid "Clementine Statistics Importer"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_connectionTypeLabel)
+#: importers/fastforward/FastForwardConfigWidget.ui:66
+#, fuzzy
+#| msgid "Connection"
+msgid "Connection type"
+msgstr "Veza"
+
+#: importers/fastforward/FastForwardManager.cpp:24
+msgid "Amarok 1.4 (FastForward)"
+msgstr ""
+
+#: importers/fastforward/FastForwardManager.cpp:25
+msgid "Amarok 1.4 Statistics Importer"
+msgstr ""
+
+#: importers/itunes/ITunesManager.cpp:24
+#, fuzzy
+#| msgid "iTunes"
+msgid "Apple iTunes"
+msgstr "I‑Tjuns"
+
+#: importers/itunes/ITunesManager.cpp:25
+#, fuzzy
+#| msgid "Write statistics to file"
+msgid "iTunes Statistics Importer"
+msgstr "Piši statistiku u datoteku"
+
+#: importers/rhythmbox/RhythmboxManager.cpp:24
+msgid "Rhythmbox"
+msgstr "Ritam mašina"
+
+#: importers/rhythmbox/RhythmboxManager.cpp:25
+msgid "Rhythmbox Statistics Importer"
+msgstr ""
+
+#: importers/SimpleImporterConfigWidget.cpp:49
+#, fuzzy
+#| msgid "artist name"
+msgctxt "Name of the synchronization target"
+msgid "Target name"
+msgstr "ime izvođača"
 
 #: k3bexporter.cpp:182
 msgid "Unable to start K3b."
@@ -12525,7 +12514,7 @@ msgstr "Lokalne liste numere skladištenje u bazi"
 msgid "<Empty>"
 msgstr "<prazno>"
 
-#: PluginManager.cpp:258
+#: PluginManager.cpp:268
 msgid ""
 "Amarok could not find any plugins. This indicates an installation problem."
 msgstr "Amarok ne može pronaći dodatke. To ukazuje na problem u instalaciji."
@@ -14492,7 +14481,7 @@ msgstr "Servis po imenu %1 nije trenutno učitan"
 msgid "This collection is currently offline"
 msgstr "Ova kolekcija je trenutno offline"
 
-#: statsyncing/Controller.cpp:106
+#: statsyncing/Controller.cpp:109
 #, kde-format
 msgctxt "%1 is collection name"
 msgid ""
@@ -14507,7 +14496,7 @@ msgstr ""
 "\n"
 "Možete uvijek promjeniti odluku u Amarok konfiguraciji."
 
-#: statsyncing/Controller.cpp:295
+#: statsyncing/Controller.cpp:371
 msgid ""
 "You only seem to have the Local Collection. Statistics synchronization only "
 "makes sense if there is more than one collection."
@@ -14692,6 +14681,38 @@ msgstr "Izaberite kolekcije za usklađivanje"
 #: statsyncing/ui/ChooseProvidersPage.ui:49
 msgid "Select Fields to Synchronize"
 msgstr "Izaberite polja za usklađivanje"
+
+#: statsyncing/ui/ConfigureProviderDialog.cpp:37
+#, fuzzy
+#| msgid "Configure Synchronization..."
+msgid "Configure Synchronization Target"
+msgstr "Konfiguriši sinhronizaciju..."
+
+#: statsyncing/ui/CreateProviderDialog.cpp:36
+#, fuzzy
+#| msgid "Add Position Marker"
+msgid "Add Synchronization Target"
+msgstr "Dodaj pozicioni obilježivač"
+
+#: statsyncing/ui/CreateProviderDialog.cpp:46
+msgid ""
+"<span style=\"color:red; font-weight:bold;\">Important:</span> before "
+"synchronizing tracks with a file-based target always make sure that the "
+"database file is not currently in use!"
+msgstr ""
+
+#: statsyncing/ui/CreateProviderDialog.cpp:59
+#, fuzzy
+#| msgid "Choose Language"
+msgid "Choose Target Type"
+msgstr "Odaberi jezik"
+
+# rewrite-msgid: /Configure/Settings/
+#: statsyncing/ui/CreateProviderDialog.cpp:85
+#, fuzzy
+#| msgid "Configure Scripts"
+msgid "Configure Target"
+msgstr "Postavke skripti"
 
 #: statsyncing/ui/MatchedTracksPage.cpp:142
 msgid "Synchronize"
@@ -15383,6 +15404,133 @@ msgstr "prazno"
 #, kde-format
 msgid "Volume: %1%"
 msgstr "Jačina: %1%"
+
+#~ msgid "Forget about Selected Collections"
+#~ msgstr "Zaboravi odabrane kolekcije"
+
+#~ msgid "Perform Synchronization..."
+#~ msgstr "Izvođenje sinhronizacije ..."
+
+# >> @option:check
+#~ msgid "Match tracks by meta tags"
+#~ msgstr "Poklapaj numere po metaoznakama"
+
+#~ msgid ""
+#~ "Perform meta information search on non-existing files, possibly detecting "
+#~ "file renames. See <b>What's This</b>"
+#~ msgstr ""
+#~ "Izvršava pretragu po metapodacima za nepostojeće datoteke, da bi se "
+#~ "otkrila moguća preimenovanja datoteka. Pogledajte i šta‑je‑ovo."
+
+#~ msgid ""
+#~ "If enabled, tracks from the old collection that do not exist anymore in "
+#~ "the file system are searched for (by metadata) in the current collection. "
+#~ "If a match is found, statistics for the matched track are updated, even "
+#~ "if the file locations differ."
+#~ msgstr ""
+#~ "Ako je omogućena, numere iz stare kolekcije koje više ne postoje u "
+#~ "sistemu datoteka za kojim se traga  (po metapodacima) u aktuelne "
+#~ "kolekcije. Ukoliko se pronađe podudaranje, statistike za uparenu numeru "
+#~ "se ažuriraju, čak i ako datoteke lokacije razlikuju."
+
+#~ msgid "Import downloaded artwork"
+#~ msgstr "Uvezi preuzete omote"
+
+#~ msgid "Artwork directory"
+#~ msgstr "Direktorij omota"
+
+#~ msgid "No database driver was selected"
+#~ msgstr "Nije izabran drajver za bazu"
+
+#~ msgid "Database could not be found at: %1"
+#~ msgstr "Baza nije pronađena na: %1"
+
+#~ msgid "Could not open Amarok 1.4 database: %1"
+#~ msgstr "Ne mogu da otvorim bazu iz Amaroka 1.4: %1"
+
+#~ msgid "Could not execute import query: %1"
+#~ msgstr "Ne mogu da izvršim upit uvoza: %1"
+
+#~ msgid ""
+#~ "(track exists, but does not belong in any of your configured collection "
+#~ "folders)"
+#~ msgstr ""
+#~ "(numera postoji, ali ne spada u nijednu od Vaših konfigurisanih  fascikli "
+#~ "kolekcija)"
+
+#~ msgid "Adding <b>1 new track</b> to Amarok collection <b>%2</b>."
+#~ msgid_plural "Adding <b>%1 new tracks</b> to Amarok collection <b>%2</b>."
+#~ msgstr[0] "Dodavanje<b>%1 nove numere</b> u Amarok kolekciju <b>%2</b>."
+#~ msgstr[1] "Dodavanje<b>%1 nove numere</b> u Amarok kolekciju <b>%2</b>."
+#~ msgstr[2] "Dodavanje<b>%1 novih numera</b> u Amarok kolekciju <b>%2</b>."
+
+#~ msgid "Could not execute labels import query: %1; query was: %2"
+#~ msgstr "Ne mogu da izvršim upit uvoza etiketa: %1; upit je: %2"
+
+#~ msgid "Updating cached lyrics and labels for 1 track..."
+#~ msgid_plural "Updating cached lyrics and labels for %1 tracks..."
+#~ msgstr[0] "Ažuriranje zapamćenih tekstova i oznaka za %1 numeru..."
+#~ msgstr[1] "Ažuriranje zapamćenih tekstova i oznaka za %1 numere..."
+#~ msgstr[2] "Ažuriranje zapamćenih tekstova i oznaka za %1 numera..."
+
+#~ msgid "Failed to update lyrics/labels for track %1"
+#~ msgstr "Ne mogu da ažuriram stihove ili etikete za numeru %1"
+
+#~ msgid "Cached lyrics updated for 1 track"
+#~ msgid_plural "Cached lyrics updated for %1 tracks"
+#~ msgstr[0] "Zapamćeni tekstovi i oznake ažurirani za %1 numeru..."
+#~ msgstr[1] "Zapamćeni tekstovi i oznake ažurirani za %1 numere..."
+#~ msgstr[2] "Zapamćeni tekstovi i oznake ažurirani za %1 numera..."
+
+#~ msgid "labels added to 1 track"
+#~ msgid_plural "labels added to %1 tracks"
+#~ msgstr[0] "oznake dodane za %1 numeru"
+#~ msgstr[1] "oznake dodane za %1 numere"
+#~ msgstr[2] "oznake dodane za %1 numera"
+
+#~ msgctxt ""
+#~ "%1 is e.g. Cached lyrics updated for 2 tracks, %2 is e.g. labels added to "
+#~ "3 tracks"
+#~ msgid "%1, %2."
+#~ msgstr "%1, %2."
+
+#~ msgid "Importing downloaded album art..."
+#~ msgstr "Uvozim preuzete omote..."
+
+#~ msgid "Copied 1 cover image."
+#~ msgid_plural "Copied %1 cover images."
+#~ msgstr[0] "Kopirana %1 naslovna slika."
+#~ msgstr[1] "Kopirane %1 naslovne slike."
+#~ msgstr[2] "Kopirano %1 naslovnih slika."
+
+#~ msgid "Import"
+#~ msgstr "Uvoz"
+
+#~ msgid ""
+#~ "Import collection and/or statistics from older Amarok versions, the batch "
+#~ "scanner or media players."
+#~ msgstr ""
+#~ "Uvoz kolekcije i / ili statistike iz starijih verzija Amaroka, grupnog "
+#~ "skenera ili medija plejeri."
+
+#~ msgid ""
+#~ "This tool allows you to import track information and<br>statistical data "
+#~ "from another music application.<br><br>Any statistical data in your "
+#~ "database will be <i>overwritten</i>"
+#~ msgstr ""
+#~ "Ovaj alat vam omogućava da uvezete informacije i pratite<br>statističke "
+#~ "podatke iz druge muzičke aplikacije.<br><br>Svi statistički podaci u bazi "
+#~ "podataka će biti<i>zamijenjeni</i>"
+
+#~ msgid "Amarok collection scanner"
+#~ msgstr "Amarok kolekcijski skener"
+
+# >> @title:window
+#~ msgid "Select Importer"
+#~ msgstr "Izbor uvoznika"
+
+#~ msgid "Configuration"
+#~ msgstr "Podešavanje"
 
 #~ msgid "Original"
 #~ msgstr "Original"
