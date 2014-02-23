@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-02-22 01:28+0000\n"
+"POT-Creation-Date: 2014-02-23 01:33+0000\n"
 "PO-Revision-Date: 2014-02-10 00:04+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -892,7 +892,7 @@ msgctxt "(qtundo-format)"
 msgid "Set Image Resolution"
 msgstr "Postavi rezoluciju slike"
 
-#: image/commands_new/kis_node_move_command2.cpp:32
+#: image/commands_new/kis_move_command_common.h:40
 msgctxt "(qtundo-format)"
 msgid "Move"
 msgstr "Promjeni položaj"
@@ -1057,73 +1057,79 @@ msgstr ""
 msgid "Mitchell"
 msgstr "Mičel"
 
-#: image/kis_image.cc:282
+#: image/kis_image.cc:283
 msgid "background"
 msgstr "pozadina"
 
-#: image/kis_image.cc:285
+#: image/kis_image.cc:286
 #, kde-format
 msgid "Layer %1"
 msgstr "Sloj %1"
 
-#: image/kis_image.cc:421
+#: image/kis_image.cc:422
 msgid "Crop Image"
 msgstr "Saseci sliku"
 
-#: image/kis_image.cc:421
+#: image/kis_image.cc:422
 msgid "Resize Image"
 msgstr "Promijeni veličinu slike"
 
-#: image/kis_image.cc:454
+#: image/kis_image.cc:455
 msgid "Crop Node"
 msgstr "Sasjeći čvor"
 
-#: image/kis_image.cc:481
+#: image/kis_image.cc:482
 msgid "Scale Image"
 msgstr "Skaliraj sliku"
 
-#: image/kis_image.cc:481
+#: image/kis_image.cc:482
 msgid "Change Image Resolution"
 msgstr "Promijeni rezoluciju slike"
 
-#: image/kis_image.cc:528
+#: image/kis_image.cc:529
 msgid "Scale Layer"
 msgstr "Skaliraj sloj"
 
-#: image/kis_image.cc:622 plugins/extensions/rotateimage/rotateimage.cc:155
+#: image/kis_image.cc:623 plugins/extensions/rotateimage/rotateimage.cc:155
 msgid "Rotate Layer"
 msgstr "Okreni sloj"
 
-#: image/kis_image.cc:689
+#: image/kis_image.cc:690
 msgid "Shear layer"
 msgstr "Smakni sloj"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgShearImage)
-#: image/kis_image.cc:695 plugins/extensions/shearimage/dlg_shearimage.cc:32
+#: image/kis_image.cc:696 plugins/extensions/shearimage/dlg_shearimage.cc:32
 #: plugins/extensions/shearimage/shearimage.cc:64
 #: plugins/extensions/shearimage/wdg_shearimage.ui:14
 msgid "Shear Image"
 msgstr "Smakni sliku"
 
-#: image/kis_image.cc:708
+#: image/kis_image.cc:709
 msgid "Convert Image Color Space"
 msgstr "Konvertuj prostor boja slike"
 
-#: image/kis_image.cc:741
+#: image/kis_image.cc:742
 msgid "Convert Projection Color Space"
 msgstr "Konvertuj prostor boja projekcije"
 
-#: image/kis_image.cc:920 ui/kis_layer_manager.cc:710
+#: image/kis_image.cc:921 ui/kis_layer_manager.cc:710
 msgid "Flatten Image"
 msgstr "Spljošti sliku"
 
-#: image/kis_image.cc:1020
+#: image/kis_image.cc:1021
 msgid "Merge with Layer Below"
 msgstr "Stopi sa slojem ispod"
 
-#: image/kis_image.cc:1066
+#: image/kis_image.cc:1067
 msgid "Flatten Layer"
 msgstr "Izravnaj sloj"
+
+#: image/kis_image.cc:1623
+#, fuzzy
+#| msgid "Grow Selection"
+msgid "Crop Selections"
+msgstr "Proširi izbor"
 
 #. i18n: ectx: property (text), widget (QCheckBox, opacityCBox)
 #: image/kis_layer.cc:174 plugins/paintops/hairy/wdghairyeoptions.ui:297
@@ -8695,7 +8701,7 @@ msgid "Select a polygonal region"
 msgstr "Izaberite poligonski region"
 
 #: plugins/tools/selectiontools/kis_tool_select_rectangular.cc:42
-#: plugins/tools/selectiontools/kis_tool_select_rectangular.cc:98
+#: plugins/tools/selectiontools/kis_tool_select_rectangular.cc:88
 msgid "Rectangular Selection"
 msgstr "Pravougaoni izbor"
 
@@ -9074,7 +9080,7 @@ msgstr "Zaljepljeno"
 msgid "Convert to Vector Selection"
 msgstr "Pretvori u Odabir vektora"
 
-#: ui/canvas/kis_canvas_controller.cpp:185
+#: ui/canvas/kis_canvas_controller.cpp:184
 msgid ""
 "You are activating wrap-around mode, but have not enabled OpenGL.\n"
 "To visualize wrap-around mode, enable OpenGL."
