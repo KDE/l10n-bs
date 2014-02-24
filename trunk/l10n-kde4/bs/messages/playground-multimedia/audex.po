@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-02-22 01:49+0000\n"
+"POT-Creation-Date: 2014-02-24 01:55+0000\n"
 "PO-Revision-Date: 2014-01-11 10:00+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian\n"
@@ -59,35 +59,40 @@ msgid "Number of covers to fetch"
 msgstr "Broj  zaklona da dohvati"
 
 #. i18n: ectx: label, entry (cdDevice), group (general)
-#: audex.kcfg:42
+#: audex.kcfg:44
 msgid "CD Device"
 msgstr "CD uređaj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_paranoiaMode)
 #. i18n: ectx: label, entry (paranoiaMode), group (general)
-#: audex.kcfg:46 widgets/generalsettingswidgetUI.ui:139
+#: audex.kcfg:48 widgets/devicewidgetUI.ui:33
 msgid "Full paranoia mode (best quality)"
 msgstr "Potpuni paranoja režim (najbolji kvalitet)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_neverSkip)
 #. i18n: ectx: label, entry (neverSkip), group (general)
-#: audex.kcfg:50 widgets/generalsettingswidgetUI.ui:146
+#: audex.kcfg:52 widgets/devicewidgetUI.ui:40
 msgid "Never skip on read error"
 msgstr "Nemoj preskakati  pri grešakama čitanja"
 
+#. i18n: ectx: label, entry (sampleOffset), group (general)
+#: audex.kcfg:56
+msgid "Sample offset"
+msgstr ""
+
 #. i18n: ectx: label, entry (basePath), group (general)
-#: audex.kcfg:54
+#: audex.kcfg:62
 msgid "Base path to store music files"
 msgstr "Bazna putanja za pohranu muzičkih datoteka"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_upload)
 #. i18n: ectx: label, entry (upload), group (general)
-#: audex.kcfg:58 widgets/remoteserversettingswidgetUI.ui:23
+#: audex.kcfg:66 widgets/remoteserversettingswidgetUI.ui:23
 msgid "Upload files to server"
 msgstr "Pošalji datoteke na server"
 
 #. i18n: ectx: label, entry (url), group (general)
-#: audex.kcfg:62
+#: audex.kcfg:70
 msgid "URL of server"
 msgstr "URL servera"
 
@@ -1199,46 +1204,52 @@ msgid "General settings"
 msgstr "Opšte postavke"
 
 #: mainwindow.cpp:153
+#, fuzzy
+#| msgid "CDDB settings"
+msgid "Device settings"
+msgstr "CDDB postavke"
+
+#: mainwindow.cpp:156
 msgid "Profiles"
 msgstr "Profili"
 
-#: mainwindow.cpp:165
+#: mainwindow.cpp:168
 msgid "CDDB settings"
 msgstr "CDDB postavke"
 
-#: mainwindow.cpp:173
+#: mainwindow.cpp:176
 msgid "Remote Server"
 msgstr "Daljinski poslužitelj"
 
-#: mainwindow.cpp:185
+#: mainwindow.cpp:188
 msgid "No status information available"
 msgstr "Status informacije nisu dostupne"
 
-#: mainwindow.cpp:189 models/cddamodel.cpp:683
+#: mainwindow.cpp:192 models/cddamodel.cpp:683
 msgid "No disc in drive"
 msgstr "Nema diska u pogonu"
 
-#: mainwindow.cpp:193
+#: mainwindow.cpp:196
 msgid "Audio disc in drive"
 msgstr "Audio disk u pogonu"
 
-#: mainwindow.cpp:202 models/cddamodel.cpp:685
+#: mainwindow.cpp:205 models/cddamodel.cpp:685
 msgid "Drive tray open"
 msgstr "Ladica diska otvorena"
 
-#: mainwindow.cpp:206 models/cddamodel.cpp:686
+#: mainwindow.cpp:209 models/cddamodel.cpp:686
 msgid "Drive not ready"
 msgstr "Pogon nije spreman"
 
-#: mainwindow.cpp:210 models/cddamodel.cpp:687
+#: mainwindow.cpp:213 models/cddamodel.cpp:687
 msgid "Drive error"
 msgstr "Greška pogona"
 
-#: mainwindow.cpp:247
+#: mainwindow.cpp:250
 msgid "Fetching CDDB information..."
 msgstr "Dohvaćanje CDDB informacija..."
 
-#: mainwindow.cpp:252
+#: mainwindow.cpp:255
 #, kde-format
 msgid ""
 "CDDB lookup failed, with the following error:\n"
@@ -1247,15 +1258,15 @@ msgstr ""
 "CDDB pregled nije uspio, sa slijedećom greškom:\n"
 "%1"
 
-#: mainwindow.cpp:253
+#: mainwindow.cpp:256
 msgid "CDD Lookup Failure"
 msgstr "CDD neuspjeh pregleda"
 
-#: mainwindow.cpp:358
+#: mainwindow.cpp:361
 msgid "Split titles"
 msgstr "Razdvoji naslove"
 
-#: mainwindow.cpp:359
+#: mainwindow.cpp:362
 msgid ""
 "Please set a divider string. Be aware of empty spaces.\n"
 "\n"
@@ -1265,83 +1276,83 @@ msgstr ""
 "\n"
 "Razdvajač:"
 
-#: mainwindow.cpp:369
+#: mainwindow.cpp:372
 msgid "Do you really want to swap all artists and titles?"
 msgstr "Da li stvarno želite da zamjenite sve umjetnike i naslove?"
 
-#: mainwindow.cpp:370
+#: mainwindow.cpp:373
 msgid "Swap artists and titles"
 msgstr "Zamjeni izvođačee i naslove"
 
-#: mainwindow.cpp:382
+#: mainwindow.cpp:385
 msgid "Do you really want to capitalize all artists and titles?"
 msgstr "Da li stvarno želite pisati velikim slovima sve umjetnike i naslove?"
 
-#: mainwindow.cpp:383
+#: mainwindow.cpp:386
 msgid "Capitalize artists and titles"
 msgstr "Kapitaliziraj umjetnike i naslove"
 
-#: mainwindow.cpp:395
+#: mainwindow.cpp:398
 msgid "Do you really want to autofill track artists?"
 msgstr "Da li stvarno želite automatski popuniti numere umjetnika?"
 
-#: mainwindow.cpp:396
+#: mainwindow.cpp:399
 msgid "Autofill artists"
 msgstr "Automatski popuni umjetnike"
 
-#: mainwindow.cpp:420
+#: mainwindow.cpp:423
 msgid "Eject"
 msgstr "Izbaci"
 
-#: mainwindow.cpp:427
+#: mainwindow.cpp:430
 msgid "Profile:"
 msgstr "Profil:"
 
-#: mainwindow.cpp:439
+#: mainwindow.cpp:442
 msgid "&Profile:"
 msgstr "&Profil:"
 
-#: mainwindow.cpp:445
+#: mainwindow.cpp:448
 msgid "Profile"
 msgstr "Profil"
 
-#: mainwindow.cpp:453
+#: mainwindow.cpp:456
 msgid "Fetch Info"
 msgstr "Dobavi informacije"
 
-#: mainwindow.cpp:460
+#: mainwindow.cpp:463
 msgid "Submit Info"
 msgstr "Potvrdi informacije"
 
-#: mainwindow.cpp:466
+#: mainwindow.cpp:469
 msgid "Rip..."
 msgstr "Snimi..."
 
-#: mainwindow.cpp:475
+#: mainwindow.cpp:478
 msgid "Split Titles..."
 msgstr "Razdvoji naslove..."
 
-#: mainwindow.cpp:480
+#: mainwindow.cpp:483
 msgid "Swap Artists And Titles"
 msgstr "Zamjeni izvođače i naslove"
 
-#: mainwindow.cpp:485
+#: mainwindow.cpp:488
 msgid "Capitalize"
 msgstr "Veliko prvo slovo"
 
-#: mainwindow.cpp:490
+#: mainwindow.cpp:493
 msgid "Auto Fill Artists"
 msgstr "Automatski popuni umjetnike"
 
-#: mainwindow.cpp:495
+#: mainwindow.cpp:498
 msgid "Select All Tracks"
 msgstr "Odaberi sve numere"
 
-#: mainwindow.cpp:500
+#: mainwindow.cpp:503
 msgid "Deselect All Tracks"
 msgstr "Deselektuj sve numere"
 
-#: mainwindow.cpp:505
+#: mainwindow.cpp:508
 msgid "Invert Selection"
 msgstr "Obrni izbor"
 
@@ -1884,6 +1895,12 @@ msgstr ""
 "Provjerite vaš uređaj. Je li stvarno \"%1\"? Ako je tako takođe provjerite "
 "Vašu dozvolu na \"%1\"."
 
+#: utils/cddasolid.cpp:104
+#, fuzzy
+#| msgid "Audio disc"
+msgid "Audio Disc"
+msgstr "Audio disk"
+
 #: utils/coverfetcher.cpp:140
 msgid "There was an error communicating with Google."
 msgstr "Bila je greška u komunikaciji sa Google-om."
@@ -2035,7 +2052,7 @@ msgid "CD Number: "
 msgstr "CD broj: "
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: widgets/cddaheaderwidget.cpp:498 widgets/generalsettingswidgetUI.ui:94
+#: widgets/cddaheaderwidget.cpp:498 widgets/generalsettingswidgetUI.ui:117
 msgid "Wikipedia"
 msgstr "Wikipedia"
 
@@ -2087,6 +2104,29 @@ msgstr "Ukloni omot"
 #: widgets/customwidgetUI.ui:29
 msgid "Command Pattern:"
 msgstr "Komandni obrazac:"
+
+#: widgets/devicewidget.cpp:27
+msgid "None detected"
+msgstr "Nijedan nije otkriven"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, DeviceWidgetUI)
+#: widgets/devicewidgetUI.ui:14
+#, fuzzy
+#| msgid "Format:"
+msgid "Form"
+msgstr "Format:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: widgets/devicewidgetUI.ui:20
+msgid "Device"
+msgstr "Uređaj"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: widgets/devicewidgetUI.ui:49
+#, fuzzy
+#| msgid "Sampler Example:"
+msgid "Sample offset:"
+msgstr "Primjer samplea:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: widgets/faacwidgetUI.ui:29 widgets/oggencwidgetUI.ui:29
@@ -2155,10 +2195,6 @@ msgstr "Portugalski"
 msgid "Svenska"
 msgstr "Švedski"
 
-#: widgets/generalsettingswidget.cpp:42
-msgid "None detected"
-msgstr "Nijedan nije otkriven"
-
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ejectCDTray)
 #: widgets/generalsettingswidgetUI.ui:37
 msgid "Eject CD tray after finished extraction"
@@ -2174,25 +2210,20 @@ msgstr "Obavite pretragu omota automatski"
 msgid "Number of covers to fetch:"
 msgstr "Broj omota za dohvatiti:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_wikipediaLocale)
-#: widgets/generalsettingswidgetUI.ui:106
-msgid "Localization:"
-msgstr "Lokalizacija:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: widgets/generalsettingswidgetUI.ui:126
-msgid "Device"
-msgstr "Uređaj"
-
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: widgets/generalsettingswidgetUI.ui:156
+#: widgets/generalsettingswidgetUI.ui:94
 msgid "Paths"
 msgstr "Putanje"
 
 #. i18n: ectx: property (text), widget (QLabel, label_basePath)
-#: widgets/generalsettingswidgetUI.ui:164
+#: widgets/generalsettingswidgetUI.ui:102
 msgid "Base path to store music files:"
 msgstr "Bazna putanja za pohranjivanje muzičkih datoteka:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_wikipediaLocale)
+#: widgets/generalsettingswidgetUI.ui:129
+msgid "Localization:"
+msgstr "Lokalizacija:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: widgets/lamewidgetUI.ui:41
