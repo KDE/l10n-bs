@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-02-24 01:47+0000\n"
+"POT-Creation-Date: 2014-02-26 01:46+0000\n"
 "PO-Revision-Date: 2014-02-09 10:19+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@kde.org>\n"
@@ -170,19 +170,23 @@ msgstr "Obriši"
 msgid "%1: remove all children."
 msgstr "Ukloni sve završene"
 
-#: src/backend/core/AbstractColumn.cpp:155 src/backend/matrix/Matrix.cpp:125
-#: src/backend/matrix/matrixcommands.cpp:64
+#: src/backend/core/AbstractColumn.cpp:155
 #: src/backend/spreadsheet/Spreadsheet.cpp:145
 #, fuzzy, kde-format
-msgid "%1: insert %2 row(s)"
-msgstr "Ubaci red"
+msgid "%1: insert 1 row"
+msgid_plural "%1: insert %2 rows"
+msgstr[0] "Ubaci red"
+msgstr[1] "Ubaci red"
+msgstr[2] "Ubaci red"
 
-#: src/backend/core/AbstractColumn.cpp:174 src/backend/matrix/Matrix.cpp:115
-#: src/backend/matrix/matrixcommands.cpp:125
+#: src/backend/core/AbstractColumn.cpp:174
 #: src/backend/spreadsheet/Spreadsheet.cpp:134
 #, fuzzy, kde-format
-msgid "%1: remove %2 row(s)"
-msgstr "Ukloni red"
+msgid "%1: remove 1 row"
+msgid_plural "%1: remove %2 rows"
+msgstr[0] "Ukloni red"
+msgstr[1] "Ukloni red"
+msgstr[2] "Ukloni red"
 
 #: src/backend/core/AbstractColumn.cpp:615
 #: src/backend/core/column/Column.cpp:658
@@ -415,10 +419,11 @@ msgstr "Zamjenjuje tekstove"
 #: src/backend/core/column/columncommands.cpp:219
 #: src/backend/core/column/columncommands.cpp:332
 #, fuzzy, kde-format
-msgid "%1: change cell value(s)"
+msgid "%1: change cell values"
 msgstr "Izmijeni vrijednost atributa"
 
 #: src/backend/core/column/columncommands.cpp:532
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1080
 #, fuzzy, kde-format
 msgid "%1: set plot designation"
 msgstr "Dialog za crtanje"
@@ -478,7 +483,7 @@ msgid "set date-time format to %1"
 msgstr "Puni datum/vrijeme (dugi format)"
 
 #: src/backend/core/datatypes/Double2StringFilter.cpp:80
-msgid "missing or invalid format attribute(s)"
+msgid "missing or invalid format attribute"
 msgstr ""
 
 #: src/backend/core/datatypes/Double2StringFilter.cpp:107
@@ -752,16 +757,24 @@ msgid "unexpected end of document"
 msgstr "Došao sam do kraja dokumenta."
 
 #: src/backend/matrix/Matrix.cpp:95 src/backend/matrix/matrixcommands.cpp:38
-#: src/backend/spreadsheet/Spreadsheet.cpp:233
 #, fuzzy, kde-format
 msgid "%1: insert %2 column(s)"
 msgstr "Ubaci kolonu"
 
 #: src/backend/matrix/Matrix.cpp:105 src/backend/matrix/matrixcommands.cpp:90
-#: src/backend/spreadsheet/Spreadsheet.cpp:223
 #, fuzzy, kde-format
 msgid "%1: remove %2 column(s)"
 msgstr "Ukloni kolonu"
+
+#: src/backend/matrix/Matrix.cpp:115 src/backend/matrix/matrixcommands.cpp:125
+#, fuzzy, kde-format
+msgid "%1: remove %2 row(s)"
+msgstr "Ukloni red"
+
+#: src/backend/matrix/Matrix.cpp:125 src/backend/matrix/matrixcommands.cpp:64
+#, fuzzy, kde-format
+msgid "%1: insert %2 row(s)"
+msgstr "Ubaci red"
 
 #: src/backend/matrix/Matrix.cpp:135
 #, kde-format
@@ -775,7 +788,6 @@ msgid "%1: clear"
 msgstr "Čisto"
 
 #: src/backend/matrix/Matrix.cpp:183
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:732
 #, fuzzy, kde-format
 msgid "%1: cut selected cell(s)"
 msgstr "Veličina izabrane 3-D ćelije"
@@ -787,43 +799,36 @@ msgid "%1: paste from clipboard"
 msgstr "Umetni iz međuspremnika"
 
 #: src/backend/matrix/Matrix.cpp:303
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1025
 #, fuzzy, kde-format
 msgid "%1: insert empty column(s)"
 msgstr "Ubaci kolonu lijevo"
 
 #: src/backend/matrix/Matrix.cpp:327
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1051
 #, fuzzy, kde-format
 msgid "%1: remove selected column(s)"
 msgstr "Briše izabranu kolonu."
 
 #: src/backend/matrix/Matrix.cpp:338
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1063
 #, fuzzy, kde-format
 msgid "%1: clear selected column(s)"
 msgstr "Očisti označene kolone unosa."
 
 #: src/backend/matrix/Matrix.cpp:356
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1188
 #, fuzzy, kde-format
 msgid "%1: insert empty rows(s)"
 msgstr "&Ubaci praznu vrstu"
 
 #: src/backend/matrix/Matrix.cpp:380
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1207
 #, fuzzy, kde-format
 msgid "%1: remove selected rows(s)"
 msgstr "Brišem izabrane vrste..."
 
 #: src/backend/matrix/Matrix.cpp:395
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1218
 #, fuzzy, kde-format
 msgid "%1: clear selected rows(s)"
 msgstr "Brišem izabrane vrste..."
 
 #: src/backend/matrix/Matrix.cpp:417
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1248
 #, fuzzy, kde-format
 msgid "%1: clear selected cell(s)"
 msgstr "Veličina izabrane 3-D ćelije"
@@ -1198,6 +1203,22 @@ msgstr "Tablica"
 msgid "ASCII table"
 msgstr "Umetni tabelu"
 
+#: src/backend/spreadsheet/Spreadsheet.cpp:223
+#, fuzzy, kde-format
+msgid "%1: remove 1 column"
+msgid_plural "%1: remove %2 columns"
+msgstr[0] "Ukloni kolonu"
+msgstr[1] "Ukloni kolonu"
+msgstr[2] "Ukloni kolonu"
+
+#: src/backend/spreadsheet/Spreadsheet.cpp:233
+#, fuzzy, kde-format
+msgid "%1: insert 1 column"
+msgid_plural "%1: insert %2 columns"
+msgstr[0] "Ubaci kolonu"
+msgstr[1] "Ubaci kolonu"
+msgstr[2] "Ubaci kolonu"
+
 #: src/backend/spreadsheet/Spreadsheet.cpp:279
 #, fuzzy, kde-format
 msgid "%1: clear all masks"
@@ -1210,7 +1231,7 @@ msgstr "Povucite za pomicanje gradijentnog položaja."
 
 #: src/backend/spreadsheet/Spreadsheet.cpp:421
 #, fuzzy, kde-format
-msgid "%1: sort column(s)"
+msgid "%1: sort columns"
 msgstr "Izaberite kolonu za sortiranje"
 
 #: src/backend/spreadsheet/Spreadsheet.cpp:734
@@ -2205,7 +2226,7 @@ msgstr ""
 
 #: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:191
 #, fuzzy
-msgid "S&et Column(s) As"
+msgid "S&et Column As"
 msgstr "Prva kolona kao oznaka"
 
 #: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:217
@@ -2224,14 +2245,19 @@ msgstr "Dodaj Komentare"
 msgid "Show Comments"
 msgstr "Dodaj Komentare"
 
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:732
+#, fuzzy, kde-format
+msgid "%1: cut selected cells"
+msgstr "Veličina izabrane 3-D ćelije"
+
 #: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:874
 #, fuzzy, kde-format
-msgid "%1: mask selected cell(s)"
+msgid "%1: mask selected cells"
 msgstr "Veličina izabrane 3-D ćelije"
 
 #: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:892
 #, fuzzy, kde-format
-msgid "%1: unmask selected cell(s)"
+msgid "%1: unmask selected cells"
 msgstr "Veličina izabrane 3-D ćelije"
 
 #: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:915
@@ -2244,20 +2270,50 @@ msgstr ""
 msgid "%1: fill cells with random values"
 msgstr "Molimo popunite sva polja vrijednostima."
 
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1080
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1025
 #, fuzzy, kde-format
-msgid "%1: set plot designation(s)"
-msgstr "Dialog za crtanje"
+msgid "%1: insert empty columns"
+msgstr "Ubaci kolonu lijevo"
+
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1051
+#, fuzzy, kde-format
+msgid "%1: remove selected columns"
+msgstr "Briše izabranu kolonu."
+
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1063
+#, fuzzy, kde-format
+msgid "%1: clear selected columns"
+msgstr "Očisti označene kolone unosa."
 
 #: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1116
 #, fuzzy, kde-format
-msgid "%1: normalize column(s)"
+msgid "%1: normalize columns"
 msgstr "Obriši kolonu"
 
 #: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1138
 #, fuzzy, kde-format
 msgid "%1: normalize selection"
 msgstr "Izbor koordinata"
+
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1188
+#, fuzzy, kde-format
+msgid "%1: insert empty rows"
+msgstr "&Ubaci praznu vrstu"
+
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1207
+#, fuzzy, kde-format
+msgid "%1: remove selected rows"
+msgstr "Brišem izabrane vrste..."
+
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1218
+#, fuzzy, kde-format
+msgid "%1: clear selected rows"
+msgstr "Brišem izabrane vrste..."
+
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1248
+#, fuzzy, kde-format
+msgid "%1: clear selected cells"
+msgstr "Veličina izabrane 3-D ćelije"
 
 #: src/commonfrontend/spreadsheet/spreadsheetview_kactions.h:8
 #, fuzzy
@@ -2517,7 +2573,7 @@ msgstr "Mreža"
 
 #: src/commonfrontend/worksheet/WorksheetView.cpp:680
 #, fuzzy, kde-format
-msgid "%1: Remove selected worksheet element(s)."
+msgid "%1: Remove selected worksheet elements."
 msgstr "Uklonite izabrani uzorak datoteka."
 
 #: src/kdefrontend/datasources/FileInfoDialog.cpp:52
@@ -4466,9 +4522,10 @@ msgid "Right"
 msgstr "Desno"
 
 #: src/kdefrontend/spreadsheet/SortDialog.cpp:51
+#: src/kdefrontend/spreadsheet/SortDialog.cpp:65
 #, fuzzy
-msgid "Sort column(s)"
-msgstr "Izaberite kolonu za sortiranje"
+msgid "Sort columns"
+msgstr "Uvezi kolone:"
 
 #. i18n: ectx: property (text), widget (QLabel, lOrder)
 #: src/kdefrontend/spreadsheet/SortDialog.cpp:59
@@ -4486,11 +4543,6 @@ msgstr "Rastuće"
 #, fuzzy
 msgid "Descending"
 msgstr "Opadajuće"
-
-#: src/kdefrontend/spreadsheet/SortDialog.cpp:65
-#, fuzzy
-msgid "Sort columns"
-msgstr "Uvezi kolone:"
 
 #: src/kdefrontend/spreadsheet/SortDialog.cpp:68
 #, fuzzy
@@ -6026,3 +6078,11 @@ msgstr "Horizontalni razmaci"
 #: src/kdefrontend/worksheet/GridDialog.cpp:68
 msgid "Vertical spacing"
 msgstr "Vertikalni razmaci"
+
+#, fuzzy
+#~ msgid "%1: set plot designation(s)"
+#~ msgstr "Dialog za crtanje"
+
+#, fuzzy
+#~ msgid "Sort column(s)"
+#~ msgstr "Izaberite kolonu za sortiranje"
