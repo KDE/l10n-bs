@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-04-01 01:57+0000\n"
+"POT-Creation-Date: 2014-04-02 01:49+0000\n"
 "PO-Revision-Date: 2014-02-08 00:17+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosanski <bs@li.org>\n"
@@ -116,7 +116,7 @@ msgid "Multiple encryption keys per address"
 msgstr "Višestruki enkripcijski ključevi po adresi"
 
 #: aboutdata.cpp:240 collectionpage/collectionmailinglistpage.cpp:109
-#: editor/kmcomposewin.cpp:2179 kmsystemtray.cpp:71 kmsystemtray.cpp:116
+#: editor/kmcomposewin.cpp:2185 kmsystemtray.cpp:71 kmsystemtray.cpp:116
 msgid "KMail"
 msgstr "KMail"
 
@@ -518,22 +518,23 @@ msgstr[2] ""
 msgid "Quota"
 msgstr "Kvota"
 
-#: collectionpage/collectionquotapage_p.cpp:54
+#: collectionpage/collectionquotapage_p.cpp:55
 msgid "Usage:"
 msgstr "Upotreba:"
 
-#: collectionpage/collectionquotapage_p.cpp:61
+#: collectionpage/collectionquotapage_p.cpp:62
 msgid "Status:"
 msgstr "Status:"
 
-#: collectionpage/collectionquotapage_p.cpp:65
+#: collectionpage/collectionquotapage_p.cpp:66
 #, no-c-format
 msgid "%p% full"
 msgstr "%p% puno"
 
-#: collectionpage/collectionquotapage_p.cpp:75
-#, kde-format
-msgid "%1 of %2 KiB used"
+#: collectionpage/collectionquotapage_p.cpp:76
+#, fuzzy, kde-format
+#| msgid "%1 of %2 KiB used"
+msgid "%1 of %2 used"
 msgstr "%1 od %2 KiB korišteno"
 
 #: collectionpage/collectionshortcutpage.cpp:42
@@ -552,7 +553,7 @@ msgstr ""
 "želite da pridružite ovojm fasciklu.</qt>"
 
 #: collectionpage/collectiontemplatespage.cpp:39
-#: identity/identitydialog.cpp:544
+#: identity/identitydialog.cpp:574
 msgid "Templates"
 msgstr "Šabloni"
 
@@ -561,7 +562,7 @@ msgid "&Use custom message templates in this folder"
 msgstr "&Koristi vlastite šablone poruka u ovom direktoriju"
 
 #: collectionpage/collectiontemplatespage.cpp:79
-#: identity/identitydialog.cpp:529
+#: identity/identitydialog.cpp:559
 msgid "&Copy Global Templates"
 msgstr "&Kopiraj globalne predloške"
 
@@ -695,50 +696,38 @@ msgstr "Pošalji odmah"
 msgid "Send Later"
 msgstr "Pošalji kasnije"
 
-#: configuredialog/configureaccountpage.cpp:149
+#: configuredialog/configureaccountpage.cpp:143
 msgid "Send &messages in outbox folder:"
 msgstr "Pošalji poruke iz &Outboxa:"
 
-#: configuredialog/configureaccountpage.cpp:157
+#: configuredialog/configureaccountpage.cpp:151
 msgid "Defa&ult send method:"
 msgstr "&Podrazumjevana metoda slanja:"
 
-#: configuredialog/configureaccountpage.cpp:160
-msgid "Defaul&t domain:"
-msgstr "Po&drazumjevana domena:"
-
-#: configuredialog/configureaccountpage.cpp:165
-msgid ""
-"<qt><p>The default domain is used to complete email addresses that only "
-"consist of the user's name.</p></qt>"
-msgstr ""
-"<qt> <p>Podrazumijevana domena se koristi za dovršavanje email adresa koje "
-"sadrže samo korisničko ime.</p></qt>"
-
-#: configuredialog/configureaccountpage.cpp:314
+#: configuredialog/configureaccountpage.cpp:290
 msgctxt "Label to a checkbox, so is either checked/unchecked"
 msgid "Include in Manual Mail Check"
 msgstr "Uključi ručnu provjeru pošte"
 
-#: configuredialog/configureaccountpage.cpp:323
+#: configuredialog/configureaccountpage.cpp:299
 msgctxt "Label to a checkbox, so is either checked/unchecked"
 msgid "Switch offline on KMail Shutdown"
 msgstr "Uključi rad van mreže pri napuštanju KMail"
 
-#: configuredialog/configureaccountpage.cpp:332
+#: configuredialog/configureaccountpage.cpp:308
 msgid "Check mail on startup"
 msgstr "Provjeri poštu pri pokretanju"
 
-#: configuredialog/configureaccountpage.cpp:431
+#: configuredialog/configureaccountpage.cpp:407
 #, kde-format
 msgid "Do you want to remove account '%1'?"
 msgstr "Želite li ukloniti nalog '%1'?"
 
-#: configuredialog/configureaccountpage.cpp:432
+#: configuredialog/configureaccountpage.cpp:408
 msgid "Remove account?"
 msgstr "Ukloniti nalog?"
 
-#: configuredialog/configureaccountpage.cpp:450
+#: configuredialog/configureaccountpage.cpp:426
 msgid ""
 "New Mail Notifier Agent not registered. Please contact your administrator."
 msgstr ""
@@ -750,8 +739,11 @@ msgid "Activate"
 msgstr "Aktiviraj"
 
 #: configuredialog/configureagentswidget.cpp:52
-msgid "Agent Name"
-msgstr "Ime agenta"
+#, fuzzy
+#| msgctxt "@title:column Name of the mime header."
+#| msgid "Name"
+msgid "Name"
+msgstr "Naziv"
 
 #: configuredialog/configureagentswidget.cpp:64
 msgid "Configure..."
@@ -1100,8 +1092,14 @@ msgstr "Smanji prioritet oznake"
 msgid "Ta&g Settings"
 msgstr "Postav&ke Oznake"
 
-#: configuredialog/configureappearancepage.cpp:1321
-#: configuredialog/configureappearancepage.cpp:1358
+#: configuredialog/configureappearancepage.cpp:1277
+#, fuzzy, kde-format
+#| msgid "Do you want to remove account '%1'?"
+msgid "Do you want to remove tag '%1'?"
+msgstr "Želite li ukloniti nalog '%1'?"
+
+#: configuredialog/configureappearancepage.cpp:1322
+#: configuredialog/configureappearancepage.cpp:1359
 msgid "We cannot create tag. A tag with same name already exists."
 msgstr "Ne možemo kreirati karticu. Kartica s istim imenom već postoji."
 
@@ -1372,18 +1370,20 @@ msgstr ""
 #: configuredialog/configurecomposerpage.cpp:783
 #: configuredialog/configurecomposerpage.cpp:881
 #: configuredialog/configurecomposerpage.cpp:1276
-#: ui/accountspagereceivingtab.ui:36
+#: mailmerge/mailmergewidget.cpp:79 ui/accountspagereceivingtab.ui:36
 msgid "A&dd..."
 msgstr "&Dodaj..."
 
 #: configuredialog/configurecomposerpage.cpp:783
 #: configuredialog/configurecomposerpage.cpp:1034
 #: configuredialog/configurecomposerpage.cpp:1276
+#: mailmerge/mailmergewidget.cpp:79
 msgid "Re&move"
 msgstr "&Ukloni"
 
 #: configuredialog/configurecomposerpage.cpp:784
 #: configuredialog/configurecomposerpage.cpp:1277
+#: mailmerge/mailmergewidget.cpp:80
 msgid "Mod&ify..."
 msgstr "Izm&ijeni..."
 
@@ -1559,7 +1559,9 @@ msgid "Proxy"
 msgstr "Proksi"
 
 #: configuredialog/configuremiscpage.cpp:51
-msgid "Agent Settings"
+#, fuzzy
+#| msgid "Agent Settings"
+msgid "Plugins Settings"
 msgstr "Podešavanja agenta"
 
 #: configuredialog/configuremiscpage.cpp:54
@@ -1656,7 +1658,7 @@ msgctxt "@title:window for archiving a folder"
 msgid "Archive Folder"
 msgstr "Arhiviraj fasciklu"
 
-#: dialog/archivefolderdialog.cpp:60 kmmainwidget.cpp:3686
+#: dialog/archivefolderdialog.cpp:60 kmmainwidget.cpp:3687
 msgctxt "@action"
 msgid "Archive"
 msgstr "Arhiva"
@@ -1846,7 +1848,7 @@ msgid "Send"
 msgstr "Pošalji"
 
 #: editor/kmcomposewin.cpp:1138 editor/kmcomposewin.cpp:1147
-#: editor/kmcomposewin.cpp:2942
+#: editor/kmcomposewin.cpp:2954
 msgid "Send &Later"
 msgstr "Pošalji &kasnije"
 
@@ -1883,7 +1885,7 @@ msgstr "Snimi kao datoteku"
 msgid "Save email as text or html file"
 msgstr "Snimi poštu kao tekstualnu ili HTML datoteku"
 
-#: editor/kmcomposewin.cpp:1202 kmmainwidget.cpp:3537
+#: editor/kmcomposewin.cpp:1202 kmmainwidget.cpp:3538
 msgid "New AddressBook Contact..."
 msgstr "Novi kontakt u adresaru..."
 
@@ -1895,7 +1897,7 @@ msgstr "&Ubaci tekstualnu datoteku..."
 msgid "&Insert Recent Text File"
 msgstr "&Ubaci nedavnu tekstualnu datoteku"
 
-#: editor/kmcomposewin.cpp:1221 kmmainwidget.cpp:3032
+#: editor/kmcomposewin.cpp:1221 kmmainwidget.cpp:3033
 msgid "&Address Book"
 msgstr "&Adresar"
 
@@ -2018,78 +2020,82 @@ msgid "Uppercase"
 msgstr "Velika slova"
 
 #: editor/kmcomposewin.cpp:1371
+msgid "Sentence case"
+msgstr ""
+
+#: editor/kmcomposewin.cpp:1376
 msgid "Lowercase"
 msgstr "Mala slova"
 
-#: editor/kmcomposewin.cpp:1375
+#: editor/kmcomposewin.cpp:1380
 msgid "Change Case"
 msgstr "Promijeni velika/mala slova"
 
-#: editor/kmcomposewin.cpp:1388
+#: editor/kmcomposewin.cpp:1394
 msgid "&Spellchecker..."
 msgstr "&Provjera pravopisa..."
 
-#: editor/kmcomposewin.cpp:1389
+#: editor/kmcomposewin.cpp:1395
 msgid "Spellchecker"
 msgstr "Provjera pravopisa"
 
-#: editor/kmcomposewin.cpp:1401 editor/kmcomposewin.cpp:1403
+#: editor/kmcomposewin.cpp:1407 editor/kmcomposewin.cpp:1409
 msgid "Encrypt Message with Chiasmus..."
 msgstr "Šifruj poruku pomoću Chiasmus-a..."
 
-#: editor/kmcomposewin.cpp:1412
+#: editor/kmcomposewin.cpp:1418
 msgid "&Encrypt Message"
 msgstr "Ši&friraj poruku"
 
-#: editor/kmcomposewin.cpp:1413
+#: editor/kmcomposewin.cpp:1419
 msgid "Encrypt"
 msgstr "Kriptuj"
 
-#: editor/kmcomposewin.cpp:1415
+#: editor/kmcomposewin.cpp:1421
 msgid "&Sign Message"
 msgstr "&Potpiši poruku"
 
-#: editor/kmcomposewin.cpp:1416
+#: editor/kmcomposewin.cpp:1422
 msgid "Sign"
 msgstr "Potpiši"
 
-#: editor/kmcomposewin.cpp:1440
+#: editor/kmcomposewin.cpp:1446
 msgid "&Cryptographic Message Format"
 msgstr "&Smještajni forma:"
 
-#: editor/kmcomposewin.cpp:1444
+#: editor/kmcomposewin.cpp:1450
 msgid "Select a cryptographic format for this message"
 msgstr "Odaberite kriptografski format za ovu poruku"
 
-#: editor/kmcomposewin.cpp:1459
+#: editor/kmcomposewin.cpp:1465
 msgid "Configure KMail..."
 msgstr "Podesi KMail..."
 
-#: editor/kmcomposewin.cpp:1495
+#: editor/kmcomposewin.cpp:1501
 #, kde-format
 msgid " Spellcheck: %1 "
 msgstr " Provjera pravopisa: %1 "
 
-#: editor/kmcomposewin.cpp:1496 editor/kmcomposewin.cpp:3315
+#: editor/kmcomposewin.cpp:1502 editor/kmcomposewin.cpp:3327
 #, kde-format
 msgid " Column: %1 "
 msgstr " Kolona: %1 "
 
-#: editor/kmcomposewin.cpp:1498 editor/kmcomposewin.cpp:3313
+#: editor/kmcomposewin.cpp:1504 editor/kmcomposewin.cpp:3325
 #, kde-format
 msgctxt "Shows the linenumber of the cursor position."
 msgid " Line: %1 "
 msgstr " Linija: %1 "
 
-#: editor/kmcomposewin.cpp:1872
+#: editor/kmcomposewin.cpp:1878
 msgid "Re&save as Template"
 msgstr "Ponovo &snimi kao šablon"
 
-#: editor/kmcomposewin.cpp:1873
+#: editor/kmcomposewin.cpp:1879
 msgid "&Save as Draft"
 msgstr "&Snimi kao nacrt"
 
-#: editor/kmcomposewin.cpp:1875
+#: editor/kmcomposewin.cpp:1881
 msgid ""
 "Resave this message in the Templates folder. It can then be used at a later "
 "time."
@@ -2097,7 +2103,7 @@ msgstr ""
 "Ponovo snimi ovu poruku u fascikl za šablone. Tada se može upotrijebiti "
 "kasnije."
 
-#: editor/kmcomposewin.cpp:1877
+#: editor/kmcomposewin.cpp:1883
 msgid ""
 "Save this message in the Drafts folder. It can then be edited and sent at a "
 "later time."
@@ -2105,57 +2111,57 @@ msgstr ""
 "Snimi ovu poruku u fascikl za nedovršene poruke. Tada se može urediti i "
 "poslati kasnije."
 
-#: editor/kmcomposewin.cpp:1881
+#: editor/kmcomposewin.cpp:1887
 msgid "Do you want to save the message for later or discard it?"
 msgstr "Da li želite snimiti poruku za kasnije ili je poništiti?"
 
-#: editor/kmcomposewin.cpp:1882
+#: editor/kmcomposewin.cpp:1888
 msgid "Close Composer"
 msgstr "&Nova poruka"
 
-#: editor/kmcomposewin.cpp:1953
+#: editor/kmcomposewin.cpp:1959
 msgid "Autosave Message Failed"
 msgstr "Snimanje poruke neuspjelo"
 
-#: editor/kmcomposewin.cpp:1953
+#: editor/kmcomposewin.cpp:1959
 msgid "Sending Message Failed"
 msgstr "Slanje poruke neuspjelo"
 
-#: editor/kmcomposewin.cpp:2162
+#: editor/kmcomposewin.cpp:2168
 msgid "Add as &Inline Image"
 msgstr "Dodaj kao ugrađenu sl&iku"
 
-#: editor/kmcomposewin.cpp:2163
+#: editor/kmcomposewin.cpp:2169
 msgid "Add as &Attachment"
 msgstr "Dodaj kao dod&atak"
 
-#: editor/kmcomposewin.cpp:2179 editor/kmcomposewin.cpp:2256
+#: editor/kmcomposewin.cpp:2185 editor/kmcomposewin.cpp:2262
 msgid "Name of the attachment:"
 msgstr "Ime priloga:"
 
-#: editor/kmcomposewin.cpp:2216
+#: editor/kmcomposewin.cpp:2222
 msgid "Add URL into Message"
 msgid_plural "Add URLs into Message"
 msgstr[0] "Dodaj URL u poruku"
 msgstr[1] "Dodaj URL-ove u poruku"
 msgstr[2] "Dodaj UR-ove u poruku"
 
-#: editor/kmcomposewin.cpp:2217
+#: editor/kmcomposewin.cpp:2223
 msgid "Add File as &Attachment"
 msgid_plural "Add Files as &Attachment"
 msgstr[0] "Dodaj datoteku kao &Prilog"
 msgstr[1] "Dodaj datoteke kao &Prilog"
 msgstr[2] "Dodaj datoteke kao &Prilog"
 
-#: editor/kmcomposewin.cpp:2255
+#: editor/kmcomposewin.cpp:2261
 msgid "Insert clipboard text as attachment"
 msgstr "Umetni tekst međuspremnika kao dodatak"
 
-#: editor/kmcomposewin.cpp:2461
+#: editor/kmcomposewin.cpp:2467
 msgid "unnamed"
 msgstr "bez imena"
 
-#: editor/kmcomposewin.cpp:2489
+#: editor/kmcomposewin.cpp:2495
 msgid ""
 "<qt><p>You have requested that messages be encrypted to yourself, but the "
 "currently selected identity does not define an (OpenPGP or S/MIME) "
@@ -2167,11 +2173,11 @@ msgstr ""
 "šifrovanje koji biste koristili za ovo.</p><p>Molim izaberite ključeve koje "
 "ćete koristiti u konfiguraciji identiteta.</p></qt>"
 
-#: editor/kmcomposewin.cpp:2496
+#: editor/kmcomposewin.cpp:2502
 msgid "Undefined Encryption Key"
 msgstr "Ključ enkripcije nije definisan"
 
-#: editor/kmcomposewin.cpp:2542
+#: editor/kmcomposewin.cpp:2548
 msgid ""
 "<qt><p>In order to be able to sign this message you first have to define the "
 "(OpenPGP or S/MIME) signing key to use.</p><p>Please select the key to use "
@@ -2182,11 +2188,11 @@ msgstr ""
 "ključ koji će biti korišten sa trenutnim identitetom u postavkama identiteta."
 "</p></qt>"
 
-#: editor/kmcomposewin.cpp:2549
+#: editor/kmcomposewin.cpp:2555
 msgid "Undefined Signing Key"
 msgstr "Nije definisan ključ za potpisivanje"
 
-#: editor/kmcomposewin.cpp:2666
+#: editor/kmcomposewin.cpp:2672
 #, kde-format
 msgid "There is %1 file upload in progress."
 msgid_plural "There are %1 file uploads in progress."
@@ -2194,7 +2200,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: editor/kmcomposewin.cpp:2687
+#: editor/kmcomposewin.cpp:2693
 msgid ""
 "You must enter your email address in the From: field. You should also set "
 "your email address for all identities, so that you do not have to enter it "
@@ -2204,56 +2210,56 @@ msgstr ""
 "e-mail adresu za sve identitete, tako da je ne morate unositi za svaku "
 "poruku posebno."
 
-#: editor/kmcomposewin.cpp:2696
+#: editor/kmcomposewin.cpp:2702
 msgid ""
 "You must specify at least one receiver, either in the To: field or as CC or "
 "as BCC."
 msgstr ""
 "Morate navesti bar jednog primaoca, bilo u Za: polje ili CC ili kao BCC."
 
-#: editor/kmcomposewin.cpp:2702
+#: editor/kmcomposewin.cpp:2708
 msgid "To: field is empty. Send message anyway?"
 msgstr "Za: polje je prazno. Poslati poruku svakako?"
 
-#: editor/kmcomposewin.cpp:2704
+#: editor/kmcomposewin.cpp:2710
 msgid "No To: specified"
 msgstr "Za: nije navedeno"
 
-#: editor/kmcomposewin.cpp:2718
+#: editor/kmcomposewin.cpp:2724
 msgid "You did not specify a subject. Send message anyway?"
 msgstr "Niste upisali temu. Da li da pošaljem poruku sa praznom temom?"
 
-#: editor/kmcomposewin.cpp:2720
+#: editor/kmcomposewin.cpp:2726
 msgid "No Subject Specified"
 msgstr "Niste upisali temu"
 
-#: editor/kmcomposewin.cpp:2721
+#: editor/kmcomposewin.cpp:2727
 msgid "S&end as Is"
 msgstr "Pošalji &kao što jeste"
 
-#: editor/kmcomposewin.cpp:2722
+#: editor/kmcomposewin.cpp:2728
 msgid "&Specify the Subject"
 msgstr "&Navedi temu"
 
-#: editor/kmcomposewin.cpp:2752
+#: editor/kmcomposewin.cpp:2764
 msgid ""
 "You must specify at least one receiver in order to be able to encrypt a "
 "draft."
 msgstr "Morate navesti bar jednog primaoca kako biste mogli šifrovati nacrt"
 
-#: editor/kmcomposewin.cpp:2939
+#: editor/kmcomposewin.cpp:2951
 msgid "About to send email..."
 msgstr "Spremam se poslati e-mail..."
 
-#: editor/kmcomposewin.cpp:2940
+#: editor/kmcomposewin.cpp:2952
 msgid "Send Confirmation"
 msgstr "Potvrda slanja poruke"
 
-#: editor/kmcomposewin.cpp:2941
+#: editor/kmcomposewin.cpp:2953
 msgid "&Send Now"
 msgstr "Pošalji &odmah"
 
-#: editor/kmcomposewin.cpp:2960
+#: editor/kmcomposewin.cpp:2972
 #, kde-format
 msgid ""
 "You are trying to send the mail to more than %1 recipients. Send message "
@@ -2262,54 +2268,54 @@ msgstr ""
 "Pokušavate da pošaljete poruku za više od %1 primaoca. Poslati poruku "
 "svakako?"
 
-#: editor/kmcomposewin.cpp:2961
+#: editor/kmcomposewin.cpp:2973
 msgid "Too many recipients"
 msgstr "Previše primaoca"
 
-#: editor/kmcomposewin.cpp:2962
+#: editor/kmcomposewin.cpp:2974
 msgid "&Send as Is"
 msgstr "Pošalji &kao što jeste"
 
-#: editor/kmcomposewin.cpp:2963
+#: editor/kmcomposewin.cpp:2975
 msgid "&Edit Recipients"
 msgstr "&Uredi Primaoce"
 
-#: editor/kmcomposewin.cpp:3006
+#: editor/kmcomposewin.cpp:3018
 msgid ""
 "Turning HTML mode off will cause the text to lose the formatting. Are you "
 "sure?"
 msgstr ""
 "Gašenjem HTML će uzrokovati da tekst izgubi oblikovanje. Da li ste sigurni?"
 
-#: editor/kmcomposewin.cpp:3008
+#: editor/kmcomposewin.cpp:3020
 msgid "Lose the formatting?"
 msgstr "Izgubiti oblikovanje?"
 
-#: editor/kmcomposewin.cpp:3008
+#: editor/kmcomposewin.cpp:3020
 msgid "Lose Formatting"
 msgstr "Izgubiti oblikovanje"
 
-#: editor/kmcomposewin.cpp:3008
+#: editor/kmcomposewin.cpp:3020
 msgid "Add Markup Plain Text"
 msgstr "Dodaj obični tekst za označavanje"
 
-#: editor/kmcomposewin.cpp:3072
+#: editor/kmcomposewin.cpp:3084
 msgid "Spellcheck: on"
 msgstr "Provjera pravopisa: uključena"
 
-#: editor/kmcomposewin.cpp:3074
+#: editor/kmcomposewin.cpp:3086
 msgid "Spellcheck: off"
 msgstr "Provjera pravopisa: isključena"
 
-#: editor/kmcomposewin.cpp:3303
+#: editor/kmcomposewin.cpp:3315
 msgid "OVR"
 msgstr "OVR"
 
-#: editor/kmcomposewin.cpp:3303
+#: editor/kmcomposewin.cpp:3315
 msgid "INS"
 msgstr "INS"
 
-#: editor/kmcomposewin.cpp:3360
+#: editor/kmcomposewin.cpp:3372
 msgid ""
 "Please configure a Crypto Backend to use for Chiasmus encryption first.\n"
 "You can do this in the Crypto Backends tab of the configure dialog's "
@@ -2319,7 +2325,7 @@ msgstr ""
 "Ovo možete uraditi u kartici Pozadinski šifranti, na strani Bezbijednost, "
 "dijaloga podešavanja."
 
-#: editor/kmcomposewin.cpp:3364
+#: editor/kmcomposewin.cpp:3376
 msgid ""
 "It looks as though libkleopatra was compiled without Chiasmus support. You "
 "might want to recompile libkleopatra with --enable-chiasmus."
@@ -2327,11 +2333,11 @@ msgstr ""
 "Izgleda da je libkleopatra kompajlirana bez podrške za Chiasmus. Možda biste "
 "željeli da prekompajlirate libkleopatra sa opsijom --enable-chiasmus."
 
-#: editor/kmcomposewin.cpp:3367
+#: editor/kmcomposewin.cpp:3379
 msgid "No Chiasmus Backend Configured"
 msgstr "Nije podešen pozadinski program Chiasmus-a"
 
-#: editor/kmcomposewin.cpp:3373
+#: editor/kmcomposewin.cpp:3385
 msgid ""
 "Chiasmus backend does not offer the \"x-obtain-keys\" function. Please "
 "report this bug."
@@ -2339,12 +2345,12 @@ msgstr ""
 "Chiasmus-ov pozadinski program ne nudi funkciju „x-obtain-keys“. Prijavite "
 "ovu grešku."
 
-#: editor/kmcomposewin.cpp:3375 editor/kmcomposewin.cpp:3380
-#: editor/kmcomposewin.cpp:3389
+#: editor/kmcomposewin.cpp:3387 editor/kmcomposewin.cpp:3392
+#: editor/kmcomposewin.cpp:3401
 msgid "Chiasmus Backend Error"
 msgstr "Greška pozadinskog programa Chiasmus-a"
 
-#: editor/kmcomposewin.cpp:3386
+#: editor/kmcomposewin.cpp:3398
 msgid ""
 "Unexpected return value from Chiasmus backend: The \"x-obtain-keys\" "
 "function did not return a string list. Please report this bug."
@@ -2352,7 +2358,7 @@ msgstr ""
 "Pozadinski program Chiasmus-a je vratio neočekivanu vrijednost: Funkcija „x-"
 "obtain-keys“ nije vratila listu znakovnog niza. Prijavite ovu grešku."
 
-#: editor/kmcomposewin.cpp:3395
+#: editor/kmcomposewin.cpp:3407
 msgid ""
 "No keys have been found. Please check that a valid key path has been set in "
 "the Chiasmus configuration."
@@ -2360,52 +2366,52 @@ msgstr ""
 "Nisu pronađeni nikakvi ključevi. Provjerite da li je postavljena ispravna "
 "putanja ključa u podešavanjima Chiasmus-a."
 
-#: editor/kmcomposewin.cpp:3398
+#: editor/kmcomposewin.cpp:3410
 msgid "No Chiasmus Keys Found"
 msgstr "Nisu pronađeni ključevi Chiasmus-a"
 
-#: editor/kmcomposewin.cpp:3402
+#: editor/kmcomposewin.cpp:3414
 msgid "Chiasmus Encryption Key Selection"
 msgstr "Izbor Chiasmus ključa za šifrovanje"
 
-#: editor/kmcomposewin.cpp:3431
+#: editor/kmcomposewin.cpp:3443
 msgid "Message will be signed"
 msgstr "Poruka će biti potpisana"
 
-#: editor/kmcomposewin.cpp:3432
+#: editor/kmcomposewin.cpp:3444
 msgid "Message will not be signed"
 msgstr "Poruka neće biti potpisana"
 
-#: editor/kmcomposewin.cpp:3434
+#: editor/kmcomposewin.cpp:3446
 msgid "Message will be encrypted"
 msgstr "Poruka će biti šifrovana"
 
-#: editor/kmcomposewin.cpp:3435
+#: editor/kmcomposewin.cpp:3447
 msgid "Message will not be encrypted"
 msgstr "Poruka neće biti šifrovana"
 
-#: editor/kmcomposewin.cpp:3457
+#: editor/kmcomposewin.cpp:3469
 msgid "Insert Special Character"
 msgstr "Ubaci specijalan znak"
 
-#: editor/kmcomposewin.cpp:3458
+#: editor/kmcomposewin.cpp:3470
 msgid "Insert"
 msgstr "Umetni"
 
-#: editor/kmcomposewin.cpp:3580
+#: editor/kmcomposewin.cpp:3598
 msgid "An error occurred while sending the file."
 msgstr "Greška se desila pri slanju datoteke"
 
-#: editor/kmcomposewin.cpp:3580
+#: editor/kmcomposewin.cpp:3598
 msgid "Upload file"
 msgstr "Šalji datoteku"
 
-#: editor/kmcomposewin.cpp:3599
+#: editor/kmcomposewin.cpp:3617
 #, kde-format
 msgid "%1 return an error '%2'"
 msgstr "%1 vratio grešku '%2'"
 
-#: editor/kmcomposewin.cpp:3599
+#: editor/kmcomposewin.cpp:3617
 msgid "Error"
 msgstr "Greška"
 
@@ -2490,20 +2496,20 @@ msgstr "&Dupliciraj postojeću vizitkartu"
 msgid "&Existing identities:"
 msgstr "&Postojeći identiteti:"
 
-#: identity/identitydialog.cpp:113
+#: identity/identitydialog.cpp:119
 msgid "Edit Identity"
 msgstr "Izmijeni identitet"
 
-#: identity/identitydialog.cpp:142
+#: identity/identitydialog.cpp:148
 msgctxt "@title:tab General identity settings."
 msgid "General"
 msgstr "Opšte"
 
-#: identity/identitydialog.cpp:153
+#: identity/identitydialog.cpp:159
 msgid "&Your name:"
 msgstr "&Vaše ime:"
 
-#: identity/identitydialog.cpp:156
+#: identity/identitydialog.cpp:162
 msgid ""
 "<qt><h3>Your name</h3><p>This field should contain your name as you would "
 "like it to appear in the email header that is sent out;</p><p>if you leave "
@@ -2514,11 +2520,11 @@ msgstr ""
 "ostavite ovo polje praznim, umjesto vašeg pravog imena ispisivaće se vaša e-"
 "mail adresa.</p></qt>"
 
-#: identity/identitydialog.cpp:168
+#: identity/identitydialog.cpp:174
 msgid "Organi&zation:"
 msgstr "Organi&zacija:"
 
-#: identity/identitydialog.cpp:171
+#: identity/identitydialog.cpp:177
 msgid ""
 "<qt><h3>Organization</h3><p>This field should have the name of your "
 "organization if you would like it to be shown in the email header that is "
@@ -2528,11 +2534,11 @@ msgstr ""
 "ako želite da bude prikazano u zaglavlju e-pošte koja je poslana.</"
 "p><p>Sigurno je( i normalno ) ostaviti ovo prazno.</p></qt>"
 
-#: identity/identitydialog.cpp:184
+#: identity/identitydialog.cpp:190
 msgid "&Email address:"
 msgstr "&Email adresa:"
 
-#: identity/identitydialog.cpp:187
+#: identity/identitydialog.cpp:193
 msgid ""
 "<qt><h3>Email address</h3><p>This field should have your full email address."
 "</p><p>This address is the primary one, used for all outgoing mail. If you "
@@ -2546,11 +2552,11 @@ msgstr ""
 "alias adresu u polje ispod.</p><p>Ako ovo polje ostavite prazno, ili da je "
 "pogrešno, ljudi će imati problema da van odgovaraju.</p></qt>"
 
-#: identity/identitydialog.cpp:204
+#: identity/identitydialog.cpp:210
 msgid "Email a&liases:"
 msgstr "Email a&liasi:"
 
-#: identity/identitydialog.cpp:207
+#: identity/identitydialog.cpp:213
 msgid ""
 "<qt><h3>Email aliases</h3><p>This field contains alias addresses that should "
 "also be considered as belonging to this identity (as opposed to representing "
@@ -2566,27 +2572,27 @@ msgstr ""
 "org<br>last@example.org</td></tr></table><p>Unesite jednu alias adresu po "
 "liniji.</p></qt>"
 
-#: identity/identitydialog.cpp:225
+#: identity/identitydialog.cpp:231
 msgid "Cryptography"
 msgstr "Kriptografija"
 
-#: identity/identitydialog.cpp:234 identity/identitydialog.cpp:259
-#: identity/identitydialog.cpp:285 identity/identitydialog.cpp:312
+#: identity/identitydialog.cpp:240 identity/identitydialog.cpp:265
+#: identity/identitydialog.cpp:291 identity/identitydialog.cpp:318
 msgid "Chang&e..."
 msgstr "Izmij&eni..."
 
-#: identity/identitydialog.cpp:235
+#: identity/identitydialog.cpp:241
 msgid "Your OpenPGP Signature Key"
 msgstr "Vaš OpenPGP ključ za potpis"
 
-#: identity/identitydialog.cpp:236
+#: identity/identitydialog.cpp:242
 msgid ""
 "Select the OpenPGP key which should be used to digitally sign your messages."
 msgstr ""
 "Odaberite OpenPGP ključ koji želite koristiti za potpisivanje vaših poruka i "
 "kriptovanje poruka koje šaljete sebi."
 
-#: identity/identitydialog.cpp:240
+#: identity/identitydialog.cpp:246
 msgid ""
 "<qt><p>The OpenPGP key you choose here will be used to digitally sign "
 "messages. You can also use GnuPG keys.</p><p>You can leave this blank, but "
@@ -2601,15 +2607,15 @@ msgstr ""
 "utjecati na normalne e-mail funkcije.</p><p>Možete saznati više o ključevima "
 "na <a>http://www.gnupg.org</a></p></qt>"
 
-#: identity/identitydialog.cpp:247
+#: identity/identitydialog.cpp:253
 msgid "OpenPGP signing key:"
 msgstr "OpenPGP ključ za potpisivanje:"
 
-#: identity/identitydialog.cpp:260
+#: identity/identitydialog.cpp:266
 msgid "Your OpenPGP Encryption Key"
 msgstr "Vaš OpenPGP ključ"
 
-#: identity/identitydialog.cpp:261
+#: identity/identitydialog.cpp:267
 msgid ""
 "Select the OpenPGP key which should be used when encrypting to yourself and "
 "for the \"Attach My Public Key\" feature in the composer."
@@ -2617,7 +2623,7 @@ msgstr ""
 "Odaberite OpenPGP ključ koji želite koristiti za šifrovanje poruka koje "
 "šaljete sebi i za opciju \"Zakači moj javni ključ\" u sastavljaču."
 
-#: identity/identitydialog.cpp:266
+#: identity/identitydialog.cpp:272
 msgid ""
 "<qt><p>The OpenPGP key you choose here will be used to encrypt messages to "
 "yourself and for the \"Attach My Public Key\" feature in the composer. You "
@@ -2633,15 +2639,15 @@ msgstr ""
 "koristeći OpenPGP; normalne funkcije e-pošte neće biti djelotvorne.</"
 "p><p>Možete više naći o ključevima na <a>http://www.gnupg.org</a></p></qt>"
 
-#: identity/identitydialog.cpp:273
+#: identity/identitydialog.cpp:279
 msgid "OpenPGP encryption key:"
 msgstr "OpenPGP ključ:"
 
-#: identity/identitydialog.cpp:286
+#: identity/identitydialog.cpp:292
 msgid "Your S/MIME Signature Certificate"
 msgstr "Vaš S/MIME certifikat za potpis"
 
-#: identity/identitydialog.cpp:287
+#: identity/identitydialog.cpp:293
 msgid ""
 "Select the S/MIME certificate which should be used to digitally sign your "
 "messages."
@@ -2649,7 +2655,7 @@ msgstr ""
 "Odaberite OpenPGP ključ koji želite koristiti za potpisivanje vaših poruka i "
 "kriptovanje poruka koje šaljete sebi."
 
-#: identity/identitydialog.cpp:291
+#: identity/identitydialog.cpp:297
 msgid ""
 "<qt><p>The S/MIME (X.509) certificate you choose here will be used to "
 "digitally sign messages.</p><p>You can leave this blank, but KMail will not "
@@ -2662,15 +2668,15 @@ msgstr ""
 "KMail neće biti u stanju da kriptografski potpisuje poruke. Ovo neće "
 "utjecati na normalne e-mail funkcije.</p></qt>"
 
-#: identity/identitydialog.cpp:296
+#: identity/identitydialog.cpp:302
 msgid "S/MIME signing certificate:"
 msgstr "Slanje certifikata"
 
-#: identity/identitydialog.cpp:313
+#: identity/identitydialog.cpp:319
 msgid "Your S/MIME Encryption Certificate"
 msgstr "Vaš S/MIME certifikat za šifrovanje"
 
-#: identity/identitydialog.cpp:314
+#: identity/identitydialog.cpp:320
 msgid ""
 "Select the S/MIME certificate which should be used when encrypting to "
 "yourself and for the \"Attach My Certificate\" feature in the composer."
@@ -2678,7 +2684,7 @@ msgstr ""
 "Izaberite S/MIME certifikat koji ćete koristiti za šifrovanje poruka koje "
 "šaljete samim sebi i za opciju \"Zakači moj certifikat\" u sastavljaču."
 
-#: identity/identitydialog.cpp:319
+#: identity/identitydialog.cpp:325
 msgid ""
 "<qt><p>The S/MIME certificate you choose here will be used to encrypt "
 "messages to yourself and for the \"Attach My Certificate\" feature in the "
@@ -2692,29 +2698,29 @@ msgstr ""
 "u stanju da šifruje izlazne poruke za vas koristeći S/MIME. Ovo neće "
 "utjecati na normalne e-mail funkcije.</p></qt>"
 
-#: identity/identitydialog.cpp:325
+#: identity/identitydialog.cpp:331
 msgid "S/MIME encryption certificate:"
 msgstr "S/MIME certifikat za šifrovanje:"
 
-#: identity/identitydialog.cpp:347
+#: identity/identitydialog.cpp:353
 msgctxt "preferred format of encrypted messages"
 msgid "Preferred format:"
 msgstr "Željeni format:"
 
-#: identity/identitydialog.cpp:355
+#: identity/identitydialog.cpp:361
 msgid "Automatically sign messages"
 msgstr "Automatski potpiši poruke"
 
-#: identity/identitydialog.cpp:366
+#: identity/identitydialog.cpp:372
 msgctxt "@title:tab Advanced identity settings."
 msgid "Advanced"
 msgstr "Napredno"
 
-#: identity/identitydialog.cpp:378
+#: identity/identitydialog.cpp:384
 msgid "&Reply-To address:"
 msgstr "&Reply-To adresa:"
 
-#: identity/identitydialog.cpp:381
+#: identity/identitydialog.cpp:387
 msgid ""
 "<qt><h3>Reply-To addresses</h3><p>This sets the <tt>Reply-to:</tt> header to "
 "contain a different email address to the normal <tt>From:</tt> address.</"
@@ -2731,11 +2737,11 @@ msgstr ""
 "</tt>, ali da odgovori idu na adresu čitave grupe.</p><p>Ako niste sigurni, "
 "ostavite polje praznim.</p></qt>"
 
-#: identity/identitydialog.cpp:401
+#: identity/identitydialog.cpp:407
 msgid "&CC addresses:"
 msgstr "&CC adrese:"
 
-#: identity/identitydialog.cpp:404
+#: identity/identitydialog.cpp:410
 msgid ""
 "<qt><h3>CC (Carbon Copy) addresses</h3><p>The addresses that you enter here "
 "will be added to each outgoing mail that is sent with this identity.</"
@@ -2751,11 +2757,11 @@ msgstr ""
 "razdvajanje liste CC primalaca.</p><p>Ako ste u sumnji, ostavite ovo polje "
 "prazno.</p></qt>"
 
-#: identity/identitydialog.cpp:421
+#: identity/identitydialog.cpp:427
 msgid "&BCC addresses:"
 msgstr "&BCC adrese:"
 
-#: identity/identitydialog.cpp:424
+#: identity/identitydialog.cpp:430
 msgid ""
 "<qt><h3>BCC (Blind Carbon Copy) addresses</h3><p>The addresses that you "
 "enter here will be added to each outgoing mail that is sent with this "
@@ -2771,61 +2777,79 @@ msgstr ""
 "koji pripada vama.</p><p>Ako niste sigurni, ostavite ovo polje praznim.</p></"
 "qt>"
 
-#: identity/identitydialog.cpp:440
+#: identity/identitydialog.cpp:446
 msgid "D&ictionary:"
 msgstr "R&ječnik:"
 
-#: identity/identitydialog.cpp:449
+#: identity/identitydialog.cpp:455
 msgid "Sent-mail &folder:"
 msgstr "Direktorij p&oslanih poruka:"
 
-#: identity/identitydialog.cpp:458
+#: identity/identitydialog.cpp:464
 msgid "&Drafts folder:"
 msgstr "Direktorij &nacrta:"
 
-#: identity/identitydialog.cpp:467
+#: identity/identitydialog.cpp:473
 msgid "&Templates folder:"
 msgstr "Direktorij za ša&blone:"
 
-#: identity/identitydialog.cpp:473
+#: identity/identitydialog.cpp:479
 msgid "Outgoing Account:"
 msgstr "Otvoren nalog:"
 
-#: identity/identitydialog.cpp:482
+#: identity/identitydialog.cpp:488
 msgid "Attach my vCard to message"
 msgstr "Dodaj vizitkartu poruci."
 
-#: identity/identitydialog.cpp:484 identity/identitydialog.cpp:972
+#: identity/identitydialog.cpp:490 identity/identitydialog.cpp:1017
 msgid "Create..."
 msgstr "Kreiraj..."
 
-#: identity/identitydialog.cpp:492
+#: identity/identitydialog.cpp:498
 msgid "Autocorrection language:"
 msgstr "Jezik autokorekcije:"
 
-#: identity/identitydialog.cpp:512
+#: identity/identitydialog.cpp:510
+#, fuzzy
+#| msgid "Defaul&t domain:"
+msgid "Restore default domain name"
+msgstr "Po&drazumjevana domena:"
+
+#: identity/identitydialog.cpp:514
+msgid "Defaul&t domain:"
+msgstr "Po&drazumjevana domena:"
+
+#: identity/identitydialog.cpp:519
+msgid ""
+"<qt><p>The default domain is used to complete email addresses that only "
+"consist of the user's name.</p></qt>"
+msgstr ""
+"<qt> <p>Podrazumijevana domena se koristi za dovršavanje email adresa koje "
+"sadrže samo korisničko ime.</p></qt>"
+
+#: identity/identitydialog.cpp:542
 msgid "&Use custom message templates for this identity"
 msgstr "&Koristi obične šablone poruka za ovaj identitet"
 
-#: identity/identitydialog.cpp:552
+#: identity/identitydialog.cpp:582
 msgid "Signature"
 msgstr "Potpis"
 
-#: identity/identitydialog.cpp:561
+#: identity/identitydialog.cpp:591
 msgid "Picture"
 msgstr "Slika"
 
-#: identity/identitydialog.cpp:646
+#: identity/identitydialog.cpp:681
 #, kde-format
 msgid "Invalid Email Alias \"%1\""
 msgstr "Pogrešan alias e-maila \"%1\""
 
-#: identity/identitydialog.cpp:655 job/addressvalidationjob.cpp:84
-#: job/addressvalidationjob.cpp:93
+#: identity/identitydialog.cpp:690 job/addressvalidationjob.cpp:85
+#: job/addressvalidationjob.cpp:94
 msgid "Invalid Email Address"
 msgstr "Pogrešna e-mail adresa"
 
-#: identity/identitydialog.cpp:690
+#: identity/identitydialog.cpp:727
 #, kde-format
 msgid ""
 "One of the configured OpenPGP signing keys does not contain any user ID with "
@@ -2838,7 +2862,7 @@ msgstr ""
 "Ovo može rezultirati porukama upozorenja na strani primatelja kada pokuša "
 "provjeriti potpise napravljene ovom konfiguracijom."
 
-#: identity/identitydialog.cpp:698
+#: identity/identitydialog.cpp:735
 #, kde-format
 msgid ""
 "One of the configured OpenPGP encryption keys does not contain any user ID "
@@ -2847,7 +2871,7 @@ msgstr ""
 "Jedan od podešenih OpenPGP ključeva za šifrovanje ne sadrži ID korisnika sa "
 "podešenom e-mail adresom za ovaj identitet (%1)."
 
-#: identity/identitydialog.cpp:704
+#: identity/identitydialog.cpp:741
 #, kde-format
 msgid ""
 "One of the configured S/MIME signing certificates does not contain the "
@@ -2860,7 +2884,7 @@ msgstr ""
 "Ovo može rezultirati porukama upozorenja na strani primatelja kada pokuša "
 "provjeriti potpise napravljene ovom konfiguracijom."
 
-#: identity/identitydialog.cpp:712
+#: identity/identitydialog.cpp:749
 #, kde-format
 msgid ""
 "One of the configured S/MIME encryption certificates does not contain the "
@@ -2869,20 +2893,20 @@ msgstr ""
 "Jedan od podešenih S/MIME ključeva za šifrovanje ne sadrži ID korisnika sa "
 "podešenom e-mail adresom za ovaj identitet (%1)."
 
-#: identity/identitydialog.cpp:720
+#: identity/identitydialog.cpp:757
 msgid "Email Address Not Found in Key/Certificates"
 msgstr "E-mail adresa nije pronađena u ključu/certifikatu"
 
-#: identity/identitydialog.cpp:735
+#: identity/identitydialog.cpp:772
 msgid "The signature file is not valid"
 msgstr "Datoteka potpisa nije ispravan"
 
-#: identity/identitydialog.cpp:757
+#: identity/identitydialog.cpp:794
 #, kde-format
 msgid "Edit Identity \"%1\""
 msgstr "Izmijeni identitet \"%1\""
 
-#: identity/identitydialog.cpp:791
+#: identity/identitydialog.cpp:828
 #, kde-format
 msgid ""
 "The custom sent-mail folder for identity \"%1\" does not exist (anymore); "
@@ -2891,7 +2915,7 @@ msgstr ""
 "Vlastiti fascikl poslanih poruka za identitet \"%1\" (više) ne postoji. "
 "Stoga će biti korišten uobičajeni fascikl za poslane poruke."
 
-#: identity/identitydialog.cpp:803
+#: identity/identitydialog.cpp:840
 #, kde-format
 msgid ""
 "The custom drafts folder for identity \"%1\" does not exist (anymore); "
@@ -2900,7 +2924,7 @@ msgstr ""
 "Vlastiti fascikl nacrta za identitet \"%1\" (više) ne postoji. Stoga će biti "
 "korišten uobičajeni fascikl za nacrte."
 
-#: identity/identitydialog.cpp:815
+#: identity/identitydialog.cpp:852
 #, kde-format
 msgid ""
 "The custom templates folder for identity \"%1\" does not exist (anymore); "
@@ -2909,7 +2933,7 @@ msgstr ""
 "Direktorij posebnih šablona za identitet „%1“ ne postoji (više). Zbog toga "
 "će se koristiti podrazumijevani fascikl za šablone."
 
-#: identity/identitydialog.cpp:974
+#: identity/identitydialog.cpp:1019
 msgid "Edit..."
 msgstr "Izmijeni..."
 
@@ -3092,7 +3116,7 @@ msgstr "Slika nije postavljena za vaš unos u adresaru."
 msgid "Email added successfully."
 msgstr "Poruke su uspješno dodane."
 
-#: job/addressvalidationjob.cpp:81
+#: job/addressvalidationjob.cpp:82
 #, kde-format
 msgid "Distribution list %2 is empty, it cannot be used."
 msgid_plural "Distribution lists %2 are empty, they cannot be used."
@@ -3218,29 +3242,29 @@ msgid "&Forward"
 msgstr "P&roslijedi:"
 
 #. i18n: ectx: Menu (apply_filter_actions)
-#: kmail_part.rc:166 kmmainwidget.cpp:3361 kmmainwin.rc:166
+#: kmail_part.rc:166 kmmainwidget.cpp:3362 kmmainwin.rc:166
 msgid "A&pply Filter"
 msgstr "Primijeni &filter"
 
 #. i18n: ectx: Menu (tools)
-#: kmail_part.rc:176 kmmainwin.rc:176
+#: kmail_part.rc:177 kmmainwin.rc:177
 msgid "&Tools"
 msgstr "&Alati"
 
 #. i18n: ectx: Menu (settings)
-#: kmail_part.rc:197 kmcomposerui.rc:101 kmmainwin.rc:197
-#: kmreadermainwin.rc:70
+#: kmail_part.rc:198 kmcomposerui.rc:101 kmmainwin.rc:198
+#: kmreadermainwin.rc:71
 msgid "&Settings"
 msgstr "&Postavke"
 
 #. i18n: ectx: Menu (help)
-#: kmail_part.rc:212 kmmainwin.rc:212
+#: kmail_part.rc:213 kmmainwin.rc:213
 msgid "&Help"
 msgstr "&Pomoć"
 
 #. i18n: ectx: ToolBar (mainToolBar)
-#: kmail_part.rc:289 kmcomposerui.rc:105 kmmainwin.rc:289
-#: kmreadermainwin.rc:79
+#: kmail_part.rc:291 kmcomposerui.rc:105 kmmainwin.rc:291
+#: kmreadermainwin.rc:80
 msgid "Main Toolbar"
 msgstr "Glavna alatna traka"
 
@@ -3299,24 +3323,24 @@ msgstr "Pošalji kao zbirni dokument"
 msgid "Send Individually"
 msgstr "Pošalji posebno"
 
-#: kmcommands.cpp:1315
+#: kmcommands.cpp:1317
 msgid "Filtering messages"
 msgstr "Filtriram poruke"
 
-#: kmcommands.cpp:1322
+#: kmcommands.cpp:1324
 #, kde-format
 msgid "Filtering message %1 of %2"
 msgstr "Filtriram poruku %1 od %2"
 
-#: kmcommands.cpp:1474
+#: kmcommands.cpp:1476
 msgid "Moving messages"
 msgstr "Premještanje poruka nije uspjelo."
 
-#: kmcommands.cpp:1474
+#: kmcommands.cpp:1476
 msgid "Deleting messages"
 msgstr "Obriši poruke"
 
-#: kmcommands.cpp:1604
+#: kmcommands.cpp:1606
 msgid "Image"
 msgstr "Slika"
 
@@ -3457,13 +3481,13 @@ msgstr ""
 "Drugi  poštanski program je pronađen na sistemu. Želite li uvesti podatke iz "
 "njega?"
 
-#: kmmainwidget.cpp:333 kmmainwidget.cpp:4343
+#: kmmainwidget.cpp:333 kmmainwidget.cpp:4351
 msgid "Could not start the import wizard. Please check your installation."
 msgstr ""
 "Nije moguće pokretanje uvezenog čarobnjaka. Molimo provjerite vašu "
 "instalaciju."
 
-#: kmmainwidget.cpp:335 kmmainwidget.cpp:4345
+#: kmmainwidget.cpp:335 kmmainwidget.cpp:4353
 msgid "Unable to start import wizard"
 msgstr "Nije moguće pokrenuti čarobnjaka za uvoz"
 
@@ -3751,344 +3775,344 @@ msgstr ""
 "Ne mogu pokrenuti GnuPG preglednik dnevnika (kwatchgnupg). Molim provjerite "
 "vašu instalaciju."
 
-#: kmmainwidget.cpp:2974
+#: kmmainwidget.cpp:2975
 msgid "Save &As..."
 msgstr "Snimi &kao..."
 
-#: kmmainwidget.cpp:2988
+#: kmmainwidget.cpp:2989
 msgid "&Expire All Folders"
 msgstr "Briši stare poruke u &svim fasciklima"
 
-#: kmmainwidget.cpp:2993
+#: kmmainwidget.cpp:2994
 msgid "Check &Mail"
 msgstr "Provjeri &poštu"
 
-#: kmmainwidget.cpp:2999
+#: kmmainwidget.cpp:3000
 msgid "Check Mail In"
 msgstr "Provjeri poštu u"
 
-#: kmmainwidget.cpp:3000 kmmainwidget.cpp:3001
+#: kmmainwidget.cpp:3001 kmmainwidget.cpp:3002
 msgid "Check Mail"
 msgstr "Provjeri poštu"
 
-#: kmmainwidget.cpp:3010
+#: kmmainwidget.cpp:3011
 msgid "&Send Queued Messages"
 msgstr "Pošalji po&redane poruke"
 
-#: kmmainwidget.cpp:3019
+#: kmmainwidget.cpp:3020
 msgid "Online status (unknown)"
 msgstr "Stanje na mreži (nepoznato)"
 
-#: kmmainwidget.cpp:3022
+#: kmmainwidget.cpp:3023
 msgid "Send Queued Messages Via"
 msgstr "Pošalji spremljene poruke preko"
 
-#: kmmainwidget.cpp:3040
+#: kmmainwidget.cpp:3041
 msgid "Certificate Manager"
 msgstr "Upravljač certifikatima"
 
-#: kmmainwidget.cpp:3048
+#: kmmainwidget.cpp:3049
 msgid "GnuPG Log Viewer"
 msgstr "GnuPG Log Preglednik"
 
-#: kmmainwidget.cpp:3061
+#: kmmainwidget.cpp:3062
 msgid "&Import Messages..."
 msgstr "&Uvezi Poruke..."
 
-#: kmmainwidget.cpp:3069
+#: kmmainwidget.cpp:3070
 msgid "&Debug Sieve..."
 msgstr "&Ispravljanje Sieve-a..."
 
-#: kmmainwidget.cpp:3076
+#: kmmainwidget.cpp:3077
 msgid "Filter &Log Viewer..."
 msgstr "Filtriraj &preglednik dnevnika..."
 
-#: kmmainwidget.cpp:3081
+#: kmmainwidget.cpp:3082
 msgid "&Anti-Spam Wizard..."
 msgstr "&Anti-spam čarobnjak..."
 
-#: kmmainwidget.cpp:3086
+#: kmmainwidget.cpp:3087
 msgid "&Anti-Virus Wizard..."
 msgstr "&Anti-virus čarobnjak..."
 
-#: kmmainwidget.cpp:3091
+#: kmmainwidget.cpp:3092
 msgid "&Account Wizard..."
 msgstr "&Čarobnjak naloga"
 
-#: kmmainwidget.cpp:3096
+#: kmmainwidget.cpp:3097
 msgid "&Import Wizard..."
 msgstr "&Uvezi čarobnjaka"
 
-#: kmmainwidget.cpp:3102
+#: kmmainwidget.cpp:3103
 msgid "Edit \"Out of Office\" Replies..."
 msgstr "Izmijeni automatske odgovore..."
 
-#: kmmainwidget.cpp:3108
+#: kmmainwidget.cpp:3109
 msgid "&Configure Automatic Archiving..."
 msgstr "&Konfiguriši automatsko arhiviranje"
 
-#: kmmainwidget.cpp:3114
+#: kmmainwidget.cpp:3115
 msgid "Message Delayed..."
 msgstr "Poruka odložena..."
 
-#: kmmainwidget.cpp:3130 kmmainwidget.cpp:4138
+#: kmmainwidget.cpp:3131 kmmainwidget.cpp:4139
 msgctxt "@action Hard delete, bypassing trash"
 msgid "&Delete"
 msgstr "&Obriši"
 
-#: kmmainwidget.cpp:3135 kmmainwidget.cpp:4140
+#: kmmainwidget.cpp:3136 kmmainwidget.cpp:4141
 msgid "M&ove Thread to Trash"
 msgstr "Pr&emjesti lanac u smeće"
 
-#: kmmainwidget.cpp:3139
+#: kmmainwidget.cpp:3140
 msgid "Move thread to trashcan"
 msgstr "Premjesti lanac u kantu za smeće"
 
-#: kmmainwidget.cpp:3142 kmmainwidget.cpp:4140
+#: kmmainwidget.cpp:3143 kmmainwidget.cpp:4141
 msgid "Delete T&hread"
 msgstr "Obriši &lanac"
 
-#: kmmainwidget.cpp:3148
+#: kmmainwidget.cpp:3149
 msgid "&Find Messages..."
 msgstr "&Pronađi poruke..."
 
-#: kmmainwidget.cpp:3154
+#: kmmainwidget.cpp:3155
 msgid "Select &All Messages"
 msgstr "Izaberi &sve poruke"
 
-#: kmmainwidget.cpp:3162
+#: kmmainwidget.cpp:3163
 msgid "&Mailing List Management..."
 msgstr "&Upravljanje diskusionom listom..."
 
-#: kmmainwidget.cpp:3167
+#: kmmainwidget.cpp:3168
 msgid "&Assign Shortcut..."
 msgstr "&Dodijeli prečicu..."
 
-#: kmmainwidget.cpp:3184
+#: kmmainwidget.cpp:3185
 msgid "&Expiration Settings"
 msgstr "Postavke ist&eka"
 
-#: kmmainwidget.cpp:3202
+#: kmmainwidget.cpp:3203
 msgid "&Archive Folder..."
 msgstr "&Arhiviranje fascikle..."
 
-#: kmmainwidget.cpp:3206
+#: kmmainwidget.cpp:3207
 msgid "Prefer &HTML to Plain Text"
 msgstr "Preferiraj &HTML umjesto čistog teksta"
 
-#: kmmainwidget.cpp:3210
+#: kmmainwidget.cpp:3211
 msgid "Load E&xternal References"
 msgstr "Učitaj spoljne re&ference"
 
-#: kmmainwidget.cpp:3233
+#: kmmainwidget.cpp:3234
 msgid "Copy Message To..."
 msgstr "Kopiraj poruku u..."
 
-#: kmmainwidget.cpp:3235
+#: kmmainwidget.cpp:3236
 msgid "Move Message To..."
 msgstr "Pomjeri poruku u..."
 
-#: kmmainwidget.cpp:3240
+#: kmmainwidget.cpp:3241
 msgid "&New Message..."
 msgstr "&Nova poruka..."
 
-#: kmmainwidget.cpp:3242
+#: kmmainwidget.cpp:3243
 msgctxt "@action:intoolbar New Empty Message"
 msgid "New"
 msgstr "Nova"
 
-#: kmmainwidget.cpp:3250
+#: kmmainwidget.cpp:3251
 msgid "Message From &Template"
 msgstr "&Šablon za pošiljaoca poruke"
 
-#: kmmainwidget.cpp:3260
+#: kmmainwidget.cpp:3261
 msgid "New Message t&o Mailing-List..."
 msgstr "Nova poruka na &mailing listu..."
 
-#: kmmainwidget.cpp:3267
+#: kmmainwidget.cpp:3268
 msgid "Send A&gain..."
 msgstr "Pošalji pono&vo..."
 
-#: kmmainwidget.cpp:3272
+#: kmmainwidget.cpp:3273
 msgid "&Create Filter"
 msgstr "&Napravi filter"
 
-#: kmmainwidget.cpp:3277
+#: kmmainwidget.cpp:3278
 msgid "Filter on &Subject..."
 msgstr "Filter na &temu..."
 
-#: kmmainwidget.cpp:3284
+#: kmmainwidget.cpp:3285
 msgid "Filter on &From..."
 msgstr "Filter na &pošiljaoca..."
 
-#: kmmainwidget.cpp:3290
+#: kmmainwidget.cpp:3291
 msgid "Filter on &To..."
 msgstr "Filter na p&rimaoca..."
 
-#: kmmainwidget.cpp:3297
+#: kmmainwidget.cpp:3298
 msgid "New Message From &Template"
 msgstr "Nova poruka prema ša&blonu"
 
-#: kmmainwidget.cpp:3303
+#: kmmainwidget.cpp:3304
 msgid "Mark &Thread"
 msgstr "Označi &thread"
 
-#: kmmainwidget.cpp:3306
+#: kmmainwidget.cpp:3307
 msgid "Mark Thread as &Read"
 msgstr "Označi thread kao &pročitan"
 
-#: kmmainwidget.cpp:3309
+#: kmmainwidget.cpp:3310
 msgid "Mark all messages in the selected thread as read"
 msgstr "Označi sve poruke u izabranom threadu kao pročitane"
 
-#: kmmainwidget.cpp:3312
+#: kmmainwidget.cpp:3313
 msgid "Mark Thread as &Unread"
 msgstr "Označi thread kao n&epročitan"
 
-#: kmmainwidget.cpp:3315
+#: kmmainwidget.cpp:3316
 msgid "Mark all messages in the selected thread as unread"
 msgstr "Označi sve poruke u izabranom threadu kao nepročitane"
 
-#: kmmainwidget.cpp:3321
+#: kmmainwidget.cpp:3322
 msgid "Mark Thread as &Important"
 msgstr "Označi thread kao &važan"
 
-#: kmmainwidget.cpp:3324
+#: kmmainwidget.cpp:3325
 msgid "Remove &Important Thread Mark"
 msgstr "Ukloni oznaku &Važan thread"
 
-#: kmmainwidget.cpp:3327
+#: kmmainwidget.cpp:3328
 msgid "Mark Thread as &Action Item"
 msgstr "Označi lanac kao &akcionu stavku"
 
-#: kmmainwidget.cpp:3330
+#: kmmainwidget.cpp:3331
 msgid "Remove &Action Item Thread Mark"
 msgstr "Ukloni oznaku &akcionog sa lanca"
 
-#: kmmainwidget.cpp:3334
+#: kmmainwidget.cpp:3335
 msgid "&Watch Thread"
 msgstr "&Prati thread"
 
-#: kmmainwidget.cpp:3338
+#: kmmainwidget.cpp:3339
 msgid "&Ignore Thread"
 msgstr "&Ignoriši thread"
 
-#: kmmainwidget.cpp:3346 kmreadermainwin.cpp:327
+#: kmmainwidget.cpp:3347 kmreadermainwin.cpp:327
 msgid "Save A&ttachments..."
 msgstr "Snimi pri&loge..."
 
-#: kmmainwidget.cpp:3355
+#: kmmainwidget.cpp:3356
 msgid "Appl&y All Filters"
 msgstr "Primijeni s&ve filtere"
 
-#: kmmainwidget.cpp:3365
+#: kmmainwidget.cpp:3366
 msgctxt "View->"
 msgid "&Expand Thread / Group"
 msgstr "&Raširi nit / grupu"
 
-#: kmmainwidget.cpp:3368
+#: kmmainwidget.cpp:3369
 msgid "Expand the current thread or group"
 msgstr "Raširi trenutnu nit ili grupu"
 
-#: kmmainwidget.cpp:3372
+#: kmmainwidget.cpp:3373
 msgctxt "View->"
 msgid "&Collapse Thread / Group"
 msgstr "Sažmi nit / grupu"
 
-#: kmmainwidget.cpp:3375
+#: kmmainwidget.cpp:3376
 msgid "Collapse the current thread or group"
 msgstr "Sažmi trenutnu nit ili grupu"
 
-#: kmmainwidget.cpp:3379
+#: kmmainwidget.cpp:3380
 msgctxt "View->"
 msgid "Ex&pand All Threads"
 msgstr "R&aširi sve threadove"
 
-#: kmmainwidget.cpp:3382
+#: kmmainwidget.cpp:3383
 msgid "Expand all threads in the current folder"
 msgstr "Raširi sve threadove u trenutnom fasciklu"
 
-#: kmmainwidget.cpp:3386
+#: kmmainwidget.cpp:3387
 msgctxt "View->"
 msgid "C&ollapse All Threads"
 msgstr "Saž&mi sve threadove"
 
-#: kmmainwidget.cpp:3389
+#: kmmainwidget.cpp:3390
 msgid "Collapse all threads in the current folder"
 msgstr "Sažmi sve threadove u trenutnom fasciklu"
 
-#: kmmainwidget.cpp:3394
+#: kmmainwidget.cpp:3395
 msgid "&Display Message"
 msgstr "&Prikaži poruku"
 
-#: kmmainwidget.cpp:3403
+#: kmmainwidget.cpp:3404
 msgid "&Next Message"
 msgstr "&Sljedeća poruka"
 
-#: kmmainwidget.cpp:3406
+#: kmmainwidget.cpp:3407
 msgid "Go to the next message"
 msgstr "Idi na sljedeću poruku"
 
-#: kmmainwidget.cpp:3410
+#: kmmainwidget.cpp:3411
 msgid "Next &Unread Message"
 msgstr "Sljedeća &nepročitana poruka"
 
-#: kmmainwidget.cpp:3418
+#: kmmainwidget.cpp:3419
 msgctxt "@action:inmenu Goto next unread message"
 msgid "Next"
 msgstr "Sljedeća"
 
-#: kmmainwidget.cpp:3419
+#: kmmainwidget.cpp:3420
 msgid "Go to the next unread message"
 msgstr "Idi na sljedeću nepročitanu poruku"
 
-#: kmmainwidget.cpp:3423
+#: kmmainwidget.cpp:3424
 msgid "&Previous Message"
 msgstr "&Prethodna poruka"
 
-#: kmmainwidget.cpp:3425
+#: kmmainwidget.cpp:3426
 msgid "Go to the previous message"
 msgstr "Idi na prethodnu poruku"
 
-#: kmmainwidget.cpp:3430
+#: kmmainwidget.cpp:3431
 msgid "Previous Unread &Message"
 msgstr "Prethodna n&epročitana poruka"
 
-#: kmmainwidget.cpp:3438
+#: kmmainwidget.cpp:3439
 msgctxt "@action:inmenu Goto previous unread message."
 msgid "Previous"
 msgstr "Prethodna"
 
-#: kmmainwidget.cpp:3439
+#: kmmainwidget.cpp:3440
 msgid "Go to the previous unread message"
 msgstr "Idi na prethodnu nepročitanu poruku"
 
-#: kmmainwidget.cpp:3443
+#: kmmainwidget.cpp:3444
 msgid "Next Unread &Folder"
 msgstr "Sljedeći nepročitan &fascikl"
 
-#: kmmainwidget.cpp:3447
+#: kmmainwidget.cpp:3448
 msgid "Go to the next folder with unread messages"
 msgstr "Idi na sljedeći fascikl sa nepročitanim porukama"
 
-#: kmmainwidget.cpp:3450
+#: kmmainwidget.cpp:3451
 msgid "Previous Unread F&older"
 msgstr "Prethodn&i nepročitani fascikl"
 
-#: kmmainwidget.cpp:3453
+#: kmmainwidget.cpp:3454
 msgid "Go to the previous folder with unread messages"
 msgstr "Idi na prethodni fascikl sa nepročitanim porukama"
 
-#: kmmainwidget.cpp:3457
+#: kmmainwidget.cpp:3458
 msgctxt "Go->"
 msgid "Next Unread &Text"
 msgstr "Sljedeći nepročitan &tekst"
 
-#: kmmainwidget.cpp:3460
+#: kmmainwidget.cpp:3461
 msgid "Go to the next unread text"
 msgstr "Idi na idući nepročitani tekst"
 
-#: kmmainwidget.cpp:3461
+#: kmmainwidget.cpp:3462
 msgid ""
 "Scroll down current message. If at end of current message, go to next unread "
 "message."
@@ -4096,170 +4120,179 @@ msgstr ""
 "Skroluje trenutnu poruku. Ako ste na kraju trenutne poruke, ide na sljedeću "
 "nepročitanu poruku."
 
-#: kmmainwidget.cpp:3469
+#: kmmainwidget.cpp:3470
 msgid "Configure &Filters..."
 msgstr "Podesi &filtere..."
 
-#: kmmainwidget.cpp:3475
+#: kmmainwidget.cpp:3476
 msgid "Manage &Sieve Scripts..."
 msgstr "Upravljaj &Sijeve skriptama..."
 
-#: kmmainwidget.cpp:3480
+#: kmmainwidget.cpp:3481
 msgid "KMail &Introduction"
 msgstr "KMail &Uvod"
 
-#: kmmainwidget.cpp:3482
+#: kmmainwidget.cpp:3483
 msgid "Display KMail's Welcome Page"
 msgstr "Prikaži KMail stranicu dobrodošlice"
 
-#: kmmainwidget.cpp:3491
+#: kmmainwidget.cpp:3492
 msgid "Configure &Notifications..."
 msgstr "Podesi &obavještenja..."
 
-#: kmmainwidget.cpp:3498
+#: kmmainwidget.cpp:3499
 msgid "&Configure KMail..."
 msgstr "Po&desi KMail..."
 
-#: kmmainwidget.cpp:3504
+#: kmmainwidget.cpp:3505
 msgid "Expire..."
 msgstr "Izbaci..."
 
-#: kmmainwidget.cpp:3510
+#: kmmainwidget.cpp:3511
 msgid "Add Favorite Folder..."
 msgstr "Dodaj omiljeni diretkorij..."
 
-#: kmmainwidget.cpp:3516
+#: kmmainwidget.cpp:3517
 msgid "Serverside Subscription..."
 msgstr "Pretplate na serverskoj strani..."
 
-#: kmmainwidget.cpp:3523
+#: kmmainwidget.cpp:3524
 msgid "Appl&y All Filters On Folder"
 msgstr "Staviti sve prečišćavače ma direktorij"
 
-#: kmmainwidget.cpp:3531
+#: kmmainwidget.cpp:3532
 msgid "&Export KMail Data..."
 msgstr "&Izvezi KMail podatke..."
 
-#: kmmainwidget.cpp:3562
+#: kmmainwidget.cpp:3563
 msgid "Copy Message to Folder"
 msgstr "Kopiraj poruku u fascikl"
 
-#: kmmainwidget.cpp:3569
+#: kmmainwidget.cpp:3570
 msgid "Jump to Folder..."
 msgstr "Idi na direktorij..."
 
-#: kmmainwidget.cpp:3576
+#: kmmainwidget.cpp:3577
 msgid "Abort Current Operation"
 msgstr "Prekini trenutnu operaciju"
 
-#: kmmainwidget.cpp:3583
+#: kmmainwidget.cpp:3584
 msgid "Focus on Next Folder"
 msgstr "Fokus na idući fascikl"
 
-#: kmmainwidget.cpp:3590
+#: kmmainwidget.cpp:3591
 msgid "Focus on Previous Folder"
 msgstr "Fokus na prethodni fascikl"
 
-#: kmmainwidget.cpp:3597
+#: kmmainwidget.cpp:3598
 msgid "Select Folder with Focus"
 msgstr "Izaberi fascikl sa fokusom"
 
-#: kmmainwidget.cpp:3605
+#: kmmainwidget.cpp:3606
 msgid "Focus on First Folder"
 msgstr "Fokus na prvu fasciklu"
 
-#: kmmainwidget.cpp:3612
+#: kmmainwidget.cpp:3613
 msgid "Focus on Last Folder"
 msgstr "Fokus na zadnju fasciklu"
 
-#: kmmainwidget.cpp:3619
+#: kmmainwidget.cpp:3620
 msgid "Focus on Next Message"
 msgstr "Fokus na sljedeću poruku"
 
-#: kmmainwidget.cpp:3626
+#: kmmainwidget.cpp:3627
 msgid "Focus on Previous Message"
 msgstr "Fokus na prethodnu poruku"
 
-#: kmmainwidget.cpp:3633
+#: kmmainwidget.cpp:3634
 msgid "Select First Message"
 msgstr "Izaberi prvu poruku"
 
-#: kmmainwidget.cpp:3640
+#: kmmainwidget.cpp:3641
 msgid "Select Last Message"
 msgstr "Izaberi zadnju poruku"
 
-#: kmmainwidget.cpp:3647
+#: kmmainwidget.cpp:3648
 msgid "Select Message with Focus"
 msgstr "Odaberite poruku sa fokusom"
 
-#: kmmainwidget.cpp:3655
+#: kmmainwidget.cpp:3656
 msgid "Set Focus to Quick Search"
 msgstr "Usredotočite se na brzo pretraživanje"
 
-#: kmmainwidget.cpp:3664
+#: kmmainwidget.cpp:3665
 msgid "Extend Selection to Previous Message"
 msgstr "Proširivanje izbora na prethodnu poruku"
 
-#: kmmainwidget.cpp:3671
+#: kmmainwidget.cpp:3672
 msgid "Extend Selection to Next Message"
 msgstr "Proširivanje izbora na sljedeću poruku"
 
-#: kmmainwidget.cpp:3679
+#: kmmainwidget.cpp:3680
 msgid "Move Message to Folder"
 msgstr "Premjesti poruku u fascikl"
 
-#: kmmainwidget.cpp:3699
+#: kmmainwidget.cpp:3700
 msgid "Add Favorite Folder"
 msgstr "Dodaj omiljeni fascikl"
 
-#: kmmainwidget.cpp:4032
+#: kmmainwidget.cpp:4033
 msgid "E&mpty Trash"
 msgstr "&Isprazni smeće"
 
-#: kmmainwidget.cpp:4032
+#: kmmainwidget.cpp:4033
 msgid "&Move All Messages to Trash"
 msgstr "&Premjesti sve poruke u smeće"
 
-#: kmmainwidget.cpp:4133
+#: kmmainwidget.cpp:4134
 msgid "&Delete Search"
 msgstr "&Obriši pretragu"
 
-#: kmmainwidget.cpp:4138 kmreadermainwin.cpp:330
+#: kmmainwidget.cpp:4139 kmreadermainwin.cpp:330
 msgid "&Move to Trash"
 msgstr "Pre&mjesti u smeće"
 
-#: kmmainwidget.cpp:4280
+#: kmmainwidget.cpp:4243
+msgid "&Undo"
+msgstr ""
+
+#: kmmainwidget.cpp:4245
+#, kde-format
+msgid "&Undo: \"%1\""
+msgstr ""
+
+#: kmmainwidget.cpp:4288
 #, kde-format
 msgid "Filter %1"
 msgstr "Akcija filtriranja %1"
 
-#: kmmainwidget.cpp:4550
+#: kmmainwidget.cpp:4558
 msgid "Network is unconnected. Folder information cannot be updated."
 msgstr "Mreža je odspojena. Informacije u fasciklama se ne mogu ažurirati"
 
-#: kmmainwidget.cpp:4558 kmmainwidget.cpp:4606
+#: kmmainwidget.cpp:4566 kmmainwidget.cpp:4614
 msgid "Retrieving folder properties"
 msgstr "Preuzimam svojstva fascikle"
 
-#: kmmainwidget.cpp:4637 kmmainwidget.cpp:4705
+#: kmmainwidget.cpp:4645 kmmainwidget.cpp:4713
 msgid "Done"
 msgstr "Urađeno"
 
-#: kmmainwidget.cpp:4661
+#: kmmainwidget.cpp:4669
 #, kde-format
 msgctxt "@title:window"
 msgid "Properties of Folder %1"
 msgstr "Svojstva direktorija %1"
 
-#: kmmainwidget.cpp:4673
+#: kmmainwidget.cpp:4681
 msgid "Removing duplicates"
 msgstr "Uklanjam duplikate"
 
-#: kmmainwidget.cpp:4699
+#: kmmainwidget.cpp:4707
 msgid "Error while removing duplicates"
 msgstr "Greška pri uklanjanju duplikata"
 
-#: kmmainwidget.cpp:4757
+#: kmmainwidget.cpp:4765
 msgid ""
 "IMAP server not configured yet. Please configure the server in the IMAP "
 "account before setting up server-side subscription."
@@ -4267,7 +4300,7 @@ msgstr ""
 "IMAP server nije konfigurisan. Molimo konfigurišite server u IMAP nalogu "
 "prije postavljanja server-strane upisa."
 
-#: kmmainwidget.cpp:4759
+#: kmmainwidget.cpp:4767
 msgid ""
 "Log in failed, please configure the IMAP account before setting up server-"
 "side subscription."
@@ -4275,15 +4308,15 @@ msgstr ""
 "Prijava nije uspjela, molimo konfigurišite IMAP nalog prije postavljanja "
 "server-strane upisa."
 
-#: kmmainwidget.cpp:4777
+#: kmmainwidget.cpp:4785
 msgid "Archive Mail Agent was not registered."
 msgstr "Agent za arhiviranje pošte nije registrovan."
 
-#: kmmainwidget.cpp:4787
+#: kmmainwidget.cpp:4795
 msgid "Send Later Agent was not registered."
 msgstr "Agent za kasnije slanje pošte nije registrovan."
 
-#: kmmainwidget.cpp:4803
+#: kmmainwidget.cpp:4811
 msgid ""
 "Could not start \"PIM Setting Exporter\" program. Please check your "
 "installation."
@@ -4291,11 +4324,11 @@ msgstr ""
 "Nije moguće pokretanje programa za izvoz PIM postavki. Molimo provjerite "
 "vašu instalaciju."
 
-#: kmmainwidget.cpp:4805
+#: kmmainwidget.cpp:4813
 msgid "Unable to start \"PIM Setting Exporter\" program"
 msgstr "Nije moguće pokrenuti programa za uvoz PIM postavki"
 
-#: kmmainwidget.cpp:4845
+#: kmmainwidget.cpp:4853
 #, fuzzy, kde-format
 #| msgid "Searching..."
 msgctxt "Show shortcut for focus quick search. Don't change it"
@@ -4550,12 +4583,54 @@ msgstr[0] "%1 nepročitana poruka"
 msgstr[1] "%1 nepročitane poruke"
 msgstr[2] "%1 nepročitanih poruka"
 
+#: mailmerge/attachmentlistwidget.cpp:66
+#, fuzzy
+#| msgctxt "Config->Composer->Attachments"
+#| msgid "Attachments"
+msgid "Attachment"
+msgstr "Prilozi"
+
+#: mailmerge/attachmentlistwidget.cpp:71
+#, fuzzy
+#| msgid "Select Contact"
+msgid "Select attachment:"
+msgstr "Izaberite kontakt"
+
+#: mailmerge/mailmergedialog.cpp:25
+msgid "Mail Merge"
+msgstr ""
+
+#: mailmerge/mailmergewidget.cpp:40
+msgid "Source:"
+msgstr ""
+
+#: mailmerge/mailmergewidget.cpp:45
+#, fuzzy
+#| msgid "&Address Book"
+msgid "Address Book"
+msgstr "&Adresar"
+
+#: mailmerge/mailmergewidget.cpp:46
+msgid "CSV"
+msgstr ""
+
+#: mailmerge/mailmergewidget.cpp:66
+msgid "Path:"
+msgstr ""
+
+#: mailmerge/mailmergewidget.cpp:73
+#, fuzzy
+#| msgctxt "Config->Composer->Attachments"
+#| msgid "Attachments"
+msgid "Attachment:"
+msgstr "Prilozi"
+
 #: messageactions.cpp:71
 msgctxt "Message->"
 msgid "&Reply"
 msgstr "&Odgovori"
 
-#: messageactions.cpp:76 searchdialog/searchwindow.cpp:233
+#: messageactions.cpp:76 searchdialog/searchwindow.cpp:231
 msgid "&Reply..."
 msgstr "Odgovo&ri..."
 
@@ -4563,11 +4638,11 @@ msgstr "Odgovo&ri..."
 msgid "Reply to A&uthor..."
 msgstr "Odgovori a&utoru..."
 
-#: messageactions.cpp:90 searchdialog/searchwindow.cpp:237
+#: messageactions.cpp:90 searchdialog/searchwindow.cpp:235
 msgid "Reply to &All..."
 msgstr "Odgovori svim&a..."
 
-#: messageactions.cpp:97 searchdialog/searchwindow.cpp:241
+#: messageactions.cpp:97 searchdialog/searchwindow.cpp:239
 msgid "Reply to Mailing-&List..."
 msgstr "Odgovori na mailing &listu..."
 
@@ -4591,7 +4666,7 @@ msgstr "&Edituj poruku"
 msgid "Add Note..."
 msgstr "Dodaj bilješku..."
 
-#: messageactions.cpp:151 searchdialog/searchwindow.cpp:245
+#: messageactions.cpp:151 searchdialog/searchwindow.cpp:243
 msgctxt "Message->"
 msgid "&Forward"
 msgstr "&Proslijedi"
@@ -4736,29 +4811,35 @@ msgctxt "@action:button Search for messages"
 msgid "&Search"
 msgstr "&Traži"
 
-#: searchdialog/searchwindow.cpp:195 searchdialog/searchwindow.cpp:416
+#: searchdialog/searchwindow.cpp:193 searchdialog/searchwindow.cpp:419
 msgid "Last Search"
 msgstr "Posljednja pretraga"
 
-#: searchdialog/searchwindow.cpp:250
+#: searchdialog/searchwindow.cpp:248
 msgctxt "@action:inmenu Forward message inline."
 msgid "&Inline..."
 msgstr "&U sastavu poruke..."
 
-#: searchdialog/searchwindow.cpp:255
+#: searchdialog/searchwindow.cpp:253
 msgctxt "Message->Forward->"
 msgid "As &Attachment..."
 msgstr "Kao &prilog..."
 
-#: searchdialog/searchwindow.cpp:269
+#: searchdialog/searchwindow.cpp:267
 msgid "Save Attachments..."
 msgstr "&Snimi priloge..."
 
-#: searchdialog/searchwindow.cpp:275
+#: searchdialog/searchwindow.cpp:273
 msgid "Clear Selection"
 msgstr "Očisti izbor"
 
-#: searchdialog/searchwindow.cpp:359
+#: searchdialog/searchwindow.cpp:277
+#, fuzzy
+#| msgid "Jump to Folder"
+msgid "Jump to original folder"
+msgstr "Skoči do fascikla"
+
+#: searchdialog/searchwindow.cpp:362
 #, kde-format
 msgid "%1 match"
 msgid_plural "%1 matches"
@@ -4766,53 +4847,55 @@ msgstr[0] "%1 podudarnost"
 msgstr[1] "%1 podudarnosti"
 msgstr[2] "%1 podudarnosti"
 
-#: searchdialog/searchwindow.cpp:441
+#: searchdialog/searchwindow.cpp:444
 msgid "You did not selected a valid folder."
 msgstr "Niste izabrali ispravan folder."
 
-#: searchdialog/searchwindow.cpp:451 searchdialog/searchwindow.cpp:460
+#: searchdialog/searchwindow.cpp:454 searchdialog/searchwindow.cpp:463
 msgid "You forgot to select collections."
 msgstr "Zaboravili ste izabrati kolekcije."
 
-#: searchdialog/searchwindow.cpp:478
+#: searchdialog/searchwindow.cpp:481
 msgid "You forgot to define condition."
 msgstr "Zaboravili ste definirati uslove."
 
-#: searchdialog/searchwindow.cpp:483
+#: searchdialog/searchwindow.cpp:486
 msgid "All folders selected are empty or were not indexed."
 msgstr "Svi izabrani folderi su prazni ili ne postoje."
 
-#: searchdialog/searchwindow.cpp:489
-msgid "No message found."
-msgstr "Nije pronađena poruka."
+#: searchdialog/searchwindow.cpp:492
+#, fuzzy
+#| msgid "You forgot to define condition."
+msgid "You forgot to add conditions."
+msgstr "Zaboravili ste definirati uslove."
 
-#: searchdialog/searchwindow.cpp:493
+#: searchdialog/searchwindow.cpp:496
 msgid ""
 "Contains condition cannot be used with a number of characters inferior to 4."
 msgstr "Sadržani uslovi ne mogu biti korišteni sa brojem znakova manjim od 4."
 
-#: searchdialog/searchwindow.cpp:525
+#: searchdialog/searchwindow.cpp:528
 msgid "Searching..."
 msgstr "Tražim..."
 
-#: searchdialog/searchwindow.cpp:535
+#: searchdialog/searchwindow.cpp:538
 #, kde-format
 msgid "Cannot get search result. %1"
 msgstr "Ne možemo dobiti rezultate pretrage. %1"
 
-#: searchdialog/searchwindow.cpp:541
+#: searchdialog/searchwindow.cpp:544
 msgid "Search failed."
 msgstr "Pretraga neuspjela"
 
-#: searchdialog/searchwindow.cpp:581
+#: searchdialog/searchwindow.cpp:584
 msgid "Search complete."
 msgstr "Pretraga završena"
 
-#: searchdialog/searchwindow.cpp:601
+#: searchdialog/searchwindow.cpp:604
 msgid "Search stopped."
 msgstr "Pretraga zaustavljena"
 
-#: searchdialog/searchwindow.cpp:659
+#: searchdialog/searchwindow.cpp:662
 #, kde-format
 msgid ""
 "There was a problem renaming your search folder. A common reason for this is "
@@ -4823,7 +4906,7 @@ msgstr ""
 "Uobičajeni razlog je da postoji jos jedan folder sa istim imenom. Greška "
 "prijavljena \"%1\"."
 
-#: searchdialog/searchwindow.cpp:765
+#: searchdialog/searchwindow.cpp:762
 #, kde-format
 msgid "Copy Message"
 msgid_plural "Copy %1 Messages"
@@ -4831,7 +4914,7 @@ msgstr[0] "Kopiraj %1 poruku"
 msgstr[1] "Kopiraj %1 poruke"
 msgstr[2] "Kopiraj %1 poruka"
 
-#: searchdialog/searchwindow.cpp:768
+#: searchdialog/searchwindow.cpp:765
 #, kde-format
 msgid "Cut Message"
 msgid_plural "Cut %1 Messages"
@@ -6524,11 +6607,26 @@ msgstr "Chiasmus postavke..."
 msgid "Re-enable All \"Do not Ask Again\" Warnings"
 msgstr "Ponovo uključi sva \"Ne pitaj ponovo\" upozorenja"
 
-#: undostack.cpp:101
+#: undostack.cpp:60
+#, fuzzy
+#| msgid "Move to Trash"
+msgid "Move To Trash"
+msgstr "Premjesti u smeće"
+
+#: undostack.cpp:60
+#, fuzzy
+#| msgid "Move Message To..."
+msgid "Move Message"
+msgid_plural "Move Messages"
+msgstr[0] "Pomjeri poruku u..."
+msgstr[1] "Pomjeri poruku u..."
+msgstr[2] "Pomjeri poruku u..."
+
+#: undostack.cpp:112
 msgid "There is nothing to undo."
 msgstr "Nemam šta vratiti!"
 
-#: undostack.cpp:108
+#: undostack.cpp:119
 #, kde-format
 msgid "Cannot move message. %1"
 msgstr "Ne možete pomjeriti poruku. %1"
@@ -6612,6 +6710,12 @@ msgid_plural "Out of office reply active on servers"
 msgstr[0] "Odgovor „van kancelarije“ aktivan na serveru "
 msgstr[1] "Odgovor „van kancelarije“ aktivan na serverima"
 msgstr[2] "Odgovor „van kancelarije“ aktivan na serveruma"
+
+#~ msgid "Agent Name"
+#~ msgstr "Ime agenta"
+
+#~ msgid "No message found."
+#~ msgstr "Nije pronađena poruka."
 
 #~ msgid "Warn when inserting attachments larger than:"
 #~ msgstr "Upozori ako je broj priloga veći od:"

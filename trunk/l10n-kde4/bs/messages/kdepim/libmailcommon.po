@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailcommon.po\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-17 01:45+0000\n"
+"POT-Creation-Date: 2014-04-02 01:49+0000\n"
 "PO-Revision-Date: 2014-01-31 19:29+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -742,6 +742,12 @@ msgstr ""
 "*.siv|sieve datoteke (*.siv)\n"
 "*|sve datoteke (*)"
 
+#: filter/filterconverter/filterconverttosieveresultdialog.cpp:65
+#, fuzzy
+#| msgid "Convert to sieve script"
+msgid "Convert to Script Sieve"
+msgstr "Konvertuj u Sieve filter"
+
 #: filter/filterimporterexporter.cpp:143 filter/kmfilterdialog.cpp:1208
 msgid ""
 "The following filters have not been saved because they were invalid (e.g. "
@@ -1124,7 +1130,7 @@ msgctxt "@info"
 msgid "Unable to apply a filter since there are no filters currently selected."
 msgstr "Nismo u mogućnosti odobriti ovaj filter pošto nema odabranih foldera."
 
-#: filter/kmfilterdialog.cpp:690
+#: filter/kmfilterdialog.cpp:690 filter/kmfilterdialog.cpp:1738
 msgid "No filters selected."
 msgstr "Nijedan filter nije izabran."
 
@@ -1216,9 +1222,14 @@ msgid "Filters which were imported:"
 msgstr "Filteri koji su bili uvezeni:"
 
 #: filter/kmfilterdialog.cpp:1722
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "Some filters were changed and not saved yet. You must save your filters "
+#| "before they can be exported."
 msgctxt "@info"
 msgid ""
-"Some filters were changed and not saved yet. You must save your filters "
+"Some filters were changed and not saved yet.<br>You must save your filters "
 "before they can be exported."
 msgstr ""
 "Neki filteri su promijenjeni i jos uvijek nisu sačuvani. Morate sačuvati "
@@ -1230,7 +1241,7 @@ msgstr ""
 "Ne možemo konvertovati sve KMail filtere u filter skripte ali možemo "
 "pokušati :)"
 
-#: filter/kmfilterdialog.cpp:1727
+#: filter/kmfilterdialog.cpp:1727 filter/kmfilterdialog.cpp:1738
 msgid "Convert KMail filters to sieve scripts"
 msgstr "Konvertuj KMail filtere u filter skripte"
 
@@ -1793,9 +1804,16 @@ msgid " kB"
 msgstr " kB"
 
 #: search/numericrulewidgethandler.cpp:188
+#, fuzzy
+#| msgctxt "Expire messages after %1"
+#| msgid " day"
+#| msgid_plural " days"
 msgctxt "Unit suffix where units are days."
-msgid " days"
-msgstr " dana"
+msgid " day"
+msgid_plural " days"
+msgstr[0] " dan"
+msgstr[1] " dana"
+msgstr[2] " dana"
 
 #: search/searchpattern.cpp:232
 msgid "equal"
@@ -2256,31 +2274,6 @@ msgstr "P&rečica:"
 msgid "Enable &toolbar button"
 msgstr "Omogući dugme alatne &trake"
 
-#: util/mailutil.cpp:275
-#, kde-format
-msgid ""
-"From: %1\n"
-"To: %2\n"
-"Subject: %3"
-msgstr ""
-"Od: %1\n"
-"Za: %2\n"
-"Tema: %3"
-
-#: util/mailutil.cpp:331
-msgid "Removing attachments from an email might invalidate its signature."
-msgstr "Uklanjanjem priloga može se pokvariti potpis e-poruke."
-
-#: util/mailutil.cpp:332
-msgid "Remove Attachments"
-msgstr "Ukloni priloge"
-
-#: util/mailutil.cpp:367 util/mailutil.cpp:380 util/mailutil.cpp:405
-#: util/mailutil.cpp:415
-#, kde-format
-msgid "Mail: %1"
-msgstr "Pošta: %1"
-
 #: util/mailutil_p.h:49
 msgid "Create Todo/Reminder"
 msgstr "Kreiraj Zadatak/Podsjetnik"
@@ -2321,19 +2314,23 @@ msgstr "Režim ikone"
 msgid "Drop your favorite folders here..."
 msgstr "Stavite vaše omiljene foldere ovdje..."
 
-#: widgets/redirectdialog.cpp:127
-msgid "Redirect Message"
-msgstr "Preusmjeri poruku"
+#: widgets/redirectdialog.cpp:74
+msgid "Resend-To:"
+msgstr ""
 
-#: widgets/redirectdialog.cpp:133
-msgid "Select the recipient &addresses to redirect to:"
-msgstr "Izaberite &adrese primalaca kojima treba preusmjeriti:"
+#: widgets/redirectdialog.cpp:77
+msgid "Resend-Cc:"
+msgstr ""
 
-#: widgets/redirectdialog.cpp:147
+#: widgets/redirectdialog.cpp:80
+msgid "Resend-Bcc:"
+msgstr ""
+
+#: widgets/redirectdialog.cpp:95
 msgid "Use the Address-Selection Dialog"
 msgstr "Upotrebi dijalog za izbor adresa"
 
-#: widgets/redirectdialog.cpp:148
+#: widgets/redirectdialog.cpp:96
 msgid ""
 "This button opens a separate dialog where you can select recipients out of "
 "all available addresses."
@@ -2341,33 +2338,65 @@ msgstr ""
 "Ovo dugme otvara poseban dijalog u kome možete izabrati primaoce iz svih "
 "dostupnih adresa."
 
-#: widgets/redirectdialog.cpp:159
+#: widgets/redirectdialog.cpp:190
+msgid "Redirect Message"
+msgstr "Preusmjeri poruku"
+
+#: widgets/redirectdialog.cpp:199
+#, fuzzy
+#| msgid "Select the recipient &addresses to redirect to:"
+msgid "Select the recipient addresses to redirect:"
+msgstr "Izaberite &adrese primalaca kojima treba preusmjeriti:"
+
+#: widgets/redirectdialog.cpp:215
 msgid "Identity:"
 msgstr "Identitet:"
 
-#: widgets/redirectdialog.cpp:164
+#: widgets/redirectdialog.cpp:223
 msgid "Transport:"
 msgstr "Transport:"
 
-#: widgets/redirectdialog.cpp:168
+#: widgets/redirectdialog.cpp:229
 msgid "&Send Now"
 msgstr "Pošalji &sada"
 
-#: widgets/redirectdialog.cpp:169
+#: widgets/redirectdialog.cpp:230
 msgid "Send &Later"
 msgstr "Poša&lji kasnije"
 
-#: widgets/redirectdialog.cpp:207
+#: widgets/redirectdialog.cpp:278
 msgid "You cannot redirect the message without an address."
 msgstr "Ne možete preusmjeriti poruku bez adrese."
 
-#: widgets/redirectdialog.cpp:208
+#: widgets/redirectdialog.cpp:279
 msgid "Empty Redirection Address"
 msgstr "Prazna adresa preusmjeravanja"
 
 #: widgets/regexplineedit.cpp:81
 msgid "Edit..."
 msgstr "Uredi..."
+
+#~ msgctxt "Unit suffix where units are days."
+#~ msgid " days"
+#~ msgstr " dana"
+
+#~ msgid ""
+#~ "From: %1\n"
+#~ "To: %2\n"
+#~ "Subject: %3"
+#~ msgstr ""
+#~ "Od: %1\n"
+#~ "Za: %2\n"
+#~ "Tema: %3"
+
+#~ msgid "Removing attachments from an email might invalidate its signature."
+#~ msgstr "Uklanjanjem priloga može se pokvariti potpis e-poruke."
+
+#~ msgid "Remove Attachments"
+#~ msgstr "Ukloni priloge"
+
+#~ msgid "Mail: %1"
+#~ msgstr "Pošta: %1"
 
 #~ msgid "### \"%1 not supported\""
 #~ msgstr "### \"%1 nije podržan\""
