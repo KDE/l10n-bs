@@ -275,6 +275,12 @@ msgctxt "AsciiConfig|relative offset"
 msgid "Relative"
 msgstr "Relativno"
 
+#: ../src/datasources/ascii/asciiplugin.cpp:23
+#: ../src/datasources/ascii/asciiplugin.cpp:24
+msgctxt "AsciiPlugin|"
+msgid "ASCII File Reader"
+msgstr ""
+
 #: ../src/datasources/ascii/asciisource.cpp:237
 #, fuzzy, qt-format
 msgctxt "AsciiSource|"
@@ -329,6 +335,53 @@ msgstr "Greška parsiranja: "
 msgctxt "AsciiSource|"
 msgid "Column %1"
 msgstr "Kolona %1"
+
+#: ../src/datasources/dirfilesource/dirfilesource.cpp:441
+#: ../src/datasources/dirfilesource/dirfilesource.cpp:442
+#, fuzzy
+msgctxt "DirFilePlugin|"
+msgid "DirFile Reader"
+msgstr "Datoteka: %1<br/>Datum dodavanja: %2"
+
+#: ../src/datasources/fitsimage/fitsimage.cpp:473
+#: ../src/datasources/fitsimage/fitsimage.cpp:474
+msgctxt "FitsImagePlugin|"
+msgid "FITS Image Source Reader"
+msgstr ""
+
+#: ../src/datasources/matlab/matlab.cpp:745
+msgctxt "MatlabSourcePlugin|"
+msgid "Matlab Datasource Reader"
+msgstr ""
+
+#: ../src/datasources/matlab/matlab.cpp:746
+msgctxt "MatlabSourcePlugin|"
+msgid "Matlab's .mat Datasource Reader"
+msgstr ""
+
+#: ../src/datasources/netcdf/netcdfplugin.cpp:29
+#: ../src/datasources/netcdf/netcdfplugin.cpp:30
+msgctxt "NetCdfPlugin|"
+msgid "netCDF Reader"
+msgstr ""
+
+#: ../src/datasources/qimagesource/qimagesource.cpp:407
+#: ../src/datasources/qimagesource/qimagesource.cpp:408
+msgctxt "QImageSourcePlugin|"
+msgid "QImage Source Reader"
+msgstr ""
+
+#: ../src/datasources/sampledatasource/sampledatasource.cpp:121
+#: ../src/datasources/sampledatasource/sampledatasource.cpp:122
+msgctxt "SampleDatasourcePlugin|"
+msgid "Sample Datasource Reader"
+msgstr ""
+
+#: ../src/datasources/sourcelist/sourcelist.cpp:327
+#: ../src/datasources/sourcelist/sourcelist.cpp:328
+msgctxt "SourceListPlugin|"
+msgid "Source List Reader"
+msgstr ""
 
 #: ../src/libkst/datamatrix.cpp:177
 #, qt-format
@@ -711,15 +764,14 @@ msgid "%2 frame %3 of %1 = %4"
 msgstr "okvir"
 
 #: ../src/libkstapp/aboutdialog.cpp:65
-#, fuzzy
 msgctxt "Kst::AboutDialog|"
-msgid "<qt><h2>Kst "
-msgstr "<qt><h2>Veza je uredu.</h2></qt>"
+msgid "<qt><h2>Kst % - A data viewing program.</h2>"
+msgstr ""
 
 #: ../src/libkstapp/aboutdialog.cpp:67
-#, fuzzy
+#, fuzzy, qt-format
 msgctxt "Kst::AboutDialog|"
-msgid "Revision "
+msgid "Revision %1<br><hr>"
 msgstr "Revizija "
 
 #: ../src/libkstapp/aboutdialog.cpp:69
@@ -1186,9 +1238,9 @@ msgid "Lin&e color:"
 msgstr "Boja pozadine"
 
 #: ../src/libkstapp/baddatasourcedialog.cpp:34
-#, fuzzy
+#, fuzzy, qt-format
 msgctxt "Kst::BadDatasourceDialog|"
-msgid ": File not found.  "
+msgid "%1: File not found.  "
 msgstr "Datoteka nije pronađena"
 
 #: ../src/libkstapp/baddatasourcedialog.ui:20
@@ -1235,20 +1287,20 @@ msgid "Basic Plugin"
 msgstr "Podešavanja %1 dodatka"
 
 #: ../src/libkstapp/basicplugindialog.cpp:55
-msgctxt "Kst::BasicPluginDialog|"
-msgid "Edit "
-msgstr "Izmijeni"
+#, fuzzy, qt-format
+msgctxt "Kst::BasicPluginDialog|arg1 is a plugin name"
+msgid "Edit %1 Plugin"
+msgstr ""
+"Pl;petalitar;petalitara;petalitre;petalitri;petalitrima;petalitar;petalitara;"
+"petalitre;petalitri;petalitrima"
 
-#: ../src/libkstapp/basicplugindialog.cpp:55
 #: ../src/libkstapp/basicplugindialog.cpp:57
-msgctxt "Kst::BasicPluginDialog|"
-msgid " Plugin"
+#, fuzzy, qt-format
+#| msgctxt "Kst::BasicPluginDialog|"
+#| msgid " Plugin"
+msgctxt "Kst::BasicPluginDialog|arg1 is a plugin name"
+msgid "New %1 Plugin"
 msgstr "Dodatak"
-
-#: ../src/libkstapp/basicplugindialog.cpp:57
-msgctxt "Kst::BasicPluginDialog|"
-msgid "New "
-msgstr "Novo"
 
 #: ../src/libkstapp/basicplugindialog.cpp:87
 msgctxt "Kst::BasicPluginDialog|"
@@ -2135,15 +2187,15 @@ msgid "Remove: Alt+r"
 msgstr "Alt+Shift+d"
 
 #: ../src/libkstapp/datawizard.cpp:221
-#, fuzzy
+#, fuzzy, qt-format
 msgctxt "Kst::DataWizardPageVectors|"
-msgid " vector(s) available"
+msgid "%1 vector(s) available"
 msgstr "Akonadi je dostupan"
 
 #: ../src/libkstapp/datawizard.cpp:246 ../src/libkstapp/datawizard.cpp:262
-#, fuzzy
+#, fuzzy, qt-format
 msgctxt "Kst::DataWizardPageVectors|"
-msgid " vector(s) selected"
+msgid "%1 vector(s) selected"
 msgstr "%1 datoteka odabrana"
 
 #: ../src/libkstapp/datawizard.cpp:590
@@ -3650,23 +3702,20 @@ msgid "Plugin"
 msgstr "Dodatak"
 
 #: ../src/libkstapp/filterfitdialog.cpp:159
-#, fuzzy
-msgctxt "Kst::FilterFitDialog|"
-msgid "Edit "
-msgstr "Izmijeni..."
+#, fuzzy, qt-format
+msgctxt "Kst::FilterFitDialog|Arg1 is a plugin"
+msgid "Edit %1 Plugin"
+msgstr ""
+"Pl;petalitar;petalitara;petalitre;petalitri;petalitrima;petalitar;petalitara;"
+"petalitre;petalitri;petalitrima"
 
-#: ../src/libkstapp/filterfitdialog.cpp:159
 #: ../src/libkstapp/filterfitdialog.cpp:161
-#, fuzzy
-msgctxt "Kst::FilterFitDialog|"
-msgid " Plugin"
+#, fuzzy, qt-format
+#| msgctxt "Kst::BasicPluginDialog|"
+#| msgid " Plugin"
+msgctxt "Kst::FilterFitDialog|Arg1 is a plugin"
+msgid "New %1 Plugin"
 msgstr "Dodatak"
-
-#: ../src/libkstapp/filterfitdialog.cpp:161
-#, fuzzy
-msgctxt "Kst::FilterFitDialog|"
-msgid "New "
-msgstr "Novo..."
 
 #: ../src/libkstapp/filterfitdialog.cpp:213
 msgctxt "Kst::FilterFitDialog|"
@@ -7664,9 +7713,9 @@ msgid ""
 msgstr ""
 
 #: ../src/libkstapp/viewitem.cpp:1189
-#, fuzzy
-msgctxt "Kst::ViewItem|"
-msgid " Menu"
+#, fuzzy, qt-format
+msgctxt "Kst::ViewItem|title of menu for object type arg1"
+msgid "%1 Menu"
 msgstr "Meni"
 
 #: ../src/libkstapp/viewitem.cpp:1214
@@ -8477,6 +8526,17 @@ msgctxt "QObject|"
 msgid "Error creating PSD from Kst file.  Could not find Vector."
 msgstr ""
 
+#: ../src/plugins/dataobject/activitylevel/activitylevel.cpp:154
+#, qt-format
+msgctxt "ActivityLevelSource|"
+msgid "%1 Activity Level"
+msgstr ""
+
+#: ../src/plugins/dataobject/activitylevel/activitylevel.cpp:156
+msgctxt "ActivityLevelSource|"
+msgid "Actvity Level"
+msgstr ""
+
 #: ../src/plugins/dataobject/activitylevel/activitylevel.cpp:163
 #, qt-format
 msgctxt "ActivityLevelSource|"
@@ -8493,6 +8553,18 @@ msgctxt "ActivityLevelSource|"
 msgid ""
 "\n"
 "Input: %1"
+msgstr ""
+
+#: ../src/plugins/dataobject/activitylevel/activitylevel.cpp:399
+msgctxt "ActivityLevelPlugin|"
+msgid "Activity Level"
+msgstr ""
+
+#: ../src/plugins/dataobject/activitylevel/activitylevel.cpp:400
+msgctxt "ActivityLevelPlugin|"
+msgid ""
+"Computes the activity level of a signal as the product of standard deviation "
+"and number of reversals over a sliding window."
 msgstr ""
 
 #: ../src/plugins/dataobject/activitylevel/activitylevel.ui:31
@@ -8519,6 +8591,24 @@ msgctxt "ActivityLevelConfig|"
 msgid "Noise Threshold"
 msgstr "Prag povlačenja:"
 
+#: ../src/plugins/dataobject/bin/bin.cpp:120
+#, fuzzy
+msgctxt "BinSource|"
+msgid "Bin Plugin Object"
+msgstr "Podešavanja %1 dodatka"
+
+#: ../src/plugins/dataobject/bin/bin.cpp:218
+msgctxt "BinPlugin|"
+msgid "Bin"
+msgstr ""
+
+#: ../src/plugins/dataobject/bin/bin.cpp:219
+msgctxt "BinPlugin|"
+msgid ""
+"Bins data into the given size bins.  Each bin contains the mean of the "
+"elements belonging to the bin."
+msgstr ""
+
 #: ../src/plugins/dataobject/bin/binconfig.ui:31
 #, fuzzy
 msgctxt "BinConfig|"
@@ -8531,11 +8621,41 @@ msgctxt "BinConfig|"
 msgid "Bin Size"
 msgstr "Veličina slova"
 
+#: ../src/plugins/dataobject/chop/chop.cpp:113
+msgctxt "ChopSource|"
+msgid "Chop Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/chop/chop.cpp:209
+msgctxt "ChopPlugin|"
+msgid "Chop"
+msgstr ""
+
+#: ../src/plugins/dataobject/chop/chop.cpp:210
+msgctxt "ChopPlugin|"
+msgid "Chops a given data set into odd, even, difference, and Index data sets."
+msgstr ""
+
 #: ../src/plugins/dataobject/chop/chopconfig.ui:30
 #, fuzzy
 msgctxt "ChopConfig|"
 msgid "Input Vector"
 msgstr "Zalazak sunca"
+
+#: ../src/plugins/dataobject/convolution/convolve/convolve.cpp:122
+msgctxt "ConvolveSource|"
+msgid "Convolve Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/convolution/convolve/convolve.cpp:311
+msgctxt "ConvolvePlugin|"
+msgid "Convolve"
+msgstr ""
+
+#: ../src/plugins/dataobject/convolution/convolve/convolve.cpp:312
+msgctxt "ConvolvePlugin|"
+msgid "Generates the convolution of one vector with another."
+msgstr ""
 
 #: ../src/plugins/dataobject/convolution/convolve/convolveconfig.ui:30
 #, fuzzy
@@ -8549,6 +8669,21 @@ msgctxt "ConvolveConfig|"
 msgid "Input Vector Two"
 msgstr "Konstruiši razliku vektora od dva vektora."
 
+#: ../src/plugins/dataobject/convolution/deconvolve/deconvolve.cpp:122
+msgctxt "DeconvolveSource|"
+msgid "Deconvolve Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/convolution/deconvolve/deconvolve.cpp:317
+msgctxt "DeconvolvePlugin|"
+msgid "Deconvolve"
+msgstr ""
+
+#: ../src/plugins/dataobject/convolution/deconvolve/deconvolve.cpp:318
+msgctxt "DeconvolvePlugin|"
+msgid "Generates the deconvolution of one vector with another."
+msgstr ""
+
 #: ../src/plugins/dataobject/convolution/deconvolve/deconvolveconfig.ui:30
 #, fuzzy
 msgctxt "DeconvolveConfig|"
@@ -8561,11 +8696,41 @@ msgctxt "DeconvolveConfig|"
 msgid "Input Vector Two"
 msgstr "Konstruiši razliku vektora od dva vektora."
 
+#: ../src/plugins/dataobject/correlation/autocorrelation/autocorrelation.cpp:108
+msgctxt "AutoCorrelationSource|"
+msgid "Auto Correlation Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/correlation/autocorrelation/autocorrelation.cpp:278
+msgctxt "AutoCorrelationPlugin|"
+msgid "Auto Correlation"
+msgstr ""
+
+#: ../src/plugins/dataobject/correlation/autocorrelation/autocorrelation.cpp:279
+msgctxt "AutoCorrelationPlugin|"
+msgid "Generates the auto-correlation of a vector."
+msgstr ""
+
 #: ../src/plugins/dataobject/correlation/autocorrelation/autocorrelationconfig.ui:30
 #, fuzzy
 msgctxt "AutoCorrelationConfig|"
 msgid "Input Vector"
 msgstr "Zalazak sunca"
+
+#: ../src/plugins/dataobject/correlation/crosscorrelation/crosscorrelation.cpp:123
+msgctxt "CrossCorrelationSource|"
+msgid "Cross Correlation"
+msgstr ""
+
+#: ../src/plugins/dataobject/correlation/crosscorrelation/crosscorrelation.cpp:308
+msgctxt "CrossCorrelationPlugin|"
+msgid "Cross Correlation"
+msgstr ""
+
+#: ../src/plugins/dataobject/correlation/crosscorrelation/crosscorrelation.cpp:309
+msgctxt "CrossCorrelationPlugin|"
+msgid "Generates the correlation of one vector with another."
+msgstr ""
 
 #: ../src/plugins/dataobject/correlation/crosscorrelation/crosscorrelationconfig.ui:30
 #, fuzzy
@@ -8578,6 +8743,21 @@ msgstr "(%1 godinu staro)"
 msgctxt "CrossCorrelationConfig|"
 msgid "Input Vector Two"
 msgstr "Konstruiši razliku vektora od dva vektora."
+
+#: ../src/plugins/dataobject/crossspectrum/crossspectrum.cpp:150
+msgctxt "CrossSpectrumSource|"
+msgid "Cross Spectrum Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/crossspectrum/crossspectrum.cpp:358
+msgctxt "CrossSpectrumPlugin|"
+msgid "Cross Spectrum DataObject Plugin"
+msgstr ""
+
+#: ../src/plugins/dataobject/crossspectrum/crossspectrum.cpp:359
+msgctxt "CrossSpectrumPlugin|"
+msgid "Generates the cross power spectrum of one vector with another."
+msgstr ""
 
 #: ../src/plugins/dataobject/crossspectrum/crossspectrumconfig.ui:29
 #, fuzzy
@@ -8602,6 +8782,21 @@ msgstr "Trajanje tišine:"
 msgctxt "CrossSpectrumConfig|"
 msgid "Sample Rate"
 msgstr "uzorkovanje"
+
+#: ../src/plugins/dataobject/effectivebandwidth/effectivebandwidth.cpp:167
+msgctxt "EffectiveBandwidthSource|"
+msgid "Effective Bandwidth Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/effectivebandwidth/effectivebandwidth.cpp:339
+msgctxt "EffectiveBandwidthPlugin|"
+msgid "Effective Bandwidth"
+msgstr ""
+
+#: ../src/plugins/dataobject/effectivebandwidth/effectivebandwidth.cpp:340
+msgctxt "EffectiveBandwidthPlugin|"
+msgid "Calculates effective bandwidth from an amplitude spectrum."
+msgstr ""
 
 #: ../src/plugins/dataobject/effectivebandwidth/effectivebandwidthconfig.ui:29
 #, fuzzy
@@ -8634,6 +8829,23 @@ msgctxt "EffectiveBandwidthConfig|Abbreviation for Kelvin (unit)"
 msgid "K"
 msgstr "K"
 
+#: ../src/plugins/dataobject/genericfilter/genericfilter.cpp:155
+#, fuzzy
+msgctxt "GenericFilterSource|"
+msgid "Generic Filter Plugin Object"
+msgstr "Zdravo‑svijete priključak"
+
+#: ../src/plugins/dataobject/genericfilter/genericfilter.cpp:292
+#, fuzzy
+msgctxt "GenericFilterPlugin|"
+msgid "Generic Filter"
+msgstr "Dodaj filter"
+
+#: ../src/plugins/dataobject/genericfilter/genericfilter.cpp:293
+msgctxt "GenericFilterPlugin|"
+msgid "Generates a discrete filter from a continuous-time definition."
+msgstr ""
+
 #: ../src/plugins/dataobject/genericfilter/genericfilterconfig.ui:30
 #, fuzzy
 msgctxt "GenericFilterConfig|"
@@ -8658,6 +8870,22 @@ msgctxt "GenericFilterConfig|"
 msgid "Denominator (increasing order)"
 msgstr "Igra redoslijeda slova"
 
+#: ../src/plugins/dataobject/interpolations/akima/akima.cpp:135
+msgctxt "AkimaSource|"
+msgid "Interpolation Akima Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/interpolations/akima/akima.cpp:217
+#, fuzzy
+msgctxt "AkimaPlugin|"
+msgid "Interpolation Akima Spline"
+msgstr "Režim arhiviranja"
+
+#: ../src/plugins/dataobject/interpolations/akima/akima.cpp:218
+msgctxt "AkimaPlugin|"
+msgid "Generates a non-rounded Akima interpolation for a set of data."
+msgstr ""
+
 #: ../src/plugins/dataobject/interpolations/akima/akimaconfig.ui:30
 msgctxt "AkimaConfig|"
 msgid "Input Vector X"
@@ -8672,6 +8900,21 @@ msgstr "Ulazni vektor Y"
 msgctxt "AkimaConfig|"
 msgid "Input Vector X'"
 msgstr "Ulazni vektor X'"
+
+#: ../src/plugins/dataobject/interpolations/akimaperiodic/akimaperiodic.cpp:135
+msgctxt "AkimaPeriodicSource|"
+msgid "Interpolation Akima Periodic Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/interpolations/akimaperiodic/akimaperiodic.cpp:217
+msgctxt "AkimaPeriodicPlugin|"
+msgid "Interpolation Akima Periodic Spline"
+msgstr ""
+
+#: ../src/plugins/dataobject/interpolations/akimaperiodic/akimaperiodic.cpp:218
+msgctxt "AkimaPeriodicPlugin|"
+msgid "Generates a non-rounded periodic Akima interpolation for a set of data."
+msgstr ""
 
 #: ../src/plugins/dataobject/interpolations/akimaperiodic/akimaperiodicconfig.ui:30
 msgctxt "AkimaPeriodicConfig|"
@@ -8688,6 +8931,21 @@ msgctxt "AkimaPeriodicConfig|"
 msgid "Input Vector X'"
 msgstr "Ulazni vektor X'"
 
+#: ../src/plugins/dataobject/interpolations/cspline/cspline.cpp:135
+msgctxt "CubicSplineSource|"
+msgid "Interpolation Cubic Spline Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/interpolations/cspline/cspline.cpp:217
+msgctxt "CubicSplinePlugin|"
+msgid "Interpolation Cubic Spline Spline"
+msgstr ""
+
+#: ../src/plugins/dataobject/interpolations/cspline/cspline.cpp:218
+msgctxt "CubicSplinePlugin|"
+msgid "Generates a spline interpolation for a set of data."
+msgstr ""
+
 #: ../src/plugins/dataobject/interpolations/cspline/csplineconfig.ui:30
 msgctxt "CubicSplineConfig|"
 msgid "Input Vector X"
@@ -8702,6 +8960,21 @@ msgstr "Ulazni vektor Y"
 msgctxt "CubicSplineConfig|"
 msgid "Input Vector X'"
 msgstr "Ulazni vektor X'"
+
+#: ../src/plugins/dataobject/interpolations/csplineperiodic/csplineperiodic.cpp:135
+msgctxt "CubicSplinePeriodicSource|"
+msgid "Interpolation Cubic Spline Periodic Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/interpolations/csplineperiodic/csplineperiodic.cpp:217
+msgctxt "CubicSplinePeriodicPlugin|"
+msgid "Interpolation Cubic Spline Periodic Spline"
+msgstr ""
+
+#: ../src/plugins/dataobject/interpolations/csplineperiodic/csplineperiodic.cpp:218
+msgctxt "CubicSplinePeriodicPlugin|"
+msgid "Generates a cubic spline interpolation for a set of data."
+msgstr ""
 
 #: ../src/plugins/dataobject/interpolations/csplineperiodic/csplineperiodicconfig.ui:30
 msgctxt "CubicSplinePeriodicConfig|"
@@ -8718,6 +8991,22 @@ msgctxt "CubicSplinePeriodicConfig|"
 msgid "Input Vector X'"
 msgstr "Ulazni vektor X'"
 
+#: ../src/plugins/dataobject/interpolations/linear/linear.cpp:135
+msgctxt "LinearSource|"
+msgid "Interpolation Linear Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/interpolations/linear/linear.cpp:217
+#, fuzzy
+msgctxt "LinearPlugin|"
+msgid "Interpolation Linear Spline"
+msgstr "Preuzmi promjene"
+
+#: ../src/plugins/dataobject/interpolations/linear/linear.cpp:218
+msgctxt "LinearPlugin|"
+msgid "Generates a linear interpolation for a set of data."
+msgstr ""
+
 #: ../src/plugins/dataobject/interpolations/linear/linearconfig.ui:30
 msgctxt "LinearConfig|"
 msgid "Input Vector X"
@@ -8732,6 +9021,21 @@ msgstr "Ulazni vektor Y"
 msgctxt "LinearConfig|"
 msgid "Input Vector X'"
 msgstr "Ulazni vektor X'"
+
+#: ../src/plugins/dataobject/interpolations/polynomial/polynomial.cpp:135
+msgctxt "PolynomialSource|"
+msgid "Interpolation Polynomial Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/interpolations/polynomial/polynomial.cpp:217
+msgctxt "PolynomialPlugin|"
+msgid "Interpolation Polynomial Spline"
+msgstr ""
+
+#: ../src/plugins/dataobject/interpolations/polynomial/polynomial.cpp:218
+msgctxt "PolynomialPlugin|"
+msgid "Generates a polynomial interpolation for a set of data."
+msgstr ""
 
 #: ../src/plugins/dataobject/interpolations/polynomial/polynomialconfig.ui:30
 msgctxt "PolynomialConfig|"
@@ -8748,6 +9052,25 @@ msgctxt "PolynomialConfig|"
 msgid "Input Vector X'"
 msgstr "Ulazni vektor X'"
 
+#: ../src/plugins/dataobject/linefit/linefit.cpp:126
+#, fuzzy
+msgctxt "LineFitSource|"
+msgid "Line Fit Plugin Object"
+msgstr ""
+"Pl;petalitar;petalitara;petalitre;petalitri;petalitrima;petalitar;petalitara;"
+"petalitre;petalitri;petalitrima"
+
+#: ../src/plugins/dataobject/linefit/linefit.cpp:292
+#, fuzzy
+msgctxt "LineFitPlugin|"
+msgid "Line Fit"
+msgstr "Širina linije"
+
+#: ../src/plugins/dataobject/linefit/linefit.cpp:293
+msgctxt "LineFitPlugin|"
+msgid "Generates a line of best fit for a set of data."
+msgstr ""
+
 #: ../src/plugins/dataobject/linefit/linefitconfig.ui:30
 msgctxt "LineFitConfig|"
 msgid "Input Vector X"
@@ -8757,6 +9080,21 @@ msgstr "Ulazni vektor X"
 msgctxt "LineFitConfig|"
 msgid "Input Vector Y"
 msgstr "Ulazni vektor Y"
+
+#: ../src/plugins/dataobject/lockin/lockin.cpp:133
+msgctxt "LockInSource|"
+msgid "Lock-In DataObject Plugin"
+msgstr ""
+
+#: ../src/plugins/dataobject/lockin/lockin.cpp:343
+msgctxt "LockInPlugin|"
+msgid "Lock-In"
+msgstr ""
+
+#: ../src/plugins/dataobject/lockin/lockin.cpp:344
+msgctxt "LockInPlugin|"
+msgid "Lock-In amplifies Input using a Reference carrier wave"
+msgstr ""
 
 #: ../src/plugins/dataobject/lockin/lockinconfig.ui:29
 msgctxt "LockInConfig|"
@@ -8768,6 +9106,23 @@ msgctxt "LockInConfig|"
 msgid "Reference Vector"
 msgstr "Referentni vektor"
 
+#: ../src/plugins/dataobject/noiseaddition/noiseaddition.cpp:122
+msgctxt "NoiseAdditionSource|"
+msgid "Noise Addition Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/noiseaddition/noiseaddition.cpp:222
+#, fuzzy
+msgctxt "NoiseAdditionPlugin|"
+msgid "Noise Addition"
+msgstr "Pozicija"
+
+#: ../src/plugins/dataobject/noiseaddition/noiseaddition.cpp:223
+msgctxt "NoiseAdditionPlugin|"
+msgid ""
+"Adds Gaussian noise to a set of data, of a specified standard deviation."
+msgstr ""
+
 #: ../src/plugins/dataobject/noiseaddition/noiseadditionconfig.ui:31
 msgctxt "NoiseAdditionConfig|"
 msgid "Input Vector"
@@ -8778,6 +9133,27 @@ msgstr "Ulazni vektor"
 msgctxt "NoiseAdditionConfig|"
 msgid "Sigma"
 msgstr "sigma"
+
+#: ../src/plugins/dataobject/periodogram/periodogram.cpp:156
+msgctxt "PeriodogramSource|"
+msgid "Periodogram Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/periodogram/periodogram.cpp:824
+#, fuzzy
+#| msgctxt "PhaseConfig|"
+#| msgid "Period"
+msgctxt "PeriodogramPlugin|"
+msgid "Periodogram"
+msgstr "Period"
+
+#: ../src/plugins/dataobject/periodogram/periodogram.cpp:825
+msgctxt "PeriodogramPlugin|"
+msgid ""
+"Takes the outputVectorPeriodogram of a given inputVectorData set. The "
+"inputVectorData is not assumed to be sampled at equal inputVectorTime "
+"intervals."
+msgstr ""
 
 #: ../src/plugins/dataobject/periodogram/periodogramconfig.ui:29
 #, fuzzy
@@ -8800,6 +9176,23 @@ msgstr "Faktor eksplozije"
 #: ../src/plugins/dataobject/periodogram/periodogramconfig.ui:109
 msgctxt "PeriodogramConfig|"
 msgid "Average Nyquist frequency factor"
+msgstr ""
+
+#: ../src/plugins/dataobject/phase/phase.cpp:152
+msgctxt "PhaseSource|"
+msgid "Phase Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/phase/phase.cpp:338
+#, fuzzy
+msgctxt "PhasePlugin|"
+msgid "Phase"
+msgstr "Fazni modulator"
+
+#: ../src/plugins/dataobject/phase/phase.cpp:339
+msgctxt "PhasePlugin|"
+msgid ""
+"Phases a given data set to the specified period and zero outputVectorPhase."
 msgstr ""
 
 #: ../src/plugins/dataobject/phase/phaseconfig.ui:29
@@ -8825,6 +9218,11 @@ msgctxt "PhaseConfig|"
 msgid "Zero Phase"
 msgstr "Fazni modulator"
 
+#: ../src/plugins/dataobject/shift/shift.cpp:134
+msgctxt "ShiftSource|"
+msgid "Shift Plugin Object"
+msgstr ""
+
 #: ../src/plugins/dataobject/shift/shift.cpp:140
 #, fuzzy, qt-format
 msgctxt "ShiftSource|Phase shift.  dX is the amount of the shift"
@@ -8841,6 +9239,16 @@ msgid ""
 "Input: %1"
 msgstr ""
 
+#: ../src/plugins/dataobject/shift/shift.cpp:252
+msgctxt "ShiftPlugin|"
+msgid "Shift"
+msgstr ""
+
+#: ../src/plugins/dataobject/shift/shift.cpp:253
+msgctxt "ShiftPlugin|"
+msgid "Shifts (and truncates) a vector."
+msgstr ""
+
 #: ../src/plugins/dataobject/shift/shiftconfig.ui:29
 #, fuzzy
 msgctxt "ShiftConfig|"
@@ -8852,11 +9260,44 @@ msgctxt "ShiftConfig|"
 msgid "Shift value (# points, negative allowed)"
 msgstr ""
 
+#: ../src/plugins/dataobject/statistics/statistics.cpp:112
+#, qt-format
+msgctxt "StatisticsSource|arg1 is a vector"
+msgid "%1 Statistics"
+msgstr ""
+
+#: ../src/plugins/dataobject/statistics/statistics.cpp:316
+msgctxt "StatisticsPlugin|"
+msgid "Statistics"
+msgstr ""
+
+#: ../src/plugins/dataobject/statistics/statistics.cpp:317
+msgctxt "StatisticsPlugin|"
+msgid "Determines statistics for a given inputVector set."
+msgstr ""
+
 #: ../src/plugins/dataobject/statistics/statisticsconfig.ui:30
 #, fuzzy
 msgctxt "StatisticsConfig|"
 msgid "Input Vector"
 msgstr "Zalazak sunca"
+
+#: ../src/plugins/dataobject/syncbin/syncbin.cpp:175
+msgctxt "SyncBinSource|"
+msgid "SyncBin Plugin Object"
+msgstr ""
+
+#: ../src/plugins/dataobject/syncbin/syncbin.cpp:386
+msgctxt "SyncBinPlugin|"
+msgid "SyncBin"
+msgstr ""
+
+#: ../src/plugins/dataobject/syncbin/syncbin.cpp:387
+msgctxt "SyncBinPlugin|"
+msgid ""
+"Synchronously coadd vector Y into inputScalarBins defined by vector X.  Like "
+"a 1D map."
+msgstr ""
 
 #: ../src/plugins/dataobject/syncbin/syncbinconfig.ui:29
 #, fuzzy
@@ -8888,11 +9329,29 @@ msgctxt "SyncBinConfig|"
 msgid "X Max"
 msgstr "X maks:"
 
+#: ../src/plugins/filters/butterworth_bandpass/butterworth_bandpass.cpp:156
+#, qt-format
+msgctxt "FilterButterworthBandPassSource|arg1 is a vector"
+msgid "%1 Band Pass"
+msgstr ""
+
 #: ../src/plugins/filters/butterworth_bandpass/butterworth_bandpass.cpp:214
 #, fuzzy, qt-format
 msgctxt "FilterButterworthBandPassSource|"
 msgid "Filtered %1"
 msgstr "%1 (%2 filtritrano)"
+
+#: ../src/plugins/filters/butterworth_bandpass/butterworth_bandpass.cpp:281
+msgctxt "ButterworthBandPassPlugin|"
+msgid "Band Pass Filter"
+msgstr ""
+
+#: ../src/plugins/filters/butterworth_bandpass/butterworth_bandpass.cpp:282
+msgctxt "ButterworthBandPassPlugin|"
+msgid ""
+"Filters a vector with a zero phase band pass filter with a butterworth "
+"amplitude response."
+msgstr ""
 
 #: ../src/plugins/filters/butterworth_bandpass/filterbutterworthbandpassconfig.ui:41
 #, fuzzy
@@ -8917,11 +9376,29 @@ msgctxt "FilterButterworthBandPassConfig|"
 msgid "Band width:"
 msgstr "Širina slike:"
 
+#: ../src/plugins/filters/butterworth_bandstop/butterworth_bandstop.cpp:155
+#, qt-format
+msgctxt "FilterButterworthBandStopSource|"
+msgid "%1 Band Stop"
+msgstr ""
+
 #: ../src/plugins/filters/butterworth_bandstop/butterworth_bandstop.cpp:214
 #, fuzzy, qt-format
 msgctxt "FilterButterworthBandStopSource|"
 msgid "Filtered %1"
 msgstr "%1 (%2 filtritrano)"
+
+#: ../src/plugins/filters/butterworth_bandstop/butterworth_bandstop.cpp:281
+msgctxt "ButterworthBandStopPlugin|"
+msgid "Band Stop Filter"
+msgstr ""
+
+#: ../src/plugins/filters/butterworth_bandstop/butterworth_bandstop.cpp:282
+msgctxt "ButterworthBandStopPlugin|"
+msgid ""
+"Filters a vector with a zero phase band stop filter with a butterworth "
+"amplitude response."
+msgstr ""
 
 #: ../src/plugins/filters/butterworth_bandstop/filterbutterworthbandstopconfig.ui:29
 #, fuzzy
@@ -8946,11 +9423,29 @@ msgctxt "FilterButterworthBandStopConfig|"
 msgid "Band width:"
 msgstr "Širina slike:"
 
+#: ../src/plugins/filters/butterworth_highpass/butterworth_highpass.cpp:143
+#, qt-format
+msgctxt "FilterButterworthHighPassSource|"
+msgid "%1 High Pass"
+msgstr ""
+
 #: ../src/plugins/filters/butterworth_highpass/butterworth_highpass.cpp:193
 #, fuzzy, qt-format
 msgctxt "FilterButterworthHighPassSource|"
 msgid "Filtered %1"
 msgstr "%1 (%2 filtritrano)"
+
+#: ../src/plugins/filters/butterworth_highpass/butterworth_highpass.cpp:254
+msgctxt "ButterworthHighPassPlugin|"
+msgid "High Pass Filter"
+msgstr ""
+
+#: ../src/plugins/filters/butterworth_highpass/butterworth_highpass.cpp:255
+msgctxt "ButterworthHighPassPlugin|"
+msgid ""
+"Filters a vector with a zero phase high pass filter with a butterworth "
+"amplitude response."
+msgstr ""
 
 #: ../src/plugins/filters/butterworth_highpass/filterbutterworthhighpassconfig.ui:29
 #, fuzzy
@@ -8970,11 +9465,29 @@ msgctxt "FilterButterworthHighPassConfig|"
 msgid "Cutoff Frequency / Sample Rate:"
 msgstr "Vrijednost odsječne frekvencije visokopropusnog filtera"
 
+#: ../src/plugins/filters/butterworth_lowpass/butterworth_lowpass.cpp:144
+#, qt-format
+msgctxt "FilterButterworthLowPassSource|"
+msgid "%1 Low Pass"
+msgstr ""
+
 #: ../src/plugins/filters/butterworth_lowpass/butterworth_lowpass.cpp:189
 #, fuzzy, qt-format
 msgctxt "FilterButterworthLowPassSource|"
 msgid "Filtered %1"
 msgstr "%1 (%2 filtritrano)"
+
+#: ../src/plugins/filters/butterworth_lowpass/butterworth_lowpass.cpp:249
+msgctxt "ButterworthLowPassPlugin|"
+msgid "Low Pass Filter"
+msgstr ""
+
+#: ../src/plugins/filters/butterworth_lowpass/butterworth_lowpass.cpp:250
+msgctxt "ButterworthLowPassPlugin|"
+msgid ""
+"Filters a vector with a zero phase low pass filter with a butterworth "
+"amplitude response."
+msgstr ""
 
 #: ../src/plugins/filters/butterworth_lowpass/filterbutterworthlowpassconfig.ui:29
 #, fuzzy
@@ -8994,6 +9507,18 @@ msgctxt "FilterButterworthLowPassConfig|"
 msgid "Cutoff Frequency / Sample Rate:"
 msgstr "Vrijednost odsječne frekvencije visokopropusnog filtera"
 
+#: ../src/plugins/filters/cumulativeaverage/cumulativeaverage.cpp:118
+#, fuzzy, qt-format
+msgctxt "CumulativeAverageSource|"
+msgid "%1 Cumulative Average"
+msgstr "Prosječni protok bita"
+
+#: ../src/plugins/filters/cumulativeaverage/cumulativeaverage.cpp:120
+#, fuzzy
+msgctxt "CumulativeAverageSource|"
+msgid "Cumulative Average"
+msgstr "Prosječni protok bita"
+
 #: ../src/plugins/filters/cumulativeaverage/cumulativeaverage.cpp:127
 #, fuzzy, qt-format
 msgctxt "CumulativeAverageSource|"
@@ -9008,10 +9533,33 @@ msgid ""
 "Input: %1"
 msgstr ""
 
+#: ../src/plugins/filters/cumulativeaverage/cumulativeaverage.cpp:212
+#, fuzzy
+msgctxt "CumulativeAveragePlugin|"
+msgid "Cumulative Average"
+msgstr "Prosječni protok bita"
+
+#: ../src/plugins/filters/cumulativeaverage/cumulativeaverage.cpp:213
+msgctxt "CumulativeAveragePlugin|"
+msgid "Computes the cumulative average of the input vector."
+msgstr ""
+
 #: ../src/plugins/filters/cumulativeaverage/cumulativeaverageconfig.ui:39
 msgctxt "CumulativeAverageConfig|"
 msgid "Y: "
 msgstr "Y: "
+
+#: ../src/plugins/filters/cumulativesum/cumulativesum.cpp:129
+#, fuzzy, qt-format
+msgctxt "CumulativeSumSource|"
+msgid "%1 Integral"
+msgstr "Izaberite interval vremena"
+
+#: ../src/plugins/filters/cumulativesum/cumulativesum.cpp:131
+#, fuzzy
+msgctxt "CumulativeSumSource|"
+msgid "Integral"
+msgstr "Izaberite interval vremena"
 
 #: ../src/plugins/filters/cumulativesum/cumulativesum.cpp:138
 #, fuzzy, qt-format
@@ -9029,6 +9577,17 @@ msgid ""
 "Input: %1"
 msgstr ""
 
+#: ../src/plugins/filters/cumulativesum/cumulativesum.cpp:229
+#, fuzzy
+msgctxt "CumulativeSumPlugin|"
+msgid "Cumulative Sum"
+msgstr "Odnos VF opadanja (%)"
+
+#: ../src/plugins/filters/cumulativesum/cumulativesum.cpp:230
+msgctxt "CumulativeSumPlugin|"
+msgid "Computes the cumulative sum (integral) of the input vector."
+msgstr ""
+
 #: ../src/plugins/filters/cumulativesum/cumulativesumconfig.ui:39
 #, fuzzy
 msgctxt "CumulativeSumConfig|"
@@ -9039,6 +9598,18 @@ msgstr "dx skala"
 msgctxt "CumulativeSumConfig|"
 msgid "Y: "
 msgstr "Y: "
+
+#: ../src/plugins/filters/despike/filterdespike.cpp:142
+#, qt-format
+msgctxt ""
+"FilterDespikeSource|arg 1 is the name of the vector which has been despiked"
+msgid "%1 Despiked"
+msgstr ""
+
+#: ../src/plugins/filters/despike/filterdespike.cpp:144
+msgctxt "FilterDespikeSource|"
+msgid "Despike"
+msgstr ""
 
 #: ../src/plugins/filters/despike/filterdespike.cpp:152
 #, qt-format
@@ -9063,6 +9634,17 @@ msgctxt "FilterDespikeSource|"
 msgid "Despiked %1"
 msgstr ""
 
+#: ../src/plugins/filters/despike/filterdespike.cpp:348
+#, fuzzy
+msgctxt "FilterDespikePlugin|"
+msgid "Despike Filter"
+msgstr "Primijeni filter"
+
+#: ../src/plugins/filters/despike/filterdespike.cpp:349
+msgctxt "FilterDespikePlugin|"
+msgid "Finds and removes spikes using a 3 point difference."
+msgstr ""
+
 #: ../src/plugins/filters/despike/filterdespikeconfig.ui:29
 #, fuzzy
 msgctxt "FilterDespikeConfig|"
@@ -9078,6 +9660,18 @@ msgstr "Razmak:"
 msgctxt "FilterDespikeConfig|"
 msgid "NSigma:"
 msgstr ""
+
+#: ../src/plugins/filters/differentiation/differentiation.cpp:130
+#, qt-format
+msgctxt "DifferentiationSource|"
+msgid "%1 Derivative"
+msgstr ""
+
+#: ../src/plugins/filters/differentiation/differentiation.cpp:132
+#, fuzzy
+msgctxt "DifferentiationSource|"
+msgid "Derivative"
+msgstr "Relativno"
 
 #: ../src/plugins/filters/differentiation/differentiation.cpp:139
 #, fuzzy, qt-format
@@ -9095,6 +9689,16 @@ msgid ""
 "Input: %1"
 msgstr ""
 
+#: ../src/plugins/filters/differentiation/differentiation.cpp:229
+msgctxt "DifferentiationPlugin|"
+msgid "Fixed Step Differentiation"
+msgstr ""
+
+#: ../src/plugins/filters/differentiation/differentiation.cpp:230
+msgctxt "DifferentiationPlugin|"
+msgid "Computes the discrete derivative of an input vector"
+msgstr ""
+
 #: ../src/plugins/filters/differentiation/differentiationconfig.ui:29
 #, fuzzy
 msgctxt "DifferentiationConfig|"
@@ -9106,6 +9710,17 @@ msgstr "Y:"
 msgctxt "DifferentiationConfig|"
 msgid "Step (dX):"
 msgstr "dx skala"
+
+#: ../src/plugins/filters/unwind/filterunwind.cpp:154
+#, qt-format
+msgctxt "FilterUnwindSource|"
+msgid "%1 Unwind"
+msgstr ""
+
+#: ../src/plugins/filters/unwind/filterunwind.cpp:156
+msgctxt "FilterUnwindSource|"
+msgid "Unwind"
+msgstr ""
 
 #: ../src/plugins/filters/unwind/filterunwind.cpp:164
 #, fuzzy, qt-format
@@ -9128,6 +9743,17 @@ msgstr ""
 #, qt-format
 msgctxt "FilterUnwindSource|"
 msgid "Unwind %1"
+msgstr ""
+
+#: ../src/plugins/filters/unwind/filterunwind.cpp:306
+#, fuzzy
+msgctxt "FilterUnwindPlugin|"
+msgid "Unwind Filter"
+msgstr "Filter"
+
+#: ../src/plugins/filters/unwind/filterunwind.cpp:307
+msgctxt "FilterUnwindPlugin|"
+msgid "Unwinds data that have wrapped."
 msgstr ""
 
 #: ../src/plugins/filters/unwind/filterunwindconfig.ui:29
@@ -9155,9 +9781,9 @@ msgid "Max Step (%):"
 msgstr "Veličina koraka"
 
 #: ../src/plugins/fits/exponential_unweighted/fitexponential_unweighted.cpp:142
-#, fuzzy
+#, fuzzy, qt-format
 msgctxt "FitExponentialUnweightedSource|"
-msgid " Unweighted Exponential"
+msgid "%1 Unweighted Exponential"
 msgstr "Eksponencijalna funkcija"
 
 #: ../src/plugins/fits/exponential_unweighted/fitexponential_unweighted.cpp:216
@@ -9172,6 +9798,17 @@ msgctxt "FitExponentialUnweightedSource|"
 msgid "Exponential Fit Residuals"
 msgstr "Uklopi prema širini stranice"
 
+#: ../src/plugins/fits/exponential_unweighted/fitexponential_unweighted.cpp:303
+#, fuzzy
+msgctxt "FitExponentialUnweightedPlugin|"
+msgid "Exponential Fit"
+msgstr "Uvećaj da odgovara"
+
+#: ../src/plugins/fits/exponential_unweighted/fitexponential_unweighted.cpp:304
+msgctxt "FitExponentialUnweightedPlugin|"
+msgid "Generates a exponential fit for a set of data."
+msgstr ""
+
 #: ../src/plugins/fits/exponential_unweighted/fitexponential_unweightedconfig.ui:31
 msgctxt "FitExponential_UnweightedConfig|The X (horizontal) axis of a plot"
 msgid "X:"
@@ -9183,9 +9820,9 @@ msgid "Y:"
 msgstr "Y:"
 
 #: ../src/plugins/fits/exponential_weighted/fitexponential_weighted.cpp:155
-#, fuzzy
+#, fuzzy, qt-format
 msgctxt "FitExponentialWeightedSource|"
-msgid " Weighted Exponential"
+msgid "%1 Weighted Exponential"
 msgstr "Eksponencijalna funkcija"
 
 #: ../src/plugins/fits/exponential_weighted/fitexponential_weighted.cpp:231
@@ -9199,6 +9836,17 @@ msgstr "Uvećaj da odgovara"
 msgctxt "FitExponentialWeightedSource|"
 msgid "Exponential Fit Residuals"
 msgstr "Uklopi prema širini stranice"
+
+#: ../src/plugins/fits/exponential_weighted/fitexponential_weighted.cpp:325
+#, fuzzy
+msgctxt "FitExponentialWeightedPlugin|"
+msgid "Exponential Weighted Fit"
+msgstr "Uvećaj da odgovara"
+
+#: ../src/plugins/fits/exponential_weighted/fitexponential_weighted.cpp:326
+msgctxt "FitExponentialWeightedPlugin|"
+msgid "Generates a exponential weighted fit for a set of data."
+msgstr ""
 
 #: ../src/plugins/fits/exponential_weighted/fitexponential_weightedconfig.ui:23
 msgctxt "FitExponential_WeightedConfig|The X axis of a plot"
@@ -9216,9 +9864,9 @@ msgid "Weights:"
 msgstr "Težine:"
 
 #: ../src/plugins/fits/gaussian_unweighted/fitgaussian_unweighted.cpp:142
-#, fuzzy
+#, fuzzy, qt-format
 msgctxt "FitGaussianUnweightedSource|"
-msgid " Unweighted Gaussian"
+msgid "%1 Unweighted Gaussian"
 msgstr "Gaussova mrlja"
 
 #: ../src/plugins/fits/gaussian_unweighted/fitgaussian_unweighted.cpp:261
@@ -9233,6 +9881,17 @@ msgctxt "FitGaussianUnweightedSource|"
 msgid "Gaussian Fit Residuals"
 msgstr "Uklopi prema širini stranice"
 
+#: ../src/plugins/fits/gaussian_unweighted/fitgaussian_unweighted.cpp:351
+#, fuzzy
+msgctxt "FitGaussianUnweightedPlugin|"
+msgid "Gaussian Fit"
+msgstr "Uvećaj da odgovara"
+
+#: ../src/plugins/fits/gaussian_unweighted/fitgaussian_unweighted.cpp:352
+msgctxt "FitGaussianUnweightedPlugin|"
+msgid "Generates a gaussian fit for a set of data."
+msgstr ""
+
 #: ../src/plugins/fits/gaussian_unweighted/fitgaussian_unweightedconfig.ui:31
 msgctxt "FitGaussian_UnweightedConfig|The X axis of a plot"
 msgid "X:"
@@ -9244,9 +9903,9 @@ msgid "Y:"
 msgstr "Y:"
 
 #: ../src/plugins/fits/gaussian_weighted/fitgaussian_weighted.cpp:155
-#, fuzzy
+#, fuzzy, qt-format
 msgctxt "FitGaussianWeightedSource|"
-msgid " Weighted Gaussian"
+msgid "%1 Weighted Gaussian"
 msgstr "Gaussova mrlja"
 
 #: ../src/plugins/fits/gaussian_weighted/fitgaussian_weighted.cpp:236
@@ -9260,6 +9919,17 @@ msgstr "Uvećaj da odgovara"
 msgctxt "FitGaussianWeightedSource|"
 msgid "Gaussian Fit Residuals"
 msgstr "Uklopi prema širini stranice"
+
+#: ../src/plugins/fits/gaussian_weighted/fitgaussian_weighted.cpp:330
+#, fuzzy
+msgctxt "FitGaussianWeightedPlugin|"
+msgid "Gaussian Weighted Fit"
+msgstr "Uvećaj da odgovara"
+
+#: ../src/plugins/fits/gaussian_weighted/fitgaussian_weighted.cpp:331
+msgctxt "FitGaussianWeightedPlugin|"
+msgid "Generates a gaussian weighted fit for a set of data."
+msgstr ""
 
 #: ../src/plugins/fits/gaussian_weighted/fitgaussian_weightedconfig.ui:29
 msgctxt "FitGaussian_WeightedConfig|The X (horizontal) axis of a plot"
@@ -9277,9 +9947,9 @@ msgid "Weights:"
 msgstr "Težine:"
 
 #: ../src/plugins/fits/gradient_unweighted/fitgradient_unweighted.cpp:140
-#, fuzzy
+#, fuzzy, qt-format
 msgctxt "FitGradientUnweightedSource|"
-msgid " Unweighted Gradient"
+msgid "%1 Unweighted Gradient"
 msgstr "SVG Gradijent"
 
 #: ../src/plugins/fits/gradient_unweighted/fitgradient_unweighted.cpp:177
@@ -9306,6 +9976,17 @@ msgctxt "FitGradientUnweightedSource|"
 msgid "Gradient Fit Upper Limit"
 msgstr "ERF(Donja granica; Gornja granica)"
 
+#: ../src/plugins/fits/gradient_unweighted/fitgradient_unweighted.cpp:294
+#, fuzzy
+msgctxt "FitGradientUnweightedPlugin|"
+msgid "Gradient Fit"
+msgstr "Uvećaj da odgovara"
+
+#: ../src/plugins/fits/gradient_unweighted/fitgradient_unweighted.cpp:295
+msgctxt "FitGradientUnweightedPlugin|"
+msgid "Generates a gradient fit for a set of data."
+msgstr ""
+
 #: ../src/plugins/fits/gradient_unweighted/fitgradient_unweightedconfig.ui:31
 msgctxt "FitGradient_UnweightedConfig|The X (horizontal) axis of a plot"
 msgid "X:"
@@ -9317,9 +9998,9 @@ msgid "Y:"
 msgstr "Y:"
 
 #: ../src/plugins/fits/gradient_weighted/fitgradient_weighted.cpp:155
-#, fuzzy
+#, fuzzy, qt-format
 msgctxt "FitGradientWeightedSource|"
-msgid " Weighted Gradient"
+msgid "%1 Weighted Gradient"
 msgstr "SVG Gradijent"
 
 #: ../src/plugins/fits/gradient_weighted/fitgradient_weighted.cpp:193
@@ -9346,6 +10027,17 @@ msgctxt "FitGradientWeightedSource|"
 msgid "Gradient Fit Upper Limit"
 msgstr "ERF(Donja granica; Gornja granica)"
 
+#: ../src/plugins/fits/gradient_weighted/fitgradient_weighted.cpp:317
+#, fuzzy
+msgctxt "FitGradientWeightedPlugin|"
+msgid "Gradient Weighted Fit"
+msgstr "Uvećaj da odgovara"
+
+#: ../src/plugins/fits/gradient_weighted/fitgradient_weighted.cpp:318
+msgctxt "FitGradientWeightedPlugin|"
+msgid "Generates a gradient weighted fit for a set of data."
+msgstr ""
+
 #: ../src/plugins/fits/gradient_weighted/fitgradient_weightedconfig.ui:29
 msgctxt "FitGradient_WeightedConfig|The X axis of a plot"
 msgid "X:"
@@ -9360,6 +10052,23 @@ msgstr "Y:"
 msgctxt "FitGradient_WeightedConfig|statistical weights"
 msgid "Weights:"
 msgstr "Težine:"
+
+#: ../src/plugins/fits/kneefrequency/fitkneefrequency.cpp:181
+#, fuzzy
+msgctxt "FitKneeFrequencySource|"
+msgid "Fit Knee Frequency Plugin"
+msgstr "Zdravo‑svijete priključak"
+
+#: ../src/plugins/fits/kneefrequency/fitkneefrequency.cpp:435
+#, fuzzy
+msgctxt "FitKneeFrequencyPlugin|"
+msgid "Knee Frequency Fit"
+msgstr "Ucestalost"
+
+#: ../src/plugins/fits/kneefrequency/fitkneefrequency.cpp:436
+msgctxt "FitKneeFrequencyPlugin|"
+msgid "Generates a knee frequency fit for a set of data."
+msgstr ""
 
 #: ../src/plugins/fits/kneefrequency/fitkneefrequencyconfig.ui:31
 #, fuzzy
@@ -9389,9 +10098,9 @@ msgid "Input Scalar - White Noise C"
 msgstr ""
 
 #: ../src/plugins/fits/linear_unweighted/fitlinear_unweighted.cpp:140
-#, fuzzy
+#, fuzzy, qt-format
 msgctxt "FitLinearUnweightedSource|"
-msgid " Unweighted Linear"
+msgid "%1 Unweighted Linear"
 msgstr "Linearo nagorijevanje"
 
 #: ../src/plugins/fits/linear_unweighted/fitlinear_unweighted.cpp:189
@@ -9418,6 +10127,17 @@ msgctxt "FitLinearUnweightedSource|"
 msgid "Linear Fit Upper Limit"
 msgstr "ERF(Donja granica; Gornja granica)"
 
+#: ../src/plugins/fits/linear_unweighted/fitlinear_unweighted.cpp:300
+#, fuzzy
+msgctxt "FitLinearUnweightedPlugin|"
+msgid "Linear Fit"
+msgstr "Uvećaj da odgovara"
+
+#: ../src/plugins/fits/linear_unweighted/fitlinear_unweighted.cpp:301
+msgctxt "FitLinearUnweightedPlugin|"
+msgid "Generates a linear fit for a set of data."
+msgstr ""
+
 #: ../src/plugins/fits/linear_unweighted/fitlinear_unweightedconfig.ui:31
 #, fuzzy
 msgctxt "FitLinear_UnweightedConfig|The X axis of a plot"
@@ -9431,9 +10151,9 @@ msgid "Y:"
 msgstr "Y:"
 
 #: ../src/plugins/fits/linear_weighted/fitlinear_weighted.cpp:155
-#, fuzzy
+#, fuzzy, qt-format
 msgctxt "FitLinearWeightedSource|"
-msgid " Weighted Linear"
+msgid "%1 Weighted Linear"
 msgstr "Linearo nagorijevanje"
 
 #: ../src/plugins/fits/linear_weighted/fitlinear_weighted.cpp:193
@@ -9460,6 +10180,17 @@ msgctxt "FitLinearWeightedSource|"
 msgid "Linear Fit Upper Limit"
 msgstr "ERF(Donja granica; Gornja granica)"
 
+#: ../src/plugins/fits/linear_weighted/fitlinear_weighted.cpp:323
+#, fuzzy
+msgctxt "FitLinearWeightedPlugin|"
+msgid "Linear Weighted Fit"
+msgstr "SVG Gradijent"
+
+#: ../src/plugins/fits/linear_weighted/fitlinear_weighted.cpp:324
+msgctxt "FitLinearWeightedPlugin|"
+msgid "Generates a linear weighted fit for a set of data."
+msgstr ""
+
 #: ../src/plugins/fits/linear_weighted/fitlinear_weightedconfig.ui:29
 #, fuzzy
 msgctxt "FitLinear_WeightedConfig|"
@@ -9479,9 +10210,10 @@ msgid "Input Vector - Weights"
 msgstr "Plavo narandžasti vektor"
 
 #: ../src/plugins/fits/lorentzian_unweighted/fitlorentzian_unweighted.cpp:142
+#, fuzzy, qt-format
 msgctxt "FitLorentzianUnweightedSource|"
-msgid " Lorentzian"
-msgstr ""
+msgid "%1 Lorentzian"
+msgstr "težinsko zasićenje"
 
 #: ../src/plugins/fits/lorentzian_unweighted/fitlorentzian_unweighted.cpp:262
 #, fuzzy, qt-format
@@ -9495,6 +10227,17 @@ msgctxt "FitLorentzianUnweightedSource|"
 msgid "Lorentzian Fit Residuals"
 msgstr "Uklopi prema širini stranice"
 
+#: ../src/plugins/fits/lorentzian_unweighted/fitlorentzian_unweighted.cpp:352
+#, fuzzy
+msgctxt "FitLorentzianUnweightedPlugin|"
+msgid "Lorentzian Fit"
+msgstr "Uvećaj da odgovara"
+
+#: ../src/plugins/fits/lorentzian_unweighted/fitlorentzian_unweighted.cpp:353
+msgctxt "FitLorentzianUnweightedPlugin|"
+msgid "Generates a lorentzian fit for a set of data."
+msgstr ""
+
 #: ../src/plugins/fits/lorentzian_unweighted/fitlorentzian_unweightedconfig.ui:31
 msgctxt "FitLorentzian_UnweightedConfig|The X axis of a plot"
 msgid "X:"
@@ -9506,9 +10249,9 @@ msgid "Y:"
 msgstr "Y:"
 
 #: ../src/plugins/fits/lorentzian_weighted/fitlorentzian_weighted.cpp:155
-#, fuzzy
+#, fuzzy, qt-format
 msgctxt "FitLorentzianWeightedSource|"
-msgid " Weighted Lorentzian"
+msgid "%1 Weighted Lorentzian"
 msgstr "težinsko zasićenje"
 
 #: ../src/plugins/fits/lorentzian_weighted/fitlorentzian_weighted.cpp:235
@@ -9522,6 +10265,17 @@ msgstr "Uvećaj da odgovara"
 msgctxt "FitLorentzianWeightedSource|"
 msgid "Lorentzian Fit Residuals"
 msgstr "Uklopi prema širini stranice"
+
+#: ../src/plugins/fits/lorentzian_weighted/fitlorentzian_weighted.cpp:329
+#, fuzzy
+msgctxt "FitLorentzianWeightedPlugin|"
+msgid "Lorentzian Weighted Fit"
+msgstr "Uvećaj da odgovara"
+
+#: ../src/plugins/fits/lorentzian_weighted/fitlorentzian_weighted.cpp:330
+msgctxt "FitLorentzianWeightedPlugin|"
+msgid "Generates a lorentzian weighted fit for a set of data."
+msgstr ""
 
 #: ../src/plugins/fits/lorentzian_weighted/fitlorentzian_weightedconfig.ui:30
 #, fuzzy
@@ -9542,9 +10296,10 @@ msgid "Input Vector - Weights"
 msgstr "Plavo narandžasti vektor"
 
 #: ../src/plugins/fits/polynomial_unweighted/fitpolynomial_unweighted.cpp:154
+#, fuzzy, qt-format
 msgctxt "FitPolynomialUnweightedSource|"
-msgid " Polynomial"
-msgstr ""
+msgid "%1 Polynomial"
+msgstr "težinsko zasićenje"
 
 #: ../src/plugins/fits/polynomial_unweighted/fitpolynomial_unweighted.cpp:197
 #, fuzzy, qt-format
@@ -9557,6 +10312,17 @@ msgstr "Uvećaj da odgovara"
 msgctxt "FitPolynomialUnweightedSource|"
 msgid "Polynomial Fit Residuals"
 msgstr "Uklopi prema širini stranice"
+
+#: ../src/plugins/fits/polynomial_unweighted/fitpolynomial_unweighted.cpp:315
+#, fuzzy
+msgctxt "FitPolynomialUnweightedPlugin|"
+msgid "Polynomial Fit"
+msgstr "Uvećaj da odgovara"
+
+#: ../src/plugins/fits/polynomial_unweighted/fitpolynomial_unweighted.cpp:316
+msgctxt "FitPolynomialUnweightedPlugin|"
+msgid "Generates a polynomial fit for a set of data."
+msgstr ""
 
 #: ../src/plugins/fits/polynomial_unweighted/fitpolynomial_unweightedconfig.ui:31
 msgctxt "FitPolynomial_UnweightedConfig|The X (horizontal) axis of a plot"
@@ -9574,9 +10340,9 @@ msgid "Order:"
 msgstr "Red:"
 
 #: ../src/plugins/fits/polynomial_weighted/fitpolynomial_weighted.cpp:168
-#, fuzzy
+#, fuzzy, qt-format
 msgctxt "FitPolynomialWeightedSource|"
-msgid " Weighted Polynomial"
+msgid "%1 Weighted Polynomial"
 msgstr "težinsko zasićenje"
 
 #: ../src/plugins/fits/polynomial_weighted/fitpolynomial_weighted.cpp:213
@@ -9590,6 +10356,17 @@ msgstr "Uvećaj da odgovara"
 msgctxt "FitPolynomialWeightedSource|"
 msgid "Polynomial Fit Residuals"
 msgstr "Uklopi prema širini stranice"
+
+#: ../src/plugins/fits/polynomial_weighted/fitpolynomial_weighted.cpp:335
+#, fuzzy
+msgctxt "FitPolynomialWeightedPlugin|"
+msgid "Polynomial Weighted Fit"
+msgstr "Uvećaj da odgovara"
+
+#: ../src/plugins/fits/polynomial_weighted/fitpolynomial_weighted.cpp:336
+msgctxt "FitPolynomialWeightedPlugin|"
+msgid "Generates a polynomial weighted fit for a set of data."
+msgstr ""
 
 #: ../src/plugins/fits/polynomial_weighted/fitpolynomial_weightedconfig.ui:30
 #, fuzzy
@@ -9616,9 +10393,10 @@ msgid "Input Scalar - Order"
 msgstr "Zamijeni redoslijed bajtova ulaznih podataka"
 
 #: ../src/plugins/fits/sinusoid_unweighted/fitsinusoid_unweighted.cpp:169
+#, fuzzy, qt-format
 msgctxt "FitSinusoidUnweightedSource|"
-msgid " Sinusoid"
-msgstr ""
+msgid "%1 Sinusoid"
+msgstr "težinsko zasićenje"
 
 #: ../src/plugins/fits/sinusoid_unweighted/fitsinusoid_unweighted.cpp:221
 #, fuzzy, qt-format
@@ -9631,6 +10409,17 @@ msgstr "Uvećaj da odgovara"
 msgctxt "FitSinusoidUnweightedSource|"
 msgid "Sinusoidal Fit Residuals"
 msgstr "Uklopi prema širini stranice"
+
+#: ../src/plugins/fits/sinusoid_unweighted/fitsinusoid_unweighted.cpp:332
+#, fuzzy
+msgctxt "FitSinusoidUnweightedPlugin|"
+msgid "Sinusoid Fit"
+msgstr "Uvećaj da odgovara"
+
+#: ../src/plugins/fits/sinusoid_unweighted/fitsinusoid_unweighted.cpp:333
+msgctxt "FitSinusoidUnweightedPlugin|"
+msgid "Generates a sinusoid fit for a set of data."
+msgstr ""
 
 #: ../src/plugins/fits/sinusoid_unweighted/fitsinusoid_unweightedconfig.ui:29
 msgctxt "FitSinusoid_UnweightedConfig|The X axis of a plot"
@@ -9653,9 +10442,9 @@ msgid "Period:"
 msgstr "Period:"
 
 #: ../src/plugins/fits/sinusoid_weighted/fitsinusoid_weighted.cpp:183
-#, fuzzy
+#, fuzzy, qt-format
 msgctxt "FitSinusoidWeightedSource|"
-msgid " Weighted Sinusoid"
+msgid "%1 Weighted Sinusoid"
 msgstr "težinsko zasićenje"
 
 #: ../src/plugins/fits/sinusoid_weighted/fitsinusoid_weighted.cpp:238
@@ -9669,6 +10458,17 @@ msgstr "Uvećaj da odgovara"
 msgctxt "FitSinusoidWeightedSource|"
 msgid "Sinusoidal Fit Residuals"
 msgstr "Uklopi prema širini stranice"
+
+#: ../src/plugins/fits/sinusoid_weighted/fitsinusoid_weighted.cpp:355
+#, fuzzy
+msgctxt "FitSinusoidWeightedPlugin|"
+msgid "Sinusoid Weighted Fit"
+msgstr "Uvećaj da odgovara"
+
+#: ../src/plugins/fits/sinusoid_weighted/fitsinusoid_weighted.cpp:356
+msgctxt "FitSinusoidWeightedPlugin|"
+msgid "Generates a sinusoid weighted fit for a set of data."
+msgstr ""
 
 #: ../src/plugins/fits/sinusoid_weighted/fitsinusoid_weightedconfig.ui:30
 #, fuzzy
@@ -10291,6 +11091,77 @@ msgctxt "Kst::LabelBuilder|"
 msgid "Label text.  A subset of LaTeX is supported.  Click 'Help' for help."
 msgstr ""
 
+#: ../src/widgets/labelbuilder.cpp:59
+msgctxt "Kst::LabelBuilder|"
+msgid ""
+"<qt><P ALIGN=LEFT STYLE=\"margin-bottom: 0in\"><FONT SIZE=4><B>Scalars &amp; "
+"equations</B></FONT><br>Scalars and scalar equations can be displayed live "
+"in labels.  When the scalar is updated, the label is updated.  Scalar names "
+"are autocompleted.  The format is:</P><P STYLE=\"margin-bottom: 0in"
+"\"><B>Scalar:</B> <FONT FACE=\"Courier New, monospace\">[</"
+"FONT><I>scalarname</I><FONT FACE=\"Courier New, monospace\">]</FONT>, eg "
+"<FONT FACE=\"Courier New, monospace\">[GYRO1:Mean(X4)]</FONT></P><P STYLE="
+"\"margin-bottom: 0in\"><B>Vector Element:</B><FONT FACE=\"Courier New, "
+"monospace\">[</FONT><I>vectorName</I><FONT FACE=\"Courier New, monospace\">"
+"[</FONT><I>index</I><FONT FACE=\"Courier New, monospace\">]]</FONT><FONT "
+"FACE=\"Times New Roman, serif\">,eg, </FONT><FONT FACE=\"Courier New, "
+"monospace\">[GYRO1 (V2)[4]]</FONT></P><P STYLE=\"margin-bottom: 0in"
+"\"><B>Equation:</B> <FONT FACE=\"Courier New, monospace\">[=</"
+"FONT><I>equation</I><FONT FACE=\"Courier New, monospace\">]</FONT>,eg <FONT "
+"FACE=\"Courier New, monospace\">[=[GYRO1:Mean(X4)]/[GYRO1:Sigma (X4)]]</"
+"FONT></P><P ALIGN=LEFT STYLE=\"margin-bottom: 0in\"><FONT "
+"SIZE=4><B>Supported LaTeX Subset</B></FONT><br>Labels in <i>kst</i> support "
+"a derrivitive subset of LaTeX. For example, to display the equation for the "
+"area of a circle, you could set the label to A=2\\pir^2.  Unlike LaTeX, it "
+"is not necessary to enter math mode using '$'.  Also, unlike LaTeX, "
+"variables are not automatically displayed in italic font.  If desired, this "
+"must be done explicitly using \\textit{}.  Supported sequences are:</P><P "
+"STYLE=\"margin-bottom: 0in\"><B>Greek letters:</B>  \\<I>name</I> or "
+"\\<I>Name</I>.  eg: <FONT FACE=\"Courier New, monospace\">\\alpha</FONT></"
+"P><P STYLE=\"margin-bottom: 0in\"><B>Other symbols:</B>  <FONT FACE="
+"\"Courier New, monospace\">\\approx</FONT><FONT FACE=\"Times New Roman, serif"
+"\">,</FONT><FONT FACE=\"Courier New, monospace\">\\cdot</FONT><FONT FACE="
+"\"Times New Roman, serif\">,</FONT><FONT FACE=\"Courier New, monospace\">"
+"\\ge</FONT><FONT FACE=\"Times New Roman, serif\">,</FONT><FONT FACE="
+"\"Courier New, monospace\">\\geq</FONT><FONT FACE=\"Times New Roman, serif"
+"\">,</FONT><FONT FACE=\"Courier New, monospace\">\\inf</FONT><FONT FACE="
+"\"Times New Roman, serif\">,</FONT><FONT FACE=\"Courier New, monospace\">"
+"\\approx</FONT><FONT FACE=\"Times New Roman, serif\">,</FONT><FONT FACE="
+"\"Courier New, monospace\">\\cdot</FONT><FONT FACE=\"Times New Roman, serif"
+"\">,</FONT><FONT FACE=\"Courier New, monospace\">\\ge</FONT><FONT FACE="
+"\"Times New Roman, serif\">,</FONT><FONT FACE=\"Courier New, monospace\">"
+"\\geq</FONT><FONT FACE=\"Times New Roman, serif\">,</FONT><FONT FACE="
+"\"Courier New, monospace\">\\inf</FONT><FONT FACE=\"Times New Roman, serif"
+"\">,</FONT><FONT FACE=\"Courier New, monospace\">\\int</FONT><FONT FACE="
+"\"Times New Roman, serif\">,</FONT><FONT FACE=\"Courier New, monospace\">"
+"\\le</FONT><FONT FACE=\"Times New Roman, serif\">,</FONT><FONT FACE="
+"\"Courier New, monospace\">\\leq</FONT><FONT FACE=\"Times New Roman, serif"
+"\">,</FONT><FONT FACE=\"Courier New, monospace\">\\ne</FONT><FONT FACE="
+"\"Times New Roman, serif\">,</FONT><FONT FACE=\"Courier New, monospace\">"
+"\\n</FONT><FONT FACE=\"Times New Roman, serif\">,</FONT><FONT FACE=\"Courier "
+"New, monospace\">\\partial</FONT><FONT FACE=\"Times New Roman, serif\">,</"
+"FONT><FONT FACE=\"Courier New, monospace\">\\prod</FONT><FONT FACE=\"Times "
+"New Roman, serif\">,</FONT><FONT FACE=\"Courier New, monospace\">\\pm</"
+"FONT><FONT FACE=\"Times New Roman, serif\">,</FONT><FONT FACE=\"Courier New, "
+"monospace\">\\sum</FONT><FONT FACE=\"Times New Roman, serif\">,</FONT><FONT "
+"FACE=\"Courier New, monospace\">\\sqrt</FONT></P><P STYLE=\"margin-bottom: "
+"0in\"><B>Font effects:</B> <FONT FACE=\"Courier New, monospace\">\\textcolor"
+"{</FONT><I>colorname</I><FONT FACE=\"Courier New, monospace\">}{</"
+"FONT><I>colored text</I><FONT FACE=\"Courier New, monospace\">}</FONT>, "
+"<FONT FACE=\"Courier New, monospace\">\\textbf{</FONT><I>bold text</I><FONT "
+"FACE=\"Courier New, monospace\">}</FONT>,<FONT FACE=\"Courier New, monospace"
+"\">\\textit{</FONT><I>italicized text</I><FONT FACE=\"Courier New, monospace"
+"\">}</FONT>,<FONT FACE=\"Courier New, monospace\">\\underline{</"
+"FONT><I>underlined text</I><FONT FACE=\"Courier New, monospace\">}</FONT>,"
+"<FONT FACE=\"Courier New, monospace\">\\overline{</FONT><I>overlined text</"
+"I><FONT FACE=\"Courier New, monospace\">}</FONT>.<P STYLE=\"margin-bottom: "
+"0in\"><B>Other:</B><I>x</I><FONT FACE=\"Courier New, monospace\">^</"
+"FONT><I>y</I>,<I>x</I><FONT FACE=\"Courier New, monospace\">_</FONT><I>y</"
+"I>, <FONT FACE=\"Courier New, monospace\">\\t</FONT>,<FONT FACE=\"Courier "
+"New, monospace\">\\n</FONT>, <FONT FACE=\"Courier New, monospace\">\\[</"
+"FONT></P>"
+msgstr ""
+
 #: ../src/widgets/labelbuilder.ui:40
 msgctxt "LabelBuilder|"
 msgid "Supports LaTeX symbols, live strings & scalars, and embedded equations."
@@ -10478,6 +11349,34 @@ msgstr "Otvori dijaloški prozor za izmjenu svojstava izabranog kalendara."
 msgctxt "Kst::WidgetPlugin|"
 msgid "Kst Widgets"
 msgstr "Osnovni dodaci"
+
+#, fuzzy
+#~ msgctxt "Kst::AboutDialog|"
+#~ msgid "<qt><h2>Kst "
+#~ msgstr "<qt><h2>Veza je uredu.</h2></qt>"
+
+#~ msgctxt "Kst::BasicPluginDialog|"
+#~ msgid "Edit "
+#~ msgstr "Izmijeni"
+
+#~ msgctxt "Kst::BasicPluginDialog|"
+#~ msgid "New "
+#~ msgstr "Novo"
+
+#, fuzzy
+#~ msgctxt "Kst::FilterFitDialog|"
+#~ msgid "Edit "
+#~ msgstr "Izmijeni..."
+
+#, fuzzy
+#~ msgctxt "Kst::FilterFitDialog|"
+#~ msgid " Plugin"
+#~ msgstr "Dodatak"
+
+#, fuzzy
+#~ msgctxt "Kst::FilterFitDialog|"
+#~ msgid "New "
+#~ msgstr "Novo..."
 
 #, fuzzy
 #~ msgctxt "AsciiSource|"
