@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-28 01:52+0000\n"
+"POT-Creation-Date: 2014-04-05 01:35+0000\n"
 "PO-Revision-Date: 2014-01-31 20:49+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team:  <bs@li.org>\n"
@@ -64,7 +64,7 @@ msgid ""
 msgstr ""
 "K‑torent ne može da prihvata veze jer UDP port %1 već koristi drugi program."
 
-#: ktorrent/core.cpp:295
+#: ktorrent/core.cpp:300
 #, kde-format
 msgid ""
 "Opening the torrent <b>%1</b>, would share one or more files with the "
@@ -73,16 +73,16 @@ msgstr ""
 "Otvaranje torenta <b>%1</b> će podijeliti jednu ili više datoteka sa "
 "sljedećim torentima. Torentima nije dozvoljeno da pišu istovremeno. "
 
-#: ktorrent/core.cpp:975
+#: ktorrent/core.cpp:980
 msgid "KTorrent is running one or more torrents"
 msgstr "K‑torent radi sa jednim ili više torenata"
 
-#: ktorrent/core.cpp:1062
+#: ktorrent/core.cpp:1067
 #, kde-format
 msgid "Cannot create torrent: %1"
 msgstr "Ne mogu da napravim torent: %1"
 
-#: ktorrent/core.cpp:1165
+#: ktorrent/core.cpp:1170
 msgid ""
 "One or more storage volumes are not mounted. In order to start this torrent, "
 "they need to be mounted."
@@ -90,21 +90,21 @@ msgstr ""
 "Jedan ili više sadržaja za pohranu nisu montirani.  Da b pokrenuo torent, "
 "trebaju biti montirani."
 
-#: ktorrent/core.cpp:1166
+#: ktorrent/core.cpp:1171
 msgid "Retry"
 msgstr "Pokušaj ponovo"
 
-#: ktorrent/core.cpp:1175
+#: ktorrent/core.cpp:1180
 #, kde-format
 msgid "Storage volume %1 is not mounted"
 msgstr "Sadržaj za pohranu %1 nije montiran"
 
-#: ktorrent/core.cpp:1177
+#: ktorrent/core.cpp:1182
 #, kde-format
 msgid "Storage volumes %1 are not mounted"
 msgstr "Sadržaji za pohranu %1 nisu montirani"
 
-#: ktorrent/core.cpp:1189
+#: ktorrent/core.cpp:1194
 #, kde-format
 msgid ""
 "Several data files of the torrent \"%1\" are missing. \n"
@@ -113,21 +113,21 @@ msgstr ""
 "Nedostaje nekoliko datoteka torenta „%1“. \n"
 "Želite li da ih ponovo napravite ili da ih ne preuzimate?"
 
-#: ktorrent/core.cpp:1198 ktorrent/core.cpp:1209 ktorrent/core.cpp:1222
+#: ktorrent/core.cpp:1203 ktorrent/core.cpp:1214 ktorrent/core.cpp:1227
 msgid "Data files are missing"
 msgstr "Nedostaju datoteke sa podacima"
 
-#: ktorrent/core.cpp:1208
+#: ktorrent/core.cpp:1213
 #, kde-format
 msgid "Cannot deselect missing files: %1"
 msgstr "Ne mogu da demarkiram nedostajuće datoteke: %1"
 
-#: ktorrent/core.cpp:1221
+#: ktorrent/core.cpp:1226
 #, kde-format
 msgid "Cannot recreate missing files: %1"
 msgstr "Ne mogu da napravim nedostajuće datoteke: %1"
 
-#: ktorrent/core.cpp:1232
+#: ktorrent/core.cpp:1237
 #, kde-format
 msgid ""
 "The file where the data is saved of the torrent \"%1\" is missing.\n"
@@ -136,16 +136,16 @@ msgstr ""
 "Nedostaje datoteka u koui se upisuju podaci torenta „%1“. \n"
 "Želite li da je ponovo napravite?"
 
-#: ktorrent/core.cpp:1239 ktorrent/core.cpp:1249
+#: ktorrent/core.cpp:1244 ktorrent/core.cpp:1254
 msgid "Data file is missing"
 msgstr "Nedostaje datoteka sa podacima"
 
-#: ktorrent/core.cpp:1248
+#: ktorrent/core.cpp:1253
 #, kde-format
 msgid "Cannot recreate data file: %1"
 msgstr "Ne mogu da napravim datoteku: %1"
 
-#: ktorrent/core.cpp:1336
+#: ktorrent/core.cpp:1341
 #, kde-format
 msgid ""
 "KTorrent has found a torrent from the KDE3 version of KTorrent, do you want "
@@ -160,16 +160,16 @@ msgstr[1] ""
 msgstr[2] ""
 "Nađeno je %1 torenata iz KDE‑3 verzije K‑torenta. Želite li da ih uvezete?"
 
-#: ktorrent/core.cpp:1358
+#: ktorrent/core.cpp:1363
 msgid "No torrents from the KDE3 version were found."
 msgstr "Nema torenata iz KDE‑3 verzije."
 
-#: ktorrent/core.cpp:1397
+#: ktorrent/core.cpp:1402
 #, kde-format
 msgid "Invalid magnet bittorrent link: %1"
 msgstr "Neispravna magnetska bittorent veza: %1"
 
-#: ktorrent/core.cpp:1402
+#: ktorrent/core.cpp:1407
 msgid ""
 "You are attempting to download a magnet link, and DHT is not enabled. For "
 "optimum results enable DHT."
@@ -1832,19 +1832,72 @@ msgstr ""
 "doseći ovu brzinu ako je vrijednost previsoka. Bez limita možete doseći "
 "preko  3000 KiB/s na LAN.</p>"
 
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: ktorrent/pref/advancedpref.ui:132
+#, fuzzy
+#| msgid "Magnet"
+msgid "Magnets Queue"
+msgstr "Magnet"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ktorrent/pref/advancedpref.ui:140
+#, fuzzy
+#| msgid "Number of upload slots:"
+msgid "Number of downloading slots:"
+msgstr "Broj veza slanja:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_numMagnetDownloadingSlots)
+#: ktorrent/pref/advancedpref.ui:147
+msgid ""
+"<html><head/><body><p>Maximum number of concurrent downloading magnets at "
+"the same time.</p><p><span style=\" font-weight:600;\">Note:</span> If you "
+"already tweak this value and KTorrent hangs when you are trying to download "
+"a big list of magnets, try to lower it.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_requeueMagnets)
+#: ktorrent/pref/advancedpref.ui:163
+msgid ""
+"<html><head/><body><p>Whether or not the magnets that are not downloaded "
+"after a maximum period of time must be pushed back at the end of the queue.</"
+"p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_requeueMagnets)
+#: ktorrent/pref/advancedpref.ui:166
+#, fuzzy
+#| msgid "Auto resume after:"
+msgid "Requeue magnets after:"
+msgstr "Automatski nastavi nakon:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_requeueMagnetsTime)
+#: ktorrent/pref/advancedpref.ui:173
+msgid ""
+"<html><head/><body><p>Maximum time that a magnet can occupy a downloading "
+"slot before it will be pushed back in the queue.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_requeueMagnetsTime)
+#: ktorrent/pref/advancedpref.ui:176
+#, fuzzy
+#| msgid " minute"
+#| msgid_plural " minutes"
+msgid " min"
+msgstr " minuta"
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: ktorrent/pref/advancedpref.ui:132 ktorrent/pref/generalpref.ui:120
+#: ktorrent/pref/advancedpref.ui:210 ktorrent/pref/generalpref.ui:120
 msgid "Miscellaneous"
 msgstr "Razno"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ktorrent/pref/advancedpref.ui:142
+#: ktorrent/pref/advancedpref.ui:220
 msgid "Preview size for audio files:"
 msgstr "Veličina pregleda audio datoteka:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_previewSizeAudio)
-#: ktorrent/pref/advancedpref.ui:149
+#: ktorrent/pref/advancedpref.ui:227
 msgid ""
 "<p>The amount of data at the beginning and end of an audio file, which will "
 "be prioritized for previewing.</p>"
@@ -1854,17 +1907,17 @@ msgstr ""
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeAudio)
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_previewSizeVideo)
-#: ktorrent/pref/advancedpref.ui:152 ktorrent/pref/advancedpref.ui:175
+#: ktorrent/pref/advancedpref.ui:230 ktorrent/pref/advancedpref.ui:253
 msgid " KiB"
 msgstr " kiB"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: ktorrent/pref/advancedpref.ui:165
+#: ktorrent/pref/advancedpref.ui:243
 msgid "Preview size for video files:"
 msgstr "Veličina pregleda video datoteka:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_previewSizeVideo)
-#: ktorrent/pref/advancedpref.ui:172
+#: ktorrent/pref/advancedpref.ui:250
 msgid ""
 "<p>The amount of data at the beginning and end of a video file, which will "
 "be prioritized for previewing.</p>"
@@ -1873,7 +1926,7 @@ msgstr ""
 "prioritetna za pregledavanje</p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_useQHttpAnnounce)
-#: ktorrent/pref/advancedpref.ui:207
+#: ktorrent/pref/advancedpref.ui:285
 msgid ""
 "Disables the use of KDE's KIO library for tracker announces.\n"
 "\n"
@@ -1885,12 +1938,12 @@ msgstr ""
 "veze sa računarom.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useQHttpAnnounce)
-#: ktorrent/pref/advancedpref.ui:210
+#: ktorrent/pref/advancedpref.ui:288
 msgid "Do not use KIO for tracker announces"
 msgstr "Ne koristi K‑U/I za objavljivanja pratioca"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
-#: ktorrent/pref/advancedpref.ui:219
+#: ktorrent/pref/advancedpref.ui:297
 msgid ""
 "Resolve the hostname of each peer. This will result in the hostname of a "
 "peer being displayed instead of the IP address. \n"
@@ -1903,7 +1956,7 @@ msgstr ""
 "smeta povećanje mrežnog saobraćaja do kojeg dovodi.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
-#: ktorrent/pref/advancedpref.ui:222
+#: ktorrent/pref/advancedpref.ui:300
 msgid "Resolve hostnames of peers"
 msgstr "Razrješavaj imena računara saradnika"
 
@@ -2859,38 +2912,42 @@ msgstr[2] "%1 zadataka"
 msgid "DHT: %1, %2"
 msgstr "DHT: %1, %2"
 
-#: ktorrent/tools/magnetmodel.cpp:134
+#: ktorrent/tools/magnetmodel.cpp:122
 msgid "Magnet Link"
 msgstr "Magnetska veza"
 
-#: ktorrent/tools/magnetmodel.cpp:135 ktorrent/tools/queuemanagermodel.cpp:196
+#: ktorrent/tools/magnetmodel.cpp:123 ktorrent/tools/queuemanagermodel.cpp:196
 #: ktorrent/trayicon.cpp:167 plugins/infowidget/trackermodel.cpp:148
 #: plugins/infowidget/webseedsmodel.cpp:127
 msgid "Status"
 msgstr "Stanje"
 
-#: ktorrent/tools/magnetmodel.cpp:136
+#: ktorrent/tools/magnetmodel.cpp:124
 #: plugins/infowidget/infowidgetplugin.cpp:222
 msgid "Peers"
 msgstr "Vršnjaci"
 
-#: ktorrent/tools/magnetmodel.cpp:210
+#: ktorrent/tools/magnetmodel.cpp:178
 msgid "Downloading"
 msgstr "Preuzimam"
 
-#: ktorrent/tools/magnetmodel.cpp:212
+#: ktorrent/tools/magnetmodel.cpp:181 ktorrent/tools/queuemanagermodel.cpp:237
+msgid "Queued"
+msgstr "U redu"
+
+#: ktorrent/tools/magnetmodel.cpp:185
 msgid "Stopped"
 msgstr "Zaustavljen"
 
-#: ktorrent/tools/magnetview.cpp:43
+#: ktorrent/tools/magnetview.cpp:64
 msgid "Start Magnet"
 msgstr "Pokreni magnet"
 
-#: ktorrent/tools/magnetview.cpp:44
+#: ktorrent/tools/magnetview.cpp:65
 msgid "Stop Magnet"
 msgstr "Zaustavi magnet"
 
-#: ktorrent/tools/magnetview.cpp:46
+#: ktorrent/tools/magnetview.cpp:67
 msgid "Remove Magnet"
 msgstr "Ukloni magnet"
 
@@ -2921,10 +2978,6 @@ msgstr "prioritet"
 #: ktorrent/tools/queuemanagermodel.cpp:235
 msgid "Running"
 msgstr "radi"
-
-#: ktorrent/tools/queuemanagermodel.cpp:237
-msgid "Queued"
-msgstr "U redu"
 
 # >> @item:intable
 #: ktorrent/tools/queuemanagermodel.cpp:239
