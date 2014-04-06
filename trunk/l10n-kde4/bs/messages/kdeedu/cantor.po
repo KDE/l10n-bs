@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-04-02 01:42+0000\n"
+"POT-Creation-Date: 2014-04-06 01:54+0000\n"
 "PO-Revision-Date: 2014-01-31 20:51+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -327,6 +327,18 @@ msgstr "ugrađen crtež u radni list"
 msgid "Enable Variable Management"
 msgstr "Uključi upravljanje varijablama"
 
+#. i18n: ectx: label, entry (autorunScripts), group (RBackend)
+#. i18n: ectx: label, entry (autorunScripts), group (MaximaBackend)
+#. i18n: ectx: label, entry (autorunScripts), group (SageBackend)
+#. i18n: ectx: label, entry (autorunScripts), group (PythonBackend)
+#. i18n: ectx: label, entry (autorunScripts), group (ScilabBackend)
+#. i18n: ectx: label, entry (autorunScripts), group (OctaveBackend)
+#: backends/maxima/maximabackend.kcfg:22 backends/octave/octavebackend.kcfg:18
+#: backends/python2/python2backend.kcfg:18 backends/R/rserver/rserver.kcfg:13
+#: backends/sage/sagebackend.kcfg:14 backends/scilab/scilabbackend.kcfg:18
+msgid "List of scripts to autorun at the beginning of session"
+msgstr "Lista skripti koje se pokrećuna početku sesije"
+
 #: backends/maxima/maximaexpression.cpp:108
 msgid "Error: Too many */"
 msgstr "Greška: Previše */"
@@ -347,21 +359,21 @@ msgstr "Čekam sliku..."
 msgid "*.mac|Maxima batch File"
 msgstr "*.mac|Maxima serijska datoteka"
 
-#: backends/maxima/maximasession.cpp:269
+#: backends/maxima/maximasession.cpp:275
 msgid "Failed to start Maxima"
 msgstr "Neuspjeli pokušaj pokretanja Maxime"
 
-#: backends/maxima/maximasession.cpp:412
+#: backends/maxima/maximasession.cpp:418
 msgid "Maxima crashed. restarting..."
 msgstr "Maxima se srušila. restartujem..."
 
-#: backends/maxima/maximasession.cpp:426 cantor_part.cpp:87
+#: backends/maxima/maximasession.cpp:432 cantor_part.cpp:87
 #: cantor_part.cpp:757 worksheet.cpp:828 worksheet.cpp:845 worksheet.cpp:881
 #: worksheet.cpp:893
 msgid "Error - Cantor"
 msgstr "Greška - Cantor"
 
-#: backends/maxima/maximasession.cpp:426
+#: backends/maxima/maximasession.cpp:432
 msgid "Maxima crashed twice within a short time. Stopping to try starting"
 msgstr ""
 "Maxima se srušila dva puta u kratkom vremenu. Zaustavljam da bih pokušao "
@@ -388,6 +400,13 @@ msgstr "Integriraj grafike u radnom listu"
 msgid "Let Cantor follow the creation/destruction of variables"
 msgstr "Neka Cantor prati kreiranje/uništavanje varijabli"
 
+#. i18n: ectx: property (title), widget (KEditListBox, kcfg_autorunScripts)
+#: backends/maxima/settings.ui:48 backends/octave/settings.ui:38
+#: backends/python2/settings.ui:38 backends/R/settings.ui:24
+#: backends/sage/settings.ui:31 backends/scilab/settings.ui:38
+msgid "Scripts to autorun"
+msgstr "Skripte za automatsko pokretanje"
+
 #: backends/octave/octavebackend.cpp:71
 msgctxt ""
 "the url to the documentation of Octave, please check if there is a "
@@ -413,16 +432,6 @@ msgstr ""
 msgid "Path to the Octave executable"
 msgstr "Staza do programa Octave"
 
-#. i18n: ectx: label, entry (autorunScripts), group (RBackend)
-#. i18n: ectx: label, entry (autorunScripts), group (PythonBackend)
-#. i18n: ectx: label, entry (autorunScripts), group (ScilabBackend)
-#. i18n: ectx: label, entry (autorunScripts), group (OctaveBackend)
-#: backends/octave/octavebackend.kcfg:18
-#: backends/python2/python2backend.kcfg:18 backends/R/rserver/rserver.kcfg:13
-#: backends/scilab/scilabbackend.kcfg:18
-msgid "List of scripts to autorun at the beginning of session"
-msgstr "Lista skripti koje se pokrećuna početku sesije"
-
 #: backends/octave/octaveextensions.cpp:47
 msgid "*.m|Octave script file"
 msgstr "*.m|Octave skript datoteka"
@@ -431,12 +440,6 @@ msgstr "*.m|Octave skript datoteka"
 #: backends/octave/settings.ui:19
 msgid "Path to Octave:"
 msgstr "Staza do Octave"
-
-#. i18n: ectx: property (title), widget (KEditListBox, kcfg_autorunScripts)
-#: backends/octave/settings.ui:38 backends/python2/settings.ui:38
-#: backends/R/settings.ui:24 backends/scilab/settings.ui:38
-msgid "Scripts to autorun"
-msgstr "Skripte za automatsko pokretanje"
 
 #: backends/python2/python2backend.cpp:92
 msgctxt "the url to the documentation Python 2"
@@ -1505,29 +1508,29 @@ msgstr ""
 "*.py|Python skriptna datoteka\n"
 "*.sage|Sage skriptna datoteka"
 
-#: backends/sage/sagesession.cpp:302
+#: backends/sage/sagesession.cpp:307
 msgid "The Sage process crashed while evaluating this expression"
 msgstr "Sage process se srušio dok je procjenjivao ovaj izraz"
 
-#: backends/sage/sagesession.cpp:306 backends/sage/sagesession.cpp:316
+#: backends/sage/sagesession.cpp:311 backends/sage/sagesession.cpp:321
 #: cantor.cpp:179 cantor.cpp:180 cantor_part.cpp:491 main.cpp:36
 #: worksheet.cpp:930 worksheet.cpp:938
 msgid "Cantor"
 msgstr "Cantor"
 
-#: backends/sage/sagesession.cpp:306
+#: backends/sage/sagesession.cpp:311
 msgid "The Sage process crashed"
 msgstr "Sage process se srušio"
 
-#: backends/sage/sagesession.cpp:312
+#: backends/sage/sagesession.cpp:317
 msgid "The Sage process exited while evaluating this expression"
 msgstr "Sage proces zatvoren tokom računanja izraza"
 
-#: backends/sage/sagesession.cpp:316
+#: backends/sage/sagesession.cpp:321
 msgid "The Sage process exited"
 msgstr "Sage proces izašao"
 
-#: backends/sage/sagesession.cpp:326
+#: backends/sage/sagesession.cpp:331
 msgid "Failed to start Sage"
 msgstr "Neuspjeli pokušaj pokretanja Sage"
 
