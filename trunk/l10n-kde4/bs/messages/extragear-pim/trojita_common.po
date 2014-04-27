@@ -958,7 +958,7 @@ msgctxt "Gui::MessageView|"
 msgid "Cannot Determine Recipients"
 msgstr ""
 
-#. Translators: use a text which is returned for e-mails older than one day but newer than one week (see Imap::Mailbox::PrettyMsgListModel::prettyFormatDate() for the string formats); the idea here is to have a text which is "wide enough" in a typical UI font. The English version uses "Mon" because of the M letter; you should use something similar.
+#. Translators: use a text which is returned for e-mails older than one day but newer than one week (see UiUtils::Formatting::prettyDate() for the string formats); the idea here is to have a text which is "wide enough" in a typical UI font. The English version uses "Mon" because of the M letter; you should use something similar.
 #: ../src/Gui/MsgListView.cpp:141
 msgctxt "Gui::MsgListView|"
 msgid "Mon 10"
@@ -2936,7 +2936,7 @@ msgid "Message is loading..."
 msgstr "Poruka se učitava..."
 
 #: ../src/Harmattan/qml/trojita/MessageListPage.qml:119
-#: ../src/Ubuntu/qml/trojita/MessageListPage.qml:162
+#: ../src/Ubuntu/qml/trojita/MessageListPage.qml:163
 msgctxt "MessageListPage|"
 msgid "Scrolling..."
 msgstr "Pomicanje..."
@@ -3158,7 +3158,7 @@ msgctxt "Imap::Mailbox::FullMessageCombiner|"
 msgid "Offline mode: uncached body data not available"
 msgstr "Offline režim rada: nekeširani podatak tijela nije dostupan"
 
-#: ../src/Imap/Model/ImapAccess.cpp:279
+#: ../src/Imap/Model/ImapAccess.cpp:278
 #, fuzzy, qt-format
 #| msgctxt "Gui::MainWindow|"
 #| msgid "Failed to create directory %1"
@@ -3166,7 +3166,7 @@ msgctxt "Imap::ImapAccess|"
 msgid "Failed to create directory %1"
 msgstr "Neuspjelo stvaranje direktorija %1"
 
-#: ../src/Imap/Model/ImapAccess.cpp:288
+#: ../src/Imap/Model/ImapAccess.cpp:287
 #, fuzzy, qt-format
 #| msgctxt "Gui::MainWindow|"
 #| msgid "Failed to set safe permissions on cache directory %1"
@@ -3267,7 +3267,7 @@ msgctxt "Imap::Mailbox::Model|"
 msgid "We aren't talking to an IMAP4 server"
 msgstr "Nismo povezani sa IMAP4 serverom"
 
-#: ../src/Imap/Model/Model.cpp:1476
+#: ../src/Imap/Model/Model.cpp:1475
 msgctxt "Imap::Mailbox::Model|"
 msgid "The connection is being killed for unspecified reason"
 msgstr ""
@@ -3343,24 +3343,6 @@ msgstr "Učitavanje..."
 msgctxt "Imap::Mailbox::PrettyMsgListModel|"
 msgid "(no subject)"
 msgstr "(Nema predmeta)"
-
-#. please do not translate the format specifier (you can change their order or the separator to follow the local conventions)
-#: ../src/Imap/Model/PrettyMsgListModel.cpp:222
-msgctxt "Imap::Mailbox::PrettyMsgListModel|"
-msgid "hh:mm"
-msgstr "hh:mm"
-
-#. please do not translate the format specifier (you can change their order or the separator to follow the local conventions)
-#: ../src/Imap/Model/PrettyMsgListModel.cpp:227
-msgctxt "Imap::Mailbox::PrettyMsgListModel|"
-msgid "ddd hh:mm"
-msgstr "ddd hh:mm"
-
-#. please do not translate the format specifier (you can change their order or the separator to follow the local conventions)
-#: ../src/Imap/Model/PrettyMsgListModel.cpp:232
-msgctxt "Imap::Mailbox::PrettyMsgListModel|"
-msgid "d MMM hh:mm"
-msgstr "d MMM hh:mm"
 
 #: ../src/Imap/Model/SQLCache.cpp:107
 msgctxt "Imap::Mailbox::SQLCache|"
@@ -3752,186 +3734,6 @@ msgid ""
 msgstr ""
 "Ova nit se odnosi na dodatnu poruku ali da poruka nije prisutna u označenom "
 "sandučiću ili je nestala iz trenutnog konteksta pretraživanja."
-
-#: ../src/Imap/Model/Utils.cpp:55
-msgctxt "Imap::Mailbox::PrettySize|"
-msgid "0"
-msgstr "0"
-
-#: ../src/Imap/Model/Utils.cpp:65
-#, qt-format
-msgctxt "Imap::Mailbox::PrettySize|"
-msgid "%1 bytes"
-msgstr "%1 bajta"
-
-#: ../src/Imap/Model/Utils.cpp:67
-msgctxt "Imap::Mailbox::PrettySize|"
-msgid "kB"
-msgstr "kB"
-
-#: ../src/Imap/Model/Utils.cpp:69
-msgctxt "Imap::Mailbox::PrettySize|"
-msgid "MB"
-msgstr "MB"
-
-#: ../src/Imap/Model/Utils.cpp:71
-msgctxt "Imap::Mailbox::PrettySize|"
-msgid "GB"
-msgstr "GB"
-
-#: ../src/Imap/Model/Utils.cpp:75
-msgctxt "Imap::Mailbox::PrettySize|"
-msgid "TB"
-msgstr "TB"
-
-#: ../src/Imap/Model/Utils.cpp:77
-#, qt-format
-msgctxt "Imap::Mailbox::PrettySize|"
-msgid "%1 %2"
-msgstr "%1 %2"
-
-#: ../src/Imap/Model/Utils.cpp:345
-#, qt-format
-msgctxt "Imap::Mailbox::CertificateUtils|"
-msgid ""
-"<li><b>CN</b>: %1,<br/>\n"
-"<b>Organization</b>: %2,<br/>\n"
-"<b>Serial</b>: %3,<br/>\n"
-"<b>SHA1</b>: %4,<br/>\n"
-"<b>MD5</b>: %5</li>"
-msgstr ""
-"<li><b>CN</b>: %1,<br/>\n"
-"<b>Organizacija</b>: %2,<br/>\n"
-"<b>Serijski</b>: %3,<br/>\n"
-"<b>SHA1</b>: %4,<br/>\n"
-"<b>MD5</b>: %5</li>"
-
-#: ../src/Imap/Model/Utils.cpp:349 ../src/Imap/Model/Utils.cpp:350
-msgctxt "Imap::Mailbox::CertificateUtils|"
-msgid ", "
-msgstr ", "
-
-#: ../src/Imap/Model/Utils.cpp:360
-msgctxt "Imap::Mailbox::CertificateUtils|"
-msgid "<p>The remote side doesn't have a certificate.</p>\n"
-msgstr "<p>Udaljena strana nema potvrdu.</p>\n"
-
-#: ../src/Imap/Model/Utils.cpp:361
-#, qt-format
-msgctxt "Imap::Mailbox::CertificateUtils|"
-msgid ""
-"<p>This is the certificate chain of the connection:</p>\n"
-"<ul>%1</ul>\n"
-msgstr ""
-"<p>Ovo je lanac potvrda o konekciji:</p>\n"
-"<ul>%1</ul>\n"
-
-#: ../src/Imap/Model/Utils.cpp:361 ../src/Imap/Model/Utils.cpp:376
-msgctxt "Imap::Mailbox::CertificateUtils|"
-msgid "\n"
-msgstr "\n"
-
-#: ../src/Imap/Model/Utils.cpp:369 ../src/Imap/Model/Utils.cpp:371
-#, qt-format
-msgctxt "Imap::Mailbox::CertificateUtils|"
-msgid "<li>%1</li>"
-msgstr "<li>%1</li>"
-
-#: ../src/Imap/Model/Utils.cpp:376
-#, qt-format
-msgctxt "Imap::Mailbox::CertificateUtils|"
-msgid ""
-"<p>The connection triggered the following SSL errors:</p>\n"
-"<ul>%1</ul>\n"
-msgstr ""
-"<p>Konekcija je pokrenula sljedeće SSL greške:</p>\n"
-"<ul>%1</ul>\n"
-
-#: ../src/Imap/Model/Utils.cpp:387
-msgctxt "Imap::Mailbox::CertificateUtils|"
-msgid "Different SSL certificate"
-msgstr "Drugačija SSL potvrda"
-
-#: ../src/Imap/Model/Utils.cpp:388
-#, qt-format
-msgctxt "Imap::Mailbox::CertificateUtils|"
-msgid ""
-"<p>The public key of the SSL certificate has changed. This should only "
-"happen when there was a security incident on the remote server. Your system "
-"configuration is set to accept such certificates anyway.</p>\n"
-"%1\n"
-"<p>Would you like to connect and remember the new certificate?</p>"
-msgstr ""
-"<p>Javni ključ SSL potvrde je promijenjen. Ovo se može desiti jedino kada "
-"postoji sigurnosna nesreća na udaljenom serveru. Vaša konfiguracija sistema "
-"je postavljena na prihvatanje ovakvih potvrda svakako.</p>\n"
-"%1\n"
-"<p>Želite li se povezati i zapamtiti novu potvrdu</p>"
-
-#: ../src/Imap/Model/Utils.cpp:395
-msgctxt "Imap::Mailbox::CertificateUtils|"
-msgid "SSL certificate looks fishy"
-msgstr "SSL potvrda izgleda sumnjivo"
-
-#: ../src/Imap/Model/Utils.cpp:396
-#, qt-format
-msgctxt "Imap::Mailbox::CertificateUtils|"
-msgid ""
-"<p>The public key of the SSL certificate of the IMAP server has changed "
-"since the last time and your system doesn't believe that the new certificate "
-"is genuine.</p>\n"
-"%1\n"
-"%2\n"
-"<p>Would you like to connect anyway and remember the new certificate?</p>"
-msgstr ""
-"<p>Javni ključ SSL potvrde za IMAP server je promijenjena od zadnjeg puta i "
-"Vaš sistem ne vjeruje da je potvrda originalna.</p>\n"
-"%1\n"
-"%2\n"
-"<p>Želite li se povezati svakako i zapamtiti novu potvrdu?</p>"
-
-#: ../src/Imap/Model/Utils.cpp:405 ../src/Imap/Model/Utils.cpp:412
-msgctxt "Imap::Mailbox::CertificateUtils|"
-msgid "Accept SSL connection?"
-msgstr "Prihvatite SSL konekciju?"
-
-#: ../src/Imap/Model/Utils.cpp:406
-#, qt-format
-msgctxt "Imap::Mailbox::CertificateUtils|"
-msgid ""
-"<p>This is the first time you're connecting to this IMAP server; the "
-"certificate is trusted by this system.</p>\n"
-"%1\n"
-"%2\n"
-"<p>Would you like to connect and remember this certificate's public key for "
-"the next time?</p>"
-msgstr ""
-"<p>Ovo je prvi put da se spajate na IMAP server; potvrda je sigurna od "
-"strane ovog sistema.</p>\n"
-"%1\n"
-"%2\n"
-"<p>Želite li da se spojite i zapamtite ovaj javni ključ potvrde za sljedeći "
-"put?</p>"
-
-#: ../src/Imap/Model/Utils.cpp:413
-#, qt-format
-msgctxt "Imap::Mailbox::CertificateUtils|"
-msgid ""
-"<p>This is the first time you're connecting to this IMAP server and the "
-"server certificate failed validation test.</p>\n"
-"%1\n"
-"\n"
-"%2\n"
-"<p>Would you like to connect and remember this certificate's public key for "
-"the next time?</p>"
-msgstr ""
-"<p>Ovo je prvi put da se spajate na IMAP server i potvrda servera nije "
-"prošla test valjanosti.</p>\n"
-"%1\n"
-"\n"
-"%2\n"
-"<p>Želite li se spojiti i zapamtiti ovaj javni ključ potvrde za sljedeći put?"
-"</p>"
 
 #: ../src/Imap/Network/FileDownloadManager.cpp:50
 #, qt-format
@@ -4537,7 +4339,7 @@ msgctxt "main|"
 msgid "DO NOT USE: autopilot sets this automatically"
 msgstr ""
 
-#: ../src/Ubuntu/main.cpp:119
+#: ../src/Ubuntu/main.cpp:120
 #, fuzzy
 #| msgctxt "Gui::ShortcutConfigDialog|"
 #| msgid "Trojitá"
@@ -4690,7 +4492,7 @@ msgctxt "main|"
 msgid "Please provide IMAP password for user <b>%1</b> on <b>%2</b>:"
 msgstr "<p>Molimo navedite IMAP šifru za korisnika <b>%1</b> na <b>%2</b>:</p>"
 
-#: ../src/Ubuntu/qml/trojita/MessageListPage.qml:33
+#: ../src/Ubuntu/qml/trojita/MessageListPage.qml:34
 #, fuzzy
 #| msgctxt "Composer::Submission|"
 #| msgid "Message sent"
@@ -4698,7 +4500,7 @@ msgctxt "MessageListPage|"
 msgid "Messages"
 msgstr "Poruka poslana"
 
-#: ../src/Ubuntu/qml/trojita/MessageListPage.qml:111
+#: ../src/Ubuntu/qml/trojita/MessageListPage.qml:112
 #, fuzzy
 #| msgctxt "MessageListPage|"
 #| msgid "(No subject)"
@@ -4746,6 +4548,299 @@ msgstr "Poništi"
 msgctxt "SettingsToolbar|"
 msgid "Save"
 msgstr "Snimite kao"
+
+#: ../src/UiUtils/Formatting.cpp:38
+#, fuzzy
+#| msgctxt "Imap::Mailbox::PrettySize|"
+#| msgid "0"
+msgctxt "UiUtils::Formatting|"
+msgid "0"
+msgstr "0"
+
+#: ../src/UiUtils/Formatting.cpp:48
+#, fuzzy, qt-format
+#| msgctxt "Imap::Mailbox::PrettySize|"
+#| msgid "%1 bytes"
+msgctxt "UiUtils::Formatting|"
+msgid "%1 bytes"
+msgstr "%1 bajta"
+
+#: ../src/UiUtils/Formatting.cpp:50
+#, fuzzy
+#| msgctxt "Imap::Mailbox::PrettySize|"
+#| msgid "kB"
+msgctxt "UiUtils::Formatting|"
+msgid "kB"
+msgstr "kB"
+
+#: ../src/UiUtils/Formatting.cpp:52
+#, fuzzy
+#| msgctxt "Imap::Mailbox::PrettySize|"
+#| msgid "MB"
+msgctxt "UiUtils::Formatting|"
+msgid "MB"
+msgstr "MB"
+
+#: ../src/UiUtils/Formatting.cpp:54
+#, fuzzy
+#| msgctxt "Imap::Mailbox::PrettySize|"
+#| msgid "GB"
+msgctxt "UiUtils::Formatting|"
+msgid "GB"
+msgstr "GB"
+
+#: ../src/UiUtils/Formatting.cpp:57
+#, fuzzy
+#| msgctxt "Imap::Mailbox::PrettySize|"
+#| msgid "TB"
+msgctxt "UiUtils::Formatting|"
+msgid "TB"
+msgstr "TB"
+
+#: ../src/UiUtils/Formatting.cpp:59
+#, fuzzy, qt-format
+#| msgctxt "Imap::Mailbox::PrettySize|"
+#| msgid "%1 %2"
+msgctxt "UiUtils::Formatting|"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#. please do not translate the format specifier (you can change their order or the separator to follow the local conventions)
+#: ../src/UiUtils/Formatting.cpp:80
+#, fuzzy
+#| msgctxt "Imap::Mailbox::PrettyMsgListModel|"
+#| msgid "hh:mm"
+msgctxt "UiUtils::Formatting|"
+msgid "hh:mm"
+msgstr "hh:mm"
+
+#. please do not translate the format specifier (you can change their order or the separator to follow the local conventions)
+#: ../src/UiUtils/Formatting.cpp:85
+#, fuzzy
+#| msgctxt "Imap::Mailbox::PrettyMsgListModel|"
+#| msgid "ddd hh:mm"
+msgctxt "UiUtils::Formatting|"
+msgid "ddd hh:mm"
+msgstr "ddd hh:mm"
+
+#. please do not translate the format specifier (you can change their order or the separator to follow the local conventions)
+#: ../src/UiUtils/Formatting.cpp:90
+#, fuzzy
+#| msgctxt "Imap::Mailbox::PrettyMsgListModel|"
+#| msgid "d MMM hh:mm"
+msgctxt "UiUtils::Formatting|"
+msgid "d MMM hh:mm"
+msgstr "d MMM hh:mm"
+
+#: ../src/UiUtils/Formatting.cpp:121
+#, fuzzy, qt-format
+#| msgctxt "Imap::Mailbox::CertificateUtils|"
+#| msgid ""
+#| "<li><b>CN</b>: %1,<br/>\n"
+#| "<b>Organization</b>: %2,<br/>\n"
+#| "<b>Serial</b>: %3,<br/>\n"
+#| "<b>SHA1</b>: %4,<br/>\n"
+#| "<b>MD5</b>: %5</li>"
+msgctxt "UiUtils::Formatting|"
+msgid ""
+"<li><b>CN</b>: %1,<br/>\n"
+"<b>Organization</b>: %2,<br/>\n"
+"<b>Serial</b>: %3,<br/>\n"
+"<b>SHA1</b>: %4,<br/>\n"
+"<b>MD5</b>: %5</li>"
+msgstr ""
+"<li><b>CN</b>: %1,<br/>\n"
+"<b>Organizacija</b>: %2,<br/>\n"
+"<b>Serijski</b>: %3,<br/>\n"
+"<b>SHA1</b>: %4,<br/>\n"
+"<b>MD5</b>: %5</li>"
+
+#: ../src/UiUtils/Formatting.cpp:125 ../src/UiUtils/Formatting.cpp:126
+#, fuzzy
+#| msgctxt "Gui::EnvelopeView|"
+#| msgid ", "
+msgctxt "UiUtils::Formatting|"
+msgid ", "
+msgstr ", "
+
+#: ../src/UiUtils/Formatting.cpp:136
+#, fuzzy
+#| msgctxt "Imap::Mailbox::CertificateUtils|"
+#| msgid "<p>The remote side doesn't have a certificate.</p>\n"
+msgctxt "UiUtils::Formatting|"
+msgid "<p>The remote side doesn't have a certificate.</p>\n"
+msgstr "<p>Udaljena strana nema potvrdu.</p>\n"
+
+#: ../src/UiUtils/Formatting.cpp:137
+#, fuzzy, qt-format
+#| msgctxt "Imap::Mailbox::CertificateUtils|"
+#| msgid ""
+#| "<p>This is the certificate chain of the connection:</p>\n"
+#| "<ul>%1</ul>\n"
+msgctxt "UiUtils::Formatting|"
+msgid ""
+"<p>This is the certificate chain of the connection:</p>\n"
+"<ul>%1</ul>\n"
+msgstr ""
+"<p>Ovo je lanac potvrda o konekciji:</p>\n"
+"<ul>%1</ul>\n"
+
+#: ../src/UiUtils/Formatting.cpp:137 ../src/UiUtils/Formatting.cpp:152
+#, fuzzy
+#| msgctxt "Imap::Mailbox::CertificateUtils|"
+#| msgid "\n"
+msgctxt "UiUtils::Formatting|"
+msgid "\n"
+msgstr "\n"
+
+#: ../src/UiUtils/Formatting.cpp:145 ../src/UiUtils/Formatting.cpp:147
+#, fuzzy, qt-format
+#| msgctxt "Imap::Mailbox::CertificateUtils|"
+#| msgid "<li>%1</li>"
+msgctxt "UiUtils::Formatting|"
+msgid "<li>%1</li>"
+msgstr "<li>%1</li>"
+
+#: ../src/UiUtils/Formatting.cpp:152
+#, fuzzy, qt-format
+#| msgctxt "Imap::Mailbox::CertificateUtils|"
+#| msgid ""
+#| "<p>The connection triggered the following SSL errors:</p>\n"
+#| "<ul>%1</ul>\n"
+msgctxt "UiUtils::Formatting|"
+msgid ""
+"<p>The connection triggered the following SSL errors:</p>\n"
+"<ul>%1</ul>\n"
+msgstr ""
+"<p>Konekcija je pokrenula sljedeće SSL greške:</p>\n"
+"<ul>%1</ul>\n"
+
+#: ../src/UiUtils/Formatting.cpp:163
+#, fuzzy
+#| msgctxt "Imap::Mailbox::CertificateUtils|"
+#| msgid "Different SSL certificate"
+msgctxt "UiUtils::Formatting|"
+msgid "Different SSL certificate"
+msgstr "Drugačija SSL potvrda"
+
+#: ../src/UiUtils/Formatting.cpp:164
+#, fuzzy, qt-format
+#| msgctxt "Imap::Mailbox::CertificateUtils|"
+#| msgid ""
+#| "<p>The public key of the SSL certificate has changed. This should only "
+#| "happen when there was a security incident on the remote server. Your "
+#| "system configuration is set to accept such certificates anyway.</p>\n"
+#| "%1\n"
+#| "<p>Would you like to connect and remember the new certificate?</p>"
+msgctxt "UiUtils::Formatting|"
+msgid ""
+"<p>The public key of the SSL certificate has changed. This should only "
+"happen when there was a security incident on the remote server. Your system "
+"configuration is set to accept such certificates anyway.</p>\n"
+"%1\n"
+"<p>Would you like to connect and remember the new certificate?</p>"
+msgstr ""
+"<p>Javni ključ SSL potvrde je promijenjen. Ovo se može desiti jedino kada "
+"postoji sigurnosna nesreća na udaljenom serveru. Vaša konfiguracija sistema "
+"je postavljena na prihvatanje ovakvih potvrda svakako.</p>\n"
+"%1\n"
+"<p>Želite li se povezati i zapamtiti novu potvrdu</p>"
+
+#: ../src/UiUtils/Formatting.cpp:171
+#, fuzzy
+#| msgctxt "Imap::Mailbox::CertificateUtils|"
+#| msgid "SSL certificate looks fishy"
+msgctxt "UiUtils::Formatting|"
+msgid "SSL certificate looks fishy"
+msgstr "SSL potvrda izgleda sumnjivo"
+
+#: ../src/UiUtils/Formatting.cpp:172
+#, fuzzy, qt-format
+#| msgctxt "Imap::Mailbox::CertificateUtils|"
+#| msgid ""
+#| "<p>The public key of the SSL certificate of the IMAP server has changed "
+#| "since the last time and your system doesn't believe that the new "
+#| "certificate is genuine.</p>\n"
+#| "%1\n"
+#| "%2\n"
+#| "<p>Would you like to connect anyway and remember the new certificate?</p>"
+msgctxt "UiUtils::Formatting|"
+msgid ""
+"<p>The public key of the SSL certificate of the IMAP server has changed "
+"since the last time and your system doesn't believe that the new certificate "
+"is genuine.</p>\n"
+"%1\n"
+"%2\n"
+"<p>Would you like to connect anyway and remember the new certificate?</p>"
+msgstr ""
+"<p>Javni ključ SSL potvrde za IMAP server je promijenjena od zadnjeg puta i "
+"Vaš sistem ne vjeruje da je potvrda originalna.</p>\n"
+"%1\n"
+"%2\n"
+"<p>Želite li se povezati svakako i zapamtiti novu potvrdu?</p>"
+
+#: ../src/UiUtils/Formatting.cpp:181 ../src/UiUtils/Formatting.cpp:188
+#, fuzzy
+#| msgctxt "Imap::Mailbox::CertificateUtils|"
+#| msgid "Accept SSL connection?"
+msgctxt "UiUtils::Formatting|"
+msgid "Accept SSL connection?"
+msgstr "Prihvatite SSL konekciju?"
+
+#: ../src/UiUtils/Formatting.cpp:182
+#, fuzzy, qt-format
+#| msgctxt "Imap::Mailbox::CertificateUtils|"
+#| msgid ""
+#| "<p>This is the first time you're connecting to this IMAP server; the "
+#| "certificate is trusted by this system.</p>\n"
+#| "%1\n"
+#| "%2\n"
+#| "<p>Would you like to connect and remember this certificate's public key "
+#| "for the next time?</p>"
+msgctxt "UiUtils::Formatting|"
+msgid ""
+"<p>This is the first time you're connecting to this IMAP server; the "
+"certificate is trusted by this system.</p>\n"
+"%1\n"
+"%2\n"
+"<p>Would you like to connect and remember this certificate's public key for "
+"the next time?</p>"
+msgstr ""
+"<p>Ovo je prvi put da se spajate na IMAP server; potvrda je sigurna od "
+"strane ovog sistema.</p>\n"
+"%1\n"
+"%2\n"
+"<p>Želite li da se spojite i zapamtite ovaj javni ključ potvrde za sljedeći "
+"put?</p>"
+
+#: ../src/UiUtils/Formatting.cpp:189
+#, fuzzy, qt-format
+#| msgctxt "Imap::Mailbox::CertificateUtils|"
+#| msgid ""
+#| "<p>This is the first time you're connecting to this IMAP server and the "
+#| "server certificate failed validation test.</p>\n"
+#| "%1\n"
+#| "\n"
+#| "%2\n"
+#| "<p>Would you like to connect and remember this certificate's public key "
+#| "for the next time?</p>"
+msgctxt "UiUtils::Formatting|"
+msgid ""
+"<p>This is the first time you're connecting to this IMAP server and the "
+"server certificate failed validation test.</p>\n"
+"%1\n"
+"\n"
+"%2\n"
+"<p>Would you like to connect and remember this certificate's public key for "
+"the next time?</p>"
+msgstr ""
+"<p>Ovo je prvi put da se spajate na IMAP server i potvrda servera nije "
+"prošla test valjanosti.</p>\n"
+"%1\n"
+"\n"
+"%2\n"
+"<p>Želite li se spojiti i zapamtiti ovaj javni ključ potvrde za sljedeći put?"
+"</p>"
 
 #: ../src/UiUtils/PasswordWatcher.cpp:78
 #, qt-format
@@ -4800,6 +4895,10 @@ msgstr ""
 msgctxt "XtConnect::XtConnect|"
 msgid "Database Password: "
 msgstr "Šifra baze podataka: "
+
+#~ msgctxt "Imap::Mailbox::CertificateUtils|"
+#~ msgid ", "
+#~ msgstr ", "
 
 #~ msgctxt "OutgoingPage|"
 #~ msgid ""
