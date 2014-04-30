@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-04-11 06:54+0000\n"
+"POT-Creation-Date: 2014-04-30 06:10+0000\n"
 "PO-Revision-Date: 2014-02-10 00:04+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -674,9 +674,13 @@ msgstr "M_05"
 msgid "M_06"
 msgstr "M_06"
 
-#: i18ndata:129 i18ndata:130
+#: i18ndata:129
 msgid "M_07"
 msgstr "M_07"
+
+#: i18ndata:130
+msgid "M_08"
+msgstr ""
 
 #: i18ndata:131
 msgid "M_09"
@@ -1201,7 +1205,7 @@ msgstr "Konvertuj prostor boja slike"
 msgid "Convert Projection Color Space"
 msgstr "Konvertuj prostor boja projekcije"
 
-#: image/kis_image.cc:918 ui/kis_layer_manager.cc:710
+#: image/kis_image.cc:918 ui/kis_layer_manager.cc:704
 msgid "Flatten Image"
 msgstr "Spljošti sliku"
 
@@ -2563,7 +2567,7 @@ msgid "&Select Opaque"
 msgstr "&Izaberi neprovidnost"
 
 #: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:458
-#: ui/kis_layer_manager.cc:285
+#: ui/kis_layer_manager.cc:284
 msgid "&Merge with Layer Below"
 msgstr "&Stopi sa slojem ispod"
 
@@ -2844,7 +2848,7 @@ msgstr "50%"
 msgid "25%"
 msgstr "25%"
 
-#: plugins/extensions/dockers/imagedocker/imagedocker_dock.cpp:163
+#: plugins/extensions/dockers/imagedocker/imagedocker_dock.cpp:177
 msgid "Reference Images"
 msgstr "Referentne slike"
 
@@ -6215,7 +6219,9 @@ msgid "Deform Mode"
 msgstr "Odabir Deformacije"
 
 #. i18n: ectx: property (text), widget (QRadioButton, growBtn)
+#. i18n: ectx: property (text), widget (QCheckBox, boolGrow)
 #: plugins/paintops/deform/wdgdeformoptions.ui:44
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:108
 msgid "Grow"
 msgstr "Izrasti"
 
@@ -8573,19 +8579,27 @@ msgid "Move a layer"
 msgstr "Premjesti sloj"
 
 #: plugins/tools/defaulttools/kis_tool_multihand.cpp:223
-msgid "Show Axis"
+#, fuzzy
+#| msgid "Show Axis"
+msgid "Show Axes"
 msgstr "Prikaži ose"
 
 #: plugins/tools/defaulttools/kis_tool_multihand.cpp:227
-msgid "Axis point"
+#, fuzzy
+#| msgid "Axis point"
+msgid "Axes point"
 msgstr "Tačka osi"
 
 #: plugins/tools/defaulttools/kis_tool_multihand.cpp:233
-msgid "Set axis angle (degrees)"
+#, fuzzy
+#| msgid "Set axis angle (degrees)"
+msgid "Set axes angle (degrees)"
 msgstr "Postavi ugao osa u stepenima."
 
 #: plugins/tools/defaulttools/kis_tool_multihand.cpp:238
-msgid "Axis Angle:"
+#, fuzzy
+#| msgid "Axis Angle:"
+msgid "Axes Angle:"
 msgstr "Ugao osa:"
 
 #: plugins/tools/defaulttools/kis_tool_multihand.cpp:241
@@ -8867,23 +8881,24 @@ msgstr "Vertikalna pozicija"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, boolCenter)
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:95
-msgid "resize keeping center fixed"
+#, fuzzy
+#| msgid "resize keeping center fixed"
+msgid "Resize keeping center fixed"
 msgstr "promijeni veličinu čuvajući centar fiksnim"
 
 #. i18n: ectx: property (text), widget (QCheckBox, boolCenter)
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:98
-msgid "center"
+#, fuzzy
+#| msgid "center"
+msgid "Center"
 msgstr "centriraj"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, boolGrow)
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:105
-msgid "allow growing the image by dragging outside bounds of the image"
+#, fuzzy
+#| msgid "allow growing the image by dragging outside bounds of the image"
+msgid "Allow growing the image by dragging outside bounds of the image"
 msgstr "dopusti rast slike prevlačenjem vanjskih granica slike"
-
-#. i18n: ectx: property (text), widget (QCheckBox, boolGrow)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:108
-msgid "grow"
-msgstr "Izrasti"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, boolWidth)
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:148
@@ -10599,17 +10614,17 @@ msgstr "Gest"
 msgid "Unknown Input"
 msgstr "Nepoznat ulaz"
 
-#: ui/input/config/kis_action_shortcuts_model.cpp:194
+#: ui/input/config/kis_action_shortcuts_model.cpp:186
 msgctxt "Type of shortcut"
 msgid "Type"
 msgstr "Tip"
 
-#: ui/input/config/kis_action_shortcuts_model.cpp:197
+#: ui/input/config/kis_action_shortcuts_model.cpp:189
 msgctxt "Input for shortcut"
 msgid "Input"
 msgstr "Ulaz"
 
-#: ui/input/config/kis_action_shortcuts_model.cpp:200
+#: ui/input/config/kis_action_shortcuts_model.cpp:192
 msgctxt "Action to trigger with shortcut"
 msgid "Action"
 msgstr "Akcija"
@@ -10665,8 +10680,11 @@ msgstr "Ništa"
 
 #: ui/input/config/kis_input_button.cpp:140
 #: ui/input/config/kis_input_button.cpp:202
+#, fuzzy
+#| msgctxt "Waiting for user input"
+#| msgid "Input ..."
 msgctxt "Waiting for user input"
-msgid "Input ..."
+msgid "Input..."
 msgstr "Ulaz..."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -10790,7 +10808,9 @@ msgstr ""
 "\" alata, na primjer veličina četke za alat četku."
 
 #: ui/input/kis_input_manager.cpp:490
-msgid "Set Mirror Axis"
+#, fuzzy
+#| msgid "Set Mirror Axis"
+msgid "Set Mirror Axes"
 msgstr "Postavi osu ogledala."
 
 #: ui/input/kis_pan_action.cpp:50
@@ -10861,81 +10881,123 @@ msgstr "Odaberi sloj ispod pozicije kursora"
 msgid "Toggle Select Layer Mode"
 msgstr "Prebaci na način biranja sloja"
 
-#: ui/input/kis_shortcut_configuration.cpp:238
+#: ui/input/kis_shortcut_configuration.cpp:234
+msgctxt "Separator in the list of mouse buttons for shortcut"
+msgid " + "
+msgstr ""
+
+#: ui/input/kis_shortcut_configuration.cpp:239
 msgctxt "Left Mouse Button"
 msgid "Left"
 msgstr "Lijeva"
 
-#: ui/input/kis_shortcut_configuration.cpp:247
+#: ui/input/kis_shortcut_configuration.cpp:248
 msgctxt "Right Mouse Button"
 msgid "Right"
 msgstr "Desna"
 
-#: ui/input/kis_shortcut_configuration.cpp:255
+#: ui/input/kis_shortcut_configuration.cpp:256
 msgctxt "Middle Mouse Button"
 msgid "Middle"
 msgstr "Srednja"
 
-#: ui/input/kis_shortcut_configuration.cpp:263
+#: ui/input/kis_shortcut_configuration.cpp:264
 msgctxt "Mouse Back Button"
 msgid "Back"
 msgstr "Nazad"
 
-#: ui/input/kis_shortcut_configuration.cpp:271
+#: ui/input/kis_shortcut_configuration.cpp:272
 msgctxt "Mouse Forward Button"
 msgid "Forward"
 msgstr "Naprijed"
 
-#: ui/input/kis_shortcut_configuration.cpp:275
-#: ui/input/kis_shortcut_configuration.cpp:320
-#: ui/input/kis_shortcut_configuration.cpp:346
-msgctxt "No input"
+#: ui/input/kis_shortcut_configuration.cpp:276
+#, fuzzy
+#| msgid "None"
+msgctxt "No mouse buttons for shortcut"
 msgid "None"
 msgstr "Ništa"
 
-#: ui/input/kis_shortcut_configuration.cpp:279
-msgctxt "Mouse Buttons"
-msgid "Button"
-msgid_plural "Buttons"
+#: ui/input/kis_shortcut_configuration.cpp:282
+#, fuzzy, kde-format
+#| msgctxt "Mouse Buttons"
+#| msgid "Button"
+#| msgid_plural "Buttons"
+msgctxt ""
+"%1 = List of mouse buttons for shortcut. Plural form is chosen upon the "
+"number of buttons in that list."
+msgid "%1 Button"
+msgid_plural "%1 Buttons"
 msgstr[0] "Dugme"
 msgstr[1] "Dugmad"
 msgstr[2] "Dugmad"
 
-#: ui/input/kis_shortcut_configuration.cpp:296
+#: ui/input/kis_shortcut_configuration.cpp:294
+msgctxt "Separator in the list of keys for shortcut"
+msgid " + "
+msgstr ""
+
+#: ui/input/kis_shortcut_configuration.cpp:299
 msgctxt "Ctrl key"
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: ui/input/kis_shortcut_configuration.cpp:300
+#: ui/input/kis_shortcut_configuration.cpp:303
 msgctxt "Meta key"
 msgid "Meta"
 msgstr "Meta"
 
-#: ui/input/kis_shortcut_configuration.cpp:304
+#: ui/input/kis_shortcut_configuration.cpp:307
 msgctxt "Alt key"
 msgid "Alt"
 msgstr "Alt"
 
-#: ui/input/kis_shortcut_configuration.cpp:308
+#: ui/input/kis_shortcut_configuration.cpp:311
 msgctxt "Shift key"
 msgid "Shift"
 msgstr "Shift"
 
-#: ui/input/kis_shortcut_configuration.cpp:330
+#: ui/input/kis_shortcut_configuration.cpp:323
+#, fuzzy
+#| msgid "None"
+msgctxt "No keys for shortcut"
+msgid "None"
+msgstr "Ništa"
+
+#: ui/input/kis_shortcut_configuration.cpp:333
 msgid "Mouse Wheel Up"
 msgstr "Točkić miša gore"
 
-#: ui/input/kis_shortcut_configuration.cpp:334
+#: ui/input/kis_shortcut_configuration.cpp:337
 msgid "Mouse Wheel Down"
 msgstr "Točkić miša dolje"
 
-#: ui/input/kis_shortcut_configuration.cpp:338
+#: ui/input/kis_shortcut_configuration.cpp:341
 msgid "Mouse Wheel Left"
 msgstr "Točkić miša lijevo"
 
-#: ui/input/kis_shortcut_configuration.cpp:342
+#: ui/input/kis_shortcut_configuration.cpp:345
 msgid "Mouse Wheel Right"
 msgstr "Točkić miša desno"
+
+#: ui/input/kis_shortcut_configuration.cpp:349
+#, fuzzy
+#| msgid "None"
+msgctxt "No mouse wheel buttons for shortcut"
+msgid "None"
+msgstr "Ništa"
+
+#: ui/input/kis_shortcut_configuration.cpp:361
+#, kde-format
+msgctxt "%1 = modifier keys in shortcut; %2 = mouse buttons in shortcut"
+msgid "%1 + %2"
+msgstr ""
+
+#: ui/input/kis_shortcut_configuration.cpp:377
+#, kde-format
+msgctxt "%1 = modifier keys in shortcut; %2 = mouse wheel buttons in shortcut"
+msgid "%1 + %2"
+msgstr ""
 
 #: ui/input/kis_show_palette_action.cpp:33
 msgid "Show Popup Palette"
@@ -11342,71 +11404,71 @@ msgstr "Svojstva..."
 msgid "Import Image"
 msgstr "Uvezi sliku"
 
-#: ui/kis_layer_manager.cc:280
+#: ui/kis_layer_manager.cc:279
 msgid "&Flatten image"
 msgstr "S&pljošti sliku"
 
-#: ui/kis_layer_manager.cc:290
+#: ui/kis_layer_manager.cc:289
 msgid "&Flatten Layer"
 msgstr "&Izravnaj sloj"
 
-#: ui/kis_layer_manager.cc:294 ui/kis_layer_manager.cc:779
+#: ui/kis_layer_manager.cc:293 ui/kis_layer_manager.cc:773
 msgid "Rasterize Layer"
 msgstr "Rasteriziraj sloj"
 
-#: ui/kis_layer_manager.cc:300
+#: ui/kis_layer_manager.cc:299
 msgid "Save Group Layers..."
 msgstr "Snimi grupne slojeve..."
 
-#: ui/kis_layer_manager.cc:304
+#: ui/kis_layer_manager.cc:303
 msgid "Size Canvas to Size of Current Layer"
 msgstr "Razvuci platno na veličinu trenutnog sloja"
 
-#: ui/kis_layer_manager.cc:359
+#: ui/kis_layer_manager.cc:353
 msgid "Filter Layer Properties"
 msgstr "Svojstva filterskog sloja"
 
-#: ui/kis_layer_manager.cc:404
+#: ui/kis_layer_manager.cc:398
 msgid "Generator Layer Properties"
 msgstr "Svojstva generatorskog sloja"
 
-#: ui/kis_layer_manager.cc:485
+#: ui/kis_layer_manager.cc:479
 msgid "Convert to a Paint Layer"
 msgstr "Pretvori u Sloj boje"
 
-#: ui/kis_layer_manager.cc:564
+#: ui/kis_layer_manager.cc:558
 msgid "New Filter Layer"
 msgstr "Novi filterski sloj"
 
-#: ui/kis_layer_manager.cc:623
+#: ui/kis_layer_manager.cc:617
 msgid "Could not add layer to image."
 msgstr "Nisam mogao da dodam sloj slici."
 
-#: ui/kis_layer_manager.cc:623
+#: ui/kis_layer_manager.cc:617
 msgid "Layer Error"
 msgstr "Greška u sloju"
 
-#: ui/kis_layer_manager.cc:709
+#: ui/kis_layer_manager.cc:703
 msgid "The image contains hidden layers that will be lost."
 msgstr "Slika sadrži skrivene slojeve, koji će biti izgubljeni."
 
-#: ui/kis_layer_manager.cc:711
+#: ui/kis_layer_manager.cc:705
 msgid "&Flatten Image"
 msgstr "&Spljošti sliku"
 
-#: ui/kis_layer_manager.cc:815
+#: ui/kis_layer_manager.cc:809
 msgid "Convert Invisible Groups"
 msgstr "Prevedi nevidljive grupe"
 
-#: ui/kis_layer_manager.cc:818
+#: ui/kis_layer_manager.cc:812
 msgid "Export Only Toplevel Groups"
 msgstr "Izvezi samo grupe na najvišem nivou"
 
-#: ui/kis_layer_manager.cc:876
+#: ui/kis_layer_manager.cc:870
 msgid "No file name specified."
 msgstr "Nije navedeno ime."
 
-#: ui/kis_layer_manager.cc:876
+#: ui/kis_layer_manager.cc:870
 msgid "No file specified"
 msgstr "Nijedna datoteka nije navedena"
 
@@ -11538,23 +11600,23 @@ msgstr "Pretvori u Odabir maske"
 msgid "Remove Last Layer"
 msgstr "Ukloni posljednji sloj"
 
-#: ui/kis_node_manager.cpp:666
+#: ui/kis_node_manager.cpp:669
 msgid "Mirror Layer X"
 msgstr "Sloj X u ogledalu"
 
-#: ui/kis_node_manager.cpp:668
+#: ui/kis_node_manager.cpp:671
 msgid "Mirror Mask X"
 msgstr "Ogledalo maske X"
 
-#: ui/kis_node_manager.cpp:679
+#: ui/kis_node_manager.cpp:682
 msgid "Mirror Layer Y"
 msgstr "Sloj Y u ogledalu"
 
-#: ui/kis_node_manager.cpp:681
+#: ui/kis_node_manager.cpp:684
 msgid "Mirror Mask Y"
 msgstr "Ogledaj masku Y"
 
-#: ui/kis_node_manager.cpp:802
+#: ui/kis_node_manager.cpp:805
 msgid "Export Node"
 msgstr "izvoz čvora"
 
@@ -12124,6 +12186,13 @@ msgstr ""
 #| msgid "Close"
 msgid "&Close"
 msgstr "Zatvori"
+
+#~ msgid "grow"
+#~ msgstr "Izrasti"
+
+#~ msgctxt "No input"
+#~ msgid "None"
+#~ msgstr "Ništa"
 
 #~ msgid "     Cyan"
 #~ msgstr "     Cijan"
