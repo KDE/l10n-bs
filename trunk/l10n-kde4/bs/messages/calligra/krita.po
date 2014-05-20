@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-05-19 01:27+0000\n"
+"POT-Creation-Date: 2014-05-20 01:29+0000\n"
 "PO-Revision-Date: 2014-02-10 00:04+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1545,11 +1545,6 @@ msgstr "HR  Zidni papir"
 
 #: image/brushengine/kis_paintop_factory.cpp:66
 msgctxt "Category of brush engines"
-msgid "Experimental"
-msgstr "Eksperimentalno"
-
-#: image/brushengine/kis_paintop_factory.cpp:71
-msgctxt "Category of brush engines"
 msgid "Stable"
 msgstr "Stabilno"
 
@@ -1688,7 +1683,7 @@ msgid "Generator"
 msgstr "Generator"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: image/kis_adjustment_layer.cc:127
+#: image/kis_adjustment_layer.cc:127 plugins/paintops/filterop/filterop.cpp:45
 #: plugins/paintops/libpaintop/kis_filter_option.cpp:50
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:844
 #: ui/dialogs/kis_dlg_filter.cpp:105
@@ -1707,13 +1702,20 @@ msgstr "Interna greška programa Krita"
 msgid "Default"
 msgstr "Podrazumijevano"
 
+#. i18n: ectx: property (text), item, widget (QComboBox, editSharpness)
+#. i18n: ectx: property (text), item, widget (QComboBox, editContrast)
 #: image/kis_base_mask_generator.h:33
-msgid "Soft brush"
-msgstr "Mehka četka"
+#: plugins/extensions/metadataeditor/editors/exif.ui:860
+#: plugins/extensions/metadataeditor/editors/exif.ui:892
+#: plugins/paintops/libpaintop/kis_pressure_softness_option.cpp:31
+msgid "Soft"
+msgstr "Umekšan"
 
 #: image/kis_base_mask_generator.h:34
-msgid "Gaussian brush"
-msgstr "Gaussova četka"
+#, fuzzy
+#| msgid "Gaussian Blur"
+msgid "Gaussian"
+msgstr "Gausovo zamućenje"
 
 #: image/kis_base_node.cpp:141 ui/kis_node_model.cpp:420
 msgid "Visible"
@@ -2776,6 +2778,7 @@ msgstr "Vrsta:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, shadeSelectorTypeMyPaint)
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:234
+#: plugins/paintops/mypaint/mypaint_paintop_factory.h:55
 msgid "MyPaint"
 msgstr "MyPaint"
 
@@ -3587,7 +3590,7 @@ msgstr "Naziv radne skupine"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, brushNameLbl)
 #: plugins/extensions/dockers/tasksetdocker/tasksetdocker_dock.cpp:188
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:31
+#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:22
 #: ui/forms/wdgfilternodecreation.ui:17 ui/forms/wdgflipbookselector.ui:28
 #: ui/forms/wdgpaintopsettings.ui:93
 msgid "Name:"
@@ -4075,6 +4078,7 @@ msgstr "Režim ekspozicije:"
 #: plugins/extensions/metadataeditor/editors/exif.ui:101
 #: plugins/extensions/metadataeditor/editors/exif.ui:919
 #: plugins/paintops/libpaintop/forms/wdgbrushchooser.ui:88
+#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:58
 msgid "Auto"
 msgstr "Automatski"
 
@@ -4501,14 +4505,6 @@ msgstr "Normalan"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, editSharpness)
 #. i18n: ectx: property (text), item, widget (QComboBox, editContrast)
-#: plugins/extensions/metadataeditor/editors/exif.ui:860
-#: plugins/extensions/metadataeditor/editors/exif.ui:892
-#: plugins/paintops/libpaintop/kis_pressure_softness_option.cpp:31
-msgid "Soft"
-msgstr "Umekšan"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, editSharpness)
-#. i18n: ectx: property (text), item, widget (QComboBox, editContrast)
 #: plugins/extensions/metadataeditor/editors/exif.ui:865
 #: plugins/extensions/metadataeditor/editors/exif.ui:897
 #: plugins/paintops/libpaintop/kis_pressure_softness_option.cpp:32
@@ -4528,6 +4524,8 @@ msgstr "Balans bijelog:"
 #. i18n: ectx: property (text), item, widget (QComboBox, editWhiteBalance)
 #. i18n: ectx: property (text), widget (QRadioButton, customRadioButton)
 #: plugins/extensions/metadataeditor/editors/exif.ui:924
+#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:64
+#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:66
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:1037
 msgid "Custom"
 msgstr "Posebno"
@@ -6688,7 +6686,9 @@ msgid "Color"
 msgstr "Boja"
 
 #: plugins/paintops/chalk/chalk_paintop_plugin.cpp:43
-msgid "Chalk brush"
+#, fuzzy
+#| msgid "Chalk brush"
+msgid "Chalk"
 msgstr "Četka u obliku krede"
 
 #. i18n: ectx: attribute (title), widget (QWidget, inkTab)
@@ -6710,7 +6710,9 @@ msgid "Saturation decrease"
 msgstr "Smanjenjen zasićenja"
 
 #: plugins/paintops/colorsmudge/colorsmudge_paintop_plugin.cpp:44
-msgid "Color Smudge Brush"
+#, fuzzy
+#| msgid "Color Smudge Brush"
+msgid "Color Smudge"
 msgstr "Četka za zamazivanje boje"
 
 #: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:52
@@ -6770,8 +6772,10 @@ msgid "Smudge mode:"
 msgstr "Način mrlja:"
 
 #: plugins/paintops/curvebrush/curve_paintop_plugin.cpp:43
-msgid "Curve brush"
-msgstr "Krivuljasta četka"
+#, fuzzy
+#| msgid "Curved"
+msgid "Curve"
+msgstr "Zakrivljeno"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, selectMainStyle)
 #. i18n: ectx: property (text), item, widget (KComboBox, selectSubdivisionStyle)
@@ -6831,14 +6835,19 @@ msgstr "Slikaj  spojnu liniju"
 msgid "Smoothing"
 msgstr "Uglađivanje"
 
+#. i18n: ectx: property (text), item, widget (QComboBox, shapeBox)
+#. i18n: ectx: property (text), item, widget (QComboBox, shapeCBox)
 #: plugins/paintops/defaultpaintops/defaultpaintops_plugin.cc:47
-msgid "Pixel Brush"
-msgstr "Četkica piksela"
+#: plugins/paintops/experiment/wdgshapeoptions.ui:75
+#: plugins/paintops/gridbrush/wdgshapeoptions.ui:51
+#: plugins/paintops/spray/wdgshapeoptions.ui:75
+msgid "Pixel"
+msgstr "Piksel"
 
 #: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_factory.h:50
-msgctxt "duplicate paintbrush"
-msgid "Duplicate"
-msgstr "Umnoženo"
+msgctxt "clone paintbrush (previously \"Duplicate\")"
+msgid "Clone"
+msgstr ""
 
 #: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_option.cpp:45
 #: plugins/paintops/libpaintop/kis_paint_action_type_option.cpp:37
@@ -6865,8 +6874,10 @@ msgid "Deform Options"
 msgstr "Opcije deformacije"
 
 #: plugins/paintops/deform/kis_deform_paintop_factory.h:45
-msgid "Deform brush"
-msgstr "Deformisana četka"
+#, fuzzy
+#| msgid "Deform Mode"
+msgid "Deform"
+msgstr "Odabir Deformacije"
 
 #. i18n: ectx: property (text), widget (QLabel, deformLabel)
 #: plugins/paintops/deform/wdgdeformoptions.ui:35
@@ -6936,8 +6947,11 @@ msgid "Use undeformed image"
 msgstr "Koristi nedeformisanu sliku"
 
 #: plugins/paintops/dynadraw/dyna_paintop_plugin.cpp:41
-msgid "Dyna brush"
-msgstr "Dina četka"
+#, fuzzy
+#| msgctxt "(qtundo-format)"
+#| msgid "Dyna"
+msgid "Dyna"
+msgstr "Dyna"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: plugins/paintops/dynadraw/wdgdynaoptions.ui:51
@@ -6971,6 +6985,7 @@ msgstr "Opseg širine:"
 #. i18n: ectx: attribute (title), widget (QWidget, ShapeTab)
 #. i18n: ectx: property (title), widget (QGroupBox, shapeGroup)
 #: plugins/paintops/dynadraw/wdgdynaoptions.ui:160
+#: plugins/paintops/experiment/experiment_paintop_plugin.cpp:45
 #: plugins/paintops/hairy/wdghairyeoptions.ui:43
 #: plugins/paintops/hairy/wdgshapeoptions.ui:84
 msgid "Shape"
@@ -7021,10 +7036,6 @@ msgstr "Dijametar:"
 #: plugins/paintops/dynadraw/wdgdynaoptions.ui:296
 msgid "Fixed angle"
 msgstr "Fiksni ugao"
-
-#: plugins/paintops/experiment/experiment_paintop_plugin.cpp:42
-msgid "Experiment brush"
-msgstr "Eksperimentalna četka"
 
 #: plugins/paintops/experiment/kis_experiment_shape_option.cpp:36
 #: plugins/paintops/gridbrush/kis_grid_shape_option.cpp:33
@@ -7082,14 +7093,6 @@ msgstr "Čvrsta ivica"
 msgid "Anti-aliased pixel"
 msgstr "Anti alias piksel"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, shapeBox)
-#. i18n: ectx: property (text), item, widget (QComboBox, shapeCBox)
-#: plugins/paintops/experiment/wdgshapeoptions.ui:75
-#: plugins/paintops/gridbrush/wdgshapeoptions.ui:51
-#: plugins/paintops/spray/wdgshapeoptions.ui:75
-msgid "Pixel"
-msgstr "Piksel"
-
 #. i18n: ectx: property (text), widget (QCheckBox, proportionalBox)
 #: plugins/paintops/experiment/wdgshapeoptions.ui:213
 #: plugins/paintops/spray/wdgshapeoptions.ui:218
@@ -7115,7 +7118,7 @@ msgstr "Rotacija"
 #. i18n: ectx: property (text), widget (QCheckBox, fixedRotation)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox2)
 #: plugins/paintops/experiment/wdgshapeoptions.ui:241
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:77
+#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:59
 #: plugins/paintops/spray/wdgshapedynamicsoptions.ui:48
 msgid "Constant"
 msgstr "Konstantno"
@@ -7123,7 +7126,7 @@ msgstr "Konstantno"
 #. i18n: ectx: property (text), widget (QCheckBox, randomRotation)
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox2)
 #: plugins/paintops/experiment/wdgshapeoptions.ui:289
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:82
+#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:64
 #: plugins/paintops/spray/wdgshapedynamicsoptions.ui:58
 msgid "Random"
 msgstr "Nasumično"
@@ -7140,13 +7143,11 @@ msgstr "Prati kursor"
 msgid "Texture:"
 msgstr "Tekstura:"
 
-#: plugins/paintops/filterop/filterop.cpp:45
-msgid "Filter Brush"
-msgstr "Četkica za filtriranje"
-
 #: plugins/paintops/gridbrush/grid_paintop_plugin.cpp:41
-msgid "Grid brush"
-msgstr "Mrežasta četka"
+#: ui/canvas/kis_grid_manager.cpp:47 ui/dialogs/kis_dlg_preferences.cc:673
+#: ui/dialogs/kis_dlg_preferences.cc:674
+msgid "Grid"
+msgstr "Mreža"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/paintops/gridbrush/wdggridoptions.ui:38
@@ -7201,7 +7202,9 @@ msgid "Line"
 msgstr "Linija"
 
 #: plugins/paintops/hairy/hairy_paintop_plugin.cpp:44
-msgid "Hairy brush"
+#, fuzzy
+#| msgid "Hairy brush"
+msgid "Hairy"
 msgstr "Dlakava četka"
 
 #: plugins/paintops/hairy/kis_hairy_bristle_option.cpp:46
@@ -7376,7 +7379,9 @@ msgid "Soak ink"
 msgstr "Potopiti mastilo"
 
 #: plugins/paintops/hatching/hatching_paintop_plugin.cpp:43
-msgid "Hatching brush"
+#, fuzzy
+#| msgid "Hatching brush"
+msgid "Hatching"
 msgstr "Šrafirana četka"
 
 #: plugins/paintops/hatching/kis_hatching_options.cpp:57
@@ -7526,7 +7531,7 @@ msgstr "Slučajnost:"
 #: plugins/paintops/libpaintop/forms/wdgautobrush.ui:266
 #: plugins/paintops/libpaintop/forms/wdgBrushSizeOptions.ui:152
 #: plugins/paintops/libpaintop/forms/wdgclipboardbrush.ui:85
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:207
+#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:180
 #: plugins/paintops/libpaintop/forms/wdgtextbrush.ui:72
 #: plugins/paintops/libpaintop/kis_brush_chooser.cpp:112
 #: plugins/paintops/spray/wdgsprayoptions.ui:204
@@ -7589,15 +7594,17 @@ msgstr "Jitter kretanje"
 #. i18n: ectx: property (text), widget (QCheckBox, colorAsMask)
 #. i18n: ectx: property (text), widget (QCheckBox, colorAsmask)
 #: plugins/paintops/libpaintop/forms/wdgclipboardbrush.ui:19
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:131
+#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:113
 #: plugins/paintops/libpaintop/kis_brush_chooser.cpp:119
 msgid "Use color as mask"
 msgstr "Koristi boju kao masku"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/paintops/libpaintop/forms/wdgclipboardbrush.ui:102
-msgid "Save brush:"
-msgstr "Spremi četku:"
+#, fuzzy
+#| msgid "Save macro"
+msgid "Save Tip:"
+msgstr "Snimi makro"
 
 #. i18n: ectx: property (text), widget (QPushButton, saveBrush)
 #. i18n: ectx: property (text), widget (QPushButton, bnSave)
@@ -7678,51 +7685,55 @@ msgstr "Koristi krivu"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #. i18n: ectx: property (text), widget (QLabel, labelStyle)
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:60
+#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:42
 #: plugins/tools/tool_text/wdgtextoptions.ui:71
 msgid "Style:"
 msgstr "Stil:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox2)
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:87
+#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:69
 msgid "Incremental"
 msgstr "Inkrementalno"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox2)
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:92
+#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:74
 #: plugins/paintops/libpaintop/kis_dynamic_sensor.h:47
 #: plugins/tools/defaulttools/kis_tool_line.cc:70
 msgid "Pressure"
 msgstr "Pritisak"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox2)
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:97
+#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:79
 msgid "Angular"
 msgstr "Uglovno"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:105
+#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:87
 msgid "Selection mode:"
 msgstr "Režim izbora:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, brushStyle)
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:116
+#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:98
 msgid "Regular"
 msgstr "Uobičajeno"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, brushStyle)
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:121
+#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:103
 msgid "Animated"
 msgstr "Animirano"
 
 #. i18n: ectx: property (text), widget (QPushButton, brushButton)
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:236
-msgid "Use as Brush"
+#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:200
+#, fuzzy
+#| msgid "Use as Brush"
+msgid "Use as Tip"
 msgstr "Koristi kao četkicu"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:243
-msgid "Add to Predefined Brushes"
+#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:207
+#, fuzzy
+#| msgid "Add to Predefined Brushes"
+msgid "Add to Predefined Tips"
 msgstr "Dodaj u predefinisane četkice"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxSmudgeMode)
@@ -7830,8 +7841,10 @@ msgid "The mixing option mixes the paint on the brush with that on the canvas."
 msgstr "Opcija miješanja miješa sliku na četki sa onom na platnu."
 
 #: plugins/paintops/libpaintop/kis_brush_chooser.cpp:156
-msgid "Reset Brush"
-msgstr "Resetuj četku"
+#, fuzzy
+#| msgid "Save Predefined Size as:"
+msgid "Reset Predefined Tip"
+msgstr "Snimi predefinisane veličine kao:"
 
 #: plugins/paintops/libpaintop/kis_brush_chooser.cpp:157
 msgid ""
@@ -7847,28 +7860,23 @@ msgstr ""
 msgid "Brush Tip"
 msgstr "Vrsta četke"
 
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:58
-msgid "Autobrush"
-msgstr "Automatska četkica"
-
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:62
-msgid "Predefined Brushes"
-msgstr "Predefinisane četkice"
+#, fuzzy
+#| msgid "&Predefined:"
+msgid "Predefined"
+msgstr "&Predefinisano:"
 
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:64
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:66
-msgid "Custom Brush"
-msgstr "Posebna četkica"
-
+#. i18n: ectx: property (title), widget (QGroupBox, grpClipboard)
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:68
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:70
-msgid "Clipboard Brush"
-msgstr "Ostava za četke"
+#: ui/forms/wdgnewimage.ui:331
+msgid "Clipboard"
+msgstr "Klipbord"
 
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:72
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:74
-msgid "Text Brush"
-msgstr "Tekstualna četkica"
+msgid "Text"
+msgstr "Tekst"
 
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:98
 msgid ""
@@ -8946,13 +8954,11 @@ msgstr ""
 "niža vrijednost čini da se usmjereni ulaz adaptira brže, viša vriojednost će "
 "ga učiniti glatkim"
 
-#: plugins/paintops/mypaint/mypaint_paintop_factory.h:55
-msgid "MyPaint brush"
-msgstr "MyPaint četka"
-
 #: plugins/paintops/particle/particle_paintop_plugin.cpp:42
-msgid "Particle brush"
-msgstr "Četka od čestica"
+#, fuzzy
+#| msgid "Particles"
+msgid "Particle"
+msgstr "Čestice"
 
 #. i18n: ectx: property (text), widget (QLabel, particlesLbl)
 #: plugins/paintops/particle/wdgparticleoptions.ui:50
@@ -9323,7 +9329,9 @@ msgid "Offset scale"
 msgstr "Skala pomaka"
 
 #: plugins/paintops/sketch/sketch_paintop_plugin.cpp:43
-msgid "Sketch brush"
+#, fuzzy
+#| msgid "Sketch brush"
+msgid "Sketch"
 msgstr "Skicirna četka"
 
 #. i18n: ectx: property (suffix), widget (KDoubleNumInput, lineWidthSPBox)
@@ -9384,8 +9392,10 @@ msgid "Spray area"
 msgstr "Oblik spreja"
 
 #: plugins/paintops/spray/spray_paintop_plugin.cpp:41
-msgid "Spray brush"
-msgstr "Sprej"
+#, fuzzy
+#| msgid "Spray shape"
+msgid "Spray"
+msgstr "Oblik spreja"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: plugins/paintops/spray/wdgsprayoptions.ui:239
@@ -10297,11 +10307,6 @@ msgid ""
 msgstr ""
 "Aktivirate režim preloma oko, ali niste uključili OpenGL.\n"
 "Da vizualizirate režim preloma oko, uključite OpenGL."
-
-#: ui/canvas/kis_grid_manager.cpp:47 ui/dialogs/kis_dlg_preferences.cc:673
-#: ui/dialogs/kis_dlg_preferences.cc:674
-msgid "Grid"
-msgstr "Mreža"
 
 #: ui/canvas/kis_grid_manager.cpp:70
 msgid "Snap To Grid"
@@ -11536,11 +11541,6 @@ msgstr "&Spasi"
 msgid "&Predefined:"
 msgstr "&Predefinisano:"
 
-#. i18n: ectx: property (title), widget (QGroupBox, grpClipboard)
-#: ui/forms/wdgnewimage.ui:331
-msgid "Clipboard"
-msgstr "Klipbord"
-
 #. i18n: ectx: property (title), widget (QGroupBox, grpContents)
 #: ui/forms/wdgnewimage.ui:373
 msgid "Contents"
@@ -11722,7 +11722,7 @@ msgid "No Outline"
 msgstr "Bez konture"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbOutline)
-#: ui/forms/wdgshapeoptions.ui:38 ui/kis_paintop_option.cpp:26
+#: ui/forms/wdgshapeoptions.ui:38
 msgid "Brush"
 msgstr "Četkica"
 
@@ -12886,6 +12886,10 @@ msgstr "Prebaci na prethodna pretpodešavanja"
 msgid "Select Favorite Presets..."
 msgstr "Izaberi omiljene postavke..."
 
+#: ui/kis_paintop_option.cpp:26
+msgid "Common"
+msgstr ""
+
 #: ui/kis_paintop_option.cpp:36
 msgid "Texture"
 msgstr "Tekstura"
@@ -13398,11 +13402,11 @@ msgstr "Lokalni izbor je zaključan."
 msgid "Freehand Stroke"
 msgstr "Svojručni potez"
 
-#: ui/tool/kis_tool_paint.cc:89
+#: ui/tool/kis_tool_paint.cc:105
 msgid "Increase Brush Size"
 msgstr "Povećaj veličinu četke"
 
-#: ui/tool/kis_tool_paint.cc:95
+#: ui/tool/kis_tool_paint.cc:111
 msgid "Decrease Brush Size"
 msgstr "Smanji veličinu četke"
 
@@ -13523,6 +13527,71 @@ msgstr ""
 #| msgid "Close"
 msgid "&Close"
 msgstr "Zatvori"
+
+#~ msgctxt "Category of brush engines"
+#~ msgid "Experimental"
+#~ msgstr "Eksperimentalno"
+
+#~ msgid "Soft brush"
+#~ msgstr "Mehka četka"
+
+#~ msgid "Gaussian brush"
+#~ msgstr "Gaussova četka"
+
+#~ msgid "Curve brush"
+#~ msgstr "Krivuljasta četka"
+
+#~ msgid "Pixel Brush"
+#~ msgstr "Četkica piksela"
+
+#~ msgctxt "duplicate paintbrush"
+#~ msgid "Duplicate"
+#~ msgstr "Umnoženo"
+
+#~ msgid "Deform brush"
+#~ msgstr "Deformisana četka"
+
+#~ msgid "Dyna brush"
+#~ msgstr "Dina četka"
+
+#~ msgid "Experiment brush"
+#~ msgstr "Eksperimentalna četka"
+
+#~ msgid "Filter Brush"
+#~ msgstr "Četkica za filtriranje"
+
+#~ msgid "Grid brush"
+#~ msgstr "Mrežasta četka"
+
+#~ msgid "Save brush:"
+#~ msgstr "Spremi četku:"
+
+#~ msgid "Reset Brush"
+#~ msgstr "Resetuj četku"
+
+#~ msgid "Autobrush"
+#~ msgstr "Automatska četkica"
+
+#~ msgid "Predefined Brushes"
+#~ msgstr "Predefinisane četkice"
+
+#~ msgid "Custom Brush"
+#~ msgstr "Posebna četkica"
+
+#~ msgid "Clipboard Brush"
+#~ msgstr "Ostava za četke"
+
+#~ msgid "Text Brush"
+#~ msgstr "Tekstualna četkica"
+
+#~ msgid "MyPaint brush"
+#~ msgstr "MyPaint četka"
+
+#~ msgid "Particle brush"
+#~ msgstr "Četka od čestica"
+
+#~ msgid "Spray brush"
+#~ msgstr "Sprej"
 
 #~ msgid "Total Refresh"
 #~ msgstr "Ukupno osvježavanje"
@@ -14261,9 +14330,6 @@ msgstr "Zatvori"
 
 #~ msgid "Flow"
 #~ msgstr "Tok"
-
-#~ msgid "Text"
-#~ msgstr "Tekst"
 
 #~ msgid "Scale: "
 #~ msgstr "Razmjera: "
