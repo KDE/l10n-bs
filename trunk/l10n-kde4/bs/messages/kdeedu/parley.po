@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-05-22 01:48+0000\n"
+"POT-Creation-Date: 2014-06-04 01:40+0000\n"
 "PO-Revision-Date: 2014-01-10 10:18+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -85,7 +85,7 @@ msgstr[2] " sekundi"
 msgid "*.kvtml|Vocabulary Collections"
 msgstr "*.kvtml|Kolekcija rječnika"
 
-#: plugins/example.py:14 src/vocabulary/lessonview.cpp:37
+#: plugins/example.py:14
 msgid "New Lesson"
 msgstr "Nova lekcija"
 
@@ -863,10 +863,15 @@ msgid "Lessons"
 msgstr "Lekcije"
 
 #: src/editor/editor.cpp:164
+#, fuzzy
+#| msgid ""
+#| "Right click to add, delete, or rename lessons. \n"
+#| "With the checkboxes you can select which lessons you want to practice. \n"
+#| "Only checked lessons [x] will be asked in the tests!"
 msgid ""
-"Right click to add, delete, or rename lessons. \n"
-"With the checkboxes you can select which lessons you want to practice. \n"
-"Only checked lessons [x] will be asked in the tests!"
+"Right click to add, delete, or rename units. \n"
+"With the checkboxes you can select which units you want to practice. \n"
+"Only checked units [x] will be asked in the practice!"
 msgstr ""
 "Desni klik za dodavanje, brisanje i preimenovanje lekcija. \n"
 "S potvrdnim kvadratićima možete izabrati lekcije koje želite vježbati. \n"
@@ -942,8 +947,8 @@ msgstr "&Pogled"
 
 #. i18n: ectx: Menu (lesson)
 #: src/editor/editorui.rc:49
-msgid "&Lesson"
-msgstr "&Lekcija"
+msgid "&Unit"
+msgstr ""
 
 #. i18n: ectx: Menu (learning)
 #: src/editor/editorui.rc:62 src/practice/practicesummaryui.rc:12
@@ -962,8 +967,9 @@ msgid "Editor Toolbar"
 msgstr "Alatna traka za uređivanje"
 
 #: src/editor/FromToEntryPage.cpp:160
-#, kde-format
-msgid "Grades from %1 to %2"
+#, fuzzy, kde-format
+#| msgid "Grades from %1 to %2"
+msgid "Confidence Levels from %1 to %2"
 msgstr "Stepeni od %1 do %2"
 
 #. i18n: ectx: property (title), widget (QGroupBox, direc_label)
@@ -973,8 +979,8 @@ msgstr "Svojstva iz originala"
 
 #. i18n: ectx: property (text), widget (QLabel, grade_label)
 #: src/editor/FromToEntryPageForm.ui:72
-msgid "&Grade:"
-msgstr "&Ocjena:"
+msgid "&Confidence Level:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, fauxami_label)
 #: src/editor/FromToEntryPageForm.ui:95
@@ -1028,8 +1034,8 @@ msgstr "dd.MM.gggg"
 
 #. i18n: ectx: property (text), widget (QPushButton, resetGradesButton)
 #: src/editor/FromToEntryPageForm.ui:260
-msgid "&Reset Grades"
-msgstr "&Poništi ocjene"
+msgid "&Reset Confidence Levels"
+msgstr ""
 
 #: src/editor/inflectionwidget.cpp:36 src/parleydocument.cpp:326
 #: src/vocabulary/wordtypeview.cpp:123
@@ -1087,7 +1093,7 @@ msgid "Language"
 msgstr "Jezik"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: src/editor/summarywordwidget.ui:32 src/vocabulary/containermodel.cpp:170
+#: src/editor/summarywordwidget.ui:32
 msgid "Lesson"
 msgstr "Lekcija"
 
@@ -1419,20 +1425,26 @@ msgid ""
 "Edit which languages are in the collection and their grammar properties."
 msgstr "Izmijeni koji jezici su u kolekciji i njihova gramatička svojstva."
 
-#: src/parleyactions.cpp:121
-msgid "Remove Grades"
-msgstr "Ukloni ocjene"
+#: src/parleyactions.cpp:121 src/vocabulary/lessonview.cpp:69
+msgid "Remove Confidence Levels"
+msgstr ""
 
 #: src/parleyactions.cpp:122
-msgid "Remove all grades from the current document"
+#, fuzzy
+#| msgid "Remove all grades from the current document"
+msgid "Remove all confidence levels from the current document"
 msgstr "Ukloni sve ocjene iz trenutnog dokumenta"
 
 #: src/parleyactions.cpp:129
-msgid "Show Entries from Child Lessons"
+#, fuzzy
+#| msgid "Show Entries from Child Lessons"
+msgid "Show Entries from Child Units"
 msgstr "Prikaži unose iz lekcija za djecu"
 
 #: src/parleyactions.cpp:130
-msgid "Enable to also see the entries of child lessons in each lesson."
+#, fuzzy
+#| msgid "Enable to also see the entries of child lessons in each lesson."
+msgid "Enable to also see the entries of child units in each unit."
 msgstr "Omogući prikaz unosa iz lekcija za djecu iz svake lekcije."
 
 #: src/parleyactions.cpp:136
@@ -1441,7 +1453,9 @@ msgstr "Automatski prijevod"
 
 #. i18n: ectx: label, entry (AutomaticTranslation), group (General)
 #: src/parleyactions.cpp:137 src/settings/parley.kcfg:50
-msgid "Enable automatic translation of the lesson entries."
+#, fuzzy
+#| msgid "Enable automatic translation of the lesson entries."
+msgid "Enable automatic translation of the unit entries."
 msgstr "Omogući automatski prijevod unosa u lekciji."
 
 #: src/parleyactions.cpp:143
@@ -1794,9 +1808,9 @@ msgstr "%1 je srednji"
 
 #: src/practice/guifrontend.cpp:129
 #, kde-format
-msgctxt "Display of the current lesson during practice"
-msgid "Lesson: %1"
-msgstr "Lekcija: %1"
+msgctxt "Display of the current unit during practice"
+msgid "Unit: %1"
+msgstr ""
 
 #: src/practice/guifrontend.cpp:136
 #, fuzzy
@@ -2783,7 +2797,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (EntriesPerLesson), group (General)
 #: src/settings/parley.kcfg:27
-msgid "The number of entries per lesson"
+#, fuzzy
+#| msgid "The number of entries per lesson"
+msgid "The number of entries per unit"
 msgstr "Broj unosa po lekciji"
 
 #. i18n: ectx: label, entry (AutoOpenLast), group (General)
@@ -2841,9 +2857,13 @@ msgstr "Koristi Lajtnerov metod učenja"
 
 #. i18n: ectx: label, entry (TestOrderLesson), group (PracticeOptions)
 #: src/settings/parley.kcfg:77
+#, fuzzy
+#| msgid ""
+#| "Append new vocabulary in a test in order of their lessons. Note that this "
+#| "will not be a hard transition, but a slow mix from one lesson to the next."
 msgid ""
-"Append new vocabulary in a test in order of their lessons. Note that this "
-"will not be a hard transition, but a slow mix from one lesson to the next."
+"Append new vocabulary in a collection in order of their units. Note that "
+"this will not be a hard transition, but a slow mix from one unit to the next."
 msgstr ""
 "Dodaj novi rječnik u test u redoslijedu odgovarajućih lekcija. Primijetite "
 "da ovo neće biti snažan prijelaz, već spora mješavina iz jedne lekcije u "
@@ -3003,13 +3023,17 @@ msgstr "Promijeni vidljivost trake za pretraživanje."
 
 #. i18n: ectx: label, entry (ShowSublessonentries), group (Appearance)
 #: src/settings/parley.kcfg:198
-msgid "When enabled a lesson also shows entries from its sublessons."
+#, fuzzy
+#| msgid "When enabled a lesson also shows entries from its sublessons."
+msgid "When enabled a unit also shows entries from its subunits."
 msgstr ""
 "Kada je omogućeno, lekcija također prikazuje unose iz njenih podlekcija."
 
 #. i18n: ectx: label, entry (TableLessonColumnVisible), group (Appearance)
 #: src/settings/parley.kcfg:203
-msgid "Show/hide the lesson column."
+#, fuzzy
+#| msgid "Show/hide the lesson column."
+msgid "Show/hide the unit column."
 msgstr "Prikaži/sakrij kolonu lekcije."
 
 #. i18n: ectx: label, entry (TableActiveColumnVisible), group (Appearance)
@@ -3019,7 +3043,9 @@ msgstr "Prikaži/sakrij aktivnu kolonu."
 
 #. i18n: ectx: label, entry (LessonEditingSelection), group (Appearance)
 #: src/settings/parley.kcfg:213
-msgid "Select which lessons are displayed for editing"
+#, fuzzy
+#| msgid "Select which lessons are displayed for editing"
+msgid "Select which units are displayed for editing"
 msgstr "Označite koje su lekcije dostupne za uređivanje"
 
 #. i18n: ectx: label, entry (MainWindowSplitter), group (Appearance)
@@ -3048,11 +3074,10 @@ msgid "Currently selected row"
 msgstr "Trenutno odabrani red"
 
 #. i18n: ectx: label, entry (GradeColor), group (Appearance)
-#. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_GradeColor)
-#: src/settings/parley.kcfg:243 src/settings/viewoptionsbase.ui:102
+#: src/settings/parley.kcfg:243
 #, fuzzy
 #| msgid "Colors used to display different grades"
-msgid "Color used to display the grades"
+msgid "Color used to display the confidence levels"
 msgstr "Boje za označavanje različitih ocjena"
 
 #. i18n: ectx: label, entry (PracticeMinimumTimesAsked), group (Thresholds)
@@ -3090,16 +3115,25 @@ msgstr ""
 
 #. i18n: ectx: label, entry (PracticeMinimumGrade), group (Thresholds)
 #: src/settings/parley.kcfg:269
+#, fuzzy
+#| msgid ""
+#| "The entry must have at least this grade to be included in the practice "
+#| "(0..7)."
 msgid ""
-"The entry must have at least this grade to be included in the practice "
-"(0..7)."
+"The entry must have at least this confidence level to be included in the "
+"practice (0..7)."
 msgstr ""
 "Unos mora imati barem ovoliku ocjenu da bi bio uključen u vježbu (0..7)."
 
 #. i18n: ectx: label, entry (PracticeMaximumGrade), group (Thresholds)
 #: src/settings/parley.kcfg:273
+#, fuzzy
+#| msgid ""
+#| "The entry must have at most this grade to be included in the practice "
+#| "(0..7)."
 msgid ""
-"The entry must have at most this grade to be included in the practice (0..7)."
+"The entry must have at most this confidence level to be included in the "
+"practice (0..7)."
 msgstr ""
 "Unos mora imati najviše ovoliku ocjenu da bi bio uključen u vježbu (0..7)."
 
@@ -3159,12 +3193,16 @@ msgstr "Način vježbanja koji je trenutno odabran."
 
 #. i18n: ectx: label, entry (BlockItem$(Grade)), group (PracticeManager)
 #: src/settings/parley.kcfg:338
-msgid "Amount of time different grades should be blocked"
+#, fuzzy
+#| msgid "Amount of time different grades should be blocked"
+msgid "Amount of time different confidence levels should be blocked"
 msgstr "Iznos vremena koliko  bi različite ocjene trebale biti blokirane"
 
 #. i18n: ectx: label, entry (ExpireItem$(Grade)), group (PracticeManager)
 #: src/settings/parley.kcfg:349
-msgid "Amount of time after which different grades should expire"
+#, fuzzy
+#| msgid "Amount of time after which different grades should expire"
+msgid "Amount of time after which different confidence levels should expire"
 msgstr "Iznos vremena nakon kojeg različite ocjene ističu"
 
 #. i18n: ectx: label, entry (ProvidersUrl), group (KNewStuff)
@@ -3224,6 +3262,13 @@ msgstr "&Font simbola za izgovor:"
 msgid "Base color for displaying grades:"
 msgstr "Boje za označavanje različitih ocjena"
 
+#. i18n: ectx: property (toolTip), widget (KColorButton, kcfg_GradeColor)
+#: src/settings/viewoptionsbase.ui:102
+#, fuzzy
+#| msgid "Colors used to display different grades"
+msgid "Color used to display the grades"
+msgstr "Boje za označavanje različitih ocjena"
+
 #. i18n: ectx: property (whatsThis), widget (KColorButton, kcfg_GradeColor)
 #: src/settings/viewoptionsbase.ui:105
 #, fuzzy
@@ -3256,27 +3301,22 @@ msgid "Not practiced"
 msgstr "Nije &vježbano:"
 
 #: src/statistics/lessonstatistics.cpp:182
-#, fuzzy
-#| msgid "Remove all grades from this lesson"
-msgid "Remove &Grades from this lesson"
-msgstr "Ukloni sve ocjene iz ove lekcije"
-
 #: src/statistics/lessonstatistics.cpp:184
 #, fuzzy
 #| msgid "Remove all grades from this lesson"
-msgid "Remove grades from this lesson"
+msgid "Remove confidence levels from this unit"
 msgstr "Ukloni sve ocjene iz ove lekcije"
 
 #: src/statistics/lessonstatistics.cpp:192
 #, fuzzy
 #| msgid "Remove all grades from this lesson"
-msgid "Remove &Grades from this lesson and all sub-lessons"
+msgid "Remove confidence levels from this unit and all sub-units"
 msgstr "Ukloni sve ocjene iz ove lekcije"
 
 #: src/statistics/lessonstatistics.cpp:194
 #, fuzzy
 #| msgid "Remove all grades from this lesson"
-msgid "Remove grades from this lesson and all sub-lessons"
+msgid "Remove confidence level from this unit and all sub-units"
 msgstr "Ukloni sve ocjene iz ove lekcije"
 
 #: src/statistics/statisticsmainwindow.cpp:196
@@ -3356,27 +3396,36 @@ msgstr "Vježbanje dijaloga"
 
 #: src/statistics/statisticsmodel.cpp:31
 #, kde-format
-msgctxt "Grade in language, table header"
-msgid "Grade (%1)"
-msgstr "Ocjena (%1)"
+msgctxt "Confidence level in language, table header"
+msgid "Confidence (%1)"
+msgstr ""
 
 #: src/vocabulary/basiccontainermodel.cpp:145
 msgid "None"
 msgstr "Nijedan"
 
+#: src/vocabulary/containermodel.cpp:170
+msgid "Unit"
+msgstr ""
+
 #: src/vocabulary/containermodel.cpp:178
 msgid "Number of entries in this lesson."
 msgstr "Broj unosa u ovoj lekciji."
 
-#: src/vocabulary/leitnerview.cpp:117 src/vocabulary/lessonview.cpp:194
-msgid "The root lesson cannot be deleted."
+#: src/vocabulary/leitnerview.cpp:117
+#, fuzzy
+#| msgid "The root lesson cannot be deleted."
+msgid "The root unit cannot be deleted."
 msgstr "Ishodišna lekcija ne može biti izbrisana."
 
 #: src/vocabulary/leitnerview.cpp:126 src/vocabulary/lessonview.cpp:203
-#, kde-format
-msgid "There is %1 word left in this lesson. Do you want to delete it?"
+#, fuzzy, kde-format
+#| msgid "There is %1 word left in this lesson. Do you want to delete it?"
+#| msgid_plural ""
+#| "There are %1 words left in this lesson. Do you want to delete them?"
+msgid "There is %1 word left in this unit. Do you want to delete it?"
 msgid_plural ""
-"There are %1 words left in this lesson. Do you want to delete them?"
+"There are %1 words left in this unit. Do you want to delete them?"
 msgstr[0] "Preostala je još %1 riječ u ovoj lekciji. Želite li ju izbrisati?"
 msgstr[1] "Preostale su još %1 riječi u ovoj lekciji. Želite li ih izbrisati?"
 msgstr[2] "Preostalo je još %1 riječi u ovoj lekciji. Želite li ih izbrisati?"
@@ -3387,86 +3436,106 @@ msgctxt "display of the name of the vocabulary collection"
 msgid "Collection: %1"
 msgstr "Kolekcija: %1"
 
+#: src/vocabulary/lessonview.cpp:37
+msgid "New Unit"
+msgstr ""
+
 #: src/vocabulary/lessonview.cpp:39
-msgid "Add a new lesson to your document"
+#, fuzzy
+#| msgid "Add a new lesson to your document"
+msgid "Add a new unit to your document"
 msgstr "Dodajte novu lekciju u Vaš dokument"
 
 #: src/vocabulary/lessonview.cpp:45
-msgid "Rename Lesson"
-msgstr "Preimenuj lekciju"
+#, fuzzy
+#| msgid "Rename"
+msgid "Rename Unit"
+msgstr "Promijeni ime"
 
 #: src/vocabulary/lessonview.cpp:53
-msgid "Delete Lesson"
-msgstr "Izbriši lekciju"
+#, fuzzy
+#| msgid "&Delete Entry"
+msgid "Delete Unit"
+msgstr "&Izbriši unos"
 
 #: src/vocabulary/lessonview.cpp:55
-msgid "Delete the selected lesson."
+#, fuzzy
+#| msgid "Delete the selected lesson."
+msgid "Delete the selected unit."
 msgstr "Izbriši odabranu lekciju."
 
 #: src/vocabulary/lessonview.cpp:61
-msgid "Split Lesson into Smaller Lessons"
+#, fuzzy
+#| msgid "Split Lesson into Smaller Lessons"
+msgid "Split Unit into Smaller Units"
 msgstr "Podijeli lekciju u manje lekcije"
 
 #: src/vocabulary/lessonview.cpp:63
-msgid "Make multiple smaller lessons out of one big lesson."
-msgstr "Napravi više manjih lekcija iz jedne velike."
-
-#: src/vocabulary/lessonview.cpp:69
 #, fuzzy
-#| msgid "Remove all grades from this lesson"
-msgid "Remove Grades from this Lesson"
-msgstr "Ukloni sve ocjene iz ove lekcije"
+#| msgid "Make multiple smaller lessons out of one big lesson."
+msgid "Make multiple smaller units out of one big unit."
+msgstr "Napravi više manjih lekcija iz jedne velike."
 
 #: src/vocabulary/lessonview.cpp:71
 #, fuzzy
 #| msgid "Remove all grades from this lesson"
-msgid "Remove grades from this lesson."
+msgid "Remove confidence levels from this unit."
 msgstr "Ukloni sve ocjene iz ove lekcije"
 
 #: src/vocabulary/lessonview.cpp:77
 #, fuzzy
 #| msgid "Remove all grades from this lesson"
-msgid "Remove Grades from this Lesson and all Sub-Lessons"
+msgid "Remove Confidence Levels From This Unit And All Subunits"
 msgstr "Ukloni sve ocjene iz ove lekcije"
 
 #: src/vocabulary/lessonview.cpp:79
 #, fuzzy
 #| msgid "Remove all grades from this lesson"
-msgid "Remove grades from this lesson and all sub-lessons."
+msgid "Remove confidence levels from this unit and all subunits."
 msgstr "Ukloni sve ocjene iz ove lekcije"
 
 #: src/vocabulary/lessonview.cpp:85
 #, fuzzy
 #| msgid "Remove all grades from this lesson"
-msgid "Expand all lessons and sub-lessons"
+msgid "Expand Units and Subunits"
 msgstr "Ukloni sve ocjene iz ove lekcije"
 
 #: src/vocabulary/lessonview.cpp:87
 #, fuzzy
 #| msgid "Remove all grades from this lesson"
-msgid "Expand all lessons and sub-lessons."
+msgid "Expand all units and subunits."
 msgstr "Ukloni sve ocjene iz ove lekcije"
 
 #: src/vocabulary/lessonview.cpp:93
 #, fuzzy
 #| msgid "Remove all grades from this lesson"
-msgid "Collapse all lessons and sub-lessons"
+msgid "Collapse All Units And Subunits"
 msgstr "Ukloni sve ocjene iz ove lekcije"
 
 #: src/vocabulary/lessonview.cpp:95
 #, fuzzy
 #| msgid "Remove all grades from this lesson"
-msgid "Collapse all lessons and sub-lessons."
+msgid "Collapse all units and subunits."
 msgstr "Ukloni sve ocjene iz ove lekcije"
 
+#: src/vocabulary/lessonview.cpp:194
+msgid "The root lesson cannot be deleted."
+msgstr "Ishodišna lekcija ne može biti izbrisana."
+
 #: src/vocabulary/lessonview.cpp:217
-msgid "Entries per Lesson"
+#, fuzzy
+#| msgid "Entries per Lesson"
+msgid "Entries per Unit"
 msgstr "Unosi po lekciji"
 
 #: src/vocabulary/lessonview.cpp:217
+#, fuzzy
+#| msgid ""
+#| "The lesson will be split into smaller lessons. How many entries in each "
+#| "lesson do you want?"
 msgid ""
-"The lesson will be split into smaller lessons. How many entries in each "
-"lesson do you want?"
+"The unit will be split into smaller unit. How many entries in each unit do "
+"you want?"
 msgstr ""
 "Lekcija će biti razdvojena na manje lekcije. Koliko unosa želite po novim "
 "lekcijama?"
@@ -3520,11 +3589,15 @@ msgid "No Languages Defined"
 msgstr "Nema definiranih jezika"
 
 #: src/vocabulary/vocabularymodel.cpp:328
-msgid "Select a lesson before adding vocabulary."
+#, fuzzy
+#| msgid "Select a lesson before adding vocabulary."
+msgid "Select a unit before adding vocabulary."
 msgstr "Odaberite lekciju prije dodavanja rječnika."
 
 #: src/vocabulary/vocabularymodel.cpp:328
-msgid "No Lesson Selected"
+#, fuzzy
+#| msgid "No Lesson Selected"
+msgid "No Unit Selected"
 msgstr "Nema odabrane lekcije"
 
 #: src/vocabulary/vocabularyview.cpp:87
@@ -3871,6 +3944,47 @@ msgstr ""
 "stranicu koja sadrži mnoge rječničke dokumente:\n"
 "<a href=\"http://edu.kde.org/contrib/kvtml2.php\">http://edu.kde.org/contrib/"
 "kvtml2.php</a>.</p>\n"
+
+#~ msgid "&Lesson"
+#~ msgstr "&Lekcija"
+
+#~ msgid "&Grade:"
+#~ msgstr "&Ocjena:"
+
+#~ msgid "&Reset Grades"
+#~ msgstr "&Poništi ocjene"
+
+#~ msgid "Remove Grades"
+#~ msgstr "Ukloni ocjene"
+
+#~ msgctxt "Display of the current lesson during practice"
+#~ msgid "Lesson: %1"
+#~ msgstr "Lekcija: %1"
+
+#, fuzzy
+#~| msgid "Remove all grades from this lesson"
+#~ msgid "Remove &Grades from this lesson"
+#~ msgstr "Ukloni sve ocjene iz ove lekcije"
+
+#, fuzzy
+#~| msgid "Remove all grades from this lesson"
+#~ msgid "Remove &Grades from this lesson and all sub-lessons"
+#~ msgstr "Ukloni sve ocjene iz ove lekcije"
+
+#~ msgctxt "Grade in language, table header"
+#~ msgid "Grade (%1)"
+#~ msgstr "Ocjena (%1)"
+
+#~ msgid "Rename Lesson"
+#~ msgstr "Preimenuj lekciju"
+
+#~ msgid "Delete Lesson"
+#~ msgstr "Izbriši lekciju"
+
+#, fuzzy
+#~| msgid "Remove all grades from this lesson"
+#~ msgid "Remove Grades from this Lesson"
+#~ msgstr "Ukloni sve ocjene iz ove lekcije"
 
 #~ msgctxt "caption for an overview of the grades for a document"
 #~ msgid "Statistics for \"%1\""
