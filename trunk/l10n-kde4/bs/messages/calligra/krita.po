@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-06-18 01:36+0000\n"
+"POT-Creation-Date: 2014-06-19 01:30+0000\n"
 "PO-Revision-Date: 2014-02-10 00:04+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -24,16 +24,6 @@ msgid "Your emails"
 msgstr ""
 "eturkovic4@etf.unsa.ba,samir.ribic@etf.unsa.ba,edautbegov1@etf.unsa.ba,"
 "vljubovic@smartnet.ba"
-
-#: benchmarks/kis_floodfill_benchmark.cpp:86
-#: plugins/tools/defaulttools/kis_tool_fill.cc:128
-#: ui/actions/kis_selection_action_factories.cpp:171
-msgid "Flood Fill"
-msgstr "Poplavna popuna"
-
-#: benchmarks/kis_gradient_benchmark.cpp:69
-msgid "Gradient Fill"
-msgstr "Gradijentna ispuna"
 
 #: crashreporter/main.cpp:53
 #, fuzzy
@@ -203,22 +193,22 @@ msgid "&Select"
 msgstr "&Izaberi"
 
 #. i18n: ectx: Menu (Filter)
-#: gemini/kritagemini.rc:139 krita.rc:139 sketch/kritasketch.rc:139
+#: gemini/kritagemini.rc:139 krita.rc:140 sketch/kritasketch.rc:139
 msgid "Filte&r"
 msgstr "&Filter"
 
 #. i18n: ectx: Menu (Tools)
-#: gemini/kritagemini.rc:156 krita.rc:156 sketch/kritasketch.rc:156
+#: gemini/kritagemini.rc:156 krita.rc:157 sketch/kritasketch.rc:156
 msgid "&Tools"
 msgstr "&Alati"
 
 #. i18n: ectx: Menu (settings)
-#: gemini/kritagemini.rc:159 krita.rc:159 sketch/kritasketch.rc:159
+#: gemini/kritagemini.rc:159 krita.rc:160 sketch/kritasketch.rc:159
 msgid "Settings"
 msgstr "Postavke"
 
 #. i18n: ectx: ToolBar (BrushesAndStuff)
-#: gemini/kritagemini.rc:172 krita.rc:172 sketch/kritasketch.rc:172
+#: gemini/kritagemini.rc:172 krita.rc:173 sketch/kritasketch.rc:172
 msgid "Brushes and Stuff"
 msgstr "Četkice i ostalo"
 
@@ -1611,21 +1601,25 @@ msgid "Property Changes"
 msgstr "Promjene osobine"
 
 #: image/commands/kis_node_compositeop_command.cpp:28
+#, fuzzy
+#| msgid "Composite Mode"
 msgctxt "(qtundo-format)"
-msgid "Node Composite Mode"
-msgstr "Kompozitni režim čvora"
+msgid "Composition Mode Change"
+msgstr "Kompozitni režim"
 
 #: image/commands/kis_node_opacity_command.cpp:26
+#, fuzzy
+#| msgid "Opacity: "
 msgctxt "(qtundo-format)"
-msgid "Node Opacity"
-msgstr "Neprozirnost čvora"
+msgid "Opacity Change"
+msgstr "Neprozirnost: "
 
 #: image/commands/kis_reselect_global_selection_command.cpp:30
 msgctxt "(qtundo-format)"
 msgid "Reselect"
 msgstr "Označi ponovo"
 
-#: image/commands_new/kis_image_resize_command.cpp:28
+#: image/commands_new/kis_image_resize_command.cpp:28 image/kis_image.cc:421
 msgctxt "(qtundo-format)"
 msgid "Resize Image"
 msgstr "Promjeni dimenzije slike"
@@ -1636,13 +1630,12 @@ msgid "Set Image Resolution"
 msgstr "Postavi rezoluciju slike"
 
 #: image/commands_new/kis_move_command_common.h:40
+#: plugins/tools/defaulttools/strokes/move_stroke_strategy.cpp:31
 msgctxt "(qtundo-format)"
 msgid "Move"
 msgstr "Promjeni položaj"
 
-#. i18n: ectx: property (text), widget (QPushButton, bnZoomAdjust)
 #: image/filter/kis_filter.cc:35
-#: plugins/extensions/dockers/imagedocker/forms/wdgImageViewPopup.ui:35
 msgid "Adjust"
 msgstr "Podesi"
 
@@ -1726,13 +1719,13 @@ msgstr "Umekšan"
 msgid "Gaussian"
 msgstr "Gausovo zamućenje"
 
-#: image/kis_base_node.cpp:141 ui/kis_node_model.cpp:425
+#: image/kis_base_node.cpp:141 ui/kis_node_model.cpp:442
 msgid "Visible"
 msgstr "Vidljiv"
 
 #: image/kis_base_node.cpp:142
 #: plugins/extensions/dockers/channeldocker/channelmodel.cpp:68
-#: ui/kis_node_model.cpp:426
+#: ui/kis_node_model.cpp:443
 msgid "Locked"
 msgstr "Zaključan"
 
@@ -1815,70 +1808,122 @@ msgstr "pozadina"
 msgid "Layer %1"
 msgstr "Sloj %1"
 
-#: image/kis_image.cc:419
+#: image/kis_image.cc:420
+#, fuzzy
+#| msgid "Crop Image"
+msgctxt "(qtundo-format)"
 msgid "Crop Image"
 msgstr "Saseci sliku"
 
-#: image/kis_image.cc:419
-msgid "Resize Image"
-msgstr "Promijeni veličinu slike"
+#: image/kis_image.cc:456
+#, fuzzy
+#| msgid "&Group Layer"
+msgctxt "(qtundo-format)"
+msgid "Crop Layer"
+msgstr "&Grupni sloj"
 
-#: image/kis_image.cc:452
-msgid "Crop Node"
-msgstr "Sasjeći čvor"
+#: image/kis_image.cc:457
+#, fuzzy
+#| msgid "Unsharp Mask"
+msgctxt "(qtundo-format)"
+msgid "Crop Mask"
+msgstr "Maska ublažavanja"
 
-#: image/kis_image.cc:479
+#: image/kis_image.cc:485
+#, fuzzy
+#| msgid "Scale Image"
+msgctxt "(qtundo-format)"
 msgid "Scale Image"
 msgstr "Skaliraj sliku"
 
-#: image/kis_image.cc:479
+#: image/kis_image.cc:486
+#, fuzzy
+#| msgid "Change Image Resolution"
+msgctxt "(qtundo-format)"
 msgid "Change Image Resolution"
 msgstr "Promijeni rezoluciju slike"
 
-#: image/kis_image.cc:526
+#: image/kis_image.cc:533
+#, fuzzy
+#| msgid "Scale Layer"
+msgctxt "(qtundo-format)"
 msgid "Scale Layer"
 msgstr "Skaliraj sloj"
 
-#: image/kis_image.cc:620 plugins/extensions/rotateimage/rotateimage.cc:155
+#: image/kis_image.cc:621
+#, fuzzy
+#| msgid "Rotate Image"
+msgctxt "(qtundo-format)"
+msgid "Rotate Image"
+msgstr "Rotiraj sliku"
+
+#: image/kis_image.cc:626
+#, fuzzy
+#| msgid "Rotate Layer"
+msgctxt "(qtundo-format)"
 msgid "Rotate Layer"
 msgstr "Okreni sloj"
 
-#: image/kis_image.cc:687
+#: image/kis_image.cc:693
+#, fuzzy
+#| msgid "Shear layer"
+msgctxt "(qtundo-format)"
 msgid "Shear layer"
 msgstr "Smakni sloj"
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, WdgShearImage)
-#: image/kis_image.cc:693 plugins/extensions/shearimage/dlg_shearimage.cc:32
-#: plugins/extensions/shearimage/shearimage.cc:64
-#: plugins/extensions/shearimage/wdg_shearimage.ui:14
+#: image/kis_image.cc:699
+#, fuzzy
+#| msgid "Shear Image"
+msgctxt "(qtundo-format)"
 msgid "Shear Image"
 msgstr "Smakni sliku"
 
-#: image/kis_image.cc:706
+#: image/kis_image.cc:712
+#, fuzzy
+#| msgid "Convert Image Color Space"
+msgctxt "(qtundo-format)"
 msgid "Convert Image Color Space"
 msgstr "Konvertuj prostor boja slike"
 
-#: image/kis_image.cc:739
+#: image/kis_image.cc:745
+#, fuzzy
+#| msgid "Convert Projection Color Space"
+msgctxt "(qtundo-format)"
 msgid "Convert Projection Color Space"
 msgstr "Konvertuj prostor boja projekcije"
 
-#: image/kis_image.cc:918 ui/kis_layer_manager.cc:709
+#: image/kis_image.cc:924
+#, fuzzy
+#| msgid "Flatten Image"
+msgctxt "(qtundo-format)"
 msgid "Flatten Image"
 msgstr "Spljošti sliku"
 
-#: image/kis_image.cc:1018
+#: image/kis_image.cc:1024
+#, fuzzy
+#| msgid "Merge with Layer Below"
+msgctxt "(qtundo-format)"
 msgid "Merge with Layer Below"
 msgstr "Stopi sa slojem ispod"
 
-#: image/kis_image.cc:1064
+#: image/kis_image.cc:1070
+#, fuzzy
+#| msgid "Flatten Layer"
+msgctxt "(qtundo-format)"
 msgid "Flatten Layer"
 msgstr "Izravnaj sloj"
 
-#: image/kis_image.cc:1650
+#: image/kis_image.cc:1656
 #, fuzzy
 #| msgid "Grow Selection"
+msgctxt "(qtundo-format)"
 msgid "Crop Selections"
 msgstr "Proširi izbor"
+
+#: image/kis_layer.cc:174
+#, kde-format
+msgid "%1%"
+msgstr "%1%"
 
 #. i18n: ectx: property (text), widget (QCheckBox, opacityCBox)
 #: image/kis_layer.cc:174 plugins/paintops/hairy/wdghairyeoptions.ui:297
@@ -1888,17 +1933,12 @@ msgstr "Proširi izbor"
 msgid "Opacity"
 msgstr "Neprozirnost"
 
-#: image/kis_layer.cc:174
-#, kde-format
-msgid "%1%"
-msgstr "%1%"
-
 #: image/kis_layer.cc:176
 msgid "Composite Mode"
 msgstr "Kompozitni režim"
 
 #: image/kis_paint_layer.cc:151 image/kis_paint_layer.cc:160
-#: ui/kis_node_model.cpp:434
+#: ui/kis_node_model.cpp:451
 msgid "Alpha Locked"
 msgstr "Alfa zaključano"
 
@@ -1911,45 +1951,65 @@ msgid "Processing"
 msgstr "Obrađujem"
 
 #: image/kis_selection_filters.cpp:120
+#, fuzzy
+#| msgid "Erode Selection"
+msgctxt "(qtundo-format)"
 msgid "Erode Selection"
 msgstr "Erodirano označavanje"
 
 #: image/kis_selection_filters.cpp:184
+#, fuzzy
+#| msgid "Dilate Selection"
+msgctxt "(qtundo-format)"
 msgid "Dilate Selection"
 msgstr "Prošireno označavanje"
 
 #: image/kis_selection_filters.cpp:254
-#: plugins/extensions/modify_selection/dlg_border_selection.cc:31
+#, fuzzy
+#| msgid "Border Selection"
+msgctxt "(qtundo-format)"
 msgid "Border Selection"
 msgstr "Izbor granica"
 
 #: image/kis_selection_filters.cpp:473
-#: plugins/extensions/modify_selection/dlg_feather_selection.cc:31
+#, fuzzy
+#| msgid "Feather Selection"
+msgctxt "(qtundo-format)"
 msgid "Feather Selection"
 msgstr "Umekšaj izbor"
 
 #: image/kis_selection_filters.cpp:520
-#: plugins/extensions/modify_selection/dlg_grow_selection.cc:31
+#, fuzzy
+#| msgid "Grow Selection"
+msgctxt "(qtundo-format)"
 msgid "Grow Selection"
 msgstr "Proširi izbor"
 
 #: image/kis_selection_filters.cpp:647
-#: plugins/extensions/modify_selection/dlg_shrink_selection.cc:31
+#, fuzzy
+#| msgid "Shrink Selection"
+msgctxt "(qtundo-format)"
 msgid "Shrink Selection"
 msgstr "Smanji izbor"
 
 #: image/kis_selection_filters.cpp:790
+#, fuzzy
+#| msgid "Smooth Selection"
+msgctxt "(qtundo-format)"
 msgid "Smooth Selection"
 msgstr "Glatko označavanje"
 
 #: image/kis_selection_filters.cpp:851
+#, fuzzy
+#| msgid "Invert Selection"
+msgctxt "(qtundo-format)"
 msgid "Invert Selection"
 msgstr "Obrnuto označavanje"
 
 #. i18n: ectx: property (text), widget (QLabel, label_17)
 #: image/kis_selection_mask.cpp:106
 #: plugins/paintops/resourcemanager/wdgdlgbundlemanager.ui:225
-#: ui/kis_node_model.cpp:427
+#: ui/kis_node_model.cpp:444
 msgid "Active"
 msgstr "Aktivan"
 
@@ -2018,21 +2078,21 @@ msgstr ""
 msgid "Invalid value."
 msgstr "Nevažeća vrijednost"
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, WdgToolCrop)
-#: image/processing/kis_crop_processing_visitor.cpp:54
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:14
-msgid "Crop"
-msgstr "Odsjeci"
-
 #: image/processing/kis_transform_processing_visitor.cpp:160
-msgid "Transform Node"
+#, fuzzy
+#| msgid "Transform Node"
+msgctxt "(qtundo-format)"
+msgid "Transform Layer"
 msgstr "Transformisi čvor"
 
-#: image/recorder/kis_macro_player.cc:75
+#: image/recorder/kis_macro_player.cc:77
+#, fuzzy
+#| msgid "Play macro"
+msgctxt "(qtundo-format)"
 msgid "Play macro"
 msgstr "Izvrši makro"
 
-#: image/recorder/kis_macro_player.cc:81
+#: image/recorder/kis_macro_player.cc:83
 #: plugins/extensions/bigbrother/bigbrother.cc:124
 msgid "Playing back macro"
 msgstr "Izvodim makro"
@@ -2041,13 +2101,18 @@ msgstr "Izvodim makro"
 msgid "Fill"
 msgstr "Popuna"
 
+#: image/recorder/kis_recorded_filter_action.cpp:103
+#, fuzzy, kde-format
+#| msgid "Filter:"
+msgctxt "(qtundo-format)"
+msgid "Filter: \"%1\""
+msgstr "Filter:"
+
 #: image/recorder/kis_recorded_node_action.cc:54
 msgid "Applying action to all selected nodes"
 msgstr "Obavljam akcije nad svinm izabranim čvorovima"
 
 #: image/recorder/kis_recorded_path_paint_action.cpp:61
-#: plugins/tools/defaulttools/kis_tool_path.cc:75
-#: plugins/tools/defaulttools/kis_tool_pencil.cc:61
 msgid "Path"
 msgstr "Putanja"
 
@@ -2059,7 +2124,6 @@ msgstr "Putanja"
 #: plugins/paintops/gridbrush/wdgshapeoptions.ui:36
 #: plugins/paintops/libpaintop/forms/wdgBrushSizeOptions.ui:343
 #: plugins/paintops/spray/wdgshapeoptions.ui:60
-#: plugins/tools/defaulttools/kis_tool_ellipse.cc:64
 msgid "Ellipse"
 msgstr "Elipsa"
 
@@ -2072,7 +2136,6 @@ msgstr "Elipsa"
 #: plugins/paintops/gridbrush/wdgshapeoptions.ui:41
 #: plugins/paintops/libpaintop/forms/wdgBrushSizeOptions.ui:348
 #: plugins/paintops/spray/wdgshapeoptions.ui:65
-#: plugins/tools/defaulttools/kis_tool_rectangle.cc:67
 msgid "Rectangle"
 msgstr "Pravilni četverougao"
 
@@ -2155,7 +2218,7 @@ msgid "Perspective assistant"
 msgstr "Pomocnik perspektive"
 
 #: plugins/assistants/RulerAssistant/PerspectiveAssistant.cc:339
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:52
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:60
 msgid "Perspective"
 msgstr "Perspektiva"
 
@@ -2309,7 +2372,7 @@ msgstr "- Niz od %1"
 #: plugins/extensions/clonesarray/wdg_clonesarray.ui:14
 #: plugins/extensions/offsetimage/wdg_offsetimage.ui:14
 #: plugins/extensions/rotateimage/dlg_rotateimage.cc:31
-#: plugins/extensions/rotateimage/rotateimage.cc:108
+#: plugins/extensions/rotateimage/rotateimage.cc:109
 #: plugins/extensions/rotateimage/wdg_rotateimage.ui:16
 msgid "Rotate Image"
 msgstr "Rotiraj sliku"
@@ -2407,7 +2470,13 @@ msgid "Select from Color Range..."
 msgstr "Izbor iz opsega boja..."
 
 #: plugins/extensions/colorrange/colorrange.cc:55
+msgid "Select Opaque"
+msgstr "Izaberi neprozirno"
+
 #: plugins/extensions/colorrange/colorrange.cc:83
+#, fuzzy
+#| msgid "Select Opaque"
+msgctxt "(qtundo-format)"
 msgid "Select Opaque"
 msgstr "Izaberi neprozirno"
 
@@ -2424,6 +2493,9 @@ msgid "Color Range"
 msgstr "Opseg boja"
 
 #: plugins/extensions/colorrange/dlg_colorrange.cc:318
+#, fuzzy
+#| msgid "Color Range Selection"
+msgctxt "(qtundo-format)"
 msgid "Color Range Selection"
 msgstr "Izbor opsega boje"
 
@@ -2527,6 +2599,9 @@ msgid "Convert Current Layer From"
 msgstr "Pretvori tekući sloj iz"
 
 #: plugins/extensions/colorspaceconversion/colorspaceconversion.cc:122
+#, fuzzy
+#| msgid "Convert Layer Type"
+msgctxt "(qtundo-format)"
 msgid "Convert Layer Type"
 msgstr "Pretvori tip sloja"
 
@@ -2709,6 +2784,7 @@ msgstr "Pomak: "
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:24
 #: ui/dialogs/kis_dlg_preferences.cc:602 ui/dialogs/kis_dlg_preferences.cc:603
+#: ui/kis_paintop_option.cpp:26
 msgid "General"
 msgstr "Općenito"
 
@@ -2892,8 +2968,10 @@ msgstr "Prikaži"
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #. i18n: ectx: property (text), widget (QLabel, label_12)
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:476
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:693
+#: plugins/formats/heightmap/kis_wdg_options_heightmap.ui:30
 #: plugins/formats/pdf/pdfimportwidgetbase.ui:214
 #: plugins/paintops/libpaintop/kis_brush_chooser.cpp:97
 #: ui/forms/wdgdisplaysettings.ui:77 ui/kis_paintop_box.cc:152
@@ -3105,58 +3183,71 @@ msgstr "Naziv:"
 msgid "Composition"
 msgstr "Sastav"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:120
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:122
 msgid "Layers"
 msgstr "Slojevi"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:146
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:148
 msgid "Minimal View"
 msgstr "Minmalni pogled"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:148
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:150
 msgid "Detailed View"
 msgstr "Detaljni pogled"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:150
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:152
 msgid "Thumbnail View"
 msgstr "Umanjeni pogled"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:162
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:164
 msgid "View mode"
 msgstr "Način prikaza"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:189
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:191
 msgid "&Remove Layer"
 msgstr "&Ukloni sloj"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:197
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:199
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Move Layer"
 msgid "Move Layer Left"
 msgstr "Promjeni nivo sloja"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:205
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:207
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Move Layer"
 msgid "Move Layer Right"
 msgstr "Promjeni nivo sloja"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:212
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:214
 msgid "&Properties..."
 msgstr "&Osobine..."
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:230
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:232
 msgid "&Select Opaque"
 msgstr "&Izaberi neprovidnost"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:475
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:256
+#, fuzzy
+#| msgid "to &Selection Mask"
+msgid "&Show Global Selection Mask"
+msgstr "u &Odabirnu masku"
+
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:258
+msgctxt "@info:tooltip"
+msgid ""
+"Shows global selection as a usual selection mask in <interface>Layers</"
+"interface> docker"
+msgstr ""
+
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:487
 #: ui/kis_layer_manager.cc:283
 msgid "&Merge with Layer Below"
 msgstr "&Stopi sa slojem ispod"
 
-#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:479
+#: plugins/extensions/dockers/defaultdockers/kis_layer_box.cpp:491
 msgid "&Convert"
 msgstr "&Pretvori"
 
@@ -3411,6 +3502,14 @@ msgstr "Sljedeći"
 msgid "Fit"
 msgstr "Uklopi"
 
+#. i18n: ectx: property (text), widget (QPushButton, bnZoomAdjust)
+#: plugins/extensions/dockers/imagedocker/forms/wdgImageViewPopup.ui:35
+#, fuzzy
+#| msgid "Adjust"
+msgctxt "Zoom mode to fit by only one dimension - width or height"
+msgid "Adjust"
+msgstr "Podesi"
+
 #. i18n: ectx: property (text), widget (QPushButton, bnZoom100)
 #: plugins/extensions/dockers/imagedocker/forms/wdgImageViewPopup.ui:48
 #: plugins/paintops/curvebrush/kis_curves_opacity_option.cpp:26
@@ -3543,7 +3642,7 @@ msgid "LUT file:"
 msgstr "LUT datoteka:"
 
 #. i18n: ectx: property (text), widget (QToolButton, m_bnClearLut)
-#: plugins/extensions/dockers/lut/wdglut.ui:186 ui/tool/kis_tool.cc:545
+#: plugins/extensions/dockers/lut/wdglut.ui:186
 msgid "Clear"
 msgstr "Čisto"
 
@@ -3694,6 +3793,9 @@ msgid "Layer Effects"
 msgstr "Efekti slojeva"
 
 #: plugins/extensions/dropshadow/kis_dropshadow.cc:126
+#, fuzzy
+#| msgid "Add Drop Shadow"
+msgctxt "(qtundo-format)"
 msgid "Add Drop Shadow"
 msgstr "Dodaj padajuću sjenku"
 
@@ -3772,7 +3874,7 @@ msgstr "Obavi G'Mic akciju..."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgSplash)
 #: plugins/extensions/gmic/kis_gmic_plugin.cpp:158
-#: plugins/extensions/gmic/kis_gmic_plugin.cpp:167 ui/kis_aboutdata.h:44
+#: plugins/extensions/gmic/kis_gmic_plugin.cpp:166 ui/kis_aboutdata.h:44
 #: wdgsplash.ui:300
 msgid "Krita"
 msgstr "Krita"
@@ -3781,11 +3883,14 @@ msgstr "Krita"
 msgid "Sorry, this filter is crashing Krita and is turned off."
 msgstr "Oprostite,filter ruši Kritu i ugašena je."
 
-#: plugins/extensions/gmic/kis_gmic_plugin.cpp:167
+#: plugins/extensions/gmic/kis_gmic_plugin.cpp:166
 msgid "Sorry, this input mode is not implemented"
 msgstr "Oprostite, ulazni način nije implementiran"
 
-#: plugins/extensions/gmic/kis_gmic_plugin.cpp:172
+#: plugins/extensions/gmic/kis_gmic_plugin.cpp:170
+#, fuzzy
+#| msgid "Gmic filter"
+msgctxt "(qtundo-format)"
 msgid "Gmic filter"
 msgstr "Gmic filter"
 
@@ -3997,7 +4102,6 @@ msgstr "Čuvaj proporcije"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (title), widget (QGroupBox, grpAngle)
 #: plugins/extensions/imagesize/wdg_canvassize.ui:158
-#: plugins/extensions/offsetimage/kis_offset_processing_visitor.cpp:109
 #: plugins/extensions/offsetimage/wdg_offsetimage.ui:20
 msgid "Offset"
 msgstr "Pomjeraj"
@@ -4611,8 +4715,6 @@ msgstr "Balans bijelog:"
 #. i18n: ectx: property (text), item, widget (QComboBox, editWhiteBalance)
 #. i18n: ectx: property (text), widget (QRadioButton, customRadioButton)
 #: plugins/extensions/metadataeditor/editors/exif.ui:924
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:64
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:66
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:1037
 msgid "Custom"
 msgstr "Posebno"
@@ -4769,6 +4871,22 @@ msgstr "Vrijednost"
 msgid "&Edit metadata..."
 msgstr "&Izmijeni metapodatke..."
 
+#: plugins/extensions/modify_selection/dlg_border_selection.cc:31
+msgid "Border Selection"
+msgstr "Izbor granica"
+
+#: plugins/extensions/modify_selection/dlg_feather_selection.cc:31
+msgid "Feather Selection"
+msgstr "Umekšaj izbor"
+
+#: plugins/extensions/modify_selection/dlg_grow_selection.cc:31
+msgid "Grow Selection"
+msgstr "Proširi izbor"
+
+#: plugins/extensions/modify_selection/dlg_shrink_selection.cc:31
+msgid "Shrink Selection"
+msgstr "Smanji izbor"
+
 #: plugins/extensions/modify_selection/modify_selection.cc:42
 msgid "Grow Selection..."
 msgstr "Proširi izbor..."
@@ -4817,11 +4935,6 @@ msgstr "Smanji za"
 msgid "Shrink from image border"
 msgstr "Smanji od granica slike"
 
-#: plugins/extensions/offsetimage/dlg_offsetimage.cpp:28
-#: plugins/extensions/offsetimage/offsetimage.cpp:73
-msgid "Offset Image"
-msgstr "Pomak slike"
-
 #: plugins/extensions/offsetimage/offsetimage.cpp:48
 msgid "&Offset Image..."
 msgstr "&Pomak slike..."
@@ -4830,7 +4943,31 @@ msgstr "&Pomak slike..."
 msgid "&Offset Layer..."
 msgstr "&Pokak sloja..."
 
+#: plugins/extensions/offsetimage/offsetimage.cpp:73
+#, fuzzy
+#| msgid "Offset Image"
+msgctxt "(qtundo-format)"
+msgid "Offset Image"
+msgstr "Pomak slike"
+
+#: plugins/extensions/offsetimage/offsetimage.cpp:74
+#, fuzzy
+#| msgid "Offset Image"
+msgctxt "@title:window"
+msgid "Offset Image"
+msgstr "Pomak slike"
+
 #: plugins/extensions/offsetimage/offsetimage.cpp:97
+#, fuzzy
+#| msgid "Offset Layer"
+msgctxt "(qtundo-format)"
+msgid "Offset Layer"
+msgstr "Pomak sloja"
+
+#: plugins/extensions/offsetimage/offsetimage.cpp:98
+#, fuzzy
+#| msgid "Offset Layer"
+msgctxt "@title:window"
 msgid "Offset Layer"
 msgstr "Pomak sloja"
 
@@ -4839,53 +4976,69 @@ msgstr "Pomak sloja"
 msgid "Offset by x/2, y/2"
 msgstr "Pomak za x/2, y/2"
 
-#: plugins/extensions/rotateimage/rotateimage.cc:46
+#: plugins/extensions/rotateimage/rotateimage.cc:47
 msgid "&Rotate Image..."
 msgstr "&Rotiraj sliku..."
 
-#: plugins/extensions/rotateimage/rotateimage.cc:50
+#: plugins/extensions/rotateimage/rotateimage.cc:51
 msgctxt "rotate image 90 degrees to the right"
 msgid "Rotate Image 90° to the Right"
 msgstr "Okreni sliku 90° udesno"
 
-#: plugins/extensions/rotateimage/rotateimage.cc:54
+#: plugins/extensions/rotateimage/rotateimage.cc:55
 msgctxt "rotate image 180 degrees to the right"
 msgid "Rotate Image 180°"
 msgstr "Okreni sliku za 180°"
 
-#: plugins/extensions/rotateimage/rotateimage.cc:58
+#: plugins/extensions/rotateimage/rotateimage.cc:59
 msgctxt "rotate image 90 degrees to the left"
 msgid "Rotate Image 90° to the Left"
 msgstr "Okreni sliku za 90° ulijevo"
 
-#: plugins/extensions/rotateimage/rotateimage.cc:62
-#: plugins/extensions/rotateimage/rotateimage.cc:143
+#: plugins/extensions/rotateimage/rotateimage.cc:63
 msgid "Mirror Image Horizontally"
 msgstr "Slika u ogledalu horizontalno"
 
-#: plugins/extensions/rotateimage/rotateimage.cc:66
-#: plugins/extensions/rotateimage/rotateimage.cc:136
+#: plugins/extensions/rotateimage/rotateimage.cc:67
 msgid "Mirror Image Vertically"
 msgstr "Slika u ogledalu vertikalno"
 
-#: plugins/extensions/rotateimage/rotateimage.cc:70
+#: plugins/extensions/rotateimage/rotateimage.cc:71
 msgid "&Rotate Layer..."
 msgstr "&Rotiraj sloj..."
 
-#: plugins/extensions/rotateimage/rotateimage.cc:76
+#: plugins/extensions/rotateimage/rotateimage.cc:77
 msgctxt "rotate the layer 180 degrees"
 msgid "Rotate Layer 180°"
 msgstr "Okreni sloj za 180°"
 
-#: plugins/extensions/rotateimage/rotateimage.cc:82
+#: plugins/extensions/rotateimage/rotateimage.cc:83
 msgctxt "rotate the layer 90 degrees to the right"
 msgid "Rotate Layer 90° to the Right"
 msgstr "Okreni sloj za 90° udesno"
 
-#: plugins/extensions/rotateimage/rotateimage.cc:88
+#: plugins/extensions/rotateimage/rotateimage.cc:89
 msgctxt "rotate the layer 90 degrees to the left"
 msgid "Rotate Layer 90° to the Left"
 msgstr "Okreni sloj za 90° ulijevo"
+
+#: plugins/extensions/rotateimage/rotateimage.cc:137
+#, fuzzy
+#| msgid "Mirror Image Vertically"
+msgctxt "(qtundo-format)"
+msgid "Mirror Image Vertically"
+msgstr "Slika u ogledalu vertikalno"
+
+#: plugins/extensions/rotateimage/rotateimage.cc:144
+#, fuzzy
+#| msgid "Mirror Image Horizontally"
+msgctxt "(qtundo-format)"
+msgid "Mirror Image Horizontally"
+msgstr "Slika u ogledalu horizontalno"
+
+#: plugins/extensions/rotateimage/rotateimage.cc:156
+msgid "Rotate Layer"
+msgstr "Okreni sloj"
 
 #. i18n: ectx: Menu (Rotate)
 #: plugins/extensions/rotateimage/rotateimage.rc:5
@@ -4929,9 +5082,15 @@ msgid "&Custom:"
 msgstr "&Posebno:"
 
 #: plugins/extensions/separate_channels/dlg_separate.cc:40
-#: plugins/extensions/separate_channels/kis_channel_separator.cc:214
 #: plugins/extensions/separate_channels/kis_separate_channels_plugin.cc:76
 #: plugins/extensions/separate_channels/kis_separate_channels_plugin.cc:87
+msgid "Separate Image"
+msgstr "Razdvoji sliku"
+
+#: plugins/extensions/separate_channels/kis_channel_separator.cc:214
+#, fuzzy
+#| msgid "Separate Image"
+msgctxt "(qtundo-format)"
 msgid "Separate Image"
 msgstr "Razdvoji sliku"
 
@@ -5008,6 +5167,13 @@ msgstr "Spusti na 8-bitno prije razdvajanja"
 #: plugins/extensions/separate_channels/wdg_separations.ui:138
 msgid "Output to color, not grayscale"
 msgstr "Izlaz u boji, ne u sivim tonovima"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, WdgShearImage)
+#: plugins/extensions/shearimage/dlg_shearimage.cc:32
+#: plugins/extensions/shearimage/shearimage.cc:64
+#: plugins/extensions/shearimage/wdg_shearimage.ui:14
+msgid "Shear Image"
+msgstr "Smakni sliku"
 
 #: plugins/extensions/shearimage/shearimage.cc:40
 msgid "&Shear Image..."
@@ -5127,7 +5293,7 @@ msgstr "Iris"
 #: plugins/paintops/experiment/wdgshapeoptions.ui:46
 #: plugins/paintops/libpaintop/forms/wdgBrushSizeOptions.ui:326
 #: plugins/paintops/spray/wdgshapeoptions.ui:46
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:214
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:215
 msgid "Shape:"
 msgstr "Oblik:"
 
@@ -5654,6 +5820,11 @@ msgid "&Index Colors..."
 msgstr "&Puna boja..."
 
 #: plugins/filters/indexcolors/indexcolors.cpp:82
+msgctxt "Color palette shade"
+msgid "Base"
+msgstr ""
+
+#: plugins/filters/indexcolors/indexcolors.cpp:82
 #, fuzzy
 #| msgid "Brightness"
 msgctxt "Color palette shade"
@@ -5666,11 +5837,6 @@ msgstr "Osvetljenost"
 msgctxt "Color palette shade"
 msgid "Light"
 msgstr "Desno"
-
-#: plugins/filters/indexcolors/indexcolors.cpp:82
-msgctxt "Color palette shade"
-msgid "Base"
-msgstr ""
 
 #: plugins/filters/indexcolors/indexcolors.cpp:82
 #, fuzzy
@@ -6043,7 +6209,7 @@ msgstr "&Obli uglovi..."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/filters/roundcorners/kis_round_corners_filter.cpp:130
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:284
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:285
 #: plugins/tools/selectiontools/kis_tool_select_magnetic_option_widget.ui:103
 msgid "Radius"
 msgstr "Poluprečnik"
@@ -6176,13 +6342,13 @@ msgstr ""
 msgid "HDR Layer"
 msgstr "HDR Sloj"
 
-#: plugins/formats/exr/exr_converter.cc:1071
+#: plugins/formats/exr/exr_converter.cc:1070
 #, kde-format
 msgctxt "@item:unsupported-node-message"
 msgid "%1 (type: \"%2\")"
 msgstr ""
 
-#: plugins/formats/exr/exr_converter.cc:1076
+#: plugins/formats/exr/exr_converter.cc:1075
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -6191,7 +6357,7 @@ msgid ""
 "saved to the final EXR file</warning></para>"
 msgstr ""
 
-#: plugins/formats/exr/exr_converter.cc:1081
+#: plugins/formats/exr/exr_converter.cc:1080
 msgctxt "@title:window"
 msgid "Layers will be lost"
 msgstr ""
@@ -6267,8 +6433,83 @@ msgstr ""
 msgid "Krita could not create a new image."
 msgstr "Nisam mogao da dodam sloj slici."
 
-#: plugins/formats/jp2/jp2_converter.cc:345
-#: plugins/formats/jp2/jp2_converter.cc:356
+#: plugins/formats/heightmap/kis_heightmap_export.cpp:79
+msgid "Cannot export this image to a heightmap: it is not square"
+msgstr ""
+
+#: plugins/formats/heightmap/kis_heightmap_export.cpp:84
+msgid "Cannot export this image to a heightmap: it is not grayscale"
+msgstr ""
+
+#: plugins/formats/heightmap/kis_heightmap_export.cpp:89
+#, fuzzy
+#| msgid "PPM Export Options"
+msgid "HeightMap Export Options"
+msgstr "PPM izvozne opcije"
+
+#: plugins/formats/heightmap/kis_heightmap_export.cpp:139
+#, fuzzy
+#| msgid "Scale Image"
+msgid "Downscale Image"
+msgstr "Skaliraj sliku"
+
+#: plugins/formats/heightmap/kis_heightmap_export.cpp:140
+msgid ""
+"You specified the .r8 extension for a 16 bit/channel image. Do you want to "
+"save as 8 bit? Your image data will not be changed."
+msgstr ""
+
+#: plugins/formats/heightmap/kis_heightmap_import.cpp:83
+msgid "The file is not 8 or 16 bits raw"
+msgstr ""
+
+#: plugins/formats/heightmap/kis_heightmap_import.cpp:112
+#, fuzzy
+#| msgid "PDF Import Options"
+msgid "R16 HeightMap Import Options"
+msgstr "Opcije uvoza iz PDF-a"
+
+#: plugins/formats/heightmap/kis_heightmap_import.cpp:132
+msgid "File does not exist."
+msgstr ""
+
+#: plugins/formats/heightmap/kis_heightmap_import.cpp:158
+msgid "Source file is not the right size for the specified width and height."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: plugins/formats/heightmap/kis_wdg_options_heightmap.ui:40
+#, fuzzy
+#| msgid "Randomness:"
+msgid "Endianness:"
+msgstr "Slučajnost:"
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, radioMac)
+#: plugins/formats/heightmap/kis_wdg_options_heightmap.ui:58
+msgid "Big Endian"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioMac)
+#: plugins/formats/heightmap/kis_wdg_options_heightmap.ui:61
+#, fuzzy
+#| msgid "Macro"
+msgid "Mac"
+msgstr "Makro"
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, radioPC)
+#: plugins/formats/heightmap/kis_wdg_options_heightmap.ui:68
+msgid "Little Endian"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioPC)
+#: plugins/formats/heightmap/kis_wdg_options_heightmap.ui:71
+#, fuzzy
+#| msgid "IPTC"
+msgid "PC"
+msgstr "IPTC"
+
+#: plugins/formats/jp2/jp2_converter.cc:344
+#: plugins/formats/jp2/jp2_converter.cc:355
 #: plugins/formats/tiff/kis_tiff_writer_visitor.cpp:67
 #, kde-format
 msgid "Cannot export images in %1.\n"
@@ -6431,8 +6672,12 @@ msgid "Vector Layer"
 msgstr "Vektor sloj"
 
 #: plugins/formats/ora/ora_export.cc:100
+#, fuzzy
+#| msgid ""
+#| "This image contains vector, clone or generated layers..\n"
+#| "These layers will be saved as raster layers."
 msgid ""
-"This image contains vector, clone or generated layers..\n"
+"This image contains vector, clone or fill layers..\n"
 "These layers will be saved as raster layers."
 msgstr ""
 "Ova slika sadrži vektorske, klonirane ili generisanje slojeve..\n"
@@ -6961,24 +7206,24 @@ msgid "Color Smudge"
 msgstr "Četka za zamazivanje boje"
 
 #: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:52
-msgid "Smudge Length"
-msgstr "Dužina mrlje"
-
-#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:52
 msgid "Length: "
 msgstr "Dužina: "
 
-#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:53
-#, fuzzy
-#| msgid "smudge radius"
-msgid "Smudge Radius"
-msgstr "Zamazivanje poluprečnik"
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:52
+msgid "Smudge Length"
+msgstr "Dužina mrlje"
 
 #: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:53
 #, fuzzy
 #| msgid "Radius:"
 msgid "Radius: "
 msgstr "Poluprečnik:"
+
+#: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:53
+#, fuzzy
+#| msgid "smudge radius"
+msgid "Smudge Radius"
+msgstr "Zamazivanje poluprečnik"
 
 #: plugins/paintops/colorsmudge/kis_colorsmudgeop_settings_widget.cpp:54
 msgid "Color Rate"
@@ -7290,7 +7535,6 @@ msgstr "Broj linija"
 
 #. i18n: ectx: property (text), widget (QRadioButton, polygonRBox)
 #: plugins/paintops/dynadraw/wdgdynaoptions.ui:227
-#: plugins/tools/tool_polygon/kis_tool_polygon.cc:63
 msgid "Polygon"
 msgstr "Poligon"
 
@@ -7426,8 +7670,7 @@ msgid "Texture:"
 msgstr "Tekstura:"
 
 #: plugins/paintops/gridbrush/grid_paintop_plugin.cpp:41
-#: ui/canvas/kis_grid_manager.cpp:47 ui/dialogs/kis_dlg_preferences.cc:636
-#: ui/dialogs/kis_dlg_preferences.cc:637
+#: ui/dialogs/kis_dlg_preferences.cc:636 ui/dialogs/kis_dlg_preferences.cc:637
 msgid "Grid"
 msgstr "Mreža"
 
@@ -8141,6 +8384,11 @@ msgstr "Vrsta četke"
 msgid "Predefined"
 msgstr "&Predefinisano:"
 
+#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:64
+#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:66
+msgid "Stamp"
+msgstr ""
+
 #. i18n: ectx: property (title), widget (QGroupBox, grpClipboard)
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:68
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:70
@@ -8247,8 +8495,6 @@ msgstr "Obična boja"
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbStyle)
 #: plugins/paintops/libpaintop/kis_color_source_option.cpp:56
 #: plugins/paintops/libpaintop/kis_pressure_gradient_option.cpp:26
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:151
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:165
 #: plugins/tools/tool_text/wdgtextoptions.ui:53
 msgid "Gradient"
 msgstr "Gradijent"
@@ -8297,15 +8543,19 @@ msgstr "X-nagib"
 msgid "Y-Tilt"
 msgstr "Y-nagib"
 
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:50
-msgid "Ascension"
-msgstr "Penjanje"
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:57
+#, fuzzy
+#| msgid "Direction:"
+msgid "Tilt direction"
+msgstr "Smjer:"
 
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:51
-msgid "Declination"
-msgstr "Odbijanje"
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:58
+#, fuzzy
+#| msgid "Dilate Selection"
+msgid "Tilt elevation"
+msgstr "Prošireno označavanje"
 
-#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:53
+#: plugins/paintops/libpaintop/kis_dynamic_sensor.h:61
 msgid "Tangential pressure"
 msgstr "Tangencijalni pritisak"
 
@@ -8361,7 +8611,7 @@ msgid "Lower value "
 msgstr "Niža vrijednost "
 
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option.cpp:30
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:242
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:243
 #: ui/kis_paintop_box.cc:252
 msgid "Mirror"
 msgstr "Ogledalo"
@@ -8375,12 +8625,12 @@ msgid "Mirrored"
 msgstr "Ogledano"
 
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:35
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:262
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:263
 msgid "Horizontally"
 msgstr "Vodoravno"
 
 #: plugins/paintops/libpaintop/kis_pressure_mirror_option_widget.cpp:37
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:264
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:265
 msgid "Vertically"
 msgstr "Uspravno"
 
@@ -8487,12 +8737,12 @@ msgid "Texturing Mode:"
 msgstr "Način postavljanja tekstura:"
 
 #: plugins/paintops/libpaintop/kis_texture_option.cpp:105
-msgid "Cut Off Disabled"
-msgstr "Odrezivanje onemogućeno"
-
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:105
 msgid "Cut Off Brush"
 msgstr "Odrezivanje četke"
+
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:105
+msgid "Cut Off Disabled"
+msgstr "Odrezivanje onemogućeno"
 
 #: plugins/paintops/libpaintop/kis_texture_option.cpp:105
 msgid "Cut Off Pattern"
@@ -8515,8 +8765,10 @@ msgid "Cutoff:"
 msgstr "Odsjecanje:"
 
 #: plugins/paintops/libpaintop/kis_texture_option.cpp:119
-msgid "Invert Texture:"
-msgstr "Izvrni teksture:"
+#, fuzzy
+#| msgid "Invert Saturation"
+msgid "Invert Pattern:"
+msgstr "Izvrsni zasićenje"
 
 #: plugins/paintops/libpaintop/sensors/kis_dynamic_sensor_distance.cc:29
 msgid "0 px"
@@ -8699,10 +8951,6 @@ msgstr ""
 "detalje."
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:156
-msgid "opaque"
-msgstr "neprozirno"
-
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:156
 msgid ""
 "0 means brush is transparent, 1 fully visible\n"
 "(also known as alpha or opacity)"
@@ -8710,9 +8958,9 @@ msgstr ""
 "0 znači da je četka sasvim prozirna, 1 potpuno vidljiva\n"
 "(poznato i kao alfa ili neprozirnost)"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:157
-msgid "opaque multiply"
-msgstr "neprozirno umnoženo"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:156
+msgid "opaque"
+msgstr "neprozirno"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:157
 msgid ""
@@ -8722,9 +8970,9 @@ msgstr ""
 "Ovo postaje umnoženo sa neprozirnošću. Koristi se za izradu neprozirnosti "
 "zavisno od pritiska (ili drugih ulaza)."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:158
-msgid "opaque linearize"
-msgstr "neprozirno linearizovati"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:157
+msgid "opaque multiply"
+msgstr "neprozirno umnoženo"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:158
 msgid ""
@@ -8747,6 +8995,10 @@ msgstr ""
 "pretpostavkom da svaki piksel dobija (dabs_per_radius * 2) crtica četkom u "
 "prosjeku tokom poteza"
 
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:158
+msgid "opaque linearize"
+msgstr "neprozirno linearizovati"
+
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:159
 msgid ""
 "basic brush radius (logarithmic)\n"
@@ -8758,12 +9010,12 @@ msgstr ""
 " 3.0 znači 20 piksela"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:160
-msgid "hardness"
-msgstr "čvrstoća"
-
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:160
 msgid "hard brush-circle borders (setting to zero will draw nothing)"
 msgstr "čvrsta četka kružne ivice (postavljanje na nulu neće ništa crtati)"
+
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:160
+msgid "hardness"
+msgstr "čvrstoća"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:161
 msgid "dabs per basic radius"
@@ -8800,10 +9052,6 @@ msgstr ""
 "pomijera"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:164
-msgid "radius by random"
-msgstr "radijus za slučajno"
-
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:164
 msgid ""
 "Alter the radius randomly each dab. You can also do this with the by_random "
 "input on the radius setting. If you do it here, there are two differences:\n"
@@ -8818,9 +9066,9 @@ msgstr ""
 "radijusa više transparentne\n"
 "2) to neće promeniti stvarnu radijus vide dabs_per_actual_radius"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:165
-msgid "speed1 filter"
-msgstr "speed1 filter"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:164
+msgid "radius by random"
+msgstr "radijus za slučajno"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:165
 msgid ""
@@ -8830,17 +9078,17 @@ msgstr ""
 "Kako polako ulaz speed1 prati stvarnu brzinu.\n"
 "0.0 mijenja odmah po promjeni brzine (ne preporučuje, ali pokušajte ga.)"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:166
-msgid "speed2 filter"
-msgstr "speed2 filter"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:165
+msgid "speed1 filter"
+msgstr "speed1 filter"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:166
 msgid "same as 'speed1 slowness' but note that the range is different"
 msgstr "isto kao 'speed1 sporost' ali je opseg drugi"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:167
-msgid "speed1 gamma"
-msgstr "speed1 gama"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:166
+msgid "speed2 filter"
+msgstr "speed2 filter"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:167
 msgid ""
@@ -8856,17 +9104,17 @@ msgstr ""
 "+8,0 Veoma brzo povećava speed1 mnogo\n"
 "Za veoma male brzine se suprotno dešava."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:168
-msgid "speed2 gamma"
-msgstr "speed2 gamma"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:167
+msgid "speed1 gamma"
+msgstr "speed1 gama"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:168
 msgid "same as 'speed1 gamma' for speed2"
 msgstr "Isto kao 'speed1 gamma' za speed2"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:169
-msgid "jitter"
-msgstr "jitter"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:168
+msgid "speed2 gamma"
+msgstr "speed2 gamma"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:169
 msgid ""
@@ -8880,9 +9128,9 @@ msgstr ""
 " 1,0 standardna devijacija je jedan osnovni radijus udaljena\n"
 "<0.0 negativne vrednosti ne proizvide jitter"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:170
-msgid "offset by speed"
-msgstr "pomak po brzini"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:169
+msgid "jitter"
+msgstr "jitter"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:170
 msgid ""
@@ -8896,17 +9144,17 @@ msgstr ""
 "> 0 Nacrtajte gde pokazivač se pomera na\n"
 "<0 Nacrtajte gde pokazivač dolazi"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:171
-msgid "offset by speed filter"
-msgstr "pomak za brzinski filter"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:170
+msgid "offset by speed"
+msgstr "pomak po brzini"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:171
 msgid "how slow the offset goes back to zero when the cursor stops moving"
 msgstr "Kako sporo pomak vraća na nulu kada se kursor prestane da se kreće"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:172
-msgid "slow position tracking"
-msgstr "sporo praćenje pozicije"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:171
+msgid "offset by speed filter"
+msgstr "pomak za brzinski filter"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:172
 msgid ""
@@ -8917,9 +9165,9 @@ msgstr ""
 "vrijednostima uklanjaju više skokova u kursor pokretima. Korisno za crtanje "
 "glatkih, stripolikih obrisa."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:173
-msgid "slow tracking per dab"
-msgstr "spori trag po crtici"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:172
+msgid "slow position tracking"
+msgstr "sporo praćenje pozicije"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:173
 msgid ""
@@ -8929,9 +9177,9 @@ msgstr ""
 "Slično kao gore, ali na nivou crtice četkom (ignorišući koliko je vremena "
 "prošlo, ako crtice četkom ne zavise od vremena)"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:174
-msgid "tracking noise"
-msgstr "šum crtica četkom"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:173
+msgid "slow tracking per dab"
+msgstr "spori trag po crtici"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:174
 msgid ""
@@ -8940,6 +9188,10 @@ msgid ""
 msgstr ""
 "Dodaj nasumičnosti pokazivaču miša, a to  obično stvara mnogo malih linija u "
 "slučajnim pravcima, možda probajte ovo, zajedno sa \"sporo praćenje '"
+
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:174
+msgid "tracking noise"
+msgstr "šum crtica četkom"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:176
 msgid "color hue"
@@ -8958,10 +9210,6 @@ msgid "color value (brightness, intensity)"
 msgstr "vrijednost boje (osvjetljenje, intenzitet)"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:179
-msgid "change color hue"
-msgstr "promijeni nijansu boje"
-
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:179
 msgid ""
 "Change color hue.\n"
 "-0.1 small clockwise color hue shift\n"
@@ -8973,9 +9221,9 @@ msgstr ""
 " 0.0 onemogući\n"
 " 0.5 pomak obrnuto od kazaljke na satu za 180 stepeni"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:180
-msgid "change color lightness (HSL)"
-msgstr "Promijeni osvjetljenje boje (HSL)"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:179
+msgid "change color hue"
+msgstr "promijeni nijansu boje"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:180
 msgid ""
@@ -8989,9 +9237,9 @@ msgstr ""
 " 0.0 onemogućeno\n"
 " 1,0 bijelje"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:181
-msgid "change color satur. (HSL)"
-msgstr "promijeni zasićenje boje. (HSL)"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:180
+msgid "change color lightness (HSL)"
+msgstr "Promijeni osvjetljenje boje (HSL)"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:181
 msgid ""
@@ -9005,9 +9253,9 @@ msgstr ""
 " 0.0 onemogućeno\n"
 " 1,0 zasićenije"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:182
-msgid "change color value (HSV)"
-msgstr "promjena vrijednosti boje (HSV)"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:181
+msgid "change color satur. (HSL)"
+msgstr "promijeni zasićenje boje. (HSL)"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:182
 msgid ""
@@ -9023,9 +9271,9 @@ msgstr ""
 " 0.0 Onemogući\n"
 " 1,0 svjetlije"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:183
-msgid "change color satur. (HSV)"
-msgstr "promjena zasićebha boje. (HSV)"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:182
+msgid "change color value (HSV)"
+msgstr "promjena vrijednosti boje (HSV)"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:183
 msgid ""
@@ -9041,9 +9289,9 @@ msgstr ""
 " 0.0 Onemogući\n"
 " 1,0 zasićenie"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:184
-msgid "smudge"
-msgstr "mrlja"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:183
+msgid "change color satur. (HSV)"
+msgstr "promjena zasićebha boje. (HSV)"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:184
 msgid ""
@@ -9059,9 +9307,9 @@ msgstr ""
 " 0,5 Miješaj boju razmazivanja  sa bojom četkice\n"
 " 1,0 koriste samo razmazivanje boje"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:185
-msgid "smudge length"
-msgstr "dužina mrlje"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:184
+msgid "smudge"
+msgstr "mrlja"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:185
 msgid ""
@@ -9075,9 +9323,9 @@ msgstr ""
 "0.0 odmah promijeni boju mrlja\n"
 "1,0 nikad ne menja boju mrlja"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:186
-msgid "smudge radius"
-msgstr "Zamazivanje poluprečnik"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:185
+msgid "smudge length"
+msgstr "dužina mrlje"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:186
 msgid ""
@@ -9093,6 +9341,10 @@ msgstr ""
 "-0.7 polovina poluprečnika četke\n"
 "+0.7 dupli poluprečnik četke\n"
 "+1.6 pet puta poluprečnik četke(sporo)"
+
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:186
+msgid "smudge radius"
+msgstr "Zamazivanje poluprečnik"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:187
 msgid "eraser"
@@ -9111,10 +9363,6 @@ msgstr ""
 " 0.5 pikseli idu prema 50% prozirnosti"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:189
-msgid "stroke threshold"
-msgstr "prak poteza"
-
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:189
 msgid ""
 "How much pressure is needed to start a stroke. This affects the stroke input "
 "only. Mypaint does not need a minimal pressure to start drawing."
@@ -9122,9 +9370,9 @@ msgstr ""
 "Koliki pritisak je potreban za pokretanje crtanja. Ovo utiče samo na unos "
 "potezima. Mipaint ne treba minimalni pritisak za početak crtanja."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:190
-msgid "stroke duration"
-msgstr "dužina poteza"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:189
+msgid "stroke threshold"
+msgstr "prak poteza"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:190
 msgid ""
@@ -9134,9 +9382,9 @@ msgstr ""
 "Koliko daleko morate pomjeriti dok ulaz potezima ne dostigne 1.0. Vrijednost "
 "je logaritamska (negativne vrijednosti neće invertovati proces)."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:191
-msgid "stroke hold time"
-msgstr "vrijeme zadržanja poteza"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:190
+msgid "stroke duration"
+msgstr "dužina poteza"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:191
 msgid ""
@@ -9151,9 +9399,9 @@ msgstr ""
 "2,0 znači dva puta onoliko dugo koliko je potrebno da idu od 0,0 do 1,0\n"
 "9,9 i veći predstavlja beskonačno"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:192
-msgid "custom input"
-msgstr "vlastiti ulaz"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:191
+msgid "stroke hold time"
+msgstr "vrijeme zadržanja poteza"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:192
 msgid ""
@@ -9173,9 +9421,9 @@ msgstr ""
 "Ako  se promeni za \"slučajnu\" možete da generišete spori (glatki) slučajni "
 "ulaz."
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:193
-msgid "custom input filter"
-msgstr "filter za vlastiti ulaz"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:192
+msgid "custom input"
+msgstr "vlastiti ulaz"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:193
 msgid ""
@@ -9189,9 +9437,9 @@ msgstr ""
 "ako tačkice četkene zavise od vremena).\n"
 "0.0 nema usporavanja (promjene se obave trenutno)"
 
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:195
-msgid "elliptical dab: ratio"
-msgstr "eliptička tačkica; omjer"
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:193
+msgid "custom input filter"
+msgstr "filter za vlastiti ulaz"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:195
 msgid ""
@@ -9200,6 +9448,10 @@ msgid ""
 msgstr ""
 "omjer oblika tačkica; mora biti >= 1.0, gdje 1.0 znači savršeno okruglu "
 "tačku. ZADATAK: linearizirati? početi od 0.0 možda ili logaritamski?"
+
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:195
+msgid "elliptical dab: ratio"
+msgstr "eliptička tačkica; omjer"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:196
 msgid "elliptical dab: angle"
@@ -9218,16 +9470,16 @@ msgstr ""
 " 180.0 horizontallno ponovo"
 
 #: plugins/paintops/mypaint/mypaint_brush_resource.cpp:197
-msgid "direction filter"
-msgstr "filter pravca"
-
-#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:197
 msgid ""
 "a low value will make the direction input adapt more quickly, a high value "
 "will make it smoother"
 msgstr ""
 "niža vrijednost čini da se usmjereni ulaz adaptira brže, viša vriojednost će "
 "ga učiniti glatkim"
+
+#: plugins/paintops/mypaint/mypaint_brush_resource.cpp:197
+msgid "direction filter"
+msgstr "filter pravca"
 
 #: plugins/paintops/particle/particle_paintop_plugin.cpp:42
 #, fuzzy
@@ -9822,9 +10074,11 @@ msgid "Gaussian distribution"
 msgstr "Gausova raspodjela"
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:39
+#, fuzzy
+#| msgid "Freehand Stroke"
 msgctxt "(qtundo-format)"
-msgid "Brush"
-msgstr "Četka"
+msgid "Freehand Brush Stroke"
+msgstr "Svojručni potez"
 
 #: plugins/tools/defaulttools/kis_tool_brush.cc:167
 msgid "No Smoothing"
@@ -9876,8 +10130,10 @@ msgid "Assistant Magnetism"
 msgstr "Pomoćni magnetizam"
 
 #: plugins/tools/defaulttools/kis_tool_brush.h:96
-msgid "Paint with brushes"
-msgstr "Slikaj četkama"
+#, fuzzy
+#| msgid "Freehand Stroke"
+msgid "Freehand Brush Tool"
+msgstr "Svojručni potez"
 
 #: plugins/tools/defaulttools/kis_tool_colorpicker.cc:248
 msgid "Cannot pick a color as no layer is active."
@@ -9896,9 +10152,25 @@ msgstr "Ne mogu da pišem u datoteku palete %1. Možda je samo-za-čitanje."
 msgid "Select a color from the image or current layer"
 msgstr "Izaberi boju iz slike ili trenutnog sloja"
 
-#: plugins/tools/defaulttools/kis_tool_ellipse.h:56
-msgid "Draw an ellipse"
+#: plugins/tools/defaulttools/kis_tool_ellipse.cc:64
+#, fuzzy
+#| msgid "Draw an ellipse"
+msgctxt "(qtundo-format)"
+msgid "Draw Ellipse"
 msgstr "Nacrtaj elipsu"
+
+#: plugins/tools/defaulttools/kis_tool_ellipse.h:56
+#, fuzzy
+#| msgid "Ellipse"
+msgid "Ellipse Tool"
+msgstr "Elipsa"
+
+#: plugins/tools/defaulttools/kis_tool_fill.cc:128
+#, fuzzy
+#| msgid "Flood Fill"
+msgctxt "(qtundo-format)"
+msgid "Flood Fill"
+msgstr "Poplavna popuna"
 
 #: plugins/tools/defaulttools/kis_tool_fill.cc:158
 #, fuzzy
@@ -9965,61 +10237,75 @@ msgstr ""
 msgid "Fill a contiguous area of color with a color, or fill a selection."
 msgstr "Ispuni kontinualno područje boje bojom ili ispuni izbor"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:215
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:150
+#, fuzzy
+#| msgid "Gradient"
+msgctxt "(qtundo-format)"
+msgid "Gradient"
+msgstr "Gradijent"
+
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:166
+#, fuzzy
+#| msgid "Gradient"
+msgctxt "@info:progress"
+msgid "Gradient..."
+msgstr "Gradijent"
+
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:216
 msgid "Repeat:"
 msgstr "Ponavljanje:"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:217
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:218
 msgctxt "the gradient will be drawn with the color order reversed"
 msgid "Reverse"
 msgstr "Izvrnuto"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:224
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:225
 msgctxt "the gradient will be drawn linearly"
 msgid "Linear"
 msgstr "Linearno"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:225
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:226
 msgctxt "the gradient will be drawn bilinearly"
 msgid "Bi-Linear"
 msgstr "Bilinearni"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:226
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:227
 msgctxt "the gradient will be drawn radially"
 msgid "Radial"
 msgstr "Radijalno"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:227
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:228
 msgctxt "the gradient will be drawn in a square around a centre"
 msgid "Square"
 msgstr "Kvadratni"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:228
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:229
 msgctxt "the gradient will be drawn as an assymmetric cone"
 msgid "Conical"
 msgstr "Konično"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:229
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:230
 msgctxt "the gradient will be drawn as a symmetric cone"
 msgid "Conical Symmetric"
 msgstr "Simetrično konični"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:234
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:235
 msgctxt "The gradient will not repeat"
 msgid "None"
 msgstr "Ništa"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:235
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:236
 msgctxt "The gradient will repeat forwards"
 msgid "Forwards"
 msgstr "Unaprijed"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:236
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:237
 msgctxt "The gradient will repeat alternatingly"
 msgid "Alternating"
 msgstr "Izmjenjujući"
 
-#: plugins/tools/defaulttools/kis_tool_gradient.cc:244
+#: plugins/tools/defaulttools/kis_tool_gradient.cc:245
 msgid "Anti-alias threshold:"
 msgstr "Prag omekšavanja:"
 
@@ -10040,9 +10326,11 @@ msgid "Varying End-Points"
 msgstr "Promjenljive krajnje tačke"
 
 #: plugins/tools/defaulttools/kis_tool_line.cc:186
-msgctxt "a straight drawn line"
-msgid "Line"
-msgstr "Linija"
+#, fuzzy
+#| msgid "Dashed Lines"
+msgctxt "(qtundo-format)"
+msgid "Draw Line"
+msgstr "Linije u crticama"
 
 #: plugins/tools/defaulttools/kis_tool_line.cc:259
 msgid ""
@@ -10053,8 +10341,10 @@ msgstr ""
 "+prevlačenje će forsirati crtanje pravih linija"
 
 #: plugins/tools/defaulttools/kis_tool_line.h:85
-msgid "Draw a straight line with the current brush"
-msgstr "Crtaj ravnu liniju trenutnom četkom"
+#, fuzzy
+#| msgid "&Painter's Tools"
+msgid "Line Tool"
+msgstr "&Slikarevi alati"
 
 #: plugins/tools/defaulttools/kis_tool_measure.cc:51
 msgid "Distance: "
@@ -10072,69 +10362,98 @@ msgstr "Izmjeri rastojanje između dve tačke"
 msgid "Move a layer"
 msgstr "Premjesti sloj"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:223
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:59
+msgctxt "(qtundo-format)"
+msgid "Multibrush Stroke"
+msgstr ""
+
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:224
 #, fuzzy
 #| msgid "Show Axis"
 msgid "Show Axes"
 msgstr "Prikaži ose"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:227
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:228
 #, fuzzy
 #| msgid "Axis point"
 msgid "Axes point"
 msgstr "Tačka osi"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:233
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:234
 #, fuzzy
 #| msgid "Set axis angle (degrees)"
 msgid "Set axes angle (degrees)"
 msgstr "Postavi ugao osa u stepenima."
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:238
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:239
 #, fuzzy
 #| msgid "Axis Angle:"
 msgid "Axes Angle:"
 msgstr "Ugao osa:"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:241
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:242
 msgid "Symmetry"
 msgstr "Simetrija"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:243
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:244
 msgid "Translate"
 msgstr "Pomjeri"
 
-#: plugins/tools/defaulttools/kis_tool_multihand.cpp:249
+#: plugins/tools/defaulttools/kis_tool_multihand.cpp:250
 msgid "Brush count"
 msgstr "Količina četki"
 
 #: plugins/tools/defaulttools/kis_tool_multihand.h:99
-msgid "Paint with multibrushes"
-msgstr "Slikaj sa vise četki"
+msgid "Multibrush Tool"
+msgstr ""
 
 #: plugins/tools/defaulttools/kis_tool_pan.h:76
 msgid "Move and rotate your canvas"
 msgstr "Premjesti i rotiraj platno"
 
-#: plugins/tools/defaulttools/kis_tool_path.h:76
-msgid "Draw a path. Shift-mouseclick ends the path."
-msgstr "Crtaj putanju. Shift-klikMisem završava putanju."
+#: plugins/tools/defaulttools/kis_tool_path.cc:75
+msgctxt "(qtundo-format)"
+msgid "Draw Bezier Curve"
+msgstr ""
 
-#: plugins/tools/defaulttools/kis_tool_pencil.h:67
-msgid "Draw a freehand path."
+#: plugins/tools/defaulttools/kis_tool_path.h:76
+#, fuzzy
+#| msgid "Draw a polyline. Shift-mouseclick ends the polyline."
+msgid "Bezier Curve Tool. Shift-mouseclick ends the curve."
+msgstr "Crta poliliniju. Shift-klikom se dovršava."
+
+#: plugins/tools/defaulttools/kis_tool_pencil.cc:61
+#, fuzzy
+#| msgid "Draw a freehand path."
+msgctxt "(qtundo-format)"
+msgid "Draw Freehand Path"
 msgstr "Nacrtaj stazu slobodnom rukom"
 
-#: plugins/tools/defaulttools/kis_tool_rectangle.h:61
-msgid "Draw a rectangle"
+#: plugins/tools/defaulttools/kis_tool_pencil.h:67
+#, fuzzy
+#| msgid "Freehand path"
+msgid "Freehand Path Tool"
+msgstr "Staza slobodnom rukom"
+
+#: plugins/tools/defaulttools/kis_tool_rectangle.cc:67
+#, fuzzy
+#| msgid "Draw a rectangle"
+msgctxt "(qtundo-format)"
+msgid "Draw Rectangle"
 msgstr "Nacrtaj pravougaonik"
 
-#: plugins/tools/defaulttools/strokes/move_selection_stroke_strategy.cpp:35
-msgid "Move Selection Stroke"
-msgstr "Pomjeri odabir udara"
+#: plugins/tools/defaulttools/kis_tool_rectangle.h:61
+#, fuzzy
+#| msgid "Rectangle"
+msgid "Rectangle Tool"
+msgstr "Pravilni četverougao"
 
-#: plugins/tools/defaulttools/strokes/move_stroke_strategy.cpp:31
-msgid "Move Stroke"
-msgstr "Pomjeri udar"
+#: plugins/tools/defaulttools/strokes/move_selection_stroke_strategy.cpp:35
+#, fuzzy
+#| msgid "No Selection"
+msgctxt "(qtundo-format)"
+msgid "Move Selection"
+msgstr "Nema izbora"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ColorPickerOptionsWidget)
 #: plugins/tools/defaulttools/wdgcolorpicker.ui:14
@@ -10226,7 +10545,6 @@ msgid "Move the whole group"
 msgstr "Pomjeri cijelu grupu"
 
 #: plugins/tools/selectiontools/kis_tool_select_brush.cc:53
-#: plugins/tools/selectiontools/kis_tool_select_brush.cc:176
 msgid "Brush Selection"
 msgstr "Odabiranje četke"
 
@@ -10234,14 +10552,29 @@ msgstr "Odabiranje četke"
 msgid "Brush size:"
 msgstr "Veličina četke:"
 
-#: plugins/tools/selectiontools/kis_tool_select_brush.h:76
-msgid "Select by brush"
+#: plugins/tools/selectiontools/kis_tool_select_brush.cc:176
+#, fuzzy
+#| msgid "Select by brush"
+msgctxt "(qtundo-format)"
+msgid "Select by Brush"
 msgstr "Izbor četkom"
 
+#: plugins/tools/selectiontools/kis_tool_select_brush.h:76
+#, fuzzy
+#| msgid "Brush Selection"
+msgid "Brush Selection Tool"
+msgstr "Odabiranje četke"
+
 #: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:55
-#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:106
 msgid "Contiguous Area Selection"
 msgstr "Izbor dodirne oblasti"
+
+#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:106
+#, fuzzy
+#| msgid "Select a contiguous area of colors"
+msgctxt "(qtundo-format)"
+msgid "Select Contiguous Area"
+msgstr "Izaberi kontinualno područje boja"
 
 #: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:148
 #: plugins/tools/selectiontools/kis_tool_select_similar.cc:139
@@ -10257,24 +10590,33 @@ msgid "Limit to current layer"
 msgstr "Ograniči na tekući sloj"
 
 #: plugins/tools/selectiontools/kis_tool_select_contiguous.h:67
-msgid "Select a contiguous area of colors"
-msgstr "Izaberi kontinualno područje boja"
+#, fuzzy
+#| msgid "Contiguous Area Selection"
+msgid "Contiguous Selection Tool"
+msgstr "Izbor dodirne oblasti"
 
 #: plugins/tools/selectiontools/kis_tool_select_elliptical.cc:39
-#: plugins/tools/selectiontools/kis_tool_select_elliptical.cc:71
 msgid "Elliptical Selection"
 msgstr "Eliptički izbor"
 
+#: plugins/tools/selectiontools/kis_tool_select_elliptical.cc:71
+#, fuzzy
+#| msgid "Select All"
+msgctxt "(qtundo-format)"
+msgid "Select Ellipse"
+msgstr "Izaberi sve"
+
 #: plugins/tools/selectiontools/kis_tool_select_elliptical.h:53
-msgid "Select an elliptical area"
-msgstr "Izaberi eliptičku oblast"
+#, fuzzy
+#| msgid "Elliptical Selection"
+msgid "Elliptical Selection Tool"
+msgstr "Eliptički izbor"
 
 #: plugins/tools/selectiontools/kis_tool_select_magnetic.cc:91
 msgid "Magnetic Selection"
 msgstr "Magnetni izbor"
 
 #: plugins/tools/selectiontools/kis_tool_select_magnetic.cc:477
-#: plugins/tools/selectiontools/kis_tool_select_path.cc:97
 #: plugins/tools/selectiontools/kis_tool_select_path.h:53
 msgid "Path Selection"
 msgstr "Izbor staze"
@@ -10314,48 +10656,96 @@ msgid "Red"
 msgstr "Crvena"
 
 #: plugins/tools/selectiontools/kis_tool_select_outline.cc:58
-#: plugins/tools/selectiontools/kis_tool_select_outline.cc:105
 msgid "Outline Selection"
 msgstr "Izbor konture"
 
-#: plugins/tools/selectiontools/kis_tool_select_outline.h:66
-msgid "Select an area by its outline"
+#: plugins/tools/selectiontools/kis_tool_select_outline.cc:105
+#, fuzzy
+#| msgid "Select an area by its outline"
+msgctxt "(qtundo-format)"
+msgid "Select by Outline"
 msgstr "Izaberi područje po njegovoj konturi"
 
+#: plugins/tools/selectiontools/kis_tool_select_outline.h:66
+#, fuzzy
+#| msgid "Outline Selection"
+msgid "Outline Selection Tool"
+msgstr "Izbor konture"
+
+#: plugins/tools/selectiontools/kis_tool_select_path.cc:97
+#, fuzzy
+#| msgid "Select by brush"
+msgctxt "(qtundo-format)"
+msgid "Select by Bezier Curve"
+msgstr "Izbor četkom"
+
 #: plugins/tools/selectiontools/kis_tool_select_path.h:82
-msgid "Select an area of the image with path."
-msgstr "Izaberi područje slike s stazom"
+#, fuzzy
+#| msgid "Brush Selection"
+msgid "Bezier Curve Selection Tool"
+msgstr "Odabiranje četke"
 
 #: plugins/tools/selectiontools/kis_tool_select_polygonal.cc:42
-#: plugins/tools/selectiontools/kis_tool_select_polygonal.cc:89
 msgid "Polygonal Selection"
 msgstr "Poligonalni izbor"
 
+#: plugins/tools/selectiontools/kis_tool_select_polygonal.cc:89
+#, fuzzy
+#| msgid "Selection"
+msgctxt "(qtundo-format)"
+msgid "Select Polygon"
+msgstr "Odabir"
+
 #: plugins/tools/selectiontools/kis_tool_select_polygonal.h:62
-msgid "Select a polygonal region"
-msgstr "Izaberite poligonski region"
+#, fuzzy
+#| msgid "Polygonal Selection"
+msgid "Polygonal Selection Tool"
+msgstr "Poligonalni izbor"
 
 #: plugins/tools/selectiontools/kis_tool_select_rectangular.cc:42
-#: plugins/tools/selectiontools/kis_tool_select_rectangular.cc:88
 msgid "Rectangular Selection"
 msgstr "Pravougaoni izbor"
 
-#: plugins/tools/selectiontools/kis_tool_select_rectangular.h:62
-msgid "Select a rectangular area"
+#: plugins/tools/selectiontools/kis_tool_select_rectangular.cc:88
+#, fuzzy
+#| msgid "Select a rectangular area"
+msgctxt "(qtundo-format)"
+msgid "Select Rectangle"
 msgstr "Izaberi pravougaonu oblast"
 
+#: plugins/tools/selectiontools/kis_tool_select_rectangular.h:62
+#, fuzzy
+#| msgid "Rectangular Selection"
+msgid "Rectangular Selection Tool"
+msgstr "Pravougaoni izbor"
+
 #: plugins/tools/selectiontools/kis_tool_select_similar.cc:79
-#: plugins/tools/selectiontools/kis_tool_select_similar.cc:120
-msgid "Similar Selection"
+#, fuzzy
+#| msgid "Similar Selection"
+msgid "Similar Color Selection"
 msgstr "Izbor sličnog"
 
-#: plugins/tools/selectiontools/kis_tool_select_similar.h:47
-msgid "Select similar colors"
+#: plugins/tools/selectiontools/kis_tool_select_similar.cc:120
+#, fuzzy
+#| msgid "Select similar colors"
+msgctxt "(qtundo-format)"
+msgid "Select Similar Color"
 msgstr "Izaberi slične boje"
+
+#: plugins/tools/selectiontools/kis_tool_select_similar.h:47
+#, fuzzy
+#| msgid "Similar Selection"
+msgid "Similar Color Selection Tool"
+msgstr "Izbor sličnog"
 
 #: plugins/tools/tool_crop/kis_tool_crop.h:201
 msgid "Crop the image to an area"
 msgstr "Izreži sliku u oblast"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, WdgToolCrop)
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:14
+msgid "Crop"
+msgstr "Odsjeci"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_horizPos)
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, intX)
@@ -10459,17 +10849,21 @@ msgid "Crosshair"
 msgstr "Nišan"
 
 #: plugins/tools/tool_dyna/kis_tool_dyna.cpp:46
+#, fuzzy
+#| msgid "A - 2 Dynamic Brush"
 msgctxt "(qtundo-format)"
-msgid "Dyna"
-msgstr "Dyna"
+msgid "Dynamic Brush Stroke"
+msgstr "A - 2 Dinamička četka"
 
 #: plugins/tools/tool_dyna/kis_tool_dyna.cpp:288
 msgid "Fixed angle:"
 msgstr "Fiksni ugao:"
 
 #: plugins/tools/tool_dyna/kis_tool_dyna.h:155
-msgid "Paint with brushes using dynamic movements"
-msgstr "Crtaj četkama koristeći dinamičke pokrete"
+#, fuzzy
+#| msgid "A - 2 Dynamic Brush"
+msgid "Dynamic Brush Tool"
+msgstr "A - 2 Dinamička četka"
 
 #: plugins/tools/tool_grid/kis_tool_grid.h:71
 msgid "Edit the grid"
@@ -10479,16 +10873,30 @@ msgstr "Izmijeni mrežu"
 msgid "Edit the perspective grid"
 msgstr "Uredi mrežu perspektive"
 
+#: plugins/tools/tool_polygon/kis_tool_polygon.cc:63
+#, fuzzy
+#| msgid "Polygon"
+msgctxt "(qtundo-format)"
+msgid "Draw Polygon"
+msgstr "Poligon"
+
 #: plugins/tools/tool_polygon/kis_tool_polygon.h:51
-msgid "Draw a polygon. Shift-mouseclick ends the polygon."
+#, fuzzy
+#| msgid "Draw a polygon. Shift-mouseclick ends the polygon."
+msgid "Polygon Tool. Shift-mouseclick ends the polygon."
 msgstr "Crta poligon. Shift-klikom se dovršava."
 
 #: plugins/tools/tool_polyline/kis_tool_polyline.cc:67
-msgid "Polyline"
+#, fuzzy
+#| msgid "Polyline"
+msgctxt "(qtundo-format)"
+msgid "Draw Polyline"
 msgstr "Polilinija"
 
 #: plugins/tools/tool_polyline/kis_tool_polyline.h:51
-msgid "Draw a polyline. Shift-mouseclick ends the polyline."
+#, fuzzy
+#| msgid "Draw a polyline. Shift-mouseclick ends the polyline."
+msgid "Polyline Tool. Shift-mouseclick ends the polyline."
 msgstr "Crta poliliniju. Shift-klikom se dovršava."
 
 #: plugins/tools/tool_text/kis_tool_text.h:60
@@ -10544,8 +10952,9 @@ msgid "Unlock Points"
 msgstr "Otključaj tačke"
 
 #: plugins/tools/tool_transform2/strokes/transform_stroke_strategy.cpp:39
-msgid "Transform Stroke"
-msgstr "Transformiši udar"
+msgctxt "(qtundo-format)"
+msgid "Transform"
+msgstr "Trasformiši"
 
 #. i18n: ectx: property (text), widget (QToolButton, freeTransformButton)
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:83
@@ -10694,41 +11103,54 @@ msgid "Open sketch in a window, otherwise defaults to full-screen"
 msgstr ""
 
 #: ui/actions/kis_selection_action_factories.cpp:102
+#, fuzzy
+#| msgid "Select All"
+msgctxt "(qtundo-format)"
 msgid "Select All"
 msgstr "Izaberi sve"
 
-#: ui/actions/kis_selection_action_factories.cpp:261
+#: ui/actions/kis_selection_action_factories.cpp:171
+#, fuzzy
+#| msgid "Flood Fill"
+msgctxt "(qtundo-format)"
+msgid "Flood Fill Layer"
+msgstr "Poplavna popuna"
+
+#: ui/actions/kis_selection_action_factories.cpp:262
+#, fuzzy
+#| msgid "Cut"
+msgctxt "(qtundo-format)"
 msgid "Cut"
 msgstr "Isijeci"
 
-#: ui/actions/kis_selection_action_factories.cpp:261
+#: ui/actions/kis_selection_action_factories.cpp:263
+#, fuzzy
+#| msgid "Copy"
+msgctxt "(qtundo-format)"
 msgid "Copy"
 msgstr "Kopiraj"
 
-#: ui/actions/kis_selection_action_factories.cpp:285
+#: ui/actions/kis_selection_action_factories.cpp:287
+#, fuzzy
+#| msgid "Copy Merged"
+msgctxt "(qtundo-format)"
 msgid "Copy Merged"
 msgstr "Kopija ujedinjena"
 
-#: ui/actions/kis_selection_action_factories.cpp:295
+#: ui/actions/kis_selection_action_factories.cpp:297
 msgid "(pasted)"
 msgstr "(umetnuto)"
 
-#: ui/actions/kis_selection_action_factories.cpp:326
+#: ui/actions/kis_selection_action_factories.cpp:328
 msgid "Pasted"
 msgstr "Zaljepljeno"
 
-#: ui/actions/kis_selection_action_factories.cpp:373
-#: ui/kis_selection_manager.cc:225
+#: ui/actions/kis_selection_action_factories.cpp:375
+#, fuzzy
+#| msgid "Convert to Vector Selection"
+msgctxt "(qtundo-format)"
 msgid "Convert to Vector Selection"
 msgstr "Pretvori u Odabir vektora"
-
-#: ui/canvas/kis_canvas_controller.cpp:164
-msgid "ON"
-msgstr ""
-
-#: ui/canvas/kis_canvas_controller.cpp:164
-msgid "OFF"
-msgstr ""
 
 #: ui/canvas/kis_canvas_controller.cpp:164
 #, fuzzy, kde-format
@@ -10736,6 +11158,14 @@ msgstr ""
 msgctxt "floating message about mirroring"
 msgid "Horizontal mirroring: %1 "
 msgstr "Horizontalni razmaci:"
+
+#: ui/canvas/kis_canvas_controller.cpp:164
+msgid "OFF"
+msgstr ""
+
+#: ui/canvas/kis_canvas_controller.cpp:164
+msgid "ON"
+msgstr ""
 
 #: ui/canvas/kis_canvas_controller.cpp:183
 #, fuzzy, kde-format
@@ -10801,14 +11231,6 @@ msgstr "40x40"
 #: ui/canvas/kis_grid_manager.cpp:116
 msgid "64x64"
 msgstr ""
-
-#: ui/canvas/kis_infinity_manager.cpp:38
-msgid "Expand into Infinity Decoration"
-msgstr "Proširi u beskonačno ukrašavanje"
-
-#: ui/canvas/kis_perspective_grid_manager.cpp:140
-msgid "Perspective grid"
-msgstr "Perspektivna mreža"
 
 #: ui/canvas/kis_perspective_grid_manager.cpp:162
 msgid "Show Perspective Grid"
@@ -12194,15 +12616,15 @@ msgid "Copy of %1"
 msgstr "Kopija od %1"
 
 #: ui/input/config/kis_edit_profiles_dialog.cpp:95
-msgid ""
-"You will lose all changes to any input profiles. Do you wish to continue?"
-msgstr ""
-
-#: ui/input/config/kis_edit_profiles_dialog.cpp:95
 #, fuzzy
 #| msgid "Reset All Rings"
 msgid "Reset All Profiles"
 msgstr "Restartuj sve prstene"
+
+#: ui/input/config/kis_edit_profiles_dialog.cpp:95
+msgid ""
+"You will lose all changes to any input profiles. Do you wish to continue?"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (KPushButton, renameButton)
 #: ui/input/config/kis_edit_profiles_dialog.ui:17
@@ -12325,19 +12747,27 @@ msgstr ""
 "trenutnim alatom. Na primjer, koristeći četku kupi boju sa platna."
 
 #: ui/input/kis_alternate_invocation_action.cpp:43
-msgid "Toggle Primary Mode"
+#, fuzzy
+#| msgid "Toggle Primary Mode"
+msgid "Primary Mode"
 msgstr "Prebaci na primarni način"
 
 #: ui/input/kis_alternate_invocation_action.cpp:44
-msgid "Toggle Secondary Mode"
+#, fuzzy
+#| msgid "Toggle Secondary Mode"
+msgid "Secondary Mode"
 msgstr "Prebaci na sekundarni način"
 
 #: ui/input/kis_alternate_invocation_action.cpp:46
-msgid "Pick Foreground Color from Current Node"
+#, fuzzy
+#| msgid "Pick Foreground Color from Current Node"
+msgid "Pick Foreground Color from Current Layer"
 msgstr "Preuzmi boju crtanja iz trenutnog čvora"
 
 #: ui/input/kis_alternate_invocation_action.cpp:47
-msgid "Pick Background Color from Current Node"
+#, fuzzy
+#| msgid "Pick Background Color from Current Node"
+msgid "Pick Background Color from Current Layer"
 msgstr "Preuzmi boju pozadine iz trenutnog čvora"
 
 #: ui/input/kis_alternate_invocation_action.cpp:49
@@ -12446,8 +12876,10 @@ msgid "The <i>Pan Canvas</i> action pans the canvas."
 msgstr "Akcija<i> Pomjeri platno</i> pomjera platno."
 
 #: ui/input/kis_pan_action.cpp:54
-msgid "Toggle Pan Mode"
-msgstr "Uključi/isključi režim nagetosti"
+#, fuzzy
+#| msgid "Painting Mode"
+msgid "Pan Mode"
+msgstr "Režim bojenja"
 
 #: ui/input/kis_pan_action.cpp:55
 msgid "Pan Left"
@@ -12474,11 +12906,15 @@ msgid "The <i>Rotate Canvas</i> action rotates the canvas."
 msgstr "Akcija <i>Rotiraj platno</i> rotira platno."
 
 #: ui/input/kis_rotate_canvas_action.cpp:47
-msgid "Toggle Rotate Mode"
-msgstr "Uključi/isključi režim oretanja"
+#, fuzzy
+#| msgid "Rotate Node"
+msgid "Rotate Mode"
+msgstr "Okreni čvor"
 
 #: ui/input/kis_rotate_canvas_action.cpp:48
-msgid "Toggle Discrete Rotate Mode"
+#, fuzzy
+#| msgid "Toggle Discrete Rotate Mode"
+msgid "Discrete Rotate Mode"
 msgstr "Uključi/isključi režim okretanja"
 
 #: ui/input/kis_rotate_canvas_action.cpp:49
@@ -12502,7 +12938,9 @@ msgid "Selects a layer under cursor position"
 msgstr "Odaberi sloj ispod pozicije kursora"
 
 #: ui/input/kis_select_layer_action.cpp:50
-msgid "Toggle Select Layer Mode"
+#, fuzzy
+#| msgid "Toggle Select Layer Mode"
+msgid "Select Layer Mode"
 msgstr "Prebaci na način biranja sloja"
 
 #: ui/input/kis_shortcut_configuration.cpp:234
@@ -12660,11 +13098,15 @@ msgid "The <i>Zoom Canvas</i> action zooms the canvas."
 msgstr "Akcija<i> Zumiraj platno</i> zumira platno."
 
 #: ui/input/kis_zoom_action.cpp:116
-msgid "Toggle Zoom Mode"
+#, fuzzy
+#| msgid "Toggle Zoom Mode"
+msgid "Zoom Mode"
 msgstr "Uključi/isključi režim zumiranja"
 
 #: ui/input/kis_zoom_action.cpp:117
-msgid "Toggle Discrete Zoom Mode"
+#, fuzzy
+#| msgid "Toggle Discrete Zoom Mode"
+msgid "Discrete Zoom Mode"
 msgstr "Uključi/isključi režim zumiranja"
 
 #: ui/input/kis_zoom_action.cpp:120
@@ -12702,12 +13144,12 @@ msgid "Bart Coppens"
 msgstr "Bart Coppens"
 
 #: ui/kis_aboutdata.h:58
-msgid "David Revoy"
-msgstr "David Revoy"
-
-#: ui/kis_aboutdata.h:58
 msgid "Brush and palette set"
 msgstr "Skup četki i paleta"
+
+#: ui/kis_aboutdata.h:58
+msgid "David Revoy"
+msgstr "David Revoy"
 
 #: ui/kis_aboutdata.h:59
 msgid "Carsten Pfeiffer"
@@ -12818,12 +13260,12 @@ msgid "Michael Thaler"
 msgstr "Michael Thaler"
 
 #: ui/kis_aboutdata.h:84
-msgid "Øyvind Kolås"
-msgstr "Øyvind Kolås"
-
-#: ui/kis_aboutdata.h:84
 msgid "Wiseguy"
 msgstr "Wiseguy"
+
+#: ui/kis_aboutdata.h:84
+msgid "Øyvind Kolås"
+msgstr "Øyvind Kolås"
 
 #: ui/kis_aboutdata.h:85
 msgid "Patrick Julien"
@@ -12838,11 +13280,11 @@ msgid "Vision master"
 msgstr "Master vizije"
 
 #: ui/kis_aboutdata.h:87
-msgid "Ramon Miranda"
+msgid "Artist, Muses author, brush and preset creator"
 msgstr ""
 
 #: ui/kis_aboutdata.h:87
-msgid "Artist, Muses author, brush and preset creator"
+msgid "Ramon Miranda"
 msgstr ""
 
 #: ui/kis_aboutdata.h:88
@@ -12862,12 +13304,12 @@ msgid "Sven Langkamp"
 msgstr "Sven Langkamp"
 
 #: ui/kis_aboutdata.h:92
-msgid "Timothée Giet"
-msgstr "Timothée Giet"
-
-#: ui/kis_aboutdata.h:92
 msgid "BD Artist, brush presets and templates"
 msgstr "BD umjetnik, postavke četke i predložaka"
+
+#: ui/kis_aboutdata.h:92
+msgid "Timothée Giet"
+msgstr "Timothée Giet"
 
 #: ui/kis_aboutdata.h:93
 msgid "Toshitaka Fujioka"
@@ -12925,6 +13367,14 @@ msgid "Decrease opacity"
 msgstr "Umanji neprozirnost"
 
 #: ui/kis_clipboard.cc:257
+msgid "As &Web"
+msgstr "Kao &veb"
+
+#: ui/kis_clipboard.cc:257
+msgid "As on &Monitor"
+msgstr "Kao na &monitoru"
+
+#: ui/kis_clipboard.cc:257
 msgid "Pasting data from simple source"
 msgstr "Prenosim podatke iz prostog izvora"
 
@@ -12950,14 +13400,6 @@ msgstr ""
 "možda ćete željeti da je uvezete onako kako je izgledala na vašem monitoru.\n"
 "\n"
 "Kako želite da interpretirate ove podatke?"
-
-#: ui/kis_clipboard.cc:257
-msgid "As &Web"
-msgstr "Kao &veb"
-
-#: ui/kis_clipboard.cc:257
-msgid "As on &Monitor"
-msgstr "Kao na &monitoru"
 
 #: ui/kis_control_frame.cpp:80 ui/kis_control_frame.cpp:81
 msgid "Fill Patterns"
@@ -13076,7 +13518,7 @@ msgstr "&Izravnaj sloj"
 msgid "Rename current layer"
 msgstr "Obriši trenutni sloj"
 
-#: ui/kis_layer_manager.cc:298 ui/kis_layer_manager.cc:778
+#: ui/kis_layer_manager.cc:298
 msgid "Rasterize Layer"
 msgstr "Rasteriziraj sloj"
 
@@ -13093,10 +13535,15 @@ msgid "Filter Layer Properties"
 msgstr "Svojstva filterskog sloja"
 
 #: ui/kis_layer_manager.cc:403
-msgid "Generator Layer Properties"
-msgstr "Svojstva generatorskog sloja"
+#, fuzzy
+#| msgid "Filter Layer Properties"
+msgid "Fill Layer Properties"
+msgstr "Svojstva filterskog sloja"
 
 #: ui/kis_layer_manager.cc:484
+#, fuzzy
+#| msgid "Convert to a Paint Layer"
+msgctxt "(qtundo-format)"
 msgid "Convert to a Paint Layer"
 msgstr "Pretvori u Sloj boje"
 
@@ -13116,9 +13563,20 @@ msgstr "Greška u sloju"
 msgid "The image contains hidden layers that will be lost."
 msgstr "Slika sadrži skrivene slojeve, koji će biti izgubljeni."
 
+#: ui/kis_layer_manager.cc:709
+msgid "Flatten Image"
+msgstr "Spljošti sliku"
+
 #: ui/kis_layer_manager.cc:710
 msgid "&Flatten Image"
 msgstr "&Spljošti sliku"
+
+#: ui/kis_layer_manager.cc:778
+#, fuzzy
+#| msgid "Rasterize Layer"
+msgctxt "(qtundo-format)"
+msgid "Rasterize Layer"
+msgstr "Rasteriziraj sloj"
 
 #: ui/kis_layer_manager.cc:814
 msgid "Convert Invisible Groups"
@@ -13137,6 +13595,9 @@ msgid "No file specified"
 msgstr "Nijedna datoteka nije navedena"
 
 #: ui/kis_mask_manager.cc:177
+#, fuzzy
+#| msgid "Add Selection Mask"
+msgctxt "(qtundo-format)"
 msgid "Add Selection Mask"
 msgstr "Dodaj masku odabira"
 
@@ -13145,6 +13606,9 @@ msgid "Selection"
 msgstr "Odabir"
 
 #: ui/kis_mask_manager.cc:184
+#, fuzzy
+#| msgid "Add Transparency Mask"
+msgctxt "(qtundo-format)"
 msgid "Add Transparency Mask"
 msgstr "Dodaj masku transparentnosti"
 
@@ -13153,6 +13617,9 @@ msgid "Transparency Mask"
 msgstr "Maska prozirnosti"
 
 #: ui/kis_mask_manager.cc:190
+#, fuzzy
+#| msgid "Add Filter Mask"
+msgctxt "(qtundo-format)"
 msgid "Add Filter Mask"
 msgstr "Dodaj masku filtriranja"
 
@@ -13171,12 +13638,6 @@ msgstr "Kopija od "
 #: ui/kis_mask_manager.cc:268
 msgid "Filter Mask Properties"
 msgstr "Svojstva maske filtriranja"
-
-#: ui/kis_mirror_axis.cpp:91
-#, fuzzy
-#| msgid "Set Mirror Axis"
-msgid "Mirror Axis"
-msgstr "Postavi osu ogledala."
 
 #: ui/kis_node_manager.cpp:194
 msgid "Mirror Layer Horizontally"
@@ -13223,12 +13684,16 @@ msgid "&Filter Layer..."
 msgstr "&Filter slojeva..."
 
 #: ui/kis_node_manager.cpp:246
-msgid "&Generated Layer..."
-msgstr "&Generisani sloj..."
+#, fuzzy
+#| msgid "&Filter Layer..."
+msgid "&Fill Layer..."
+msgstr "&Filter slojeva..."
 
 #: ui/kis_node_manager.cpp:249
-msgid "&File Layer"
-msgstr "&Datoteka sloj"
+#, fuzzy
+#| msgid "&Filter Layer..."
+msgid "&File Layer..."
+msgstr "&Filter slojeva..."
 
 #: ui/kis_node_manager.cpp:252
 msgid "&Transparency Mask"
@@ -13251,8 +13716,10 @@ msgid "to &Selection Mask"
 msgstr "u &Odabirnu masku"
 
 #: ui/kis_node_manager.cpp:270
-msgid "to &Filter Mask"
-msgstr "u &Filter masku"
+#, fuzzy
+#| msgid "&Filter Mask..."
+msgid "to &Filter Mask..."
+msgstr "Maska &filtera..."
 
 #: ui/kis_node_manager.cpp:273
 msgid "to &Transparency Mask"
@@ -13263,36 +13730,52 @@ msgid "&Isolate Layer"
 msgstr "&Izoliraj sloj"
 
 #: ui/kis_node_manager.cpp:464
+#, fuzzy
+#| msgid "Convert to a Selection Mask"
+msgctxt "(qtundo-format)"
 msgid "Convert to a Selection Mask"
 msgstr "Pretvori u Odabir maske"
 
 #: ui/kis_node_manager.cpp:664
+#, fuzzy
+#| msgid "Remove Last Layer"
+msgctxt "(qtundo-format)"
 msgid "Remove Last Layer"
 msgstr "Ukloni posljednji sloj"
 
 #: ui/kis_node_manager.cpp:683
+#, fuzzy
+#| msgid "Mirror Layer X"
+msgctxt "(qtundo-format)"
 msgid "Mirror Layer X"
 msgstr "Sloj X u ogledalu"
 
 #: ui/kis_node_manager.cpp:685
+#, fuzzy
+#| msgid "Mirror Mask X"
+msgctxt "(qtundo-format)"
 msgid "Mirror Mask X"
 msgstr "Ogledalo maske X"
 
 #: ui/kis_node_manager.cpp:696
+#, fuzzy
+#| msgid "Mirror Layer Y"
+msgctxt "(qtundo-format)"
 msgid "Mirror Layer Y"
 msgstr "Sloj Y u ogledalu"
 
 #: ui/kis_node_manager.cpp:698
+#, fuzzy
+#| msgid "Mirror Mask Y"
+msgctxt "(qtundo-format)"
 msgid "Mirror Mask Y"
 msgstr "Ogledaj masku Y"
 
 #: ui/kis_node_manager.cpp:819
-msgid "Export Node"
-msgstr "izvoz čvora"
-
-#: ui/kis_painting_assistants_decoration.cpp:41
-msgid "Painting assistants"
-msgstr "Slikarski pomoćnici"
+#, fuzzy, kde-format
+#| msgid "Exposure"
+msgid "Export \"%1\""
+msgstr "Ekspozicija"
 
 #: ui/kis_painting_assistants_decoration.cpp:107
 msgid "Show Painting Assistants"
@@ -13370,10 +13853,6 @@ msgstr "Prebaci na prethodna pretpodešavanja"
 msgid "Select Favorite Presets..."
 msgstr "Izaberi omiljene postavke..."
 
-#: ui/kis_paintop_option.cpp:26
-msgid "Common"
-msgstr ""
-
 #: ui/kis_paintop_option.cpp:36
 msgid "Texture"
 msgstr "Tekstura"
@@ -13422,10 +13901,6 @@ msgstr "Sličice"
 #: ui/kis_part2.cpp:175
 msgid "Installation error"
 msgstr "Greška instalacije"
-
-#: ui/kis_selection_decoration.cc:45
-msgid "Selection decoration"
-msgstr "Dekor izbora"
 
 #: ui/kis_selection_manager.cc:137
 msgid "Paste into &New Image"
@@ -13479,11 +13954,18 @@ msgstr "Prikaži izbor"
 msgid "Size Canvas to Size of Selection"
 msgstr "Raširi platno na veličinu izbora"
 
+#: ui/kis_selection_manager.cc:225
+msgid "Convert to Vector Selection"
+msgstr "Pretvori u Odabir vektora"
+
 #: ui/kis_selection_manager.cc:500
 msgid "Stroked Shapes"
 msgstr "Udarni oblici"
 
-#: ui/kis_selection_manager.cc:502 ui/kis_selection_manager.cc:505
+#: ui/kis_selection_manager.cc:502
+#, fuzzy
+#| msgid "Stroke Shapes"
+msgctxt "(qtundo-format)"
 msgid "Stroke Shapes"
 msgstr "Udarni oblici"
 
@@ -13866,6 +14348,13 @@ msgstr "Zamijeni boju iscrtavanja i pozadine"
 msgid "Reset Foreground and Background Color"
 msgstr "Resetuj boje iscrtavanja i pozadine"
 
+#: ui/tool/kis_tool.cc:545
+#, fuzzy
+#| msgid "Clear"
+msgctxt "(qtundo-format)"
+msgid "Clear"
+msgstr "Čisto"
+
 #: ui/tool/kis_tool.cc:574
 msgid "No options"
 msgstr "Bez opcija"
@@ -13890,10 +14379,6 @@ msgstr "Grupa se ne može mijenjati"
 msgid "Local selection is locked."
 msgstr "Lokalni izbor je zaključan."
 
-#: ui/tool/kis_tool_freehand_helper.cpp:209
-msgid "Freehand Stroke"
-msgstr "Svojručni potez"
-
 #: ui/tool/kis_tool_paint.cc:105
 msgid "Increase Brush Size"
 msgstr "Povećaj veličinu četke"
@@ -13901,6 +14386,13 @@ msgstr "Povećaj veličinu četke"
 #: ui/tool/kis_tool_paint.cc:111
 msgid "Decrease Brush Size"
 msgstr "Smanji veličinu četke"
+
+#: ui/tool/strokes/kis_filter_stroke_strategy.cpp:44
+#, fuzzy, kde-format
+#| msgid "Filter:"
+msgctxt "(qtundo-format)"
+msgid "Filter \"%1\""
+msgstr "Filter:"
 
 #: ui/widgets/kis_channelflags_widget.cpp:39
 msgid ""
@@ -14175,6 +14667,115 @@ msgstr ""
 #| msgid "Close"
 msgid "&Close"
 msgstr "Zatvori"
+
+#~ msgid "Gradient Fill"
+#~ msgstr "Gradijentna ispuna"
+
+#~ msgctxt "(qtundo-format)"
+#~ msgid "Node Composite Mode"
+#~ msgstr "Kompozitni režim čvora"
+
+#~ msgctxt "(qtundo-format)"
+#~ msgid "Node Opacity"
+#~ msgstr "Neprozirnost čvora"
+
+#~ msgid "Resize Image"
+#~ msgstr "Promijeni veličinu slike"
+
+#~ msgid "Crop Node"
+#~ msgstr "Sasjeći čvor"
+
+#~ msgid "Ascension"
+#~ msgstr "Penjanje"
+
+#~ msgid "Declination"
+#~ msgstr "Odbijanje"
+
+#~ msgid "Invert Texture:"
+#~ msgstr "Izvrni teksture:"
+
+#~ msgctxt "(qtundo-format)"
+#~ msgid "Brush"
+#~ msgstr "Četka"
+
+#~ msgid "Paint with brushes"
+#~ msgstr "Slikaj četkama"
+
+#~ msgctxt "a straight drawn line"
+#~ msgid "Line"
+#~ msgstr "Linija"
+
+#~ msgid "Draw a straight line with the current brush"
+#~ msgstr "Crtaj ravnu liniju trenutnom četkom"
+
+#~ msgid "Paint with multibrushes"
+#~ msgstr "Slikaj sa vise četki"
+
+#~ msgid "Draw a path. Shift-mouseclick ends the path."
+#~ msgstr "Crtaj putanju. Shift-klikMisem završava putanju."
+
+#~ msgid "Move Selection Stroke"
+#~ msgstr "Pomjeri odabir udara"
+
+#~ msgid "Move Stroke"
+#~ msgstr "Pomjeri udar"
+
+#~ msgid "Select an elliptical area"
+#~ msgstr "Izaberi eliptičku oblast"
+
+#~ msgid "Select an area of the image with path."
+#~ msgstr "Izaberi područje slike s stazom"
+
+#~ msgid "Select a polygonal region"
+#~ msgstr "Izaberite poligonski region"
+
+#~ msgctxt "(qtundo-format)"
+#~ msgid "Dyna"
+#~ msgstr "Dyna"
+
+#~ msgid "Paint with brushes using dynamic movements"
+#~ msgstr "Crtaj četkama koristeći dinamičke pokrete"
+
+#~ msgid "Transform Stroke"
+#~ msgstr "Transformiši udar"
+
+#~ msgid "Expand into Infinity Decoration"
+#~ msgstr "Proširi u beskonačno ukrašavanje"
+
+#~ msgid "Perspective grid"
+#~ msgstr "Perspektivna mreža"
+
+#~ msgid "Toggle Pan Mode"
+#~ msgstr "Uključi/isključi režim nagetosti"
+
+#~ msgid "Toggle Rotate Mode"
+#~ msgstr "Uključi/isključi režim oretanja"
+
+#~ msgid "Generator Layer Properties"
+#~ msgstr "Svojstva generatorskog sloja"
+
+#, fuzzy
+#~| msgid "Set Mirror Axis"
+#~ msgid "Mirror Axis"
+#~ msgstr "Postavi osu ogledala."
+
+#~ msgid "&Generated Layer..."
+#~ msgstr "&Generisani sloj..."
+
+#~ msgid "&File Layer"
+#~ msgstr "&Datoteka sloj"
+
+#~ msgid "to &Filter Mask"
+#~ msgstr "u &Filter masku"
+
+#~ msgid "Export Node"
+#~ msgstr "izvoz čvora"
+
+#~ msgid "Painting assistants"
+#~ msgstr "Slikarski pomoćnici"
+
+#~ msgid "Selection decoration"
+#~ msgstr "Dekor izbora"
 
 #, fuzzy
 #~| msgid "Formats:"
@@ -14451,9 +15052,6 @@ msgstr "Zatvori"
 #~ msgid "Open in New Documents"
 #~ msgstr "Otvori u novim dokumentima"
 
-#~ msgid "Rotate Node"
-#~ msgstr "Okreni čvor"
-
 #~ msgid "on mouse over."
 #~ msgstr "na kretanju miša"
 
@@ -14650,9 +15248,6 @@ msgstr "Zatvori"
 
 #~ msgid "Smudge Rate"
 #~ msgstr "Mjera zamazanosti"
-
-#~ msgid "Freehand path"
-#~ msgstr "Staza slobodnom rukom"
 
 #~ msgid "Scale To Image Resolution"
 #~ msgstr "Skaliraj do rezolucije slike"
@@ -14987,9 +15582,6 @@ msgstr "Zatvori"
 #~ msgid "Layer Profile:"
 #~ msgstr "Profil sloja:"
 
-#~ msgid "Opacity: "
-#~ msgstr "Neprozirnost: "
-
 #~ msgid "Blend mode:"
 #~ msgstr "Način miješanja:"
 
@@ -15071,10 +15663,6 @@ msgstr "Zatvori"
 
 #~ msgid "Apply transformation"
 #~ msgstr "Primijeni transformaciju"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Transform"
-#~ msgstr "Trasformiši"
 
 #~ msgid "Add New Palette"
 #~ msgstr "Dodaj novu paletu"
