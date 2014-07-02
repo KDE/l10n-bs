@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-07-01 01:42+0000\n"
+"POT-Creation-Date: 2014-07-02 01:43+0000\n"
 "PO-Revision-Date: 2014-02-10 00:04+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -124,7 +124,7 @@ msgstr "Zatvori"
 msgid "&Restart Krita"
 msgstr ""
 
-#: gemini/desktopviewproxy.cpp:124 gemini/MainWindow.cpp:534
+#: gemini/desktopviewproxy.cpp:124 gemini/MainWindow.cpp:545
 msgid "Open Document"
 msgstr "Otvori dokument"
 
@@ -212,7 +212,7 @@ msgstr "Postavke"
 msgid "Brushes and Stuff"
 msgstr "Četkice i ostalo"
 
-#: gemini/main.cpp:70 gemini/MainWindow.cpp:245 gemini/MainWindow.cpp:287
+#: gemini/main.cpp:70 gemini/MainWindow.cpp:251 gemini/MainWindow.cpp:293
 msgid "Krita Gemini"
 msgstr "Krita Gemini"
 
@@ -240,12 +240,16 @@ msgstr "Ne koristi virtualnu tastaturu"
 msgid "Use full-screen display"
 msgstr ""
 
-#: gemini/MainWindow.cpp:286 gemini/MainWindow.cpp:625
+#: gemini/main.cpp:85
+msgid "Start with the Sketch interface"
+msgstr ""
+
+#: gemini/MainWindow.cpp:292 gemini/MainWindow.cpp:636
 #: sketch/MainWindow.cpp:150
 msgid "Untitled"
 msgstr "Neimenovano"
 
-#: gemini/MainWindow.cpp:628
+#: gemini/MainWindow.cpp:639
 #, kde-format
 msgid ""
 "<p>The document <b>'%1'</b> has been modified.</p><p>Do you want to save it?"
@@ -7696,7 +7700,6 @@ msgstr "Slučajna veličina"
 #: plugins/paintops/libpaintop/kis_dynamic_sensor.h:46
 #: plugins/paintops/libpaintop/kis_pressure_rotation_option.cpp:29
 #: plugins/paintops/spray/wdgshapedynamicsoptions.ui:42
-#: plugins/tools/defaulttools/kis_tool_line.cc:72
 msgid "Rotation"
 msgstr "Rotacija"
 
@@ -8275,7 +8278,6 @@ msgstr "Inkrementalno"
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox2)
 #: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:74
 #: plugins/paintops/libpaintop/kis_dynamic_sensor.h:47
-#: plugins/tools/defaulttools/kis_tool_line.cc:70
 msgid "Pressure"
 msgstr "Pritisak"
 
@@ -10389,26 +10391,20 @@ msgstr "Prag omekšavanja:"
 msgid "Draw a gradient."
 msgstr "Crtaj gradijent."
 
-#: plugins/tools/defaulttools/kis_tool_line.cc:71
-msgid "Tilt"
-msgstr "Nagib"
-
-#: plugins/tools/defaulttools/kis_tool_line.cc:73
-msgid "Tangential Pressure"
-msgstr "Tangencijalni pritisak"
-
-#: plugins/tools/defaulttools/kis_tool_line.cc:74
-msgid "Varying End-Points"
-msgstr "Promjenljive krajnje tačke"
-
-#: plugins/tools/defaulttools/kis_tool_line.cc:186
+#: plugins/tools/defaulttools/kis_tool_line.cc:54
 #, fuzzy
 #| msgid "Dashed Lines"
 msgctxt "(qtundo-format)"
 msgid "Draw Line"
 msgstr "Linije u crticama"
 
-#: plugins/tools/defaulttools/kis_tool_line.cc:259
+#: plugins/tools/defaulttools/kis_tool_line.cc:79
+#, fuzzy
+#| msgid "Use OpenColorIO"
+msgid "Use sensors"
+msgstr "Koristi OpencolorIO"
+
+#: plugins/tools/defaulttools/kis_tool_line.cc:240
 msgid ""
 "Alt+Drag will move the origin of the currently displayed line around, Shift"
 "+Drag will force you to draw straight lines"
@@ -10416,7 +10412,7 @@ msgstr ""
 "Alt+prevlačenje će pomjerati okolo ishodište trenutno prikazane linije, Shift"
 "+prevlačenje će forsirati crtanje pravih linija"
 
-#: plugins/tools/defaulttools/kis_tool_line.h:85
+#: plugins/tools/defaulttools/kis_tool_line.h:93
 #, fuzzy
 #| msgid "&Painter's Tools"
 msgid "Line Tool"
@@ -12807,7 +12803,7 @@ msgid "Edit Mouse Wheel Input"
 msgstr "Uredi ulaz točkića na mišu"
 
 #: ui/input/kis_abstract_input_action.cpp:44
-#: ui/input/kis_tool_invocation_action.cpp:49
+#: ui/input/kis_tool_invocation_action.cpp:50
 msgid "Activate"
 msgstr "Aktiviraj"
 
@@ -13147,11 +13143,11 @@ msgstr "Prikazi iskačuću paletu"
 msgid "The <i>Show Popup Palette</i> displays the popup palette."
 msgstr "<i> Prikaži Pop-up paletu</i> prikazuje pop-up paletu."
 
-#: ui/input/kis_tool_invocation_action.cpp:45
+#: ui/input/kis_tool_invocation_action.cpp:46
 msgid "Tool Invocation"
 msgstr "Prizivanje alake"
 
-#: ui/input/kis_tool_invocation_action.cpp:46
+#: ui/input/kis_tool_invocation_action.cpp:47
 msgid ""
 "The <i>Tool Invocation</i> action invokes the current tool, for example, "
 "using the brush tool, it will start painting."
@@ -13159,13 +13155,19 @@ msgstr ""
 "Akcija <i> Prizivanje alata</i> priziva trenutni alat, na primjer, koristeći "
 "četku, počinjete bojiti."
 
-#: ui/input/kis_tool_invocation_action.cpp:50
+#: ui/input/kis_tool_invocation_action.cpp:51
 msgid "Confirm"
 msgstr "Potvrdi"
 
-#: ui/input/kis_tool_invocation_action.cpp:51 ui/kis_view2.cpp:570
+#: ui/input/kis_tool_invocation_action.cpp:52 ui/kis_view2.cpp:570
 msgid "Cancel"
 msgstr "Odustani"
+
+#: ui/input/kis_tool_invocation_action.cpp:53
+#, fuzzy
+#| msgid "Activate next layer"
+msgid "Activate Line Tool"
+msgstr "Aktiviraj sljedeći sloj"
 
 #: ui/input/kis_zoom_action.cpp:112
 msgid "Zoom Canvas"
@@ -14769,6 +14771,15 @@ msgstr ""
 #| msgid "Close"
 msgid "&Close"
 msgstr "Zatvori"
+
+#~ msgid "Tilt"
+#~ msgstr "Nagib"
+
+#~ msgid "Tangential Pressure"
+#~ msgstr "Tangencijalni pritisak"
+
+#~ msgid "Varying End-Points"
+#~ msgstr "Promjenljive krajnje tačke"
 
 #~ msgid "Gradient Fill"
 #~ msgstr "Gradijentna ispuna"
