@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-07-30 01:52+0000\n"
+"POT-Creation-Date: 2014-08-11 01:55+0000\n"
 "PO-Revision-Date: 2013-12-30 16:56+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -287,7 +287,7 @@ msgstr ""
 msgid "The free/busy information was successfully sent."
 msgstr "informacije o slobodnom/zauzetom su uspješno poslane."
 
-#: freebusymanager.cpp:658 itiphandler_p.cpp:161
+#: freebusymanager.cpp:658 itiphandler_p.cpp:167
 msgid "Sending Free/Busy"
 msgstr "Slanje informacija o slobodnom/zauzetom"
 
@@ -383,35 +383,42 @@ msgstr "Datoteka za spajanje tipa ical je prazna"
 msgid "Merge ical file into existing calendar."
 msgstr "Spoji ical datoteku u postojeći kalendar"
 
-#: incidencechanger.cpp:288
+#: incidencechanger.cpp:277
 #, kde-format
 msgid "Error while trying to create calendar item. Error was: %1"
 msgstr "Greška pri kreiranju kalendarske stavke. Greška je bila: %1"
 
-#: incidencechanger.cpp:337
+#: incidencechanger.cpp:357
 #, kde-format
 msgid "Error while trying to delete calendar item. Error was: %1"
 msgstr "Greška pri brisanju kalendarske stavke. Greška je bila: %1"
 
-#: incidencechanger.cpp:394
+#: incidencechanger.cpp:395
+#, fuzzy
+#| msgid "Unknown error"
+msgctxt "errormessage for a job ended with an unexpected result"
+msgid "An unknown error occurred"
+msgstr "Nepoznata greška"
+
+#: incidencechanger.cpp:435
 #, kde-format
 msgid "Error while trying to modify calendar item. Error was: %1"
 msgstr "Greška u pokušaju izmjene stavke kalendara. Greška je bila: %1"
 
-#: incidencechanger.cpp:768 incidencechanger.cpp:878
+#: incidencechanger.cpp:848 incidencechanger.cpp:972
 msgid "That calendar item was already deleted, or currently being deleted."
 msgstr "Kalendarska stavka je već bila obrisana ili se trenutno briše"
 
-#: incidencechanger.cpp:1095
+#: incidencechanger.cpp:1206
 msgid "Operation can not be performed due to ACL restrictions"
 msgstr ""
 "Operacija se ne može obaviti zbog ograničenja na listama prava pristupa"
 
-#: incidencechanger.cpp:1098
+#: incidencechanger.cpp:1209
 msgid "The chosen collection is invalid"
 msgstr "Izabrana kolekcija je nevažeća"
 
-#: incidencechanger.cpp:1101
+#: incidencechanger.cpp:1212
 msgid ""
 "Default collection is invalid or doesn't have proper ACLs and "
 "DestinationPolicyNeverAsk was used"
@@ -419,11 +426,11 @@ msgstr ""
 "Podrazumijevana kolekcija je nevažeća ili nema odgovarajuću listu prava "
 "pristupa i pravilo da se na odredištu ne postavlja pitanje je korišteno"
 
-#: incidencechanger.cpp:1105
+#: incidencechanger.cpp:1216
 msgid "Duplicate item id in a group operation"
 msgstr "Dupla oznaka stavke u grupnoh operaciji"
 
-#: incidencechanger.cpp:1108
+#: incidencechanger.cpp:1219
 msgid ""
 "One change belonging to a group of changes failed. All changes are being "
 "rolled back."
@@ -431,66 +438,80 @@ msgstr ""
 "Jedna promjena koja pripada grupi promjena je neuspjela. Sve promjene su "
 "vraćene"
 
-#: incidencechanger.cpp:1113
+#: incidencechanger.cpp:1224
 msgid "Unknown error"
 msgstr "Nepoznata greška"
 
-#: itiphandler.cpp:122
+#: itiphandler.cpp:127
 msgid "Error loading calendar."
 msgstr "Greška pri učitavanju kalendara."
 
-#: itiphandler.cpp:130
+#: itiphandler.cpp:135
 #, kde-format
 msgid "Error message: %1"
 msgstr "Poruka o grešci %1"
 
-#: itiphandler.cpp:131
+#: itiphandler.cpp:136
 msgid "Unknown error while parsing iCal invitation"
 msgstr "Nepoznata greška pri analizi iCal poziva"
 
-#: itiphandler.cpp:137
+#: itiphandler.cpp:142
 msgid "Error while processing an invitation or update."
 msgstr "Greška pri obradi poziva ili ažuriranja"
 
-#: itiphandler.cpp:154
+#: itiphandler.cpp:159
 msgid "Invalid incidence"
 msgstr "Pogrešna pojava"
 
-#: itiphandler.cpp:223
+#: itiphandler.cpp:228
 #, kde-format
 msgid "Invalid action: %1"
 msgstr "Neispravna akcija: %1"
 
-#: itiphandler.cpp:246
+#: itiphandler.cpp:251
 msgid "Error sending counter proposal"
 msgstr "Gerška slanja kontra prijedloga"
 
-#: itiphandler.cpp:253
+#: itiphandler.cpp:258
 msgid "Could not start editor to edit counter proposal"
 msgstr "Ne mogu pokrenuti editor za uređivanje kontra prijedloga"
 
-#: itiphandler.cpp:286
+#: itiphandler.cpp:291
 #, kde-format
 msgid ""
 "The item '%1' has no attendees. Therefore no groupware message will be sent."
 msgstr "Stavka '%1' nema prisutnij. Stoga se grupna poruka neće slati."
 
-#: itiphandler.cpp:289
+#: itiphandler.cpp:294
 msgid "Message Not Sent"
 msgstr "Poruka nije poslana"
 
-#: itiphandler_p.cpp:76 itiphandler_p.cpp:79 itiphandler_p.cpp:148
-#: itiphandlerhelper_p.cpp:406
+#: itiphandler.h:104 itiphandler.h:122 itiphandler.h:138 itiphandler.h:151
+#, fuzzy
+#| msgid "Send Email"
+msgctxt "@action:button dialog positive answer"
+msgid "Send Email"
+msgstr "Pošalji Email:"
+
+#: itiphandler.h:105 itiphandler.h:123 itiphandler.h:139 itiphandler.h:152
+#, fuzzy
+#| msgid "Do Not Send"
+msgctxt "@action:button dialog negative answer"
+msgid "Do Not Send"
+msgstr "Nemoj slati"
+
+#: itiphandler_p.cpp:79 itiphandler_p.cpp:82 itiphandler_p.cpp:145
+#: itiphandlerhelper_p.cpp:495
 #, kde-format
 msgid "Error: %1"
 msgstr "Greška: %1"
 
-#: itiphandler_p.cpp:102
+#: itiphandler_p.cpp:105
 #, kde-format
 msgid "Error loading calendar: %1"
 msgstr "Greška pri učitavanju kalendara: %1"
 
-#: itiphandler_p.cpp:157
+#: itiphandler_p.cpp:163
 #, kde-format
 msgid ""
 "The groupware message for item '%1' was successfully sent.\n"
@@ -499,7 +520,7 @@ msgstr ""
 "Grupna poruka za stavku  '%1' je uspješno poslana.\n"
 "Metod: %2"
 
-#: itiphandler_p.cpp:168
+#: itiphandler_p.cpp:174
 #, kde-format
 msgctxt ""
 "Groupware message sending failed. %2 is request/reply/add/cancel/counter/etc."
@@ -510,29 +531,29 @@ msgstr ""
 "Ne mogu poslati stavku '%1'.\n"
 "Metod: %2"
 
-#: itiphandler_p.cpp:185 itiphandler_p.cpp:207
+#: itiphandler_p.cpp:191 itiphandler_p.cpp:213
 msgid "The item information was successfully sent."
 msgstr "Informacija o stavci je uspješno poslana."
 
-#: itiphandler_p.cpp:186
+#: itiphandler_p.cpp:192
 msgid "Publishing"
 msgstr "Objavljivanje"
 
-#: itiphandler_p.cpp:191
+#: itiphandler_p.cpp:197
 #, kde-format
 msgid "Unable to publish the item '%1'"
 msgstr "Ne mogu da objavim stavku '%1'."
 
-#: itiphandler_p.cpp:208
+#: itiphandler_p.cpp:214
 msgid "Forwarding"
 msgstr "Prosljeđivanje"
 
-#: itiphandler_p.cpp:215
+#: itiphandler_p.cpp:221
 #, kde-format
 msgid "Unable to forward the item '%1'"
 msgstr "Ne mogu proslijediti stavku '%1'"
 
-#: itiphandler_p.cpp:217
+#: itiphandler_p.cpp:223
 msgid "Forwarding Error"
 msgstr "Greška prosljeđivanja"
 
@@ -541,15 +562,15 @@ msgstr "Greška prosljeđivanja"
 msgid "Proposed new meeting time: %1 - %2"
 msgstr "Predloženo novo vrijeme sastanka: %1 - %2"
 
-#: itiphandlerhelper_p.cpp:76
+#: itiphandlerhelper_p.cpp:87
 msgid "Group Scheduling Email"
 msgstr "Pošta za grupno zakazivanje"
 
-#: itiphandlerhelper_p.cpp:108
+#: itiphandlerhelper_p.cpp:145
 msgid "<placeholder>No summary given</placeholder>"
 msgstr "<placeholder>Nema datog rezimea</placeholder>"
 
-#: itiphandlerhelper_p.cpp:194
+#: itiphandlerhelper_p.cpp:238
 #, kde-format
 msgid ""
 "The event \"%1\" includes other people.\n"
@@ -558,7 +579,7 @@ msgstr ""
 "Događaj \"%1\" uključuje druge ljude.\n"
 "Želite li poslati poštu učesnicima?"
 
-#: itiphandlerhelper_p.cpp:198
+#: itiphandlerhelper_p.cpp:242
 #, kde-format
 msgid ""
 "The todo \"%1\" includes other people.\n"
@@ -567,13 +588,13 @@ msgstr ""
 "Zadatak \"%1\" uključuje druge ljude.\n"
 "Želite li poslati poštu učesnicima?"
 
-#: itiphandlerhelper_p.cpp:202
+#: itiphandlerhelper_p.cpp:246
 msgid ""
 "This incidence includes other people. Should an email be sent to the "
 "attendees?"
 msgstr "Incident uključuje druge ljude. Treba li poslati poštu učesnicima?"
 
-#: itiphandlerhelper_p.cpp:218
+#: itiphandlerhelper_p.cpp:270
 msgid ""
 "You are not the organizer of this event. Editing it will bring your calendar "
 "out of sync with the organizer's calendar. Do you really want to edit it?"
@@ -582,7 +603,7 @@ msgstr ""
 "sinhribnizaciju vašeg kalendara s organizatorovim. Da li zaista želite da ga "
 "uredite?"
 
-#: itiphandlerhelper_p.cpp:249
+#: itiphandlerhelper_p.cpp:304
 #, kde-format
 msgid ""
 "You changed the invitation \"%1\".\n"
@@ -591,17 +612,16 @@ msgstr ""
 "Promijenili ste poziv \"%1\".\n"
 "Želite li poslati učesnicima poruku ažuriranja?"
 
-#: itiphandlerhelper_p.cpp:253 itiphandlerhelper_p.cpp:268
-#: itiphandlerhelper_p.cpp:277 itiphandlerhelper_p.cpp:329
-#: itiphandlerhelper_p.cpp:349
+#: itiphandlerhelper_p.cpp:308 itiphandlerhelper_p.cpp:326
+#: itiphandlerhelper_p.cpp:336
 msgid "Send Update"
 msgstr "Požalji ažuriranje"
 
-#: itiphandlerhelper_p.cpp:266 itiphandlerhelper_p.cpp:324
+#: itiphandlerhelper_p.cpp:324 itiphandlerhelper_p.cpp:400
 msgid "Do you want to send a status update to the organizer of this task?"
 msgstr "Želite li poslati promjenu statusa organizatoru ovog zadatka?"
 
-#: itiphandlerhelper_p.cpp:275
+#: itiphandlerhelper_p.cpp:333
 msgid ""
 "Your status as an attendee of this event changed. Do you want to send a "
 "status update to the event organizer?"
@@ -609,7 +629,7 @@ msgstr ""
 "Vaš status kao učesnika ovog događaja se promijenio. Želite li poslati "
 "ažuriranje statusa organizatoru događaja?"
 
-#: itiphandlerhelper_p.cpp:297
+#: itiphandlerhelper_p.cpp:371
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -618,7 +638,7 @@ msgstr ""
 "Uklonili ste poziv \"%1\".\n"
 "Želite li poslati poštu učesnicima da je događaj otkazan?"
 
-#: itiphandlerhelper_p.cpp:301
+#: itiphandlerhelper_p.cpp:375
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -627,7 +647,7 @@ msgstr ""
 "Uklonili ste poziv \"%1\".\n"
 "Želite li poslati poštu učesnicima da je zadatak otkazan?"
 
-#: itiphandlerhelper_p.cpp:305
+#: itiphandlerhelper_p.cpp:379
 #, kde-format
 msgid ""
 "You removed the invitation \"%1\".\n"
@@ -636,11 +656,18 @@ msgstr ""
 "Uklonili ste poziv \"%1\".\n"
 "Želite li poslati poštu učesnicima da je dnevnik otkazan?"
 
-#: itiphandlerhelper_p.cpp:326
+#: itiphandlerhelper_p.cpp:402
 msgid "Do you want to send a status update to the organizer of this journal?"
 msgstr "Želite li poslati ažuriranje statusa organizatoru ovog dnevnika?"
 
-#: itiphandlerhelper_p.cpp:346
+#: itiphandlerhelper_p.cpp:405 itiphandlerhelper_p.cpp:426
+#, fuzzy
+#| msgid "Send Update"
+msgctxt "@action:button dialog positive answer"
+msgid "Send Update"
+msgstr "Požalji ažuriranje"
+
+#: itiphandlerhelper_p.cpp:422
 msgid ""
 "You had previously accepted an invitation to this event. Do you want to send "
 "an updated response to the organizer declining the invitation?"
@@ -648,26 +675,21 @@ msgstr ""
 "Prethodno ste prihvatili poziv na ovaj događaj. Želite li poslati ažurirani "
 "odgovor organizatoru da odbijate poziv?"
 
-#: itiphandlerhelper_p.cpp:374 mailscheduler_p.cpp:116
+#: itiphandlerhelper_p.cpp:462 mailscheduler_p.cpp:116
 #, kde-format
 msgid "Counter proposal: %1"
 msgstr "Kontra prijedlog %1"
 
-#: itiphandlerhelper_p.cpp:392
+#: itiphandlerhelper_p.cpp:480
 msgid "Sending group scheduling email failed."
 msgstr "Slanje grupne pošte za zakazivanje nije uspjelo"
 
-#: itiphandlerhelper_p.cpp:393
+#: itiphandlerhelper_p.cpp:487
+#, fuzzy
+#| msgid "Abort Update"
+msgctxt "@action:button dialog positive answer to abort question"
 msgid "Abort Update"
 msgstr "O ažuriranje"
-
-#: itiphandlerhelper_p.h:170
-msgid "Send Email"
-msgstr "Pošalji Email:"
-
-#: itiphandlerhelper_p.h:171
-msgid "Do Not Send"
-msgstr "Nemoj slati"
 
 #: mailclient_p.cpp:67 mailclient_p.cpp:103
 msgid "There are no attendees to e-mail"

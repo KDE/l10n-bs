@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacomtablet\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-06-26 01:31+0000\n"
+"POT-Creation-Date: 2014-08-11 01:39+0000\n"
 "PO-Revision-Date: 2013-10-19 12:44+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -121,13 +121,13 @@ msgstr "Shift"
 
 #. i18n: Select an action which will be assigned to a tablet button.
 #. i18n: ectx: property (placeholderText), widget (Wacom::ButtonActionDisplayWidget, actionNameLineEdit)
-#: src/kcmodule/buttonactionselectionwidget.ui:164
+#: src/kcmodule/buttonactionselectionwidget.ui:159
 msgid "Please select an action."
 msgstr "Molim oadberite akciju"
 
 #. i18n: Click to assign an action (shortcut) to a tablet button.
 #. i18n: ectx: property (placeholderText), widget (Wacom::ButtonActionDisplayWidget, actionNameDisplayWidget)
-#: src/kcmodule/buttonactionselectorwidget.ui:56
+#: src/kcmodule/buttonactionselectorwidget.ui:51
 msgid "Click to assign an action."
 msgstr "Kliknite za dodjelu akcije"
 
@@ -138,7 +138,7 @@ msgstr "Dugmad ploče"
 
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroupBox)
 #: src/kcmodule/buttonpagewidget.ui:29
-#: src/kcmodule/kcmwacomtabletwidget.cpp:330
+#: src/kcmodule/kcmwacomtabletwidget.cpp:425
 msgid "Express Buttons"
 msgstr "Ekspresna dugmad"
 
@@ -262,89 +262,122 @@ msgstr ""
 msgid "No Tablet Found"
 msgstr "Nema nađenog tableta"
 
-#: src/kcmodule/generalpagewidget.cpp:81 src/kded/tabletdaemon.cpp:143
+#: src/kcmodule/generalpagewidget.cpp:86 src/kded/tabletdaemon.cpp:143
 msgctxt "@action"
 msgid "Enable/Disable the Touch Tool"
 msgstr "O(ne)mogući dodirni alat"
 
-#: src/kcmodule/generalpagewidget.cpp:86 src/kded/tabletdaemon.cpp:148
+#: src/kcmodule/generalpagewidget.cpp:91 src/kded/tabletdaemon.cpp:148
 msgctxt "@action"
 msgid "Toggle the Stylus Tool Relative/Absolute"
 msgstr "Preklapaj između alatke pisaljke apsolutno/relativno"
 
-#: src/kcmodule/generalpagewidget.cpp:91 src/kded/tabletdaemon.cpp:153
+#: src/kcmodule/generalpagewidget.cpp:96 src/kded/tabletdaemon.cpp:153
 msgctxt "@action"
 msgid "Toggle between all screens"
 msgstr "Preklapaj između svih ekrana"
 
-#: src/kcmodule/generalpagewidget.cpp:96
+#: src/kcmodule/generalpagewidget.cpp:101
 msgctxt ""
 "@action Maps the area of the tablet to all available screen space (space "
 "depends on connected monitors)"
 msgid "Map to fullscreen"
 msgstr "Mapiraj na puni ekran"
 
-#: src/kcmodule/generalpagewidget.cpp:101 src/kded/tabletdaemon.cpp:163
+#: src/kcmodule/generalpagewidget.cpp:106 src/kded/tabletdaemon.cpp:163
 msgctxt "@action"
 msgid "Map to screen 1"
 msgstr "Mapiraj na ekran 1"
 
-#: src/kcmodule/generalpagewidget.cpp:106 src/kded/tabletdaemon.cpp:168
+#: src/kcmodule/generalpagewidget.cpp:111 src/kded/tabletdaemon.cpp:168
 msgctxt "@action"
 msgid "Map to screen 2"
 msgstr "Mapiraj na ekran 2"
 
-#: src/kcmodule/generalpagewidget.cpp:111
+#: src/kcmodule/generalpagewidget.cpp:116 src/kded/tabletdaemon.cpp:173
+#, fuzzy
+#| msgid "Add new profile"
+msgctxt "@action Switch to the next profile in the rotation"
+msgid "Next profile"
+msgstr "Dodaj novi profil"
+
+#: src/kcmodule/generalpagewidget.cpp:121 src/kded/tabletdaemon.cpp:178
+msgctxt "@action Switch to the previous profile in the rotation"
+msgid "Previous Profile"
+msgstr ""
+
+#: src/kcmodule/generalpagewidget.cpp:126
 msgid "Wacom Tablet Settings"
 msgstr "Postavke Wacom tableta"
+
+#: src/kcmodule/generalpagewidget.cpp:228
+#, fuzzy
+#| msgid "Profile name:"
+msgid "Profile List"
+msgstr "Ime profila:"
+
+#: src/kcmodule/generalpagewidget.cpp:229
+#, fuzzy
+#| msgid "Select Profile:"
+msgid "Select the Profile you want to add:"
+msgstr "Izaberite profil:"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, GeneralPageWidget)
 #: src/kcmodule/generalpagewidget.ui:14
 msgid "General Hardware Overview"
 msgstr "Opšti hardverski pregled"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: src/kcmodule/generalpagewidget.ui:23
-msgid "Tablet Details"
-msgstr "Detalji tableta"
+#. i18n: ectx: property (title), widget (QGroupBox, profileRotationBox)
+#: src/kcmodule/generalpagewidget.ui:29
+#, fuzzy
+#| msgid "Orientation"
+msgid "ProfileRotation"
+msgstr "Orijentacija"
 
-#. i18n: ectx: property (text), widget (QLabel, CompanyLabel)
-#: src/kcmodule/generalpagewidget.ui:93
-msgid "Company:"
-msgstr "Kompanija:"
+#. i18n: ectx: property (text), widget (QPushButton, pbUp)
+#: src/kcmodule/generalpagewidget.ui:65
+msgid "Up"
+msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, tabletLabel)
-#: src/kcmodule/generalpagewidget.ui:113
-msgid "Tablet:"
-msgstr "Tablet:"
+#. i18n: ectx: property (text), widget (QPushButton, pbAddToRotationList)
+#: src/kcmodule/generalpagewidget.ui:78
+msgid "Add"
+msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, devicesLabel)
-#: src/kcmodule/generalpagewidget.ui:133
-msgid "Input Devices:"
-msgstr "Ulazni uređaji:"
+#. i18n: ectx: property (text), widget (QPushButton, pbDown)
+#: src/kcmodule/generalpagewidget.ui:91
+#, fuzzy
+#| msgid "Ring Down"
+msgid "Down"
+msgstr "Prsten dolje"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbRemoveFromRotationList)
+#: src/kcmodule/generalpagewidget.ui:104
+msgid "Remove"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, shortcutGroupBox)
-#: src/kcmodule/generalpagewidget.ui:154
+#: src/kcmodule/generalpagewidget.ui:128
 msgid "Shortcuts"
 msgstr "Kratice"
 
-#: src/kcmodule/kcmwacomtablet.cpp:73
+#: src/kcmodule/kcmwacomtablet.cpp:74
 msgid "Graphic Tablet Configuration"
 msgstr "Konfiguracija grafičkog tableta"
 
-#: src/kcmodule/kcmwacomtablet.cpp:74
+#: src/kcmodule/kcmwacomtablet.cpp:75
 msgid "A configurator for graphic tablets"
 msgstr "Konfigurator grafičkih tableta"
 
-#: src/kcmodule/kcmwacomtablet.cpp:75
+#: src/kcmodule/kcmwacomtablet.cpp:76
 msgid "In this module you can configure your Wacom tablet profiles"
 msgstr "U ovom modulu možete konfigurisati profile Wacom tableta"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:132
+#: src/kcmodule/kcmwacomtabletwidget.cpp:157
 msgid "KDE tablet service not found"
 msgstr "Usliga KDE tableta nije nađena"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:133
+#: src/kcmodule/kcmwacomtabletwidget.cpp:158
 msgid ""
 "Please start the KDE wacom tablet service to use this configuration dialog.\n"
 "The service is required for tablet detection and profile support."
@@ -353,11 +386,11 @@ msgstr ""
 "dijalog\n"
 "Usluga je potrebna za prepoznavanje tableta i podršku profilima."
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:138
+#: src/kcmodule/kcmwacomtabletwidget.cpp:163
 msgid "No tablet device detected"
 msgstr "Nema prepoznatpg tablet uređaja"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:139
+#: src/kcmodule/kcmwacomtabletwidget.cpp:164
 msgid ""
 "Please connect a tablet device to continue.\n"
 "If your device is already connected it is currently unsupported."
@@ -365,33 +398,38 @@ msgstr ""
 "Molim povežite tablet uređaj za nastavak.\n"
 "Ako je uređaj već povezan, on trenutno nije podržan."
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:152
+#: src/kcmodule/kcmwacomtabletwidget.cpp:216
 msgid "Add new profile"
 msgstr "Dodaj novi profil"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:153
+#: src/kcmodule/kcmwacomtabletwidget.cpp:217
 msgid "Profile name:"
 msgstr "Ime profila:"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:324
+#: src/kcmodule/kcmwacomtabletwidget.cpp:409
+msgctxt "Name of the default profile that will be created if none exist."
+msgid "Default"
+msgstr ""
+
+#: src/kcmodule/kcmwacomtabletwidget.cpp:418
 msgctxt "Basic overview page for the tablet hardware"
 msgid "General"
 msgstr "Opšte"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:325
+#: src/kcmodule/kcmwacomtabletwidget.cpp:419
 msgid "Stylus"
 msgstr "Pisaljka"
 
 #. i18n: ectx: property (title), widget (QGroupBox, tabletGroupBox)
 #. i18n: ectx: property (title), widget (QGroupBox, generalGroupBox)
-#: src/kcmodule/kcmwacomtabletwidget.cpp:333
+#: src/kcmodule/kcmwacomtabletwidget.cpp:428
 #: src/kcmodule/tabletareaselectionview.ui:150
 #: src/kcmodule/tabletpagewidget.ui:17
 msgid "Tablet"
 msgstr "Tablet"
 
 #. i18n: ectx: property (title), widget (QGroupBox, touchGroupBox)
-#: src/kcmodule/kcmwacomtabletwidget.cpp:339
+#: src/kcmodule/kcmwacomtabletwidget.cpp:434
 #: src/kcmodule/touchpagewidget.ui:17
 msgid "Touch"
 msgstr "Dodir"
@@ -401,28 +439,38 @@ msgstr "Dodir"
 msgid "Graphic Tablet Settings"
 msgstr "Postavke grafičkog tableta"
 
-#. i18n: ectx: property (text), widget (QLabel, profileLabel)
+#. i18n: ectx: property (text), widget (QLabel, tabletListLabel)
 #: src/kcmodule/kcmwacomtabletwidget.ui:28
+#, fuzzy
+#| msgctxt ""
+#| "Dialog title from a dialog which lets the user select an area of the "
+#| "tablet where the screen space will be mapped to."
+#| msgid "Select a Tablet Area"
+msgid "Select Tablet:"
+msgstr "Odaberite područje tableta"
+
+#. i18n: ectx: property (text), widget (QLabel, profileLabel)
+#: src/kcmodule/kcmwacomtabletwidget.ui:52
 msgid "Select Profile:"
 msgstr "Izaberite profil:"
 
 #. i18n: ectx: property (toolTip), widget (KAnimatedButton, addProfileButton)
-#: src/kcmodule/kcmwacomtabletwidget.ui:48
+#: src/kcmodule/kcmwacomtabletwidget.ui:72
 msgid "Creates a new default profile"
 msgstr "Kreira novi podrazumijevani profil"
 
 #. i18n: ectx: property (icons), widget (KAnimatedButton, addProfileButton)
-#: src/kcmodule/kcmwacomtabletwidget.ui:57
+#: src/kcmodule/kcmwacomtabletwidget.ui:81
 msgid "document-new"
 msgstr "dokument-novi"
 
 #. i18n: ectx: property (toolTip), widget (KAnimatedButton, delProfileButton)
-#: src/kcmodule/kcmwacomtabletwidget.ui:64
+#: src/kcmodule/kcmwacomtabletwidget.ui:88
 msgid "Deletes the current profile"
 msgstr "Briše trenutni profil"
 
 #. i18n: ectx: property (icons), widget (KAnimatedButton, delProfileButton)
-#: src/kcmodule/kcmwacomtabletwidget.ui:67
+#: src/kcmodule/kcmwacomtabletwidget.ui:91
 msgid "edit-delete-page"
 msgstr "uredi-briši-stranu"
 
@@ -565,6 +613,43 @@ msgstr "Postavlja prag pritiska pisaljke"
 msgid "Tip Feel"
 msgstr "Osjećaj tipkanja"
 
+#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBoxRawSample)
+#. i18n: ectx: property (toolTip), widget (QSlider, horizontalSliderRawSample)
+#: src/kcmodule/styluspagewidget.ui:393 src/kcmodule/styluspagewidget.ui:402
+msgid "Number of raw data used to filter the points (default is 4)"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBoxRawSample)
+#: src/kcmodule/styluspagewidget.ui:396
+msgid "Raw Sample Rate"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, labelMinRawSample)
+#: src/kcmodule/styluspagewidget.ui:432
+msgid "1"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, labelMaxRawSample)
+#. i18n: ectx: property (text), widget (QLabel, labelMaxSuppress)
+#: src/kcmodule/styluspagewidget.ui:452 src/kcmodule/styluspagewidget.ui:526
+msgid "20"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBoxSupress)
+#: src/kcmodule/styluspagewidget.ui:470
+msgid "Number of points trimmed (default is 2)"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBoxSupress)
+#: src/kcmodule/styluspagewidget.ui:473
+msgid "Suppress Rate"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, labelMinSuppress)
+#: src/kcmodule/styluspagewidget.ui:506
+msgid "0"
+msgstr ""
+
 #: src/kcmodule/tabletareaselectiondialog.cpp:107
 msgctxt ""
 "Dialog title from a dialog which lets the user select an area of the tablet "
@@ -641,24 +726,24 @@ msgstr "Kalibriši"
 msgid "This mapping can only be applied in absolute tracking mode."
 msgstr "Ovo mapiranje se može primijeniti samo u apsolutnom režimu praćenja"
 
-#: src/kcmodule/tabletpagewidget.cpp:446
+#: src/kcmodule/tabletpagewidget.cpp:453
 msgctxt ""
 "Either no orientation or the current screen orientation is applied to the "
 "tablet."
 msgid "Default Orientation"
 msgstr "Podrazumijevana orijentacija"
 
-#: src/kcmodule/tabletpagewidget.cpp:447
+#: src/kcmodule/tabletpagewidget.cpp:454
 msgctxt "The tablet will be rotated clockwise."
 msgid "Rotate Tablet Clockwise"
 msgstr "Rotiraj tablet u pravcu kazaljke na satu"
 
-#: src/kcmodule/tabletpagewidget.cpp:448
+#: src/kcmodule/tabletpagewidget.cpp:455
 msgctxt "The tablet will be rotated counterclockwise."
 msgid "Rotate Tablet Counterclockwise"
 msgstr "Rotiraj tablet obrnto od pravca kazaljke na satu"
 
-#: src/kcmodule/tabletpagewidget.cpp:449
+#: src/kcmodule/tabletpagewidget.cpp:456
 msgctxt "The tablet will be rotated up side down."
 msgid "Rotate Tablet Upside-Down"
 msgstr "Rotiraj tablet odozgo dolje"
@@ -704,7 +789,7 @@ msgid "Map Tablet Area to Screen"
 msgstr "Mapiraj područje tableta na ekran."
 
 #. i18n: ectx: property (text), widget (QLabel, trackingWarningLabel)
-#: src/kcmodule/tabletpagewidget.ui:142 src/kcmodule/touchpagewidget.ui:158
+#: src/kcmodule/tabletpagewidget.ui:137 src/kcmodule/touchpagewidget.ui:153
 msgid ""
 "Your currently selected mapping can not be applied in relative tracking mode."
 msgstr ""
@@ -712,27 +797,27 @@ msgstr ""
 "praćenja."
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, rotationGroupBox)
-#: src/kcmodule/tabletpagewidget.ui:183
+#: src/kcmodule/tabletpagewidget.ui:178
 msgid "Changes the orientation of the tablet."
 msgstr "Mijenja orijentaciju tableta."
 
 #. i18n: ectx: property (title), widget (QGroupBox, rotationGroupBox)
-#: src/kcmodule/tabletpagewidget.ui:186
+#: src/kcmodule/tabletpagewidget.ui:181
 msgid "Orientation"
 msgstr "Orijentacija"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, rotateWithScreenCheckBox)
-#: src/kcmodule/tabletpagewidget.ui:195
+#: src/kcmodule/tabletpagewidget.ui:190
 msgid "If enabled, the tablet rotates together with the screen."
 msgstr "Ako je uključeno, tablet rotira zajedno s ekranom."
 
 #. i18n: ectx: property (text), widget (QCheckBox, rotateWithScreenCheckBox)
-#: src/kcmodule/tabletpagewidget.ui:198
+#: src/kcmodule/tabletpagewidget.ui:193
 msgid "Auto-Rotate with Screen"
 msgstr "Automatski rotiraj s ekranom"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, rotateWithScreenInvertCheckBox)
-#: src/kcmodule/tabletpagewidget.ui:208
+#: src/kcmodule/tabletpagewidget.ui:203
 msgid ""
 "If enabled the automatic tablet rotation for clockwise and counterclockwise "
 "rotations will be inverted."
@@ -741,7 +826,7 @@ msgstr ""
 "kazaljke na satu će biti invertovana."
 
 #. i18n: ectx: property (text), widget (QCheckBox, rotateWithScreenInvertCheckBox)
-#: src/kcmodule/tabletpagewidget.ui:211
+#: src/kcmodule/tabletpagewidget.ui:206
 msgid "Invert Auto-Rotation"
 msgstr "Invertuj automatsku rotaciju."
 
@@ -771,76 +856,76 @@ msgid "Map Touch Area to Screen"
 msgstr "Mapiraj dodirno područje na ekran"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, gesturesCheckBox)
-#: src/kcmodule/touchpagewidget.ui:194
+#: src/kcmodule/touchpagewidget.ui:189
 msgid "If enabled the touch events can recognize gestures."
 msgstr "Ako je omogućeno, dodirni događaji će prepoznati gesture."
 
 #. i18n: ectx: property (text), widget (QCheckBox, gesturesCheckBox)
-#: src/kcmodule/touchpagewidget.ui:197
+#: src/kcmodule/touchpagewidget.ui:192
 msgid "Enable Gestures"
 msgstr "Omogući gesture"
 
 #. i18n: ectx: property (title), widget (QGroupBox, gesturesGroupBox)
-#: src/kcmodule/touchpagewidget.ui:215
+#: src/kcmodule/touchpagewidget.ui:210
 msgid "Gestures"
 msgstr "Gesture"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, scrollDistanceLabel)
-#: src/kcmodule/touchpagewidget.ui:227
+#: src/kcmodule/touchpagewidget.ui:222
 msgid "Minimum motion before sending a scroll gesture."
 msgstr "Minimalno kretanje prije slanja gesture klizanja."
 
 #. i18n: ectx: property (text), widget (QLabel, scrollDistanceLabel)
-#: src/kcmodule/touchpagewidget.ui:230
+#: src/kcmodule/touchpagewidget.ui:225
 msgid "Scroll Distance"
 msgstr "Udaljenost klizbha"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, scrollDistanceSpinBox)
-#: src/kcmodule/touchpagewidget.ui:246
+#: src/kcmodule/touchpagewidget.ui:241
 msgid "The minimum motion in tablet units before sending a scroll event."
 msgstr ""
 "Minimalno kretanje u jedinicama tableta prije slanja događaja klizanja."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, zoomDistanceLabel)
-#: src/kcmodule/touchpagewidget.ui:265
+#: src/kcmodule/touchpagewidget.ui:260
 msgid "Minimum distance for a zoom gesture is recognized."
 msgstr "Minimalna udaljenost kojom se zum gestura prepozna."
 
 #. i18n: ectx: property (text), widget (QLabel, zoomDistanceLabel)
-#: src/kcmodule/touchpagewidget.ui:268
+#: src/kcmodule/touchpagewidget.ui:263
 msgid "Zoom Distance"
 msgstr "Zum udaljenost"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, zoomDistanceSpinBox)
-#: src/kcmodule/touchpagewidget.ui:284
+#: src/kcmodule/touchpagewidget.ui:279
 msgid ""
 "The minimum distance in tablet units for a zoom gesture to be recognized."
 msgstr ""
 "Minimalna udaljenost u jedinicama tableta kojom se zum gestura prepozna."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, tapTimeLabel)
-#: src/kcmodule/touchpagewidget.ui:303
+#: src/kcmodule/touchpagewidget.ui:298
 msgid "Minimum time between taps for a right click."
 msgstr "Minimalno vrijeme između dva tupa za desni klik."
 
 #. i18n: ectx: property (text), widget (QLabel, tapTimeLabel)
-#: src/kcmodule/touchpagewidget.ui:306
+#: src/kcmodule/touchpagewidget.ui:301
 msgid "Tap Time"
 msgstr "Vrijeme tupa"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, tapTimeSpinBox)
-#: src/kcmodule/touchpagewidget.ui:316
+#: src/kcmodule/touchpagewidget.ui:311
 msgid "The minimum time in milliseconds between taps to trigger a right click."
 msgstr ""
 "Minimalno vrijeme u milisekundama između tupova koje pokreće desni klik"
 
 #. i18n: ectx: property (text), widget (QLabel, scrollInversionLabel)
-#: src/kcmodule/touchpagewidget.ui:329
+#: src/kcmodule/touchpagewidget.ui:324
 msgid "Invert Scroll Direction"
 msgstr "Invertuj pravac klizanja"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, scrollInversionCheckBox)
-#: src/kcmodule/touchpagewidget.ui:336
+#: src/kcmodule/touchpagewidget.ui:331
 msgid "If selected, the scroll direction for the scroll gesture is inverted."
 msgstr ""
 "Ako je odabrano, pravac klizanja za gesturu klizanja će biuti invertovan"
@@ -852,40 +937,58 @@ msgctxt ""
 msgid "Map to all fullscreen"
 msgstr "Mapiraj na puni ekran"
 
-#: src/kded/tabletdaemon.cpp:182
+#: src/kded/tabletdaemon.cpp:192
 msgid "Graphic Tablet Configuration daemon"
 msgstr "Demon za konfiguraciju grafičkog tableta"
 
-#: src/kded/tabletdaemon.cpp:183
+#: src/kded/tabletdaemon.cpp:193
 msgid "A Wacom tablet control daemon"
 msgstr "Wacom tablet kontrolni demon"
 
-#: src/kded/tablethandler.cpp:137
+#: src/kded/tablethandler.cpp:142
 msgid "Tablet Connected"
 msgstr "Tablet priključen"
 
-#: src/kded/tablethandler.cpp:138
+#: src/kded/tablethandler.cpp:143
 #, kde-format
 msgid "New tablet '%1' connected."
 msgstr "Novi tablet '%1' priključen."
 
-#: src/kded/tablethandler.cpp:156
+#: src/kded/tablethandler.cpp:164
 msgid "Tablet removed"
 msgstr "Tablet uklonjen"
 
-#: src/kded/tablethandler.cpp:157
+#: src/kded/tablethandler.cpp:165
 #, kde-format
 msgid "Tablet %1 removed"
 msgstr "Tablet %1 uklonjen"
 
-#: src/kded/tablethandler.cpp:323
+#: src/kded/tablethandler.cpp:407
+msgctxt "Name of the default profile that will be created if none exists."
+msgid "Default"
+msgstr ""
+
+#: src/kded/tablethandler.cpp:419
 msgid "Graphic Tablet error"
 msgstr "Greška grafičkog tableta"
 
-#: src/kded/tablethandler.cpp:324
-#, kde-format
-msgid "Profile <b>%1</b> does not exist"
+#: src/kded/tablethandler.cpp:420
+#, fuzzy, kde-format
+#| msgid "Profile <b>%1</b> does not exist"
+msgid "Profile <b>%1</b> does not exist. Apply <b>%2</b> instead"
 msgstr "Profil <b>%1</b> ne postoji"
+
+#~ msgid "Tablet Details"
+#~ msgstr "Detalji tableta"
+
+#~ msgid "Company:"
+#~ msgstr "Kompanija:"
+
+#~ msgid "Tablet:"
+#~ msgstr "Tablet:"
+
+#~ msgid "Input Devices:"
+#~ msgstr "Ulazni uređaji:"
 
 #~ msgid "Error - Tablet service not available."
 #~ msgstr "Greška: Servis tableta nije pokrenut"
