@@ -3155,31 +3155,39 @@ msgid "Logged in."
 msgstr "Prijavljen."
 
 #: ../src/Imap/ConnectionState.cpp:63
+#, fuzzy
+#| msgctxt "QObject|"
+#| msgid "Waiting for encryption..."
+msgctxt "QObject|"
+msgid "Waiting for another mailbox..."
+msgstr "Čekanje za šifriranje..."
+
+#: ../src/Imap/ConnectionState.cpp:65
 msgctxt "QObject|"
 msgid "Opening mailbox..."
 msgstr "Otvaranje sandučića..."
 
-#: ../src/Imap/ConnectionState.cpp:65
+#: ../src/Imap/ConnectionState.cpp:67
 msgctxt "QObject|"
 msgid "Synchronizing mailbox..."
 msgstr "Sinhronizacija sandučića..."
 
-#: ../src/Imap/ConnectionState.cpp:67
+#: ../src/Imap/ConnectionState.cpp:69
 msgctxt "QObject|"
 msgid "Mailbox opened."
 msgstr "Sandučič otvoren."
 
-#: ../src/Imap/ConnectionState.cpp:69
+#: ../src/Imap/ConnectionState.cpp:71
 msgctxt "QObject|"
 msgid "Downloading message..."
 msgstr "Preuzimanje poruke..."
 
-#: ../src/Imap/ConnectionState.cpp:71
+#: ../src/Imap/ConnectionState.cpp:73
 msgctxt "QObject|"
 msgid "Downloading message structure..."
 msgstr "Preuzimanje strukture poruke..."
 
-#: ../src/Imap/ConnectionState.cpp:73
+#: ../src/Imap/ConnectionState.cpp:75
 msgctxt "QObject|"
 msgid "Logged out."
 msgstr "Odjavljen."
@@ -4028,9 +4036,9 @@ msgid "Aborted"
 msgstr ""
 
 #: ../src/Imap/Tasks/KeepMailboxOpenTask.cpp:169
-#: ../src/Imap/Tasks/KeepMailboxOpenTask.cpp:395
-#: ../src/Imap/Tasks/KeepMailboxOpenTask.cpp:461
-#: ../src/Imap/Tasks/KeepMailboxOpenTask.cpp:489
+#: ../src/Imap/Tasks/KeepMailboxOpenTask.cpp:401
+#: ../src/Imap/Tasks/KeepMailboxOpenTask.cpp:467
+#: ../src/Imap/Tasks/KeepMailboxOpenTask.cpp:495
 msgctxt "Imap::Mailbox::KeepMailboxOpenTask|"
 msgid "Asked to die"
 msgstr ""
@@ -4044,7 +4052,7 @@ msgctxt "Imap::Mailbox::KeepMailboxOpenTask|"
 msgid "Parser is gone"
 msgstr "Parser %1"
 
-#: ../src/Imap/Tasks/KeepMailboxOpenTask.cpp:671
+#: ../src/Imap/Tasks/KeepMailboxOpenTask.cpp:689
 #, fuzzy
 #| msgctxt "QObject|"
 #| msgid "Logging in..."
@@ -4052,14 +4060,14 @@ msgctxt "Imap::Mailbox::KeepMailboxOpenTask|"
 msgid "Logging off..."
 msgstr "Prijavljivanje..."
 
-#: ../src/Imap/Tasks/KeepMailboxOpenTask.cpp:878
+#: ../src/Imap/Tasks/KeepMailboxOpenTask.cpp:896
 msgctxt "Imap::Mailbox::KeepMailboxOpenTask|"
 msgid "The UIDVALIDITY has changed while mailbox is open. Please reconnect."
 msgstr ""
 "UIDVALIDITY je promijenjen kada je sandučić otvoren. Molimo da se ponovo "
 "spojite."
 
-#: ../src/Imap/Tasks/KeepMailboxOpenTask.cpp:895
+#: ../src/Imap/Tasks/KeepMailboxOpenTask.cpp:913
 msgctxt "Imap::Mailbox::KeepMailboxOpenTask|"
 msgid "UNSELECTed"
 msgstr ""
@@ -4120,17 +4128,17 @@ msgctxt "Imap::Mailbox::ObtainSynchronizedMailboxTask|"
 msgid "Mailbox syncing dead or aborted"
 msgstr ""
 
-#: ../src/Imap/Tasks/ObtainSynchronizedMailboxTask.cpp:137
+#: ../src/Imap/Tasks/ObtainSynchronizedMailboxTask.cpp:146
 msgctxt "Imap::Mailbox::ObtainSynchronizedMailboxTask|"
 msgid "Asked to die"
 msgstr ""
 
-#: ../src/Imap/Tasks/ObtainSynchronizedMailboxTask.cpp:1181
+#: ../src/Imap/Tasks/ObtainSynchronizedMailboxTask.cpp:1199
 msgctxt "Imap::Mailbox::ObtainSynchronizedMailboxTask|"
 msgid "Escaped from mailbox"
 msgstr ""
 
-#: ../src/Imap/Tasks/ObtainSynchronizedMailboxTask.cpp:1186
+#: ../src/Imap/Tasks/ObtainSynchronizedMailboxTask.cpp:1204
 msgctxt "Imap::Mailbox::ObtainSynchronizedMailboxTask|"
 msgid "Synchronizing mailbox"
 msgstr "Sinhronizacija sandučića"
@@ -4156,7 +4164,7 @@ msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid "Asked to die"
 msgstr ""
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:162
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:163
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid ""
 "Configuration requires sending STARTTLS, but the IMAP server greets us with "
@@ -4164,12 +4172,12 @@ msgid ""
 "previously, someone is after your data and they are pretty smart."
 msgstr ""
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:194
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:195
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid "Server has closed the connection"
 msgstr "Server je zatvorio konekciju"
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:201
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:202
 #, qt-format
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid ""
@@ -4179,28 +4187,28 @@ msgstr ""
 "Server je odgovorio sljedećim LOŠIM odgovorom:\n"
 "%1"
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:203
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:204
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid "Server has greeted us with a BAD response"
 msgstr "Server nas je dočekao sa LOŠIM odgovorom"
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:235
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:236
 #, qt-format
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid "STARTTLS failed: %1"
 msgstr "STARTTLS neuspio: %1"
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:264
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:265
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid "Capabilities still contain LOGINDISABLED even after STARTTLS"
 msgstr "Sposobnosti još uvijek sadrže LOGINDISABLED čak i poslije STARTTLS"
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:299
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:300
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid "Temporary failure because a subsystem is down."
 msgstr "Privremeni neuspjeh jer je podsistem pao."
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:302
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:303
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid ""
 "Authentication failed.  This often happens due to bad password or wrong user "
@@ -4209,7 +4217,7 @@ msgstr ""
 "Neuspjela autentifikacija Ovo se često događa zbog loše šifre ili pogrešnog "
 "korisničkog imena."
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:305
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:306
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid ""
 "Authentication succeeded in using the authentication identity, but the "
@@ -4220,7 +4228,7 @@ msgstr ""
 "može ili neće dopustiti autentifikaciju identiteta tako da se ponaša kao "
 "tražena autentifikacija identiteta."
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:310
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:311
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid ""
 "Either authentication succeeded or the server no longer had the necessary "
@@ -4231,23 +4239,23 @@ msgstr ""
 "kako bilo, pristup više nije dozvoljen koristeći taj izraz. Trebali bi "
 "dobiti novi izraz."
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:315
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:316
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid "The operation is not permitted due to a lack of privacy."
 msgstr "Operacija nije dopuštena zbog nedostatka privatnosti."
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:318
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:319
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid "You should contact the system administrator or support desk."
 msgstr "Trebali bi se obratiti administratoru sistema ili pisati podršku."
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:325
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:326
 #, qt-format
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid "Login failed: %1"
 msgstr "Neuspjela prijava: %1"
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:327
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:328
 #, qt-format
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid ""
@@ -4259,37 +4267,37 @@ msgstr ""
 "\n"
 "%2"
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:378
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:379
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid "Server does not support STARTTLS"
 msgstr "Server ne podržava STARTTLS"
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:398
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:399
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid "Server did not provide useful capabilities"
 msgstr "Server nije naveo korisne mogućnosti"
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:402
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:403
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid "CAPABILITIES command has failed"
 msgstr "Komanda CAPABILITIES nije uspjela"
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:453
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:454
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid "No credentials available"
 msgstr "Nema akreditiva dostupnih"
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:460
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:461
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid "Connecting to mail server"
 msgstr "Povezivanje na mail server"
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:480
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:481
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid "The security state of the SSL connection got rejected"
 msgstr "Sigurnosno stanje SSL veze je odbijeno"
 
-#: ../src/Imap/Tasks/OpenConnectionTask.cpp:489
+#: ../src/Imap/Tasks/OpenConnectionTask.cpp:490
 msgctxt "Imap::Mailbox::OpenConnectionTask|"
 msgid ""
 "The security state of the connection after a STARTTLS operation got rejected"
