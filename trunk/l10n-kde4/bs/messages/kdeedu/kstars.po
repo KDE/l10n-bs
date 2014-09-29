@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-09-08 01:53+0000\n"
+"POT-Creation-Date: 2014-09-29 01:49+0000\n"
 "PO-Revision-Date: 2014-01-13 22:18+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -210,7 +210,7 @@ msgstr ""
 "Šema se ne može snimiti."
 
 #: colorscheme.cpp:233 colorscheme.cpp:248 dialogs/detaildialog.cpp:611
-#: dialogs/locationdialog.cpp:265 ekos/capture.cpp:1460 ekos/capture.cpp:1671
+#: dialogs/locationdialog.cpp:265 ekos/capture.cpp:1478 ekos/capture.cpp:1689
 #: indi/drivermanager.cpp:1371 indi/indidriver.cpp:936 kstarsactions.cpp:763
 #: oal/execute.cpp:278 options/opscolors.cpp:199 tools/modcalcangdist.cpp:128
 #: tools/modcalcapcoord.cpp:151 tools/modcalcdaylength.cpp:247
@@ -367,14 +367,14 @@ msgstr "Pregled za %1"
 msgid "Catalog Preview"
 msgstr "Pregled kataloga"
 
-#: dialogs/addcatdialog.cpp:213 ekos/capture.cpp:1628
+#: dialogs/addcatdialog.cpp:213 ekos/capture.cpp:1646
 #: fitsviewer/fitstab.cpp:259 imageviewer.cpp:265 kstarsactions.cpp:673
 #: printing/pwizprint.cpp:86 tools/scriptbuilder.cpp:1042
 #, kde-format
 msgid "A file named \"%1\" already exists. Overwrite it?"
 msgstr "Datoteka sa imenom '%1' već postoji. Da li da pišem preko nje?"
 
-#: dialogs/addcatdialog.cpp:215 ekos/capture.cpp:1630
+#: dialogs/addcatdialog.cpp:215 ekos/capture.cpp:1648
 #: fitsviewer/fitstab.cpp:261 imageviewer.cpp:267 kstarsactions.cpp:674
 #: printing/pwizprint.cpp:87 tools/scriptbuilder.cpp:1044
 msgid "Overwrite File?"
@@ -512,7 +512,7 @@ msgstr ""
 "Ovaj URL nije ispravan. Da li želite da otvorim preglednik sa Google\n"
 "pretraživačem?"
 
-#: dialogs/addlinkdialog.cpp:53 ekos/capture.cpp:1451 ekos/capture.cpp:1649
+#: dialogs/addlinkdialog.cpp:53 ekos/capture.cpp:1469 ekos/capture.cpp:1667
 #: fitsviewer/fitstab.cpp:287 indi/streamwg.cpp:196
 #: tools/scriptbuilder.cpp:1005 tools/scriptbuilder.cpp:1081
 msgid "Invalid URL"
@@ -859,7 +859,7 @@ msgstr "B - V popis:"
 
 #. i18n: ectx: property (text), widget (QLabel, BVIndex)
 #. i18n: ectx: property (text), item, widget (QComboBox, filterCombo)
-#: dialogs/details_data.ui:312 ekos/capture.ui:497 ekos/focus.ui:576
+#: dialogs/details_data.ui:312 ekos/capture.ui:497 ekos/focus.ui:150
 #: ekos/guide.ui:106
 msgid "--"
 msgstr "--"
@@ -2520,7 +2520,7 @@ msgstr ""
 msgid "Error: Lost connection to CCD."
 msgstr "Greška: Izgubljena je konekcija za CCD"
 
-#: ekos/align.cpp:538 ekos/capture.cpp:831 ekos/focus.cpp:504
+#: ekos/align.cpp:538 ekos/capture.cpp:847 ekos/focus.cpp:504
 #: ekos/guide/rcalibration.cpp:722
 msgid "Capturing image..."
 msgstr "Dohvatanje slike..."
@@ -2541,7 +2541,7 @@ msgstr[0] "Rješavač prekinut nakon %1 sekunde"
 msgstr[1] "Rješavač prekinut nakon %1 sekunde"
 msgstr[2] "Rješavač prekinut nakon %1 sekundi"
 
-#: ekos/align.cpp:650 ekos/capture.cpp:942 ekos/ekosmanager.cpp:1246
+#: ekos/align.cpp:650 ekos/capture.cpp:958 ekos/ekosmanager.cpp:1246
 #: ekos/focus.cpp:1303 ekos/guide.cpp:430
 #, kde-format
 msgctxt "log entry; %1 is the date, %2 is the text"
@@ -2693,7 +2693,7 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, controlBox)
 #. i18n: ectx: property (title), widget (QGroupBox, controlGroup)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_Control)
-#: ekos/align.ui:21 ekos/focus.ui:144 ekos/guide/guider.ui:581
+#: ekos/align.ui:21 ekos/focus.ui:163 ekos/guide/guider.ui:581
 msgid "Control"
 msgstr "Kontrola"
 
@@ -2704,7 +2704,7 @@ msgstr "Dohvati i riješi"
 
 #. i18n: ectx: property (text), widget (QPushButton, stopB)
 #. i18n: ectx: property (text), widget (QPushButton, stopFocusB)
-#: ekos/align.ui:42 ekos/focus.ui:205 ekos/guide/guider.cpp:392
+#: ekos/align.ui:42 ekos/focus.ui:224 ekos/guide/guider.cpp:392
 #: ekos/guide/rcalibration.cpp:348
 msgid "Stop"
 msgstr "Zaustavi"
@@ -2754,7 +2754,7 @@ msgid "Bin X:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_19)
-#: ekos/align.ui:207 ekos/focus.ui:111
+#: ekos/align.ui:207 ekos/focus.ui:121
 msgid "Bin Y:"
 msgstr ""
 
@@ -3020,165 +3020,173 @@ msgstr "Prekini"
 msgid "Complete"
 msgstr "Završeno"
 
-#: ekos/capture.cpp:366 ekos/capture.cpp:985
+#: ekos/capture.cpp:366 ekos/capture.cpp:1001
 msgid "Auto dark subtract is not supported in batch mode."
 msgstr "Automatsko oduzimanje tamnine nije podrzano u batch načinu rada"
 
-#: ekos/capture.cpp:392
+#: ekos/capture.cpp:396
 msgid "No pending jobs found. Please add a job to the sequence queue."
 msgstr ""
 
-#: ekos/capture.cpp:639 ekos/focus.cpp:232
+#: ekos/capture.cpp:401
+#, fuzzy
+#| msgid "Are you sure you want to remove the %1 link?"
+msgid ""
+"All jobs are complete. Do you want to reset the status of all jobs and "
+"restart capturing?"
+msgstr "Jeste li sigurni da želite ukloniti vezu %1?"
+
+#: ekos/capture.cpp:402 ekos/capture.cpp:1744
+#, fuzzy
+#| msgid "Reset Position"
+msgid "Reset job status"
+msgstr "Resetuj položaj"
+
+#: ekos/capture.cpp:655 ekos/focus.cpp:232
 #, kde-format
 msgid "Unable to find FILTER_SLOT property in driver %1"
 msgstr "Nije moguće pronaći FILTER_SLOT svojstvo u %1 drajveru"
 
-#: ekos/capture.cpp:722
+#: ekos/capture.cpp:738
 #, fuzzy
 msgid "Complete."
 msgstr "Završeno"
 
-#: ekos/capture.cpp:737
+#: ekos/capture.cpp:753
 #, kde-format
 msgid "Received image %1 out of %2."
 msgstr "Primljena slika %1 od %2."
 
-#: ekos/capture.cpp:768
+#: ekos/capture.cpp:784
 #, fuzzy
 msgid "Parking telescope..."
 msgstr "Radioteleskop"
 
-#: ekos/capture.cpp:791
+#: ekos/capture.cpp:807
 #, fuzzy
 msgid "Dithering..."
 msgstr "Ostali"
 
-#: ekos/capture.cpp:796 ekos/capture.cpp:854
+#: ekos/capture.cpp:812 ekos/capture.cpp:870
 #, fuzzy
 msgid "Focusing..."
 msgstr "Fokusiranje unutra..."
 
-#: ekos/capture.cpp:828
+#: ekos/capture.cpp:844
 msgid "Capturing dark frame..."
 msgstr "Dohvatanje tamnog okvira..."
 
-#: ekos/capture.cpp:835
+#: ekos/capture.cpp:851
 msgid "Failed to set sub frame."
 msgstr "Postavljanje pod okvira nije uspjelo."
 
-#: ekos/capture.cpp:840
+#: ekos/capture.cpp:856
 msgid "Failed to set binning."
 msgstr "Postavljanje binninga nije uspjelo."
 
-#: ekos/capture.cpp:850
+#: ekos/capture.cpp:866
 #, fuzzy
 msgid "Dither complete."
 msgstr "Završeno"
 
-#: ekos/capture.cpp:929
+#: ekos/capture.cpp:945
 msgid ""
 "Cannot enable preview while CCD upload mode is set to local. Change upload "
 "mode to client or both and try again."
 msgstr ""
 
-#: ekos/capture.cpp:969
+#: ekos/capture.cpp:985
 #, fuzzy
 msgid "Downloading..."
 msgstr "Skini nove podatke..."
 
-#: ekos/capture.cpp:973
+#: ekos/capture.cpp:989
 msgid "second left"
 msgstr "preostala je sekunda"
 
-#: ekos/capture.cpp:975
+#: ekos/capture.cpp:991
 msgid "seconds left"
 msgstr "preostale sekunde"
 
-#: ekos/capture.cpp:1120
+#: ekos/capture.cpp:1138
 #, kde-format
 msgid "Job #%1 changes applied."
 msgstr ""
 
-#: ekos/capture.cpp:1247
+#: ekos/capture.cpp:1265
 #, kde-format
 msgid "Changing filter to %1..."
 msgstr ""
 
-#: ekos/capture.cpp:1335
+#: ekos/capture.cpp:1353
 #, kde-format
 msgid ""
 "Guiding deviation %1 exceeded limit value of %2 arcsecs, aborting exposure."
 msgstr ""
 
-#: ekos/capture.cpp:1346
+#: ekos/capture.cpp:1364
 #, kde-format
 msgid ""
 "Guiding deviation %1 is now lower than limit value of %2 arcsecs, resuming "
 "exposure."
 msgstr ""
 
-#: ekos/capture.cpp:1381
+#: ekos/capture.cpp:1399
 #, fuzzy
 msgid "Autofocus failed. Aborting exposure..."
 msgstr "Automatsko fokusiranje u toku..."
 
-#: ekos/capture.cpp:1450 ekos/capture.cpp:1648 fitsviewer/fitstab.cpp:286
+#: ekos/capture.cpp:1468 ekos/capture.cpp:1666 fitsviewer/fitstab.cpp:286
 #: indi/streamwg.cpp:195 tools/scriptbuilder.cpp:1004
 #: tools/scriptbuilder.cpp:1080
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "Neispravan URL: %1"
 
-#: ekos/capture.cpp:1459
+#: ekos/capture.cpp:1477
 #, fuzzy, kde-format
 msgid "Unable to open file %1"
 msgstr "Nisam mogao da otvorim datoteku %1."
 
-#: ekos/capture.cpp:1631 fitsviewer/fitstab.cpp:262
+#: ekos/capture.cpp:1649 fitsviewer/fitstab.cpp:262
 msgid "&Overwrite"
 msgstr "&Prebriši"
 
-#: ekos/capture.cpp:1640
+#: ekos/capture.cpp:1658
 #, fuzzy
 #| msgid "Failed to set sub frame."
 msgid "Failed to save sequence queue"
 msgstr "Postavljanje pod okvira nije uspjelo."
 
-#: ekos/capture.cpp:1640 fitsviewer/fitstab.cpp:275
+#: ekos/capture.cpp:1658 fitsviewer/fitstab.cpp:275
 msgid "FITS Save"
 msgstr "FITS Snimi"
 
-#: ekos/capture.cpp:1670
+#: ekos/capture.cpp:1688
 #, fuzzy, kde-format
 #| msgid "Unable to save image: %1 "
 msgid "Unable to write to file %1"
 msgstr "Ne mogu snimiti sliku: %1 "
 
-#: ekos/capture.cpp:1718
+#: ekos/capture.cpp:1736
 #, fuzzy, kde-format
 #| msgid "Sequence Queue"
 msgid "Sequence queue saved to %1"
 msgstr "sekvencijalni red"
 
-#: ekos/capture.cpp:1725
+#: ekos/capture.cpp:1743
 #, fuzzy
 #| msgid "Are you sure you want to remove the %1 link?"
 msgid "Are you sure you want to reset status of all jobs?"
 msgstr "Jeste li sigurni da želite ukloniti vezu %1?"
 
-#: ekos/capture.cpp:1726
-#, fuzzy
-#| msgid "Reset Position"
-msgid "Reset job status"
-msgstr "Resetuj položaj"
-
-#: ekos/capture.cpp:1765
+#: ekos/capture.cpp:1783
 #, fuzzy, kde-format
 #| msgid "Edit Link..."
 msgid "Editing job #%1..."
 msgstr "Uredi vezu..."
 
-#: ekos/capture.cpp:1776
+#: ekos/capture.cpp:1794
 msgid "Editing job canceled."
 msgstr ""
 
@@ -3195,7 +3203,7 @@ msgstr "CCD"
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_5_3)
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: ekos/capture.ui:53 ekos/capture.ui:865 ekos/focus.ui:313
+#: ekos/capture.ui:53 ekos/capture.ui:865 ekos/focus.ui:332
 #: tools/argsetdeviceindi.ui:30 tools/argshutdownindi.ui:38
 #: tools/argstartindi.ui:30
 msgid "Device:"
@@ -3239,7 +3247,7 @@ msgstr "Prefiks:"
 #. i18n: ectx: property (toolTip), widget (QLabel, textLabel1_2_4)
 #. i18n: ectx: property (toolTip), widget (QLabel, textLabel1_2_5)
 #: ekos/capture.ui:112 ekos/capture.ui:872 ekos/capture.ui:990
-#: ekos/capture.ui:1042 ekos/focus.ui:320
+#: ekos/capture.ui:1042 ekos/focus.ui:339
 msgid "Number of images to capture"
 msgstr "Broj slika koje treba uhvatiti"
 
@@ -3262,12 +3270,12 @@ msgid "Directory:"
 msgstr "Usmjerenje"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_8)
-#: ekos/capture.ui:138 ekos/focus.ui:565 ekos/guide.ui:95
+#: ekos/capture.ui:138 ekos/focus.ui:56 ekos/guide.ui:95
 msgid "Apply filter to image after capture to enhance it"
 msgstr "Stavite filter na sliku nakon što je dohvatite da biste je poboljšali"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: ekos/capture.ui:141 ekos/focus.ui:568 ekos/guide.ui:98
+#: ekos/capture.ui:141 ekos/focus.ui:59 ekos/guide.ui:98
 msgid "Filters:"
 msgstr "Filteri:"
 
@@ -3344,7 +3352,7 @@ msgstr "Aktivni filter otvor"
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #. i18n: ectx: attribute (title), widget (QWidget, Filter)
 #: ekos/capture.ui:396 ekos/capture.ui:737 ekos/capture.ui:849
-#: ekos/focus.ui:297 ekos/opsekos.ui:293 oal/equipmentwriter.ui:553
+#: ekos/focus.ui:316 ekos/opsekos.ui:293 oal/equipmentwriter.ui:553
 msgid "Filter"
 msgstr "Filter"
 
@@ -3408,7 +3416,7 @@ msgstr "&Stani"
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2_3)
 #. i18n: ectx: property (text), widget (QLabel, label_18)
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: ekos/capture.ui:878 ekos/focus.ui:326 oal/execute.ui:377
+#: ekos/capture.ui:878 ekos/focus.ui:345 oal/execute.ui:377
 #: tools/argsetfilternumindi.ui:30
 msgid "Filter:"
 msgstr "Filter:"
@@ -3482,7 +3490,7 @@ msgstr "Opcije automatskog fokusiranja"
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, l_22)
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: ekos/capture.ui:1048 ekos/focus.ui:451 ekos/focus.ui:673
+#: ekos/capture.ui:1048 ekos/focus.ui:470 ekos/focus.ui:666
 #: ekos/guide/guider.ui:534 xplanet/opsxplanet.ui:120
 msgid "pixels"
 msgstr "pikseli"
@@ -3701,7 +3709,7 @@ msgstr "Filter Točak:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #. i18n: ectx: property (text), widget (QLabel, label_14)
-#: ekos/ekosmanager.ui:114 ekos/focus.ui:225
+#: ekos/ekosmanager.ui:114 ekos/focus.ui:244
 msgid "Focuser:"
 msgstr "Fokuser:"
 
@@ -3871,61 +3879,61 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_13)
-#: ekos/focus.ui:81
+#: ekos/focus.ui:91
 msgid "secs"
 msgstr "sekundi"
 
 #. i18n: ectx: property (text), widget (QPushButton, focusOutB)
-#: ekos/focus.ui:155
+#: ekos/focus.ui:174
 msgid "Focus Out"
 msgstr "Defokusiranje"
 
 #. i18n: ectx: property (text), widget (QPushButton, startFocusB)
-#: ekos/focus.ui:165
+#: ekos/focus.ui:184
 msgid "Start Focus"
 msgstr "Započni fokusiranje"
 
 #. i18n: ectx: property (text), widget (QPushButton, focusInB)
-#: ekos/focus.ui:175
+#: ekos/focus.ui:194
 msgid "Focus In"
 msgstr "Fokusiranje"
 
 #. i18n: ectx: property (text), widget (QPushButton, startLoopB)
-#: ekos/focus.ui:185
+#: ekos/focus.ui:204
 msgid "Start Framing"
 msgstr "Započni stavljanje u kadrove"
 
 #. i18n: ectx: property (text), widget (QPushButton, captureB)
-#: ekos/focus.ui:195 ekos/guide/guider.ui:455 ekos/guide/rcalibration.ui:55
+#: ekos/focus.ui:214 ekos/guide/guider.ui:455 ekos/guide/rcalibration.ui:55
 msgid "Capture"
 msgstr "Dohvati"
 
 #. i18n: ectx: property (title), widget (QGroupBox, focuserGroup)
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: ekos/focus.ui:217 ekos/opsekos.ui:279
+#: ekos/focus.ui:236 ekos/opsekos.ui:279
 msgid "Focuser"
 msgstr "Fokuser"
 
 #. i18n: ectx: property (text), widget (QLabel, label_15)
-#: ekos/focus.ui:232
+#: ekos/focus.ui:251
 #, fuzzy
 #| msgid "Model:"
 msgid "Mode:"
 msgstr "Model:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, manualModeR)
-#: ekos/focus.ui:248
+#: ekos/focus.ui:267
 msgid "Manual"
 msgstr "Ručno"
 
 #. i18n: ectx: property (text), widget (QRadioButton, AutoModeR)
 #. i18n: ectx: property (text), widget (QRadioButton, autoR)
-#: ekos/focus.ui:261 fitsviewer/fitshistogramui.ui:113
+#: ekos/focus.ui:280 fitsviewer/fitshistogramui.ui:113
 msgid "Auto"
 msgstr "Auto."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, lockFilterCheck)
-#: ekos/focus.ui:348
+#: ekos/focus.ui:367
 msgid ""
 "If locked, the focus process will always use the specified filter when "
 "performing autofocus.\n"
@@ -3934,109 +3942,109 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, lockFilterCheck)
-#: ekos/focus.ui:351
+#: ekos/focus.ui:370
 #, fuzzy
 #| msgid "Filter"
 msgid "Lock Filter"
 msgstr "Filter"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: ekos/focus.ui:376
+#: ekos/focus.ui:395
 msgid "Autofocus Options"
 msgstr "Opcije automatskog fokusiranja"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_autoSelectStar)
-#: ekos/focus.ui:384
+#: ekos/focus.ui:403
 #, fuzzy
 msgid "Automatically select the best focus star from the image"
 msgstr "Automatski odabir koordinatne mreže"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_autoSelectStar)
-#: ekos/focus.ui:387
+#: ekos/focus.ui:406
 #, fuzzy
 msgid "Auto Select Star"
 msgstr "Višestruka zvijezda"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_subFrame)
-#: ekos/focus.ui:394
+#: ekos/focus.ui:413
 msgid "Subframe around the focus star during the autofocus procedure"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_subFrame)
-#: ekos/focus.ui:397
+#: ekos/focus.ui:416
 #, fuzzy
 msgid "Sub Frame"
 msgstr "Kadar"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, suspendGuideCheck)
-#: ekos/focus.ui:411
+#: ekos/focus.ui:430
 msgid "Suspend Guiding while autofocus in progress"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, suspendGuideCheck)
-#: ekos/focus.ui:414
+#: ekos/focus.ui:433
 #, fuzzy
 msgid "Suspend Guiding"
 msgstr "Navođenje"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, resetFrameB)
-#: ekos/focus.ui:421
+#: ekos/focus.ui:440
 msgid "Reset frame to full capture"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, resetFrameB)
-#: ekos/focus.ui:424
+#: ekos/focus.ui:443
 #, fuzzy
 msgid "Reset Frame"
 msgstr "Koristi marker datoteka"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_10)
-#: ekos/focus.ui:458 ekos/focus.ui:507
+#: ekos/focus.ui:477 ekos/focus.ui:526
 msgid "Delay between two consequent focus images"
 msgstr "Kašnjenje između dva fokusa slike u slijedu"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: ekos/focus.ui:461
+#: ekos/focus.ui:480
 msgid "Step:"
 msgstr "Korak:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: ekos/focus.ui:500
+#: ekos/focus.ui:519
 #, no-c-format
 msgid "%"
 msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: ekos/focus.ui:510
+#: ekos/focus.ui:529
 #, fuzzy
 msgid "Box Size:"
 msgstr "Veličina:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: ekos/focus.ui:533 ekos/focus.ui:554
+#: ekos/focus.ui:552 ekos/focus.ui:573
 msgid "ticks"
 msgstr "otkucaji"
 
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: ekos/focus.ui:540
+#: ekos/focus.ui:559
 #, fuzzy
 msgid "Max Travel:"
 msgstr "Maks.hod mašine"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: ekos/focus.ui:547
+#: ekos/focus.ui:566
 msgid "Tolerance:"
 msgstr "Tolerancija:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: ekos/focus.ui:641
+#: ekos/focus.ui:634
 msgid "V-Curve"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ekos/focus.ui:659
+#: ekos/focus.ui:652
 msgid "HFR:"
 msgstr "HFR:"
 
