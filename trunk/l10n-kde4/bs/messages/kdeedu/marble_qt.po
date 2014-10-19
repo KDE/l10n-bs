@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-12 01:49+0000\n"
+"POT-Creation-Date: 2014-10-19 01:50+0000\n"
 "PO-Revision-Date: 2014-02-09 16:26+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1059,12 +1059,14 @@ msgid "Upload to cloud"
 msgstr "Učitaj na oblak"
 
 #: src/lib/marble/CurrentLocationWidget.cpp:205
-msgid "Waiting for current location information..."
-msgstr "Čekanje informacija o trenutnoj lokaciji..."
+#, fuzzy
+#| msgid "No description available."
+msgid "No position available."
+msgstr "Nema dostupnog opisa"
 
 #: src/lib/marble/CurrentLocationWidget.cpp:208
-msgid "Initializing current location service..."
-msgstr "Pokrećem trenutnu uslugu lokacije"
+msgid "Waiting for current location information..."
+msgstr "Čekanje informacija o trenutnoj lokaciji..."
 
 #: src/lib/marble/CurrentLocationWidget.cpp:214
 msgid "Error when determining current location: "
@@ -1123,28 +1125,29 @@ msgstr "kt"
 msgid "nm"
 msgstr "m"
 
-#: src/lib/marble/CurrentLocationWidget.cpp:321
-msgid "Disabled"
-msgstr "Isključeno"
+#: src/lib/marble/CurrentLocationWidget.cpp:340
+#: src/lib/marble/PlacemarkPositionProviderPlugin.cpp:46
+msgid "Placemark"
+msgstr "Oznaka"
 
-#: src/lib/marble/CurrentLocationWidget.cpp:380
+#: src/lib/marble/CurrentLocationWidget.cpp:375
 msgid "Save Track"
 msgstr "Snimi stazu"
 
-#: src/lib/marble/CurrentLocationWidget.cpp:382
-#: src/lib/marble/CurrentLocationWidget.cpp:398
+#: src/lib/marble/CurrentLocationWidget.cpp:377
+#: src/lib/marble/CurrentLocationWidget.cpp:393
 msgid "KML File (*.kml)"
 msgstr "KML datoteka (*.kml)"
 
-#: src/lib/marble/CurrentLocationWidget.cpp:397
+#: src/lib/marble/CurrentLocationWidget.cpp:392
 msgid "Open Track"
 msgstr "Otvori stazu"
 
-#: src/lib/marble/CurrentLocationWidget.cpp:409
+#: src/lib/marble/CurrentLocationWidget.cpp:404
 msgid "Clear current track"
 msgstr "Obriši trenutni trag"
 
-#: src/lib/marble/CurrentLocationWidget.cpp:410
+#: src/lib/marble/CurrentLocationWidget.cpp:405
 msgid "Are you sure you want to clear the current track?"
 msgstr "Da li ste sigurni da želite Obrisati trenutni trag"
 
@@ -2537,6 +2540,14 @@ msgstr ""
 msgid "Installation aborted by user."
 msgstr "Instalacija prekinuta od strane korisnika."
 
+#: src/lib/marble/PlacemarkPositionProviderPlugin.cpp:36
+msgid "Placemark position provider Plugin"
+msgstr "Oznaka pozicije davatelja dodataka"
+
+#: src/lib/marble/PlacemarkPositionProviderPlugin.cpp:56
+msgid "Reports the position of a placemark"
+msgstr "Prijavljuje poziciju oznake"
+
 #: src/lib/marble/PlanetFactory.cpp:229
 msgctxt "the planet"
 msgid "Mercury"
@@ -2771,6 +2782,18 @@ msgstr ""
 "Odlučili ste se za pokretanje Marble-a sa različitim grafičkim sistemom.\n"
 "Da bi ova opcija stupila na snagu, Marble mora biti ponovo pokrenut.\n"
 "Molim zatvorite program i ponovo pokrenite Marble."
+
+#: src/lib/marble/RouteSimulationPositionProviderPlugin.cpp:34
+msgid "Current Route Position Provider Plugin"
+msgstr "Trenutna pozicija rute davatelja dodataka"
+
+#: src/lib/marble/RouteSimulationPositionProviderPlugin.cpp:44
+msgid "Current Route"
+msgstr "Trenutna ruta"
+
+#: src/lib/marble/RouteSimulationPositionProviderPlugin.cpp:54
+msgid "Simulates traveling along the current route."
+msgstr "Simulira putovanje duž trenutne rute."
 
 #: src/lib/marble/routing/instructions/RoutingInstruction.cpp:250
 msgid "Enter the roundabout."
@@ -3121,7 +3144,7 @@ msgstr "Pravac učitavanja"
 msgid "No route found"
 msgstr "Nema pronađenih ruta"
 
-#: src/lib/marble/RoutingRunner.cpp:51
+#: src/lib/marble/RoutingRunner.cpp:40
 #, qt-format
 msgctxt "journey duration"
 msgid "%1:%2 h"
@@ -3314,18 +3337,6 @@ msgstr "Maemo"
 msgid "Reports the GPS position of a Maemo device (e.g. Nokia N900)."
 msgstr "Izvještava o GPS poziciji Maemo uređaja (npr. Nokia N900)."
 
-#: src/plugins/positionprovider/placemark/PlacemarkPositionProviderPlugin.cpp:35
-msgid "Placemark position provider Plugin"
-msgstr "Oznaka pozicije davatelja dodataka"
-
-#: src/plugins/positionprovider/placemark/PlacemarkPositionProviderPlugin.cpp:45
-msgid "Placemark"
-msgstr "Oznaka"
-
-#: src/plugins/positionprovider/placemark/PlacemarkPositionProviderPlugin.cpp:55
-msgid "Reports the position of a placemark"
-msgstr "Prijavljuje poziciju oznake"
-
 #: src/plugins/positionprovider/qtmobility/QtMobilityPositionProviderPlugin.cpp:39
 msgid "Qt Mobility Position Provider Plugin"
 msgstr "Qt Mobility pozicija davatelja dodataka"
@@ -3337,18 +3348,6 @@ msgstr "Qt Mobility lokacija"
 #: src/plugins/positionprovider/qtmobility/QtMobilityPositionProviderPlugin.cpp:59
 msgid "Reports the GPS position of a QtMobility compatible device."
 msgstr "Izvještaj GPS pozicije QtMobility kompatibilnog uređaja."
-
-#: src/plugins/positionprovider/routesimulation/RouteSimulationPositionProviderPlugin.cpp:35
-msgid "Current Route Position Provider Plugin"
-msgstr "Trenutna pozicija rute davatelja dodataka"
-
-#: src/plugins/positionprovider/routesimulation/RouteSimulationPositionProviderPlugin.cpp:45
-msgid "Current Route"
-msgstr "Trenutna ruta"
-
-#: src/plugins/positionprovider/routesimulation/RouteSimulationPositionProviderPlugin.cpp:55
-msgid "Simulates traveling along the current route."
-msgstr "Simulira putovanje duž trenutne rute."
 
 #: src/plugins/positionprovider/wlocate/WlocatePositionProviderPlugin.cpp:63
 msgid "Wlocate Position Provider Plugin"
@@ -5960,6 +5959,12 @@ msgstr "&Šablon plutajućeg predmeta"
 #: src/plugins/templates/floatitem/FITemplateFloatItem.cpp:68
 msgid "This is a template class for float items."
 msgstr "Ovo je šablonska klasa za plutajuće predmete."
+
+#~ msgid "Initializing current location service..."
+#~ msgstr "Pokrećem trenutnu uslugu lokacije"
+
+#~ msgid "Disabled"
+#~ msgstr "Isključeno"
 
 #, fuzzy
 #~| msgid "Deleted"
