@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgpgcertmanager\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-11-13 07:49+0000\n"
+"POT-Creation-Date: 2014-11-30 07:50+0000\n"
 "PO-Revision-Date: 2014-01-10 18:37+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -154,6 +154,16 @@ msgstr "pogođeno"
 msgid "Gpg4win"
 msgstr "Gpg4win"
 
+#: commands/adduseridcommand.cpp:248
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to add the user-id: <message>%1</"
+"message></para>"
+msgstr ""
+"<para>Greška se desila pri pokušaju dodavanja user-id: <message>%1</"
+"message></para>"
+
 #: commands/adduseridcommand.cpp:251
 msgctxt "@title:window"
 msgid "Add User-ID Error"
@@ -168,6 +178,17 @@ msgstr "Korisnički ID je uspješno dodan"
 msgctxt "@title:window"
 msgid "Add User-ID Succeeded"
 msgstr "Dodavanje korisničkog ID je uspjelo"
+
+#: commands/certifycertificatecommand.cpp:204
+msgctxt "@info"
+msgid ""
+"To certify other certificates, you first need to create an OpenPGP "
+"certificate for yourself. Choose <interface>File->New Certificate...</"
+"interface> to create one."
+msgstr ""
+"Da verifikujete druge certifikate, prvo morate da kreirate OpenPGP "
+"certifikat za sebe. Izaberite <interface>Datoteka->Novi certifikat...</"
+"interface> da ga kreirate."
 
 #: commands/certifycertificatecommand.cpp:205
 msgid "Certification Not Possible"
@@ -546,11 +567,44 @@ msgstr "Izvoženje certifikata nije uspelo"
 msgid "Could not write to file %1."
 msgstr "Ne mogu pisati u datoteku %1."
 
+#: commands/exportopenpgpcertstoservercommand.cpp:88
+msgctxt "@info"
+msgid ""
+"<para>No OpenPGP directory services have been configured.</para><para>Since "
+"none is configured, <application>Kleopatra</application> will use "
+"<resource>keys.gnupg.net</resource> as the server to export to.</"
+"para><para>You can configure OpenPGP directory servers in "
+"<application>Kleopatra</application>'s configuration dialog.</para><para>Do "
+"you want to continue with <resource>keys.gnupg.net</resource> as the server "
+"to export to?</para>"
+msgstr ""
+"<para>Nema OpenPGP Directori Services su konfigurisani.</para><para>Pošto "
+"nijedan nije konfigurisan,<application>Kleopatra</application> će koristiti "
+"<resource>keys.gnupg.net</resource> kao server za izvoz.</para><para>Možete "
+"konfigurisati OpenPGP direktorijske servere u  <application>Kleopatra</"
+"application> konfiguraciomom dijalogu.</para><para>Želite li nastaviti sa "
+"<resource>keys.gnupg.net</resource> kao serverom na koji se izvozi?</para>"
+
 #: commands/exportopenpgpcertstoservercommand.cpp:95
 #: commands/exportopenpgpcertstoservercommand.cpp:108
 msgctxt "@title:window"
 msgid "OpenPGP Certificate Export"
 msgstr "OpenPGP izvoz certifikata"
+
+#: commands/exportopenpgpcertstoservercommand.cpp:103
+msgctxt "@info"
+msgid ""
+"<para>When OpenPGP certificates have been exported to a public directory "
+"server, it is nearly impossible to remove them again.</para><para>Before "
+"exporting your certificate to a public directory server, make sure that you "
+"have created a revocation certificate so you can revoke the certificate if "
+"needed later.</para><para>Are you sure you want to continue?</para>"
+msgstr ""
+"<para>Kada su OpenPGP certifikati su izvozili u javnom imeničkom serveru, to "
+"je gotovo nemoguće da ih uklonimo ponovo.</para><para>Pre nego što izvezete "
+"svoje certifikate na javni server direktorijuma, uvjerite se da ste kreirali "
+"opoziv certifikata, tako da može da opozovete certifikat, ako je potrebno "
+"kasnije </para> <para> Jeste li sigurni da želite da nastavite.?</para>"
 
 #: commands/exportopenpgpcertstoservercommand.cpp:130
 msgctxt "@title:window"
@@ -561,6 +615,28 @@ msgstr "Greška izvoza OpenPGP certifikata"
 msgctxt "@title:window"
 msgid "OpenPGP Certificate Export Finished"
 msgstr "Izvoz OpenPGP certifikata završen"
+
+#: commands/exportopenpgpcertstoservercommand.cpp:141
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The GPG process that tried to export OpenPGP certificates ended "
+"prematurely because of an unexpected error.</para><para>Please check the "
+"output of <icode>%1</icode> for details.</para>"
+msgstr ""
+"<para>GPG proces koji je pokušao da izveze OpenPGP certifikate završio je "
+"prerano zbog neočekivane greške.</para><para>Molim provjerite izlaz <icode>"
+"%1</icode> za detalje.</para>"
+
+#: commands/exportopenpgpcertstoservercommand.cpp:149
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to export OpenPGP certificates.</para> "
+"<para>The output from <command>%1</command> was: <message>%2</message></para>"
+msgstr ""
+"<para>Desila se greška pri pokušaju izvoza OpenPGP certifikata.</para> "
+"<para>Izlaz iz<command>%1</command> je bio: <message>%2</message></para>"
 
 #: commands/exportopenpgpcertstoservercommand.cpp:156
 msgctxt "@info"
@@ -576,6 +652,28 @@ msgstr "Greška u izvozu tajnog ključa"
 msgctxt "@title:window"
 msgid "Secret Key Export Finished"
 msgstr "Izvoz tajnog ključa završen"
+
+#: commands/exportsecretkeycommand.cpp:148
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The GPG or GpgSM process that tried to export the secret key ended "
+"prematurely because of an unexpected error.</para><para>Please check the "
+"output of <icode>%1</icode> for details.</para>"
+msgstr ""
+"<para>Proces GPG ili GpgSM koji je pokušao da izveze tajni ključ prerano je "
+"stao zbog neočekivane greške.</para><para>Pogledajte izlaz iz <icode>%1</"
+"icode> za detalje.</para>"
+
+#: commands/exportsecretkeycommand.cpp:156
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to export the secret key.</para> "
+"<para>The output from <command>%1</command> was: <message>%2</message></para>"
+msgstr ""
+"<para>Desila se greška pri pokušaju izvoza tajnog ključa.</para> <para>Izlaz "
+"iz <command>%1</command> je bio: <message>%2</message></para>"
 
 #: commands/exportsecretkeycommand.cpp:163
 msgctxt "@info"
@@ -850,6 +948,18 @@ msgstr "Pogreška učenja pametne kartice"
 msgid "Finished Learning SmartCard"
 msgstr "Završeno učenje pametne kartice"
 
+#: commands/learncardkeyscommand.cpp:89
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The GPG or GpgSM process that tried to learn the smart card ended "
+"prematurely because of an unexpected error.</para><para>Please check the "
+"output of <icode>%1</icode> for details.</para>"
+msgstr ""
+"<para>GPG ili GpgSM procesi koji su pokušali da instruiraju pametnu karticu "
+"završili su prerano zbog neočekivane greške.</para><para>Provjerite izlaz iz "
+"<icode>%1</icode> za detalje.</para>"
+
 #: commands/lookupcertificatescommand.cpp:259
 msgid ""
 "<p>You seem to be searching for a fingerPrint or a key-id.</p><p>Different "
@@ -897,21 +1007,86 @@ msgstr ""
 "Nije uspjela potraga na certifikacijskom serveru. Greška je vraćena:\n"
 "%1"
 
+#: commands/lookupcertificatescommand.cpp:394
+msgctxt "@info"
+msgid ""
+"<para>The query result has been truncated.</para><para>Either the local or a "
+"remote limit on the maximum number of returned hits has been exceeded.</"
+"para><para>You can try to increase the local limit in the configuration "
+"dialog, but if one of the configured servers is the limiting factor, you "
+"have to refine your search.</para>"
+msgstr ""
+"<para>Rezultat upita je sasječen.</para><para>Bilo lokalni ili udaljeni "
+"limit na maksimalnom broju vraćenih pogodaka je pređen.</para><para>Možete "
+"da pokušate da se poveća limit u lokalnom konfiguracijskom dijalogu , ali "
+"ako jedan od konfigurisanih  servera ograničavajući faktor, morate da "
+"precizirate svoju pretragu.</para>"
+
 #: commands/lookupcertificatescommand.cpp:402
 msgctxt "@title"
 msgid "Result Truncated"
 msgstr "Rezultat odsječen"
+
+#: commands/lookupcertificatescommand.cpp:434
+msgctxt "@info"
+msgid ""
+"<para>You do not have any directory servers configured.</para><para>You need "
+"to configure at least one directory server to search on one.</para><para>You "
+"can configure directory servers here: <interface>Settings->Configure "
+"Kleopatra</interface>.</para>"
+msgstr ""
+"<para>Nemate konfigurisane imeničke servere.</para><para>Morate "
+"konfigurisati barem jedan imenički server na komećete tražiti.</"
+"para><para>Imeničke serevere možete ovdje konfigurisati: <interface>Postavke-"
+">Konfiguriši Kleopatra</interface>.</para>"
 
 #: commands/lookupcertificatescommand.cpp:439
 msgctxt "@title"
 msgid "No Directory Servers Configured"
 msgstr "Nema konfigurisanih servera direktorija"
 
+#: commands/refreshopenpgpcertscommand.cpp:77
+msgctxt "@info"
+msgid ""
+"<para>No OpenPGP directory services have been configured.</para><para>If not "
+"all of the certificates carry the name of their preferred certificate server "
+"(few do), a fallback server is needed to fetch from.</para><para>Since none "
+"is configured, <application>Kleopatra</application> will use <resource>keys."
+"gnupg.net</resource> as the fallback.</para><para>You can configure OpenPGP "
+"directory servers in Kleopatra's configuration dialog.</para><para>Do you "
+"want to continue with <resource>keys.gnupg.net</resource> as fallback server?"
+"</para>"
+msgstr ""
+"<para>Nema OpenPGP imeničkih servisa koji su konfigurisani.</para><para>Ako "
+"svi sertifikati ne nose naziv svog željenog certifikatskog servera (nekoliko "
+"nosi), rezervni server je potreban za dobavljanje  iz njega.</"
+"para><para>Pošto nijedan nije konfigurisan <application>Kleopatra</"
+"application> će koristiti <resource>keys.gnupg.net</resource> kao rezervu.</"
+"para><para>Možete konfigurisati OpenPGP direktorijske servere u  Kleopatra's "
+"konfiguracijskom dijalog.</para><para>Želite li nastaviti s<resource>keys."
+"gnupg.net</resource> kao rezervnim  serverom?</para>"
+
 #: commands/refreshopenpgpcertscommand.cpp:86
 #: commands/refreshopenpgpcertscommand.cpp:100
 msgctxt "@title:window"
 msgid "OpenPGP Certificate Refresh"
 msgstr "Osvježavanje OpenPGP certifikata"
+
+#: commands/refreshopenpgpcertscommand.cpp:94
+msgctxt "@info"
+msgid ""
+"<para>Refreshing OpenPGP certificates implies downloading all certificates "
+"anew, to check if any of them have been revoked in the meantime.</"
+"para><para>This can put a severe strain on your own as well as other "
+"people's network connections, and can take up to an hour or more to "
+"complete, depending on your network connection, and the number of "
+"certificates to check.</para> <para>Are you sure you want to continue?</para>"
+msgstr ""
+"<para>Osvježavanje OpenPGP certifikata povlači preuzmanje svih certifikata "
+"iznova, da se vidi da li su povučeni u međuvremenu.</para><para>To je "
+"ozbiljno opterećenje za vaše mrežne konekcije i konekcije drugih korisnika i "
+"može uzeti do dat pa i više vremena da se završi..</para> <para>Da li ste "
+"sigurni da želite nastaviti?</para>"
 
 #: commands/refreshopenpgpcertscommand.cpp:119
 msgctxt "@title:window"
@@ -923,10 +1098,49 @@ msgctxt "@title:window"
 msgid "OpenPGP Certificate Refresh Finished"
 msgstr "Osvježavanje OpenPGP certifikata je završeno"
 
+#: commands/refreshopenpgpcertscommand.cpp:130
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The GPG process that tried to refresh OpenPGP certificates ended "
+"prematurely because of an unexpected error.</para><para>Please check the "
+"output of <icode>%1</icode> for details.</para>"
+msgstr ""
+"<para>GPG proces koji je pokušao da osvježi OpenPGP certifikate je prerano "
+"završio zbog neočekivane greške.</para><para>Molimo vas provjerite izlaz od "
+"<icode>%1</icode> za detalje.</para>"
+
+#: commands/refreshopenpgpcertscommand.cpp:138
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to refresh OpenPGP certificates.</para> "
+"<para>The output from <command>%1</command> was: <message>%2</message></para>"
+msgstr ""
+"<para>Greška se dogodila prilikom pokušaja da se osvježe OpenPGP certifikati."
+"</para> <para>Izlaz od <command>%1</command> bio je: <message>%2</message></"
+"para>"
+
 #: commands/refreshopenpgpcertscommand.cpp:145
 msgctxt "@info"
 msgid "OpenPGP certificates refreshed successfully."
 msgstr "OpenPGP certifikati su uspješno osvježeni."
+
+#: commands/refreshx509certscommand.cpp:63
+msgctxt "@info"
+msgid ""
+"<para>Refreshing X.509 certificates implies downloading CRLs for all "
+"certificates, even if they might otherwise still be valid.</para><para>This "
+"can put a severe strain on your own as well as other people's network "
+"connections, and can take up to an hour or more to complete, depending on "
+"your network connection, and the number of certificates to check.</para> "
+"<para>Are you sure you want to continue?</para>"
+msgstr ""
+"<para>Osvježavanje X.509 certifikata povlači preuzmanje CRL za sve "
+"certifikata čak i ako bi inače još bili važeći.</para><para>To je ozbiljno "
+"opterećenje za vaše mrežne konekcije i konekcije drugih korisnika i može "
+"uzeti do dat pa i više vremena da se završi..</para> <para>Da li ste sigurni "
+"da želite nastaviti?</para>"
 
 #: commands/refreshx509certscommand.cpp:69
 msgctxt "@title:window"
@@ -942,6 +1156,30 @@ msgstr "Greška osvježavanja X.509 certifikata"
 msgctxt "@title:window"
 msgid "X.509 Certificate Refresh Finished"
 msgstr "Osvježavanje X.509 certifikata je završeno"
+
+#: commands/refreshx509certscommand.cpp:93
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The GpgSM process that tried to refresh X.509 certificates ended "
+"prematurely because of an unexpected error.</para><para>Please check the "
+"output of <icode>%1</icode> for details.</para>"
+msgstr ""
+"<para>GpgSM postupak koji je pokušao da osvježi X.509 certifikate je završio "
+"prerano zbog neočekivane greške.</para><para>Molimo vas provjerite izlaz od "
+"<icode>%1</icode> za detalje.</para>"
+
+#: commands/refreshx509certscommand.cpp:101
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to refresh X.509 certificates.</"
+"para><para>The output from <command>%1</command> was: <message>%2</message></"
+"para>"
+msgstr ""
+"<para>Greška se dogodila prilikom pokušaja osvježavanja X.509 certifikata.</"
+"para><para>Izlaz od <command>%1</command> je bio: <message>%2</message></"
+"para>"
 
 #: commands/refreshx509certscommand.cpp:108
 msgctxt "@info"
@@ -2127,6 +2365,24 @@ msgctxt "base name of an archive file, e.g. archive.zip or archive.tar.gz"
 msgid "archive"
 msgstr "arhive"
 
+#: crypto/gui/newsignencryptfileswizard.cpp:599
+msgctxt "@info"
+msgid ""
+"<para>Archiving in combination with sign-only currently requires what are "
+"known as opaque signatures - unlike detached ones, these embed the content "
+"in the signature.</para><para>This format is rather unusual. You might want "
+"to archive the files separately, and then sign the archive as one file with "
+"Kleopatra.</para><para>Future versions of Kleopatra are expected to also "
+"support detached signatures in this case.</para>"
+msgstr ""
+"<para>Arhiviranje u kombinaciji sa samo potpisivanjem trenutno zahtijeva "
+"nešto poznato kao neprozirni potpisa - za razliku od odvojenih, oni ugrađuju "
+"sadržaj u potpisu.</para><para>Ovaj format je prilično neobičan. Možda "
+"želite da arhivirate odvojene datoteke, a zatim potpišete arhive, kao jednu "
+"datoteku u programu Kleopatra.</para><para>Za buduće verzije programa "
+"Kleopatra očekuje se da će takođe podržati odvojen potpisa u ovom slučaju.</"
+"para>"
+
 #: crypto/gui/newsignencryptfileswizard.cpp:604
 msgctxt "@title:window"
 msgid "Unusual Signature Warning"
@@ -2163,11 +2419,35 @@ msgctxt "@action"
 msgid "Encrypt"
 msgstr "Šifruj"
 
+#: crypto/gui/newsignencryptfileswizard.cpp:813
+msgctxt "@info"
+msgid ""
+"<para>None of the recipients you are encrypting to seems to be your own.</"
+"para><para>This means that you will not be able to decrypt the data anymore, "
+"once encrypted.</para><para>Do you want to continue, or cancel to change the "
+"recipient selection?</para>"
+msgstr ""
+"<para>Niko od primatelja koje šifrirate ne čini se vašim.</para><para>Ovo "
+"znači da nećete biti u mogućnosti da dešifrirate datoteke, koje su već "
+"šifrirane.</para><para>Da li želite da nastavite, ili obustavite radi "
+"mijenjanja izbora primatelja?</para>"
+
 #: crypto/gui/newsignencryptfileswizard.cpp:816
 #: crypto/gui/newsignencryptfileswizard.cpp:827
 msgctxt "@title:window"
 msgid "Encrypt-To-Self Warning"
 msgstr "Upozorenje: Šifirranje samom sebi"
+
+#: crypto/gui/newsignencryptfileswizard.cpp:825
+msgctxt "@info"
+msgid ""
+"<para>You have requested the unencrypted data to be removed after encryption."
+"</para><para>Are you really sure you do not need to access the data anymore "
+"in decrypted form?</para>"
+msgstr ""
+"<para>Zatražili ste da se nešifrirane datoteke uklone nakon šifriranja.</"
+"para><para>Da li ste sigurni da vam više ne treba pristup datotekama u "
+"dešifriranom obliku?</para>"
 
 #: crypto/gui/newsignencryptfileswizard.cpp:879
 msgid "Sign with OpenPGP"
@@ -2721,6 +3001,59 @@ msgstr "(obavezno)"
 msgid "(optional)"
 msgstr "(opcionalan)"
 
+#: dialogs/adduseriddialog.cpp:303
+#: newcertificatewizard/newcertificatewizard.cpp:1385
+#, kde-format
+msgctxt "@info"
+msgid "<interface>%1</interface> is required, but empty."
+msgstr "<interface>%1</interface> je potrebno ali je prazno."
+
+#: dialogs/adduseriddialog.cpp:305
+#: newcertificatewizard/newcertificatewizard.cpp:1387
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<interface>%1</interface> is required, but empty.<nl/>Local Admin rule: "
+"<icode>%2</icode>"
+msgstr ""
+"<interface>%1</interface> je potrebno ali je prazno.<nl/>Lokalno "
+"administratorsko pravilo: <icode>%2</icode>"
+
+#: dialogs/adduseriddialog.cpp:311
+#: newcertificatewizard/newcertificatewizard.cpp:1393
+#, kde-format
+msgctxt "@info"
+msgid "<interface>%1</interface> is incomplete."
+msgstr "<interface>%1</interface> je nekompletno."
+
+#: dialogs/adduseriddialog.cpp:313
+#: newcertificatewizard/newcertificatewizard.cpp:1395
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<interface>%1</interface> is incomplete.<nl/>Local Admin rule: <icode>%2</"
+"icode>"
+msgstr ""
+"<interface>%1</interface> je nekompletno.<nl/>Lokalno administratorsko "
+"pravilo: <icode>%2</icode>"
+
+#: dialogs/adduseriddialog.cpp:318
+#: newcertificatewizard/newcertificatewizard.cpp:1400
+#, kde-format
+msgctxt "@info"
+msgid "<interface>%1</interface> is invalid."
+msgstr "<interface>%1</interface> je nevažeće."
+
+#: dialogs/adduseriddialog.cpp:320
+#: newcertificatewizard/newcertificatewizard.cpp:1402
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<interface>%1</interface> is invalid.<nl/>Local Admin rule: <icode>%2</icode>"
+msgstr ""
+"<interface>%1</interface> je nevažeće.<nl/>Lokalno administratorsko pravilo: "
+"<icode>%2</icode>"
+
 #. i18n: ectx: property (windowTitle), widget (QDialog, AddUserIDDialog)
 #: dialogs/adduseriddialog.ui:5
 msgid "Add New User-ID"
@@ -2730,6 +3063,16 @@ msgstr "Dodaj novi korisnički ID"
 #: dialogs/adduseriddialog.ui:48
 msgid "This is how the new User-ID will be stored in the certificate:"
 msgstr "Kako če se novi korisnički ID smjestiti na certifikatu"
+
+#: dialogs/certificatedetailsdialog.cpp:295
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while loading the certifications: <message>%1</"
+"message></para>"
+msgstr ""
+"<para>Greška se desila pri učitavanju certifikata: <message>%1</message></"
+"para>"
 
 #: dialogs/certificatedetailsdialog.cpp:298
 msgctxt "@title"
@@ -3047,6 +3390,34 @@ msgstr "Certificiraj certifikat: %1"
 #: dialogs/deletecertificatesdialog.cpp:115
 msgid "These are the certificates you have selected for deletion:"
 msgstr "Ima certifikata koje ste odabrali za brisanie:"
+
+#: dialogs/deletecertificatesdialog.cpp:117
+msgid ""
+"These certificates will be deleted even though you did <emphasis>not</"
+"emphasis><nl/> explicitly select them (<a href=\"whatsthis://\">Why?</a>):"
+msgstr ""
+"Ovi certifikati će biti obrisani iako ih <emphasis>niste</emphasis><nl/> "
+"lično odabrali (<a href=\"whatsthis://\">Zašto?</a>):"
+
+#: dialogs/deletecertificatesdialog.cpp:138
+msgctxt "@info:whatsthis"
+msgid ""
+"<title>Why do you want to delete more certificates than I selected?</"
+"title><para>When you delete CA certificates (both root CAs and intermediate "
+"CAs), the certificates issued by them will also be deleted.</para><para>This "
+"can be nicely seen in <application>Kleopatra</application>'s hierarchical "
+"view mode: In this mode, if you delete a certificate that has children, "
+"those children will also be deleted. Think of CA certificates as folders "
+"containing other certificates: When you delete the folder, you delete its "
+"contents, too.</para>"
+msgstr ""
+"<title>Zašto želite da izbrišete više potvrda nego sam izabrao?</"
+"title><para>Kada izbrišete CA certifikate (i korijen CA i srednji CAS), "
+"certifikati izdani od njih će takođe biti izbrisani.</para><para>To se može "
+"lijepo videti u <application>Kleopatra</application> hijerarhijskom prikazu "
+"rada: U ovom režimu, ako izbrišete certifikat koji ima djecu, ta deca će "
+"takođe biti izbrisana. Posmatrajte CA certifikate kao fascikle sa drugim "
+"certifikatima: Kada izbrišete fasciklu, brišete njen sadržaj, takođe.</para>"
 
 #: dialogs/deletecertificatesdialog.cpp:150
 msgctxt "@action:button"
@@ -3509,10 +3880,25 @@ msgstr "Uradi"
 msgid "Run these tests at startup"
 msgstr "Pokreni ove testove pri startu"
 
+#: dialogs/setinitialpindialog.cpp:92
+msgctxt "@info"
+msgid ""
+"No NullPin found. <warning>If this PIN was not set by you personally, the "
+"card might have been tampered with.</warning>"
+msgstr ""
+"NullPin nije nađen. <warning>Ako ovaj PIN niste lično postavili, kartica je "
+"možda provaljena.</warning>"
+
 #: dialogs/setinitialpindialog.cpp:99
 msgctxt "@info"
 msgid "Canceled setting PIN."
 msgstr "Otkazan postavni PIN."
+
+#: dialogs/setinitialpindialog.cpp:103
+#, kde-format
+msgctxt "@info"
+msgid "There was an error setting the PIN: <message>%1</message>."
+msgstr "Desila se greška kada se postavljao PIN: <message>%1</message>."
 
 #: dialogs/setinitialpindialog.cpp:106
 msgctxt "@info"
@@ -3988,37 +4374,52 @@ msgstr "Mjesto utičnice na kojoj ui server sluša"
 msgid "File(s) to process"
 msgstr "Obraditi datoteku(e)"
 
-#: main.cpp:155
+#: main.cpp:154
 msgid "Performing Self-Check..."
 msgstr "Provođenje samo-provjere..."
 
-#: main.cpp:172
+#: main.cpp:171
 msgctxt "did not pass"
 msgid "Self-Check Failed"
 msgstr "Samo-provjera nije uspjela"
 
-#: main.cpp:177
+#: main.cpp:176
 msgid "Self-Check Passed"
 msgstr "Samo-provjera uspjela"
 
-#: main.cpp:195
+#: main.cpp:194
 msgid "Loading certificate cache..."
 msgstr "Učitavanje keša certifikata..."
 
-#: main.cpp:202
+#: main.cpp:201
 msgid "Certificate cache loaded."
 msgstr "Keš certifikata učitan"
 
-#: main.cpp:252
+#: main.cpp:247
+msgctxt "@info"
+msgid ""
+"<para>The version of the <application>GpgME</application> library you are "
+"running against is older than the one that the <application>GpgME++</"
+"application> library was built against.</para><para><application>Kleopatra</"
+"application> will not function in this setting.</para><para>Please ask your "
+"administrator for help in resolving this issue.</para>"
+msgstr ""
+"<para>Verzija <application>GpgME</application> biblioteke koju pokrećete je "
+"starija od one koju je <application>GpgME++</application> biblioteka "
+"pokrenula.</para><para><application>Kleopatra</application> neće raditi na "
+"ovim postavkama.</para><para>Molim vas pitajte administratora za pomoć u "
+"rješavanju ovog problema.</para>"
+
+#: main.cpp:251
 msgctxt "@title"
 msgid "GpgME Too Old"
 msgstr "GpgME prestar"
 
-#: main.cpp:348
+#: main.cpp:347
 msgid "GPG UI Server Error"
 msgstr "GPG UI Server Greška"
 
-#: main.cpp:349
+#: main.cpp:348
 #, kde-format
 msgid ""
 "<qt>The Kleopatra GPG UI Server Module could not be initialized.<br/>The "
@@ -4478,10 +4879,30 @@ msgstr "Snimanje zahtjeva"
 msgid "PKCS#10 Requests (*.p10)"
 msgstr "PKCS#10 Zahtjevi (*.p10)"
 
+#: newcertificatewizard/newcertificatewizard.cpp:848
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Could not copy temporary file <filename>%1</filename> to file <filename>%2</"
+"filename>: <message>%3</message>"
+msgstr ""
+"Ne mogu kreirati privremenu datoteku <filename>%1</filename> u datoteku "
+"<filename>%2</filename>: <message>%3</message>"
+
 #: newcertificatewizard/newcertificatewizard.cpp:851
 msgctxt "@title"
 msgid "Error Saving Request"
 msgstr "Greška u snimanju zahtjeva"
+
+#: newcertificatewizard/newcertificatewizard.cpp:855
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Successfully wrote request to <filename>%1</filename>.</para><para>You "
+"should now send the request to the Certification Authority (CA).</para>"
+msgstr ""
+"<para>Uspješno upisan zahtjev na <filename>%1</filename>.</"
+"para><para>Trebate poslati zahtjev certifikacijskom Autoritetu (CA).</para>"
 
 #: newcertificatewizard/newcertificatewizard.cpp:858
 msgctxt "@title"
@@ -4511,6 +4932,25 @@ msgstr "Moja novi OpenPGP certifikat"
 #: newcertificatewizard/newcertificatewizard.cpp:899
 msgid "Please find attached my new OpenPGP certificate."
 msgstr "Molim nađite priložen moj novi OpenPGP certifikat."
+
+#: newcertificatewizard/newcertificatewizard.cpp:933
+msgctxt "@info"
+msgid ""
+"<para><application>Kleopatra</application> tried to send a mail via your "
+"default mail client.</para><para>Some mail clients are known not to support "
+"attachments when invoked this way.</para><para>If your mail client does not "
+"have an attachment, then drag the <application>Kleopatra</application> icon "
+"and drop it on the message compose window of your mail client.</"
+"para><para>If that does not work, either, save the request to a file, and "
+"then attach that.</para>"
+msgstr ""
+"<para><application>Kleopatra</application> je pokušala poslati poštu "
+"podrazumijevanim programom.</para><para>Neki programi za elektronsku poštu "
+"nemaju dodatke kada su pozvani na ovaj način.</para><para>Ako vaš program za "
+"elektronsku poštu ne poznaje dodatke kada je pozvan na ovaj način, "
+"prevucite<application>Kleopatra</application> ikonu i ispustite je na prozor "
+"za sastavljanje poruke vašeg kllijenta elektronske pošte.</para><para>Ako "
+"ovo ne radi, snimite zahtjev nad datotekom i priložit to.</para>"
 
 #: newcertificatewizard/newcertificatewizard.cpp:937
 msgctxt "@title"
@@ -4765,21 +5205,119 @@ msgctxt "@title"
 msgid "GpgConf (Configuration) installation"
 msgstr "GpgConf (Konfiguracija) instalacija"
 
+#: selftest/enginecheck.cpp:104
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>A problem was detected with the <application>%1</application> backend."
+"</para>"
+msgstr ""
+"<para>Problem je detektovan s <application>%1</application> pozadinom.</para>"
+
 #: selftest/enginecheck.cpp:109
 msgid "not supported"
 msgstr "nije podržano"
+
+#: selftest/enginecheck.cpp:111
+msgctxt "@info"
+msgid ""
+"<para>It seems that the <icode>gpgme</icode> library was compiled without "
+"support for this backend.</para>"
+msgstr ""
+"<para>Izgleda da je <icode>gpgme</icode> kompajliran bez podrške za ovu "
+"pozadinu.</para>"
+
+#: selftest/enginecheck.cpp:114
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Replace the <icode>gpgme</icode> library with a version compiled with "
+"<application>%1</application> support.</para>"
+msgstr ""
+"<para>Zamijeni <icode>gpgme</icode> biblioteku kompajliranu s <application>"
+"%1</application> podrškom.</para>"
 
 #: selftest/enginecheck.cpp:118
 msgid "not properly installed"
 msgstr "nije pravilno instalirano"
 
+#: selftest/enginecheck.cpp:120
+#, kde-format
+msgctxt "@info"
+msgid "<para>Backend <command>%1</command> is not installed properly.</para>"
+msgstr "<para>Pozadina <command>%1</command> nije ispravno instalirana.</para>"
+
+#: selftest/enginecheck.cpp:122
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Please check the output of <command>%1 --version</command> manually.</"
+"para>"
+msgstr ""
+"<para>Molim provjerite izlaz <command>%1 --version</command> ručno.</para>"
+
 #: selftest/enginecheck.cpp:125
 msgid "too old"
 msgstr "prestaro"
 
+#: selftest/enginecheck.cpp:127
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Backend <command>%1</command> is installed in version %2, but at least "
+"version %3 is required.</para>"
+msgstr ""
+"<para>Pozadina <command>%1</command> je instalirana u verziji %2, ali barem "
+"verzija %3 je potrebna.</para>"
+
+#: selftest/enginecheck.cpp:133 selftest/enginecheck.cpp:218
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Install <application>%1</application> version %2 or higher.</para>"
+msgstr ""
+"<para>Instalirajte <application>%1</application> verzije %2 ili veće.</para>"
+
 #: selftest/enginecheck.cpp:136
 msgid "unknown problem"
 msgstr "nepoznat problem"
+
+#: selftest/enginecheck.cpp:138
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Make sure <application>%1</application> is installed and in "
+"<envar>PATH</envar>.</para>"
+msgstr ""
+"<para>Uvjerite se da je<application>%1</application> instalirano i u "
+"<envar>PATH</envar>.</para>"
+
+#: selftest/enginecheck.cpp:215
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para><application>%1</application> v%2.%3.%4 is required for this test, but "
+"only %5 is installed.</para>"
+msgstr ""
+"<para><application>%1</application> v%2.%3.%4 je potrebno za ovajtest, ali "
+"samo %5 je instalirano.</para>"
+
+#: selftest/enginecheck.cpp:223
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para><application>%1</application> is required for this test, but does not "
+"seem available.</para><para>See tests further up for more information.</para>"
+msgstr ""
+"<para><application>%1</application> je potreban za ovaj test ali izgleda da "
+"nije dostupan.</para><para>Pogledajte testove detaljnije za više informacija."
+"</para>"
+
+#: selftest/enginecheck.cpp:227
+#, kde-format
+msgctxt "@info %1: test name"
+msgid "<para>See \"%1\" above.</para>"
+msgstr "<para>Vidi \"%1\" iznad.</para>"
 
 #: selftest/gpgagentcheck.cpp:65
 msgctxt "@title"
@@ -4799,17 +5337,68 @@ msgstr ""
 "Ili je GpgME biblioteka prestara, ili je GpgME++ biblioteka kompajlirana s "
 "starijim GpgME koji nije podržao povezivanje na gpg-agent."
 
+#: selftest/gpgagentcheck.cpp:82
+msgctxt "@info"
+msgid ""
+"Upgrade to <application>gpgme</application> 1.2.0 or higher, and ensure that "
+"gpgme++ was compiled against it."
+msgstr ""
+"Nadogradite na <application>gpgme</application> 1.2.0 ili noviji, i "
+"osigurajte da je gpgme++ kompajliran za njega."
+
 #: selftest/gpgagentcheck.cpp:89
 msgid "GpgME does not support gpg-agent"
 msgstr "GpgME ne podržava gpg-agent"
+
+#: selftest/gpgagentcheck.cpp:91
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>The <application>GpgME</application> library is new enough to support "
+"<application>gpg-agent</application>, but does not seem to do so in this "
+"installation.</para><para>The error returned was: <message>%1</message>.</"
+"para>"
+msgstr ""
+"<para>Biblioteka <application>GpgME</application> je dovoljno nova da "
+"podržava <application>gpg-agent</application>, ali ne izgleda tako u ovoj "
+"instalaciji.</para><para>Vraćena greška je bila: <message>%1</message>.</"
+"para>"
 
 #: selftest/gpgagentcheck.cpp:104 selftest/uiservercheck.cpp:82
 msgid "not reachable"
 msgstr "nedokučivo"
 
+#: selftest/gpgagentcheck.cpp:106
+#, kde-format
+msgctxt "@info"
+msgid "Could not connect to GpgAgent: <message>%1</message>"
+msgstr "Nije u mogućnosti da se poveže sa GpgAgent: <message>%1</message>"
+
+#: selftest/gpgagentcheck.cpp:109
+msgctxt "@info"
+msgid ""
+"<para>Check that gpg-agent is running and that the "
+"<environment>GPG_AGENT_INFO</environment> variable is set and up-to-date.</"
+"para>"
+msgstr ""
+"<para>Provjerite da li gpg-agent radi i da je <environment>GPG_AGENT_INFO</"
+"environment> varijabla postavljena i ažurna.</para>"
+
 #: selftest/gpgagentcheck.cpp:113
 msgid "unexpected error"
 msgstr "neočekivana greška"
+
+#: selftest/gpgagentcheck.cpp:115
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Unexpected error while asking <application>gpg-agent</application> for "
+"its version.</para><para>The error returned was: <message>%1</message>.</"
+"para>"
+msgstr ""
+"<para>Neočekivana greška pri upitug <application>gpg-agent</application> za "
+"njegovu verziju.</para><para>Vraćena greška je bila: <message>%1</message>.</"
+"para>"
 
 #: selftest/gpgconfcheck.cpp:64
 #, kde-format
@@ -4879,6 +5468,16 @@ msgstr "Konfiguraciona datoteka 'libkleopatrarc'"
 msgid "Errors found"
 msgstr "Nađene greške"
 
+#: selftest/libkleopatrarccheck.cpp:80
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Kleopatra detected the following errors in the libkleopatrarc "
+"configuration:</para>%1"
+msgstr ""
+"<para>Kleopatra je otkrila sljedeće greške u libkleopatrarc konfiguraciji:</"
+"para>%1"
+
 #: selftest/registrycheck.cpp:62
 msgctxt "@title"
 msgid "Windows Registry"
@@ -4887,6 +5486,34 @@ msgstr "Windows Registar"
 #: selftest/registrycheck.cpp:76
 msgid "Obsolete registry entries found"
 msgstr "Zastarjeli zapis registra nije pronađen"
+
+#: selftest/registrycheck.cpp:80
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<para>Kleopatra detected an obsolete registry key (<resource>%1\\%2</"
+"resource>), added by either a previous <application>Gpg4win</application> "
+"version or applications such as <application>WinPT</application> or "
+"<application>EnigMail</application>.</para><para>Keeping the entry might "
+"lead to an old GnuPG backend being used.</para>"
+msgstr ""
+"<para>Kleopatra detektovala zastarjeli registar kljuć (<resource>%1\\%2</"
+"resource>), koji je dodala ranija<application>Gpg4win</application> verzija "
+"ili programi poput <application>WinPT</application> ili "
+"<application>EnigMail</application>.</para><para>Čuvanje ovog elementa može "
+"dovesti da se GnuPG pozadina koristi.</para>"
+
+#: selftest/registrycheck.cpp:86
+#, kde-format
+msgctxt "@info"
+msgid "<para>Delete registry key <resource>%1\\%2</resource>.</para>"
+msgstr "<para>Obriši registry ključ <resource>%1\\%2</resource>.</para>"
+
+#: selftest/registrycheck.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid "Could not delete the registry key <resource>%1\\%2</resource>"
+msgstr "Ne mogu obrisati registry ključ <resource>%1\\%2</resource>"
 
 #: selftest/registrycheck.cpp:113
 msgctxt "@title"
@@ -4898,9 +5525,44 @@ msgctxt "@title"
 msgid "UiServer Connectivity"
 msgstr "UiServer povezivost"
 
+#: selftest/uiservercheck.cpp:84
+#, kde-format
+msgctxt "@info"
+msgid "Could not connect to UiServer: <message>%1</message>"
+msgstr "Ne mogu se povezati na UiServer: <message>%1</message>"
+
+#: selftest/uiservercheck.cpp:87
+msgctxt "@info"
+msgid ""
+"<para>Check that your firewall is not set to block local connections (allow "
+"connections to <resource>localhost</resource> or <resource>127.0.0.1</"
+"resource>).</para>"
+msgstr ""
+"<para>Provjerite da zaštitni zid ne blokira lokalne konekcije (dopušta "
+"konekcije na <resource>localhost</resource> or <resource>127.0.0.1</"
+"resource>).</para>"
+
 #: selftest/uiservercheck.cpp:91
 msgid "multiple instances"
 msgstr "više instanci"
+
+#: selftest/uiservercheck.cpp:93
+#, kde-format
+msgctxt "@info"
+msgid ""
+"It seems another <application>Kleopatra</application> is running (with "
+"process-id %1)"
+msgstr ""
+"Izgleda da je još jedna <application>Kleopatra</application> pokrenuta (s "
+"process-id %1)"
+
+#: selftest/uiservercheck.cpp:96
+msgctxt "@info"
+msgid ""
+"Quit any other running instances of <application>Kleopatra</application>."
+msgstr ""
+"Prekinite druge pokrenute kopije programa <application>Kleopatra</"
+"application>."
 
 #: systrayicon.cpp:158
 msgid "&Open Certificate Manager..."
@@ -6276,584 +6938,6 @@ msgstr "Novi naslov kartice:"
 
 #~ msgid "KWatchGnuPG Log Viewer"
 #~ msgstr "Pregledač KWatchGnuPG-ovog dnevnika"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>An error occurred while trying to add the user-id: <message>%1</"
-#~ "message></para>"
-#~ msgstr ""
-#~ "<para>Greška se desila pri pokušaju dodavanja user-id: <message>%1</"
-#~ "message></para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "To certify other certificates, you first need to create an OpenPGP "
-#~ "certificate for yourself. Choose <interface>File->New Certificate...</"
-#~ "interface> to create one."
-#~ msgstr ""
-#~ "Da verifikujete druge certifikate, prvo morate da kreirate OpenPGP "
-#~ "certifikat za sebe. Izaberite <interface>Datoteka->Novi certifikat...</"
-#~ "interface> da ga kreirate."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>No OpenPGP directory services have been configured.</"
-#~ "para><para>Since none is configured, <application>Kleopatra</application> "
-#~ "will use <resource>keys.gnupg.net</resource> as the server to export to.</"
-#~ "para><para>You can configure OpenPGP directory servers in "
-#~ "<application>Kleopatra</application>'s configuration dialog.</"
-#~ "para><para>Do you want to continue with <resource>keys.gnupg.net</"
-#~ "resource> as the server to export to?</para>"
-#~ msgstr ""
-#~ "<para>Nema OpenPGP Directori Services su konfigurisani.</para><para>Pošto "
-#~ "nijedan nije konfigurisan,<application>Kleopatra</application> će "
-#~ "koristiti <resource>keys.gnupg.net</resource> kao server za izvoz.</"
-#~ "para><para>Možete konfigurisati OpenPGP direktorijske servere u  "
-#~ "<application>Kleopatra</application> konfiguraciomom dijalogu.</"
-#~ "para><para>Želite li nastaviti sa <resource>keys.gnupg.net</resource> kao "
-#~ "serverom na koji se izvozi?</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>When OpenPGP certificates have been exported to a public directory "
-#~ "server, it is nearly impossible to remove them again.</para><para>Before "
-#~ "exporting your certificate to a public directory server, make sure that "
-#~ "you have created a revocation certificate so you can revoke the "
-#~ "certificate if needed later.</para><para>Are you sure you want to "
-#~ "continue?</para>"
-#~ msgstr ""
-#~ "<para>Kada su OpenPGP certifikati su izvozili u javnom imeničkom serveru, "
-#~ "to je gotovo nemoguće da ih uklonimo ponovo.</para><para>Pre nego što "
-#~ "izvezete svoje certifikate na javni server direktorijuma, uvjerite se da "
-#~ "ste kreirali opoziv certifikata, tako da može da opozovete certifikat, "
-#~ "ako je potrebno kasnije </para> <para> Jeste li sigurni da želite da "
-#~ "nastavite.?</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The GPG process that tried to export OpenPGP certificates ended "
-#~ "prematurely because of an unexpected error.</para><para>Please check the "
-#~ "output of <icode>%1</icode> for details.</para>"
-#~ msgstr ""
-#~ "<para>GPG proces koji je pokušao da izveze OpenPGP certifikate završio je "
-#~ "prerano zbog neočekivane greške.</para><para>Molim provjerite izlaz "
-#~ "<icode>%1</icode> za detalje.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>An error occurred while trying to export OpenPGP certificates.</"
-#~ "para> <para>The output from <command>%1</command> was: <message>%2</"
-#~ "message></para>"
-#~ msgstr ""
-#~ "<para>Desila se greška pri pokušaju izvoza OpenPGP certifikata.</para> "
-#~ "<para>Izlaz iz<command>%1</command> je bio: <message>%2</message></para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The GPG or GpgSM process that tried to export the secret key ended "
-#~ "prematurely because of an unexpected error.</para><para>Please check the "
-#~ "output of <icode>%1</icode> for details.</para>"
-#~ msgstr ""
-#~ "<para>Proces GPG ili GpgSM koji je pokušao da izveze tajni ključ prerano "
-#~ "je stao zbog neočekivane greške.</para><para>Pogledajte izlaz iz <icode>"
-#~ "%1</icode> za detalje.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>An error occurred while trying to export the secret key.</para> "
-#~ "<para>The output from <command>%1</command> was: <message>%2</message></"
-#~ "para>"
-#~ msgstr ""
-#~ "<para>Desila se greška pri pokušaju izvoza tajnog ključa.</para> "
-#~ "<para>Izlaz iz <command>%1</command> je bio: <message>%2</message></para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The GPG or GpgSM process that tried to learn the smart card ended "
-#~ "prematurely because of an unexpected error.</para><para>Please check the "
-#~ "output of <icode>%1</icode> for details.</para>"
-#~ msgstr ""
-#~ "<para>GPG ili GpgSM procesi koji su pokušali da instruiraju pametnu "
-#~ "karticu završili su prerano zbog neočekivane greške.</"
-#~ "para><para>Provjerite izlaz iz <icode>%1</icode> za detalje.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The query result has been truncated.</para><para>Either the local "
-#~ "or a remote limit on the maximum number of returned hits has been "
-#~ "exceeded.</para><para>You can try to increase the local limit in the "
-#~ "configuration dialog, but if one of the configured servers is the "
-#~ "limiting factor, you have to refine your search.</para>"
-#~ msgstr ""
-#~ "<para>Rezultat upita je sasječen.</para><para>Bilo lokalni ili udaljeni "
-#~ "limit na maksimalnom broju vraćenih pogodaka je pređen.</"
-#~ "para><para>Možete da pokušate da se poveća limit u lokalnom "
-#~ "konfiguracijskom dijalogu , ali ako jedan od konfigurisanih  servera "
-#~ "ograničavajući faktor, morate da precizirate svoju pretragu.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>You do not have any directory servers configured.</para><para>You "
-#~ "need to configure at least one directory server to search on one.</"
-#~ "para><para>You can configure directory servers here: <interface>Settings-"
-#~ ">Configure Kleopatra</interface>.</para>"
-#~ msgstr ""
-#~ "<para>Nemate konfigurisane imeničke servere.</para><para>Morate "
-#~ "konfigurisati barem jedan imenički server na komećete tražiti.</"
-#~ "para><para>Imeničke serevere možete ovdje konfigurisati: "
-#~ "<interface>Postavke->Konfiguriši Kleopatra</interface>.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>No OpenPGP directory services have been configured.</para><para>If "
-#~ "not all of the certificates carry the name of their preferred certificate "
-#~ "server (few do), a fallback server is needed to fetch from.</"
-#~ "para><para>Since none is configured, <application>Kleopatra</application> "
-#~ "will use <resource>keys.gnupg.net</resource> as the fallback.</"
-#~ "para><para>You can configure OpenPGP directory servers in Kleopatra's "
-#~ "configuration dialog.</para><para>Do you want to continue with "
-#~ "<resource>keys.gnupg.net</resource> as fallback server?</para>"
-#~ msgstr ""
-#~ "<para>Nema OpenPGP imeničkih servisa koji su konfigurisani.</"
-#~ "para><para>Ako svi sertifikati ne nose naziv svog željenog certifikatskog "
-#~ "servera (nekoliko nosi), rezervni server je potreban za dobavljanje  iz "
-#~ "njega.</para><para>Pošto nijedan nije konfigurisan "
-#~ "<application>Kleopatra</application> će koristiti <resource>keys.gnupg."
-#~ "net</resource> kao rezervu.</para><para>Možete konfigurisati OpenPGP "
-#~ "direktorijske servere u  Kleopatra's konfiguracijskom dijalog.</"
-#~ "para><para>Želite li nastaviti s<resource>keys.gnupg.net</resource> kao "
-#~ "rezervnim  serverom?</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Refreshing OpenPGP certificates implies downloading all "
-#~ "certificates anew, to check if any of them have been revoked in the "
-#~ "meantime.</para><para>This can put a severe strain on your own as well as "
-#~ "other people's network connections, and can take up to an hour or more to "
-#~ "complete, depending on your network connection, and the number of "
-#~ "certificates to check.</para> <para>Are you sure you want to continue?</"
-#~ "para>"
-#~ msgstr ""
-#~ "<para>Osvježavanje OpenPGP certifikata povlači preuzmanje svih "
-#~ "certifikata iznova, da se vidi da li su povučeni u međuvremenu.</"
-#~ "para><para>To je ozbiljno opterećenje za vaše mrežne konekcije i "
-#~ "konekcije drugih korisnika i može uzeti do dat pa i više vremena da se "
-#~ "završi..</para> <para>Da li ste sigurni da želite nastaviti?</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The GPG process that tried to refresh OpenPGP certificates ended "
-#~ "prematurely because of an unexpected error.</para><para>Please check the "
-#~ "output of <icode>%1</icode> for details.</para>"
-#~ msgstr ""
-#~ "<para>GPG proces koji je pokušao da osvježi OpenPGP certifikate je "
-#~ "prerano završio zbog neočekivane greške.</para><para>Molimo vas "
-#~ "provjerite izlaz od <icode>%1</icode> za detalje.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>An error occurred while trying to refresh OpenPGP certificates.</"
-#~ "para> <para>The output from <command>%1</command> was: <message>%2</"
-#~ "message></para>"
-#~ msgstr ""
-#~ "<para>Greška se dogodila prilikom pokušaja da se osvježe OpenPGP "
-#~ "certifikati.</para> <para>Izlaz od <command>%1</command> bio je: <message>"
-#~ "%2</message></para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Refreshing X.509 certificates implies downloading CRLs for all "
-#~ "certificates, even if they might otherwise still be valid.</"
-#~ "para><para>This can put a severe strain on your own as well as other "
-#~ "people's network connections, and can take up to an hour or more to "
-#~ "complete, depending on your network connection, and the number of "
-#~ "certificates to check.</para> <para>Are you sure you want to continue?</"
-#~ "para>"
-#~ msgstr ""
-#~ "<para>Osvježavanje X.509 certifikata povlači preuzmanje CRL za sve "
-#~ "certifikata čak i ako bi inače još bili važeći.</para><para>To je "
-#~ "ozbiljno opterećenje za vaše mrežne konekcije i konekcije drugih "
-#~ "korisnika i može uzeti do dat pa i više vremena da se završi..</para> "
-#~ "<para>Da li ste sigurni da želite nastaviti?</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The GpgSM process that tried to refresh X.509 certificates ended "
-#~ "prematurely because of an unexpected error.</para><para>Please check the "
-#~ "output of <icode>%1</icode> for details.</para>"
-#~ msgstr ""
-#~ "<para>GpgSM postupak koji je pokušao da osvježi X.509 certifikate je "
-#~ "završio prerano zbog neočekivane greške.</para><para>Molimo vas "
-#~ "provjerite izlaz od <icode>%1</icode> za detalje.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>An error occurred while trying to refresh X.509 certificates.</"
-#~ "para><para>The output from <command>%1</command> was: <message>%2</"
-#~ "message></para>"
-#~ msgstr ""
-#~ "<para>Greška se dogodila prilikom pokušaja osvježavanja X.509 certifikata."
-#~ "</para><para>Izlaz od <command>%1</command> je bio: <message>%2</"
-#~ "message></para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Archiving in combination with sign-only currently requires what are "
-#~ "known as opaque signatures - unlike detached ones, these embed the "
-#~ "content in the signature.</para><para>This format is rather unusual. You "
-#~ "might want to archive the files separately, and then sign the archive as "
-#~ "one file with Kleopatra.</para><para>Future versions of Kleopatra are "
-#~ "expected to also support detached signatures in this case.</para>"
-#~ msgstr ""
-#~ "<para>Arhiviranje u kombinaciji sa samo potpisivanjem trenutno zahtijeva "
-#~ "nešto poznato kao neprozirni potpisa - za razliku od odvojenih, oni "
-#~ "ugrađuju sadržaj u potpisu.</para><para>Ovaj format je prilično neobičan. "
-#~ "Možda želite da arhivirate odvojene datoteke, a zatim potpišete arhive, "
-#~ "kao jednu datoteku u programu Kleopatra.</para><para>Za buduće verzije "
-#~ "programa Kleopatra očekuje se da će takođe podržati odvojen potpisa u "
-#~ "ovom slučaju.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>None of the recipients you are encrypting to seems to be your own.</"
-#~ "para><para>This means that you will not be able to decrypt the data "
-#~ "anymore, once encrypted.</para><para>Do you want to continue, or cancel "
-#~ "to change the recipient selection?</para>"
-#~ msgstr ""
-#~ "<para>Niko od primatelja koje šifrirate ne čini se vašim.</para><para>Ovo "
-#~ "znači da nećete biti u mogućnosti da dešifrirate datoteke, koje su već "
-#~ "šifrirane.</para><para>Da li želite da nastavite, ili obustavite radi "
-#~ "mijenjanja izbora primatelja?</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>You have requested the unencrypted data to be removed after "
-#~ "encryption.</para><para>Are you really sure you do not need to access the "
-#~ "data anymore in decrypted form?</para>"
-#~ msgstr ""
-#~ "<para>Zatražili ste da se nešifrirane datoteke uklone nakon šifriranja.</"
-#~ "para><para>Da li ste sigurni da vam više ne treba pristup datotekama u "
-#~ "dešifriranom obliku?</para>"
-
-#~ msgctxt "@info"
-#~ msgid "<interface>%1</interface> is required, but empty."
-#~ msgstr "<interface>%1</interface> je potrebno ali je prazno."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<interface>%1</interface> is required, but empty.<nl/>Local Admin rule: "
-#~ "<icode>%2</icode>"
-#~ msgstr ""
-#~ "<interface>%1</interface> je potrebno ali je prazno.<nl/>Lokalno "
-#~ "administratorsko pravilo: <icode>%2</icode>"
-
-#~ msgctxt "@info"
-#~ msgid "<interface>%1</interface> is incomplete."
-#~ msgstr "<interface>%1</interface> je nekompletno."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<interface>%1</interface> is incomplete.<nl/>Local Admin rule: <icode>%2</"
-#~ "icode>"
-#~ msgstr ""
-#~ "<interface>%1</interface> je nekompletno.<nl/>Lokalno administratorsko "
-#~ "pravilo: <icode>%2</icode>"
-
-#~ msgctxt "@info"
-#~ msgid "<interface>%1</interface> is invalid."
-#~ msgstr "<interface>%1</interface> je nevažeće."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<interface>%1</interface> is invalid.<nl/>Local Admin rule: <icode>%2</"
-#~ "icode>"
-#~ msgstr ""
-#~ "<interface>%1</interface> je nevažeće.<nl/>Lokalno administratorsko "
-#~ "pravilo: <icode>%2</icode>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>An error occurred while loading the certifications: <message>%1</"
-#~ "message></para>"
-#~ msgstr ""
-#~ "<para>Greška se desila pri učitavanju certifikata: <message>%1</message></"
-#~ "para>"
-
-#~ msgid ""
-#~ "These certificates will be deleted even though you did <emphasis>not</"
-#~ "emphasis><nl/> explicitly select them (<a href=\"whatsthis://\">Why?</a>):"
-#~ msgstr ""
-#~ "Ovi certifikati će biti obrisani iako ih <emphasis>niste</emphasis><nl/> "
-#~ "lično odabrali (<a href=\"whatsthis://\">Zašto?</a>):"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "<title>Why do you want to delete more certificates than I selected?</"
-#~ "title><para>When you delete CA certificates (both root CAs and "
-#~ "intermediate CAs), the certificates issued by them will also be deleted.</"
-#~ "para><para>This can be nicely seen in <application>Kleopatra</"
-#~ "application>'s hierarchical view mode: In this mode, if you delete a "
-#~ "certificate that has children, those children will also be deleted. Think "
-#~ "of CA certificates as folders containing other certificates: When you "
-#~ "delete the folder, you delete its contents, too.</para>"
-#~ msgstr ""
-#~ "<title>Zašto želite da izbrišete više potvrda nego sam izabrao?</"
-#~ "title><para>Kada izbrišete CA certifikate (i korijen CA i srednji CAS), "
-#~ "certifikati izdani od njih će takođe biti izbrisani.</para><para>To se "
-#~ "može lijepo videti u <application>Kleopatra</application> hijerarhijskom "
-#~ "prikazu rada: U ovom režimu, ako izbrišete certifikat koji ima djecu, ta "
-#~ "deca će takođe biti izbrisana. Posmatrajte CA certifikate kao fascikle sa "
-#~ "drugim certifikatima: Kada izbrišete fasciklu, brišete njen sadržaj, "
-#~ "takođe.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "No NullPin found. <warning>If this PIN was not set by you personally, the "
-#~ "card might have been tampered with.</warning>"
-#~ msgstr ""
-#~ "NullPin nije nađen. <warning>Ako ovaj PIN niste lično postavili, kartica "
-#~ "je možda provaljena.</warning>"
-
-#~ msgctxt "@info"
-#~ msgid "There was an error setting the PIN: <message>%1</message>."
-#~ msgstr "Desila se greška kada se postavljao PIN: <message>%1</message>."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The version of the <application>GpgME</application> library you are "
-#~ "running against is older than the one that the <application>GpgME++</"
-#~ "application> library was built against.</"
-#~ "para><para><application>Kleopatra</application> will not function in this "
-#~ "setting.</para><para>Please ask your administrator for help in resolving "
-#~ "this issue.</para>"
-#~ msgstr ""
-#~ "<para>Verzija <application>GpgME</application> biblioteke koju pokrećete "
-#~ "je starija od one koju je <application>GpgME++</application> biblioteka "
-#~ "pokrenula.</para><para><application>Kleopatra</application> neće raditi "
-#~ "na ovim postavkama.</para><para>Molim vas pitajte administratora za pomoć "
-#~ "u rješavanju ovog problema.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Could not copy temporary file <filename>%1</filename> to file <filename>"
-#~ "%2</filename>: <message>%3</message>"
-#~ msgstr ""
-#~ "Ne mogu kreirati privremenu datoteku <filename>%1</filename> u datoteku "
-#~ "<filename>%2</filename>: <message>%3</message>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Successfully wrote request to <filename>%1</filename>.</"
-#~ "para><para>You should now send the request to the Certification Authority "
-#~ "(CA).</para>"
-#~ msgstr ""
-#~ "<para>Uspješno upisan zahtjev na <filename>%1</filename>.</"
-#~ "para><para>Trebate poslati zahtjev certifikacijskom Autoritetu (CA).</"
-#~ "para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para><application>Kleopatra</application> tried to send a mail via your "
-#~ "default mail client.</para><para>Some mail clients are known not to "
-#~ "support attachments when invoked this way.</para><para>If your mail "
-#~ "client does not have an attachment, then drag the <application>Kleopatra</"
-#~ "application> icon and drop it on the message compose window of your mail "
-#~ "client.</para><para>If that does not work, either, save the request to a "
-#~ "file, and then attach that.</para>"
-#~ msgstr ""
-#~ "<para><application>Kleopatra</application> je pokušala poslati poštu "
-#~ "podrazumijevanim programom.</para><para>Neki programi za elektronsku "
-#~ "poštu nemaju dodatke kada su pozvani na ovaj način.</para><para>Ako vaš "
-#~ "program za elektronsku poštu ne poznaje dodatke kada je pozvan na ovaj "
-#~ "način, prevucite<application>Kleopatra</application> ikonu i ispustite je "
-#~ "na prozor za sastavljanje poruke vašeg kllijenta elektronske pošte.</"
-#~ "para><para>Ako ovo ne radi, snimite zahtjev nad datotekom i priložit to.</"
-#~ "para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>A problem was detected with the <application>%1</application> "
-#~ "backend.</para>"
-#~ msgstr ""
-#~ "<para>Problem je detektovan s <application>%1</application> pozadinom.</"
-#~ "para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>It seems that the <icode>gpgme</icode> library was compiled without "
-#~ "support for this backend.</para>"
-#~ msgstr ""
-#~ "<para>Izgleda da je <icode>gpgme</icode> kompajliran bez podrške za ovu "
-#~ "pozadinu.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Replace the <icode>gpgme</icode> library with a version compiled "
-#~ "with <application>%1</application> support.</para>"
-#~ msgstr ""
-#~ "<para>Zamijeni <icode>gpgme</icode> biblioteku kompajliranu s "
-#~ "<application>%1</application> podrškom.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Backend <command>%1</command> is not installed properly.</para>"
-#~ msgstr ""
-#~ "<para>Pozadina <command>%1</command> nije ispravno instalirana.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Please check the output of <command>%1 --version</command> manually."
-#~ "</para>"
-#~ msgstr ""
-#~ "<para>Molim provjerite izlaz <command>%1 --version</command> ručno.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Backend <command>%1</command> is installed in version %2, but at "
-#~ "least version %3 is required.</para>"
-#~ msgstr ""
-#~ "<para>Pozadina <command>%1</command> je instalirana u verziji %2, ali "
-#~ "barem verzija %3 je potrebna.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Install <application>%1</application> version %2 or higher.</para>"
-#~ msgstr ""
-#~ "<para>Instalirajte <application>%1</application> verzije %2 ili veće.</"
-#~ "para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Make sure <application>%1</application> is installed and in "
-#~ "<envar>PATH</envar>.</para>"
-#~ msgstr ""
-#~ "<para>Uvjerite se da je<application>%1</application> instalirano i u "
-#~ "<envar>PATH</envar>.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para><application>%1</application> v%2.%3.%4 is required for this test, "
-#~ "but only %5 is installed.</para>"
-#~ msgstr ""
-#~ "<para><application>%1</application> v%2.%3.%4 je potrebno za ovajtest, "
-#~ "ali samo %5 je instalirano.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para><application>%1</application> is required for this test, but does "
-#~ "not seem available.</para><para>See tests further up for more information."
-#~ "</para>"
-#~ msgstr ""
-#~ "<para><application>%1</application> je potreban za ovaj test ali izgleda "
-#~ "da nije dostupan.</para><para>Pogledajte testove detaljnije za više "
-#~ "informacija.</para>"
-
-#~ msgctxt "@info %1: test name"
-#~ msgid "<para>See \"%1\" above.</para>"
-#~ msgstr "<para>Vidi \"%1\" iznad.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Upgrade to <application>gpgme</application> 1.2.0 or higher, and ensure "
-#~ "that gpgme++ was compiled against it."
-#~ msgstr ""
-#~ "Nadogradite na <application>gpgme</application> 1.2.0 ili noviji, i "
-#~ "osigurajte da je gpgme++ kompajliran za njega."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The <application>GpgME</application> library is new enough to "
-#~ "support <application>gpg-agent</application>, but does not seem to do so "
-#~ "in this installation.</para><para>The error returned was: <message>%1</"
-#~ "message>.</para>"
-#~ msgstr ""
-#~ "<para>Biblioteka <application>GpgME</application> je dovoljno nova da "
-#~ "podržava <application>gpg-agent</application>, ali ne izgleda tako u ovoj "
-#~ "instalaciji.</para><para>Vraćena greška je bila: <message>%1</message>.</"
-#~ "para>"
-
-#~ msgctxt "@info"
-#~ msgid "Could not connect to GpgAgent: <message>%1</message>"
-#~ msgstr "Nije u mogućnosti da se poveže sa GpgAgent: <message>%1</message>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Check that gpg-agent is running and that the "
-#~ "<environment>GPG_AGENT_INFO</environment> variable is set and up-to-date."
-#~ "</para>"
-#~ msgstr ""
-#~ "<para>Provjerite da li gpg-agent radi i da je "
-#~ "<environment>GPG_AGENT_INFO</environment> varijabla postavljena i ažurna."
-#~ "</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Unexpected error while asking <application>gpg-agent</application> "
-#~ "for its version.</para><para>The error returned was: <message>%1</"
-#~ "message>.</para>"
-#~ msgstr ""
-#~ "<para>Neočekivana greška pri upitug <application>gpg-agent</application> "
-#~ "za njegovu verziju.</para><para>Vraćena greška je bila: <message>%1</"
-#~ "message>.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Kleopatra detected the following errors in the libkleopatrarc "
-#~ "configuration:</para>%1"
-#~ msgstr ""
-#~ "<para>Kleopatra je otkrila sljedeće greške u libkleopatrarc konfiguraciji:"
-#~ "</para>%1"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Kleopatra detected an obsolete registry key (<resource>%1\\%2</"
-#~ "resource>), added by either a previous <application>Gpg4win</application> "
-#~ "version or applications such as <application>WinPT</application> or "
-#~ "<application>EnigMail</application>.</para><para>Keeping the entry might "
-#~ "lead to an old GnuPG backend being used.</para>"
-#~ msgstr ""
-#~ "<para>Kleopatra detektovala zastarjeli registar kljuć (<resource>%1\\%2</"
-#~ "resource>), koji je dodala ranija<application>Gpg4win</application> "
-#~ "verzija ili programi poput <application>WinPT</application> ili "
-#~ "<application>EnigMail</application>.</para><para>Čuvanje ovog elementa "
-#~ "može dovesti da se GnuPG pozadina koristi.</para>"
-
-#~ msgctxt "@info"
-#~ msgid "<para>Delete registry key <resource>%1\\%2</resource>.</para>"
-#~ msgstr "<para>Obriši registry ključ <resource>%1\\%2</resource>.</para>"
-
-#~ msgctxt "@info"
-#~ msgid "Could not delete the registry key <resource>%1\\%2</resource>"
-#~ msgstr "Ne mogu obrisati registry ključ <resource>%1\\%2</resource>"
-
-#~ msgctxt "@info"
-#~ msgid "Could not connect to UiServer: <message>%1</message>"
-#~ msgstr "Ne mogu se povezati na UiServer: <message>%1</message>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>Check that your firewall is not set to block local connections "
-#~ "(allow connections to <resource>localhost</resource> or "
-#~ "<resource>127.0.0.1</resource>).</para>"
-#~ msgstr ""
-#~ "<para>Provjerite da zaštitni zid ne blokira lokalne konekcije (dopušta "
-#~ "konekcije na <resource>localhost</resource> or <resource>127.0.0.1</"
-#~ "resource>).</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "It seems another <application>Kleopatra</application> is running (with "
-#~ "process-id %1)"
-#~ msgstr ""
-#~ "Izgleda da je još jedna <application>Kleopatra</application> pokrenuta (s "
-#~ "process-id %1)"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Quit any other running instances of <application>Kleopatra</application>."
-#~ msgstr ""
-#~ "Prekinite druge pokrenute kopije programa <application>Kleopatra</"
-#~ "application>."
 
 #~ msgid "&Find:"
 #~ msgstr "&Nađi:"
