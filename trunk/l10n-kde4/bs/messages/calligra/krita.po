@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-12-07 01:41+0000\n"
+"POT-Creation-Date: 2014-12-08 01:46+0000\n"
 "PO-Revision-Date: 2014-02-10 00:04+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -171,7 +171,8 @@ msgstr "&Slika"
 
 #. i18n: ectx: Menu (Layer)
 #: gemini/kritagemini.rc:91 krita.rc:118
-#: plugins/extensions/histogram/histogram.rc:4 sketch/kritasketch.rc:91
+#: plugins/extensions/histogram/histogram.rc:4
+#: plugins/extensions/layersplit/layersplit.rc:4 sketch/kritasketch.rc:91
 msgid "&Layer"
 msgstr "&Sloj"
 
@@ -255,12 +256,12 @@ msgstr ""
 
 #: gemini/MainWindow.cpp:292 gemini/MainWindow.cpp:654
 #: sketch/MainWindow.cpp:151 ui/KisDocument.cpp:1961 ui/KisDocument.cpp:2562
-#: ui/KisMainWindow.cpp:1342 ui/KisView.cpp:801
+#: ui/KisMainWindow.cpp:1342 ui/KisView.cpp:799
 msgid "Untitled"
 msgstr "Neimenovano"
 
 #: gemini/MainWindow.cpp:657 ui/KisDocument.cpp:1964 ui/KisMainWindow.cpp:1345
-#: ui/KisView.cpp:804
+#: ui/KisView.cpp:802
 #, kde-format
 msgid ""
 "<p>The document <b>'%1'</b> has been modified.</p><p>Do you want to save it?"
@@ -2682,8 +2683,10 @@ msgstr "Pretvori tip sloja"
 
 #. i18n: ectx: property (title), widget (QGroupBox, grpImage)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgImagesplit)
+#. i18n: ectx: property (windowTitle), widget (QWidget, WdgLayerSplit)
 #: plugins/extensions/colorspaceconversion/dlg_colorspaceconversion.cc:43
 #: plugins/extensions/imagesplit/wdg_imagesplit.ui:14
+#: plugins/extensions/layersplit/wdg_layersplit.ui:14
 #: ui/forms/wdgnewimage.ui:46
 msgid "Image Size"
 msgstr "Veličina slike"
@@ -4733,6 +4736,97 @@ msgstr "Pomjeri u prethodnu grupu"
 #: plugins/extensions/layergroupswitcher/layergroupswitcher.cpp:48
 msgid "Move into next group"
 msgstr "Pomjeri u sljedeću grupu"
+
+#: plugins/extensions/layersplit/dlg_layersplit.cpp:40
+#, fuzzy
+#| msgid "Select Layer"
+msgid "Split Layer"
+msgstr "Odaberi Sloj"
+
+#: plugins/extensions/layersplit/layersplit.cpp:58
+#, fuzzy
+#| msgid "Scale &Layer..."
+msgid "Split Layer..."
+msgstr "Skaliraj S&loj..."
+
+#: plugins/extensions/layersplit/layersplit.cpp:91
+#, fuzzy
+#| msgid "to &Paint Layer"
+msgid "Split into Layers"
+msgstr "u &Boja sloj"
+
+#: plugins/extensions/layersplit/layersplit.cpp:183
+#, fuzzy
+#| msgid "Select Layer"
+msgctxt "(qtundo-format)"
+msgid "Split Layer"
+msgstr "Odaberi Sloj"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#. i18n: ectx: property (title), widget (QGroupBox, grpMode)
+#: plugins/extensions/layersplit/layersplit.cpp:197
+#: plugins/generators/solid/colorgenerator.h:53
+#: ui/dialogs/kis_dlg_preferences.cc:637 ui/forms/wdganimationselector.ui:290
+#: ui/forms/wdgnewimage.ui:388 ui/kis_paintop_option.cpp:31
+msgid "Color"
+msgstr "Boja"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkCreateGroupLayer)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:25
+msgid "Put all new layers in a group layer"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkSeparateGroupLayers)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:35
+msgid "Put every layer in its own, separate group layer."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkAlphaLock)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:42
+msgid "Alpha-lock every new layer"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkHideOriginal)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:52
+#, fuzzy
+#| msgid "Show original layer"
+msgid "Hide the original layer"
+msgstr "Prikaži prvobitan sloj"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkSortLayers)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:62
+msgid "Sort layers by amount of non-transparent pixels"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:72
+#, fuzzy
+#| msgid "Fuzziness: "
+msgid "Fuzziness:"
+msgstr "Nejasnoća: "
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkDisregardOpacity)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:85
+#, fuzzy
+#| msgid "Distance opacity"
+msgid "Disregard opacity"
+msgstr "Distancna neprozirnost"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: plugins/extensions/layersplit/wdg_layersplit.ui:97
+#, fuzzy
+#| msgid ""
+#| "<html><head/><body><p><span style=\" font-weight:600;\">Note:</span> This "
+#| "changes only the colorspace of the rendered image. To convert the "
+#| "colorspace of the layers, use Convert Image Colorspace.</p></body></html>"
+msgid ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Split a layer "
+"according to color</span></p><p>Creates a new layer for every color in the "
+"active layer.</p></body></html>"
+msgstr ""
+"<html><head/><body><p><span style=\" font-weight:600;\">Napomena:</span> Ovo "
+"mijenja samo poderučje boja isctrane slike. Za konvertziju prostora boja "
+"slojeva, koristite Konvertuj prostor boja slike.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/extensions/metadataeditor/editors/dublincore.ui:19
@@ -8050,14 +8144,6 @@ msgstr "&Boja:"
 #: plugins/generators/solid/colorgenerator.cpp:57
 msgid "&Solid Color..."
 msgstr "&Puna boja..."
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#. i18n: ectx: property (title), widget (QGroupBox, grpMode)
-#: plugins/generators/solid/colorgenerator.h:53
-#: ui/dialogs/kis_dlg_preferences.cc:637 ui/forms/wdganimationselector.ui:290
-#: ui/forms/wdgnewimage.ui:388 ui/kis_paintop_option.cpp:31
-msgid "Color"
-msgstr "Boja"
 
 #: plugins/paintops/chalk/chalk_paintop_plugin.cpp:42
 #, fuzzy
@@ -13774,7 +13860,7 @@ msgstr ""
 msgid "Confirm"
 msgstr "Potvrdi"
 
-#: ui/input/kis_tool_invocation_action.cpp:53 ui/KisView.cpp:465
+#: ui/input/kis_tool_invocation_action.cpp:53 ui/KisView.cpp:463
 msgid "Cancel"
 msgstr "Odustani"
 
@@ -18055,23 +18141,23 @@ msgstr ""
 msgid "Undo %1"
 msgstr ""
 
-#: ui/KisView.cpp:457
+#: ui/KisView.cpp:455
 msgid "Insert as New Layer"
 msgstr "Ubaci kao novi sloj"
 
-#: ui/KisView.cpp:458
+#: ui/KisView.cpp:456
 msgid "Insert Many Layers"
 msgstr "Umetni mnogo slojeva"
 
-#: ui/KisView.cpp:460
+#: ui/KisView.cpp:458
 msgid "Open in New Document"
 msgstr "Otvori u dokumentu"
 
-#: ui/KisView.cpp:461
+#: ui/KisView.cpp:459
 msgid "Open Many Documents"
 msgstr "Otvori nekoliko dokumenata"
 
-#: ui/KisView.cpp:463
+#: ui/KisView.cpp:461
 msgid "Replace Current Document"
 msgstr "Smjeni trenutni dokument"
 
