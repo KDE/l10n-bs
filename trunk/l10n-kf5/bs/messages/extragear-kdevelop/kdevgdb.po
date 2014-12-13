@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevelop\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-12-01 07:45+0000\n"
+"POT-Creation-Date: 2014-12-13 07:53+0000\n"
 "PO-Revision-Date: 2013-12-15 19:17+0000\n"
 "Last-Translator: Nermina Ahmić <nahmic1@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -403,27 +403,40 @@ msgctxt "ProjectName: run configuration name"
 msgid "%1: %2"
 msgstr ""
 
-#: debugsession.cpp:159
+#: debugsession.cpp:167
 msgid "Debugger stopped"
 msgstr "Debager zaustavljen"
 
-#: debugsession.cpp:188
-msgid "Application interrupted"
-msgstr "Program prekinut"
-
-#: debugsession.cpp:192
+#: debugsession.cpp:182
 msgid "Process exited"
 msgstr "Proces izašao"
 
-#: debugsession.cpp:199
+#: debugsession.cpp:187
 msgid "Application is running"
 msgstr "Program se izvršava"
 
-#: debugsession.cpp:205
+#: debugsession.cpp:192
 msgid "Application is paused"
 msgstr "Program je pauziran"
 
-#: debugsession.cpp:418
+#: debugsession.cpp:200
+msgid "Application interrupted"
+msgstr "Program prekinut"
+
+#: debugsession.cpp:237
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>Debugger error</b><p>Debugger reported the following error:<p><tt>%1"
+msgid ""
+"<b>Failed to load core file</b><p>Debugger reported the following error:"
+"<p><tt>%1"
+msgstr "<b>Debagerska greška</b><p>Debager je javio sljedeću grešku:<p><tt>%1"
+
+#: debugsession.cpp:240 debugsession.cpp:1208
+msgid "Debugger error"
+msgstr "Debagerska greška"
+
+#: debugsession.cpp:408
 msgid ""
 "<b>GDB exited abnormally</b><p>This is likely a bug in GDB. Examine the gdb "
 "output window and then stop the debugger"
@@ -431,11 +444,11 @@ msgstr ""
 "<b>GDB nenormalno izašao</b><p>To je vjerovatno greška u GDB. Ispitajte GDB "
 "izlazni prozor, a zatim zaustavite otklanjanje grešaka"
 
-#: debugsession.cpp:421
+#: debugsession.cpp:411
 msgid "GDB exited abnormally"
 msgstr "GDB nenormalno izašao"
 
-#: debugsession.cpp:550
+#: debugsession.cpp:535
 #, kde-format
 msgid ""
 "<b>Gdb command sent when debugger is not running</b><br>The command was:<br> "
@@ -444,43 +457,43 @@ msgstr ""
 "<b>Gdb komanda je poslana kada se debager nije izvršavao</b><br>Komanda je "
 "bila:<br> %1"
 
-#: debugsession.cpp:552
+#: debugsession.cpp:537
 msgid "Internal error"
 msgstr "Unutrašnja greška"
 
-#: debugsession.cpp:649
+#: debugsession.cpp:634
 #, kde-format
 msgid "<b>Invalid debugger command</b><br>%1"
 msgstr "<b>Pogrešna debagerska komanda</b><br>%1"
 
-#: debugsession.cpp:650
+#: debugsession.cpp:635
 msgid "Invalid debugger command"
 msgstr "Pogrešna debagerska komanda"
 
-#: debugsession.cpp:678
+#: debugsession.cpp:663
 #, kde-format
 msgid "Exited with return code: %1"
 msgstr "Izašao s izlaznim kodom: %1"
 
-#: debugsession.cpp:680
+#: debugsession.cpp:665
 msgid "Exited normally"
 msgstr "Izašao normalno"
 
-#: debugsession.cpp:688
+#: debugsession.cpp:673
 #, kde-format
 msgid "Exited on signal %1"
 msgstr "Izašao na signal %1"
 
-#: debugsession.cpp:747
+#: debugsession.cpp:732
 #, kde-format
 msgid "Program received signal %1 (%2)"
 msgstr "Program primio signal %1 (%2)"
 
-#: debugsession.cpp:953
+#: debugsession.cpp:938
 msgid "Running program"
 msgstr "Izvršavam program"
 
-#: debugsession.cpp:973
+#: debugsession.cpp:959
 #, kde-format
 msgid ""
 "No environment group specified, looks like a broken configuration, please "
@@ -489,20 +502,16 @@ msgstr ""
 "Nema grupe okruženja, izgleda kao slomljena konfiguracija, molimo provjerite "
 "aktivnu konfiguraciju \"%1\". Koristi se podrazumijevana grupa okruženja."
 
-#: debugsession.cpp:1020
+#: debugsession.cpp:1006
 msgid "Warning"
 msgstr "Upozorenje"
 
-#: debugsession.cpp:1223
+#: debugsession.cpp:1205
 #, kde-format
 msgid "<b>Debugger error</b><p>Debugger reported the following error:<p><tt>%1"
 msgstr "<b>Debagerska greška</b><p>Debager je javio sljedeću grešku:<p><tt>%1"
 
-#: debugsession.cpp:1226
-msgid "Debugger error"
-msgstr "Debagerska greška"
-
-#: debugsession.cpp:1325
+#: debugsession.cpp:1307
 #, kde-format
 msgid "1 command in queue\n"
 msgid_plural "%1 commands in queue\n"
@@ -510,7 +519,7 @@ msgstr[0] "%1 komanda u redu čekanja\n"
 msgstr[1] "%1 komande u redu čekanja\n"
 msgstr[2] "%1 komandi u redu čekanja\n"
 
-#: debugsession.cpp:1326
+#: debugsession.cpp:1308
 #, kde-format
 msgctxt "Only the 0 and 1 cases need to be translated"
 msgid "1 command being processed by gdb\n"
@@ -519,12 +528,12 @@ msgstr[0] "%1 komandu obrađuje gdb\n"
 msgstr[1] "%1 komande obrađuje gdb\n"
 msgstr[2] "%1 komandi obrađuje gdb\n"
 
-#: debugsession.cpp:1327
+#: debugsession.cpp:1309
 #, kde-format
 msgid "Debugger state: %1\n"
 msgstr "Debagersko stanje: %1\n"
 
-#: debugsession.cpp:1331
+#: debugsession.cpp:1313
 #, kde-format
 msgid ""
 "Current command class: '%1'\n"
@@ -535,28 +544,28 @@ msgstr ""
 "Tekst trenutne naredbe: '%2'\n"
 "Originalni tekst trenutne naredbe: '%3'\n"
 
-#: debugsession.cpp:1342
+#: debugsession.cpp:1324
 msgid "Debugger status"
 msgstr "Debagerski status"
 
-#: debugsession.cpp:1445
+#: debugsession.cpp:1427
 #, kde-format
 msgid "<b>You need gdb 7.0.0 or higher.</b><br />You are using: %1"
 msgstr "<b>Treba vam gdb 7.0.0 ili viši.</b><br />Koristite: %1"
 
-#: debugsession.cpp:1447
+#: debugsession.cpp:1429
 msgid "gdb error"
 msgstr "gdb greška"
 
-#: debugsession.cpp:1458
+#: debugsession.cpp:1440
 msgid "<b>Could not start debugger:</b><br />"
 msgstr "<b>ne mogu pokrenuti debager:</b><br />"
 
-#: debugsession.cpp:1460 debugsession.cpp:1472
+#: debugsession.cpp:1442 debugsession.cpp:1454
 msgid "Startup error"
 msgstr "Greška pokretanja"
 
-#: debugsession.cpp:1470
+#: debugsession.cpp:1452
 msgid "<b>Could not attach debugger:</b><br />"
 msgstr "<b>Ne mobu prikačiti debager:</b><br />"
 
@@ -621,7 +630,7 @@ msgstr "Nije moguće pronaći za školjku za otklanjanje grešaka '%1'."
 msgid "Debugging Shell Not Found"
 msgstr "Školjka za otklanjanje grešaka nije nađena"
 
-#: gdb.cpp:352
+#: gdb.cpp:340
 msgctxt "<b>Internal debugger error</b>"
 msgid ""
 "<p>The debugger component encountered internal error while processing reply "
@@ -630,7 +639,7 @@ msgstr ""
 "<p>Debager komponenta je naišlana internu grešku prilikom obrade odgovora od "
 "GDB. Molimo Vas da pošaljete izveštaj o grešci."
 
-#: gdb.cpp:354
+#: gdb.cpp:342
 #, kde-format
 msgid ""
 "The exception is: %1\n"
@@ -639,11 +648,11 @@ msgstr ""
 "Izuzetak je: %1\n"
 "MI odgovor je: %2"
 
-#: gdb.cpp:357
+#: gdb.cpp:345
 msgid "Internal debugger error"
 msgstr "Interna debagerska greška"
 
-#: gdb.cpp:409
+#: gdb.cpp:388
 #, kde-format
 msgid ""
 "<b>Could not start debugger.</b><p>Could not run '%1'. Make sure that the "
@@ -652,11 +661,11 @@ msgstr ""
 "<b>Ne mogu pokrenuti debager.</b><p>Ne mogu pokrenuti '%1'. Uvjerite se da "
 "je ime staze ispravno navedeno."
 
-#: gdb.cpp:413
+#: gdb.cpp:392
 msgid "Could not start debugger"
 msgstr "Ne mogu pokrenuti debager"
 
-#: gdb.cpp:430
+#: gdb.cpp:409
 msgid ""
 "<b>Gdb crashed.</b><p>Because of that the debug session has to be ended."
 "<br>Try to reproduce the crash with plain gdb and report a bug.<br>"
@@ -664,9 +673,15 @@ msgstr ""
 "<b>Gdb pao.</b><p>Zbog toga je sesija traženja grešaka prekinuta."
 "<br>Pokušajte reprodukovati pad običnm gdb i prijavite grešku.<br>"
 
-#: gdb.cpp:433
+#: gdb.cpp:412
 msgid "Gdb crashed"
 msgstr "Gdb pao"
+
+#: gdbframestackmodel.cpp:77
+#, fuzzy
+#| msgid "Warning"
+msgid "(running)"
+msgstr "Upozorenje"
 
 #: gdblaunchconfig.cpp:115
 msgid "GDB Configuration"
