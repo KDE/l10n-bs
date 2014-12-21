@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-20 05:08+0000\n"
+"POT-Creation-Date: 2014-12-21 05:30+0000\n"
 "PO-Revision-Date: 2012-10-22 10:10+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -20,14 +20,14 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: body.cc:26 joint.cc:29 joint.cc:35 motor.cc:30 motor.cc:36
-msgid "Body"
-msgstr "Tijelo"
-
 #: body.cc:26
 msgctxt "ObjectClass"
 msgid "Body"
 msgstr "Body"
+
+#: body.cc:26 joints.cc:29 joints.cc:35 motor.cc:30 motor.cc:36
+msgid "Body"
+msgstr "Tijelo"
 
 #: collisionsolver.cc:32
 msgctxt "ObjectClass"
@@ -177,15 +177,15 @@ msgstr "J"
 msgid "Potential depth"
 msgstr "Potencijalna dubina"
 
-#: gas.cc:33 gas.cc:34 gas.cc:40 gas.cc:46 gas.cc:48 joint.cc:30 joint.cc:36
-#: joint.cc:37 joint.cc:41 joint.cc:44 joint.cc:46 joint.cc:48 joint.cc:49
-#: motor.cc:31 motor.cc:37 particle.cc:30 particle.cc:42 rigidbody.cc:28
-#: rigidbody.cc:53 rigidbody.cc:84 rigidbody.cc:89 rigidbody.cc:92
-#: rigidbody.cc:96 rigidbody.cc:97 softbody.cc:36 spring.cc:30 spring.cc:31
-#: spring.cc:36 spring.cc:38 spring.cc:40 spring.cc:41 spring.cc:47
-#: spring.cc:49 spring.cc:55 spring.cc:57 spring.cc:59 spring.cc:61 tool.cc:38
-#: tool.cc:39 tool.cc:45 tool.cc:46 tool.cc:67 tool.cc:68 tool.cc:79
-#: tool.cc:80 tool.cc:98 tool.cc:100 tool.cc:101
+#: gas.cc:33 gas.cc:34 gas.cc:40 gas.cc:46 gas.cc:48 joints.cc:30 joints.cc:36
+#: joints.cc:37 joints.cc:41 joints.cc:44 joints.cc:46 joints.cc:48
+#: joints.cc:49 motor.cc:31 motor.cc:37 particle.cc:30 particle.cc:42
+#: rigidbody.cc:28 rigidbody.cc:53 rigidbody.cc:84 rigidbody.cc:89
+#: rigidbody.cc:92 rigidbody.cc:96 rigidbody.cc:97 softbody.cc:36 spring.cc:30
+#: spring.cc:31 spring.cc:36 spring.cc:38 spring.cc:40 spring.cc:41
+#: spring.cc:47 spring.cc:49 spring.cc:55 spring.cc:57 spring.cc:59
+#: spring.cc:61 tool.cc:38 tool.cc:39 tool.cc:45 tool.cc:46 tool.cc:67
+#: tool.cc:68 tool.cc:79 tool.cc:80 tool.cc:98 tool.cc:100 tool.cc:101
 msgctxt "Units"
 msgid "m"
 msgstr "m"
@@ -697,144 +697,162 @@ msgstr "color"
 msgid "Item color"
 msgstr "Boja predmeta"
 
-#: joint.cc:27
+#: itemgroup.cc:28
+msgctxt "ObjectClass"
+msgid "ItemGroup"
+msgstr "ItemGroup"
+
+#: itemgroup.cc:28
+msgid "ItemGroup"
+msgstr "GrupaPredmeta"
+
+#: joint.cc:26
+msgctxt "ObjectClass"
+msgid "Joint"
+msgstr "Spoj"
+
+#: joint.cc:26
+msgid "Joint"
+msgstr "Spoj"
+
+#: joints.cc:27
 msgctxt "ObjectClass"
 msgid "Anchor"
 msgstr "Anchor"
 
-#: joint.cc:27
+#: joints.cc:27
 msgid "Anchor: fixes position of the body"
 msgstr "Sidro: fiksira položaj tijela"
 
-#: joint.cc:29 joint.cc:35 motor.cc:30 motor.cc:36 tool.cc:97
+#: joints.cc:29 joints.cc:35 motor.cc:30 motor.cc:36 tool.cc:97
 msgctxt "PropertyName"
 msgid "body"
 msgstr "tijelo"
 
-#: joint.cc:30 joint.cc:37 particle.cc:30 rigidbody.cc:28 softbody.cc:36
+#: joints.cc:30 joints.cc:37 particle.cc:30 rigidbody.cc:28 softbody.cc:36
 #: tool.cc:38 tool.cc:45 tool.cc:67 tool.cc:79 tool.cc:100
 msgctxt "PropertyName"
 msgid "position"
 msgstr "položaj"
 
-#: joint.cc:30 tool.cc:100
+#: joints.cc:30 tool.cc:100
 msgid "Position"
 msgstr "Položaj"
 
-#: joint.cc:31 rigidbody.cc:29
+#: joints.cc:31 rigidbody.cc:29
 msgctxt "PropertyName"
 msgid "angle"
 msgstr "ugao"
 
-#: joint.cc:31 rigidbody.cc:29 rigidbody.cc:55
+#: joints.cc:31 rigidbody.cc:29 rigidbody.cc:55
 msgctxt "Units"
 msgid "rad"
 msgstr "rad"
 
-#: joint.cc:31
+#: joints.cc:31
 msgid "Angle"
 msgstr "Ugao"
 
-#: joint.cc:33
+#: joints.cc:33
 msgctxt "ObjectClass"
 msgid "Pin"
 msgstr "Pin"
 
-#: joint.cc:33
+#: joints.cc:33
 msgid "Pin: fixes position of a given point on the body"
 msgstr "Čioda: fiksira položaj date tačke na tijelu"
 
-#: joint.cc:36 motor.cc:31 motor.cc:37 tool.cc:98
+#: joints.cc:36 motor.cc:31 motor.cc:37 tool.cc:98
 msgctxt "PropertyName"
 msgid "localPosition"
 msgstr "localPosition"
 
-#: joint.cc:36
+#: joints.cc:36
 msgid "Position on the body"
 msgstr "Položaj na tijelu"
 
-#: joint.cc:37
+#: joints.cc:37
 msgid "Position in the world"
 msgstr "Položaj na svijetu"
 
-#: joint.cc:39
+#: joints.cc:39
 msgctxt "ObjectClass"
 msgid "Stick"
 msgstr "Štap"
 
-#: joint.cc:39
+#: joints.cc:39
 msgid "Massless stick which can be connected to bodies"
 msgstr "Štap bez mase koji može biti povezan sa tijelima"
 
-#: joint.cc:41 spring.cc:30
+#: joints.cc:41 spring.cc:30
 msgctxt "PropertyName"
 msgid "restLength"
 msgstr "preostalaDužina"
 
-#: joint.cc:41
+#: joints.cc:41
 msgid "Rest length of the stick"
 msgstr "Preostala dužina štapa"
 
-#: joint.cc:42 spring.cc:34
+#: joints.cc:42 spring.cc:34
 msgctxt "PropertyName"
 msgid "body1"
 msgstr "tijelo1"
 
-#: joint.cc:42 spring.cc:34
+#: joints.cc:42 spring.cc:34
 msgid "Body1"
 msgstr "Tijelo1"
 
-#: joint.cc:43 spring.cc:35
+#: joints.cc:43 spring.cc:35
 msgctxt "PropertyName"
 msgid "body2"
 msgstr "tijelo2"
 
-#: joint.cc:43 spring.cc:35
+#: joints.cc:43 spring.cc:35
 msgid "Body2"
 msgstr "Tijelo2"
 
-#: joint.cc:44 spring.cc:36
+#: joints.cc:44 spring.cc:36
 msgctxt "PropertyName"
 msgid "localPosition1"
 msgstr "localPosition1"
 
-#: joint.cc:45 spring.cc:37
+#: joints.cc:45 spring.cc:37
 msgid "Local position 1"
 msgstr "Lokalna pozicija 1"
 
-#: joint.cc:46 spring.cc:38
+#: joints.cc:46 spring.cc:38
 msgctxt "PropertyName"
 msgid "localPosition2"
 msgstr "localPosition2"
 
-#: joint.cc:47 spring.cc:39
+#: joints.cc:47 spring.cc:39
 msgid "Local position 2"
 msgstr "Lokalna pozicija 2"
 
-#: joint.cc:48 spring.cc:40
+#: joints.cc:48 spring.cc:40
 msgctxt "PropertyName"
 msgid "position1"
 msgstr "položaj1"
 
-#: joint.cc:48 spring.cc:40
+#: joints.cc:48 spring.cc:40
 msgid "Position1"
 msgstr "Položaj1"
 
-#: joint.cc:49 spring.cc:41
+#: joints.cc:49 spring.cc:41
 msgctxt "PropertyName"
 msgid "position2"
 msgstr "položaj2"
 
-#: joint.cc:49 spring.cc:41
+#: joints.cc:49 spring.cc:41
 msgid "Position2"
 msgstr "Položaj2"
 
-#: joint.cc:52
+#: joints.cc:52
 msgctxt "ObjectClass"
 msgid "Rope"
 msgstr "Konopac"
 
-#: joint.cc:52
+#: joints.cc:52
 msgid "Massless rope which can be connected to bodies"
 msgstr "Konopac bez mase koji može biti vezan za tijela"
 
@@ -1429,7 +1447,7 @@ msgctxt "PropertyName"
 msgid "stepSize"
 msgstr "stepSize"
 
-#: solver.cc:27 world.cc:38
+#: solver.cc:27 world.cc:35
 msgctxt "Units"
 msgid "s"
 msgstr "s"
@@ -1982,62 +2000,44 @@ msgstr "Lokalni položaj"
 
 #: world.cc:32
 msgctxt "ObjectClass"
-msgid "Joint"
-msgstr "Spoj"
-
-#: world.cc:32
-msgid "Joint"
-msgstr "Spoj"
-
-#: world.cc:33
-msgctxt "ObjectClass"
 msgid "Tool"
 msgstr "Tool"
 
-#: world.cc:33
+#: world.cc:32
 msgid "Tool"
 msgstr "Alat"
 
-#: world.cc:35
-msgctxt "ObjectClass"
-msgid "ItemGroup"
-msgstr "ItemGroup"
-
-#: world.cc:35
-msgid "ItemGroup"
-msgstr "GrupaPredmeta"
-
-#: world.cc:37
+#: world.cc:34
 msgctxt "ObjectClass"
 msgid "World"
 msgstr "World"
 
-#: world.cc:37
+#: world.cc:34
 msgid "World"
 msgstr "Svijet"
 
-#: world.cc:38
+#: world.cc:35
 msgctxt "PropertyName"
 msgid "time"
 msgstr "time"
 
-#: world.cc:38
+#: world.cc:35
 msgid "Current time"
 msgstr "Trenutno vrijeme"
 
-#: world.cc:39
+#: world.cc:36
 msgid "timeScale"
 msgstr "vremenskaSkala"
 
-#: world.cc:39
+#: world.cc:36
 msgid "Simulation speed scale"
 msgstr "Skala brzine simulacije"
 
-#: world.cc:40
+#: world.cc:37
 msgid "errorsCalculation"
 msgstr "proračunGrešaka"
 
-#: world.cc:41
+#: world.cc:38
 msgid "Enable global error calculation"
 msgstr "Omogući globalno računanje greške"
 
