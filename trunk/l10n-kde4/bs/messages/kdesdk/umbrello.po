@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: umbrello\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-12-22 01:56+0000\n"
+"POT-Creation-Date: 2014-12-23 01:57+0000\n"
 "PO-Revision-Date: 2014-01-04 22:51+0000\n"
 "Last-Translator: memsud <dedovic.memsud94@hotmail.com>\n"
 "Language-Team: <bs@li.org>\n"
@@ -83,7 +83,7 @@ msgstr "Agregacija"
 msgid "Dependency"
 msgstr "Zavisnost"
 
-#: basictypes.cpp:335 worktoolbar.cpp:316
+#: basictypes.cpp:335 widgets/widgetbase.cpp:1013 worktoolbar.cpp:316
 msgid "Association"
 msgstr "Udruženje"
 
@@ -139,7 +139,8 @@ msgstr "Sidro"
 msgid "State Transition"
 msgstr "Prijelaz stanja"
 
-#: basictypes.cpp:361 dialogs/activitydialog.cpp:137 worktoolbar.cpp:358
+#: basictypes.cpp:361 dialogs/activitydialog.cpp:137
+#: widgets/widgetbase.cpp:1004 worktoolbar.cpp:358
 msgid "Activity"
 msgstr "Aktivnost"
 
@@ -694,9 +695,9 @@ msgstr "Koristi sljedeće za klase u generisanom kôdu:"
 #: dialogs/pages/associationgeneralpage.cpp:82
 #: dialogs/pages/associationrolepage.cpp:91
 #: dialogs/pages/associationrolepage.cpp:92
-#: dialogs/pages/classgeneralpage.cpp:186
+#: dialogs/pages/classgeneralpage.cpp:141
+#: dialogs/pages/classgeneralpage.cpp:203
 #: dialogs/pages/classgeneralpage.cpp:248
-#: dialogs/pages/classgeneralpage.cpp:301
 #: dialogs/pages/classifierlistpage.cpp:218
 #: dialogs/pages/diagrampropertiespage.ui:257
 #: dialogs/pages/umlrolepropertiesbase.ui:140
@@ -1219,6 +1220,7 @@ msgstr "Status"
 
 #. i18n: ectx: property (text), widget (QTableWidget, ui_tableWidgetStatus)
 #: codegenwizard/codegenstatuspage.ui:40 codeimpwizard/codeimpstatuspage.ui:54
+#: widgets/widgetbase.cpp:1028
 msgid "Class"
 msgstr "Klasa"
 
@@ -2139,114 +2141,50 @@ msgstr ""
 msgid "Show export layout in diagram context menu"
 msgstr "Prikaži izgled izvoza u dijagramu kontekstnog izbornika"
 
-#: dialogs/pages/classgeneralpage.cpp:74
-msgid "Class &name:"
-msgstr "Ime &klase:"
-
-#: dialogs/pages/classgeneralpage.cpp:77
-msgid "Actor &name:"
-msgstr "Ime &učesnika:"
-
-#: dialogs/pages/classgeneralpage.cpp:80
-msgid "Package &name:"
-msgstr "Ime &paketa:"
-
-#: dialogs/pages/classgeneralpage.cpp:83
-msgid "Use case &name:"
-msgstr "&Ime slučaja upotrebe:"
-
-#: dialogs/pages/classgeneralpage.cpp:86
-msgid "Interface &name:"
-msgstr "Ime i&nterfejsa:"
-
-#: dialogs/pages/classgeneralpage.cpp:89
-msgid "Component &name:"
-msgstr "Ime &komponente:"
-
-#: dialogs/pages/classgeneralpage.cpp:92
-#, fuzzy
-#| msgid "Actor &name:"
-msgid "Port &name:"
-msgstr "Ime &učesnika:"
-
-#: dialogs/pages/classgeneralpage.cpp:95
-msgid "Node &name:"
-msgstr "&Ime čvora:"
-
-#: dialogs/pages/classgeneralpage.cpp:98
-msgid "Artifact &name:"
-msgstr "Ime &artifakta:"
-
-#: dialogs/pages/classgeneralpage.cpp:101
-msgid "Enum &name:"
-msgstr "I&me nabrajanja:"
-
-#: dialogs/pages/classgeneralpage.cpp:104
-msgid "Datatype &name:"
-msgstr "Ime tipa po&datka:"
-
-#: dialogs/pages/classgeneralpage.cpp:107
-msgid "Entity &name:"
-msgstr "I&me entiteta:"
-
-#: dialogs/pages/classgeneralpage.cpp:110
-#, fuzzy
-#| msgid "Stereotype name:"
-msgid "Stereotype &name:"
-msgstr "Ime stereotipa:"
-
-#: dialogs/pages/classgeneralpage.cpp:138
+#: dialogs/pages/classgeneralpage.cpp:93
 #, fuzzy
 #| msgctxt "column header referenced"
 #| msgid "Referenced"
 msgid "Reference:"
 msgstr "Referencirano"
 
-#: dialogs/pages/classgeneralpage.cpp:154
+#: dialogs/pages/classgeneralpage.cpp:109
 msgid "A&bstract class"
 msgstr "A&pstraktna klasa"
 
-#: dialogs/pages/classgeneralpage.cpp:156
+#: dialogs/pages/classgeneralpage.cpp:111
 msgid "A&bstract use case"
 msgstr "Slučaj korišćenja a&pstrakcije"
 
-#: dialogs/pages/classgeneralpage.cpp:165
+#: dialogs/pages/classgeneralpage.cpp:120
 msgctxt "component is executable"
 msgid "&Executable"
 msgstr "&Izvršno"
 
-#: dialogs/pages/classgeneralpage.cpp:221
+#: dialogs/pages/classgeneralpage.cpp:176
 msgid "Class name:"
 msgstr "Ime klase:"
 
-#: dialogs/pages/classgeneralpage.cpp:224
-#: dialogs/pages/classgeneralpage.cpp:293
+#: dialogs/pages/classgeneralpage.cpp:179
+#: dialogs/pages/classgeneralpage.cpp:240
 msgid "Instance name:"
 msgstr "Ime primjerka:"
 
-#: dialogs/pages/classgeneralpage.cpp:229
+#: dialogs/pages/classgeneralpage.cpp:184
 msgid "Draw as actor"
 msgstr "Crtaj kao učesnika"
 
-#: dialogs/pages/classgeneralpage.cpp:234
+#: dialogs/pages/classgeneralpage.cpp:189
 msgid "Multiple instance"
 msgstr "Višestruki primjerak"
 
-#: dialogs/pages/classgeneralpage.cpp:240
+#: dialogs/pages/classgeneralpage.cpp:195
 msgid "Show destruction"
 msgstr "Prikaži razgrađivanje"
 
-#: dialogs/pages/classgeneralpage.cpp:280
-msgid "Component name:"
-msgstr "Ime komponente:"
-
-#: dialogs/pages/classgeneralpage.cpp:282
-msgid "Node name:"
-msgstr "Ime čvora:"
-
-#: dialogs/pages/classgeneralpage.cpp:339
-#: dialogs/pages/classgeneralpage.cpp:372
-#: dialogs/pages/classgeneralpage.cpp:385
+#: dialogs/pages/classgeneralpage.cpp:286
+#: dialogs/pages/classgeneralpage.cpp:319
+#: dialogs/pages/classgeneralpage.cpp:332
 msgid ""
 "The name you have chosen\n"
 "is already being used.\n"
@@ -2256,9 +2194,9 @@ msgstr ""
 "već se koristi.\n"
 "Ime je resetovano."
 
-#: dialogs/pages/classgeneralpage.cpp:340
-#: dialogs/pages/classgeneralpage.cpp:373
-#: dialogs/pages/classgeneralpage.cpp:386
+#: dialogs/pages/classgeneralpage.cpp:287
+#: dialogs/pages/classgeneralpage.cpp:320
+#: dialogs/pages/classgeneralpage.cpp:333
 msgid "Name is Not Unique"
 msgstr "Ime nije jedinstveno"
 
@@ -3638,19 +3576,19 @@ msgstr "Izvezi kao sliku..."
 msgid "Subsystem"
 msgstr "Podsistem"
 
-#: listpopupmenu.cpp:758 worktoolbar.cpp:340
+#: listpopupmenu.cpp:758 widgets/widgetbase.cpp:1025 worktoolbar.cpp:340
 msgid "Component"
 msgstr "Komponenta"
 
-#: listpopupmenu.cpp:761
+#: listpopupmenu.cpp:761 widgets/widgetbase.cpp:1070
 msgid "Port"
 msgstr ""
 
-#: listpopupmenu.cpp:764 worktoolbar.cpp:342
+#: listpopupmenu.cpp:764 widgets/widgetbase.cpp:1010 worktoolbar.cpp:342
 msgid "Artifact"
 msgstr "Artifakt"
 
-#: listpopupmenu.cpp:775 worktoolbar.cpp:341
+#: listpopupmenu.cpp:775 widgets/widgetbase.cpp:1052 worktoolbar.cpp:341
 msgid "Node"
 msgstr "Čvor"
 
@@ -3658,15 +3596,15 @@ msgstr "Čvor"
 msgid "Folder"
 msgstr "Mapa"
 
-#: listpopupmenu.cpp:791 worktoolbar.cpp:346
+#: listpopupmenu.cpp:791 widgets/widgetbase.cpp:1034 worktoolbar.cpp:346
 msgid "Entity"
 msgstr "Entitet"
 
-#: listpopupmenu.cpp:801 worktoolbar.cpp:369
+#: listpopupmenu.cpp:801 widgets/widgetbase.cpp:1019 worktoolbar.cpp:369
 msgid "Category"
 msgstr "Kategorija"
 
-#: listpopupmenu.cpp:804 worktoolbar.cpp:322
+#: listpopupmenu.cpp:804 widgets/widgetbase.cpp:1007 worktoolbar.cpp:322
 msgid "Actor"
 msgstr "Učesnik"
 
@@ -3688,19 +3626,20 @@ msgctxt "new class menu item"
 msgid "Class"
 msgstr "Klasa"
 
-#: listpopupmenu.cpp:926 worktoolbar.cpp:343
+#: listpopupmenu.cpp:926 widgets/widgetbase.cpp:1046 worktoolbar.cpp:343
 msgid "Interface"
 msgstr "Interface"
 
-#: listpopupmenu.cpp:927 worktoolbar.cpp:344
+#: listpopupmenu.cpp:927 widgets/widgetbase.cpp:1031 worktoolbar.cpp:344
 msgid "Datatype"
 msgstr "Tip podataka"
 
-#: listpopupmenu.cpp:928 worktoolbar.cpp:345
+#: listpopupmenu.cpp:928 widgets/widgetbase.cpp:1037 worktoolbar.cpp:345
 msgid "Enum"
 msgstr "Nabrajanje"
 
-#: listpopupmenu.cpp:929 listpopupmenu.cpp:1138 worktoolbar.cpp:339
+#: listpopupmenu.cpp:929 listpopupmenu.cpp:1138 widgets/widgetbase.cpp:1064
+#: worktoolbar.cpp:339
 msgid "Package"
 msgstr "Paket"
 
@@ -5872,6 +5811,68 @@ msgstr ""
 msgid "Name Not Valid"
 msgstr "Ime nije ispravno"
 
+#: umlobject.cpp:1092
+msgid "Actor &name:"
+msgstr "Ime &učesnika:"
+
+#: umlobject.cpp:1095
+msgid "Artifact &name:"
+msgstr "Ime &artifakta:"
+
+#: umlobject.cpp:1098
+msgid "Class &name:"
+msgstr "Ime &klase:"
+
+#: umlobject.cpp:1101
+msgid "Component &name:"
+msgstr "Ime &komponente:"
+
+#: umlobject.cpp:1104
+msgid "Datatype &name:"
+msgstr "Ime tipa po&datka:"
+
+#: umlobject.cpp:1107
+msgid "Entity &name:"
+msgstr "I&me entiteta:"
+
+#: umlobject.cpp:1110
+msgid "Enum &name:"
+msgstr "I&me nabrajanja:"
+
+#: umlobject.cpp:1113
+#, fuzzy
+#| msgid "Node &name:"
+msgid "Folder &name:"
+msgstr "&Ime čvora:"
+
+#: umlobject.cpp:1116
+msgid "Interface &name:"
+msgstr "Ime i&nterfejsa:"
+
+#: umlobject.cpp:1119
+msgid "Node &name:"
+msgstr "&Ime čvora:"
+
+#: umlobject.cpp:1122
+msgid "Package &name:"
+msgstr "Ime &paketa:"
+
+#: umlobject.cpp:1125
+#, fuzzy
+#| msgid "Actor &name:"
+msgid "Port &name:"
+msgstr "Ime &učesnika:"
+
+#: umlobject.cpp:1128
+#, fuzzy
+#| msgid "Stereotype name:"
+msgid "Stereotype &name:"
+msgstr "Ime stereotipa:"
+
+#: umlobject.cpp:1131
+msgid "Use case &name:"
+msgstr "&Ime slučaja upotrebe:"
+
 #: umlscene.cpp:525
 #, kde-format
 msgid "Diagram: %2 Page %1"
@@ -6082,7 +6083,7 @@ msgstr "Naziv"
 msgid "Enter operation name:"
 msgstr "Unesite ime operacije:"
 
-#: widgets/notewidget.cpp:183 worktoolbar.cpp:315
+#: widgets/notewidget.cpp:183 widgets/widgetbase.cpp:1073 worktoolbar.cpp:315
 msgid "Precondition"
 msgstr "Preduslov"
 
@@ -6249,14 +6250,82 @@ msgstr ""
 "Držite Shift ili Ctrl za kretanje duž X-ose. Držite Shift i Ctrl za kretanje "
 "duž Y-ose. Desnim klikom se prekida promjena veličine."
 
+#: widgets/widgetbase.cpp:1016 worktoolbar.cpp:321
+msgid "Box"
+msgstr "Kutija"
+
+#: widgets/widgetbase.cpp:1022
+#, fuzzy
+#| msgid "Combined Fragment"
+msgid "CombinedFragment"
+msgstr "Kombinirani fragment"
+
+#: widgets/widgetbase.cpp:1040
+msgid "FloatingDashLine"
+msgstr ""
+
+#: widgets/widgetbase.cpp:1043
+#, fuzzy
+#| msgid "Fork/Join"
+msgid "ForkJoin"
+msgstr "Podijeli/Spoji"
+
+#: widgets/widgetbase.cpp:1049
+msgid "Message"
+msgstr "Poruka"
+
+#: widgets/widgetbase.cpp:1055 worktoolbar.cpp:320
+msgid "Note"
+msgstr "Zabilješka"
+
+#: widgets/widgetbase.cpp:1058 worktoolbar.cpp:309
+msgid "Object"
+msgstr "Objekat"
+
+#: widgets/widgetbase.cpp:1061
+#, fuzzy
+#| msgid "Object Node"
+msgid "ObjectNode"
+msgstr "Čvor objekta"
+
+#: widgets/widgetbase.cpp:1067 worktoolbar.cpp:362
+msgid "Pin"
+msgstr "Pin"
+
+#: widgets/widgetbase.cpp:1076 worktoolbar.cpp:332
+msgid "Region"
+msgstr "Oblast"
+
+#: widgets/widgetbase.cpp:1079
+#, fuzzy
+#| msgid "new Signal"
+msgid "Signal"
+msgstr "novi signal"
+
+#: widgets/widgetbase.cpp:1082
+#, fuzzy
+#| msgctxt "state in statechart"
+#| msgid "State"
+msgid "State"
+msgstr "Stanje"
+
+#: widgets/widgetbase.cpp:1085
+#, fuzzy
+#| msgctxt "text color"
+#| msgid "&Text:"
+msgid "Text"
+msgstr "&Tekst:"
+
+#: widgets/widgetbase.cpp:1088
+#, fuzzy
+#| msgid "Use Case"
+msgid "UseCase"
+msgstr "Slučaj upotrebe"
+
 #: worktoolbar.cpp:308
 msgctxt "selection arrow"
 msgid "Select"
 msgstr "Odaberi"
-
-#: worktoolbar.cpp:309
-msgid "Object"
-msgstr "Objekat"
 
 #: worktoolbar.cpp:310 worktoolbar.cpp:364
 msgid "Synchronous Message"
@@ -6282,14 +6351,6 @@ msgstr "Kombinirani fragment"
 msgid "Label"
 msgstr "Oznaka"
 
-#: worktoolbar.cpp:320
-msgid "Note"
-msgstr "Zabilješka"
-
-#: worktoolbar.cpp:321
-msgid "Box"
-msgstr "Kutija"
-
 #: worktoolbar.cpp:326
 msgid "Directional Association"
 msgstr "Direkciono pridruživanje"
@@ -6302,10 +6363,6 @@ msgstr "Implementira"
 msgctxt "UML class"
 msgid "Class"
 msgstr "Klasa"
-
-#: worktoolbar.cpp:332
-msgid "Region"
-msgstr "Oblast"
 
 #: worktoolbar.cpp:335
 msgid "Send signal"
@@ -6350,10 +6407,6 @@ msgstr "Stanje"
 msgid "Final Activity"
 msgstr "Završna aktivnost"
 
-#: worktoolbar.cpp:362
-msgid "Pin"
-msgstr "Pin"
-
 #: worktoolbar.cpp:367
 msgid "Object Node"
 msgstr "Čvor objekta"
@@ -6361,6 +6414,12 @@ msgstr "Čvor objekta"
 #: worktoolbar.cpp:368
 msgid "Pre/Post condition"
 msgstr "Pred/Post stanje"
+
+#~ msgid "Component name:"
+#~ msgstr "Ime komponente:"
+
+#~ msgid "Node name:"
+#~ msgstr "Ime čvora:"
 
 #~ msgctxt "font page name"
 #~ msgid "Font"
@@ -6408,9 +6467,6 @@ msgstr "Pred/Post stanje"
 
 #~ msgid "Note Documentation"
 #~ msgstr "Dokumentacija napomene"
-
-#~ msgid "Message"
-#~ msgstr "Poruka"
 
 #, fuzzy
 #~| msgctxt "new container menu"
