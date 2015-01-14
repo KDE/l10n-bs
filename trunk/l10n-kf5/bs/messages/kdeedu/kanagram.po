@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-01-02 08:08+0000\n"
+"POT-Creation-Date: 2015-01-14 07:53+0000\n"
 "PO-Revision-Date: 2013-10-18 20:14+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -35,8 +35,19 @@ msgstr "caslav.ilic@gmx.nit,mj@etf.ba,samir.ribic@etf.unsa.ba"
 msgid "This setting stores the currently selected Vocabulary."
 msgstr "Uređuje izabrani rječnik."
 
-#. i18n: ectx: label, entry (hintHideTime), group (kanagram)
+#. i18n: ectx: label, entry (singlePlayerMode), group (kanagram)
 #: kanagram.kcfg:13
+#, fuzzy
+#| msgid ""
+#| "This setting allows you to set the length of time Kanagram's hint bubble "
+#| "is shown."
+msgid "This setting allows you to decide one-player or two-player mode"
+msgstr ""
+"Ova postavka omogućuje vam da postavite  vrijeme za koje će vam Kanagram "
+"pokazivati upute."
+
+#. i18n: ectx: label, entry (hintHideTime), group (kanagram)
+#: kanagram.kcfg:17
 #, fuzzy
 #| msgid ""
 #| "This setting allows you to set the length of time Kanagram's hint bubble "
@@ -49,7 +60,7 @@ msgstr ""
 "pokazivati upute."
 
 #. i18n: ectx: label, entry (resolveTime), group (kanagram)
-#: kanagram.kcfg:17
+#: kanagram.kcfg:21
 #, fuzzy
 #| msgid ""
 #| "This setting allows you to set the length of time Kanagram's hint bubble "
@@ -62,7 +73,7 @@ msgstr ""
 "pokazivati upute."
 
 #. i18n: ectx: label, entry (scoreTime), group (kanagram)
-#: kanagram.kcfg:22
+#: kanagram.kcfg:26
 #, fuzzy
 #| msgid ""
 #| "This setting allows you to set the length of time Kanagram's hint bubble "
@@ -75,7 +86,7 @@ msgstr ""
 "pokazivati upute."
 
 #. i18n: ectx: label, entry (correctAnswerScore), group (kanagram)
-#: kanagram.kcfg:26
+#: kanagram.kcfg:30
 #, fuzzy
 #| msgid ""
 #| "This setting allows you to set the length of time Kanagram's hint bubble "
@@ -87,7 +98,7 @@ msgstr ""
 "pokazivati upute."
 
 #. i18n: ectx: label, entry (incorrectAnswerScore), group (kanagram)
-#: kanagram.kcfg:30
+#: kanagram.kcfg:34
 #, fuzzy
 #| msgid ""
 #| "This setting allows you to set the length of time Kanagram's hint bubble "
@@ -99,7 +110,7 @@ msgstr ""
 "pokazivati upute."
 
 #. i18n: ectx: label, entry (revealAnswerScore), group (kanagram)
-#: kanagram.kcfg:34
+#: kanagram.kcfg:38
 #, fuzzy
 #| msgid ""
 #| "This setting allows you to set the length of time Kanagram's hint bubble "
@@ -110,7 +121,7 @@ msgstr ""
 "pokazivati upute."
 
 #. i18n: ectx: label, entry (skippedWordScore), group (kanagram)
-#: kanagram.kcfg:38
+#: kanagram.kcfg:42
 #, fuzzy
 #| msgid ""
 #| "This setting allows you to set the length of time Kanagram's hint bubble "
@@ -123,24 +134,24 @@ msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_useSounds)
 #. i18n: ectx: label, entry (useSounds), group (kanagram)
-#: kanagram.kcfg:42 mainsettingswidget.ui:301
+#: kanagram.kcfg:46 mainsettingswidget.ui:301
 msgid "Turns sounds on/off."
 msgstr "Uključuje i isključuje zvukove."
 
 #. i18n: ectx: label, entry (uppercaseOnly), group (kanagram)
-#: kanagram.kcfg:46
+#: kanagram.kcfg:50
 msgid "Use uppercase."
 msgstr ""
 
 #. i18n: ectx: label, entry (enablePronunciation), group (kanagram)
-#: kanagram.kcfg:50
+#: kanagram.kcfg:54
 #, fuzzy
 #| msgid "Turns sounds on/off."
 msgid "Turns pronunciations on/off."
 msgstr "Uključuje i isključuje zvukove."
 
 #. i18n: ectx: label, entry (dataLanguage), group (kanagram)
-#: kanagram.kcfg:54
+#: kanagram.kcfg:58
 msgid "Set the default translation"
 msgstr ""
 
@@ -155,22 +166,22 @@ msgstr "Opšte"
 msgid "Vocabularies"
 msgstr "Rječnici"
 
-#: kanagramgame.cpp:217
+#: kanagramgame.cpp:242
 #, fuzzy
 #| msgid "hint"
 msgid "No hint"
 msgstr "savjet"
 
-#: kanagramgame.cpp:311 mainsettings.cpp:86
+#: kanagramgame.cpp:336 mainsettings.cpp:86
 msgctxt "@item:inlistbox no language for that locale"
 msgid "None"
 msgstr "Ništa"
 
-#: kanagramgame.cpp:369
+#: kanagramgame.cpp:394
 msgid "Speech System Failure"
 msgstr ""
 
-#: kanagramgame.cpp:369
+#: kanagramgame.cpp:394
 #, kde-format
 msgid "Starting Jovie Text-to-Speech service Failed: %1"
 msgstr ""
@@ -579,39 +590,67 @@ msgstr "Prikaži savjet"
 msgid "Score : "
 msgstr ""
 
-#: ui/main.qml:124
+#: ui/Blackboard.qml:495
+msgid " Player 1 : "
+msgstr ""
+
+#: ui/Blackboard.qml:495
+msgid ""
+"\n"
+" Player 2 : "
+msgstr ""
+
+#: ui/Blackboard.qml:523
+#, fuzzy
+#| msgid "&Close"
+msgid "Close"
+msgstr "&Zatvori"
+
+#: ui/main.qml:169
 msgid "Quit"
 msgstr ""
 
-#: ui/main.qml:204
+#: ui/main.qml:182
+msgid "Change mode"
+msgstr ""
+
+#: ui/main.qml:262
 msgid "Next Anagram"
 msgstr "Sljedeći anagram"
 
-#: ui/main.qml:296
+#: ui/main.qml:309
+msgid "1st Player"
+msgstr ""
+
+#: ui/main.qml:309
+msgid "2nd Player"
+msgstr ""
+
+#: ui/main.qml:387
 #, fuzzy
 #| msgid "Configure Kanagram"
 msgid "Configure"
 msgstr "Podesi Kanagram"
 
-#: ui/main.qml:433
+#: ui/main.qml:524
 msgid "  "
 msgstr ""
 
-#: ui/main.qml:445
+#: ui/main.qml:536
 #, fuzzy
 #| msgid "About KDE"
 msgid "About"
 msgstr "O KDE-u"
 
-#: ui/main.qml:493
+#: ui/main.qml:584
 msgid "About KDE"
 msgstr "O KDE-u"
 
-#: ui/main.qml:543
+#: ui/main.qml:634
 msgid "About Kanagram"
 msgstr "O Kanagram-u"
 
-#: ui/main.qml:594
+#: ui/main.qml:685
 msgid "Kanagram Handbook"
 msgstr "Priručnik za Kanagram"
 
