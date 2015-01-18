@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-11-23 01:55+0000\n"
+"POT-Creation-Date: 2015-01-18 01:48+0000\n"
 "PO-Revision-Date: 2014-01-10 19:58+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -334,7 +334,7 @@ msgid "Stop after current track: On"
 msgstr "Zaustavi nakon tekuće numere: uključeno"
 
 #: ActionClasses.cpp:493 context/engines/current/CurrentEngine.cpp:143
-#: EngineController.cpp:1326 mac/GrowlInterface.cpp:43 widgets/Osd.cpp:669
+#: EngineController.cpp:1322 mac/GrowlInterface.cpp:43 widgets/Osd.cpp:669
 msgid "No track playing"
 msgstr "Ništa nije pušteno"
 
@@ -1601,106 +1601,102 @@ msgstr "Idi"
 msgid "Bookmark Track Position"
 msgstr "Obilježi poziciju numere"
 
-#: amarokurls/PlayUrlRunner.cpp:85
+#: amarokurls/PlayUrlRunner.cpp:86
 msgctxt ""
 "A type of command that starts playing at a specific position in a track"
 msgid "Play"
 msgstr "Pusti"
 
-#: App.cpp:359
+#: App.cpp:356
 msgid "Files/URLs to open"
 msgstr "Datoteke/URL-ovi za otvaranje"
 
-#: App.cpp:360
+#: App.cpp:357
 msgid "Immediately start playing an audio cd"
 msgstr "Odmah započni puštanje audio CD‑a"
 
-#: App.cpp:362
+#: App.cpp:359
 msgid "Skip backwards in playlist"
 msgstr "Preskoči unazad u listi numera"
 
-#: App.cpp:364
+#: App.cpp:361
 msgid "Start playing current playlist"
 msgstr "Počni da puštaš tekuću listu numera"
 
-#: App.cpp:366
+#: App.cpp:363
 msgid "Play if stopped, pause if playing"
 msgstr "Pusti ako je zaustavljeno, zaustavi ako se pušta"
 
-#: App.cpp:367
+#: App.cpp:364
 msgid "Pause playback"
 msgstr "Pauziraj reprodukciju"
 
-#: App.cpp:369
+#: App.cpp:366
 msgid "Stop playback"
 msgstr "Zaustavi reprodukciju"
 
-#: App.cpp:371
+#: App.cpp:368
 msgid "Skip forwards in playlist"
 msgstr "Preskoči unaprijed u listi numera"
 
-#: App.cpp:372
+#: App.cpp:369
 msgid "Additional options:"
 msgstr "Dodatne opcije:"
 
-#: App.cpp:374
+#: App.cpp:371
 msgid "Append files/URLs to playlist"
 msgstr "Dodaj datoteke/URL-ove u listu numera"
 
-#: App.cpp:375
+#: App.cpp:372
 msgid "Queue URLs after the currently playing track"
 msgstr "Stavi URL-ove u red posle numere koja se trenutno pušta"
 
-#: App.cpp:377
+#: App.cpp:374
 msgid "Load URLs, replacing current playlist"
 msgstr "Učitaj URL-ove, zamenivši tekuću listu"
 
-#: App.cpp:379
+#: App.cpp:376
 msgid "Print verbose debugging information"
 msgstr "Ispisuj opširne ispravljački podatke"
 
-#: App.cpp:380
+#: App.cpp:377
 msgid "Print verbose debugging information from the audio system"
 msgstr "Ispiši opširne informacije o greškama iz audio sistema"
 
-#: App.cpp:382
+#: App.cpp:379
 msgid "Disable colorization for debug output."
 msgstr "Onemogući bojenje za testni izlaz."
 
-#: App.cpp:384
+#: App.cpp:381
 msgid "Allow running multiple Amarok instances"
 msgstr "Dozvoli pokretanje više primjeraka Amaroka"
 
-#: App.cpp:385
+#: App.cpp:382
 msgid "Base for relative filenames/URLs"
 msgstr "Osnova za relativna imena datoteka/URL-ove"
 
-#: App.cpp:518
+#: App.cpp:502 configdialog/dialogs/DatabaseConfig.cpp:109
+#, kde-format
 msgid ""
-"The embedded database was not found; you must set up a database server "
-"connection.\n"
-"You must restart Amarok after doing this."
+"The amarok database reported the following errors:\n"
+"%1\n"
+"In most cases you will need to resolve these errors before Amarok will run "
+"properly."
 msgstr ""
-"Nije pronađena ugrađena baza; morate podesiti vezu sa serverom baze.\n"
-"Nakon ovoga morate ponovo pokrenuti Amarok."
+"Amarok baza podataka prijavila je sljedeće greške:\n"
+"%1\n"
+"U većini slučajeva trebaćete ih razriješiti prije nego Amarok bude ispravno "
+"radio."
 
-#: App.cpp:519
-msgid ""
-"The connection details for the database server were invalid.\n"
-"You must enter correct settings and restart Amarok after doing this."
-msgstr ""
-"Podaci za povezivanje sa serverom baze su neispravni.\n"
-"Morate unijeti ispravne postavke i nakon toga ponovo pokrenuti Amarok."
-
-#: App.cpp:520
+#: App.cpp:506 configdialog/dialogs/DatabaseConfig.cpp:113
 msgid "Database Error"
 msgstr "Greška u bazi"
 
-#: App.cpp:565
+#: App.cpp:551
 msgid "Moving files to trash"
 msgstr "Premještam datoteke u smeće"
 
-#: App.cpp:632
+#: App.cpp:618
 #, kde-format
 msgid ""
 "A music path, %1, is set in System Settings.\n"
@@ -1795,7 +1791,7 @@ msgid "Merged View"
 msgstr "Objedinjeni prikaz"
 
 #: browsers/collectionbrowser/CollectionWidget.cpp:274
-#: services/jamendo/JamendoService.cpp:160
+#: services/jamendo/JamendoService.cpp:167
 #: services/magnatune/MagnatuneStore.cpp:233
 msgid "Sort Options"
 msgstr "Opcije sortiranja"
@@ -2586,7 +2582,30 @@ msgstr ""
 msgid "Transcode tracks:"
 msgstr "Prekodirati numere:"
 
-#: configdialog/dialogs/DatabaseConfig.cpp:93
+#: configdialog/dialogs/DatabaseConfig.cpp:106
+msgid "Amarok was able to connect succesfull to the database."
+msgstr ""
+
+#: configdialog/dialogs/DatabaseConfig.cpp:107
+#, fuzzy
+#| msgctxt "The operation completed as expected"
+#| msgid "Success"
+msgid "Success"
+msgstr "Uspjeh"
+
+#: configdialog/dialogs/DatabaseConfig.cpp:139
+msgid ""
+"Changes to database settings only take\n"
+"effect after Amarok is restarted."
+msgstr ""
+
+#: configdialog/dialogs/DatabaseConfig.cpp:140
+#, fuzzy
+#| msgid "Rating changed"
+msgid "Database settings changed"
+msgstr "Rejting je izmijenjen"
+
+#: configdialog/dialogs/DatabaseConfig.cpp:159
 msgctxt ""
 "A default password for insertion into an example SQL command (so as not to "
 "print the real one). To be manually replaced by the user."
@@ -2673,19 +2692,31 @@ msgstr "&Baza:"
 msgid "Enter the name of the database. Default preset is amarokdb.\n"
 msgstr "Unesi ime baze podataka. Podrazumijevano je amarokdb.\n"
 
+#. i18n: ectx: property (text), widget (QPushButton, button_Test)
+#: configdialog/dialogs/DatabaseConfig.ui:188
+#, fuzzy
+#| msgid "Database Location"
+msgid "Test database connection"
+msgstr "Lokacija baze"
+
 #. i18n: ectx: property (text), widget (QLabel, label_Info)
-#: configdialog/dialogs/DatabaseConfig.ui:199
+#: configdialog/dialogs/DatabaseConfig.ui:206
+#, fuzzy
+#| msgid ""
+#| "Amarok expects the above database and user account to already exist. This "
+#| "user also requires full access to the database. You MUST restart Amarok "
+#| "after changing these settings."
 msgid ""
 "Amarok expects the above database and user account to already exist. This "
-"user also requires full access to the database. You MUST restart Amarok "
-"after changing these settings."
+"user also requires full access to the database. Changes only take effect "
+"after Amarok is restarted."
 msgstr ""
 "Amarok očekuje da navedena baza i korisnički nalog već postoje. Korisnik "
 "takođe mora imati sve dozvole za pristup bazi. Nakon izmjene postavki MORATE "
 "ponovo pokrenuti Amarok."
 
 #. i18n: ectx: property (text), widget (QLabel, label_SQL)
-#: configdialog/dialogs/DatabaseConfig.ui:209
+#: configdialog/dialogs/DatabaseConfig.ui:216
 msgid ""
 "If your database is not already set up, you can use the following S&QL "
 "commands (after replacing the password with the correct one):"
@@ -4954,7 +4985,7 @@ msgstr "Učitavam udaljenu zbirku sa domaćina %1..."
 msgid "Music share at %1"
 msgstr "Dijeljenje muzike na %1"
 
-#: core-impl/collections/db/sql/SqlCollection.cpp:239
+#: core-impl/collections/db/sql/SqlCollection.cpp:238
 msgid ""
 "Updating Amarok database schema. Please don't terminate Amarok now as it may "
 "result in database corruption."
@@ -4962,22 +4993,9 @@ msgstr ""
 "Ažuriranje Amarok šeme baze podataka. Molimo vas da ne prekinete Amarok sada "
 "jer to može dovesti do kvarenja baze podataka."
 
-#: core-impl/collections/db/sql/SqlCollection.cpp:243
+#: core-impl/collections/db/sql/SqlCollection.cpp:242
 msgid "Updating Amarok database schema"
 msgstr "Ažuriranje Amarok šeme baze podataka."
-
-#: core-impl/collections/db/sql/SqlCollection.cpp:284
-#, kde-format
-msgid ""
-"The amarok database reported the following errors:\n"
-"%1\n"
-"In most cases you will need to resolve these errors before Amarok will run "
-"properly."
-msgstr ""
-"Amarok baza podataka prijavila je sljedeće greške:\n"
-"%1\n"
-"U većini slučajeva trebaćete ih razriješiti prije nego Amarok bude ispravno "
-"radio."
 
 #: core-impl/collections/db/sql/SqlCollectionLocation.cpp:527
 #, kde-format
@@ -5082,7 +5100,7 @@ msgstr "Nepoznata kolekcija"
 
 #: core-impl/collections/ipodcollection/IpodMeta.cpp:183
 #: core-impl/collections/mediadevicecollection/MediaDeviceMeta.cpp:93
-#: EngineController.cpp:1304
+#: EngineController.cpp:1300
 msgid "Unknown track"
 msgstr "Nepoznata numera"
 
@@ -5615,7 +5633,7 @@ msgstr ""
 "Semantic Desktop' omogućen u Sistemske postavke -> Pretraživanje desktopa.  "
 "Nepomuk dodatak neće biti učitan osim ako je Nepomuk omogućen."
 
-#: core-impl/collections/playdarcollection/PlaydarCollection.cpp:125
+#: core-impl/collections/playdarcollection/PlaydarCollection.cpp:126
 msgid "Playdar Collection"
 msgstr "Playdar kolekcija"
 
@@ -6086,7 +6104,7 @@ msgstr[0] " stavka"
 msgstr[1] " stavke"
 msgstr[2] " stavki"
 
-#: core-impl/podcasts/sql/SqlPodcastMeta.cpp:425
+#: core-impl/podcasts/sql/SqlPodcastMeta.cpp:429
 #: core/podcasts/PodcastMeta.h:382
 msgid "Podcast"
 msgstr "Podemisija"
@@ -6279,6 +6297,10 @@ msgstr ""
 "kanal doda, kao direktorij za preuzimanje koristi se <icode>&lt;osnovni-"
 "direktorij&gt;/&lt;ime‑kanala&gt;</icode>.</p><p>Ovo se može izmijeniti za "
 "svaki kanal pojedinačno.</p></html>"
+
+#: core-impl/storage/StorageManager.cpp:167
+msgid "The configured database plugin could be loaded."
+msgstr ""
 
 #: core/collections/CollectionLocation.cpp:380
 msgid "Organize tracks"
@@ -8075,17 +8097,17 @@ msgstr "%1 Dijagnostika"
 msgid "Copy to Clipboard"
 msgstr "Kopiraj u clipboard"
 
-#: dialogs/DiagnosticDialog.cpp:107
+#: dialogs/DiagnosticDialog.cpp:108
 msgctxt "Usage"
 msgid "Yes"
 msgstr "Da"
 
-#: dialogs/DiagnosticDialog.cpp:107
+#: dialogs/DiagnosticDialog.cpp:108
 msgctxt "Usage"
 msgid "No"
 msgstr "Ne"
 
-#: dialogs/DiagnosticDialog.cpp:110
+#: dialogs/DiagnosticDialog.cpp:111
 #, kde-format
 msgid ""
 "%1 Diagnostics\n"
@@ -8110,7 +8132,7 @@ msgstr ""
 "   PulseAudio: %8\n"
 "\n"
 
-#: dialogs/DiagnosticDialog.cpp:126
+#: dialogs/DiagnosticDialog.cpp:127
 #, kde-format
 msgid ""
 "Enabled Scripts:\n"
@@ -9440,29 +9462,29 @@ msgctxt "Name of a dynamic playlist"
 msgid "Rating"
 msgstr "Rejting"
 
-#: EngineController.cpp:1094
+#: EngineController.cpp:1090
 msgid "Too many errors encountered in playlist. Playback stopped."
 msgstr "Suviše grešaka u listi numera. Puštanje zaustavljeno."
 
-#: EngineController.cpp:1294
+#: EngineController.cpp:1290
 #, kde-format
 msgctxt "track by artist on album"
 msgid "<b>%1</b> by <b>%2</b> on <b>%3</b>"
 msgstr "<b>%1</b> izvodi <b>%2</b> sa <b>%3</b>"
 
-#: EngineController.cpp:1296
+#: EngineController.cpp:1292
 #, kde-format
 msgctxt "track by artist"
 msgid "<b>%1</b> by <b>%2</b>"
 msgstr "<b>%1</b> izvodi <b>%2</b>"
 
-#: EngineController.cpp:1299
+#: EngineController.cpp:1295
 #, kde-format
 msgctxt "track on album"
 msgid "<b>%1</b> on <b>%2</b>"
 msgstr "<b>%1</b> sa <b>%2</b>"
 
-#: EngineController.cpp:1311
+#: EngineController.cpp:1307
 #, kde-format
 msgctxt "track from source"
 msgid "from <b>%1</b>"
@@ -11045,7 +11067,7 @@ msgstr "Kontrole puštanja u liniji"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: playlist/layouts/PlaylistLayoutEditDialog.ui:267
-#: services/ServiceBase.cpp:164
+#: services/ServiceBase.cpp:163
 msgid "Group By"
 msgstr "Grupiši po"
 
@@ -12623,7 +12645,7 @@ msgstr "Lokalne liste numere skladištenje u bazi"
 msgid "<Empty>"
 msgstr "<prazno>"
 
-#: PluginManager.cpp:283
+#: PluginManager.cpp:287
 msgid ""
 "Amarok could not find any plugins. This indicates an installation problem."
 msgstr "Amarok ne može pronaći dodatke. To ukazuje na problem u instalaciji."
@@ -13376,32 +13398,32 @@ msgstr ""
 "postave i podjele svoje albume sa svetom, a korisnicima da ih besplatno "
 "preuzmu. Preslušajte i preuzmite sav sadržaj sa Jamendo.com pravo iz Amaroka."
 
-#: services/jamendo/JamendoService.cpp:120
+#: services/jamendo/JamendoService.cpp:127
 msgctxt "Fetch new information from the website"
 msgid "Update"
 msgstr "Ažuriraj"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, typeComboBox)
-#: services/jamendo/JamendoService.cpp:126
+#: services/jamendo/JamendoService.cpp:133
 #: services/magnatune/MagnatuneConfigWidget.ui:121
 msgid "Download"
 msgstr "Preuzmi"
 
-#: services/jamendo/JamendoService.cpp:154
+#: services/jamendo/JamendoService.cpp:161
 #: services/magnatune/MagnatuneStore.cpp:227
 msgid "Genre / Artist"
 msgstr "Žanr/izvođač"
 
-#: services/jamendo/JamendoService.cpp:157
+#: services/jamendo/JamendoService.cpp:164
 #: services/magnatune/MagnatuneStore.cpp:230
 msgid "Genre / Artist / Album"
 msgstr "Žanr/izvođač/album"
 
-#: services/jamendo/JamendoService.cpp:192
+#: services/jamendo/JamendoService.cpp:199
 msgid "Downloading Jamendo.com database..."
 msgstr "Preuzimam bazu sa Jamendo.com..."
 
-#: services/jamendo/JamendoService.cpp:214
+#: services/jamendo/JamendoService.cpp:221
 msgid "Updating the local Jamendo database."
 msgstr "Ažuriram lokalnu bazu Džamenda"
 
@@ -14602,20 +14624,20 @@ msgstr "Autentifikujem se..."
 msgid "MP3tunes failed to Authenticate."
 msgstr "Neuspješno autentifikovanje na MP3‑tjunsu"
 
-#: services/mp3tunes/Mp3tunesService.cpp:300
+#: services/mp3tunes/Mp3tunesService.cpp:299
 msgid "MP3tunes Harmony: Disconnected"
 msgstr "Harmoni za MP3‑tjuns: veza prekinuta"
 
-#: services/mp3tunes/Mp3tunesService.cpp:307
-#: services/mp3tunes/Mp3tunesService.cpp:320
+#: services/mp3tunes/Mp3tunesService.cpp:306
+#: services/mp3tunes/Mp3tunesService.cpp:319
 msgid "MP3tunes Harmony: Waiting for PIN Input"
 msgstr "Harmoni za MP3‑tjuns: čekam na unos PIN‑a"
 
-#: services/mp3tunes/Mp3tunesService.cpp:332
+#: services/mp3tunes/Mp3tunesService.cpp:331
 msgid "MP3tunes Harmony: Successfully Connected"
 msgstr "Harmoni za MP3‑tjuns: povezivanje uspješno"
 
-#: services/mp3tunes/Mp3tunesService.cpp:347
+#: services/mp3tunes/Mp3tunesService.cpp:346
 #, kde-format
 msgid ""
 "MP3tunes Harmony Error\n"
@@ -14710,11 +14732,11 @@ msgstr "Dodaj OPML datoteku na listu."
 msgid "Loading info..."
 msgstr "Učitavam podatke..."
 
-#: services/ServiceBase.cpp:338
+#: services/ServiceBase.cpp:337
 msgid "This service does not accept any messages"
 msgstr "Ovaj servis ne prima poruke"
 
-#: services/ServiceBase.cpp:345
+#: services/ServiceBase.cpp:344
 msgid "ERROR: unknown message"
 msgstr "GREŠKA: nepoznata poruka"
 
@@ -14722,8 +14744,8 @@ msgstr "GREŠKA: nepoznata poruka"
 msgid "Neither playable nor downloadable url specified."
 msgstr "Nije naveden url ni za pokretanje ni za skidanje."
 
-#: services/ServicePluginManager.cpp:156 services/ServicePluginManager.cpp:173
-#: services/ServicePluginManager.cpp:190
+#: services/ServicePluginManager.cpp:146 services/ServicePluginManager.cpp:163
+#: services/ServicePluginManager.cpp:180
 #, kde-format
 msgid "No service named %1 is currently loaded"
 msgstr "Servis po imenu %1 nije trenutno učitan"
@@ -14747,7 +14769,7 @@ msgstr ""
 "\n"
 "Možete uvijek promjeniti odluku u Amarok konfiguraciji."
 
-#: statsyncing/Controller.cpp:377
+#: statsyncing/Controller.cpp:376
 msgid ""
 "You only seem to have the Local Collection. Statistics synchronization only "
 "makes sense if there is more than one collection."
@@ -15660,6 +15682,21 @@ msgstr "Izvođač: %1"
 #: widgets/TrackSelectWidget.cpp:98
 msgid "empty"
 msgstr "prazno"
+
+#~ msgid ""
+#~ "The embedded database was not found; you must set up a database server "
+#~ "connection.\n"
+#~ "You must restart Amarok after doing this."
+#~ msgstr ""
+#~ "Nije pronađena ugrađena baza; morate podesiti vezu sa serverom baze.\n"
+#~ "Nakon ovoga morate ponovo pokrenuti Amarok."
+
+#~ msgid ""
+#~ "The connection details for the database server were invalid.\n"
+#~ "You must enter correct settings and restart Amarok after doing this."
+#~ msgstr ""
+#~ "Podaci za povezivanje sa serverom baze su neispravni.\n"
+#~ "Morate unijeti ispravne postavke i nakon toga ponovo pokrenuti Amarok."
 
 #~ msgid "Flac"
 #~ msgstr "FLAC"
