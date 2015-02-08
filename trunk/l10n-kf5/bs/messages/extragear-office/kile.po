@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kile\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-01-26 07:48+0000\n"
+"POT-Creation-Date: 2015-02-08 08:41+0000\n"
 "PO-Revision-Date: 2014-01-12 22:29+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bhld@linux.org.ba>\n"
@@ -175,15 +175,15 @@ msgstr "&Skraćenica:"
 msgid "&Expanded Text:"
 msgstr "&Proširen Tekst:"
 
-#: dialogs/cleandialog.cpp:41
+#: dialogs/cleandialog.cpp:39
 msgid "Delete Files"
 msgstr "Obriši datoteke"
 
-#: dialogs/cleandialog.cpp:77
+#: dialogs/cleandialog.cpp:62
 msgid "Do you really want to delete these files?"
 msgstr "Da li zaista želite da obrišete ove datoteke?"
 
-#: dialogs/cleandialog.cpp:85 dialogs/listselector.cpp:80
+#: dialogs/cleandialog.cpp:70 dialogs/listselector.cpp:80
 msgid "Files"
 msgstr "Datoteke"
 
@@ -425,8 +425,8 @@ msgstr "Strukturni pregled"
 msgid "Symbol View"
 msgstr "Simboličan pregled"
 
-#: dialogs/findfilesdialog.cpp:114 dialogs/projectdialogs.cpp:81
-#: kileproject.cpp:476
+#: dialogs/findfilesdialog.cpp:114 dialogs/projectdialogs.cpp:62
+#: kileproject.cpp:471
 msgid "Project"
 msgstr "Projekat"
 
@@ -488,7 +488,7 @@ msgstr "Referenca"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: dialogs/findfilesdialog.cpp:172 dialogs/includegraphicsdialog_base.ui:17
-#: dialogs/projectdialogs.cpp:271
+#: dialogs/projectdialogs.cpp:231
 msgid "File"
 msgstr "Datoteka"
 
@@ -1485,7 +1485,8 @@ msgstr "Matematičko okruženje"
 msgid "Without n&umbering:"
 msgstr "Bez numeriracije:"
 
-#: dialogs/mathenvironmentdialog.cpp:61
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: dialogs/mathenvironmentdialog.cpp:61 dialogs/tabbingdialog_base.ui:45
 msgid "Number of &rows:"
 msgstr "Broj &vrsta:"
 
@@ -2112,7 +2113,7 @@ msgid "Background:"
 msgstr "Pozadina:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, m_tbProperties)
-#: dialogs/pdf-wizard/pdfdialog_base.ui:376 dialogs/projectdialogs.cpp:481
+#: dialogs/pdf-wizard/pdfdialog_base.ui:376 dialogs/projectdialogs.cpp:420
 #: widgets/previewconfigwidget.cpp:118
 msgid "Properties"
 msgstr "Svojstva"
@@ -2395,11 +2396,15 @@ msgstr "Prikaži ps fajl sa 'okular'"
 msgid "When you want to copy pages, you must enter the number of copies"
 msgstr "Kada želite da kopirate strane, morate unijeti broj kopija"
 
-#: dialogs/projectdialogs.cpp:89
+#: dialogs/projectdialogs.cpp:63
+msgid "Extensions"
+msgstr "Proširenja"
+
+#: dialogs/projectdialogs.cpp:69
 msgid "Insert a short descriptive name of your project here."
 msgstr "Ovdje unesite kratko opisno ime vašeg projekta."
 
-#: dialogs/projectdialogs.cpp:90
+#: dialogs/projectdialogs.cpp:70
 msgid ""
 "Insert a list (separated by spaces) of file extensions which should be "
 "treated also as files of the corresponding type in this project."
@@ -2407,77 +2412,73 @@ msgstr ""
 "Umetnite listu(odvojenu sa razmakom) nastavaka datoteka koje treba tretirati "
 "i kao datoteke na odgovarajućem tipu u ovom projektu."
 
-#: dialogs/projectdialogs.cpp:91
+#: dialogs/projectdialogs.cpp:74
+msgid "Project &title:"
+msgstr "&Naslov projekta:"
+
+#: dialogs/projectdialogs.cpp:87
+msgid "Project &folder:"
+msgstr "Projekt folder:"
+
+#: dialogs/projectdialogs.cpp:89
+msgid "Insert the path to your project here."
+msgstr "Umetnite put na svoj projekt ovdje."
+
+#: dialogs/projectdialogs.cpp:101
+msgid "(use global settings)"
+msgstr "(koristi globalna podešavanja)"
+
+#: dialogs/projectdialogs.cpp:102
 msgid "Default graphic extension to open when none specified by file name."
 msgstr ""
 "Zadano grafičko proširenje otvoriti kada nije specificirano po nazivu "
 "datoteke."
 
-#: dialogs/projectdialogs.cpp:95
-msgid "Project &title:"
-msgstr "&Naslov projekta:"
-
-#: dialogs/projectdialogs.cpp:100
-msgid "Extensions"
-msgstr "Proširenja"
-
-#: dialogs/projectdialogs.cpp:114
-msgid "(use global settings)"
-msgstr "(koristi globalna podešavanja)"
-
-#: dialogs/projectdialogs.cpp:115
-msgid "Default Graphics Extension:"
-msgstr "Podrazumijevano grafičko proširenje:"
-
-#: dialogs/projectdialogs.cpp:123
+#: dialogs/projectdialogs.cpp:113
 msgid "Source Files"
 msgstr "Izvorne datoteke"
 
-#: dialogs/projectdialogs.cpp:124
+#: dialogs/projectdialogs.cpp:114
 msgid "Package Files"
 msgstr "Paket datoteke"
 
-#: dialogs/projectdialogs.cpp:125
+#: dialogs/projectdialogs.cpp:115
 msgid "Image Files"
 msgstr "Datoteke slika"
 
-#: dialogs/projectdialogs.cpp:126
+#: dialogs/projectdialogs.cpp:122
+msgid "Default Graphics Extension:"
+msgstr "Podrazumijevano grafičko proširenje:"
+
+#: dialogs/projectdialogs.cpp:124
 msgid "Predefined:"
 msgstr "Predefinirano:"
 
-#: dialogs/projectdialogs.cpp:175
+#: dialogs/projectdialogs.cpp:156
 msgid "Error in extension"
 msgstr "Greška u ekstenziji"
 
-#: dialogs/projectdialogs.cpp:175
+#: dialogs/projectdialogs.cpp:156
 msgid "All user-defined extensions should look like '.xyz'"
 msgstr "Sve korisnički definisane ekstenzije trebaju izgledati kao '.xyz'"
 
-#: dialogs/projectdialogs.cpp:175
+#: dialogs/projectdialogs.cpp:156
 msgid "Invalid extension"
 msgstr "Pogrešna ekstenzija"
 
-#: dialogs/projectdialogs.cpp:241
+#: dialogs/projectdialogs.cpp:221
 msgid "Create New Project"
 msgstr "Napravi novi projekat"
 
-#: dialogs/projectdialogs.cpp:260
-msgid "Insert the path to your project here."
-msgstr "Umetnite put na svoj projekt ovdje."
-
-#: dialogs/projectdialogs.cpp:262
-msgid "Project &folder:"
-msgstr "Projekt folder:"
-
-#: dialogs/projectdialogs.cpp:278
+#: dialogs/projectdialogs.cpp:235
 msgid "Create a new file and add it to this project"
 msgstr "Napravi novu datoteku i dodaj je ovom projektu"
 
-#: dialogs/projectdialogs.cpp:280
+#: dialogs/projectdialogs.cpp:237
 msgid "File&name (relative to where the project file is):"
 msgstr "&Ime datoteke (relativno prema lokaciji datoteke projekta):"
 
-#: dialogs/projectdialogs.cpp:287
+#: dialogs/projectdialogs.cpp:244
 msgid ""
 "If you want Kile to create a new file and add it to the project, then check "
 "this option and select a template from the list that will appear below."
@@ -2485,34 +2486,106 @@ msgstr ""
 "Ako želite da Kile napravi novu datoteku i doda je projektu, uključite ovu "
 "opciju i izaberite šablon iz liste koja će se pojaviti ispod."
 
+#: dialogs/projectdialogs.cpp:326
+msgid ""
+"You have not entered a project name. If you decide to proceed, the project "
+"name will be set to \"Untitled\".\n"
+"Do you want to create the project nevertheless?"
+msgstr ""
+"Niste unijeli naziv projekta. Ako se odlučite za nastavak, projekt će ime "
+"biti postavljena na \"Untitled\".\n"
+"Želite li izraditi projekt ipak?"
+
+#: dialogs/projectdialogs.cpp:327
+msgid "No Project Name Given"
+msgstr "Nije dato ime prokjekta"
+
+#: dialogs/projectdialogs.cpp:328 kileviewmanager.cpp:872
+msgid "Untitled"
+msgstr "Neimenovano"
+
+#: dialogs/projectdialogs.cpp:336
+msgid "Please enter the folder where the project file should be saved to."
+msgstr "Unesite direktorij gdje bi projektna datoteka trebala biti spremljena."
+
+#: dialogs/projectdialogs.cpp:336
+msgid "Empty Location"
+msgstr "Prazna lokacija"
+
+#: dialogs/projectdialogs.cpp:342
+msgid "Please enter an absolute (local) path to the project folder."
+msgstr "Unesite apsolutni lokalni direktorij za projekat."
+
+#: dialogs/projectdialogs.cpp:342
+msgid "Invalid Location"
+msgstr "Pogrešna lokacija"
+
+#: dialogs/projectdialogs.cpp:354
+msgid "Could not create the project folder, check your permissions."
+msgstr "Nisam mogao da napravim fasciklu projekta, provjerite svoje dozvole."
+
+#: dialogs/projectdialogs.cpp:360
+msgid "The project folder is not writable, check your permissions."
+msgstr "U fasciklu projekta se ne može upisivati, provjerite svoje dozvole."
+
+#: dialogs/projectdialogs.cpp:365
+msgid ""
+"The project file already exists, please select another name. Delete the "
+"existing project file if your intention was to overwrite it."
+msgstr ""
+"Datoteka projekta već postoji, izaberite drugo ime. Obrišite postojeću "
+"datoteku projekta ako vam je namjera bila da je prebrišete."
+
+#: dialogs/projectdialogs.cpp:365
+msgid "Project File Already Exists"
+msgstr "Datoteka projekta već postoji"
+
+#: dialogs/projectdialogs.cpp:371
+msgid ""
+"Please enter a filename for the file that should be added to this project."
+msgstr "Unesite ime datoteke koji treba da bude dodat ovom projektu."
+
+#: dialogs/projectdialogs.cpp:371
+msgid "No File Name Given"
+msgstr "Nije dato ime datoteke"
+
+#: dialogs/projectdialogs.cpp:385
+#, kde-format
+msgid "The file \"%1\" already exists, overwrite it?"
+msgstr "Datoteka „%1“ već postoji, želite li da ga prebrišete?"
+
+#: dialogs/projectdialogs.cpp:385 documentinfo.cpp:132
+msgid "File Already Exists"
+msgstr "Datoteka već postoji"
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox5)
-#: dialogs/projectdialogs.cpp:456 widgets/generalconfigwidget.ui:32
+#: dialogs/projectdialogs.cpp:410 widgets/generalconfigwidget.ui:32
 msgid "Project Options"
 msgstr "Opcije projekta"
 
-#: dialogs/projectdialogs.cpp:457
+#: dialogs/projectdialogs.cpp:411
 msgid "(use global setting)"
 msgstr "(koristi globalna podešavanja)"
 
-#: dialogs/projectdialogs.cpp:490
+#: dialogs/projectdialogs.cpp:426
 msgid "Select the default master document. Leave empty for auto detection."
 msgstr ""
 "Izaberite podrazumijevani glavni dokument. Ostavite nepopunjeno za "
 "automatsko otkrivanje."
 
-#: dialogs/projectdialogs.cpp:495
+#: dialogs/projectdialogs.cpp:431
 msgid "&Master document:"
 msgstr "&Glavni dokument:"
 
-#: dialogs/projectdialogs.cpp:501
+#: dialogs/projectdialogs.cpp:437
 msgid "(auto-detect)"
 msgstr "(otkrij automatski)"
 
-#: dialogs/projectdialogs.cpp:518
+#: dialogs/projectdialogs.cpp:454
 msgid "&QuickBuild configuration:"
 msgstr "Podešavanja &brze izgradnje:"
 
-#: dialogs/projectdialogs.cpp:536
+#: dialogs/projectdialogs.cpp:473
 msgid "&MakeIndex options"
 msgstr "Opcije za pravljenje &indeksa"
 
@@ -3450,13 +3523,10 @@ msgstr "Statistika za Neimenovano"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: dialogs/tabbingdialog_base.ui:28
-msgid "Num of &columns:"
+#, fuzzy
+#| msgid "Num of &columns:"
+msgid "Number of &columns:"
 msgstr "Broj &kolona"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: dialogs/tabbingdialog_base.ui:45
-msgid "Num of &rows:"
-msgstr "Broj &vrsta:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: dialogs/tabbingdialog_base.ui:62
@@ -4464,10 +4534,6 @@ msgid ""
 msgstr ""
 "Datoteka sadrži nevažeće znakove ($ ~ #). <br> Pružiti još jednu, ili "
 "kliknite na \"Cancel\" za spremanje svejedno."
-
-#: documentinfo.cpp:132
-msgid "File Already Exists"
-msgstr "Datoteka već postoji"
 
 #: documentinfo.cpp:133
 #, kde-format
@@ -6283,7 +6349,7 @@ msgstr "Dodaj BiBTeX baze podataka"
 msgid "Paste"
 msgstr "Umetni"
 
-#: kileproject.cpp:483
+#: kileproject.cpp:478
 #, kde-format
 msgid ""
 "The project file of %1 was created by a newer version of kile. Opening it "
@@ -8835,10 +8901,6 @@ msgstr "&Brzi pregled okruženja"
 msgid "&QuickPreview Math"
 msgstr "&Brzi pregled matematike"
 
-#: kileviewmanager.cpp:872
-msgid "Untitled"
-msgstr "Neimenovano"
-
 #: kileviewmanager.cpp:974
 msgid "Print Compiled Document..."
 msgstr "Kompajliran dokument za printanje..."
@@ -10999,6 +11061,9 @@ msgstr "Prikaži korisnički meni u LaTeX meniju"
 msgid "Show the user menu in the menu bar"
 msgstr "Prikaži korisnički meni iz trake menija"
 
+#~ msgid "Num of &rows:"
+#~ msgstr "Broj &vrsta:"
+
 #~ msgid "*.png *.jpg *.pdf|Graphics\n"
 #~ msgstr "*.png *.jpg *.pdf|Grafika\n"
 
@@ -11096,58 +11161,6 @@ msgstr "Prikaži korisnički meni iz trake menija"
 #~ "<p><i>Informacije: </i> Ova verzija Kile-a je kompajlirana bez libpoppler "
 #~ "biblioteke. Postavke, promjena i uklanjanje postavki i dozvola nije "
 #~ "moguće.</p>"
-
-#~ msgid ""
-#~ "You have not entered a project name. If you decide to proceed, the "
-#~ "project name will be set to \"Untitled\".\n"
-#~ "Do you want to create the project nevertheless?"
-#~ msgstr ""
-#~ "Niste unijeli naziv projekta. Ako se odlučite za nastavak, projekt će ime "
-#~ "biti postavljena na \"Untitled\".\n"
-#~ "Želite li izraditi projekt ipak?"
-
-#~ msgid "No Project Name Given"
-#~ msgstr "Nije dato ime prokjekta"
-
-#~ msgid "Please enter the folder where the project file should be saved to."
-#~ msgstr ""
-#~ "Unesite direktorij gdje bi projektna datoteka trebala biti spremljena."
-
-#~ msgid "Empty Location"
-#~ msgstr "Prazna lokacija"
-
-#~ msgid "Please enter an absolute (local) path to the project folder."
-#~ msgstr "Unesite apsolutni lokalni direktorij za projekat."
-
-#~ msgid "Invalid Location"
-#~ msgstr "Pogrešna lokacija"
-
-#~ msgid "Could not create the project folder, check your permissions."
-#~ msgstr ""
-#~ "Nisam mogao da napravim fasciklu projekta, provjerite svoje dozvole."
-
-#~ msgid "The project folder is not writable, check your permissions."
-#~ msgstr "U fasciklu projekta se ne može upisivati, provjerite svoje dozvole."
-
-#~ msgid ""
-#~ "The project file already exists, please select another name. Delete the "
-#~ "existing project file if your intention was to overwrite it."
-#~ msgstr ""
-#~ "Datoteka projekta već postoji, izaberite drugo ime. Obrišite postojeću "
-#~ "datoteku projekta ako vam je namjera bila da je prebrišete."
-
-#~ msgid "Project File Already Exists"
-#~ msgstr "Datoteka projekta već postoji"
-
-#~ msgid ""
-#~ "Please enter a filename for the file that should be added to this project."
-#~ msgstr "Unesite ime datoteke koji treba da bude dodat ovom projektu."
-
-#~ msgid "No File Name Given"
-#~ msgstr "Nije dato ime datoteke"
-
-#~ msgid "The file \"%1\" already exists, overwrite it?"
-#~ msgstr "Datoteka „%1“ već postoji, želite li da ga prebrišete?"
 
 #~ msgid "This document class already exists."
 #~ msgstr "Ova klasa dokumenata već postoji."
