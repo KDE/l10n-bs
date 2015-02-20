@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-02-19 09:45+0000\n"
+"POT-Creation-Date: 2015-02-20 09:16+0000\n"
 "PO-Revision-Date: 2014-01-13 22:18+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -1113,11 +1113,13 @@ msgid "Delete Confirmation"
 msgstr "Potvrda brisanja"
 
 #: dialogs/detaildialog.cpp:1092 dialogs/detaildialog.cpp:1122
+#: tools/flagmanager.cpp:254 tools/flagmanager.cpp:283
 #: tools/observinglist.cpp:559 tools/observinglist.cpp:589
 msgid "KStars did not find any active telescopes."
 msgstr "KStars ne može da nađe nijedan aktivan teleskop."
 
-#: dialogs/detaildialog.cpp:1108 tools/observinglist.cpp:575
+#: dialogs/detaildialog.cpp:1108 tools/flagmanager.cpp:270
+#: tools/observinglist.cpp:575
 #, kde-format
 msgid "Telescope %1 is offline. Please connect and retry again."
 msgstr "Teleskop %1 nije na vezi. Molim vas konektujte se i probajte ponovo."
@@ -1194,12 +1196,12 @@ msgid "Add to Observing List"
 msgstr "Dodaj na osmatračku listu"
 
 #. i18n: ectx: property (text), widget (QPushButton, CenterButton)
-#: dialogs/details_data.ui:377
+#: dialogs/details_data.ui:377 tools/flagmanager.ui:206
 msgid "Center in Map"
 msgstr "Centriraj na mapi"
 
 #. i18n: ectx: property (text), widget (QPushButton, ScopeButton)
-#: dialogs/details_data.ui:384
+#: dialogs/details_data.ui:384 tools/flagmanager.ui:216
 msgid "Center in Telescope"
 msgstr "Centriraj na teleskopu"
 
@@ -1697,16 +1699,16 @@ msgstr "Filtriraj po vrsti:"
 msgid "Set Coordinates Manually"
 msgstr "Postavi koordinate ručno"
 
-#: dialogs/focusdialog.cpp:97 ekos/align.cpp:435 tools/flagmanager.cpp:173
+#: dialogs/focusdialog.cpp:97 ekos/align.cpp:435 tools/flagmanager.cpp:182
 msgid "The Right Ascension value must be between 0.0 and 24.0."
 msgstr "Vrijednost rektascenzije mora biti između 0.0 i 24.0."
 
-#: dialogs/focusdialog.cpp:99 ekos/align.cpp:437 tools/flagmanager.cpp:175
+#: dialogs/focusdialog.cpp:99 ekos/align.cpp:437 tools/flagmanager.cpp:184
 msgid "The Declination value must be between -90.0 and 90.0."
 msgstr "Vrijednost deklinacije mora biti između -90,0 i 90,0"
 
 #: dialogs/focusdialog.cpp:101 dialogs/focusdialog.cpp:123 ekos/align.cpp:440
-#: tools/flagmanager.cpp:177
+#: tools/flagmanager.cpp:186
 msgid "Invalid Coordinate Data"
 msgstr "Neispravne koordinate"
 
@@ -1725,7 +1727,7 @@ msgstr "RA/Dek"
 
 #. i18n: ectx: property (text), widget (QLineEdit, epochBox)
 #. i18n: ectx: property (text), widget (QLabel, EpochTarget)
-#: dialogs/focusdialog.ui:70 tools/flagmanager.ui:79
+#: dialogs/focusdialog.ui:70 tools/flagmanager.ui:77
 #: tools/modcalcapcoord.ui:182
 msgid "2000.0"
 msgstr "2000.0"
@@ -1735,7 +1737,7 @@ msgstr "2000.0"
 #. i18n: ectx: property (text), widget (QLabel, EpochLabel2)
 #. i18n: ectx: property (text), widget (QCheckBox, epochCheckBatch)
 #. i18n: ectx: property (text), widget (QCheckBox, EpochCheckBatch)
-#: dialogs/focusdialog.ui:77 tools/flagmanager.ui:66
+#: dialogs/focusdialog.ui:77 tools/flagmanager.ui:64
 #: tools/modcalcapcoord.ui:88 tools/modcalcapcoord.ui:167
 #: tools/modcalcapcoord.ui:434 tools/modcalcgalcoord.ui:214
 #: tools/modcalcvlsr.ui:521
@@ -6297,7 +6299,7 @@ msgstr "Računari"
 
 #. i18n: ectx: property (text), widget (QPushButton, addB)
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: indi/drivermanager.ui:297 tools/flagmanager.ui:135
+#: indi/drivermanager.ui:297 tools/flagmanager.ui:133
 msgid "Add"
 msgstr "Dodaj"
 
@@ -47291,7 +47293,7 @@ msgstr "Rektascenzija:"
 #. i18n: ectx: property (text), widget (QLabel, DecLabel)
 #. i18n: ectx: property (text), widget (QCheckBox, decCheckBatch)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: oal/execute.ui:248 tools/flagmanager.ui:49 tools/modcalcaltaz.ui:232
+#: oal/execute.ui:248 tools/flagmanager.ui:47 tools/modcalcaltaz.ui:232
 #: tools/modcalcangdist.ui:118 tools/modcalcangdist.ui:203
 #: tools/modcalcapcoord.ui:78 tools/modcalcapcoord.ui:293
 #: tools/modcalcapcoord.ui:424 tools/modcalceclipticcoords.ui:121
@@ -49508,11 +49510,11 @@ msgstr "Učitavam NGC/IC objekte"
 msgid "Unnamed Object"
 msgstr "Bezimeni objekat"
 
-#: skycomponents/flagcomponent.cpp:184
+#: skycomponents/flagcomponent.cpp:40
 msgid "No icon"
 msgstr "Nema ikone"
 
-#: skycomponents/flagcomponent.cpp:186
+#: skycomponents/flagcomponent.cpp:42
 msgid "Default"
 msgstr "Podrazumijevano"
 
@@ -51850,31 +51852,31 @@ msgstr "Fairview"
 msgid "Rotation: "
 msgstr "Rotacija:"
 
-#: tools/flagmanager.cpp:49
+#: tools/flagmanager.cpp:57
 msgid "Flag manager"
 msgstr "Upravljač zastavama"
 
-#: tools/flagmanager.cpp:63 tools/observinglist.cpp:111
+#: tools/flagmanager.cpp:71 tools/observinglist.cpp:111
 #: tools/observinglist.cpp:117 widgets/infoboxwidget.cpp:134
 msgctxt "Right Ascension"
 msgid "RA"
 msgstr "RA"
 
-#: tools/flagmanager.cpp:64 tools/observinglist.cpp:112
+#: tools/flagmanager.cpp:72 tools/observinglist.cpp:112
 #: tools/observinglist.cpp:118 widgets/infoboxwidget.cpp:135
 msgctxt "Declination"
 msgid "Dec"
 msgstr "Dek"
 
-#: tools/flagmanager.cpp:64
+#: tools/flagmanager.cpp:72
 msgid "Epoch"
 msgstr "Trajanje"
 
-#: tools/flagmanager.cpp:65
+#: tools/flagmanager.cpp:73
 msgid "Icon"
 msgstr "Ikona"
 
-#: tools/flagmanager.cpp:65
+#: tools/flagmanager.cpp:73
 msgid "Label"
 msgstr "Oznaka"
 
@@ -51885,7 +51887,7 @@ msgstr "Oznaka"
 #. i18n: ectx: property (text), widget (QLabel, RALabel)
 #. i18n: ectx: property (text), widget (QCheckBox, raCheckBatch)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: tools/flagmanager.ui:32 tools/modcalcaltaz.ui:239
+#: tools/flagmanager.ui:30 tools/modcalcaltaz.ui:239
 #: tools/modcalcangdist.ui:125 tools/modcalcangdist.ui:210
 #: tools/modcalcapcoord.ui:105 tools/modcalcapcoord.ui:321
 #: tools/modcalcapcoord.ui:414 tools/modcalceclipticcoords.ui:114
@@ -51894,27 +51896,27 @@ msgid "Right ascension:"
 msgstr "Rektascenzija:"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: tools/flagmanager.ui:86
+#: tools/flagmanager.ui:84
 msgid "Label:"
 msgstr "Oznaka:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: tools/flagmanager.ui:103
+#: tools/flagmanager.ui:101
 msgid "Label color:"
 msgstr "Boja labele:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: tools/flagmanager.ui:110
+#: tools/flagmanager.ui:108
 msgid "Icon:"
 msgstr "Ikona:"
 
 #. i18n: ectx: property (text), widget (QPushButton, saveButton)
-#: tools/flagmanager.ui:142
+#: tools/flagmanager.ui:140
 msgid "Save changes"
 msgstr "Snimi izmjene"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: tools/flagmanager.ui:169
+#: tools/flagmanager.ui:167
 #, fuzzy
 #| msgid ""
 #| "To add custom icons, just add images in $HOME/.kde4/share/apps/kstars. "
@@ -51922,7 +51924,7 @@ msgstr "Snimi izmjene"
 #| "\"_flagSmall_red_cross.gif\" will be shown as \"Small red cross\" in the "
 #| "combo box."
 msgid ""
-"To add custom icons, just add images in $HOME/.kde5/local/share/kstars. File "
+"To add custom icons, just add images in $HOME/.kde/share/apps/kstars. File "
 "names must begin with \"_flags\". For example, the file "
 "\"_flagSmall_red_cross.gif\" will be shown as \"Small red cross\" in the "
 "combo box."
@@ -51932,14 +51934,16 @@ msgstr ""
 "\"_fladSmall_red_cross.gif\" ce biti prikazana kao \"Small red cross\" u "
 "kombiniranom okviru."
 
-#. i18n: ectx: property (text), widget (QPushButton, CenterButton)
-#: tools/flagmanager.ui:208 tools/obslistpopupmenu.cpp:49
-msgid "Center"
-msgstr "Centar"
+#. i18n: ectx: property (toolTip), widget (QPushButton, ScopeButton)
+#: tools/flagmanager.ui:213
+#, fuzzy
+#| msgid "Slew the telescope to the target coordinates"
+msgid "Slew to the flag coordinates"
+msgstr "Namjesti teleskop na odredišne koordinate"
 
 #. i18n: ectx: property (text), widget (QPushButton, delButton)
 #. i18n: ectx: property (text), widget (QPushButton, DeleteImage)
-#: tools/flagmanager.ui:215 tools/observinglist.ui:594
+#: tools/flagmanager.ui:223 tools/observinglist.ui:594
 msgid "Delete"
 msgstr "Obriši"
 
@@ -53104,6 +53108,10 @@ msgstr "Dodaj u plan sesija"
 #: tools/obslistpopupmenu.cpp:43
 msgid "Add objects visible tonight to session plan"
 msgstr "Dodaj objekte vidljive večeras u plan sesija"
+
+#: tools/obslistpopupmenu.cpp:49
+msgid "Center"
+msgstr "Centar"
 
 #: tools/obslistpopupmenu.cpp:52
 msgctxt "Show the selected object in the telescope"
