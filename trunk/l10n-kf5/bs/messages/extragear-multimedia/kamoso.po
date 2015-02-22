@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-02-21 09:28+0000\n"
+"POT-Creation-Date: 2014-12-31 07:46+0000\n"
 "PO-Revision-Date: 2014-01-10 10:39+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Launchpad (build 16890)\n"
-"X-Launchpad-Export-Date: 2014-01-11 06:20+0000\n"
+"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-02-15 06:07+0000\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
@@ -26,7 +26,7 @@ msgstr "Dejan Azinović,Samir Ribić"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "dazinovic1@etf.unsa.ba,samir.ribic@etf.unsa.ba"
+msgstr "Dazinovic1@etf.unsa.ba,samir.ribic@etf.unsa.ba"
 
 #. i18n: ectx: label, entry (saveUrl), group (General)
 #: src/kamosoSettings.kcfg:11
@@ -36,7 +36,7 @@ msgstr "Gdje su slike sačuvane."
 #. i18n: ectx: label, entry (photoSound), group (General)
 #: src/kamosoSettings.kcfg:15
 msgid "Play a sound when a photo is taken."
-msgstr "Izvodi znuk kada je fotografija preuzeta"
+msgstr "Izvodi znuk kada je fotografija preuzeta."
 
 #. i18n: ectx: label, entry (photoTime), group (PictureSettings)
 #: src/kamosoSettings.kcfg:21
@@ -48,7 +48,8 @@ msgstr "Koliko sekundi kamoso čeka prije pravljenja slike."
 msgid "Points to the last used webcam."
 msgstr ""
 
-#: src/main.cpp:28
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, titleText)
+#: src/main.cpp:28 src/share/plugins/youtube/videoInfo.ui:56
 msgid "Kamoso"
 msgstr "Kamoso"
 
@@ -58,7 +59,6 @@ msgstr "Hvatač slike za web-kameru"
 
 #: src/main.cpp:29
 #, fuzzy
-#| msgid "(C) 2008-2010 Alex Fiestas and Aleix Pol"
 msgid "(C) 2008-2012 Alex Fiestas and Aleix Pol"
 msgstr "(C) 2008-2010 Alex Fiestas i Aleix Pol"
 
@@ -82,15 +82,16 @@ msgstr "Coffee drinker"
 msgid "Open..."
 msgstr "Otvori..."
 
-#: src/qml/ImagesView.qml:98
+#: src/qml/ImagesView.qml:93
 msgid "The URL was just shared"
 msgstr ""
 
-#: src/qml/ImagesView.qml:101 src/qml/ImagesView.qml:129
+#: src/qml/ImagesView.qml:96 src/qml/ImagesView.qml:124
+#: src/share/tool/main.qml:93
 msgid "Back"
 msgstr ""
 
-#: src/qml/ImagesView.qml:121
+#: src/qml/ImagesView.qml:116 src/share/tool/main.qml:81
 msgid "Run"
 msgstr ""
 
@@ -100,13 +101,11 @@ msgstr ""
 
 #: src/qml/Main.qml:144
 #, fuzzy
-#| msgid "Photo Settings"
 msgid "Show settings..."
 msgstr "Postavke fotografija"
 
 #: src/qml/Main.qml:163
 #, fuzzy
-#| msgid "Brightness"
 msgid "Brightness:"
 msgstr "Osvjetljenje"
 
@@ -116,73 +115,124 @@ msgstr ""
 
 #: src/qml/Main.qml:189
 #, fuzzy
-#| msgid "Contrast"
 msgid "Contrast:"
 msgstr "Kontrast"
 
 #: src/qml/Main.qml:202
 #, fuzzy
-#| msgid "Saturation"
 msgid "Saturation:"
 msgstr "Zasićenje"
 
 #: src/qml/Main.qml:215
 #, fuzzy
-#| msgid "Gamma"
 msgid "Gamma:"
 msgstr "Gama"
+
+#: src/share/plugins/dummy/dummyplugin_config.qml:29
+msgid "Dummy export Output: "
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/share/plugins/youtube/videoInfo.ui:30
+msgid "Video Information:"
+msgstr "Video informacije:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: src/share/plugins/youtube/videoInfo.ui:49
+msgid "Title"
+msgstr "Naslov"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: src/share/plugins/youtube/videoInfo.ui:63
+#: src/share/plugins/youtube/youtubeplugin_config.qml:35
+msgid "Tags:"
+msgstr "Oznake:"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, tagText)
+#: src/share/plugins/youtube/videoInfo.ui:70
+msgid "Kamoso, KDE"
+msgstr "Kamoso, KDE"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: src/share/plugins/youtube/videoInfo.ui:77
+msgid "Description"
+msgstr "Opis"
+
+#: src/share/plugins/youtube/youtubejob.cpp:231
+msgid ""
+"You need to supply a username and a password to be able to upload videos to "
+"YouTube"
+msgstr ""
+"Morate unijeti korisničko ime i šifru da bi mogli postaviti video na YouTube"
+
+#: src/share/plugins/youtube/youtubejob.cpp:232
+msgid "Server:"
+msgstr "Server:"
+
+#: src/share/plugins/youtube/youtubejob.cpp:233
+msgid "Authentication for YouTube"
+msgstr "Potvrda za YouTube"
+
+#: src/share/plugins/youtube/youtubeplugin_config.qml:28
+#, fuzzy
+msgid "Title:"
+msgstr "Naslov"
+
+#: src/share/plugins/youtube/youtubeplugin_config.qml:32
+msgid "Enter a title for the video..."
+msgstr ""
+
+#: src/share/plugins/youtube/youtubeplugin_config.qml:39
+#, fuzzy
+msgid "KDE, Kamoso"
+msgstr "Kamoso"
+
+#: src/share/plugins/youtube/youtubeplugin_config.qml:42
+#, fuzzy
+msgid "Description:"
+msgstr "Opis"
+
+#: src/share/tool/main.cpp:36
+msgid "Share Tool"
+msgstr ""
+
+#: src/share/tool/main.cpp:36
+#, fuzzy
+msgid "Share random information"
+msgstr "Video informacije:"
+
+#: src/share/tool/main.cpp:37
+msgid "Implementation"
+msgstr ""
+
+#: src/share/tool/main.cpp:44
+msgid "Files to share"
+msgstr ""
+
+#: src/share/tool/main.cpp:45
+msgid "Data tuple to initialize the process with"
+msgstr ""
+
+#: src/share/tool/main.cpp:55
+msgid "Must specify some files to share"
+msgstr ""
+
+#: src/share/tool/main.cpp:62
+#, kde-format
+msgid "Error in the data argument formatting: %1 at %2"
+msgstr ""
+
+#: src/share/tool/main.cpp:65
+msgid "Error in the data argument type, it should be a json object."
+msgstr ""
+
+#: src/share/tool/main.qml:47
+msgid "Use"
+msgstr ""
 
 #: src/whitewidget.cpp:39
 msgid "Smile! :)"
 msgstr "Nasmij se! :)"
-
-#~ msgid "Video Information:"
-#~ msgstr "Video informacije:"
-
-#~ msgid "Title"
-#~ msgstr "Naslov"
-
-#~ msgid "Tags:"
-#~ msgstr "Oznake:"
-
-#~ msgid "Kamoso, KDE"
-#~ msgstr "Kamoso, KDE"
-
-#~ msgid "Description"
-#~ msgstr "Opis"
-
-#~ msgid ""
-#~ "You need to supply a username and a password to be able to upload videos "
-#~ "to YouTube"
-#~ msgstr ""
-#~ "Morate unijeti korisničko ime i šifru da bi mogli postaviti video na "
-#~ "YouTube"
-
-#~ msgid "Server:"
-#~ msgstr "Server:"
-
-#~ msgid "Authentication for YouTube"
-#~ msgstr "Potvrda za YouTube"
-
-#, fuzzy
-#~| msgid "Title"
-#~ msgid "Title:"
-#~ msgstr "Naslov"
-
-#, fuzzy
-#~| msgid "Kamoso"
-#~ msgid "KDE, Kamoso"
-#~ msgstr "Kamoso"
-
-#, fuzzy
-#~| msgid "Description"
-#~ msgid "Description:"
-#~ msgstr "Opis"
-
-#, fuzzy
-#~| msgid "Video information:"
-#~ msgid "Share random information"
-#~ msgstr "Video informacije:"
 
 #~ msgid "Take pictures"
 #~ msgstr "Uslikaj"
@@ -192,9 +242,6 @@ msgstr "Nasmij se! :)"
 
 #~ msgid "General"
 #~ msgstr "Općenito"
-
-#~ msgid "Photo Settings"
-#~ msgstr "Postavke fotografija"
 
 #~ msgid "Video Settings"
 #~ msgstr "Video postavke"
@@ -221,9 +268,6 @@ msgstr "Nasmij se! :)"
 #~ msgid "Done: %1"
 #~ msgstr "Gotovo: %1"
 
-#~ msgid "(C) 2008-2010 Alex Fiestas and Aleix Pol"
-#~ msgstr "(C) 2008-2010 Alex Fiestas i Aleix Pol"
-
 #~ msgid "No webcam was found."
 #~ msgstr "Nijedna web kamera nije nađena."
 
@@ -248,9 +292,6 @@ msgstr "Nasmij se! :)"
 #~ msgid "Uploads files to YouTube"
 #~ msgstr "Postavi datoteke na YouTube"
 
-#~ msgid "Video information:"
-#~ msgstr "Video informacije:"
-
 #~ msgid "Kamoso %1"
 #~ msgstr "Kamoso %1"
 
@@ -259,20 +300,8 @@ msgstr "Nasmij se! :)"
 #~ "webcams!"
 #~ msgstr "Ovaj video je snimljen pomoću Kamoso-a, KDE softvera za web-kamere!"
 
-#~ msgid "Brightness"
-#~ msgstr "Osvjetljenje"
-
 #~ msgid "Hue"
 #~ msgstr "Nijansa"
-
-#~ msgid "Contrast"
-#~ msgstr "Kontrast"
-
-#~ msgid "Saturation"
-#~ msgstr "Zasićenje"
-
-#~ msgid "Gamma"
-#~ msgstr "Gama"
 
 #~ msgid "Record Audio"
 #~ msgstr "Snimi zvuk"
