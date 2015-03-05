@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-03-03 13:21+0000\n"
+"POT-Creation-Date: 2015-03-05 09:28+0000\n"
 "PO-Revision-Date: 2015-01-30 09:02+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -298,7 +298,7 @@ msgstr "Nisam mogao da otvorim datoteku fov.dat."
 msgid "KStars Exported Sky Image"
 msgstr "KStars izvezena slika neba"
 
-#: auxiliary/imageexporter.cpp:84 main.cpp:104
+#: auxiliary/imageexporter.cpp:84 main.cpp:105
 #: printing/foveditordialog.cpp:163
 #, kde-format
 msgid "Could not parse image format of %1; assuming PNG."
@@ -342,9 +342,8 @@ msgstr ""
 "Obrni boje na slici. Ovo može biti korisno kako biste vremenom povećali "
 "kontrast. Ovo utiče samo na display ali ne i na spremanje."
 
-#. i18n: ectx: property (text), widget (QPushButton, saveB)
 #. i18n: ectx: property (text), widget (QPushButton, SaveImage)
-#: auxiliary/imageviewer.cpp:133 ekos/mount.ui:222 tools/observinglist.ui:580
+#: auxiliary/imageviewer.cpp:133 tools/observinglist.ui:580
 msgid "Save"
 msgstr "Snimi"
 
@@ -2880,7 +2879,7 @@ msgstr[1] "Rješavač prekinut nakon %1 sekunde."
 msgstr[2] "Rješavač prekinut nakon %1 sekundi."
 
 #: ekos/align.cpp:742 ekos/capture.cpp:1226 ekos/ekosmanager.cpp:1674
-#: ekos/focus.cpp:1501 ekos/guide.cpp:449 ekos/mount.cpp:211
+#: ekos/focus.cpp:1501 ekos/guide.cpp:449 ekos/mount.cpp:298
 #, kde-format
 msgctxt "log entry; %1 is the date, %2 is the text"
 msgid "%1 %2"
@@ -4110,7 +4109,7 @@ msgstr "INDI uređaji su stali."
 msgid "Remote devices established. Please connect devices."
 msgstr "Daljinski uređaji su uspostavljeni. Molim priključite uređaje."
 
-#: ekos/ekosmanager.cpp:1270 ekos/ekosmanager.cpp:1317 indi/indistd.cpp:409
+#: ekos/ekosmanager.cpp:1270 ekos/ekosmanager.cpp:1317 indi/indistd.cpp:414
 #, kde-format
 msgid "%1 is online."
 msgstr "%1 je na vezi."
@@ -5069,34 +5068,47 @@ msgstr "ugao-mreže"
 msgid "Auto mode"
 msgstr "Automatski način rada"
 
-#: ekos/mount.cpp:113 ekos/mount.cpp:277
+#: ekos/mount.cpp:134 ekos/mount.cpp:375
 #, kde-format
 msgid "%1 guide scope"
 msgstr ""
 
-#: ekos/mount.cpp:186
+#: ekos/mount.cpp:228
+#, kde-format
+msgid ""
+"Telescope altitude is below minimum altitude limit of %1, aborting motion."
+msgstr ""
+
+#: ekos/mount.cpp:239
+#, kde-format
+msgid ""
+"Telescope altitude is above maximum altitude limit of %1, aborting motion."
+msgstr ""
+
+#: ekos/mount.cpp:264
 msgid ""
 "Error syncing telescope info. Please fill telescope aperture and focal "
 "length."
 msgstr ""
 
-#: ekos/mount.cpp:188
+#: ekos/mount.cpp:266
 msgid ""
 "Error syncing telescope info. Check INDI control panel for more details."
 msgstr ""
 
-#: ekos/mount.cpp:198
+#: ekos/mount.cpp:276
 #, fuzzy
 #| msgid "Telescope Wizard completed successfully."
 msgid "Telescope info updated successfully."
 msgstr "Telescope Wizard je uspješno završen."
 
-#: ekos/mount.cpp:300
-#, fuzzy
-msgid "Saving telescope information..."
-msgstr "Postavljanje binninga nije uspjelo."
+#: ekos/mount.cpp:309
+#, fuzzy, kde-format
+msgctxt "Message shown in Ekos Mount module"
+msgid "%1"
+msgstr "%"
 
-#: ekos/mount.cpp:304
+#: ekos/mount.cpp:402
 #, fuzzy
 msgid "Failed to save telescope information."
 msgstr "Postavljanje binninga nije uspjelo."
@@ -5158,17 +5170,81 @@ msgstr "Spasi teleskop"
 msgid "Save telescope information in configuration file"
 msgstr "Koristi određenu konfiguracionu datoteku"
 
+#. i18n: ectx: property (text), widget (QPushButton, saveB)
+#: ekos/mount.ui:222
+#, fuzzy
+#| msgid "Save Telescope"
+msgid "Save Telescope Info"
+msgstr "Spasi teleskop"
+
 #. i18n: ectx: property (text), widget (QPushButton, parkB)
 #: ekos/mount.ui:232
 #, fuzzy
 msgid "Park"
 msgstr "Park"
 
+#. i18n: ectx: property (text), widget (QPushButton, unparkB)
+#: ekos/mount.ui:242
+#, fuzzy
+msgid "UnPark"
+msgstr "Park"
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: ekos/mount.ui:264
+#: ekos/mount.ui:281
 #, fuzzy
 msgid "Motion"
 msgstr "Kretanje"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, slewSpeedCombo)
+#: ekos/mount.ui:421
+#, fuzzy
+#| msgctxt "Move the telescope to an object or location"
+#| msgid "Slew Telescope"
+msgid "Slew speed"
+msgstr "Pomjeri teleskop"
+
+#. i18n: ectx: property (title), widget (QGroupBox, LimitGroup)
+#: ekos/mount.ui:430 tools/scriptbuilder.cpp:653
+msgid "Limits"
+msgstr "Granice"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, minAltLabel)
+#. i18n: ectx: whatsthis, entry (MinimumAltLimit), group (Mount)
+#: ekos/mount.ui:441 kstars.kcfg:1382
+msgid ""
+"Minimum telescope altitude limit. If the telescope is below this limit, it "
+"will be commanded to stop."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, minAltLabel)
+#: ekos/mount.ui:444
+#, fuzzy
+#| msgctxt "string from libindi, used in the config dialog"
+#| msgid "min Alt"
+msgid "Min. Alt:"
+msgstr "min Alt"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, maxAltLabel)
+#: ekos/mount.ui:467
+msgid ""
+"Maximum telescope altitude limit. If the telescope is above than this limit, "
+"it will be commanded to stop."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, maxAltLabel)
+#: ekos/mount.ui:470
+#, fuzzy
+#| msgctxt "string from libindi, used in the config dialog"
+#| msgid "max Alt"
+msgid "Max. Alt:"
+msgstr "maks Alt"
+
+#. i18n: ectx: property (text), widget (QCheckBox, enableLimitsCheck)
+#: ekos/mount.ui:492
+#, fuzzy
+#| msgid "Enable directions"
+msgid "Enable Limits"
+msgstr "Omogućiti upute"
 
 #: ekos/offlineastrometryparser.cpp:63
 msgid ""
@@ -6266,10 +6342,32 @@ msgstr "Omoguću binarni prijenos podataka iz ovog svojstva u KStars i obrnuto."
 msgid "Upload"
 msgstr "Pošalji"
 
-#: indi/indistd.cpp:353
+#: indi/indistd.cpp:358
 #, kde-format
 msgid "Data file saved to %1"
 msgstr "Datoteka sa podacima je snimljena u %1"
+
+#: indi/inditelescope.cpp:371
+#, kde-format
+msgid "Requested altitude %1 is outside the specificed boundary (%2,%3)."
+msgstr ""
+
+#: indi/inditelescope.cpp:372 indi/inditelescope.cpp:379
+#, fuzzy
+#| msgid "Telescope port:"
+msgid "Telescope Motion"
+msgstr "Priključak teleskopa:"
+
+#: indi/inditelescope.cpp:379
+#, fuzzy
+#| msgid ""
+#| "The requested position is below the horizon.\n"
+#| "Would you like to go there anyway?"
+msgid ""
+"Requested altitude is below the horizon. Are you sure you want to proceed?"
+msgstr ""
+"Traženi položaj se nalazi ispod horizonta.\n"
+"Želite li svejedno ići tamo?"
 
 #: indi/opsindi.cpp:58
 #, fuzzy
@@ -9814,13 +9912,39 @@ msgstr ""
 "Koristi JPEG format umjesto FITS za učitavanje slika na astrometrija.net "
 "onlajn servise."
 
-#. i18n: ectx: label, entry (GuideDeviation), group (Capture)
+#. i18n: ectx: label, entry (MinimumAltLimit), group (Mount)
 #: kstars.kcfg:1381
+#, fuzzy
+#| msgid "Default maximum permittable guide deviation"
+msgid "Default minimum mount altitude limit"
+msgstr "Zadana maksimalno dopuštena devijacija navođenja"
+
+#. i18n: ectx: label, entry (MaximumAltLimit), group (Mount)
+#: kstars.kcfg:1386
+#, fuzzy
+#| msgid "Default maximum permittable guide deviation"
+msgid "Default maximum mount altitude limit."
+msgstr "Zadana maksimalno dopuštena devijacija navođenja"
+
+#. i18n: ectx: whatsthis, entry (MaximumAltLimit), group (Mount)
+#: kstars.kcfg:1387
+msgid ""
+"Maximum telescope altitude limit. If the telescope is above this limit, it "
+"will be commanded to stop."
+msgstr ""
+
+#. i18n: ectx: label, entry (EnableAltitudeLimits), group (Mount)
+#: kstars.kcfg:1391
+msgid "Enable mount altitude limits."
+msgstr ""
+
+#. i18n: ectx: label, entry (GuideDeviation), group (Capture)
+#: kstars.kcfg:1397
 msgid "Default maximum permittable guide deviation"
 msgstr "Zadana maksimalno dopuštena devijacija navođenja"
 
 #. i18n: ectx: whatsthis, entry (GuideDeviation), group (Capture)
-#: kstars.kcfg:1382
+#: kstars.kcfg:1398
 msgid ""
 "If guide deviation exceeds this limit, the exposure will be automatically "
 "aborted and only resumed when the deviation is within this limit."
@@ -9829,12 +9953,12 @@ msgstr ""
 "prekinuti i nastaviti samo kada je unutar limita devijacije."
 
 #. i18n: ectx: label, entry (HFRDeviation), group (Capture)
-#: kstars.kcfg:1386
+#: kstars.kcfg:1402
 msgid "Default maximum permittable HFR deviation"
 msgstr "Zadana maksimalno dopuštena devijacija HFR"
 
 #. i18n: ectx: whatsthis, entry (HFRDeviation), group (Capture)
-#: kstars.kcfg:1387
+#: kstars.kcfg:1403
 msgid ""
 "If HFR deviation exceeds this limit, the autofocus routine will be "
 "automatically started."
@@ -9843,50 +9967,50 @@ msgstr ""
 "pokrenuti."
 
 #. i18n: ectx: label, entry (EnforceGuideDeviation), group (Capture)
-#: kstars.kcfg:1391
+#: kstars.kcfg:1407
 msgid "Enforce guiding deviation limit."
 msgstr "Primjeni limit devijacije navođenja."
 
 #. i18n: ectx: label, entry (EnforceAutofocus), group (Capture)
-#: kstars.kcfg:1395
+#: kstars.kcfg:1411
 msgid "Enforce Autofocus HFR limit."
 msgstr "Primjeni limit autofokusa HFR."
 
 #. i18n: ectx: label, entry (EnforceTemperatureControl), group (Capture)
-#: kstars.kcfg:1399
+#: kstars.kcfg:1415
 msgid "Enforce temperature settings when taking an image"
 msgstr ""
 
 #. i18n: ectx: label, entry (AutoMeridianHours), group (Capture)
-#: kstars.kcfg:1403
+#: kstars.kcfg:1419
 msgid "Default hour angle to perform meridian flip"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (AutoMeridianHours), group (Capture)
-#: kstars.kcfg:1404
+#: kstars.kcfg:1420
 msgid ""
 "If the target hour angle exceeds this value, Ekos will command a meridian "
 "flip and if successful it will resume guiding and capture operations."
 msgstr ""
 
 #. i18n: ectx: label, entry (AutoMeridianFlip), group (Capture)
-#: kstars.kcfg:1407
+#: kstars.kcfg:1423
 msgid "Flips the mount when reaching the meridian, if supported."
 msgstr "Okreće montiranje kada dosegne meridijan, ako je podržano."
 
 #. i18n: ectx: label, entry (AutoParkTelescope), group (Capture)
-#: kstars.kcfg:1411
+#: kstars.kcfg:1427
 msgid "Parks the telescope when the sequence jobs are complete, if supported."
 msgstr ""
 "Parkira teleskop kada su sekvencijalni poslovi završeni, ako je podržano."
 
 #. i18n: ectx: label, entry (FocusTicks), group (Focus)
-#: kstars.kcfg:1417
+#: kstars.kcfg:1433
 msgid "Default Focuser step ticks"
 msgstr "Zadani otkucaju koraka fokusera"
 
 #. i18n: ectx: whatsthis, entry (FocusTicks), group (Focus)
-#: kstars.kcfg:1418
+#: kstars.kcfg:1434
 msgid ""
 "Step size of the absolute focuser. The step size TICKS should be adjusted so "
 "that when the focuser moves TICKS steps, the difference in HFR is more than "
@@ -9897,12 +10021,12 @@ msgstr ""
 "piksela. vrijednost je manja kada ste bliži optimalnom fokusu."
 
 #. i18n: ectx: label, entry (FocusTolerance), group (Focus)
-#: kstars.kcfg:1422
+#: kstars.kcfg:1438
 msgid "Default Focuser tolerance value"
 msgstr "Zadana vrijednost tolerancije fokusera"
 
 #. i18n: ectx: whatsthis, entry (FocusTolerance), group (Focus)
-#: kstars.kcfg:1423
+#: kstars.kcfg:1439
 msgid ""
 "The tolerance specifies the percentage difference between the current "
 "focusing position and the minimum obtained during the focusing run. "
@@ -9914,22 +10038,22 @@ msgstr ""
 "je neophodno da se izbjegne da fokusni algoritam oscilira naprijed i nazad."
 
 #. i18n: ectx: label, entry (FocusMaxTravel), group (Focus)
-#: kstars.kcfg:1427
+#: kstars.kcfg:1443
 msgid "Maximum Focus Travel Distance"
 msgstr "Maksimalna pređeni put fokusa"
 
 #. i18n: ectx: whatsthis, entry (FocusMaxTravel), group (Focus)
-#: kstars.kcfg:1428
+#: kstars.kcfg:1444
 msgid "Set the maximum travel distance of an absolute focuser."
 msgstr "Postavi maksimalni pređeni put apsolutnog fokusera."
 
 #. i18n: ectx: label, entry (FocusExposure), group (Focus)
-#: kstars.kcfg:1432
+#: kstars.kcfg:1448
 msgid "Default Focuser exposure value"
 msgstr "Zadana izložena vrijednost fokusera"
 
 #. i18n: ectx: whatsthis, entry (FocusExposure), group (Focus)
-#: kstars.kcfg:1433
+#: kstars.kcfg:1449
 msgid ""
 "Specifies exposure value of CCD when performing focusing. Lower this value "
 "to avoid saturation of bright stars which adversely affects HFR measurement. "
@@ -9941,52 +10065,52 @@ msgstr ""
 "nije detektovana."
 
 #. i18n: ectx: label, entry (FocusBoxSize), group (Focus)
-#: kstars.kcfg:1437
+#: kstars.kcfg:1453
 msgid "Default Focuser star selection box size"
 msgstr "Zadana veličina kutije  zvijezde označavanja fokusera"
 
 #. i18n: ectx: whatsthis, entry (FocusBoxSize), group (Focus)
-#: kstars.kcfg:1438
+#: kstars.kcfg:1454
 msgid "Set box size to select a focus star."
 msgstr "Postavi veličinu kutije da označiš fokusnu zvijezdu."
 
 #. i18n: ectx: label, entry (FocusXBin), group (Focus)
-#: kstars.kcfg:1442
+#: kstars.kcfg:1458
 msgid "Default CCD X binning in focus mode"
 msgstr "Zadano CCD X povezivanje u fokus modu"
 
 #. i18n: ectx: whatsthis, entry (FocusXBin), group (Focus)
-#: kstars.kcfg:1443
+#: kstars.kcfg:1459
 msgid "Set horizontal binning of CCD camera while in focus mode."
 msgstr "Postavlja horizontalno povezivanje CCD kamere kada je u fokus modu."
 
 #. i18n: ectx: label, entry (FocusYBin), group (Focus)
-#: kstars.kcfg:1447
+#: kstars.kcfg:1463
 msgid "Default CCD Y binning in focus mode"
 msgstr "Zadano CCD Y povezivanje u fokus modu"
 
 #. i18n: ectx: whatsthis, entry (FocusYBin), group (Focus)
-#: kstars.kcfg:1448
+#: kstars.kcfg:1464
 msgid "Set vertical binning of CCD camera while in focus mode."
 msgstr "Postavi vertikalno povezivanje CCD kamere dok je u fokus modu."
 
 #. i18n: ectx: label, entry (FocusSubFrame), group (Focus)
-#: kstars.kcfg:1452
+#: kstars.kcfg:1468
 msgid "Subframe the focus star during the autofocus procedure."
 msgstr "Uokviri fokusnu zvijezdu tokom autofokusne procedure."
 
 #. i18n: ectx: label, entry (AutoSelectStar), group (Focus)
-#: kstars.kcfg:1456
+#: kstars.kcfg:1472
 msgid "Automatically select a star to focus."
 msgstr "Automatski označi zvijedzu za fokusiranje."
 
 #. i18n: ectx: label, entry (SuspendGuiding), group (Focus)
-#: kstars.kcfg:1460
+#: kstars.kcfg:1476
 msgid "Suspend guiding while autofocus in progress."
 msgstr "Obustavi navođenje dok je autofokus u toku."
 
 #. i18n: ectx: label, entry (LockFocusFilter), group (Focus)
-#: kstars.kcfg:1464
+#: kstars.kcfg:1480
 msgid ""
 "Use specified filter when performing focus regardless of current filter "
 "settings."
@@ -9995,43 +10119,43 @@ msgstr ""
 "postavke filtera."
 
 #. i18n: ectx: label, entry (AlignExposure), group (Align)
-#: kstars.kcfg:1470
+#: kstars.kcfg:1486
 msgid "Default alignment exposure value"
 msgstr "Zadana vrijednost poravnanja ekspozicije"
 
 #. i18n: ectx: whatsthis, entry (AlignExposure), group (Align)
-#: kstars.kcfg:1471
+#: kstars.kcfg:1487
 msgid ""
 "Specifies exposure value of CCD in seconds when performing plate solving."
 msgstr "Navodi izloženu vrijednost CCD u sekundama pri rješavanju ploča."
 
 #. i18n: ectx: label, entry (SolverXBin), group (Align)
-#: kstars.kcfg:1475
+#: kstars.kcfg:1491
 msgid "Default CCD X binning while in alignment mode"
 msgstr "Zadano CCD X povezivanje dok je u modu poravnanja"
 
 #. i18n: ectx: whatsthis, entry (SolverXBin), group (Align)
-#: kstars.kcfg:1476
+#: kstars.kcfg:1492
 msgid "Set horizontal binning of CCD camera while in alignment mode."
 msgstr "Postavi horizontalno povezivanje CCD kamere u modu poravnanja."
 
 #. i18n: ectx: label, entry (SolverYBin), group (Align)
-#: kstars.kcfg:1480
+#: kstars.kcfg:1496
 msgid "Default CCD Y binning while in alignment mode"
 msgstr "Zadano CCD Y povezivanje dok je u modu poravnanja"
 
 #. i18n: ectx: whatsthis, entry (SolverYBin), group (Align)
-#: kstars.kcfg:1481
+#: kstars.kcfg:1497
 msgid "Set vertical binning of CCD camera while in alignment mode."
 msgstr "Postavi vertikalno povezivanje CCD kamere dok je u modu poravnanja."
 
 #. i18n: ectx: label, entry (SolverUpdateCoords), group (Align)
-#: kstars.kcfg:1485
+#: kstars.kcfg:1501
 msgid "Update Solver RA and DEC search coordinates."
 msgstr "Ažuriraj RA rješavača i DEC koordinate pretrage."
 
 #. i18n: ectx: whatsthis, entry (SolverUpdateCoords), group (Align)
-#: kstars.kcfg:1486
+#: kstars.kcfg:1502
 msgid ""
 "Automatically update the solver RA and Declination coordinates after "
 "telescope slew is completed."
@@ -10040,12 +10164,12 @@ msgstr ""
 "završen slew teleskopa."
 
 #. i18n: ectx: label, entry (SolverPreview), group (Align)
-#: kstars.kcfg:1490
+#: kstars.kcfg:1506
 msgid "Display image in FITS Viewer."
 msgstr "Prikaži sliku u FITS pregledniku."
 
 #. i18n: ectx: whatsthis, entry (SolverPreview), group (Align)
-#: kstars.kcfg:1491
+#: kstars.kcfg:1507
 msgid ""
 "Display captured image in FITS Viewer before starting the plate solving "
 "process."
@@ -10054,27 +10178,27 @@ msgstr ""
 "rješavanja ploče."
 
 #. i18n: ectx: label, entry (SolverOnline), group (Align)
-#: kstars.kcfg:1495
+#: kstars.kcfg:1511
 msgid "Use astrometry.net online solver."
 msgstr "Koristi astrometry.net mrežni rješavač."
 
 #. i18n: ectx: label, entry (SolverOptions), group (Align)
-#: kstars.kcfg:1499
+#: kstars.kcfg:1515
 msgid "Options passed to the astrometry solver."
 msgstr "Opcije proslijeđene rješavaču astrometrije."
 
 #. i18n: ectx: label, entry (SolverOTA), group (Align)
-#: kstars.kcfg:1502
+#: kstars.kcfg:1518
 msgid "Use Off-Axis Guide Telescope for Alignment FOV calculations"
 msgstr "Koristi navođenje osa teleskopa za poravnanje FOV kalkulacija"
 
 #. i18n: ectx: label, entry (SolverGotoOption), group (Align)
-#: kstars.kcfg:1506
+#: kstars.kcfg:1522
 msgid "Action to take if solver if successful (Sync, Slew to Target, or None)"
 msgstr ""
 
 #. i18n: ectx: label, entry (CalibrationPulseDuration), group (Guide)
-#: kstars.kcfg:1512
+#: kstars.kcfg:1528
 msgid ""
 "Pulse duration in milliseconds used for guiding pulses during calibration "
 "stage."
@@ -10083,33 +10207,33 @@ msgstr ""
 "kalibracije."
 
 #. i18n: ectx: label, entry (UseAutoMode), group (Guide)
-#: kstars.kcfg:1516
+#: kstars.kcfg:1532
 msgid "Automatically calibrate selected axes."
 msgstr "Automatski kalibriši označene ose."
 
 #. i18n: ectx: label, entry (AutoCalibration), group (Guide)
-#: kstars.kcfg:1520
+#: kstars.kcfg:1536
 #, fuzzy
 msgid "Automatically select calibration star and perform calibration."
 msgstr "Automatski označi zvijedzu za fokusiranje."
 
 #. i18n: ectx: label, entry (AutoModeIterations), group (Guide)
-#: kstars.kcfg:1524
+#: kstars.kcfg:1540
 msgid "Number of automode iterations for calibration process."
 msgstr "Broj automod iteracija za proces kalibracije."
 
 #. i18n: ectx: label, entry (UseTwoAxis), group (Guide)
-#: kstars.kcfg:1528
+#: kstars.kcfg:1544
 msgid "Use both axes to perform calibration."
 msgstr "Koristi obje ose za izvođenje kalibracije."
 
 #. i18n: ectx: label, entry (UseDarkFrame), group (Guide)
-#: kstars.kcfg:1532
+#: kstars.kcfg:1548
 msgid "Take dark frame for autoguider images."
 msgstr "Uzmi tamni okvir za slike auto vodiča."
 
 #. i18n: ectx: label, entry (DitherPixels), group (Guide)
-#: kstars.kcfg:1536
+#: kstars.kcfg:1552
 msgid ""
 "How many pixels to move between subsequent exposures under auto dithering "
 "mode."
@@ -10118,12 +10242,12 @@ msgstr ""
 "podrhtavanja."
 
 #. i18n: ectx: label, entry (UseDither), group (Guide)
-#: kstars.kcfg:1540
+#: kstars.kcfg:1556
 msgid "Use Auto Dithering when guiding."
 msgstr "Koristi auto podrhtavanje kod navođenja."
 
 #. i18n: ectx: label, entry (AOLimit), group (Guide)
-#: kstars.kcfg:1544
+#: kstars.kcfg:1560
 msgid ""
 "The Adaptive Optics unit is utilized if the guiding deviation is less than "
 "this limit in arcseconds. Once exceeded, mechanical guiding is utilized."
@@ -10133,12 +10257,12 @@ msgstr ""
 "mehaničko navođenje je upotrebljeno."
 
 #. i18n: ectx: label, entry (EnableRAGuide), group (Guide)
-#: kstars.kcfg:1548
+#: kstars.kcfg:1564
 msgid "Enable autoguiding in the RA axis."
 msgstr "Omogući autonavođenje u RA osi."
 
 #. i18n: ectx: label, entry (EnableDECGuide), group (Guide)
-#: kstars.kcfg:1552
+#: kstars.kcfg:1568
 msgid "Enable autoguiding in the DEC axis."
 msgstr "Omogući autonavođenje u DEC osi."
 
@@ -36076,7 +36200,7 @@ msgstr ""
 "Neke od slika u KStars-u su samo za nekomercijalnu upotrebu.  Pogledaj "
 "README.images."
 
-#: main.cpp:47 main.cpp:89
+#: main.cpp:47 main.cpp:90
 msgid "KStars"
 msgstr "KStars"
 
@@ -36207,57 +36331,68 @@ msgstr "Utkarsh Simha"
 msgid "Improvements to observation plan execution, star hopper etc."
 msgstr "Poboljšanja promatranja plana izvršenja"
 
-#: main.cpp:79
+#: main.cpp:73
+#, fuzzy
+#| msgctxt "City name (optional, probably does not need a translation)"
+#| msgid "Daniel's Harbour"
+msgid "Daniel Holler"
+msgstr "Daniel's Harbour"
+
+#: main.cpp:73
+msgid "Extensive testing and suggestions for Ekos/INDI."
+msgstr ""
+
+#: main.cpp:80
 msgid "Dump sky image to file"
 msgstr "Izbaci sliku neba u datoteku"
 
-#: main.cpp:80
+#: main.cpp:81
 msgid "Script to execute"
 msgstr "Skripta za izvršavanje"
 
-#: main.cpp:81
+#: main.cpp:82
 msgid "Width of sky image"
 msgstr "Širina slike neba"
 
-#: main.cpp:82
+#: main.cpp:83
 msgid "Height of sky image"
 msgstr "Visina slike neba"
 
-#: main.cpp:83
+#: main.cpp:84
 msgid "Filename for sky image"
 msgstr "Naziv datoteke za sliku neba"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, InputComboBatch)
-#: main.cpp:84 tools/modcalcjd.ui:120
+#: main.cpp:85 tools/modcalcjd.ui:120
 msgid "Date and time"
 msgstr "Datum i vrijeme"
 
-#: main.cpp:85
+#: main.cpp:86
 msgid "Start with clock paused"
 msgstr "Počni sa zaustavljenim satom"
 
-#: main.cpp:93
+#: main.cpp:94
 msgid "Dumping sky image"
 msgstr "Ispisujem sliku neba"
 
-#: main.cpp:147 main.cpp:201
+#: main.cpp:148 main.cpp:202
 msgid "Using CPU date/time instead."
 msgstr "Koristim CPU datum/vreme."
 
-#: main.cpp:173
+#: main.cpp:174
 msgid "Script executed."
 msgstr "Skripta izvršena."
 
-#: main.cpp:175
+#: main.cpp:176
 msgid "Could not execute script."
 msgstr "Ne mogu izvršiti skriptu."
 
-#: main.cpp:184
+#: main.cpp:185
 #, kde-format
 msgid "Unable to save image: %1 "
 msgstr "Ne mogu snimiti sliku: %1 "
 
-#: main.cpp:185
+#: main.cpp:186
 #, kde-format
 msgid "Saved to file: %1"
 msgstr "Snimio datoteku: %1"
@@ -43240,10 +43375,6 @@ msgstr "Prikačiti privremenu oznaku imena pri prelasku mišem preko objekta?"
 msgid "Planet trails fade to sky color? (otherwise color is constant)"
 msgstr "Tragovi planeta blijede u boju neba? (u suprotnom, boja je konstantna)"
 
-#: tools/scriptbuilder.cpp:653
-msgid "Limits"
-msgstr "Granice"
-
 #: tools/scriptbuilder.cpp:674
 msgid "magnitude of faintest star labeled on map"
 msgstr "magnituda najbljeđe označene zvijezde na karti"
@@ -44822,6 +44953,10 @@ msgstr "Boja pozadine:"
 #: xplanet/opsxplanet.ui:943
 msgid "Set the color for the background."
 msgstr "Postavi boju pozadine."
+
+#, fuzzy
+#~ msgid "Saving telescope information..."
+#~ msgstr "Postavljanje binninga nije uspjelo."
 
 #, fuzzy
 #~ msgid "Telescope information saved."
