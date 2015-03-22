@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-03-16 08:41+0000\n"
+"POT-Creation-Date: 2015-03-22 07:48+0000\n"
 "PO-Revision-Date: 2015-01-30 09:02+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -228,7 +228,7 @@ msgstr ""
 "Šema se ne može snimiti."
 
 #: auxiliary/colorscheme.cpp:238 auxiliary/colorscheme.cpp:253
-#: dialogs/detaildialog.cpp:617 ekos/capture.cpp:1815 ekos/capture.cpp:2046
+#: dialogs/detaildialog.cpp:617 ekos/capture.cpp:1870 ekos/capture.cpp:2105
 #: indi/drivermanager.cpp:1388 indi/indidriver.cpp:937 kstarsactions.cpp:848
 #: oal/execute.cpp:310 options/opscolors.cpp:200 tools/modcalcangdist.cpp:126
 #: tools/modcalcapcoord.cpp:150 tools/modcalcdaylength.cpp:247
@@ -363,14 +363,14 @@ msgid "Save Image"
 msgstr "Snimi sve slike"
 
 #: auxiliary/imageviewer.cpp:265 dialogs/addcatdialog.cpp:209
-#: ekos/capture.cpp:2003 fitsviewer/fitstab.cpp:274 kstarsactions.cpp:734
+#: ekos/capture.cpp:2062 fitsviewer/fitstab.cpp:274 kstarsactions.cpp:734
 #: printing/pwizprint.cpp:88 tools/scriptbuilder.cpp:828
 #, kde-format
 msgid "A file named \"%1\" already exists. Overwrite it?"
 msgstr "Datoteka sa imenom '%1' već postoji. Da li da pišem preko nje?"
 
 #: auxiliary/imageviewer.cpp:267 dialogs/addcatdialog.cpp:211
-#: ekos/capture.cpp:2005 fitsviewer/fitstab.cpp:276 kstarsactions.cpp:735
+#: ekos/capture.cpp:2064 fitsviewer/fitstab.cpp:276 kstarsactions.cpp:735
 #: printing/pwizprint.cpp:89 tools/scriptbuilder.cpp:830
 msgid "Overwrite File?"
 msgstr "Da pišem preko postojeće datoteke?"
@@ -815,7 +815,7 @@ msgstr ""
 "Ovaj URL nije ispravan. Da li želite da otvorim preglednik sa Google\n"
 "pretraživačem?"
 
-#: dialogs/addlinkdialog.cpp:63 ekos/capture.cpp:1800 ekos/capture.cpp:2024
+#: dialogs/addlinkdialog.cpp:63 ekos/capture.cpp:1855 ekos/capture.cpp:2083
 #: fitsviewer/fitstab.cpp:307 indi/streamwg.cpp:194
 #: tools/scriptbuilder.cpp:787 tools/scriptbuilder.cpp:873
 msgid "Invalid URL"
@@ -2853,7 +2853,7 @@ msgstr ""
 msgid "Error: Lost connection to CCD."
 msgstr "Greška: Izgubljena je konekcija za CCD."
 
-#: ekos/align.cpp:572 ekos/capture.cpp:1121 ekos/focus.cpp:645
+#: ekos/align.cpp:572 ekos/capture.cpp:1174 ekos/focus.cpp:645
 #: ekos/guide/rcalibration.cpp:794
 msgid "Capturing image..."
 msgstr "Dohvatanje slike..."
@@ -2880,7 +2880,7 @@ msgstr[0] "Rješavač prekinut nakon %1 sekunde."
 msgstr[1] "Rješavač prekinut nakon %1 sekunde."
 msgstr[2] "Rješavač prekinut nakon %1 sekundi."
 
-#: ekos/align.cpp:768 ekos/capture.cpp:1227 ekos/ekosmanager.cpp:1674
+#: ekos/align.cpp:768 ekos/capture.cpp:1280 ekos/ekosmanager.cpp:1674
 #: ekos/focus.cpp:1495 ekos/guide.cpp:449 ekos/mount.cpp:299
 #, kde-format
 msgctxt "log entry; %1 is the date, %2 is the text"
@@ -3376,15 +3376,15 @@ msgstr "Otkazano"
 msgid "Complete"
 msgstr "Završeno"
 
-#: ekos/capture.cpp:466 ekos/capture.cpp:1292
+#: ekos/capture.cpp:484 ekos/capture.cpp:1345
 msgid "Auto dark subtract is not supported in batch mode."
 msgstr "Automatsko oduzimanje tamnine nije podrzano u batch načinu rada."
 
-#: ekos/capture.cpp:498
+#: ekos/capture.cpp:517
 msgid "No pending jobs found. Please add a job to the sequence queue."
 msgstr "Nisu pronađeni poslovi u toku. Dodaj posao redu sekvence."
 
-#: ekos/capture.cpp:503
+#: ekos/capture.cpp:522
 msgid ""
 "All jobs are complete. Do you want to reset the status of all jobs and "
 "restart capturing?"
@@ -3392,58 +3392,67 @@ msgstr ""
 "Svi poslovi su završeni. Da li želiš da resetuješ status svih poslova i "
 "restartuješ snimanje?"
 
-#: ekos/capture.cpp:504 ekos/capture.cpp:2105
+#: ekos/capture.cpp:523 ekos/capture.cpp:2167
 msgid "Reset job status"
 msgstr "Resetuj status posla"
 
-#: ekos/capture.cpp:855 ekos/focus.cpp:321
+#: ekos/capture.cpp:876 ekos/focus.cpp:321
 #, kde-format
 msgid "Unable to find FILTER_SLOT property in driver %1"
 msgstr "Nije moguće pronaći FILTER_SLOT svojstvo u %1 drajveru"
 
-#: ekos/capture.cpp:903
+#: ekos/capture.cpp:924
 #, fuzzy
 msgid "Waiting..."
 msgstr "Približne boje..."
 
-#: ekos/capture.cpp:962 fitsviewer/fitsdebayer.cpp:67
+#: ekos/capture.cpp:983 fitsviewer/fitsdebayer.cpp:67
 msgid "Complete."
 msgstr "Završeno."
 
-#: ekos/capture.cpp:977
+#: ekos/capture.cpp:1007
+#, kde-format
+msgid "Current ADU is %1% Next exposure is %2 seconds."
+msgstr ""
+
+#: ekos/capture.cpp:1020
+msgid "An empty image is received, aborting..."
+msgstr ""
+
+#: ekos/capture.cpp:1030
 #, kde-format
 msgid "Received image %1 out of %2."
 msgstr "Primljena slika %1 od %2."
 
-#: ekos/capture.cpp:1003
+#: ekos/capture.cpp:1056
 msgid "Parking telescope..."
 msgstr "Parkiranje teleskopa..."
 
-#: ekos/capture.cpp:1065
+#: ekos/capture.cpp:1118
 msgid "Dithering..."
 msgstr "Približne boje..."
 
-#: ekos/capture.cpp:1070 ekos/capture.cpp:1144
+#: ekos/capture.cpp:1123 ekos/capture.cpp:1197
 msgid "Focusing..."
 msgstr "Fokusiranje..."
 
-#: ekos/capture.cpp:1118
+#: ekos/capture.cpp:1171
 msgid "Capturing dark frame..."
 msgstr "Dohvatanje tamnog okvira..."
 
-#: ekos/capture.cpp:1125
+#: ekos/capture.cpp:1178
 msgid "Failed to set sub frame."
 msgstr "Postavljanje pod okvira nije uspjelo."
 
-#: ekos/capture.cpp:1130
+#: ekos/capture.cpp:1183
 msgid "Failed to set binning."
 msgstr "Postavljanje binninga nije uspjelo."
 
-#: ekos/capture.cpp:1140
+#: ekos/capture.cpp:1193
 msgid "Dither complete."
 msgstr "Dihterovanje završeno"
 
-#: ekos/capture.cpp:1214
+#: ekos/capture.cpp:1267
 msgid ""
 "Cannot enable preview while CCD upload mode is set to local. Change upload "
 "mode to client or both and try again."
@@ -3451,49 +3460,49 @@ msgstr ""
 "Nije moguće omogućiti pregled dok je CCD mod učitavanja podešen na lokalno. "
 "Promjeni mod učitavanja na klijenta ili oboje i pokušaj ponovo."
 
-#: ekos/capture.cpp:1263
+#: ekos/capture.cpp:1316
 msgid "Downloading..."
 msgstr "Preuzimanje..."
 
-#: ekos/capture.cpp:1267
+#: ekos/capture.cpp:1320
 msgid "second left"
 msgstr "preostala je sekunda"
 
-#: ekos/capture.cpp:1269
+#: ekos/capture.cpp:1322
 msgid "seconds left"
 msgstr "preostale sekunde"
 
-#: ekos/capture.cpp:1450
+#: ekos/capture.cpp:1505
 #, kde-format
 msgid "Job #%1 changes applied."
 msgstr "Promjene #%1 posla primjenjene."
 
-#: ekos/capture.cpp:1577
+#: ekos/capture.cpp:1632
 #, kde-format
 msgid "Changing filter to %1..."
 msgstr "Mijenjanje filtera na %1..."
 
-#: ekos/capture.cpp:1578
+#: ekos/capture.cpp:1633
 #, fuzzy
 msgid "Set filter..."
 msgstr "Snimi u datoteku..."
 
-#: ekos/capture.cpp:1591
+#: ekos/capture.cpp:1646
 #, kde-format
 msgid "Setting temperature to %1 C..."
 msgstr ""
 
-#: ekos/capture.cpp:1592
+#: ekos/capture.cpp:1647
 #, fuzzy, kde-format
 msgid "Set %1 C..."
 msgstr "Postavi vrijeme..."
 
-#: ekos/capture.cpp:1665
+#: ekos/capture.cpp:1720
 #, fuzzy
 msgid "Post meridian flip calibration completed successfully."
 msgstr "Telescope Wizard je uspješno završen."
 
-#: ekos/capture.cpp:1693
+#: ekos/capture.cpp:1748
 #, kde-format
 msgid ""
 "Guiding deviation %1 exceeded limit value of %2 arcsecs, aborting exposure."
@@ -3501,7 +3510,7 @@ msgstr ""
 "Odstupanje navođenja %1 premašuje nivo ograničenja od %2 arcsecs, "
 "obustavljanje izlaganja."
 
-#: ekos/capture.cpp:1704
+#: ekos/capture.cpp:1759
 #, kde-format
 msgid ""
 "Guiding deviation %1 is now lower than limit value of %2 arcsecs, resuming "
@@ -3510,132 +3519,139 @@ msgstr ""
 "Odstupanje navođenja %1 je sada manji od nivoa ograničenja od %2 arcsecs, "
 "nastavljanje izlaganja."
 
-#: ekos/capture.cpp:1744
+#: ekos/capture.cpp:1799
 msgid "Autofocus failed. Aborting exposure..."
 msgstr "Autofokus nije uspio.Obustavljanje izlaganja."
 
-#: ekos/capture.cpp:1785
+#: ekos/capture.cpp:1840
 #, fuzzy
 msgid "FITS Save Directory"
 msgstr "FITS podrazumijevani direktorij"
 
-#: ekos/capture.cpp:1793
+#: ekos/capture.cpp:1848
 #, fuzzy
 msgid "Open Ekos Sequence Queue"
 msgstr "Sekvencijalni red"
 
-#: ekos/capture.cpp:1799 ekos/capture.cpp:2023 fitsviewer/fitstab.cpp:306
+#: ekos/capture.cpp:1854 ekos/capture.cpp:2082 fitsviewer/fitstab.cpp:306
 #: indi/streamwg.cpp:193 tools/scriptbuilder.cpp:786
 #: tools/scriptbuilder.cpp:872
 #, kde-format
 msgid "Invalid URL: %1"
 msgstr "Neispravan URL: %1"
 
-#: ekos/capture.cpp:1814
+#: ekos/capture.cpp:1869
 #, kde-format
 msgid "Unable to open file %1"
 msgstr "Nije moguće otvoriti direktorij %1"
 
-#: ekos/capture.cpp:1989
+#: ekos/capture.cpp:2048
 #, fuzzy
 msgid "Save Ekos Sequence Queue"
 msgstr "Sekvencijalni red"
 
-#: ekos/capture.cpp:2006 fitsviewer/fitstab.cpp:277
+#: ekos/capture.cpp:2065 fitsviewer/fitstab.cpp:277
 msgid "&Overwrite"
 msgstr "&Prebriši"
 
-#: ekos/capture.cpp:2015
+#: ekos/capture.cpp:2074
 msgid "Failed to save sequence queue"
 msgstr "Nije moguće snimiti sekvencijalni red"
 
-#: ekos/capture.cpp:2015 fitsviewer/fitstab.cpp:295
+#: ekos/capture.cpp:2074 fitsviewer/fitstab.cpp:295
 msgid "FITS Save"
 msgstr "FITS Snimi"
 
-#: ekos/capture.cpp:2045
+#: ekos/capture.cpp:2104
 #, kde-format
 msgid "Unable to write to file %1"
 msgstr "Nije moguće pisati u datoteku %1"
 
-#: ekos/capture.cpp:2097
+#: ekos/capture.cpp:2159
 #, kde-format
 msgid "Sequence queue saved to %1"
 msgstr "Sekvencijalni red snimljen na %1"
 
-#: ekos/capture.cpp:2104
+#: ekos/capture.cpp:2166
 msgid "Are you sure you want to reset status of all jobs?"
 msgstr "Da li ste sigurni da želite restovati statuse svih poslova?"
 
-#: ekos/capture.cpp:2146
+#: ekos/capture.cpp:2209
 #, kde-format
 msgid "Editing job #%1..."
 msgstr "Uređivanje posla #%1..."
 
-#: ekos/capture.cpp:2157
+#: ekos/capture.cpp:2220
 msgid "Editing job canceled."
 msgstr "Uređivanje posla prekinuto."
 
-#: ekos/capture.cpp:2313
+#: ekos/capture.cpp:2376
 #, fuzzy
 msgid "Telescope completed the meridian flip."
 msgstr "Telescope Wizard je uspješno završen."
 
-#: ekos/capture.cpp:2317
+#: ekos/capture.cpp:2380
 #, fuzzy
 msgid "Performing post flip re-alignment..."
 msgstr "Obrađujem rješenje polarnog poravnanja..."
 
-#: ekos/capture.cpp:2318
+#: ekos/capture.cpp:2381
 #, fuzzy
 msgid "Aligning..."
 msgstr "Pokretanje..."
 
-#: ekos/capture.cpp:2343
+#: ekos/capture.cpp:2406
 msgid "Performing post flip re-calibration and guiding..."
 msgstr ""
 
-#: ekos/capture.cpp:2344
+#: ekos/capture.cpp:2407
 #, fuzzy
 msgid "Calibrating..."
 msgstr "Kalibracija"
 
-#: ekos/capture.cpp:2359
+#: ekos/capture.cpp:2422
 msgid ""
 "Failed to retrieve telescope coordinates. Unable to calculate telescope's "
 "hour angle."
 msgstr ""
 
-#: ekos/capture.cpp:2392
+#: ekos/capture.cpp:2455
 #, kde-format
 msgid ""
 "Current hour angle %1 hours exceeds meridian flip limit of %2 hours. Auto "
 "meridian flip is initiated."
 msgstr ""
 
-#: ekos/capture.cpp:2408
+#: ekos/capture.cpp:2471
 #, fuzzy
 msgid "Meridian Flip..."
 msgstr "Meridian"
 
-#: ekos/capture.cpp:2425
+#: ekos/capture.cpp:2488
 msgid "Telescope meridian flip timed out."
 msgstr ""
 
-#: ekos/capture.cpp:2437
+#: ekos/capture.cpp:2500
 #, fuzzy
 msgid "Alignment timed out."
 msgstr "Rješavač  pauziran."
 
-#: ekos/capture.cpp:2451
+#: ekos/capture.cpp:2514
 #, fuzzy
 msgid "Guiding timed out."
 msgstr "Navođenje nastavljeno."
 
-#: ekos/capture.cpp:2466
+#: ekos/capture.cpp:2529
 #, fuzzy
 msgid "Post flip re-alignment completed successfully."
 msgstr "Telescope Wizard je uspješno završen."
+
+#: ekos/capture.cpp:2536
+#, fuzzy
+#| msgctxt "string from libindi, used in the config dialog"
+#| msgid "Flat"
+msgid "Flat"
+msgstr "Pljosnat"
 
 #. i18n: ectx: property (title), widget (QGroupBox, setupGroup_3)
 #. i18n: ectx: property (title), widget (QGroupBox, ccdGroup)
@@ -3685,11 +3701,13 @@ msgstr "Prefiks:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, textLabel1_4)
 #. i18n: ectx: property (toolTip), widget (QLabel, textLabel1_2_3)
+#. i18n: ectx: property (toolTip), widget (QLabel, ADUPercentageLabel)
 #. i18n: ectx: property (toolTip), widget (QLabel, textLabel1_2_4)
 #. i18n: ectx: property (toolTip), widget (QLabel, textLabel1_2_5)
 #. i18n: ectx: property (toolTip), widget (QLabel, textLabel1_2_6)
-#: ekos/capture.ui:114 ekos/capture.ui:998 ekos/capture.ui:1110
-#: ekos/capture.ui:1158 ekos/capture.ui:1206 ekos/focus.ui:355
+#: ekos/capture.ui:114 ekos/capture.ui:998 ekos/capture.ui:1092
+#: ekos/capture.ui:1167 ekos/capture.ui:1215 ekos/capture.ui:1263
+#: ekos/focus.ui:355
 msgid "Number of images to capture"
 msgstr "Broj slika koje treba uhvatiti"
 
@@ -3910,43 +3928,65 @@ msgid "Filter:"
 msgstr "Filter:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, darkSubCheck)
-#: ekos/capture.ui:1050
+#: ekos/capture.ui:1052
 msgid "Perform automatic dark subtraction in preview mode"
 msgstr "Izvrši automatsko tamno oduzimanje u modu pregleda"
 
 #. i18n: ectx: property (text), widget (QCheckBox, darkSubCheck)
-#: ekos/capture.ui:1053
+#: ekos/capture.ui:1055
 msgid "Auto dark subtract"
 msgstr "Automatsko oduzimanje tamnog"
 
+#. i18n: ectx: property (toolTip), widget (QLabel, ADULabel)
+#. i18n: ectx: whatsthis, entry (ADUValue), group (Capture)
+#: ekos/capture.ui:1075 kstars.kcfg:1432
+msgid ""
+"If set, Ekos will capture a few flat images to determine the optimal "
+"exposure time to achieve the desired ADU percentage."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, ADULabel)
+#: ekos/capture.ui:1078
+#, fuzzy
+#| msgid "AU"
+msgid "ADU"
+msgstr "AJ"
+
+#. i18n: ectx: property (text), widget (QLabel, ADUPercentageLabel)
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: ekos/capture.ui:1098 ekos/focus.ui:535
+#, no-c-format
+msgid "%"
+msgstr "%"
+
 #. i18n: ectx: property (toolTip), widget (QCheckBox, displayCheck)
-#: ekos/capture.ui:1063
+#: ekos/capture.ui:1120
 msgid "Display captured sequence images in the FITS Viewer"
 msgstr "Prikaži snimljene sekvencijalne slike u FITS pregledniku"
 
 #. i18n: ectx: property (text), widget (QCheckBox, displayCheck)
-#: ekos/capture.ui:1066
+#: ekos/capture.ui:1123
 msgid "Display in FITS Viewer"
 msgstr "Prikazite u FITS pregledniku"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, guideDeviationCheck)
-#: ekos/capture.ui:1081
+#: ekos/capture.ui:1138
 msgid "Abort sequence if guiding deviation exceed this value"
 msgstr "Prekini sekvencu ako naovdeća odstupanja  prekorače ovu vrijednost"
 
 #. i18n: ectx: property (text), widget (QCheckBox, guideDeviationCheck)
-#: ekos/capture.ui:1084
+#: ekos/capture.ui:1141
 #, fuzzy
 msgid "Guiding Deviation <"
 msgstr "Maksimalno navodeće odstupanje"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2_4)
-#: ekos/capture.ui:1116
+#: ekos/capture.ui:1173
 msgid "\""
 msgstr "\""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, autofocusCheck)
-#: ekos/capture.ui:1126
+#: ekos/capture.ui:1183
 msgid ""
 "Perform autofocusing once Half-Flux-Radius (HFR) value exceeds this limit"
 msgstr ""
@@ -3954,7 +3994,7 @@ msgstr ""
 "ovo ograničenje"
 
 #. i18n: ectx: property (text), widget (QCheckBox, autofocusCheck)
-#: ekos/capture.ui:1129
+#: ekos/capture.ui:1186
 msgid "Autofocus if HFR >"
 msgstr "Autofokus ako je HFR>"
 
@@ -3963,13 +4003,13 @@ msgstr "Autofokus ako je HFR>"
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, l_22)
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: ekos/capture.ui:1164 ekos/focus.ui:486 ekos/focus.ui:668
+#: ekos/capture.ui:1221 ekos/focus.ui:486 ekos/focus.ui:668
 #: ekos/guide/guider.ui:550 xplanet/opsxplanet.ui:120
 msgid "pixels"
 msgstr "pikseli"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, meridianCheck)
-#: ekos/capture.ui:1174
+#: ekos/capture.ui:1231
 msgid ""
 "<html><head/><body><p>Command a meridian flip if the hour angle exceeds the "
 "specified value. Capture and Guiding will be suspended and resumed after the "
@@ -3977,48 +4017,48 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, meridianCheck)
-#: ekos/capture.ui:1177
+#: ekos/capture.ui:1234
 msgid "Meridian Flip if HA >"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2_6)
-#: ekos/capture.ui:1212
+#: ekos/capture.ui:1269
 #, fuzzy
 msgid "hours"
 msgstr "sat"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, parkCheck)
-#: ekos/capture.ui:1224
+#: ekos/capture.ui:1281
 msgid "Automatically park telescope once all sequence jobs are completed"
 msgstr "Automatski smješta teleskop kada su svi sekvencijalni poslovi završeni"
 
 #. i18n: ectx: property (text), widget (QCheckBox, parkCheck)
-#: ekos/capture.ui:1227
+#: ekos/capture.ui:1284
 msgid "Park When Complete"
 msgstr "Smjesti kada je završeno"
 
 #. i18n: ectx: property (title), widget (QGroupBox, progressGroup)
-#: ekos/capture.ui:1258
+#: ekos/capture.ui:1315
 msgid "Progress"
 msgstr "Napredak"
 
 #. i18n: ectx: property (text), widget (QLabel, progressLabel_3)
-#: ekos/capture.ui:1268
+#: ekos/capture.ui:1325
 msgid "Expose:"
 msgstr "Izložiti:"
 
 #. i18n: ectx: property (text), widget (QLabel, progressLabel_2)
-#: ekos/capture.ui:1316
+#: ekos/capture.ui:1373
 msgid "Progress:"
 msgstr "Napredak:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_4_2_3)
-#: ekos/capture.ui:1339
+#: ekos/capture.ui:1396
 msgid "of"
 msgstr "od"
 
 #. i18n: ectx: property (text), widget (QLabel, completedLabel_2)
-#: ekos/capture.ui:1365
+#: ekos/capture.ui:1422
 msgid "completed"
 msgstr "završeno"
 
@@ -4563,12 +4603,6 @@ msgstr "Kašnjenje između dva fokusa slike u slijedu"
 #: ekos/focus.ui:496
 msgid "Step:"
 msgstr "Korak:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: ekos/focus.ui:535
-#, no-c-format
-msgid "%"
-msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: ekos/focus.ui:545
@@ -5644,93 +5678,93 @@ msgstr "Glavna alatna traka"
 msgid "Process ToolBar"
 msgstr "Procesna traka"
 
-#: fitsviewer/fitsdata.cpp:120
+#: fitsviewer/fitsdata.cpp:121
 msgid "Please hold while loading FITS file..."
 msgstr "Učitavanje datoteke FITS ... Molim sačekajte."
 
-#: fitsviewer/fitsdata.cpp:121
+#: fitsviewer/fitsdata.cpp:122
 msgid "Loading FITS"
 msgstr "Učitavam FITS"
 
-#: fitsviewer/fitsdata.cpp:151
+#: fitsviewer/fitsdata.cpp:152
 #, kde-format
 msgid "Could not open file %1 (fits_get_img_param). Error %2"
 msgstr "Ne mogu otvoriti datoteku %1 (fits_get_img_param). Greška %2"
 
-#: fitsviewer/fitsdata.cpp:151 fitsviewer/fitsdata.cpp:169
-#: fitsviewer/fitsdata.cpp:176 fitsviewer/fitsdata.cpp:200
-#: fitsviewer/fitsdata.cpp:211 fitsviewer/fitsdata.cpp:262
+#: fitsviewer/fitsdata.cpp:152 fitsviewer/fitsdata.cpp:170
+#: fitsviewer/fitsdata.cpp:177 fitsviewer/fitsdata.cpp:201
+#: fitsviewer/fitsdata.cpp:212 fitsviewer/fitsdata.cpp:263
 msgid "FITS Open"
 msgstr "FITS Otvori"
 
-#: fitsviewer/fitsdata.cpp:169
+#: fitsviewer/fitsdata.cpp:170
 #, kde-format
 msgid "FITS file open error (fits_get_img_param): %1"
 msgstr "FITS datoteka ima grešku pri otvaranju (fits_get_img_param): %1"
 
-#: fitsviewer/fitsdata.cpp:176
+#: fitsviewer/fitsdata.cpp:177
 msgid "1D FITS images are not supported in KStars."
 msgstr "1D FITS slike nisu podržane u KStars."
 
-#: fitsviewer/fitsdata.cpp:200
+#: fitsviewer/fitsdata.cpp:201
 #, kde-format
 msgid "Bit depth %1 is not supported."
 msgstr ""
 
-#: fitsviewer/fitsdata.cpp:211
+#: fitsviewer/fitsdata.cpp:212
 #, kde-format
 msgid "Image has invalid dimensions %1x%2"
 msgstr "Slika ima nepravilne dimenzije  %1x%2"
 
-#: fitsviewer/fitsdata.cpp:262
+#: fitsviewer/fitsdata.cpp:263
 #, fuzzy, kde-format
 msgid "Error reading image: %1"
 msgstr "Greška: Ne mogu da snimim sliku: %1 "
 
-#: fitsviewer/fitsdata.cpp:348
+#: fitsviewer/fitsdata.cpp:349
 msgid ""
 "Are you sure you want to overwrite original image data with debayered data? "
 "This action is irreversible!"
 msgstr ""
 
-#: fitsviewer/fitsdata.cpp:348 fitsviewer/fitstab.cpp:260
+#: fitsviewer/fitsdata.cpp:349 fitsviewer/fitstab.cpp:260
 #, fuzzy
 msgid "Save FITS"
 msgstr "Snimi"
 
-#: fitsviewer/fitsdata.cpp:1982
+#: fitsviewer/fitsdata.cpp:1983
 msgid "Only 8 and 16 bits bayered images supported."
 msgstr ""
 
-#: fitsviewer/fitsdata.cpp:1982 fitsviewer/fitsdata.cpp:2049
+#: fitsviewer/fitsdata.cpp:1983 fitsviewer/fitsdata.cpp:2050
 #, fuzzy
 msgid "Debayer error"
 msgstr "Dyer Observatory"
 
-#: fitsviewer/fitsdata.cpp:2007
+#: fitsviewer/fitsdata.cpp:2008
 msgid "Unable to allocate memory for bayer buffer."
 msgstr ""
 
-#: fitsviewer/fitsdata.cpp:2007 kstarsactions.cpp:700
+#: fitsviewer/fitsdata.cpp:2008 kstarsactions.cpp:700
 #, fuzzy
 msgid "Open FITS"
 msgstr "Otvori FITS..."
 
-#: fitsviewer/fitsdata.cpp:2042
+#: fitsviewer/fitsdata.cpp:2043
 msgid "Unable to allocate memory for temporary bayer buffer."
 msgstr ""
 
-#: fitsviewer/fitsdata.cpp:2042 fitsviewer/fitsdata.cpp:2067
+#: fitsviewer/fitsdata.cpp:2043 fitsviewer/fitsdata.cpp:2068
 #, fuzzy
 msgid "Debayer Error"
 msgstr "Greška mjerenja azimuta"
 
-#: fitsviewer/fitsdata.cpp:2049
+#: fitsviewer/fitsdata.cpp:2050
 #, kde-format
 msgid "Debayer failed (%1)"
 msgstr ""
 
-#: fitsviewer/fitsdata.cpp:2067
+#: fitsviewer/fitsdata.cpp:2068
 msgid "Unable to allocate memory for debayerd buffer."
 msgstr ""
 
@@ -10052,13 +10086,18 @@ msgid "Parks the telescope when the sequence jobs are complete, if supported."
 msgstr ""
 "Parkira teleskop kada su sekvencijalni poslovi završeni, ako je podržano."
 
+#. i18n: ectx: label, entry (ADUValue), group (Capture)
+#: kstars.kcfg:1431
+msgid "Desired flat field ADU percentage"
+msgstr ""
+
 #. i18n: ectx: label, entry (FocusTicks), group (Focus)
-#: kstars.kcfg:1433
+#: kstars.kcfg:1438
 msgid "Default Focuser step ticks"
 msgstr "Zadani otkucaju koraka fokusera"
 
 #. i18n: ectx: whatsthis, entry (FocusTicks), group (Focus)
-#: kstars.kcfg:1434
+#: kstars.kcfg:1439
 msgid ""
 "Step size of the absolute focuser. The step size TICKS should be adjusted so "
 "that when the focuser moves TICKS steps, the difference in HFR is more than "
@@ -10069,12 +10108,12 @@ msgstr ""
 "piksela. vrijednost je manja kada ste bliži optimalnom fokusu."
 
 #. i18n: ectx: label, entry (FocusTolerance), group (Focus)
-#: kstars.kcfg:1438
+#: kstars.kcfg:1443
 msgid "Default Focuser tolerance value"
 msgstr "Zadana vrijednost tolerancije fokusera"
 
 #. i18n: ectx: whatsthis, entry (FocusTolerance), group (Focus)
-#: kstars.kcfg:1439
+#: kstars.kcfg:1444
 msgid ""
 "The tolerance specifies the percentage difference between the current "
 "focusing position and the minimum obtained during the focusing run. "
@@ -10086,22 +10125,22 @@ msgstr ""
 "je neophodno da se izbjegne da fokusni algoritam oscilira naprijed i nazad."
 
 #. i18n: ectx: label, entry (FocusMaxTravel), group (Focus)
-#: kstars.kcfg:1443
+#: kstars.kcfg:1448
 msgid "Maximum Focus Travel Distance"
 msgstr "Maksimalna pređeni put fokusa"
 
 #. i18n: ectx: whatsthis, entry (FocusMaxTravel), group (Focus)
-#: kstars.kcfg:1444
+#: kstars.kcfg:1449
 msgid "Set the maximum travel distance of an absolute focuser."
 msgstr "Postavi maksimalni pređeni put apsolutnog fokusera."
 
 #. i18n: ectx: label, entry (FocusExposure), group (Focus)
-#: kstars.kcfg:1448
+#: kstars.kcfg:1453
 msgid "Default Focuser exposure value"
 msgstr "Zadana izložena vrijednost fokusera"
 
 #. i18n: ectx: whatsthis, entry (FocusExposure), group (Focus)
-#: kstars.kcfg:1449
+#: kstars.kcfg:1454
 msgid ""
 "Specifies exposure value of CCD when performing focusing. Lower this value "
 "to avoid saturation of bright stars which adversely affects HFR measurement. "
@@ -10113,52 +10152,52 @@ msgstr ""
 "nije detektovana."
 
 #. i18n: ectx: label, entry (FocusBoxSize), group (Focus)
-#: kstars.kcfg:1453
+#: kstars.kcfg:1458
 msgid "Default Focuser star selection box size"
 msgstr "Zadana veličina kutije  zvijezde označavanja fokusera"
 
 #. i18n: ectx: whatsthis, entry (FocusBoxSize), group (Focus)
-#: kstars.kcfg:1454
+#: kstars.kcfg:1459
 msgid "Set box size to select a focus star."
 msgstr "Postavi veličinu kutije da označiš fokusnu zvijezdu."
 
 #. i18n: ectx: label, entry (FocusXBin), group (Focus)
-#: kstars.kcfg:1458
+#: kstars.kcfg:1463
 msgid "Default CCD X binning in focus mode"
 msgstr "Zadano CCD X povezivanje u fokus modu"
 
 #. i18n: ectx: whatsthis, entry (FocusXBin), group (Focus)
-#: kstars.kcfg:1459
+#: kstars.kcfg:1464
 msgid "Set horizontal binning of CCD camera while in focus mode."
 msgstr "Postavlja horizontalno povezivanje CCD kamere kada je u fokus modu."
 
 #. i18n: ectx: label, entry (FocusYBin), group (Focus)
-#: kstars.kcfg:1463
+#: kstars.kcfg:1468
 msgid "Default CCD Y binning in focus mode"
 msgstr "Zadano CCD Y povezivanje u fokus modu"
 
 #. i18n: ectx: whatsthis, entry (FocusYBin), group (Focus)
-#: kstars.kcfg:1464
+#: kstars.kcfg:1469
 msgid "Set vertical binning of CCD camera while in focus mode."
 msgstr "Postavi vertikalno povezivanje CCD kamere dok je u fokus modu."
 
 #. i18n: ectx: label, entry (FocusSubFrame), group (Focus)
-#: kstars.kcfg:1468
+#: kstars.kcfg:1473
 msgid "Subframe the focus star during the autofocus procedure."
 msgstr "Uokviri fokusnu zvijezdu tokom autofokusne procedure."
 
 #. i18n: ectx: label, entry (AutoSelectStar), group (Focus)
-#: kstars.kcfg:1472
+#: kstars.kcfg:1477
 msgid "Automatically select a star to focus."
 msgstr "Automatski označi zvijedzu za fokusiranje."
 
 #. i18n: ectx: label, entry (SuspendGuiding), group (Focus)
-#: kstars.kcfg:1476
+#: kstars.kcfg:1481
 msgid "Suspend guiding while autofocus in progress."
 msgstr "Obustavi navođenje dok je autofokus u toku."
 
 #. i18n: ectx: label, entry (LockFocusFilter), group (Focus)
-#: kstars.kcfg:1480
+#: kstars.kcfg:1485
 msgid ""
 "Use specified filter when performing focus regardless of current filter "
 "settings."
@@ -10167,43 +10206,43 @@ msgstr ""
 "postavke filtera."
 
 #. i18n: ectx: label, entry (AlignExposure), group (Align)
-#: kstars.kcfg:1486
+#: kstars.kcfg:1491
 msgid "Default alignment exposure value"
 msgstr "Zadana vrijednost poravnanja ekspozicije"
 
 #. i18n: ectx: whatsthis, entry (AlignExposure), group (Align)
-#: kstars.kcfg:1487
+#: kstars.kcfg:1492
 msgid ""
 "Specifies exposure value of CCD in seconds when performing plate solving."
 msgstr "Navodi izloženu vrijednost CCD u sekundama pri rješavanju ploča."
 
 #. i18n: ectx: label, entry (SolverXBin), group (Align)
-#: kstars.kcfg:1491
+#: kstars.kcfg:1496
 msgid "Default CCD X binning while in alignment mode"
 msgstr "Zadano CCD X povezivanje dok je u modu poravnanja"
 
 #. i18n: ectx: whatsthis, entry (SolverXBin), group (Align)
-#: kstars.kcfg:1492
+#: kstars.kcfg:1497
 msgid "Set horizontal binning of CCD camera while in alignment mode."
 msgstr "Postavi horizontalno povezivanje CCD kamere u modu poravnanja."
 
 #. i18n: ectx: label, entry (SolverYBin), group (Align)
-#: kstars.kcfg:1496
+#: kstars.kcfg:1501
 msgid "Default CCD Y binning while in alignment mode"
 msgstr "Zadano CCD Y povezivanje dok je u modu poravnanja"
 
 #. i18n: ectx: whatsthis, entry (SolverYBin), group (Align)
-#: kstars.kcfg:1497
+#: kstars.kcfg:1502
 msgid "Set vertical binning of CCD camera while in alignment mode."
 msgstr "Postavi vertikalno povezivanje CCD kamere dok je u modu poravnanja."
 
 #. i18n: ectx: label, entry (SolverUpdateCoords), group (Align)
-#: kstars.kcfg:1501
+#: kstars.kcfg:1506
 msgid "Update Solver RA and DEC search coordinates."
 msgstr "Ažuriraj RA rješavača i DEC koordinate pretrage."
 
 #. i18n: ectx: whatsthis, entry (SolverUpdateCoords), group (Align)
-#: kstars.kcfg:1502
+#: kstars.kcfg:1507
 msgid ""
 "Automatically update the solver RA and Declination coordinates after "
 "telescope slew is completed."
@@ -10212,12 +10251,12 @@ msgstr ""
 "završen slew teleskopa."
 
 #. i18n: ectx: label, entry (SolverPreview), group (Align)
-#: kstars.kcfg:1506
+#: kstars.kcfg:1511
 msgid "Display image in FITS Viewer."
 msgstr "Prikaži sliku u FITS pregledniku."
 
 #. i18n: ectx: whatsthis, entry (SolverPreview), group (Align)
-#: kstars.kcfg:1507
+#: kstars.kcfg:1512
 msgid ""
 "Display captured image in FITS Viewer before starting the plate solving "
 "process."
@@ -10226,34 +10265,34 @@ msgstr ""
 "rješavanja ploče."
 
 #. i18n: ectx: label, entry (SolverOnline), group (Align)
-#: kstars.kcfg:1511
+#: kstars.kcfg:1516
 msgid "Use astrometry.net online solver."
 msgstr "Koristi astrometry.net mrežni rješavač."
 
 #. i18n: ectx: label, entry (SolverOptions), group (Align)
-#: kstars.kcfg:1515
+#: kstars.kcfg:1520
 msgid "Options passed to the astrometry solver."
 msgstr "Opcije proslijeđene rješavaču astrometrije."
 
 #. i18n: ectx: label, entry (SolverOTA), group (Align)
-#: kstars.kcfg:1518
+#: kstars.kcfg:1523
 msgid "Use Off-Axis Guide Telescope for Alignment FOV calculations"
 msgstr "Koristi navođenje osa teleskopa za poravnanje FOV kalkulacija"
 
 #. i18n: ectx: label, entry (SolverGotoOption), group (Align)
-#: kstars.kcfg:1522
+#: kstars.kcfg:1527
 msgid "Action to take if solver if successful (Sync, Slew to Target, or None)"
 msgstr ""
 
 #. i18n: ectx: label, entry (WCSAlign), group (Align)
-#: kstars.kcfg:1526
+#: kstars.kcfg:1531
 msgid ""
 "World Coordinate System (WCS). WCS is used to encode RA/DEC coordinates in "
 "captured CCD images."
 msgstr ""
 
 #. i18n: ectx: label, entry (CalibrationPulseDuration), group (Guide)
-#: kstars.kcfg:1532
+#: kstars.kcfg:1537
 msgid ""
 "Pulse duration in milliseconds used for guiding pulses during calibration "
 "stage."
@@ -10262,33 +10301,33 @@ msgstr ""
 "kalibracije."
 
 #. i18n: ectx: label, entry (UseAutoMode), group (Guide)
-#: kstars.kcfg:1536
+#: kstars.kcfg:1541
 msgid "Automatically calibrate selected axes."
 msgstr "Automatski kalibriši označene ose."
 
 #. i18n: ectx: label, entry (AutoCalibration), group (Guide)
-#: kstars.kcfg:1540
+#: kstars.kcfg:1545
 #, fuzzy
 msgid "Automatically select calibration star and perform calibration."
 msgstr "Automatski označi zvijedzu za fokusiranje."
 
 #. i18n: ectx: label, entry (AutoModeIterations), group (Guide)
-#: kstars.kcfg:1544
+#: kstars.kcfg:1549
 msgid "Number of automode iterations for calibration process."
 msgstr "Broj automod iteracija za proces kalibracije."
 
 #. i18n: ectx: label, entry (UseTwoAxis), group (Guide)
-#: kstars.kcfg:1548
+#: kstars.kcfg:1553
 msgid "Use both axes to perform calibration."
 msgstr "Koristi obje ose za izvođenje kalibracije."
 
 #. i18n: ectx: label, entry (UseDarkFrame), group (Guide)
-#: kstars.kcfg:1552
+#: kstars.kcfg:1557
 msgid "Take dark frame for autoguider images."
 msgstr "Uzmi tamni okvir za slike auto vodiča."
 
 #. i18n: ectx: label, entry (DitherPixels), group (Guide)
-#: kstars.kcfg:1556
+#: kstars.kcfg:1561
 msgid ""
 "How many pixels to move between subsequent exposures under auto dithering "
 "mode."
@@ -10297,12 +10336,12 @@ msgstr ""
 "podrhtavanja."
 
 #. i18n: ectx: label, entry (UseDither), group (Guide)
-#: kstars.kcfg:1560
+#: kstars.kcfg:1565
 msgid "Use Auto Dithering when guiding."
 msgstr "Koristi auto podrhtavanje kod navođenja."
 
 #. i18n: ectx: label, entry (AOLimit), group (Guide)
-#: kstars.kcfg:1564
+#: kstars.kcfg:1569
 msgid ""
 "The Adaptive Optics unit is utilized if the guiding deviation is less than "
 "this limit in arcseconds. Once exceeded, mechanical guiding is utilized."
@@ -10312,12 +10351,12 @@ msgstr ""
 "mehaničko navođenje je upotrebljeno."
 
 #. i18n: ectx: label, entry (EnableRAGuide), group (Guide)
-#: kstars.kcfg:1568
+#: kstars.kcfg:1573
 msgid "Enable autoguiding in the RA axis."
 msgstr "Omogući autonavođenje u RA osi."
 
 #. i18n: ectx: label, entry (EnableDECGuide), group (Guide)
-#: kstars.kcfg:1572
+#: kstars.kcfg:1577
 msgid "Enable autoguiding in the DEC axis."
 msgstr "Omogući autonavođenje u DEC osi."
 
