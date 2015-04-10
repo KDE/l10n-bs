@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailcommon.po\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-04-09 08:37+0000\n"
+"POT-Creation-Date: 2015-04-10 08:59+0000\n"
 "PO-Revision-Date: 2014-01-31 19:29+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -476,15 +476,15 @@ msgstr "BCC"
 msgid "KMail Filter"
 msgstr "KMail Filter"
 
-#: filter/filteractions/filteractionaddtoaddressbook.cpp:114
+#: filter/filteractions/filteractionaddtoaddressbook.cpp:115
 msgid "with category"
 msgstr "sa kategorijom"
 
-#: filter/filteractions/filteractionaddtoaddressbook.cpp:122
+#: filter/filteractions/filteractionaddtoaddressbook.cpp:123
 msgid "in address book"
 msgstr "u adresar"
 
-#: filter/filteractions/filteractionaddtoaddressbook.cpp:131
+#: filter/filteractions/filteractionaddtoaddressbook.cpp:132
 msgid ""
 "<p>This defines the preferred address book.<br />If it is not accessible, "
 "the filter will fallback to the default address book.</p>"
@@ -554,6 +554,11 @@ msgstr "Proslijedi za %1 sa običnim šablonom"
 msgid "Forward to %1 with template %2"
 msgstr "Proslijedi za %1 sa šablonom %2"
 
+#: filter/filteractions/filteractionforward.cpp:250
+#: filter/filteractions/filteractionreplyto.cpp:64
+msgid "Email address was not defined."
+msgstr ""
+
 #: filter/filteractions/filteractionmove.cpp:35
 msgid "Move Into Folder"
 msgstr "Premjesti u fascikl"
@@ -562,6 +567,12 @@ msgstr "Premjesti u fascikl"
 msgctxt "pipe through with command"
 msgid "Pipe Through"
 msgstr "Proslijedi kroz cijev"
+
+#: filter/filteractions/filteractionpipethrough.cpp:48
+#, fuzzy
+#| msgid "Folder creation failed"
+msgid "No action defined."
+msgstr "Neuspjelo stvaranje direktorija"
 
 #: filter/filteractions/filteractionplaysound.cpp:34
 msgid "Play Sound"
@@ -592,10 +603,6 @@ msgstr ""
 #: filter/filteractions/filteractionreplyto.cpp:32
 msgid "Set Reply-To To"
 msgstr "Postavi Reply-To na"
-
-#: filter/filteractions/filteractionreplyto.cpp:64
-msgid "Email address was not defined."
-msgstr ""
 
 #: filter/filteractions/filteractionrewriteheader.cpp:40
 msgid "Rewrite Header"
@@ -744,7 +751,7 @@ msgstr "Uredi filter"
 msgid "Do you really want to remove filter <b>%1</b>?"
 msgstr "Da li zaista želite ukloniti filter <b>%1</b>?"
 
-#: filter/filtercontroller.cpp:117 filter/kmfilterlistbox.cpp:511
+#: filter/filtercontroller.cpp:117 filter/kmfilterlistbox.cpp:515
 msgid "Remove Filter"
 msgstr "Ukloni filter"
 
@@ -802,7 +809,7 @@ msgstr "KMail filteri"
 msgid "Procmail filter %1"
 msgstr "Procmail filteri"
 
-#: filter/filterimporterexporter.cpp:145 filter/kmfilterlistbox.cpp:424
+#: filter/filterimporterexporter.cpp:145 filter/kmfilterlistbox.cpp:428
 msgid ""
 "The following filters have not been saved because they were invalid (e.g. "
 "containing no actions or no search rules)."
@@ -865,7 +872,7 @@ msgstr "Izvezi filtere"
 msgid "Select Filters"
 msgstr "Izaberite filtere"
 
-#: filter/filterselectiondialog.cpp:52 filter/kmfilterlistbox.cpp:134
+#: filter/filterselectiondialog.cpp:52 filter/kmfilterlistbox.cpp:135
 #: folder/foldertreewidget.cpp:110
 #, fuzzy
 #| msgctxt ""
@@ -888,6 +895,20 @@ msgstr "Poništi sav odabir"
 #| msgid "Available Filters"
 msgid "Invalid Filters"
 msgstr "Dostupni filteri"
+
+#: filter/invalidfilters/invalidfilterdialog.cpp:36
+#: filter/kmfilterlistbox.cpp:418
+msgid "Discard"
+msgstr "Odbaci"
+
+#: filter/invalidfilters/invalidfilterwidget.cpp:30
+#: filter/kmfilterlistbox.cpp:414
+msgid ""
+"The following filters are invalid (e.g. containing no actions or no search "
+"rules). Discard or edit invalid filters?"
+msgstr ""
+"Sljedeći filteri su nepravilni (npr. ne sadrže radnje ili nemaju pravila "
+"pretrage). Odbaciti ili urediti nepravilne filtere?"
 
 #: filter/kmfilteraccountlist.cpp:36
 msgid "Account Name"
@@ -1124,7 +1145,7 @@ msgstr ""
 msgid "Convert KMail filters to sieve scripts"
 msgstr "Konvertuj KMail filtere u filter skripte"
 
-#: filter/kmfilterlistbox.cpp:36
+#: filter/kmfilterlistbox.cpp:37
 msgid ""
 "<qt><p>This is the list of defined filters. They are processed top-to-bottom."
 "</p><p>Click on any filter to edit it using the controls in the right-hand "
@@ -1134,7 +1155,7 @@ msgstr ""
 "dolje.</p><p>Kliknite na neki filter da ga izmijenite koristeći kontrole u "
 "desnoj polovini dijaloga.</p></qt>"
 
-#: filter/kmfilterlistbox.cpp:43
+#: filter/kmfilterlistbox.cpp:44
 msgid ""
 "<qt><p>Click this button to create a new filter.</p><p>The filter will be "
 "inserted just before the currently-selected one, but you can always change "
@@ -1146,7 +1167,7 @@ msgstr ""
 "promijeniti.</p><p>Ako ste slučajno pritisnuli ovo dugme, možete ga "
 "poništiti klikajući na dugme <em>Obriši</em>.</p></qt>"
 
-#: filter/kmfilterlistbox.cpp:51
+#: filter/kmfilterlistbox.cpp:52
 msgid ""
 "<qt><p>Click this button to copy a filter.</p><p>If you have clicked this "
 "button accidentally, you can undo this by clicking on the <em>Delete</em> "
@@ -1156,7 +1177,7 @@ msgstr ""
 "pritisnuli ovo dugme, možete ga poništiti klikajući na dugme <em>Obriši</em>."
 "dugme</p></qt>"
 
-#: filter/kmfilterlistbox.cpp:56
+#: filter/kmfilterlistbox.cpp:57
 msgid ""
 "<qt><p>Click this button to <em>delete</em> the currently-selected filter "
 "from the list above.</p><p>There is no way to get the filter back once it is "
@@ -1168,7 +1189,7 @@ msgstr ""
 "ali možete uvijek izaći iz ovog dijaloga klikajući na <em>Odustani</em> da "
 "poništite napravljene izmjene.</p></qt>"
 
-#: filter/kmfilterlistbox.cpp:64
+#: filter/kmfilterlistbox.cpp:65
 msgid ""
 "<qt><p>Click this button to move the currently-selected filter <em>up</em> "
 "one in the list above.</p><p>This is useful since the order of the filters "
@@ -1184,7 +1205,7 @@ msgstr ""
 "dugme, možete poništiti njegov efekat klikanjem na dugme <em>Dolje</em>.</"
 "p></qt>"
 
-#: filter/kmfilterlistbox.cpp:73
+#: filter/kmfilterlistbox.cpp:74
 msgid ""
 "<qt><p>Click this button to move the currently-selected filter <em>down</em> "
 "one in the list above.</p><p>This is useful since the order of the filters "
@@ -1200,7 +1221,7 @@ msgstr ""
 "dugme, možete poništiti njegov efekat klikanjem na dugme <em>Gore</em>.</p></"
 "qt>"
 
-#: filter/kmfilterlistbox.cpp:82
+#: filter/kmfilterlistbox.cpp:83
 msgid ""
 "<qt><p>Click this button to move the currently-selected filter to top of "
 "list.</p><p>This is useful since the order of the filters in the list "
@@ -1212,7 +1233,7 @@ msgstr ""
 "kojim oni se pokušavaju nad porukama: Filter pri vrhu se prvi pokušava.</p></"
 "qt>"
 
-#: filter/kmfilterlistbox.cpp:89
+#: filter/kmfilterlistbox.cpp:90
 msgid ""
 "<qt><p>Click this button to move the currently-selected filter to bottom of "
 "list.</p><p>This is useful since the order of the filters in the list "
@@ -1224,7 +1245,7 @@ msgstr ""
 "kojim oni se pokušavaju nad porukama: Filter pri vrhu se prvi pokušava.</p></"
 "qt>"
 
-#: filter/kmfilterlistbox.cpp:96
+#: filter/kmfilterlistbox.cpp:97
 msgid ""
 "<qt><p>Click this button to rename the currently-selected filter.</"
 "p><p>Filters are named automatically, as long as they start with \"&lt;\".</"
@@ -1238,7 +1259,7 @@ msgstr ""
 "imenovanje, kliknite na ovo dugme i odaberite <em>Očisti</em>, pa zatim "
 "<em>U redu</em> u prikazanom dijalogu.</p></qt>"
 
-#: filter/kmfilterlistbox.cpp:104
+#: filter/kmfilterlistbox.cpp:105
 msgid ""
 "<qt><p>Check this button to force the confirmation dialog to be displayed.</"
 "p><p>This is useful if you have defined a ruleset that tags messages to be "
@@ -1254,77 +1275,65 @@ msgstr ""
 "serveru, ili ako želite izmijeniti skup pravila tako da drugačije označite "
 "poruke.</p></qt>"
 
-#: filter/kmfilterlistbox.cpp:170
+#: filter/kmfilterlistbox.cpp:171
 msgctxt "Move selected filter up."
 msgid "Up"
 msgstr "Gore"
 
-#: filter/kmfilterlistbox.cpp:171
+#: filter/kmfilterlistbox.cpp:172
 msgctxt "Move selected filter down."
 msgid "Down"
 msgstr "Dole"
 
-#: filter/kmfilterlistbox.cpp:172
+#: filter/kmfilterlistbox.cpp:173
 msgctxt "Move selected filter to the top."
 msgid "Top"
 msgstr "Vrh"
 
-#: filter/kmfilterlistbox.cpp:173
+#: filter/kmfilterlistbox.cpp:174
 msgctxt "Move selected filter to the bottom."
 msgid "Bottom"
 msgstr "Dno"
 
-#: filter/kmfilterlistbox.cpp:201
+#: filter/kmfilterlistbox.cpp:202
 msgid "Rename..."
 msgstr "Promijeni ime..."
 
-#: filter/kmfilterlistbox.cpp:203
+#: filter/kmfilterlistbox.cpp:204
 msgctxt "@action:button in filter list manipulator"
 msgid "New"
 msgstr "Novo"
 
-#: filter/kmfilterlistbox.cpp:204
+#: filter/kmfilterlistbox.cpp:205
 msgid "Copy"
 msgstr "Kopiraj"
 
-#: filter/kmfilterlistbox.cpp:205
+#: filter/kmfilterlistbox.cpp:206
 msgid "Delete"
 msgstr "Obriši"
 
-#: filter/kmfilterlistbox.cpp:340
+#: filter/kmfilterlistbox.cpp:341
 msgid "unnamed"
 msgstr "Bez naziva"
 
-#: filter/kmfilterlistbox.cpp:410
-msgid ""
-"The following filters are invalid (e.g. containing no actions or no search "
-"rules). Discard or edit invalid filters?"
-msgstr ""
-"Sljedeći filteri su nepravilni (npr. ne sadrže radnje ili nemaju pravila "
-"pretrage). Odbaciti ili urediti nepravilne filtere?"
-
-#: filter/kmfilterlistbox.cpp:414
-msgid "Discard"
-msgstr "Odbaci"
-
-#: filter/kmfilterlistbox.cpp:510
+#: filter/kmfilterlistbox.cpp:514
 #, kde-format
 msgid "Do you want to remove the filter \"%1\"?"
 msgstr "Da li želite da obrišete filter \"%1\"?"
 
-#: filter/kmfilterlistbox.cpp:517
+#: filter/kmfilterlistbox.cpp:521
 msgid "Do you want to remove selected filters?"
 msgstr "Da li želite da obrišete izabrani filter \"%1\"?"
 
-#: filter/kmfilterlistbox.cpp:518
+#: filter/kmfilterlistbox.cpp:522
 msgid "Remove Filters"
 msgstr "Ukloni filtere"
 
-#: filter/kmfilterlistbox.cpp:732
+#: filter/kmfilterlistbox.cpp:736
 msgid "Rename Filter"
 msgstr "Promijeni ime filtera"
 
-#: filter/kmfilterlistbox.cpp:733
+#: filter/kmfilterlistbox.cpp:737
 #, kde-format
 msgid ""
 "Rename filter \"%1\" to:\n"
@@ -1920,89 +1929,89 @@ msgstr "<Tag>nije podržano"
 msgid "<message> not implemented/supported"
 msgstr "<message> nije implementirano/podržano"
 
-#: search/searchpattern.cpp:1290
+#: search/searchpattern.cpp:938
 msgctxt "name used for a virgin filter"
 msgid "unknown"
 msgstr "nepoznato"
 
-#: search/searchpattern.cpp:1298
+#: search/searchpattern.cpp:946
 msgid "(match any of the following)"
 msgstr "(nađi bilo šta od navedenog)"
 
-#: search/searchpattern.cpp:1301
+#: search/searchpattern.cpp:949
 msgid "(match all of the following)"
 msgstr "(nađi sve od navedenog)"
 
-#: search/searchpattern.cpp:1304
+#: search/searchpattern.cpp:952
 msgid "(match all messages)"
 msgstr "(Složi sve poruke)"
 
-#: search/searchpattern.h:374
+#: search/searchpattern.h:311
 msgctxt "message status"
 msgid "Important"
 msgstr "Važna"
 
-#: search/searchpattern.h:375
+#: search/searchpattern.h:312
 msgctxt "message status"
 msgid "Action Item"
 msgstr "Akcijska"
 
-#: search/searchpattern.h:376
+#: search/searchpattern.h:313
 msgctxt "message status"
 msgid "Unread"
 msgstr "Nepročitana"
 
-#: search/searchpattern.h:377
+#: search/searchpattern.h:314
 msgctxt "message status"
 msgid "Read"
 msgstr "Pročitana"
 
-#: search/searchpattern.h:378
+#: search/searchpattern.h:315
 msgctxt "message status"
 msgid "Deleted"
 msgstr "Obrisana"
 
-#: search/searchpattern.h:379
+#: search/searchpattern.h:316
 msgctxt "message status"
 msgid "Replied"
 msgstr "Odgovorena"
 
-#: search/searchpattern.h:380
+#: search/searchpattern.h:317
 msgctxt "message status"
 msgid "Forwarded"
 msgstr "Proslijeđena"
 
-#: search/searchpattern.h:381
+#: search/searchpattern.h:318
 msgctxt "message status"
 msgid "Queued"
 msgstr "Na čekanju"
 
-#: search/searchpattern.h:382
+#: search/searchpattern.h:319
 msgctxt "message status"
 msgid "Sent"
 msgstr "Poslana"
 
-#: search/searchpattern.h:383
+#: search/searchpattern.h:320
 msgctxt "message status"
 msgid "Watched"
 msgstr "Praćena"
 
-#: search/searchpattern.h:384
+#: search/searchpattern.h:321
 msgctxt "message status"
 msgid "Ignored"
 msgstr "Ignorisana"
 
-#: search/searchpattern.h:385
+#: search/searchpattern.h:322
 msgctxt "message status"
 msgid "Spam"
 msgstr "Spam"
 
-#: search/searchpattern.h:386
+#: search/searchpattern.h:323
 msgctxt "message status"
 msgid "Ham"
 msgstr "Ham"
 
-#: search/searchpattern.h:387
+#: search/searchpattern.h:324
 msgctxt "message status"
 msgid "Has Attachment"
 msgstr "Sa prilogom"
