@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailcommon.po\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-04-10 08:59+0000\n"
+"POT-Creation-Date: 2015-04-11 08:57+0000\n"
 "PO-Revision-Date: 2014-01-31 19:29+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -449,6 +449,12 @@ msgstr ""
 msgid "Add Tag"
 msgstr "Dodaj oznaku"
 
+#: filter/filteractions/filteractionaddtag.cpp:164
+#, fuzzy
+#| msgid "No filters selected."
+msgid "No tag selected."
+msgstr "Nijedan filter nije izabran."
+
 #: filter/filteractions/filteractionaddtoaddressbook.cpp:44
 msgid "Add to Address Book"
 msgstr "Dodaj u adresar"
@@ -492,6 +498,16 @@ msgstr ""
 "<p>Ovo određuje željeni imenik.<br />Ako nije dostupan, filter će se svesti "
 "na uobičajeni adresar.</p>"
 
+#: filter/filteractions/filteractionaddtoaddressbook.cpp:256
+msgid "Header type selected is unknown."
+msgstr ""
+
+#: filter/filteractions/filteractionaddtoaddressbook.cpp:262
+#, fuzzy
+#| msgid "No folder selected."
+msgid "No addressbook selected."
+msgstr "Nijedna fascikla nije izabrana."
+
 #: filter/filteractions/filteractionbeep.cpp:28
 msgid "Beep"
 msgstr "Bip"
@@ -517,6 +533,13 @@ msgstr "Budite pažljivi, posta će biti obrisana."
 #: filter/filteractions/filteractionexec.cpp:27
 msgid "Execute Command"
 msgstr "Izvrši naredbu"
+
+#: filter/filteractions/filteractionexec.cpp:48
+#: filter/filteractions/filteractionpipethrough.cpp:48
+#, fuzzy
+#| msgid "Folder creation failed"
+msgid "No action defined."
+msgstr "Neuspjelo stvaranje direktorija"
 
 #: filter/filteractions/filteractionforward.cpp:48
 msgctxt "Forward directly not with a command"
@@ -568,17 +591,11 @@ msgctxt "pipe through with command"
 msgid "Pipe Through"
 msgstr "Proslijedi kroz cijev"
 
-#: filter/filteractions/filteractionpipethrough.cpp:48
-#, fuzzy
-#| msgid "Folder creation failed"
-msgid "No action defined."
-msgstr "Neuspjelo stvaranje direktorija"
-
 #: filter/filteractions/filteractionplaysound.cpp:34
 msgid "Play Sound"
 msgstr "Pusti zvuk"
 
-#: filter/filteractions/filteractionplaysound.cpp:90
+#: filter/filteractions/filteractionplaysound.cpp:89
 #, fuzzy
 #| msgid "Sound file was \"%1\"."
 msgid "Sound file was not defined."
@@ -1797,73 +1814,73 @@ msgstr ""
 "Greška je bila:\n"
 "%1"
 
-#: search/searchpattern.cpp:226
+#: search/searchpattern.cpp:202
 msgid "equal"
 msgstr "jednak"
 
-#: search/searchpattern.cpp:229
+#: search/searchpattern.cpp:205
 msgid "not equal"
 msgstr "nije jednako"
 
-#: search/searchpattern.cpp:232
+#: search/searchpattern.cpp:208
 msgid "is greater"
 msgstr "je veći"
 
-#: search/searchpattern.cpp:235
+#: search/searchpattern.cpp:211
 msgid "is less or equal"
 msgstr "je manji ili jednak"
 
-#: search/searchpattern.cpp:238
+#: search/searchpattern.cpp:214
 msgid "is less"
 msgstr "je manji"
 
-#: search/searchpattern.cpp:241
+#: search/searchpattern.cpp:217
 msgid "is greater or equal"
 msgstr "je veći ili jednak"
 
-#: search/searchpattern.cpp:244
+#: search/searchpattern.cpp:220
 msgid "is in addressbook"
 msgstr "je u imeniku"
 
-#: search/searchpattern.cpp:247
+#: search/searchpattern.cpp:223
 msgid "is not in addressbook"
 msgstr "nije u imeniku"
 
-#: search/searchpattern.cpp:250 search/searchpattern.cpp:253
+#: search/searchpattern.cpp:226 search/searchpattern.cpp:229
 msgid "is in category"
 msgstr "jeste u kategoriji"
 
-#: search/searchpattern.cpp:256
+#: search/searchpattern.cpp:232
 #: search/widgethandler/messagerulewidgethandler.cpp:42
 #: search/widgethandler/messagerulewidgethandler.cpp:168
 msgid "has an attachment"
 msgstr "ima prilog"
 
-#: search/searchpattern.cpp:259
+#: search/searchpattern.cpp:235
 msgid "has not an attachment"
 msgstr "nema dodatke"
 
-#: search/searchpattern.cpp:262
+#: search/searchpattern.cpp:238
 msgid "start with"
 msgstr "počinje sa"
 
-#: search/searchpattern.cpp:265
+#: search/searchpattern.cpp:241
 msgid "not start with"
 msgstr "ne počinje sa"
 
-#: search/searchpattern.cpp:268
+#: search/searchpattern.cpp:244
 msgid "end with"
 msgstr "završava sa"
 
-#: search/searchpattern.cpp:271
+#: search/searchpattern.cpp:247
 msgid "not end with"
 msgstr "ne završava sa"
 
-#: search/searchpattern.cpp:274
+#: search/searchpattern.cpp:250
 msgid "none"
 msgstr "nijedan"
 
-#: search/searchpattern.cpp:277
+#: search/searchpattern.cpp:253
 #: search/widgethandler/headersrulerwidgethandler.cpp:38
 #: search/widgethandler/messagerulewidgethandler.cpp:38
 #: search/widgethandler/tagrulewidgethandler.cpp:105
@@ -1871,150 +1888,80 @@ msgstr "nijedan"
 msgid "contains"
 msgstr "sadržaj"
 
-#: search/searchpattern.cpp:280
+#: search/searchpattern.cpp:256
 msgid "not contains"
 msgstr "ne sadrži"
 
-#: search/searchpattern.cpp:283
+#: search/searchpattern.cpp:259
 msgid "has regexp"
 msgstr "ima regexp"
 
-#: search/searchpattern.cpp:286
+#: search/searchpattern.cpp:262
 msgid "not regexp"
 msgstr "nije regexp"
 
-#: search/searchpattern.cpp:300
+#: search/searchpattern.cpp:276
 msgid "size equals not supported"
 msgstr "jednake veličine nisu podržane"
 
-#: search/searchpattern.cpp:303
+#: search/searchpattern.cpp:279
 msgid "size not equals not supported"
 msgstr "nejednake veličine nisu podržane"
 
-#: search/searchpattern.cpp:334 search/searchpattern.cpp:440
-#: search/searchpattern.cpp:521
+#: search/searchpattern.cpp:310 search/searchpattern.cpp:416
+#: search/searchpattern.cpp:497
 #, kde-format
 msgid "\"%1\" is not supported with condition \"%2\""
 msgstr "\"%1\" nije podržan stanjem \"%2\""
 
-#: search/searchpattern.cpp:340
+#: search/searchpattern.cpp:316
 msgid "<status> not implemented/supported"
 msgstr "<status> nije implementiran/podržan"
 
-#: search/searchpattern.cpp:343
+#: search/searchpattern.cpp:319
 msgid "<any header> not implemented/supported"
 msgstr "<any header> nije implementiran/podržan"
 
-#: search/searchpattern.cpp:346
+#: search/searchpattern.cpp:322
 msgid "<contents> not implemented/supported"
 msgstr "<contents> nije implementiran/podržan"
 
-#: search/searchpattern.cpp:349
+#: search/searchpattern.cpp:325
 msgid "<age in days> not implemented/supported"
 msgstr "<age in days> nije implementirano/podržano"
 
-#: search/searchpattern.cpp:352
+#: search/searchpattern.cpp:328
 msgid "<date> not implemented/supported"
 msgstr "<date> nije implementirano/podržano"
 
-#: search/searchpattern.cpp:355
+#: search/searchpattern.cpp:331
 msgid "<recipients> not implemented/supported"
 msgstr "<recipients> nije implementirano/podržano"
 
-#: search/searchpattern.cpp:357
+#: search/searchpattern.cpp:333
 msgid "<Tag> is not supported"
 msgstr "<Tag>nije podržano"
 
-#: search/searchpattern.cpp:360
+#: search/searchpattern.cpp:336
 msgid "<message> not implemented/supported"
 msgstr "<message> nije implementirano/podržano"
 
-#: search/searchpattern.cpp:938
+#: search/searchpattern.cpp:813
 msgctxt "name used for a virgin filter"
 msgid "unknown"
 msgstr "nepoznato"
 
-#: search/searchpattern.cpp:946
+#: search/searchpattern.cpp:821
 msgid "(match any of the following)"
 msgstr "(nađi bilo šta od navedenog)"
 
-#: search/searchpattern.cpp:949
+#: search/searchpattern.cpp:824
 msgid "(match all of the following)"
 msgstr "(nađi sve od navedenog)"
 
-#: search/searchpattern.cpp:952
+#: search/searchpattern.cpp:827
 msgid "(match all messages)"
 msgstr "(Složi sve poruke)"
-
-#: search/searchpattern.h:311
-msgctxt "message status"
-msgid "Important"
-msgstr "Važna"
-
-#: search/searchpattern.h:312
-msgctxt "message status"
-msgid "Action Item"
-msgstr "Akcijska"
-
-#: search/searchpattern.h:313
-msgctxt "message status"
-msgid "Unread"
-msgstr "Nepročitana"
-
-#: search/searchpattern.h:314
-msgctxt "message status"
-msgid "Read"
-msgstr "Pročitana"
-
-#: search/searchpattern.h:315
-msgctxt "message status"
-msgid "Deleted"
-msgstr "Obrisana"
-
-#: search/searchpattern.h:316
-msgctxt "message status"
-msgid "Replied"
-msgstr "Odgovorena"
-
-#: search/searchpattern.h:317
-msgctxt "message status"
-msgid "Forwarded"
-msgstr "Proslijeđena"
-
-#: search/searchpattern.h:318
-msgctxt "message status"
-msgid "Queued"
-msgstr "Na čekanju"
-
-#: search/searchpattern.h:319
-msgctxt "message status"
-msgid "Sent"
-msgstr "Poslana"
-
-#: search/searchpattern.h:320
-msgctxt "message status"
-msgid "Watched"
-msgstr "Praćena"
-
-#: search/searchpattern.h:321
-msgctxt "message status"
-msgid "Ignored"
-msgstr "Ignorisana"
-
-#: search/searchpattern.h:322
-msgctxt "message status"
-msgid "Spam"
-msgstr "Spam"
-
-#: search/searchpattern.h:323
-msgctxt "message status"
-msgid "Ham"
-msgstr "Ham"
-
-#: search/searchpattern.h:324
-msgctxt "message status"
-msgid "Has Attachment"
-msgstr "Sa prilogom"
 
 #: search/searchpatternedit.cpp:63
 msgid "Complete Message"
@@ -2089,6 +2036,76 @@ msgstr "Nađi &bilo šta od navedenog"
 #: search/searchpatternedit.cpp:620
 msgid "Match all messages"
 msgstr "Posloži sve poruke"
+
+#: search/searchrule/searchrulestatus.h:37
+msgctxt "message status"
+msgid "Important"
+msgstr "Važna"
+
+#: search/searchrule/searchrulestatus.h:38
+msgctxt "message status"
+msgid "Action Item"
+msgstr "Akcijska"
+
+#: search/searchrule/searchrulestatus.h:39
+msgctxt "message status"
+msgid "Unread"
+msgstr "Nepročitana"
+
+#: search/searchrule/searchrulestatus.h:40
+msgctxt "message status"
+msgid "Read"
+msgstr "Pročitana"
+
+#: search/searchrule/searchrulestatus.h:41
+msgctxt "message status"
+msgid "Deleted"
+msgstr "Obrisana"
+
+#: search/searchrule/searchrulestatus.h:42
+msgctxt "message status"
+msgid "Replied"
+msgstr "Odgovorena"
+
+#: search/searchrule/searchrulestatus.h:43
+msgctxt "message status"
+msgid "Forwarded"
+msgstr "Proslijeđena"
+
+#: search/searchrule/searchrulestatus.h:44
+msgctxt "message status"
+msgid "Queued"
+msgstr "Na čekanju"
+
+#: search/searchrule/searchrulestatus.h:45
+msgctxt "message status"
+msgid "Sent"
+msgstr "Poslana"
+
+#: search/searchrule/searchrulestatus.h:46
+msgctxt "message status"
+msgid "Watched"
+msgstr "Praćena"
+
+#: search/searchrule/searchrulestatus.h:47
+msgctxt "message status"
+msgid "Ignored"
+msgstr "Ignorisana"
+
+#: search/searchrule/searchrulestatus.h:48
+msgctxt "message status"
+msgid "Spam"
+msgstr "Spam"
+
+#: search/searchrule/searchrulestatus.h:49
+msgctxt "message status"
+msgid "Ham"
+msgstr "Ham"
+
+#: search/searchrule/searchrulestatus.h:50
+msgctxt "message status"
+msgid "Has Attachment"
+msgstr "Sa prilogom"
 
 #: search/widgethandler/daterulewidgethandler.cpp:36
 #: search/widgethandler/numericdoublerulewidgethandler.cpp:35
