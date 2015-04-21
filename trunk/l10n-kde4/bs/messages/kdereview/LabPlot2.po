@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-04-20 02:04+0000\n"
+"POT-Creation-Date: 2015-04-21 02:30+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -301,6 +301,7 @@ msgstr "%1: pomjeri %2 u %3."
 #. i18n: ectx: property (text), widget (QLabel, lDropLineType)
 #. i18n: ectx: property (text), widget (QLabel, lSymbolStyle_2)
 #. i18n: ectx: property (text), widget (QLabel, lValuesPosition_2)
+#. i18n: ectx: property (text), widget (QLabel, lFillingBackgroundType)
 #. i18n: ectx: property (text), widget (QLabel, lErrorBarsType)
 #. i18n: ectx: property (text), widget (QLabel, lArrowType)
 #. i18n: ectx: property (text), widget (QLabel, lMajorTicksType)
@@ -320,7 +321,8 @@ msgstr "%1: pomjeri %2 u %3."
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:223
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:416
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:682
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1138
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1024
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1321
 msgid "Type"
 msgstr "Vrsta"
 
@@ -554,8 +556,8 @@ msgstr "da"
 #: src/backend/datasources/FileDataSource.cpp:284
 #: src/backend/datasources/FileDataSource.cpp:286
 #: src/backend/datasources/FileDataSource.cpp:288
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:418
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:422
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:455
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:459
 msgid "no"
 msgstr "ne"
 
@@ -619,7 +621,6 @@ msgid "Could not open file %1 for reading."
 msgstr "Ne može se otvoriti fajl %1 za čitanje."
 
 #: src/backend/datasources/FileDataSource.cpp:308
-#: src/kdefrontend/legacy/ImportWidget.cpp:142
 msgid "cannot open"
 msgstr "ne mogu da otvorim"
 
@@ -1214,6 +1215,7 @@ msgstr "stil"
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:329
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:230
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:292
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:410
 msgid "color"
 msgstr "boja"
 
@@ -2024,7 +2026,7 @@ msgid "star5"
 msgstr ""
 
 #: src/backend/worksheet/plots/cartesian/XYCurve.cpp:670
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:217
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:225
 msgid "line"
 msgstr "linija"
 
@@ -2659,13 +2661,11 @@ msgstr "Info podatka"
 
 #: src/kdefrontend/datasources/ImportFileDialog.cpp:67
 #: src/kdefrontend/datasources/ImportFileDialog.cpp:217
-#: src/kdefrontend/legacy/ImportWidget.cpp:185
 msgid "Hide Options"
 msgstr "Sakrij Opcije"
 
 #: src/kdefrontend/datasources/ImportFileDialog.cpp:69
 #: src/kdefrontend/datasources/ImportFileDialog.cpp:219
-#: src/kdefrontend/legacy/ImportWidget.cpp:191
 msgid "Show Options"
 msgstr "Prikaži opcije"
 
@@ -2830,7 +2830,8 @@ msgstr "polu-popunjen, veliki"
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:507
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:510
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:251
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:391
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:399
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:406
 #: src/kdefrontend/widgets/LabelWidget.cpp:74
 #: src/kdefrontend/widgets/LabelWidget.cpp:84
 msgid "left"
@@ -2840,7 +2841,8 @@ msgstr "lijevo"
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:508
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:509
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:253
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:392
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:400
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:407
 #: src/kdefrontend/widgets/LabelWidget.cpp:76
 #: src/kdefrontend/widgets/LabelWidget.cpp:86
 msgid "right"
@@ -2853,8 +2855,8 @@ msgstr "oba (oboje)"
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:297
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:306
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:257
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:216
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:366
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:224
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:374
 #: src/kdefrontend/GuiTools.cpp:152
 msgid "none"
 msgstr "nijedno"
@@ -2970,6 +2972,7 @@ msgstr "y^2"
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:343
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:244
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:308
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:426
 msgid "centered"
 msgstr "centrirano"
 
@@ -3012,7 +3015,7 @@ msgstr "%1: ose: predložak \"%2\" učitan"
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:917
 #: src/kdefrontend/dockwidgets/SpreadsheetDock.cpp:190
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:866
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1769
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1806
 #, kde-format
 msgid "%1: template \"%2\" loaded"
 msgstr "%1: predložak \"%2\" učitan"
@@ -3030,78 +3033,91 @@ msgstr "nagib"
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:330
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:231
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:293
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:411
 msgid "image"
 msgstr "slika"
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:331
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:232
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:294
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:412
 msgid "pattern"
 msgstr "obrazac"
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:333
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:234
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:297
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:415
 msgid "single color"
 msgstr "jedna boja"
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:334
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:235
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:298
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:416
 msgid "horizontal linear gradient"
 msgstr "horizontalni linearni gradijent"
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:335
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:236
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:299
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:417
 msgid "vertical linear gradient"
 msgstr "vertikalni linearni gradijent"
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:336
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:237
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:300
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:418
 msgid "diagonal linear gradient (start from top left)"
 msgstr "dijagonalni linearni gradijent (počinje od gornjeg lijevog ugla)"
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:337
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:238
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:301
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:419
 msgid "diagonal linear gradient (start from bottom left)"
 msgstr "dijagonalni linearni gradijent (počinje sa lijevog donjeg ugla)"
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:338
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:239
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:302
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:420
 msgid "radial gradient"
 msgstr "kružni(radijalni) gradijent"
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:340
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:241
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:305
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:423
 msgid "scaled and cropped"
 msgstr "skaliran i izrezan"
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:341
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:242
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:306
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:424
 msgid "scaled"
 msgstr "skaliran"
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:342
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:243
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:307
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:425
 msgid "scaled, keep proportions"
 msgstr "skaliran, zadrži proporcije"
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:344
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:245
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:309
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:427
 msgid "tiled"
 msgstr "popločan"
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:345
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:246
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:310
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:428
 msgid "center tiled"
 msgstr "centrirano popločan"
 
@@ -3142,7 +3158,7 @@ msgstr "centrirano popločan"
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:572
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:609
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:954
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1175
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1358
 #: src/kdefrontend/ui/labelwidget.ui:190
 #: src/kdefrontend/worksheet/GridDialog.cpp:76
 msgid "Color"
@@ -3191,17 +3207,17 @@ msgid "%1 cartesian plot legends: template \"%2\" loaded"
 msgstr "%1 legenda dekartovog grafa: predložak \"%2\" učitan"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:185
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:603
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:640
 msgid "Decimal"
 msgstr "Decimala"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:186
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:604
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:641
 msgid "Scientific (e)"
 msgstr "Naučni (3)"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:187
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:605
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:642
 msgid "Scientific (E)"
 msgstr "Naučni (E)"
 
@@ -3215,35 +3231,35 @@ msgstr "Automatski (G)"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:194
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:200
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:613
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:619
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:650
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:656
 msgid "Number without leading zero"
 msgstr "Broj bez nule na početku"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:195
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:201
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:614
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:620
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:651
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:657
 msgid "Number with leading zero"
 msgstr "Broj sa nulom na početku"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:196
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:615
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:652
 msgid "Abbreviated month name"
 msgstr "Skraćeno ime mjeseca"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:197
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:616
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:653
 msgid "Full month name"
 msgstr "Puno ime mjeseca"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:202
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:621
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:658
 msgid "Abbreviated day name"
 msgstr "Skraćeno ime dana"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:203
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:622
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:659
 msgid "Full day name"
 msgstr "Puno ime dana"
 
@@ -3252,7 +3268,7 @@ msgid "Numeric"
 msgstr "Brojčano"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:251
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:610
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:647
 msgid "Text"
 msgstr "Tekst"
 
@@ -3435,131 +3451,133 @@ msgstr "%1 radni list: pozadinski stil boje promijenjen"
 msgid "%1 worksheets: template \"%2\" loaded"
 msgstr "%1 radni list: predložak \"%2\" učitan"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:218
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:226
 msgid "horiz. start"
 msgstr "horiz.start"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:219
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:227
 msgid "vert. start"
 msgstr "vert.start"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:220
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:228
 msgid "horiz. midpoint"
 msgstr "horiz.srednja tačka"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:221
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:229
 msgid "vert. midpoint"
 msgstr "vert.srednja tačka"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:222
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:230
 msgid "2-segments"
 msgstr "2-segmenta"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:223
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:231
 msgid "3-segments"
 msgstr "3-segmenta"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:224
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:232
 msgid "cubic spline (natural)"
 msgstr "kubna dugača (prirodna)"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:225
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:233
 msgid "cubic spline (periodic)"
 msgstr "kubna dugačka (periodična)"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:226
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:234
 msgid "Akima-spline (natural)"
 msgstr "Akima-dugačka (prirodna)"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:227
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:235
 msgid "Akima-spline (periodic)"
 msgstr "Akima-dugačka(periodična)"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:350
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:358
 msgid "no drop lines"
 msgstr "nema pada linija"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:351
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:359
 msgid "drop lines, X"
 msgstr "ispusti linije, X"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:352
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:360
 msgid "drop lines, Y"
 msgstr "ispusti linije, Y"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:353
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:361
 msgid "drop lines, XY"
 msgstr "ispusti linije, XY"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:354
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:362
 msgid "drop lines, X, zero baseline"
 msgstr "ispusti linije, X, nulta bazna linija"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:355
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:363
 msgid "drop lines, X, min baseline"
 msgstr "ispusti linije, X, minimalna bazna linnija"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:356
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:364
 msgid "drop lines, X, max baseline"
 msgstr "ispusti linije, X, maksimalna bazna linija"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:382
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:390
 msgid "no values"
 msgstr "nema vrijednosti"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:387
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:395
 msgid "custom column"
 msgstr "prilagodi vrijednosti"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:389
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:397
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:404
 msgid "above"
 msgstr "iznad"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:390
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:398
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:405
 msgid "below"
 msgstr "ispod"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:401
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:438
 msgid "bars"
 msgstr "bara"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:415
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:452
 msgid "bars with ends"
 msgstr "barovi s krajevima"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:419
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:423
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:456
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:460
 msgid "symmetric"
 msgstr "simetrična glatka kriva"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:420
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:424
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:457
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:461
 msgid "asymmetric"
 msgstr "nesimetrična"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:606
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:643
 msgid "Automatic (e)"
 msgstr "Automatska (e)"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:607
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:644
 msgid "Automatic (E)"
 msgstr "Automatska (E)"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1266
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1335
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1303
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1372
 msgid "Data, +-"
 msgstr "Podaci, +-"
 
 #. i18n: ectx: property (text), widget (QLabel, lXErrorDataPlus)
 #. i18n: ectx: property (text), widget (QLabel, lYErrorDataPlus)
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1273
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1342
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1042
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1095
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1310
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1379
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1225
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1278
 msgid "Data, +"
 msgstr "Podaci, +"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1767
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1804
 #, kde-format
 msgid "%1 xy-curves: template \"%2\" loaded"
 msgstr "%1 xy- krive: predložak \"%2\" učitan"
@@ -4093,125 +4111,6 @@ msgstr "&Skripta"
 #: src/kdefrontend/LabPlot2ui.rc:60
 msgid "&Windows"
 msgstr "&Prozori"
-
-#: src/kdefrontend/legacy/filter/FilterCDF.cpp:165
-#, kde-format
-msgid "%1 (%2): %3 %4"
-msgstr "%1 (%2): %3 %4"
-
-#: src/kdefrontend/legacy/filter/FilterCDF.cpp:188
-#, kde-format
-msgid "%1: %2 %3"
-msgstr "%1: %2 %3"
-
-#: src/kdefrontend/legacy/filter/FilterCDF.cpp:198
-#, kde-format
-msgid "%1 (%2%)"
-msgstr "%1 (%2%)"
-
-#: src/kdefrontend/legacy/filter/FilterNETCDF.cpp:58
-msgid "byte"
-msgstr "bajt"
-
-#: src/kdefrontend/legacy/filter/FilterNETCDF.cpp:60
-msgid "char"
-msgstr "znak"
-
-#: src/kdefrontend/legacy/filter/FilterNETCDF.cpp:62
-msgid "short"
-msgstr "kratak"
-
-#: src/kdefrontend/legacy/filter/FilterNETCDF.cpp:64
-msgid "int"
-msgstr "cijeli broj"
-
-#: src/kdefrontend/legacy/filter/FilterNETCDF.cpp:66
-msgid "float"
-msgstr "broj sa pokretnim zarezom"
-
-#: src/kdefrontend/legacy/filter/FilterNETCDF.cpp:68
-msgid "double"
-msgstr "dvostruka preciznost"
-
-#: src/kdefrontend/legacy/filter/FilterNETCDF.cpp:70
-msgid "bogus"
-msgstr "prividan"
-
-#: src/kdefrontend/legacy/filter/FilterNETCDF.cpp:76
-msgid "UNLIMITED"
-msgstr "NEOGRANIČEN"
-
-#: src/kdefrontend/legacy/ImportWidget.cpp:123
-msgid "Select one or more files to open"
-msgstr "Označi jednu ili više datoteka za otvaranje"
-
-#: src/kdefrontend/legacy/ImportWidget.cpp:174
-#, kde-format
-msgid "Sorry. Could not open file %1 for reading."
-msgstr "Žao nam je. Datoteka %1 ne može biti otvorena za čitanje."
-
-#: src/kdefrontend/legacy/ImportWidget.cpp:374
-msgid "Reading NETCDF data..."
-msgstr "Čitanje NETCDF podataka..."
-
-#. i18n: ectx: property (text), widget (QPushButton, bCancel)
-#. i18n: ectx: property (text), widget (QPushButton, pbCancel)
-#: src/kdefrontend/legacy/ImportWidget.cpp:374
-#: src/kdefrontend/legacy/ImportWidget.cpp:413
-#: src/kdefrontend/legacy/ImportWidget.cpp:453
-#: src/kdefrontend/legacy/ImportWidget.cpp:525
-#: src/kdefrontend/ui/constantswidget.ui:88
-#: src/kdefrontend/ui/fitoptionswidget.ui:86
-#: src/kdefrontend/ui/fitparameterswidget.ui:54
-#: src/kdefrontend/ui/functionswidget.ui:60
-msgid "Cancel"
-msgstr "Otkaži"
-
-#: src/kdefrontend/legacy/ImportWidget.cpp:413
-msgid "Reading CDF data..."
-msgstr "Čitanje CDF podataka..."
-
-#: src/kdefrontend/legacy/ImportWidget.cpp:453
-msgid "Reading binary data..."
-msgstr "Čitanje binarne podataka..."
-
-#: src/kdefrontend/legacy/ImportWidget.cpp:525
-msgid "Reading ASCII data..."
-msgstr "Čitanje ASCII podataka..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabTitle)
-#: src/kdefrontend/legacy/plots/Plot.cpp:40
-#: src/kdefrontend/ui/dockwidgets/axisdock.ui:239
-#: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:383
-#: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:313
-msgid "Title"
-msgstr "Naslov"
-
-#: src/kdefrontend/legacy/plots/Plot.cpp:165
-#: src/kdefrontend/legacy/plots/Plot.cpp:175
-#: src/kdefrontend/legacy/plots/Plot.cpp:187
-msgid "auto"
-msgstr "auto"
-
-#: src/kdefrontend/legacy/plots/Plot2D.cpp:57
-msgid "x-Axis"
-msgstr "x-Osa"
-
-#: src/kdefrontend/legacy/plots/Plot2D.cpp:59
-msgid "y-Axis"
-msgstr "y-Osa"
-
-#: src/kdefrontend/legacy/plots/Plot2D.cpp:63
-msgid "x2-Axis"
-msgstr "x2-Osa"
-
-#: src/kdefrontend/legacy/plots/Plot2D.cpp:65
-msgid "y2-Axis"
-msgstr "y2-Osa"
-
-#: src/kdefrontend/legacy/PlotSurfaceStyleWidget.cpp:135
-msgid "Not yet implemented."
-msgstr "Još nije implementirano."
 
 #: src/kdefrontend/MainWin.cpp:137
 #, kde-format
@@ -4780,6 +4679,15 @@ msgstr "Vrijednost:"
 msgid "Insert"
 msgstr "Umetni"
 
+#. i18n: ectx: property (text), widget (QPushButton, bCancel)
+#. i18n: ectx: property (text), widget (QPushButton, pbCancel)
+#: src/kdefrontend/ui/constantswidget.ui:88
+#: src/kdefrontend/ui/fitoptionswidget.ui:86
+#: src/kdefrontend/ui/fitparameterswidget.ui:54
+#: src/kdefrontend/ui/functionswidget.ui:60
+msgid "Cancel"
+msgstr "Otkaži"
+
 #. i18n: ectx: property (placeholderText), widget (KLineEdit, kleFilter)
 #: src/kdefrontend/ui/constantswidget.ui:108
 #: src/kdefrontend/ui/functionswidget.ui:17
@@ -4864,7 +4772,7 @@ msgstr "Broj vektora u direktoriju"
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:1048
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:107
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:838
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1131
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1314
 msgid "Format:"
 msgstr "Format:"
 
@@ -4881,12 +4789,14 @@ msgstr "Datoteka podatak izvor"
 #. i18n: ectx: property (text), widget (QLabel, lFileName)
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, lBackgroundFileName)
+#. i18n: ectx: property (text), widget (QLabel, lFillingBackgroundFileName)
 #: src/kdefrontend/ui/datasources/importfilewidget.ui:32
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:761
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:370
 #: src/kdefrontend/ui/dockwidgets/plotareadock.ui:168
 #: src/kdefrontend/ui/dockwidgets/projectdock.ui:38
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:232
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1041
 #: src/kdefrontend/ui/spreadsheet/exportspreadsheetwidget.ui:33
 #: src/kdefrontend/ui/worksheet/exportworksheetwidget.ui:33
 msgid "File name"
@@ -4900,11 +4810,13 @@ msgid "Specify the name of the file to import."
 msgstr "Specificiraj ime datoteke za uvoz."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, bOpen)
+#. i18n: ectx: property (toolTip), widget (QPushButton, bFillingOpen)
 #: src/kdefrontend/ui/datasources/importfilewidget.ui:55
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:784
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:393
 #: src/kdefrontend/ui/dockwidgets/plotareadock.ui:191
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:255
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1064
 #: src/kdefrontend/ui/spreadsheet/exportspreadsheetwidget.ui:56
 #: src/kdefrontend/ui/worksheet/exportworksheetwidget.ui:56
 msgid " Select the file to import"
@@ -5064,6 +4976,13 @@ msgstr "Nulti ofset"
 msgid "Scaling factor"
 msgstr "Faktor skaliranja"
 
+#. i18n: ectx: attribute (title), widget (QWidget, tabTitle)
+#: src/kdefrontend/ui/dockwidgets/axisdock.ui:239
+#: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:383
+#: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:313
+msgid "Title"
+msgstr "Naslov"
+
 #. i18n: ectx: property (text), widget (QLabel, lLine)
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:256
 msgid "Line:"
@@ -5108,7 +5027,7 @@ msgstr "Linija:"
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:458
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:565
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:602
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1148
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1331
 #: src/kdefrontend/worksheet/GridDialog.cpp:51
 msgid "Style"
 msgstr "Stil"
@@ -5137,7 +5056,7 @@ msgstr "Stil"
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:142
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:267
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:626
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1192
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1375
 msgid "Width"
 msgstr "Širina"
 
@@ -5174,8 +5093,8 @@ msgstr "Širina"
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:642
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:652
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:742
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1165
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1199
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1348
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1382
 #: src/kdefrontend/ui/labelwidget.ui:329
 msgid " pt"
 msgstr " pt"
@@ -5187,6 +5106,7 @@ msgstr " pt"
 #. i18n: ectx: property (text), widget (QLabel, lDropLineOpacity)
 #. i18n: ectx: property (text), widget (QLabel, lSymbolOpacity)
 #. i18n: ectx: property (text), widget (QLabel, lValuesOpacity)
+#. i18n: ectx: property (text), widget (QLabel, lFillingBackgroundOpacity)
 #. i18n: ectx: property (text), widget (QLabel, lErrorBarsOpacity)
 #. i18n: ectx: property (text), widget (QLabel, lMajorTicksOpacity)
 #. i18n: ectx: property (text), widget (QLabel, lMinorTicksOpacity)
@@ -5209,7 +5129,8 @@ msgstr " pt"
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:284
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:517
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:781
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1209
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1124
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1392
 #: src/kdefrontend/worksheet/GridDialog.cpp:83
 msgid "Opacity"
 msgstr "Neprovidnost"
@@ -5221,6 +5142,7 @@ msgstr "Neprovidnost"
 #. i18n: ectx: property (toolTip), widget (QSpinBox, sbDropLineOpacity)
 #. i18n: ectx: property (toolTip), widget (QSpinBox, sbSymbolOpacity)
 #. i18n: ectx: property (toolTip), widget (QSpinBox, sbValuesOpacity)
+#. i18n: ectx: property (toolTip), widget (QSpinBox, sbFillingBackgroundOpacity)
 #. i18n: ectx: property (toolTip), widget (QSpinBox, sbErrorBarsOpacity)
 #. i18n: ectx: property (toolTip), widget (QSpinBox, sbArrowSize)
 #. i18n: ectx: property (toolTip), widget (QSpinBox, sbMajorTicksOpacity)
@@ -5244,7 +5166,8 @@ msgstr "Neprovidnost"
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:297
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:530
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:794
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1222
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1137
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1405
 msgid ""
 "The opacity ranges from 0 to 100, where 0 is fully transparent and 100 is "
 "fully opaque."
@@ -5260,6 +5183,7 @@ msgstr ""
 #. i18n: ectx: property (suffix), widget (QSpinBox, sbDropLineOpacity)
 #. i18n: ectx: property (suffix), widget (QSpinBox, sbSymbolOpacity)
 #. i18n: ectx: property (suffix), widget (QSpinBox, sbValuesOpacity)
+#. i18n: ectx: property (suffix), widget (QSpinBox, sbFillingBackgroundOpacity)
 #. i18n: ectx: property (suffix), widget (QSpinBox, sbErrorBarsOpacity)
 #. i18n: ectx: property (suffix), widget (QSpinBox, sbMajorTicksOpacity)
 #. i18n: ectx: property (suffix), widget (QSpinBox, sbMinorTicksOpacity)
@@ -5283,7 +5207,8 @@ msgstr ""
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:300
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:533
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:797
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1225
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1140
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1408
 #, no-c-format
 msgid " %"
 msgstr " %"
@@ -5309,10 +5234,12 @@ msgstr "Veličina"
 msgid "Ticks"
 msgstr "Otkucaji"
 
+#. i18n: ectx: property (text), widget (QLabel, lFillingDirection)
 #. i18n: ectx: property (text), widget (QLabel, lMajorTicksDirection)
 #. i18n: ectx: property (text), widget (QLabel, lMinorTicksDirection)
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:495
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:696
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:991
 msgid "Direction"
 msgstr "Smjer"
 
@@ -5606,26 +5533,32 @@ msgid "Background:"
 msgstr "Pozadina:"
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kleBackgroundFileName)
+#. i18n: ectx: property (toolTip), widget (KLineEdit, kleFillingBackgroundFileName)
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:768
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:377
 #: src/kdefrontend/ui/dockwidgets/plotareadock.ui:175
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:239
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1048
 msgid "Specify the name of the image file."
 msgstr "Specificiraj ime slike."
 
 #. i18n: ectx: property (text), widget (QLabel, lBackgroundFirstColor)
+#. i18n: ectx: property (text), widget (QLabel, lFillingBackgroundFirstColor)
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:824
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:433
 #: src/kdefrontend/ui/dockwidgets/plotareadock.ui:221
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:285
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1104
 msgid "First color"
 msgstr "Prva Boja"
 
 #. i18n: ectx: property (text), widget (QLabel, lBackgroundSecondColor)
+#. i18n: ectx: property (text), widget (QLabel, lFillingBackgroundSecondColor)
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:834
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:443
 #: src/kdefrontend/ui/dockwidgets/plotareadock.ui:231
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:295
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1114
 msgid "Second color"
 msgstr "Druga Boja"
 
@@ -5818,18 +5751,24 @@ msgstr ""
 msgid "rescale the content"
 msgstr "reskaliraj sadržaj"
 
+#. i18n: ectx: property (text), widget (QLabel, lFillingBackgroundColorStyle)
 #. i18n: ectx: property (text), widget (QLabel, lBackgroundColorStyle)
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:265
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1074
 msgid "Color Style"
 msgstr "Stil Boje"
 
+#. i18n: ectx: property (text), widget (QLabel, lFillingBackgroundImageStyle)
 #. i18n: ectx: property (text), widget (QLabel, lBackgroundImageStyle)
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:275
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1084
 msgid "Image Style"
 msgstr "Stil Slike"
 
+#. i18n: ectx: property (text), widget (QLabel, lFillingBackgroundBrushStyle)
 #. i18n: ectx: property (text), widget (QLabel, lBackgroundBrushStyle)
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:353
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1094
 msgid "Brush Style"
 msgstr "Stil četke"
 
@@ -5909,40 +5848,42 @@ msgstr "Tekst:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAreaFilling)
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:985
-msgid "Area filling"
-msgstr "Područje ispunjavanja"
+#, fuzzy
+#| msgid "Filling:"
+msgid "Filling"
+msgstr "Ispunjavanje (Bojenje):"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabErrorBars)
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:990
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1173
 msgid "Error bars"
 msgstr "Trake grešaka"
 
 #. i18n: ectx: property (text), widget (QLabel, lErrorBarX)
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1002
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1185
 msgid "x-error:"
 msgstr "x-greška:"
 
 #. i18n: ectx: property (text), widget (QLabel, lXErrorType)
 #. i18n: ectx: property (text), widget (QLabel, lYErrorType)
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1009
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1085
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1192
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1268
 msgid "Error type"
 msgstr "Tip greške"
 
 #. i18n: ectx: property (text), widget (QLabel, lXErrorDataMinus)
 #. i18n: ectx: property (text), widget (QLabel, lYErrorDataMinus)
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1049
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1102
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1232
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1285
 msgid "Data, -"
 msgstr "Podatak, -"
 
 #. i18n: ectx: property (text), widget (QLabel, lErrorBarY)
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1078
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1261
 msgid "y-error:"
 msgstr "y-greška:"
 
 #. i18n: ectx: property (text), widget (QLabel, lErrorBarsCapSize)
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1158
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1341
 msgid "Cap size"
 msgstr "Veličina kape"
 
@@ -6353,6 +6294,78 @@ msgstr "Horizontalni razmaci"
 #: src/kdefrontend/worksheet/GridDialog.cpp:68
 msgid "Vertical spacing"
 msgstr "Vertikalni razmaci"
+
+#~ msgid "%1 (%2): %3 %4"
+#~ msgstr "%1 (%2): %3 %4"
+
+#~ msgid "%1: %2 %3"
+#~ msgstr "%1: %2 %3"
+
+#~ msgid "%1 (%2%)"
+#~ msgstr "%1 (%2%)"
+
+#~ msgid "byte"
+#~ msgstr "bajt"
+
+#~ msgid "char"
+#~ msgstr "znak"
+
+#~ msgid "short"
+#~ msgstr "kratak"
+
+#~ msgid "int"
+#~ msgstr "cijeli broj"
+
+#~ msgid "float"
+#~ msgstr "broj sa pokretnim zarezom"
+
+#~ msgid "double"
+#~ msgstr "dvostruka preciznost"
+
+#~ msgid "bogus"
+#~ msgstr "prividan"
+
+#~ msgid "UNLIMITED"
+#~ msgstr "NEOGRANIČEN"
+
+#~ msgid "Select one or more files to open"
+#~ msgstr "Označi jednu ili više datoteka za otvaranje"
+
+#~ msgid "Sorry. Could not open file %1 for reading."
+#~ msgstr "Žao nam je. Datoteka %1 ne može biti otvorena za čitanje."
+
+#~ msgid "Reading NETCDF data..."
+#~ msgstr "Čitanje NETCDF podataka..."
+
+#~ msgid "Reading CDF data..."
+#~ msgstr "Čitanje CDF podataka..."
+
+#~ msgid "Reading binary data..."
+#~ msgstr "Čitanje binarne podataka..."
+
+#~ msgid "Reading ASCII data..."
+#~ msgstr "Čitanje ASCII podataka..."
+
+#~ msgid "auto"
+#~ msgstr "auto"
+
+#~ msgid "x-Axis"
+#~ msgstr "x-Osa"
+
+#~ msgid "y-Axis"
+#~ msgstr "y-Osa"
+
+#~ msgid "x2-Axis"
+#~ msgstr "x2-Osa"
+
+#~ msgid "y2-Axis"
+#~ msgstr "y2-Osa"
+
+#~ msgid "Not yet implemented."
+#~ msgstr "Još nije implementirano."
+
+#~ msgid "Area filling"
+#~ msgstr "Područje ispunjavanja"
 
 #~ msgid "%1: change error source to %2."
 #~ msgstr "%1: pomjeri izvor greške u %2."
