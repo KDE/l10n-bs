@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-04-20 01:51+0000\n"
+"POT-Creation-Date: 2015-04-25 01:54+0000\n"
 "PO-Revision-Date: 2015-02-24 23:27+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -71,14 +71,14 @@ msgstr "Održava"
 #: ui/dialogs/kis_dlg_preferences.cc:205 ui/input/kis_input_manager.cpp:545
 #: ui/kis_filter_manager.cc:217 ui/kis_filter_manager.cc:226
 #: ui/kis_layer_manager.cc:658 ui/kis_layer_manager.cc:909
-#: ui/KisApplication.cpp:356 ui/KisApplication.cpp:361
-#: ui/KisApplication.cpp:391 ui/KisDocument.cpp:746 ui/KisDocument.cpp:748
+#: ui/KisApplication.cpp:400 ui/KisApplication.cpp:405
+#: ui/KisApplication.cpp:435 ui/KisDocument.cpp:746 ui/KisDocument.cpp:748
 #: ui/KisDocument.cpp:1214 ui/KisDocument.cpp:1258 ui/KisDocument.cpp:1398
 #: ui/KisDocument.cpp:2028 ui/KisDocument.cpp:2031
 #: ui/KisImportExportManager.cpp:230 ui/KisImportExportManager.cpp:241
-#: ui/KisImportExportManager.cpp:531 ui/KisMainWindow.cpp:658
-#: ui/KisMainWindow.cpp:709 ui/KisMainWindow.cpp:723 ui/KisMainWindow.cpp:1376
-#: ui/KisMainWindow.cpp:1559 ui/KisMainWindow.cpp:1571
+#: ui/KisImportExportManager.cpp:531 ui/KisMainWindow.cpp:718
+#: ui/KisMainWindow.cpp:769 ui/KisMainWindow.cpp:783 ui/KisMainWindow.cpp:1451
+#: ui/KisMainWindow.cpp:1634 ui/KisMainWindow.cpp:1646
 #: ui/KisTemplateCreateDia.cpp:324 ui/KisView.cpp:792
 #: ui/opengl/kis_opengl.cpp:91 ui/opengl/kis_opengl_canvas2.cpp:504
 #: ui/thememanager.cpp:271 ui/widgets/kis_custom_image_widget.cc:245
@@ -1388,11 +1388,6 @@ msgctxt "property of a filter layer, noun"
 msgid "Filter"
 msgstr "Filter"
 
-#: image/kis_assert.cpp:69
-msgctxt "@title:window"
-msgid "Krita: Internal Error"
-msgstr "Interna greška programa Krita"
-
 #: image/kis_base_mask_generator.h:32
 #: ui/kis_bookmarked_configurations_model.cc:66
 msgid "Default"
@@ -1623,8 +1618,8 @@ msgid "Processing"
 msgstr "Obrađujem"
 
 #. i18n: ectx: property (text), widget (QLineEdit, palettename)
-#: image/kis_psd_layer_style.cpp:101 ui/forms/wdgcustompalette.ui:18
-#: ui/KisDocument.cpp:2480 ui/KisMainWindow.cpp:841 ui/KisPart.cpp:593
+#: image/kis_psd_layer_style.cpp:103 ui/forms/wdgcustompalette.ui:18
+#: ui/KisDocument.cpp:2480 ui/KisMainWindow.cpp:901 ui/KisPart.cpp:593
 #: ui/KisPart.cpp:609
 msgid "Unnamed"
 msgstr "Neimenovano"
@@ -1676,6 +1671,29 @@ msgstr "Aktivan"
 #: image/kis_update_scheduler.cpp:123
 msgid "Updating..."
 msgstr "Ažuriram..."
+
+#: image/layerstyles/kis_ls_bevel_emboss_filter.cpp:59
+#: image/layerstyles/kis_ls_stroke_filter.cpp:50
+msgid "Stroke (style)"
+msgstr ""
+
+#: image/layerstyles/kis_ls_drop_shadow_filter.cpp:45
+#, fuzzy
+#| msgid "Drop Shadow"
+msgid "Drop Shadow (style)"
+msgstr "Padajuća sjenka"
+
+#: image/layerstyles/kis_ls_overlay_filter.cpp:50
+#, fuzzy
+#| msgid "Overlay Mode"
+msgid "Overlay (style)"
+msgstr "Režim prekrivanja"
+
+#: image/layerstyles/kis_ls_satin_filter.cpp:46
+#, fuzzy
+#| msgid "Separation Style"
+msgid "Satin (style)"
+msgstr "Stil separacije"
 
 #: image/metadata/kis_meta_data_filter_p.cc:51
 msgid "Anonymizer"
@@ -1851,35 +1869,40 @@ msgstr "&Pomoć"
 msgid "File"
 msgstr "Datoteka"
 
-#: main.cc:92
+#: libglobal/kis_assert.cpp:69
+msgctxt "@title:window"
+msgid "Krita: Internal Error"
+msgstr "Interna greška programa Krita"
+
+#: main.cc:107
 msgid "Only print and exit"
 msgstr "Samo odštampaj i izađi"
 
-#: main.cc:93
+#: main.cc:108
 msgid "Open a new document with a template"
 msgstr "Napravi novi dokument prema šablonu"
 
-#: main.cc:94
+#: main.cc:109
 msgid "Override display DPI"
 msgstr "Prevaziđi DPI ekrana"
 
-#: main.cc:95
+#: main.cc:110
 msgid "Only export to PDF and exit"
 msgstr "Samo izvezi u PDF i izađi"
 
-#: main.cc:96
+#: main.cc:111
 msgid "Export to the given filename and exit"
 msgstr "Izvezi u trenutnu datoteku i izađi"
 
-#: main.cc:97
+#: main.cc:112
 msgid "Filename for export/export-pdf"
 msgstr "Ime datoteke za izvoz-pdf"
 
-#: main.cc:98
+#: main.cc:113
 msgid "Filename to write profiling information into."
 msgstr "Ime datoteke u koju se pišu informacija profilisanja."
 
-#: main.cc:99
+#: main.cc:114
 msgid "File(s) or URL(s) to open"
 msgstr "Datoteke ili URL-ovi za otvaranje"
 
@@ -2416,10 +2439,10 @@ msgstr ""
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:1275
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:1307
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:1339
-#: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:64
 #: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:67
 #: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:70
 #: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:73
+#: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:76
 #: plugins/paintops/hairy/wdghairyeoptions.ui:310
 #: plugins/paintops/hairy/wdgInkOptions.ui:71
 #: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:30
@@ -2923,11 +2946,11 @@ msgstr "Veličina:"
 #: plugins/paintops/experiment/kis_experimentop_option.cpp:36
 #: plugins/paintops/libpaintop/forms/wdgbrushchooser.ui:105
 #: plugins/paintops/libpaintop/forms/wdgbrushchooser.ui:128
-#: plugins/tools/defaulttools/kis_tool_brush.cc:350
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:66
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:92
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:170
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:193
+#: plugins/tools/defaulttools/kis_tool_brush.cc:361
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:57
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:83
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:161
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:184
 #: ui/forms/wdgdisplaysettings.ui:85 ui/forms/wdgrectangleconstraints.ui:39
 #: ui/forms/wdgrectangleconstraints.ui:65
 msgid " px"
@@ -3006,7 +3029,7 @@ msgstr "Napredne postavke sidrišta za izbor boja"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_colorSliderSettings)
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:1216
-#: plugins/extensions/dockers/colorslider/kis_color_slider_dock.cpp:41
+#: plugins/extensions/dockers/colorslider/kis_color_slider_dock.cpp:42
 msgid "Color Sliders"
 msgstr "Potenciometri boja"
 
@@ -3018,10 +3041,10 @@ msgstr "Potenciometri boja"
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:1268
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:1300
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:1332
-#: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:63
 #: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:66
 #: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:69
 #: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:72
+#: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:75
 #: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:25
 msgid "Hue"
 msgstr "Hue"
@@ -3029,7 +3052,7 @@ msgstr "Hue"
 #. i18n: ectx: property (text), widget (QCheckBox, csl_hsvV)
 #. i18n: ectx: property (text), widget (QTreeWidget, listViewChannels)
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:1250
-#: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:65
+#: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:68
 #: plugins/extensions/metadataeditor/kis_meta_data_model.cpp:108
 #: plugins/paintops/libpaintop/kis_pressure_hsv_option.cpp:35
 #: plugins/tools/defaulttools/wdgcolorpicker.ui:29
@@ -3038,19 +3061,19 @@ msgstr "Vrijednost"
 
 #. i18n: ectx: property (text), widget (QCheckBox, csl_hslL)
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:1282
-#: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:68
+#: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:71
 msgid "Lightness"
 msgstr "Osvijetljenost"
 
 #. i18n: ectx: property (text), widget (QCheckBox, csl_hsiI)
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:1314
-#: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:71
+#: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:74
 msgid "Intensity"
 msgstr "Intenzitet"
 
 #. i18n: ectx: property (text), widget (QCheckBox, csl_hsyY)
 #: plugins/extensions/dockers/advancedcolorselector/wdg_color_selector_settings.ui:1346
-#: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:74
+#: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:77
 msgid "Luma"
 msgstr "Luma"
 
@@ -3134,8 +3157,8 @@ msgstr "Kanali"
 msgid "Enabled"
 msgstr "Uključeno"
 
-#: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:77
-#: plugins/extensions/dockers/specificcolorselector/kis_color_input.cc:49
+#: plugins/extensions/dockers/colorslider/kis_color_slider_input.cpp:80
+#: plugins/extensions/dockers/specificcolorselector/kis_color_input.cc:53
 #, kde-format
 msgid "%1:"
 msgstr "%1:"
@@ -3299,9 +3322,9 @@ msgstr "Izaberi način miješanja za sloj"
 #: plugins/extensions/dockers/defaultdockers/wdglayerbox.ui:336
 #: plugins/extensions/dockers/lut/wdglut.ui:148
 #: plugins/extensions/dockers/lut/wdglut.ui:179
-#: plugins/extensions/dockers/palettedocker/wdgpalettedock.ui:38
-#: plugins/extensions/dockers/palettedocker/wdgpalettedock.ui:57
-#: plugins/extensions/dockers/palettedocker/wdgpalettedock.ui:76
+#: plugins/extensions/dockers/palettedocker/wdgpalettedock.ui:52
+#: plugins/extensions/dockers/palettedocker/wdgpalettedock.ui:71
+#: plugins/extensions/dockers/palettedocker/wdgpalettedock.ui:90
 #: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:95
 #: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:102
 #: plugins/extensions/resourcemanager/wdgdlgcreatebundle.ui:135
@@ -3655,7 +3678,7 @@ msgstr "Pregled"
 
 #: plugins/extensions/dockers/palettedocker/colorsetchooser.cpp:97
 #: plugins/extensions/resourcemanager/dlg_create_bundle.cpp:61
-#: ui/KisMainWindow.cpp:623 ui/widgets/kis_workspace_chooser.cpp:92
+#: ui/KisMainWindow.cpp:683 ui/widgets/kis_workspace_chooser.cpp:92
 msgid "Save"
 msgstr "Spasi"
 
@@ -3689,17 +3712,17 @@ msgid "Choose palette"
 msgstr "Izaberi paletu"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, bnRemove)
-#: plugins/extensions/dockers/palettedocker/wdgpalettedock.ui:35
+#: plugins/extensions/dockers/palettedocker/wdgpalettedock.ui:49
 msgid "Delete color"
 msgstr "Obriši boju"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, bnAdd)
-#: plugins/extensions/dockers/palettedocker/wdgpalettedock.ui:54
+#: plugins/extensions/dockers/palettedocker/wdgpalettedock.ui:68
 msgid "Add foreground color"
 msgstr "Dodaj prednju boju"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, bnAddDialog)
-#: plugins/extensions/dockers/palettedocker/wdgpalettedock.ui:73
+#: plugins/extensions/dockers/palettedocker/wdgpalettedock.ui:87
 msgid "Add color"
 msgstr "Dodaj boju"
 
@@ -3720,15 +3743,15 @@ msgstr "Dostupne četke"
 msgid "Small Color Selector"
 msgstr "Mali izbornik boja"
 
-#: plugins/extensions/dockers/specificcolorselector/kis_color_input.cc:238
+#: plugins/extensions/dockers/specificcolorselector/kis_color_input.cc:244
 msgid "Color name:"
 msgstr "Naziv boje:"
 
-#: plugins/extensions/dockers/specificcolorselector/kis_specific_color_selector_widget.cc:55
+#: plugins/extensions/dockers/specificcolorselector/kis_specific_color_selector_widget.cc:58
 msgid "Show Colorspace Selector"
 msgstr "Prikazi birač za format boje"
 
-#: plugins/extensions/dockers/specificcolorselector/specificcolorselector_dock.cc:32
+#: plugins/extensions/dockers/specificcolorselector/specificcolorselector_dock.cc:33
 msgid "Specific Color Selector"
 msgstr "Specifični izbornik boja"
 
@@ -3784,7 +3807,7 @@ msgstr "Nova slika"
 #: plugins/extensions/metadataeditor/editors/exif.ui:666
 #: plugins/formats/tiff/kis_wdg_options_tiff.ui:66
 #: plugins/formats/tiff/kis_wdg_options_tiff.ui:138
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:286
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:268
 #: ui/layerstyles/wdgblendingoptions.ui:219
 msgid "None"
 msgstr "Ništa"
@@ -4105,14 +4128,14 @@ msgstr "Skaliraj izabor"
 #: plugins/extensions/imagesplit/imagesplit.rc:4
 #: plugins/extensions/separate_channels/imageseparate.rc:4
 #: plugins/paintops/spray/wdgsprayshapeoptions.ui:86
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:250
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:232
 msgid "Image"
 msgstr "Slika"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbType)
 #. i18n: ectx: Menu (Layer)
 #: plugins/extensions/imagesize/imagesize.rc:9
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:245
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:227
 msgid "Layer"
 msgstr "Sloj"
 
@@ -6316,29 +6339,6 @@ msgstr "b*"
 msgid "Alpha Steps"
 msgstr "Alfa koraci"
 
-#: plugins/filters/layerstyles/kis_ls_bevel_emboss_filter.cpp:59
-#: plugins/filters/layerstyles/kis_ls_stroke_filter.cpp:50
-msgid "Stroke (style)"
-msgstr ""
-
-#: plugins/filters/layerstyles/kis_ls_drop_shadow_filter.cpp:45
-#, fuzzy
-#| msgid "Drop Shadow"
-msgid "Drop Shadow (style)"
-msgstr "Padajuća sjenka"
-
-#: plugins/filters/layerstyles/kis_ls_overlay_filter.cpp:50
-#, fuzzy
-#| msgid "Overlay Mode"
-msgid "Overlay (style)"
-msgstr "Režim prekrivanja"
-
-#: plugins/filters/layerstyles/kis_ls_satin_filter.cpp:46
-#, fuzzy
-#| msgid "Separation Style"
-msgid "Satin (style)"
-msgstr "Stil separacije"
-
 #: plugins/filters/levelfilter/kis_level_filter.cpp:46
 msgid "&Levels..."
 msgstr "&Nivoi..."
@@ -7835,7 +7835,7 @@ msgstr "Odabir Deformacije"
 #. i18n: ectx: property (text), widget (QRadioButton, growBtn)
 #. i18n: ectx: property (text), widget (QCheckBox, boolGrow)
 #: plugins/paintops/deform/wdgdeformoptions.ui:44
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:117
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:108
 msgid "Grow"
 msgstr "Izrasti"
 
@@ -9457,96 +9457,96 @@ msgstr "Proporcionalno"
 msgid "Texture:"
 msgstr "Tekstura:"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:62
+#: plugins/tools/defaulttools/kis_tool_brush.cc:63
 msgctxt "(qtundo-format)"
 msgid "Freehand Brush Stroke"
 msgstr "Ručni potez četkom"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:69
+#: plugins/tools/defaulttools/kis_tool_brush.cc:70
 msgctxt "@action"
 msgid "Brush Smoothing: Disabled"
 msgstr "Ublažavanje četke: Isključeno"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:70
+#: plugins/tools/defaulttools/kis_tool_brush.cc:71
 msgctxt "@action"
 msgid "Brush Smoothing: Basic"
 msgstr "Ublažavanje četke: Osnovno"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:71
+#: plugins/tools/defaulttools/kis_tool_brush.cc:72
 msgctxt "@action"
 msgid "Brush Smoothing: Weighted"
 msgstr "Ublažavanje četke: Otežano"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:72
+#: plugins/tools/defaulttools/kis_tool_brush.cc:73
 msgctxt "@action"
 msgid "Brush Smoothing: Stabilizer"
 msgstr "Ublažavanje četke: Stabilizator"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:323
+#: plugins/tools/defaulttools/kis_tool_brush.cc:324
 msgid "No Smoothing"
 msgstr "Bez uglađivanja"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:324
+#: plugins/tools/defaulttools/kis_tool_brush.cc:325
 msgid "Basic Smoothing"
 msgstr "Osnovno glađenje"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:325
+#: plugins/tools/defaulttools/kis_tool_brush.cc:326
 msgid "Weighted Smoothing"
 msgstr "Težinsko glađenje"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:326
+#: plugins/tools/defaulttools/kis_tool_brush.cc:327
 msgid "Stabilizer"
 msgstr "Stabilizator"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:335
+#: plugins/tools/defaulttools/kis_tool_brush.cc:336
 msgid "Distance:"
 msgstr "Rastojanje:"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:343
+#: plugins/tools/defaulttools/kis_tool_brush.cc:350
 msgid "Delay:"
 msgstr "Odlaganje:"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:344
+#: plugins/tools/defaulttools/kis_tool_brush.cc:355
 msgid "Delay the brush stroke to make the line smoother"
 msgstr "Odloži potez četke  da bi linija bila  glatkija"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:348
+#: plugins/tools/defaulttools/kis_tool_brush.cc:359
 msgid "Radius where the brush is blocked"
 msgstr "Radijus gdje je četka  blokirana"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:354
+#: plugins/tools/defaulttools/kis_tool_brush.cc:365
 msgid "Finish line:"
 msgstr "Finalna linija:"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:365
+#: plugins/tools/defaulttools/kis_tool_brush.cc:378
 msgid "Stabilize Sensors:"
 msgstr "Stabiliziraj senzore:"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:373
+#: plugins/tools/defaulttools/kis_tool_brush.cc:386
 msgid "Stroke Ending:"
 msgstr "Udarno završavanje:"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:378
+#: plugins/tools/defaulttools/kis_tool_brush.cc:393
 msgid "Smooth Pressure"
 msgstr "Glatki pritisak"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:383
+#: plugins/tools/defaulttools/kis_tool_brush.cc:400
 msgid "Scalable Distance"
 msgstr "Scalable distanca"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:386
+#: plugins/tools/defaulttools/kis_tool_brush.cc:407
 msgid "Assistant:"
 msgstr "Pomoćnik:"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:387
+#: plugins/tools/defaulttools/kis_tool_brush.cc:412
 msgid "You need to add Ruler Assistants before this tool will work."
 msgstr "Trebate dodati linjirski pomoćnik prije nego ovaj alat proradi"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:390
+#: plugins/tools/defaulttools/kis_tool_brush.cc:416
 msgid "Assistant Magnetism"
 msgstr "Pomoćni magnetizam"
 
-#: plugins/tools/defaulttools/kis_tool_brush.cc:397
+#: plugins/tools/defaulttools/kis_tool_brush.cc:423
 msgid "Toggle Assistant"
 msgstr "Preklopi pomoćnika"
 
@@ -10029,102 +10029,102 @@ msgstr "Odsjeci"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_horizPos)
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, intX)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:50
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:63
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:41
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:54
 msgid "Horizontal Position"
 msgstr "Horizontalna pozicija"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_vertiPos)
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, intY)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:76
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:89
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:67
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:80
 msgid "Vertical Position"
 msgstr "Vertikalna pozicija"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, boolCenter)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:104
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:95
 msgid "Resize keeping center fixed"
 msgstr "Izmjeni veličinu ali čuvaj centar fiksiran"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbPosition)
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbSource)
 #. i18n: ectx: property (text), widget (QCheckBox, boolCenter)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:107
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:98
 #: ui/layerstyles/wdgInnerGlow.ui:262 ui/layerstyles/WdgStroke.ui:79
 msgid "Center"
 msgstr "Centar"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, boolGrow)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:114
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:105
 msgid "Allow growing the image by dragging outside bounds of the image"
 msgstr "Dopustite rast slike povlačenjem izvan granica slike"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, boolWidth)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:157
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:148
 msgid "Will keep the width of the crop constant"
 msgstr "Održavaće stalnu širinu sasijecanja"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, intWidth)
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, intWidth)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:167
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:158
 #: ui/forms/wdgrectangleconstraints.ui:36
 msgid "Width"
 msgstr "Širina"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, boolHeight)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:180
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:171
 msgid "Will keep the height of the crop constant"
 msgstr "Održavaće stalnu visinu sasijecanja"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, intHeight)
 #. i18n: ectx: property (toolTip), widget (KIntSpinBox, intHeight)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:190
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:181
 #: ui/forms/wdgrectangleconstraints.ui:62
 msgid "Height"
 msgstr "Visina"
 
 #. i18n: ectx: property (toolTip), widget (KDoubleNumInput, doubleRatio)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:203
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:194
 msgid "Ratio"
 msgstr "Omjer"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, boolRatio)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:213
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:204
 msgid "Will keep the ratio constant"
 msgstr "Održavaće stalan odnos"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnCrop)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:258
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:240
 msgid "&Crop"
 msgstr "&Podreži"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:265
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:247
 msgid "Applies to:"
 msgstr "Primijeni na:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:275
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:257
 msgid "Decoration:"
 msgstr "Ukrašavanje:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbDecor)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:291
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:273
 msgid "Thirds"
 msgstr "Trećine"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbDecor)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:296
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:278
 msgid "Fifths"
 msgstr "Petine"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbDecor)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:301
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:283
 msgid "Passport photo"
 msgstr "Slika za pasoš"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbDecor)
-#: plugins/tools/tool_crop/wdg_tool_crop.ui:306
+#: plugins/tools/tool_crop/wdg_tool_crop.ui:288
 #: ui/dialogs/kis_dlg_preferences.cc:88
 msgid "Crosshair"
 msgstr "Nišan"
@@ -10789,134 +10789,134 @@ msgid "<html><head/><body><h1 align=\"center\">Backed By</h1><p>"
 msgstr "<html><head/><body><h1 align=\"center\">Podržao</h1><p>"
 
 #: ui/dialogs/kis_about_application.cpp:83
-#: ui/dialogs/kis_about_application.cpp:101 ui/kis_aboutdata.cpp:256
-#: ui/kis_aboutdata.cpp:257 ui/kis_aboutdata.cpp:258 ui/kis_aboutdata.cpp:259
-#: ui/kis_aboutdata.cpp:260 ui/kis_aboutdata.cpp:261 ui/kis_aboutdata.cpp:262
-#: ui/kis_aboutdata.cpp:263 ui/kis_aboutdata.cpp:264 ui/kis_aboutdata.cpp:265
-#: ui/kis_aboutdata.cpp:266 ui/kis_aboutdata.cpp:267 ui/kis_aboutdata.cpp:268
-#: ui/kis_aboutdata.cpp:269 ui/kis_aboutdata.cpp:270 ui/kis_aboutdata.cpp:271
-#: ui/kis_aboutdata.cpp:272 ui/kis_aboutdata.cpp:273 ui/kis_aboutdata.cpp:274
-#: ui/kis_aboutdata.cpp:275 ui/kis_aboutdata.cpp:276 ui/kis_aboutdata.cpp:277
-#: ui/kis_aboutdata.cpp:278 ui/kis_aboutdata.cpp:279 ui/kis_aboutdata.cpp:280
-#: ui/kis_aboutdata.cpp:281 ui/kis_aboutdata.cpp:282 ui/kis_aboutdata.cpp:283
-#: ui/kis_aboutdata.cpp:284 ui/kis_aboutdata.cpp:285 ui/kis_aboutdata.cpp:286
-#: ui/kis_aboutdata.cpp:287 ui/kis_aboutdata.cpp:288 ui/kis_aboutdata.cpp:289
-#: ui/kis_aboutdata.cpp:290 ui/kis_aboutdata.cpp:291 ui/kis_aboutdata.cpp:292
-#: ui/kis_aboutdata.cpp:293 ui/kis_aboutdata.cpp:294 ui/kis_aboutdata.cpp:295
-#: ui/kis_aboutdata.cpp:296 ui/kis_aboutdata.cpp:297 ui/kis_aboutdata.cpp:298
-#: ui/kis_aboutdata.cpp:299 ui/kis_aboutdata.cpp:300 ui/kis_aboutdata.cpp:301
-#: ui/kis_aboutdata.cpp:302 ui/kis_aboutdata.cpp:303 ui/kis_aboutdata.cpp:304
-#: ui/kis_aboutdata.cpp:305 ui/kis_aboutdata.cpp:306 ui/kis_aboutdata.cpp:307
-#: ui/kis_aboutdata.cpp:308 ui/kis_aboutdata.cpp:309 ui/kis_aboutdata.cpp:310
-#: ui/kis_aboutdata.cpp:311 ui/kis_aboutdata.cpp:312 ui/kis_aboutdata.cpp:313
-#: ui/kis_aboutdata.cpp:314 ui/kis_aboutdata.cpp:315 ui/kis_aboutdata.cpp:316
-#: ui/kis_aboutdata.cpp:317 ui/kis_aboutdata.cpp:318 ui/kis_aboutdata.cpp:319
-#: ui/kis_aboutdata.cpp:320 ui/kis_aboutdata.cpp:321 ui/kis_aboutdata.cpp:322
-#: ui/kis_aboutdata.cpp:323 ui/kis_aboutdata.cpp:324 ui/kis_aboutdata.cpp:325
-#: ui/kis_aboutdata.cpp:326 ui/kis_aboutdata.cpp:327 ui/kis_aboutdata.cpp:328
-#: ui/kis_aboutdata.cpp:329 ui/kis_aboutdata.cpp:330 ui/kis_aboutdata.cpp:331
-#: ui/kis_aboutdata.cpp:332 ui/kis_aboutdata.cpp:333 ui/kis_aboutdata.cpp:334
-#: ui/kis_aboutdata.cpp:335 ui/kis_aboutdata.cpp:336 ui/kis_aboutdata.cpp:337
-#: ui/kis_aboutdata.cpp:338 ui/kis_aboutdata.cpp:339 ui/kis_aboutdata.cpp:340
-#: ui/kis_aboutdata.cpp:341 ui/kis_aboutdata.cpp:342 ui/kis_aboutdata.cpp:343
-#: ui/kis_aboutdata.cpp:344 ui/kis_aboutdata.cpp:345 ui/kis_aboutdata.cpp:346
-#: ui/kis_aboutdata.cpp:347 ui/kis_aboutdata.cpp:348 ui/kis_aboutdata.cpp:349
-#: ui/kis_aboutdata.cpp:350 ui/kis_aboutdata.cpp:351 ui/kis_aboutdata.cpp:352
-#: ui/kis_aboutdata.cpp:353 ui/kis_aboutdata.cpp:354 ui/kis_aboutdata.cpp:355
-#: ui/kis_aboutdata.cpp:356 ui/kis_aboutdata.cpp:357 ui/kis_aboutdata.cpp:358
-#: ui/kis_aboutdata.cpp:359 ui/kis_aboutdata.cpp:360 ui/kis_aboutdata.cpp:361
-#: ui/kis_aboutdata.cpp:362 ui/kis_aboutdata.cpp:363 ui/kis_aboutdata.cpp:364
-#: ui/kis_aboutdata.cpp:365 ui/kis_aboutdata.cpp:366 ui/kis_aboutdata.cpp:367
-#: ui/kis_aboutdata.cpp:368 ui/kis_aboutdata.cpp:369 ui/kis_aboutdata.cpp:370
-#: ui/kis_aboutdata.cpp:371 ui/kis_aboutdata.cpp:372 ui/kis_aboutdata.cpp:373
-#: ui/kis_aboutdata.cpp:374 ui/kis_aboutdata.cpp:375 ui/kis_aboutdata.cpp:376
-#: ui/kis_aboutdata.cpp:377 ui/kis_aboutdata.cpp:378 ui/kis_aboutdata.cpp:379
-#: ui/kis_aboutdata.cpp:380 ui/kis_aboutdata.cpp:381 ui/kis_aboutdata.cpp:382
-#: ui/kis_aboutdata.cpp:383 ui/kis_aboutdata.cpp:384 ui/kis_aboutdata.cpp:385
-#: ui/kis_aboutdata.cpp:386 ui/kis_aboutdata.cpp:387 ui/kis_aboutdata.cpp:388
-#: ui/kis_aboutdata.cpp:389 ui/kis_aboutdata.cpp:390 ui/kis_aboutdata.cpp:391
-#: ui/kis_aboutdata.cpp:392 ui/kis_aboutdata.cpp:393 ui/kis_aboutdata.cpp:394
-#: ui/kis_aboutdata.cpp:395 ui/kis_aboutdata.cpp:396 ui/kis_aboutdata.cpp:397
-#: ui/kis_aboutdata.cpp:398 ui/kis_aboutdata.cpp:399 ui/kis_aboutdata.cpp:400
-#: ui/kis_aboutdata.cpp:401 ui/kis_aboutdata.cpp:402 ui/kis_aboutdata.cpp:403
-#: ui/kis_aboutdata.cpp:404 ui/kis_aboutdata.cpp:405 ui/kis_aboutdata.cpp:406
-#: ui/kis_aboutdata.cpp:407 ui/kis_aboutdata.cpp:408 ui/kis_aboutdata.cpp:409
-#: ui/kis_aboutdata.cpp:410 ui/kis_aboutdata.cpp:411 ui/kis_aboutdata.cpp:412
-#: ui/kis_aboutdata.cpp:413 ui/kis_aboutdata.cpp:414 ui/kis_aboutdata.cpp:415
-#: ui/kis_aboutdata.cpp:416 ui/kis_aboutdata.cpp:417 ui/kis_aboutdata.cpp:418
-#: ui/kis_aboutdata.cpp:419 ui/kis_aboutdata.cpp:420 ui/kis_aboutdata.cpp:421
-#: ui/kis_aboutdata.cpp:422 ui/kis_aboutdata.cpp:423 ui/kis_aboutdata.cpp:424
-#: ui/kis_aboutdata.cpp:425 ui/kis_aboutdata.cpp:426 ui/kis_aboutdata.cpp:427
-#: ui/kis_aboutdata.cpp:428 ui/kis_aboutdata.cpp:429 ui/kis_aboutdata.cpp:430
-#: ui/kis_aboutdata.cpp:431 ui/kis_aboutdata.cpp:432 ui/kis_aboutdata.cpp:433
-#: ui/kis_aboutdata.cpp:434 ui/kis_aboutdata.cpp:435 ui/kis_aboutdata.cpp:436
-#: ui/kis_aboutdata.cpp:437 ui/kis_aboutdata.cpp:438 ui/kis_aboutdata.cpp:439
-#: ui/kis_aboutdata.cpp:440 ui/kis_aboutdata.cpp:441 ui/kis_aboutdata.cpp:442
-#: ui/kis_aboutdata.cpp:443 ui/kis_aboutdata.cpp:444 ui/kis_aboutdata.cpp:445
-#: ui/kis_aboutdata.cpp:446 ui/kis_aboutdata.cpp:447 ui/kis_aboutdata.cpp:448
-#: ui/kis_aboutdata.cpp:449 ui/kis_aboutdata.cpp:450 ui/kis_aboutdata.cpp:451
-#: ui/kis_aboutdata.cpp:452 ui/kis_aboutdata.cpp:453 ui/kis_aboutdata.cpp:454
-#: ui/kis_aboutdata.cpp:455 ui/kis_aboutdata.cpp:456 ui/kis_aboutdata.cpp:457
-#: ui/kis_aboutdata.cpp:458 ui/kis_aboutdata.cpp:459 ui/kis_aboutdata.cpp:460
-#: ui/kis_aboutdata.cpp:461 ui/kis_aboutdata.cpp:462 ui/kis_aboutdata.cpp:463
-#: ui/kis_aboutdata.cpp:464 ui/kis_aboutdata.cpp:465 ui/kis_aboutdata.cpp:466
-#: ui/kis_aboutdata.cpp:467 ui/kis_aboutdata.cpp:468 ui/kis_aboutdata.cpp:469
-#: ui/kis_aboutdata.cpp:470 ui/kis_aboutdata.cpp:471 ui/kis_aboutdata.cpp:472
-#: ui/kis_aboutdata.cpp:473 ui/kis_aboutdata.cpp:474 ui/kis_aboutdata.cpp:475
-#: ui/kis_aboutdata.cpp:476 ui/kis_aboutdata.cpp:477 ui/kis_aboutdata.cpp:478
-#: ui/kis_aboutdata.cpp:479 ui/kis_aboutdata.cpp:480 ui/kis_aboutdata.cpp:481
-#: ui/kis_aboutdata.cpp:482 ui/kis_aboutdata.cpp:483 ui/kis_aboutdata.cpp:484
-#: ui/kis_aboutdata.cpp:485 ui/kis_aboutdata.cpp:486 ui/kis_aboutdata.cpp:487
-#: ui/kis_aboutdata.cpp:488 ui/kis_aboutdata.cpp:489 ui/kis_aboutdata.cpp:490
-#: ui/kis_aboutdata.cpp:491 ui/kis_aboutdata.cpp:492 ui/kis_aboutdata.cpp:493
-#: ui/kis_aboutdata.cpp:494 ui/kis_aboutdata.cpp:495 ui/kis_aboutdata.cpp:496
-#: ui/kis_aboutdata.cpp:497 ui/kis_aboutdata.cpp:498 ui/kis_aboutdata.cpp:499
-#: ui/kis_aboutdata.cpp:500 ui/kis_aboutdata.cpp:501 ui/kis_aboutdata.cpp:502
-#: ui/kis_aboutdata.cpp:503 ui/kis_aboutdata.cpp:504 ui/kis_aboutdata.cpp:505
-#: ui/kis_aboutdata.cpp:506 ui/kis_aboutdata.cpp:507 ui/kis_aboutdata.cpp:508
-#: ui/kis_aboutdata.cpp:509 ui/kis_aboutdata.cpp:510 ui/kis_aboutdata.cpp:511
-#: ui/kis_aboutdata.cpp:512 ui/kis_aboutdata.cpp:513 ui/kis_aboutdata.cpp:514
-#: ui/kis_aboutdata.cpp:515 ui/kis_aboutdata.cpp:516 ui/kis_aboutdata.cpp:517
-#: ui/kis_aboutdata.cpp:518 ui/kis_aboutdata.cpp:519 ui/kis_aboutdata.cpp:520
-#: ui/kis_aboutdata.cpp:521 ui/kis_aboutdata.cpp:522 ui/kis_aboutdata.cpp:523
-#: ui/kis_aboutdata.cpp:524 ui/kis_aboutdata.cpp:525 ui/kis_aboutdata.cpp:526
-#: ui/kis_aboutdata.cpp:527 ui/kis_aboutdata.cpp:528 ui/kis_aboutdata.cpp:529
-#: ui/kis_aboutdata.cpp:530 ui/kis_aboutdata.cpp:531 ui/kis_aboutdata.cpp:532
-#: ui/kis_aboutdata.cpp:533 ui/kis_aboutdata.cpp:534 ui/kis_aboutdata.cpp:535
-#: ui/kis_aboutdata.cpp:536 ui/kis_aboutdata.cpp:537 ui/kis_aboutdata.cpp:538
-#: ui/kis_aboutdata.cpp:539 ui/kis_aboutdata.cpp:540 ui/kis_aboutdata.cpp:541
-#: ui/kis_aboutdata.cpp:542 ui/kis_aboutdata.cpp:543 ui/kis_aboutdata.cpp:544
-#: ui/kis_aboutdata.cpp:545 ui/kis_aboutdata.cpp:546 ui/kis_aboutdata.cpp:547
-#: ui/kis_aboutdata.cpp:548 ui/kis_aboutdata.cpp:549 ui/kis_aboutdata.cpp:550
-#: ui/kis_aboutdata.cpp:551 ui/kis_aboutdata.cpp:552 ui/kis_aboutdata.cpp:553
-#: ui/kis_aboutdata.cpp:554 ui/kis_aboutdata.cpp:555 ui/kis_aboutdata.cpp:556
-#: ui/kis_aboutdata.cpp:557 ui/kis_aboutdata.cpp:558 ui/kis_aboutdata.cpp:559
-#: ui/kis_aboutdata.cpp:560 ui/kis_aboutdata.cpp:561 ui/kis_aboutdata.cpp:562
-#: ui/kis_aboutdata.cpp:563 ui/kis_aboutdata.cpp:564 ui/kis_aboutdata.cpp:565
-#: ui/kis_aboutdata.cpp:566 ui/kis_aboutdata.cpp:567 ui/kis_aboutdata.cpp:568
-#: ui/kis_aboutdata.cpp:569 ui/kis_aboutdata.cpp:570 ui/kis_aboutdata.cpp:571
-#: ui/kis_aboutdata.cpp:572 ui/kis_aboutdata.cpp:573 ui/kis_aboutdata.cpp:574
-#: ui/kis_aboutdata.cpp:575 ui/kis_aboutdata.cpp:576 ui/kis_aboutdata.cpp:577
-#: ui/kis_aboutdata.cpp:578 ui/kis_aboutdata.cpp:579 ui/kis_aboutdata.cpp:580
-#: ui/kis_aboutdata.cpp:581 ui/kis_aboutdata.cpp:582 ui/kis_aboutdata.cpp:583
-#: ui/kis_aboutdata.cpp:584 ui/kis_aboutdata.cpp:585 ui/kis_aboutdata.cpp:586
-#: ui/kis_aboutdata.cpp:587 ui/kis_aboutdata.cpp:588 ui/kis_aboutdata.cpp:589
-#: ui/kis_aboutdata.cpp:590 ui/kis_aboutdata.cpp:591 ui/kis_aboutdata.cpp:592
-#: ui/kis_aboutdata.cpp:593 ui/kis_aboutdata.cpp:594 ui/kis_aboutdata.cpp:595
-#: ui/kis_aboutdata.cpp:596 ui/kis_aboutdata.cpp:597 ui/kis_aboutdata.cpp:598
-#: ui/kis_aboutdata.cpp:599 ui/kis_aboutdata.cpp:600 ui/kis_aboutdata.cpp:601
-#: ui/kis_aboutdata.cpp:602 ui/kis_aboutdata.cpp:603 ui/kis_aboutdata.cpp:604
-#: ui/kis_aboutdata.cpp:605 ui/kis_aboutdata.cpp:606 ui/kis_aboutdata.cpp:607
-#: ui/kis_aboutdata.cpp:608 ui/kis_aboutdata.cpp:609 ui/kis_aboutdata.cpp:610
-#: ui/kis_aboutdata.cpp:611 ui/kis_aboutdata.cpp:612 ui/kis_aboutdata.cpp:613
-#: ui/kis_aboutdata.cpp:614 ui/kis_aboutdata.cpp:615 ui/kis_aboutdata.cpp:616
-#: ui/kis_aboutdata.cpp:617 ui/kis_aboutdata.cpp:618 ui/kis_aboutdata.cpp:619
-#: ui/kis_aboutdata.cpp:620 ui/kis_aboutdata.cpp:621 ui/kis_aboutdata.cpp:622
-#: ui/kis_aboutdata.cpp:623 ui/kis_aboutdata.cpp:624 ui/kis_aboutdata.cpp:625
-#: ui/kis_aboutdata.cpp:626 ui/kis_aboutdata.cpp:627 ui/kis_aboutdata.cpp:628
-#: ui/kis_aboutdata.cpp:629 ui/kis_aboutdata.cpp:630 ui/kis_aboutdata.cpp:631
-#: ui/kis_aboutdata.cpp:632 ui/kis_aboutdata.cpp:633 ui/kis_aboutdata.cpp:634
-#: ui/kis_aboutdata.cpp:635
+#: ui/dialogs/kis_about_application.cpp:101 ui/kis_aboutdata.cpp:257
+#: ui/kis_aboutdata.cpp:258 ui/kis_aboutdata.cpp:259 ui/kis_aboutdata.cpp:260
+#: ui/kis_aboutdata.cpp:261 ui/kis_aboutdata.cpp:262 ui/kis_aboutdata.cpp:263
+#: ui/kis_aboutdata.cpp:264 ui/kis_aboutdata.cpp:265 ui/kis_aboutdata.cpp:266
+#: ui/kis_aboutdata.cpp:267 ui/kis_aboutdata.cpp:268 ui/kis_aboutdata.cpp:269
+#: ui/kis_aboutdata.cpp:270 ui/kis_aboutdata.cpp:271 ui/kis_aboutdata.cpp:272
+#: ui/kis_aboutdata.cpp:273 ui/kis_aboutdata.cpp:274 ui/kis_aboutdata.cpp:275
+#: ui/kis_aboutdata.cpp:276 ui/kis_aboutdata.cpp:277 ui/kis_aboutdata.cpp:278
+#: ui/kis_aboutdata.cpp:279 ui/kis_aboutdata.cpp:280 ui/kis_aboutdata.cpp:281
+#: ui/kis_aboutdata.cpp:282 ui/kis_aboutdata.cpp:283 ui/kis_aboutdata.cpp:284
+#: ui/kis_aboutdata.cpp:285 ui/kis_aboutdata.cpp:286 ui/kis_aboutdata.cpp:287
+#: ui/kis_aboutdata.cpp:288 ui/kis_aboutdata.cpp:289 ui/kis_aboutdata.cpp:290
+#: ui/kis_aboutdata.cpp:291 ui/kis_aboutdata.cpp:292 ui/kis_aboutdata.cpp:293
+#: ui/kis_aboutdata.cpp:294 ui/kis_aboutdata.cpp:295 ui/kis_aboutdata.cpp:296
+#: ui/kis_aboutdata.cpp:297 ui/kis_aboutdata.cpp:298 ui/kis_aboutdata.cpp:299
+#: ui/kis_aboutdata.cpp:300 ui/kis_aboutdata.cpp:301 ui/kis_aboutdata.cpp:302
+#: ui/kis_aboutdata.cpp:303 ui/kis_aboutdata.cpp:304 ui/kis_aboutdata.cpp:305
+#: ui/kis_aboutdata.cpp:306 ui/kis_aboutdata.cpp:307 ui/kis_aboutdata.cpp:308
+#: ui/kis_aboutdata.cpp:309 ui/kis_aboutdata.cpp:310 ui/kis_aboutdata.cpp:311
+#: ui/kis_aboutdata.cpp:312 ui/kis_aboutdata.cpp:313 ui/kis_aboutdata.cpp:314
+#: ui/kis_aboutdata.cpp:315 ui/kis_aboutdata.cpp:316 ui/kis_aboutdata.cpp:317
+#: ui/kis_aboutdata.cpp:318 ui/kis_aboutdata.cpp:319 ui/kis_aboutdata.cpp:320
+#: ui/kis_aboutdata.cpp:321 ui/kis_aboutdata.cpp:322 ui/kis_aboutdata.cpp:323
+#: ui/kis_aboutdata.cpp:324 ui/kis_aboutdata.cpp:325 ui/kis_aboutdata.cpp:326
+#: ui/kis_aboutdata.cpp:327 ui/kis_aboutdata.cpp:328 ui/kis_aboutdata.cpp:329
+#: ui/kis_aboutdata.cpp:330 ui/kis_aboutdata.cpp:331 ui/kis_aboutdata.cpp:332
+#: ui/kis_aboutdata.cpp:333 ui/kis_aboutdata.cpp:334 ui/kis_aboutdata.cpp:335
+#: ui/kis_aboutdata.cpp:336 ui/kis_aboutdata.cpp:337 ui/kis_aboutdata.cpp:338
+#: ui/kis_aboutdata.cpp:339 ui/kis_aboutdata.cpp:340 ui/kis_aboutdata.cpp:341
+#: ui/kis_aboutdata.cpp:342 ui/kis_aboutdata.cpp:343 ui/kis_aboutdata.cpp:344
+#: ui/kis_aboutdata.cpp:345 ui/kis_aboutdata.cpp:346 ui/kis_aboutdata.cpp:347
+#: ui/kis_aboutdata.cpp:348 ui/kis_aboutdata.cpp:349 ui/kis_aboutdata.cpp:350
+#: ui/kis_aboutdata.cpp:351 ui/kis_aboutdata.cpp:352 ui/kis_aboutdata.cpp:353
+#: ui/kis_aboutdata.cpp:354 ui/kis_aboutdata.cpp:355 ui/kis_aboutdata.cpp:356
+#: ui/kis_aboutdata.cpp:357 ui/kis_aboutdata.cpp:358 ui/kis_aboutdata.cpp:359
+#: ui/kis_aboutdata.cpp:360 ui/kis_aboutdata.cpp:361 ui/kis_aboutdata.cpp:362
+#: ui/kis_aboutdata.cpp:363 ui/kis_aboutdata.cpp:364 ui/kis_aboutdata.cpp:365
+#: ui/kis_aboutdata.cpp:366 ui/kis_aboutdata.cpp:367 ui/kis_aboutdata.cpp:368
+#: ui/kis_aboutdata.cpp:369 ui/kis_aboutdata.cpp:370 ui/kis_aboutdata.cpp:371
+#: ui/kis_aboutdata.cpp:372 ui/kis_aboutdata.cpp:373 ui/kis_aboutdata.cpp:374
+#: ui/kis_aboutdata.cpp:375 ui/kis_aboutdata.cpp:376 ui/kis_aboutdata.cpp:377
+#: ui/kis_aboutdata.cpp:378 ui/kis_aboutdata.cpp:379 ui/kis_aboutdata.cpp:380
+#: ui/kis_aboutdata.cpp:381 ui/kis_aboutdata.cpp:382 ui/kis_aboutdata.cpp:383
+#: ui/kis_aboutdata.cpp:384 ui/kis_aboutdata.cpp:385 ui/kis_aboutdata.cpp:386
+#: ui/kis_aboutdata.cpp:387 ui/kis_aboutdata.cpp:388 ui/kis_aboutdata.cpp:389
+#: ui/kis_aboutdata.cpp:390 ui/kis_aboutdata.cpp:391 ui/kis_aboutdata.cpp:392
+#: ui/kis_aboutdata.cpp:393 ui/kis_aboutdata.cpp:394 ui/kis_aboutdata.cpp:395
+#: ui/kis_aboutdata.cpp:396 ui/kis_aboutdata.cpp:397 ui/kis_aboutdata.cpp:398
+#: ui/kis_aboutdata.cpp:399 ui/kis_aboutdata.cpp:400 ui/kis_aboutdata.cpp:401
+#: ui/kis_aboutdata.cpp:402 ui/kis_aboutdata.cpp:403 ui/kis_aboutdata.cpp:404
+#: ui/kis_aboutdata.cpp:405 ui/kis_aboutdata.cpp:406 ui/kis_aboutdata.cpp:407
+#: ui/kis_aboutdata.cpp:408 ui/kis_aboutdata.cpp:409 ui/kis_aboutdata.cpp:410
+#: ui/kis_aboutdata.cpp:411 ui/kis_aboutdata.cpp:412 ui/kis_aboutdata.cpp:413
+#: ui/kis_aboutdata.cpp:414 ui/kis_aboutdata.cpp:415 ui/kis_aboutdata.cpp:416
+#: ui/kis_aboutdata.cpp:417 ui/kis_aboutdata.cpp:418 ui/kis_aboutdata.cpp:419
+#: ui/kis_aboutdata.cpp:420 ui/kis_aboutdata.cpp:421 ui/kis_aboutdata.cpp:422
+#: ui/kis_aboutdata.cpp:423 ui/kis_aboutdata.cpp:424 ui/kis_aboutdata.cpp:425
+#: ui/kis_aboutdata.cpp:426 ui/kis_aboutdata.cpp:427 ui/kis_aboutdata.cpp:428
+#: ui/kis_aboutdata.cpp:429 ui/kis_aboutdata.cpp:430 ui/kis_aboutdata.cpp:431
+#: ui/kis_aboutdata.cpp:432 ui/kis_aboutdata.cpp:433 ui/kis_aboutdata.cpp:434
+#: ui/kis_aboutdata.cpp:435 ui/kis_aboutdata.cpp:436 ui/kis_aboutdata.cpp:437
+#: ui/kis_aboutdata.cpp:438 ui/kis_aboutdata.cpp:439 ui/kis_aboutdata.cpp:440
+#: ui/kis_aboutdata.cpp:441 ui/kis_aboutdata.cpp:442 ui/kis_aboutdata.cpp:443
+#: ui/kis_aboutdata.cpp:444 ui/kis_aboutdata.cpp:445 ui/kis_aboutdata.cpp:446
+#: ui/kis_aboutdata.cpp:447 ui/kis_aboutdata.cpp:448 ui/kis_aboutdata.cpp:449
+#: ui/kis_aboutdata.cpp:450 ui/kis_aboutdata.cpp:451 ui/kis_aboutdata.cpp:452
+#: ui/kis_aboutdata.cpp:453 ui/kis_aboutdata.cpp:454 ui/kis_aboutdata.cpp:455
+#: ui/kis_aboutdata.cpp:456 ui/kis_aboutdata.cpp:457 ui/kis_aboutdata.cpp:458
+#: ui/kis_aboutdata.cpp:459 ui/kis_aboutdata.cpp:460 ui/kis_aboutdata.cpp:461
+#: ui/kis_aboutdata.cpp:462 ui/kis_aboutdata.cpp:463 ui/kis_aboutdata.cpp:464
+#: ui/kis_aboutdata.cpp:465 ui/kis_aboutdata.cpp:466 ui/kis_aboutdata.cpp:467
+#: ui/kis_aboutdata.cpp:468 ui/kis_aboutdata.cpp:469 ui/kis_aboutdata.cpp:470
+#: ui/kis_aboutdata.cpp:471 ui/kis_aboutdata.cpp:472 ui/kis_aboutdata.cpp:473
+#: ui/kis_aboutdata.cpp:474 ui/kis_aboutdata.cpp:475 ui/kis_aboutdata.cpp:476
+#: ui/kis_aboutdata.cpp:477 ui/kis_aboutdata.cpp:478 ui/kis_aboutdata.cpp:479
+#: ui/kis_aboutdata.cpp:480 ui/kis_aboutdata.cpp:481 ui/kis_aboutdata.cpp:482
+#: ui/kis_aboutdata.cpp:483 ui/kis_aboutdata.cpp:484 ui/kis_aboutdata.cpp:485
+#: ui/kis_aboutdata.cpp:486 ui/kis_aboutdata.cpp:487 ui/kis_aboutdata.cpp:488
+#: ui/kis_aboutdata.cpp:489 ui/kis_aboutdata.cpp:490 ui/kis_aboutdata.cpp:491
+#: ui/kis_aboutdata.cpp:492 ui/kis_aboutdata.cpp:493 ui/kis_aboutdata.cpp:494
+#: ui/kis_aboutdata.cpp:495 ui/kis_aboutdata.cpp:496 ui/kis_aboutdata.cpp:497
+#: ui/kis_aboutdata.cpp:498 ui/kis_aboutdata.cpp:499 ui/kis_aboutdata.cpp:500
+#: ui/kis_aboutdata.cpp:501 ui/kis_aboutdata.cpp:502 ui/kis_aboutdata.cpp:503
+#: ui/kis_aboutdata.cpp:504 ui/kis_aboutdata.cpp:505 ui/kis_aboutdata.cpp:506
+#: ui/kis_aboutdata.cpp:507 ui/kis_aboutdata.cpp:508 ui/kis_aboutdata.cpp:509
+#: ui/kis_aboutdata.cpp:510 ui/kis_aboutdata.cpp:511 ui/kis_aboutdata.cpp:512
+#: ui/kis_aboutdata.cpp:513 ui/kis_aboutdata.cpp:514 ui/kis_aboutdata.cpp:515
+#: ui/kis_aboutdata.cpp:516 ui/kis_aboutdata.cpp:517 ui/kis_aboutdata.cpp:518
+#: ui/kis_aboutdata.cpp:519 ui/kis_aboutdata.cpp:520 ui/kis_aboutdata.cpp:521
+#: ui/kis_aboutdata.cpp:522 ui/kis_aboutdata.cpp:523 ui/kis_aboutdata.cpp:524
+#: ui/kis_aboutdata.cpp:525 ui/kis_aboutdata.cpp:526 ui/kis_aboutdata.cpp:527
+#: ui/kis_aboutdata.cpp:528 ui/kis_aboutdata.cpp:529 ui/kis_aboutdata.cpp:530
+#: ui/kis_aboutdata.cpp:531 ui/kis_aboutdata.cpp:532 ui/kis_aboutdata.cpp:533
+#: ui/kis_aboutdata.cpp:534 ui/kis_aboutdata.cpp:535 ui/kis_aboutdata.cpp:536
+#: ui/kis_aboutdata.cpp:537 ui/kis_aboutdata.cpp:538 ui/kis_aboutdata.cpp:539
+#: ui/kis_aboutdata.cpp:540 ui/kis_aboutdata.cpp:541 ui/kis_aboutdata.cpp:542
+#: ui/kis_aboutdata.cpp:543 ui/kis_aboutdata.cpp:544 ui/kis_aboutdata.cpp:545
+#: ui/kis_aboutdata.cpp:546 ui/kis_aboutdata.cpp:547 ui/kis_aboutdata.cpp:548
+#: ui/kis_aboutdata.cpp:549 ui/kis_aboutdata.cpp:550 ui/kis_aboutdata.cpp:551
+#: ui/kis_aboutdata.cpp:552 ui/kis_aboutdata.cpp:553 ui/kis_aboutdata.cpp:554
+#: ui/kis_aboutdata.cpp:555 ui/kis_aboutdata.cpp:556 ui/kis_aboutdata.cpp:557
+#: ui/kis_aboutdata.cpp:558 ui/kis_aboutdata.cpp:559 ui/kis_aboutdata.cpp:560
+#: ui/kis_aboutdata.cpp:561 ui/kis_aboutdata.cpp:562 ui/kis_aboutdata.cpp:563
+#: ui/kis_aboutdata.cpp:564 ui/kis_aboutdata.cpp:565 ui/kis_aboutdata.cpp:566
+#: ui/kis_aboutdata.cpp:567 ui/kis_aboutdata.cpp:568 ui/kis_aboutdata.cpp:569
+#: ui/kis_aboutdata.cpp:570 ui/kis_aboutdata.cpp:571 ui/kis_aboutdata.cpp:572
+#: ui/kis_aboutdata.cpp:573 ui/kis_aboutdata.cpp:574 ui/kis_aboutdata.cpp:575
+#: ui/kis_aboutdata.cpp:576 ui/kis_aboutdata.cpp:577 ui/kis_aboutdata.cpp:578
+#: ui/kis_aboutdata.cpp:579 ui/kis_aboutdata.cpp:580 ui/kis_aboutdata.cpp:581
+#: ui/kis_aboutdata.cpp:582 ui/kis_aboutdata.cpp:583 ui/kis_aboutdata.cpp:584
+#: ui/kis_aboutdata.cpp:585 ui/kis_aboutdata.cpp:586 ui/kis_aboutdata.cpp:587
+#: ui/kis_aboutdata.cpp:588 ui/kis_aboutdata.cpp:589 ui/kis_aboutdata.cpp:590
+#: ui/kis_aboutdata.cpp:591 ui/kis_aboutdata.cpp:592 ui/kis_aboutdata.cpp:593
+#: ui/kis_aboutdata.cpp:594 ui/kis_aboutdata.cpp:595 ui/kis_aboutdata.cpp:596
+#: ui/kis_aboutdata.cpp:597 ui/kis_aboutdata.cpp:598 ui/kis_aboutdata.cpp:599
+#: ui/kis_aboutdata.cpp:600 ui/kis_aboutdata.cpp:601 ui/kis_aboutdata.cpp:602
+#: ui/kis_aboutdata.cpp:603 ui/kis_aboutdata.cpp:604 ui/kis_aboutdata.cpp:605
+#: ui/kis_aboutdata.cpp:606 ui/kis_aboutdata.cpp:607 ui/kis_aboutdata.cpp:608
+#: ui/kis_aboutdata.cpp:609 ui/kis_aboutdata.cpp:610 ui/kis_aboutdata.cpp:611
+#: ui/kis_aboutdata.cpp:612 ui/kis_aboutdata.cpp:613 ui/kis_aboutdata.cpp:614
+#: ui/kis_aboutdata.cpp:615 ui/kis_aboutdata.cpp:616 ui/kis_aboutdata.cpp:617
+#: ui/kis_aboutdata.cpp:618 ui/kis_aboutdata.cpp:619 ui/kis_aboutdata.cpp:620
+#: ui/kis_aboutdata.cpp:621 ui/kis_aboutdata.cpp:622 ui/kis_aboutdata.cpp:623
+#: ui/kis_aboutdata.cpp:624 ui/kis_aboutdata.cpp:625 ui/kis_aboutdata.cpp:626
+#: ui/kis_aboutdata.cpp:627 ui/kis_aboutdata.cpp:628 ui/kis_aboutdata.cpp:629
+#: ui/kis_aboutdata.cpp:630 ui/kis_aboutdata.cpp:631 ui/kis_aboutdata.cpp:632
+#: ui/kis_aboutdata.cpp:633 ui/kis_aboutdata.cpp:634 ui/kis_aboutdata.cpp:635
+#: ui/kis_aboutdata.cpp:636
 msgid "Krita 2.9 Kickstarter Backer"
 msgstr "Krita 2.9 Pozadina za brzi start"
 
@@ -11017,38 +11017,62 @@ msgstr "Promijeni boju pozadinr na boju slike"
 msgid "Layer Properties"
 msgstr "Svojstva sloja"
 
-#: ui/dialogs/kis_dlg_layer_style.cpp:61
+#: ui/dialogs/kis_dlg_layer_style.cpp:66
 #, fuzzy
 #| msgid "Layer Size"
 msgid "Layer Styles"
 msgstr "Veličina sloja"
 
-#: ui/dialogs/kis_dlg_layer_style.cpp:170
-#: ui/dialogs/kis_dlg_layer_style.cpp:197
+#: ui/dialogs/kis_dlg_layer_style.cpp:231
+msgctxt "@title:window"
+msgid "Enter new style name"
+msgstr ""
+
+#: ui/dialogs/kis_dlg_layer_style.cpp:232
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "Naziv:"
+
+#: ui/dialogs/kis_dlg_layer_style.cpp:233
+#, fuzzy
+#| msgid "Style"
+msgctxt "Default name for a new style"
+msgid "New Style"
+msgstr "Stil"
+
+#: ui/dialogs/kis_dlg_layer_style.cpp:246
+#: ui/dialogs/kis_dlg_layer_style.cpp:260
 #, fuzzy
 #| msgid "Select LUT file"
 msgid "Select ASL file"
 msgstr "Odaberi LUT datoteku"
 
-#: ui/dialogs/kis_dlg_layer_style.cpp:172
-#: ui/dialogs/kis_dlg_layer_style.cpp:199
+#: ui/dialogs/kis_dlg_layer_style.cpp:248
+#, fuzzy
+#| msgid "OpenColorIO configuration (*.ocio)"
+msgid "Layer style library (*.asl)"
+msgstr "OpenColorIO konfiguraciju (*.ocio)"
+
+#: ui/dialogs/kis_dlg_layer_style.cpp:262
 #, fuzzy
 #| msgid "OpenColorIO configuration (*.ocio)"
 msgid "Layer style configuration (*.asl)"
 msgstr "OpenColorIO konfiguraciju (*.ocio)"
 
 #. i18n: ectx: property (text), item, widget (QListWidget, lstStyleSelector)
-#: ui/dialogs/kis_dlg_layer_style.cpp:620 ui/layerstyles/wdglayerstyles.ui:39
+#: ui/dialogs/kis_dlg_layer_style.cpp:807 ui/layerstyles/wdglayerstyles.ui:39
 #, fuzzy
 #| msgid "Drop Shadow"
 msgid "Inner Shadow"
 msgstr "Padajuća sjenka"
 
-#: ui/dialogs/kis_dlg_layer_style.cpp:621
+#: ui/dialogs/kis_dlg_layer_style.cpp:808
 msgid "Choke"
 msgstr ""
 
-#: ui/dialogs/kis_dlg_layer_style.cpp:814
+#: ui/dialogs/kis_dlg_layer_style.cpp:1001
 msgctxt "layer styles parameter"
 msgid "Spread"
 msgstr ""
@@ -13567,7 +13591,7 @@ msgstr "Michael David Howell"
 msgid "Michael Drueing"
 msgstr "Michael Drueing"
 
-#: ui/kis_aboutdata.cpp:179 ui/kis_aboutdata.cpp:503
+#: ui/kis_aboutdata.cpp:179 ui/kis_aboutdata.cpp:504
 msgid "Michael Thaler"
 msgstr "Michael Thaler"
 
@@ -13588,1830 +13612,1834 @@ msgid "Montel Laurent"
 msgstr "Montel Laurent"
 
 #: ui/kis_aboutdata.cpp:184
+msgid "Moritz Molch"
+msgstr ""
+
+#: ui/kis_aboutdata.cpp:185
 msgid "Nick Shaforostoff"
 msgstr "Nick Shaforostoff"
 
-#: ui/kis_aboutdata.cpp:185
+#: ui/kis_aboutdata.cpp:186
 msgid "Nicolas Goutte"
 msgstr "Nicolas Goutte"
 
-#: ui/kis_aboutdata.cpp:186
+#: ui/kis_aboutdata.cpp:187
 msgid "Olivier Goffart"
 msgstr "Olivier Goffart"
 
-#: ui/kis_aboutdata.cpp:187
+#: ui/kis_aboutdata.cpp:188
 msgid "Patrick Julien"
 msgstr "Patrick Julien"
 
-#: ui/kis_aboutdata.cpp:188
+#: ui/kis_aboutdata.cpp:189
 msgid "Patrick Spendrin"
 msgstr "Patrick Spendrin"
 
-#: ui/kis_aboutdata.cpp:189
+#: ui/kis_aboutdata.cpp:190
 msgid "Pavel Heimlich"
 msgstr "Pavel Heimlich"
 
-#: ui/kis_aboutdata.cpp:190 ui/kis_aboutdata.cpp:548
+#: ui/kis_aboutdata.cpp:191 ui/kis_aboutdata.cpp:549
 msgid "Peter Simonsson"
 msgstr "Peter Simonsson"
 
-#: ui/kis_aboutdata.cpp:191
+#: ui/kis_aboutdata.cpp:192
 msgid "Pierre Ducroquet"
 msgstr "Pierre Ducroquet"
 
-#: ui/kis_aboutdata.cpp:192
+#: ui/kis_aboutdata.cpp:193
 msgid "Pierre Stirnweiss"
 msgstr "Pierre Stirnweiss"
 
-#: ui/kis_aboutdata.cpp:193
+#: ui/kis_aboutdata.cpp:194
 msgid "Pino Toscano"
 msgstr "Pino Toscano"
 
-#: ui/kis_aboutdata.cpp:194
+#: ui/kis_aboutdata.cpp:195
 msgid "Rafael Fernández López"
 msgstr "Rafael Fernández López"
 
-#: ui/kis_aboutdata.cpp:195
+#: ui/kis_aboutdata.cpp:196
 msgid "Raphael Langerhorst"
 msgstr "Raphael Langerhorst"
 
-#: ui/kis_aboutdata.cpp:196
+#: ui/kis_aboutdata.cpp:197
 msgid "Rex Dieter"
 msgstr "Rex Dieter"
 
-#: ui/kis_aboutdata.cpp:197
+#: ui/kis_aboutdata.cpp:198
 msgid "Rob Buis"
 msgstr "Rob Buis"
 
-#: ui/kis_aboutdata.cpp:198
+#: ui/kis_aboutdata.cpp:199
 msgid "Roopesh Chander"
 msgstr "Roopesh Chander"
 
-#: ui/kis_aboutdata.cpp:199
+#: ui/kis_aboutdata.cpp:200
 msgid "Sahil Nagpal"
 msgstr "Sahil Nagpal"
 
-#: ui/kis_aboutdata.cpp:200
+#: ui/kis_aboutdata.cpp:201
 msgid "Salil Kapur"
 msgstr "Salil Kapur"
 
-#: ui/kis_aboutdata.cpp:201
+#: ui/kis_aboutdata.cpp:202
 msgid "Samuel Buttigieg"
 msgstr "Samuel Buttigieg"
 
-#: ui/kis_aboutdata.cpp:202 ui/kis_aboutdata.cpp:254
+#: ui/kis_aboutdata.cpp:203 ui/kis_aboutdata.cpp:255
 msgid "Sander Koning"
 msgstr "Sander Koning"
 
-#: ui/kis_aboutdata.cpp:203
+#: ui/kis_aboutdata.cpp:204
 msgid "Sascha Suelzer"
 msgstr "Sascha Suelzer"
 
-#: ui/kis_aboutdata.cpp:204
+#: ui/kis_aboutdata.cpp:205
 msgid "Scott Petrovic"
 msgstr "Scott Petrovic"
 
-#: ui/kis_aboutdata.cpp:205
+#: ui/kis_aboutdata.cpp:206
 msgid "Scott Wheeler"
 msgstr "Scott Wheeler"
 
-#: ui/kis_aboutdata.cpp:206
+#: ui/kis_aboutdata.cpp:207
 msgid "Sebastian Sauer"
 msgstr "Sebastian Sauer"
 
-#: ui/kis_aboutdata.cpp:207
+#: ui/kis_aboutdata.cpp:208
 msgid "Shivaraman Aiyer"
 msgstr "Shivaraman Aiyer"
 
-#: ui/kis_aboutdata.cpp:208
+#: ui/kis_aboutdata.cpp:209
 msgid "Siddharth Sharma"
 msgstr "Siddharth Sharma"
 
-#: ui/kis_aboutdata.cpp:209
+#: ui/kis_aboutdata.cpp:210
 msgid "Silvio Heinrich"
 msgstr "Silvio Heinrich"
 
-#: ui/kis_aboutdata.cpp:210
+#: ui/kis_aboutdata.cpp:211
 msgid "Somsubhra Bairi"
 msgstr "Somsubhra Bairi"
 
-#: ui/kis_aboutdata.cpp:211
+#: ui/kis_aboutdata.cpp:212
 msgid "Spencer Brown"
 msgstr "Spencer Brown"
 
-#: ui/kis_aboutdata.cpp:212
+#: ui/kis_aboutdata.cpp:213
 msgid "Srikanth Tiyyagura"
 msgstr "Srikanth Tiyyagura"
 
-#: ui/kis_aboutdata.cpp:213
+#: ui/kis_aboutdata.cpp:214
 msgid "Stefan Nikolaus"
 msgstr "Stefan Nikolaus"
 
-#: ui/kis_aboutdata.cpp:214
+#: ui/kis_aboutdata.cpp:215
 msgid "Stephan Binner"
 msgstr "Stephan Binner"
 
-#: ui/kis_aboutdata.cpp:215
+#: ui/kis_aboutdata.cpp:216
 msgid "Stephan Kulow"
 msgstr "Stephan Kulow"
 
-#: ui/kis_aboutdata.cpp:216
+#: ui/kis_aboutdata.cpp:217
 msgid "Stuart Dickson"
 msgstr "Stuart Dickson"
 
-#: ui/kis_aboutdata.cpp:217
+#: ui/kis_aboutdata.cpp:218
 msgid "Sune Vuorela"
 msgstr "Sune Vuorela"
 
-#: ui/kis_aboutdata.cpp:218
+#: ui/kis_aboutdata.cpp:219
 msgid "Sven Langkamp"
 msgstr "Sven Langkamp"
 
-#: ui/kis_aboutdata.cpp:219
+#: ui/kis_aboutdata.cpp:220
 msgid "Thiago Macieira"
 msgstr "Thiago Macieira"
 
-#: ui/kis_aboutdata.cpp:220
+#: ui/kis_aboutdata.cpp:221
 msgid "Thomas Capricelli"
 msgstr "Thomas Capricelli"
 
-#: ui/kis_aboutdata.cpp:221
+#: ui/kis_aboutdata.cpp:222
 msgid "Thomas Friedrichsmeier"
 msgstr "Thomas Friedrichsmeier"
 
-#: ui/kis_aboutdata.cpp:222
+#: ui/kis_aboutdata.cpp:223
 msgid "Thomas Klausner"
 msgstr "Thomas Klausner"
 
-#: ui/kis_aboutdata.cpp:223
+#: ui/kis_aboutdata.cpp:224
 msgid "Thomas Nagy"
 msgstr "Thomas Nagy"
 
-#: ui/kis_aboutdata.cpp:224
+#: ui/kis_aboutdata.cpp:225
 msgid "Thomas Zander"
 msgstr "Thomas Zander"
 
-#: ui/kis_aboutdata.cpp:225
+#: ui/kis_aboutdata.cpp:226
 msgid "Thorsten Staerk"
 msgstr "Thorsten Staerk"
 
-#: ui/kis_aboutdata.cpp:226
+#: ui/kis_aboutdata.cpp:227
 msgid "Thorsten Zachmann"
 msgstr "Thorsten Zachmann"
 
-#: ui/kis_aboutdata.cpp:227
+#: ui/kis_aboutdata.cpp:228
 msgid "Tim Beaulen"
 msgstr "Tim Beaulen"
 
-#: ui/kis_aboutdata.cpp:228
+#: ui/kis_aboutdata.cpp:229
 msgid "Timothée Giet"
 msgstr "Timothée Giet"
 
-#: ui/kis_aboutdata.cpp:229
+#: ui/kis_aboutdata.cpp:230
 msgid "Tobias Koenig"
 msgstr "Tobias Koenig"
 
-#: ui/kis_aboutdata.cpp:230
+#: ui/kis_aboutdata.cpp:231
 msgid "Tom Burdick"
 msgstr "Tom Burdick"
 
-#: ui/kis_aboutdata.cpp:231
+#: ui/kis_aboutdata.cpp:232
 msgid "Torio Mlshi"
 msgstr "Torio Mlshi"
 
-#: ui/kis_aboutdata.cpp:232
+#: ui/kis_aboutdata.cpp:233
 msgid "Torsten Rahn"
 msgstr "Torsten Rahn"
 
-#: ui/kis_aboutdata.cpp:233
+#: ui/kis_aboutdata.cpp:234
 msgid "Unai Garro"
 msgstr "Unai Garro"
 
-#: ui/kis_aboutdata.cpp:234
+#: ui/kis_aboutdata.cpp:235
 msgid "Urs Wolfer"
 msgstr "Urs Wolfer"
 
-#: ui/kis_aboutdata.cpp:235
+#: ui/kis_aboutdata.cpp:236
 msgid "Vadim Zhukov"
 msgstr "Vadim Zhukov"
 
-#: ui/kis_aboutdata.cpp:236
+#: ui/kis_aboutdata.cpp:237
 msgid "Vera Lukman"
 msgstr "Vera Lukman"
 
-#: ui/kis_aboutdata.cpp:237
+#: ui/kis_aboutdata.cpp:238
 msgid "Victor Lafon"
 msgstr "Vektor sloj"
 
-#: ui/kis_aboutdata.cpp:238
+#: ui/kis_aboutdata.cpp:239
 msgid "Volker Krause"
 msgstr "Volker Krause"
 
-#: ui/kis_aboutdata.cpp:239
+#: ui/kis_aboutdata.cpp:240
 msgid "Waldo Bastian"
 msgstr "Waldo Bastian"
 
-#: ui/kis_aboutdata.cpp:240
+#: ui/kis_aboutdata.cpp:241
 msgid "Werner Trobin"
 msgstr "Werner Trobin"
 
-#: ui/kis_aboutdata.cpp:241
+#: ui/kis_aboutdata.cpp:242
 msgid "Wilco Greven"
 msgstr "Wilco Greven"
 
-#: ui/kis_aboutdata.cpp:242
+#: ui/kis_aboutdata.cpp:243
 msgid "Will Entriken"
 msgstr "Will Entriken"
 
-#: ui/kis_aboutdata.cpp:243
+#: ui/kis_aboutdata.cpp:244
 msgid "William Steidtmann"
 msgstr "William Steidtmann"
 
-#: ui/kis_aboutdata.cpp:244
+#: ui/kis_aboutdata.cpp:245
 msgid "Wolthera van Hovell"
 msgstr "Wolthera van Hovell"
 
-#: ui/kis_aboutdata.cpp:245
+#: ui/kis_aboutdata.cpp:246
 msgid "Yann Bodson"
 msgstr "Yann Bodson"
 
-#: ui/kis_aboutdata.cpp:246
+#: ui/kis_aboutdata.cpp:247
 msgid "Yue Liu"
 msgstr "Yue Liu"
 
-#: ui/kis_aboutdata.cpp:247
+#: ui/kis_aboutdata.cpp:248
 msgid "Yuri Chornoivan"
 msgstr "Yuri Chornoivan"
 
-#: ui/kis_aboutdata.cpp:249
+#: ui/kis_aboutdata.cpp:250
 msgid "Peter Sikking"
 msgstr "Peter Sikking"
 
-#: ui/kis_aboutdata.cpp:249
+#: ui/kis_aboutdata.cpp:250
 msgid "Project Vision"
 msgstr "Vizija projekta"
 
-#: ui/kis_aboutdata.cpp:250
+#: ui/kis_aboutdata.cpp:251
 msgid "Artist, Muses author, brush and preset creator"
 msgstr "Ctač, Muses autor, četke i pretppodešavanja"
 
-#: ui/kis_aboutdata.cpp:250
+#: ui/kis_aboutdata.cpp:251
 msgid "Ramon Miranda"
 msgstr "Ramon Miranda"
 
-#: ui/kis_aboutdata.cpp:251
+#: ui/kis_aboutdata.cpp:252
 msgid "Brushes and Palettes"
 msgstr "Četke i palete"
 
-#: ui/kis_aboutdata.cpp:251 ui/kis_aboutdata.cpp:327
+#: ui/kis_aboutdata.cpp:252 ui/kis_aboutdata.cpp:328
 msgid "David Revoy"
 msgstr "David Revoy"
 
-#: ui/kis_aboutdata.cpp:252 ui/kis_aboutdata.cpp:408
+#: ui/kis_aboutdata.cpp:253 ui/kis_aboutdata.cpp:409
 msgid "Ilya Portnov"
 msgstr "Ilya Portnov"
 
-#: ui/kis_aboutdata.cpp:252 ui/kis_aboutdata.cpp:253
+#: ui/kis_aboutdata.cpp:253 ui/kis_aboutdata.cpp:254
 msgid "MyPaint shade selector"
 msgstr "Izbor MyPaint sjenke"
 
-#: ui/kis_aboutdata.cpp:253
+#: ui/kis_aboutdata.cpp:254
 msgid "Martin Renold"
 msgstr "Martin Renold"
 
-#: ui/kis_aboutdata.cpp:254
+#: ui/kis_aboutdata.cpp:255
 msgid "Icon Management"
 msgstr "Upravljanje ikonama"
 
-#: ui/kis_aboutdata.cpp:256
+#: ui/kis_aboutdata.cpp:257
 msgid "マイキ"
 msgstr "マイキ"
 
-#: ui/kis_aboutdata.cpp:257
+#: ui/kis_aboutdata.cpp:258
 msgid "4lun"
 msgstr "4lun"
 
-#: ui/kis_aboutdata.cpp:258
+#: ui/kis_aboutdata.cpp:259
 msgid "A. Agarossi"
 msgstr "A. Agarossi"
 
-#: ui/kis_aboutdata.cpp:259
+#: ui/kis_aboutdata.cpp:260
 msgid "A. Alexeev"
 msgstr "A. Alexeev"
 
-#: ui/kis_aboutdata.cpp:260
+#: ui/kis_aboutdata.cpp:261
 msgid "Adam J Dunn"
 msgstr "Adam J Dunn"
 
-#: ui/kis_aboutdata.cpp:261
+#: ui/kis_aboutdata.cpp:262
 msgid "Alexander Haskell"
 msgstr "Alexander Haskell"
 
-#: ui/kis_aboutdata.cpp:262
+#: ui/kis_aboutdata.cpp:263
 msgid "Alicia Rangel Avila"
 msgstr "Alicia Rangel Avila"
 
-#: ui/kis_aboutdata.cpp:263
+#: ui/kis_aboutdata.cpp:264
 msgid "Allan Nordhøy"
 msgstr "Allan Nordhøy"
 
-#: ui/kis_aboutdata.cpp:264
+#: ui/kis_aboutdata.cpp:265
 msgid "Alvaro F. Celis"
 msgstr "Alvaro F. Celis"
 
-#: ui/kis_aboutdata.cpp:265
+#: ui/kis_aboutdata.cpp:266
 msgid "Anatoliy Sova"
 msgstr "Anatoliy Sova"
 
-#: ui/kis_aboutdata.cpp:266
+#: ui/kis_aboutdata.cpp:267
 msgid "Andreas Rieger"
 msgstr "Andreas Rieger"
 
-#: ui/kis_aboutdata.cpp:267
+#: ui/kis_aboutdata.cpp:268
 msgid "Andres"
 msgstr "Andres"
 
-#: ui/kis_aboutdata.cpp:268
+#: ui/kis_aboutdata.cpp:269
 msgid "Andrew Buttery,"
 msgstr "Andrew Buttery,"
 
-#: ui/kis_aboutdata.cpp:269
+#: ui/kis_aboutdata.cpp:270
 msgid "Andrew Helm"
 msgstr "Andrew Helm"
 
-#: ui/kis_aboutdata.cpp:270
+#: ui/kis_aboutdata.cpp:271
 msgid "Antonio Díaz"
 msgstr "Antonio Díaz"
 
-#: ui/kis_aboutdata.cpp:271
+#: ui/kis_aboutdata.cpp:272
 msgid "Armin Halac"
 msgstr "Armin Halac"
 
-#: ui/kis_aboutdata.cpp:272
+#: ui/kis_aboutdata.cpp:273
 msgid "Arne Brix"
 msgstr "Arne Brix"
 
-#: ui/kis_aboutdata.cpp:273
+#: ui/kis_aboutdata.cpp:274
 msgid "Arran Langmead"
 msgstr "Arran Langmead"
 
-#: ui/kis_aboutdata.cpp:274
+#: ui/kis_aboutdata.cpp:275
 msgid "Arturo Jose Perez Verdu"
 msgstr "Arturo Jose Perez Verdu"
 
-#: ui/kis_aboutdata.cpp:275
+#: ui/kis_aboutdata.cpp:276
 msgid "AsavarTzeth"
 msgstr "AsavarTzeth"
 
-#: ui/kis_aboutdata.cpp:276
+#: ui/kis_aboutdata.cpp:277
 #, fuzzy
 #| msgid "Philipsenburg"
 msgid "Axel Philipsenburg"
 msgstr "Philipsenburg"
 
-#: ui/kis_aboutdata.cpp:277
+#: ui/kis_aboutdata.cpp:278
 msgid "Balloontree"
 msgstr "Balloontree"
 
-#: ui/kis_aboutdata.cpp:278
+#: ui/kis_aboutdata.cpp:279
 msgid "Bartek Moniewski"
 msgstr "Bartek Moniewski"
 
-#: ui/kis_aboutdata.cpp:279
+#: ui/kis_aboutdata.cpp:280
 msgid "Bastian"
 msgstr "Bastian"
 
-#: ui/kis_aboutdata.cpp:280
+#: ui/kis_aboutdata.cpp:281
 msgid "BenBen"
 msgstr "BenBen"
 
-#: ui/kis_aboutdata.cpp:281
+#: ui/kis_aboutdata.cpp:282
 msgid "BenjiButo"
 msgstr "BenjiButo"
 
-#: ui/kis_aboutdata.cpp:282
+#: ui/kis_aboutdata.cpp:283
 msgid "Bente Iren Larsen"
 msgstr "Bente Iren Larsen"
 
-#: ui/kis_aboutdata.cpp:283
+#: ui/kis_aboutdata.cpp:284
 msgid "Bill Travis"
 msgstr "Bill Travis"
 
-#: ui/kis_aboutdata.cpp:284
+#: ui/kis_aboutdata.cpp:285
 msgid "Bla6,"
 msgstr "Bla6,"
 
-#: ui/kis_aboutdata.cpp:285
+#: ui/kis_aboutdata.cpp:286
 msgid "blendtuts.com"
 msgstr "blendtuts.com"
 
-#: ui/kis_aboutdata.cpp:286
+#: ui/kis_aboutdata.cpp:287
 msgid "Bogdan Covaciu"
 msgstr "Bogdan Covaciu"
 
-#: ui/kis_aboutdata.cpp:287
+#: ui/kis_aboutdata.cpp:288
 msgid "Børre Gaup"
 msgstr "Børre Gaup"
 
-#: ui/kis_aboutdata.cpp:288
+#: ui/kis_aboutdata.cpp:289
 msgid "Bosse \"Melkesedek\" Jönsson"
 msgstr "Bosse \"Melkesedek\" Jönsson"
 
-#: ui/kis_aboutdata.cpp:289
+#: ui/kis_aboutdata.cpp:290
 msgid "Brad Auty"
 msgstr "Brad Auty"
 
-#: ui/kis_aboutdata.cpp:290
+#: ui/kis_aboutdata.cpp:291
 msgid "Brian Hinton"
 msgstr "Brian Hinton"
 
-#: ui/kis_aboutdata.cpp:291
+#: ui/kis_aboutdata.cpp:292
 msgid "B.Tolputt,"
 msgstr "B.Tolputt,"
 
-#: ui/kis_aboutdata.cpp:292
+#: ui/kis_aboutdata.cpp:293
 msgid "Camelworks"
 msgstr "Camelworks"
 
-#: ui/kis_aboutdata.cpp:293
+#: ui/kis_aboutdata.cpp:294
 msgid "Carlos Andrés Moscoso"
 msgstr "Carlos Andrés Moscoso"
 
-#: ui/kis_aboutdata.cpp:294
+#: ui/kis_aboutdata.cpp:295
 msgid "Carlos Mazon"
 msgstr "Carlos Mazon"
 
-#: ui/kis_aboutdata.cpp:295
+#: ui/kis_aboutdata.cpp:296
 msgid "Champagnie"
 msgstr "Champagnie"
 
-#: ui/kis_aboutdata.cpp:296
+#: ui/kis_aboutdata.cpp:297
 msgid "Charles Prescott Collins IV"
 msgstr "Charles Prescott Collins IV"
 
-#: ui/kis_aboutdata.cpp:297
+#: ui/kis_aboutdata.cpp:298
 msgid "Charles Stanhope,"
 msgstr "Charles Stanhope,"
 
-#: ui/kis_aboutdata.cpp:298
+#: ui/kis_aboutdata.cpp:299
 msgid "chartus"
 msgstr "chartus"
 
-#: ui/kis_aboutdata.cpp:299
+#: ui/kis_aboutdata.cpp:300
 msgid "Chris Impink"
 msgstr "Chris Impink"
 
-#: ui/kis_aboutdata.cpp:300
+#: ui/kis_aboutdata.cpp:301
 msgid "Chris Nutt"
 msgstr "Chris Nutt"
 
-#: ui/kis_aboutdata.cpp:301
+#: ui/kis_aboutdata.cpp:302
 msgid "Christian Lange"
 msgstr "Christian Lange"
 
-#: ui/kis_aboutdata.cpp:302
+#: ui/kis_aboutdata.cpp:303
 msgid "Christian Leon Christensen @chrleon"
 msgstr "Christian Leon Christensen @chrleon"
 
-#: ui/kis_aboutdata.cpp:303
+#: ui/kis_aboutdata.cpp:304
 msgid "Christina K"
 msgstr "Christina K"
 
-#: ui/kis_aboutdata.cpp:304
+#: ui/kis_aboutdata.cpp:305
 msgid "Christophe"
 msgstr "Christophe"
 
-#: ui/kis_aboutdata.cpp:305
+#: ui/kis_aboutdata.cpp:306
 msgid "Carré"
 msgstr "Carré"
 
-#: ui/kis_aboutdata.cpp:306
+#: ui/kis_aboutdata.cpp:307
 msgid "chronichol"
 msgstr "chronichol"
 
-#: ui/kis_aboutdata.cpp:307
+#: ui/kis_aboutdata.cpp:308
 msgid "corien klapwijk"
 msgstr "corien klapwijk"
 
-#: ui/kis_aboutdata.cpp:308
+#: ui/kis_aboutdata.cpp:309
 msgid "CPau"
 msgstr "CPau"
 
-#: ui/kis_aboutdata.cpp:309
+#: ui/kis_aboutdata.cpp:310
 msgid "Cristiano Seixas"
 msgstr "Cristiano Seixas"
 
-#: ui/kis_aboutdata.cpp:310
+#: ui/kis_aboutdata.cpp:311
 msgid "C.Rogers"
 msgstr "C.Rogers"
 
-#: ui/kis_aboutdata.cpp:311
+#: ui/kis_aboutdata.cpp:312
 msgid "cycl0ne"
 msgstr "cycl0ne"
 
-#: ui/kis_aboutdata.cpp:312
+#: ui/kis_aboutdata.cpp:313
 msgid "Daddle"
 msgstr "Daddle"
 
-#: ui/kis_aboutdata.cpp:313
+#: ui/kis_aboutdata.cpp:314
 msgid "DaisyBuns"
 msgstr "DaisyBuns"
 
-#: ui/kis_aboutdata.cpp:314
+#: ui/kis_aboutdata.cpp:315
 msgid "damousey,"
 msgstr "damousey,"
 
-#: ui/kis_aboutdata.cpp:315
+#: ui/kis_aboutdata.cpp:316
 msgid "Daniel Aleksandersen"
 msgstr "Daniel Aleksandersen"
 
-#: ui/kis_aboutdata.cpp:316
+#: ui/kis_aboutdata.cpp:317
 msgid "Daniel Bull"
 msgstr "Daniel Bull"
 
-#: ui/kis_aboutdata.cpp:317
+#: ui/kis_aboutdata.cpp:318
 msgid "Daniel Pinheiro Lima"
 msgstr "Daniel Pinheiro Lima"
 
-#: ui/kis_aboutdata.cpp:318
+#: ui/kis_aboutdata.cpp:319
 msgid "Danni Coy"
 msgstr "Danni Coy"
 
-#: ui/kis_aboutdata.cpp:319
+#: ui/kis_aboutdata.cpp:320
 msgid "Daryl Sautter"
 msgstr "Daryl Sautter"
 
-#: ui/kis_aboutdata.cpp:320
+#: ui/kis_aboutdata.cpp:321
 msgid "David Covert"
 msgstr "David Covert"
 
-#: ui/kis_aboutdata.cpp:321
+#: ui/kis_aboutdata.cpp:322
 msgid "David Goemans,"
 msgstr "David Goemans,"
 
-#: ui/kis_aboutdata.cpp:322
+#: ui/kis_aboutdata.cpp:323
 msgid "David Herrmann"
 msgstr "David Herrmann"
 
-#: ui/kis_aboutdata.cpp:323
+#: ui/kis_aboutdata.cpp:324
 msgid "David Macara"
 msgstr "David Macara"
 
-#: ui/kis_aboutdata.cpp:324
+#: ui/kis_aboutdata.cpp:325
 msgid "David Plassmann"
 msgstr "David Plassmann"
 
-#: ui/kis_aboutdata.cpp:325
+#: ui/kis_aboutdata.cpp:326
 msgid "David Prommer"
 msgstr "David Prommer"
 
-#: ui/kis_aboutdata.cpp:326
+#: ui/kis_aboutdata.cpp:327
 msgid "David R"
 msgstr "David R"
 
-#: ui/kis_aboutdata.cpp:328
+#: ui/kis_aboutdata.cpp:329
 msgid "David Shere"
 msgstr "David Shere"
 
-#: ui/kis_aboutdata.cpp:329
+#: ui/kis_aboutdata.cpp:330
 #, fuzzy
 #| msgid "Forerunner"
 msgid "Daxi Forerunner"
 msgstr "Forerunner"
 
-#: ui/kis_aboutdata.cpp:330
+#: ui/kis_aboutdata.cpp:331
 msgid "denDwaler"
 msgstr "denDwaler"
 
-#: ui/kis_aboutdata.cpp:331
+#: ui/kis_aboutdata.cpp:332
 msgid "Deni Klapka"
 msgstr "Deni Klapka"
 
-#: ui/kis_aboutdata.cpp:332
+#: ui/kis_aboutdata.cpp:333
 msgid "Dezponia Veil"
 msgstr "Dezponia Veil"
 
-#: ui/kis_aboutdata.cpp:333
+#: ui/kis_aboutdata.cpp:334
 msgid "Dinesh Kumar"
 msgstr "Dinesh Kumar"
 
-#: ui/kis_aboutdata.cpp:334
+#: ui/kis_aboutdata.cpp:335
 msgid "DIT"
 msgstr "DIT"
 
-#: ui/kis_aboutdata.cpp:335
+#: ui/kis_aboutdata.cpp:336
 msgid "Ditte Mark Kreinøe"
 msgstr "Ditte Mark Kreinøe"
 
-#: ui/kis_aboutdata.cpp:336
+#: ui/kis_aboutdata.cpp:337
 #, fuzzy
 #| msgid "Dmitri \"D-Meat\""
 msgid "Dmitri \"D-Meat\" Engman"
 msgstr "Dmitri \"D-Meat\""
 
-#: ui/kis_aboutdata.cpp:337
+#: ui/kis_aboutdata.cpp:338
 msgid "Dmitriy Savin"
 msgstr "Dmitriy Savin"
 
-#: ui/kis_aboutdata.cpp:338
+#: ui/kis_aboutdata.cpp:339
 msgid "Don Smith"
 msgstr "Don Smith"
 
-#: ui/kis_aboutdata.cpp:339
+#: ui/kis_aboutdata.cpp:340
 msgid "D. Sky Rains"
 msgstr "D. Sky Rains"
 
-#: ui/kis_aboutdata.cpp:340
+#: ui/kis_aboutdata.cpp:341
 msgid "Dustin Morabito"
 msgstr "Dustin Morabito"
 
-#: ui/kis_aboutdata.cpp:341
+#: ui/kis_aboutdata.cpp:342
 msgid "Dutch_Wolf"
 msgstr "Dutch_Wolf"
 
-#: ui/kis_aboutdata.cpp:342
+#: ui/kis_aboutdata.cpp:343
 msgid "Duy Vo Van"
 msgstr "Duy Vo Van"
 
-#: ui/kis_aboutdata.cpp:343
+#: ui/kis_aboutdata.cpp:344
 msgid "D Wray"
 msgstr "D Wray"
 
-#: ui/kis_aboutdata.cpp:344
+#: ui/kis_aboutdata.cpp:345
 msgid "DzymatoR,"
 msgstr "DzymatoR,"
 
-#: ui/kis_aboutdata.cpp:345
+#: ui/kis_aboutdata.cpp:346
 msgid "edomaur"
 msgstr "edomaur"
 
-#: ui/kis_aboutdata.cpp:346
+#: ui/kis_aboutdata.cpp:347
 msgid "Edward Coughlan"
 msgstr "Edward Coughlan"
 
-#: ui/kis_aboutdata.cpp:347
+#: ui/kis_aboutdata.cpp:348
 msgid "Edward Dubovic"
 msgstr ""
 
-#: ui/kis_aboutdata.cpp:348
+#: ui/kis_aboutdata.cpp:349
 msgid "Eeku Koponen"
 msgstr "Eeku Koponen"
 
-#: ui/kis_aboutdata.cpp:349
+#: ui/kis_aboutdata.cpp:350
 msgid "Egor Nelyubov"
 msgstr "Egor Nelyubov"
 
-#: ui/kis_aboutdata.cpp:350
+#: ui/kis_aboutdata.cpp:351
 msgid "Eike Hein"
 msgstr "Eike Hein"
 
-#: ui/kis_aboutdata.cpp:351
+#: ui/kis_aboutdata.cpp:352
 msgid "Elie Morisse"
 msgstr "Elie Morisse"
 
-#: ui/kis_aboutdata.cpp:352
+#: ui/kis_aboutdata.cpp:353
 msgid "Elizabeth Barndollar,"
 msgstr "Elizabeth Barndollar,"
 
-#: ui/kis_aboutdata.cpp:353
+#: ui/kis_aboutdata.cpp:354
 msgid "Elyaradine"
 msgstr "Elyaradine"
 
-#: ui/kis_aboutdata.cpp:354
+#: ui/kis_aboutdata.cpp:355
 msgid "Eo Fenstalker"
 msgstr "Eo Fenstalker"
 
-#: ui/kis_aboutdata.cpp:355
+#: ui/kis_aboutdata.cpp:356
 msgid "Érico Vieira Porto"
 msgstr "Érico Vieira Porto"
 
-#: ui/kis_aboutdata.cpp:356
+#: ui/kis_aboutdata.cpp:357
 msgid "Erik Johansson"
 msgstr "Erik Johansson"
 
-#: ui/kis_aboutdata.cpp:357
+#: ui/kis_aboutdata.cpp:358
 msgid "ethan calabria"
 msgstr "ethan calabria"
 
-#: ui/kis_aboutdata.cpp:358
+#: ui/kis_aboutdata.cpp:359
 msgid "Exilist - S.Grundmann"
 msgstr "Exilist - S.Grundmann"
 
-#: ui/kis_aboutdata.cpp:359
+#: ui/kis_aboutdata.cpp:360
 #, fuzzy
 #| msgid "Schempp"
 msgid "Fabian Schempp"
 msgstr "Schempp"
 
-#: ui/kis_aboutdata.cpp:360
+#: ui/kis_aboutdata.cpp:361
 msgid "Farkas Máté"
 msgstr "Farkas Máté"
 
-#: ui/kis_aboutdata.cpp:361
+#: ui/kis_aboutdata.cpp:362
 msgid "Felicia Nørregård"
 msgstr "Felicia Nørregård"
 
-#: ui/kis_aboutdata.cpp:362
+#: ui/kis_aboutdata.cpp:363
 msgid "Fernando Tortosa"
 msgstr "Fernando Tortosa"
 
-#: ui/kis_aboutdata.cpp:363
+#: ui/kis_aboutdata.cpp:364
 msgid "Florian Jacob"
 msgstr "Florian Jacob"
 
-#: ui/kis_aboutdata.cpp:364
+#: ui/kis_aboutdata.cpp:365
 msgid "Foli Ayivoh"
 msgstr "Foli Ayivoh"
 
-#: ui/kis_aboutdata.cpp:365
+#: ui/kis_aboutdata.cpp:366
 msgid "Formanor"
 msgstr "Formanor"
 
-#: ui/kis_aboutdata.cpp:366
+#: ui/kis_aboutdata.cpp:367
 #, fuzzy
 #| msgid "Francesca \"JK\""
 msgid "Francesca \"JK\" Poppi"
 msgstr "Francesca \"JK\""
 
-#: ui/kis_aboutdata.cpp:367
+#: ui/kis_aboutdata.cpp:368
 msgid "François Coulon"
 msgstr "François Coulon"
 
-#: ui/kis_aboutdata.cpp:368
+#: ui/kis_aboutdata.cpp:369
 msgid "Frank Bremer"
 msgstr "Frank Bremer"
 
-#: ui/kis_aboutdata.cpp:369
+#: ui/kis_aboutdata.cpp:370
 msgid "Frédéric Momméja"
 msgstr "Frédéric Momméja"
 
-#: ui/kis_aboutdata.cpp:370
+#: ui/kis_aboutdata.cpp:371
 msgid "Frederik Gladhorn"
 msgstr "Frederik Gladhorn"
 
-#: ui/kis_aboutdata.cpp:371
+#: ui/kis_aboutdata.cpp:372
 msgid "Frodolf"
 msgstr "Frodolf"
 
-#: ui/kis_aboutdata.cpp:372
+#: ui/kis_aboutdata.cpp:373
 msgid "Fuzzyman"
 msgstr "Fuzzyman"
 
-#: ui/kis_aboutdata.cpp:373
+#: ui/kis_aboutdata.cpp:374
 #, fuzzy
 #| msgid "Gábor Udvari,"
 msgid "Gábor Udvari"
 msgstr "Gábor Udvari,"
 
-#: ui/kis_aboutdata.cpp:374
+#: ui/kis_aboutdata.cpp:375
 msgid "gabsd84"
 msgstr "gabsd84"
 
-#: ui/kis_aboutdata.cpp:375
+#: ui/kis_aboutdata.cpp:376
 msgid "Gamamoto"
 msgstr "Gamamoto"
 
-#: ui/kis_aboutdata.cpp:376
+#: ui/kis_aboutdata.cpp:377
 msgid "Gareth Davidson"
 msgstr "Gareth Davidson"
 
-#: ui/kis_aboutdata.cpp:377
+#: ui/kis_aboutdata.cpp:378
 msgid "Gary Thomas"
 msgstr "Gary Thomas"
 
-#: ui/kis_aboutdata.cpp:378
+#: ui/kis_aboutdata.cpp:379
 msgid "gcala"
 msgstr "gcala"
 
-#: ui/kis_aboutdata.cpp:379
+#: ui/kis_aboutdata.cpp:380
 msgid "geeky"
 msgstr "geeky"
 
-#: ui/kis_aboutdata.cpp:380
+#: ui/kis_aboutdata.cpp:381
 msgid "Georg Piorczynski"
 msgstr "Georg Piorczynski"
 
-#: ui/kis_aboutdata.cpp:381
+#: ui/kis_aboutdata.cpp:382
 msgid "Giant Oak Studios"
 msgstr "Giant Oak Studios"
 
-#: ui/kis_aboutdata.cpp:382
+#: ui/kis_aboutdata.cpp:383
 msgid "Gibonus,"
 msgstr "Gibonus,"
 
-#: ui/kis_aboutdata.cpp:383
+#: ui/kis_aboutdata.cpp:384
 msgid "Giovanni Bianco"
 msgstr "Giovanni Bianco"
 
-#: ui/kis_aboutdata.cpp:384
+#: ui/kis_aboutdata.cpp:385
 msgid "Giovanni Remigi"
 msgstr "Giovanni Remigi"
 
-#: ui/kis_aboutdata.cpp:385
+#: ui/kis_aboutdata.cpp:386
 msgid "GNX"
 msgstr "GNX"
 
-#: ui/kis_aboutdata.cpp:386
+#: ui/kis_aboutdata.cpp:387
 msgid "goda87"
 msgstr "goda87"
 
-#: ui/kis_aboutdata.cpp:387
+#: ui/kis_aboutdata.cpp:388
 msgid "Grant Borodin"
 msgstr "Grant Borodin"
 
-#: ui/kis_aboutdata.cpp:388
+#: ui/kis_aboutdata.cpp:389
 msgid "Grégory Fauchille"
 msgstr "Grégory Fauchille"
 
-#: ui/kis_aboutdata.cpp:389
+#: ui/kis_aboutdata.cpp:390
 msgid "Grigory Petrov"
 msgstr "Grigory Petrov"
 
-#: ui/kis_aboutdata.cpp:390
+#: ui/kis_aboutdata.cpp:391
 msgid "gummiwaffen,"
 msgstr "gummiwaffen,"
 
-#: ui/kis_aboutdata.cpp:391
+#: ui/kis_aboutdata.cpp:392
 msgid "GustavN"
 msgstr "GustavN"
 
-#: ui/kis_aboutdata.cpp:392
+#: ui/kis_aboutdata.cpp:393
 msgid "Hayashihikaru"
 msgstr "Hayashihikaru"
 
-#: ui/kis_aboutdata.cpp:393
+#: ui/kis_aboutdata.cpp:394
 msgid "Heather Blandford"
 msgstr "Heather Blandford"
 
-#: ui/kis_aboutdata.cpp:394
+#: ui/kis_aboutdata.cpp:395
 msgid "Hector Dubon"
 msgstr "Hector Dubon"
 
-#: ui/kis_aboutdata.cpp:395
+#: ui/kis_aboutdata.cpp:396
 msgid "higekzk"
 msgstr "higekzk"
 
-#: ui/kis_aboutdata.cpp:396
+#: ui/kis_aboutdata.cpp:397
 msgid "High Iron Studios"
 msgstr "High Iron Studios"
 
-#: ui/kis_aboutdata.cpp:397
+#: ui/kis_aboutdata.cpp:398
 msgid "Hiroki Ishikura"
 msgstr "Hiroki Ishikura"
 
-#: ui/kis_aboutdata.cpp:398
+#: ui/kis_aboutdata.cpp:399
 msgid "Hixe,"
 msgstr "Hixe,"
 
-#: ui/kis_aboutdata.cpp:399
+#: ui/kis_aboutdata.cpp:400
 msgid "home"
 msgstr "home"
 
-#: ui/kis_aboutdata.cpp:400
+#: ui/kis_aboutdata.cpp:401
 msgid "Hra Luoma"
 msgstr "Hra Luoma"
 
-#: ui/kis_aboutdata.cpp:401
+#: ui/kis_aboutdata.cpp:402
 msgid "Hydralien"
 msgstr "Hydralien"
 
-#: ui/kis_aboutdata.cpp:402
+#: ui/kis_aboutdata.cpp:403
 msgid "IBurmistrov"
 msgstr "IBurmistrov"
 
-#: ui/kis_aboutdata.cpp:403
+#: ui/kis_aboutdata.cpp:404
 msgid "icarrion"
 msgstr "icarrion"
 
-#: ui/kis_aboutdata.cpp:404
+#: ui/kis_aboutdata.cpp:405
 msgid "Ihara"
 msgstr "Ihara"
 
-#: ui/kis_aboutdata.cpp:405
+#: ui/kis_aboutdata.cpp:406
 msgid "iiinn"
 msgstr "iiinn"
 
-#: ui/kis_aboutdata.cpp:406
+#: ui/kis_aboutdata.cpp:407
 msgid "Iker AM"
 msgstr "Iker AM"
 
-#: ui/kis_aboutdata.cpp:407
+#: ui/kis_aboutdata.cpp:408
 msgid "Ilya Diallo"
 msgstr "Ilya Diallo"
 
-#: ui/kis_aboutdata.cpp:409
+#: ui/kis_aboutdata.cpp:410
 #, fuzzy
 #| msgid "Veenstra"
 msgid "Imco Veenstra"
 msgstr "Veenstra"
 
-#: ui/kis_aboutdata.cpp:410
+#: ui/kis_aboutdata.cpp:411
 msgid "inalyricalcoma"
 msgstr "inalyricalcoma"
 
-#: ui/kis_aboutdata.cpp:411
+#: ui/kis_aboutdata.cpp:412
 msgid "Incurious Films"
 msgstr "Incurious Films"
 
-#: ui/kis_aboutdata.cpp:412
+#: ui/kis_aboutdata.cpp:413
 msgid "Jack Hill"
 msgstr "Jack Hill"
 
-#: ui/kis_aboutdata.cpp:413
+#: ui/kis_aboutdata.cpp:414
 msgid "Jackie Myles"
 msgstr "Jackie Myles"
 
-#: ui/kis_aboutdata.cpp:414
+#: ui/kis_aboutdata.cpp:415
 msgid "Jacson Spacial Querubin"
 msgstr "Jacson Spacial Querubin"
 
-#: ui/kis_aboutdata.cpp:415
+#: ui/kis_aboutdata.cpp:416
 msgid "James Graham"
 msgstr "James Graham"
 
-#: ui/kis_aboutdata.cpp:416
+#: ui/kis_aboutdata.cpp:417
 #, fuzzy
 #| msgid "O'Hare"
 msgid "James O'Hare"
 msgstr "O'Hare"
 
-#: ui/kis_aboutdata.cpp:417
+#: ui/kis_aboutdata.cpp:418
 msgid "James Thompson"
 msgstr "James Thompson"
 
-#: ui/kis_aboutdata.cpp:418
+#: ui/kis_aboutdata.cpp:419
 msgid "Jari-Pekka Kankaanpää"
 msgstr "Jari-Pekka Kankaanpää"
 
-#: ui/kis_aboutdata.cpp:419
+#: ui/kis_aboutdata.cpp:420
 msgid "Jarno Lehto"
 msgstr "Jarno Lehto"
 
-#: ui/kis_aboutdata.cpp:420
+#: ui/kis_aboutdata.cpp:421
 msgid "Jaroslav \"Rezza\" Reznik"
 msgstr "Jaroslav \"Rezza\" Reznik"
 
-#: ui/kis_aboutdata.cpp:421
+#: ui/kis_aboutdata.cpp:422
 msgid "Jefferson Ietto Novo"
 msgstr "Jefferson Ietto Novo"
 
-#: ui/kis_aboutdata.cpp:422
+#: ui/kis_aboutdata.cpp:423
 #, fuzzy
 #| msgid "Reuterberg"
 msgid "Jens Reuterberg"
 msgstr "Reuterberg"
 
-#: ui/kis_aboutdata.cpp:423
+#: ui/kis_aboutdata.cpp:424
 msgid "João Lima"
 msgstr "João Lima"
 
-#: ui/kis_aboutdata.cpp:424
+#: ui/kis_aboutdata.cpp:425
 msgid "Joeri \"Ailaik\" Schouten"
 msgstr "Joeri \"Ailaik\" Schouten"
 
-#: ui/kis_aboutdata.cpp:425
+#: ui/kis_aboutdata.cpp:426
 msgid "Johan Manders"
 msgstr "Johan Manders"
 
-#: ui/kis_aboutdata.cpp:426
+#: ui/kis_aboutdata.cpp:427
 msgid "John the Treeman"
 msgstr "John the Treeman"
 
-#: ui/kis_aboutdata.cpp:427
+#: ui/kis_aboutdata.cpp:428
 #, fuzzy
 #| msgid "John Urquhart 'Sympodius'"
 msgid "John Urquhart 'Sympodius' Ferguson"
 msgstr "John Urquhart 'Sympodius'"
 
-#: ui/kis_aboutdata.cpp:428
+#: ui/kis_aboutdata.cpp:429
 msgid "Jonathan Ringstad"
 msgstr "Jonathan Ringstad"
 
-#: ui/kis_aboutdata.cpp:429
+#: ui/kis_aboutdata.cpp:430
 msgid "Jonathan Williamson"
 msgstr "Jonathan Williamson"
 
-#: ui/kis_aboutdata.cpp:430
+#: ui/kis_aboutdata.cpp:431
 msgid "Jörg Rosenbauer"
 msgstr "Jörg Rosenbauer"
 
-#: ui/kis_aboutdata.cpp:431
+#: ui/kis_aboutdata.cpp:432
 msgid "Josep Febrer Salord"
 msgstr "Josep Febrer Salord"
 
-#: ui/kis_aboutdata.cpp:432
+#: ui/kis_aboutdata.cpp:433
 msgid "Joshua Ols"
 msgstr "Joshua Ols"
 
-#: ui/kis_aboutdata.cpp:433
+#: ui/kis_aboutdata.cpp:434
 msgid "JP LeBreton,"
 msgstr "JP LeBreton,"
 
-#: ui/kis_aboutdata.cpp:434
+#: ui/kis_aboutdata.cpp:435
 msgid "Juanjo Faico"
 msgstr "Juanjo Faico"
 
-#: ui/kis_aboutdata.cpp:435
+#: ui/kis_aboutdata.cpp:436
 msgid "JuanPi Carbajal"
 msgstr "JuanPi Carbajal"
 
-#: ui/kis_aboutdata.cpp:436
+#: ui/kis_aboutdata.cpp:437
 msgid "Juan V Camuñas"
 msgstr "Juan V Camuñas"
 
-#: ui/kis_aboutdata.cpp:437
+#: ui/kis_aboutdata.cpp:438
 msgid "Jucato"
 msgstr "Jucato"
 
-#: ui/kis_aboutdata.cpp:438
+#: ui/kis_aboutdata.cpp:439
 msgid "Kahncub Farina"
 msgstr "Kahncub Farina"
 
-#: ui/kis_aboutdata.cpp:439
+#: ui/kis_aboutdata.cpp:440
 msgid "Karith Densmore"
 msgstr "Karith Densmore"
 
-#: ui/kis_aboutdata.cpp:440
+#: ui/kis_aboutdata.cpp:441
 msgid "Kārlis Stiģis"
 msgstr "Kārlis Stiģis"
 
-#: ui/kis_aboutdata.cpp:441
+#: ui/kis_aboutdata.cpp:442
 msgid "Karlos,"
 msgstr "Karlos,"
 
-#: ui/kis_aboutdata.cpp:442
+#: ui/kis_aboutdata.cpp:443
 msgid "Karl Ove Hufthammer"
 msgstr "Karl Ove Hufthammer"
 
-#: ui/kis_aboutdata.cpp:443
+#: ui/kis_aboutdata.cpp:444
 msgid "Kathy Reid"
 msgstr "Kathy Reid"
 
-#: ui/kis_aboutdata.cpp:444
+#: ui/kis_aboutdata.cpp:445
 msgid "Kayne Crinomy"
 msgstr "Kayne Crinomy"
 
-#: ui/kis_aboutdata.cpp:445
+#: ui/kis_aboutdata.cpp:446
 msgid "Kerry Mitchell"
 msgstr "Kerry Mitchell"
 
-#: ui/kis_aboutdata.cpp:446
+#: ui/kis_aboutdata.cpp:447
 msgid "Kevin \"Hirato\" Meyer"
 msgstr "Kevin \"Hirato\" Meyer"
 
-#: ui/kis_aboutdata.cpp:447
+#: ui/kis_aboutdata.cpp:448
 msgid "Kevin Lariviere"
 msgstr "Kevin Lariviere"
 
-#: ui/kis_aboutdata.cpp:448
+#: ui/kis_aboutdata.cpp:449
 msgid "Klaemoer,"
 msgstr "Klaemoer,"
 
-#: ui/kis_aboutdata.cpp:449
+#: ui/kis_aboutdata.cpp:450
 msgid "Klas Jonsson"
 msgstr "Klas Jonsson"
 
-#: ui/kis_aboutdata.cpp:450
+#: ui/kis_aboutdata.cpp:451
 msgid "kokobin"
 msgstr "kokobin"
 
-#: ui/kis_aboutdata.cpp:451
+#: ui/kis_aboutdata.cpp:452
 msgid "Kongorilla"
 msgstr "Kongorilla"
 
-#: ui/kis_aboutdata.cpp:452
+#: ui/kis_aboutdata.cpp:453
 msgid "Kpowgames"
 msgstr "Kpowgames"
 
-#: ui/kis_aboutdata.cpp:453
+#: ui/kis_aboutdata.cpp:454
 msgid "Krasi Mirchev"
 msgstr "Krasi Mirchev"
 
-#: ui/kis_aboutdata.cpp:454
+#: ui/kis_aboutdata.cpp:455
 msgid "Kresimir Kis"
 msgstr "Kresimir Kis"
 
-#: ui/kis_aboutdata.cpp:455
+#: ui/kis_aboutdata.cpp:456
 msgid "Kwatch"
 msgstr ""
 
-#: ui/kis_aboutdata.cpp:456
+#: ui/kis_aboutdata.cpp:457
 msgid "Lani Aung"
 msgstr "Lani Aung"
 
-#: ui/kis_aboutdata.cpp:457
+#: ui/kis_aboutdata.cpp:458
 msgid "Lars Lawrenz"
 msgstr "Lars Lawrenz"
 
-#: ui/kis_aboutdata.cpp:458
+#: ui/kis_aboutdata.cpp:459
 msgid "LAS,"
 msgstr "LAS,"
 
-#: ui/kis_aboutdata.cpp:459
+#: ui/kis_aboutdata.cpp:460
 msgid "Laurent"
 msgstr "Laurent"
 
-#: ui/kis_aboutdata.cpp:460
+#: ui/kis_aboutdata.cpp:461
 msgid "Laurent Espitallier"
 msgstr "Laurent Espitallier"
 
-#: ui/kis_aboutdata.cpp:461
+#: ui/kis_aboutdata.cpp:462
 msgid "LcLk"
 msgstr "LcLk"
 
-#: ui/kis_aboutdata.cpp:462
+#: ui/kis_aboutdata.cpp:463
 msgid "Leecifer"
 msgstr "Leecifer"
 
-#: ui/kis_aboutdata.cpp:463
+#: ui/kis_aboutdata.cpp:464
 msgid "Lee Kenning"
 msgstr "Lee Kenning"
 
-#: ui/kis_aboutdata.cpp:464
+#: ui/kis_aboutdata.cpp:465
 msgid "Lee Symes"
 msgstr "Lee Symes"
 
-#: ui/kis_aboutdata.cpp:465
+#: ui/kis_aboutdata.cpp:466
 msgid "Leonhard Landrock"
 msgstr "Leonhard Landrock"
 
-#: ui/kis_aboutdata.cpp:466
+#: ui/kis_aboutdata.cpp:467
 msgid "Level¹Imp"
 msgstr "Level¹Imp"
 
-#: ui/kis_aboutdata.cpp:467
+#: ui/kis_aboutdata.cpp:468
 msgid "ligertimjan"
 msgstr "ligertimjan"
 
-#: ui/kis_aboutdata.cpp:468
+#: ui/kis_aboutdata.cpp:469
 msgid "lili lith,"
 msgstr "lili lith,"
 
-#: ui/kis_aboutdata.cpp:469
+#: ui/kis_aboutdata.cpp:470
 msgid "Lilis Iskandar"
 msgstr "Lilis Iskandar"
 
-#: ui/kis_aboutdata.cpp:470
+#: ui/kis_aboutdata.cpp:471
 msgid "Lim Yuen Hoe"
 msgstr "Lim Yuen Hoe"
 
-#: ui/kis_aboutdata.cpp:471
+#: ui/kis_aboutdata.cpp:472
 msgid "Linda van Zoggel-Polman"
 msgstr "Linda van Zoggel-Polman"
 
-#: ui/kis_aboutdata.cpp:472
+#: ui/kis_aboutdata.cpp:473
 msgid "Lorant Szakacs"
 msgstr "Lorant Szakacs"
 
-#: ui/kis_aboutdata.cpp:473
+#: ui/kis_aboutdata.cpp:474
 msgid "LordPanther"
 msgstr "LordPanther"
 
-#: ui/kis_aboutdata.cpp:474
+#: ui/kis_aboutdata.cpp:475
 msgid "Lorian Grace"
 msgstr "Lorian Grace"
 
-#: ui/kis_aboutdata.cpp:475
+#: ui/kis_aboutdata.cpp:476
 msgid "Lucas Falcao,"
 msgstr "Lucas Falcao,"
 
-#: ui/kis_aboutdata.cpp:476
+#: ui/kis_aboutdata.cpp:477
 msgid "Luciano Montanaro"
 msgstr "Luciano Montanaro"
 
-#: ui/kis_aboutdata.cpp:477
+#: ui/kis_aboutdata.cpp:478
 msgid "Ludovic"
 msgstr "Ludovic"
 
-#: ui/kis_aboutdata.cpp:478
+#: ui/kis_aboutdata.cpp:479
 msgid "Luiz F. Paulucci"
 msgstr "Luiz F. Paulucci"
 
-#: ui/kis_aboutdata.cpp:479
+#: ui/kis_aboutdata.cpp:480
 msgid "Lukas Filzer"
 msgstr "Lukas Filzer"
 
-#: ui/kis_aboutdata.cpp:480
+#: ui/kis_aboutdata.cpp:481
 msgid "Mads Tuxen"
 msgstr "Mads Tuxen"
 
-#: ui/kis_aboutdata.cpp:481
+#: ui/kis_aboutdata.cpp:482
 msgid "MahouTskai"
 msgstr "MahouTskai"
 
-#: ui/kis_aboutdata.cpp:482
+#: ui/kis_aboutdata.cpp:483
 msgid "Marc Albrecht"
 msgstr "Marc Albrecht"
 
-#: ui/kis_aboutdata.cpp:483
+#: ui/kis_aboutdata.cpp:484
 #, fuzzy
 #| msgid "Caminada"
 msgid "Marco Caminada"
 msgstr "Caminada"
 
-#: ui/kis_aboutdata.cpp:484
+#: ui/kis_aboutdata.cpp:485
 msgid "Mario Latronico"
 msgstr "Mario Latronico"
 
-#: ui/kis_aboutdata.cpp:485
+#: ui/kis_aboutdata.cpp:486
 msgid "Mark Pearson"
 msgstr "Mark Pearson"
 
-#: ui/kis_aboutdata.cpp:486
+#: ui/kis_aboutdata.cpp:487
 msgid "Mark Titchener"
 msgstr "Mark Titchener"
 
-#: ui/kis_aboutdata.cpp:487
+#: ui/kis_aboutdata.cpp:488
 msgid "Markus Germann"
 msgstr "Markus Germann"
 
-#: ui/kis_aboutdata.cpp:488
+#: ui/kis_aboutdata.cpp:489
 msgid "Matias Mendiola"
 msgstr "Matias Mendiola"
 
-#: ui/kis_aboutdata.cpp:489
+#: ui/kis_aboutdata.cpp:490
 msgid "Matthieu Chevillot,"
 msgstr "Matthieu Chevillot,"
 
-#: ui/kis_aboutdata.cpp:490
+#: ui/kis_aboutdata.cpp:491
 msgid "Matt Jordan"
 msgstr "Matt Jordan"
 
-#: ui/kis_aboutdata.cpp:491
+#: ui/kis_aboutdata.cpp:492
 msgid "maxamillion"
 msgstr "maxamillion"
 
-#: ui/kis_aboutdata.cpp:492
+#: ui/kis_aboutdata.cpp:493
 msgid "Max Torres"
 msgstr "Max Torres"
 
-#: ui/kis_aboutdata.cpp:493
+#: ui/kis_aboutdata.cpp:494
 msgid "Mdk"
 msgstr "Mdk"
 
-#: ui/kis_aboutdata.cpp:494
+#: ui/kis_aboutdata.cpp:495
 msgid "@meffrafax"
 msgstr "@meffrafax"
 
-#: ui/kis_aboutdata.cpp:495
+#: ui/kis_aboutdata.cpp:496
 #, fuzzy
 #| msgid "Bosse \"Melkesedek\" Jönsson"
 msgid "\"Melkesedek\" Jönsson"
 msgstr "Bosse \"Melkesedek\" Jönsson"
 
-#: ui/kis_aboutdata.cpp:496
+#: ui/kis_aboutdata.cpp:497
 msgid "memnoch_proxy"
 msgstr "memnoch_proxy"
 
-#: ui/kis_aboutdata.cpp:497
+#: ui/kis_aboutdata.cpp:498
 msgid "Metalfreak"
 msgstr "Metalfreak"
 
-#: ui/kis_aboutdata.cpp:498
+#: ui/kis_aboutdata.cpp:499
 msgid "Michael"
 msgstr "Michael"
 
-#: ui/kis_aboutdata.cpp:499
+#: ui/kis_aboutdata.cpp:500
 msgid "Michael Abrahams,"
 msgstr "Michael Abrahams,"
 
-#: ui/kis_aboutdata.cpp:500
+#: ui/kis_aboutdata.cpp:501
 msgid "Michael Knubben"
 msgstr "Michael Knubben"
 
-#: ui/kis_aboutdata.cpp:501
+#: ui/kis_aboutdata.cpp:502
 msgid "Michael Papkov"
 msgstr "Michael Papkov"
 
-#: ui/kis_aboutdata.cpp:502
+#: ui/kis_aboutdata.cpp:503
 msgid "Michael Pohoreski"
 msgstr "Michael Pohoreski"
 
-#: ui/kis_aboutdata.cpp:504
+#: ui/kis_aboutdata.cpp:505
 msgid "Michel Vilain"
 msgstr "Michel Vilain"
 
-#: ui/kis_aboutdata.cpp:505
+#: ui/kis_aboutdata.cpp:506
 msgid "micrypt"
 msgstr "micrypt"
 
-#: ui/kis_aboutdata.cpp:506 ui/kis_aboutdata.cpp:507
+#: ui/kis_aboutdata.cpp:507 ui/kis_aboutdata.cpp:508
 msgid "Mike"
 msgstr "Mike"
 
-#: ui/kis_aboutdata.cpp:508
+#: ui/kis_aboutdata.cpp:509
 msgid "Linksvayer"
 msgstr "Linksvayer"
 
-#: ui/kis_aboutdata.cpp:509
+#: ui/kis_aboutdata.cpp:510
 msgid "miko"
 msgstr "miko"
 
-#: ui/kis_aboutdata.cpp:510
+#: ui/kis_aboutdata.cpp:511
 msgid "Mitja"
 msgstr "Mitja"
 
-#: ui/kis_aboutdata.cpp:511
+#: ui/kis_aboutdata.cpp:512
 msgid "Mke"
 msgstr "Mke"
 
-#: ui/kis_aboutdata.cpp:512
+#: ui/kis_aboutdata.cpp:513
 msgid "mnem"
 msgstr "mnem"
 
-#: ui/kis_aboutdata.cpp:513
+#: ui/kis_aboutdata.cpp:514
 msgid "Mr Tonks"
 msgstr "Mr Tonks"
 
-#: ui/kis_aboutdata.cpp:514
+#: ui/kis_aboutdata.cpp:515
 msgid "Mu57Di3"
 msgstr "Mu57Di3"
 
-#: ui/kis_aboutdata.cpp:515
+#: ui/kis_aboutdata.cpp:516
 msgid "Mufeed Al-Hashim"
 msgstr "Mufeed Al-Hashim"
 
-#: ui/kis_aboutdata.cpp:516
+#: ui/kis_aboutdata.cpp:517
 msgid "myster0n"
 msgstr "myster0n"
 
-#: ui/kis_aboutdata.cpp:517
+#: ui/kis_aboutdata.cpp:518
 msgid "Nasser Alshammari"
 msgstr "Nasser Alshammari"
 
-#: ui/kis_aboutdata.cpp:518
+#: ui/kis_aboutdata.cpp:519
 msgid "Neko-Maya,"
 msgstr "Neko-Maya,"
 
-#: ui/kis_aboutdata.cpp:519
+#: ui/kis_aboutdata.cpp:520
 msgid "Nical"
 msgstr "Nical"
 
-#: ui/kis_aboutdata.cpp:520
+#: ui/kis_aboutdata.cpp:521
 msgid "Nick Miller"
 msgstr "Nick Miller"
 
-#: ui/kis_aboutdata.cpp:521
+#: ui/kis_aboutdata.cpp:522
 msgid "nicoguaro"
 msgstr "nicoguaro"
 
-#: ui/kis_aboutdata.cpp:522
+#: ui/kis_aboutdata.cpp:523
 msgid "Nicolas Brisset"
 msgstr "Nicolas Brisset"
 
-#: ui/kis_aboutdata.cpp:523
+#: ui/kis_aboutdata.cpp:524
 msgid "Nicolas Duhil"
 msgstr "Nicolas Duhil"
 
-#: ui/kis_aboutdata.cpp:524
+#: ui/kis_aboutdata.cpp:525
 msgid "Nikolai Schlegel"
 msgstr "Nikolai Schlegel"
 
-#: ui/kis_aboutdata.cpp:525
+#: ui/kis_aboutdata.cpp:526
 msgid "Nikolaj Woroschilow"
 msgstr "Nikolaj Woroschilow"
 
-#: ui/kis_aboutdata.cpp:526
+#: ui/kis_aboutdata.cpp:527
 msgid "NiKoZ,"
 msgstr "NiKoZ,"
 
-#: ui/kis_aboutdata.cpp:527
+#: ui/kis_aboutdata.cpp:528
 msgid "Nils Sabelstrom"
 msgstr "Nils Sabelstrom"
 
-#: ui/kis_aboutdata.cpp:528
+#: ui/kis_aboutdata.cpp:529
 msgid "nml.121"
 msgstr "nml.121"
 
-#: ui/kis_aboutdata.cpp:529
+#: ui/kis_aboutdata.cpp:530
 msgid "nullreff"
 msgstr "nullreff"
 
-#: ui/kis_aboutdata.cpp:530
+#: ui/kis_aboutdata.cpp:531
 msgid "nut-case"
 msgstr "nut-case"
 
-#: ui/kis_aboutdata.cpp:531
+#: ui/kis_aboutdata.cpp:532
 msgid "nya"
 msgstr "nya"
 
-#: ui/kis_aboutdata.cpp:532
+#: ui/kis_aboutdata.cpp:533
 msgid "nylnook"
 msgstr "nylnook"
 
-#: ui/kis_aboutdata.cpp:533
+#: ui/kis_aboutdata.cpp:534
 msgid "Odd Pierrot"
 msgstr "Odd Pierrot"
 
-#: ui/kis_aboutdata.cpp:534
+#: ui/kis_aboutdata.cpp:535
 msgid "Odysseas"
 msgstr "Odysseas"
 
-#: ui/kis_aboutdata.cpp:535
+#: ui/kis_aboutdata.cpp:536
 msgid "oenvoyage"
 msgstr "oenvoyage"
 
-#: ui/kis_aboutdata.cpp:536
+#: ui/kis_aboutdata.cpp:537
 msgid "Olle Jonsson,"
 msgstr "Olle Jonsson,"
 
-#: ui/kis_aboutdata.cpp:537
+#: ui/kis_aboutdata.cpp:538
 msgid "Oskar Świerad"
 msgstr "Oskar Świerad"
 
-#: ui/kis_aboutdata.cpp:538
+#: ui/kis_aboutdata.cpp:539
 msgid "Oxben"
 msgstr "Oxben"
 
-#: ui/kis_aboutdata.cpp:539
+#: ui/kis_aboutdata.cpp:540
 msgid "Pablo Gil"
 msgstr "Pablo Gil"
 
-#: ui/kis_aboutdata.cpp:540
+#: ui/kis_aboutdata.cpp:541
 msgid "Pascal Schmid"
 msgstr "Pascal Schmid"
 
-#: ui/kis_aboutdata.cpp:541
+#: ui/kis_aboutdata.cpp:542
 msgid "Pat David"
 msgstr "Pat David"
 
-#: ui/kis_aboutdata.cpp:542
+#: ui/kis_aboutdata.cpp:543
 msgid "Patrick \"ponpat\" Poniewas"
 msgstr "Patrick \"ponpat\" Poniewas"
 
-#: ui/kis_aboutdata.cpp:543
+#: ui/kis_aboutdata.cpp:544
 msgid "Paul Wortmann"
 msgstr "Paul Wortmann"
 
-#: ui/kis_aboutdata.cpp:544
+#: ui/kis_aboutdata.cpp:545
 msgid "Pawel"
 msgstr "Pawel"
 
-#: ui/kis_aboutdata.cpp:545
+#: ui/kis_aboutdata.cpp:546
 msgid "Swierczynski"
 msgstr "Swierczynski"
 
-#: ui/kis_aboutdata.cpp:546
+#: ui/kis_aboutdata.cpp:547
 msgid "P+B-Snegge"
 msgstr "P+B-Snegge"
 
-#: ui/kis_aboutdata.cpp:547
+#: ui/kis_aboutdata.cpp:548
 msgid "Peter Moonen"
 msgstr "Peter Moonen"
 
-#: ui/kis_aboutdata.cpp:549
+#: ui/kis_aboutdata.cpp:550
 msgid "Pete Smith"
 msgstr "Pete Smith"
 
-#: ui/kis_aboutdata.cpp:550
+#: ui/kis_aboutdata.cpp:551
 msgid "Pevzi"
 msgstr "Pevzi"
 
-#: ui/kis_aboutdata.cpp:551
+#: ui/kis_aboutdata.cpp:552
 msgid "Philip Cohn-Cort"
 msgstr "Philip Cohn-Cort"
 
-#: ui/kis_aboutdata.cpp:552
+#: ui/kis_aboutdata.cpp:553
 #, fuzzy
 #| msgid "Philip Edwards"
 msgid "Philip Edwards (@p2edwards)"
 msgstr "Philip Edwards"
 
-#: ui/kis_aboutdata.cpp:553
+#: ui/kis_aboutdata.cpp:554
 msgid "Pierre Dumot"
 msgstr "Pierre Dumot"
 
-#: ui/kis_aboutdata.cpp:554
+#: ui/kis_aboutdata.cpp:555
 msgid "pKrime"
 msgstr "pKrime"
 
-#: ui/kis_aboutdata.cpp:555
+#: ui/kis_aboutdata.cpp:556
 msgid "pnlarsson"
 msgstr "pnlarsson"
 
-#: ui/kis_aboutdata.cpp:556
+#: ui/kis_aboutdata.cpp:557
 msgid "Ponpon malon"
 msgstr "Ponpon malon"
 
-#: ui/kis_aboutdata.cpp:557
+#: ui/kis_aboutdata.cpp:558
 msgid "Rafał Danhoffer"
 msgstr "Rafał Danhoffer"
 
-#: ui/kis_aboutdata.cpp:558
+#: ui/kis_aboutdata.cpp:559
 msgid "Rainer Gievers"
 msgstr "Rainer Gievers"
 
-#: ui/kis_aboutdata.cpp:559
+#: ui/kis_aboutdata.cpp:560
 msgid "RayoGlauco,"
 msgstr "RayoGlauco,"
 
-#: ui/kis_aboutdata.cpp:560
+#: ui/kis_aboutdata.cpp:561
 msgid "RealZero"
 msgstr "RealZero"
 
-#: ui/kis_aboutdata.cpp:561
+#: ui/kis_aboutdata.cpp:562
 msgid "Reinhard"
 msgstr "Reinhard"
 
-#: ui/kis_aboutdata.cpp:562
+#: ui/kis_aboutdata.cpp:563
 msgid "Rhakios"
 msgstr "Rhakios"
 
-#: ui/kis_aboutdata.cpp:563
+#: ui/kis_aboutdata.cpp:564
 msgid "Richard Bensley"
 msgstr "Richard Bensley"
 
-#: ui/kis_aboutdata.cpp:564
+#: ui/kis_aboutdata.cpp:565
 msgid "Richard Jarvis"
 msgstr "Richard Jarvis"
 
-#: ui/kis_aboutdata.cpp:565
+#: ui/kis_aboutdata.cpp:566
 msgid "Rick Stirling"
 msgstr "Rick Stirling"
 
-#: ui/kis_aboutdata.cpp:566
+#: ui/kis_aboutdata.cpp:567
 msgid "ridli"
 msgstr "ridli"
 
-#: ui/kis_aboutdata.cpp:567
+#: ui/kis_aboutdata.cpp:568
 msgid "Robert Wloch Professional Consulting"
 msgstr "Robert Wloch Professional Consulting"
 
-#: ui/kis_aboutdata.cpp:568
+#: ui/kis_aboutdata.cpp:569
 msgid "Robin Princeley"
 msgstr "Robin Princeley"
 
-#: ui/kis_aboutdata.cpp:569
+#: ui/kis_aboutdata.cpp:570
 #, fuzzy
 #| msgid "Hobart García"
 msgid "Rodrigo Hobart García"
 msgstr "Hobart García"
 
-#: ui/kis_aboutdata.cpp:570
+#: ui/kis_aboutdata.cpp:571
 msgid "Roland"
 msgstr "Roland"
 
-#: ui/kis_aboutdata.cpp:571
+#: ui/kis_aboutdata.cpp:572
 msgid "Roman Nazarenko"
 msgstr "Roman Nazarenko"
 
-#: ui/kis_aboutdata.cpp:572
+#: ui/kis_aboutdata.cpp:573
 msgid "Rubén Moreno Montoliu"
 msgstr "Rubén Moreno Montoliu"
 
-#: ui/kis_aboutdata.cpp:573
+#: ui/kis_aboutdata.cpp:574
 msgid "Sam Alarcón"
 msgstr "Sam Alarcón"
 
-#: ui/kis_aboutdata.cpp:574
+#: ui/kis_aboutdata.cpp:575
 msgid "Samuel Roberts"
 msgstr "Samuel Roberts"
 
-#: ui/kis_aboutdata.cpp:575
+#: ui/kis_aboutdata.cpp:576
 msgid "Scott Petrovic,"
 msgstr "Scott Petrovic,"
 
-#: ui/kis_aboutdata.cpp:576
+#: ui/kis_aboutdata.cpp:577
 msgid "Scott Wilson"
 msgstr "Scott Wilson"
 
-#: ui/kis_aboutdata.cpp:577
+#: ui/kis_aboutdata.cpp:578
 msgid "SeaJey"
 msgstr "SeaJey"
 
-#: ui/kis_aboutdata.cpp:578
+#: ui/kis_aboutdata.cpp:579
 msgid "sebokie"
 msgstr "sebokie"
 
-#: ui/kis_aboutdata.cpp:579
+#: ui/kis_aboutdata.cpp:580
 msgid "Shawn Rutledge"
 msgstr "Shawn Rutledge"
 
-#: ui/kis_aboutdata.cpp:580
+#: ui/kis_aboutdata.cpp:581
 msgid "Shiruriru"
 msgstr "Shiruriru"
 
-#: ui/kis_aboutdata.cpp:581
+#: ui/kis_aboutdata.cpp:582
 msgid "Silvan Jegen"
 msgstr "Silvan Jegen"
 
-#: ui/kis_aboutdata.cpp:582
+#: ui/kis_aboutdata.cpp:583
 msgid "Simon Legrand"
 msgstr "Simon Legrand"
 
-#: ui/kis_aboutdata.cpp:583
+#: ui/kis_aboutdata.cpp:584
 msgid "S J Bennett"
 msgstr "S J Bennett"
 
-#: ui/kis_aboutdata.cpp:584
+#: ui/kis_aboutdata.cpp:585
 msgid "S Jester,"
 msgstr "S Jester,"
 
-#: ui/kis_aboutdata.cpp:585
+#: ui/kis_aboutdata.cpp:586
 msgid "Sketch Stick"
 msgstr "Sketch Stick"
 
-#: ui/kis_aboutdata.cpp:586
+#: ui/kis_aboutdata.cpp:587
 msgid "Skevos Mavros"
 msgstr "Skevos Mavros"
 
-#: ui/kis_aboutdata.cpp:587
+#: ui/kis_aboutdata.cpp:588
 msgid "Snoopfilou"
 msgstr "Snoopfilou"
 
-#: ui/kis_aboutdata.cpp:588
+#: ui/kis_aboutdata.cpp:589
 msgid "Soares Chen"
 msgstr "Soares Chen"
 
-#: ui/kis_aboutdata.cpp:589
+#: ui/kis_aboutdata.cpp:590
 msgid "Soren Lane"
 msgstr "Soren Lane"
 
-#: ui/kis_aboutdata.cpp:590
+#: ui/kis_aboutdata.cpp:591
 msgid "Søren Thing Andersen"
 msgstr "Søren Thing Andersen"
 
-#: ui/kis_aboutdata.cpp:591
+#: ui/kis_aboutdata.cpp:592
 msgid "Soriac"
 msgstr "Soriac"
 
-#: ui/kis_aboutdata.cpp:592
+#: ui/kis_aboutdata.cpp:593
 msgid "Stefan Steinbauer"
 msgstr "Stefan Steinbauer"
 
-#: ui/kis_aboutdata.cpp:593
+#: ui/kis_aboutdata.cpp:594
 #, fuzzy
 #| msgid "Stephen"
 msgid "Stephen Croft"
 msgstr "Stephen"
 
-#: ui/kis_aboutdata.cpp:594
+#: ui/kis_aboutdata.cpp:595
 msgid "Stephen D Egts"
 msgstr "Stephen D Egts"
 
-#: ui/kis_aboutdata.cpp:595
+#: ui/kis_aboutdata.cpp:596
 msgid "Stephen Shiu"
 msgstr "Stephen Shiu"
 
-#: ui/kis_aboutdata.cpp:596
+#: ui/kis_aboutdata.cpp:597
 msgid "Sternenwolf"
 msgstr "Sternenwolf"
 
-#: ui/kis_aboutdata.cpp:597
+#: ui/kis_aboutdata.cpp:598
 msgid "Steven Calwas"
 msgstr "Steven Calwas"
 
-#: ui/kis_aboutdata.cpp:598
+#: ui/kis_aboutdata.cpp:599
 msgid "Stramaz"
 msgstr "Stramaz"
 
-#: ui/kis_aboutdata.cpp:599
+#: ui/kis_aboutdata.cpp:600
 msgid "Stuart"
 msgstr "Stuart"
 
-#: ui/kis_aboutdata.cpp:600
+#: ui/kis_aboutdata.cpp:601
 msgid "Stuart Martin"
 msgstr "Stuart Martin"
 
-#: ui/kis_aboutdata.cpp:601
+#: ui/kis_aboutdata.cpp:602
 msgid "Studio Regen,"
 msgstr "Studio Regen,"
 
-#: ui/kis_aboutdata.cpp:602
+#: ui/kis_aboutdata.cpp:603
 msgid "Sumanas"
 msgstr "Sumanas"
 
-#: ui/kis_aboutdata.cpp:603
+#: ui/kis_aboutdata.cpp:604
 msgid "Syndarion"
 msgstr "Syndarion"
 
-#: ui/kis_aboutdata.cpp:604
+#: ui/kis_aboutdata.cpp:605
 msgid "tanukisan"
 msgstr "tanukisan"
 
-#: ui/kis_aboutdata.cpp:605
+#: ui/kis_aboutdata.cpp:606
 msgid "Tasuku Suzuki"
 msgstr "Tasuku Suzuki"
 
-#: ui/kis_aboutdata.cpp:606
+#: ui/kis_aboutdata.cpp:607
 msgid "TD-Linux"
 msgstr "TD-Linux"
 
-#: ui/kis_aboutdata.cpp:607
+#: ui/kis_aboutdata.cpp:608
 msgid "Teddy Ursadorable"
 msgstr "Teddy Ursadorable"
 
-#: ui/kis_aboutdata.cpp:608
+#: ui/kis_aboutdata.cpp:609
 msgid "Tepee (alias Tristan Paulais)"
 msgstr "Tepee (alias Tristan Paulais)"
 
-#: ui/kis_aboutdata.cpp:609
+#: ui/kis_aboutdata.cpp:610
 msgid "TesX,"
 msgstr "TesX,"
 
-#: ui/kis_aboutdata.cpp:610
+#: ui/kis_aboutdata.cpp:611
 msgid "Thomas Beck (plasmasolutions)"
 msgstr "Thomas Beck (plasmasolutions)"
 
-#: ui/kis_aboutdata.cpp:611
+#: ui/kis_aboutdata.cpp:612
 msgid "Thomas Penin"
 msgstr "Thomas Penin"
 
-#: ui/kis_aboutdata.cpp:612
+#: ui/kis_aboutdata.cpp:613
 msgid "Tim Lawrence"
 msgstr "Tim Lawrence"
 
-#: ui/kis_aboutdata.cpp:613
+#: ui/kis_aboutdata.cpp:614
 msgid "Todimus"
 msgstr "Todimus"
 
-#: ui/kis_aboutdata.cpp:614
+#: ui/kis_aboutdata.cpp:615
 msgid "Tyson Tan"
 msgstr "Tyson Tan"
 
-#: ui/kis_aboutdata.cpp:615
+#: ui/kis_aboutdata.cpp:616
 msgid "Usamah Philips"
 msgstr "Usamah Philips"
 
-#: ui/kis_aboutdata.cpp:616
+#: ui/kis_aboutdata.cpp:617
 msgid "Utao"
 msgstr "Utao"
 
-#: ui/kis_aboutdata.cpp:617
+#: ui/kis_aboutdata.cpp:618
 #, fuzzy
 #| msgid "Vinicius"
 msgid "Vinicius Braga"
 msgstr "Vinicius"
 
-#: ui/kis_aboutdata.cpp:618
+#: ui/kis_aboutdata.cpp:619
 msgid "Vlad"
 msgstr "Vlad"
 
-#: ui/kis_aboutdata.cpp:619
+#: ui/kis_aboutdata.cpp:620
 msgid "Vladislav A. Makeev"
 msgstr "Vladislav A. Makeev"
 
-#: ui/kis_aboutdata.cpp:620
+#: ui/kis_aboutdata.cpp:621
 msgid "vo hoang"
 msgstr "vo hoang"
 
-#: ui/kis_aboutdata.cpp:621
+#: ui/kis_aboutdata.cpp:622
 msgid "voltagex"
 msgstr "voltagex"
 
-#: ui/kis_aboutdata.cpp:622
+#: ui/kis_aboutdata.cpp:623
 msgid "vxmrtm"
 msgstr "vxmrtm"
 
-#: ui/kis_aboutdata.cpp:623
+#: ui/kis_aboutdata.cpp:624
 msgid "Wahooney"
 msgstr "Wahooney"
 
-#: ui/kis_aboutdata.cpp:624
+#: ui/kis_aboutdata.cpp:625
 msgid "Wilhansen Joseph Li"
 msgstr "Wilhansen Joseph Li"
 
-#: ui/kis_aboutdata.cpp:625
+#: ui/kis_aboutdata.cpp:626
 msgid "Will Thorup,"
 msgstr "Will Thorup,"
 
-#: ui/kis_aboutdata.cpp:626
+#: ui/kis_aboutdata.cpp:627
 msgid "Wohma4"
 msgstr "Wohma4"
 
-#: ui/kis_aboutdata.cpp:627
+#: ui/kis_aboutdata.cpp:628
 msgid "Wybren van Keulen"
 msgstr "Wybren van Keulen"
 
-#: ui/kis_aboutdata.cpp:628
+#: ui/kis_aboutdata.cpp:629
 msgid "Xavier Guillot"
 msgstr "Xavier Guillot"
 
-#: ui/kis_aboutdata.cpp:629
+#: ui/kis_aboutdata.cpp:630
 msgid "xghostx7"
 msgstr "xghostx7"
 
-#: ui/kis_aboutdata.cpp:630
+#: ui/kis_aboutdata.cpp:631
 msgid "Yalyn \"Yabo\" Vinkindo"
 msgstr "Yalyn \"Yabo\" Vinkindo"
 
-#: ui/kis_aboutdata.cpp:631
+#: ui/kis_aboutdata.cpp:632
 msgid "Yuriy Chernyshov"
 msgstr "Yuriy Chernyshov"
 
-#: ui/kis_aboutdata.cpp:632
+#: ui/kis_aboutdata.cpp:633
 msgid "Zatapathique,"
 msgstr "Zatapathique,"
 
-#: ui/kis_aboutdata.cpp:633
+#: ui/kis_aboutdata.cpp:634
 msgid "Zett-0"
 msgstr "Zett-0"
 
-#: ui/kis_aboutdata.cpp:634
+#: ui/kis_aboutdata.cpp:635
 msgid "Zorael"
 msgstr "Zorael"
 
-#: ui/kis_aboutdata.cpp:635
+#: ui/kis_aboutdata.cpp:636
 msgid "And 47 anonymous backers"
 msgstr "I 47 anonimnih ljudi za podršku"
 
@@ -15971,6 +15999,12 @@ msgstr ""
 "dodali postavljene vrijednosti, morate ih označite , a zatim odaberite "
 "oznaku ovdje ."
 
+#: ui/kis_psd_layer_style_resource.cpp:132
+#, kde-format
+msgctxt "Auto-generated layer style name for embedded styles (style itself)"
+msgid "<%1> (embedded)"
+msgstr ""
+
 #: ui/kis_selection_manager.cc:128
 msgid "Copy (sharp)"
 msgstr "Kopiraj (oštro)"
@@ -16143,12 +16177,12 @@ msgctxt "floating message about zoom"
 msgid "Zoom: %1 \\%"
 msgstr ""
 
-#: ui/KisApplication.cpp:204
+#: ui/KisApplication.cpp:225
 msgctxt "@title:window"
 msgid "Krita: Critical Error"
 msgstr "Krita: Kritična greska"
 
-#: ui/KisApplication.cpp:205
+#: ui/KisApplication.cpp:226
 msgid ""
 "You are running a 32 bits build on a 64 bits Windows.\n"
 "This is not recommended.\n"
@@ -16158,22 +16192,22 @@ msgstr ""
 "To nije preporučljivo.\n"
 "Molim preuzmite i instalirajte x64 gradnju umjesto toga."
 
-#: ui/KisApplication.cpp:356
+#: ui/KisApplication.cpp:400
 #, kde-format
 msgid "No template found for: %1"
 msgstr "Predložak nije pronađen za:%1"
 
-#: ui/KisApplication.cpp:361
+#: ui/KisApplication.cpp:405
 #, kde-format
 msgid "Too many templates found for: %1"
 msgstr "Pronađeno je previše šablona za: %1"
 
-#: ui/KisApplication.cpp:391
+#: ui/KisApplication.cpp:435
 #, kde-format
 msgid "Template %1 failed to load."
 msgstr "Šablon %1 nije mogao da se učita."
 
-#: ui/KisApplication.cpp:423
+#: ui/KisApplication.cpp:467
 msgid "Mimetype not found, try using the -mimetype option"
 msgstr "Mimevrsta nije nađena, pokušaj koristiti -mimetype opciju"
 
@@ -16360,7 +16394,7 @@ msgstr ""
 "Greška pri raščlanjivanju u %1 u liniji %2, koloni %3\n"
 "Poruka o grešci: %4"
 
-#: ui/KisDocument.cpp:1538 ui/KisMainWindow.cpp:658
+#: ui/KisDocument.cpp:1538 ui/KisMainWindow.cpp:718
 #, kde-format
 msgid "The file %1 does not exist."
 msgstr "Datoteka %1 ne postoji."
@@ -16495,70 +16529,70 @@ msgstr ""
 msgid "Choose Filter"
 msgstr "Izaberite filter"
 
-#: ui/KisMainWindow.cpp:185
+#: ui/KisMainWindow.cpp:187
 msgctxt "@action:inmenu"
 msgid "&Dockers"
 msgstr "&Sidrišta"
 
-#: ui/KisMainWindow.cpp:186
+#: ui/KisMainWindow.cpp:188
 msgctxt "@action:inmenu"
 msgid "&Window"
 msgstr "Po pro&zoru"
 
-#: ui/KisMainWindow.cpp:187
+#: ui/KisMainWindow.cpp:189
 msgctxt "@action:inmenu"
 msgid "New &View"
 msgstr "&Novi pogled"
 
-#: ui/KisMainWindow.cpp:402
+#: ui/KisMainWindow.cpp:455
 #, kde-format
 msgid "Show %1 Toolbar"
 msgstr "Prikaži traku %1"
 
-#: ui/KisMainWindow.cpp:404
+#: ui/KisMainWindow.cpp:457
 #, kde-format
 msgid "Hide %1 Toolbar"
 msgstr "Sakrij traku sa alatima %1"
 
-#: ui/KisMainWindow.cpp:613
+#: ui/KisMainWindow.cpp:673
 msgid "(write protected)"
 msgstr "(zaštićeno od pisanja)"
 
-#: ui/KisMainWindow.cpp:621
+#: ui/KisMainWindow.cpp:681
 #, kde-format
 msgid "Save as %1"
 msgstr "Snimi kao %1"
 
-#: ui/KisMainWindow.cpp:822
+#: ui/KisMainWindow.cpp:882
 msgid "untitled"
 msgstr "bez naslova"
 
-#: ui/KisMainWindow.cpp:1131
+#: ui/KisMainWindow.cpp:1191
 msgid "Import Images"
 msgstr "Uvezi sliku"
 
-#: ui/KisMainWindow.cpp:1131
+#: ui/KisMainWindow.cpp:1191
 msgid "Open Images"
 msgstr "Otvori Slike"
 
-#: ui/KisMainWindow.cpp:1334
+#: ui/KisMainWindow.cpp:1409
 msgid "Export as PDF"
 msgstr "Izvezi kao PDF"
 
-#: ui/KisMainWindow.cpp:1376
+#: ui/KisMainWindow.cpp:1451
 msgid "Cannot export to the specified file"
 msgstr "Ne mogu izvesti u navedenu datoteku"
 
-#: ui/KisMainWindow.cpp:1529
+#: ui/KisMainWindow.cpp:1604
 msgid "Document"
 msgstr "Dokument"
 
-#: ui/KisMainWindow.cpp:1537
+#: ui/KisMainWindow.cpp:1612
 #, kde-format
 msgid "Document - %1"
 msgstr "Dokument - %1"
 
-#: ui/KisMainWindow.cpp:1560
+#: ui/KisMainWindow.cpp:1635
 msgid ""
 "You will lose all changes made since your last save\n"
 "Do you want to continue?"
@@ -16566,21 +16600,21 @@ msgstr ""
 "Izgubit ćete sve napravljene promjene od prošlog snimljenog\n"
 "Da li želite nastaviti?"
 
-#: ui/KisMainWindow.cpp:1571
+#: ui/KisMainWindow.cpp:1646
 msgid "Error: Could not reload this document"
 msgstr "Greška: Ne mogu ponovo učitati ovaj dokument"
 
-#: ui/KisMainWindow.cpp:1832
+#: ui/KisMainWindow.cpp:1902
 #, kde-format
 msgid "&%1 %2"
 msgstr "&%1 %2"
 
-#: ui/KisMainWindow.cpp:1836
+#: ui/KisMainWindow.cpp:1906
 #, kde-format
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: ui/KisMainWindow.cpp:1922
+#: ui/KisMainWindow.cpp:1992
 msgid ""
 "The Calligra LittleCMS color management plugin is not installed. Krita will "
 "quit now."
@@ -16588,56 +16622,56 @@ msgstr ""
 "Calligra LittleCMS color menagement plugin nije instaliran. Krita će se sada "
 "zatvoriti."
 
-#: ui/KisMainWindow.cpp:1930
+#: ui/KisMainWindow.cpp:2000
 msgid "Krita cannot find any brush presets! Krita will quit now."
 msgstr "Krita ne može naći pripremljene četke i zatvoriće se."
 
-#: ui/KisMainWindow.cpp:1939
+#: ui/KisMainWindow.cpp:2009
 msgctxt "@title:window"
 msgid "Installation error"
 msgstr "Greška instalacije"
 
-#: ui/KisMainWindow.cpp:1998
+#: ui/KisMainWindow.cpp:2068
 #, kde-format
 msgid "%1 unsaved document (%2)"
 msgstr "%1 nesnimljen dokument (%2)"
 
-#: ui/KisMainWindow.cpp:2034
+#: ui/KisMainWindow.cpp:2104
 msgctxt "@action:inmenu"
 msgid "Export as PDF..."
 msgstr "Izvezi kao PDF..."
 
-#: ui/KisMainWindow.cpp:2042
+#: ui/KisMainWindow.cpp:2112
 msgctxt "@action:inmenu"
 msgid "Close All"
 msgstr "Zatvori Sve"
 
-#: ui/KisMainWindow.cpp:2053
+#: ui/KisMainWindow.cpp:2123
 msgctxt "@action:inmenu"
 msgid "Open ex&isting Document as Untitled Document..."
 msgstr "Otvori &postojeći dokument kao Nenaslovljeni dokument..."
 
-#: ui/KisMainWindow.cpp:2057
+#: ui/KisMainWindow.cpp:2127
 msgctxt "@action:inmenu"
 msgid "E&xport..."
 msgstr "Iz&vezi..."
 
-#: ui/KisMainWindow.cpp:2064
+#: ui/KisMainWindow.cpp:2134
 msgctxt "@action:inmenu"
 msgid "Document Information"
 msgstr "Podaci o dokumentu"
 
-#: ui/KisMainWindow.cpp:2072
+#: ui/KisMainWindow.cpp:2142
 msgctxt "@action:inmenu"
 msgid "&Themes"
 msgstr "&Teme"
 
-#: ui/KisMainWindow.cpp:2078
+#: ui/KisMainWindow.cpp:2148
 msgctxt "@action:inmenu"
 msgid "Show Dockers"
 msgstr "Prikaži sidrišta"
 
-#: ui/KisMainWindow.cpp:2084
+#: ui/KisMainWindow.cpp:2154
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Show Dockers"
@@ -16645,37 +16679,37 @@ msgctxt "@action:inmenu"
 msgid "Show Docker Titlebars"
 msgstr "Prikaži sidrišta"
 
-#: ui/KisMainWindow.cpp:2094
+#: ui/KisMainWindow.cpp:2164
 msgctxt "@action:inmenu"
 msgid "Cascade"
 msgstr "naslagano"
 
-#: ui/KisMainWindow.cpp:2099
+#: ui/KisMainWindow.cpp:2169
 msgctxt "@action:inmenu"
 msgid "Tile"
 msgstr "Popločano"
 
-#: ui/KisMainWindow.cpp:2104
+#: ui/KisMainWindow.cpp:2174
 msgctxt "@action:inmenu"
 msgid "Next"
 msgstr "Sljedeći"
 
-#: ui/KisMainWindow.cpp:2109
+#: ui/KisMainWindow.cpp:2179
 msgctxt "@action:inmenu"
 msgid "Previous"
 msgstr "Prethodni"
 
-#: ui/KisMainWindow.cpp:2114
+#: ui/KisMainWindow.cpp:2184
 msgctxt "@action:inmenu"
 msgid "&New Window"
 msgstr "&Novi prozor"
 
-#: ui/KisMainWindow.cpp:2118
+#: ui/KisMainWindow.cpp:2188
 msgctxt "@action:inmenu"
 msgid "Close"
 msgstr "Zatvori"
 
-#: ui/KisMainWindow.cpp:2126
+#: ui/KisMainWindow.cpp:2196
 msgid "Expanding Spacer"
 msgstr ""
 
@@ -16982,44 +17016,51 @@ msgstr "Ne mogu učitati raster izbor  %1."
 msgid "Could not load vector selection %1."
 msgstr "Nije moguče učitati izbor vektora %1."
 
-#: ui/kra/kis_kra_loader.cpp:188
+#: ui/kra/kis_kra_loader.cpp:191
 msgid "Image does not have a name."
 msgstr "Slika nema ime."
 
-#: ui/kra/kis_kra_loader.cpp:193
+#: ui/kra/kis_kra_loader.cpp:196
 msgid "Image does not specify a width."
 msgstr "Slika nema širinu."
 
-#: ui/kra/kis_kra_loader.cpp:199
+#: ui/kra/kis_kra_loader.cpp:202
 msgid "Image does not specify a height."
 msgstr "Slika nema visinu."
 
-#: ui/kra/kis_kra_loader.cpp:246
+#: ui/kra/kis_kra_loader.cpp:249
 #, kde-format
 msgid "Image specifies an unsupported color model: %1."
 msgstr "Slika navodi nepodržan model boja: %1"
 
-#: ui/kra/kis_kra_loader.cpp:446
+#: ui/kra/kis_kra_loader.cpp:348
+#, kde-format
+msgctxt ""
+"Auto-generated layer style collection name for embedded styles (collection)"
+msgid "<%1> (embedded)"
+msgstr ""
+
+#: ui/kra/kis_kra_loader.cpp:479
 #, kde-format
 msgid "Layer %1 specifies an unsupported color model: %2."
 msgstr "Sloj %1 navodi nepodržan model boja: %2."
 
-#: ui/kra/kis_kra_loader.cpp:469
+#: ui/kra/kis_kra_loader.cpp:502
 #, kde-format
 msgid "Layer %1 has an unsupported type."
 msgstr "Sloj %1 ima nepodržan tip."
 
-#: ui/kra/kis_kra_loader.cpp:500
+#: ui/kra/kis_kra_loader.cpp:533
 #, kde-format
 msgid "Layer %1 has an unsupported type: %2."
 msgstr "Sloj %1 ima nepodržan tip: %2."
 
-#: ui/kra/kis_kra_loader.cpp:507
+#: ui/kra/kis_kra_loader.cpp:540
 #, kde-format
 msgid "Failure loading layer %1 of type: %2."
 msgstr "Neuspjelo učitavanje sloja %1 tipa: %2."
 
-#: ui/kra/kis_kra_loader.cpp:603
+#: ui/kra/kis_kra_loader.cpp:648
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -17029,7 +17070,7 @@ msgstr ""
 "Datoteke povezane na sloj datoteku s imenom \" %1 \" nije pronađena.<nl/><nl/"
 ">Očekivani putanja:<nl/>%2<nl/><nl/>Želite li da ga ručno locirati ?"
 
-#: ui/kra/kis_kra_loader.cpp:608
+#: ui/kra/kis_kra_loader.cpp:653
 msgctxt "@title:window"
 msgid "File not found"
 msgstr "Datoteka nije pronađena"
@@ -17818,24 +17859,26 @@ msgstr "Šema"
 msgid "Stroke"
 msgstr "Pomjeri udar"
 
-#. i18n: ectx: property (text), widget (QPushButton, bnNewStyle)
+#. i18n: ectx: property (text), widget (QPushButton, btnNewStyle)
 #: ui/layerstyles/wdglayerstyles.ui:135
-msgid "Ne&w Style ..."
+msgid "Ne&w..."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, btnLoadStyle)
 #: ui/layerstyles/wdglayerstyles.ui:142
 #, fuzzy
-#| msgid "&Scale..."
-msgid "&Load Style..."
-msgstr "&Skaliraj..."
+#| msgctxt "@action:inmenu"
+#| msgid "E&xport..."
+msgid "&Import..."
+msgstr "Iz&vezi..."
 
 #. i18n: ectx: property (text), widget (QPushButton, btnSaveStyle)
 #: ui/layerstyles/wdglayerstyles.ui:149
 #, fuzzy
-#| msgid "&Scale..."
-msgid "&Save Style..."
-msgstr "&Skaliraj..."
+#| msgctxt "@action:inmenu"
+#| msgid "E&xport..."
+msgid "&Export..."
+msgstr "Iz&vezi..."
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkPreview)
 #: ui/layerstyles/wdglayerstyles.ui:156
@@ -18063,11 +18106,11 @@ msgstr "Grupa se ne može mijenjati"
 msgid "Local selection is locked."
 msgstr "Lokalni izbor je zaključan."
 
-#: ui/tool/kis_tool_paint.cc:104
+#: ui/tool/kis_tool_paint.cc:105
 msgid "Increase Brush Size"
 msgstr "Povećaj veličinu četke"
 
-#: ui/tool/kis_tool_paint.cc:110
+#: ui/tool/kis_tool_paint.cc:111
 msgid "Decrease Brush Size"
 msgstr "Smanji veličinu četke"
 
@@ -18354,6 +18397,16 @@ msgstr "Radna površina"
 #, kde-format
 msgid "Workspace %1"
 msgstr "Radna površina %1"
+
+#, fuzzy
+#~| msgid "&Scale..."
+#~ msgid "&Load Style..."
+#~ msgstr "&Skaliraj..."
+
+#, fuzzy
+#~| msgid "&Scale..."
+#~ msgid "&Save Style..."
+#~ msgstr "&Skaliraj..."
 
 #~ msgid "Layer Effects"
 #~ msgstr "Efekti slojeva"
