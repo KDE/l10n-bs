@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-05-09 02:02+0000\n"
+"POT-Creation-Date: 2015-05-10 02:02+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -36,7 +36,7 @@ msgstr "Statistike"
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: src/backend/analysis/StatisticsFilter.cpp:193
 #: src/backend/core/AspectTreeModel.cpp:147
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:85
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:88
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:42
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:30
 #: src/kdefrontend/ui/dockwidgets/columndock.ui:17
@@ -308,7 +308,7 @@ msgstr "%1: pomjeri %2 u %3."
 #. i18n: ectx: property (text), widget (QLabel, lMinorTicksType)
 #. i18n: ectx: property (text), widget (QLabel, lType)
 #: src/backend/core/AspectTreeModel.cpp:148
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:85
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:88
 #: src/kdefrontend/ui/datasources/importfilewidget.ui:84
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:403
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:521
@@ -661,9 +661,10 @@ msgid "no fileDataSource element found"
 msgstr "nije pronađen fileDataSource element"
 
 #: src/backend/datasources/FileDataSource.cpp:378
-#: src/backend/datasources/filters/AsciiFilter.cpp:572
+#: src/backend/datasources/filters/AsciiFilter.cpp:571
+#: src/backend/datasources/filters/AsciiMatrixFilter.cpp:570
 #: src/backend/datasources/filters/BinaryFilter.cpp:465
-#: src/backend/datasources/filters/HDFFilter.cpp:179
+#: src/backend/datasources/filters/HDFFilter.cpp:386
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:1878
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:1633
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:938
@@ -680,7 +681,8 @@ msgstr ""
 "Atribut '%1' nedostaje ili je prazan, podrazumijevana vrijednost je "
 "iskorištena"
 
-#: src/backend/datasources/filters/AsciiFilter.cpp:502
+#: src/backend/datasources/filters/AsciiFilter.cpp:501
+#: src/backend/datasources/filters/AsciiMatrixFilter.cpp:500
 #: src/backend/datasources/filters/BinaryFilter.cpp:413
 #, kde-format
 msgid "numerical data, %1 element"
@@ -689,7 +691,8 @@ msgstr[0] "numerički podatak, %1 element"
 msgstr[1] "numerički podatak, %1 elementa"
 msgstr[2] "numerički podatak, %1 elemenata"
 
-#: src/backend/datasources/filters/AsciiFilter.cpp:568
+#: src/backend/datasources/filters/AsciiFilter.cpp:567
+#: src/backend/datasources/filters/AsciiMatrixFilter.cpp:566
 msgid "no ascii filter element found"
 msgstr "nije pronađen element ascii filtera"
 
@@ -699,7 +702,38 @@ msgstr "nije pronađen element ascii filtera"
 msgid "no binary filter element found"
 msgstr "nije pronađen element ascii filtera"
 
-#: src/backend/datasources/filters/HDFFilter.cpp:175
+#: src/backend/datasources/filters/HDFFilter.cpp:214
+#, fuzzy
+#| msgid "Data:"
+msgid "data type"
+msgstr "Podaci:"
+
+#: src/backend/datasources/filters/HDFFilter.cpp:231
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:458
+#, fuzzy
+#| msgid "Dataset"
+msgid "data set"
+msgstr "Skup podataka"
+
+#: src/backend/datasources/filters/HDFFilter.cpp:242
+#, fuzzy
+#| msgid "solid line"
+msgid "symbolic link"
+msgstr "puna linija"
+
+#: src/backend/datasources/filters/HDFFilter.cpp:254
+msgid "hard link"
+msgstr ""
+
+#: src/backend/datasources/filters/HDFFilter.cpp:269
+msgid "group"
+msgstr ""
+
+#: src/backend/datasources/filters/HDFFilter.cpp:305
+msgid "unknown"
+msgstr "nepoznato"
+
+#: src/backend/datasources/filters/HDFFilter.cpp:382
 #, fuzzy
 #| msgid "no ascii filter element found"
 msgid "no hdf filter element found"
@@ -2823,27 +2857,41 @@ msgstr "Dodaj novi Tabelarni prikaz"
 msgid "Spreadsheet name:"
 msgstr "Ime Tabelarnog prikaza:"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:291
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:88
+#: src/kdefrontend/GuiObserver.cpp:88 src/kdefrontend/GuiObserver.cpp:103
+#: src/kdefrontend/GuiObserver.cpp:286 src/kdefrontend/MainWin.cpp:578
+msgid "Properties"
+msgstr "Podešavanja"
+
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:88
+msgid "Link"
+msgstr ""
+
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:88
+msgid "Attributes"
+msgstr ""
+
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:295
 msgid "Select the File Data Source"
 msgstr "Označi Izvor podataka"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:389
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:400
 msgid "Save Filter Settings as"
 msgstr "Sačuvaj podešavanja filtriranja kao"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:390
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:401
 msgid "Filter name:"
 msgstr "Ime filtera:"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:390
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:401
 msgid "new filter"
 msgstr "novi filter"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:434
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:445
 msgid "Automatic"
 msgstr "Automatski"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:435
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:446
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:287
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:91
 msgid "Custom"
@@ -3808,11 +3856,6 @@ msgstr "koeficijent određenja (R²)"
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:589
 msgid "adj. coefficient of determination (R²)"
 msgstr "adj. koeficijent određenja (R²)"
-
-#: src/kdefrontend/GuiObserver.cpp:88 src/kdefrontend/GuiObserver.cpp:103
-#: src/kdefrontend/GuiObserver.cpp:286 src/kdefrontend/MainWin.cpp:578
-msgid "Properties"
-msgstr "Podešavanja"
 
 #: src/kdefrontend/GuiObserver.cpp:113
 msgid "Spreadsheet properties"
@@ -4795,18 +4838,21 @@ msgid "Enter search term here"
 msgstr "Ovdje upisati pojam za pretragu"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:17
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:17
 msgid "Comment character"
 msgstr "Komentar karakter"
 
 #. i18n: ectx: property (text), widget (QLabel, lSeparator)
 #. i18n: ectx: property (text), widget (QLabel, lSeparatingCharacter)
+#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:44
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:44
 #: src/kdefrontend/ui/spreadsheet/exportspreadsheetwidget.ui:98
 msgid "Separating character"
 msgstr "Karakter za odvajanje"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chbSimplifyWhitespaces)
+#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:74
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:74
 msgid ""
 "Removes the whitespaces from the start and the end, and replaces each "
@@ -4816,16 +4862,19 @@ msgstr ""
 "internih praznih mjesta sa jednim praznim mjestom."
 
 #. i18n: ectx: property (text), widget (QCheckBox, chbSimplifyWhitespaces)
+#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:77
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:77
 msgid "Simplify whitespaces"
 msgstr "Pojednostavni prazna mjesta"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chbSkipEmptyParts)
+#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:87
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:87
 msgid "Skip empty parts"
 msgstr "Preskoči prazne dijelove"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chbTranspose)
+#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:94
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:94
 msgid ""
 "Interchanges the role of the rows and the columns. Treats the rows as data "
@@ -4835,21 +4884,25 @@ msgstr ""
 "ako su označeni."
 
 #. i18n: ectx: property (text), widget (QCheckBox, chbTranspose)
+#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:97
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:97
 msgid "Transpose"
 msgstr "Prenesi"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chbHeader)
+#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:104
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:104
 msgid "Use the first row to name the vectors"
 msgstr "Koristi prvi red za imenovanje vektora"
 
 #. i18n: ectx: property (text), widget (QLabel, lVectorNames)
+#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:117
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:117
 msgid "Vector names:"
 msgstr "Imena vektora:"
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kleVectorNames)
+#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:127
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:127
 msgid "Vector names, space separated. E.g. \"x y\""
 msgstr "Imena vektora, odvojena razmakom. Npr \"x y\""
@@ -6504,9 +6557,6 @@ msgstr "Vertikalni razmaci"
 
 #~ msgid "error"
 #~ msgstr "greška"
-
-#~ msgid "unknown"
-#~ msgstr "nepoznato"
 
 #~ msgid "associated"
 #~ msgstr "povezano"
