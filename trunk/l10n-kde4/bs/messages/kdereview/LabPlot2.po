@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-05-11 02:12+0000\n"
+"POT-Creation-Date: 2015-05-12 02:39+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -221,7 +221,7 @@ msgstr "U %1"
 
 #. i18n: ectx: property (title), widget (QGroupBox, gbExport)
 #: src/backend/core/AbstractPart.cpp:117 src/backend/core/AbstractPart.cpp:121
-#: src/kdefrontend/MainWin.cpp:251
+#: src/kdefrontend/MainWin.cpp:252
 #: src/kdefrontend/spreadsheet/ExportSpreadsheetDialog.cpp:123
 #: src/kdefrontend/ui/spreadsheet/exportspreadsheetwidget.ui:17
 #: src/kdefrontend/ui/worksheet/exportworksheetwidget.ui:17
@@ -266,7 +266,7 @@ msgstr "nekompatibilan filter tip"
 #: src/backend/core/column/Column.cpp:624 src/backend/core/Folder.cpp:137
 #: src/backend/core/Project.cpp:268
 #: src/backend/datasources/FileDataSource.cpp:432
-#: src/backend/matrix/Matrix.cpp:1136
+#: src/backend/matrix/Matrix.cpp:673
 #: src/backend/spreadsheet/Spreadsheet.cpp:715
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:2147
 #: src/backend/worksheet/plots/PlotArea.cpp:556
@@ -372,8 +372,8 @@ msgstr "nedostaje ili je pogrešna širina kolone"
 msgid "no column element found"
 msgstr "nema elemenata u koloni"
 
-#: src/backend/core/column/Column.cpp:704 src/backend/matrix/Matrix.cpp:1233
-#: src/backend/matrix/Matrix.cpp:1286
+#: src/backend/core/column/Column.cpp:704 src/backend/matrix/Matrix.cpp:754
+#: src/backend/matrix/Matrix.cpp:798
 msgid "invalid or missing row index"
 msgstr "pogrešan ili nedostaje indeks reda"
 
@@ -452,7 +452,7 @@ msgid "missing or invalid format attribute"
 msgstr "nedostaje ili je pogrešan formatni atribut"
 
 #: src/backend/core/datatypes/Double2StringFilter.cpp:107
-#: src/backend/matrix/matrixcommands.cpp:289
+#: src/backend/matrix/matrixcommands.cpp:292
 #, kde-format
 msgid "%1: set numeric format to '%2'"
 msgstr "%1: postavi numerički format na '%2'"
@@ -463,7 +463,7 @@ msgid "set numeric format to '%1'"
 msgstr "postavi numerički format na '%1'"
 
 #: src/backend/core/datatypes/Double2StringFilter.cpp:129
-#: src/backend/matrix/matrixcommands.cpp:314
+#: src/backend/matrix/matrixcommands.cpp:317
 #, kde-format
 msgid "%1: set decimal digits to %2"
 msgstr "%1: postavi decimalne cifre na %2"
@@ -668,7 +668,7 @@ msgstr "nije pronađen fileDataSource element"
 
 #: src/backend/datasources/FileDataSource.cpp:378
 #: src/backend/datasources/filters/AsciiFilter.cpp:571
-#: src/backend/datasources/filters/AsciiMatrixFilter.cpp:570
+#: src/backend/datasources/filters/AsciiMatrixFilter.cpp:528
 #: src/backend/datasources/filters/BinaryFilter.cpp:468
 #: src/backend/datasources/filters/HDFFilter.cpp:387
 #: src/backend/datasources/filters/ImageFilter.cpp:335
@@ -689,7 +689,7 @@ msgstr ""
 "iskorištena"
 
 #: src/backend/datasources/filters/AsciiFilter.cpp:501
-#: src/backend/datasources/filters/AsciiMatrixFilter.cpp:500
+#: src/backend/datasources/filters/AsciiMatrixFilter.cpp:460
 #: src/backend/datasources/filters/BinaryFilter.cpp:416
 #: src/backend/datasources/filters/ImageFilter.cpp:291
 #, kde-format
@@ -700,7 +700,7 @@ msgstr[1] "numerički podatak, %1 elementa"
 msgstr[2] "numerički podatak, %1 elemenata"
 
 #: src/backend/datasources/filters/AsciiFilter.cpp:567
-#: src/backend/datasources/filters/AsciiMatrixFilter.cpp:566
+#: src/backend/datasources/filters/AsciiMatrixFilter.cpp:524
 msgid "no ascii filter element found"
 msgstr "nije pronađen element ascii filtera"
 
@@ -718,7 +718,7 @@ msgid "data type"
 msgstr "Podaci:"
 
 #: src/backend/datasources/filters/HDFFilter.cpp:231
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:502
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:507
 #, fuzzy
 #| msgid "Dataset"
 msgid "data set"
@@ -749,7 +749,7 @@ msgid "no hdf filter element found"
 msgstr "nije pronađen element ascii filtera"
 
 #: src/backend/datasources/filters/ImageFilter.cpp:57
-#: src/backend/matrix/Matrix.cpp:1397
+#: src/kdefrontend/MainWin.cpp:219 src/kdefrontend/MainWin.cpp:1083
 msgid "Matrix"
 msgstr "Matrica"
 
@@ -790,7 +790,7 @@ msgstr "linija %1, kolona %2: "
 msgid "unexpected end of document"
 msgstr "neočekivan kraj dokumenta"
 
-#: src/backend/matrix/Matrix.cpp:90 src/backend/matrix/matrixcommands.cpp:38
+#: src/backend/matrix/Matrix.cpp:93 src/backend/matrix/matrixcommands.cpp:41
 #, kde-format
 msgid "%1: insert %2 column"
 msgid_plural "%1: insert %2 columns"
@@ -798,7 +798,7 @@ msgstr[0] "%1: dodaj %2 kolonu"
 msgstr[1] "%1: dodaj %2 kolone"
 msgstr[2] "%1: dodaj %2 kolona"
 
-#: src/backend/matrix/Matrix.cpp:100 src/backend/matrix/matrixcommands.cpp:90
+#: src/backend/matrix/Matrix.cpp:106 src/backend/matrix/matrixcommands.cpp:93
 #, kde-format
 msgid "%1: remove %2 column"
 msgid_plural "%1: remove %2 columns"
@@ -806,7 +806,7 @@ msgstr[0] "%1: ukloni %2 kolonu"
 msgstr[1] "%1: ukloni %2 kolone"
 msgstr[2] "%1: ukloni %2 kolona"
 
-#: src/backend/matrix/Matrix.cpp:110 src/backend/matrix/matrixcommands.cpp:125
+#: src/backend/matrix/Matrix.cpp:115 src/backend/matrix/matrixcommands.cpp:128
 #, kde-format
 msgid "%1: remove %2 row"
 msgid_plural "%1: remove %2 rows"
@@ -814,7 +814,7 @@ msgstr[0] "%1: ukloni %2 red"
 msgstr[1] "%1: ukloni %2 reda"
 msgstr[2] "%1: Ukloni %2 redova"
 
-#: src/backend/matrix/Matrix.cpp:120 src/backend/matrix/matrixcommands.cpp:64
+#: src/backend/matrix/Matrix.cpp:124 src/backend/matrix/matrixcommands.cpp:67
 #, kde-format
 msgid "%1: insert %2 row"
 msgid_plural "%1: insert %2 rows"
@@ -822,253 +822,18 @@ msgstr[0] "%1: umetni %2 red"
 msgstr[1] "%1: umetni %2 reda"
 msgstr[2] "%1: umetni %2 redova"
 
-#: src/backend/matrix/Matrix.cpp:130
+#: src/backend/matrix/Matrix.cpp:137
 #, kde-format
 msgid "%1: set matrix size to %2x%3"
 msgstr "%1: postavi veličinu matrice na %2x%3"
 
-#: src/backend/matrix/Matrix.cpp:158 src/backend/matrix/matrixcommands.cpp:160
-#: src/backend/spreadsheet/Spreadsheet.cpp:254
-#, kde-format
-msgid "%1: clear"
-msgstr "%1: obriši"
-
-#: src/backend/matrix/Matrix.cpp:178
-#, kde-format
-msgid "%1: cut selected cell(s)"
-msgstr "%1: izreži selektovanu(e) ćeliju(e)"
-
-#: src/backend/matrix/Matrix.cpp:225
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:853
-#, kde-format
-msgid "%1: paste from clipboard"
-msgstr "%1: zalijepi iz clipboard-a"
-
-#: src/backend/matrix/Matrix.cpp:298
-#, kde-format
-msgid "%1: insert empty column(s)"
-msgstr "%1: umetni praznu(e) kolonu(e)"
-
-#: src/backend/matrix/Matrix.cpp:322
-#, kde-format
-msgid "%1: remove selected column(s)"
-msgstr "%1: ukloni selektovanu kolonu(e)"
-
-#: src/backend/matrix/Matrix.cpp:333
-#, kde-format
-msgid "%1: clear selected column(s)"
-msgstr "%1: obriši selektovanu kolonu(e)"
-
-#: src/backend/matrix/Matrix.cpp:351
-#, kde-format
-msgid "%1: insert empty rows(s)"
-msgstr "%1: umetni prazan red(ove)"
-
-#: src/backend/matrix/Matrix.cpp:375
-#, kde-format
-msgid "%1: remove selected rows(s)"
-msgstr "%1: izbriši označeni red(ove)"
-
-#: src/backend/matrix/Matrix.cpp:390
-#, kde-format
-msgid "%1: clear selected rows(s)"
-msgstr "%1: ukloni označeni red(ove)"
-
-#: src/backend/matrix/Matrix.cpp:412
-#, kde-format
-msgid "%1: clear selected cell(s)"
-msgstr "%1: ukloni označenu ćeliju(e)"
-
-#: src/backend/matrix/Matrix.cpp:505
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:153
-msgid "Cu&t"
-msgstr "&Isijeci"
-
-#: src/backend/matrix/Matrix.cpp:508
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:154
-msgid "&Copy"
-msgstr "&Kopiraj"
-
-#: src/backend/matrix/Matrix.cpp:511
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:155
-msgid "Past&e"
-msgstr "&Umetni"
-
-#: src/backend/matrix/Matrix.cpp:517
-msgctxt "clear selection"
-msgid "Clea&r"
-msgstr "&Očisti"
-
-#: src/backend/matrix/Matrix.cpp:525
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:161
-msgid "Assign &Formula"
-msgstr "Dodijeli &formulu"
-
-#. i18n: ectx: property (text), widget (QPushButton, pbRecalculate)
-#: src/backend/matrix/Matrix.cpp:532
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:162
-#: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:373
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:250
-msgid "Recalculate"
-msgstr "Preračunaj"
-
-#: src/backend/matrix/Matrix.cpp:533
-msgid "Ctrl+Return"
-msgstr "Ctrl+Return"
-
-#: src/backend/matrix/Matrix.cpp:540
-msgid "Show/Hide Controls"
-msgstr "Prikaži/sakrij kontrole"
-
-#: src/backend/matrix/Matrix.cpp:547
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:159
-msgid "Select All"
-msgstr "Označi sve"
-
-#: src/backend/matrix/Matrix.cpp:554
-msgid "Clear Matrix"
-msgstr "Očisti matricu"
-
-#: src/backend/matrix/Matrix.cpp:561
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:176
-msgid "&Go to Cell"
-msgstr "&Idi na ćeliju"
-
-#: src/backend/matrix/Matrix.cpp:562
-msgid "Ctrl+Alt+G"
-msgstr "Ctrl+Alt+G"
-
-#: src/backend/matrix/Matrix.cpp:566
-msgid "&Transpose"
-msgstr "&Transpozicija"
-
-#: src/backend/matrix/Matrix.cpp:569
-msgid "Mirror &Horizontally"
-msgstr "Ogledalo &Horizontalno"
-
-#: src/backend/matrix/Matrix.cpp:572
-msgid "Mirror &Vertically"
-msgstr "Ogledalo &Vertikalno"
-
-#: src/backend/matrix/Matrix.cpp:575
-msgctxt "import image as matrix"
-msgid "&Import image"
-msgstr "&Uvezi sliku"
-
-#: src/backend/matrix/Matrix.cpp:578
-msgctxt "duplicate matrix"
-msgid "&Duplicate"
-msgstr "&Dupliraj"
-
-#: src/backend/matrix/Matrix.cpp:581
-msgctxt "matrix size"
-msgid "&Dimensions"
-msgstr "&Dimenzije"
-
-#: src/backend/matrix/Matrix.cpp:584
-msgid "Set &Coordinates"
-msgstr "Postavi &Koordinate"
-
-#: src/backend/matrix/Matrix.cpp:587
-msgid "Set Display &Format"
-msgstr "Postavi Displej &Format"
-
-#: src/backend/matrix/Matrix.cpp:594
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:179
-msgid "&Insert Empty Columns"
-msgstr "&Umetni prazne kolone"
-
-#: src/backend/matrix/Matrix.cpp:601
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:180
-msgid "Remo&ve Columns"
-msgstr "&Ukloni kolone"
-
-#: src/backend/matrix/Matrix.cpp:608
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:181
-msgid "Clea&r Columns"
-msgstr "Očisti kolone"
-
-#: src/backend/matrix/Matrix.cpp:615
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:182
-msgid "&Add Columns"
-msgstr "&Dodaj kolone"
-
-#: src/backend/matrix/Matrix.cpp:623
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:197
-msgid "&Insert Empty Rows"
-msgstr "&Umetni prazne redove"
-
-#: src/backend/matrix/Matrix.cpp:630
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:198
-msgid "Remo&ve Rows"
-msgstr "&Ukloni redove"
-
-#: src/backend/matrix/Matrix.cpp:637
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:199
-msgid "Clea&r Rows"
-msgstr "&Očisti redove"
-
-#: src/backend/matrix/Matrix.cpp:644
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:200
-msgid "&Add Rows"
-msgstr "&Dodaj redove"
-
-#: src/backend/matrix/Matrix.cpp:715
-msgid "&Matrix"
-msgstr "&Matrica"
-
-#: src/backend/matrix/Matrix.cpp:779 src/backend/matrix/Matrix.cpp:783
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1450
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1454
-msgid "Go to Cell"
-msgstr "Idi na ćeliju"
-
-#: src/backend/matrix/Matrix.cpp:779
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1450
-msgid "Enter column"
-msgstr "Unesi kolonu"
-
-#: src/backend/matrix/Matrix.cpp:783
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1454
-msgid "Enter row"
-msgstr "Unesi red"
-
-#: src/backend/matrix/Matrix.cpp:793
+#: src/backend/matrix/Matrix.cpp:169
 #: src/backend/spreadsheet/Spreadsheet.cpp:296
 #, kde-format
 msgid "%1: copy %2"
 msgstr "%1: kopiraj %2"
 
-#: src/backend/matrix/Matrix.cpp:851 src/backend/matrix/Matrix.cpp:855
-msgid "Set Matrix Dimensions"
-msgstr "Postavi dimenzije matrice"
-
-#: src/backend/matrix/Matrix.cpp:851
-msgid "Enter number of columns"
-msgstr "Unesi broj kolona"
-
-#: src/backend/matrix/Matrix.cpp:855
-msgid "Enter number of rows"
-msgstr "Unesi broj redova"
-
-#: src/backend/matrix/Matrix.cpp:865
-msgid "Images"
-msgstr "Slike"
-
-#: src/backend/matrix/Matrix.cpp:873
-msgid "Import image from file"
-msgstr "Uvezi sliku iz fajla"
-
-#: src/backend/matrix/Matrix.cpp:889
-msgid "Error importing image"
-msgstr "Greška pri uvozu slike"
-
-#: src/backend/matrix/Matrix.cpp:889
-#, kde-format
-msgid "Import of image '%1' failed"
-msgstr "Uvoz slike '%1' nije uspio"
-
-#: src/backend/matrix/Matrix.cpp:924
+#: src/backend/matrix/Matrix.cpp:216
 #, kde-format
 msgid "%1: add %2 rows"
 msgid_plural "%1: add %2 rows"
@@ -1076,7 +841,7 @@ msgstr[0] "%1: dodaj %2 red"
 msgstr[1] "%1: dodaj %2 reda"
 msgstr[2] "%1: dodaj %2 redova"
 
-#: src/backend/matrix/Matrix.cpp:935
+#: src/backend/matrix/Matrix.cpp:226
 #, kde-format
 msgid "%1: add %2 column"
 msgid_plural "%1: add %2 columns"
@@ -1084,108 +849,97 @@ msgstr[0] "%1: dodaj %2 kolonu"
 msgstr[1] "%1: dodaj %2 kolone"
 msgstr[2] "%1: dodaj %2 kolona"
 
-#: src/backend/matrix/Matrix.cpp:1104
-msgid "invalid row or column count"
-msgstr "pogrešan broj redova ili kolona"
+#: src/backend/matrix/Matrix.cpp:364 src/backend/matrix/matrixcommands.cpp:163
+#: src/backend/spreadsheet/Spreadsheet.cpp:254
+#, kde-format
+msgid "%1: clear"
+msgstr "%1: obriši"
 
-#: src/backend/matrix/Matrix.cpp:1145
+#: src/backend/matrix/Matrix.cpp:624
 msgid "no matrix element found"
 msgstr "nije pronađen element matrice"
 
-#: src/backend/matrix/Matrix.cpp:1158
+#: src/backend/matrix/Matrix.cpp:643
+msgid "invalid row or column count"
+msgstr "pogrešan broj redova ili kolona"
+
+#: src/backend/matrix/Matrix.cpp:690
 msgid "invalid or missing numeric format"
 msgstr "pogrešan ili nedostaje numerički format"
 
-#: src/backend/matrix/Matrix.cpp:1167
+#: src/backend/matrix/Matrix.cpp:698
 msgid "invalid or missing number of displayed digits"
 msgstr "pogrešan ili nedostaje broj cifara koje će biti prikazane"
 
-#: src/backend/matrix/Matrix.cpp:1186
+#: src/backend/matrix/Matrix.cpp:715
 msgid "invalid x start value"
 msgstr "pogrešna x početna vrijednost"
 
-#: src/backend/matrix/Matrix.cpp:1194
+#: src/backend/matrix/Matrix.cpp:722
 msgid "invalid x end value"
 msgstr "pogrešna x krajnja vrijednost"
 
-#: src/backend/matrix/Matrix.cpp:1202
+#: src/backend/matrix/Matrix.cpp:729
 msgid "invalid y start value"
 msgstr "pogrešna y startna vrijednost"
 
-#: src/backend/matrix/Matrix.cpp:1210
+#: src/backend/matrix/Matrix.cpp:736
 msgid "invalid y end value"
 msgstr "pogrešna y krajnja vrijednost"
 
-#: src/backend/matrix/Matrix.cpp:1240
+#: src/backend/matrix/Matrix.cpp:760
 msgid "invalid row height"
 msgstr "pogrešna visina reda"
 
-#: src/backend/matrix/Matrix.cpp:1257 src/backend/matrix/Matrix.cpp:1292
+#: src/backend/matrix/Matrix.cpp:774 src/backend/matrix/Matrix.cpp:803
 msgid "invalid or missing column index"
 msgstr "pogrešan ili nedostaje indeks kolone"
 
-#: src/backend/matrix/Matrix.cpp:1264
+#: src/backend/matrix/Matrix.cpp:780
 msgid "invalid column width"
 msgstr "pogrešna širina kolone"
 
-#: src/backend/matrix/Matrix.cpp:1300
+#: src/backend/matrix/Matrix.cpp:810
 msgid "invalid cell value"
 msgstr "pogrešna vrijednost ćelije"
 
-#: src/backend/matrix/Matrix.cpp:1331
-msgid "Hide Controls"
-msgstr "Sakrij kontrole"
-
-#: src/backend/matrix/Matrix.cpp:1333
-msgid "Show Controls"
-msgstr "Prikaži kontrole"
-
-#: src/backend/matrix/Matrix.cpp:1409
-msgid "SciDAVis - Import image..."
-msgstr "SciDAVis - Uvezi sliku..."
-
-#: src/backend/matrix/Matrix.cpp:1412
-#, kde-format
-msgid "Matrix %1"
-msgstr "Matrica %1"
-
-#: src/backend/matrix/matrixcommands.cpp:195
+#: src/backend/matrix/matrixcommands.cpp:198
 #, kde-format
 msgid "%1: clear column %2"
 msgstr "%1: očisti kolonu %2"
 
-#: src/backend/matrix/matrixcommands.cpp:225
+#: src/backend/matrix/matrixcommands.cpp:228
 #, kde-format
 msgid "%1: set cell value"
 msgstr "%1: postavi vrijednost ćelije"
 
-#: src/backend/matrix/matrixcommands.cpp:252
+#: src/backend/matrix/matrixcommands.cpp:255
 #, kde-format
 msgid "%1: set matrix coordinates"
 msgstr "%1: postavi koordinate matrice"
 
-#: src/backend/matrix/matrixcommands.cpp:339
+#: src/backend/matrix/matrixcommands.cpp:342
 #, kde-format
 msgid "%1: set formula"
 msgstr "%1: postavi fomulu"
 
-#: src/backend/matrix/matrixcommands.cpp:366
-#: src/backend/matrix/matrixcommands.cpp:396
+#: src/backend/matrix/matrixcommands.cpp:369
+#: src/backend/matrix/matrixcommands.cpp:399
 #, kde-format
 msgid "%1: set cell values"
 msgstr "%1: postavi vrijednosti ćelija"
 
-#: src/backend/matrix/matrixcommands.cpp:424
+#: src/backend/matrix/matrixcommands.cpp:427
 #, kde-format
 msgid "%1: transpose"
 msgstr "%1: promijeni red"
 
-#: src/backend/matrix/matrixcommands.cpp:470
+#: src/backend/matrix/matrixcommands.cpp:473
 #, kde-format
 msgid "%1: mirror horizontally"
 msgstr "%1: ogledalo horizontalno"
 
-#: src/backend/matrix/matrixcommands.cpp:507
+#: src/backend/matrix/matrixcommands.cpp:510
 #, kde-format
 msgid "%1: mirror vertically"
 msgstr "%1: ogledalo vertikalno"
@@ -1656,7 +1410,7 @@ msgstr "pomjeri > na dolje"
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:394
 #: src/commonfrontend/worksheet/WorksheetView.cpp:315
 #: src/commonfrontend/worksheet/WorksheetView.cpp:367
-#: src/kdefrontend/MainWin.cpp:343
+#: src/kdefrontend/MainWin.cpp:344
 msgid "Add new"
 msgstr "Dodaj novo"
 
@@ -2348,6 +2102,189 @@ msgstr "%1: pomjeri iza %2."
 msgid "%1: move in front of %2."
 msgstr "%1: pomjeri ispred %2."
 
+#: src/commonfrontend/matrix/MatrixView.cpp:108
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:153
+msgid "Cu&t"
+msgstr "&Isijeci"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:109
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:154
+msgid "&Copy"
+msgstr "&Kopiraj"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:110
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:155
+msgid "Past&e"
+msgstr "&Umetni"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:111
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:158
+msgid "Clea&r Selection"
+msgstr "Uklon&i Selektovano"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:112
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:159
+msgid "Select All"
+msgstr "Označi sve"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:115
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:161
+msgid "Assign &Formula"
+msgstr "Dodijeli &formulu"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbRecalculate)
+#: src/commonfrontend/matrix/MatrixView.cpp:116
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:162
+#: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:373
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:250
+msgid "Recalculate"
+msgstr "Preračunaj"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:117
+msgid "Clear Matrix"
+msgstr "Očisti matricu"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:118
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:176
+msgid "&Go to Cell"
+msgstr "&Idi na ćeliju"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:120
+msgid "&Transpose"
+msgstr "&Transpozicija"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:121
+msgid "Mirror &Horizontally"
+msgstr "Ogledalo &Horizontalno"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:122
+msgid "Mirror &Vertically"
+msgstr "Ogledalo &Vertikalno"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:123
+msgctxt "import image as matrix"
+msgid "&Import image"
+msgstr "&Uvezi sliku"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:124
+msgctxt "duplicate matrix"
+msgid "&Duplicate"
+msgstr "&Dupliraj"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:125
+msgctxt "matrix size"
+msgid "&Dimensions"
+msgstr "&Dimenzije"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:126
+msgid "Set &Coordinates"
+msgstr "Postavi &Koordinate"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:127
+msgid "Set Display &Format"
+msgstr "Postavi Displej &Format"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:130
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:182
+msgid "&Add Columns"
+msgstr "&Dodaj kolone"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:131
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:179
+msgid "&Insert Empty Columns"
+msgstr "&Umetni prazne kolone"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:132
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:180
+msgid "Remo&ve Columns"
+msgstr "&Ukloni kolone"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:133
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:181
+msgid "Clea&r Columns"
+msgstr "Očisti kolone"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:136
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:200
+msgid "&Add Rows"
+msgstr "&Dodaj redove"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:137
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:197
+msgid "&Insert Empty Rows"
+msgstr "&Umetni prazne redove"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:138
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:198
+msgid "Remo&ve Rows"
+msgstr "&Ukloni redove"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:139
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:199
+msgid "Clea&r Rows"
+msgstr "&Očisti redove"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:454
+#: src/commonfrontend/matrix/MatrixView.cpp:458
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1450
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1454
+msgid "Go to Cell"
+msgstr "Idi na ćeliju"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:454
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1450
+msgid "Enter column"
+msgstr "Unesi kolonu"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:458
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:1454
+msgid "Enter row"
+msgstr "Unesi red"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:509
+#, kde-format
+msgid "%1: cut selected cell(s)"
+msgstr "%1: izreži selektovanu(e) ćeliju(e)"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:550
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:853
+#, kde-format
+msgid "%1: paste from clipboard"
+msgstr "%1: zalijepi iz clipboard-a"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:633
+#: src/commonfrontend/matrix/MatrixView.cpp:637
+msgid "Set Matrix Dimensions"
+msgstr "Postavi dimenzije matrice"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:633
+msgid "Enter number of columns"
+msgstr "Unesi broj kolona"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:637
+msgid "Enter number of rows"
+msgstr "Unesi broj redova"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:660
+#, kde-format
+msgid "%1: insert empty column(s)"
+msgstr "%1: umetni praznu(e) kolonu(e)"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:681
+#, kde-format
+msgid "%1: remove selected column(s)"
+msgstr "%1: ukloni selektovanu kolonu(e)"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:714
+#, kde-format
+msgid "%1: insert empty rows(s)"
+msgstr "%1: umetni prazan red(ove)"
+
+#: src/commonfrontend/matrix/MatrixView.cpp:735
+#, kde-format
+msgid "%1: remove selected rows(s)"
+msgstr "%1: izbriši označeni red(ove)"
+
 #: src/commonfrontend/ProjectExplorer.cpp:74
 msgid "Search/Filter:"
 msgstr "Traži/Filtriraj:"
@@ -2418,10 +2355,6 @@ msgstr "&Maskiraj selektovano"
 #: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:157
 msgid "&Unmask Selection"
 msgstr "&Demaskiraj Selektovano"
-
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:158
-msgid "Clea&r Selection"
-msgstr "Uklon&i Selektovano"
 
 #: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:163
 msgid "Row Numbers"
@@ -2812,8 +2745,8 @@ msgstr "Uvezi u"
 
 #. i18n: ectx: ToolBar (spreadsheet_toolbar)
 #: src/kdefrontend/datasources/ImportFileDialog.cpp:98
-#: src/kdefrontend/LabPlot2ui.rc:25 src/kdefrontend/MainWin.cpp:213
-#: src/kdefrontend/MainWin.cpp:898
+#: src/kdefrontend/LabPlot2ui.rc:25 src/kdefrontend/MainWin.cpp:214
+#: src/kdefrontend/MainWin.cpp:899
 msgid "Spreadsheet"
 msgstr "Tablica"
 
@@ -2873,7 +2806,7 @@ msgstr "Ime Tabelarnog prikaza:"
 
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:93
 #: src/kdefrontend/GuiObserver.cpp:88 src/kdefrontend/GuiObserver.cpp:103
-#: src/kdefrontend/GuiObserver.cpp:286 src/kdefrontend/MainWin.cpp:578
+#: src/kdefrontend/GuiObserver.cpp:286 src/kdefrontend/MainWin.cpp:579
 msgid "Properties"
 msgstr "Podešavanja"
 
@@ -2885,27 +2818,27 @@ msgstr ""
 msgid "Attributes"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:332
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:337
 msgid "Select the File Data Source"
 msgstr "Označi Izvor podataka"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:444
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:449
 msgid "Save Filter Settings as"
 msgstr "Sačuvaj podešavanja filtriranja kao"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:445
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:450
 msgid "Filter name:"
 msgstr "Ime filtera:"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:445
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:450
 msgid "new filter"
 msgstr "novi filter"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:489
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:494
 msgid "Automatic"
 msgstr "Automatski"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:490
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:495
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:287
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:91
 msgid "Custom"
@@ -4107,7 +4040,7 @@ msgstr ""
 "Lista svih izvrđenih koraka/akcija.\n"
 "Označite stavku u listi da pređete na odgovarajući slijedeći korak."
 
-#: src/kdefrontend/HistoryDialog.cpp:52 src/kdefrontend/MainWin.cpp:261
+#: src/kdefrontend/HistoryDialog.cpp:52 src/kdefrontend/MainWin.cpp:262
 msgid "Undo/Redo History"
 msgstr "Vrati na staro/Idi na novo historija"
 
@@ -4215,8 +4148,8 @@ msgid "Main"
 msgstr "Glavni"
 
 #. i18n: ectx: ToolBar (worksheet_toolbar)
-#: src/kdefrontend/LabPlot2ui.rc:21 src/kdefrontend/MainWin.cpp:223
-#: src/kdefrontend/MainWin.cpp:926
+#: src/kdefrontend/LabPlot2ui.rc:21 src/kdefrontend/MainWin.cpp:224
+#: src/kdefrontend/MainWin.cpp:927
 msgid "Worksheet"
 msgstr "Radni list"
 
@@ -4270,188 +4203,188 @@ msgstr "&Skripta"
 msgid "&Windows"
 msgstr "&Prozori"
 
-#: src/kdefrontend/MainWin.cpp:137
+#: src/kdefrontend/MainWin.cpp:138
 #, kde-format
 msgctxt "%1 is the LabPlot version"
 msgid "Welcome to LabPlot %1"
 msgstr "Dobro došli u LabPlot %1"
 
-#: src/kdefrontend/MainWin.cpp:232
+#: src/kdefrontend/MainWin.cpp:233
 msgid "Folder"
 msgstr "Direktorij"
 
-#: src/kdefrontend/MainWin.cpp:237
+#: src/kdefrontend/MainWin.cpp:238
 msgid "File Data Source"
 msgstr "Datoteka Podatak Izvor"
 
-#: src/kdefrontend/MainWin.cpp:246
+#: src/kdefrontend/MainWin.cpp:247
 msgid "Import"
 msgstr "Uvezi"
 
-#: src/kdefrontend/MainWin.cpp:271
+#: src/kdefrontend/MainWin.cpp:272
 msgid "Cl&ose"
 msgstr "Za&tvori"
 
-#: src/kdefrontend/MainWin.cpp:272
+#: src/kdefrontend/MainWin.cpp:273
 msgid "Ctrl+W"
 msgstr "Ctrl+W"
 
-#: src/kdefrontend/MainWin.cpp:273
+#: src/kdefrontend/MainWin.cpp:274
 msgid "Close the active window"
 msgstr "Zatvori aktivni prozor"
 
-#: src/kdefrontend/MainWin.cpp:277
+#: src/kdefrontend/MainWin.cpp:278
 msgid "Close &All"
 msgstr "Zatvori &sve"
 
-#: src/kdefrontend/MainWin.cpp:278
+#: src/kdefrontend/MainWin.cpp:279
 msgid "Close all the windows"
 msgstr "Zatvori sve prozore"
 
-#: src/kdefrontend/MainWin.cpp:282
+#: src/kdefrontend/MainWin.cpp:283
 msgid "&Tile"
 msgstr "&Popločaj"
 
-#: src/kdefrontend/MainWin.cpp:283
+#: src/kdefrontend/MainWin.cpp:284
 msgid "Tile the windows"
 msgstr "Popločaj prozore"
 
-#: src/kdefrontend/MainWin.cpp:287
+#: src/kdefrontend/MainWin.cpp:288
 msgid "&Cascade"
 msgstr "&Kaskadno"
 
-#: src/kdefrontend/MainWin.cpp:288
+#: src/kdefrontend/MainWin.cpp:289
 msgid "Cascade the windows"
 msgstr "Poveži prozore"
 
-#: src/kdefrontend/MainWin.cpp:292
+#: src/kdefrontend/MainWin.cpp:293
 msgid "Ne&xt"
 msgstr "Slj&edeći"
 
-#: src/kdefrontend/MainWin.cpp:293
+#: src/kdefrontend/MainWin.cpp:294
 msgid "Move the focus to the next window"
 msgstr "Pomjeri fokus na slijedeći prozor"
 
-#: src/kdefrontend/MainWin.cpp:297
+#: src/kdefrontend/MainWin.cpp:298
 msgid "Pre&vious"
 msgstr "&Prethodna"
 
-#: src/kdefrontend/MainWin.cpp:298
+#: src/kdefrontend/MainWin.cpp:299
 msgid "Move the focus to the previous window"
 msgstr "Pomjeri fokus na prethodni prozor"
 
-#: src/kdefrontend/MainWin.cpp:310
+#: src/kdefrontend/MainWin.cpp:311
 msgid "Current &Folder Only"
 msgstr "Trenutni &Direktorij samo"
 
-#: src/kdefrontend/MainWin.cpp:314
+#: src/kdefrontend/MainWin.cpp:315
 msgid "Current Folder and &Subfolders"
 msgstr "Trenutni direktoriji i &Poddirektoriji"
 
-#: src/kdefrontend/MainWin.cpp:318
+#: src/kdefrontend/MainWin.cpp:319
 msgid "&All"
 msgstr "&Sve"
 
-#: src/kdefrontend/MainWin.cpp:328
+#: src/kdefrontend/MainWin.cpp:329
 msgid "Project explorer"
 msgstr "Pretraživač projekata"
 
-#: src/kdefrontend/MainWin.cpp:333
+#: src/kdefrontend/MainWin.cpp:334
 msgid "Properties explorer"
 msgstr "Pretražvač svojstava"
 
-#: src/kdefrontend/MainWin.cpp:353
+#: src/kdefrontend/MainWin.cpp:354
 msgid "Window visibility policy"
 msgstr "Polisa vidljivost prozora"
 
-#: src/kdefrontend/MainWin.cpp:367
+#: src/kdefrontend/MainWin.cpp:368
 #, kde-format
 msgid "The current project %1 has been modified. Do you want to save it?"
 msgstr "Trenutni projekat %1 je modificiran. Da li želite da ga spasite?"
 
-#: src/kdefrontend/MainWin.cpp:368
+#: src/kdefrontend/MainWin.cpp:369
 msgid "Save Project"
 msgstr "Spasi projekat"
 
-#: src/kdefrontend/MainWin.cpp:566
+#: src/kdefrontend/MainWin.cpp:567
 msgid "Project Explorer"
 msgstr "Pretraživač Projekata"
 
-#: src/kdefrontend/MainWin.cpp:607
+#: src/kdefrontend/MainWin.cpp:608
 #, kde-format
 msgid "Project %1 created"
 msgstr "Projekat %1 kreiran"
 
-#: src/kdefrontend/MainWin.cpp:617 src/kdefrontend/MainWin.cpp:773
+#: src/kdefrontend/MainWin.cpp:618 src/kdefrontend/MainWin.cpp:774
 msgid "LabPlot Projects (*.lml *.lml.gz *.lml.bz2 *.LML *.LML.GZ *.LML.BZ2)"
 msgstr "LabPlot Projekti (*.lml *.lml.gz *.lml.bz2 *.LML *.LML.GZ *.LML.BZ2)"
 
-#: src/kdefrontend/MainWin.cpp:618 src/kdefrontend/MainWin.cpp:635
+#: src/kdefrontend/MainWin.cpp:619 src/kdefrontend/MainWin.cpp:636
 msgid "Open project"
 msgstr "Otvori projekat"
 
-#: src/kdefrontend/MainWin.cpp:635
+#: src/kdefrontend/MainWin.cpp:636
 #, kde-format
 msgid "The project file %1 is already opened."
 msgstr "Projektna datoteka %1 je već otvorena."
 
-#: src/kdefrontend/MainWin.cpp:644
+#: src/kdefrontend/MainWin.cpp:645
 msgid "Sorry. Could not open file for reading."
 msgstr "Žao nam je. Datoteka ne može biti otvorena za čitanje."
 
-#: src/kdefrontend/MainWin.cpp:680
+#: src/kdefrontend/MainWin.cpp:681
 #, kde-format
 msgid "Project %1 opened"
 msgstr "Projekat %1 otvoren"
 
-#: src/kdefrontend/MainWin.cpp:687
+#: src/kdefrontend/MainWin.cpp:688
 #, kde-format
 msgid "Project successfully opened (in %1 seconds)."
 msgstr "Projekat uspješno otvoren (u %1 sekundi)."
 
-#: src/kdefrontend/MainWin.cpp:705
+#: src/kdefrontend/MainWin.cpp:706
 msgid "Error opening project"
 msgstr "Greška pri otvaranju projekta"
 
-#: src/kdefrontend/MainWin.cpp:774
+#: src/kdefrontend/MainWin.cpp:775
 msgid "Save project as"
 msgstr "Spasi projekat kao"
 
-#: src/kdefrontend/MainWin.cpp:805
+#: src/kdefrontend/MainWin.cpp:806
 msgid "Project saved"
 msgstr "Projekat spašen"
 
-#: src/kdefrontend/MainWin.cpp:820
+#: src/kdefrontend/MainWin.cpp:821
 msgid "Sorry. Could not open file for writing."
 msgstr "Žao nam je. Datoteka ne može biti otvorena za pisanje."
 
-#: src/kdefrontend/MainWin.cpp:853
+#: src/kdefrontend/MainWin.cpp:854
 msgid "Print worksheet"
 msgstr "Ispiši radni list"
 
-#: src/kdefrontend/MainWin.cpp:859
+#: src/kdefrontend/MainWin.cpp:860
 msgid "Worksheet printed"
 msgstr "Radni list ispisan"
 
-#: src/kdefrontend/MainWin.cpp:864
+#: src/kdefrontend/MainWin.cpp:865
 msgid "Print spreadsheet"
 msgstr "Ispiši tabelarni prikaz"
 
-#: src/kdefrontend/MainWin.cpp:871
+#: src/kdefrontend/MainWin.cpp:872
 msgid "Spreadsheet printed"
 msgstr "Tabelarni prikaz ispisan"
 
-#: src/kdefrontend/MainWin.cpp:963
+#: src/kdefrontend/MainWin.cpp:964
 #, kde-format
 msgid "%1    [Changed]"
 msgstr "%1 [Promijenjen]"
 
-#: src/kdefrontend/MainWin.cpp:1086
+#: src/kdefrontend/MainWin.cpp:1089
 #, kde-format
 msgid "Folder %1"
 msgstr "Direktorij: %1"
 
-#: src/kdefrontend/MainWin.cpp:1339
+#: src/kdefrontend/MainWin.cpp:1342
 #, kde-format
 msgid "File data source%1"
 msgstr "Direktorij datoteka izvor %1"
@@ -4881,14 +4814,8 @@ msgstr ""
 msgid "Simplify whitespaces"
 msgstr "Pojednostavni prazna mjesta"
 
-#. i18n: ectx: property (text), widget (QCheckBox, chbSkipEmptyParts)
-#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:87
-#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:87
-msgid "Skip empty parts"
-msgstr "Preskoči prazne dijelove"
-
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chbTranspose)
-#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:94
+#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:87
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:94
 msgid ""
 "Interchanges the role of the rows and the columns. Treats the rows as data "
@@ -4898,25 +4825,27 @@ msgstr ""
 "ako su označeni."
 
 #. i18n: ectx: property (text), widget (QCheckBox, chbTranspose)
-#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:97
+#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:90
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:97
 msgid "Transpose"
 msgstr "Prenesi"
 
+#. i18n: ectx: property (text), widget (QCheckBox, chbSkipEmptyParts)
+#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:87
+msgid "Skip empty parts"
+msgstr "Preskoči prazne dijelove"
+
 #. i18n: ectx: property (text), widget (QCheckBox, chbHeader)
-#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:104
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:104
 msgid "Use the first row to name the vectors"
 msgstr "Koristi prvi red za imenovanje vektora"
 
 #. i18n: ectx: property (text), widget (QLabel, lVectorNames)
-#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:117
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:117
 msgid "Vector names:"
 msgstr "Imena vektora:"
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, kleVectorNames)
-#: src/kdefrontend/ui/datasources/asciimatrixoptionswidget.ui:127
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:127
 msgid "Vector names, space separated. E.g. \"x y\""
 msgstr "Imena vektora, odvojena razmakom. Npr \"x y\""
@@ -6487,6 +6416,55 @@ msgstr "Horizontalni razmaci"
 #: src/kdefrontend/worksheet/GridDialog.cpp:68
 msgid "Vertical spacing"
 msgstr "Vertikalni razmaci"
+
+#~ msgid "%1: clear selected column(s)"
+#~ msgstr "%1: obriši selektovanu kolonu(e)"
+
+#~ msgid "%1: clear selected rows(s)"
+#~ msgstr "%1: ukloni označeni red(ove)"
+
+#~ msgid "%1: clear selected cell(s)"
+#~ msgstr "%1: ukloni označenu ćeliju(e)"
+
+#~ msgctxt "clear selection"
+#~ msgid "Clea&r"
+#~ msgstr "&Očisti"
+
+#~ msgid "Ctrl+Return"
+#~ msgstr "Ctrl+Return"
+
+#~ msgid "Show/Hide Controls"
+#~ msgstr "Prikaži/sakrij kontrole"
+
+#~ msgid "Ctrl+Alt+G"
+#~ msgstr "Ctrl+Alt+G"
+
+#~ msgid "&Matrix"
+#~ msgstr "&Matrica"
+
+#~ msgid "Images"
+#~ msgstr "Slike"
+
+#~ msgid "Import image from file"
+#~ msgstr "Uvezi sliku iz fajla"
+
+#~ msgid "Error importing image"
+#~ msgstr "Greška pri uvozu slike"
+
+#~ msgid "Import of image '%1' failed"
+#~ msgstr "Uvoz slike '%1' nije uspio"
+
+#~ msgid "Hide Controls"
+#~ msgstr "Sakrij kontrole"
+
+#~ msgid "Show Controls"
+#~ msgstr "Prikaži kontrole"
+
+#~ msgid "SciDAVis - Import image..."
+#~ msgstr "SciDAVis - Uvezi sliku..."
+
+#~ msgid "Matrix %1"
+#~ msgstr "Matrica %1"
 
 #~ msgid "%"
 #~ msgstr "%"
