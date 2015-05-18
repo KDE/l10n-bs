@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-05-15 02:03+0000\n"
+"POT-Creation-Date: 2015-05-18 01:58+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -670,7 +670,7 @@ msgstr "nije pronađen fileDataSource element"
 #: src/backend/datasources/filters/AsciiFilter.cpp:506
 #: src/backend/datasources/filters/AsciiMatrixFilter.cpp:528
 #: src/backend/datasources/filters/BinaryFilter.cpp:412
-#: src/backend/datasources/filters/HDFFilter.cpp:685
+#: src/backend/datasources/filters/HDFFilter.cpp:812
 #: src/backend/datasources/filters/ImageFilter.cpp:278
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:1878
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:1633
@@ -691,7 +691,7 @@ msgstr ""
 #: src/backend/datasources/filters/AsciiFilter.cpp:450
 #: src/backend/datasources/filters/AsciiMatrixFilter.cpp:460
 #: src/backend/datasources/filters/BinaryFilter.cpp:360
-#: src/backend/datasources/filters/HDFFilter.cpp:614
+#: src/backend/datasources/filters/HDFFilter.cpp:741
 #: src/backend/datasources/filters/ImageFilter.cpp:234
 #, kde-format
 msgid "numerical data, %1 element"
@@ -712,45 +712,49 @@ msgstr "nije pronađen element ascii filtera"
 msgid "no binary filter element found"
 msgstr "nije pronađen element ascii filtera"
 
-#: src/backend/datasources/filters/HDFFilter.cpp:298
+#: src/backend/datasources/filters/HDFFilter.cpp:418
 #, fuzzy
 #| msgid "Data:"
 msgid "data type"
 msgstr "Podaci:"
 
-#: src/backend/datasources/filters/HDFFilter.cpp:335
+#: src/backend/datasources/filters/HDFFilter.cpp:458
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:514
 #, fuzzy
 #| msgid "Dataset"
 msgid "data set"
 msgstr "Skup podataka"
 
-#: src/backend/datasources/filters/HDFFilter.cpp:346
+#: src/backend/datasources/filters/HDFFilter.cpp:468
 #, fuzzy
 #| msgid "solid line"
 msgid "symbolic link"
 msgstr "puna linija"
 
-#: src/backend/datasources/filters/HDFFilter.cpp:358
+#: src/backend/datasources/filters/HDFFilter.cpp:468
+msgid "link to "
+msgstr ""
+
+#: src/backend/datasources/filters/HDFFilter.cpp:480
 msgid "hard link"
 msgstr ""
 
-#: src/backend/datasources/filters/HDFFilter.cpp:373
+#: src/backend/datasources/filters/HDFFilter.cpp:495
 msgid "group"
 msgstr ""
 
-#: src/backend/datasources/filters/HDFFilter.cpp:408
+#: src/backend/datasources/filters/HDFFilter.cpp:531
 msgid "unknown"
 msgstr "nepoznato"
 
-#: src/backend/datasources/filters/HDFFilter.cpp:681
+#: src/backend/datasources/filters/HDFFilter.cpp:808
 #, fuzzy
 #| msgid "no ascii filter element found"
 msgid "no hdf filter element found"
 msgstr "nije pronađen element ascii filtera"
 
 #: src/backend/datasources/filters/ImageFilter.cpp:57
-#: src/kdefrontend/MainWin.cpp:219 src/kdefrontend/MainWin.cpp:1083
+#: src/kdefrontend/MainWin.cpp:219 src/kdefrontend/MainWin.cpp:1104
 msgid "Matrix"
 msgstr "Matrica"
 
@@ -2751,12 +2755,12 @@ msgid "File info"
 msgstr "Info podatka"
 
 #: src/kdefrontend/datasources/ImportFileDialog.cpp:68
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:218
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:224
 msgid "Hide Options"
 msgstr "Sakrij Opcije"
 
 #: src/kdefrontend/datasources/ImportFileDialog.cpp:70
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:220
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:226
 msgid "Show Options"
 msgstr "Prikaži opcije"
 
@@ -2768,16 +2772,21 @@ msgstr "Uvezi Podatke u tabelarni prikaz/matricu"
 msgid "Import To"
 msgstr "Uvezi u"
 
-#. i18n: ectx: ToolBar (spreadsheet_toolbar)
 #: src/kdefrontend/datasources/ImportFileDialog.cpp:98
-#: src/kdefrontend/LabPlot2ui.rc:25 src/kdefrontend/MainWin.cpp:214
-#: src/kdefrontend/MainWin.cpp:899
-msgid "Spreadsheet"
+#, fuzzy
+#| msgid "Spreadsheet"
+msgid "Spreadsheet/Matrix"
 msgstr "Tablica"
 
 #: src/kdefrontend/datasources/ImportFileDialog.cpp:114
 msgid "Add new spreadsheet"
 msgstr "Dodaj novu tabelu"
+
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:120
+#, fuzzy
+#| msgid "Add new"
+msgid "Add new matrix"
+msgstr "Dodaj novo"
 
 #. i18n: ectx: property (text), widget (QLabel, lXBreakPosition)
 #. i18n: ectx: property (text), widget (QLabel, lYBreakPosition)
@@ -2785,7 +2794,7 @@ msgstr "Dodaj novu tabelu"
 #. i18n: ectx: property (text), widget (QLabel, lPosition)
 #. i18n: ectx: property (text), widget (QLabel, lArrowPosition)
 #. i18n: ectx: property (text), widget (QLabel, lLabelsPosition)
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:120
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:126
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:118
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:420
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:1065
@@ -2795,39 +2804,57 @@ msgstr "Dodaj novu tabelu"
 msgid "Position"
 msgstr "Pozicija"
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:126
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:132
 msgid "Append"
 msgstr "Dodavanje"
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:127
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:133
 msgid "Prepend"
 msgstr "Dodaj na početak"
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:128
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:134
 msgid "Replace"
 msgstr "Zamijeni"
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:175
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:181
 #, kde-format
 msgid "File data source created in %1 seconds."
 msgstr "Izvor podataka datoteke kreiran u %1 sekundi"
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:206
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:212
 #, kde-format
 msgid "File %1 imported in %2 seconds."
 msgstr "Datoteka %1 uvezena u %2 sekundi."
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:247
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:253
 msgid "new Spreadsheet"
 msgstr "novi Tabelarni prikaz (tabela)"
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:255
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:261
 msgid "Add new Spreadsheet"
 msgstr "Dodaj novi Tabelarni prikaz"
 
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:255
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:261
 msgid "Spreadsheet name:"
 msgstr "Ime Tabelarnog prikaza:"
+
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:274
+#, fuzzy
+#| msgid "Matrix"
+msgid "new Matrix"
+msgstr "Matrica"
+
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:281
+#, fuzzy
+#| msgid "Add new"
+msgid "Add new Matrix"
+msgstr "Dodaj novo"
+
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:281
+#, fuzzy
+#| msgid "Matrix %1"
+msgid "Matrix name:"
+msgstr "Matrica %1"
 
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:64
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:501
@@ -4176,9 +4203,15 @@ msgstr "Glavni"
 
 #. i18n: ectx: ToolBar (worksheet_toolbar)
 #: src/kdefrontend/LabPlot2ui.rc:21 src/kdefrontend/MainWin.cpp:224
-#: src/kdefrontend/MainWin.cpp:927
+#: src/kdefrontend/MainWin.cpp:948
 msgid "Worksheet"
 msgstr "Radni list"
+
+#. i18n: ectx: ToolBar (spreadsheet_toolbar)
+#: src/kdefrontend/LabPlot2ui.rc:25 src/kdefrontend/MainWin.cpp:214
+#: src/kdefrontend/MainWin.cpp:899
+msgid "Spreadsheet"
+msgstr "Tablica"
 
 #. i18n: ectx: ToolBar (cartesian_plot_toolbar)
 #: src/kdefrontend/LabPlot2ui.rc:29
@@ -4401,17 +4434,17 @@ msgstr "Ispiši tabelarni prikaz"
 msgid "Spreadsheet printed"
 msgstr "Tabelarni prikaz ispisan"
 
-#: src/kdefrontend/MainWin.cpp:964
+#: src/kdefrontend/MainWin.cpp:985
 #, kde-format
 msgid "%1    [Changed]"
 msgstr "%1 [Promijenjen]"
 
-#: src/kdefrontend/MainWin.cpp:1089
+#: src/kdefrontend/MainWin.cpp:1110
 #, kde-format
 msgid "Folder %1"
 msgstr "Direktorij: %1"
 
-#: src/kdefrontend/MainWin.cpp:1342
+#: src/kdefrontend/MainWin.cpp:1365
 #, kde-format
 msgid "File data source%1"
 msgstr "Direktorij datoteka izvor %1"
@@ -6499,9 +6532,6 @@ msgstr "Vertikalni razmaci"
 
 #~ msgid "SciDAVis - Import image..."
 #~ msgstr "SciDAVis - Uvezi sliku..."
-
-#~ msgid "Matrix %1"
-#~ msgstr "Matrica %1"
 
 #~ msgid "%"
 #~ msgstr "%"
