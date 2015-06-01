@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-05-31 02:07+0000\n"
+"POT-Creation-Date: 2015-06-01 01:59+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -36,7 +36,8 @@ msgstr "Statistike"
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: src/backend/analysis/StatisticsFilter.cpp:193
 #: src/backend/core/AspectTreeModel.cpp:147
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:89
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:90
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:100
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:42
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:30
 #: src/kdefrontend/ui/dockwidgets/columndock.ui:17
@@ -316,7 +317,7 @@ msgstr "%1: pomjeri %2 u %3."
 #. i18n: ectx: property (text), widget (QLabel, lMajorTicksType)
 #. i18n: ectx: property (text), widget (QLabel, lMinorTicksType)
 #: src/backend/core/AspectTreeModel.cpp:148
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:89
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:90
 #: src/kdefrontend/ui/datasources/importfilewidget.ui:84
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:403
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:521
@@ -557,6 +558,10 @@ msgstr "Slike"
 msgid "Hierarchical Data Format (HDF)"
 msgstr ""
 
+#: src/backend/datasources/FileDataSource.cpp:108
+msgid "Network Common Data Format (NetCDF)"
+msgstr ""
+
 #: src/backend/datasources/FileDataSource.cpp:279
 #, kde-format
 msgid "<u><b>%1:</b></u>"
@@ -662,8 +667,9 @@ msgstr "nije pronađen fileDataSource element"
 #: src/backend/datasources/filters/AsciiFilter.cpp:519
 #: src/backend/datasources/filters/AsciiMatrixFilter.cpp:528
 #: src/backend/datasources/filters/BinaryFilter.cpp:439
-#: src/backend/datasources/filters/HDFFilter.cpp:1193
+#: src/backend/datasources/filters/HDFFilter.cpp:1301
 #: src/backend/datasources/filters/ImageFilter.cpp:297
+#: src/backend/datasources/filters/NetCDFFilter.cpp:495
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:1878
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:1633
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:938
@@ -690,7 +696,7 @@ msgstr "Ne može se otvoriti fajl %1 za čitanje."
 #: src/backend/datasources/filters/AsciiFilter.cpp:453
 #: src/backend/datasources/filters/AsciiMatrixFilter.cpp:460
 #: src/backend/datasources/filters/BinaryFilter.cpp:379
-#: src/backend/datasources/filters/HDFFilter.cpp:1122
+#: src/backend/datasources/filters/HDFFilter.cpp:1230
 #: src/backend/datasources/filters/ImageFilter.cpp:250
 #, kde-format
 msgid "numerical data, %1 element"
@@ -711,42 +717,43 @@ msgstr "nije pronađen element ascii filtera"
 msgid "no binary filter element found"
 msgstr "nije pronađen element ascii filtera"
 
-#: src/backend/datasources/filters/HDFFilter.cpp:726
+#: src/backend/datasources/filters/HDFFilter.cpp:787
 #, fuzzy
 #| msgid "Data:"
 msgid "data type"
 msgstr "Podaci:"
 
-#: src/backend/datasources/filters/HDFFilter.cpp:766
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:509
+#: src/backend/datasources/filters/HDFFilter.cpp:835
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:557
 #, fuzzy
 #| msgid "Dataset"
 msgid "data set"
 msgstr "Skup podataka"
 
-#: src/backend/datasources/filters/HDFFilter.cpp:776
+#: src/backend/datasources/filters/HDFFilter.cpp:846
 #, fuzzy
 #| msgid "solid line"
 msgid "symbolic link"
 msgstr "puna linija"
 
-#: src/backend/datasources/filters/HDFFilter.cpp:776
+#: src/backend/datasources/filters/HDFFilter.cpp:846
 msgid "link to "
 msgstr ""
 
-#: src/backend/datasources/filters/HDFFilter.cpp:788
+#: src/backend/datasources/filters/HDFFilter.cpp:859
 msgid "hard link"
 msgstr ""
 
-#: src/backend/datasources/filters/HDFFilter.cpp:803
+#: src/backend/datasources/filters/HDFFilter.cpp:875
 msgid "group"
 msgstr ""
 
-#: src/backend/datasources/filters/HDFFilter.cpp:839
+#: src/backend/datasources/filters/HDFFilter.cpp:920
 msgid "unknown"
 msgstr "nepoznato"
 
-#: src/backend/datasources/filters/HDFFilter.cpp:1189
+#: src/backend/datasources/filters/HDFFilter.cpp:1297
+#: src/backend/datasources/filters/NetCDFFilter.cpp:491
 #, fuzzy
 #| msgid "no ascii filter element found"
 msgid "no hdf filter element found"
@@ -2877,45 +2884,52 @@ msgstr "Dodaj novo"
 msgid "Matrix name:"
 msgstr "Matrica %1"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:64
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:496
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:65
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:544
 msgid "Automatic"
 msgstr "Automatski"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:64
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:497
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:65
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:545
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:287
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:91
 msgid "Custom"
 msgstr "Specijalno"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:89
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:90
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:100
 #: src/kdefrontend/GuiObserver.cpp:90 src/kdefrontend/GuiObserver.cpp:105
 #: src/kdefrontend/GuiObserver.cpp:304 src/kdefrontend/MainWin.cpp:585
 msgid "Properties"
 msgstr "Podešavanja"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:89
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:90
 msgid "Link"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:89
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:90
 msgid "Attributes"
 msgstr ""
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:330
+#. i18n: ectx: attribute (title), widget (QWidget, tabValues)
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:100
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:663
+msgid "Values"
+msgstr "Vrijednosti"
+
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:359
 msgid "Select the File Data Source"
 msgstr "Označi Izvor podataka"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:440
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:487
 msgid "Save Filter Settings as"
 msgstr "Sačuvaj podešavanja filtriranja kao"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:441
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:488
 msgid "Filter name:"
 msgstr "Ime filtera:"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:441
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:488
 msgid "new filter"
 msgstr "novi filter"
 
@@ -5006,6 +5020,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lDataSet)
 #: src/kdefrontend/ui/datasources/hdfoptionswidget.ui:19
+#: src/kdefrontend/ui/datasources/netcdfoptionswidget.ui:19
 #, fuzzy
 #| msgid "Dataset"
 msgid "Data set:"
@@ -5013,6 +5028,7 @@ msgstr "Skup podataka"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, leDataSet)
 #: src/kdefrontend/ui/datasources/hdfoptionswidget.ui:26
+#: src/kdefrontend/ui/datasources/netcdfoptionswidget.ui:26
 #, fuzzy
 #| msgid "Select and edit"
 msgid "Selected data set"
@@ -5202,6 +5218,13 @@ msgstr "Završna kolona:"
 #| "column"
 msgid "Specify the end column to import; -1 stands for the last column"
 msgstr "Specificiraj broj završne kolone za uvoz; -1 je za posljednju kolonu"
+
+#. i18n: ectx: property (toolTip), widget (QTreeWidget, twContent)
+#: src/kdefrontend/ui/datasources/netcdfoptionswidget.ui:35
+#, fuzzy
+#| msgid "Specify the name of the image file."
+msgid "Shows the content of a NetCDF file"
+msgstr "Specificiraj ime slike."
 
 #. i18n: ectx: property (toolTip), widget (KLineEdit, lePosition)
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:131
@@ -6098,11 +6121,6 @@ msgstr "znak"
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:558
 msgid "Filling:"
 msgstr "Ispunjavanje (Bojenje):"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabValues)
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:663
-msgid "Values"
-msgstr "Vrijednosti"
 
 #. i18n: ectx: property (text), widget (QLabel, lValuesColumn)
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:715
