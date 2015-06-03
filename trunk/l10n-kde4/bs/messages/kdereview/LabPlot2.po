@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-06-01 01:59+0000\n"
+"POT-Creation-Date: 2015-06-03 02:09+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -318,6 +318,7 @@ msgstr "%1: pomjeri %2 u %3."
 #. i18n: ectx: property (text), widget (QLabel, lMinorTicksType)
 #: src/backend/core/AspectTreeModel.cpp:148
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:90
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:100
 #: src/kdefrontend/ui/datasources/importfilewidget.ui:84
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:403
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:521
@@ -667,9 +668,9 @@ msgstr "nije pronađen fileDataSource element"
 #: src/backend/datasources/filters/AsciiFilter.cpp:519
 #: src/backend/datasources/filters/AsciiMatrixFilter.cpp:528
 #: src/backend/datasources/filters/BinaryFilter.cpp:439
-#: src/backend/datasources/filters/HDFFilter.cpp:1301
+#: src/backend/datasources/filters/HDFFilter.cpp:1300
 #: src/backend/datasources/filters/ImageFilter.cpp:297
-#: src/backend/datasources/filters/NetCDFFilter.cpp:495
+#: src/backend/datasources/filters/NetCDFFilter.cpp:634
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:1878
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:1633
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:938
@@ -696,8 +697,9 @@ msgstr "Ne može se otvoriti fajl %1 za čitanje."
 #: src/backend/datasources/filters/AsciiFilter.cpp:453
 #: src/backend/datasources/filters/AsciiMatrixFilter.cpp:460
 #: src/backend/datasources/filters/BinaryFilter.cpp:379
-#: src/backend/datasources/filters/HDFFilter.cpp:1230
+#: src/backend/datasources/filters/HDFFilter.cpp:1229
 #: src/backend/datasources/filters/ImageFilter.cpp:250
+#: src/backend/datasources/filters/NetCDFFilter.cpp:567
 #, kde-format
 msgid "numerical data, %1 element"
 msgid_plural "numerical data, %1 elements"
@@ -724,7 +726,7 @@ msgid "data type"
 msgstr "Podaci:"
 
 #: src/backend/datasources/filters/HDFFilter.cpp:835
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:557
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:561
 #, fuzzy
 #| msgid "Dataset"
 msgid "data set"
@@ -752,8 +754,8 @@ msgstr ""
 msgid "unknown"
 msgstr "nepoznato"
 
-#: src/backend/datasources/filters/HDFFilter.cpp:1297
-#: src/backend/datasources/filters/NetCDFFilter.cpp:491
+#: src/backend/datasources/filters/HDFFilter.cpp:1296
+#: src/backend/datasources/filters/NetCDFFilter.cpp:630
 #, fuzzy
 #| msgid "no ascii filter element found"
 msgid "no hdf filter element found"
@@ -772,6 +774,26 @@ msgstr ""
 #: src/backend/datasources/filters/ImageFilter.cpp:57
 msgid "XYRGB"
 msgstr ""
+
+#: src/backend/datasources/filters/NetCDFFilter.cpp:332
+#, fuzzy
+#| msgid "t-distribution"
+msgid "attribute"
+msgstr "t-distribucija"
+
+#: src/backend/datasources/filters/NetCDFFilter.cpp:355
+#, fuzzy
+#| msgctxt "matrix size"
+#| msgid "&Dimensions"
+msgid "dimension"
+msgstr "&Dimenzije"
+
+#: src/backend/datasources/filters/NetCDFFilter.cpp:387
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:576
+#, fuzzy
+#| msgid "Variance"
+msgid "variable"
+msgstr "Varijanca"
 
 #: src/backend/lib/XmlStreamReader.cpp:65
 msgctxt "prefix for XML error messages"
@@ -2885,12 +2907,12 @@ msgid "Matrix name:"
 msgstr "Matrica %1"
 
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:65
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:544
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:548
 msgid "Automatic"
 msgstr "Automatski"
 
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:65
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:545
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:549
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:287
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:91
 msgid "Custom"
@@ -2917,19 +2939,19 @@ msgstr ""
 msgid "Values"
 msgstr "Vrijednosti"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:359
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:363
 msgid "Select the File Data Source"
 msgstr "Označi Izvor podataka"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:487
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:491
 msgid "Save Filter Settings as"
 msgstr "Sačuvaj podešavanja filtriranja kao"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:488
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:492
 msgid "Filter name:"
 msgstr "Ime filtera:"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:488
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:492
 msgid "new filter"
 msgstr "novi filter"
 
@@ -5020,7 +5042,6 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lDataSet)
 #: src/kdefrontend/ui/datasources/hdfoptionswidget.ui:19
-#: src/kdefrontend/ui/datasources/netcdfoptionswidget.ui:19
 #, fuzzy
 #| msgid "Dataset"
 msgid "Data set:"
@@ -5028,7 +5049,6 @@ msgstr "Skup podataka"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, leDataSet)
 #: src/kdefrontend/ui/datasources/hdfoptionswidget.ui:26
-#: src/kdefrontend/ui/datasources/netcdfoptionswidget.ui:26
 #, fuzzy
 #| msgid "Select and edit"
 msgid "Selected data set"
@@ -5218,6 +5238,20 @@ msgstr "Završna kolona:"
 #| "column"
 msgid "Specify the end column to import; -1 stands for the last column"
 msgstr "Specificiraj broj završne kolone za uvoz; -1 je za posljednju kolonu"
+
+#. i18n: ectx: property (text), widget (QLabel, lVariable)
+#: src/kdefrontend/ui/datasources/netcdfoptionswidget.ui:19
+#, fuzzy
+#| msgid "Variance"
+msgid "Variable:"
+msgstr "Varijanca"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, leVarName)
+#: src/kdefrontend/ui/datasources/netcdfoptionswidget.ui:26
+#, fuzzy
+#| msgid "Select and edit"
+msgid "Selected variable name"
+msgstr "Označi i uredi"
 
 #. i18n: ectx: property (toolTip), widget (QTreeWidget, twContent)
 #: src/kdefrontend/ui/datasources/netcdfoptionswidget.ui:35
