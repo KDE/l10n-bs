@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-06-05 02:04+0000\n"
+"POT-Creation-Date: 2015-06-06 02:03+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -185,7 +185,7 @@ msgid "Invalid creation time for '%1'. Using current time."
 msgstr "Pogrešno vrijeme stvaranja za '%1'. Koristiti trenutno vrijeme."
 
 #: src/backend/core/AbstractColumn.cpp:154
-#: src/backend/spreadsheet/Spreadsheet.cpp:130
+#: src/backend/spreadsheet/Spreadsheet.cpp:128
 #, kde-format
 msgid "%1: insert 1 row"
 msgid_plural "%1: insert %2 rows"
@@ -194,7 +194,7 @@ msgstr[1] "%1: ubaci %2 reda"
 msgstr[2] "%1: ubaci %2 redova"
 
 #: src/backend/core/AbstractColumn.cpp:173
-#: src/backend/spreadsheet/Spreadsheet.cpp:119
+#: src/backend/spreadsheet/Spreadsheet.cpp:117
 #, kde-format
 msgid "%1: remove 1 row"
 msgid_plural "%1: remove %2 rows"
@@ -230,7 +230,7 @@ msgstr "U %1"
 
 #. i18n: ectx: property (title), widget (QGroupBox, gbExport)
 #: src/backend/core/AbstractPart.cpp:117 src/backend/core/AbstractPart.cpp:121
-#: src/kdefrontend/MainWin.cpp:253
+#: src/kdefrontend/MainWin.cpp:258
 #: src/kdefrontend/spreadsheet/ExportSpreadsheetDialog.cpp:123
 #: src/kdefrontend/ui/spreadsheet/exportspreadsheetwidget.ui:17
 #: src/kdefrontend/ui/worksheet/exportworksheetwidget.ui:17
@@ -272,11 +272,11 @@ msgid "incompatible filter type"
 msgstr "nekompatibilan filter tip"
 
 #: src/backend/core/AbstractSimpleFilter.cpp:382
-#: src/backend/core/column/Column.cpp:624 src/backend/core/Folder.cpp:106
+#: src/backend/core/column/Column.cpp:624 src/backend/core/Folder.cpp:107
 #: src/backend/core/Project.cpp:268
 #: src/backend/datasources/FileDataSource.cpp:430
 #: src/backend/matrix/Matrix.cpp:688
-#: src/backend/spreadsheet/Spreadsheet.cpp:712
+#: src/backend/spreadsheet/Spreadsheet.cpp:710
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:2147
 #: src/backend/worksheet/plots/PlotArea.cpp:556
 #: src/backend/worksheet/TextLabel.cpp:772
@@ -483,11 +483,11 @@ msgstr "%1: postavi decimalne cifre na %2"
 msgid "set decimal digits to %1"
 msgstr "postavi decimalne cifre na %1"
 
-#: src/backend/core/Folder.cpp:113
+#: src/backend/core/Folder.cpp:114
 msgid "no folder element found"
 msgstr "nema elemenata u folderu"
 
-#: src/backend/core/Folder.cpp:172
+#: src/backend/core/Folder.cpp:181
 #, kde-format
 msgid "unknown element '%1' found"
 msgstr "nepoznat element '%1' pronađen"
@@ -520,6 +520,24 @@ msgstr "Naziv projekta nedostaje."
 #: src/backend/core/Project.cpp:346
 msgid "Invalid project modification time. Using current time."
 msgstr "Pogrešno vrijeme modificiranja projekta. Koristiti trenutno vrijeme."
+
+#: src/backend/core/Workbook.cpp:153
+#, fuzzy
+#| msgid "no worksheet element found"
+msgid "no workbook element found"
+msgstr "nije pronađen element u radnom listu"
+
+#: src/backend/core/Workbook.cpp:177
+#, fuzzy
+#| msgid "Matrix"
+msgid "matrix"
+msgstr "Matrica"
+
+#: src/backend/core/Workbook.cpp:185
+#, fuzzy, kde-format
+#| msgid "unknown element '%1'"
+msgid "unknown workbook element '%1'"
+msgstr "nepoznat element '%1'"
 
 #: src/backend/datasources/FileDataSource.cpp:79
 msgid "Reload"
@@ -679,7 +697,7 @@ msgstr "nije pronađen fileDataSource element"
 #: src/backend/worksheet/plots/PlotArea.cpp:454
 #: src/backend/worksheet/TextLabel.cpp:672
 #: src/backend/worksheet/Worksheet.cpp:713
-#: src/commonfrontend/ProjectExplorer.cpp:577
+#: src/commonfrontend/ProjectExplorer.cpp:569
 #, kde-format
 msgid "Attribute '%1' missing or empty, default value is used"
 msgstr ""
@@ -829,7 +847,7 @@ msgid "%1: set matrix size to %2x%3"
 msgstr "%1: postavi veličinu matrice na %2x%3"
 
 #: src/backend/matrix/Matrix.cpp:240
-#: src/backend/spreadsheet/Spreadsheet.cpp:293
+#: src/backend/spreadsheet/Spreadsheet.cpp:291
 #, kde-format
 msgid "%1: copy %2"
 msgstr "%1: kopiraj %2"
@@ -851,7 +869,7 @@ msgstr[1] "%1: dodaj %2 kolone"
 msgstr[2] "%1: dodaj %2 kolona"
 
 #: src/backend/matrix/Matrix.cpp:420 src/backend/matrix/matrixcommands.cpp:163
-#: src/backend/spreadsheet/Spreadsheet.cpp:251
+#: src/backend/spreadsheet/Spreadsheet.cpp:249
 #, kde-format
 msgid "%1: clear"
 msgstr "%1: obriši"
@@ -945,7 +963,7 @@ msgstr "%1: ogledalo horizontalno"
 msgid "%1: mirror vertically"
 msgstr "%1: ogledalo vertikalno"
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:208
+#: src/backend/spreadsheet/Spreadsheet.cpp:206
 #, kde-format
 msgid "%1: remove 1 column"
 msgid_plural "%1: remove %2 columns"
@@ -953,7 +971,7 @@ msgstr[0] "%1: ukloni %2 kolonu"
 msgstr[1] "%1: ukloni %2 kolone"
 msgstr[2] "%1: ukloni %2 kolona"
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:218
+#: src/backend/spreadsheet/Spreadsheet.cpp:216
 #, kde-format
 msgid "%1: insert 1 column"
 msgid_plural "%1: insert %2 columns"
@@ -961,22 +979,22 @@ msgstr[0] "%1: umetni %2 kolonu"
 msgstr[1] "%1: umetni %2 kolona"
 msgstr[2] "%1: umetni %2 kolone"
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:264
+#: src/backend/spreadsheet/Spreadsheet.cpp:262
 #, kde-format
 msgid "%1: clear all masks"
 msgstr "%1: očisti sve maske"
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:284
+#: src/backend/spreadsheet/Spreadsheet.cpp:282
 #, kde-format
 msgid "%1: move column %2 from position %3 to %4."
 msgstr "%1: pomjeri kolonu %2 sa pozicije %3 na %4."
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:406
+#: src/backend/spreadsheet/Spreadsheet.cpp:404
 #, kde-format
 msgid "%1: sort columns"
 msgstr "%1: sortiraj kolone"
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:719
+#: src/backend/spreadsheet/Spreadsheet.cpp:717
 msgid "no spreadsheet element found"
 msgstr "nije pronađen element proračunske tablice"
 
@@ -1411,7 +1429,7 @@ msgstr "pomjeri > na dolje"
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:394
 #: src/commonfrontend/worksheet/WorksheetView.cpp:315
 #: src/commonfrontend/worksheet/WorksheetView.cpp:367
-#: src/kdefrontend/MainWin.cpp:345
+#: src/kdefrontend/MainWin.cpp:350
 msgid "Add new"
 msgstr "Dodaj novo"
 
@@ -2349,7 +2367,7 @@ msgid "collapse all"
 msgstr "zatvori sve"
 
 #: src/commonfrontend/ProjectExplorer.cpp:129
-#: src/commonfrontend/ProjectExplorer.cpp:374
+#: src/commonfrontend/ProjectExplorer.cpp:366
 msgid "hide search/filter options"
 msgstr "sakrije pretragu/opcije za filtriranje"
 
@@ -2366,7 +2384,7 @@ msgid "show/hide columns"
 msgstr "prikaži/sakrij kolone"
 
 #. i18n: ectx: property (text), widget (QLabel, lColumnCount)
-#: src/commonfrontend/ProjectExplorer.cpp:259
+#: src/commonfrontend/ProjectExplorer.cpp:253
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:147
 #: src/kdefrontend/ui/dockwidgets/matrixdock.ui:132
 #: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:106
@@ -2374,7 +2392,7 @@ msgstr "prikaži/sakrij kolone"
 msgid "Columns"
 msgstr "Kolone"
 
-#: src/commonfrontend/ProjectExplorer.cpp:371
+#: src/commonfrontend/ProjectExplorer.cpp:363
 msgid "show search/filter options"
 msgstr "prikaži traži/filtriraj opcije"
 
@@ -2564,6 +2582,30 @@ msgstr "%1: očisti selektovane redove"
 #, kde-format
 msgid "%1: clear selected cells"
 msgstr "%1: očisti selektovane ćelije"
+
+#: src/commonfrontend/workbook/WorkbookView.cpp:67
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:267
+msgid "Add new Spreadsheet"
+msgstr "Dodaj novi Tabelarni prikaz"
+
+#: src/commonfrontend/workbook/WorkbookView.cpp:68
+#: src/kdefrontend/datasources/ImportFileDialog.cpp:287
+#, fuzzy
+#| msgid "Add new"
+msgid "Add new Matrix"
+msgstr "Dodaj novo"
+
+#: src/commonfrontend/workbook/WorkbookView.cpp:147
+#: src/kdefrontend/MainWin.cpp:225 src/kdefrontend/MainWin.cpp:1164
+msgid "Matrix"
+msgstr "Matrica"
+
+#. i18n: ectx: ToolBar (spreadsheet_toolbar)
+#: src/commonfrontend/workbook/WorkbookView.cpp:152
+#: src/kdefrontend/LabPlot2ui.rc:27 src/kdefrontend/MainWin.cpp:220
+#: src/kdefrontend/MainWin.cpp:918
+msgid "Spreadsheet"
+msgstr "Tablica"
 
 #: src/commonfrontend/worksheet/WorksheetView.cpp:129
 msgid "Select all"
@@ -2832,10 +2874,6 @@ msgid "new Spreadsheet"
 msgstr "novi Tabelarni prikaz (tabela)"
 
 #: src/kdefrontend/datasources/ImportFileDialog.cpp:267
-msgid "Add new Spreadsheet"
-msgstr "Dodaj novi Tabelarni prikaz"
-
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:267
 msgid "Spreadsheet name:"
 msgstr "Ime Tabelarnog prikaza:"
 
@@ -2844,12 +2882,6 @@ msgstr "Ime Tabelarnog prikaza:"
 #| msgid "Matrix"
 msgid "new Matrix"
 msgstr "Matrica"
-
-#: src/kdefrontend/datasources/ImportFileDialog.cpp:287
-#, fuzzy
-#| msgid "Add new"
-msgid "Add new Matrix"
-msgstr "Dodaj novo"
 
 #: src/kdefrontend/datasources/ImportFileDialog.cpp:287
 #, fuzzy
@@ -2872,7 +2904,7 @@ msgstr "Specijalno"
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:90
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:100
 #: src/kdefrontend/GuiObserver.cpp:90 src/kdefrontend/GuiObserver.cpp:105
-#: src/kdefrontend/GuiObserver.cpp:304 src/kdefrontend/MainWin.cpp:585
+#: src/kdefrontend/GuiObserver.cpp:304 src/kdefrontend/MainWin.cpp:596
 msgid "Properties"
 msgstr "Podešavanja"
 
@@ -4120,7 +4152,7 @@ msgstr ""
 "Lista svih izvrđenih koraka/akcija.\n"
 "Označite stavku u listi da pređete na odgovarajući slijedeći korak."
 
-#: src/kdefrontend/HistoryDialog.cpp:52 src/kdefrontend/MainWin.cpp:263
+#: src/kdefrontend/HistoryDialog.cpp:52 src/kdefrontend/MainWin.cpp:268
 msgid "Undo/Redo History"
 msgstr "Vrati na staro/Idi na novo historija"
 
@@ -4228,258 +4260,252 @@ msgid "Main"
 msgstr "Glavni"
 
 #. i18n: ectx: ToolBar (worksheet_toolbar)
-#: src/kdefrontend/LabPlot2ui.rc:22 src/kdefrontend/MainWin.cpp:225
-#: src/kdefrontend/MainWin.cpp:951
+#: src/kdefrontend/LabPlot2ui.rc:23 src/kdefrontend/MainWin.cpp:230
+#: src/kdefrontend/MainWin.cpp:975
 msgid "Worksheet"
 msgstr "Radni list"
 
-#. i18n: ectx: ToolBar (spreadsheet_toolbar)
-#: src/kdefrontend/LabPlot2ui.rc:26 src/kdefrontend/MainWin.cpp:215
-#: src/kdefrontend/MainWin.cpp:907
-msgid "Spreadsheet"
-msgstr "Tablica"
-
 #. i18n: ectx: ToolBar (cartesian_plot_toolbar)
-#: src/kdefrontend/LabPlot2ui.rc:30
+#: src/kdefrontend/LabPlot2ui.rc:31
 msgid "CartesianPlot"
 msgstr "CartesianPlot"
 
 #. i18n: ectx: Menu (file)
-#: src/kdefrontend/LabPlot2ui.rc:34
+#: src/kdefrontend/LabPlot2ui.rc:35
 msgid "&File"
 msgstr "&Datoteka"
 
 #. i18n: ectx: Menu (new)
-#: src/kdefrontend/LabPlot2ui.rc:35
+#: src/kdefrontend/LabPlot2ui.rc:36
 msgid "&New"
 msgstr "&Novo"
 
 #. i18n: ectx: Menu (edit)
-#: src/kdefrontend/LabPlot2ui.rc:51
+#: src/kdefrontend/LabPlot2ui.rc:53
 msgid "&Edit"
 msgstr "&Izmijeni"
 
 #. i18n: ectx: Menu (spreadsheet)
-#: src/kdefrontend/LabPlot2ui.rc:56
+#: src/kdefrontend/LabPlot2ui.rc:58
 msgid "&Spreadsheet"
 msgstr "&Tabelarni proračun"
 
 #. i18n: ectx: Menu (matrix)
-#: src/kdefrontend/LabPlot2ui.rc:57
+#: src/kdefrontend/LabPlot2ui.rc:59
 msgid "&Matrix"
 msgstr "&Matrica"
 
 #. i18n: ectx: Menu (worksheet)
-#: src/kdefrontend/LabPlot2ui.rc:58
+#: src/kdefrontend/LabPlot2ui.rc:60
 msgid "&Worksheet"
 msgstr "&Radni list"
 
 #. i18n: ectx: Menu (analysis)
-#: src/kdefrontend/LabPlot2ui.rc:59
+#: src/kdefrontend/LabPlot2ui.rc:61
 msgid "&Analysis"
 msgstr "&Analiza"
 
 #. i18n: ectx: Menu (drawing)
-#: src/kdefrontend/LabPlot2ui.rc:60
+#: src/kdefrontend/LabPlot2ui.rc:62
 msgid "&Drawing"
 msgstr "&Crtanje"
 
 #. i18n: ectx: Menu (script)
-#: src/kdefrontend/LabPlot2ui.rc:61
+#: src/kdefrontend/LabPlot2ui.rc:63
 msgid "&Script"
 msgstr "&Skripta"
 
 #. i18n: ectx: Menu (windows)
-#: src/kdefrontend/LabPlot2ui.rc:62
+#: src/kdefrontend/LabPlot2ui.rc:64
 msgid "&Windows"
 msgstr "&Prozori"
 
-#: src/kdefrontend/MainWin.cpp:139
+#: src/kdefrontend/MainWin.cpp:140
 #, kde-format
 msgctxt "%1 is the LabPlot version"
 msgid "Welcome to LabPlot %1"
 msgstr "Dobro došli u LabPlot %1"
 
-#: src/kdefrontend/MainWin.cpp:220 src/kdefrontend/MainWin.cpp:1109
-msgid "Matrix"
-msgstr "Matrica"
+#: src/kdefrontend/MainWin.cpp:216 src/kdefrontend/MainWin.cpp:1159
+msgid "Workbook"
+msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:234
+#: src/kdefrontend/MainWin.cpp:239
 msgid "Folder"
 msgstr "Direktorij"
 
-#: src/kdefrontend/MainWin.cpp:239
+#: src/kdefrontend/MainWin.cpp:244
 msgid "File Data Source"
 msgstr "Datoteka Podatak Izvor"
 
-#: src/kdefrontend/MainWin.cpp:248
+#: src/kdefrontend/MainWin.cpp:253
 msgid "Import"
 msgstr "Uvezi"
 
-#: src/kdefrontend/MainWin.cpp:273
+#: src/kdefrontend/MainWin.cpp:278
 msgid "Cl&ose"
 msgstr "Za&tvori"
 
-#: src/kdefrontend/MainWin.cpp:274
+#: src/kdefrontend/MainWin.cpp:279
 msgid "Ctrl+W"
 msgstr "Ctrl+W"
 
-#: src/kdefrontend/MainWin.cpp:275
+#: src/kdefrontend/MainWin.cpp:280
 msgid "Close the active window"
 msgstr "Zatvori aktivni prozor"
 
-#: src/kdefrontend/MainWin.cpp:279
+#: src/kdefrontend/MainWin.cpp:284
 msgid "Close &All"
 msgstr "Zatvori &sve"
 
-#: src/kdefrontend/MainWin.cpp:280
+#: src/kdefrontend/MainWin.cpp:285
 msgid "Close all the windows"
 msgstr "Zatvori sve prozore"
 
-#: src/kdefrontend/MainWin.cpp:284
+#: src/kdefrontend/MainWin.cpp:289
 msgid "&Tile"
 msgstr "&Popločaj"
 
-#: src/kdefrontend/MainWin.cpp:285
+#: src/kdefrontend/MainWin.cpp:290
 msgid "Tile the windows"
 msgstr "Popločaj prozore"
 
-#: src/kdefrontend/MainWin.cpp:289
+#: src/kdefrontend/MainWin.cpp:294
 msgid "&Cascade"
 msgstr "&Kaskadno"
 
-#: src/kdefrontend/MainWin.cpp:290
+#: src/kdefrontend/MainWin.cpp:295
 msgid "Cascade the windows"
 msgstr "Poveži prozore"
 
-#: src/kdefrontend/MainWin.cpp:294
+#: src/kdefrontend/MainWin.cpp:299
 msgid "Ne&xt"
 msgstr "Slj&edeći"
 
-#: src/kdefrontend/MainWin.cpp:295
+#: src/kdefrontend/MainWin.cpp:300
 msgid "Move the focus to the next window"
 msgstr "Pomjeri fokus na slijedeći prozor"
 
-#: src/kdefrontend/MainWin.cpp:299
+#: src/kdefrontend/MainWin.cpp:304
 msgid "Pre&vious"
 msgstr "&Prethodna"
 
-#: src/kdefrontend/MainWin.cpp:300
+#: src/kdefrontend/MainWin.cpp:305
 msgid "Move the focus to the previous window"
 msgstr "Pomjeri fokus na prethodni prozor"
 
-#: src/kdefrontend/MainWin.cpp:312
+#: src/kdefrontend/MainWin.cpp:317
 msgid "Current &Folder Only"
 msgstr "Trenutni &Direktorij samo"
 
-#: src/kdefrontend/MainWin.cpp:316
+#: src/kdefrontend/MainWin.cpp:321
 msgid "Current Folder and &Subfolders"
 msgstr "Trenutni direktoriji i &Poddirektoriji"
 
-#: src/kdefrontend/MainWin.cpp:320
+#: src/kdefrontend/MainWin.cpp:325
 msgid "&All"
 msgstr "&Sve"
 
-#: src/kdefrontend/MainWin.cpp:330
+#: src/kdefrontend/MainWin.cpp:335
 msgid "Project explorer"
 msgstr "Pretraživač projekata"
 
-#: src/kdefrontend/MainWin.cpp:335
+#: src/kdefrontend/MainWin.cpp:340
 msgid "Properties explorer"
 msgstr "Pretražvač svojstava"
 
-#: src/kdefrontend/MainWin.cpp:356
+#: src/kdefrontend/MainWin.cpp:362
 msgid "Window visibility policy"
 msgstr "Polisa vidljivost prozora"
 
-#: src/kdefrontend/MainWin.cpp:370
+#: src/kdefrontend/MainWin.cpp:376
 #, kde-format
 msgid "The current project %1 has been modified. Do you want to save it?"
 msgstr "Trenutni projekat %1 je modificiran. Da li želite da ga spasite?"
 
-#: src/kdefrontend/MainWin.cpp:371
+#: src/kdefrontend/MainWin.cpp:377
 msgid "Save Project"
 msgstr "Spasi projekat"
 
-#: src/kdefrontend/MainWin.cpp:573
+#: src/kdefrontend/MainWin.cpp:584
 msgid "Project Explorer"
 msgstr "Pretraživač Projekata"
 
-#: src/kdefrontend/MainWin.cpp:614
+#: src/kdefrontend/MainWin.cpp:625
 #, kde-format
 msgid "Project %1 created"
 msgstr "Projekat %1 kreiran"
 
-#: src/kdefrontend/MainWin.cpp:624 src/kdefrontend/MainWin.cpp:780
+#: src/kdefrontend/MainWin.cpp:635 src/kdefrontend/MainWin.cpp:791
 msgid "LabPlot Projects (*.lml *.lml.gz *.lml.bz2 *.LML *.LML.GZ *.LML.BZ2)"
 msgstr "LabPlot Projekti (*.lml *.lml.gz *.lml.bz2 *.LML *.LML.GZ *.LML.BZ2)"
 
-#: src/kdefrontend/MainWin.cpp:625 src/kdefrontend/MainWin.cpp:642
+#: src/kdefrontend/MainWin.cpp:636 src/kdefrontend/MainWin.cpp:653
 msgid "Open project"
 msgstr "Otvori projekat"
 
-#: src/kdefrontend/MainWin.cpp:642
+#: src/kdefrontend/MainWin.cpp:653
 #, kde-format
 msgid "The project file %1 is already opened."
 msgstr "Projektna datoteka %1 je već otvorena."
 
-#: src/kdefrontend/MainWin.cpp:651
+#: src/kdefrontend/MainWin.cpp:662
 msgid "Sorry. Could not open file for reading."
 msgstr "Žao nam je. Datoteka ne može biti otvorena za čitanje."
 
-#: src/kdefrontend/MainWin.cpp:687
+#: src/kdefrontend/MainWin.cpp:698
 #, kde-format
 msgid "Project %1 opened"
 msgstr "Projekat %1 otvoren"
 
-#: src/kdefrontend/MainWin.cpp:694
+#: src/kdefrontend/MainWin.cpp:705
 #, kde-format
 msgid "Project successfully opened (in %1 seconds)."
 msgstr "Projekat uspješno otvoren (u %1 sekundi)."
 
-#: src/kdefrontend/MainWin.cpp:712
+#: src/kdefrontend/MainWin.cpp:723
 msgid "Error opening project"
 msgstr "Greška pri otvaranju projekta"
 
-#: src/kdefrontend/MainWin.cpp:781
+#: src/kdefrontend/MainWin.cpp:792
 msgid "Save project as"
 msgstr "Spasi projekat kao"
 
-#: src/kdefrontend/MainWin.cpp:812
+#: src/kdefrontend/MainWin.cpp:823
 msgid "Project saved"
 msgstr "Projekat spašen"
 
-#: src/kdefrontend/MainWin.cpp:827
+#: src/kdefrontend/MainWin.cpp:838
 msgid "Sorry. Could not open file for writing."
 msgstr "Žao nam je. Datoteka ne može biti otvorena za pisanje."
 
-#: src/kdefrontend/MainWin.cpp:861
+#: src/kdefrontend/MainWin.cpp:872
 msgid "Print worksheet"
 msgstr "Ispiši radni list"
 
-#: src/kdefrontend/MainWin.cpp:867
+#: src/kdefrontend/MainWin.cpp:878
 msgid "Worksheet printed"
 msgstr "Radni list ispisan"
 
-#: src/kdefrontend/MainWin.cpp:872
+#: src/kdefrontend/MainWin.cpp:883
 msgid "Print spreadsheet"
 msgstr "Ispiši tabelarni prikaz"
 
-#: src/kdefrontend/MainWin.cpp:879
+#: src/kdefrontend/MainWin.cpp:890
 msgid "Spreadsheet printed"
 msgstr "Tabelarni prikaz ispisan"
 
-#: src/kdefrontend/MainWin.cpp:990
+#: src/kdefrontend/MainWin.cpp:1029
 #, kde-format
 msgid "%1    [Changed]"
 msgstr "%1 [Promijenjen]"
 
-#: src/kdefrontend/MainWin.cpp:1114
+#: src/kdefrontend/MainWin.cpp:1182
 #, kde-format
 msgid "Folder %1"
 msgstr "Direktorij: %1"
 
-#: src/kdefrontend/MainWin.cpp:1367
+#: src/kdefrontend/MainWin.cpp:1435
 #, kde-format
 msgid "File data source%1"
 msgstr "Direktorij datoteka izvor %1"
