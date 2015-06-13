@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdesdk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-15 01:53+0000\n"
+"POT-Creation-Date: 2015-06-13 02:03+0000\n"
 "PO-Revision-Date: 2015-02-04 15:58+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -265,11 +265,11 @@ msgstr "(nema pozvanog)"
 msgid "(global)"
 msgstr "(globalno)"
 
-#: libcore/tracedata.cpp:3152
+#: libcore/tracedata.cpp:3154
 msgid "(not found)"
 msgstr "(nije nađeno)"
 
-#: libcore/tracedata.cpp:3694
+#: libcore/tracedata.cpp:3696
 msgid "Recalculating Function Cycles..."
 msgstr "Ponovo računam cikluse funkcija..."
 
@@ -505,7 +505,7 @@ msgstr "Kružno"
 #: libviews/callgraphview.cpp:2950 libviews/callgraphview.cpp:2955
 #: libviews/callgraphview.cpp:2975 libviews/callview.cpp:128
 #: libviews/callview.cpp:133 libviews/coverageview.cpp:170
-#: libviews/functionselection.cpp:295 libviews/instrview.cpp:240
+#: libviews/functionselection.cpp:295 libviews/instrview.cpp:265
 #: libviews/partselection.cpp:371 libviews/sourceview.cpp:121
 #, qt-format
 msgid "Go to '%1'"
@@ -586,7 +586,7 @@ msgid "A thing's name"
 msgstr "Ime stvari"
 
 #: libviews/callmapview.cpp:63 libviews/callview.cpp:47
-#: libviews/instrview.cpp:169 libviews/partselection.cpp:72
+#: libviews/instrview.cpp:194 libviews/partselection.cpp:72
 #: libviews/sourceview.cpp:63 libviews/stackselection.cpp:54
 msgid "Cost"
 msgstr "Trošak"
@@ -810,7 +810,7 @@ msgstr "(nema poziva)"
 msgid "Cost per call"
 msgstr "Cijena po pozivu"
 
-#: libviews/callview.cpp:49 libviews/instrview.cpp:170
+#: libviews/callview.cpp:49 libviews/instrview.cpp:195
 #: libviews/sourceview.cpp:64
 msgid "Cost 2"
 msgstr "Trošak 2"
@@ -1045,7 +1045,7 @@ msgstr "&Traži:"
 msgid "Group"
 msgstr "Grupa"
 
-#: libviews/functionselection.cpp:167
+#: libviews/functionselection.cpp:167 libviews/functionselection.cpp:505
 msgid "(No Grouping)"
 msgstr "(Bez grupisanja)"
 
@@ -1094,23 +1094,23 @@ msgstr "Skoči %1 puta na 0x%2"
 msgid "(cycle)"
 msgstr "(ciklus)"
 
-#: libviews/instrview.cpp:168 libviews/sourceview.cpp:62
+#: libviews/instrview.cpp:193 libviews/sourceview.cpp:62
 msgid "#"
 msgstr "#"
 
-#: libviews/instrview.cpp:172
+#: libviews/instrview.cpp:197
 msgid "Hex"
 msgstr "Heks"
 
-#: libviews/instrview.cpp:174
+#: libviews/instrview.cpp:199
 msgid "Assembly Instructions"
 msgstr "Asemblerske instrukcije"
 
-#: libviews/instrview.cpp:175
+#: libviews/instrview.cpp:200
 msgid "Source Position"
 msgstr "Položaj u izvoru"
 
-#: libviews/instrview.cpp:211
+#: libviews/instrview.cpp:236
 msgid ""
 "<b>Annotated Machine Code</b><p>The annotated machine code list shows the "
 "assembly instructions of the current selected function together with (self) "
@@ -1129,81 +1129,85 @@ msgstr ""
 "'binutils' paketa.</p><p>Odaberite liniju s informacijom o pozivima da "
 "napravite odredišnu funkciju ovog poziva trenutnom.</p>"
 
-#: libviews/instrview.cpp:245
+#: libviews/instrview.cpp:270
 #, qt-format
 msgid "Go to Address %1"
 msgstr "Idi na adresu %1"
 
-#: libviews/instrview.cpp:257
+#: libviews/instrview.cpp:282
 msgid "Hex Code"
 msgstr "Heks. kôd"
 
-#: libviews/instrview.cpp:551
+#: libviews/instrview.cpp:576
 msgid "There is no instruction info in the profile data file."
 msgstr ""
 "Unutar datoteke sa podacima o profilu nema informacija o instrukcijama."
 
-#: libviews/instrview.cpp:553
+#: libviews/instrview.cpp:578
 msgid "Tip: For Callgrind, rerun with option"
 msgstr "Savjet: Za Callgrind, pokrenite s opcijom"
 
-#: libviews/instrview.cpp:554
+#: libviews/instrview.cpp:579
 msgid "      --dump-instr=yes"
 msgstr "      --dump-instr=yes"
 
-#: libviews/instrview.cpp:555
+#: libviews/instrview.cpp:580
 msgid "To see (conditional) jumps, additionally specify"
 msgstr "Da biste vidjeli (uslovne) skokove, specificirajte dodatno"
 
-#: libviews/instrview.cpp:556
+#: libviews/instrview.cpp:581
 msgid "      --collect-jumps=yes"
 msgstr "      --collect-jumps=yes"
 
-#: libviews/instrview.cpp:776
+#: libviews/instrview.cpp:819
 msgid "For annotated machine code, the following object file is needed:"
 msgstr "Za označeni mašinski kôd, potrebno je staviti sljedeću datoteku:"
 
-#: libviews/instrview.cpp:781
+#: libviews/instrview.cpp:824
 msgid "This file can not be found."
 msgstr "Datoteka ne može biti pronađena."
 
-#: libviews/instrview.cpp:804
+#: libviews/instrview.cpp:827
+msgid "If cross-compiled, set SYSROOT variable."
+msgstr ""
+
+#: libviews/instrview.cpp:850
 msgid "There is an error trying to execute the command"
 msgstr "Greška prilikom izvršavanja naredbe"
 
-#: libviews/instrview.cpp:808 libviews/instrview.cpp:1098
+#: libviews/instrview.cpp:854 libviews/instrview.cpp:1146
 msgid "Check that you have installed 'objdump'."
 msgstr "Provjerite da li je instaliran „objdump“."
 
-#: libviews/instrview.cpp:810 libviews/instrview.cpp:1100
+#: libviews/instrview.cpp:856 libviews/instrview.cpp:1148
 msgid "This utility can be found in the 'binutils' package."
 msgstr "Ovaj alat se može naći u paketu „binutils“."
 
-#: libviews/instrview.cpp:910
+#: libviews/instrview.cpp:958
 msgid "(No Instruction)"
 msgstr "(Nema naredbe)"
 
-#: libviews/instrview.cpp:1076
+#: libviews/instrview.cpp:1124
 msgid "This happens because the code of"
 msgstr "Ovo se dešava zato što kôd od"
 
-#: libviews/instrview.cpp:1079
+#: libviews/instrview.cpp:1127
 msgid "does not seem to match the profile data file."
 msgstr "izgleda ne odgovara datoteci sa podacima o profilu."
 
-#: libviews/instrview.cpp:1082
+#: libviews/instrview.cpp:1130
 msgid "Are you using an old profile data file or is the above mentioned"
 msgstr "Da li koristite staru datoteku sa podacima o profilu ili gore pomenutu"
 
-#: libviews/instrview.cpp:1084
+#: libviews/instrview.cpp:1132
 msgid "ELF object from an updated installation/another machine?"
 msgstr "ELF objekat iz ažurirane instalacije/sa druge mašine?"
 
-#: libviews/instrview.cpp:1092
+#: libviews/instrview.cpp:1140
 msgid "There seems to be an error trying to execute the command"
 msgstr "Izgleda da dolazi do greške pri pokušaju izvršavanja naredbe"
 
-#: libviews/instrview.cpp:1096
+#: libviews/instrview.cpp:1144
 msgid "Check that the ELF object used in the command exists."
 msgstr "Provjerite da li ELF objekat koji se koristi u naredbi zaista postoji."
 
