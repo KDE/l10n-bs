@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krecipes.po\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-06-19 02:04+0000\n"
+"POT-Creation-Date: 2015-06-20 02:00+0000\n"
 "PO-Revision-Date: 2015-02-24 22:49+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -43,6 +43,9 @@ msgstr ""
 #: actionshandlers/ingredientactionshandler.cpp:65
 #: actionshandlers/kreauthoractionshandler.cpp:70
 #: actionshandlers/krecategoryactionshandler.cpp:161
+#: actionshandlers/kreheaderactionshandler.cpp:68
+#: actionshandlers/kreingredientactionshandler.cpp:68
+#: actionshandlers/kreprepmethodactionshandler.cpp:64
 #: actionshandlers/kreunitactionshandler.cpp:140
 #: actionshandlers/prepmethodactionshandler.cpp:65
 #: actionshandlers/recipeactionshandler.cpp:250
@@ -70,6 +73,7 @@ msgstr ""
 "jednu. Jeste li sigurni?"
 
 #: actionshandlers/headeractionshandler.cpp:39
+#: actionshandlers/kreheaderactionshandler.cpp:37
 msgid "New Header"
 msgstr "Novo zaglavlje"
 
@@ -91,10 +95,14 @@ msgstr ""
 "jedno. Jeste li sigurni?"
 
 #: actionshandlers/ingredientactionshandler.cpp:38
+#: actionshandlers/kreingredientactionshandler.cpp:37
 msgid "New Ingredient"
 msgstr "Novi sastojak"
 
 #: actionshandlers/ingredientactionshandler.cpp:68
+#: actionshandlers/kreheaderactionshandler.cpp:71
+#: actionshandlers/kreingredientactionshandler.cpp:71
+#: actionshandlers/kreprepmethodactionshandler.cpp:66
 #: actionshandlers/kreunitactionshandler.cpp:161
 #: actionshandlers/prepmethodactionshandler.cpp:67
 #: actionshandlers/unitactionshandler.cpp:154
@@ -102,6 +110,7 @@ msgid "You are about to permanently delete recipes from your database."
 msgstr "Ovim ćete zauvijek izbrisati recept iz vaše baze podataka."
 
 #: actionshandlers/ingredientactionshandler.cpp:80
+#: actionshandlers/kreingredientactionshandler.cpp:83
 #: widgets/ingredientinputwidget.cpp:248
 #, kde-format
 msgid "Ingredient name cannot be longer than 1 character."
@@ -111,6 +120,7 @@ msgstr[1] "Ime sastojka ne smije biti duže od %1 znaka."
 msgstr[2] "Ime sastojka ne smije biti duže od %1 znakova."
 
 #: actionshandlers/ingredientactionshandler.cpp:102
+#: actionshandlers/kreingredientactionshandler.cpp:108
 msgid ""
 "This ingredient already exists. Continuing will merge these two ingredients "
 "into one. Are you sure?"
@@ -141,6 +151,55 @@ msgid ""
 msgstr ""
 "Autor već postoji. Ako nastavite, ova dva autora će se spojiti u jednog. "
 "Jeste li sigurni?"
+
+#: actionshandlers/kreheaderactionshandler.cpp:83
+#, fuzzy, kde-format
+#| msgid "Header cannot be longer than 1 character."
+#| msgid_plural "Header cannot be longer than %1 characters."
+msgid "Header name cannot be longer than 1 character."
+msgid_plural "Header name cannot be longer than %1 characters."
+msgstr[0] "Zaglavlje ne smije biti duže od %1 znak."
+msgstr[1] "Zaglavlje ne smije biti duže od %1 znaka."
+msgstr[2] "Zaglavlje ne smije biti duže od %1 znakova."
+
+#: actionshandlers/kreheaderactionshandler.cpp:108
+#, fuzzy
+#| msgid ""
+#| "This header already exists.  Continuing will merge these two headers into "
+#| "one.  Are you sure?"
+msgid ""
+"This header already exists. Continuing will merge these two headers into "
+"one. Are you sure?"
+msgstr ""
+"Zaglavlje već postoji. Ako nastavite ova dva zaglavlja će se spojiti u "
+"jedno. Jeste li sigurni?"
+
+#: actionshandlers/kreprepmethodactionshandler.cpp:33
+#: actionshandlers/prepmethodactionshandler.cpp:38
+msgid "New Preparation Method"
+msgstr "Nova Metoda Pripreme"
+
+#: actionshandlers/kreprepmethodactionshandler.cpp:91
+#, fuzzy
+#| msgid ""
+#| "This header already exists.  Continuing will merge these two headers into "
+#| "one.  Are you sure?"
+msgid ""
+"This preparation method already exists. Continuing will merge these two "
+"headers into one. Are you sure?"
+msgstr ""
+"Zaglavlje već postoji. Ako nastavite ova dva zaglavlja će se spojiti u "
+"jedno. Jeste li sigurni?"
+
+#: actionshandlers/kreprepmethodactionshandler.cpp:113
+#: actionshandlers/prepmethodactionshandler.cpp:79
+#: widgets/ingredientinputwidget.cpp:270
+#, kde-format
+msgid "Preparation method cannot be longer than 1 character."
+msgid_plural "Preparation method cannot be longer than %1 characters."
+msgstr[0] "Metoda pripreme ne smije biti duža od %1 znak."
+msgstr[1] "Metoda pripreme ne smije biti duža od %1 znaka."
+msgstr[2] "Metoda pripreme ne smije biti duža od %1 znakova."
 
 #: actionshandlers/krepropertyactionshandler.cpp:62
 #: actionshandlers/propertyactionshandler.cpp:60
@@ -200,19 +259,6 @@ msgid_plural "Unit name cannot be longer than %1 characters."
 msgstr[0] "Ime jedinice ne smije biti duže od %1 znak."
 msgstr[1] "Ime jedinice ne smije biti duže od %1 znaka."
 msgstr[2] "Ime jedinice ne smije biti duže od %1 znakova."
-
-#: actionshandlers/prepmethodactionshandler.cpp:38
-msgid "New Preparation Method"
-msgstr "Nova Metoda Pripreme"
-
-#: actionshandlers/prepmethodactionshandler.cpp:79
-#: widgets/ingredientinputwidget.cpp:270
-#, kde-format
-msgid "Preparation method cannot be longer than 1 character."
-msgid_plural "Preparation method cannot be longer than %1 characters."
-msgstr[0] "Metoda pripreme ne smije biti duža od %1 znak."
-msgstr[1] "Metoda pripreme ne smije biti duža od %1 znaka."
-msgstr[2] "Metoda pripreme ne smije biti duža od %1 znakova."
 
 #: actionshandlers/recipeactionshandler.cpp:229
 msgid "Please select only one recipe."
@@ -370,17 +416,17 @@ msgstr ""
 msgid "Failed to fix database structure."
 msgstr "Neuspješno ispravljanje strukture baze podataka."
 
-#: backends/qsqlrecipedb.cpp:1848
+#: backends/qsqlrecipedb.cpp:1859
 #, kde-format
 msgid "In ingredient '%1': weight [%2/%3%4]"
 msgstr "U sastojku '%1': težina [%2/%3/%4]"
 
-#: backends/qsqlrecipedb.cpp:1898
+#: backends/qsqlrecipedb.cpp:1909
 #, kde-format
 msgid "In ingredient '%1': property \"%2\" [%3/%4]"
 msgstr "U sastojku '%1': svojstvo \"%2\" [%3/%4]"
 
-#: backends/qsqlrecipedb.cpp:2071
+#: backends/qsqlrecipedb.cpp:2082
 msgctxt "@info"
 msgid ""
 "<p>The database was created with a previous version of Krecipes. Would you "
@@ -397,11 +443,11 @@ msgstr ""
 "biti kompatibilna sa prethodnim verzijama Krecipes-a.</p><p>Ako prekinete "
 "ovu operaciju može doći do oštećenja baze podataka.</p></warning>"
 
-#: backends/qsqlrecipedb.cpp:2081
+#: backends/qsqlrecipedb.cpp:2092
 msgid "Porting database structure..."
 msgstr "Otpremam strukturu baze podataka..."
 
-#: backends/qsqlrecipedb.cpp:2168
+#: backends/qsqlrecipedb.cpp:2179
 msgctxt "@info:progress"
 msgid "Loading category list"
 msgstr "Učitavanje liste kategorija"
@@ -466,11 +512,11 @@ msgstr "Vraćanje rezerve"
 msgid "Restore Failed"
 msgstr "Vraćanje nije uspjelo"
 
-#: backends/recipedb.cpp:918
+#: backends/recipedb.cpp:923
 msgid "Nutrient Import"
 msgstr "Uvoz nutrijenta"
 
-#: backends/recipedb.cpp:918
+#: backends/recipedb.cpp:923
 msgid "Importing USDA nutrient data"
 msgstr "Uvozim USDA prehrambene podatke"
 
@@ -797,7 +843,7 @@ msgid "No matching recipes found"
 msgstr "Nisu pronađeni recepti koji se podudaraju."
 
 #: dialogs/authorsdialog.cpp:45 dialogs/categorieseditordialog.cpp:45
-#: dialogs/ingredientgroupsdialog.cpp:40 dialogs/ingredientsdialog.cpp:63
+#: dialogs/ingredientgroupsdialog.cpp:36 dialogs/ingredientsdialog.cpp:61
 #: dialogs/prepmethodsdialog.cpp:44 dialogs/propertiesdialog.cpp:48
 #: dialogs/unitsdialog.cpp:57
 msgctxt "@action:button"
@@ -805,7 +851,7 @@ msgid "Create..."
 msgstr "Napravi..."
 
 #: dialogs/authorsdialog.cpp:50 dialogs/categorieseditordialog.cpp:50
-#: dialogs/ingredientgroupsdialog.cpp:45 dialogs/ingredientsdialog.cpp:68
+#: dialogs/ingredientgroupsdialog.cpp:41 dialogs/ingredientsdialog.cpp:66
 #: dialogs/prepmethodsdialog.cpp:49 dialogs/propertiesdialog.cpp:52
 #: dialogs/selectrecipedialog.cpp:108 dialogs/unitsdialog.cpp:62
 msgctxt "@action:button"
@@ -1525,13 +1571,14 @@ msgstr "Analizator sastojaka"
 #: dialogs/ingredientparserdialog.cpp:66
 #: dialogs/ingredientparserdialog.cpp:115 dialogs/recipeinputdialog.cpp:344
 #: widgets/ingredientlistview.cpp:107 widgets/ingredientlistview.cpp:132
+#: widgets/kreingredientlistwidget.cpp:27
 msgctxt "@title:column"
 msgid "Ingredient"
 msgstr "Sastojak"
 
 #: dialogs/ingredientparserdialog.cpp:69
 #: dialogs/ingredientparserdialog.cpp:118 dialogs/recipeinputdialog.cpp:348
-#: widgets/prepmethodlistview.cpp:52
+#: widgets/kreprepmethodlistwidget.cpp:25 widgets/prepmethodlistview.cpp:52
 msgctxt "@title:column"
 msgid "Preparation Method"
 msgstr "Način pripreme"
@@ -1591,22 +1638,22 @@ msgctxt "@action:button"
 msgid "Parse Text"
 msgstr "Analiziraj tekst"
 
-#: dialogs/ingredientsdialog.cpp:74
+#: dialogs/ingredientsdialog.cpp:72
 msgctxt "@action:button"
 msgid "Property Information"
 msgstr "Informacija o Svojstvu"
 
-#: dialogs/ingredientsdialog.cpp:81 dialogs/recipeinputdialog.cpp:428
+#: dialogs/ingredientsdialog.cpp:79 dialogs/recipeinputdialog.cpp:428
 msgctxt "@title:tab"
 msgid "Ingredients"
 msgstr "Sastojci"
 
-#: dialogs/ingredientsdialog.cpp:84
+#: dialogs/ingredientsdialog.cpp:82
 msgctxt "@title:tab"
 msgid "Headers"
 msgstr "Zaglavlja"
 
-#: dialogs/ingredientsdialog.cpp:135
+#: dialogs/ingredientsdialog.cpp:133
 msgctxt "@info"
 msgid "No ingredient selected."
 msgstr "Nema izabranih sastojaka."
@@ -2163,7 +2210,9 @@ msgstr "Autori"
 #: widgets/categorylistview.cpp:317 widgets/categorylistview.cpp:381
 #: widgets/headerlistview.cpp:60 widgets/ingredientlistview.cpp:111
 #: widgets/ingredientlistview.cpp:136 widgets/kreauthorlistwidget.cpp:36
-#: widgets/krecategorieslistwidget.cpp:42 widgets/krepropertylistwidget.cpp:33
+#: widgets/krecategorieslistwidget.cpp:45 widgets/kreheaderlistwidget.cpp:26
+#: widgets/kreingredientlistwidget.cpp:26
+#: widgets/kreprepmethodlistwidget.cpp:24 widgets/krepropertylistwidget.cpp:33
 #: widgets/kreunitlistwidget.cpp:28 widgets/prepmethodlistview.cpp:56
 #: widgets/propertylistview.cpp:135 widgets/unitlistview.cpp:70
 msgctxt "@title:column"
@@ -3916,7 +3965,7 @@ msgctxt "Next item"
 msgid "Next >>"
 msgstr "Sljedeće >>"
 
-#: widgets/headerlistview.cpp:55
+#: widgets/headerlistview.cpp:55 widgets/kreheaderlistwidget.cpp:27
 msgctxt "@title:column"
 msgid "Header"
 msgstr "Zaglavlje"
@@ -3994,7 +4043,7 @@ msgctxt "@option do not specify a date"
 msgid "No Date"
 msgstr "Nema Datuma"
 
-#: widgets/krecategorieslistwidget.cpp:42
+#: widgets/krecategorieslistwidget.cpp:45
 msgctxt "@title:column"
 msgid "Categories"
 msgstr "Kategorije"
