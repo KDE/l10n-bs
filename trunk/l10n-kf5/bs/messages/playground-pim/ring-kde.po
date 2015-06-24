@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-06-10 09:13+0000\n"
+"POT-Creation-Date: 2015-06-24 09:14+0000\n"
 "PO-Revision-Date: 2015-02-24 23:35+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -36,14 +36,14 @@ msgstr "Radnje"
 #. i18n: ectx: Menu (View)
 #. i18n: ectx: property (text), widget (QToolButton, m_pViewCa)
 #. i18n: ectx: property (text), widget (QToolButton, m_pViewCert)
-#: data/ring-kdeui.rc:20 src/conf/dlgaccountsbase.ui:1598
-#: src/conf/dlgaccountsbase.ui:1612
+#: data/ring-kdeui.rc:20 src/conf/account/accountpages/security.ui:407
+#: src/conf/account/accountpages/security.ui:421
 msgid "View"
 msgstr "Pogled"
 
 #. i18n: ectx: Menu (Settings)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: data/ring-kdeui.rc:31 src/conf/dlgdht.ui:208
+#: data/ring-kdeui.rc:31 src/conf/account/accountpages/dlgdht.ui:150
 msgid "Settings"
 msgstr "Postavke"
 
@@ -201,7 +201,7 @@ msgstr "Dodaj novi kontakt"
 msgid "Configure Shortcut"
 msgstr "Podesite prečicu"
 
-#: src/canvasobjectmanager.cpp:224 src/ring.cpp:188
+#: src/canvasobjectmanager.cpp:227 src/ring.cpp:189
 #, fuzzy
 #| msgid "Ringtone"
 msgid "Ring"
@@ -225,6 +225,830 @@ msgstr "Korišteno u kombinaciji --send-text"
 #: src/cmd.cpp:66
 msgid "Start in the system tray"
 msgstr ""
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, AccountDlg)
+#. i18n: ectx: property (windowTitle), widget (QWidget, BasicPage)
+#. i18n: ectx: property (windowTitle), widget (QWidget, CodecPage)
+#. i18n: ectx: property (windowTitle), widget (QWidget, RingtonePage)
+#. i18n: ectx: property (windowTitle), widget (QWidget, AdvancedPage)
+#. i18n: ectx: property (windowTitle), widget (QWidget, SecurityPage)
+#. i18n: ectx: property (windowTitle), widget (QWidget, NetworkPage)
+#. i18n: ectx: property (windowTitle), widget (QWidget, CredentialsPage)
+#. i18n: ectx: property (windowTitle), widget (QWidget, DlgAudioRecording)
+#: src/conf/account/accountdlg.ui:14
+#: src/conf/account/accountpages/advanced.ui:14
+#: src/conf/account/accountpages/basic.ui:14
+#: src/conf/account/accountpages/codecs.ui:14
+#: src/conf/account/accountpages/credentials.ui:14
+#: src/conf/account/accountpages/network.ui:14
+#: src/conf/account/accountpages/ringtone.ui:14
+#: src/conf/account/accountpages/security.ui:14
+#: src/conf/dlgaudiorecording.ui:14
+msgid "Form"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, button_accountAdd)
+#: src/conf/account/accountdlg.ui:78
+msgid "Add a new account"
+msgstr "Dodaj novi nalog"
+
+#. i18n: ectx: property (whatsThis), widget (QToolButton, button_accountAdd)
+#: src/conf/account/accountdlg.ui:81
+msgid ""
+"This button enables you to initialize a new account. You will then be able "
+"to edit it using the form on the right."
+msgstr ""
+"Ovo dugme omogućava vam da se pokrene novi nalog. Tada ćete biti u "
+"mogućnosti da ga uredite koristeći obrazac na desnoj strani."
+
+#. i18n: ectx: property (text), widget (QToolButton, button_accountAdd)
+#: src/conf/account/accountdlg.ui:84
+msgctxt "Add new account"
+msgid "Add"
+msgstr "Dodaj"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, m_pAccountList)
+#: src/conf/account/accountdlg.ui:121
+#, fuzzy
+#| msgid ""
+#| "By default, when you place a call, sflphone will use the first account in "
+#| "this list which is \"registered\". Change the order of the accounts using "
+#| "the \"Up\" and \"Down\" arrows. Enable/disable them by checking/"
+#| "unchecking them on the left of the item. Add or remove some with \"Plus\" "
+#| "and \"Sub\" buttons. Edit the selected account with the form on the right."
+msgid ""
+"By default, when you place a call, Ring will use the first account in this "
+"list which is \"registered\". Change the order of the accounts using the \"Up"
+"\" and \"Down\" arrows. Enable/disable them by checking/unchecking them on "
+"the left of the item. Add or remove some with \"Plus\" and \"Sub\" buttons. "
+"Edit the selected account with the form on the right."
+msgstr ""
+"Podrazumijevano, kada ste uputili poziv, sflphone će koristiti prvi nalog na "
+"ovom spisku koji je \"registrovan\". Promijenite redoslijed naloga koristeći "
+"\"gore\" i \"dole\" strelice. Omogućite / onemogućite ih pomoću označavanja "
+"ih na lijevo od stavke. Dodajte ili uklonite neke sa \"plus\" i \"sub\" "
+"dugmadima. Izmjenite izabrani nalog uz pomoć formulara na desno."
+
+#. i18n: ectx: property (toolTip), widget (LeftToolButton, m_pMoveUp)
+#: src/conf/account/accountdlg.ui:161
+msgid "Get this account up"
+msgstr "Podignite ovaj nalog"
+
+#. i18n: ectx: property (whatsThis), widget (LeftToolButton, m_pMoveUp)
+#. i18n: ectx: property (whatsThis), widget (CenterToolButton, m_pMoveDown)
+#: src/conf/account/accountdlg.ui:164 src/conf/account/accountdlg.ui:183
+#, fuzzy
+#| msgid ""
+#| "By default, when you place a call, sflphone will use the first account in "
+#| "this list which is \"registered\". Change the order of the accounts using "
+#| "the \"Up\" and \"Down\" arrows."
+msgid ""
+"By default, when you place a call, Ring will use the first account in this "
+"list which is \"registered\". Change the order of the accounts using the \"Up"
+"\" and \"Down\" arrows."
+msgstr ""
+"Podrazumijevano, kada ste uputili poziv, sflphone će koristiti prvi nalog na "
+"ovom spisku koji je \"registrovan\". Promijenite redoslijed naloga koristeći "
+"\"gore\" i \"dole\" strelice."
+
+#. i18n: ectx: property (text), widget (LeftToolButton, m_pMoveUp)
+#: src/conf/account/accountdlg.ui:167
+msgctxt "Move account up"
+msgid "Up"
+msgstr "Gore"
+
+#. i18n: ectx: property (toolTip), widget (CenterToolButton, m_pMoveDown)
+#: src/conf/account/accountdlg.ui:180
+msgid "Get this account down"
+msgstr "Skini ovaj nalog"
+
+#. i18n: ectx: property (text), widget (CenterToolButton, m_pMoveDown)
+#: src/conf/account/accountdlg.ui:186
+msgctxt "Move account down"
+msgid "Down"
+msgstr "Dolje"
+
+#. i18n: ectx: property (toolTip), widget (RightToolButton, m_pRemove)
+#: src/conf/account/accountdlg.ui:205
+msgid "Remove the selected account"
+msgstr "Ukloni odabrani nalog"
+
+#. i18n: ectx: property (whatsThis), widget (RightToolButton, m_pRemove)
+#: src/conf/account/accountdlg.ui:208
+msgid ""
+"This button will remove the selected account in the list below. Be sure you "
+"really don't need it anymore. If you think you might use it again later, "
+"just uncheck it."
+msgstr ""
+"Ovo dugme će otkloniti odabrani račun sa liste ispod. Budite sigurni da Vam "
+"više nije potreban. Ako mislite da ga možete korisiti poslije, odznačite ga."
+
+#. i18n: ectx: property (text), widget (RightToolButton, m_pRemove)
+#: src/conf/account/accountdlg.ui:214
+msgctxt "Remove selected account"
+msgid "Remove"
+msgstr "Ukloni"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: src/conf/account/accountpages/advanced.ui:20
+msgid "Registration"
+msgstr "Registracija"
+
+#. i18n: ectx: property (text), widget (QLabel, label_regExpire)
+#: src/conf/account/accountpages/advanced.ui:29
+msgid "Registration expire"
+msgstr "Registracija ističe"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, lrcfg_registrationExpire)
+#. i18n: ectx: property (suffix), widget (QSpinBox, lrcfg_tlsNegotiationTimeoutSec)
+#: src/conf/account/accountpages/advanced.ui:39
+#: src/conf/account/accountpages/security.ui:461
+msgid " seconds"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_hasCustomUserAgent)
+#: src/conf/account/accountpages/advanced.ui:49
+#, fuzzy
+#| msgid "Use custom file"
+msgid "Use custom user agent"
+msgstr "Koristi prilagođenu datoteku"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: src/conf/account/accountpages/advanced.ui:66
+#, fuzzy
+#| msgid "Notifications"
+msgid "Negotiation"
+msgstr "Obavještenja"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_sipStunEnabled)
+#: src/conf/account/accountpages/advanced.ui:72
+#, fuzzy
+#| msgid "Enable STUN"
+msgid "Enable STUN"
+msgstr "Omogući STUN"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lrcfg_sipStunServer)
+#: src/conf/account/accountpages/advanced.ui:82
+msgid "Choose STUN server (example: stunserver.org)"
+msgstr "Odaberi STUN server (primjer: stunserver.org)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_hasProxy)
+#: src/conf/account/accountpages/advanced.ui:89
+msgid "Use a proxy"
+msgstr ""
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lrcfg_proxy)
+#: src/conf/account/accountpages/advanced.ui:99
+msgid "SIP proxy server (if none, leave blank)"
+msgstr "SIP proxy server (ako ga nema ostavi prazno)"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lrcfg_turnServer)
+#: src/conf/account/accountpages/advanced.ui:109
+#, fuzzy
+#| msgid "Choose STUN server (example: stunserver.org)"
+msgid "Choose TURN server (example: turnserver.org)"
+msgstr "Odaberi STUN server (primjer: stunserver.org)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_turnEnabled)
+#: src/conf/account/accountpages/advanced.ui:116
+#, fuzzy
+#| msgid "STUN Server"
+msgid "TURN server"
+msgstr "STUN server"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_upnpEnabled)
+#: src/conf/account/accountpages/advanced.ui:123
+#, fuzzy
+#| msgid "Enable STUN"
+msgid "Enable UPnP"
+msgstr "Omogući STUN"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/conf/account/accountpages/advanced.ui:136
+msgid "Feature"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_presenceEnabled)
+#: src/conf/account/accountpages/advanced.ui:145
+msgid "Enable presence support"
+msgstr "Omogući trenutnu podršku"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_isVideoEnabled)
+#: src/conf/account/accountpages/advanced.ui:152
+msgid "Enable video when supported"
+msgstr "Omogući video kada je podržan"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_6)
+#: src/conf/account/accountpages/advanced.ui:162
+msgid "DTMF"
+msgstr "DTMF"
+
+#. i18n: ectx: property (text), widget (QRadioButton, auto_2)
+#: src/conf/account/accountpages/advanced.ui:168
+msgid "Over RTP"
+msgstr "Preko RTP"
+
+#. i18n: ectx: property (text), widget (QRadioButton, lrcfg_dTMFType)
+#: src/conf/account/accountpages/advanced.ui:175
+msgid "Over SIP"
+msgstr "Preko SIP"
+
+#. i18n: ectx: property (text), widget (QLabel, label1_alias)
+#: src/conf/account/accountpages/basic.ui:20
+msgid "Alias*"
+msgstr "Alias*"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lrcfg_alias)
+#: src/conf/account/accountpages/basic.ui:42
+msgid "Anything, used only to select the account"
+msgstr "Bilo šta, koristiti samo za odabir računa"
+
+#. i18n: ectx: property (text), widget (QLabel, label2_protocol)
+#: src/conf/account/accountpages/basic.ui:49
+msgid "Protocol"
+msgstr "Protokol"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/conf/account/accountpages/basic.ui:62
+#, fuzzy
+#| msgid "Display all"
+msgid "Display Name*"
+msgstr "Prikaži sve"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lrcfg_displayName)
+#: src/conf/account/accountpages/basic.ui:69
+msgid "The name as seen by the peer"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label3_server)
+#: src/conf/account/accountpages/basic.ui:76
+msgctxt "SIP server"
+msgid "Server*"
+msgstr "Server*"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lrcfg_hostname)
+#: src/conf/account/accountpages/basic.ui:92
+#, fuzzy
+#| msgid "Example: sip.sflphone.org or 192.168.0.2"
+msgid "Example: sip.sflphone.org or 192.168.0.2"
+msgstr "Primjer: sip.sflphone.org ili 192.168.0.2"
+
+#. i18n: ectx: property (text), widget (QLabel, label4_user)
+#: src/conf/account/accountpages/basic.ui:102
+msgctxt "Account username"
+msgid "Username*"
+msgstr "Korisničko ime*"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lrcfg_username)
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, edit_credential_auth_2)
+#: src/conf/account/accountpages/basic.ui:112
+#: src/conf/account/accountpages/credentials.ui:163
+msgid "Usually your extension number"
+msgstr "Vaš oubičajeni broj lokala"
+
+#. i18n: ectx: property (text), widget (QLabel, label5_password)
+#: src/conf/account/accountpages/basic.ui:119
+msgctxt "Account password"
+msgid "Password*"
+msgstr "Šifra*"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lrcfg_password)
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, edit_credential_password_2)
+#: src/conf/account/accountpages/basic.ui:132
+#: src/conf/account/accountpages/credentials.ui:179
+msgid "SIP password, ask your network administrator"
+msgstr "SIP lozinku, obratite se administratoru mreže"
+
+#. i18n: ectx: property (text), widget (QLabel, label6_mailbox)
+#: src/conf/account/accountpages/basic.ui:139
+msgctxt "Account voice mail address"
+msgid "Voicemail"
+msgstr "Govorna pošta"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lrcfg_mailbox)
+#: src/conf/account/accountpages/basic.ui:149
+msgid "Usually the same as the username"
+msgstr "Obično isto kao i korisničko ime ime"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_hasCustomBootstrap)
+#: src/conf/account/accountpages/basic.ui:156
+#, fuzzy
+#| msgid "Use custom file"
+msgid "Use custom  bootstrap nodes"
+msgstr "Koristi prilagođenu datoteku"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_autoAnswer)
+#: src/conf/account/accountpages/basic.ui:170
+#: src/conf/account/accountpages/dlgdht.ui:166
+msgid "Auto answer"
+msgstr "Auto odgovor"
+
+#. i18n: ectx: property (text), widget (QLabel, label7_state)
+#: src/conf/account/accountpages/basic.ui:177
+msgid "Status"
+msgstr "Status"
+
+#. i18n: ectx: property (text), widget (QToolButton, m_pDisplayLog)
+#: src/conf/account/accountpages/basic.ui:205
+#, fuzzy
+#| msgid "Display all"
+msgid "Availability log"
+msgstr "Prikaži sve"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, button_audiocodecUp)
+#: src/conf/account/accountpages/codecs.ui:25
+msgid "Increase codec priority"
+msgstr "Povećaj kodec prioritet"
+
+#. i18n: ectx: property (whatsThis), widget (QToolButton, button_audiocodecUp)
+#. i18n: ectx: property (whatsThis), widget (QToolButton, button_audiocodecDown)
+#: src/conf/account/accountpages/codecs.ui:28
+#: src/conf/account/accountpages/codecs.ui:47
+#, fuzzy
+#| msgid ""
+#| "By default, when you place a call, sflphone will use the first account in "
+#| "this list which is \"registered\". Change the order of the accounts using "
+#| "the \"Up\" and \"Down\" arrows."
+msgid ""
+"By default, when you place a call, sflphone will use the first account in "
+"this list which is \"registered\". Change the order of the accounts using "
+"the \"Up\" and \"Down\" arrows."
+msgstr ""
+"Podrazumijevano, kada ste uputili poziv, sflphone će koristiti prvi nalog na "
+"ovom spisku koji je \"registrovan\". Promijenite redoslijed naloga koristeći "
+"\"gore\" i \"dole\" strelice."
+
+#. i18n: ectx: property (text), widget (QToolButton, button_audiocodecUp)
+#: src/conf/account/accountpages/codecs.ui:31
+msgctxt "Move audio codec up"
+msgid "Up"
+msgstr "Gore"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, button_audiocodecDown)
+#: src/conf/account/accountpages/codecs.ui:44
+msgid "Decrease codec priority"
+msgstr "Smanji  kodec prioritet"
+
+#. i18n: ectx: property (text), widget (QToolButton, button_audiocodecDown)
+#: src/conf/account/accountpages/codecs.ui:50
+msgctxt "Move audio codec down"
+msgid "Down"
+msgstr "Dolje"
+
+#. i18n: ectx: property (text), widget (QLabel, label_bitrate)
+#: src/conf/account/accountpages/codecs.ui:65
+msgid "Bitrate:"
+msgstr "Bitni protok:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_frequency)
+#: src/conf/account/accountpages/codecs.ui:72
+msgid "Sample rate:"
+msgstr "Frekvencija uzorka:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/conf/account/accountpages/codecs.ui:79
+msgid ""
+"Move the codecs up and down to alter the priority. Ring recommand Opus for "
+"audio and H264 for video. In case of problems, PCMA is the most widely "
+"supported audio codec and H263 the most supported video codec."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_pInfoL)
+#: src/conf/account/accountpages/credentials.ui:61
+#, fuzzy
+#| msgid ""
+#| "This tab help manage accounts with multiple credentials. If you have "
+#| "multiple accounts. Do not use this feature, just create multiple accounts "
+#| "in SFLPhone. Nor use this dialog if you only have one set of credentials. "
+#| "In that case, the \"Basic\" tab will provide everything you need."
+msgid ""
+"This tab help manage accounts with multiple credentials. If you have "
+"multiple accounts. Do not use this feature, just create multiple accounts in "
+"SFLPhone. Nor use this dialog if you only have one set of credentials. In "
+"that case, the \"Basic\" tab will provide everything you need."
+msgstr ""
+"Ova kartica pomoć upravljati računima sa višestrukim uvjerenjima. Ako imate "
+"više računa. Ne koristite ovu funkciju, samo otvorite više naloga u "
+"SFLPhone. Niti trebate koristiti ovaj dijalog ako imate samo jedan set "
+"uvjerenja. U tom slučaju, u \"Basic\" kartica će pružiti sve što vam je "
+"potrebno."
+
+#. i18n: ectx: property (text), widget (QToolButton, button_add_credential)
+#: src/conf/account/accountpages/credentials.ui:95
+msgctxt "Add new credential"
+msgid "Add"
+msgstr "Dodaj"
+
+#. i18n: ectx: property (text), widget (QToolButton, button_remove_credential)
+#: src/conf/account/accountpages/credentials.ui:105
+msgctxt "Remove selected credential"
+msgid "Remove"
+msgstr "Ukloni"
+
+#. i18n: ectx: property (title), widget (QGroupBox, group_credential)
+#: src/conf/account/accountpages/credentials.ui:123
+msgid "Details"
+msgstr "Detalji"
+
+#. i18n: ectx: property (text), widget (QLabel, label_credential_realm_2)
+#: src/conf/account/accountpages/credentials.ui:129
+msgid "Realm"
+msgstr "Područje"
+
+#. i18n: ectx: property (text), widget (QLabel, labe_credential_auth_2)
+#: src/conf/account/accountpages/credentials.ui:136
+msgid "Auth. name"
+msgstr "Aut. ime"
+
+#. i18n: ectx: property (text), widget (QLabel, label_credential_password_2)
+#: src/conf/account/accountpages/credentials.ui:143
+msgid "Password"
+msgstr "Lozinka"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, edit_credential_realm_2)
+#: src/conf/account/accountpages/credentials.ui:153
+msgid "Usually *"
+msgstr "Obično*"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: src/conf/account/accountpages/dlgdht.ui:17
+#, fuzzy
+#| msgid "Display all"
+msgid "Display name*"
+msgstr "Prikaži sve"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lrcfg_alias)
+#: src/conf/account/accountpages/dlgdht.ui:24
+msgid "The name you send to your peer"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/conf/account/accountpages/dlgdht.ui:35
+msgid "Peers lookup"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: src/conf/account/accountpages/dlgdht.ui:45
+msgid "Bootstrap"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: src/conf/account/accountpages/dlgdht.ui:57
+#, fuzzy
+#| msgid "Automatically remove calls after"
+msgid "Automatically add nodes"
+msgstr "Automatski ukloni pozive poslije"
+
+#. i18n: ectx: property (text), widget (LeftToolButton, toolButton)
+#. i18n: ectx: property (text), widget (CenterToolButton, toolButton_2)
+#. i18n: ectx: property (text), widget (CenterToolButton, toolButton_3)
+#. i18n: ectx: property (text), widget (RightToolButton, toolButton_4)
+#. i18n: ectx: property (text), widget (QToolButton, m_pDelete)
+#. i18n: ectx: property (text), widget (QToolButton, m_pPlay)
+#. i18n: ectx: property (text), widget (QToolButton, m_pPlayPause)
+#. i18n: ectx: property (text), widget (QToolButton, m_pStop)
+#: src/conf/account/accountpages/dlgdht.ui:92
+#: src/conf/account/accountpages/dlgdht.ui:104
+#: src/conf/account/accountpages/dlgdht.ui:116
+#: src/conf/account/accountpages/dlgdht.ui:128 src/widgets/ui/player.ui:64
+#: src/widgets/ui/player.ui:71 src/widgets/ui/playeroverlay.ui:54
+#: src/widgets/ui/playeroverlay.ui:77
+msgid "..."
+msgstr "..."
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox_2)
+#: src/conf/account/accountpages/dlgdht.ui:159
+msgid "Only allow incoming calls from known peers"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/conf/account/accountpages/dlgdht.ui:182
+msgid "For your friends to be able to call you, send them your hash:"
+msgstr ""
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lrcfg_username)
+#: src/conf/account/accountpages/dlgdht.ui:192
+msgid "Your hash will be generated once the account is saved"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: src/conf/account/accountpages/dlgdht.ui:199
+msgid "Fields marked with \"*\" are compulsory and required"
+msgstr "Polja označena sa \"*\" su obavezna i potrebna"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: src/conf/account/accountpages/network.ui:20
+msgid "Network Interface"
+msgstr "Mrežni interfejs"
+
+#. i18n: ectx: property (text), widget (QLabel, label_ni_local_address)
+#: src/conf/account/accountpages/network.ui:26
+msgid "Local address"
+msgstr "Lokalna adresa"
+
+#. i18n: ectx: property (text), widget (QLabel, label_ni_local_port)
+#: src/conf/account/accountpages/network.ui:43
+msgid "Local port"
+msgstr "Lokalni port"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#. i18n: ectx: property (text), widget (QLabel, label_published_address)
+#: src/conf/account/accountpages/network.ui:60
+#: src/conf/account/accountpages/network.ui:83
+msgid "Published address"
+msgstr "Objavljena adresa"
+
+#. i18n: ectx: property (text), widget (QRadioButton, lrcfg_publishedSameAsLocal)
+#: src/conf/account/accountpages/network.ui:66
+msgid "Same as local parameters"
+msgstr "Isto kao lokalni parametri"
+
+#. i18n: ectx: property (text), widget (QRadioButton, auto_2)
+#: src/conf/account/accountpages/network.ui:76
+msgid "Set published address and port"
+msgstr "Postavi objavljenu adresu i izlaz"
+
+#. i18n: ectx: property (text), widget (QLabel, label_pa_published_port)
+#: src/conf/account/accountpages/network.ui:90
+msgid "Published port"
+msgstr "Objavljeni port"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lrcfg_publishedAddress)
+#: src/conf/account/accountpages/network.ui:110
+msgid "IP address or hostname"
+msgstr "IP adresa ili hostname"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_7)
+#: src/conf/account/accountpages/network.ui:133
+#, fuzzy
+#| msgid "RTP configuration"
+msgid "RTP configuration"
+msgstr "RTP configuracija"
+
+#. i18n: ectx: property (text), widget (QLabel, m_pMinAudioPortL)
+#: src/conf/account/accountpages/network.ui:146
+msgid "Minimum audio port"
+msgstr "Minimalni audio port"
+
+#. i18n: ectx: property (text), widget (QLabel, m_pMinVideoPortL)
+#: src/conf/account/accountpages/network.ui:187
+msgid "Minimum video port"
+msgstr "Minimalni video port"
+
+#. i18n: ectx: property (text), widget (QLabel, m_pMaxAudioPortL)
+#: src/conf/account/accountpages/network.ui:194
+msgid "Maximum audio port"
+msgstr "Maksimalni audio port"
+
+#. i18n: ectx: property (text), widget (QLabel, m_pMaxVideoPortL)
+#: src/conf/account/accountpages/network.ui:201
+#, fuzzy
+#| msgid "Minimum video port"
+msgid "Maximum video port"
+msgstr "Minimalni video port"
+
+#. i18n: ectx: property (title), widget (QGroupBox, m_pEnableRingtoneGB)
+#. i18n: ectx: property (text), widget (QLabel, alsaRingtoneDeviceL)
+#: src/conf/account/accountpages/ringtone.ui:30 src/conf/dlgaudiobase.ui:130
+msgid "Ringtone"
+msgstr "Zvono"
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_pUseCustomFileCK)
+#: src/conf/account/accountpages/ringtone.ui:55
+msgid "Use custom file"
+msgstr "Koristi prilagođenu datoteku"
+
+#. i18n: ectx: property (title), widget (QGroupBox, lrcfg_srtpEnabled)
+#: src/conf/account/accountpages/security.ui:77
+msgid "Encrypt media streams (SRTP)"
+msgstr "Šifruj medija potoke (SRTP)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_zrtpHelloHash)
+#: src/conf/account/accountpages/security.ui:99
+msgid "Send Hello Hash in SDP"
+msgstr "Pošalji Hello Hash u SDP"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_zrtpDisplaySas)
+#: src/conf/account/accountpages/security.ui:109
+msgid "Ask user to confirm SAS"
+msgstr "Traži od korisnika da potvrdi SAS"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_zrtpNotSuppWarning)
+#: src/conf/account/accountpages/security.ui:119
+msgid "Warn if ZRTP is not supported"
+msgstr "Upozori ako ne podržava ZRTP"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_displaySasOnce)
+#: src/conf/account/accountpages/security.ui:129
+msgid "Display SAS once for hold events"
+msgstr "Prikaži SAS jednom za održavanje događaja"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_srtpRtpFallback)
+#: src/conf/account/accountpages/security.ui:136
+msgid "Fallback on RTP on SDES failure"
+msgstr "Kašnjenje na RTP na SDES kvaru"
+
+#. i18n: ectx: property (title), widget (QGroupBox, lrcfg_tlsEnabled)
+#: src/conf/account/accountpages/security.ui:152
+msgid "Encrypt negotiation (TLS)"
+msgstr "Šifruj pregovore (TLS)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_tls_endpoint)
+#: src/conf/account/accountpages/security.ui:164
+msgid "Public endpoint certificate"
+msgstr "Javni certifikat krajnje tačke"
+
+#. i18n: ectx: property (text), widget (QLabel, label_tls_authority)
+#: src/conf/account/accountpages/security.ui:184
+msgid "Authority certificate list"
+msgstr "Lista upravnih certifikata"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_tlsVerifyServer)
+#: src/conf/account/accountpages/security.ui:194
+msgid "Verify incoming certificates (server side)"
+msgstr "Provjerite dolazne potvrde (server strana)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_tls_private_key)
+#: src/conf/account/accountpages/security.ui:201
+msgid "Private key"
+msgstr "Privatni ključ"
+
+#. i18n: ectx: property (text), widget (QLabel, label_tls_timeout)
+#: src/conf/account/accountpages/security.ui:211
+msgid "Negotiation timeout"
+msgstr "Prekid pregovora"
+
+#. i18n: ectx: property (text), widget (QLabel, m_pMoveCertL)
+#: src/conf/account/accountpages/security.ui:263
+msgid ""
+"A good security practice is to move the certificates to a common directory. "
+"SELinux recommend ~/.cert for this. Do you wish to move the certificate "
+"there?"
+msgstr ""
+"Dobra sigurnosna praksa je da se certifikat pomjeri u zajednički direktorij. "
+"SELinux preporučujemo ~ / .cert za ovo. Želite li da se certifikat "
+"premjesti  tamo?"
+
+#. i18n: ectx: property (text), widget (QPushButton, m_pMoveCertPB)
+#: src/conf/account/accountpages/security.ui:277
+msgid "Move to ~/.cert"
+msgstr "Premjesti u  ~/.cert"
+
+#. i18n: ectx: property (text), widget (QPushButton, m_pCancelMove)
+#. i18n: ectx: property (text), widget (QPushButton, m_pCancelFix)
+#: src/conf/account/accountpages/security.ui:284
+#: src/conf/account/accountpages/security.ui:362
+msgid "No thanks"
+msgstr "Ne hvala"
+
+#. i18n: ectx: property (text), widget (QLabel, m_pMoveCertL_2)
+#: src/conf/account/accountpages/security.ui:341
+msgid ""
+"Your certification access is too permissive. Certificates should only be "
+"readable by the owner."
+msgstr ""
+"Naš pristup certifikacija je previše popustljiv. Potvrde treba da bude "
+"čitljive samo od strane vlasnika."
+
+#. i18n: ectx: property (text), widget (QPushButton, m_pFixCertPB)
+#: src/conf/account/accountpages/security.ui:355
+msgid "Fix the permissions"
+msgstr "Popravi dozvole"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lrcfg_tlsPassword)
+#: src/conf/account/accountpages/security.ui:390
+msgid "Only necessary if the key have a password"
+msgstr "Samo potrebno ako ključ ima lozinku"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lrcfg_tlsServerName)
+#: src/conf/account/accountpages/security.ui:397
+msgid "Usually the SIP server hostname"
+msgstr "Obično SIP server ime domaćina"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pViewCa)
+#: src/conf/account/accountpages/security.ui:404
+#, fuzzy
+#| msgid "Public endpoint certificate"
+msgid "View the certificate authority"
+msgstr "Javni certifikat krajnje tačke"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, m_pViewCert)
+#: src/conf/account/accountpages/security.ui:418
+#, fuzzy
+#| msgid "Public endpoint certificate"
+msgid "View the certificate"
+msgstr "Javni certifikat krajnje tačke"
+
+#. i18n: ectx: property (text), widget (QLabel, label_tls_private_key_password)
+#: src/conf/account/accountpages/security.ui:432
+msgid "Private key password"
+msgstr "Šifra privatnog ključa"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_tlsRequireClientCertificate)
+#: src/conf/account/accountpages/security.ui:442
+msgid "Require a certificate for incoming TLS connections"
+msgstr "Traži potvrdu za dolazeće TLS veze"
+
+#. i18n: ectx: property (text), widget (QLabel, label_tls_outgoing)
+#: src/conf/account/accountpages/security.ui:474
+msgid "Outgoing TLS server name"
+msgstr "Naziv odlazećeg TLS servera"
+
+#. i18n: ectx: property (text), widget (QCheckBox, lrcfg_tlsVerifyClient)
+#: src/conf/account/accountpages/security.ui:481
+msgid "Verify answer certificates (client side)"
+msgstr "Potvrdi odgovorne potvrde (strani klijenta)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_tls_method)
+#: src/conf/account/accountpages/security.ui:510
+msgid "TLS protocol method"
+msgstr "TLS protokol metoda"
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_pDefaultCiphers)
+#: src/conf/account/accountpages/security.ui:517
+msgid "Use default ciphers"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: src/conf/account/accountpages/tabs.ui:21
+#, fuzzy
+#| msgctxt "Basic settings"
+#| msgid "Basic"
+msgid "Basic"
+msgstr "Osnovno"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: src/conf/account/accountpages/tabs.ui:31
+#, fuzzy
+#| msgctxt "Advanced settings"
+#| msgid "Advanced"
+msgid "Advanced"
+msgstr "Napredno"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: src/conf/account/accountpages/tabs.ui:41
+msgid "Network"
+msgstr "Mreža"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#: src/conf/account/accountpages/tabs.ui:51
+msgid "Codecs"
+msgstr "Kodeci"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_7)
+#: src/conf/account/accountpages/tabs.ui:61
+#, fuzzy
+#| msgid "Credential"
+msgid "Credentials"
+msgstr "Uvjerenje"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_5)
+#: src/conf/account/accountpages/tabs.ui:71
+msgid "Security"
+msgstr "Sigurnost"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_6)
+#: src/conf/account/accountpages/tabs.ui:81
+#, fuzzy
+#| msgid "Ringtone"
+msgid "Ringtones"
+msgstr "Zvono"
+
+#         translations.
+#: src/conf/account/widgets/securityprogress.cpp:277
+#, kde-format
+msgid "%1 tip"
+msgid_plural "%1 tips"
+msgstr[0] "%1 savjet"
+msgstr[1] "%1 savjeta"
+msgstr[2] "%1 savjeta"
+
+#         translations.
+#: src/conf/account/widgets/securityprogress.cpp:278
+#, kde-format
+msgid "%1 warning"
+msgid_plural "%1 warnings"
+msgstr[0] "%1 upozorenje"
+msgstr[1] "%1 upozorenja"
+msgstr[2] "%1 upozorenja"
+
+#         translations.
+#: src/conf/account/widgets/securityprogress.cpp:279
+#, kde-format
+msgid "%1 issue"
+msgid_plural "%1 issues"
+msgstr[0] "%1 problem"
+msgstr[1] "%1 problema"
+msgstr[2] "%1 problema"
+
+#         translations.
+#: src/conf/account/widgets/securityprogress.cpp:280
+#, kde-format
+msgid "%1 error"
+msgid_plural "%1 errors"
+msgstr[0] "%1 greška"
+msgstr[1] "%1 greše"
+msgstr[2] "%1 grešaka"
 
 #: src/conf/configurationdialog.cpp:115
 msgid "Accounts"
@@ -328,12 +1152,11 @@ msgstr "Makro"
 msgid "Remove"
 msgstr "Ukloni"
 
-#. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #. i18n: ectx: property (text), widget (QPushButton, btn_add_field)
 #. i18n: ectx: property (text), widget (LeftToolButton, m_pAddTB)
 #. i18n: ectx: property (text), widget (CenterToolButton, m_pAdd)
-#: src/conf/dlgaccessibility.ui:129 src/conf/dlgdht.ui:188
-#: src/conf/dlgpresence.ui:71 src/conf/dlgprofiles.ui:226
+#: src/conf/dlgaccessibility.ui:129 src/conf/dlgpresence.ui:71
+#: src/conf/dlgprofiles.ui:226
 msgid "Add"
 msgstr "Dodaj"
 
@@ -391,712 +1214,6 @@ msgstr "Prečica"
 #: src/conf/dlgaccessibility.ui:364
 msgid "Info"
 msgstr "Info"
-
-#: src/conf/dlgaccounts.cpp:108
-msgid ""
-"To add an account, press the \"Add\" button below. Use the ⬆ up and ⬇ down "
-"button to change the default account priority."
-msgstr ""
-"Da biste dodali račun, ispod pritisnite tipku \"Dodaj\". Koristi gore ⬆ i ⬇ "
-"tipku dolje za promjenu zadanog prioriteta za račun."
-
-#: src/conf/dlgaccounts.cpp:116
-msgid "Usually called \"ca.crt\" or \"cacert.pem\""
-msgstr "Obično se zove \"ca.crt\" ili \"cacert.pem\""
-
-#: src/conf/dlgaccounts.cpp:117
-msgid "A .pem or .crt"
-msgstr ".pem ili .crt"
-
-#: src/conf/dlgaccounts.cpp:118
-msgid "A .key file"
-msgstr ".ključ datoteka"
-
-#: src/conf/dlgaccounts.cpp:655
-msgid "New account"
-msgstr "Novi nalog"
-
-#: src/conf/dlgaccounts.cpp:655
-#, kde-format
-msgid "New account%1"
-msgstr "Novi nalog%1"
-
-#: src/conf/dlgaccounts.cpp:673
-#, kde-format
-msgid "Are you sure you want to remove %1?"
-msgstr "Želite li zaista da uklonite %1?"
-
-#: src/conf/dlgaccounts.cpp:673
-msgid "Remove account"
-msgstr "Ukloni nalog"
-
-#: src/conf/dlgaccounts.cpp:715
-msgid "Warning, caps lock is turned on!"
-msgstr "Upozorenje, caps lock je uključen!"
-
-#. i18n: ectx: property (text), widget (QLabel, label_message)
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: src/conf/dlgaccounts.cpp:719 src/conf/dlgaccountsbase.ui:457
-#: src/conf/dlgdht.ui:257
-msgid "Fields marked with \"*\" are compulsory and required"
-msgstr "Polja označena sa \"*\" su obavezna i potrebna"
-
-#. i18n: ectx: property (whatsThis), widget (CategorizedTreeView, treeView_accountList)
-#: src/conf/dlgaccountsbase.ui:95
-#, fuzzy
-#| msgid ""
-#| "By default, when you place a call, sflphone will use the first account in "
-#| "this list which is \"registered\". Change the order of the accounts using "
-#| "the \"Up\" and \"Down\" arrows. Enable/disable them by checking/"
-#| "unchecking them on the left of the item. Add or remove some with \"Plus\" "
-#| "and \"Sub\" buttons. Edit the selected account with the form on the right."
-msgid ""
-"By default, when you place a call, Ring will use the first account in this "
-"list which is \"registered\". Change the order of the accounts using the \"Up"
-"\" and \"Down\" arrows. Enable/disable them by checking/unchecking them on "
-"the left of the item. Add or remove some with \"Plus\" and \"Sub\" buttons. "
-"Edit the selected account with the form on the right."
-msgstr ""
-"Podrazumijevano, kada ste uputili poziv, sflphone će koristiti prvi nalog na "
-"ovom spisku koji je \"registrovan\". Promijenite redoslijed naloga koristeći "
-"\"gore\" i \"dole\" strelice. Omogućite / onemogućite ih pomoću označavanja "
-"ih na lijevo od stavke. Dodajte ili uklonite neke sa \"plus\" i \"sub\" "
-"dugmadima. Izmjenite izabrani nalog uz pomoć formulara na desno."
-
-#. i18n: ectx: property (toolTip), widget (LeftToolButton, button_accountUp)
-#: src/conf/dlgaccountsbase.ui:122
-msgid "Get this account up"
-msgstr "Podignite ovaj nalog"
-
-#. i18n: ectx: property (whatsThis), widget (LeftToolButton, button_accountUp)
-#. i18n: ectx: property (whatsThis), widget (CenterToolButton, button_accountDown)
-#. i18n: ectx: property (whatsThis), widget (LeftToolButton, button_audiocodecUp)
-#. i18n: ectx: property (whatsThis), widget (RightToolButton, button_audiocodecDown)
-#: src/conf/dlgaccountsbase.ui:125 src/conf/dlgaccountsbase.ui:141
-#: src/conf/dlgaccountsbase.ui:913 src/conf/dlgaccountsbase.ui:929
-#, fuzzy
-#| msgid ""
-#| "By default, when you place a call, sflphone will use the first account in "
-#| "this list which is \"registered\". Change the order of the accounts using "
-#| "the \"Up\" and \"Down\" arrows."
-msgid ""
-"By default, when you place a call, Ring will use the first account in this "
-"list which is \"registered\". Change the order of the accounts using the \"Up"
-"\" and \"Down\" arrows."
-msgstr ""
-"Podrazumijevano, kada ste uputili poziv, sflphone će koristiti prvi nalog na "
-"ovom spisku koji je \"registrovan\". Promijenite redoslijed naloga koristeći "
-"\"gore\" i \"dole\" strelice."
-
-#. i18n: ectx: property (text), widget (LeftToolButton, button_accountUp)
-#: src/conf/dlgaccountsbase.ui:128
-msgctxt "Move account up"
-msgid "Up"
-msgstr "Gore"
-
-#. i18n: ectx: property (toolTip), widget (CenterToolButton, button_accountDown)
-#: src/conf/dlgaccountsbase.ui:138
-msgid "Get this account down"
-msgstr "Skini ovaj nalog"
-
-#. i18n: ectx: property (text), widget (CenterToolButton, button_accountDown)
-#: src/conf/dlgaccountsbase.ui:144
-msgctxt "Move account down"
-msgid "Down"
-msgstr "Dolje"
-
-#. i18n: ectx: property (toolTip), widget (RightToolButton, button_accountRemove)
-#: src/conf/dlgaccountsbase.ui:160
-msgid "Remove the selected account"
-msgstr "Ukloni odabrani nalog"
-
-#. i18n: ectx: property (whatsThis), widget (RightToolButton, button_accountRemove)
-#: src/conf/dlgaccountsbase.ui:163
-msgid ""
-"This button will remove the selected account in the list below. Be sure you "
-"really don't need it anymore. If you think you might use it again later, "
-"just uncheck it."
-msgstr ""
-"Ovo dugme će otkloniti odabrani račun sa liste ispod. Budite sigurni da Vam "
-"više nije potreban. Ako mislite da ga možete korisiti poslije, odznačite ga."
-
-#. i18n: ectx: property (text), widget (RightToolButton, button_accountRemove)
-#: src/conf/dlgaccountsbase.ui:169
-msgctxt "Remove selected account"
-msgid "Remove"
-msgstr "Ukloni"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, button_accountAdd)
-#: src/conf/dlgaccountsbase.ui:206
-msgid "Add a new account"
-msgstr "Dodaj novi nalog"
-
-#. i18n: ectx: property (whatsThis), widget (QToolButton, button_accountAdd)
-#: src/conf/dlgaccountsbase.ui:209
-msgid ""
-"This button enables you to initialize a new account. You will then be able "
-"to edit it using the form on the right."
-msgstr ""
-"Ovo dugme omogućava vam da se pokrene novi nalog. Tada ćete biti u "
-"mogućnosti da ga uredite koristeći obrazac na desnoj strani."
-
-#. i18n: ectx: property (text), widget (QToolButton, button_accountAdd)
-#: src/conf/dlgaccountsbase.ui:212
-msgctxt "Add new account"
-msgid "Add"
-msgstr "Dodaj"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_basic)
-#: src/conf/dlgaccountsbase.ui:244
-msgctxt "Basic settings"
-msgid "Basic"
-msgstr "Osnovno"
-
-#. i18n: ectx: property (text), widget (QLabel, label1_alias)
-#: src/conf/dlgaccountsbase.ui:255
-msgid "Alias*"
-msgstr "Alias*"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, edit1_alias)
-#: src/conf/dlgaccountsbase.ui:277
-msgid "Anything, used only to select the account"
-msgstr "Bilo šta, koristiti samo za odabir računa"
-
-#. i18n: ectx: property (text), widget (QLabel, label2_protocol)
-#: src/conf/dlgaccountsbase.ui:284
-msgid "Protocol"
-msgstr "Protokol"
-
-#. i18n: ectx: property (text), widget (QLabel, label3_server)
-#: src/conf/dlgaccountsbase.ui:297
-msgctxt "SIP server"
-msgid "Server*"
-msgstr "Server*"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, edit3_server)
-#: src/conf/dlgaccountsbase.ui:313
-#, fuzzy
-#| msgid "Example: sip.sflphone.org or 192.168.0.2"
-msgid "Example: sip.Ring.org or 192.168.0.2"
-msgstr "Primjer: sip.sflphone.org ili 192.168.0.2"
-
-#. i18n: ectx: property (text), widget (QLabel, label4_user)
-#: src/conf/dlgaccountsbase.ui:323
-msgctxt "Account username"
-msgid "Username*"
-msgstr "Korisničko ime*"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, edit4_user)
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, edit_credential_auth)
-#: src/conf/dlgaccountsbase.ui:333 src/conf/dlgaccountsbase.ui:1162
-msgid "Usually your extension number"
-msgstr "Vaš oubičajeni broj lokala"
-
-#. i18n: ectx: property (text), widget (QLabel, label5_password)
-#: src/conf/dlgaccountsbase.ui:340
-msgctxt "Account password"
-msgid "Password*"
-msgstr "Šifra*"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, edit5_password)
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, edit_credential_password)
-#: src/conf/dlgaccountsbase.ui:353 src/conf/dlgaccountsbase.ui:1178
-msgid "SIP password, ask your network administrator"
-msgstr "SIP lozinku, obratite se administratoru mreže"
-
-#. i18n: ectx: property (text), widget (QLabel, label6_mailbox)
-#: src/conf/dlgaccountsbase.ui:360
-msgctxt "Account voice mail address"
-msgid "Voicemail"
-msgstr "Govorna pošta"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, edit6_mailbox)
-#: src/conf/dlgaccountsbase.ui:370
-msgid "Usually the same as the username"
-msgstr "Obično isto kao i korisničko ime ime"
-
-#. i18n: ectx: property (text), widget (QCheckBox, m_pAutoAnswer)
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox_3)
-#: src/conf/dlgaccountsbase.ui:377 src/conf/dlgdht.ui:224
-msgid "Auto answer"
-msgstr "Auto odgovor"
-
-#. i18n: ectx: property (text), widget (QCheckBox, m_pPresenceCK)
-#: src/conf/dlgaccountsbase.ui:387
-msgid "Enable presence support"
-msgstr "Omogući trenutnu podršku"
-
-#. i18n: ectx: property (text), widget (QToolButton, statusButton)
-#: src/conf/dlgaccountsbase.ui:415
-#, fuzzy
-#| msgid "Display all"
-msgid "Display availability log"
-msgstr "Prikaži sve"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: src/conf/dlgaccountsbase.ui:468
-msgid "RING"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_advanced)
-#: src/conf/dlgaccountsbase.ui:478
-msgctxt "Advanced settings"
-msgid "Advanced"
-msgstr "Napredno"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: src/conf/dlgaccountsbase.ui:484
-msgid "Registration"
-msgstr "Registracija"
-
-#. i18n: ectx: property (text), widget (QLabel, label_regExpire)
-#: src/conf/dlgaccountsbase.ui:490
-msgid "Registration expire"
-msgstr "Registracija ističe"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, spinbox_regExpire)
-#. i18n: ectx: property (suffix), widget (QSpinBox, spinbox_tls_timeout_sec)
-#: src/conf/dlgaccountsbase.ui:502 src/conf/dlgaccountsbase.ui:1652
-msgid " seconds"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, m_pUseCustomUserAgent)
-#: src/conf/dlgaccountsbase.ui:527
-#, fuzzy
-#| msgid "Use custom file"
-msgid "Use custom user agent"
-msgstr "Koristi prilagođenu datoteku"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: src/conf/dlgaccountsbase.ui:546
-#, fuzzy
-#| msgid "Notifications"
-msgid "Negotiation"
-msgstr "Obavještenja"
-
-#. i18n: ectx: property (text), widget (QCheckBox, m_pProxyCK)
-#: src/conf/dlgaccountsbase.ui:552
-msgid "Use a proxy"
-msgstr ""
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, m_pProxyLE)
-#: src/conf/dlgaccountsbase.ui:562
-msgid "SIP proxy server (if none, leave blank)"
-msgstr "SIP proxy server (ako ga nema ostavi prazno)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, checkbox_stun)
-#: src/conf/dlgaccountsbase.ui:569
-#, fuzzy
-#| msgid "STUN Server"
-msgid "STUN server"
-msgstr "STUN server"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, line_stun)
-#: src/conf/dlgaccountsbase.ui:579
-msgid "Choose STUN server (example: stunserver.org)"
-msgstr "Odaberi STUN server (primjer: stunserver.org)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, checkbox_turn)
-#: src/conf/dlgaccountsbase.ui:586
-#, fuzzy
-#| msgid "STUN Server"
-msgid "TURN server"
-msgstr "STUN server"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, line_turn)
-#: src/conf/dlgaccountsbase.ui:596
-#, fuzzy
-#| msgid "Choose STUN server (example: stunserver.org)"
-msgid "Choose TURN server (example: turnserver.org)"
-msgstr "Odaberi STUN server (primjer: stunserver.org)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, m_pEnableUPnP)
-#: src/conf/dlgaccountsbase.ui:603
-#, fuzzy
-#| msgid "Enable STUN"
-msgid "Enable UPnP"
-msgstr "Omogući STUN"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_6)
-#: src/conf/dlgaccountsbase.ui:616
-msgid "DTMF"
-msgstr "DTMF"
-
-#. i18n: ectx: property (text), widget (QRadioButton, m_pDTMFOverRTP)
-#: src/conf/dlgaccountsbase.ui:625
-msgid "Over RTP"
-msgstr "Preko RTP"
-
-#. i18n: ectx: property (text), widget (QRadioButton, m_pDTMFOverSIP)
-#: src/conf/dlgaccountsbase.ui:632
-msgid "Over SIP"
-msgstr "Preko SIP"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: src/conf/dlgaccountsbase.ui:656
-msgid "Network"
-msgstr "Mreža"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: src/conf/dlgaccountsbase.ui:662
-msgid "Network Interface"
-msgstr "Mrežni interfejs"
-
-#. i18n: ectx: property (text), widget (QLabel, label_ni_local_address)
-#: src/conf/dlgaccountsbase.ui:684
-msgid "Local address"
-msgstr "Lokalna adresa"
-
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox_2)
-#: src/conf/dlgaccountsbase.ui:691
-#, fuzzy
-#| msgid "Use custom file"
-msgid "Use custom port"
-msgstr "Koristi prilagođenu datoteku"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: src/conf/dlgaccountsbase.ui:701
-#, fuzzy
-#| msgid "Published address"
-msgid "Fallback Published address"
-msgstr "Objavljena adresa"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_pa_same_as_local)
-#: src/conf/dlgaccountsbase.ui:707
-msgid "Same as local parameters"
-msgstr "Isto kao lokalni parametri"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_pa_custom)
-#: src/conf/dlgaccountsbase.ui:714
-msgid "Set published address and port"
-msgstr "Postavi objavljenu adresu i izlaz"
-
-#. i18n: ectx: property (text), widget (QLabel, label_published_address)
-#: src/conf/dlgaccountsbase.ui:721
-msgid "Published address"
-msgstr "Objavljena adresa"
-
-#. i18n: ectx: property (text), widget (QLabel, label_pa_published_port)
-#: src/conf/dlgaccountsbase.ui:728
-msgid "Published port"
-msgstr "Objavljeni port"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, lineEdit_pa_published_address)
-#: src/conf/dlgaccountsbase.ui:742
-msgid "IP address or hostname"
-msgstr "IP adresa ili hostname"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_7)
-#: src/conf/dlgaccountsbase.ui:765
-#, fuzzy
-#| msgid "RTP configuration"
-msgid "Fallback RTP configuration"
-msgstr "RTP configuracija"
-
-#. i18n: ectx: property (text), widget (QLabel, m_pMinAudioPortL)
-#: src/conf/dlgaccountsbase.ui:778
-msgid "Minimum audio port"
-msgstr "Minimalni audio port"
-
-#. i18n: ectx: property (text), widget (QLabel, m_pMinVideoPortL)
-#. i18n: ectx: property (text), widget (QLabel, m_pMaxVideoPortL)
-#: src/conf/dlgaccountsbase.ui:819 src/conf/dlgaccountsbase.ui:833
-msgid "Minimum video port"
-msgstr "Minimalni video port"
-
-#. i18n: ectx: property (text), widget (QLabel, m_pMaxAudioPortL)
-#: src/conf/dlgaccountsbase.ui:826
-msgid "Maximum audio port"
-msgstr "Maksimalni audio port"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_8)
-#: src/conf/dlgaccountsbase.ui:843
-msgid "DHT"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: src/conf/dlgaccountsbase.ui:849
-msgid "Port"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_codec)
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: src/conf/dlgaccountsbase.ui:893 src/conf/dlgaccountsbase.ui:899
-msgid "Codecs"
-msgstr "Kodeci"
-
-#. i18n: ectx: property (toolTip), widget (LeftToolButton, button_audiocodecUp)
-#: src/conf/dlgaccountsbase.ui:910
-msgid "Increase codec priority"
-msgstr "Povećaj kodec prioritet"
-
-#. i18n: ectx: property (text), widget (LeftToolButton, button_audiocodecUp)
-#: src/conf/dlgaccountsbase.ui:916
-msgctxt "Move audio codec up"
-msgid "Up"
-msgstr "Gore"
-
-#. i18n: ectx: property (toolTip), widget (RightToolButton, button_audiocodecDown)
-#: src/conf/dlgaccountsbase.ui:926
-msgid "Decrease codec priority"
-msgstr "Smanji  kodec prioritet"
-
-#. i18n: ectx: property (text), widget (RightToolButton, button_audiocodecDown)
-#: src/conf/dlgaccountsbase.ui:932
-msgctxt "Move audio codec down"
-msgid "Down"
-msgstr "Dolje"
-
-#. i18n: ectx: property (text), widget (QLabel, label_bitrate_value)
-#. i18n: ectx: property (text), widget (QLabel, label_frequency_value)
-#: src/conf/dlgaccountsbase.ui:944 src/conf/dlgaccountsbase.ui:958
-msgid "-"
-msgstr "-"
-
-#. i18n: ectx: property (text), widget (QLabel, label_bitrate)
-#: src/conf/dlgaccountsbase.ui:951
-msgid "Bitrate:"
-msgstr "Bitni protok:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_frequency)
-#: src/conf/dlgaccountsbase.ui:994
-msgid "Sample rate:"
-msgstr "Frekvencija uzorka:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, m_pEnableVideo)
-#: src/conf/dlgaccountsbase.ui:1001
-msgid "Enable video when supported"
-msgstr "Omogući video kada je podržan"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_credentials)
-#: src/conf/dlgaccountsbase.ui:1025
-msgid "Credential"
-msgstr "Uvjerenje"
-
-#. i18n: ectx: property (text), widget (QLabel, m_pInfoL)
-#: src/conf/dlgaccountsbase.ui:1056
-#, fuzzy
-#| msgid ""
-#| "This tab help manage accounts with multiple credentials. If you have "
-#| "multiple accounts. Do not use this feature, just create multiple accounts "
-#| "in SFLPhone. Nor use this dialog if you only have one set of credentials. "
-#| "In that case, the \"Basic\" tab will provide everything you need."
-msgid ""
-"This tab help manage accounts with multiple credentials. If you have "
-"multiple accounts. Do not use this feature, just create multiple accounts in "
-"Ring. Nor use this dialog if you only have one set of credentials. In that "
-"case, the \"Basic\" tab will provide everything you need."
-msgstr ""
-"Ova kartica pomoć upravljati računima sa višestrukim uvjerenjima. Ako imate "
-"više računa. Ne koristite ovu funkciju, samo otvorite više naloga u "
-"SFLPhone. Niti trebate koristiti ovaj dijalog ako imate samo jedan set "
-"uvjerenja. U tom slučaju, u \"Basic\" kartica će pružiti sve što vam je "
-"potrebno."
-
-#. i18n: ectx: property (text), widget (LeftToolButton, button_add_credential)
-#: src/conf/dlgaccountsbase.ui:1100
-msgctxt "Add new credential"
-msgid "Add"
-msgstr "Dodaj"
-
-#. i18n: ectx: property (text), widget (RightToolButton, button_remove_credential)
-#: src/conf/dlgaccountsbase.ui:1107
-msgctxt "Remove selected credential"
-msgid "Remove"
-msgstr "Ukloni"
-
-#. i18n: ectx: property (title), widget (QGroupBox, group_credential)
-#: src/conf/dlgaccountsbase.ui:1122
-msgid "Details"
-msgstr "Detalji"
-
-#. i18n: ectx: property (text), widget (QLabel, label_credential_realm)
-#: src/conf/dlgaccountsbase.ui:1128
-msgid "Realm"
-msgstr "Područje"
-
-#. i18n: ectx: property (text), widget (QLabel, labe_credential_auth)
-#: src/conf/dlgaccountsbase.ui:1135
-msgid "Auth. name"
-msgstr "Aut. ime"
-
-#. i18n: ectx: property (text), widget (QLabel, label_credential_password)
-#: src/conf/dlgaccountsbase.ui:1142
-msgid "Password"
-msgstr "Lozinka"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, edit_credential_realm)
-#: src/conf/dlgaccountsbase.ui:1152
-msgid "Usually *"
-msgstr "Obično*"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_security)
-#: src/conf/dlgaccountsbase.ui:1205
-msgid "Security"
-msgstr "Sigurnost"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupbox_STRP_keyexchange)
-#: src/conf/dlgaccountsbase.ui:1268
-msgid "Encrypt media streams (SRTP)"
-msgstr "Šifruj medija potoke (SRTP)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, checkbox_ZTRP_send_hello)
-#: src/conf/dlgaccountsbase.ui:1290
-msgid "Send Hello Hash in SDP"
-msgstr "Pošalji Hello Hash u SDP"
-
-#. i18n: ectx: property (text), widget (QCheckBox, checkbox_ZRTP_warn_supported)
-#: src/conf/dlgaccountsbase.ui:1300
-msgid "Ask user to confirm SAS"
-msgstr "Traži od korisnika da potvrdi SAS"
-
-#. i18n: ectx: property (text), widget (QCheckBox, checkbox_ZRTP_Ask_user)
-#: src/conf/dlgaccountsbase.ui:1310
-msgid "Warn if ZRTP is not supported"
-msgstr "Upozori ako ne podržava ZRTP"
-
-#. i18n: ectx: property (text), widget (QCheckBox, checkbox_ZRTP_display_SAS)
-#: src/conf/dlgaccountsbase.ui:1320
-msgid "Display SAS once for hold events"
-msgstr "Prikaži SAS jednom za održavanje događaja"
-
-#. i18n: ectx: property (text), widget (QCheckBox, checkbox_SDES_fallback_rtp)
-#: src/conf/dlgaccountsbase.ui:1327
-msgid "Fallback on RTP on SDES failure"
-msgstr "Kašnjenje na RTP na SDES kvaru"
-
-#. i18n: ectx: property (title), widget (QGroupBox, group_security_tls)
-#: src/conf/dlgaccountsbase.ui:1343
-msgid "Encrypt negotiation (TLS)"
-msgstr "Šifruj pregovore (TLS)"
-
-#. i18n: ectx: property (text), widget (QLabel, label_tls_endpoint)
-#: src/conf/dlgaccountsbase.ui:1355
-msgid "Public endpoint certificate"
-msgstr "Javni certifikat krajnje tačke"
-
-#. i18n: ectx: property (text), widget (QLabel, label_tls_authority)
-#: src/conf/dlgaccountsbase.ui:1375
-msgid "Authority certificate list"
-msgstr "Lista upravnih certifikata"
-
-#. i18n: ectx: property (text), widget (QCheckBox, check_tls_incoming)
-#: src/conf/dlgaccountsbase.ui:1385
-msgid "Verify incoming certificates (server side)"
-msgstr "Provjerite dolazne potvrde (server strana)"
-
-#. i18n: ectx: property (text), widget (QLabel, label_tls_private_key)
-#: src/conf/dlgaccountsbase.ui:1392
-msgid "Private key"
-msgstr "Privatni ključ"
-
-#. i18n: ectx: property (text), widget (QLabel, label_tls_timeout)
-#: src/conf/dlgaccountsbase.ui:1402
-msgid "Negotiation timeout"
-msgstr "Prekid pregovora"
-
-#. i18n: ectx: property (text), widget (QLabel, m_pMoveCertL)
-#: src/conf/dlgaccountsbase.ui:1454
-msgid ""
-"A good security practice is to move the certificates to a common directory. "
-"SELinux recommend ~/.cert for this. Do you wish to move the certificate "
-"there?"
-msgstr ""
-"Dobra sigurnosna praksa je da se certifikat pomjeri u zajednički direktorij. "
-"SELinux preporučujemo ~ / .cert za ovo. Želite li da se certifikat "
-"premjesti  tamo?"
-
-#. i18n: ectx: property (text), widget (QPushButton, m_pMoveCertPB)
-#: src/conf/dlgaccountsbase.ui:1468
-msgid "Move to ~/.cert"
-msgstr "Premjesti u  ~/.cert"
-
-#. i18n: ectx: property (text), widget (QPushButton, m_pCancelMove)
-#. i18n: ectx: property (text), widget (QPushButton, m_pCancelFix)
-#: src/conf/dlgaccountsbase.ui:1475 src/conf/dlgaccountsbase.ui:1553
-msgid "No thanks"
-msgstr "Ne hvala"
-
-#. i18n: ectx: property (text), widget (QLabel, m_pMoveCertL_2)
-#: src/conf/dlgaccountsbase.ui:1532
-msgid ""
-"Your certification access is too permissive. Certificates should only be "
-"readable by the owner."
-msgstr ""
-"Naš pristup certifikacija je previše popustljiv. Potvrde treba da bude "
-"čitljive samo od strane vlasnika."
-
-#. i18n: ectx: property (text), widget (QPushButton, m_pFixCertPB)
-#: src/conf/dlgaccountsbase.ui:1546
-msgid "Fix the permissions"
-msgstr "Popravi dozvole"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, edit_tls_private_key_password)
-#: src/conf/dlgaccountsbase.ui:1581
-msgid "Only necessary if the key have a password"
-msgstr "Samo potrebno ako ključ ima lozinku"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, edit_tls_outgoing)
-#: src/conf/dlgaccountsbase.ui:1588
-msgid "Usually the SIP server hostname"
-msgstr "Obično SIP server ime domaćina"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_pViewCa)
-#: src/conf/dlgaccountsbase.ui:1595
-#, fuzzy
-#| msgid "Public endpoint certificate"
-msgid "View the certificate authority"
-msgstr "Javni certifikat krajnje tačke"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, m_pViewCert)
-#: src/conf/dlgaccountsbase.ui:1609
-#, fuzzy
-#| msgid "Public endpoint certificate"
-msgid "View the certificate"
-msgstr "Javni certifikat krajnje tačke"
-
-#. i18n: ectx: property (text), widget (QLabel, label_tls_private_key_password)
-#: src/conf/dlgaccountsbase.ui:1623
-msgid "Private key password"
-msgstr "Šifra privatnog ključa"
-
-#. i18n: ectx: property (text), widget (QCheckBox, check_tls_requier_cert)
-#: src/conf/dlgaccountsbase.ui:1633
-msgid "Require a certificate for incoming TLS connections"
-msgstr "Traži potvrdu za dolazeće TLS veze"
-
-#. i18n: ectx: property (text), widget (QLabel, label_tls_outgoing)
-#: src/conf/dlgaccountsbase.ui:1665
-msgid "Outgoing TLS server name"
-msgstr "Naziv odlazećeg TLS servera"
-
-#. i18n: ectx: property (text), widget (QCheckBox, check_tls_answer)
-#: src/conf/dlgaccountsbase.ui:1672
-msgid "Verify answer certificates (client side)"
-msgstr "Potvrdi odgovorne potvrde (strani klijenta)"
-
-#. i18n: ectx: property (text), widget (QLabel, label_tls_method)
-#: src/conf/dlgaccountsbase.ui:1701
-msgid "TLS protocol method"
-msgstr "TLS protokol metoda"
-
-#. i18n: ectx: property (text), widget (QCheckBox, m_pDefaultCiphers)
-#: src/conf/dlgaccountsbase.ui:1708
-msgid "Use default ciphers"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_ringtone)
-#. i18n: ectx: property (title), widget (QGroupBox, m_pEnableRingtoneGB)
-#. i18n: ectx: property (text), widget (QLabel, alsaRingtoneDeviceL)
-#: src/conf/dlgaccountsbase.ui:1727 src/conf/dlgaccountsbase.ui:1733
-#: src/conf/dlgaudiobase.ui:130
-msgid "Ringtone"
-msgstr "Zvono"
-
-#. i18n: ectx: property (text), widget (QCheckBox, m_pUseCustomFileCK)
-#: src/conf/dlgaccountsbase.ui:1742
-msgid "Use custom file"
-msgstr "Koristi prilagođenu datoteku"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_displayAllCollections)
 #: src/conf/dlgaddressbookbase.ui:68
@@ -1182,11 +1299,6 @@ msgstr "Omogući ton biranja"
 msgid "Mute DTMF"
 msgstr "Utišaj DTMF"
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, DlgAudioRecording)
-#: src/conf/dlgaudiorecording.ui:14
-msgid "Form"
-msgstr ""
-
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox1_recordGeneral)
 #: src/conf/dlgaudiorecording.ui:26
 msgid "Recording"
@@ -1201,80 +1313,6 @@ msgstr "Odredišni direktorij"
 #: src/conf/dlgaudiorecording.ui:45
 msgid "Always record calls"
 msgstr "Uvijek snimaj pozive"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: src/conf/dlgdht.ui:17
-#, fuzzy
-#| msgid "Display all"
-msgid "Display name*"
-msgstr "Prikaži sve"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, m_pAlias)
-#: src/conf/dlgdht.ui:24
-msgid "The name you send to your peer"
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: src/conf/dlgdht.ui:35
-msgid "Peers lookup"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: src/conf/dlgdht.ui:45
-msgid "Bootstrap"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
-#: src/conf/dlgdht.ui:57
-#, fuzzy
-#| msgid "Automatically remove calls after"
-msgid "Automatically add nodes"
-msgstr "Automatski ukloni pozive poslije"
-
-#. i18n: ectx: property (text), widget (LeftToolButton, toolButton)
-#. i18n: ectx: property (text), widget (CenterToolButton, toolButton_2)
-#. i18n: ectx: property (text), widget (CenterToolButton, toolButton_3)
-#. i18n: ectx: property (text), widget (RightToolButton, toolButton_4)
-#. i18n: ectx: property (text), widget (QToolButton, m_pDelete)
-#. i18n: ectx: property (text), widget (QToolButton, m_pPlay)
-#. i18n: ectx: property (text), widget (QToolButton, m_pPlayPause)
-#. i18n: ectx: property (text), widget (QToolButton, m_pStop)
-#: src/conf/dlgdht.ui:92 src/conf/dlgdht.ui:104 src/conf/dlgdht.ui:116
-#: src/conf/dlgdht.ui:128 src/widgets/ui/player.ui:64
-#: src/widgets/ui/player.ui:71 src/widgets/ui/playeroverlay.ui:54
-#: src/widgets/ui/playeroverlay.ui:77
-msgid "..."
-msgstr "..."
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: src/conf/dlgdht.ui:153
-msgid "Peers"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: src/conf/dlgdht.ui:163
-msgid "Known peers"
-msgstr ""
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
-#: src/conf/dlgdht.ui:196
-msgid "Blacklist"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox_2)
-#: src/conf/dlgdht.ui:217
-msgid "Only allow incoming calls from known peers"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: src/conf/dlgdht.ui:240
-msgid "For your friends to be able to call you, send them your hash:"
-msgstr ""
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, m_pHash)
-#: src/conf/dlgdht.ui:250
-msgid "Your hash will be generated once the account is saved"
-msgstr ""
 
 #: src/conf/dlgdisplay.cpp:39
 msgid "Display Icon"
@@ -1708,11 +1746,11 @@ msgstr "Propušten"
 msgid "Cancelled"
 msgstr "Otkazan"
 
-#: src/eventmanager.cpp:530 src/widgets/tips/tipcollection.cpp:123
+#: src/eventmanager.cpp:530 src/widgets/tips/tipcollection.cpp:128
 msgid "Call ended"
 msgstr "Poziv završen"
 
-#: src/eventmanager.cpp:616
+#: src/eventmanager.cpp:606
 #, kde-format
 msgid "%1 is not unregistered"
 msgstr "%1 nije registrovan"
@@ -2117,89 +2155,89 @@ msgstr ""
 msgid "Based on the SFLphone teamworks"
 msgstr ""
 
-#: src/ring.cpp:99
+#: src/ring.cpp:100
 msgid "Home"
 msgstr "Početna strana"
 
-#: src/ring.cpp:100
+#: src/ring.cpp:101
 msgid "Work"
 msgstr "Posao"
 
-#: src/ring.cpp:101
+#: src/ring.cpp:102
 msgid "Msg"
 msgstr "Msg"
 
-#: src/ring.cpp:102
+#: src/ring.cpp:103
 msgid "Pref"
 msgstr "Pref"
 
-#: src/ring.cpp:103
+#: src/ring.cpp:104
 msgid "Voice"
 msgstr "Glas"
 
-#: src/ring.cpp:104
+#: src/ring.cpp:105
 msgid "Fax"
 msgstr "Fax"
 
-#: src/ring.cpp:105
+#: src/ring.cpp:106
 msgid "Cell"
 msgstr "Polje"
 
-#: src/ring.cpp:106
+#: src/ring.cpp:107
 msgid "Video"
 msgstr "Video"
 
-#: src/ring.cpp:107
+#: src/ring.cpp:108
 msgid "Bbs"
 msgstr "Bbs"
 
-#: src/ring.cpp:108
+#: src/ring.cpp:109
 msgid "Modem"
 msgstr "Modem"
 
-#: src/ring.cpp:109
+#: src/ring.cpp:110
 msgid "Car"
 msgstr "Automobil"
 
-#: src/ring.cpp:110
+#: src/ring.cpp:111
 msgid "Isdn"
 msgstr "Isdn"
 
-#: src/ring.cpp:111
+#: src/ring.cpp:112
 msgid "Pcs"
 msgstr "Pcs"
 
-#: src/ring.cpp:112
+#: src/ring.cpp:113
 msgid "Pager"
 msgstr "Pejdžer"
 
-#: src/ring.cpp:113
+#: src/ring.cpp:114
 msgid "Preferred"
 msgstr "Omiljeno"
 
-#: src/ring.cpp:203
+#: src/ring.cpp:204
 msgctxt "Call tab"
 msgid "Call"
 msgstr "Poziv"
 
-#: src/ring.cpp:322
+#: src/ring.cpp:323
 msgctxt "The presence state is \"Online\""
 msgid "Online"
 msgstr "Dostupan"
 
-#: src/ring.cpp:332
+#: src/ring.cpp:333
 msgid "Your Ring ID:"
 msgstr ""
 
-#: src/ring.cpp:339
+#: src/ring.cpp:340
 msgid "None"
 msgstr ""
 
-#: src/ring.cpp:352
+#: src/ring.cpp:353
 msgid "Account:"
 msgstr "Nalog:"
 
-#: src/ring.cpp:369
+#: src/ring.cpp:370
 #, fuzzy
 #| msgid ""
 #| "The SFLPhone daemon (sflphoned) is not available. Please be sure it is "
@@ -2211,20 +2249,20 @@ msgstr ""
 "SFLPhone daemon (sflphoned) nije dostupan. Provjerite da li je ispravno "
 "instaliran ili ga pokrenite ručno"
 
-#: src/ring.cpp:522 src/ring.cpp:592
+#: src/ring.cpp:524 src/ring.cpp:594
 msgid "Call"
 msgstr "Poziv"
 
-#: src/ring.cpp:525 src/widgets/contactdock.cpp:236
+#: src/ring.cpp:527 src/widgets/contactdock.cpp:236
 #: src/widgets/historydock.cpp:244 src/widgets/historydock.cpp:246
 msgid "Bookmark"
 msgstr "Zabilješka"
 
-#: src/ring.cpp:528
+#: src/ring.cpp:530
 msgid "Contact"
 msgstr "Kontakt"
 
-#: src/ring.cpp:531
+#: src/ring.cpp:533
 msgid "History"
 msgstr "Historijat"
 
@@ -2322,12 +2360,6 @@ msgstr "Jeste li sigurni da želite trajno izbrisati %1?"
 msgid "Delete contact"
 msgstr "Izbriši kontakt"
 
-#: src/widgets/groupedtoolbutton.cpp:105
-#, kde-format
-msgctxt "@info:tooltip of custom toolbar button"
-msgid "%1"
-msgstr "%1"
-
 #: src/widgets/historydock.cpp:152
 msgctxt "History tab"
 msgid "History"
@@ -2356,42 +2388,6 @@ msgstr "Jeste li sigurni da želite obrisati ovu snimku?"
 msgid "Delete recording"
 msgstr "Izbriši snimak"
 
-#         translations.
-#: src/widgets/securityprogress.cpp:277
-#, kde-format
-msgid "%1 tip"
-msgid_plural "%1 tips"
-msgstr[0] "%1 savjet"
-msgstr[1] "%1 savjeta"
-msgstr[2] "%1 savjeta"
-
-#         translations.
-#: src/widgets/securityprogress.cpp:278
-#, kde-format
-msgid "%1 warning"
-msgid_plural "%1 warnings"
-msgstr[0] "%1 upozorenje"
-msgstr[1] "%1 upozorenja"
-msgstr[2] "%1 upozorenja"
-
-#         translations.
-#: src/widgets/securityprogress.cpp:279
-#, kde-format
-msgid "%1 issue"
-msgid_plural "%1 issues"
-msgstr[0] "%1 problem"
-msgstr[1] "%1 problema"
-msgstr[2] "%1 problema"
-
-#         translations.
-#: src/widgets/securityprogress.cpp:280
-#, kde-format
-msgid "%1 error"
-msgid_plural "%1 errors"
-msgstr[0] "%1 greška"
-msgstr[1] "%1 greše"
-msgstr[2] "%1 grešaka"
-
 #: src/widgets/tips/conftip.cpp:31
 msgid ""
 "Do you know you can create conferences or transfer the call by drag and "
@@ -2401,6 +2397,7 @@ msgstr ""
 "uhvatite i prebacite jedan poziv na drugi?"
 
 #: src/widgets/tips/connectionlosttip.cpp:32
+#: src/widgets/tips/searchingtip.cpp:32
 msgid "There was a network error, trying to reconnect in 60 seconds."
 msgstr "Došlo je do mrežne greške, pokušaj vraćanja  u 60 sekundi."
 
@@ -2413,11 +2410,11 @@ msgstr ""
 "puta kliknite na poziv da započne pozivanje. Pritisnite escape ili \"Prekini"
 "\" da završite poziv."
 
-#: src/widgets/tips/tipcollection.cpp:133
+#: src/widgets/tips/tipcollection.cpp:138
 msgid "Peer is busy"
 msgstr "Premac je zauzet"
 
-#: src/widgets/tips/tipcollection.cpp:167
+#: src/widgets/tips/tipcollection.cpp:172
 msgid "An account went down"
 msgstr "Račun je pao"
 
@@ -2568,6 +2565,64 @@ msgstr "Uređaj:"
 msgid "Full screen video"
 msgstr "Puni ekran video"
 
+#~ msgid ""
+#~ "To add an account, press the \"Add\" button below. Use the ⬆ up and ⬇ "
+#~ "down button to change the default account priority."
+#~ msgstr ""
+#~ "Da biste dodali račun, ispod pritisnite tipku \"Dodaj\". Koristi gore ⬆ i "
+#~ "⬇ tipku dolje za promjenu zadanog prioriteta za račun."
+
+#~ msgid "Usually called \"ca.crt\" or \"cacert.pem\""
+#~ msgstr "Obično se zove \"ca.crt\" ili \"cacert.pem\""
+
+#~ msgid "A .pem or .crt"
+#~ msgstr ".pem ili .crt"
+
+#~ msgid "A .key file"
+#~ msgstr ".ključ datoteka"
+
+#~ msgid "New account"
+#~ msgstr "Novi nalog"
+
+#~ msgid "New account%1"
+#~ msgstr "Novi nalog%1"
+
+#~ msgid "Are you sure you want to remove %1?"
+#~ msgstr "Želite li zaista da uklonite %1?"
+
+#~ msgid "Remove account"
+#~ msgstr "Ukloni nalog"
+
+#~ msgid "Warning, caps lock is turned on!"
+#~ msgstr "Upozorenje, caps lock je uključen!"
+
+#, fuzzy
+#~| msgid "STUN Server"
+#~ msgid "STUN server"
+#~ msgstr "STUN server"
+
+#, fuzzy
+#~| msgid "Use custom file"
+#~ msgid "Use custom port"
+#~ msgstr "Koristi prilagođenu datoteku"
+
+#, fuzzy
+#~| msgid "Published address"
+#~ msgid "Fallback Published address"
+#~ msgstr "Objavljena adresa"
+
+#, fuzzy
+#~| msgid "RTP configuration"
+#~ msgid "Fallback RTP configuration"
+#~ msgstr "RTP configuracija"
+
+#~ msgid "-"
+#~ msgstr "-"
+
+#~ msgctxt "@info:tooltip of custom toolbar button"
+#~ msgid "%1"
+#~ msgstr "%1"
+
 #~ msgid "Are you sure you want to clear history?"
 #~ msgstr "Da li ste sigurni da želite očistiti historijat?"
 
@@ -2656,9 +2711,6 @@ msgstr "Puni ekran video"
 #~ msgid "Presence"
 #~ msgstr "Prisustvo"
 
-#~ msgid "Status"
-#~ msgstr "Status"
-
 #~ msgid "User agent"
 #~ msgstr "Korisnički agent"
 
@@ -2667,9 +2719,6 @@ msgstr "Puni ekran video"
 
 #~ msgid "STUN parameters will be applied on each SIP account created."
 #~ msgstr "STUN parametri će se primijeniti na svaki otvoreni SIP nalog."
-
-#~ msgid "Local port"
-#~ msgstr "Lokalni port"
 
 #~ msgid "Proxy"
 #~ msgstr "Proxy"
