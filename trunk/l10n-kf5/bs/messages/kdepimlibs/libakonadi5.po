@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-06-08 08:43+0000\n"
+"POT-Creation-Date: 2015-06-26 08:54+0000\n"
 "PO-Revision-Date: 2014-01-31 20:40+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -200,31 +200,60 @@ msgstr "Ne mogu da pristupim d‑bus interfejsu za resurs „%1“."
 msgid "Collection attributes synchronization timed out."
 msgstr "Isteklo vijreme za sinhronizaciju atributa zbirke."
 
+#: core/jobs/collectioncopyjob.cpp:62
+#, fuzzy
+#| msgid "Invalid collection"
+msgid "Invalid collection to copy"
+msgstr "Loša zbirka"
+
+#: core/jobs/collectioncopyjob.cpp:68
+#, fuzzy
+#| msgid "Invalid collection"
+msgid "Invalid destination collection"
+msgstr "Loša zbirka"
+
 #: core/jobs/collectioncreatejob.cpp:58
 msgid "Invalid parent"
 msgstr "Loš roditelj"
 
-#: core/jobs/collectiondeletejob.cpp:59
+#: core/jobs/collectioncreatejob.cpp:105
+#, fuzzy
+#| msgid "Failed to fetch the resource collection."
+msgid "Failed to parse Collection from response"
+msgstr "Ne mogu da dobavim zbirku resursa."
+
+#: core/jobs/collectiondeletejob.cpp:60
 msgid "Invalid collection"
 msgstr "Loša zbirka"
 
-#: core/jobs/collectionfetchjob.cpp:231
+#: core/jobs/collectionfetchjob.cpp:233
 msgid "Invalid collection given."
 msgstr "Data pogrešna kolekcija."
 
-#: core/jobs/collectionselectjob.cpp:73
-msgid "Invalid collection specified"
-msgstr "Pogrešna kolekcija zadana"
+#: core/jobs/collectionmovejob.cpp:59 core/jobs/itemmovejob.cpp:85
+msgid "No objects specified for moving"
+msgstr "Nisu zadati objekti za premještanje"
+
+#: core/jobs/collectionmovejob.cpp:66 core/jobs/itemmovejob.cpp:92
+#: core/jobs/linkjobimpl_p.h:54
+msgid "No valid destination specified"
+msgstr "Nije navedeno dobro odredište"
 
 #: core/jobs/invalidatecachejob.cpp:65
 msgid "Invalid collection."
 msgstr "Neispravna kolekcija."
 
-#: core/jobs/job.cpp:308
+#: core/jobs/itemcreatejob.cpp:100
+#, fuzzy
+#| msgid "Invalid collection"
+msgid "Invalid parent collection"
+msgstr "Loša zbirka"
+
+#: core/jobs/job.cpp:304
 msgid "Cannot connect to the Akonadi service."
 msgstr "Ne mogu da se povežem sa servisom Akonadija."
 
-#: core/jobs/job.cpp:311
+#: core/jobs/job.cpp:307
 msgid ""
 "The protocol version of the Akonadi server is incompatible. Make sure you "
 "have a compatible version installed."
@@ -232,23 +261,15 @@ msgstr ""
 "Nesaglasna verzija protokola na serveru Akonadija. Morate instalirati "
 "saglasnu."
 
-#: core/jobs/job.cpp:314
+#: core/jobs/job.cpp:310
 msgid "User canceled operation."
 msgstr "Korisnik je otkazao operaciju."
 
-#: core/jobs/job.cpp:319
+#: core/jobs/job.cpp:315
 msgid "Unknown error."
 msgstr "Nepoznata greška."
 
-#: core/jobs/linkjobimpl_p.h:52 core/jobs/movejobimpl_p.h:52
-msgid "No valid destination specified"
-msgstr "Nije navedeno dobro odredište"
-
-#: core/jobs/movejobimpl_p.h:46
-msgid "No objects specified for moving"
-msgstr "Nisu zadati objekti za premještanje"
-
-#: core/jobs/relationcreatejob.cpp:52 core/jobs/relationdeletejob.cpp:52
+#: core/jobs/relationcreatejob.cpp:54 core/jobs/relationdeletejob.cpp:54
 #, fuzzy
 #| msgid "Unable to create agent instance."
 msgid "Failed to create relation."
@@ -454,10 +475,19 @@ msgstr "Bezimeni dodatak"
 msgid "No description available"
 msgstr "Nema dostupnog opisa"
 
-#: core/session.cpp:292
+#: core/session.cpp:307
 #, kde-format
-msgid "Protocol version %1 found, expected at least %2"
-msgstr "Nađena verzija protokola %1, očekivana bar %2"
+msgid ""
+"Protocol version mismatch. Server version is newer (%1) than ours (%2). If "
+"you updated your system recently please restart the Akonadi server."
+msgstr ""
+
+#: core/session.cpp:313
+#, kde-format
+msgid ""
+"Protocol version mismatch. Server version is older (%1) than ours (%2). If "
+"you updated your system recently please restart all KDE PIM applications."
+msgstr ""
 
 #: selftest/main.cpp:31
 #, fuzzy
@@ -1214,40 +1244,50 @@ msgstr ""
 msgid "Server protocol version is too old."
 msgstr "Verzija protokola servera previše stara."
 
-#: widgets/selftestdialog.cpp:446
-#, kde-format
+#: widgets/selftestdialog.cpp:446 widgets/selftestdialog.cpp:452
+#, fuzzy, kde-format
+#| msgid ""
+#| "The server protocol version is %1, but at least version %2 is required. "
+#| "Install a newer version of the Akonadi server."
 msgid ""
-"The server protocol version is %1, but at least version %2 is required. "
-"Install a newer version of the Akonadi server."
+"The server protocol version is %1, but version %2 is required by the client. "
+"If you recently updated KDE PIM, please make sure to restart both Akonadi "
+"and KDE PIM applications."
 msgstr ""
 "Verzija protokola servera je %1, a neophodna je bar %2. Instalirajte noviju "
 "verziju servera Akonadija."
 
 #: widgets/selftestdialog.cpp:451
-msgid "Server protocol version is recent enough."
-msgstr "Verzija protokola servera dovoljno je nova."
+#, fuzzy
+#| msgid "Server protocol version is too old."
+msgid "Server protocol version is too new."
+msgstr "Verzija protokola servera previše stara."
 
-#: widgets/selftestdialog.cpp:452
-#, kde-format
-msgid ""
-"The server Protocol version is %1, which equal or newer than the required "
-"version %2."
-msgstr ""
-"Verzija protokola servera je %1, što je jednako ili novije od zahtevane %2."
+#: widgets/selftestdialog.cpp:457
+#, fuzzy
+#| msgid "Server protocol version is too old."
+msgid "Server protocol version matches."
+msgstr "Verzija protokola servera previše stara."
 
-#: widgets/selftestdialog.cpp:472
+#: widgets/selftestdialog.cpp:458
+#, fuzzy, kde-format
+#| msgid "Server protocol version is too old."
+msgid "The current Protocol version is %1."
+msgstr "Verzija protokola servera previše stara."
+
+#: widgets/selftestdialog.cpp:477
 msgid "Resource agents found."
 msgstr "Agenti resursa nađeni."
 
-#: widgets/selftestdialog.cpp:472
+#: widgets/selftestdialog.cpp:477
 msgid "At least one resource agent has been found."
 msgstr "Nađen je bar jedan agent resursa."
 
-#: widgets/selftestdialog.cpp:474
+#: widgets/selftestdialog.cpp:479
 msgid "No resource agents found."
 msgstr "Agenti resursa nisu nađeni."
 
-#: widgets/selftestdialog.cpp:475
+#: widgets/selftestdialog.cpp:480
 #, kde-format
 msgid ""
 "No resource agents have been found, Akonadi is not usable without at least "
@@ -1263,21 +1303,21 @@ msgstr ""
 "%2</icode>, proverite uključuje li ovo sve putanje gde su instalirani agenti "
 "Akonadija."
 
-#: widgets/selftestdialog.cpp:493
+#: widgets/selftestdialog.cpp:498
 msgid "No current Akonadi server error log found."
 msgstr "Tekući dnevnik grešaka servera Akonadija nije nađen."
 
-#: widgets/selftestdialog.cpp:494
+#: widgets/selftestdialog.cpp:499
 msgid ""
 "The Akonadi server did not report any errors during its current startup."
 msgstr ""
 "Server Akonadija nije prijavio nijednu grešku tokom tekućeg pokretanja."
 
-#: widgets/selftestdialog.cpp:496
+#: widgets/selftestdialog.cpp:501
 msgid "Current Akonadi server error log found."
 msgstr "Tekući dnevnik grešaka servera Akonadija nađen."
 
-#: widgets/selftestdialog.cpp:497
+#: widgets/selftestdialog.cpp:502
 #, kde-format
 msgid ""
 "The Akonadi server reported errors during its current startup. The log can "
@@ -1286,21 +1326,21 @@ msgstr ""
 "Server Akonadija prijavio je greške tokom tekućeg pokretanja. Dnevnik se "
 "nalazi u %1."
 
-#: widgets/selftestdialog.cpp:504
+#: widgets/selftestdialog.cpp:509
 msgid "No previous Akonadi server error log found."
 msgstr "Prethodni dnevnik grešaka servera Akonadija nađen."
 
-#: widgets/selftestdialog.cpp:505
+#: widgets/selftestdialog.cpp:510
 msgid ""
 "The Akonadi server did not report any errors during its previous startup."
 msgstr ""
 "Server Akonadija nije prijavio nijednu grešku tokom prethodnog pokretanja."
 
-#: widgets/selftestdialog.cpp:507
+#: widgets/selftestdialog.cpp:512
 msgid "Previous Akonadi server error log found."
 msgstr "Prethodni dnevnik grešaka servera Akonadija nađen."
 
-#: widgets/selftestdialog.cpp:508
+#: widgets/selftestdialog.cpp:513
 #, kde-format
 msgid ""
 "The Akonadi server reported errors during its previous startup. The log can "
@@ -1309,11 +1349,11 @@ msgstr ""
 "Server Akonadija prijavio je greške pri prethodnom pokretanju. Dnevnik se "
 "nalazi u %1."
 
-#: widgets/selftestdialog.cpp:519
+#: widgets/selftestdialog.cpp:524
 msgid "No current Akonadi control error log found."
 msgstr "Tekući dnevnik grešaka upravljanja Akonadija nije nađen."
 
-#: widgets/selftestdialog.cpp:520
+#: widgets/selftestdialog.cpp:525
 msgid ""
 "The Akonadi control process did not report any errors during its current "
 "startup."
@@ -1321,11 +1361,11 @@ msgstr ""
 "Upravljački proces Akonadija nije prijavio nijednu grešku pri tekućem "
 "pokretanju."
 
-#: widgets/selftestdialog.cpp:522
+#: widgets/selftestdialog.cpp:527
 msgid "Current Akonadi control error log found."
 msgstr "Tekući dnevnik grešaka upravljanja Akonadija nađen."
 
-#: widgets/selftestdialog.cpp:523
+#: widgets/selftestdialog.cpp:528
 #, kde-format
 msgid ""
 "The Akonadi control process reported errors during its current startup. The "
@@ -1334,11 +1374,11 @@ msgstr ""
 "Upravljački proces Akonadija prijavio je greške tokom tekućeg pokretanja. "
 "Dnevnik se nalazi u %1."
 
-#: widgets/selftestdialog.cpp:530
+#: widgets/selftestdialog.cpp:535
 msgid "No previous Akonadi control error log found."
 msgstr "Prethodni dnevnik grešaka upravljanja Akonadija nađen."
 
-#: widgets/selftestdialog.cpp:531
+#: widgets/selftestdialog.cpp:536
 msgid ""
 "The Akonadi control process did not report any errors during its previous "
 "startup."
@@ -1346,11 +1386,11 @@ msgstr ""
 "Upravljački proces Akonadija nije prijavio nijednu grešku tokom prethodnog "
 "pokretanja."
 
-#: widgets/selftestdialog.cpp:533
+#: widgets/selftestdialog.cpp:538
 msgid "Previous Akonadi control error log found."
 msgstr "Prethodni dnevnik grešaka upravljanja Akonadija nađen."
 
-#: widgets/selftestdialog.cpp:534
+#: widgets/selftestdialog.cpp:539
 #, kde-format
 msgid ""
 "The Akonadi control process reported errors during its previous startup. The "
@@ -1359,11 +1399,11 @@ msgstr ""
 "Upravljački proces Akonadija prijavio je greške tokom prethodnog pokretanja. "
 "Dnevnik se nalazi u %1."
 
-#: widgets/selftestdialog.cpp:543
+#: widgets/selftestdialog.cpp:548
 msgid "Akonadi was started as root"
 msgstr "Akonadi pokrenut kao root"
 
-#: widgets/selftestdialog.cpp:543
+#: widgets/selftestdialog.cpp:548
 msgid ""
 "Running Internet-facing applications as root/administrator exposes you to "
 "many security risks. MySQL, used by this Akonadi installation, will not "
@@ -1374,11 +1414,11 @@ msgstr ""
 "instalacija Akonadija, neće dopustiti izvršavanje pod korenom da bi vas "
 "zaštitio od ovih rizika."
 
-#: widgets/selftestdialog.cpp:545
+#: widgets/selftestdialog.cpp:550
 msgid "Akonadi is not running as root"
 msgstr "Akonadi ne radi kao root"
 
-#: widgets/selftestdialog.cpp:545
+#: widgets/selftestdialog.cpp:550
 msgid ""
 "Akonadi is not running as a root/administrator user, which is the "
 "recommended setup for a secure system."
@@ -1386,11 +1426,11 @@ msgstr ""
 "Akonadi ne radi pod root (administratorskim) korisnikom, što je i "
 "preporučena postava za bezbjednost sistema."
 
-#: widgets/selftestdialog.cpp:623
+#: widgets/selftestdialog.cpp:628
 msgid "Save Test Report"
 msgstr "Upisivanje izveštaja o probama"
 
-#: widgets/selftestdialog.cpp:630
+#: widgets/selftestdialog.cpp:635
 #, kde-format
 msgid "Could not open file '%1'"
 msgstr "Ne mogu da otvorim datoteku %1"
@@ -2058,6 +2098,22 @@ msgstr "Ne mogu da umetnem podatke: %1"
 #| msgid "Invalid collection"
 msgid "Unable to find collection %1"
 msgstr "Loša zbirka"
+
+#~ msgid "Invalid collection specified"
+#~ msgstr "Pogrešna kolekcija zadana"
+
+#~ msgid "Protocol version %1 found, expected at least %2"
+#~ msgstr "Nađena verzija protokola %1, očekivana bar %2"
+
+#~ msgid "Server protocol version is recent enough."
+#~ msgstr "Verzija protokola servera dovoljno je nova."
+
+#~ msgid ""
+#~ "The server Protocol version is %1, which equal or newer than the required "
+#~ "version %2."
+#~ msgstr ""
+#~ "Verzija protokola servera je %1, što je jednako ili novije od zahtevane "
+#~ "%2."
 
 #~ msgid "Inconsistent local collection tree detected."
 #~ msgstr "Otkriveno je neusaglašeno lokalno stablo zbirke."
