@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmymoney\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-06-12 02:01+0000\n"
+"POT-Creation-Date: 2015-06-28 01:55+0000\n"
 "PO-Revision-Date: 2015-02-27 23:28+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -6674,30 +6674,26 @@ msgid "Cannot enter transaction with postdate prior to account's opening date."
 msgstr ""
 "Nije moguće unijeti transakciju sa datumom prije datuma otvaranja računa."
 
-#: kmymoney/dialogs/transactionmatcher.cpp:71
+#: kmymoney/dialogs/transactionmatcher.cpp:72
 msgid "First transaction does not match requirement for matching"
 msgstr "Prva transakcija ne odgovara zahtjevu za podudaranje"
 
-#: kmymoney/dialogs/transactionmatcher.cpp:75
+#: kmymoney/dialogs/transactionmatcher.cpp:76
 #, kde-format
 msgid "Splits for %1 have conflicting values (%2,%3)"
 msgstr "Podjele za %1 imaju proturječne vrijednosti (%2,%3)"
 
-#: kmymoney/dialogs/transactionmatcher.cpp:80
-#, fuzzy
-#| msgid ""
-#| "<center>The '<b>%1</b>' field already has this column selected.</"
-#| "center><center>If you wish to copy that data to the memo field, click "
-#| "'Yes'.</center>"
+#: kmymoney/dialogs/transactionmatcher.cpp:82
+#, kde-format
 msgid ""
-"<center>The transaction post-dates are not within the 'matchInterval' "
-"setting.</center><center>If you wish to continue with this matching, click "
-"'Yes'.</center>"
-msgstr ""
-"<center>Polje '<b>%1</b>' već ima odabranu kolonu.</center><center>Ako "
-"želite kopirati podatke u polje zabilješke, kliknite 'Da'.</center>"
+"The transaction dates are one day apart. Do you want to match them anyway?"
+msgid_plural ""
+"The transaction dates are %1 days apart. Do you want to match them anyway?"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
-#: kmymoney/dialogs/transactionmatcher.cpp:99
+#: kmymoney/dialogs/transactionmatcher.cpp:101
 #, kde-format
 msgid "Unable to match all splits (%1)"
 msgstr "Nije moguće uskladiti sve podjele (%1)"
@@ -9430,7 +9426,9 @@ msgstr "Ovaj posao zahtijeva dodatno uređivanje i stoga se ne može poslati."
 msgid "This job is ready for sending."
 msgstr "Ovaj posao je spreman za slanje"
 
-#: kmymoney/models/payeeidentifiermodel.cpp:50
+#: kmymoney/models/payeeidentifiercontainermodel.cpp:50
+#: kmymoney/mymoney/payeeidentifier/payeeidentifiercontainermodel.cpp:50
+#: kmymoney/mymoney/payeeidentifiermodel.cpp:101
 msgid "The plugin to show this information could not be found."
 msgstr "Dodatak za prikaz ove informacije se ne može naći."
 
@@ -12902,7 +12900,7 @@ msgstr ""
 "u nacionalnim transferima. Ona je bila dodana u svrhu umjesto toga."
 
 #: kmymoney/plugins/onlinetasks/national/ui/germancredittransferedit.cpp:108
-#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:242
+#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:460
 #, kde-format
 msgid "A beneficiary name is needed."
 msgid_plural "The beneficiary name must be at least %1 characters long"
@@ -12923,12 +12921,12 @@ msgid "This bank identifier is unknown. Please re-check it."
 msgstr "Identifikator banke je nepoznat. Molim ponovo ga provjerite."
 
 #: kmymoney/plugins/onlinetasks/national/ui/germancredittransferedit.cpp:148
-#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:253
+#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:471
 msgid "A positive amount to transfer is needed."
 msgstr "Pozitivan iznos za transfer je potreban."
 
 #: kmymoney/plugins/onlinetasks/national/ui/germancredittransferedit.cpp:157
-#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:264
+#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:482
 msgid ""
 "After this credit transfer the account's balance will be below your credit "
 "limit."
@@ -12937,7 +12935,7 @@ msgstr ""
 "limita."
 
 #: kmymoney/plugins/onlinetasks/national/ui/germancredittransferedit.cpp:160
-#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:266
+#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:484
 msgid ""
 "After this credit transfer the account's balance will be below the minimal "
 "balance."
@@ -12946,7 +12944,7 @@ msgstr ""
 "bilansa."
 
 #: kmymoney/plugins/onlinetasks/national/ui/germancredittransferedit.cpp:175
-#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:292
+#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:510
 #, kde-format
 msgid "The maximal line length of %1 character per line is exceeded."
 msgid_plural "The maximal line length of %1 characters per line is exceeded."
@@ -12961,7 +12959,7 @@ msgid ""
 msgstr "Svrha može sadržati samo slova A-Z, ä,ö,ü, razmake i .,-+*%/$ or &."
 
 #: kmymoney/plugins/onlinetasks/national/ui/germancredittransferedit.cpp:181
-#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:298
+#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:516
 #, kde-format
 msgid "In the purpose only a single line is allowed."
 msgid_plural "The purpose cannot contain more than %1 lines."
@@ -13006,11 +13004,11 @@ msgstr "Svrha"
 msgid "SEPA Credit Transfer"
 msgstr "SEPA kreditni transfer"
 
-#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:226
+#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:444
 msgid "For this beneficiary's country the BIC is mandatory."
 msgstr "Za zemlje ovog primaoca BIC je obavezan"
 
-#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:276
+#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:494
 #, kde-format
 msgid "The end-to-end reference cannot contain more than one character."
 msgid_plural "The end-to-end reference cannot contain more than %1 characters."
@@ -13018,12 +13016,12 @@ msgstr[0] "Referenca s kraja na kraj ne može sadržati više od %1 znak"
 msgstr[1] "Referenca s kraja na kraj ne može sadržati više od %1 znaka"
 msgstr[2] "Referenca s kraja na kraj ne može sadržati više od %1 znakova"
 
-#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:296
+#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:514
 msgid ""
 "The purpose can only contain the letters A-Z, spaces and ':?.,-()+ and /"
 msgstr "Svhra može sadržati samo slova A-Z, razmake i ':?.,-()+ and /"
 
-#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:302
+#: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.cpp:520
 #, kde-format
 msgid "A purpose is needed."
 msgid_plural "The purpose must be at least %1 characters long."
@@ -20828,6 +20826,19 @@ msgstr ""
 "konekcije? Samo odaberite datoteku (OFX ili QIF) iz menija Datoteka->Uvezi.</"
 "p>\n"
 "<p>Osigurava Jose Jorge</p>\n"
+
+#, fuzzy
+#~| msgid ""
+#~| "<center>The '<b>%1</b>' field already has this column selected.</"
+#~| "center><center>If you wish to copy that data to the memo field, click "
+#~| "'Yes'.</center>"
+#~ msgid ""
+#~ "<center>The transaction post-dates are not within the 'matchInterval' "
+#~ "setting.</center><center>If you wish to continue with this matching, "
+#~ "click 'Yes'.</center>"
+#~ msgstr ""
+#~ "<center>Polje '<b>%1</b>' već ima odabranu kolonu.</center><center>Ako "
+#~ "želite kopirati podatke u polje zabilješke, kliknite 'Da'.</center>"
 
 #~ msgctxt "column containing number field"
 #~ msgid "Number column"
