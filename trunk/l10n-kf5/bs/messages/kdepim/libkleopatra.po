@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-04-24 08:25+0000\n"
+"POT-Creation-Date: 2015-07-03 08:38+0000\n"
 "PO-Revision-Date: 2015-02-04 15:11+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -50,7 +50,7 @@ msgstr "Datoteka „%1“ ne postoji ili nije izvršna."
 msgid "Output from chiasmus"
 msgstr "Rezultat iz chiasmus-a"
 
-#: backends/chiasmus/chiasmusjob.cpp:234 ui/messagebox.cpp:269
+#: backends/chiasmus/chiasmusjob.cpp:234 ui/messagebox.cpp:135
 #, kde-format
 msgid "Encryption failed: %1"
 msgstr "Šifrovanje nije uspelo: %1"
@@ -396,6 +396,35 @@ msgstr "Certifikati u koje se vjeruje"
 #: kleo/keyfiltermanager.cpp:134
 msgid "Other Certificates"
 msgstr "Ostali certifikati"
+
+#: ui/auditlogviewer.cpp:38
+msgid "View GnuPG Audit Log"
+msgstr "Prikaži dnevnik revizije GnuPG-a"
+
+#: ui/auditlogviewer.cpp:49
+msgid "&Save to Disk..."
+msgstr "&Snimi na disk..."
+
+#: ui/auditlogviewer.cpp:52
+msgid "&Copy to Clipboard"
+msgstr "&Kopiraj u klipbord"
+
+#: ui/auditlogviewer.cpp:52
+msgid "Copy Audit Log to Clipboard"
+msgstr "Kopiraj dnevnik revizije u klipbord"
+
+#: ui/auditlogviewer.cpp:87
+msgid "Choose File to Save GnuPG Audit Log to"
+msgstr "Izaberite datoteku za snimanje dnevnika revizije GnuPG-a"
+
+#: ui/auditlogviewer.cpp:110
+#, kde-format
+msgid "Could not save to file \"%1\": %2"
+msgstr "Ne mogu spremiti u datoteku \"%1\": %2"
+
+#: ui/auditlogviewer.cpp:112
+msgid "File Save Error"
+msgstr "Greška pri snimanju"
 
 #: ui/cryptoconfigdialog.cpp:44
 msgid "Configure GnuPG Backend"
@@ -968,48 +997,15 @@ msgstr "Rezlutat listanja ključeva"
 msgid "Recheck Key"
 msgstr "Ponovo provjeri ključ"
 
-#: ui/messagebox.cpp:70
-msgid "&Save to Disk..."
-msgstr "&Snimi na disk..."
-
-#: ui/messagebox.cpp:77
-msgid "&Copy to Clipboard"
-msgstr "&Kopiraj u klipbord"
-
-#: ui/messagebox.cpp:77
-msgid "Copy Audit Log to Clipboard"
-msgstr "Kopiraj dnevnik revizije u klipbord"
-
-#: ui/messagebox.cpp:83
-msgid "&Show Audit Log"
-msgstr "&Prikaži dnevnik revizije"
-
-#: ui/messagebox.cpp:93
-msgid "View GnuPG Audit Log"
-msgstr "Prikaži dnevnik revizije GnuPG-a"
-
-#: ui/messagebox.cpp:142
-msgid "Choose File to Save GnuPG Audit Log to"
-msgstr "Izaberite datoteku za snimanje dnevnika revizije GnuPG-a"
-
-#: ui/messagebox.cpp:165
-#, kde-format
-msgid "Could not save to file \"%1\": %2"
-msgstr "Ne mogu spremiti u datoteku \"%1\": %2"
-
-#: ui/messagebox.cpp:167
-msgid "File Save Error"
-msgstr "Greška pri snimanju"
-
-#: ui/messagebox.cpp:207
+#: ui/messagebox.cpp:73
 msgid "Your system does not have support for GnuPG Audit Logs"
 msgstr "Sistem nema podršku za dnevnike revizija GnuPG-a"
 
-#: ui/messagebox.cpp:208
+#: ui/messagebox.cpp:74
 msgid "System Error"
 msgstr "Sistemska greška"
 
-#: ui/messagebox.cpp:215
+#: ui/messagebox.cpp:81
 #, kde-format
 msgid ""
 "An error occurred while trying to retrieve the GnuPG Audit Log:\n"
@@ -1018,50 +1014,54 @@ msgstr ""
 "Greška se desila pri dohvatanju GnuPG dnevnika:\n"
 "%1"
 
-#: ui/messagebox.cpp:217
+#: ui/messagebox.cpp:83
 msgid "GnuPG Audit Log Error"
 msgstr "GnuPG greška u praćenju"
 
-#: ui/messagebox.cpp:224
+#: ui/messagebox.cpp:90
 msgid "No GnuPG Audit Log available for this operation."
 msgstr "Dnevnik revizije GnuPG-a nije dostupan za ovu operaciju."
 
-#: ui/messagebox.cpp:225
+#: ui/messagebox.cpp:91
 msgid "No GnuPG Audit Log"
 msgstr "Nema dnevnika revizije GnuPG-a"
 
-#: ui/messagebox.cpp:245 ui/messagebox.cpp:251
+#: ui/messagebox.cpp:111 ui/messagebox.cpp:117
 msgid "GnuPG Audit Log Viewer"
 msgstr "Prikazivač dnevnika revizije GnuPG-a"
 
-#: ui/messagebox.cpp:257
+#: ui/messagebox.cpp:123
 #, kde-format
 msgid "Signing failed: %1"
 msgstr "Potpisivanje nije uspelo: %1"
 
-#: ui/messagebox.cpp:258
+#: ui/messagebox.cpp:124
 msgid "Signing successful"
 msgstr "Potpisivanje uspješno"
 
-#: ui/messagebox.cpp:270
+#: ui/messagebox.cpp:136
 msgid "Encryption successful"
 msgstr "Šifrovanje uspješno"
 
-#: ui/messagebox.cpp:291
+#: ui/messagebox.cpp:157
 msgid "Signing Result"
 msgstr "Rezultat potpisivanja"
 
-#: ui/messagebox.cpp:303
+#: ui/messagebox.cpp:169
 msgid "Signing Error"
 msgstr "Greška potpisivanja"
 
-#: ui/messagebox.cpp:315 ui/messagebox.cpp:339
+#: ui/messagebox.cpp:181 ui/messagebox.cpp:205
 msgid "Encryption Result"
 msgstr "Rezultat šifrovanja"
 
-#: ui/messagebox.cpp:327 ui/messagebox.cpp:351
+#: ui/messagebox.cpp:193 ui/messagebox.cpp:217
 msgid "Encryption Error"
 msgstr "Greška šifrovanja"
+
+#: ui/messagebox.cpp:265
+msgid "&Show Audit Log"
+msgstr "&Prikaži dnevnik revizije"
 
 #: ui/progressdialog.cpp:92
 #, kde-format
