@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-11-07 03:10+0100\n"
+"POT-Creation-Date: 2015-07-14 02:33+0000\n"
 "PO-Revision-Date: 2014-10-20 19:47+0000\n"
 "Last-Translator: Adnela Čavčić <acavcic1@etf.unsa.ba>\n"
 "Language-Team: Bosnian\n"
@@ -28,12 +28,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Samir.ribic@etf.unsa.ba,acavcic1@etf.unsa.ba"
 
-#: analysisjob.cpp:45
+#: analysisjob.cpp:47
 msgctxt "@action:inmenu"
 msgid "<command>krazy2</command> analysis"
 msgstr "<command>krazy2</command> analiza"
 
-#: analysisjob.cpp:284 checkerlistjob.cpp:93
+#: analysisjob.cpp:288 checkerlistjob.cpp:97
 msgctxt "@info"
 msgid ""
 "<para>There is no path set in the Krazy2 configuration for the "
@@ -42,22 +42,26 @@ msgstr ""
 "<para> Ne postoji put postavljen u Krazy2 konfiguraciji za <command>krazy2</"
 "command>executable.</para>"
 
-#: analysisjob.cpp:287 checkerlistjob.cpp:96
-#, kde-format
+#: analysisjob.cpp:291
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "<para><command>krazy2</command> failed to start using the path set in the "
+#| "Krazy2 configuration (<filename>%1</filename>).</para>"
 msgctxt "@info"
 msgid ""
-"<para><command>krazy2</command> failed to start using the path set in the "
-"Krazy2 configuration (<filename>%1</filename>).</para>"
+"<para><command>krazy2</command> failed to start using the path(<filename>%1</"
+"filename>).</para>"
 msgstr ""
 "<para><command>krazy2</command> greska pri pocetku koristenja puta "
 "postavljenog u Krazy2 konfiguraciji (<filename>%1</filename>).</para>"
 
-#: analysisjob.cpp:291 checkerlistjob.cpp:100
+#: analysisjob.cpp:295 checkerlistjob.cpp:104
 msgctxt "@info"
 msgid "<para><command>krazy2</command> crashed.</para>"
 msgstr "<para><command>krazy2</command> se srusio. </para>"
 
-#: analysisjob.cpp:293 checkerlistjob.cpp:102
+#: analysisjob.cpp:297 checkerlistjob.cpp:106
 msgctxt "@info"
 msgid ""
 "<para>An error occurred while executing <command>krazy2</command>.</para>"
@@ -76,10 +80,24 @@ msgctxt "@info:progress File type (c++, desktop...) and checker name"
 msgid "Running %1/%2"
 msgstr "Pokretanje  %1/%2"
 
-#: checkerlistjob.cpp:36
+#: checkerlistjob.cpp:38
 msgctxt "@action:inmenu"
 msgid "Find available checkers for <command>krazy2</command>"
 msgstr "Nađi dostupne figure za <command>krazy2</command>"
+
+#: checkerlistjob.cpp:100
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "<para><command>krazy2</command> failed to start using the path set in the "
+#| "Krazy2 configuration (<filename>%1</filename>).</para>"
+msgctxt "@info"
+msgid ""
+"<para><command>krazy2</command> failed to start using the path <filename>%1</"
+"filename>.</para>"
+msgstr ""
+"<para><command>krazy2</command> greska pri pocetku koristenja puta "
+"postavljenog u Krazy2 konfiguraciji (<filename>%1</filename>).</para>"
 
 #: checkermodel.cpp:178
 msgctxt "@info:tooltip The underlying command did not provide a text output"
@@ -146,12 +164,12 @@ msgctxt "@title:column Line number of a file"
 msgid "Line"
 msgstr "Linija"
 
-#: issuewidget.cpp:70
+#: issuewidget.cpp:72
 msgctxt "@item:inmenu"
 msgid "Analyze again"
 msgstr "Analizirajte opet"
 
-#: issuewidget.cpp:71
+#: issuewidget.cpp:73
 msgctxt "@item:inmenu"
 msgid "Selected issue"
 msgid_plural "Selected issues"
@@ -159,7 +177,7 @@ msgstr[0] "Odabran problem"
 msgstr[1] "Odabrani problemi"
 msgstr[2] "Odabrani problemi"
 
-#: issuewidget.cpp:74
+#: issuewidget.cpp:76
 msgctxt "@item:inmenu"
 msgid "Selected file"
 msgid_plural "Selected files"
@@ -167,23 +185,7 @@ msgstr[0] "Odabrani fajl"
 msgstr[1] "Odabrana datoteka"
 msgstr[2] "Odabrane datoteke"
 
-#: krazy2plugin.cpp:34
-msgid "Krazy2 Code Checking"
-msgstr "Krazy2 provjera koda"
-
-#: krazy2plugin.cpp:35
-msgid "Shows issues reported by Krazy2"
-msgstr "Prikaži probleme prjavljene od strane Krazy2"
-
-#: krazy2plugin.cpp:36
-msgid "Daniel Calviño Sánchez"
-msgstr "Daniel Calviño Sánchez"
-
-#: krazy2plugin.cpp:37
-msgid "Author"
-msgstr "Autor"
-
-#: krazy2plugin.cpp:67
+#: krazy2plugin.cpp:63 settings/krazy2preferences.cpp:46
 msgid "Krazy2"
 msgstr "Krazy2"
 
@@ -193,13 +195,13 @@ msgctxt "@title:window"
 msgid "Krazy2"
 msgstr "Krazy2"
 
-#. i18n: ectx: property (toolTip), widget (KPushButton, selectPathsButton)
+#. i18n: ectx: property (toolTip), widget (QPushButton, selectPathsButton)
 #: krazy2view.ui:22
 msgctxt "@info:tooltip"
 msgid "Select the files and directories to analyze."
 msgstr "Odaberite datoteke i direktorije za analizu."
 
-#. i18n: ectx: property (whatsThis), widget (KPushButton, selectPathsButton)
+#. i18n: ectx: property (whatsThis), widget (QPushButton, selectPathsButton)
 #: krazy2view.ui:27
 msgctxt "@info:whatsthis"
 msgid ""
@@ -215,19 +217,19 @@ msgstr ""
 "datoteke u odabranim imenicima( i, rekruzivno, sve datoteke u svim njenim "
 "poddirektorijima).</para>"
 
-#. i18n: ectx: property (text), widget (KPushButton, selectPathsButton)
+#. i18n: ectx: property (text), widget (QPushButton, selectPathsButton)
 #: krazy2view.ui:30
 msgctxt "@action:button"
 msgid "Select paths..."
 msgstr "Odabir puteva..."
 
-#. i18n: ectx: property (toolTip), widget (KPushButton, selectCheckersButton)
+#. i18n: ectx: property (toolTip), widget (QPushButton, selectCheckersButton)
 #: krazy2view.ui:37
 msgctxt "@info:tooltip"
 msgid "Select the checkers that will be executed."
 msgstr "Odaberite fugre koje će biti izvršene."
 
-#. i18n: ectx: property (whatsThis), widget (KPushButton, selectCheckersButton)
+#. i18n: ectx: property (whatsThis), widget (QPushButton, selectCheckersButton)
 #: krazy2view.ui:44
 msgctxt "@info:whatsthis"
 msgid ""
@@ -251,20 +253,20 @@ msgstr ""
 "onemogućen (osim ako je analiza već izvedena). To će potrajati par minuta "
 "dok se slobodne figure ne dobiju od Krazy2 i omogući lista.</para>"
 
-#. i18n: ectx: property (text), widget (KPushButton, selectCheckersButton)
+#. i18n: ectx: property (text), widget (QPushButton, selectCheckersButton)
 #: krazy2view.ui:47
 msgctxt "@action:button"
 msgid "Select checkers..."
 msgstr "Odaberi figure..."
 
-#. i18n: ectx: property (toolTip), widget (KPushButton, analyzeButton)
+#. i18n: ectx: property (toolTip), widget (QPushButton, analyzeButton)
 #: krazy2view.ui:67
 msgctxt "@info:tooltip"
 msgid ""
 "Analyze all the selected files and directories with the selected checkers."
 msgstr "Analizirajte sve odabrane datoteke i direktorije s izabranim figura."
 
-#. i18n: ectx: property (whatsThis), widget (KPushButton, analyzeButton)
+#. i18n: ectx: property (whatsThis), widget (QPushButton, analyzeButton)
 #: krazy2view.ui:72
 msgctxt "@info:whatsthis"
 msgid ""
@@ -278,7 +280,7 @@ msgstr ""
 "<para> Rezultati iz prethodne analize, ako ih ima, se zamjenjuju novima.</"
 "para>"
 
-#. i18n: ectx: property (text), widget (KPushButton, analyzeButton)
+#. i18n: ectx: property (text), widget (QPushButton, analyzeButton)
 #: krazy2view.ui:75
 msgctxt "@action:button"
 msgid "Analyze"
@@ -330,13 +332,13 @@ msgid ""
 msgstr ""
 "<para> Druge dostupne figure koje se neće porkenuti u ovoj analizi.</para>"
 
-#. i18n: ectx: property (toolTip), widget (KPushButton, addButton)
+#. i18n: ectx: property (toolTip), widget (QPushButton, addButton)
 #: selectcheckerswidget.ui:59
 msgctxt "@info:tooltip"
 msgid "Add checkers"
 msgstr "Dodaj figure"
 
-#. i18n: ectx: property (whatsThis), widget (KPushButton, addButton)
+#. i18n: ectx: property (whatsThis), widget (QPushButton, addButton)
 #: selectcheckerswidget.ui:62
 msgctxt "@info:whatsthis"
 msgid ""
@@ -346,19 +348,19 @@ msgstr ""
 "<para>Dodaje figure odabrane u <interface>Ostale dostupne figure</interface> "
 "lista na<interface>figure za pokretanje </interface> lista.</para>"
 
-#. i18n: ectx: property (text), widget (KPushButton, addButton)
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: selectcheckerswidget.ui:65
 msgctxt "@action:button Move items from the left list to the right list"
 msgid ">"
 msgstr ">"
 
-#. i18n: ectx: property (toolTip), widget (KPushButton, removeButton)
+#. i18n: ectx: property (toolTip), widget (QPushButton, removeButton)
 #: selectcheckerswidget.ui:88
 msgctxt "@info:tooltip"
 msgid "Remove checkers"
 msgstr "Izbrisi fuguru"
 
-#. i18n: ectx: property (whatsThis), widget (KPushButton, removeButton)
+#. i18n: ectx: property (whatsThis), widget (QPushButton, removeButton)
 #: selectcheckerswidget.ui:93
 msgctxt "@info:whatsthis"
 msgid ""
@@ -374,7 +376,7 @@ msgstr ""
 "<para>Figure ce biti dodane u <interface>ostale dostupne figure</"
 "interface>lista.</para>"
 
-#. i18n: ectx: property (text), widget (KPushButton, removeButton)
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: selectcheckerswidget.ui:96
 msgctxt "@action:button Move items from the right list to the left list"
 msgid "<"
@@ -404,13 +406,13 @@ msgctxt "@info:whatsthis"
 msgid "<para>The files and directories to analyze.</para>"
 msgstr "<para> Fajlovi i direktoriji za analizu.</para>"
 
-#. i18n: ectx: property (toolTip), widget (KPushButton, addButton)
+#. i18n: ectx: property (toolTip), widget (QPushButton, addButton)
 #: selectpathswidget.ui:32
 msgctxt "@info:tooltip"
 msgid "Add files and directories."
 msgstr "Dodaj fajlove i direktorije."
 
-#. i18n: ectx: property (whatsThis), widget (KPushButton, addButton)
+#. i18n: ectx: property (whatsThis), widget (QPushButton, addButton)
 #: selectpathswidget.ui:37
 msgctxt "@info:whatsthis"
 msgid ""
@@ -422,50 +424,56 @@ msgstr ""
 "\n"
 "<para>Jedino lokalni fajlovi i direktoriji mogu biti odabrani.</para>"
 
-#. i18n: ectx: property (text), widget (KPushButton, addButton)
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: selectpathswidget.ui:40
 msgctxt "@action:button"
 msgid "Add..."
 msgstr "Dodaj..."
 
-#. i18n: ectx: property (toolTip), widget (KPushButton, removeButton)
+#. i18n: ectx: property (toolTip), widget (QPushButton, removeButton)
 #: selectpathswidget.ui:50
 msgctxt "@info:tooltip"
 msgid "Remove the selected files or directories."
 msgstr "Ukloni odabrane fajlove i direktorije."
 
-#. i18n: ectx: property (whatsThis), widget (KPushButton, removeButton)
+#. i18n: ectx: property (whatsThis), widget (QPushButton, removeButton)
 #: selectpathswidget.ui:53
 msgctxt "@info:whatsthis"
 msgid "<para>Removes files or directories from the list.</para>"
 msgstr "<para>Uklanja fajlove ili direktorije iz liste.</para>"
 
-#. i18n: ectx: property (text), widget (KPushButton, removeButton)
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: selectpathswidget.ui:56
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Ukloni"
 
 #. i18n: ectx: label, entry (krazy2Path), group (Krazy2)
-#: settings/krazy2config.kcfg:10
+#: settings/krazy2config.kcfg:9
 msgid "krazy2 Executable"
 msgstr "krazy2 Izvršni"
 
 #. i18n: ectx: tooltip, entry (krazy2Path), group (Krazy2)
-#: settings/krazy2config.kcfg:11
+#: settings/krazy2config.kcfg:10
 msgid "The full path to the krazy2 executable"
 msgstr "Cijeli put do izvršne krazy2"
 
 #. i18n: ectx: whatsthis, entry (krazy2Path), group (Krazy2)
-#: settings/krazy2config.kcfg:12
+#: settings/krazy2config.kcfg:11
 msgid ""
 "The full path to the krazy2 executable that will be used to run Krazy2 tests."
 msgstr ""
 "Cijeli put do izvršne krazy2  koja će se koristiti za pokretanje Krazy2 "
 "ispitivanja."
 
+#: settings/krazy2preferences.cpp:51
+#, fuzzy
+#| msgid "Krazy2 Settings"
+msgid "Configure Krazy2 settings"
+msgstr "Krazy2 Postavke"
+
 #. i18n: ectx: property (windowTitle), widget (QWidget, Krazy2Settings)
-#: settings/krazy2preferences.cpp:33 settings/krazy2settings.ui:14
+#: settings/krazy2settings.ui:14
 msgid "Krazy2 Settings"
 msgstr "Krazy2 Postavke"
 
@@ -478,3 +486,15 @@ msgstr "Putanje"
 #: settings/krazy2settings.ui:28
 msgid "krazy2 Executable:"
 msgstr "krazy2 Izvršni:"
+
+#~ msgid "Krazy2 Code Checking"
+#~ msgstr "Krazy2 provjera koda"
+
+#~ msgid "Shows issues reported by Krazy2"
+#~ msgstr "Prikaži probleme prjavljene od strane Krazy2"
+
+#~ msgid "Daniel Calviño Sánchez"
+#~ msgstr "Daniel Calviño Sánchez"
+
+#~ msgid "Author"
+#~ msgstr "Autor"
