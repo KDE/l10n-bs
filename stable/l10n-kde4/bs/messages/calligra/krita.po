@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-08-08 05:53+0000\n"
+"POT-Creation-Date: 2015-08-09 05:53+0000\n"
 "PO-Revision-Date: 2015-03-16 22:51+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -5788,7 +5788,7 @@ msgstr "Poluprečnik:"
 
 #. i18n: ectx: property (label), widget (KIntNumInput, irisRotationSlider)
 #: plugins/filters/blur/wdg_lens_blur.ui:58
-#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:112
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:115
 msgid "Rotation:"
 msgstr "Rotacija:"
 
@@ -6969,7 +6969,7 @@ msgstr "Izvor datoteke nije odgovarajuće veličine za navedenu širinu i visinu
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, lblSize)
 #: plugins/formats/heightmap/kis_wdg_options_heightmap.ui:30
-#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:100
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:103
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:1776
 #: ui/forms/wdgdisplaysettings.ui:72 ui/kis_paintop_box.cc:211
 #: ui/kis_paintop_box.cc:216
@@ -7978,8 +7978,8 @@ msgstr ""
 #: plugins/paintops/colorsmudge/kis_smudge_option_widget.cpp:82
 msgctxt "@info:tooltip"
 msgid ""
-"The brush has a few transparent pixels in its center, so dulling mode may "
-"work in unstable. Use \"Smearing\" mode in case of a trouble"
+"This brush has transparent pixels in its center. \"Dulling\" mode may give "
+"unstable results. Consider using \"Smearing\" mode instead."
 msgstr ""
 
 #: plugins/paintops/curvebrush/curve_paintop_plugin.cpp:42
@@ -8783,7 +8783,7 @@ msgstr "Šiljci:"
 #: plugins/paintops/libpaintop/forms/wdgclipboardbrush.ui:96
 #: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:81
 #: plugins/paintops/libpaintop/forms/wdgtextbrush.ui:90
-#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:119
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:122
 #: plugins/paintops/spray/wdgsprayoptions.ui:138
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:1735
 msgid "Spacing:"
@@ -8841,16 +8841,9 @@ msgstr "Jitter kretanje"
 #. i18n: ectx: property (text), widget (QCheckBox, colorAsmask)
 #: plugins/paintops/libpaintop/forms/wdgclipboardbrush.ui:116
 #: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:101
-#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:124
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:127
 msgid "Use color as mask"
 msgstr "Koristi boju kao masku"
-
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#. i18n: ectx: property (text), widget (QPushButton, saveBrush)
-#: plugins/paintops/libpaintop/forms/wdgclipboardbrush.ui:165
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:269
-msgid "Add to Predefined Tips"
-msgstr "Dodaj predefiniranim savjetima"
 
 #. i18n: ectx: property (text), widget (QCheckBox, colorPerParticleCHBox)
 #: plugins/paintops/libpaintop/forms/wdgcoloroptions.ui:47
@@ -8987,11 +8980,6 @@ msgstr "Pritisak"
 msgid "Angular"
 msgstr "Uglovno"
 
-#. i18n: ectx: property (text), widget (QPushButton, brushButton)
-#: plugins/paintops/libpaintop/forms/wdgcustombrush.ui:262
-msgid "Use as Tip"
-msgstr "Koristi kao savjet"
-
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxSmudgeMode)
 #: plugins/paintops/libpaintop/forms/wdgfilteroption.ui:43
 msgid "Smudge Mode"
@@ -9084,11 +9072,33 @@ msgstr "Opcija miješanja miješa sliku na četki sa onom na platnu."
 msgid "Brush Tip"
 msgstr "Vrsta četke"
 
-#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:161
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:151
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:262
+msgid "Stamp"
+msgstr "Pečat"
+
+#. i18n: ectx: property (title), widget (QGroupBox, grpClipboard)
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:152
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:277
+#: ui/forms/wdgnewimage.ui:334
+msgid "Clipboard"
+msgstr "Klipbord"
+
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:154
+msgid ""
+"Creates a brush tip from the current image selection.\n"
+" If no selection is present the whole image will be used."
+msgstr ""
+
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:156
+msgid "Creates a brush tip from the image in the clipboard."
+msgstr ""
+
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:176
 msgid "Reset Predefined Tip"
 msgstr "Resetuj predefinirane savjete"
 
-#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:162
+#: plugins/paintops/libpaintop/kis_brush_chooser.cpp:177
 msgid ""
 "Reloads Spacing from file\n"
 "Sets Scale to 1.0\n"
@@ -9104,22 +9114,10 @@ msgstr "Predefinisano"
 
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:62
 #: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:64
-msgid "Stamp"
-msgstr "Pečat"
-
-#. i18n: ectx: property (title), widget (QGroupBox, grpClipboard)
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:66
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:68
-#: ui/forms/wdgnewimage.ui:334
-msgid "Clipboard"
-msgstr "Klipbord"
-
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:70
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:72
 msgid "Text"
 msgstr "Tekst"
 
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:96
+#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:88
 msgid ""
 "Use to set the size from which the Automatic Precision Setting should "
 "begin. \n"
@@ -9129,7 +9127,7 @@ msgstr ""
 "treba početi. \n"
 "Preciznost  će ostati 5 prije ove vrijednosti ."
 
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:97
+#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:89
 msgid ""
 "Use to set the interval at which the Automatic Precision will change. \n"
 "The Precision will decrease as brush size increases."
@@ -9138,7 +9136,7 @@ msgstr ""
 "promijeniti. \n"
 "Preciznost  će se smanjiti sa povećanjem veličine četke."
 
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:250
+#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:236
 msgid ""
 "Precision Level 1 (fastest)\n"
 "Subpixel precision: disabled\n"
@@ -9152,7 +9150,7 @@ msgstr ""
 "\n"
 "Optimalno za vrlo velike četke"
 
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:258
+#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:244
 msgid ""
 "Precision Level 2\n"
 "Subpixel precision: disabled\n"
@@ -9166,7 +9164,7 @@ msgstr ""
 "\n"
 "Optimalno za vrlo četke"
 
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:266
+#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:252
 msgid ""
 "Precision Level 3\n"
 "Subpixel precision: disabled\n"
@@ -9176,7 +9174,7 @@ msgstr ""
 "Preciznost podpiksela: isključena\n"
 "Preciznost veličine četke: tačno"
 
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:272
+#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:258
 msgid ""
 "Precision Level 4 (optimal)\n"
 "Subpixel precision: 50%\n"
@@ -9190,7 +9188,7 @@ msgstr ""
 "\n"
 "Daje do 50% bolje pefomanse u poređenju s nivoom 5"
 
-#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:280
+#: plugins/paintops/libpaintop/kis_brush_selection_widget.cpp:266
 msgid ""
 "Precision Level 5 (best quality)\n"
 "Subpixel precision: exact\n"
@@ -9204,7 +9202,7 @@ msgstr ""
 "\n"
 "Najsporije performanse. Najbolji kvalitet."
 
-#: plugins/paintops/libpaintop/kis_clipboard_brush_widget.cpp:105
+#: plugins/paintops/libpaintop/kis_clipboard_brush_widget.cpp:87
 msgid ""
 "Nothing copied\n"
 " to Clipboard"
@@ -19350,6 +19348,12 @@ msgstr "Radna površina"
 #, kde-format
 msgid "Workspace %1"
 msgstr "Radna površina %1"
+
+#~ msgid "Add to Predefined Tips"
+#~ msgstr "Dodaj predefiniranim savjetima"
+
+#~ msgid "Use as Tip"
+#~ msgstr "Koristi kao savjet"
 
 #~ msgid "Scott Petrovic,"
 #~ msgstr "Scott Petrovic,"
