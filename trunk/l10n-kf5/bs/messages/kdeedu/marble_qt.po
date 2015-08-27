@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-10 08:30+0000\n"
+"POT-Creation-Date: 2015-08-27 09:03+0000\n"
 "PO-Revision-Date: 2015-02-25 23:33+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -919,10 +919,11 @@ msgid "Please specify a URL for this link."
 msgstr "Molim navedite URL za ovaj link."
 
 #: src/lib/marble/AddLinkDialog.cpp:75
-#: src/lib/marble/EditPlacemarkDialog.cpp:326
+#: src/lib/marble/EditPlacemarkDialog.cpp:375
+#: src/lib/marble/osm/OsmRelationEditorDialog.cpp:85
 #: src/plugins/render/annotate/EditGroundOverlayDialog.cpp:118
-#: src/plugins/render/annotate/EditPolygonDialog.cpp:250
-#: src/plugins/render/annotate/EditPolylineDialog.cpp:240
+#: src/plugins/render/annotate/EditPolygonDialog.cpp:297
+#: src/plugins/render/annotate/EditPolylineDialog.cpp:288
 msgid "No name specified"
 msgstr "Ime nije navedeno"
 
@@ -1290,49 +1291,67 @@ msgstr "Procijenjena veličina preuzimanja: %1 MB"
 msgid "Estimated download size: %1 kB"
 msgstr "Procijenjena veličina preuzimanja: %1 kB"
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:105
+#: src/lib/marble/EditPlacemarkDialog.cpp:128
 msgid "Untitled Placemark"
 msgstr "Oznaka mjesta nije navedena"
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:145
+#: src/lib/marble/EditPlacemarkDialog.cpp:170
+#: src/plugins/render/annotate/EditPolygonDialog.cpp:98
+#: src/plugins/render/annotate/EditPolylineDialog.cpp:97
+#, fuzzy
+#| msgid "Tags:"
+msgid "Tags"
+msgstr "Oznake:"
+
+#: src/lib/marble/EditPlacemarkDialog.cpp:176
+#: src/plugins/render/annotate/EditPolygonDialog.cpp:104
+#: src/plugins/render/annotate/EditPolylineDialog.cpp:103
+#, fuzzy
+#| msgid "Elevation"
+msgid "Relations"
+msgstr "Visina"
+
+#: src/lib/marble/EditPlacemarkDialog.cpp:185
 #: src/plugins/render/annotate/NodeModel.cpp:92
 msgid "Elevation"
 msgstr "Visina"
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:327
+#: src/lib/marble/EditPlacemarkDialog.cpp:376
 msgid "Please specify a name for this placemark."
 msgstr "Molim navedite ime za oznaku mjesta."
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:330
+#: src/lib/marble/EditPlacemarkDialog.cpp:379
 msgid "No ID specified"
 msgstr "ID nije naveden"
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:331
+#: src/lib/marble/EditPlacemarkDialog.cpp:380
 msgid "Please specify a ID for this placemark."
 msgstr "Molim navedite ID za oznaku mjesta."
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:334
+#: src/lib/marble/EditPlacemarkDialog.cpp:383
 msgid "ID is invalid"
 msgstr "ID je nevažeći"
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:335
+#: src/lib/marble/EditPlacemarkDialog.cpp:384
 msgid "Please specify a valid ID for this placemark."
 msgstr "Molim navedite važeći ID za oznaku mjesta."
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:338
+#: src/lib/marble/EditPlacemarkDialog.cpp:387
 #: src/plugins/render/annotate/EditGroundOverlayDialog.cpp:122
 msgid "No image specified"
 msgstr "Slika nije navedena"
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:339
-msgid "Please specify an icon for this placemark."
+#: src/lib/marble/EditPlacemarkDialog.cpp:388
+#, fuzzy
+#| msgid "Please specify an icon for this placemark."
+msgid "Please specify an icon for this placemark or add a valid tag."
 msgstr "Molim navedite ikonu za ovu oznaku mjesta."
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:342
+#: src/lib/marble/EditPlacemarkDialog.cpp:391
 msgid "Invalid icon path"
 msgstr "Neispravna putanja ikone"
 
-#: src/lib/marble/EditPlacemarkDialog.cpp:343
+#: src/lib/marble/EditPlacemarkDialog.cpp:392
 msgid "Please specify a valid path for the icon file."
 msgstr "Molim navedite ispravnu putanju za datoteku ikone."
 
@@ -1509,6 +1528,7 @@ msgstr "Ovo je nevažeća datoteka"
 
 #: src/lib/marble/GeoDataTreeModel.cpp:214
 #: src/lib/marble/MapThemeManager.cpp:407
+#: src/lib/marble/osm/OsmRelationEditorDialog.cpp:39
 #: src/plugins/runner/monav/MonavMapsModel.cpp:46
 msgid "Name"
 msgstr "Ime"
@@ -1579,10 +1599,12 @@ msgstr "Instaliraj"
 
 #: src/lib/marble/MapThemeDownloadDialog.cpp:247
 #: src/lib/marble/MapThemeDownloadDialog.cpp:286
+#: src/lib/marble/osm/OsmRelationManagerWidget.cpp:131
+#: src/lib/marble/osm/OsmRelationManagerWidget.cpp:139
 #: src/plugins/render/annotate/AnnotatePlugin.cpp:1046
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1160
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1294
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1535
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1165
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1299
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1544
 msgid "Remove"
 msgstr "Ukloni"
 
@@ -2718,7 +2740,7 @@ msgstr "Pregled datoteke"
 msgid "Current Location"
 msgstr "Trenutna lokacija"
 
-#: src/lib/marble/MarbleGlobal.h:268
+#: src/lib/marble/MarbleGlobal.h:269
 msgid "not available"
 msgstr "nije dostupno"
 
@@ -2782,8 +2804,8 @@ msgstr ""
 
 #: src/lib/marble/MarbleWebView.cpp:23
 #: src/plugins/render/annotate/AnnotatePlugin.cpp:1042
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1290
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1531
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1295
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1540
 msgid "Copy"
 msgstr "Kopiraj"
 
@@ -2933,6 +2955,45 @@ msgstr ""
 #: src/lib/marble/NewstuffModel.cpp:718 src/lib/marble/NewstuffModel.cpp:727
 msgid "Installation aborted by user."
 msgstr "Instalacija prekinuta od strane korisnika."
+
+#: src/lib/marble/osm/OsmRelationEditorDialog.cpp:86
+#, fuzzy
+#| msgid "Please specify a name for this link."
+msgid "Please specify a name for this relation."
+msgstr "Molim navedite ime za ovaj link."
+
+#: src/lib/marble/osm/OsmRelationEditorDialog.cpp:90
+#, fuzzy
+#| msgid "No image specified"
+msgid "No type tag specified"
+msgstr "Slika nije navedena"
+
+#: src/lib/marble/osm/OsmRelationEditorDialog.cpp:91
+#, fuzzy
+#| msgid "Please specify a URL for this link."
+msgid "Please add a type tag for this relation."
+msgstr "Molim navedite URL za ovaj link."
+
+#: src/lib/marble/osm/OsmRelationManagerWidget.cpp:57
+#: src/lib/marble/osm/OsmRelationManagerWidget_p.cpp:111
+msgid "New Relation"
+msgstr ""
+
+#: src/lib/marble/osm/OsmRelationManagerWidget.cpp:132
+#: src/lib/marble/osm/OsmRelationManagerWidget.cpp:143
+#, fuzzy
+#| msgid "&Edit"
+msgid "Edit"
+msgstr "&Izmijeni"
+
+#: src/lib/marble/osm/OsmTagEditorWidget.cpp:86
+#: src/lib/marble/osm/OsmTagEditorWidget_p.cpp:128
+msgid "value"
+msgstr ""
+
+#: src/lib/marble/osm/OsmTagEditorWidget_p.cpp:30
+msgid "Add custom tag..."
+msgstr ""
 
 #: src/lib/marble/PlacemarkEditHeader.cpp:222
 msgid "All Supported Files (*.png)"
@@ -3903,8 +3964,8 @@ msgstr ""
 #: src/plugins/render/annotate/AnnotatePlugin.cpp:767
 #: src/plugins/render/annotate/AnnotatePlugin.cpp:772
 #: src/plugins/render/annotate/AnnotatePlugin.cpp:777
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1424
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1508
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1431
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1517
 msgid "Operation not permitted"
 msgstr "Operacija nije dopuštena"
 
@@ -3972,34 +4033,34 @@ msgid "Paste"
 msgstr "najbrže"
 
 #: src/plugins/render/annotate/AnnotatePlugin.cpp:1038
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1286
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1527
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1291
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1536
 msgid "Cut"
 msgstr "Isjeci"
 
 #: src/plugins/render/annotate/AnnotatePlugin.cpp:1052
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1154
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1300
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1541
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1159
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1305
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1550
 msgid "Properties"
 msgstr "Osobine"
 
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1179
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1184
 msgid "Untitled Ground Overlay"
 msgstr "Nenaslovljeni zemaljski prekrival"
 
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1276
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1517
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1281
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1526
 msgid "Deselect All Nodes"
 msgstr "Poništi izbor svih čvorova"
 
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1280
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1521
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1285
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1530
 msgid "Delete All Selected Nodes"
 msgstr "Obriši sve izabrane čvorove"
 
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1425
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1509
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1432
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1518
 msgid ""
 "Cannot delete one of the selected nodes. Most probably this would make the "
 "polygon's outer boundary not contain all its inner boundary nodes."
@@ -4007,16 +4068,16 @@ msgstr ""
 "Ne mogu obrisati jedan od odabranih čvorova. Vjerojatno bi to učinilo da "
 "vanjske granice poligona ne sadrže sve svoje unutrašnje granične čvorove."
 
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1451
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1472
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1460
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1481
 msgid "Select Node"
 msgstr "Odaberi čvor"
 
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1455
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1464
 msgid "Delete Node"
 msgstr "Obriši čvor"
 
-#: src/plugins/render/annotate/AnnotatePlugin.cpp:1472
+#: src/plugins/render/annotate/AnnotatePlugin.cpp:1481
 msgid "Deselect Node"
 msgstr "Poništi izbor čvora"
 
@@ -4036,32 +4097,32 @@ msgstr "Neispravna putanja slike"
 msgid "Please specify a valid path for the image file."
 msgstr "Molim navedite ispravnu putanju datoteke slike."
 
-#: src/plugins/render/annotate/EditPolygonDialog.cpp:84
+#: src/plugins/render/annotate/EditPolygonDialog.cpp:122
 msgid "Untitled Polygon"
 msgstr "Poligon bez naziva"
 
-#: src/plugins/render/annotate/EditPolygonDialog.cpp:251
+#: src/plugins/render/annotate/EditPolygonDialog.cpp:298
 msgid "Please specify a name for this polygon."
 msgstr "Molim navedite ime za ovaj poligon."
 
-#: src/plugins/render/annotate/EditPolygonDialog.cpp:258
-#: src/plugins/render/annotate/EditPolylineDialog.cpp:248
+#: src/plugins/render/annotate/EditPolygonDialog.cpp:305
+#: src/plugins/render/annotate/EditPolylineDialog.cpp:296
 msgid "Not enough nodes specified."
 msgstr "Nije navedeno dovoljno čvorova"
 
-#: src/plugins/render/annotate/EditPolygonDialog.cpp:259
+#: src/plugins/render/annotate/EditPolygonDialog.cpp:306
 msgid "Please specify at least 3 nodes for the polygon by clicking on the map."
 msgstr "Molim navedite bar 3 čvora poligona klikom na mapu."
 
-#: src/plugins/render/annotate/EditPolylineDialog.cpp:82
+#: src/plugins/render/annotate/EditPolylineDialog.cpp:117
 msgid "Untitled Path"
 msgstr "Putanja nije navedena"
 
-#: src/plugins/render/annotate/EditPolylineDialog.cpp:241
+#: src/plugins/render/annotate/EditPolylineDialog.cpp:289
 msgid "Please specify a name for this polyline."
 msgstr "Molim navedite ime ove polilinije."
 
-#: src/plugins/render/annotate/EditPolylineDialog.cpp:249
+#: src/plugins/render/annotate/EditPolylineDialog.cpp:297
 msgid "Please specify at least 2 nodes for the path by clicking on the map."
 msgstr "Molim navedite bar 3 čvora putanje klikom na mapu."
 
