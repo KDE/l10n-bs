@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-09-21 07:56+0000\n"
+"POT-Creation-Date: 2015-09-22 10:02+0000\n"
 "PO-Revision-Date: 2015-01-30 09:02+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -299,7 +299,7 @@ msgstr "Nisam mogao da otvorim datoteku fov.dat."
 msgid "KStars Exported Sky Image"
 msgstr "KStars izvezena slika neba"
 
-#: auxiliary/imageexporter.cpp:84 main.cpp:116
+#: auxiliary/imageexporter.cpp:84 main.cpp:117
 #: printing/foveditordialog.cpp:164
 #, kde-format
 msgid "Could not parse image format of %1; assuming PNG."
@@ -2917,7 +2917,7 @@ msgstr[0] "Rješavač prekinut nakon %1 sekunde."
 msgstr[1] "Rješavač prekinut nakon %1 sekunde."
 msgstr[2] "Rješavač prekinut nakon %1 sekundi."
 
-#: ekos/align.cpp:808 ekos/capture.cpp:1352 ekos/ekosmanager.cpp:2162
+#: ekos/align.cpp:808 ekos/capture.cpp:1352 ekos/ekosmanager.cpp:2176
 #: ekos/focus.cpp:1492 ekos/guide.cpp:466 ekos/mount.cpp:314
 #: ekos/scheduler.cpp:139
 #, kde-format
@@ -3754,7 +3754,7 @@ msgstr "Pljosnat"
 #. i18n: ectx: property (title), widget (QGroupBox, setupGroup_3)
 #. i18n: ectx: property (title), widget (QGroupBox, ccdGroup)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: ekos/capture.ui:34 ekos/ekosmanager.cpp:2197 ekos/focus.ui:21
+#: ekos/capture.ui:34 ekos/ekosmanager.cpp:2211 ekos/focus.ui:21
 #: ekos/opsekos.ui:235
 msgid "CCD"
 msgstr "CCD"
@@ -4191,7 +4191,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, processINDIB)
-#: ekos/ekosmanager.cpp:821 ekos/ekosmanager.cpp:1385 ekos/ekosmanager.ui:326
+#: ekos/ekosmanager.cpp:821 ekos/ekosmanager.cpp:1395 ekos/ekosmanager.ui:326
 msgid "Start INDI"
 msgstr "Pokreni INDI"
 
@@ -4211,21 +4211,40 @@ msgstr ""
 msgid "INDI Server"
 msgstr "INDI server"
 
-#: ekos/ekosmanager.cpp:1073
+#: ekos/ekosmanager.cpp:1064
+#, fuzzy
+#| msgid "Connecting INDI devices..."
+msgid "Starting INDI services..."
+msgstr "Povezivanje INDI uređaja..."
+
+#: ekos/ekosmanager.cpp:1075
 msgid "INDI services started. Please connect devices."
 msgstr "INDI usluge započele. Molim da povežete uređaje."
 
-#: ekos/ekosmanager.cpp:1094
-#, kde-format
-msgid "INDI services started. Connection to %1 at %2 is successful."
+#: ekos/ekosmanager.cpp:1085
+#, fuzzy, kde-format
+#| msgid "Connection to INDI server at host %1 with port %2 failed."
+msgid "Connecting to remote INDI server at %1 on port %2 ..."
+msgstr "Konekcija za INDI server domaćinu %1 sa priključkom %2 nije uspjela."
+
+#: ekos/ekosmanager.cpp:1092
+#, fuzzy
+#| msgid "Name of the remote INDI focuser device."
+msgid "Failed to connect to remote INDI server!"
+msgstr "Naziv daljinskog INDI fokuser uređaja."
+
+#: ekos/ekosmanager.cpp:1104
+#, fuzzy
+#| msgid "INDI services started. Connection to %1 at %2 is successful."
+msgid "INDI services started. Connection to remote INDI server is successful."
 msgstr "INDI usluge započele. Konekcija za %1 na %2 je uspješna."
 
-#: ekos/ekosmanager.cpp:1106
+#: ekos/ekosmanager.cpp:1116
 msgid "Stop INDI"
 msgstr "Zaustaviti INDI"
 
 #         translations.
-#: ekos/ekosmanager.cpp:1151
+#: ekos/ekosmanager.cpp:1161
 #, fuzzy, kde-format
 msgid ""
 "Unable to establish:\n"
@@ -4235,8 +4254,8 @@ msgstr ""
 "Nije moguće uspostaviti u potpunosti udaljene uređaje.%1 uređaj je preostao. "
 "Osigurajte da ime udaljenog uređaja odgovara stvarnom imenu uređaja."
 
-#: ekos/ekosmanager.cpp:1152 ekos/ekosmanager.cpp:1157
-#: ekos/ekosmanager.cpp:1191 ekos/ekosmanager.cpp:1196
+#: ekos/ekosmanager.cpp:1162 ekos/ekosmanager.cpp:1167
+#: ekos/ekosmanager.cpp:1201 ekos/ekosmanager.cpp:1206
 #, fuzzy
 #| msgid "1 star detected."
 #| msgid_plural "%1 stars detected."
@@ -4244,7 +4263,7 @@ msgid "Ekos startup error"
 msgstr "%1 zvijezda detektovana."
 
 #         translations.
-#: ekos/ekosmanager.cpp:1156
+#: ekos/ekosmanager.cpp:1166
 #, fuzzy, kde-format
 msgid ""
 "Unable to establish the following devices:\n"
@@ -4255,7 +4274,7 @@ msgstr ""
 "Osigurajte da ime udaljenog uređaja odgovara stvarnom imenu uređaja."
 
 #         translations.
-#: ekos/ekosmanager.cpp:1190
+#: ekos/ekosmanager.cpp:1200
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to completely establish remote devices. %1 device remaining. "
@@ -4272,7 +4291,7 @@ msgstr ""
 "Osigurajte da ime udaljenog uređaja odgovara stvarnom imenu uređaja."
 
 #         translations.
-#: ekos/ekosmanager.cpp:1195
+#: ekos/ekosmanager.cpp:1205
 #, fuzzy, kde-format
 #| msgid ""
 #| "Unable to completely establish remote devices. %1 device remaining. "
@@ -4288,67 +4307,67 @@ msgstr ""
 "Nije moguće uspostaviti u potpunosti udaljene uređaje.%1 uređaj je preostao. "
 "Osigurajte da ime udaljenog uređaja odgovara stvarnom imenu uređaja."
 
-#: ekos/ekosmanager.cpp:1276
+#: ekos/ekosmanager.cpp:1286
 msgid "Connecting INDI devices..."
 msgstr "Povezivanje INDI uređaja..."
 
-#: ekos/ekosmanager.cpp:1348
+#: ekos/ekosmanager.cpp:1358
 msgid "Disconnecting INDI devices..."
 msgstr "Odspajanje INDI uređaja..."
 
-#: ekos/ekosmanager.cpp:1393
+#: ekos/ekosmanager.cpp:1403
 msgid "INDI services stopped."
 msgstr "INDI uređaji su stali."
 
-#: ekos/ekosmanager.cpp:1588
+#: ekos/ekosmanager.cpp:1602
 msgid "Remote devices established. Please connect devices."
 msgstr "Daljinski uređaji su uspostavljeni. Molim priključite uređaje."
 
-#: ekos/ekosmanager.cpp:1733 ekos/ekosmanager.cpp:1780
-#: ekos/ekosmanager.cpp:1891 ekos/ekosmanager.cpp:1902
-#: ekos/ekosmanager.cpp:1913 indi/indistd.cpp:438
+#: ekos/ekosmanager.cpp:1747 ekos/ekosmanager.cpp:1794
+#: ekos/ekosmanager.cpp:1905 ekos/ekosmanager.cpp:1916
+#: ekos/ekosmanager.cpp:1927 indi/indistd.cpp:447
 #, kde-format
 msgid "%1 is online."
 msgstr "%1 je na vezi."
 
-#: ekos/ekosmanager.cpp:1867
+#: ekos/ekosmanager.cpp:1881
 #, kde-format
 msgid "%1 filter is online."
 msgstr "%1 filter je onlajn."
 
-#: ekos/ekosmanager.cpp:1933
+#: ekos/ekosmanager.cpp:1947
 #, kde-format
 msgid "%1 is offline."
 msgstr "%1 nije na vezi."
 
-#: ekos/ekosmanager.cpp:2235
+#: ekos/ekosmanager.cpp:2249
 msgid "Alignment"
 msgstr "Poravnanje"
 
 #. i18n: ectx: property (text), widget (QCheckBox, focusModuleCheck)
-#: ekos/ekosmanager.cpp:2262 ekos/scheduler.ui:177
+#: ekos/ekosmanager.cpp:2276 ekos/scheduler.ui:177
 #: fitsviewer/fitsviewer.cpp:298
 msgid "Focus"
 msgstr "Fokus"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: ekos/ekosmanager.cpp:2295 ekos/opsekos.ui:225
+#: ekos/ekosmanager.cpp:2309 ekos/opsekos.ui:225
 #, fuzzy
 msgid "Mount"
 msgstr "Broj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, guideModuleCheck)
-#: ekos/ekosmanager.cpp:2318 ekos/scheduler.ui:203
+#: ekos/ekosmanager.cpp:2332 ekos/scheduler.ui:203
 #: fitsviewer/fitsviewer.cpp:302
 msgid "Guide"
 msgstr "Vodilja"
 
-#: ekos/ekosmanager.cpp:2377
+#: ekos/ekosmanager.cpp:2391
 #, kde-format
 msgid "Guider port from %1 is ready."
 msgstr "Vodični izlaz od %1 je spreman."
 
-#: ekos/ekosmanager.cpp:2694
+#: ekos/ekosmanager.cpp:2708
 msgid "No active FITS Viewer windows to show/hide."
 msgstr ""
 
@@ -7881,7 +7900,7 @@ msgstr "Omoguću binarni prijenos podataka iz ovog svojstva u KStars i obrnuto."
 msgid "Upload"
 msgstr "Pošalji"
 
-#: indi/indistd.cpp:382
+#: indi/indistd.cpp:391
 #, kde-format
 msgid "Data file saved to %1"
 msgstr "Datoteka sa podacima je snimljena u %1"
@@ -49922,57 +49941,68 @@ msgstr "Daniel's Harbour"
 msgid "Extensive testing and suggestions for Ekos/INDI."
 msgstr ""
 
-#: main.cpp:92
+#: main.cpp:82
+#, fuzzy
+#| msgctxt "Country name (optional, but should be translated)"
+#| msgid "St. Lucia"
+msgid "Stephane Lucas"
+msgstr "St. Lucia"
+
+#: main.cpp:82
+msgid "Extensive testing and suggestions for Ekos Scheduler."
+msgstr ""
+
+#: main.cpp:93
 msgid "Dump sky image to file"
 msgstr "Izbaci sliku neba u datoteku"
 
-#: main.cpp:93
+#: main.cpp:94
 msgid "Script to execute"
 msgstr "Skripta za izvršavanje"
 
-#: main.cpp:94
+#: main.cpp:95
 msgid "Width of sky image"
 msgstr "Širina slike neba"
 
-#: main.cpp:95
+#: main.cpp:96
 msgid "Height of sky image"
 msgstr "Visina slike neba"
 
-#: main.cpp:96
+#: main.cpp:97
 msgid "Filename for sky image"
 msgstr "Naziv datoteke za sliku neba"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, InputComboBatch)
-#: main.cpp:97 tools/modcalcjd.ui:120
+#: main.cpp:98 tools/modcalcjd.ui:120
 msgid "Date and time"
 msgstr "Datum i vrijeme"
 
-#: main.cpp:98
+#: main.cpp:99
 msgid "Start with clock paused"
 msgstr "Počni sa zaustavljenim satom"
 
-#: main.cpp:105
+#: main.cpp:106
 msgid "Dumping sky image"
 msgstr "Ispisujem sliku neba"
 
-#: main.cpp:159 main.cpp:209
+#: main.cpp:160 main.cpp:210
 msgid "Using CPU date/time instead."
 msgstr "Koristim CPU datum/vreme."
 
-#: main.cpp:185
+#: main.cpp:186
 msgid "Script executed."
 msgstr "Skripta izvršena."
 
-#: main.cpp:187
+#: main.cpp:188
 msgid "Could not execute script."
 msgstr "Ne mogu izvršiti skriptu."
 
-#: main.cpp:196
+#: main.cpp:197
 #, kde-format
 msgid "Unable to save image: %1 "
 msgstr "Ne mogu snimiti sliku: %1 "
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Saved to file: %1"
 msgstr "Snimio datoteku: %1"
