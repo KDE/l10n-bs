@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-10-12 08:28+0000\n"
+"POT-Creation-Date: 2015-10-13 10:20+0000\n"
 "PO-Revision-Date: 2014-01-31 19:13+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -748,7 +748,7 @@ msgid "Edit Attachment"
 msgstr "Izmijeni prilog"
 
 #: job/attachmentencryptwithchiasmusjob.cpp:92
-#: viewer/objecttreeparser.cpp:1924
+#: viewer/objecttreeparser.cpp:1589
 msgid ""
 "Chiasmus backend does not offer the \"x-obtain-keys\" function. Please "
 "report this bug."
@@ -763,12 +763,12 @@ msgstr ""
 #: job/attachmentencryptwithchiasmusjob.cpp:140
 #: job/attachmentencryptwithchiasmusjob.cpp:153
 #: job/attachmentencryptwithchiasmusjob.cpp:196
-#: viewer/objecttreeparser.cpp:1930
+#: viewer/objecttreeparser.cpp:1595
 msgid "Chiasmus Backend Error"
 msgstr "Greška pozadinskog programa Chiasmus-a"
 
 #: job/attachmentencryptwithchiasmusjob.cpp:107
-#: viewer/objecttreeparser.cpp:1936
+#: viewer/objecttreeparser.cpp:1601
 msgid ""
 "Unexpected return value from Chiasmus backend: The \"x-obtain-keys\" "
 "function did not return a string list. Please report this bug."
@@ -777,7 +777,7 @@ msgstr ""
 "obtain-keys“ nije vratila listu znakovnog niza. Prijavite ovu grešku."
 
 #: job/attachmentencryptwithchiasmusjob.cpp:117
-#: viewer/objecttreeparser.cpp:1944
+#: viewer/objecttreeparser.cpp:1609
 msgid ""
 "No keys have been found. Please check that a valid key path has been set in "
 "the Chiasmus configuration."
@@ -786,12 +786,12 @@ msgstr ""
 "putanja ključa u podešavanjima Chiasmus-a."
 
 #: job/attachmentencryptwithchiasmusjob.cpp:125
-#: viewer/objecttreeparser.cpp:1950
+#: viewer/objecttreeparser.cpp:1615
 msgid "Chiasmus Decryption Key Selection"
 msgstr "Izbor Chiasmus-ovog ključa za dešifrovanje"
 
 #: job/attachmentencryptwithchiasmusjob.cpp:138
-#: viewer/objecttreeparser.cpp:1963
+#: viewer/objecttreeparser.cpp:1628
 msgid ""
 "Chiasmus backend does not offer the \"x-decrypt\" function. Please report "
 "this bug."
@@ -800,7 +800,7 @@ msgstr ""
 "grešku."
 
 #: job/attachmentencryptwithchiasmusjob.cpp:151
-#: viewer/objecttreeparser.cpp:1971
+#: viewer/objecttreeparser.cpp:1636
 msgid ""
 "The \"x-decrypt\" function does not accept the expected parameters. Please "
 "report this bug."
@@ -809,12 +809,12 @@ msgstr ""
 
 #: job/attachmentencryptwithchiasmusjob.cpp:159
 #: job/attachmentencryptwithchiasmusjob.cpp:187
-#: viewer/objecttreeparser.cpp:1977
+#: viewer/objecttreeparser.cpp:1642
 msgid "Chiasmus Decryption Error"
 msgstr "Chiasmus-ova greška dešifrovanja"
 
 #: job/attachmentencryptwithchiasmusjob.cpp:193
-#: viewer/objecttreeparser.cpp:1983
+#: viewer/objecttreeparser.cpp:1648
 msgid ""
 "Unexpected return value from Chiasmus backend: The \"x-decrypt\" function "
 "did not return a byte array. Please report this bug."
@@ -1602,6 +1602,32 @@ msgstr ""
 msgid "Unable to edit attachment"
 msgstr "Ne mogu da uredim prilog"
 
+#: viewer/messagepart.cpp:133 viewer/objecttreeparser.cpp:2479
+msgid "Wrong Crypto Plug-In."
+msgstr "Pogrešan Kripto dodatak!"
+
+#: viewer/messagepart.cpp:288
+msgid "This message is encrypted."
+msgstr "Poruka je šifrovana."
+
+#: viewer/messagepart.cpp:293
+msgid "Decrypt Message"
+msgstr "Dešifruj poruku"
+
+#: viewer/messagepart.cpp:329
+msgid "The crypto engine returned no cleartext data."
+msgstr "Kripto dodatak nije vratio podatke u vidu čistog teksta."
+
+#: viewer/messagepart.cpp:332 viewer/objecttreeparser.cpp:2278
+#: viewer/objecttreeparser.cpp:2320
+msgid "Status: "
+msgstr "Status: "
+
+#: viewer/messagepart.cpp:338
+msgctxt "Status of message unknown."
+msgid "(unknown)"
+msgstr "(nepoznat)"
+
 #: viewer/mimeparttree/mimetreemodel.cpp:59
 msgid "body part"
 msgstr "dio tijela"
@@ -1614,75 +1640,20 @@ msgstr "Opis"
 msgid "Size"
 msgstr "Veličina"
 
-#: viewer/objecttreeparser.cpp:642 viewer/objecttreeparser.cpp:2812
-msgid "Wrong Crypto Plug-In."
-msgstr "Pogrešan Kripto dodatak!"
-
-#: viewer/objecttreeparser.cpp:684
-msgid "The crypto engine returned no cleartext data."
-msgstr "Kripto dodatak nije vratio podatke u vidu čistog teksta."
-
-#: viewer/objecttreeparser.cpp:687 viewer/objecttreeparser.cpp:2613
-#: viewer/objecttreeparser.cpp:2655
-msgid "Status: "
-msgstr "Status: "
-
-#: viewer/objecttreeparser.cpp:693
-msgctxt "Status of message unknown."
-msgid "(unknown)"
-msgstr "(nepoznat)"
-
-#: viewer/objecttreeparser.cpp:705 viewer/objecttreeparser.cpp:986
-#, kde-format
-msgid "Crypto plug-in \"%1\" is not initialized."
-msgstr "Kripto dodatak \"%1\" nije inicijalizovan."
-
-#: viewer/objecttreeparser.cpp:709
-#, kde-format
-msgid "Crypto plug-in \"%1\" cannot verify signatures."
-msgstr "Kripto dodatak \"%1\" ne može provjeravati potpise."
-
-#: viewer/objecttreeparser.cpp:714 viewer/objecttreeparser.cpp:994
-msgid "No appropriate crypto plug-in was found."
-msgstr "Nije pronađen odgovarajući kripto dodatak."
-
-#: viewer/objecttreeparser.cpp:717
-#, kde-format
-msgctxt "%1 is either 'OpenPGP' or 'S/MIME'"
-msgid "No %1 plug-in was found."
-msgstr "Nije pronađen %1 dodatak."
-
-#: viewer/objecttreeparser.cpp:721
-#, kde-format
-msgid ""
-"The message is signed, but the validity of the signature cannot be verified."
-"<br />Reason: %1"
-msgstr ""
-"Poruka je potpisana, ali ispravnost potpisa ne može biti potvrđena.<br /"
-">Razlog: %1"
-
-#: viewer/objecttreeparser.cpp:755
-msgid "This message is encrypted."
-msgstr "Poruka je šifrovana."
-
-#: viewer/objecttreeparser.cpp:760
-msgid "Decrypt Message"
-msgstr "Dešifruj poruku"
-
-#: viewer/objecttreeparser.cpp:799
+#: viewer/objecttreeparser.cpp:630
 #, kde-format
 msgid "Sorry, certificate could not be imported.<br />Reason: %1"
 msgstr "Žao nam je, potvrda se ne može uvesti <br />Razlog: %1"
 
-#: viewer/objecttreeparser.cpp:809
+#: viewer/objecttreeparser.cpp:640
 msgid "Sorry, no certificates were found in this message."
 msgstr "Žalim, u ovoj poruci nije pronađen nijedan certifikat."
 
-#: viewer/objecttreeparser.cpp:812
+#: viewer/objecttreeparser.cpp:643
 msgid "Certificate import status:"
 msgstr "Status uvoza certifikata:"
 
-#: viewer/objecttreeparser.cpp:814
+#: viewer/objecttreeparser.cpp:645
 #, kde-format
 msgid "1 new certificate was imported."
 msgid_plural "%1 new certificates were imported."
@@ -1690,7 +1661,7 @@ msgstr[0] "%1 certifikat je uvezen."
 msgstr[1] "%1 certifikata su uvezena."
 msgstr[2] "%1 certifikata je uvezeno."
 
-#: viewer/objecttreeparser.cpp:817
+#: viewer/objecttreeparser.cpp:648
 #, kde-format
 msgid "1 certificate was unchanged."
 msgid_plural "%1 certificates were unchanged."
@@ -1698,7 +1669,7 @@ msgstr[0] "%1 certifikat nije promijenjen."
 msgstr[1] "%1 certifikata nisu promijenjena."
 msgstr[2] "%1 certifikata nije promijenjeno."
 
-#: viewer/objecttreeparser.cpp:820
+#: viewer/objecttreeparser.cpp:651
 #, kde-format
 msgid "1 new secret key was imported."
 msgid_plural "%1 new secret keys were imported."
@@ -1706,7 +1677,7 @@ msgstr[0] "%1 tajni ključ je uvezen."
 msgstr[1] "%1 tajna ključa su uvezena."
 msgstr[2] "%1 tajnih ključeva je uvezeno."
 
-#: viewer/objecttreeparser.cpp:823
+#: viewer/objecttreeparser.cpp:654
 #, kde-format
 msgid "1 secret key was unchanged."
 msgid_plural "%1 secret keys were unchanged."
@@ -1714,50 +1685,59 @@ msgstr[0] "%1 tajni ključ nije promijenjen."
 msgstr[1] "%1 tajna ključa nisu promijenjena."
 msgstr[2] "%1 tajnih ključeva nije promijenjeno."
 
-#: viewer/objecttreeparser.cpp:833
+#: viewer/objecttreeparser.cpp:664
 msgid "Sorry, no details on certificate import available."
 msgstr "Žalim, nisu dostupni detalji za uvoz certifikata."
 
-#: viewer/objecttreeparser.cpp:836
+#: viewer/objecttreeparser.cpp:667
 msgid "Certificate import details:"
 msgstr "Detalji uvoza certifikata:"
 
-#: viewer/objecttreeparser.cpp:840
+#: viewer/objecttreeparser.cpp:671
 #, kde-format
 msgctxt "Certificate import failed."
 msgid "Failed: %1 (%2)"
 msgstr "Nije uspjelo: %1 (%2)"
 
-#: viewer/objecttreeparser.cpp:844
+#: viewer/objecttreeparser.cpp:675
 #, kde-format
 msgid "New or changed: %1 (secret key available)"
 msgstr "Novi ili promijenjen: %1 (dostupan tajni ključ)"
 
-#: viewer/objecttreeparser.cpp:846
+#: viewer/objecttreeparser.cpp:677
 #, kde-format
 msgid "New or changed: %1"
 msgstr "Novi ili promijenjen: %1"
 
-#: viewer/objecttreeparser.cpp:883
+#: viewer/objecttreeparser.cpp:714
 msgid "Could not decrypt the data."
 msgstr "Ne mogu dekriptirati podatke."
 
-#: viewer/objecttreeparser.cpp:973
+#: viewer/objecttreeparser.cpp:804
 #, kde-format
 msgid "Crypto plug-in \"%1\" could not decrypt the data."
 msgstr "Kripto dodatak \"%1\" ne može dešifrovati podatke."
 
-#: viewer/objecttreeparser.cpp:975
+#: viewer/objecttreeparser.cpp:806
 #, kde-format
 msgid "Error: %1"
 msgstr "Greška: %1"
 
-#: viewer/objecttreeparser.cpp:990
+#: viewer/objecttreeparser.cpp:817 viewer/objecttreeparser.cpp:2550
+#, kde-format
+msgid "Crypto plug-in \"%1\" is not initialized."
+msgstr "Kripto dodatak \"%1\" nije inicijalizovan."
+
+#: viewer/objecttreeparser.cpp:821
 #, kde-format
 msgid "Crypto plug-in \"%1\" cannot decrypt messages."
 msgstr "Kripto dodatak \"%1\" ne može dešifrovati poruke."
 
-#: viewer/objecttreeparser.cpp:1088
+#: viewer/objecttreeparser.cpp:825 viewer/objecttreeparser.cpp:2559
+msgid "No appropriate crypto plug-in was found."
+msgstr "Nije pronađen odgovarajući kripto dodatak."
+
+#: viewer/objecttreeparser.cpp:919
 msgid ""
 "<b>Note:</b> This HTML message may contain external references to images "
 "etc. For security/privacy reasons external references are not loaded. If you "
@@ -1769,7 +1749,7 @@ msgstr ""
 "Ako vjerujete pošiljaocu ove poruke, možete učitati spoljne reference <a "
 "href=\"kmail:loadExternal\">klikom ovde</a>."
 
-#: viewer/objecttreeparser.cpp:1102
+#: viewer/objecttreeparser.cpp:933
 msgid ""
 "<b>Note:</b> This is an HTML message. For security reasons, only the raw "
 "HTML code is shown. If you trust the sender of this message then you can "
@@ -1781,176 +1761,176 @@ msgstr ""
 "aktivirati formatirani HTML prikaz za ovu poruku klikajući <a href=\"kmail:"
 "showHTML\">ovdje</a>."
 
-#: viewer/objecttreeparser.cpp:2054
+#: viewer/objecttreeparser.cpp:1719
 msgctxt "display name for an unnamed attachment"
 msgid "Unnamed"
 msgstr "Neimenovan"
 
-#: viewer/objecttreeparser.cpp:2110
+#: viewer/objecttreeparser.cpp:1775
 msgid "Error: Signature not verified"
 msgstr "Greška: Potpis nije provjeren"
 
-#: viewer/objecttreeparser.cpp:2113
+#: viewer/objecttreeparser.cpp:1778
 msgid "Good signature"
 msgstr "Dobar potpis"
 
-#: viewer/objecttreeparser.cpp:2116
+#: viewer/objecttreeparser.cpp:1781
 msgid "<b>Bad</b> signature"
 msgstr "<b>Loš</b> potpis"
 
-#: viewer/objecttreeparser.cpp:2119
+#: viewer/objecttreeparser.cpp:1784
 msgid "No public key to verify the signature"
 msgstr "Nema javnog ključa za provjeru potpisa"
 
-#: viewer/objecttreeparser.cpp:2122
+#: viewer/objecttreeparser.cpp:1787
 msgid "No signature found"
 msgstr "Nije pronađen potpis"
 
-#: viewer/objecttreeparser.cpp:2125
+#: viewer/objecttreeparser.cpp:1790
 msgid "Error verifying the signature"
 msgstr "Greška pri provjeri potpisa"
 
-#: viewer/objecttreeparser.cpp:2128
+#: viewer/objecttreeparser.cpp:1793
 msgid "Different results for signatures"
 msgstr "Različiti rezultati za potpise"
 
-#: viewer/objecttreeparser.cpp:2147
+#: viewer/objecttreeparser.cpp:1812
 msgid "No status information available."
 msgstr "Statusne informacije nisu dostupne."
 
-#: viewer/objecttreeparser.cpp:2154 viewer/objecttreeparser.cpp:2240
+#: viewer/objecttreeparser.cpp:1819 viewer/objecttreeparser.cpp:1905
 msgid "Good signature."
 msgstr "Dobar potpis."
 
-#: viewer/objecttreeparser.cpp:2175
+#: viewer/objecttreeparser.cpp:1840
 msgid "One key has expired."
 msgstr "Jedan ključ je istekao."
 
-#: viewer/objecttreeparser.cpp:2179
+#: viewer/objecttreeparser.cpp:1844
 msgid "The signature has expired."
 msgstr "Potpis je istekao."
 
-#: viewer/objecttreeparser.cpp:2184
+#: viewer/objecttreeparser.cpp:1849
 msgid "Unable to verify: key missing."
 msgstr "Ne mogu provjeriti: nedostaje ključ."
 
-#: viewer/objecttreeparser.cpp:2191
+#: viewer/objecttreeparser.cpp:1856
 msgid "CRL not available."
 msgstr "CRL nije dostupan."
 
-#: viewer/objecttreeparser.cpp:2195
+#: viewer/objecttreeparser.cpp:1860
 msgid "Available CRL is too old."
 msgstr "Dostupni CRL je previše star."
 
-#: viewer/objecttreeparser.cpp:2199
+#: viewer/objecttreeparser.cpp:1864
 msgid "A policy was not met."
 msgstr "Pravilo nije zadovoljeno."
 
-#: viewer/objecttreeparser.cpp:2203
+#: viewer/objecttreeparser.cpp:1868
 msgid "A system error occurred."
 msgstr "Došlo je do sistemske greške."
 
-#: viewer/objecttreeparser.cpp:2214
+#: viewer/objecttreeparser.cpp:1879
 msgid "One key has been revoked."
 msgstr "Jedan ključ je povučen."
 
-#: viewer/objecttreeparser.cpp:2242
+#: viewer/objecttreeparser.cpp:1907
 msgid "<b>Bad</b> signature."
 msgstr "<b>Loš</b> potpis."
 
-#: viewer/objecttreeparser.cpp:2270
+#: viewer/objecttreeparser.cpp:1935
 msgid "Invalid signature."
 msgstr "Neispravan potpis."
 
-#: viewer/objecttreeparser.cpp:2273
+#: viewer/objecttreeparser.cpp:1938
 msgid "Not enough information to check signature validity."
 msgstr "Nema dovoljno informacija za ovjeru potpisa."
 
-#: viewer/objecttreeparser.cpp:2287
+#: viewer/objecttreeparser.cpp:1952
 msgid "Signature is valid."
 msgstr "Potpis je ispravan."
 
-#: viewer/objecttreeparser.cpp:2289
+#: viewer/objecttreeparser.cpp:1954
 #, kde-format
 msgid "Signed by <a href=\"mailto:%1\">%2</a>."
 msgstr "Potpisnik: <a href=\"mailto:%1\">%2</a>."
 
-#: viewer/objecttreeparser.cpp:2294
+#: viewer/objecttreeparser.cpp:1959
 msgid "Unknown signature state"
 msgstr "Nepoznato stanje potpisa"
 
-#: viewer/objecttreeparser.cpp:2300
+#: viewer/objecttreeparser.cpp:1965
 msgid "Show Details"
 msgstr "Prikaži detalje"
 
-#: viewer/objecttreeparser.cpp:2323
+#: viewer/objecttreeparser.cpp:1988
 msgid "No Audit Log available"
 msgstr "Dnevnik revizije nije dostupan"
 
-#: viewer/objecttreeparser.cpp:2325
+#: viewer/objecttreeparser.cpp:1990
 #, kde-format
 msgid "Error Retrieving Audit Log: %1"
 msgstr "Pogreška u preuzimanju dnevnika praćenja:%1"
 
-#: viewer/objecttreeparser.cpp:2336
+#: viewer/objecttreeparser.cpp:2001
 msgctxt "The Audit Log is a detailed error log from the gnupg backend"
 msgid "Show Audit Log"
 msgstr "Prikažite dnevnik praćenja grešaka"
 
-#: viewer/objecttreeparser.cpp:2347
+#: viewer/objecttreeparser.cpp:2012
 msgid "Hide Details"
 msgstr "Sakrij detalje"
 
-#: viewer/objecttreeparser.cpp:2372 viewer/objecttreeparser.cpp:2374
+#: viewer/objecttreeparser.cpp:2037 viewer/objecttreeparser.cpp:2039
 msgid "Encapsulated message"
 msgstr "Enkapsulirana poruka"
 
-#: viewer/objecttreeparser.cpp:2383
+#: viewer/objecttreeparser.cpp:2048
 msgid "Please wait while the message is being decrypted..."
 msgstr "Molimo pričekajte dok se poruka dešifruje..."
 
-#: viewer/objecttreeparser.cpp:2385
+#: viewer/objecttreeparser.cpp:2050
 msgid "Encrypted message"
 msgstr "Šifrirana poruka"
 
-#: viewer/objecttreeparser.cpp:2387
+#: viewer/objecttreeparser.cpp:2052
 msgid "Encrypted message (decryption not possible)"
 msgstr "Šifrovana poruka (dešifrovanje nije moguće)"
 
-#: viewer/objecttreeparser.cpp:2389
+#: viewer/objecttreeparser.cpp:2054
 #, kde-format
 msgid "Reason: %1"
 msgstr "Razlog: %1"
 
-#: viewer/objecttreeparser.cpp:2399
+#: viewer/objecttreeparser.cpp:2064
 msgid "Please wait while the signature is being verified..."
 msgstr "Molimo pričekajte dok se potpis ovjeri ..."
 
-#: viewer/objecttreeparser.cpp:2496 viewer/objecttreeparser.cpp:2498
+#: viewer/objecttreeparser.cpp:2161 viewer/objecttreeparser.cpp:2163
 msgid "certificate"
 msgstr "certifikat"
 
-#: viewer/objecttreeparser.cpp:2505 viewer/objecttreeparser.cpp:2531
+#: viewer/objecttreeparser.cpp:2170 viewer/objecttreeparser.cpp:2196
 msgctxt "Start of warning message."
 msgid "Warning:"
 msgstr "Upozorenje:"
 
-#: viewer/objecttreeparser.cpp:2507
+#: viewer/objecttreeparser.cpp:2172
 #, kde-format
 msgid "Sender's mail address is not stored in the %1 used for signing."
 msgstr ""
 "E-mail adresa pošiljaoca nije smještena u %1 koji je korišten za "
 "potpisivanje."
 
-#: viewer/objecttreeparser.cpp:2510
+#: viewer/objecttreeparser.cpp:2175
 msgid "sender: "
 msgstr "pošiljalac: "
 
-#: viewer/objecttreeparser.cpp:2513
+#: viewer/objecttreeparser.cpp:2178
 msgid "stored: "
 msgstr "spremljeno: "
 
-#: viewer/objecttreeparser.cpp:2533
+#: viewer/objecttreeparser.cpp:2198
 #, kde-format
 msgid ""
 "No mail address is stored in the %1 used for signing, so we cannot compare "
@@ -1959,96 +1939,116 @@ msgstr ""
 "E-mail adresa nije smještena u %1 koji je korišten za potpisivanje, tako da "
 "je ne možemo uporediti sa adresom pošiljaoca %2."
 
-#: viewer/objecttreeparser.cpp:2557
+#: viewer/objecttreeparser.cpp:2222
 #, kde-format
 msgid "Not enough information to check signature. %1"
 msgstr "Nemam dovoljno informacija da provjerim potpis. %1"
 
-#: viewer/objecttreeparser.cpp:2574 viewer/objecttreeparser.cpp:2648
+#: viewer/objecttreeparser.cpp:2239 viewer/objecttreeparser.cpp:2313
 msgid "Message was signed with unknown key."
 msgstr "Poruka je potpisana nepoznatim ključem."
 
-#: viewer/objecttreeparser.cpp:2576 viewer/objecttreeparser.cpp:2686
-#: viewer/objecttreeparser.cpp:2728
+#: viewer/objecttreeparser.cpp:2241 viewer/objecttreeparser.cpp:2351
+#: viewer/objecttreeparser.cpp:2393
 #, kde-format
 msgid "Message was signed by %1."
 msgstr "Poruku je potpisao %1."
 
-#: viewer/objecttreeparser.cpp:2583 viewer/objecttreeparser.cpp:2591
-#: viewer/objecttreeparser.cpp:2601
+#: viewer/objecttreeparser.cpp:2248 viewer/objecttreeparser.cpp:2256
+#: viewer/objecttreeparser.cpp:2266
 #, kde-format
 msgid "Message was signed with key %1."
 msgstr "Poruka je potpisana ključem %1."
 
-#: viewer/objecttreeparser.cpp:2586
+#: viewer/objecttreeparser.cpp:2251
 #, kde-format
 msgid "Message was signed on %1 with key %2."
 msgstr "Poruka je potpisana na dan %1 ključem %2."
 
-#: viewer/objecttreeparser.cpp:2594
+#: viewer/objecttreeparser.cpp:2259
 #, kde-format
 msgid "Message was signed by %3 on %1 with key %2"
 msgstr "Poruku je potpisao %3 dana %1 ključem %2."
 
-#: viewer/objecttreeparser.cpp:2604
+#: viewer/objecttreeparser.cpp:2269
 #, kde-format
 msgid "Message was signed by %2 with key %1."
 msgstr "Poruku je potpisao %2 ključem %1."
 
-#: viewer/objecttreeparser.cpp:2641
+#: viewer/objecttreeparser.cpp:2306
 #, kde-format
 msgid "Message was signed on %1 with unknown key %2."
 msgstr "Poruka je potpisana dana %1 nepoznatim ključem %2."
 
-#: viewer/objecttreeparser.cpp:2645
+#: viewer/objecttreeparser.cpp:2310
 #, kde-format
 msgid "Message was signed with unknown key %1."
 msgstr "Poruka je potpisana nepoznatim ključem %1."
 
-#: viewer/objecttreeparser.cpp:2651
+#: viewer/objecttreeparser.cpp:2316
 msgid "The validity of the signature cannot be verified."
 msgstr "Ispravnost potpisa ne može biti potvrđena."
 
-#: viewer/objecttreeparser.cpp:2682 viewer/objecttreeparser.cpp:2724
+#: viewer/objecttreeparser.cpp:2347 viewer/objecttreeparser.cpp:2389
 #, kde-format
 msgid "Message was signed by %2 (Key ID: %1)."
 msgstr "Poruku je potpisao %2 (ID ključa: %1)."
 
-#: viewer/objecttreeparser.cpp:2692
+#: viewer/objecttreeparser.cpp:2357
 msgid "The signature is valid, but the key's validity is unknown."
 msgstr "Potpis je ispravan, ali ispravnost ključa je nepoznata."
 
-#: viewer/objecttreeparser.cpp:2696
+#: viewer/objecttreeparser.cpp:2361
 msgid "The signature is valid and the key is marginally trusted."
 msgstr "Potpis je ispravan i ključu se može marginalno vjerovati."
 
-#: viewer/objecttreeparser.cpp:2700
+#: viewer/objecttreeparser.cpp:2365
 msgid "The signature is valid and the key is fully trusted."
 msgstr "Potpis je ispravan i ključu se može potpuno vjerovati."
 
-#: viewer/objecttreeparser.cpp:2704
+#: viewer/objecttreeparser.cpp:2369
 msgid "The signature is valid and the key is ultimately trusted."
 msgstr "Potpis je ispravan i ključu se može krajnje vjerovati."
 
-#: viewer/objecttreeparser.cpp:2708
+#: viewer/objecttreeparser.cpp:2373
 msgid "The signature is valid, but the key is untrusted."
 msgstr "Potpis je ispravan, ali ključu se ne može vjerovati."
 
-#: viewer/objecttreeparser.cpp:2731
+#: viewer/objecttreeparser.cpp:2396
 msgid "Warning: The signature is bad."
 msgstr "Upozorenje: Potpis je neispravan."
 
-#: viewer/objecttreeparser.cpp:2756
+#: viewer/objecttreeparser.cpp:2421
 msgid "End of signed message"
 msgstr "Kraj potpisane poruke"
 
-#: viewer/objecttreeparser.cpp:2762
+#: viewer/objecttreeparser.cpp:2427
 msgid "End of encrypted message"
 msgstr "Kraj šifrirane poruke"
 
-#: viewer/objecttreeparser.cpp:2768
+#: viewer/objecttreeparser.cpp:2433
 msgid "End of encapsulated message"
 msgstr "Kraj enkapsulirane poruke"
+
+#: viewer/objecttreeparser.cpp:2554
+#, kde-format
+msgid "Crypto plug-in \"%1\" cannot verify signatures."
+msgstr "Kripto dodatak \"%1\" ne može provjeravati potpise."
+
+#: viewer/objecttreeparser.cpp:2562
+#, kde-format
+msgctxt "%1 is either 'OpenPGP' or 'S/MIME'"
+msgid "No %1 plug-in was found."
+msgstr "Nije pronađen %1 dodatak."
+
+#: viewer/objecttreeparser.cpp:2567
+#, kde-format
+msgid ""
+"The message is signed, but the validity of the signature cannot be verified."
+"<br />Reason: %1"
+msgstr ""
+"Poruka je potpisana, ali ispravnost potpisa ne može biti potvrđena.<br /"
+">Razlog: %1"
 
 #: viewer/pluginloaderbase.cpp:90
 msgid "Unnamed plugin"
