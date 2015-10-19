@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: $2\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-09-27 01:53+0000\n"
+"POT-Creation-Date: 2015-10-19 01:54+0000\n"
 "PO-Revision-Date: 2015-02-24 22:26+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: none\n"
@@ -709,7 +709,7 @@ msgstr "Ključ"
 msgid "Value"
 msgstr "Vrijednost"
 
-#: src/gui/element/elementwidgets.cpp:891 src/parts/part.cpp:637
+#: src/gui/element/elementwidgets.cpp:891 src/parts/part.cpp:192
 msgid "Delete"
 msgstr "Obriši"
 
@@ -971,7 +971,7 @@ msgstr "Nastavi uređivanje"
 msgid "View Element"
 msgstr "Prikaz elementa"
 
-#: src/gui/file/fileview.cpp:338 src/parts/part.cpp:613
+#: src/gui/file/fileview.cpp:338 src/parts/part.cpp:168
 msgid "Edit Element"
 msgstr "Uredi element"
 
@@ -1432,7 +1432,7 @@ msgid "Open Editor"
 msgstr "Otvori Uređivač"
 
 #: src/gui/preferences/settingsuserinterfacewidget.cpp:106
-#: src/parts/part.cpp:114 src/parts/part.cpp:617
+#: src/parts/part.cpp:114 src/parts/part.cpp:172
 msgid "View Document"
 msgstr "Prikaži dokument"
 
@@ -1893,39 +1893,84 @@ msgstr "Element"
 msgid "Main Toolbar"
 msgstr "Glavna traka sa alatkama"
 
-#: src/parts/part.cpp:178
+#: src/parts/part.cpp:138
+msgid "Save Copy As..."
+msgstr "Spremi kopiju kao ..."
+
+#: src/parts/part.cpp:142
+msgid "Filter"
+msgstr "Filter"
+
+#: src/parts/part.cpp:147
+#, kde-format
+msgid "Filter bibliographic entries (%1)"
+msgstr "Filtriraj bibliografske unose (%1)"
+
+#: src/parts/part.cpp:149
+msgid "New element"
+msgstr "Novi element"
+
+#: src/parts/part.cpp:154
+msgid "New entry"
+msgstr "Novi unos"
+
+#: src/parts/part.cpp:158
+msgid "New comment"
+msgstr "Novi komentar"
+
+#: src/parts/part.cpp:161
+msgid "New macro"
+msgstr "Novi makro"
+
+#: src/parts/part.cpp:164
+msgid "New preamble"
+msgstr "Novi uvod"
+
+#: src/parts/part.cpp:177
+msgid "Find PDF..."
+msgstr "Nađi PDF..."
+
+#: src/parts/part.cpp:181
+msgid "Format entry ids"
+msgstr "Formatiraj ulazne id-ove"
+
+#: src/parts/part.cpp:187
+msgid "Copy References"
+msgstr "Kopiraj reference"
+
+#: src/parts/part.cpp:286
 #, kde-format
 msgid "New%1"
 msgstr "Novi%1"
 
-#: src/parts/part.cpp:297
+#: src/parts/part.cpp:405
 #, kde-format
 msgid "<qt>Could not create backup copies of document<br/><b>%1</b>.</qt>"
 msgstr "<qt>Neuspjelo kreiranje rezervnih kopija dokumenta<br/><b>%1</b>.</qt>"
 
-#: src/parts/part.cpp:297
+#: src/parts/part.cpp:405
 msgid "Backup copies"
 msgstr "Rezervne kopije"
 
-#: src/parts/part.cpp:354
+#: src/parts/part.cpp:462
 msgid "BibTeX File Settings"
 msgstr "BibTeX Postavke datoteka"
 
-#: src/parts/part.cpp:356 src/parts/part.cpp:369
+#: src/parts/part.cpp:464 src/parts/part.cpp:477
 msgid "Save as Default"
 msgstr "Snimi kao podrazumijevano"
 
-#: src/parts/part.cpp:356 src/parts/part.cpp:369
+#: src/parts/part.cpp:464 src/parts/part.cpp:477
 msgid "Save this configuration as default for future Save As operations."
 msgstr ""
 "Sačuvaj ovu konfiguraciju kao podrazumijevanu za buduće Sačuvaj Kao "
 "operacije."
 
-#: src/parts/part.cpp:367
+#: src/parts/part.cpp:475
 msgid "PDF/PostScript File Settings"
 msgstr "PDF/PostScript Postavke datoteka"
 
-#: src/parts/part.cpp:388
+#: src/parts/part.cpp:496
 #, kde-format
 msgid ""
 "Saving the bibliography to file '%1' failed.\n"
@@ -1936,16 +1981,16 @@ msgstr ""
 "\n"
 "Sljedeći izlaz je generiran od strane izvoznog filtera:"
 
-#: src/parts/part.cpp:388 src/parts/part.cpp:412
+#: src/parts/part.cpp:496 src/parts/part.cpp:520
 msgid "Saving bibliography failed"
 msgstr "Čuvanje literature nije uspjelo"
 
-#: src/parts/part.cpp:412
+#: src/parts/part.cpp:520
 #, kde-format
 msgid "Saving the bibliography to file '%1' failed."
 msgstr "Čuvanje literature u datoteku '%1' nije uspjelo."
 
-#: src/parts/part.cpp:426
+#: src/parts/part.cpp:534
 #, kde-format
 msgid ""
 "A file named '%1' already exists. Are you sure you want to overwrite it?"
@@ -1953,64 +1998,19 @@ msgstr ""
 "Datoteka pod imenom  '%1' već postoji. Da li ste sigurni da želite pisati "
 "preko nje?"
 
-#: src/parts/part.cpp:426
+#: src/parts/part.cpp:534
 msgid "Overwrite File?"
 msgstr "Da li da pišem preko postojeće datoteke?"
 
-#: src/parts/part.cpp:481
+#: src/parts/part.cpp:589
 msgid "Local Files"
 msgstr "Lokalne Datoteke"
 
-#: src/parts/part.cpp:505
+#: src/parts/part.cpp:613
 msgid "Remote Files"
 msgstr "Udaljene datoteke"
 
-#: src/parts/part.cpp:583
-msgid "Save Copy As..."
-msgstr "Spremi kopiju kao ..."
-
-#: src/parts/part.cpp:587
-msgid "Filter"
-msgstr "Filter"
-
-#: src/parts/part.cpp:592
-#, kde-format
-msgid "Filter bibliographic entries (%1)"
-msgstr "Filtriraj bibliografske unose (%1)"
-
-#: src/parts/part.cpp:594
-msgid "New element"
-msgstr "Novi element"
-
-#: src/parts/part.cpp:599
-msgid "New entry"
-msgstr "Novi unos"
-
-#: src/parts/part.cpp:603
-msgid "New comment"
-msgstr "Novi komentar"
-
-#: src/parts/part.cpp:606
-msgid "New macro"
-msgstr "Novi makro"
-
-#: src/parts/part.cpp:609
-msgid "New preamble"
-msgstr "Novi uvod"
-
-#: src/parts/part.cpp:622
-msgid "Find PDF..."
-msgstr "Nađi PDF..."
-
-#: src/parts/part.cpp:626
-msgid "Format entry ids"
-msgstr "Formatiraj ulazne id-ove"
-
-#: src/parts/part.cpp:632
-msgid "Copy References"
-msgstr "Kopiraj reference"
-
-#: src/parts/part.cpp:710
+#: src/parts/part.cpp:711
 #, kde-format
 msgid ""
 "The document could not be saved, as it was not possible to write to '%1'.\n"
@@ -2023,14 +2023,14 @@ msgstr ""
 "Provjerite da imate pristup za pisanje u ovu datoteku ili da na disku ima "
 "dovoljno mjesta."
 
-#: src/parts/part.cpp:829
+#: src/parts/part.cpp:830
 msgid ""
 "Cannot apply default formatting for entry ids: No default format specified."
 msgstr ""
 "Ne mogu primjeniti podrazumijevano formatiranje za ulazne id-ove: Nije "
 "specificiran podrazumijevani format."
 
-#: src/parts/part.cpp:973
+#: src/parts/part.cpp:969
 #, kde-format
 msgid ""
 "The file '%1' has changed on disk.\n"
@@ -2041,15 +2041,15 @@ msgstr ""
 "\n"
 "Da ponovo učitam datoteku ili da zanemarim promjene na disku?"
 
-#: src/parts/part.cpp:973
+#: src/parts/part.cpp:969
 msgid "File changed externally"
 msgstr "Datoteka je promijenjena izvana"
 
-#: src/parts/part.cpp:973
+#: src/parts/part.cpp:969
 msgid "Reload file"
 msgstr "Ponovno učitati datoteku"
 
-#: src/parts/part.cpp:973
+#: src/parts/part.cpp:969
 msgid "Ignore on-disk changes"
 msgstr "Zanemari promjene na disku"
 
@@ -2470,7 +2470,7 @@ msgid "Open reference in web browser."
 msgstr "Otvori referencu u web pregledniku."
 
 #: src/program/docklets/referencepreview.cpp:145
-#: src/program/docklets/referencepreview.cpp:401
+#: src/program/docklets/referencepreview.cpp:407
 msgid "Save as HTML"
 msgstr "Sačuvaj kao HTML"
 
@@ -2486,11 +2486,11 @@ msgstr "Prikaz onemogućen"
 msgid "No element selected"
 msgstr "Nijedan element nije izabran"
 
-#: src/program/docklets/referencepreview.cpp:329
+#: src/program/docklets/referencepreview.cpp:331
 msgid "No HTML output generated"
 msgstr "Nijedan HTML izlaz nije generiran"
 
-#: src/program/docklets/referencepreview.cpp:345
+#: src/program/docklets/referencepreview.cpp:347
 msgid ""
 "This type of element is not supported by Wikipedia's <tt>{{cite}}</tt> "
 "command."
