@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-10-08 09:05+0000\n"
+"POT-Creation-Date: 2015-10-23 08:12+0000\n"
 "PO-Revision-Date: 2015-02-24 23:35+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -193,7 +193,7 @@ msgstr "Prikaži zabilješku"
 msgid "Configure Toolbars"
 msgstr "Podesi alatne trake"
 
-#: src/actioncollection.cpp:183 src/widgets/historydock.cpp:261
+#: src/actioncollection.cpp:183 src/menu/call.cpp:86
 msgid "Add new contact"
 msgstr "Dodaj novi kontakt"
 
@@ -201,7 +201,7 @@ msgstr "Dodaj novi kontakt"
 msgid "Configure Shortcut"
 msgstr "Podesite prečicu"
 
-#: src/canvasobjectmanager.cpp:227 src/mainwindow.cpp:193
+#: src/canvasobjectmanager.cpp:227 src/mainwindow.cpp:194
 #, fuzzy
 #| msgid "Ringtone"
 msgid "Ring"
@@ -267,7 +267,7 @@ msgctxt "Add new account"
 msgid "Add"
 msgstr "Dodaj"
 
-#. i18n: ectx: property (whatsThis), widget (QTreeView, m_pAccountList)
+#. i18n: ectx: property (whatsThis), widget (CategorizedTree, m_pAccountList)
 #: src/conf/account/accountdlg.ui:121
 #, fuzzy
 #| msgid ""
@@ -1196,6 +1196,7 @@ msgstr "Zvono"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_8)
 #: src/conf/account/accountpages/tabs.ui:91
+#: src/conf/account/model/extendedprotocolmodel.cpp:42
 msgid "Profile"
 msgstr ""
 
@@ -1333,7 +1334,7 @@ msgstr "Makro"
 #. i18n: ectx: property (text), widget (RightToolButton, m_pRemoveTB)
 #. i18n: ectx: property (text), widget (RightToolButton, m_pRemove)
 #: src/conf/dlgaccessibility.ui:115 src/conf/dlgpresence.ui:81
-#: src/widgets/historydock.cpp:240
+#: src/menu/call.cpp:65
 msgid "Remove"
 msgstr "Ukloni"
 
@@ -1730,6 +1731,39 @@ msgstr "Podešavanje uređaja"
 #: src/delegates/historydelegate.cpp:303
 msgid "Conference"
 msgstr "Konferencija"
+
+#: src/dock.cpp:81
+msgctxt "Contact tab"
+msgid "Contact"
+msgstr "Kontakt osoba"
+
+#: src/dock.cpp:117
+msgctxt "History tab"
+msgid "History"
+msgstr "Historija"
+
+#: src/dock.cpp:145
+#, fuzzy
+#| msgid "Bookmark"
+msgctxt "Bookmark tab"
+msgid "Bookmark"
+msgstr "Zabilješka"
+
+#: src/dock.cpp:226 src/mainwindow.cpp:515
+msgid "Call"
+msgstr "Poziv"
+
+#: src/dock.cpp:229 src/menu/call.cpp:69 src/menu/person.cpp:78
+msgid "Bookmark"
+msgstr "Zabilješka"
+
+#: src/dock.cpp:232
+msgid "Contact"
+msgstr "Kontakt"
+
+#: src/dock.cpp:235
+msgid "History"
+msgstr "Historijat"
 
 #: src/errormessage.cpp:22
 #, fuzzy
@@ -2275,29 +2309,29 @@ msgstr "Pejdžer"
 msgid "Preferred"
 msgstr "Omiljeno"
 
-#: src/mainwindow.cpp:208
+#: src/mainwindow.cpp:209
 msgctxt "Call tab"
 msgid "Call"
 msgstr "Poziv"
 
-#: src/mainwindow.cpp:326
+#: src/mainwindow.cpp:295
 msgctxt "The presence state is \"Online\""
 msgid "Online"
 msgstr "Dostupan"
 
-#: src/mainwindow.cpp:336
+#: src/mainwindow.cpp:305
 msgid "Your Ring ID:"
 msgstr ""
 
-#: src/mainwindow.cpp:343
+#: src/mainwindow.cpp:312
 msgid "None"
 msgstr ""
 
-#: src/mainwindow.cpp:356
+#: src/mainwindow.cpp:325
 msgid "Account:"
 msgstr "Nalog:"
 
-#: src/mainwindow.cpp:373
+#: src/mainwindow.cpp:342
 #, fuzzy
 #| msgid ""
 #| "The SFLPhone daemon (sflphoned) is not available. Please be sure it is "
@@ -2309,22 +2343,52 @@ msgstr ""
 "SFLPhone daemon (sflphoned) nije dostupan. Provjerite da li je ispravno "
 "instaliran ili ga pokrenite ručno"
 
-#: src/mainwindow.cpp:527 src/mainwindow.cpp:597
-msgid "Call"
-msgstr "Poziv"
+#: src/menu/call.cpp:52 src/menu/contactmethod.cpp:44 src/menu/person.cpp:50
+msgid "Call Again"
+msgstr "Pozovi ponovo"
 
-#: src/mainwindow.cpp:530 src/widgets/contactdock.cpp:236
-#: src/widgets/historydock.cpp:244 src/widgets/historydock.cpp:246
-msgid "Bookmark"
-msgstr "Zabilješka"
+#. i18n: ectx: property (text), widget (QPushButton, m_pCopy)
+#: src/menu/call.cpp:56 src/menu/contactmethod.cpp:52 src/menu/person.cpp:61
+#: src/widgets/ui/share.ui:72
+msgid "Copy"
+msgstr "Kopiraj"
 
-#: src/mainwindow.cpp:533
-msgid "Contact"
-msgstr "Kontakt"
+#: src/menu/call.cpp:60 src/menu/contactmethod.cpp:56 src/menu/person.cpp:66
+msgid "Send Email"
+msgstr "Pošalji e-mail"
 
-#: src/mainwindow.cpp:536
-msgid "History"
-msgstr "Historijat"
+#: src/menu/contactmethod.cpp:48 src/menu/person.cpp:55
+msgid "Edit contact"
+msgstr "Uredi kontakt"
+
+#: src/menu/contactmethod.cpp:61 src/menu/person.cpp:72
+msgid "Add Phone Number"
+msgstr "Dodaj broj telefona"
+
+#: src/menu/contactmethod.cpp:66
+msgid "Remove Bookmark"
+msgstr "Ukloni zabilješku"
+
+#: src/menu/contactmethod.cpp:172 src/menu/person.cpp:165
+msgid "Enter a new number"
+msgstr "Unesi novi broj"
+
+#: src/menu/contactmethod.cpp:172 src/menu/person.cpp:165
+msgid "New number:"
+msgstr "Novi broj:"
+
+#: src/menu/person.cpp:83
+msgid "Delete"
+msgstr "Izbrisati"
+
+#: src/menu/person.cpp:185
+#, kde-format
+msgid "Are you sure you want to permanently delete %1?"
+msgstr "Jeste li sigurni da želite trajno izbrisati %1?"
+
+#: src/menu/person.cpp:186
+msgid "Delete contact"
+msgstr "Izbriši kontakt"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, m_pSendMessageLE)
 #: src/ui/View_base.ui:69
@@ -2346,88 +2410,10 @@ msgstr "Jačina mikrofona"
 msgid "Speakers volume"
 msgstr "Jačina zvučnika"
 
-#: src/widgets/autocompletion.cpp:119
+#: src/widgets/autocompletion.cpp:47
 msgid "Use ⬆ up and ⬇ down arrows to select one of these numbers"
 msgstr ""
 "Koristi strelice ⬆ gore i ⬇ dolje arrows da odabereš jedan od ovih brojeva"
-
-#. i18n: ectx: property (placeholderText), widget (FilterLineEdit, m_pFilterLE)
-#: src/widgets/bookmarkdock.cpp:88 src/widgets/ui/contactdock.ui:20
-#: src/widgets/ui/dockbase.ui:56
-msgid "Filter"
-msgstr "Filter"
-
-#: src/widgets/bookmarkdock.cpp:94
-msgid "Show most called contacts"
-msgstr "Prikaži najpozivanije kontakte"
-
-#: src/widgets/bookmarkdock.cpp:99
-msgctxt "Bookmark dock"
-msgid "Bookmark"
-msgstr "Zabilješka"
-
-#: src/widgets/bookmarkdock.cpp:154 src/widgets/contactdock.cpp:208
-#: src/widgets/historydock.cpp:227
-msgid "Call Again"
-msgstr "Pozovi ponovo"
-
-#: src/widgets/bookmarkdock.cpp:158 src/widgets/contactdock.cpp:213
-msgid "Edit contact"
-msgstr "Uredi kontakt"
-
-#. i18n: ectx: property (text), widget (QPushButton, m_pCopy)
-#: src/widgets/bookmarkdock.cpp:162 src/widgets/contactdock.cpp:219
-#: src/widgets/historydock.cpp:231 src/widgets/ui/share.ui:72
-msgid "Copy"
-msgstr "Kopiraj"
-
-#: src/widgets/bookmarkdock.cpp:166 src/widgets/contactdock.cpp:224
-#: src/widgets/historydock.cpp:235
-msgid "Send Email"
-msgstr "Pošalji e-mail"
-
-#: src/widgets/bookmarkdock.cpp:171 src/widgets/contactdock.cpp:230
-msgid "Add Phone Number"
-msgstr "Dodaj broj telefona"
-
-#: src/widgets/bookmarkdock.cpp:176
-msgid "Remove Bookmark"
-msgstr "Ukloni zabilješku"
-
-#: src/widgets/bookmarkdock.cpp:290 src/widgets/contactdock.cpp:353
-msgid "Enter a new number"
-msgstr "Unesi novi broj"
-
-#: src/widgets/bookmarkdock.cpp:290 src/widgets/contactdock.cpp:353
-msgid "New number:"
-msgstr "Novi broj:"
-
-#: src/widgets/contactdock.cpp:118
-msgctxt "Contact tab"
-msgid "Contact"
-msgstr "Kontakt osoba"
-
-#: src/widgets/contactdock.cpp:241
-msgid "Delete"
-msgstr "Izbrisati"
-
-#: src/widgets/contactdock.cpp:373
-#, kde-format
-msgid "Are you sure you want to permanently delete %1?"
-msgstr "Jeste li sigurni da želite trajno izbrisati %1?"
-
-#: src/widgets/contactdock.cpp:374
-msgid "Delete contact"
-msgstr "Izbriši kontakt"
-
-#: src/widgets/historydock.cpp:152
-msgctxt "History tab"
-msgid "History"
-msgstr "Historija"
-
-#: src/widgets/historydock.cpp:250
-msgid "Remove bookmark"
-msgstr "Ukloni zabilješku"
 
 #: src/widgets/kphonenumberselector.cpp:47
 msgid "Select phone number"
@@ -2479,10 +2465,14 @@ msgid "An account went down"
 msgstr "Račun je pao"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ContactDock)
-#. i18n: ectx: property (windowTitle), widget (QWidget, DockBase)
-#: src/widgets/ui/contactdock.ui:14 src/widgets/ui/dockbase.ui:14
+#: src/widgets/ui/contactdock.ui:14
 msgid "Dock"
 msgstr "Prikači"
+
+#. i18n: ectx: property (placeholderText), widget (FilterLineEdit, m_pFilterLE)
+#: src/widgets/ui/contactdock.ui:63
+msgid "Filter"
+msgstr "Filter"
 
 #. i18n: ectx: property (text), widget (QLabel, m_pElapsed)
 #. i18n: ectx: property (text), widget (QLabel, m_pLeft)
@@ -2621,9 +2611,19 @@ msgstr ""
 msgid "Device:"
 msgstr "Uređaj:"
 
-#: src/widgets/videodock.cpp:257
+#: src/widgets/videodock.cpp:254
 msgid "Full screen video"
 msgstr "Puni ekran video"
+
+#~ msgid "Show most called contacts"
+#~ msgstr "Prikaži najpozivanije kontakte"
+
+#~ msgctxt "Bookmark dock"
+#~ msgid "Bookmark"
+#~ msgstr "Zabilješka"
+
+#~ msgid "Remove bookmark"
+#~ msgstr "Ukloni zabilješku"
 
 #~ msgid ""
 #~ "To add an account, press the \"Add\" button below. Use the ⬆ up and ⬇ "
