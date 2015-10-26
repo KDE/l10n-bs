@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ark\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-10-20 10:17+0000\n"
+"POT-Creation-Date: 2015-10-26 08:07+0000\n"
 "PO-Revision-Date: 2015-02-24 23:38+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -189,7 +189,14 @@ msgstr ""
 "Odredišni direktorij za raspakivanje.Ukoliko nije određen koristi se "
 "trenutna putanja."
 
-#: app/main.cpp:140
+#. i18n: ectx: label, entry (openDestinationFolderAfterExtraction), group (Extraction)
+#: app/main.cpp:140 kerfuffle/ark.kcfg:9
+#, fuzzy
+#| msgid "Open destination folder after extraction"
+msgid "Open destination folder after extraction."
+msgstr "Otvori odredišni direktorij nakon raspakivanja"
+
+#: app/main.cpp:143
 msgid ""
 "Query the user for an archive filename and add specified files to it. Quit "
 "when finished."
@@ -197,7 +204,7 @@ msgstr ""
 "Obavjesti korisnika za ime arhive i dodavanje navedenih datoteka u arhivu."
 "Zatvori kad završi."
 
-#: app/main.cpp:143
+#: app/main.cpp:146
 msgid ""
 "Add the specified files to 'filename'. Create archive if it does not exist. "
 "Quit when finished."
@@ -205,7 +212,7 @@ msgstr ""
 "Dodaj navedene datoteke u  'ime datoteke'.Kreiraj arhivu ako ne postoji."
 "Zatvori kad završi."
 
-#: app/main.cpp:147
+#: app/main.cpp:150
 msgid ""
 "Change the current dir to the first entry and add all other entries relative "
 "to this one."
@@ -213,7 +220,7 @@ msgstr ""
 "Promijeni trenutni direktorij u prvi unos i dodaj sve ostale unose relativne "
 "u odnosu na ovaj."
 
-#: app/main.cpp:150
+#: app/main.cpp:153
 msgid ""
 "Automatically choose a filename, with the selected suffix (for example rar, "
 "tar.gz, zip or any other supported types)"
@@ -221,7 +228,7 @@ msgstr ""
 "Automatski odaberi ime datoteke sa odabranim sufiksom (na primjer rar, tar."
 "gz ili ostalim podržanim tipovima)"
 
-#: app/main.cpp:154
+#: app/main.cpp:157
 msgid ""
 "Use the batch interface instead of the usual dialog. This option is implied "
 "if more than one url is specified."
@@ -229,13 +236,13 @@ msgstr ""
 "Grupno okruženje umjesto uobičajenog dijaloškog. Ova opcija se pretpostavlja "
 "kad se zada više od jednog URL‑a."
 
-#: app/main.cpp:157
+#: app/main.cpp:160
 msgid ""
 "The destination argument will be set to the path of the first file supplied."
 msgstr ""
 "Odredišni argument će biti podešen na putanju prve isporučene datoteke."
 
-#: app/main.cpp:160
+#: app/main.cpp:163
 msgid ""
 "Archive contents will be read, and if detected to not be a single folder "
 "archive, a subfolder with the name of the archive will be created."
@@ -310,13 +317,6 @@ msgstr ""
 #: kerfuffle/addtoarchive.cpp:186
 msgid "It is not possible to create archives of this type."
 msgstr "Nije moguće napraviti arhive ovog tipa."
-
-#. i18n: ectx: label, entry (openDestinationFolderAfterExtraction), group (Extraction)
-#: kerfuffle/ark.kcfg:9
-#, fuzzy
-#| msgid "Open destination folder after extraction"
-msgid "Open destination folder after extraction."
-msgstr "Otvori odredišni direktorij nakon raspakivanja"
 
 #. i18n: ectx: label, entry (closeAfterExtraction), group (Extraction)
 #: kerfuffle/ark.kcfg:13
@@ -1004,7 +1004,7 @@ msgctxt "@info"
 msgid "The archive <filename>%1</filename> was not found."
 msgstr "Arhiva <filename>%1</filename> nije nađena."
 
-#: part/part.cpp:439 part/part.cpp:495 part/part.cpp:557
+#: part/part.cpp:439 part/part.cpp:458 part/part.cpp:465 part/part.cpp:530
 msgctxt "@title:window"
 msgid "Error Opening Archive"
 msgstr "Greška pri otvaranju arhive"
@@ -1021,68 +1021,49 @@ msgid ""
 "possible to read from it."
 msgstr "Arhiva <filename>%1</filename> već postoji. Želite li da je otvorite?"
 
-#: part/part.cpp:477
-msgctxt "@title:window"
-msgid "Invalid Archive Type"
-msgstr "Loš tip arhive"
-
-#: part/part.cpp:478
-#, fuzzy
+#: part/part.cpp:455
+#, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
-#| "Ark cannot create archives of the type you have chosen.<nl/><nl/>Please "
-#| "choose another archive type below."
+#| "Ark was not able to open the archive <filename>%1</filename>. No plugin "
+#| "capable of handling the file was found."
 msgctxt "@info"
 msgid ""
-"Ark cannot create archives of the type you have chosen.<br />Please choose "
-"another archive type below."
-msgstr ""
-"Ark ne može da pravi arhive tipa koji ste izabrali.<nl/><nl/>Izaberite ispod "
-"neki drugi tip arhive."
-
-#: part/part.cpp:481
-msgctxt "@title:window"
-msgid "Unable to Determine Archive Type"
-msgstr "Ne mogu da odredim tip arhive"
-
-#: part/part.cpp:482
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Ark was unable to determine the archive type of the filename.<nl/><nl/"
-#| ">Please choose the correct archive type below."
-msgctxt "@info"
-msgid ""
-"Ark was unable to determine the archive type of the filename.<br />Please "
-"choose the correct archive type below."
-msgstr ""
-"Ark ne može da odredi tip arhive prema imenu datoteke.<nl/><nl/>Izaberite "
-"ispod tačan tip arhive."
-
-#: part/part.cpp:495
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Ark was not able to open the archive <filename>%1</filename>. No plugin "
-"capable of handling the file was found."
+"Ark was not able to open <filename>%1</filename>. No suitable plugin found."
+"<nl/><nl/>Ark does not seem to support this file type."
 msgstr ""
 "Ark ne može da otvori arhivu <filename>%1</filename>. Nije nađen priključak "
 "koja bi mogao da obradi datoteku."
 
-#: part/part.cpp:538
+#: part/part.cpp:462
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Ark was not able to open the archive <filename>%1</filename>. No plugin "
+#| "capable of handling the file was found."
+msgctxt "@info"
+msgid ""
+"Ark was not able to open <filename>%1</filename>. Failed to load a suitable "
+"plugin.<nl/><nl/>Make sure any executables needed to handle the archive type "
+"are installed."
+msgstr ""
+"Ark ne može da otvori arhivu <filename>%1</filename>. Nije nađen priključak "
+"koja bi mogao da obradi datoteku."
+
+#: part/part.cpp:511
 #, fuzzy
 #| msgid "Extraction Dialog"
 msgid "Extraction settings"
 msgstr "Dijalog raspakivanja"
 
-#: part/part.cpp:539
+#: part/part.cpp:512
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Preview as Text"
 msgid "Preview settings"
 msgstr "Pregled kao tekst"
 
-#: part/part.cpp:554
+#: part/part.cpp:527
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -1096,11 +1077,11 @@ msgstr ""
 "Učitavanje arhive <filename>%1</filename> nije uspjelo, uz sledeću grešku: "
 "<message>%2</message>"
 
-#: part/part.cpp:619
+#: part/part.cpp:592
 msgid "Ark cannot open symlinks."
 msgstr ""
 
-#: part/part.cpp:731
+#: part/part.cpp:704
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -1113,38 +1094,38 @@ msgstr ""
 "Direktorij <filename>%1</filename> već postoji. Želite li zaista da "
 "raspakujete u njega?"
 
-#: part/part.cpp:733
+#: part/part.cpp:706
 msgid "File modified"
 msgstr ""
 
-#: part/part.cpp:992
+#: part/part.cpp:965
 msgctxt "@title:window"
 msgid "Add Files"
 msgstr "Dodavanje datoteka"
 
-#: part/part.cpp:999
+#: part/part.cpp:972
 msgctxt "@title:window"
 msgid "Add Folder"
 msgstr "Dodavanje direktorija"
 
-#: part/part.cpp:1024
+#: part/part.cpp:997
 msgid "Deleting these files is not undoable. Are you sure you want to do this?"
 msgstr ""
 "Brisanje ovih datoteka ne može se opozvati. Želite li zaista da ih obrišete?"
 
-#: part/part.cpp:1025
+#: part/part.cpp:998
 msgctxt "@title:window"
 msgid "Delete files"
 msgstr "Brisanje datoteka"
 
-#: part/part.cpp:1057
+#: part/part.cpp:1030
 #, fuzzy
 #| msgid "Source archive"
 msgctxt "@title:window"
 msgid "Save Archive As"
 msgstr "Izvorna arhiva"
 
-#: part/part.cpp:1064
+#: part/part.cpp:1037
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1154,7 +1135,7 @@ msgstr ""
 "Arhiva po imenu <filename>%1</filename> već postoji. Želite li zaista da je "
 "prebrišete?"
 
-#: part/part.cpp:1078
+#: part/part.cpp:1051
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1164,7 +1145,7 @@ msgstr ""
 "Arhiva <filename>%1</filename> ne može da se kopira na navedenu lokaciju. "
 "Arhiva više ne postoji."
 
-#: part/part.cpp:1092
+#: part/part.cpp:1065
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1323,6 +1304,40 @@ msgctxt "@info"
 msgid ""
 "There was an error while reading <filename>%1</filename> during extraction."
 msgstr "Greška pri čitanju iz <filename>%1</filename> tokom raspakivanja."
+
+#~ msgctxt "@title:window"
+#~ msgid "Invalid Archive Type"
+#~ msgstr "Loš tip arhive"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid ""
+#~| "Ark cannot create archives of the type you have chosen.<nl/><nl/>Please "
+#~| "choose another archive type below."
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Ark cannot create archives of the type you have chosen.<br />Please "
+#~ "choose another archive type below."
+#~ msgstr ""
+#~ "Ark ne može da pravi arhive tipa koji ste izabrali.<nl/><nl/>Izaberite "
+#~ "ispod neki drugi tip arhive."
+
+#~ msgctxt "@title:window"
+#~ msgid "Unable to Determine Archive Type"
+#~ msgstr "Ne mogu da odredim tip arhive"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid ""
+#~| "Ark was unable to determine the archive type of the filename.<nl/><nl/"
+#~| ">Please choose the correct archive type below."
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Ark was unable to determine the archive type of the filename.<br />Please "
+#~ "choose the correct archive type below."
+#~ msgstr ""
+#~ "Ark ne može da odredi tip arhive prema imenu datoteke.<nl/><nl/>Izaberite "
+#~ "ispod tačan tip arhive."
 
 #~ msgid ""
 #~ "Easter egg for the developers:\n"
