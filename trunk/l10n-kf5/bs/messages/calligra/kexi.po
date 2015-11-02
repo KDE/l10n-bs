@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-11-01 08:17+0000\n"
+"POT-Creation-Date: 2015-11-02 07:46+0000\n"
 "PO-Revision-Date: 2015-02-26 22:24+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -943,7 +943,25 @@ msgstr "Ne mogu da preimenujem objekat \"%1\"."
 msgid "Could not open project \"%1\"."
 msgstr "Ne mogu da otvorim projekat \"%1\"."
 
-#: core/kexiproject.cpp:336
+#: core/kexiproject.cpp:304
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Could not open file. The file <filename>%1</filename> does not exist."
+msgctxt "@info"
+msgid ""
+"Could not open project file. The file <filename>%1</filename> does not exist."
+msgstr ""
+"Ne mogu otvoriti datoteku. Datoteka <filename>%1</filename> ne postoji."
+
+#: core/kexiproject.cpp:307 core/kexiproject.cpp:1462
+#: main/startup/KexiStartup.cpp:811 main/startup/KexiStartup.cpp:820
+#: main/startup/KexiStartup.cpp:831
+msgctxt "@title:window"
+msgid "Could Not Open File"
+msgstr "Ne može se otvoriti datoteka"
+
+#: core/kexiproject.cpp:343
 #, fuzzy, kde-format
 #| msgid ""
 #| "Database project %1 does not appear to have been created using Kexi and "
@@ -956,28 +974,28 @@ msgstr ""
 "Projekt Baza podataka %1 ne izgleda da je stvoren pomoću Kexi i ne može se "
 "otvoriti. To je SQLite datoteka stvorena pomoću drugih alata."
 
-#: core/kexiproject.cpp:361
+#: core/kexiproject.cpp:368
 #, kde-format
 msgid "Could not create project \"%1\"."
 msgstr "Ne mogu da napravim projekat \"%1\"."
 
-#: core/kexiproject.cpp:404 core/kexiproject.cpp:473
+#: core/kexiproject.cpp:411 core/kexiproject.cpp:480
 msgid "Project major version"
 msgstr "Velika verzija projekta"
 
-#: core/kexiproject.cpp:406 core/kexiproject.cpp:475
+#: core/kexiproject.cpp:413 core/kexiproject.cpp:482
 msgid "Project minor version"
 msgstr "Mala verzija projekta"
 
-#: core/kexiproject.cpp:408
+#: core/kexiproject.cpp:415
 msgid "Project caption"
 msgstr "Natpis projekta"
 
-#: core/kexiproject.cpp:410
+#: core/kexiproject.cpp:417
 msgid "Project description"
 msgstr "Opis projekta"
 
-#: core/kexiproject.cpp:945
+#: core/kexiproject.cpp:952
 #, fuzzy, kde-format
 #| msgid "Opening object \"%1\" failed."
 msgid ""
@@ -985,19 +1003,19 @@ msgid ""
 "%2%3"
 msgstr "Otvaranje objekta \"%1\" nije uspjelo."
 
-#: core/kexiproject.cpp:964
+#: core/kexiproject.cpp:971
 msgid "This project is opened as read only."
 msgstr "Ovaj projekat je otvoren kao samo-za-čitanje."
 
-#: core/kexiproject.cpp:996
+#: core/kexiproject.cpp:1003
 msgid "Could not remove object's user data."
 msgstr "Ne mogu da uklonim korisničke podatke objekta."
 
-#: core/kexiproject.cpp:1124
+#: core/kexiproject.cpp:1131
 msgid "Warning: entire project's data will be removed."
 msgstr "Upozorenje: Svi podaci projekta biće uklonjeni."
 
-#: core/kexiproject.cpp:1140
+#: core/kexiproject.cpp:1147
 #, fuzzy, kde-format
 #| msgid ""
 #| "The project %1 already exists.\n"
@@ -1010,14 +1028,14 @@ msgstr ""
 "Projekat \"%1\" već postoji.\n"
 "Želite li da ga zamijenite novim, praznim?"
 
-#: core/kexiproject.cpp:1144
+#: core/kexiproject.cpp:1151
 #, fuzzy
 #| msgid "Replace"
 msgctxt "@action:button"
 msgid "Replace"
 msgstr "Zamijeni"
 
-#: core/kexiproject.cpp:1168
+#: core/kexiproject.cpp:1175
 #, fuzzy, kde-format
 #| msgid "Do you want to drop the project \"%1\"?"
 msgid ""
@@ -1025,14 +1043,14 @@ msgid ""
 "%1"
 msgstr "Želite li da bacite projekat \"%1\"?"
 
-#: core/kexiproject.cpp:1170
+#: core/kexiproject.cpp:1177
 #, fuzzy
 #| msgid "Delete object"
 msgctxt "@action:button"
 msgid "Delete Project"
 msgstr "Obriši objekat"
 
-#: core/kexiproject.cpp:1184
+#: core/kexiproject.cpp:1191
 #, fuzzy
 #| msgid ""
 #| "Could not drop this project. Database connection for this project has "
@@ -1044,11 +1062,11 @@ msgstr ""
 "Nisam mogao da bacim projekat. Veza sa bazom podataka za ovaj projekat "
 "otvorena je samo-za-čitanje."
 
-#: core/kexiproject.cpp:1449
+#: core/kexiproject.cpp:1456
 msgid "Open As Read Only"
 msgstr "Otvori Samo za čitanje"
 
-#: core/kexiproject.cpp:1452
+#: core/kexiproject.cpp:1459
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1057,12 +1075,6 @@ msgid ""
 msgstr ""
 "<para>Ne može se otvoriti datoteka <filename>%1</filename> za čitanje i "
 "pisanje.</para><para>Želite li otvoriti datoteku samo za čitanje?</para>"
-
-#: core/kexiproject.cpp:1455 main/startup/KexiStartup.cpp:811
-#: main/startup/KexiStartup.cpp:820 main/startup/KexiStartup.cpp:831
-msgctxt "@title:window"
-msgid "Could Not Open File"
-msgstr "Ne može se otvoriti datoteka"
 
 #: core/kexiprojectdata.cpp:197
 #, fuzzy, kde-format
