@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: umbrello\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-11-04 02:49+0000\n"
+"POT-Creation-Date: 2015-11-05 02:09+0000\n"
 "PO-Revision-Date: 2015-02-25 21:00+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team:  <bs@li.org>\n"
@@ -1710,8 +1710,7 @@ msgstr "<p align=\"right\">Neizmenljiv tekst:</p>"
 msgid "<p align=\"right\">Editable text:</p>"
 msgstr "<p align=\"right\">Urediv tekst:</p>"
 
-#. i18n: ectx: property (toolTip), widget (QLabel, ui_imageTypeLabel)
-#: dialogs/exportallviewsdialog.cpp:83 dialogs/exportallviewsdialogbase.ui:52
+#: dialogs/exportallviewsdialog.cpp:64 dialogs/widgets/imagetypewidget.cpp:46
 msgid "The format that the images will be exported to"
 msgstr "Format u kojem će slike biti izvezene"
 
@@ -1732,13 +1731,8 @@ msgstr "Osnovna mapa za snimanje slika"
 msgid "&Directory to save the diagrams in:"
 msgstr "&Mapa u kojoj se snimaju dijagrami:"
 
-#. i18n: ectx: property (text), widget (QLabel, ui_imageTypeLabel)
-#: dialogs/exportallviewsdialogbase.ui:55
-msgid "&Image type:"
-msgstr "&Tip slike:"
-
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_useFolders)
-#: dialogs/exportallviewsdialogbase.ui:68
+#: dialogs/exportallviewsdialogbase.ui:57
 msgid ""
 "Create in the target directory the same tree structure used\n"
 "in the document to store the views"
@@ -1747,7 +1741,7 @@ msgstr ""
 "koristi u dokumentu za skladištenje prikaza"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_useFolders)
-#: dialogs/exportallviewsdialogbase.ui:72
+#: dialogs/exportallviewsdialogbase.ui:61
 msgid ""
 "The views are stored in folders in the document. The same tree structure "
 "used in the document to store the views can be created in the selected base "
@@ -1762,7 +1756,7 @@ msgstr ""
 "(Logički pregled, pregled upotrebljivosti itd. se ne kreiraju)."
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_useFolders)
-#: dialogs/exportallviewsdialogbase.ui:75
+#: dialogs/exportallviewsdialogbase.ui:64
 msgid "Use &folders"
 msgstr "Koristi &mape"
 
@@ -3197,6 +3191,20 @@ msgstr "Stil"
 msgid "Diagram Style"
 msgstr "Stil dijagrama"
 
+#: dialogs/widgets/imagetypewidget.cpp:45
+msgid "&Image type:"
+msgstr "&Tip slike:"
+
+#: dialogs/widgets/resolutionwidget.cpp:42
+#, fuzzy
+#| msgid "Realization"
+msgid "&Resolution:"
+msgstr "Realizacija"
+
+#: dialogs/widgets/resolutionwidget.cpp:48
+msgid "DPI"
+msgstr ""
+
 #. i18n: ectx: Menu (file)
 #: dialogs/widgets/umlartifacttypewidget.cpp:29 umbrelloui.rc:4
 msgid "&File"
@@ -3303,11 +3311,11 @@ msgstr "Vidljivost uloge „B“"
 msgid "Exporting to XHTML..."
 msgstr "Eksportovanje u XHTML..."
 
-#: docgenerators/docbookgenerator.cpp:95 umlviewimageexporterall.cpp:115
+#: docgenerators/docbookgenerator.cpp:95 umlviewimageexporterall.cpp:111
 msgid "Exporting all views..."
 msgstr "Izvozim sve prikaze..."
 
-#: docgenerators/docbookgenerator.cpp:101 umlviewimageexporterall.cpp:126
+#: docgenerators/docbookgenerator.cpp:101 umlviewimageexporterall.cpp:122
 msgid "Some errors happened when exporting the images:"
 msgstr "Došlo je do nekih grešaka pri izvozu slika:"
 
@@ -5586,7 +5594,7 @@ msgstr ""
 "Umbrello nije mogao da umetne sadržaj međuspremnika. Objekti u međuspremniku "
 "su možda pogrešnog tipa da bi se ovdje umetnuli."
 
-#: uml.cpp:1758 umlviewimageexporter.cpp:92 umlviewimageexporterall.cpp:128
+#: uml.cpp:1758 umlviewimageexporter.cpp:92 umlviewimageexporterall.cpp:124
 msgctxt "reset status bar"
 msgid "Ready."
 msgstr "Spreman."
@@ -5708,7 +5716,7 @@ msgid "There was a problem saving: %1"
 msgstr "Došlo je do problema prilikom snimanja datoteke: %1"
 
 #: umldoc.cpp:802 umldoc.cpp:820 umldoc.cpp:841 umldoc.cpp:889 umldoc.cpp:930
-#: umllistview.cpp:552 umlviewimageexportermodel.cpp:306
+#: umllistview.cpp:552 umlviewimageexportermodel.cpp:308
 #, kde-format
 msgid "There was a problem saving file: %1"
 msgstr "Došlo je do problema prilikom snimanja datoteke: %1"
@@ -6129,20 +6137,20 @@ msgstr ""
 msgid "File Already Exists"
 msgstr "Datoteka već postoji"
 
-#: umlviewimageexportermodel.cpp:258
+#: umlviewimageexportermodel.cpp:260
 msgid "Empty scene"
 msgstr "Prazna scena"
 
-#: umlviewimageexportermodel.cpp:264 umlviewimageexportermodel.cpp:266
+#: umlviewimageexportermodel.cpp:266 umlviewimageexportermodel.cpp:268
 #, kde-format
 msgid "Cannot create directory: %1"
 msgstr "Ne može se kreirati direktroj: %1"
 
-#: umlviewimageexportermodel.cpp:288
+#: umlviewimageexportermodel.cpp:290
 msgid "Cannot save an empty diagram"
 msgstr "Ne može se spasiti prazan dijagram"
 
-#: umlviewimageexportermodel.cpp:293
+#: umlviewimageexportermodel.cpp:295
 #, kde-format
 msgid "A problem occurred while saving diagram in %1"
 msgstr "Pojavio se problem pri spašavanju dijagrama u %1"
