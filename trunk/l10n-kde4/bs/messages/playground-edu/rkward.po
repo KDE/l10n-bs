@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde4.14\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-11-05 02:14+0000\n"
+"POT-Creation-Date: 2015-11-07 02:04+0000\n"
 "PO-Revision-Date: 2015-02-22 23:06+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -141,7 +141,14 @@ msgstr ""
 msgid "Edit file(s)"
 msgstr "Uredi &datoteku"
 
-#: rkward/core/renvironmentobject.cpp:106
+#: rkward/core/renvironmentobject.cpp:53
+msgid ""
+"This section contains data in your \"workspace\". This is data that you "
+"created or imported, in contrast to data contained in a loaded R package. "
+"Technically, this corresponds to the <i>.GlobalEnv</i> environment."
+msgstr ""
+
+#: rkward/core/renvironmentobject.cpp:114
 #, kde-format
 msgid ""
 "The package '%1' (probably you just loaded it) is currently blacklisted for "
@@ -154,22 +161,22 @@ msgid ""
 ">Configure RKWard->Workspace."
 msgstr ""
 
-#: rkward/core/renvironmentobject.cpp:106
+#: rkward/core/renvironmentobject.cpp:114
 msgid "Package blacklisted"
 msgstr ""
 
-#: rkward/core/rkmodificationtracker.cpp:67
+#: rkward/core/rkmodificationtracker.cpp:68
 #, kde-format
 msgid ""
 "The object '%1' was removed from workspace or changed to a different type of "
 "object, but is currently opened for editing. Do you want to restore it?"
 msgstr ""
 
-#: rkward/core/rkmodificationtracker.cpp:67
+#: rkward/core/rkmodificationtracker.cpp:68
 msgid "Restore object?"
 msgstr ""
 
-#: rkward/core/rkmodificationtracker.cpp:83
+#: rkward/core/rkmodificationtracker.cpp:84
 #, kde-format
 msgid ""
 "Do you really want to remove the object '%1'? The object is currently opened "
@@ -177,19 +184,19 @@ msgid ""
 "back."
 msgstr ""
 
-#: rkward/core/rkmodificationtracker.cpp:83
-#: rkward/core/rkmodificationtracker.cpp:88
+#: rkward/core/rkmodificationtracker.cpp:84
+#: rkward/core/rkmodificationtracker.cpp:89
 #, fuzzy
 msgid "Remove object?"
 msgstr "Odstranite %1 objekt"
 
-#: rkward/core/rkmodificationtracker.cpp:88
+#: rkward/core/rkmodificationtracker.cpp:89
 #, kde-format
 msgid ""
 "Do you really want to remove the object '%1'? There's no way to get it back."
 msgstr ""
 
-#: rkward/core/rkmodificationtracker.cpp:349
+#: rkward/core/rkmodificationtracker.cpp:355
 #: rkward/dataeditor/rkvareditmodel.cpp:688
 #: rkward/dialogs/rkloadlibsdialog.cpp:427
 #: rkward/dialogs/rkloadlibsdialog.cpp:443
@@ -198,21 +205,21 @@ msgstr ""
 msgid "Name"
 msgstr "Ime"
 
-#: rkward/core/rkmodificationtracker.cpp:350
+#: rkward/core/rkmodificationtracker.cpp:356
 #: rkward/dataeditor/rkvareditmodel.cpp:689
-#: rkward/misc/editlabelsdialog.cpp:205 rkward/misc/rkobjectlistview.cpp:186
+#: rkward/misc/editlabelsdialog.cpp:205 rkward/misc/rkobjectlistview.cpp:240
 msgid "Label"
 msgstr "Labela"
 
-#: rkward/core/rkmodificationtracker.cpp:351
+#: rkward/core/rkmodificationtracker.cpp:357
 #: rkward/dataeditor/rkvareditmodel.cpp:690
-#: rkward/misc/rkobjectlistview.cpp:185 rkward/rbackend/rcommandstack.cpp:320
+#: rkward/misc/rkobjectlistview.cpp:239 rkward/rbackend/rcommandstack.cpp:320
 #: rkward/windows/rkhelpsearchwindow.cpp:345
 msgid "Type"
 msgstr "Vrsta"
 
-#: rkward/core/rkmodificationtracker.cpp:352
-#: rkward/misc/rkobjectlistview.cpp:187
+#: rkward/core/rkmodificationtracker.cpp:358
+#: rkward/misc/rkobjectlistview.cpp:241
 msgid "Class"
 msgstr "Klasa"
 
@@ -299,14 +306,21 @@ msgstr "Dimenzije: "
 msgid "Class(es):"
 msgstr ""
 
-#: rkward/core/robjectlist.cpp:82
+#: rkward/core/robjectlist.cpp:75
+msgid ""
+"This section contains environments that are not part of <i>.GlobalEnv</i> / "
+"your \"workspace\". Most importantly, this includes loaded packages, but "
+"also objects added to R's <i>search()<i>-path using <i>attach()</i>."
+msgstr ""
+
+#: rkward/core/robjectlist.cpp:87
 #, kde-format
 msgid ""
 "Did not unload package %1. It is required in RKWard. If you really want to "
 "do this, do so on the R Console."
 msgstr ""
 
-#: rkward/core/robjectlist.cpp:85
+#: rkward/core/robjectlist.cpp:90
 #, kde-format
 msgid "Package %1 appears not to have been loaded"
 msgstr ""
@@ -1339,7 +1353,7 @@ msgstr "Ne radi"
 msgid "Click to add new row"
 msgstr ""
 
-#: rkward/misc/rkaccordiontable.cpp:453
+#: rkward/misc/rkaccordiontable.cpp:452
 msgid "Remove this row / element"
 msgstr ""
 
@@ -1369,38 +1383,53 @@ msgstr ""
 msgid "Highlight all matches"
 msgstr ""
 
-#: rkward/misc/rkobjectlistview.cpp:43
+#: rkward/misc/rkobjectlistview.cpp:59
+#, fuzzy
+#| msgid "Environment"
+msgid "Other Environments"
+msgstr "Okruženje"
+
+#: rkward/misc/rkobjectlistview.cpp:61
+#, fuzzy
+msgid "My Workspace"
+msgstr "Radni prostor"
+
+#: rkward/misc/rkobjectlistview.cpp:62
+msgid "My Workspace (no objects matching filter)"
+msgstr ""
+
+#: rkward/misc/rkobjectlistview.cpp:83
 msgid "Configure Defaults"
 msgstr ""
 
-#: rkward/misc/rkobjectlistview.cpp:180
+#: rkward/misc/rkobjectlistview.cpp:234
 msgid "All Environments"
 msgstr ""
 
-#: rkward/misc/rkobjectlistview.cpp:181
+#: rkward/misc/rkobjectlistview.cpp:235
 msgid "Objects with children"
 msgstr ""
 
-#: rkward/misc/rkobjectlistview.cpp:182
+#: rkward/misc/rkobjectlistview.cpp:236
 #, fuzzy
 msgid "Variables"
 msgstr "Promjenljive"
 
-#: rkward/misc/rkobjectlistview.cpp:183 rkward/windows/robjectbrowser.cpp:297
+#: rkward/misc/rkobjectlistview.cpp:237 rkward/windows/robjectbrowser.cpp:297
 #, fuzzy
 msgid "Functions"
 msgstr "Funkcije"
 
-#: rkward/misc/rkobjectlistview.cpp:184
+#: rkward/misc/rkobjectlistview.cpp:238
 msgid "Hidden Objects"
 msgstr ""
 
-#: rkward/misc/rkobjectlistview.cpp:285
+#: rkward/misc/rkobjectlistview.cpp:343
 #, fuzzy
 msgid "Show Objects"
 msgstr "Prikaži objekte"
 
-#: rkward/misc/rkobjectlistview.cpp:293
+#: rkward/misc/rkobjectlistview.cpp:351
 msgid "Show Fields"
 msgstr ""
 
