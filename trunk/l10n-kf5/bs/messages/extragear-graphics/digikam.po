@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: digikam\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-11-14 09:16+0000\n"
+"POT-Creation-Date: 2015-11-15 08:24+0000\n"
 "PO-Revision-Date: 2015-02-26 21:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1416,7 +1416,7 @@ msgstr "Baloo podrška"
 #: app/utils/componentsinfo.h:78 app/utils/componentsinfo.h:84
 #: app/utils/componentsinfo.h:90 app/utils/componentsinfo.h:111
 #: app/views/tableview/tableview_column_geo.cpp:151
-#: libs/database/engine/dbstatdlg.cpp:82 libs/dialogs/libsinfodlg.cpp:111
+#: libs/database/utils/dbstatdlg.cpp:82 libs/dialogs/libsinfodlg.cpp:111
 #: libs/dialogs/libsinfodlg.cpp:113 libs/dialogs/libsinfodlg.cpp:115
 #: libs/dialogs/libsinfodlg.cpp:117 libs/dialogs/libsinfodlg.cpp:119
 #: libs/dialogs/libsinfodlg.cpp:121 libs/dialogs/libsinfodlg.cpp:174
@@ -1452,13 +1452,13 @@ msgstr "LibKipi podrška"
 msgid "LibOpenCV"
 msgstr "LibOpenCV"
 
-#: app/utils/componentsinfo.h:107 libs/database/engine/dbstatdlg.cpp:78
+#: app/utils/componentsinfo.h:107 libs/database/utils/dbstatdlg.cpp:78
 msgid "Database backend"
 msgstr "Pozadina baze podataka"
 
 #: app/utils/componentsinfo.h:111
 #: app/views/tableview/tableview_column_geo.cpp:151
-#: libs/database/engine/dbstatdlg.cpp:82 libs/dialogs/libsinfodlg.cpp:111
+#: libs/database/utils/dbstatdlg.cpp:82 libs/dialogs/libsinfodlg.cpp:111
 #: libs/dialogs/libsinfodlg.cpp:113 libs/dialogs/libsinfodlg.cpp:115
 #: libs/dialogs/libsinfodlg.cpp:117 libs/dialogs/libsinfodlg.cpp:119
 #: libs/dialogs/libsinfodlg.cpp:121 libs/dialogs/libsinfodlg.cpp:176
@@ -1469,7 +1469,7 @@ msgstr "Pozadina baze podataka"
 msgid "No"
 msgstr "Ne"
 
-#: app/utils/componentsinfo.h:112 libs/database/engine/dbstatdlg.cpp:83
+#: app/utils/componentsinfo.h:112 libs/database/utils/dbstatdlg.cpp:83
 msgid "Database internal server"
 msgstr "Interni server baze podataka"
 
@@ -2083,7 +2083,8 @@ msgstr "Pretraga po približnoj slici"
 msgid "Map Search"
 msgstr "Pretraga po mapi"
 
-#: app/views/digikamview.cpp:222 libs/database/coredb/schemaupdater.cpp:983
+#: app/views/digikamview.cpp:222
+#: libs/database/coredb/coredbschemaupdater.cpp:983
 msgid "Last Search"
 msgstr "Posljednja pretraga"
 
@@ -2140,7 +2141,7 @@ msgstr ""
 
 #: app/views/leftsidebarwidgets.cpp:171 libs/album/album.cpp:467
 #: libs/album/albummanager.cpp:1042 libs/album/albumselectiontreeview.cpp:188
-#: libs/database/engine/dbstatdlg.cpp:70 libs/models/albummodel.cpp:50
+#: libs/database/utils/dbstatdlg.cpp:70 libs/models/albummodel.cpp:50
 #: utilities/kdesupport/kipi/kipiimagecollection.cpp:306
 #: utilities/kdesupport/kipi/kipiimagecollectionselector.cpp:229
 msgid "Albums"
@@ -2159,7 +2160,7 @@ msgid "No Tags Album"
 msgstr "Album bez oznaka"
 
 #: app/views/leftsidebarwidgets.cpp:379 libs/album/album.cpp:529
-#: libs/album/albummanager.cpp:1045 libs/database/engine/dbstatdlg.cpp:74
+#: libs/album/albummanager.cpp:1045 libs/database/utils/dbstatdlg.cpp:74
 #: libs/dmetadata/dmetadatasettingscontainer.h:53
 #: libs/imageproperties/imagedescedittab.cpp:323 libs/models/albummodel.cpp:88
 #: libs/tags/tagfolderview.cpp:93
@@ -2722,7 +2723,7 @@ msgid "Rational"
 msgstr "Racionalan"
 
 #: app/views/tableview/tableview_column_photo.cpp:380
-#: libs/database/engine/dbstatdlg.cpp:55
+#: libs/database/utils/dbstatdlg.cpp:55
 msgid "Format"
 msgstr "Format"
 
@@ -6284,8 +6285,218 @@ msgstr ""
 "Dijeljenje na mreži će biti identificirano prema putanji koju ste odabrali. "
 "Ako je putanja prazna, dijeljenje će se smatrati kao nedostupno."
 
+#: libs/database/coredb/coredbschemaupdater.cpp:209
+#, kde-format
+msgid ""
+"You have insufficient privileges on the database.\n"
+"Following privileges are not assigned to you:\n"
+" %1\n"
+"Check your privileges on the database and restart digiKam."
+msgstr ""
+"Nemate dovoljno dopuštenja na bazi podataka.\n"
+"Slijedeća dopuštenja nisu vam pridružena:\n"
+" %1\n"
+"Provjerite Vaša dopuštenja na bazi podataka i ponovo pokrenite digiKam."
+
+#: libs/database/coredb/coredbschemaupdater.cpp:243
+#: libs/facesengine/facedb/facedbschemaupdater.cpp:129
+msgid ""
+"The database is not valid: the \"DBVersion\" setting does not exist. The "
+"current database schema version cannot be verified. Try to start with an "
+"empty database. "
+msgstr ""
+"Baza podataka nije ispravna: \"DBVersion\" postavka ne postoji. Trenutna "
+"šema baze podataka ne može biti ovjerena.Pokušajte početi sa praznom bazom "
+"podataka. "
+
+#: libs/database/coredb/coredbschemaupdater.cpp:271
+msgid ""
+"The database has been used with a more recent version of digiKam and has "
+"been updated to a database schema which cannot be used with this version. "
+"(This means this digiKam version is too old, or the database format is too "
+"recent.) Please use the more recent version of digiKam that you used before. "
+msgstr ""
+"Baza podataka je korištena sa novijom verzijom digiKam-a i dograđena je "
+"šemom baze podataka koja ne može biti korištena u ovoj verziji.(To znači da "
+"je ova verzija digiKam-a previše stara ili je format beze podataka previše "
+"nov) Molimo Vas da koristite noviju verziju digikam-a od one što ste "
+"koristili ranije. "
+
+#: libs/database/coredb/coredbschemaupdater.cpp:332
+#: libs/database/thumbsdb/thumbsdbchemaupdater.cpp:173
+msgid ""
+"Failed to create tables in database.\n"
+" "
+msgstr ""
+"Kreiranje ploča u bazi podataka nije uspjelo\n"
+" "
+
+#: libs/database/coredb/coredbschemaupdater.cpp:353
+#, kde-format
+msgid ""
+"Failed to open a database transaction on your database file \"%1\". This is "
+"unusual. Please check that you can access the file and no other process has "
+"currently locked the file. If the problem persists you can get help from the "
+"digikam-devel@kde.org mailing list. As well, please have a look at what "
+"digiKam prints on the console. "
+msgstr ""
+"Otvaranje transakcije baze podataka na Vašem fajlu baze podataka \"%1\" nije "
+"uspjelo. Ovo je neobično. Molimo Vas da provjerite da li možete pristupiti "
+"fajlu i da nema drugih procesa koji su zauzeli fajl. Ako problema nastavi da "
+"se pojavljuje,možete dobiti pomoć sadigikam-devel@kde.org liste mailova. "
+"Također,pogledajte šta digiKam ispisuje na konzoli. "
+
+#: libs/database/coredb/coredbschemaupdater.cpp:410
+#, kde-format
+msgid ""
+"The schema updating process from version 4 to 6 failed, caused by an error "
+"that we did not expect. You can try to discard your old database and start "
+"with an empty one. (In this case, please move the database files \"%1\" and "
+"\"%2\" from the directory \"%3\"). More probably you will want to report "
+"this error to the digikam-devel@kde.org mailing list. As well, please have a "
+"look at what digiKam prints on the console. "
+msgstr ""
+"Nadogradnja šeme baze podataka sa verzije 4 na 6 nije uspjela, uzrokovana je "
+"greškom koju nismo očekivali. Možete probati odbaciti Vašu staru bazu "
+"podataka i započeti sa praznom. (U ovome slučaju,molimo Vas da pomjerite "
+"fajlove baze podataka \"%1\" i \"%2\" iz direktorija \"%3\"). Vjerovatno "
+"ćete htjeti da prijavite ovu grešku na digikam-devel@kde.org listu mailova."
+"Također,pogledajte šta digiKam ispisuje na konzoli. "
+
+#: libs/database/coredb/coredbschemaupdater.cpp:440
+#, kde-format
+msgid ""
+"Failed to update the database schema from version %1 to version %2. Please "
+"read the error messages printed on the console and report this error as a "
+"bug at bugs.kde.org. "
+msgstr ""
+"Nadogradnja šeme baze podataka sa verzije %1 na verziju %2 nije uspjela. "
+"Molimo Vas da pročitate poruku o grešci napisanu na konzoli i da prijavite "
+"ovu grešku kao bug na bugs.kde.org. "
+
+#: libs/database/coredb/coredbschemaupdater.cpp:601
+msgid ""
+"The database update action cannot be found. Please ensure that the dbconfig."
+"xml file of the current version of digiKam is installed at the correct "
+"place. "
+msgstr ""
+"Akcija za nadogradnju baze podataka nije pronađena. Molimo Vas da  osigurate "
+"da je trenuta verzija digiKam-a instalirana na pravom mjestu. "
+
+#: libs/database/coredb/coredbschemaupdater.cpp:620
+#, kde-format
+msgid "Updated schema to version %1."
+msgstr "Ažurirajte shemu na verziju %1."
+
+#: libs/database/coredb/coredbschemaupdater.cpp:674
+#, kde-format
+msgid ""
+"Failed to copy the old database file (\"%1\") to its new location (\"%2\"). "
+"Error message: \"%3\". Please make sure that the file can be copied, or "
+"delete it."
+msgstr ""
+"Kopiranje stare fajlova baze podataka  (\"%1\") na novu lokaciju  (\"%2\"). "
+"Poruka o grešci:\"%3\". Molimo da provjerite da fajl može biti kopiran ili "
+"ga obrišite."
+
+#: libs/database/coredb/coredbschemaupdater.cpp:694
+msgid "Copied database file"
+msgstr "Kopirana datoteka baze podataka"
+
+#: libs/database/coredb/coredbschemaupdater.cpp:699
+#, kde-format
+msgid ""
+"The old database file (\"%1\") has been copied to the new location (\"%2\") "
+"but it cannot be opened. Please delete both files and try again, starting "
+"with an empty database. "
+msgstr ""
+"Fajl stare baze podataka  (\"%1\") kopiran je na novu lokaciju   (\"%2\") "
+"ali se ne može otvoriti. Molimo  Vas  da obrišete oba fajla i pokušate poovo,"
+"počinjući sa praznom bazom podataka. "
+
+#: libs/database/coredb/coredbschemaupdater.cpp:719
+msgid "Opened new database file"
+msgstr "Otvorena nova datoteka baze podataka"
+
+#: libs/database/coredb/coredbschemaupdater.cpp:813
+msgid "Prepared table creation"
+msgstr "Pripremljene kreacije tablica"
+
+#: libs/database/coredb/coredbschemaupdater.cpp:832
+msgid "Created tables"
+msgstr "Stvorene tablice"
+
+#: libs/database/coredb/coredbschemaupdater.cpp:845
+msgid ""
+"No album library path has been found in the configuration file. Giving up "
+"the schema updating process. Please try with an empty database, or repair "
+"your configuration."
+msgstr ""
+"U konfiguracijskoj datoteci nije pronađena putanja do biblioteke albuma. "
+"Odustajem od procesa ažuriranja sheme. Molimo, pokušajte sa praznom bazom "
+"podataka, ili popravite Vašu konfiguraciju."
+
+#: libs/database/coredb/coredbschemaupdater.cpp:866
+#, kde-format
+msgid ""
+"There was an error associating your albumLibraryPath (\"%1\") with a storage "
+"volume of your system. This problem may indicate that there is a problem "
+"with your installation. If you are working on Linux, check that HAL is "
+"installed and running. In any case, you can seek advice from the digikam-"
+"devel@kde.org mailing list. The database updating process will now be "
+"aborted because we do not want to create a new database based on false "
+"assumptions from a broken installation."
+msgstr ""
+"Desila se greška u povezivanju Vašeg albumLibraryPath (\"%1\") sa jednom od "
+"particija na sistemu. Ovaj problem može da indikuje problem sa instalacijom. "
+"Ako radite na Linuxu, provjerite da li je instaliran i pokrenut HAL. U "
+"svakom slučaju, možete potražiti savjet od digikam-devel@kde.org mailing "
+"liste. Proces ažuriranja baze podataka će sada biti obustavljen, jer ne "
+"želimo kreirati novu bazu podataka zasnovanu na pogrešnim pretpostavkama iz "
+"neispravne instalacije."
+
+#: libs/database/coredb/coredbschemaupdater.cpp:893
+msgid "Configured one album root"
+msgstr "Konfigurisan jedan korijen albuma"
+
+#: libs/database/coredb/coredbschemaupdater.cpp:919
+msgid "Imported albums"
+msgstr "Uvezeni albumi"
+
+#: libs/database/coredb/coredbschemaupdater.cpp:955
+msgid "Imported images information"
+msgstr "Ubačene informacije o slikama"
+
+#: libs/database/coredb/coredbschemaupdater.cpp:985
+msgid "Last Search (0.9)"
+msgstr "Zadnja Pretraga (0.9)"
+
+#: libs/database/coredb/coredbschemaupdater.cpp:1042
+msgid "Initialized and imported file suffix filter"
+msgstr "Inicijalizovan i uvezen filter datoteka prema sufiksu"
+
+#: libs/database/coredb/coredbschemaupdater.cpp:1064
+msgid "Did the initial full scan"
+msgstr "Obavljeno inicijalno skeniranje"
+
+#: libs/database/coredb/coredbschemaupdater.cpp:1087
+msgid "Imported creation dates"
+msgstr "Uvezeni datumi kreiranja"
+
+#: libs/database/coredb/coredbschemaupdater.cpp:1117
+msgid "Imported comments"
+msgstr "Ubačeni komentari"
+
+#: libs/database/coredb/coredbschemaupdater.cpp:1143
+msgid "Imported ratings"
+msgstr "Ubačene ocjene"
+
+#: libs/database/coredb/coredbschemaupdater.cpp:1154
+msgid "Dropped v3 tables"
+msgstr "Spuštene v3 tablice"
+
 #: libs/database/coredb/databaseaccess.cpp:265
-#: libs/database/thumbsdb/thumbnaildatabaseaccess.cpp:204
+#: libs/database/thumbsdb/thumbsdbaccess.cpp:204
 msgid ""
 "The driver \"SQLITE\" for SQLite3 databases is not available.\n"
 "digiKam depends on the drivers provided by the SQL module of Qt4."
@@ -6294,7 +6505,7 @@ msgstr ""
 "digiKam ovisi o drajverima omogućenim po SQL modulu od Qt4."
 
 #: libs/database/coredb/databaseaccess.cpp:303
-#: libs/database/thumbsdb/thumbnaildatabaseaccess.cpp:228
+#: libs/database/thumbsdb/thumbsdbaccess.cpp:228
 msgid ""
 "Error opening database backend.\n"
 " "
@@ -6331,216 +6542,6 @@ msgid ""
 msgstr ""
 "Greška prilikom pretvorbe baze podataka. \n"
 " Detalji :%1"
-
-#: libs/database/coredb/schemaupdater.cpp:209
-#, kde-format
-msgid ""
-"You have insufficient privileges on the database.\n"
-"Following privileges are not assigned to you:\n"
-" %1\n"
-"Check your privileges on the database and restart digiKam."
-msgstr ""
-"Nemate dovoljno dopuštenja na bazi podataka.\n"
-"Slijedeća dopuštenja nisu vam pridružena:\n"
-" %1\n"
-"Provjerite Vaša dopuštenja na bazi podataka i ponovo pokrenite digiKam."
-
-#: libs/database/coredb/schemaupdater.cpp:243
-#: libs/facesengine/facedb/databasefaceschemaupdater.cpp:129
-msgid ""
-"The database is not valid: the \"DBVersion\" setting does not exist. The "
-"current database schema version cannot be verified. Try to start with an "
-"empty database. "
-msgstr ""
-"Baza podataka nije ispravna: \"DBVersion\" postavka ne postoji. Trenutna "
-"šema baze podataka ne može biti ovjerena.Pokušajte početi sa praznom bazom "
-"podataka. "
-
-#: libs/database/coredb/schemaupdater.cpp:271
-msgid ""
-"The database has been used with a more recent version of digiKam and has "
-"been updated to a database schema which cannot be used with this version. "
-"(This means this digiKam version is too old, or the database format is too "
-"recent.) Please use the more recent version of digiKam that you used before. "
-msgstr ""
-"Baza podataka je korištena sa novijom verzijom digiKam-a i dograđena je "
-"šemom baze podataka koja ne može biti korištena u ovoj verziji.(To znači da "
-"je ova verzija digiKam-a previše stara ili je format beze podataka previše "
-"nov) Molimo Vas da koristite noviju verziju digikam-a od one što ste "
-"koristili ranije. "
-
-#: libs/database/coredb/schemaupdater.cpp:332
-#: libs/database/thumbsdb/thumbnailschemaupdater.cpp:173
-msgid ""
-"Failed to create tables in database.\n"
-" "
-msgstr ""
-"Kreiranje ploča u bazi podataka nije uspjelo\n"
-" "
-
-#: libs/database/coredb/schemaupdater.cpp:353
-#, kde-format
-msgid ""
-"Failed to open a database transaction on your database file \"%1\". This is "
-"unusual. Please check that you can access the file and no other process has "
-"currently locked the file. If the problem persists you can get help from the "
-"digikam-devel@kde.org mailing list. As well, please have a look at what "
-"digiKam prints on the console. "
-msgstr ""
-"Otvaranje transakcije baze podataka na Vašem fajlu baze podataka \"%1\" nije "
-"uspjelo. Ovo je neobično. Molimo Vas da provjerite da li možete pristupiti "
-"fajlu i da nema drugih procesa koji su zauzeli fajl. Ako problema nastavi da "
-"se pojavljuje,možete dobiti pomoć sadigikam-devel@kde.org liste mailova. "
-"Također,pogledajte šta digiKam ispisuje na konzoli. "
-
-#: libs/database/coredb/schemaupdater.cpp:410
-#, kde-format
-msgid ""
-"The schema updating process from version 4 to 6 failed, caused by an error "
-"that we did not expect. You can try to discard your old database and start "
-"with an empty one. (In this case, please move the database files \"%1\" and "
-"\"%2\" from the directory \"%3\"). More probably you will want to report "
-"this error to the digikam-devel@kde.org mailing list. As well, please have a "
-"look at what digiKam prints on the console. "
-msgstr ""
-"Nadogradnja šeme baze podataka sa verzije 4 na 6 nije uspjela, uzrokovana je "
-"greškom koju nismo očekivali. Možete probati odbaciti Vašu staru bazu "
-"podataka i započeti sa praznom. (U ovome slučaju,molimo Vas da pomjerite "
-"fajlove baze podataka \"%1\" i \"%2\" iz direktorija \"%3\"). Vjerovatno "
-"ćete htjeti da prijavite ovu grešku na digikam-devel@kde.org listu mailova."
-"Također,pogledajte šta digiKam ispisuje na konzoli. "
-
-#: libs/database/coredb/schemaupdater.cpp:440
-#, kde-format
-msgid ""
-"Failed to update the database schema from version %1 to version %2. Please "
-"read the error messages printed on the console and report this error as a "
-"bug at bugs.kde.org. "
-msgstr ""
-"Nadogradnja šeme baze podataka sa verzije %1 na verziju %2 nije uspjela. "
-"Molimo Vas da pročitate poruku o grešci napisanu na konzoli i da prijavite "
-"ovu grešku kao bug na bugs.kde.org. "
-
-#: libs/database/coredb/schemaupdater.cpp:601
-msgid ""
-"The database update action cannot be found. Please ensure that the dbconfig."
-"xml file of the current version of digiKam is installed at the correct "
-"place. "
-msgstr ""
-"Akcija za nadogradnju baze podataka nije pronađena. Molimo Vas da  osigurate "
-"da je trenuta verzija digiKam-a instalirana na pravom mjestu. "
-
-#: libs/database/coredb/schemaupdater.cpp:620
-#, kde-format
-msgid "Updated schema to version %1."
-msgstr "Ažurirajte shemu na verziju %1."
-
-#: libs/database/coredb/schemaupdater.cpp:674
-#, kde-format
-msgid ""
-"Failed to copy the old database file (\"%1\") to its new location (\"%2\"). "
-"Error message: \"%3\". Please make sure that the file can be copied, or "
-"delete it."
-msgstr ""
-"Kopiranje stare fajlova baze podataka  (\"%1\") na novu lokaciju  (\"%2\"). "
-"Poruka o grešci:\"%3\". Molimo da provjerite da fajl može biti kopiran ili "
-"ga obrišite."
-
-#: libs/database/coredb/schemaupdater.cpp:694
-msgid "Copied database file"
-msgstr "Kopirana datoteka baze podataka"
-
-#: libs/database/coredb/schemaupdater.cpp:699
-#, kde-format
-msgid ""
-"The old database file (\"%1\") has been copied to the new location (\"%2\") "
-"but it cannot be opened. Please delete both files and try again, starting "
-"with an empty database. "
-msgstr ""
-"Fajl stare baze podataka  (\"%1\") kopiran je na novu lokaciju   (\"%2\") "
-"ali se ne može otvoriti. Molimo  Vas  da obrišete oba fajla i pokušate poovo,"
-"počinjući sa praznom bazom podataka. "
-
-#: libs/database/coredb/schemaupdater.cpp:719
-msgid "Opened new database file"
-msgstr "Otvorena nova datoteka baze podataka"
-
-#: libs/database/coredb/schemaupdater.cpp:813
-msgid "Prepared table creation"
-msgstr "Pripremljene kreacije tablica"
-
-#: libs/database/coredb/schemaupdater.cpp:832
-msgid "Created tables"
-msgstr "Stvorene tablice"
-
-#: libs/database/coredb/schemaupdater.cpp:845
-msgid ""
-"No album library path has been found in the configuration file. Giving up "
-"the schema updating process. Please try with an empty database, or repair "
-"your configuration."
-msgstr ""
-"U konfiguracijskoj datoteci nije pronađena putanja do biblioteke albuma. "
-"Odustajem od procesa ažuriranja sheme. Molimo, pokušajte sa praznom bazom "
-"podataka, ili popravite Vašu konfiguraciju."
-
-#: libs/database/coredb/schemaupdater.cpp:866
-#, kde-format
-msgid ""
-"There was an error associating your albumLibraryPath (\"%1\") with a storage "
-"volume of your system. This problem may indicate that there is a problem "
-"with your installation. If you are working on Linux, check that HAL is "
-"installed and running. In any case, you can seek advice from the digikam-"
-"devel@kde.org mailing list. The database updating process will now be "
-"aborted because we do not want to create a new database based on false "
-"assumptions from a broken installation."
-msgstr ""
-"Desila se greška u povezivanju Vašeg albumLibraryPath (\"%1\") sa jednom od "
-"particija na sistemu. Ovaj problem može da indikuje problem sa instalacijom. "
-"Ako radite na Linuxu, provjerite da li je instaliran i pokrenut HAL. U "
-"svakom slučaju, možete potražiti savjet od digikam-devel@kde.org mailing "
-"liste. Proces ažuriranja baze podataka će sada biti obustavljen, jer ne "
-"želimo kreirati novu bazu podataka zasnovanu na pogrešnim pretpostavkama iz "
-"neispravne instalacije."
-
-#: libs/database/coredb/schemaupdater.cpp:893
-msgid "Configured one album root"
-msgstr "Konfigurisan jedan korijen albuma"
-
-#: libs/database/coredb/schemaupdater.cpp:919
-msgid "Imported albums"
-msgstr "Uvezeni albumi"
-
-#: libs/database/coredb/schemaupdater.cpp:955
-msgid "Imported images information"
-msgstr "Ubačene informacije o slikama"
-
-#: libs/database/coredb/schemaupdater.cpp:985
-msgid "Last Search (0.9)"
-msgstr "Zadnja Pretraga (0.9)"
-
-#: libs/database/coredb/schemaupdater.cpp:1042
-msgid "Initialized and imported file suffix filter"
-msgstr "Inicijalizovan i uvezen filter datoteka prema sufiksu"
-
-#: libs/database/coredb/schemaupdater.cpp:1064
-msgid "Did the initial full scan"
-msgstr "Obavljeno inicijalno skeniranje"
-
-#: libs/database/coredb/schemaupdater.cpp:1087
-msgid "Imported creation dates"
-msgstr "Uvezeni datumi kreiranja"
-
-#: libs/database/coredb/schemaupdater.cpp:1117
-msgid "Imported comments"
-msgstr "Ubačeni komentari"
-
-#: libs/database/coredb/schemaupdater.cpp:1143
-msgid "Imported ratings"
-msgstr "Ubačene ocjene"
-
-#: libs/database/coredb/schemaupdater.cpp:1154
-msgid "Dropped v3 tables"
-msgstr "Spuštene v3 tablice"
 
 #: libs/database/engine/databaseconfigloader.cpp:195
 #, fuzzy, kde-format
@@ -6598,23 +6599,6 @@ msgstr ""
 "Vas,osigurajte da je verzija koja je puštena sa trenutnom verzijom didKama "
 "instalirana. "
 
-#: libs/database/engine/databaseguierrorhandler.cpp:208
-msgid ""
-"Error while opening the database.\n"
-"digiKam will try to automatically reconnect to the database."
-msgstr ""
-"Greška prilikom otvaranja baze podataka.\n"
-"digiKam će pokušati automatski ponovo  uspostaviti vezu sa bazom podataka."
-
-#: libs/database/engine/databaseguierrorhandler.cpp:237
-#, kde-format
-msgid ""
-"<p><b>A database error occurred.</b></p>Details:\n"
-" %1"
-msgstr ""
-"<p><b> Greška baze podataka se pojavila.</b></p>Detalji:\n"
-" %1"
-
 #: libs/database/engine/databaseserverstarter.cpp:166
 #, kde-format
 msgid ""
@@ -6624,73 +6608,6 @@ msgstr ""
 "<p><b>Greška prilikom poziva pokretača servera baze podataka.</b></"
 "p>Detalji:\n"
 " %1"
-
-#: libs/database/engine/dbstatdlg.cpp:54
-#: libs/widgets/mainview/dxmlguiwindow.cpp:221
-msgid "Database Statistics"
-msgstr "Statistike baze podataka"
-
-#: libs/database/engine/dbstatdlg.cpp:55
-msgid "Count"
-msgstr "Broj"
-
-#: libs/database/engine/dbstatdlg.cpp:58
-msgid "Images"
-msgstr "Slike"
-
-#: libs/database/engine/dbstatdlg.cpp:59
-msgid "Videos"
-msgstr "Video snimci"
-
-#: libs/database/engine/dbstatdlg.cpp:60
-msgid "Audio"
-msgstr "Zvuk"
-
-#: libs/database/engine/dbstatdlg.cpp:66
-msgid "Total Items"
-msgstr "Ukupno stavki"
-
-#: libs/database/engine/dbstatdlg.cpp:123
-msgid "total"
-msgstr "ukupno"
-
-#: libs/database/engine/scancontroller.cpp:344
-msgid "<b>Scanning collections, please wait...</b>"
-msgstr "<b>Skeniranje kolekcija,molimo sačekajte...</b>"
-
-#: libs/database/engine/scancontroller.cpp:345
-msgid ""
-"This shows the progress of the scan. During the scan, all files on disk are "
-"registered in a database."
-msgstr ""
-"Ovo pokazuje napredak skeniranja.Tokom skeniranja, sve datoteke na disku  su "
-"registrovane u bazu podataka."
-
-#: libs/database/engine/scancontroller.cpp:747
-msgctxt "@info:status"
-msgid "Scanning collection"
-msgstr "Skenirajuća kolekcija"
-
-#: libs/database/engine/scancontroller.cpp:827
-msgid "Preparing collection scan..."
-msgstr "Priprema kolekciju za skeniranje..."
-
-#: libs/database/engine/scancontroller.cpp:874
-msgid "Scanning for removed albums..."
-msgstr "Skeniranje uklonitih albuma..."
-
-#: libs/database/engine/scancontroller.cpp:888
-msgid "Scanning images in individual albums..."
-msgstr "Skeniranje slika u zasebnim albumima..."
-
-#: libs/database/engine/scancontroller.cpp:965 libs/tags/tageditdlg.cpp:516
-#: utilities/geolocation/editor/dialog/geolocationedit.cpp:965
-msgid "Error"
-msgstr "Greška"
-
-#: libs/database/engine/scancontroller.cpp:981
-msgid "Initializing database..."
-msgstr "Incijalizacija baze podataka..."
 
 #: libs/database/facesiface/facetags.cpp:364
 msgctxt "People on your photos"
@@ -6750,7 +6667,7 @@ msgctxt "RAW image file (), the parentheses contain the file suffix, like MRW"
 msgid "RAW image file (%1)"
 msgstr "RAW  fajl slike (%1)"
 
-#: libs/database/thumbsdb/thumbnailschemaupdater.cpp:114
+#: libs/database/thumbsdb/thumbsdbchemaupdater.cpp:114
 msgid ""
 "The database is not valid: the \"DBThumbnailsVersion\" setting does not "
 "exist. The current database schema version cannot be verified. Try to start "
@@ -6760,7 +6677,7 @@ msgstr ""
 "Trenutna šema baze podataka ne može biti ovjerena.Pokušajte početi sa "
 "praznom bazom podataka. "
 
-#: libs/database/thumbsdb/thumbnailschemaupdater.cpp:144
+#: libs/database/thumbsdb/thumbsdbchemaupdater.cpp:144
 msgid ""
 "The database has been used with a more recent version of digiKam and has "
 "been updated to a database schema which cannot be used with this version. "
@@ -6772,6 +6689,90 @@ msgstr ""
 "je ova verzija digiKam-a previše stara ili je format beze podataka previše "
 "nov) Molimo Vas da koristite noviju verziju digikam-a od one što ste "
 "koristili ranije. "
+
+#: libs/database/utils/databaseguierrorhandler.cpp:208
+msgid ""
+"Error while opening the database.\n"
+"digiKam will try to automatically reconnect to the database."
+msgstr ""
+"Greška prilikom otvaranja baze podataka.\n"
+"digiKam će pokušati automatski ponovo  uspostaviti vezu sa bazom podataka."
+
+#: libs/database/utils/databaseguierrorhandler.cpp:237
+#, kde-format
+msgid ""
+"<p><b>A database error occurred.</b></p>Details:\n"
+" %1"
+msgstr ""
+"<p><b> Greška baze podataka se pojavila.</b></p>Detalji:\n"
+" %1"
+
+#: libs/database/utils/dbstatdlg.cpp:54
+#: libs/widgets/mainview/dxmlguiwindow.cpp:221
+msgid "Database Statistics"
+msgstr "Statistike baze podataka"
+
+#: libs/database/utils/dbstatdlg.cpp:55
+msgid "Count"
+msgstr "Broj"
+
+#: libs/database/utils/dbstatdlg.cpp:58
+msgid "Images"
+msgstr "Slike"
+
+#: libs/database/utils/dbstatdlg.cpp:59
+msgid "Videos"
+msgstr "Video snimci"
+
+#: libs/database/utils/dbstatdlg.cpp:60
+msgid "Audio"
+msgstr "Zvuk"
+
+#: libs/database/utils/dbstatdlg.cpp:66
+msgid "Total Items"
+msgstr "Ukupno stavki"
+
+#: libs/database/utils/dbstatdlg.cpp:123
+msgid "total"
+msgstr "ukupno"
+
+#: libs/database/utils/scancontroller.cpp:344
+msgid "<b>Scanning collections, please wait...</b>"
+msgstr "<b>Skeniranje kolekcija,molimo sačekajte...</b>"
+
+#: libs/database/utils/scancontroller.cpp:345
+msgid ""
+"This shows the progress of the scan. During the scan, all files on disk are "
+"registered in a database."
+msgstr ""
+"Ovo pokazuje napredak skeniranja.Tokom skeniranja, sve datoteke na disku  su "
+"registrovane u bazu podataka."
+
+#: libs/database/utils/scancontroller.cpp:747
+msgctxt "@info:status"
+msgid "Scanning collection"
+msgstr "Skenirajuća kolekcija"
+
+#: libs/database/utils/scancontroller.cpp:827
+msgid "Preparing collection scan..."
+msgstr "Priprema kolekciju za skeniranje..."
+
+#: libs/database/utils/scancontroller.cpp:874
+msgid "Scanning for removed albums..."
+msgstr "Skeniranje uklonitih albuma..."
+
+#: libs/database/utils/scancontroller.cpp:888
+msgid "Scanning images in individual albums..."
+msgstr "Skeniranje slika u zasebnim albumima..."
+
+#: libs/database/utils/scancontroller.cpp:965 libs/tags/tageditdlg.cpp:516
+#: utilities/geolocation/editor/dialog/geolocationedit.cpp:965
+msgid "Error"
+msgstr "Greška"
+
+#: libs/database/utils/scancontroller.cpp:981
+msgid "Initializing database..."
+msgstr "Incijalizacija baze podataka..."
 
 #: libs/dialogs/deletedialog.cpp:182
 #: utilities/importui/dialogs/cameramessagebox.cpp:145
@@ -9886,7 +9887,7 @@ msgstr "Parket"
 msgid "Deletion Time"
 msgstr "Izbriši datoteku"
 
-#: libs/facesengine/facedb/databasefaceaccess.cpp:207
+#: libs/facesengine/facedb/facedbaccess.cpp:207
 #, fuzzy
 #| msgid ""
 #| "The driver \"SQLITE\" for SQLite3 databases is not available.\n"
@@ -9898,7 +9899,7 @@ msgstr ""
 "Drajver  \"SQLITE\" za SQLite3 bazu podataka je dostupan.\n"
 "digiKam ovisi o drajverima omogućenim po SQL modulu od Qt4."
 
-#: libs/facesengine/facedb/databasefaceaccess.cpp:231
+#: libs/facesengine/facedb/facedbaccess.cpp:231
 #, fuzzy, kde-format
 #| msgid ""
 #| "Error opening database backend.\n"
@@ -9910,7 +9911,7 @@ msgstr ""
 "Greška pri otvaranju pozadine baze podataka.\n"
 " "
 
-#: libs/facesengine/facedb/databasefaceschemaupdater.cpp:159
+#: libs/facesengine/facedb/facedbschemaupdater.cpp:159
 #, fuzzy
 #| msgid ""
 #| "The database has been used with a more recent version of digiKam and has "
@@ -9930,7 +9931,7 @@ msgstr ""
 "nov) Molimo Vas da koristite noviju verziju digikam-a od one što ste "
 "koristili ranije. "
 
-#: libs/facesengine/facedb/databasefaceschemaupdater.cpp:189
+#: libs/facesengine/facedb/facedbschemaupdater.cpp:189
 #, fuzzy, kde-format
 #| msgid ""
 #| "Failed to create tables in database.\n"
