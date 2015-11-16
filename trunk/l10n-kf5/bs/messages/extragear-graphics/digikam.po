@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: digikam\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-11-15 08:24+0000\n"
+"POT-Creation-Date: 2015-11-16 07:52+0000\n"
 "PO-Revision-Date: 2015-02-26 21:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -6285,6 +6285,54 @@ msgstr ""
 "Dijeljenje na mreži će biti identificirano prema putanji koju ste odabrali. "
 "Ako je putanja prazna, dijeljenje će se smatrati kao nedostupno."
 
+#: libs/database/coredb/coredbaccess.cpp:265
+#: libs/database/thumbsdb/thumbsdbaccess.cpp:204
+msgid ""
+"The driver \"SQLITE\" for SQLite3 databases is not available.\n"
+"digiKam depends on the drivers provided by the SQL module of Qt4."
+msgstr ""
+"Drajver  \"SQLITE\" za SQLite3 bazu podataka je dostupan.\n"
+"digiKam ovisi o drajverima omogućenim po SQL modulu od Qt4."
+
+#: libs/database/coredb/coredbaccess.cpp:303
+#: libs/database/thumbsdb/thumbsdbaccess.cpp:228
+msgid ""
+"Error opening database backend.\n"
+" "
+msgstr ""
+"Greška pri otvaranju pozadine baze podataka.\n"
+" "
+
+#: libs/database/coredb/coredbcopymanager.cpp:69
+msgid "Error while opening the source database."
+msgstr "Greška prilikom otvaranja izvorne baze podataka."
+
+#: libs/database/coredb/coredbcopymanager.cpp:78
+msgid "Error while opening the target database."
+msgstr "Greška prilikom otvaranja ciljne baze podataka."
+
+#: libs/database/coredb/coredbcopymanager.cpp:117
+#: libs/database/coredb/coredbcopymanager.cpp:125
+msgid "Error while scrubbing the target database."
+msgstr "Greška prilikom pročišćavanja ciljane bez podataka."
+
+#: libs/database/coredb/coredbcopymanager.cpp:135
+msgid "Create Schema..."
+msgstr "Kreirajte Shemu..."
+
+#: libs/database/coredb/coredbcopymanager.cpp:139
+msgid "Error while creating the database schema."
+msgstr "Greška prilikom izrade sheme baze podataka."
+
+#: libs/database/coredb/coredbcopymanager.cpp:269
+#, fuzzy, kde-format
+msgid ""
+"Error while converting the database.\n"
+" Details: %1"
+msgstr ""
+"Greška prilikom pretvorbe baze podataka. \n"
+" Detalji :%1"
+
 #: libs/database/coredb/coredbschemaupdater.cpp:209
 #, kde-format
 msgid ""
@@ -6495,55 +6543,17 @@ msgstr "Ubačene ocjene"
 msgid "Dropped v3 tables"
 msgstr "Spuštene v3 tablice"
 
-#: libs/database/coredb/databaseaccess.cpp:265
-#: libs/database/thumbsdb/thumbsdbaccess.cpp:204
+#: libs/database/engine/databaseserverstarter.cpp:166
+#, kde-format
 msgid ""
-"The driver \"SQLITE\" for SQLite3 databases is not available.\n"
-"digiKam depends on the drivers provided by the SQL module of Qt4."
+"<p><b>Error while calling the database server starter.</b></p>Details:\n"
+" %1"
 msgstr ""
-"Drajver  \"SQLITE\" za SQLite3 bazu podataka je dostupan.\n"
-"digiKam ovisi o drajverima omogućenim po SQL modulu od Qt4."
+"<p><b>Greška prilikom poziva pokretača servera baze podataka.</b></"
+"p>Detalji:\n"
+" %1"
 
-#: libs/database/coredb/databaseaccess.cpp:303
-#: libs/database/thumbsdb/thumbsdbaccess.cpp:228
-msgid ""
-"Error opening database backend.\n"
-" "
-msgstr ""
-"Greška pri otvaranju pozadine baze podataka.\n"
-" "
-
-#: libs/database/coredb/databasecopymanager.cpp:69
-msgid "Error while opening the source database."
-msgstr "Greška prilikom otvaranja izvorne baze podataka."
-
-#: libs/database/coredb/databasecopymanager.cpp:78
-msgid "Error while opening the target database."
-msgstr "Greška prilikom otvaranja ciljne baze podataka."
-
-#: libs/database/coredb/databasecopymanager.cpp:117
-#: libs/database/coredb/databasecopymanager.cpp:125
-msgid "Error while scrubbing the target database."
-msgstr "Greška prilikom pročišćavanja ciljane bez podataka."
-
-#: libs/database/coredb/databasecopymanager.cpp:135
-msgid "Create Schema..."
-msgstr "Kreirajte Shemu..."
-
-#: libs/database/coredb/databasecopymanager.cpp:139
-msgid "Error while creating the database schema."
-msgstr "Greška prilikom izrade sheme baze podataka."
-
-#: libs/database/coredb/databasecopymanager.cpp:269
-#, fuzzy, kde-format
-msgid ""
-"Error while converting the database.\n"
-" Details: %1"
-msgstr ""
-"Greška prilikom pretvorbe baze podataka. \n"
-" Detalji :%1"
-
-#: libs/database/engine/databaseconfigloader.cpp:195
+#: libs/database/engine/dbengineconfigloader.cpp:194
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not open the dbconfig.xml file. This file is installed with the "
@@ -6558,12 +6568,12 @@ msgstr ""
 "aplikacijom i apsoludno je zahtjevan za pokretanje digikam-a. Molimo Vas,"
 "provjerite Vašu instalaciju."
 
-#: libs/database/engine/databaseconfigloader.cpp:204
+#: libs/database/engine/dbengineconfigloader.cpp:203
 #, fuzzy, kde-format
 msgid "Could not open configuration file <b>%1</b>"
 msgstr "Ne može se otvoriti  dbconfig.xml fajl <filename>%1</filename>"
 
-#: libs/database/engine/databaseconfigloader.cpp:213
+#: libs/database/engine/dbengineconfigloader.cpp:212
 #, fuzzy, kde-format
 msgid ""
 "The XML in the configuration file <b>%1</b> is invalid and cannot be read."
@@ -6571,7 +6581,7 @@ msgstr ""
 "XML u  dbconfig.xml fajlu<filename>%1</filename> je neispravno i ne može se "
 "čitati."
 
-#: libs/database/engine/databaseconfigloader.cpp:223
+#: libs/database/engine/dbengineconfigloader.cpp:222
 #, fuzzy, kde-format
 msgid ""
 "The XML in the configuration file <b>%1</b> is missing the required element "
@@ -6580,7 +6590,7 @@ msgstr ""
 "XML-u u  dbconfig.xml fajlu<filename>%1</filename>  nedostaje zahtjevani "
 "element <icode>%2</icode>"
 
-#: libs/database/engine/databaseconfigloader.cpp:233
+#: libs/database/engine/dbengineconfigloader.cpp:232
 #, fuzzy, kde-format
 msgid ""
 "The XML in the configuration file <b>%1</b> is missing the required element "
@@ -6589,7 +6599,7 @@ msgstr ""
 "XML-u u  dbconfig.xml fajlu<filename>%1</filename>  nedostaje zahtjevani "
 "element <icode>%2</icode>"
 
-#: libs/database/engine/databaseconfigloader.cpp:252
+#: libs/database/engine/dbengineconfigloader.cpp:251
 #, fuzzy, kde-format
 msgid ""
 "An old version of the configuration file <b>%1</b> is found. Please ensure "
@@ -6598,16 +6608,6 @@ msgstr ""
 "Stara verzija dbconfig.xml fajla <filename>%1</filename> je pronađena. Molmo "
 "Vas,osigurajte da je verzija koja je puštena sa trenutnom verzijom didKama "
 "instalirana. "
-
-#: libs/database/engine/databaseserverstarter.cpp:166
-#, kde-format
-msgid ""
-"<p><b>Error while calling the database server starter.</b></p>Details:\n"
-" %1"
-msgstr ""
-"<p><b>Greška prilikom poziva pokretača servera baze podataka.</b></"
-"p>Detalji:\n"
-" %1"
 
 #: libs/database/facesiface/facetags.cpp:364
 msgctxt "People on your photos"
