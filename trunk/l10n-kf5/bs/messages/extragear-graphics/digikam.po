@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: digikam\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-11-16 07:52+0000\n"
+"POT-Creation-Date: 2015-11-17 09:46+0000\n"
 "PO-Revision-Date: 2015-02-26 21:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -2084,7 +2084,7 @@ msgid "Map Search"
 msgstr "Pretraga po mapi"
 
 #: app/views/digikamview.cpp:222
-#: libs/database/coredb/coredbschemaupdater.cpp:983
+#: libs/database/coredb/coredbschemaupdater.cpp:988
 msgid "Last Search"
 msgstr "Posljednja pretraga"
 
@@ -2859,16 +2859,16 @@ msgstr ""
 msgid "Welcome to digiKam %1"
 msgstr "Dobrodošli na digiKam %1"
 
-#: databaseserver/databaseserver.cpp:164
+#: databaseserver/databaseserver.cpp:163
 msgid "No path to mysqld set in server configuration."
 msgstr "Nema staze do mysqld postavke u konfiguraciji servera."
 
-#: databaseserver/databaseserver.cpp:207
+#: databaseserver/databaseserver.cpp:206
 msgid "Did not find MySQL server default configuration (mysql-global.conf)."
 msgstr ""
 "Nije pronađena zadana konfiguracija za MySQL server  (mysql-global.conf)."
 
-#: databaseserver/databaseserver.cpp:239
+#: databaseserver/databaseserver.cpp:238
 msgid ""
 "Unable to create MySQL server configuration file.\n"
 "This means that either the default configuration file (mysql-global.conf) "
@@ -2880,21 +2880,21 @@ msgstr ""
 "nije mogla da bude pročitana ili ciljana datoteka (mysql.conf) nije mogala "
 "biti zapisana."
 
-#: databaseserver/databaseserver.cpp:260
+#: databaseserver/databaseserver.cpp:259
 msgid "Digikam server was not able to create database data directory"
 msgstr "Digikam server nije mogao kreirati direktorij za podatke baze podataka"
 
-#: databaseserver/databaseserver.cpp:267
+#: databaseserver/databaseserver.cpp:266
 msgid "Digikam server was not able to create database log directory"
 msgstr ""
 "Digikam server nije bio u mogućnosti da kreira direktorij log  baze podataka"
 
-#: databaseserver/databaseserver.cpp:274
+#: databaseserver/databaseserver.cpp:273
 msgid "Digikam server was not able to create database misc directory"
 msgstr ""
 "Digikam server nije bio u mogućnosti da kreira direktorij misc baze podataka"
 
-#: databaseserver/databaseserver.cpp:321
+#: databaseserver/databaseserver.cpp:320
 #, kde-format
 msgid ""
 "Could not start database init command.\n"
@@ -2905,26 +2905,26 @@ msgstr ""
 "Izvršivo : %1\n"
 "Greška  procesa : %2"
 
-#: databaseserver/databaseserver.cpp:335
+#: databaseserver/databaseserver.cpp:334
 msgid "Could not start database server."
 msgstr "Server baze podataka nije moguće pokrenuti."
 
-#: databaseserver/databaseserver.cpp:336
+#: databaseserver/databaseserver.cpp:335
 #, kde-format
 msgid "<p>Executable: %1</p>"
 msgstr "<p>Izvršni program: %1</p>"
 
-#: databaseserver/databaseserver.cpp:337
+#: databaseserver/databaseserver.cpp:336
 #, kde-format
 msgid "<p>Arguments: %1</p>"
 msgstr "<p>Parametri: %1</p>"
 
-#: databaseserver/databaseserver.cpp:338
+#: databaseserver/databaseserver.cpp:337
 #, kde-format
 msgid "<p>Process error: %1</p>"
 msgstr "<p>Greška procesa: %1</p>"
 
-#: databaseserver/databaseserver.cpp:381
+#: databaseserver/databaseserver.cpp:380
 #, kde-format
 msgid ""
 "Database process exited unexpectedly during initial connection."
@@ -2933,7 +2933,7 @@ msgstr ""
 "Database proces je završio neocekivano tokom početnog povezivanja.<p>Izvršni "
 "program: %1</p>”<p>Greška procesa: %2</p>"
 
-#: databaseserver/databaseserver.cpp:404 databaseserver/databaseserver.cpp:454
+#: databaseserver/databaseserver.cpp:403 databaseserver/databaseserver.cpp:453
 #, kde-format
 msgid ""
 "Failed to create database<p>Query error: %1</p><p>Database error: %2</p>"
@@ -6286,19 +6286,29 @@ msgstr ""
 "Ako je putanja prazna, dijeljenje će se smatrati kao nedostupno."
 
 #: libs/database/coredb/coredbaccess.cpp:265
-#: libs/database/thumbsdb/thumbsdbaccess.cpp:204
+#: libs/database/thumbsdb/thumbsdbaccess.cpp:210
+#: libs/facesengine/facedb/facedbaccess.cpp:209
+#, fuzzy
+#| msgid ""
+#| "The driver \"SQLITE\" for SQLite3 databases is not available.\n"
+#| "digiKam depends on the drivers provided by the SQL module of Qt4."
 msgid ""
-"The driver \"SQLITE\" for SQLite3 databases is not available.\n"
-"digiKam depends on the drivers provided by the SQL module of Qt4."
+"The driver \"SQLITE\" for Sqlite3 databases is not available.\n"
+"digiKam depends on the drivers provided by the Qt::SQL module."
 msgstr ""
 "Drajver  \"SQLITE\" za SQLite3 bazu podataka je dostupan.\n"
 "digiKam ovisi o drajverima omogućenim po SQL modulu od Qt4."
 
-#: libs/database/coredb/coredbaccess.cpp:303
-#: libs/database/thumbsdb/thumbsdbaccess.cpp:228
+#: libs/database/coredb/coredbaccess.cpp:304
+#: libs/database/thumbsdb/thumbsdbaccess.cpp:234
+#: libs/facesengine/facedb/facedbaccess.cpp:233
+#, fuzzy, kde-format
+#| msgid ""
+#| "Error opening database backend.\n"
+#| " "
 msgid ""
 "Error opening database backend.\n"
-" "
+"%1"
 msgstr ""
 "Greška pri otvaranju pozadine baze podataka.\n"
 " "
@@ -6346,8 +6356,7 @@ msgstr ""
 " %1\n"
 "Provjerite Vaša dopuštenja na bazi podataka i ponovo pokrenite digiKam."
 
-#: libs/database/coredb/coredbschemaupdater.cpp:243
-#: libs/facesengine/facedb/facedbschemaupdater.cpp:129
+#: libs/database/coredb/coredbschemaupdater.cpp:242
 msgid ""
 "The database is not valid: the \"DBVersion\" setting does not exist. The "
 "current database schema version cannot be verified. Try to start with an "
@@ -6357,7 +6366,7 @@ msgstr ""
 "šema baze podataka ne može biti ovjerena.Pokušajte početi sa praznom bazom "
 "podataka. "
 
-#: libs/database/coredb/coredbschemaupdater.cpp:271
+#: libs/database/coredb/coredbschemaupdater.cpp:270
 msgid ""
 "The database has been used with a more recent version of digiKam and has "
 "been updated to a database schema which cannot be used with this version. "
@@ -6370,7 +6379,7 @@ msgstr ""
 "nov) Molimo Vas da koristite noviju verziju digikam-a od one što ste "
 "koristili ranije. "
 
-#: libs/database/coredb/coredbschemaupdater.cpp:332
+#: libs/database/coredb/coredbschemaupdater.cpp:331
 #: libs/database/thumbsdb/thumbsdbchemaupdater.cpp:173
 msgid ""
 "Failed to create tables in database.\n"
@@ -6379,7 +6388,7 @@ msgstr ""
 "Kreiranje ploča u bazi podataka nije uspjelo\n"
 " "
 
-#: libs/database/coredb/coredbschemaupdater.cpp:353
+#: libs/database/coredb/coredbschemaupdater.cpp:352
 #, kde-format
 msgid ""
 "Failed to open a database transaction on your database file \"%1\". This is "
@@ -6394,7 +6403,7 @@ msgstr ""
 "se pojavljuje,možete dobiti pomoć sadigikam-devel@kde.org liste mailova. "
 "Također,pogledajte šta digiKam ispisuje na konzoli. "
 
-#: libs/database/coredb/coredbschemaupdater.cpp:410
+#: libs/database/coredb/coredbschemaupdater.cpp:409
 #, kde-format
 msgid ""
 "The schema updating process from version 4 to 6 failed, caused by an error "
@@ -6411,7 +6420,7 @@ msgstr ""
 "ćete htjeti da prijavite ovu grešku na digikam-devel@kde.org listu mailova."
 "Također,pogledajte šta digiKam ispisuje na konzoli. "
 
-#: libs/database/coredb/coredbschemaupdater.cpp:440
+#: libs/database/coredb/coredbschemaupdater.cpp:441
 #, kde-format
 msgid ""
 "Failed to update the database schema from version %1 to version %2. Please "
@@ -6422,7 +6431,7 @@ msgstr ""
 "Molimo Vas da pročitate poruku o grešci napisanu na konzoli i da prijavite "
 "ovu grešku kao bug na bugs.kde.org. "
 
-#: libs/database/coredb/coredbschemaupdater.cpp:601
+#: libs/database/coredb/coredbschemaupdater.cpp:603
 msgid ""
 "The database update action cannot be found. Please ensure that the dbconfig."
 "xml file of the current version of digiKam is installed at the correct "
@@ -6431,12 +6440,12 @@ msgstr ""
 "Akcija za nadogradnju baze podataka nije pronađena. Molimo Vas da  osigurate "
 "da je trenuta verzija digiKam-a instalirana na pravom mjestu. "
 
-#: libs/database/coredb/coredbschemaupdater.cpp:620
+#: libs/database/coredb/coredbschemaupdater.cpp:622
 #, kde-format
 msgid "Updated schema to version %1."
 msgstr "Ažurirajte shemu na verziju %1."
 
-#: libs/database/coredb/coredbschemaupdater.cpp:674
+#: libs/database/coredb/coredbschemaupdater.cpp:676
 #, kde-format
 msgid ""
 "Failed to copy the old database file (\"%1\") to its new location (\"%2\"). "
@@ -6447,11 +6456,11 @@ msgstr ""
 "Poruka o grešci:\"%3\". Molimo da provjerite da fajl može biti kopiran ili "
 "ga obrišite."
 
-#: libs/database/coredb/coredbschemaupdater.cpp:694
+#: libs/database/coredb/coredbschemaupdater.cpp:698
 msgid "Copied database file"
 msgstr "Kopirana datoteka baze podataka"
 
-#: libs/database/coredb/coredbschemaupdater.cpp:699
+#: libs/database/coredb/coredbschemaupdater.cpp:703
 #, kde-format
 msgid ""
 "The old database file (\"%1\") has been copied to the new location (\"%2\") "
@@ -6462,19 +6471,19 @@ msgstr ""
 "ali se ne može otvoriti. Molimo  Vas  da obrišete oba fajla i pokušate poovo,"
 "počinjući sa praznom bazom podataka. "
 
-#: libs/database/coredb/coredbschemaupdater.cpp:719
+#: libs/database/coredb/coredbschemaupdater.cpp:724
 msgid "Opened new database file"
 msgstr "Otvorena nova datoteka baze podataka"
 
-#: libs/database/coredb/coredbschemaupdater.cpp:813
+#: libs/database/coredb/coredbschemaupdater.cpp:818
 msgid "Prepared table creation"
 msgstr "Pripremljene kreacije tablica"
 
-#: libs/database/coredb/coredbschemaupdater.cpp:832
+#: libs/database/coredb/coredbschemaupdater.cpp:837
 msgid "Created tables"
 msgstr "Stvorene tablice"
 
-#: libs/database/coredb/coredbschemaupdater.cpp:845
+#: libs/database/coredb/coredbschemaupdater.cpp:850
 msgid ""
 "No album library path has been found in the configuration file. Giving up "
 "the schema updating process. Please try with an empty database, or repair "
@@ -6484,7 +6493,7 @@ msgstr ""
 "Odustajem od procesa ažuriranja sheme. Molimo, pokušajte sa praznom bazom "
 "podataka, ili popravite Vašu konfiguraciju."
 
-#: libs/database/coredb/coredbschemaupdater.cpp:866
+#: libs/database/coredb/coredbschemaupdater.cpp:871
 #, kde-format
 msgid ""
 "There was an error associating your albumLibraryPath (\"%1\") with a storage "
@@ -6503,43 +6512,43 @@ msgstr ""
 "želimo kreirati novu bazu podataka zasnovanu na pogrešnim pretpostavkama iz "
 "neispravne instalacije."
 
-#: libs/database/coredb/coredbschemaupdater.cpp:893
+#: libs/database/coredb/coredbschemaupdater.cpp:898
 msgid "Configured one album root"
 msgstr "Konfigurisan jedan korijen albuma"
 
-#: libs/database/coredb/coredbschemaupdater.cpp:919
+#: libs/database/coredb/coredbschemaupdater.cpp:924
 msgid "Imported albums"
 msgstr "Uvezeni albumi"
 
-#: libs/database/coredb/coredbschemaupdater.cpp:955
+#: libs/database/coredb/coredbschemaupdater.cpp:960
 msgid "Imported images information"
 msgstr "Ubačene informacije o slikama"
 
-#: libs/database/coredb/coredbschemaupdater.cpp:985
+#: libs/database/coredb/coredbschemaupdater.cpp:990
 msgid "Last Search (0.9)"
 msgstr "Zadnja Pretraga (0.9)"
 
-#: libs/database/coredb/coredbschemaupdater.cpp:1042
+#: libs/database/coredb/coredbschemaupdater.cpp:1047
 msgid "Initialized and imported file suffix filter"
 msgstr "Inicijalizovan i uvezen filter datoteka prema sufiksu"
 
-#: libs/database/coredb/coredbschemaupdater.cpp:1064
+#: libs/database/coredb/coredbschemaupdater.cpp:1069
 msgid "Did the initial full scan"
 msgstr "Obavljeno inicijalno skeniranje"
 
-#: libs/database/coredb/coredbschemaupdater.cpp:1087
+#: libs/database/coredb/coredbschemaupdater.cpp:1092
 msgid "Imported creation dates"
 msgstr "Uvezeni datumi kreiranja"
 
-#: libs/database/coredb/coredbschemaupdater.cpp:1117
+#: libs/database/coredb/coredbschemaupdater.cpp:1122
 msgid "Imported comments"
 msgstr "Ubačeni komentari"
 
-#: libs/database/coredb/coredbschemaupdater.cpp:1143
+#: libs/database/coredb/coredbschemaupdater.cpp:1148
 msgid "Imported ratings"
 msgstr "Ubačene ocjene"
 
-#: libs/database/coredb/coredbschemaupdater.cpp:1154
+#: libs/database/coredb/coredbschemaupdater.cpp:1159
 msgid "Dropped v3 tables"
 msgstr "Spuštene v3 tablice"
 
@@ -6608,6 +6617,23 @@ msgstr ""
 "Stara verzija dbconfig.xml fajla <filename>%1</filename> je pronađena. Molmo "
 "Vas,osigurajte da je verzija koja je puštena sa trenutnom verzijom didKama "
 "instalirana. "
+
+#: libs/database/engine/dbengineguierrorhandler.cpp:207
+msgid ""
+"Error while opening the database.\n"
+"digiKam will try to automatically reconnect to the database."
+msgstr ""
+"Greška prilikom otvaranja baze podataka.\n"
+"digiKam će pokušati automatski ponovo  uspostaviti vezu sa bazom podataka."
+
+#: libs/database/engine/dbengineguierrorhandler.cpp:236
+#, kde-format
+msgid ""
+"<p><b>A database error occurred.</b></p>Details:\n"
+" %1"
+msgstr ""
+"<p><b> Greška baze podataka se pojavila.</b></p>Detalji:\n"
+" %1"
 
 #: libs/database/facesiface/facetags.cpp:364
 msgctxt "People on your photos"
@@ -6689,23 +6715,6 @@ msgstr ""
 "je ova verzija digiKam-a previše stara ili je format beze podataka previše "
 "nov) Molimo Vas da koristite noviju verziju digikam-a od one što ste "
 "koristili ranije. "
-
-#: libs/database/utils/databaseguierrorhandler.cpp:208
-msgid ""
-"Error while opening the database.\n"
-"digiKam will try to automatically reconnect to the database."
-msgstr ""
-"Greška prilikom otvaranja baze podataka.\n"
-"digiKam će pokušati automatski ponovo  uspostaviti vezu sa bazom podataka."
-
-#: libs/database/utils/databaseguierrorhandler.cpp:237
-#, kde-format
-msgid ""
-"<p><b>A database error occurred.</b></p>Details:\n"
-" %1"
-msgstr ""
-"<p><b> Greška baze podataka se pojavila.</b></p>Detalji:\n"
-" %1"
 
 #: libs/database/utils/dbstatdlg.cpp:54
 #: libs/widgets/mainview/dxmlguiwindow.cpp:221
@@ -9887,29 +9896,20 @@ msgstr "Parket"
 msgid "Deletion Time"
 msgstr "Izbriši datoteku"
 
-#: libs/facesengine/facedb/facedbaccess.cpp:207
+#: libs/facesengine/facedb/facedbschemaupdater.cpp:129
 #, fuzzy
 #| msgid ""
-#| "The driver \"SQLITE\" for SQLite3 databases is not available.\n"
-#| "digiKam depends on the drivers provided by the SQL module of Qt4."
+#| "The database is not valid: the \"DBVersion\" setting does not exist. The "
+#| "current database schema version cannot be verified. Try to start with an "
+#| "empty database. "
 msgid ""
-"The driver \"SQLITE\" for SQLite3 databases is not available.\n"
-"digiKam depends on the drivers provided by the SQL module of Qt."
+"The database is not valid: the \"DBFaceVersion\" setting does not exist. The "
+"current database schema version cannot be verified. Try to start with an "
+"empty database. "
 msgstr ""
-"Drajver  \"SQLITE\" za SQLite3 bazu podataka je dostupan.\n"
-"digiKam ovisi o drajverima omogućenim po SQL modulu od Qt4."
-
-#: libs/facesengine/facedb/facedbaccess.cpp:231
-#, fuzzy, kde-format
-#| msgid ""
-#| "Error opening database backend.\n"
-#| " "
-msgid ""
-"Error opening database backend.\n"
-"%1"
-msgstr ""
-"Greška pri otvaranju pozadine baze podataka.\n"
-" "
+"Baza podataka nije ispravna: \"DBVersion\" postavka ne postoji. Trenutna "
+"šema baze podataka ne može biti ovjerena.Pokušajte početi sa praznom bazom "
+"podataka. "
 
 #: libs/facesengine/facedb/facedbschemaupdater.cpp:159
 #, fuzzy
@@ -12092,7 +12092,9 @@ msgid "Cannot create thumbnail for %1"
 msgstr "Ne mogu da napravim umanjeni prikaz za %1"
 
 #: libs/threadimageio/thumbnailloadthread.cpp:223
-msgid "Failed to initialize thumbnail database"
+#, fuzzy
+#| msgid "Failed to initialize thumbnail database"
+msgid "Failed to initialize thumbnails database"
 msgstr "Neuspješna inicijalizacija baze podataka o umanjenim prikazima"
 
 #: libs/threadimageio/thumbnailloadthread.cpp:224
@@ -12122,7 +12124,9 @@ msgid "Internal Server"
 msgstr "Interni server"
 
 #: libs/widgets/common/databasewidget.cpp:108
-msgid "Schema Name"
+#, fuzzy
+#| msgid "Schema Name"
+msgid "Core<br>Schema Name"
 msgstr "Ime šeme"
 
 #: libs/widgets/common/databasewidget.cpp:110
@@ -12185,7 +12189,7 @@ msgstr ""
 "veličinama kolekcije . Budite oprezni: Ovo je još u eksperimentalnoj fazi.</"
 "p>"
 
-#: libs/widgets/common/databasewidget.cpp:222
+#: libs/widgets/common/databasewidget.cpp:224
 msgid ""
 "You do not seem to have write access to this database folder.\n"
 "Without this access, the caption and tag features will not work."
@@ -12193,16 +12197,16 @@ msgstr ""
 "Izgleda da nemate pristup pisanju u ovom direktoriju baze podataka.\n"
 "Bez ovog pristupa, mogućnosti titlovanja i označavanja neće raditi."
 
-#: libs/widgets/common/databasewidget.cpp:321
-#: libs/widgets/common/databasewidget.cpp:326
+#: libs/widgets/common/databasewidget.cpp:332
+#: libs/widgets/common/databasewidget.cpp:337
 msgid "Database connection test"
 msgstr "Test veze baze podataka"
 
-#: libs/widgets/common/databasewidget.cpp:322
+#: libs/widgets/common/databasewidget.cpp:333
 msgid "Database connection test successful."
 msgstr "Test veze baze podataka uspješan."
 
-#: libs/widgets/common/databasewidget.cpp:327
+#: libs/widgets/common/databasewidget.cpp:338
 #, kde-format
 msgid "Database connection test was not successful. <p>Error was: %1</p>"
 msgstr "Test veze baze podataka nije bio uspješan.<p>Greška je bila:%1</p>"
@@ -17155,7 +17159,7 @@ msgstr "Numerisanje na osnovu poznatog datotečnog nastavka"
 msgid "Folder aware numbering"
 msgstr "Numerisanje na osnovu poznatog direktorija"
 
-#: utilities/facemanagement/assignnamewidget.cpp:248
+#: utilities/facemanagement/assignnamewidget.cpp:247
 #: utilities/imageeditor/editor/editortoolsettings.cpp:189
 #: utilities/imageeditor/editor/editorwindow.cpp:653
 #: utilities/maintenance/facesdetector.cpp:70
@@ -17164,16 +17168,16 @@ msgstr "Numerisanje na osnovu poznatog direktorija"
 msgid "Ok"
 msgstr "U redu"
 
-#: utilities/facemanagement/assignnamewidget.cpp:252
+#: utilities/facemanagement/assignnamewidget.cpp:251
 msgid "Confirm"
 msgstr "Potvrdi"
 
-#: utilities/facemanagement/assignnamewidget.cpp:262
+#: utilities/facemanagement/assignnamewidget.cpp:261
 #, fuzzy
 msgid "Remove"
 msgstr "&Ukloni"
 
-#: utilities/facemanagement/assignnamewidget.cpp:500
+#: utilities/facemanagement/assignnamewidget.cpp:499
 msgid "Who is this?"
 msgstr "Ko je ovo?"
 
@@ -29240,6 +29244,23 @@ msgstr "Promijeni ekran"
 msgctxt "%1 is the screen number (0, 1, ...)"
 msgid "Screen %1"
 msgstr "Ekran %1"
+
+#~ msgid ""
+#~ "The driver \"SQLITE\" for SQLite3 databases is not available.\n"
+#~ "digiKam depends on the drivers provided by the SQL module of Qt4."
+#~ msgstr ""
+#~ "Drajver  \"SQLITE\" za SQLite3 bazu podataka je dostupan.\n"
+#~ "digiKam ovisi o drajverima omogućenim po SQL modulu od Qt4."
+
+#~ msgid ""
+#~ "Error opening database backend.\n"
+#~ " "
+#~ msgstr ""
+#~ "Greška pri otvaranju pozadine baze podataka.\n"
+#~ " "
+
+#~ msgid "Schema Name"
+#~ msgstr "Ime šeme"
 
 #, fuzzy
 #~| msgid ""
