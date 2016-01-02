@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde4.14\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2015-11-18 07:53+0000\n"
+"POT-Creation-Date: 2016-01-02 07:28+0000\n"
 "PO-Revision-Date: 2015-02-26 22:01+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -104,7 +104,7 @@ msgstr ""
 #: plugins/memory/MemoryPlugin.cpp:36 plugins/newsignal/NewSignalPlugin.cpp:33
 #: plugins/noise/NoisePlugin.cpp:42 plugins/normalize/NormalizePlugin.cpp:55
 #: plugins/pitch_shift/PitchShiftPlugin.cpp:33
-#: plugins/playback/PlayBackPlugin.cpp:69 plugins/record/RecordPlugin.cpp:63
+#: plugins/playback/PlayBackPlugin.cpp:70 plugins/record/RecordPlugin.cpp:63
 #: plugins/reverse/ReversePlugin.cpp:46
 #: plugins/samplerate/SampleRatePlugin.cpp:43
 #: plugins/saveblocks/SaveBlocksPlugin.cpp:45
@@ -1005,6 +1005,7 @@ msgstr "Učitavanje datoteke '%1'..."
 #: plugins/codec_ogg/OpusEncoder.cpp:381 plugins/codec_ogg/OpusEncoder.cpp:434
 #: plugins/codec_wav/WavDecoder.cpp:365 plugins/codec_wav/WavEncoder.cpp:427
 #: plugins/playback/PlayBack-OSS.cpp:245 plugins/playback/PlayBack-OSS.cpp:253
+#: plugins/playback/PlayBack-Qt.cpp:172 plugins/playback/PlayBack-Qt.cpp:177
 #: plugins/record/RecordPlugin.cpp:879 plugins/record/RecordPlugin.cpp:895
 #: plugins/record/RecordPlugin.cpp:965
 msgid "Out of memory"
@@ -2690,7 +2691,7 @@ msgstr ""
 msgid "Failed opening the log file '%1' for writing"
 msgstr ""
 
-#: libkwave/PlaybackController.cpp:652
+#: libkwave/PlaybackController.cpp:656
 #, kde-format
 msgid "Unable to open '%1'"
 msgstr "Ne mogu da otvorim „%1“"
@@ -2705,6 +2706,10 @@ msgstr ""
 
 #: libkwave/PlayBackTypesMap.cpp:44 plugins/record/RecordTypesMap.cpp:47
 msgid "Pulse Audio"
+msgstr ""
+
+#: libkwave/PlayBackTypesMap.cpp:49
+msgid "Qt Multimedia Audio"
 msgstr ""
 
 #: libkwave/Plugin.cpp:194
@@ -3773,7 +3778,7 @@ msgctxt ""
 msgid "Error: No Codec for '%1' available"
 msgstr ""
 
-#: plugins/codec_ogg/OpusCommon.cpp:55
+#: plugins/codec_ogg/OpusCommon.cpp:55 plugins/playback/PlayBack-Qt.cpp:126
 msgid "One or more invalid/out of range arguments."
 msgstr ""
 
@@ -4942,7 +4947,7 @@ msgstr ""
 msgid "by Factor"
 msgstr ""
 
-#: plugins/playback/PlayBack-ALSA.cpp:50
+#: plugins/playback/PlayBack-ALSA.cpp:50 plugins/playback/PlayBack-Qt.cpp:41
 msgid "Default device"
 msgstr "Podrazumijevani uređaj"
 
@@ -5002,17 +5007,17 @@ msgstr ""
 msgid "The device '%1' cannot be opened in the correct mode."
 msgstr ""
 
-#: plugins/playback/PlayBack-OSS.cpp:185
+#: plugins/playback/PlayBack-OSS.cpp:185 plugins/playback/PlayBack-Qt.cpp:157
 #, kde-format
 msgid "%1 bits per sample are not supported"
 msgstr ""
 
-#: plugins/playback/PlayBack-OSS.cpp:191
+#: plugins/playback/PlayBack-OSS.cpp:191 plugins/playback/PlayBack-Qt.cpp:160
 #, kde-format
 msgid "%1 channels playback is not supported"
 msgstr ""
 
-#: plugins/playback/PlayBack-OSS.cpp:198
+#: plugins/playback/PlayBack-OSS.cpp:198 plugins/playback/PlayBack-Qt.cpp:163
 #, kde-format
 msgid "Playback rate %1 Hz is not supported"
 msgstr ""
@@ -5035,37 +5040,56 @@ msgstr ""
 msgid "Any device (*)"
 msgstr ""
 
-#: plugins/playback/PlayBack-PulseAudio.cpp:455
+#: plugins/playback/PlayBack-PulseAudio.cpp:454
 #, kde-format
 msgid "%1 channels are not supported, maximum is 255"
 msgstr ""
 
-#: plugins/playback/PlayBack-PulseAudio.cpp:462
+#: plugins/playback/PlayBack-PulseAudio.cpp:461
 msgid "Connecting to the PulseAudio server failed."
 msgstr ""
 
-#: plugins/playback/PlayBack-PulseAudio.cpp:468
+#: plugins/playback/PlayBack-PulseAudio.cpp:467
 #, kde-format
 msgid "The PulseAudio device '%1' is unknown or no longer connected"
 msgstr ""
 
-#: plugins/playback/PlayBack-PulseAudio.cpp:512
+#: plugins/playback/PlayBack-PulseAudio.cpp:511
 msgid "playback..."
 msgstr "Izvođenje..."
 
-#: plugins/playback/PlayBack-PulseAudio.cpp:528
+#: plugins/playback/PlayBack-PulseAudio.cpp:527
 #, kde-format
 msgid "Failed to create a PulseAudio stream (%1)."
 msgstr ""
 
-#: plugins/playback/PlayBack-PulseAudio.cpp:569
+#: plugins/playback/PlayBack-PulseAudio.cpp:568
 #, kde-format
 msgid "Failed to open a PulseAudio stream for playback (%1)."
 msgstr ""
 
-#: plugins/playback/PlayBack-PulseAudio.cpp:812
+#: plugins/playback/PlayBack-PulseAudio.cpp:811
 msgid "(Use server default)"
 msgstr ""
+
+#: plugins/playback/PlayBack-Qt.cpp:138
+#, kde-format
+msgid "The audio device '%1' is unknown or no longer connected"
+msgstr ""
+
+#: plugins/playback/PlayBack-Qt.cpp:154
+msgid "PCM playback is not supported"
+msgstr ""
+
+#: plugins/playback/PlayBack-Qt.cpp:167
+msgid "Integer sample format is not supported"
+msgstr ""
+
+#: plugins/playback/PlayBack-Qt.cpp:212
+#, fuzzy, kde-format
+#| msgid "Opening the file failed"
+msgid "Opening the Qt Multimedia device '%1' failed"
+msgstr "Otvaranje datoteke neuspjelo."
 
 #: plugins/playback/PlayBackDialog.cpp:514
 #, kde-format
@@ -5095,7 +5119,7 @@ msgid "Select Playback Device"
 msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, PlayBackDlg)
-#: plugins/playback/PlayBackDlg.ui:20 plugins/playback/PlayBackPlugin.cpp:68
+#: plugins/playback/PlayBackDlg.ui:20 plugins/playback/PlayBackPlugin.cpp:69
 msgid "Playback"
 msgstr "Reprodukcija"
 
@@ -5251,15 +5275,15 @@ msgstr ""
 msgid "&Test..."
 msgstr "&Test..."
 
-#: plugins/playback/PlayBackPlugin.cpp:391
+#: plugins/playback/PlayBackPlugin.cpp:401
 msgid "Please select a playback device first"
 msgstr ""
 
-#: plugins/playback/PlayBackPlugin.cpp:419
+#: plugins/playback/PlayBackPlugin.cpp:429
 msgid "Playback Test"
 msgstr ""
 
-#: plugins/playback/PlayBackPlugin.cpp:428
+#: plugins/playback/PlayBackPlugin.cpp:438
 #, kde-format
 msgid ""
 "You should now hear a %1 Hz test tone.<br/><br/>(If you hear clicks or "
