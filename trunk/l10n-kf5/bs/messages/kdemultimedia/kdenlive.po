@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-03-03 07:55+0000\n"
+"POT-Creation-Date: 2016-03-04 07:15+0000\n"
 "PO-Revision-Date: 2015-01-09 12:00+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -116,7 +116,7 @@ msgstr ""
 
 #: data/effects/automask.xml:7 data/effects/dynamictext.xml:7
 #: src/effectslist/initeffects.cpp:742 src/effectslist/initeffects.cpp:769
-#: src/effectslist/initeffects.cpp:787
+#: src/effectslist/initeffects.cpp:787 src/project/transitionsettings.cpp:117
 msgid "Geometry"
 msgstr "Geometrija"
 
@@ -612,10 +612,10 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, clip_filesize_2)
 #. i18n: ectx: property (text), widget (QLabel, position_label)
-#. i18n: ectx: property (text), widget (QCheckBox, import_position)
 #: data/effects/frei0r_alphagrad.xml:9 src/effectstack/keyframeedit.cpp:56
-#: src/ui/clipdurationdialog_ui.ui:20 src/ui/importkeyframesdialog_ui.ui:80
-#: src/ui/keyframedialog_ui.ui:20 src/ui/markerdialog_ui.ui:20
+#: src/effectstack/widgets/keyframeimport.cpp:66
+#: src/ui/clipdurationdialog_ui.ui:20 src/ui/keyframedialog_ui.ui:20
+#: src/ui/markerdialog_ui.ui:20
 msgid "Position"
 msgstr "Položaj"
 
@@ -1812,13 +1812,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#. i18n: ectx: property (text), widget (QCheckBox, import_size)
 #. i18n: ectx: property (text), widget (QLabel, label_20)
 #. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
 #: data/effects/frei0r_medians.xml:13 data/effects/frei0r_sharpness.xml:12
 #: src/effectstack/widgets/geometrywidget.cpp:211
-#: src/ui/configcapture_ui.ui:563 src/ui/importkeyframesdialog_ui.ui:73
-#: src/ui/managecaptures_ui.ui:40 src/ui/profiledialog_ui.ui:191
+#: src/effectstack/widgets/keyframeimport.cpp:67
+#: src/ui/configcapture_ui.ui:563 src/ui/managecaptures_ui.ui:40
+#: src/ui/profiledialog_ui.ui:191
 msgid "Size"
 msgstr "Veličina"
 
@@ -3209,7 +3209,8 @@ msgstr "Učestalost"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: data/effects/sox_band.xml:10 data/effects/sox_flanger.xml:16
-#: src/ui/geometryval_ui.ui:181 src/ui/titlewidget_ui.ui:307
+#: src/timeline/keyframeview.cpp:257 src/ui/geometryval_ui.ui:181
+#: src/ui/titlewidget_ui.ui:307
 msgid "Width"
 msgstr "Širina"
 
@@ -3784,23 +3785,23 @@ msgstr ""
 "Molimo vas da odaberete standardnu aplikaciju za otvaranje zvučnih "
 "dokumenata u dijalogu Podešenja"
 
-#: src/bin/bin.cpp:2601
+#: src/bin/bin.cpp:2600
 msgid "No data returned from clip analysis"
 msgstr "Nema vraćenih podataka iz analize isječka"
 
-#: src/bin/bin.cpp:2615
+#: src/bin/bin.cpp:2614
 msgid "Processing data analysis"
 msgstr "Obrada podataka dobivenih analizom"
 
-#: src/bin/bin.cpp:2621
+#: src/bin/bin.cpp:2620
 msgid "Auto Split Clip"
 msgstr "Automatski podijeli isječak"
 
-#: src/bin/bin.cpp:2639
+#: src/bin/bin.cpp:2638
 msgid "Add Markers"
 msgstr "Dodaj oznake"
 
-#: src/bin/bin.cpp:2682 src/mltcontroller/clippropertiescontroller.cpp:186
+#: src/bin/bin.cpp:2681 src/mltcontroller/clippropertiescontroller.cpp:186
 #: src/project/projectcommands.cpp:163
 #, fuzzy
 #| msgid "Add marker"
@@ -3810,56 +3811,56 @@ msgstr[0] "Dodaj obilježivač"
 msgstr[1] "Dodaj obilježivač"
 msgstr[2] "Dodaj obilježivač"
 
-#: src/bin/bin.cpp:2693 src/bin/bin.cpp:2775 src/project/jobs/filterjob.cpp:96
+#: src/bin/bin.cpp:2692 src/bin/bin.cpp:2774 src/project/jobs/filterjob.cpp:96
 #: src/timeline/markerdialog.cpp:45
 #, kde-format
 msgid "Category %1"
 msgstr "Kategorija %1"
 
-#: src/bin/bin.cpp:2698
+#: src/bin/bin.cpp:2697
 #, fuzzy
 msgid "Load Clip Markers"
 msgstr "Učitaj markere"
 
-#: src/bin/bin.cpp:2713 src/bin/bin.cpp:2810
+#: src/bin/bin.cpp:2712 src/bin/bin.cpp:2809
 #: src/dialogs/profilesdialog.cpp:272 src/dialogs/profilesdialog.cpp:565
 #, kde-format
 msgid "Cannot open file %1"
 msgstr "Ne mogu otvoriti datoteku %1"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, MarkerDialog_UI)
-#: src/bin/bin.cpp:2739 src/definitions.cpp:148 src/definitions.cpp:165
-#: src/doc/docclipbase.cpp:370 src/mainwindow.cpp:1931
+#: src/bin/bin.cpp:2738 src/definitions.cpp:148 src/definitions.cpp:165
+#: src/doc/docclipbase.cpp:370 src/mainwindow.cpp:1930
 #: src/mltcontroller/clippropertiescontroller.cpp:839
 #: src/ui/markerdialog_ui.ui:14
 msgid "Marker"
 msgstr "Marker"
 
-#: src/bin/bin.cpp:2773
+#: src/bin/bin.cpp:2772
 msgid "All categories"
 msgstr "Sve kategorije"
 
-#: src/bin/bin.cpp:2780
+#: src/bin/bin.cpp:2779
 #, fuzzy
 msgid "Save Clip Markers"
 msgstr "Sačuvaj obilježivač"
 
-#: src/bin/bin.cpp:2823 src/mltcontroller/clippropertiescontroller.cpp:187
+#: src/bin/bin.cpp:2822 src/mltcontroller/clippropertiescontroller.cpp:187
 #: src/project/projectcommands.cpp:161
 msgid "Delete marker"
 msgstr "Izbriši obilježivač"
 
-#: src/bin/bin.cpp:2838
+#: src/bin/bin.cpp:2837
 #, fuzzy
 #| msgid "Delete marker"
 msgid "Delete clip markers"
 msgstr "Izbriši obilježivač"
 
-#: src/bin/bin.cpp:2840
+#: src/bin/bin.cpp:2839
 msgid "Clip has no markers"
 msgstr "Snimak nema markere"
 
-#: src/bin/bin.cpp:2878
+#: src/bin/bin.cpp:2877
 #, kde-format
 msgid ""
 "You are editing an external title clip (%1). Do you want to save your "
@@ -3868,27 +3869,27 @@ msgstr ""
 "Obrađujete eksterni isječak naziva (%1). Da li želite spasiti promjene na "
 "imenovanoj datoteci ili da spasite samo izmjene na ovom projektu?"
 
-#: src/bin/bin.cpp:2878 src/titler/titlewidget.cpp:1765
+#: src/bin/bin.cpp:2877 src/titler/titlewidget.cpp:1765
 msgid "Save Title"
 msgstr "Sačuvaj naslov"
 
-#: src/bin/bin.cpp:2878
+#: src/bin/bin.cpp:2877
 msgid "Save to title file"
 msgstr "Sačuvaj naziv dokumenta"
 
-#: src/bin/bin.cpp:2878
+#: src/bin/bin.cpp:2877
 msgid "Save in project only"
 msgstr "Spasi samo u projekat"
 
-#: src/bin/bin.cpp:2942
+#: src/bin/bin.cpp:2941
 msgid "Clip is invalid, will be removed from project."
 msgstr "Okvir je nevažeći, uklonit će se iz projekta."
 
-#: src/bin/bin.cpp:2946 src/timeline/customtrackview.cpp:4587
+#: src/bin/bin.cpp:2945 src/timeline/customtrackview.cpp:4587
 msgid "Invalid clip"
 msgstr "Neispravan snimak"
 
-#: src/bin/bin.cpp:3153 src/mainwindow.cpp:1087
+#: src/bin/bin.cpp:3152 src/mainwindow.cpp:1087
 msgid "Clean Project"
 msgstr "Očisti projekat"
 
@@ -3929,12 +3930,12 @@ msgid "Edit clip"
 msgstr "Uredi isječak"
 
 #: src/bin/generators/generators.cpp:157 src/mainwindow.cpp:1176
-#: src/mainwindow.cpp:3338
+#: src/mainwindow.cpp:3337
 msgid "Save clip"
 msgstr "Spasi snimak"
 
-#: src/bin/generators/generators.cpp:157 src/mainwindow.cpp:3338
-#: src/renderer.cpp:600 src/timeline/customtrackview.cpp:7995
+#: src/bin/generators/generators.cpp:157 src/mainwindow.cpp:3337
+#: src/renderer.cpp:600 src/timeline/customtrackview.cpp:7983
 msgid "MLT playlist (*.mlt)"
 msgstr ""
 
@@ -4064,12 +4065,12 @@ msgstr[1] "Dodaj snimke"
 msgstr[2] "Dodaj snimke"
 
 #: src/dialogs/clipcreationdialog.cpp:531 src/dvdwizard/dvdwizardvob.cpp:247
-#: src/effectstack/collapsibleeffect.cpp:206 src/mainwindow.cpp:2922
+#: src/effectstack/collapsibleeffect.cpp:207 src/mainwindow.cpp:2921
 msgid "All Supported Files"
 msgstr "Svi podržani tipovi datoteka"
 
 #: src/dialogs/clipcreationdialog.cpp:531 src/dvdwizard/dvdwizardvob.cpp:247
-#: src/effectstack/collapsibleeffect.cpp:206 src/mainwindow.cpp:2922
+#: src/effectstack/collapsibleeffect.cpp:207 src/mainwindow.cpp:2921
 msgid "All Files"
 msgstr "Sve datoteke"
 
@@ -4133,7 +4134,7 @@ msgstr "Podrazumjevana podešenja projekta"
 
 #. i18n: ectx: Menu (timeline)
 #: src/dialogs/kdenlivesettingsdialog.cpp:84 src/kdenliveui.rc:96
-#: src/mainwindow.cpp:2875
+#: src/mainwindow.cpp:2874
 msgid "Timeline"
 msgstr "Vremenska osa"
 
@@ -4335,7 +4336,7 @@ msgstr ""
 #: src/dialogs/renderwidget.cpp:2297 src/dialogs/renderwidget.cpp:2320
 #: src/doc/kdenlivedoc.cpp:664 src/doc/kdenlivedoc.cpp:670
 #: src/dvdwizard/dvdwizard.cpp:937 src/dvdwizard/dvdwizard.cpp:943
-#: src/mainwindow.cpp:3150 src/mainwindow.cpp:3155
+#: src/mainwindow.cpp:3149 src/mainwindow.cpp:3154
 #: src/project/dialogs/archivewidget.cpp:797
 #: src/project/dialogs/archivewidget.cpp:803 src/titler/titlewidget.cpp:1779
 #, kde-format
@@ -5452,7 +5453,7 @@ msgid "The clip %1 is invalid."
 msgstr "Isječak %1 je neispravan."
 
 #: src/dvdwizard/dvdwizardvob.cpp:674
-#: src/effectstack/collapsibleeffect.cpp:374
+#: src/effectstack/collapsibleeffect.cpp:375
 #: src/effectstack/collapsiblegroup.cpp:179 src/monitor/monitor.cpp:944
 #: src/project/clipstabilize.cpp:222 src/project/cliptranscode.cpp:141
 #: src/project/projectmanager.cpp:305
@@ -5501,7 +5502,7 @@ msgstr "Kopiraj profil u omiljene"
 
 #: src/effectslist/effectslistview.cpp:85
 #: src/effectslist/effectslistview.cpp:231
-#: src/effectstack/collapsibleeffect.cpp:69
+#: src/effectstack/collapsibleeffect.cpp:70
 #: src/effectstack/collapsiblegroup.cpp:77
 msgid "Delete effect"
 msgstr "Izbriši efekat"
@@ -5725,26 +5726,26 @@ msgstr "Izblijedi jedan video dok se ubacuje drugi video."
 msgid "Reverse"
 msgstr "Obrni"
 
-#: src/effectstack/collapsibleeffect.cpp:65
+#: src/effectstack/collapsibleeffect.cpp:66
 #: src/effectstack/collapsiblegroup.cpp:72
 msgid "Move effect up"
 msgstr "Pomjeri efekat gore"
 
-#: src/effectstack/collapsibleeffect.cpp:67
+#: src/effectstack/collapsibleeffect.cpp:68
 #: src/effectstack/collapsiblegroup.cpp:74
 msgid "Move effect down"
 msgstr "Pomjeri efekat dolje"
 
-#: src/effectstack/collapsibleeffect.cpp:89
+#: src/effectstack/collapsibleeffect.cpp:90
 msgid "Reset Effect"
 msgstr "Restartuj efekat"
 
-#: src/effectstack/collapsibleeffect.cpp:90
-#: src/effectstack/collapsibleeffect.cpp:367
+#: src/effectstack/collapsibleeffect.cpp:91
+#: src/effectstack/collapsibleeffect.cpp:368
 msgid "Save Effect"
 msgstr "Sačuvaj efekat"
 
-#: src/effectstack/collapsibleeffect.cpp:98
+#: src/effectstack/collapsibleeffect.cpp:99
 #: src/effectstack/collapsiblegroup.cpp:89
 #, fuzzy
 #| msgid "Disable effect"
@@ -5752,7 +5753,7 @@ msgstr "Sačuvaj efekat"
 msgid "Disable Effect"
 msgstr "Onemogući efekt"
 
-#: src/effectstack/collapsibleeffect.cpp:98
+#: src/effectstack/collapsibleeffect.cpp:99
 #: src/effectstack/collapsiblegroup.cpp:89
 #, fuzzy
 #| msgid "Enable effect"
@@ -5760,15 +5761,15 @@ msgstr "Onemogući efekt"
 msgid "Enable Effect"
 msgstr "Omogući efekt"
 
-#: src/effectstack/collapsibleeffect.cpp:103
+#: src/effectstack/collapsibleeffect.cpp:104
 msgid "Create Group"
 msgstr "Kreiraj grupu"
 
-#: src/effectstack/collapsibleeffect.cpp:143
+#: src/effectstack/collapsibleeffect.cpp:144
 msgid "Create Region"
 msgstr "Kreiraj region"
 
-#: src/effectstack/collapsibleeffect.cpp:367
+#: src/effectstack/collapsibleeffect.cpp:368
 msgid "Name for saved effect: "
 msgstr "Ime za sačuvani efekat "
 
@@ -5845,18 +5846,18 @@ msgstr "Resetuj vrijednost"
 msgid "Show %1 in timeline"
 msgstr "Prikaži %1 na vremenskoj osi"
 
-#: src/effectstack/effectstackview2.cpp:171
+#: src/effectstack/effectstackview2.cpp:172
 #, kde-format
 msgid "Effects for %1"
 msgstr "Efekti za %1"
 
-#: src/effectstack/effectstackview2.cpp:225
+#: src/effectstack/effectstackview2.cpp:226
 #, fuzzy, kde-format
 #| msgid "Effects for %1"
 msgid "Bin effects for %1"
 msgstr "Efekti za %1"
 
-#: src/effectstack/effectstackview2.cpp:264
+#: src/effectstack/effectstackview2.cpp:265
 #, kde-format
 msgid "Effects for track %1"
 msgstr "Efekti za traku %1"
@@ -5915,11 +5916,11 @@ msgstr "Centriraj detalje na desno"
 msgid "Align item to left"
 msgstr "Centriraj detalje na lijevo"
 
-#: src/effectstack/parametercontainer.cpp:501
+#: src/effectstack/parametercontainer.cpp:502
 msgid "<select a keyword>"
 msgstr "<izaberi ključnu riječ>"
 
-#: src/effectstack/parametercontainer.cpp:532
+#: src/effectstack/parametercontainer.cpp:533
 msgid "sync keyframes with clip start"
 msgstr ""
 
@@ -6126,6 +6127,18 @@ msgstr "Svrstaj dno"
 msgid "%"
 msgstr "%"
 
+#: src/effectstack/widgets/keyframeimport.cpp:44
+#, fuzzy
+#| msgid "Data to import"
+msgid "Data to import: "
+msgstr "Podaci za uvoz"
+
+#: src/effectstack/widgets/keyframeimport.cpp:73
+#, fuzzy
+#| msgid "Limit keyframes number"
+msgid "Limit keyframe number"
+msgstr "Ograniči broj glavnih okvira"
+
 #: src/effectstack/widgets/lumaliftgain.cpp:61
 msgid "Lift"
 msgstr ""
@@ -6148,14 +6161,14 @@ msgid "Project"
 msgstr "Projektne datoteke"
 
 #. i18n: ectx: Menu (extract_audio)
-#: src/kdenliveui.rc:29 src/mainwindow.cpp:2842
+#: src/kdenliveui.rc:29 src/mainwindow.cpp:2841
 #, fuzzy
 #| msgid "Extract to"
 msgid "Extract Audio"
 msgstr "Raspakuj u"
 
 #. i18n: ectx: Menu (clip_actions)
-#: src/kdenliveui.rc:32 src/mainwindow.cpp:2789
+#: src/kdenliveui.rc:32 src/mainwindow.cpp:2788
 #, fuzzy
 msgid "Clip Jobs"
 msgstr "Poravnanje vrha"
@@ -6974,7 +6987,7 @@ msgstr "Dodaj prelaz na selekciju"
 msgid "Cut Clip"
 msgstr "Izreži isječak"
 
-#: src/mainwindow.cpp:1190 src/mainwindow.cpp:1933
+#: src/mainwindow.cpp:1190 src/mainwindow.cpp:1932
 #: src/mltcontroller/clippropertiescontroller.cpp:841
 msgid "Add Marker"
 msgstr "Dodaj obilježivač"
@@ -6987,7 +7000,7 @@ msgstr "Obriši Marker"
 msgid "Delete All Markers"
 msgstr "Obriši Sve Markere"
 
-#: src/mainwindow.cpp:1194 src/mainwindow.cpp:2024
+#: src/mainwindow.cpp:1194 src/mainwindow.cpp:2023
 #: src/mltcontroller/clippropertiescontroller.cpp:814
 msgid "Edit Marker"
 msgstr "Uredi obilježivač"
@@ -7159,42 +7172,42 @@ msgstr "Ovo će ukloniti sve neiskorištene snimke sa vašeg projekta."
 msgid "Clean up project"
 msgstr "Očistite svoj projekat"
 
-#: src/mainwindow.cpp:1746
+#: src/mainwindow.cpp:1745
 msgctxt "general keyboard shortcuts"
 msgid "General"
 msgstr "Opšte"
 
-#: src/mainwindow.cpp:1927 src/mainwindow.cpp:2048
+#: src/mainwindow.cpp:1926 src/mainwindow.cpp:2047
 msgid "Cannot find clip to add marker"
 msgstr "Nije moguće pronaći snimak za dodavanje markera"
 
-#: src/mainwindow.cpp:1959 src/mainwindow.cpp:1989 src/mainwindow.cpp:2012
+#: src/mainwindow.cpp:1958 src/mainwindow.cpp:1988 src/mainwindow.cpp:2011
 msgid "Cannot find clip to remove marker"
 msgstr "Ne mogu da nađem isječak da uklonim marker"
 
-#: src/mainwindow.cpp:1969 src/mainwindow.cpp:2019
+#: src/mainwindow.cpp:1968 src/mainwindow.cpp:2018
 msgid "No marker found at cursor time"
 msgstr "Marker nije pronađen za vrijeme pokazivača"
 
-#: src/mainwindow.cpp:2297
+#: src/mainwindow.cpp:2296
 #, kde-format
 msgid "Cannot find effect %1 / %2"
 msgstr "Nije moguće pronaći efekte %1 / %2"
 
-#: src/mainwindow.cpp:2355
+#: src/mainwindow.cpp:2354
 #, kde-format
 msgid "Zoom Level: %1/13"
 msgstr "Nivo uvećanja: %1/13"
 
-#: src/mainwindow.cpp:2472
+#: src/mainwindow.cpp:2471
 msgid "Ctrl + click to use spacer on current track only"
 msgstr "Ctrl + klik za upotrebu razmaka samo na trenutnom zapisu"
 
-#: src/mainwindow.cpp:2475
+#: src/mainwindow.cpp:2474
 msgid "Click on a clip to cut it, Shift + move to preview cut frame"
 msgstr ""
 
-#: src/mainwindow.cpp:2478
+#: src/mainwindow.cpp:2477
 msgid ""
 "Shift + click to create a selection rectangle, Ctrl + click to add an item "
 "to selection"
@@ -7202,61 +7215,61 @@ msgstr ""
 "Shift + klik da kreirate odabirni pravougao, Ctrl + klik da dodate detalj na "
 "asortiman"
 
-#: src/mainwindow.cpp:2797
+#: src/mainwindow.cpp:2796
 msgid "Stabilize"
 msgstr "Stabilizacija"
 
-#: src/mainwindow.cpp:2809
+#: src/mainwindow.cpp:2808
 msgid "Automatic scene split"
 msgstr "Automatski podijeli prizore"
 
-#: src/mainwindow.cpp:2819 src/project/jobs/filterjob.cpp:83
+#: src/mainwindow.cpp:2818 src/project/jobs/filterjob.cpp:83
 msgid "Reverse clip"
 msgstr "Preokreni isječak"
 
-#: src/mainwindow.cpp:2826
+#: src/mainwindow.cpp:2825
 #, fuzzy
 #| msgid "Add keyframes"
 msgid "Analyse keyframes"
 msgstr "Dodaj keyframes"
 
-#: src/mainwindow.cpp:2841
+#: src/mainwindow.cpp:2840
 #, fuzzy
 #| msgid "Transcode"
 msgid "Transcoders"
 msgstr "Dekodiraj"
 
-#: src/mainwindow.cpp:2874
+#: src/mainwindow.cpp:2873
 msgid "Interface"
 msgstr "Sučelje"
 
-#: src/mainwindow.cpp:2911
+#: src/mainwindow.cpp:2910
 msgid "No clip to transcode"
 msgstr "Nema isječka za dekodiranje"
 
-#: src/mainwindow.cpp:2924
+#: src/mainwindow.cpp:2923
 #, fuzzy
 msgid "Files to transcode"
 msgstr "Nema isječka za dekodiranje"
 
-#: src/mainwindow.cpp:2962
+#: src/mainwindow.cpp:2961
 msgid "Create Render Script"
 msgstr "Kreiraj Render skriptu"
 
-#: src/mainwindow.cpp:2972
+#: src/mainwindow.cpp:2971
 msgid "Script file already exists. Do you want to overwrite it?"
 msgstr "Dokument skripte već postoji. Da li želite pisati preko njega?"
 
-#: src/mainwindow.cpp:3018
+#: src/mainwindow.cpp:3017
 msgctxt "the first in a list of chapters"
 msgid "Start"
 msgstr "Započni"
 
-#: src/mainwindow.cpp:3306
+#: src/mainwindow.cpp:3305
 msgid "Archiving project"
 msgstr "Arhivisanje projekta"
 
-#: src/mainwindow.cpp:3335
+#: src/mainwindow.cpp:3334
 msgid "Select a clip to save"
 msgstr "Selektuj isječak da ga sčuvate"
 
@@ -8677,11 +8690,11 @@ msgid "Archived project (*.tar.gz)"
 msgstr "Arhiviraj projekat"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, scanning_list)
-#: src/project/transitionsettings.cpp:152 src/ui/renderwidget_ui.ui:505
+#: src/project/transitionsettings.cpp:138 src/ui/renderwidget_ui.ui:505
 msgid "Auto"
 msgstr "Automatski"
 
-#: src/project/transitionsettings.cpp:163
+#: src/project/transitionsettings.cpp:149
 #: src/scopes/colorscopes/vectorscope.cpp:54
 msgid "Black"
 msgstr "Crna"
@@ -8709,7 +8722,7 @@ msgstr ""
 "Nešto nije uredu sa vašom Kdenlive instalacijom ili podešenjima vašeg "
 "drajvera, molimo vas popravite to."
 
-#: src/renderer.cpp:600 src/timeline/customtrackview.cpp:7995
+#: src/renderer.cpp:600 src/timeline/customtrackview.cpp:7983
 #, fuzzy
 #| msgid "Save zone"
 msgid "Save Zone"
@@ -9655,6 +9668,25 @@ msgstr "Omogući efekt"
 #: src/timeline/headertrack.cpp:91
 msgid "Opaque"
 msgstr ""
+
+#: src/timeline/keyframeview.cpp:245
+#, fuzzy
+#| msgid "X"
+msgctxt "X as in x coordinate"
+msgid "X"
+msgstr "X"
+
+#: src/timeline/keyframeview.cpp:251
+#, fuzzy
+#| msgid "Y"
+msgctxt "Y as in y coordinate"
+msgid "Y"
+msgstr "Y"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/timeline/keyframeview.cpp:263 src/ui/geometryval_ui.ui:198
+msgid "Height"
+msgstr "Visina"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/timeline/managers/selectmanager.cpp:65 src/ui/clipproperties_ui.ui:804
@@ -11766,11 +11798,6 @@ msgstr "P"
 msgid "Pos"
 msgstr "Pozicija"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: src/ui/geometryval_ui.ui:198
-msgid "Height"
-msgstr "Visina"
-
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/ui/geometryval_ui.ui:219
 msgid "Resize:"
@@ -11800,21 +11827,6 @@ msgstr "Sumirani RGB"
 #: src/ui/histogram_ui.ui:74
 msgid "Sum"
 msgstr "Suma"
-
-#. i18n: ectx: property (windowTitle), widget (QDialog, ImportKeyframesDialog_UI)
-#: src/ui/importkeyframesdialog_ui.ui:14
-msgid "Import Keyframes"
-msgstr "Uvezi glavne okvire"
-
-#. i18n: ectx: property (text), widget (QCheckBox, limit_keyframes)
-#: src/ui/importkeyframesdialog_ui.ui:48
-msgid "Limit keyframes number"
-msgstr "Ograniči broj glavnih okvira"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: src/ui/importkeyframesdialog_ui.ui:90
-msgid "Data to import"
-msgstr "Podaci za uvoz"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, KeyFrameDialog_UI)
 #: src/ui/keyframedialog_ui.ui:14
@@ -12848,6 +12860,9 @@ msgid ""
 "Cannot start Colors Settings panel from KDE Control Center. Please check "
 "your system..."
 msgstr ""
+
+#~ msgid "Import Keyframes"
+#~ msgstr "Uvezi glavne okvire"
 
 #, fuzzy
 #~ msgid "Clip right"
