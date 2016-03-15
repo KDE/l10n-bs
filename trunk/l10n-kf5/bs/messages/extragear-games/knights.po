@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: knights\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-02-09 08:26+0000\n"
+"POT-Creation-Date: 2016-03-15 08:53+0000\n"
 "PO-Revision-Date: 2014-10-20 19:25+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <kde-i18n-bs@kde.org>\n"
@@ -30,11 +30,11 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Githzerai06@gmail.com, megaribi@epn.ba,lbajgoric1@etf.unsa.ba"
 
-#: board.cpp:695
+#: board.cpp:567
 msgid "Promotion"
 msgstr "Promocija"
 
-#: board.cpp:699
+#: board.cpp:571
 msgid "Promote"
 msgstr "Promoviši"
 
@@ -54,26 +54,41 @@ msgid "White"
 msgstr "Bijeli"
 
 #. i18n: ectx: property (text), widget (QLabel, searchDepthLabel)
-#: customdifficultydialog.ui:20
+#: customdifficultydialog.ui:26
 msgid "Search &depth:"
 msgstr "&Dubinu pretrage:"
 
-#. i18n: ectx: property (specialValueText), widget (KPluralHandlingSpinBox, searchDepthIntSpinBox)
-#: customdifficultydialog.ui:30
+#. i18n: ectx: property (specialValueText), widget (KPluralHandlingSpinBox, sbSearchDepth)
+#: customdifficultydialog.ui:36
 msgctxt "Let the engine determine the search depth"
 msgid "Engine default"
 msgstr "Podrazumijevani pogon"
 
 #. i18n: ectx: property (text), widget (QLabel, memorySizeLabel)
-#: customdifficultydialog.ui:37
+#: customdifficultydialog.ui:43
 msgid "Memory &size:"
 msgstr "Memorijska &veličina:"
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, memorySizeIntSpinBox)
-#: customdifficultydialog.ui:47
+#. i18n: ectx: property (suffix), widget (QSpinBox, sbMemorySize)
+#: customdifficultydialog.ui:53
 msgctxt "Megabytes"
 msgid " MB"
 msgstr " MB"
+
+#: difficultydialog.cpp:38
+#, fuzzy
+#| msgid " move"
+#| msgid_plural " moves"
+msgctxt "Search depth suffix"
+msgid " move"
+msgid_plural " moves"
+msgstr[0] " potez"
+msgstr[1] " poteza"
+msgstr[2] " poteza"
+
+#: difficultydialog.cpp:49
+msgid "Difficulty Level"
+msgstr ""
 
 #: enginesettings.cpp:114
 msgctxt "Protocol name"
@@ -239,28 +254,28 @@ msgid "&Initial time limit"
 msgstr "Početno vremensko ograničenje"
 
 #. i18n: ectx: property (text), widget (QLabel, timeIncrementLabel)
-#: gamedialog.ui:266
+#: gamedialog.ui:269
 #, fuzzy
 #| msgid "Increment per move"
 msgid "I&ncrement per move"
 msgstr "Uvećanje po potezu"
 
-#: gamemanager.cpp:469
+#: gamemanager.cpp:392
 msgctxt "The player of this color"
 msgid "White"
 msgstr "Bijeli"
 
-#: gamemanager.cpp:470
+#: gamemanager.cpp:393
 msgctxt "The player of this color"
 msgid "Black"
 msgstr "Crni"
 
-#: gamemanager.cpp:590
+#: gamemanager.cpp:494
 #, kde-format
 msgid "%1 offers you a draw"
 msgstr "%1 vam nudi remi"
 
-#: gamemanager.cpp:593
+#: gamemanager.cpp:497
 #, kde-format
 msgid "%2 would like to take back a half move"
 msgid_plural "%2 would like to take back %1 half moves"
@@ -268,54 +283,43 @@ msgstr[0] "%2 želi da povuče %1 polupotez"
 msgstr[1] "%2 želi da povuče %1 polupoteza"
 msgstr[2] "%2 želi da povuče %1 polupoteza"
 
-#: gamemanager.cpp:596
+#: gamemanager.cpp:500
 #, kde-format
 msgid "%1 would like to adjourn the game"
 msgstr "%1 želi da odgodi partiju"
 
-#: gamemanager.cpp:599
+#: gamemanager.cpp:503
 #, kde-format
 msgid "%1 would like to abort the game"
 msgstr "%1 želi da prekine partiju"
 
-#: gamemanager.cpp:713
+#: gamemanager.cpp:591
 #, kde-format
 msgctxt "string to be spoken when the opponent castles queenside"
 msgid "%1 castles queenside"
 msgstr "%1 izvodi veliku rokadu"
 
-#: gamemanager.cpp:718
+#: gamemanager.cpp:594
 #, kde-format
 msgctxt "string to be spoken when the opponent castles queenside"
 msgid "%1 castles kingside"
 msgstr "%1 izvodi malu rokadu"
 
-#: gamemanager.cpp:724
+#: gamemanager.cpp:598
 #, kde-format
 msgctxt "string to be spoken when the opponent makes a normal  move"
 msgid "%1 to %2"
 msgstr "%1 na %2"
 
-#: gamemanager.cpp:737
+#: gamemanager.cpp:609
 msgctxt "Your king is under attack"
 msgid "Check"
 msgstr "Šah"
 
-#: gamemanager.cpp:741
+#: gamemanager.cpp:611
 msgctxt "Your king is dead"
 msgid "Checkmate"
 msgstr "Šah‑mat"
-
-#: gamemanager.cpp:930
-#, fuzzy
-#| msgid " move"
-#| msgid_plural " moves"
-msgctxt "Search depth suffix"
-msgid " move"
-msgid_plural " moves"
-msgstr[0] " potez"
-msgstr[1] " poteza"
-msgstr[2] " poteza"
 
 # >! Contexts.
 # >> @option:radio Your Color
@@ -358,118 +362,118 @@ msgstr "Dugi algebarski"
 msgid "Coordinate"
 msgstr "Koordinata"
 
-#: knights.cpp:84
+#: knights.cpp:81
 msgid "Custom"
 msgstr "Proizvoljno"
 
-#: knights.cpp:106
+#: knights.cpp:107
 msgid "Clock"
 msgstr "Sat"
 
-#: knights.cpp:137
+#: knights.cpp:138
 msgid "Move History"
 msgstr "Historija kretanja"
 
-#: knights.cpp:155
+#: knights.cpp:156
 msgid "Resign"
 msgstr "Predaj"
 
-#: knights.cpp:156
+#: knights.cpp:157
 msgid "Admit your inevitable defeat"
 msgstr "Priznaj neizbježan poraz"
 
-#: knights.cpp:161
+#: knights.cpp:162
 msgid "Undo"
 msgstr "Opozovi"
 
-#: knights.cpp:162
+#: knights.cpp:163
 msgid "Take back your last move"
 msgstr "Povuci moj posljednji potez"
 
-#: knights.cpp:168
+#: knights.cpp:169
 msgid "Redo"
 msgstr "Ponovi"
 
-#: knights.cpp:169
+#: knights.cpp:170
 msgid "Repeat your last move"
 msgstr "Ponovi moj posljednji potez"
 
-#: knights.cpp:175
+#: knights.cpp:176
 msgid "Offer &Draw"
 msgstr "Ponudi &remi"
 
-#: knights.cpp:176
+#: knights.cpp:177
 msgid "Offer a draw to your opponent"
 msgstr "Predloži protivniku remi"
 
-#: knights.cpp:181
+#: knights.cpp:182
 msgid "Adjourn"
 msgstr "Odgodi"
 
-#: knights.cpp:182
+#: knights.cpp:183
 msgid "Continue this game at a later time"
 msgstr "Nastavi ovu igru kasnije"
 
-#: knights.cpp:187
+#: knights.cpp:188
 msgid "Abort"
 msgstr "Prekid"
 
-#: knights.cpp:188
+#: knights.cpp:189
 msgid "End the game immediately"
 msgstr "Odmah završi igru"
 
-#: knights.cpp:192
+#: knights.cpp:193
 msgid "Show Clock"
 msgstr "Prikaži sat"
 
-#: knights.cpp:198
+#: knights.cpp:199
 msgid "Show History"
 msgstr "Prikaži istorijat"
 
-#: knights.cpp:205
+#: knights.cpp:206
 msgid "Show White Console"
 msgstr "Prikaži konzolu bijelog"
 
-#: knights.cpp:211
+#: knights.cpp:212
 msgid "Show Black Console"
 msgstr "Prikaži konzolu crnog"
 
-#: knights.cpp:217
+#: knights.cpp:218
 msgid "Show Chat"
 msgstr "Prikaži ćaskanje"
 
-#: knights.cpp:260
+#: knights.cpp:266
 msgid "Open File"
 msgstr ""
 
-#: knights.cpp:262 knights.cpp:619 knights.cpp:635
+#: knights.cpp:268 knights.cpp:623 knights.cpp:639
 #, fuzzy
 #| msgid "*.pgn | Portable game notation"
 msgid "Portable game notation (*.pgn)"
 msgstr "*.pgn | Prenosiva notacija igre"
 
-#: knights.cpp:477
+#: knights.cpp:481
 msgid "General"
 msgstr "Opšte"
 
-#: knights.cpp:481
+#: knights.cpp:485
 msgid "Computer Engines"
 msgstr "Kompjuterski motori"
 
-#: knights.cpp:486
+#: knights.cpp:490
 msgid "Accessibility"
 msgstr "Pristupačnost"
 
-#: knights.cpp:489
+#: knights.cpp:493
 msgid "Theme"
 msgstr "Tema"
 
-#: knights.cpp:575
+#: knights.cpp:579
 #, kde-format
 msgid "%1 vs. %2"
 msgstr "%1 — %2"
 
-#: knights.cpp:595
+#: knights.cpp:599
 msgid ""
 "This will end your game.\n"
 "Would you like to save the move history?"
@@ -477,11 +481,11 @@ msgstr ""
 "Ovo će završiti vašu igru.\n"
 "Da li želite sačuvati historiju poteza?"
 
-#: knights.cpp:618
+#: knights.cpp:622
 msgid "Save"
 msgstr ""
 
-#: knights.cpp:634
+#: knights.cpp:638
 #, fuzzy
 #| msgid "&Save History"
 msgid "Save As"
@@ -692,15 +696,15 @@ msgstr "Alatna traka akcija igara"
 msgid "Dockable Windows Toolbar"
 msgstr "Dockable Windows Traka sa alatima"
 
-#: knightsview.cpp:112
+#: knightsview.cpp:108
 msgid "Game over"
 msgstr "Kraj igre"
 
-#: knightsview.cpp:141
+#: knightsview.cpp:135
 msgid "The game ended in a draw"
 msgstr "Partija je završena remijem."
 
-#: knightsview.cpp:151
+#: knightsview.cpp:141
 #, fuzzy
 #| msgctxt "White as in the player with white pieces"
 #| msgid "The game ended with a victory for <emphasis>White</emphasis>"
@@ -708,7 +712,7 @@ msgctxt "White as in the player with white pieces"
 msgid "The game ended with a victory for <em>White</em>"
 msgstr "Igra je završena sa pobjedom za <emphasis>Bijele</emphasis>"
 
-#: knightsview.cpp:156
+#: knightsview.cpp:144
 #, fuzzy
 #| msgctxt "Black as in the player with black pieces"
 #| msgid "The game ended with a victory for <emphasis>Black</emphasis>"
@@ -716,7 +720,7 @@ msgctxt "Black as in the player with black pieces"
 msgid "The game ended with a victory for <em>Black</em>"
 msgstr "Igra je završena sa pobjedom za <emphasis>Crne</emphasis>"
 
-#: knightsview.cpp:164
+#: knightsview.cpp:149
 #, fuzzy, kde-format
 #| msgctxt "Player name, then <White as in the player with white pieces"
 #| msgid ""
@@ -725,7 +729,7 @@ msgctxt "Player name, then <White as in the player with white pieces"
 msgid "The game ended with a victory for <em>%1</em>, playing White"
 msgstr "Igra je završena sa pobjedom za <emphasis>%1</emphasis>, igra Bijeli"
 
-#: knightsview.cpp:169
+#: knightsview.cpp:152
 #, fuzzy, kde-format
 #| msgctxt "Player name, then Black as in the player with black pieces"
 #| msgid ""
@@ -734,7 +738,7 @@ msgctxt "Player name, then Black as in the player with black pieces"
 msgid "The game ended with a victory for <em>%1</em>, playing Black"
 msgstr "Igra je završena sa pobjedom za <emphasis>%1</emphasis>, igra Crni"
 
-#: knightsview.cpp:189
+#: knightsview.cpp:170
 msgid "Settings changed"
 msgstr "Postavke su izmijenjene"
 
