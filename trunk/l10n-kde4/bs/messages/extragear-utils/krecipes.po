@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krecipes.po\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-03-29 01:59+0000\n"
+"POT-Creation-Date: 2016-03-30 01:46+0000\n"
 "PO-Revision-Date: 2015-02-24 22:49+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -1727,20 +1727,25 @@ msgid "Spell checking Options"
 msgstr "Opcije provjere pravopisa"
 
 #: dialogs/preferences/mysqlserverprefs.cpp:32
-#: dialogs/preferences/postgresqlserverprefs.cpp:32 setupassistant.cpp:509
+#: dialogs/preferences/postgresqlserverprefs.cpp:32
+#: dialogs/setupassistant/serversetuppage.cpp:130
 msgid "Server:"
 msgstr "Server:"
 
 #: dialogs/preferences/mysqlserverprefs.cpp:35
-#: dialogs/preferences/postgresqlserverprefs.cpp:35 setupassistant.cpp:232
-#: setupassistant.cpp:360 setupassistant.cpp:465
+#: dialogs/preferences/postgresqlserverprefs.cpp:35
+#: dialogs/setupassistant/permissionssetuppage.cpp:105
+#: dialogs/setupassistant/psqlpermissionssetuppage.cpp:109
+#: dialogs/setupassistant/serversetuppage.cpp:86
 msgctxt "@label:textbox Database Username"
 msgid "Username:"
 msgstr "Korisničko ime:"
 
 #: dialogs/preferences/mysqlserverprefs.cpp:39
-#: dialogs/preferences/postgresqlserverprefs.cpp:39 setupassistant.cpp:236
-#: setupassistant.cpp:364 setupassistant.cpp:472
+#: dialogs/preferences/postgresqlserverprefs.cpp:39
+#: dialogs/setupassistant/permissionssetuppage.cpp:109
+#: dialogs/setupassistant/psqlpermissionssetuppage.cpp:113
+#: dialogs/setupassistant/serversetuppage.cpp:93
 msgid "Password:"
 msgstr "Lozinka:"
 
@@ -1751,12 +1756,14 @@ msgid "Default"
 msgstr "Podrazumijevano"
 
 #: dialogs/preferences/mysqlserverprefs.cpp:44
-#: dialogs/preferences/postgresqlserverprefs.cpp:44 setupassistant.cpp:520
+#: dialogs/preferences/postgresqlserverprefs.cpp:44
+#: dialogs/setupassistant/serversetuppage.cpp:141
 msgid "Port:"
 msgstr "Port:"
 
 #: dialogs/preferences/mysqlserverprefs.cpp:47
-#: dialogs/preferences/postgresqlserverprefs.cpp:47 setupassistant.cpp:479
+#: dialogs/preferences/postgresqlserverprefs.cpp:47
+#: dialogs/setupassistant/serversetuppage.cpp:100
 msgid "Database name:"
 msgstr "Ime baze podataka:"
 
@@ -1869,7 +1876,8 @@ msgstr ""
 "Napomena: Krecipes se mora ponovo pokrenuti kako bi postavke servera imale "
 "efekta."
 
-#: dialogs/preferences/sqliteserverprefs.cpp:32 setupassistant.cpp:611
+#: dialogs/preferences/sqliteserverprefs.cpp:32
+#: dialogs/setupassistant/sqlitesetuppage.cpp:65
 msgid "Database file:"
 msgstr "Datoteka baze podataka:"
 
@@ -1897,7 +1905,8 @@ msgstr "Odaberite SQLite komandu nove verzije"
 msgid "Path to SQLite new version command:"
 msgstr "Put do SQLite komande nove verzije:"
 
-#: dialogs/preferences/sqliteserverprefs.cpp:75 setupassistant.cpp:641
+#: dialogs/preferences/sqliteserverprefs.cpp:75
+#: dialogs/setupassistant/sqlitesetuppage.cpp:95
 msgid "Select SQLite database file"
 msgstr "Odaberite SQLite datoteku s bazom podataka"
 
@@ -2057,7 +2066,7 @@ msgctxt "@title:column"
 msgid "Id"
 msgstr "Id"
 
-#: dialogs/recipeinput/ingredientseditor.cpp:545
+#: dialogs/recipeinput/ingredientseditor.cpp:549
 msgctxt "@title"
 msgid "Nutritive information status"
 msgstr ""
@@ -2088,6 +2097,30 @@ msgstr "Zaglavlje"
 msgid "Paste from text"
 msgstr ""
 
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_moveUpButton)
+#: dialogs/recipeinput/ingredientseditor.ui:109
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Move ingredient up"
+msgid "Move ingredient up"
+msgstr "Pomjeri sastojak gore"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_moveDownButton)
+#: dialogs/recipeinput/ingredientseditor.ui:120
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Move ingredient down"
+msgid "Move ingredient down"
+msgstr "Pomjeri sastojak dolje"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, m_deleteButton)
+#: dialogs/recipeinput/ingredientseditor.ui:144
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Remove ingredient"
+msgid "Remove ingredient"
+msgstr "Ukloni sastojak"
+
 #: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:88
 #: dialogs/recipeinput/recipeinputdialog.cpp:1202
 msgctxt "@info"
@@ -2109,17 +2142,21 @@ msgstr ""
 "informacija."
 
 #: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:125
-#: dialogs/recipeinput/recipeinputdialog.cpp:1064
-#, kde-format
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:137
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "<b>%1:</b> No nutrient information available. <a href=\"ingredient#"
+#| "%2\">Provide nutrient information.</a>"
 msgctxt "@info"
 msgid ""
-"<b>%1:</b> No nutrient information available. <a href=\"ingredient#"
-"%2\">Provide nutrient information.</a>"
+"<b>%1:</b> No nutrient information available. <a href=\"%2\">Provide "
+"nutrient information.</a>"
 msgstr ""
 "<b>%1:</b> Nema dostupnih prehrambenih informacija. <a href=\"ingredient#"
 "%2\">Dajte prehrambene informacije.</a>"
 
-#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:159
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:170
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -2133,7 +2170,7 @@ msgstr ""
 "<b>%1:</b> Nema težine sastojaka. <a href=\"ingredient#%2\">Navedite težinu "
 "sastojaka.</a>"
 
-#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:167
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:178
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -2147,7 +2184,7 @@ msgstr ""
 "<b>%1:</b> Nema dostupnih prehrambenih informacija. <a href=\"ingredient#"
 "%2\">Dajte prehrambene informacije.</a>"
 
-#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:196
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:207
 #: dialogs/recipeinput/recipeinputdialog.cpp:1114
 #, kde-format
 msgctxt "@info"
@@ -2159,7 +2196,7 @@ msgstr ""
 "<b>%1:</b> Ili <a href=\"ingredient#%3\">unesite odgovarajuću težinu "
 "sastojka</a>, ili omogućite jednu od sljedećih konverzija: %2"
 
-#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:207
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:218
 #: dialogs/recipeinput/recipeinputdialog.cpp:1126
 #, kde-format
 msgctxt "@info"
@@ -2170,7 +2207,7 @@ msgstr ""
 "<b>%1:</b> Nema težine sastojaka. <a href=\"ingredient#%2\">Navedite težinu "
 "sastojaka.</a>"
 
-#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:216
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:227
 #: dialogs/recipeinput/recipeinputdialog.cpp:1133
 #, kde-format
 msgctxt "@info"
@@ -2181,7 +2218,7 @@ msgstr ""
 "<b>%1:</b> Nema podatka o težini sastojka kada nije dat način pripreme. <a "
 "href=\"ingredient#%2\">Navedite težinu sastojka.</a>"
 
-#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:223
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:234
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -2197,7 +2234,7 @@ msgstr ""
 "<b>%1:</b> Nema podatka o težini sastojka kada se priprema na neki od "
 "sljedećih načina: %2<a href=\"ingredient#%3\">Navedite težinu sastojka.</a>"
 
-#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:233
+#: dialogs/recipeinput/nutrientinfodetailsdialog.cpp:244
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -2605,6 +2642,16 @@ msgstr ""
 "Ovaj recept ima promjene koje s neće prikazati, dok se recept ne snimi. "
 "Želite li ga snimiti."
 
+#: dialogs/recipeinput/recipeinputdialog.cpp:1064
+#, kde-format
+msgctxt "@info"
+msgid ""
+"<b>%1:</b> No nutrient information available. <a href=\"ingredient#"
+"%2\">Provide nutrient information.</a>"
+msgstr ""
+"<b>%1:</b> Nema dostupnih prehrambenih informacija. <a href=\"ingredient#"
+"%2\">Dajte prehrambene informacije.</a>"
+
 #: dialogs/recipeinput/recipeinputdialog.cpp:1085
 #, kde-format
 msgctxt "@info"
@@ -2811,6 +2858,216 @@ msgstr "Izaberi jedinicu"
 msgctxt "@title:group"
 msgid "Choose Unit"
 msgstr "Izaberi jedinicu"
+
+#: dialogs/setupassistant/datainitializepage.cpp:43
+msgid ""
+"<p>Krecipes comes with some delicious default recipes and useful data.</"
+"p><p>Would you like to initialize your database with those? Note that this "
+"will erase all your previous recipes if you have any.</p>"
+msgstr ""
+"<p>Krecipes dolazi s nekim ukusnim osnovnim receptima i podacima.</"
+"p><p>Želite li inicijalizirati bazu s njima? To će obrisati vaše ranije "
+"recepte ako ih imate.</p>"
+
+#: dialogs/setupassistant/datainitializepage.cpp:68
+msgid "Yes please, initialize the database with the examples"
+msgstr "Da, molim. Inicijaliziraj bazu s primjerima"
+
+#: dialogs/setupassistant/datainitializepage.cpp:77
+msgid ""
+"<p>Krecipes can import nutrient data from the USDA's nutrient database for "
+"over 400 foods.  A total of 43 food properties are included for each food, "
+"such as energy, fat, vitamin C, etc.</p><p>Would you like to import this "
+"data now?  Note that this operation is safe to use on an existing database, "
+"and no data loss will occur.  This operation may take several minutes.</p>"
+msgstr ""
+"<p>Krecipes može uvesti prehrambene podatke iz USDA prehrambene baze za  400 "
+"vrsta hrane.  Ukupno 43 svojstva su uključena za svaku vrstu jela: energija, "
+"masti,  vitamin C, etc.</p><p>Želite li uvesti ove podatke sada? Ova "
+"operacija je bezbijedna nad postojećom bazom i neće biti gubitaka podataka.  "
+"Ova operacijamože trajati više minuta.</p>"
+
+#: dialogs/setupassistant/datainitializepage.cpp:91
+msgid "Yes please, load the database with nutrient data for 400+ foods."
+msgstr "Da, molim, učitaj bazu s podacima za preko 400 vrsta jela."
+
+#: dialogs/setupassistant/dbtypesetuppage.cpp:49
+msgid ""
+"Choose the type of database that you want to use. Most users will want to "
+"choose a simple local database here. However, you can also use remote "
+"servers by means of a MySQL or PostgreSQL database."
+msgstr ""
+"Izaberite vrstu baze podataka koje želite koristiti. Većina korisnika voli "
+"jednostavne lokalne baze. Ipak, možete koristiti udaljene servere poput "
+"MySQL ili PostgreSQL baze."
+
+#: dialogs/setupassistant/dbtypesetuppage.cpp:66
+msgid "Simple Local File (SQLite)"
+msgstr "Prosta lokalna datoteka (SQLite)"
+
+#: dialogs/setupassistant/dbtypesetuppage.cpp:69
+msgid "Local or Remote MySQL Database"
+msgstr "Lokalna ili udaljena MySQL baza"
+
+#: dialogs/setupassistant/dbtypesetuppage.cpp:72
+msgid "Local or Remote PostgreSQL Database"
+msgstr "Lokalna ili udaljena PostgreSQL baza podataka"
+
+#: dialogs/setupassistant/permissionssetuppage.cpp:53
+msgid ""
+"<p>This dialog will allow you to specify a MySQL account that has the "
+"necessary permissions to access the Krecipes MySQL database.</p><p><b><font "
+"size=\"+1\">Most users that use Krecipes and MySQL for the first time can "
+"just leave the default parameters and press 'Next'.</font></b></p> <p>If you "
+"set a MySQL root password before, or you have already permissions as normal "
+"user, click on the appropriate option. Otherwise the account 'root' will be "
+"used, with no password.</p><p>[For security reasons, we strongly encourage "
+"you to setup a MySQL root password if you have not done so yet. Just type as "
+"root: mysqladmin password <i>your_password</i>]</p>"
+msgstr ""
+"<p>Ovaj dijalog će vam omogućiti da navedete MySQL nalog koji ima potrebna "
+"prava da pristupate Krecipes MySQL bazi.</p><p><b><font size=\"+1\">Većina "
+"korisnik koji koriste Krecipes i MySQL prvi put mogu samo unijeti zadane "
+"parametre i kliknuti 'Sljedeće'.</font></b></p> <p>Ako ste postavili MySQL "
+"root lozinku ranije, ili već imate prava kao normalni korisnik, kliknite na "
+"odgovarajuću opciju. Inače, koristit će se nalog  'root' bez lozinke.</p><p>"
+"[Radi sigurnosti, preporučujemo da postavite MySQL root lozinku ako to niste "
+"uradili. Kao root korisnik unesite mysqladmin password <i>nova_lozinka</i>]</"
+"p>"
+
+#: dialogs/setupassistant/permissionssetuppage.cpp:71
+#: dialogs/setupassistant/psqlpermissionssetuppage.cpp:74
+msgid "I have already set the necessary permissions"
+msgstr "Već imam potrebna prava"
+
+#: dialogs/setupassistant/permissionssetuppage.cpp:88
+msgid "I have already set a MySQL root/admin account"
+msgstr "Već sam postavio MySQL root/admin nalog"
+
+#: dialogs/setupassistant/permissionssetuppage.cpp:100
+msgid "MySQL Administrator Account"
+msgstr "MySQL administratorski nalog"
+
+#: dialogs/setupassistant/psqlpermissionssetuppage.cpp:55
+msgid ""
+"<p>This dialog will allow you to specify a PostgreSQL account that has the "
+"necessary permissions to access the Krecipes PostgreSQL database.  This "
+"account may either be a <b>PostgreSQL superuser</b> or have the ability to "
+"both <b>create new PostgreSQL users and databases</b>.</p><p>If no superuser "
+"or privileged account is given, the account 'postgres' will be attempted, "
+"with no password.  If this is insufficient for your PostgreSQL setup, you "
+"<b>must</b> select the appropriate option below to enter the information of "
+"a privileged PostgreSQL account.</p>"
+msgstr ""
+"<p>Ovaj dijaloški prozor služi za navođenje PostgreSQL naloga koji ima "
+"potrebna prava za pristup Krecipes PostgreSQL bazi podataka.  Taj nalog može "
+"biti <b>PostgreSQL superkorisnik</b> ili moći da radi <b>kreiranje novih "
+"PostgreSQL korisnika i baza</b>.</p><p>Ako nema superkorisnika ili "
+"privilegovanog naloga, probaće se nalog 'postgres' bez lozinke.  Ako je to "
+"nedovoljno za PostgreSQL postavku, vi <b>morate</b> morate izabratu opciju "
+"ispod da unedete informaciju o privilegovanom PostgreSQL nalogu.</p>"
+
+#: dialogs/setupassistant/psqlpermissionssetuppage.cpp:91
+msgid "I have already set a superuser or privileged account"
+msgstr "Već sam postavtio suprekorisnički ili privilegovani nalog"
+
+#: dialogs/setupassistant/psqlpermissionssetuppage.cpp:104
+msgid "PostgreSQL Superuser or Privileged Account"
+msgstr "PostgreSQLsuperkorisnički ili privilegovani nalog"
+
+#: dialogs/setupassistant/savepage.cpp:41
+msgid ""
+"Congratulations; all the necessary configuration setup is done. Press "
+"'Finish' to continue, and enjoy cooking!"
+msgstr ""
+"Čestitam, sva potrebna konfiguracija je završena. Pritisnite 'Završi' za "
+"nastavak i uživajte u kuhanju!"
+
+#: dialogs/setupassistant/serversetuppage.cpp:56
+msgid ""
+"<p>In this dialog you can adjust the database server settings.</"
+"p><p><b>Warning: Passwords are stored in plain text and could potentially be "
+"compromised.  We recommend that you create a username and password "
+"combination solely for use by Krecipes.</b></p>"
+msgstr ""
+"<p>U ovom dijalogu možete podesiti postavke servera baze podataka.</"
+"p><p><b>Upozorenje: Lozinke se čuvaju kao otvoreni tekst i možda će biti "
+"zloupotrijebljene. Preporučujemo da kreirte korisničko ime i lozinku samo za "
+"Krecipes.</b></p>"
+
+#: dialogs/setupassistant/serversetuppage.cpp:110
+msgid "The server is remote"
+msgstr "Server je udaljeni"
+
+#: dialogs/setupassistant/serversetuppage.cpp:122
+msgid "Server / Client Settings"
+msgstr "Postavke servera/klijenta"
+
+#: dialogs/setupassistant/serversetuppage.cpp:135
+msgid "Client:"
+msgstr "Klijent:"
+
+#: dialogs/setupassistant/serversetuppage.cpp:140
+msgctxt "@label:textbox Default Port"
+msgid "Default"
+msgstr "Podrazumijevano"
+
+#: dialogs/setupassistant/setupassistant.cpp:40
+msgid "Welcome to Krecipes"
+msgstr "Dobrodošli u KRecipes"
+
+#: dialogs/setupassistant/setupassistant.cpp:44
+msgid "Database Type"
+msgstr "Tip Baze Podataka"
+
+#: dialogs/setupassistant/setupassistant.cpp:48
+msgid "Database Management System Settings"
+msgstr "Postavke sistema za upravljanje bazom podataka"
+
+#: dialogs/setupassistant/setupassistant.cpp:52
+#: dialogs/setupassistant/setupassistant.cpp:56
+msgid "Database Permissions"
+msgstr "Prava nad bazom podataka"
+
+#: dialogs/setupassistant/setupassistant.cpp:60
+msgid "Server Settings"
+msgstr "Postavke servera"
+
+#: dialogs/setupassistant/setupassistant.cpp:64
+msgid "Initialize Database"
+msgstr "Inicijalizuj bazu podataka"
+
+#: dialogs/setupassistant/setupassistant.cpp:68
+msgid "Finish & Save Settings"
+msgstr "Završi i snimi postavke"
+
+#: dialogs/setupassistant/setupassistant.cpp:87
+msgid ""
+"There is currently no localized ingredient data for this locale.\n"
+"Would you like to load the English ingredients instead?"
+msgstr ""
+"Trenutno nema prevedenih podataka o sastojcima za ovaj jezik.\n"
+"Želite li umjesto toga učitati sastojke na engleskom?"
+
+#: dialogs/setupassistant/sqlitesetuppage.cpp:51
+msgid "In this dialog you can adjust SQLite settings."
+msgstr "U ovom dijalogu možete postaviti SQLite postavke."
+
+#: dialogs/setupassistant/sqlitesetuppage.cpp:73
+msgid "Open file dialog"
+msgstr "Dijalog za otvaranje datoteke"
+
+#: dialogs/setupassistant/welcomepage.cpp:42
+msgid ""
+"<p><b><font size=\"+1\">Thank you very much for choosing Krecipes.</font></"
+"b></p><p>It looks like this is the first time you are using it. This wizard "
+"will help you with the initial setup so that you can start using it quickly."
+"</p><p>Welcome, and enjoy cooking!</p>"
+msgstr ""
+"<p><b><font size=\"+1\">Hvala što ste izabrali Krecipes.</font></b></"
+"p><p>Izgleda da ga prvi put koristite. Ovaj čarobnjak će vam pomoći u "
+"početnim postavkama, pa ćete ga moći brzo koristiti.</p><p>Dobrodošli, i "
+"uživajte u kuhanju!</p>"
 
 #: dialogs/setupdisplay.cpp:69
 msgid "Recipe Title"
@@ -4238,214 +4495,6 @@ msgstr "&Obriši"
 #| msgid "Comments:"
 msgid "Comments:"
 msgstr "Komentari:"
-
-#: setupassistant.cpp:43
-msgid "Welcome to Krecipes"
-msgstr "Dobrodošli u KRecipes"
-
-#: setupassistant.cpp:47
-msgid "Database Type"
-msgstr "Tip Baze Podataka"
-
-#: setupassistant.cpp:51
-msgid "Database Management System Settings"
-msgstr "Postavke sistema za upravljanje bazom podataka"
-
-#: setupassistant.cpp:55 setupassistant.cpp:59
-msgid "Database Permissions"
-msgstr "Prava nad bazom podataka"
-
-#: setupassistant.cpp:63
-msgid "Server Settings"
-msgstr "Postavke servera"
-
-#: setupassistant.cpp:67
-msgid "Initialize Database"
-msgstr "Inicijalizuj bazu podataka"
-
-#: setupassistant.cpp:71
-msgid "Finish & Save Settings"
-msgstr "Završi i snimi postavke"
-
-#: setupassistant.cpp:90
-msgid ""
-"There is currently no localized ingredient data for this locale.\n"
-"Would you like to load the English ingredients instead?"
-msgstr ""
-"Trenutno nema prevedenih podataka o sastojcima za ovaj jezik.\n"
-"Želite li umjesto toga učitati sastojke na engleskom?"
-
-#: setupassistant.cpp:146
-msgid ""
-"<p><b><font size=\"+1\">Thank you very much for choosing Krecipes.</font></"
-"b></p><p>It looks like this is the first time you are using it. This wizard "
-"will help you with the initial setup so that you can start using it quickly."
-"</p><p>Welcome, and enjoy cooking!</p>"
-msgstr ""
-"<p><b><font size=\"+1\">Hvala što ste izabrali Krecipes.</font></b></"
-"p><p>Izgleda da ga prvi put koristite. Ovaj čarobnjak će vam pomoći u "
-"početnim postavkama, pa ćete ga moći brzo koristiti.</p><p>Dobrodošli, i "
-"uživajte u kuhanju!</p>"
-
-#: setupassistant.cpp:179
-msgid ""
-"<p>This dialog will allow you to specify a MySQL account that has the "
-"necessary permissions to access the Krecipes MySQL database.</p><p><b><font "
-"size=\"+1\">Most users that use Krecipes and MySQL for the first time can "
-"just leave the default parameters and press 'Next'.</font></b></p> <p>If you "
-"set a MySQL root password before, or you have already permissions as normal "
-"user, click on the appropriate option. Otherwise the account 'root' will be "
-"used, with no password.</p><p>[For security reasons, we strongly encourage "
-"you to setup a MySQL root password if you have not done so yet. Just type as "
-"root: mysqladmin password <i>your_password</i>]</p>"
-msgstr ""
-"<p>Ovaj dijalog će vam omogućiti da navedete MySQL nalog koji ima potrebna "
-"prava da pristupate Krecipes MySQL bazi.</p><p><b><font size=\"+1\">Većina "
-"korisnik koji koriste Krecipes i MySQL prvi put mogu samo unijeti zadane "
-"parametre i kliknuti 'Sljedeće'.</font></b></p> <p>Ako ste postavili MySQL "
-"root lozinku ranije, ili već imate prava kao normalni korisnik, kliknite na "
-"odgovarajuću opciju. Inače, koristit će se nalog  'root' bez lozinke.</p><p>"
-"[Radi sigurnosti, preporučujemo da postavite MySQL root lozinku ako to niste "
-"uradili. Kao root korisnik unesite mysqladmin password <i>nova_lozinka</i>]</"
-"p>"
-
-#: setupassistant.cpp:198 setupassistant.cpp:325
-msgid "I have already set the necessary permissions"
-msgstr "Već imam potrebna prava"
-
-#: setupassistant.cpp:215
-msgid "I have already set a MySQL root/admin account"
-msgstr "Već sam postavio MySQL root/admin nalog"
-
-#: setupassistant.cpp:227
-msgid "MySQL Administrator Account"
-msgstr "MySQL administratorski nalog"
-
-#: setupassistant.cpp:306
-msgid ""
-"<p>This dialog will allow you to specify a PostgreSQL account that has the "
-"necessary permissions to access the Krecipes PostgreSQL database.  This "
-"account may either be a <b>PostgreSQL superuser</b> or have the ability to "
-"both <b>create new PostgreSQL users and databases</b>.</p><p>If no superuser "
-"or privileged account is given, the account 'postgres' will be attempted, "
-"with no password.  If this is insufficient for your PostgreSQL setup, you "
-"<b>must</b> select the appropriate option below to enter the information of "
-"a privileged PostgreSQL account.</p>"
-msgstr ""
-"<p>Ovaj dijaloški prozor služi za navođenje PostgreSQL naloga koji ima "
-"potrebna prava za pristup Krecipes PostgreSQL bazi podataka.  Taj nalog može "
-"biti <b>PostgreSQL superkorisnik</b> ili moći da radi <b>kreiranje novih "
-"PostgreSQL korisnika i baza</b>.</p><p>Ako nema superkorisnika ili "
-"privilegovanog naloga, probaće se nalog 'postgres' bez lozinke.  Ako je to "
-"nedovoljno za PostgreSQL postavku, vi <b>morate</b> morate izabratu opciju "
-"ispod da unedete informaciju o privilegovanom PostgreSQL nalogu.</p>"
-
-#: setupassistant.cpp:342
-msgid "I have already set a superuser or privileged account"
-msgstr "Već sam postavtio suprekorisnički ili privilegovani nalog"
-
-#: setupassistant.cpp:355
-msgid "PostgreSQL Superuser or Privileged Account"
-msgstr "PostgreSQLsuperkorisnički ili privilegovani nalog"
-
-#: setupassistant.cpp:435
-msgid ""
-"<p>In this dialog you can adjust the database server settings.</"
-"p><p><b>Warning: Passwords are stored in plain text and could potentially be "
-"compromised.  We recommend that you create a username and password "
-"combination solely for use by Krecipes.</b></p>"
-msgstr ""
-"<p>U ovom dijalogu možete podesiti postavke servera baze podataka.</"
-"p><p><b>Upozorenje: Lozinke se čuvaju kao otvoreni tekst i možda će biti "
-"zloupotrijebljene. Preporučujemo da kreirte korisničko ime i lozinku samo za "
-"Krecipes.</b></p>"
-
-#: setupassistant.cpp:489
-msgid "The server is remote"
-msgstr "Server je udaljeni"
-
-#: setupassistant.cpp:501
-msgid "Server / Client Settings"
-msgstr "Postavke servera/klijenta"
-
-#: setupassistant.cpp:514
-msgid "Client:"
-msgstr "Klijent:"
-
-#: setupassistant.cpp:519
-msgctxt "@label:textbox Default Port"
-msgid "Default"
-msgstr "Podrazumijevano"
-
-#: setupassistant.cpp:597
-msgid "In this dialog you can adjust SQLite settings."
-msgstr "U ovom dijalogu možete postaviti SQLite postavke."
-
-#: setupassistant.cpp:619
-msgid "Open file dialog"
-msgstr "Dijalog za otvaranje datoteke"
-
-#: setupassistant.cpp:671
-msgid ""
-"Congratulations; all the necessary configuration setup is done. Press "
-"'Finish' to continue, and enjoy cooking!"
-msgstr ""
-"Čestitam, sva potrebna konfiguracija je završena. Pritisnite 'Završi' za "
-"nastavak i uživajte u kuhanju!"
-
-#: setupassistant.cpp:768
-msgid ""
-"<p>Krecipes comes with some delicious default recipes and useful data.</"
-"p><p>Would you like to initialize your database with those? Note that this "
-"will erase all your previous recipes if you have any.</p>"
-msgstr ""
-"<p>Krecipes dolazi s nekim ukusnim osnovnim receptima i podacima.</"
-"p><p>Želite li inicijalizirati bazu s njima? To će obrisati vaše ranije "
-"recepte ako ih imate.</p>"
-
-#: setupassistant.cpp:793
-msgid "Yes please, initialize the database with the examples"
-msgstr "Da, molim. Inicijaliziraj bazu s primjerima"
-
-#: setupassistant.cpp:802
-msgid ""
-"<p>Krecipes can import nutrient data from the USDA's nutrient database for "
-"over 400 foods.  A total of 43 food properties are included for each food, "
-"such as energy, fat, vitamin C, etc.</p><p>Would you like to import this "
-"data now?  Note that this operation is safe to use on an existing database, "
-"and no data loss will occur.  This operation may take several minutes.</p>"
-msgstr ""
-"<p>Krecipes može uvesti prehrambene podatke iz USDA prehrambene baze za  400 "
-"vrsta hrane.  Ukupno 43 svojstva su uključena za svaku vrstu jela: energija, "
-"masti,  vitamin C, etc.</p><p>Želite li uvesti ove podatke sada? Ova "
-"operacija je bezbijedna nad postojećom bazom i neće biti gubitaka podataka.  "
-"Ova operacijamože trajati više minuta.</p>"
-
-#: setupassistant.cpp:816
-msgid "Yes please, load the database with nutrient data for 400+ foods."
-msgstr "Da, molim, učitaj bazu s podacima za preko 400 vrsta jela."
-
-#: setupassistant.cpp:864
-msgid ""
-"Choose the type of database that you want to use. Most users will want to "
-"choose a simple local database here. However, you can also use remote "
-"servers by means of a MySQL or PostgreSQL database."
-msgstr ""
-"Izaberite vrstu baze podataka koje želite koristiti. Većina korisnika voli "
-"jednostavne lokalne baze. Ipak, možete koristiti udaljene servere poput "
-"MySQL ili PostgreSQL baze."
-
-#: setupassistant.cpp:881
-msgid "Simple Local File (SQLite)"
-msgstr "Prosta lokalna datoteka (SQLite)"
-
-#: setupassistant.cpp:884
-msgid "Local or Remote MySQL Database"
-msgstr "Lokalna ili udaljena MySQL baza"
-
-#: setupassistant.cpp:887
-msgid "Local or Remote PostgreSQL Database"
-msgstr "Lokalna ili udaljena PostgreSQL baza podataka"
 
 #: widgets/categorycombobox.cpp:36 widgets/categorycombobox.cpp:63
 msgid "All Categories"
