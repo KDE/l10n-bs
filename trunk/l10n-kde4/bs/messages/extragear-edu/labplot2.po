@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-04-11 01:53+0000\n"
+"POT-Creation-Date: 2016-04-12 01:50+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -51,8 +51,8 @@ msgstr "Statistike"
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:23
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:17
 #: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:17
-#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:57
-#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:80
+#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:17
+#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:55
 #: src/kdefrontend/widgets/FitParametersWidget.cpp:47
 msgid "Name"
 msgstr "Ime"
@@ -74,6 +74,7 @@ msgid "StandardDev"
 msgstr "Standardna Devijacija"
 
 #: src/backend/analysis/StatisticsFilter.cpp:197
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:81
 msgid "Variance"
 msgstr "Varijanca"
 
@@ -267,7 +268,7 @@ msgid "incompatible filter type"
 msgstr "nekompatibilan filter tip"
 
 #: src/backend/core/AbstractSimpleFilter.cpp:382
-#: src/backend/core/column/Column.cpp:793 src/backend/core/Folder.cpp:108
+#: src/backend/core/column/Column.cpp:805 src/backend/core/Folder.cpp:108
 #: src/backend/core/Project.cpp:269
 #: src/backend/datapicker/DatapickerCurve.cpp:634
 #: src/backend/datapicker/DatapickerImage.cpp:818
@@ -332,8 +333,8 @@ msgstr "%1: pomjeri %2 u %3."
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:640
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:982
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1279
-#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:77
-#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:100
+#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:119
+#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:89
 msgid "Type"
 msgstr "Vrsta"
 
@@ -357,12 +358,12 @@ msgstr "Napravljeno"
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:49
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:43
 #: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:43
-#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:156
-#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:179
+#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:40
+#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:195
 msgid "Comment"
 msgstr "Komentar"
 
-#: src/backend/core/column/Column.cpp:152
+#: src/backend/core/column/Column.cpp:151
 #: src/backend/core/column/columncommands.cpp:102
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:304
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:324
@@ -370,31 +371,31 @@ msgstr "Komentar"
 msgid "%1: change column type"
 msgstr "%1: promijeni tip kolone"
 
-#: src/backend/core/column/Column.cpp:731
+#: src/backend/core/column/Column.cpp:743
 msgid "column mode missing"
 msgstr "mod kolone nedostaje"
 
-#: src/backend/core/column/Column.cpp:737
+#: src/backend/core/column/Column.cpp:749
 msgid "column mode invalid"
 msgstr "neispravan mod kolone"
 
-#: src/backend/core/column/Column.cpp:750
+#: src/backend/core/column/Column.cpp:762
 msgid "column plot designation invalid"
 msgstr "neispravne oznake za kolone"
 
-#: src/backend/core/column/Column.cpp:761
+#: src/backend/core/column/Column.cpp:773
 msgid "missing or invalid column width"
 msgstr "nedostaje ili je pogrešna širina kolone"
 
-#: src/backend/core/column/Column.cpp:807
+#: src/backend/core/column/Column.cpp:819
 msgid "no column element found"
 msgstr "nema elemenata u koloni"
 
-#: src/backend/core/column/Column.cpp:905
+#: src/backend/core/column/Column.cpp:917
 msgid "invalid or missing row index"
 msgstr "pogrešan ili nedostaje indeks reda"
 
-#: src/backend/core/column/Column.cpp:915
+#: src/backend/core/column/Column.cpp:927
 msgid "invalid row value"
 msgstr "pogrešna vrijednost reda"
 
@@ -804,7 +805,7 @@ msgstr "nije pronađen element xy iz jednačine krive"
 #: src/backend/worksheet/plots/cartesian/XYEquationCurve.cpp:211
 #: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:839
 #: src/backend/worksheet/plots/cartesian/XYFourierFilterCurve.cpp:456
-#: src/backend/worksheet/plots/cartesian/XYInterpolationCurve.cpp:382
+#: src/backend/worksheet/plots/cartesian/XYInterpolationCurve.cpp:380
 #: src/backend/worksheet/plots/PlotArea.cpp:454
 #: src/backend/worksheet/TextLabel.cpp:667
 #: src/backend/worksheet/Worksheet.cpp:759
@@ -3488,8 +3489,8 @@ msgstr "%1: postavi vertikalno punjenje"
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:89
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:402
 #: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:279
-#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:149
-#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:172
+#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:225
+#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:218
 #: src/kdefrontend/ui/labelwidget.ui:395
 msgid "visible"
 msgstr "vidljivo"
@@ -4521,7 +4522,7 @@ msgstr "%1: postavi fit opcije i izvedi ih"
 msgid "Not enough data points available."
 msgstr "Nisu dostupne tačke podataka."
 
-#: src/backend/worksheet/plots/cartesian/XYInterpolationCurve.cpp:378
+#: src/backend/worksheet/plots/cartesian/XYInterpolationCurve.cpp:376
 #, fuzzy
 #| msgid "no xy fit curve element found"
 msgid "no xy Fourier interpolation curve element found"
@@ -5589,7 +5590,7 @@ msgstr "Automatski"
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:65
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:571
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:291
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:90
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:93
 msgid "Custom"
 msgstr "Specijalno"
 
@@ -5901,7 +5902,7 @@ msgstr "%1: ose: predložak \"%2\" učitan"
 #: src/kdefrontend/dockwidgets/MatrixDock.cpp:337
 #: src/kdefrontend/dockwidgets/SpreadsheetDock.cpp:196
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:877
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:2092
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:2095
 #, kde-format
 msgid "%1: template \"%2\" loaded"
 msgstr "%1: predložak \"%2\" učitan"
@@ -6031,9 +6032,9 @@ msgstr "centrirano popločan"
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:442
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:466
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:495
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1367
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1391
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1419
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1370
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1394
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1422
 #: src/kdefrontend/ui/datapickercurvewidget.ui:210
 #: src/kdefrontend/ui/datapickercurvewidget.ui:303
 #: src/kdefrontend/ui/datapickercurvewidget.ui:502
@@ -6067,15 +6068,15 @@ msgstr "Boja"
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:468
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:446
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:499
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1371
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1423
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1374
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1426
 msgid "First Color"
 msgstr "Prva boja"
 
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:759
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:529
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:652
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1477
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1480
 #: src/kdefrontend/widgets/DatapickerImageWidget.cpp:389
 msgid "Select the image file"
 msgstr "Odaberi slikovnu datoteku"
@@ -6118,19 +6119,19 @@ msgstr "%1 legenda dekartovog grafa: predložak \"%2\" učitan"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:185
 #: src/kdefrontend/dockwidgets/MatrixDock.cpp:44
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:674
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:677
 msgid "Decimal"
 msgstr "Decimala"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:186
 #: src/kdefrontend/dockwidgets/MatrixDock.cpp:45
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:675
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:678
 msgid "Scientific (e)"
 msgstr "Naučni (3)"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:187
 #: src/kdefrontend/dockwidgets/MatrixDock.cpp:46
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:676
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:679
 msgid "Scientific (E)"
 msgstr "Naučni (E)"
 
@@ -6146,35 +6147,35 @@ msgstr "Automatski (G)"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:194
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:200
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:684
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:690
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:687
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:693
 msgid "Number without leading zero"
 msgstr "Broj bez nule na početku"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:195
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:201
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:685
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:691
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:688
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:694
 msgid "Number with leading zero"
 msgstr "Broj sa nulom na početku"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:196
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:686
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:689
 msgid "Abbreviated month name"
 msgstr "Skraćeno ime mjeseca"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:197
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:687
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:690
 msgid "Full month name"
 msgstr "Puno ime mjeseca"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:202
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:692
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:695
 msgid "Abbreviated day name"
 msgstr "Skraćeno ime dana"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:203
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:693
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:696
 msgid "Full day name"
 msgstr "Puno ime dana"
 
@@ -6183,7 +6184,7 @@ msgid "Numeric"
 msgstr "Brojčano"
 
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:251
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:681
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:684
 msgid "Text"
 msgstr "Tekst"
 
@@ -6552,288 +6553,288 @@ msgstr "simetrična glatka kriva"
 msgid "asymmetric"
 msgstr "nesimetrična"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:677
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:680
 msgid "Automatic (e)"
 msgstr "Automatska (e)"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:678
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:681
 msgid "Automatic (E)"
 msgstr "Automatska (E)"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1526
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1595
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1529
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1598
 msgid "Data, +-"
 msgstr "Podaci, +-"
 
 #. i18n: ectx: property (text), widget (QLabel, lXErrorDataPlus)
 #. i18n: ectx: property (text), widget (QLabel, lYErrorDataPlus)
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1533
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1602
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1536
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:1605
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1183
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1236
 msgid "Data, +"
 msgstr "Podaci, +"
 
-#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:2090
+#: src/kdefrontend/dockwidgets/XYCurveDock.cpp:2093
 #, kde-format
 msgid "%1 xy-curves: template \"%2\" loaded"
 msgstr "%1 xy- krive: predložak \"%2\" učitan"
 
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:83
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:84
 msgid "cartesian"
 msgstr "dekartov"
 
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:84
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:85
 msgid "polar"
 msgstr "polaran"
 
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:85
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:86
 msgid "parametric"
 msgstr "parametarski"
 
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:202
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:203
 msgid "x, min"
 msgstr "x, minimalan"
 
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:203
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:204
 msgid "x, max"
 msgstr "x, maksimalan"
 
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:214
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:215
 msgid "φ, min"
 msgstr "φ, minimalan"
 
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:215
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:216
 msgid "φ, max"
 msgstr "φ, maksimalan"
 
 #. i18n: ectx: property (text), widget (QLabel, lMin)
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:227
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:228
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:255
 msgid "t, min"
 msgstr "t, minimalan"
 
 #. i18n: ectx: property (text), widget (QLabel, lMax)
-#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:228
+#: src/kdefrontend/dockwidgets/XYEquationCurveDock.cpp:229
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:297
 msgid "t, max"
 msgstr "t, maksimalan"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:82
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:79
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:85
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:84
 msgid "Polynomial"
 msgstr "Polinomski"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:83
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:86
 msgid "Power"
 msgstr "Snaga"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:84
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:87
 msgid "Exponential"
 msgstr "Eksponencijalno"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:85
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:88
 msgid "Inverse Exponential"
 msgstr "Inverzni eksponent"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:86
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:89
 msgid "Fourier"
 msgstr "Furijer"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:87
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:90
 msgid "Gaussian"
 msgstr "Gaussov"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:88
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:91
 msgid "Lorentz (Cauchy)"
 msgstr "Lorenc(Koši)"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:89
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:92
 msgid "Maxwell-Boltzmann"
 msgstr "Maksvel-Bolcman"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:560
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:412
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:361
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:563
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:415
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:366
 msgid "status"
 msgstr "status:"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:567
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:570
 msgid "iterations"
 msgstr "iteracije"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:569
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:420
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:369
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:572
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:423
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:374
 #, kde-format
 msgid "calculation time: %1 s"
 msgstr "vrijeme računanja: %1 s"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:571
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:422
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:371
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:574
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:425
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:376
 #, kde-format
 msgid "calculation time: %1 ms"
 msgstr "vrijeme računanja: %1 ms"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:573
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:576
 msgid "degrees of freedom"
 msgstr "stepeni slobode"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:582
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:585
 msgid "sum of squared errors"
 msgstr "greške suma kvadrata"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:583
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:586
 msgid "mean squared error"
 msgstr "srednje kvadratno odstupanje"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:584
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:587
 msgid "root-mean squared error"
 msgstr "korijen srednjeg kvadratnog odstupanja"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:585
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:588
 msgid "mean absolute error"
 msgstr "srednja apsolutna greška"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:588
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:591
 msgid "residual mean square"
 msgstr "rezidualno srednje kvadratno"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:589
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:592
 msgid "residual standard deviation"
 msgstr "rezidualna standardna devijacija"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:592
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:595
 msgid "coefficient of determination (R²)"
 msgstr "koeficijent određenja (R²)"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:593
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:596
 msgid "adj. coefficient of determination (R²)"
 msgstr "adj. koeficijent određenja (R²)"
 
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:75
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:78
 msgid "Low pass"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:76
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:79
 msgid "High pass"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:77
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:80
 msgid "Band pass"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:78
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:81
 #, fuzzy
 #| msgid "Save Project"
 msgid "Band reject"
 msgstr "Spasi projekat"
 
 #. i18n: ectx: property (text), widget (QLabel, lThreshold)
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:79
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:82
 #: src/kdefrontend/ui/plotsurfacestylewidget.ui:211
 msgid "Threshold"
 msgstr "Granica"
 
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:81
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:84
 msgid "Ideal"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:82
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:85
 msgid "Butterworth"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:83
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:86
 msgid "Chebyshev type I"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:84
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:87
 msgid "Chebyshev type II"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:86
 #: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:89
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:92
 msgid "Frequency (Hz)"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:87
 #: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:90
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:93
 #, fuzzy
 #| msgid "Direction"
 msgid "Fraction"
 msgstr "Smjer"
 
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:88
 #: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:91
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:94
 msgid "Index"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lCutoff)
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:263
-#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:27
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:266
+#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:133
 msgid "Cutoff"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:271
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:274
 #, fuzzy
 #| msgid "Functions"
 msgid "Lower Cutoff"
 msgstr "Funkcije"
 
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:272
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:275
 msgid "Upper Cutoff"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:78
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:83
 #, fuzzy
 #| msgid "linear"
 msgid "Linear"
 msgstr "linearan"
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:80
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:85
 #, fuzzy
 #| msgid "cubic spline (natural)"
 msgid "Cubic spline"
 msgstr "kubna dugača (prirodna)"
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:81
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:86
 #, fuzzy
 #| msgid "cubic spline (periodic)"
 msgid "Cubic spline - periodic"
 msgstr "kubna dugačka (periodična)"
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:82
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:87
 #, fuzzy
 #| msgid "Akima-spline (natural)"
 msgid "Akima spline"
 msgstr "Akima-dugačka (prirodna)"
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:83
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:88
 #, fuzzy
 #| msgid "Akima-spline (periodic)"
 msgid "Akima spline - periodic"
 msgstr "Akima-dugačka(periodična)"
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:85
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:90
 msgid "Steffen spline"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:88
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:93
 #, fuzzy
 #| msgid "Functions"
 msgid "Function"
 msgstr "Funkcije"
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:89
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:94
 msgid "Derivative"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:90
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:95
 msgid "Second derivative"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:91
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:96
 #, fuzzy
 #| msgid "Interface"
 msgid "Integral"
@@ -7692,11 +7693,19 @@ msgstr[0] "%1: popuni kolonu sa ekvidistantnim brojevima"
 msgstr[1] "%1: popuni kolone sa ekvidistantnim brojevima"
 msgstr[2] "%1: popuni kolone sa ekvidistantnim brojevima"
 
+#: src/kdefrontend/spreadsheet/ExportSpreadsheetDialog.cpp:66
 #: src/kdefrontend/spreadsheet/ExportSpreadsheetDialog.cpp:82
 msgid "Export spreadsheet"
 msgstr "Izvezi tabelarni prikaz"
 
+#: src/kdefrontend/spreadsheet/ExportSpreadsheetDialog.cpp:67
+#, fuzzy
+#| msgid "Fit to selection"
+msgid "Export selection"
+msgstr "Uklopi u selektovano"
+
 #: src/kdefrontend/spreadsheet/ExportSpreadsheetDialog.cpp:132
+#: src/kdefrontend/spreadsheet/ExportSpreadsheetDialog.cpp:137
 #, fuzzy
 #| msgid "Export header"
 msgid "Export matrix"
@@ -7782,7 +7791,7 @@ msgstr "Sortiraj kolone"
 #. i18n: ectx: property (text), widget (QLabel, lOrder)
 #: src/kdefrontend/spreadsheet/SortDialog.cpp:57
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:154
-#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:239
+#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:247
 msgid "Order"
 msgstr "Redoslijed"
 
@@ -7814,7 +7823,83 @@ msgstr "&Sortiraj"
 msgid "&Ok"
 msgstr ""
 
-#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:119
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:26
+#, fuzzy
+#| msgid "Function Values"
+msgid "Location measures"
+msgstr "Vrijednosti funkcije"
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:32
+msgid "Minimum"
+msgstr ""
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:38
+msgid "Maximum"
+msgstr ""
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:44
+msgid "Arithmetic mean"
+msgstr ""
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:50
+#, fuzzy
+#| msgid "Geometric Distribution"
+msgid "Geometric mean"
+msgstr "Geometrijska Distribucija"
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:56
+msgid "Harmonic mean"
+msgstr ""
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:62
+msgid "Contraharmonic mean"
+msgstr ""
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:68
+msgid "Median"
+msgstr ""
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:75
+msgid "Dispersion measures"
+msgstr ""
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:87
+#, fuzzy
+#| msgid "residual standard deviation"
+msgid "Standard deviation"
+msgstr "rezidualna standardna devijacija"
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:93
+msgid "Mean absolute deviation around mean"
+msgstr ""
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:99
+msgid "Mean absolute deviation around median"
+msgstr ""
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:105
+#, fuzzy
+#| msgid "mean absolute error"
+msgid "Median absolute deviation"
+msgstr "srednja apsolutna greška"
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:112
+msgid "Shape measures"
+msgstr ""
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:118
+msgid "Skewness"
+msgstr ""
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:124
+msgid "Kurtosis"
+msgstr ""
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:130
+msgid "Entropy"
+msgstr ""
+
+#: src/kdefrontend/spreadsheet/StatisticsDialog.cpp:155
 msgid "The value couldn't be calculated."
 msgstr ""
 
@@ -9417,16 +9502,16 @@ msgstr "Veličina kape"
 #. i18n: ectx: property (text), widget (QLabel, lXColumn)
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:59
 #: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:322
-#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:107
-#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:130
+#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:76
+#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:75
 msgid "x-data"
 msgstr "x-podatak"
 
 #. i18n: ectx: property (text), widget (QLabel, lYColumn)
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:66
 #: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:329
-#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:100
-#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:123
+#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:83
+#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:82
 msgid "y-data"
 msgstr "y-podatak"
 
@@ -9475,8 +9560,8 @@ msgstr "Broj tačaka"
 #. i18n: ectx: property (text), widget (QPushButton, pbRecalculate)
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:379
 #: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:256
-#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:163
-#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:186
+#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:202
+#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:152
 msgid "Recalculate"
 msgstr "Preračunaj"
 
@@ -9503,8 +9588,8 @@ msgstr "Napredne fit opcije"
 #. i18n: ectx: property (text), widget (QLabel, lName_2)
 #. i18n: ectx: property (text), widget (QLabel, lData)
 #: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:315
-#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:123
-#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:146
+#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:69
+#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:68
 msgid "Data:"
 msgstr "Podaci:"
 
@@ -9529,8 +9614,8 @@ msgstr "f(x)"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, lResults)
 #: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:363
-#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:179
-#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:202
+#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:169
+#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:165
 msgid "Results:"
 msgstr "Rezultati:"
 
@@ -9540,7 +9625,7 @@ msgid "Fit:"
 msgstr "Podesiti:"
 
 #. i18n: ectx: property (text), widget (QLabel, lFilter)
-#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:70
+#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:112
 #, fuzzy
 #| msgid "Filter"
 msgid "Filter:"
@@ -9548,32 +9633,32 @@ msgstr "Filter"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, StatisticsDialog)
 #. i18n: ectx: property (text), widget (QLabel, lForm)
-#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:210
+#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:126
 #: src/kdefrontend/ui/spreadsheet/statisticswidget.ui:14
 msgid "Form"
 msgstr "Forma"
 
 #. i18n: ectx: property (text), widget (QLabel, lCutoff2)
-#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:217
+#: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:140
 msgid "Cutoff2"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lPoints)
-#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:30
+#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:109
 #, fuzzy
-#| msgid "Number of points"
-msgid "Nr of points"
-msgstr "Broj tačaka"
+#| msgid "Fitted Points"
+msgid "Points"
+msgstr "Tačke podešavanja"
 
 #. i18n: ectx: property (text), widget (QLabel, lEval)
-#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:40
+#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:175
 #, fuzzy
 #| msgid "value"
 msgid "Evaluate"
 msgstr "vrijednost"
 
 #. i18n: ectx: property (text), widget (QLabel, lInterpolation)
-#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:93
+#: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:188
 #, fuzzy
 #| msgid "iterations"
 msgid "Interpolation:"
@@ -10045,6 +10130,11 @@ msgstr "Horizontalni razmaci"
 #: src/kdefrontend/worksheet/GridDialog.cpp:68
 msgid "Vertical spacing"
 msgstr "Vertikalni razmaci"
+
+#, fuzzy
+#~| msgid "Number of points"
+#~ msgid "Nr of points"
+#~ msgstr "Broj tačaka"
 
 #~ msgid "Worksheet printed"
 #~ msgstr "Radni list ispisan"
