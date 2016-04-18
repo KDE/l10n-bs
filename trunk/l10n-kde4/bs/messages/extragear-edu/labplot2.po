@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-04-17 01:44+0000\n"
+"POT-Creation-Date: 2016-04-18 01:58+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -5652,6 +5652,7 @@ msgstr "Format podataka"
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:195
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:317
 #: src/kdefrontend/dockwidgets/CartesianPlotDock.cpp:322
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:86
 msgid "linear"
 msgstr "linearan"
 
@@ -6464,18 +6465,22 @@ msgid "3-segments"
 msgstr "3-segmenta"
 
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:252
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:88
 msgid "cubic spline (natural)"
 msgstr "kubna dugača (prirodna)"
 
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:253
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:89
 msgid "cubic spline (periodic)"
 msgstr "kubna dugačka (periodična)"
 
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:254
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:90
 msgid "Akima-spline (natural)"
 msgstr "Akima-dugačka (prirodna)"
 
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:255
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:91
 msgid "Akima-spline (periodic)"
 msgstr "Akima-dugačka(periodična)"
 
@@ -6621,7 +6626,6 @@ msgid "t, max"
 msgstr "t, maksimalan"
 
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:85
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:84
 msgid "Polynomial"
 msgstr "Polinomski"
 
@@ -6655,7 +6659,7 @@ msgstr "Maksvel-Bolcman"
 
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:563
 #: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:415
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:366
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:373
 msgid "status"
 msgstr "status:"
 
@@ -6665,14 +6669,14 @@ msgstr "iteracije"
 
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:572
 #: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:423
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:374
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:381
 #, kde-format
 msgid "calculation time: %1 s"
 msgstr "vrijeme računanja: %1 s"
 
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:574
 #: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:425
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:376
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:383
 #, kde-format
 msgid "calculation time: %1 ms"
 msgstr "vrijeme računanja: %1 ms"
@@ -6786,55 +6790,31 @@ msgstr "Funkcije"
 msgid "Upper Cutoff"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:83
-#, fuzzy
-#| msgid "linear"
-msgid "Linear"
-msgstr "linearan"
-
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:85
-#, fuzzy
-#| msgid "cubic spline (natural)"
-msgid "Cubic spline"
-msgstr "kubna dugača (prirodna)"
-
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:86
-#, fuzzy
-#| msgid "cubic spline (periodic)"
-msgid "Cubic spline - periodic"
-msgstr "kubna dugačka (periodična)"
-
 #: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:87
 #, fuzzy
-#| msgid "Akima-spline (natural)"
-msgid "Akima spline"
-msgstr "Akima-dugačka (prirodna)"
+#| msgid "Polynomial"
+msgid "polynomial"
+msgstr "Polinomski"
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:88
-#, fuzzy
-#| msgid "Akima-spline (periodic)"
-msgid "Akima spline - periodic"
-msgstr "Akima-dugačka(periodična)"
-
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:90
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:93
 msgid "Steffen spline"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:93
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:96
 #, fuzzy
 #| msgid "Functions"
 msgid "Function"
 msgstr "Funkcije"
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:94
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:97
 msgid "Derivative"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:95
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:98
 msgid "Second derivative"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:96
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:99
 #, fuzzy
 #| msgid "Interface"
 msgid "Integral"
@@ -10118,6 +10098,31 @@ msgstr "Horizontalni razmaci"
 #: src/kdefrontend/worksheet/GridDialog.cpp:68
 msgid "Vertical spacing"
 msgstr "Vertikalni razmaci"
+
+#, fuzzy
+#~| msgid "linear"
+#~ msgid "Linear"
+#~ msgstr "linearan"
+
+#, fuzzy
+#~| msgid "cubic spline (natural)"
+#~ msgid "Cubic spline"
+#~ msgstr "kubna dugača (prirodna)"
+
+#, fuzzy
+#~| msgid "cubic spline (periodic)"
+#~ msgid "Cubic spline - periodic"
+#~ msgstr "kubna dugačka (periodična)"
+
+#, fuzzy
+#~| msgid "Akima-spline (natural)"
+#~ msgid "Akima spline"
+#~ msgstr "Akima-dugačka (prirodna)"
+
+#, fuzzy
+#~| msgid "Akima-spline (periodic)"
+#~ msgid "Akima spline - periodic"
+#~ msgstr "Akima-dugačka(periodična)"
 
 #, fuzzy
 #~| msgid "Number of points"
