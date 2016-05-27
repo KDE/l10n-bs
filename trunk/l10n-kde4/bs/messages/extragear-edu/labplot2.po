@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-05-24 01:47+0000\n"
+"POT-Creation-Date: 2016-05-27 01:47+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -269,7 +269,7 @@ msgid "incompatible filter type"
 msgstr "nekompatibilan filter tip"
 
 #: src/backend/core/AbstractSimpleFilter.cpp:382
-#: src/backend/core/column/Column.cpp:814 src/backend/core/Folder.cpp:106
+#: src/backend/core/column/Column.cpp:782 src/backend/core/Folder.cpp:106
 #: src/backend/core/Project.cpp:270
 #: src/backend/datapicker/DatapickerCurve.cpp:634
 #: src/backend/datapicker/DatapickerImage.cpp:818
@@ -374,31 +374,46 @@ msgstr "Komentar"
 msgid "%1: change column type"
 msgstr "%1: promijeni tip kolone"
 
-#: src/backend/core/column/Column.cpp:752
-msgid "column mode missing"
-msgstr "mod kolone nedostaje"
+#: src/backend/core/column/Column.cpp:745
+#: src/backend/datapicker/DatapickerCurve.cpp:531
+#: src/backend/datapicker/DatapickerImage.cpp:555
+#: src/backend/datapicker/DatapickerPoint.cpp:476
+#: src/backend/datasources/FileDataSource.cpp:356
+#: src/backend/datasources/filters/AsciiFilter.cpp:533
+#: src/backend/datasources/filters/BinaryFilter.cpp:453
+#: src/backend/datasources/filters/HDFFilter.cpp:1556
+#: src/backend/datasources/filters/ImageFilter.cpp:292
+#: src/backend/datasources/filters/NetCDFFilter.cpp:721
+#: src/backend/matrix/Matrix.cpp:744
+#: src/backend/worksheet/plots/cartesian/Axis.cpp:1928
+#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:1789
+#: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:933
+#: src/backend/worksheet/plots/cartesian/CustomPoint.cpp:424
+#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:2210
+#: src/backend/worksheet/plots/cartesian/XYEquationCurve.cpp:211
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:845
+#: src/backend/worksheet/plots/cartesian/XYFourierFilterCurve.cpp:458
+#: src/backend/worksheet/plots/cartesian/XYInterpolationCurve.cpp:652
+#: src/backend/worksheet/plots/cartesian/XYSmoothCurve.cpp:454
+#: src/backend/worksheet/plots/PlotArea.cpp:454
+#: src/backend/worksheet/TextLabel.cpp:667
+#: src/backend/worksheet/Worksheet.cpp:758
+#: src/commonfrontend/ProjectExplorer.cpp:584
+#, kde-format
+msgid "Attribute '%1' missing or empty, default value is used"
+msgstr ""
+"Atribut '%1' nedostaje ili je prazan, podrazumijevana vrijednost je "
+"iskorištena"
 
-#: src/backend/core/column/Column.cpp:758
-msgid "column mode invalid"
-msgstr "neispravan mod kolone"
-
-#: src/backend/core/column/Column.cpp:771
-msgid "column plot designation invalid"
-msgstr "neispravne oznake za kolone"
-
-#: src/backend/core/column/Column.cpp:782
-msgid "missing or invalid column width"
-msgstr "nedostaje ili je pogrešna širina kolone"
-
-#: src/backend/core/column/Column.cpp:828
+#: src/backend/core/column/Column.cpp:796
 msgid "no column element found"
 msgstr "nema elemenata u koloni"
 
-#: src/backend/core/column/Column.cpp:926
+#: src/backend/core/column/Column.cpp:894
 msgid "invalid or missing row index"
 msgstr "pogrešan ili nedostaje indeks reda"
 
-#: src/backend/core/column/Column.cpp:936
+#: src/backend/core/column/Column.cpp:904
 msgid "invalid row value"
 msgstr "pogrešna vrijednost reda"
 
@@ -789,36 +804,6 @@ msgstr ""
 #| msgid "no xy equation curve element found"
 msgid "no dataPicker curve element found"
 msgstr "nije pronađen element xy iz jednačine krive"
-
-#: src/backend/datapicker/DatapickerCurve.cpp:531
-#: src/backend/datapicker/DatapickerImage.cpp:555
-#: src/backend/datapicker/DatapickerPoint.cpp:476
-#: src/backend/datasources/FileDataSource.cpp:356
-#: src/backend/datasources/filters/AsciiFilter.cpp:533
-#: src/backend/datasources/filters/BinaryFilter.cpp:453
-#: src/backend/datasources/filters/HDFFilter.cpp:1556
-#: src/backend/datasources/filters/ImageFilter.cpp:292
-#: src/backend/datasources/filters/NetCDFFilter.cpp:721
-#: src/backend/matrix/Matrix.cpp:744
-#: src/backend/worksheet/plots/cartesian/Axis.cpp:1928
-#: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:1789
-#: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:933
-#: src/backend/worksheet/plots/cartesian/CustomPoint.cpp:424
-#: src/backend/worksheet/plots/cartesian/XYCurve.cpp:2210
-#: src/backend/worksheet/plots/cartesian/XYEquationCurve.cpp:211
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:845
-#: src/backend/worksheet/plots/cartesian/XYFourierFilterCurve.cpp:458
-#: src/backend/worksheet/plots/cartesian/XYInterpolationCurve.cpp:652
-#: src/backend/worksheet/plots/cartesian/XYSmoothCurve.cpp:454
-#: src/backend/worksheet/plots/PlotArea.cpp:454
-#: src/backend/worksheet/TextLabel.cpp:667
-#: src/backend/worksheet/Worksheet.cpp:758
-#: src/commonfrontend/ProjectExplorer.cpp:584
-#, kde-format
-msgid "Attribute '%1' missing or empty, default value is used"
-msgstr ""
-"Atribut '%1' nedostaje ili je prazan, podrazumijevana vrijednost je "
-"iskorištena"
 
 #: src/backend/datapicker/DatapickerImage.cpp:174
 #, fuzzy
@@ -5643,12 +5628,12 @@ msgid "%1 name:"
 msgstr "Ime:"
 
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:65
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:570
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:576
 msgid "Automatic"
 msgstr "Automatski"
 
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:65
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:571
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:577
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:291
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:94
 msgid "Custom"
@@ -5671,35 +5656,35 @@ msgstr ""
 msgid "Values"
 msgstr "Vrijednosti"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:368
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:374
 msgid "Select the File Data Source"
 msgstr "Označi Izvor podataka"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:495
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:501
 msgid "Save Filter Settings as"
 msgstr "Sačuvaj podešavanja filtriranja kao"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:496
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:502
 msgid "Filter name:"
 msgstr "Ime filtera:"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:496
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:502
 msgid "new filter"
 msgstr "novi filter"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabDataFormat)
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:523
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:529
 #: src/kdefrontend/ui/datasources/importfilewidget.ui:234
 msgid "Data format"
 msgstr "Format podataka"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabDataPreview)
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:524
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:530
 #: src/kdefrontend/ui/datasources/importfilewidget.ui:247
 msgid "Preview"
 msgstr "Pregled"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:549
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:555
 #, fuzzy
 #| msgid "Data format"
 msgid "Data format && preview"
@@ -10304,6 +10289,18 @@ msgstr "Horizontalni razmaci"
 #: src/kdefrontend/worksheet/GridDialog.cpp:68
 msgid "Vertical spacing"
 msgstr "Vertikalni razmaci"
+
+#~ msgid "column mode missing"
+#~ msgstr "mod kolone nedostaje"
+
+#~ msgid "column mode invalid"
+#~ msgstr "neispravan mod kolone"
+
+#~ msgid "column plot designation invalid"
+#~ msgstr "neispravne oznake za kolone"
+
+#~ msgid "missing or invalid column width"
+#~ msgstr "nedostaje ili je pogrešna širina kolone"
 
 #~ msgid "Folder %1"
 #~ msgstr "Direktorij: %1"
