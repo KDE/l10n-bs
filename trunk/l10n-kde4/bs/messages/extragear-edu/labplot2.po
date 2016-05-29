@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-05-28 01:43+0000\n"
+"POT-Creation-Date: 2016-05-29 01:46+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -381,7 +381,7 @@ msgstr "%1: promijeni tip kolone"
 #: src/backend/datasources/FileDataSource.cpp:356
 #: src/backend/datasources/filters/AsciiFilter.cpp:533
 #: src/backend/datasources/filters/BinaryFilter.cpp:453
-#: src/backend/datasources/filters/HDFFilter.cpp:1556
+#: src/backend/datasources/filters/HDFFilter.cpp:1554
 #: src/backend/datasources/filters/ImageFilter.cpp:292
 #: src/backend/datasources/filters/NetCDFFilter.cpp:721
 #: src/backend/matrix/Matrix.cpp:744
@@ -1062,7 +1062,7 @@ msgstr "nije pronađen fileDataSource element"
 
 #: src/backend/datasources/filters/AsciiFilter.cpp:460
 #: src/backend/datasources/filters/BinaryFilter.cpp:386
-#: src/backend/datasources/filters/HDFFilter.cpp:1477
+#: src/backend/datasources/filters/HDFFilter.cpp:1475
 #: src/backend/datasources/filters/ImageFilter.cpp:240
 #: src/backend/datasources/filters/NetCDFFilter.cpp:641
 #, kde-format
@@ -1087,7 +1087,44 @@ msgstr "nije pronađen element ascii filtera"
 msgid "link to "
 msgstr ""
 
-#: src/backend/datasources/filters/HDFFilter.cpp:1552
+#: src/backend/datasources/filters/HDFFilter.cpp:1277
+msgid "Unsupported integer type for rank=1"
+msgstr ""
+
+#: src/backend/datasources/filters/HDFFilter.cpp:1291
+msgid "Unsupported float type for rank=1"
+msgstr ""
+
+#: src/backend/datasources/filters/HDFFilter.cpp:1321
+#, kde-format
+msgid "rank = 1 not implemented yet for type %1"
+msgstr ""
+
+#: src/backend/datasources/filters/HDFFilter.cpp:1404
+msgid "Unsupported integer type for rank=2"
+msgstr ""
+
+#: src/backend/datasources/filters/HDFFilter.cpp:1417
+msgid "Unsupported float type for rank=2"
+msgstr ""
+
+#: src/backend/datasources/filters/HDFFilter.cpp:1430
+#, fuzzy
+#| msgid "Not yet implemented."
+msgid "not implemented yet"
+msgstr "Još nije implementirano."
+
+#: src/backend/datasources/filters/HDFFilter.cpp:1431
+#, kde-format
+msgid "size = %1"
+msgstr ""
+
+#: src/backend/datasources/filters/HDFFilter.cpp:1453
+#, kde-format
+msgid "rank = %1 not supported"
+msgstr ""
+
+#: src/backend/datasources/filters/HDFFilter.cpp:1550
 #, fuzzy
 #| msgid "no ascii filter element found"
 msgid "no hdf filter element found"
@@ -1107,6 +1144,41 @@ msgstr ""
 msgid "XYRGB"
 msgstr ""
 
+#: src/backend/datasources/filters/NetCDFFilter.cpp:343
+#, fuzzy
+#| msgid "t-distribution"
+msgid "global attribute"
+msgstr "t-distribucija"
+
+#: src/backend/datasources/filters/NetCDFFilter.cpp:347
+#, fuzzy
+#| msgid "t-distribution"
+msgid "attribute"
+msgstr "t-distribucija"
+
+#: src/backend/datasources/filters/NetCDFFilter.cpp:376
+#, fuzzy
+#| msgid "Length"
+msgid "length"
+msgstr "Dužina"
+
+#: src/backend/datasources/filters/NetCDFFilter.cpp:379
+msgid "unlimited"
+msgstr ""
+
+#: src/backend/datasources/filters/NetCDFFilter.cpp:380
+#, fuzzy
+#| msgctxt "matrix size"
+#| msgid "&Dimensions"
+msgid "dimension"
+msgstr "&Dimenzije"
+
+#: src/backend/datasources/filters/NetCDFFilter.cpp:415
+#, fuzzy
+#| msgid "Variance"
+msgid "variable"
+msgstr "Varijanca"
+
 #: src/backend/datasources/filters/NetCDFFilter.cpp:446
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:90
 msgid "Attributes"
@@ -1124,6 +1196,12 @@ msgstr "&Dimenzije"
 #| msgid "Variance"
 msgid "Variables"
 msgstr "Varijanca"
+
+#: src/backend/datasources/filters/NetCDFFilter.cpp:508
+#, fuzzy
+#| msgid "&Normalize Selection"
+msgid "No variable selected"
+msgstr "&Normalizuj Selektovano"
 
 #: src/backend/datasources/filters/NetCDFFilter.cpp:717
 #, fuzzy
@@ -6733,6 +6811,16 @@ msgstr "vrijeme računanja: %1 ms"
 msgid "degrees of freedom"
 msgstr "stepeni slobode"
 
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:588
+#, fuzzy
+#| msgid "Parameters"
+msgid "<b>Parameters:</b>"
+msgstr "Parametri"
+
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:594
+msgid "<b>Goodness of fit:</b>"
+msgstr ""
+
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:595
 msgid "sum of squared errors"
 msgstr "greške suma kvadrata"
@@ -10670,16 +10758,6 @@ msgstr "Vertikalni razmaci"
 #~ msgstr "nepoznato"
 
 #, fuzzy
-#~| msgid "t-distribution"
-#~ msgid "attribute"
-#~ msgstr "t-distribucija"
-
-#, fuzzy
-#~| msgid "Variance"
-#~ msgid "variable"
-#~ msgstr "Varijanca"
-
-#, fuzzy
 #~| msgid "ASCII vector data"
 #~ msgid "ASCII matrix data"
 #~ msgstr "ASCII  vektorski podaci"
@@ -10811,9 +10889,6 @@ msgstr "Vertikalni razmaci"
 
 #~ msgid "y2-Axis"
 #~ msgstr "y2-Osa"
-
-#~ msgid "Not yet implemented."
-#~ msgstr "Još nije implementirano."
 
 #~ msgid "Area filling"
 #~ msgstr "Područje ispunjavanja"
