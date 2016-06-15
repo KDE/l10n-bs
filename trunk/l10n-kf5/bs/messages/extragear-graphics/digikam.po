@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: digikam\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-06-14 08:16+0000\n"
+"POT-Creation-Date: 2016-06-15 07:15+0000\n"
 "PO-Revision-Date: 2015-02-26 21:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1955,7 +1955,7 @@ msgstr "%1 (%2)"
 #: app/utils/tooltipfiller.cpp:107 imageplugins/decorate/texturetool.cpp:117
 #: imageplugins/filters/blurfxtool.cpp:118
 #: imageplugins/filters/distortionfxtool.cpp:120
-#: libs/database/utils/dbsettingswidget.cpp:141
+#: libs/database/utils/dbsettingswidget.cpp:149
 #: libs/dimg/filters/decorate/bordersettings.cpp:130
 #: libs/dimg/filters/fx/colorfxsettings.cpp:116
 #: showfoto/thumbbar/showfototooltipfiller.cpp:92
@@ -2983,18 +2983,26 @@ msgstr ""
 msgid "Welcome to digiKam %1"
 msgstr "Dobrodošli na digiKam %1"
 
-#: databaseserver/databaseserver.cpp:162
-msgid "No path to mysqld set in server configuration."
+#: databaseserver/databaseserver.cpp:161
+#, fuzzy
+#| msgid "No path to mysqld set in server configuration."
+msgid "No path to mysql server comand set in configuration file!"
 msgstr "Nema staze do mysqld postavke u konfiguraciji servera."
 
-#: databaseserver/databaseserver.cpp:228
+#: databaseserver/databaseserver.cpp:189
+#, fuzzy
+#| msgid "No path to mysqld set in server configuration."
+msgid "No path to mysql initalization command set in configuration file!."
+msgstr "Nema staze do mysqld postavke u konfiguraciji servera."
+
+#: databaseserver/databaseserver.cpp:230
 #, fuzzy
 #| msgid "Did not find MySQL server default configuration (mysql-global.conf)."
 msgid "Cannot find MySQL server default configuration (mysql-global.conf)."
 msgstr ""
 "Nije pronađena zadana konfiguracija za MySQL server  (mysql-global.conf)."
 
-#: databaseserver/databaseserver.cpp:261
+#: databaseserver/databaseserver.cpp:263
 msgid ""
 "Unable to create MySQL server configuration file.\n"
 "This means that either the default configuration file (mysql-global.conf) "
@@ -3006,27 +3014,27 @@ msgstr ""
 "nije mogla da bude pročitana ili ciljana datoteka (mysql.conf) nije mogala "
 "biti zapisana."
 
-#: databaseserver/databaseserver.cpp:286
+#: databaseserver/databaseserver.cpp:288
 #, fuzzy
 #| msgid "Digikam server was not able to create database data directory"
 msgid "digiKam server was not able to create database data directory"
 msgstr "Digikam server nije mogao kreirati direktorij za podatke baze podataka"
 
-#: databaseserver/databaseserver.cpp:293
+#: databaseserver/databaseserver.cpp:295
 #, fuzzy
 #| msgid "Digikam server was not able to create database log directory"
 msgid "digiKam server was not able to create database log directory"
 msgstr ""
 "Digikam server nije bio u mogućnosti da kreira direktorij log  baze podataka"
 
-#: databaseserver/databaseserver.cpp:300
+#: databaseserver/databaseserver.cpp:302
 #, fuzzy
 #| msgid "Digikam server was not able to create database misc directory"
 msgid "digiKam server was not able to create database misc directory"
 msgstr ""
 "Digikam server nije bio u mogućnosti da kreira direktorij misc baze podataka"
 
-#: databaseserver/databaseserver.cpp:355
+#: databaseserver/databaseserver.cpp:357
 #, kde-format
 msgid ""
 "Could not start database init command.\n"
@@ -3037,26 +3045,26 @@ msgstr ""
 "Izvršivo : %1\n"
 "Greška  procesa : %2"
 
-#: databaseserver/databaseserver.cpp:377
+#: databaseserver/databaseserver.cpp:379
 msgid "Could not start database server."
 msgstr "Server baze podataka nije moguće pokrenuti."
 
-#: databaseserver/databaseserver.cpp:378
+#: databaseserver/databaseserver.cpp:380
 #, kde-format
 msgid "<p>Executable: %1</p>"
 msgstr "<p>Izvršni program: %1</p>"
 
-#: databaseserver/databaseserver.cpp:379
+#: databaseserver/databaseserver.cpp:381
 #, kde-format
 msgid "<p>Arguments: %1</p>"
 msgstr "<p>Parametri: %1</p>"
 
-#: databaseserver/databaseserver.cpp:380
+#: databaseserver/databaseserver.cpp:382
 #, kde-format
 msgid "<p>Process error: %1</p>"
 msgstr "<p>Greška procesa: %1</p>"
 
-#: databaseserver/databaseserver.cpp:424
+#: databaseserver/databaseserver.cpp:426
 #, kde-format
 msgid ""
 "Database process exited unexpectedly during initial connection."
@@ -3065,7 +3073,7 @@ msgstr ""
 "Database proces je završio neocekivano tokom početnog povezivanja.<p>Izvršni "
 "program: %1</p>”<p>Greška procesa: %2</p>"
 
-#: databaseserver/databaseserver.cpp:448 databaseserver/databaseserver.cpp:506
+#: databaseserver/databaseserver.cpp:450 databaseserver/databaseserver.cpp:508
 #, kde-format
 msgid ""
 "Failed to create database<p>Query error: %1</p><p>Database error: %2</p>"
@@ -6715,7 +6723,7 @@ msgstr ""
 "Drajver  \"SQLITE\" za SQLite3 bazu podataka je dostupan.\n"
 "digiKam ovisi o drajverima omogućenim po SQL modulu od Qt4."
 
-#: libs/database/engine/dbengineconfigloader.cpp:194
+#: libs/database/engine/dbengineconfigloader.cpp:178
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not open the dbconfig.xml file. This file is installed with the "
@@ -6730,12 +6738,12 @@ msgstr ""
 "aplikacijom i apsoludno je zahtjevan za pokretanje digikam-a. Molimo Vas,"
 "provjerite Vašu instalaciju."
 
-#: libs/database/engine/dbengineconfigloader.cpp:203
+#: libs/database/engine/dbengineconfigloader.cpp:187
 #, fuzzy, kde-format
 msgid "Could not open configuration file <b>%1</b>"
 msgstr "Ne može se otvoriti  dbconfig.xml fajl <filename>%1</filename>"
 
-#: libs/database/engine/dbengineconfigloader.cpp:212
+#: libs/database/engine/dbengineconfigloader.cpp:196
 #, fuzzy, kde-format
 msgid ""
 "The XML in the configuration file <b>%1</b> is invalid and cannot be read."
@@ -6743,7 +6751,7 @@ msgstr ""
 "XML u  dbconfig.xml fajlu<filename>%1</filename> je neispravno i ne može se "
 "čitati."
 
-#: libs/database/engine/dbengineconfigloader.cpp:222
+#: libs/database/engine/dbengineconfigloader.cpp:206
 #, fuzzy, kde-format
 msgid ""
 "The XML in the configuration file <b>%1</b> is missing the required element "
@@ -6752,7 +6760,7 @@ msgstr ""
 "XML-u u  dbconfig.xml fajlu<filename>%1</filename>  nedostaje zahtjevani "
 "element <icode>%2</icode>"
 
-#: libs/database/engine/dbengineconfigloader.cpp:232
+#: libs/database/engine/dbengineconfigloader.cpp:216
 #, fuzzy, kde-format
 msgid ""
 "The XML in the configuration file <b>%1</b> is missing the required element "
@@ -6761,7 +6769,7 @@ msgstr ""
 "XML-u u  dbconfig.xml fajlu<filename>%1</filename>  nedostaje zahtjevani "
 "element <icode>%2</icode>"
 
-#: libs/database/engine/dbengineconfigloader.cpp:251
+#: libs/database/engine/dbengineconfigloader.cpp:235
 #, fuzzy, kde-format
 msgid ""
 "An old version of the configuration file <b>%1</b> is found. Please ensure "
@@ -6921,29 +6929,29 @@ msgstr "Konverzija baze podataka otkazana."
 msgid "Step Progress (%1)"
 msgstr "Napredak koraka (%1)"
 
-#: libs/database/utils/dbsettingswidget.cpp:135
+#: libs/database/utils/dbsettingswidget.cpp:143
 #, fuzzy
 #| msgid "Database Migration..."
 msgid "Database Configuration"
 msgstr "Prenošenje baze podataka..."
 
-#: libs/database/utils/dbsettingswidget.cpp:145
+#: libs/database/utils/dbsettingswidget.cpp:154
 msgid "SQLite"
 msgstr "SQLite"
 
-#: libs/database/utils/dbsettingswidget.cpp:151
+#: libs/database/utils/dbsettingswidget.cpp:160
 #, fuzzy
 #| msgid "MySQL (experimental)"
 msgid "MySQL Internal (experimental)"
 msgstr "MySQL (eksperimentalno)"
 
-#: libs/database/utils/dbsettingswidget.cpp:155
+#: libs/database/utils/dbsettingswidget.cpp:164
 #, fuzzy
 #| msgid "MySQL (experimental)"
 msgid "MySQL Server (experimental)"
 msgstr "MySQL (eksperimentalno)"
 
-#: libs/database/utils/dbsettingswidget.cpp:159
+#: libs/database/utils/dbsettingswidget.cpp:168
 #, fuzzy
 #| msgid ""
 #| "<p>Select here the type of database backend.</p><p><b>SQlite</b> backend "
@@ -6972,7 +6980,7 @@ msgstr ""
 "veličinama kolekcije . Budite oprezni: Ovo je još u eksperimentalnoj fazi.</"
 "p>"
 
-#: libs/database/utils/dbsettingswidget.cpp:178
+#: libs/database/utils/dbsettingswidget.cpp:187
 #, fuzzy
 #| msgid ""
 #| "<p>The location where the database file will be stored on your system. "
@@ -6996,54 +7004,72 @@ msgstr ""
 "p><p>Napomena: sistem za udaljene datoteke, npr. NFS, ne može biti "
 "upotrijebljen ovdje.</p><p></p>"
 
-#: libs/database/utils/dbsettingswidget.cpp:196
+#: libs/database/utils/dbsettingswidget.cpp:208
+msgid ""
+"<p>Set here the locations where MySQL binaries tools are located. These run-"
+"time dependencies are only used by MySQL Internal backend.</p><p>Note : if "
+"executables are included in default system PATH environnement variable, you "
+"don't need to set the full pathes to run these tools.</p><p></p>"
+msgstr ""
+
+#: libs/database/utils/dbsettingswidget.cpp:220
+#, fuzzy
+#| msgid "Could not start database server."
+msgid "Path to Mysql database server:"
+msgstr "Server baze podataka nije moguće pokrenuti."
+
+#: libs/database/utils/dbsettingswidget.cpp:226
+msgid "Path to Mysql database initialization Perl script:"
+msgstr ""
+
+#: libs/database/utils/dbsettingswidget.cpp:235
 #, fuzzy
 #| msgid "Host Name"
 msgid "Host Name:"
 msgstr "Adresa računara"
 
-#: libs/database/utils/dbsettingswidget.cpp:198
+#: libs/database/utils/dbsettingswidget.cpp:237
 #, fuzzy
 #| msgid "Add the camera name"
 msgid "Set the host computer name"
 msgstr "Dodaj ime aparata"
 
-#: libs/database/utils/dbsettingswidget.cpp:199
+#: libs/database/utils/dbsettingswidget.cpp:238
 msgid ""
 "This is the computer name running Mysql server.\n"
 "This can be \"localhost\" for a local server, or the network computer\n"
 " name (or IP address) in case of remote computer."
 msgstr ""
 
-#: libs/database/utils/dbsettingswidget.cpp:202
+#: libs/database/utils/dbsettingswidget.cpp:241
 msgid ""
 "<a href=\"http://doc.qt.io/qt-5/qsqldatabase.html#setConnectOptions"
 "\">Connect options:</a>"
 msgstr ""
 
-#: libs/database/utils/dbsettingswidget.cpp:206
+#: libs/database/utils/dbsettingswidget.cpp:245
 #, fuzzy
 #| msgid "Database connection test"
 msgid "Set the database connection options"
 msgstr "Test veze baze podataka"
 
-#: libs/database/utils/dbsettingswidget.cpp:207
+#: libs/database/utils/dbsettingswidget.cpp:246
 msgid ""
 "Set the Mysql server connection options.\n"
 "For advanced users only."
 msgstr ""
 
-#: libs/database/utils/dbsettingswidget.cpp:209
+#: libs/database/utils/dbsettingswidget.cpp:248
 #, fuzzy
 #| msgid "User"
 msgid "User:"
 msgstr "Korisnik"
 
-#: libs/database/utils/dbsettingswidget.cpp:211
+#: libs/database/utils/dbsettingswidget.cpp:250
 msgid "Set the database account name"
 msgstr ""
 
-#: libs/database/utils/dbsettingswidget.cpp:212
+#: libs/database/utils/dbsettingswidget.cpp:251
 msgid ""
 "Set the Mysql server account name used\n"
 "by digiKam to be connected to the server.\n"
@@ -7051,74 +7077,74 @@ msgid ""
 "been created."
 msgstr ""
 
-#: libs/database/utils/dbsettingswidget.cpp:215
+#: libs/database/utils/dbsettingswidget.cpp:254
 #, fuzzy
 #| msgid "Password"
 msgid "Password:"
 msgstr "Šifra"
 
-#: libs/database/utils/dbsettingswidget.cpp:217
+#: libs/database/utils/dbsettingswidget.cpp:256
 msgid ""
 "Set the Mysql server account password used\n"
 "by digiKam to be connected to the server.\n"
 "You can left this field empty to use an account set without password."
 msgstr ""
 
-#: libs/database/utils/dbsettingswidget.cpp:222
+#: libs/database/utils/dbsettingswidget.cpp:261
 #, fuzzy
 #| msgid "Port"
 msgid "Host Port:"
 msgstr "Port"
 
-#: libs/database/utils/dbsettingswidget.cpp:224
+#: libs/database/utils/dbsettingswidget.cpp:263
 msgid ""
 "Set the host computer port.\n"
 "Usually, Mysql server use port number 3306 by default"
 msgstr ""
 
-#: libs/database/utils/dbsettingswidget.cpp:228
+#: libs/database/utils/dbsettingswidget.cpp:267
 #, fuzzy
 #| msgid "Check DB Connection"
 msgid "Check Connection"
 msgstr "Provjeri DB vezu"
 
-#: libs/database/utils/dbsettingswidget.cpp:229
+#: libs/database/utils/dbsettingswidget.cpp:268
 msgid ""
 "Run a basic database connection to see if current Mysql server settings is "
 "suitable."
 msgstr ""
 
-#: libs/database/utils/dbsettingswidget.cpp:235
+#: libs/database/utils/dbsettingswidget.cpp:274
 #, fuzzy
 #| msgid "Schema Name"
 msgid "Core Db Name:"
 msgstr "Ime šeme"
 
-#: libs/database/utils/dbsettingswidget.cpp:237
+#: libs/database/utils/dbsettingswidget.cpp:276
 #, fuzzy
 #| msgid "Set the font color to use here"
 msgid "Set the core database name"
 msgstr "Postavite boju fonta za korištenje ovdje"
 
-#: libs/database/utils/dbsettingswidget.cpp:238
+#: libs/database/utils/dbsettingswidget.cpp:277
 msgid ""
 "The core database is lead digiKam container used to store\n"
 "albums, items, and searches metadata."
 msgstr ""
 
-#: libs/database/utils/dbsettingswidget.cpp:241
+#: libs/database/utils/dbsettingswidget.cpp:280
 #, fuzzy
 #| msgid "Thumbnails<br>Schema Name"
 msgid "Thumbs Db Name:"
 msgstr "Umanjeni prikazi<br>Naziv sheme"
 
-#: libs/database/utils/dbsettingswidget.cpp:243
+#: libs/database/utils/dbsettingswidget.cpp:282
 #, fuzzy
 #| msgid "Failed to initialize thumbnail database"
 msgid "Set the thumbnails database name"
 msgstr "Neuspješna inicijalizacija baze podataka o umanjenim prikazima"
 
-#: libs/database/utils/dbsettingswidget.cpp:244
+#: libs/database/utils/dbsettingswidget.cpp:283
 msgid ""
 "The thumbnails database is used by digiKam to host\n"
 "image thumbs with wavelets compression images.\n"
@@ -7126,19 +7152,19 @@ msgid ""
 "especially if you have huge collections."
 msgstr ""
 
-#: libs/database/utils/dbsettingswidget.cpp:248
+#: libs/database/utils/dbsettingswidget.cpp:287
 #, fuzzy
 #| msgid "Schema Name"
 msgid "Face Db Name:"
 msgstr "Ime šeme"
 
-#: libs/database/utils/dbsettingswidget.cpp:250
+#: libs/database/utils/dbsettingswidget.cpp:289
 #, fuzzy
 #| msgid "Updating faces database."
 msgid "Set the face database name"
 msgstr "Ažuriranje lica baze podataka."
 
-#: libs/database/utils/dbsettingswidget.cpp:251
+#: libs/database/utils/dbsettingswidget.cpp:290
 msgid ""
 "The face database is used by digiKam to host image histograms\n"
 "dedicated to faces recognition process.\n"
@@ -7146,32 +7172,32 @@ msgid ""
 "if you a lots of image with people faces detected and tagged."
 msgstr ""
 
-#: libs/database/utils/dbsettingswidget.cpp:256
+#: libs/database/utils/dbsettingswidget.cpp:295
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "Default Settings"
 msgid "Default Settings"
 msgstr "Uobičajene postavke"
 
-#: libs/database/utils/dbsettingswidget.cpp:257
+#: libs/database/utils/dbsettingswidget.cpp:296
 #, fuzzy
 #| msgid "Reset all settings to default values."
 msgid "Reset database names settings to common default values."
 msgstr "Resetujte sve postavke na zadane vrijednosti."
 
-#: libs/database/utils/dbsettingswidget.cpp:275
+#: libs/database/utils/dbsettingswidget.cpp:314
 #, fuzzy
 #| msgid "Capture Device Settings"
 msgid "Remote Server Settings"
 msgstr "Postavke Naslova Uređaja"
 
-#: libs/database/utils/dbsettingswidget.cpp:279
+#: libs/database/utils/dbsettingswidget.cpp:318
 #, fuzzy
 #| msgid "Database connection test"
 msgid "Database Server Instructions"
 msgstr "Test veze baze podataka"
 
-#: libs/database/utils/dbsettingswidget.cpp:281
+#: libs/database/utils/dbsettingswidget.cpp:320
 msgid ""
 "<p>digiKam expects the above database and user account to already exists. "
 "This user also require full access to the database.<br>If your database is "
@@ -7179,20 +7205,20 @@ msgid ""
 "the <b><i>password</i></b> with the correct one)."
 msgstr ""
 
-#: libs/database/utils/dbsettingswidget.cpp:297
+#: libs/database/utils/dbsettingswidget.cpp:336
 #, fuzzy
 #| msgctxt "@info Storage"
 #| msgid "Require:"
 msgid "Requirements"
 msgstr "Potrebno:"
 
-#: libs/database/utils/dbsettingswidget.cpp:301
+#: libs/database/utils/dbsettingswidget.cpp:340
 #, fuzzy
 #| msgid "Database connection test"
 msgid "Database Server Technical Details"
 msgstr "Test veze baze podataka"
 
-#: libs/database/utils/dbsettingswidget.cpp:303
+#: libs/database/utils/dbsettingswidget.cpp:342
 #, fuzzy
 #| msgid ""
 #| "<p>The location where the database file will be stored on your system. "
@@ -7223,55 +7249,93 @@ msgstr ""
 "p><p>Napomena: sistem za udaljene datoteke, npr. NFS, ne može biti "
 "upotrijebljen ovdje.</p><p></p>"
 
-#: libs/database/utils/dbsettingswidget.cpp:329
+#: libs/database/utils/dbsettingswidget.cpp:368
 #, fuzzy
 #| msgctxt "type is a document"
 #| msgid "Document"
 msgid "Documentation"
 msgstr "Dokument"
 
-#: libs/database/utils/dbsettingswidget.cpp:509
-#: libs/database/utils/dbsettingswidget.cpp:514
-#: libs/database/utils/dbsettingswidget.cpp:762
+#: libs/database/utils/dbsettingswidget.cpp:562
+#: libs/database/utils/dbsettingswidget.cpp:567
+#: libs/database/utils/dbsettingswidget.cpp:808
 msgid "Database connection test"
 msgstr "Test veze baze podataka"
 
-#: libs/database/utils/dbsettingswidget.cpp:510
+#: libs/database/utils/dbsettingswidget.cpp:563
 msgid "Database connection test successful."
 msgstr "Test veze baze podataka uspješan."
 
-#: libs/database/utils/dbsettingswidget.cpp:515
+#: libs/database/utils/dbsettingswidget.cpp:568
 #, kde-format
 msgid "Database connection test was not successful. <p>Error was: %1</p>"
 msgstr "Test veze baze podataka nije bio uspješan.<p>Greška je bila:%1</p>"
 
-#: libs/database/utils/dbsettingswidget.cpp:524
+#: libs/database/utils/dbsettingswidget.cpp:577
 msgid "The server hostname is empty"
 msgstr ""
 
-#: libs/database/utils/dbsettingswidget.cpp:530
+#: libs/database/utils/dbsettingswidget.cpp:583
 msgid "The server user name is empty"
 msgstr ""
 
-#: libs/database/utils/dbsettingswidget.cpp:541
+#: libs/database/utils/dbsettingswidget.cpp:594
 #, fuzzy
 #| msgid "Set the font color to use here"
 msgid "The core database name is empty"
 msgstr "Postavite boju fonta za korištenje ovdje"
 
-#: libs/database/utils/dbsettingswidget.cpp:547
+#: libs/database/utils/dbsettingswidget.cpp:600
 #, fuzzy
 #| msgid "Failed to initialize thumbnail database"
 msgid "The thumbnails database name is empty"
 msgstr "Neuspješna inicijalizacija baze podataka o umanjenim prikazima"
 
-#: libs/database/utils/dbsettingswidget.cpp:553
+#: libs/database/utils/dbsettingswidget.cpp:606
 #, fuzzy
 #| msgid "Updating faces database."
 msgid "The face database name is empty"
 msgstr "Ažuriranje lica baze podataka."
 
-#: libs/database/utils/dbsettingswidget.cpp:695
+#: libs/database/utils/dbsettingswidget.cpp:760
+msgid "MySQL server path is empty. Please fix it."
+msgstr ""
+
+#: libs/database/utils/dbsettingswidget.cpp:767
+#, kde-format
+msgid "Cannot find MySQL server \"%1\". Please fix it."
+msgstr ""
+
+#: libs/database/utils/dbsettingswidget.cpp:777
+msgid "MySQL initialization script path is empty. Please fix it."
+msgstr ""
+
+#: libs/database/utils/dbsettingswidget.cpp:784
+#, kde-format
+msgid "Cannot find MySQL initialization script \"%1\". Please fix it."
+msgstr ""
+
+#: libs/database/utils/dbsettingswidget.cpp:799
+#, fuzzy
+#| msgid "Database Migration..."
+msgid "Database configuration"
+msgstr "Prenošenje baze podataka..."
+
+#: libs/database/utils/dbsettingswidget.cpp:800
+#, kde-format
+msgid ""
+"The database names configuration is not valid. Error is <br/><p>%1</p><br/"
+">Please check your configuration."
+msgstr ""
+
+#: libs/database/utils/dbsettingswidget.cpp:809
+#, kde-format
+msgid ""
+"Testing database connection has failed with error<br/><p>%1</p><br/>Please "
+"check your configuration."
+msgstr ""
+
+#: libs/database/utils/dbsettingswidget.cpp:830
 msgid ""
 "You must select a folder for digiKam to store information and metadata in a "
 "database file."
@@ -7279,11 +7343,11 @@ msgstr ""
 "Morate označiti folder za digiKam da sprema informacije i meta podatke u "
 "datoteku baze podataka."
 
-#: libs/database/utils/dbsettingswidget.cpp:704
+#: libs/database/utils/dbsettingswidget.cpp:839
 msgid "Create Database Folder?"
 msgstr "Kreiraj folder za bazu podataka?"
 
-#: libs/database/utils/dbsettingswidget.cpp:705
+#: libs/database/utils/dbsettingswidget.cpp:840
 #, kde-format
 msgid ""
 "<p>The folder to put your database in does not seem to exist:</p><p><b>%1</"
@@ -7292,11 +7356,11 @@ msgstr ""
 "<p>Folder za stavljanje Vaše baze podataka izgleda da ne postoji:</p><p><b>"
 "%1</b></p>Da li želite da ga digiKam kreira za Vas?"
 
-#: libs/database/utils/dbsettingswidget.cpp:716
+#: libs/database/utils/dbsettingswidget.cpp:851
 msgid "Create Database Folder Failed"
 msgstr "Kreiranje foldera za bazu podataka nije uspjelo"
 
-#: libs/database/utils/dbsettingswidget.cpp:717
+#: libs/database/utils/dbsettingswidget.cpp:852
 #, kde-format
 msgid ""
 "<p>digiKam could not create the folder to host your database file.\n"
@@ -7306,11 +7370,11 @@ msgstr ""
 "datoteku baze podataka.\n"
 "Izaberite drugu lokaciju.</p><p><b>%1</b></p>"
 
-#: libs/database/utils/dbsettingswidget.cpp:736
+#: libs/database/utils/dbsettingswidget.cpp:871
 msgid "No Database Write Access"
 msgstr "Nema pristupa pisanju u bazu podataka"
 
-#: libs/database/utils/dbsettingswidget.cpp:737
+#: libs/database/utils/dbsettingswidget.cpp:872
 #, kde-format
 msgid ""
 "<p>You do not seem to have write access for the folder to host the database "
@@ -7318,26 +7382,6 @@ msgid ""
 msgstr ""
 "<p>Nemate pristup pisanju u direktorij u koji želite smjestiti Vašu datoteku "
 "baze podataka.<br/>Izaberite drugu lokaciju.</p><p><b>%1</b></p>"
-
-#: libs/database/utils/dbsettingswidget.cpp:753
-#, fuzzy
-#| msgid "Database Migration..."
-msgid "Database configuration"
-msgstr "Prenošenje baze podataka..."
-
-#: libs/database/utils/dbsettingswidget.cpp:754
-#, kde-format
-msgid ""
-"The database names configuration is not valid. Error is <br/><p>%1</p><br/"
-">Please check your configuration."
-msgstr ""
-
-#: libs/database/utils/dbsettingswidget.cpp:763
-#, kde-format
-msgid ""
-"Testing database connection has failed with error<br/><p>%1</p><br/>Please "
-"check your configuration."
-msgstr ""
 
 #: libs/database/utils/dbstatdlg.cpp:54
 #: libs/widgets/mainview/dxmlguiwindow.cpp:227
