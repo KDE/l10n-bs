@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-06-26 01:39+0000\n"
+"POT-Creation-Date: 2016-06-27 01:51+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr "Statistike"
 #: src/kdefrontend/ui/dockwidgets/columndock.ui:17
 #: src/kdefrontend/ui/dockwidgets/custompointdock.ui:30
 #: src/kdefrontend/ui/dockwidgets/matrixdock.ui:150
-#: src/kdefrontend/ui/dockwidgets/notesdock.ui:23
+#: src/kdefrontend/ui/dockwidgets/notesdock.ui:17
 #: src/kdefrontend/ui/dockwidgets/projectdock.ui:113
 #: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:17
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:36
@@ -356,7 +356,7 @@ msgstr "Napravljeno"
 #: src/kdefrontend/ui/dockwidgets/columndock.ui:27
 #: src/kdefrontend/ui/dockwidgets/custompointdock.ui:63
 #: src/kdefrontend/ui/dockwidgets/matrixdock.ui:30
-#: src/kdefrontend/ui/dockwidgets/notesdock.ui:49
+#: src/kdefrontend/ui/dockwidgets/notesdock.ui:43
 #: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:43
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:68
 #: src/kdefrontend/ui/dockwidgets/xycurvedockgeneraltab.ui:49
@@ -535,6 +535,7 @@ msgid "Not yet loaded."
 msgstr "Nije još učitano."
 
 #: src/backend/core/Project.cpp:98 src/backend/core/Project.cpp:109
+#: src/kdefrontend/GuiObserver.cpp:401
 msgid "Project"
 msgstr "Projekat"
 
@@ -629,6 +630,7 @@ msgstr "novi Tabelarni prikaz (tabela)"
 #. i18n: ectx: property (text), widget (QLabel, lMajorTicksColumn)
 #. i18n: ectx: property (text), widget (QLabel, lMinorTicksColumn)
 #: src/backend/datapicker/DatapickerCurve.cpp:129
+#: src/kdefrontend/GuiObserver.cpp:143
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:551
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:736
 msgid "Column"
@@ -5466,7 +5468,8 @@ msgid "Add new Matrix"
 msgstr "Dodaj novo"
 
 #: src/commonfrontend/workbook/WorkbookView.cpp:181
-#: src/kdefrontend/MainWin.cpp:241 src/kdefrontend/MainWin.cpp:1038
+#: src/kdefrontend/GuiObserver.cpp:159 src/kdefrontend/MainWin.cpp:241
+#: src/kdefrontend/MainWin.cpp:1038
 msgid "Matrix"
 msgstr "Matrica"
 
@@ -5474,8 +5477,8 @@ msgstr "Matrica"
 #: src/commonfrontend/workbook/WorkbookView.cpp:186
 #: src/kdefrontend/datasources/ImportFileDialog.cpp:245
 #: src/kdefrontend/datasources/ImportFileDialog.cpp:277
-#: src/kdefrontend/labplot2ui.rc:33 src/kdefrontend/MainWin.cpp:236
-#: src/kdefrontend/MainWin.cpp:1017
+#: src/kdefrontend/GuiObserver.cpp:127 src/kdefrontend/labplot2ui.rc:33
+#: src/kdefrontend/MainWin.cpp:236 src/kdefrontend/MainWin.cpp:1017
 msgid "Spreadsheet"
 msgstr "Tablica"
 
@@ -5578,6 +5581,7 @@ msgid "Select y-region and zoom in"
 msgstr "Označi y-područje i uvećaj"
 
 #: src/commonfrontend/worksheet/WorksheetView.cpp:288
+#: src/kdefrontend/GuiObserver.cpp:307
 #, fuzzy
 #| msgid "iterations"
 msgid "Interpolation"
@@ -5622,6 +5626,7 @@ msgid "Grid"
 msgstr "Meža"
 
 #: src/commonfrontend/worksheet/WorksheetView.cpp:382
+#: src/kdefrontend/GuiObserver.cpp:191
 msgid "Cartesian Plot"
 msgstr "Kartezijevo crtanje"
 
@@ -6806,7 +6811,7 @@ msgid "Sigmoid"
 msgstr ""
 
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:573
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:441
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:503
 #: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:474
 #: src/kdefrontend/dockwidgets/XYSmoothCurveDock.cpp:442
 #, fuzzy
@@ -6821,7 +6826,7 @@ msgid "iterations:"
 msgstr "iteracije"
 
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:582
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:449
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:511
 #: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:482
 #: src/kdefrontend/dockwidgets/XYSmoothCurveDock.cpp:450
 #, kde-format
@@ -6829,7 +6834,7 @@ msgid "calculation time: %1 s"
 msgstr "vrijeme računanja: %1 s"
 
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:584
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:451
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:513
 #: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:484
 #: src/kdefrontend/dockwidgets/XYSmoothCurveDock.cpp:452
 #, kde-format
@@ -6967,13 +6972,13 @@ msgstr "Funkcije"
 msgid "Upper Cutoff"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:405
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:467
 msgid ""
 "The band width is <= 0 since lower cutoff value is not smaller than upper "
 "cutoff value. Please fix this."
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:406
+#: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:468
 msgid "band width <= 0"
 msgstr ""
 
@@ -7121,97 +7126,85 @@ msgstr "Konstante"
 msgid "periodic"
 msgstr ""
 
-#: src/kdefrontend/GuiObserver.cpp:127
-msgid "Spreadsheet properties"
-msgstr "Podešavanja tabelarnog prikaza"
-
-#: src/kdefrontend/GuiObserver.cpp:143
-msgid "Column properties"
-msgstr "Podešavanja kolona"
-
-#: src/kdefrontend/GuiObserver.cpp:159
-#, fuzzy
-#| msgid "Paste properties"
-msgid "Matrix properties"
-msgstr "Zalijepi osobine"
-
-#: src/kdefrontend/GuiObserver.cpp:175
-msgid "Worksheet properties"
-msgstr "Podešavanja radnog lista"
-
-#: src/kdefrontend/GuiObserver.cpp:191
-msgid "Cartesian plot properties"
-msgstr "Podešavanja Dekartovog grafa"
+#. i18n: ectx: ToolBar (worksheet_toolbar)
+#: src/kdefrontend/GuiObserver.cpp:175 src/kdefrontend/labplot2ui.rc:25
+#: src/kdefrontend/MainWin.cpp:246 src/kdefrontend/MainWin.cpp:1059
+msgid "Worksheet"
+msgstr "Radni list"
 
 #: src/kdefrontend/GuiObserver.cpp:207
-msgid "Cartesian plot legend properties"
-msgstr "Podešavanja legende Dekartovog grafa"
+#, fuzzy
+#| msgid "legend"
+msgid "Legend"
+msgstr "legenda"
 
 #: src/kdefrontend/GuiObserver.cpp:223
-msgid "Axis properties"
-msgstr "Podešavanja osa"
+#, fuzzy
+#| msgid "x-Axis"
+msgid "Axis"
+msgstr "x-Osa"
 
 #: src/kdefrontend/GuiObserver.cpp:239
-msgid "xy-curve properties"
-msgstr "xy-svojstva krivih"
+#, fuzzy
+#| msgid "xy-curve"
+msgid "xy-Curve"
+msgstr "xy-kriva"
 
 #: src/kdefrontend/GuiObserver.cpp:256
-msgid "xy-equation-curve properties"
-msgstr "xy-jednačina-svojstva krivih"
+#, fuzzy
+#| msgid "Equation type"
+msgid "xy-Equation"
+msgstr "Tip jednačine"
 
 #: src/kdefrontend/GuiObserver.cpp:273
-msgid "xy-fit-curve properties"
-msgstr "xy-svojstva pristajanja krivih"
+#, fuzzy
+#| msgid "Fit:"
+msgid "Fit"
+msgstr "Podesiti:"
 
 #: src/kdefrontend/GuiObserver.cpp:290
 #, fuzzy
-#| msgid "xy-fit-curve properties"
-msgid "xy-fourier_filter-curve properties"
-msgstr "xy-svojstva pristajanja krivih"
-
-#: src/kdefrontend/GuiObserver.cpp:307
-#, fuzzy
-#| msgid "xy-equation-curve properties"
-msgid "xy-interpolation-curve properties"
-msgstr "xy-jednačina-svojstva krivih"
+#| msgid "new filter"
+msgid "Fourier Filter"
+msgstr "novi filter"
 
 #: src/kdefrontend/GuiObserver.cpp:324
 #, fuzzy
-#| msgid "xy-fit-curve properties"
-msgid "xy-smooth-curve properties"
-msgstr "xy-svojstva pristajanja krivih"
+#| msgid "Do nothing"
+msgid "Smoothing"
+msgstr "Ne radi ništa"
 
 #: src/kdefrontend/GuiObserver.cpp:341
-msgid "Text label properties"
-msgstr "Text svojstva labele"
+#, fuzzy
+#| msgid "text label"
+msgid "Text Label"
+msgstr "tekstualna oznaka"
 
 #: src/kdefrontend/GuiObserver.cpp:356
 #, fuzzy
-#| msgid "Column properties"
-msgid "Custom point properties"
-msgstr "Podešavanja kolona"
+#| msgid "custom column"
+msgid "Custom Point"
+msgstr "prilagodi vrijednosti"
 
 #: src/kdefrontend/GuiObserver.cpp:371
 #, fuzzy
-#| msgid "xy-curve properties"
-msgid "DatapickerCurve properties"
-msgstr "xy-svojstva krivih"
+#| msgid "Data:"
+msgid "Datapicker Curve"
+msgstr "Podaci:"
 
-#: src/kdefrontend/GuiObserver.cpp:386
+#. i18n: ectx: ToolBar (datapicker_toolbar)
+#: src/kdefrontend/GuiObserver.cpp:386 src/kdefrontend/labplot2ui.rc:29
+#: src/kdefrontend/MainWin.cpp:232 src/kdefrontend/MainWin.cpp:1010
 #, fuzzy
-#| msgid "Paste properties"
-msgid "Datapicker properties"
-msgstr "Zalijepi osobine"
+#| msgid "Data:"
+msgid "Datapicker"
+msgstr "Podaci:"
 
-#: src/kdefrontend/GuiObserver.cpp:401
-msgid "Project properties"
-msgstr "Svojstva projekta"
-
+#. i18n: ectx: property (text), widget (QLabel, label_9)
 #: src/kdefrontend/GuiObserver.cpp:413
-#, fuzzy
-#| msgid "Paste properties"
-msgid "Notes properties"
-msgstr "Zalijepi osobine"
+#: src/kdefrontend/ui/dockwidgets/projectdock.ui:183
+msgid "Notes"
+msgstr "Bilješke"
 
 #: src/kdefrontend/GuiTools.cpp:66 src/kdefrontend/GuiTools.cpp:92
 msgid "no line"
@@ -7514,20 +7507,6 @@ msgstr ""
 #: src/kdefrontend/labplot2ui.rc:6
 msgid "Main"
 msgstr "Glavni"
-
-#. i18n: ectx: ToolBar (worksheet_toolbar)
-#: src/kdefrontend/labplot2ui.rc:25 src/kdefrontend/MainWin.cpp:246
-#: src/kdefrontend/MainWin.cpp:1059
-msgid "Worksheet"
-msgstr "Radni list"
-
-#. i18n: ectx: ToolBar (datapicker_toolbar)
-#: src/kdefrontend/labplot2ui.rc:29 src/kdefrontend/MainWin.cpp:232
-#: src/kdefrontend/MainWin.cpp:1010
-#, fuzzy
-#| msgid "Data:"
-msgid "Datapicker"
-msgstr "Podaci:"
 
 #. i18n: ectx: ToolBar (notes_toolbar)
 #: src/kdefrontend/labplot2ui.rc:37 src/kdefrontend/MainWin.cpp:251
@@ -9243,10 +9222,11 @@ msgid "Offset"
 msgstr "Pomak"
 
 #. i18n: ectx: property (text), widget (QLabel, lValuesFont)
-#. i18n: ectx: property (text), widget (QLabel, lFont)
 #. i18n: ectx: property (text), widget (QLabel, lLabelsFont)
+#. i18n: ectx: property (text), widget (QLabel, lFont)
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:976
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:114
+#: src/kdefrontend/ui/dockwidgets/notesdock.ui:89
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:902
 #: src/kdefrontend/ui/labelwidget.ui:176
 msgid "Font"
@@ -9696,14 +9676,14 @@ msgid "Mapping:"
 msgstr "Popunjavanje:"
 
 #. i18n: ectx: property (text), widget (QLabel, bgcolor)
-#: src/kdefrontend/ui/dockwidgets/notesdock.ui:59
+#: src/kdefrontend/ui/dockwidgets/notesdock.ui:69
 #, fuzzy
 #| msgid "Background"
-msgid "Backgorund Color"
+msgid "Background Color"
 msgstr "Pozadina"
 
 #. i18n: ectx: property (text), widget (QLabel, textcolor)
-#: src/kdefrontend/ui/dockwidgets/notesdock.ui:69
+#: src/kdefrontend/ui/dockwidgets/notesdock.ui:79
 #, fuzzy
 #| msgid "First Color"
 msgid "Text Color"
@@ -9723,11 +9703,6 @@ msgstr "Autor"
 #: src/kdefrontend/ui/dockwidgets/projectdock.ui:163
 msgid "Last modified"
 msgstr "Posljednja izmjena"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: src/kdefrontend/ui/dockwidgets/projectdock.ui:183
-msgid "Notes"
-msgstr "Bilješke"
 
 #. i18n: ectx: property (text), widget (QLabel, lShowComments)
 #: src/kdefrontend/ui/dockwidgets/spreadsheetdock.ui:152
@@ -10547,6 +10522,79 @@ msgstr "Horizontalni razmaci"
 msgid "Vertical spacing"
 msgstr "Vertikalni razmaci"
 
+#~ msgid "Spreadsheet properties"
+#~ msgstr "Podešavanja tabelarnog prikaza"
+
+#~ msgid "Column properties"
+#~ msgstr "Podešavanja kolona"
+
+#, fuzzy
+#~| msgid "Paste properties"
+#~ msgid "Matrix properties"
+#~ msgstr "Zalijepi osobine"
+
+#~ msgid "Worksheet properties"
+#~ msgstr "Podešavanja radnog lista"
+
+#~ msgid "Cartesian plot properties"
+#~ msgstr "Podešavanja Dekartovog grafa"
+
+#~ msgid "Cartesian plot legend properties"
+#~ msgstr "Podešavanja legende Dekartovog grafa"
+
+#~ msgid "Axis properties"
+#~ msgstr "Podešavanja osa"
+
+#~ msgid "xy-curve properties"
+#~ msgstr "xy-svojstva krivih"
+
+#~ msgid "xy-equation-curve properties"
+#~ msgstr "xy-jednačina-svojstva krivih"
+
+#~ msgid "xy-fit-curve properties"
+#~ msgstr "xy-svojstva pristajanja krivih"
+
+#, fuzzy
+#~| msgid "xy-fit-curve properties"
+#~ msgid "xy-fourier_filter-curve properties"
+#~ msgstr "xy-svojstva pristajanja krivih"
+
+#, fuzzy
+#~| msgid "xy-equation-curve properties"
+#~ msgid "xy-interpolation-curve properties"
+#~ msgstr "xy-jednačina-svojstva krivih"
+
+#, fuzzy
+#~| msgid "xy-fit-curve properties"
+#~ msgid "xy-smooth-curve properties"
+#~ msgstr "xy-svojstva pristajanja krivih"
+
+#~ msgid "Text label properties"
+#~ msgstr "Text svojstva labele"
+
+#, fuzzy
+#~| msgid "Column properties"
+#~ msgid "Custom point properties"
+#~ msgstr "Podešavanja kolona"
+
+#, fuzzy
+#~| msgid "xy-curve properties"
+#~ msgid "DatapickerCurve properties"
+#~ msgstr "xy-svojstva krivih"
+
+#, fuzzy
+#~| msgid "Paste properties"
+#~ msgid "Datapicker properties"
+#~ msgstr "Zalijepi osobine"
+
+#~ msgid "Project properties"
+#~ msgstr "Svojstva projekta"
+
+#, fuzzy
+#~| msgid "Paste properties"
+#~ msgid "Notes properties"
+#~ msgstr "Zalijepi osobine"
+
 #, fuzzy
 #~| msgid "Parameters"
 #~ msgid "<b>Parameters:</b>"
@@ -10978,9 +11026,6 @@ msgstr "Vertikalni razmaci"
 
 #~ msgid "auto"
 #~ msgstr "auto"
-
-#~ msgid "x-Axis"
-#~ msgstr "x-Osa"
 
 #~ msgid "y-Axis"
 #~ msgstr "y-Osa"
