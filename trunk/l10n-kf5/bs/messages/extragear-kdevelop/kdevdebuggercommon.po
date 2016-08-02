@@ -20,362 +20,491 @@ msgstr ""
 "X-Generator: Launchpad (build 16869)\n"
 "X-Launchpad-Export-Date: 2013-12-16 05:33+0000\n"
 
-#: debuggerplugin.cpp:76
-msgid "Disassemble/Registers"
-msgstr "Disaasembliraj/Registri"
+#: dialogs/processselection.cpp:44
+msgid "Attach to a process"
+msgstr "Kačenje na proces"
 
-#: debuggerplugin.cpp:80 gdbconfigpage.cpp:141
-msgid "GDB"
-msgstr "GDB"
+#: dialogs/selectcoredialog.cpp:33
+msgid "Select Core File"
+msgstr "Izaberi datoteku jezgra"
 
-#: debuggerplugin.cpp:89
-msgid "Memory"
-msgstr "Memorija"
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dialogs/selectcoredialog.ui:17
+msgid "Executable:"
+msgstr "Izvršni program:"
 
-#. i18n: ectx: property (windowTitle), widget (QDialog, DebuggerTracingDialog)
-#: debuggertracingdialog.ui:13
-msgid "Tracing Configuration"
-msgstr "Konfigurisanje praćenja"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: dialogs/selectcoredialog.ui:27
+msgid "Core File:"
+msgstr "Datoteka jezgra:"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, enable)
-#: debuggertracingdialog.ui:20
+#: mibreakpointcontroller.cpp:753
+#, kde-format
+msgid "<br>Old value: %1"
+msgstr "<br>Stara vrijednost: %1"
+
+#: mibreakpointcontroller.cpp:756
+#, kde-format
+msgid "<br>New value: %1"
+msgstr "<br>Nova vrijednost: %1"
+
+#: midebugger.cpp:302
+msgctxt "<b>Internal debugger error</b>"
 msgid ""
-"<b>Enable tracing</b>\n"
-"<p>Tracing is a mechanism to automatically print values of the chosen "
-"expressions and continue execution when breakpoint is hit. You can think of "
-"it as printf debugging that does not require modifying the source.</p>"
+"<p>The debugger component encountered internal error while processing reply "
+"from gdb. Please submit a bug report."
 msgstr ""
-"<b>Omogući praćenje</b>\n"
-"<p>Praćenje je mehanizam za automatsko štampanje vrednosti izabranog izraza "
-"i nastavak izvođenja nakon prekidne tačke. Možete misliti o tome kao o "
-"pomoćnoj printf naredvi koja ne zahteva izmjene izvornog koda.</p>"
+"<p>Debager komponenta je naišlana internu grešku prilikom obrade odgovora od "
+"GDB. Molimo Vas da pošaljete izveštaj o grešci."
 
-#. i18n: ectx: property (text), widget (QCheckBox, enable)
-#: debuggertracingdialog.ui:23
-msgid "Enable tracing"
-msgstr "Omogući praćenje"
-
-#. i18n: ectx: property (text), widget (QPushButton, cancelButton)
-#: debuggertracingdialog.ui:30 memviewdlg.cpp:95
-msgid "Cancel"
-msgstr "Odustani"
-
-#. i18n: ectx: property (text), widget (QCheckBox, enableCustomFormat)
-#: debuggertracingdialog.ui:40
-msgid "Custom format string"
-msgstr "Vlastititi formatni string"
-
-#. i18n: ectx: property (text), widget (QPushButton, okButton)
-#: debuggertracingdialog.ui:47 memviewdlg.cpp:92
-msgid "OK"
-msgstr "U redu"
-
-#. i18n: ectx: property (whatsThis), widget (QLineEdit, customFormat)
-#: debuggertracingdialog.ui:79
-#, no-c-format
-msgid ""
-"<b>Custom format string</b>\n"
-"<p>Specify a C-style format string that will be used when printing the "
-"chosen expression. For example:\n"
-"<p align=\"center\"> <tt>Tracepoint 1: g = %d</tt></p>\n"
-"If custom format string is not enabled, names and values of all expressions "
-"will be printed, using \"%d\" as format specifier for all expressions."
-msgstr ""
-"<b>Vlastiti niz za formatiranje</b>\n"
-"<p>Navedi u C-stilu format niza koji će se koristiti prilikom štampanja "
-"izabranog izraza. Na primjer:\n"
-"<p align=\"center\"> <tt>Pozicija 1: g = %d</tt></p>\n"
-"Ako prilagođeni format string nije omogućen, imena i vrijednosti svih izraza "
-"će biti štampane, koristeći \"%d\" kao format specifikatore za sve izraze."
-
-#. i18n: ectx: property (text), widget (QLabel, expressionsLabel)
-#: debuggertracingdialog.ui:99
-msgid "Expressions to print:"
-msgstr "Izraz za štampu"
-
-#: debugsession.cpp:184
+#: midebugger.cpp:304
 #, kde-format
 msgid ""
-"No environment group specified, looks like a broken configuration, please "
-"check run configuration '%1'. Using default environment group."
+"The exception is: %1\n"
+"The MI response is: %2"
 msgstr ""
-"Nema grupe okruženja, izgleda kao slomljena konfiguracija, molimo provjerite "
-"aktivnu konfiguraciju \"%1\". Koristi se podrazumijevana grupa okruženja."
+"Izuzetak je: %1\n"
+"MI odgovor je: %2"
 
-#: debugsession.cpp:284
+#: midebugger.cpp:307
+msgid "Internal debugger error"
+msgstr "Interna debagerska greška"
+
+#: midebugger.cpp:318 midebugsession.cpp:489
+msgid "Process exited"
+msgstr "Proces izašao"
+
+#: midebugger.cpp:328
 #, kde-format
-msgid "<b>You need gdb 7.0.0 or higher.</b><br />You are using: %1"
-msgstr "<b>Treba vam gdb 7.0.0 ili viši.</b><br />Koristite: %1"
+msgid ""
+"<b>Could not start debugger.</b><p>Could not run '%1'. Make sure that the "
+"path name is specified correctly."
+msgstr ""
+"<b>Ne mogu pokrenuti debager.</b><p>Ne mogu pokrenuti '%1'. Uvjerite se da "
+"je ime staze ispravno navedeno."
 
-#: debugsession.cpp:286
-msgid "gdb error"
-msgstr "gdb greška"
+#: midebugger.cpp:332
+msgid "Could not start debugger"
+msgstr "Ne mogu pokrenuti debager"
 
-#: debugsession.cpp:296
-msgid "<b>Could not start debugger:</b><br />"
-msgstr "<b>ne mogu pokrenuti debager:</b><br />"
+#: midebugger.cpp:335
+msgid "Process failed to start'"
+msgstr ""
 
-#: debugsession.cpp:298
-msgid "Startup error"
-msgstr "Greška pokretanja"
+#: midebugger.cpp:340
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>Gdb crashed.</b><p>Because of that the debug session has to be ended."
+#| "<br>Try to reproduce the crash with plain gdb and report a bug.<br>"
+msgid ""
+"<b>Debugger crashed.</b><p>The debugger process '%1' crashed.<br>Because of "
+"that the debug session has to be ended.<br>Try to reproduce the crash "
+"without KDevelop and report a bug.<br>"
+msgstr ""
+"<b>Gdb pao.</b><p>Zbog toga je sesija traženja grešaka prekinuta."
+"<br>Pokušajte reprodukovati pad običnm gdb i prijavite grešku.<br>"
 
-#: gdb.cpp:79
+#: midebugger.cpp:345
+#, fuzzy
+#| msgid "Debugger stopped"
+msgid "Debugger crashed"
+msgstr "Debager zaustavljen"
+
+#: midebugger.cpp:348
+#, fuzzy
+#| msgid "Process exited"
+msgid "Process crashed"
+msgstr "Proces izašao"
+
+#: midebuggerplugin.cpp:76
+msgid "Examine Core File..."
+msgstr "Ispitaj datoteku jezgra..."
+
+#: midebuggerplugin.cpp:77
+msgid "Examine core file"
+msgstr "Ispitaj datoteku jezgra"
+
+#: midebuggerplugin.cpp:78
+msgid ""
+"<b>Examine core file</b><p>This loads a core file, which is typically "
+"created after the application has crashed, e.g. with a segmentation fault. "
+"The core file contains an image of the program memory at the time it "
+"crashed, allowing you to do a post-mortem analysis.</p>"
+msgstr ""
+"<b>Ispitaj datoteku jezgra</b><p>Ovo učitava datoteku jezgra, koja je obično "
+"nastala nakon pada programa, na primjer, sa Greška segmentacije. Datoteka "
+"jezgra sadrži sliku programske memorije u trenutku kada se srušio, što vam "
+"omogućava da uradite post mortem analizu.</p>"
+
+#: midebuggerplugin.cpp:90
+#, fuzzy
+#| msgid "Attach to process..."
+msgid "Attach to Process..."
+msgstr "Priloži uz proces..."
+
+#: midebuggerplugin.cpp:91
+#, fuzzy
+#| msgid "Attach to a process"
+msgid "Attach to process"
+msgstr "Kačenje na proces"
+
+#: midebuggerplugin.cpp:92
+msgid ""
+"<b>Attach to process</b><p>Attaches the debugger to a running process.</p>"
+msgstr "<b>Priloži uz proces</b><p>Priloži debager uz izvršavani proces.</p>"
+
+#: midebuggerplugin.cpp:138
+msgid "KDevelop"
+msgstr "KDevelop"
+
+#: midebuggerplugin.cpp:193
 #, kde-format
-msgid "Could not locate the debugging shell '%1'."
-msgstr "Nije moguće pronaći za školjku za otklanjanje grešaka '%1'."
+msgid "Evaluate: %1"
+msgstr "Izračunaj: %1"
 
-#: gdb.cpp:80
-msgid "Debugging Shell Not Found"
-msgstr "Školjka za otklanjanje grešaka nije nađena"
+#: midebuggerplugin.cpp:194
+msgid ""
+"<b>Evaluate expression</b><p>Shows the value of the expression under the "
+"cursor.</p>"
+msgstr "<b>Izračinaj izraz</b><p>Prikazuje vrijednost izraza pod kurzorom.</p>"
 
-#: gdbconfigpage.cpp:118
-msgid "GDB Configuration"
-msgstr "GDB konfiguracija"
+#: midebuggerplugin.cpp:202
+#, kde-format
+msgid "Watch: %1"
+msgstr "Prati: %1"
 
-#: gdbconfigpage.cpp:158
+#: midebuggerplugin.cpp:203
+#, fuzzy
+#| msgid ""
+#| "<b>Watch expression</b><p>Adds an expression under the cursor to the "
+#| "Variables/Watch list.</p>"
+msgid ""
+"<b>Watch expression</b><p>Adds the expression under the cursor to the "
+"Variables/Watch list.</p>"
+msgstr ""
+"<b>Prati izraz</b><p>Dodaje izraz pod kursorom na listu varijabli/praćenja.</"
+"p>"
+
+#: midebuggerplugin.cpp:216
+msgid "Choose a core file to examine..."
+msgstr "Izaberi datoteku jezgra na ispitivanje..."
+
+#: midebuggerplugin.cpp:221 midebuggerplugin.cpp:239
 msgid ""
 "A program is already being debugged. Do you want to abort the currently "
-"running debug session and continue with the launch?"
+"running debug session and continue?"
 msgstr ""
 
-#: gdbconfigpage.cpp:184
-msgid "Executes a Native application in GDB"
-msgstr "Izvrši prirodnu aplikaciju u GDB"
+#: midebuggerplugin.cpp:234
+msgid "Choose a process to attach to..."
+msgstr "Izaberite proces na koji se treba zakačiti..."
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, GdbConfigPage)
-#: gdbconfigpage.ui:14
-msgid "Debugger Configuration"
-msgstr "Debugger konfiguracija"
+#: midebuggerplugin.cpp:253
+#, kde-format
+msgid "Not attaching to process %1: cannot attach the debugger to itself."
+msgstr "Ne kači se za proces %1: ne može se zakačiti za sam debager."
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: gdbconfigpage.ui:26
+#: midebuggerplugin.cpp:268
 msgid "Debugger"
 msgstr "Ispravljač grešaka"
 
-#. i18n: ectx: property (text), widget (QLabel, gdbPath_label)
-#: gdbconfigpage.ui:38
+#: midebugjobs.cpp:70
+#, kde-format
+msgctxt "ProjectName: run configuration name"
+msgid "%1: %2"
+msgstr ""
+
+#: midebugjobs.cpp:94
+#, kde-format
+msgid "'%1' is not an executable"
+msgstr ""
+
+#: midebugjobs.cpp:168
+msgid "Debug core file"
+msgstr "Traži greške u datoteci jezgra"
+
+#: midebugjobs.cpp:204
+#, kde-format
+msgid "Debug process %1"
+msgstr "Traženje grešaka u procesu %1"
+
+#: midebugsession.cpp:224
+msgid "Running program"
+msgstr "Izvršavam program"
+
+#: midebugsession.cpp:252
 #, fuzzy
-#| msgid "Debugger executable:"
-msgid "Debugger e&xecutable:"
-msgstr "Debugger izvršni program"
+#| msgid "Warning"
+msgid "warning"
+msgstr "Upozorenje"
 
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_gdbPath)
-#: gdbconfigpage.ui:51
-msgid "Gdb executable"
-msgstr "Gdb izvršni program"
+#: midebugsession.cpp:296
+#, kde-format
+msgid "Attaching to process %1"
+msgstr "Kačenje na proces %1"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_gdbPath)
-#: gdbconfigpage.ui:54
+#: midebugsession.cpp:329
+msgid "<b>Could not attach debugger:</b><br />"
+msgstr "<b>Ne mobu prikačiti debager:</b><br />"
+
+#: midebugsession.cpp:331
+msgid "Startup error"
+msgstr "Greška pokretanja"
+
+#: midebugsession.cpp:338
+#, kde-format
+msgid "Examining core file %1"
+msgstr "Ispitujem datoteku jezgra %1"
+
+#: midebugsession.cpp:366
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>Debugger error</b><p>Debugger reported the following error:<p><tt>%1"
 msgid ""
-"To run \"gdb\" binary from $PATH, leave this field empty. To run custom gdb, "
-"for example, for a different architecture, enter the executable name here. "
-"You can either run gdb from $PATH, but with a different name (say, \"arm-gdb"
-"\"), by typing the name here, or specify full path to the gdb executable."
-msgstr ""
-"Da pokrenete \"gdb\" iz $PATH, ostavite ovo polje prazno. Da pokrenete "
-"vlastiti gdb, na primjer za drugu arhitekturu, unesite njegovo ime. Mošete "
-"pokrenuti gdb iz $PATH, ali s drugim imenom (na primjer, \"arm-gdb\"), "
-"unošenjem imena ovdje, ili navođenjem pune staze do gdb programa."
+"<b>Failed to load core file</b><p>Debugger reported the following error:"
+"<p><tt>%1"
+msgstr "<b>Debagerska greška</b><p>Debager je javio sljedeću grešku:<p><tt>%1"
 
-#. i18n: ectx: property (toolTip), widget (QLabel, debuggingShell_label)
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_debuggingShell)
-#: gdbconfigpage.ui:67 gdbconfigpage.ui:86
+#: midebugsession.cpp:369 midebugsession.cpp:1297
+msgid "Debugger error"
+msgstr "Debagerska greška"
+
+#: midebugsession.cpp:474
+msgid "Debugger stopped"
+msgstr "Debager zaustavljen"
+
+#: midebugsession.cpp:494
+msgid "Application is running"
+msgstr "Program se izvršava"
+
+#: midebugsession.cpp:499
+msgid "Application is paused"
+msgstr "Program je pauziran"
+
+#: midebugsession.cpp:783
+#, kde-format
 msgid ""
-"<html><head/><body><p>If you want gdb to be executed by a special shell "
-"script, which for example properly sets the library path, insert it here e."
-"g.: /path/to/script.sh --scriptArguments</p><p>Note: your script'll be "
-"invoked like this: /path/to/script.sh --scriptArguments debugger --"
-"debuggerArguments. So script.sh <span style=\" font-weight:600;\">must</"
-"span> invoke \"debugger\" executable manually.</p></body></html>"
+"<b>Gdb command sent when debugger is not running</b><br>The command was:<br> "
+"%1"
 msgstr ""
+"<b>Gdb komanda je poslana kada se debager nije izvršavao</b><br>Komanda je "
+"bila:<br> %1"
 
-#. i18n: ectx: property (text), widget (QLabel, debuggingShell_label)
-#: gdbconfigpage.ui:73
+#: midebugsession.cpp:785
+msgid "Internal error"
+msgstr "Unutrašnja greška"
+
+#: midebugsession.cpp:899
+#, kde-format
+msgid "<b>Invalid debugger command</b><br>%1"
+msgstr "<b>Pogrešna debagerska komanda</b><br>%1"
+
+#: midebugsession.cpp:900
+msgid "Invalid debugger command"
+msgstr "Pogrešna debagerska komanda"
+
+#: midebugsession.cpp:1034
+#, kde-format
+msgid "Exited with return code: %1"
+msgstr "Izašao s izlaznim kodom: %1"
+
+#: midebugsession.cpp:1036
+msgid "Exited normally"
+msgstr "Izašao normalno"
+
+#: midebugsession.cpp:1043
+#, kde-format
+msgid "Exited on signal %1"
+msgstr "Izašao na signal %1"
+
+#: midebugsession.cpp:1080
+#, kde-format
+msgid "Program received signal %1 (%2)"
+msgstr "Program primio signal %1 (%2)"
+
+#: midebugsession.cpp:1212
+#, kde-format
+msgid "1 command in queue\n"
+msgid_plural "%1 commands in queue\n"
+msgstr[0] "%1 komanda u redu čekanja\n"
+msgstr[1] "%1 komande u redu čekanja\n"
+msgstr[2] "%1 komandi u redu čekanja\n"
+
+#: midebugsession.cpp:1213
+#, kde-format
+msgctxt "Only the 0 and 1 cases need to be translated"
+msgid "1 command being processed by gdb\n"
+msgid_plural "%1 commands being processed by gdb\n"
+msgstr[0] "%1 komandu obrađuje gdb\n"
+msgstr[1] "%1 komande obrađuje gdb\n"
+msgstr[2] "%1 komandi obrađuje gdb\n"
+
+#: midebugsession.cpp:1214
+#, kde-format
+msgid "Debugger state: %1\n"
+msgstr "Debagersko stanje: %1\n"
+
+#: midebugsession.cpp:1217
+#, kde-format
+msgid ""
+"Current command class: '%1'\n"
+"Current command text: '%2'\n"
+"Current command original text: '%3'\n"
+msgstr ""
+"Klasa trenutne naredbe: '%1'\n"
+"Tekst trenutne naredbe: '%2'\n"
+"Originalni tekst trenutne naredbe: '%3'\n"
+
+#: midebugsession.cpp:1228
+msgid "Debugger status"
+msgstr "Debagerski status"
+
+#: midebugsession.cpp:1294
+#, kde-format
+msgid "<b>Debugger error</b><p>Debugger reported the following error:<p><tt>%1"
+msgstr "<b>Debagerska greška</b><p>Debager je javio sljedeću grešku:<p><tt>%1"
+
+#: miframestackmodel.cpp:83
 #, fuzzy
-msgid "She&ll script:"
-msgstr "Pokreni skript&u školjke:"
+#| msgid "Warning"
+msgid "(running)"
+msgstr "Upozorenje"
 
-#. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_debuggingShell)
-#: gdbconfigpage.ui:89
-msgid "<html><head/><body><p><br/></p></body></html>"
-msgstr ""
+#: registers/converters.cpp:30
+msgid "Binary"
+msgstr "Binarno"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: gdbconfigpage.ui:99
-msgid "Options"
-msgstr "Opcije"
+#: registers/converters.cpp:30
+msgid "Octal"
+msgstr "Oktalno"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: gdbconfigpage.ui:108
-msgid "Display static &members:"
-msgstr "Prikaži statičke &članoves:"
+#: registers/converters.cpp:30
+msgid "Decimal"
+msgstr "Decimalno"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_displayStaticMembers)
-#: gdbconfigpage.ui:123
+#: registers/converters.cpp:30
+msgid "Hexadecimal"
+msgstr "Heksadecimalno"
+
+#: registers/converters.cpp:30
+msgid "Raw"
+msgstr "Sirovo"
+
+#: registers/converters.cpp:30
+msgid "Unsigned"
+msgstr "Nepredznačeno"
+
+#: registers/registercontroller_arm.cpp:106
+#: registers/registercontroller_x86.cpp:106
+msgid "General"
+msgstr "Opće"
+
+#: registers/registercontroller_arm.cpp:106
+#: registers/registercontroller_x86.cpp:106
+msgid "Flags"
+msgstr "Indikatori"
+
+#: registers/registercontroller_arm.cpp:106
+msgid "VFP single-word"
+msgstr "VFP jednostruka riječ"
+
+#: registers/registercontroller_arm.cpp:106
+msgid "VFP double-word"
+msgstr "VFP dvostruka riječ"
+
+#: registers/registercontroller_arm.cpp:106
+msgid "VFP quad-word"
+msgstr "VFP četverostruka riječ"
+
+#: registers/registercontroller_x86.cpp:106
+msgid "FPU"
+msgstr "FPU"
+
+#: registers/registercontroller_x86.cpp:106
+msgid "XMM"
+msgstr "XMM"
+
+#: registers/registercontroller_x86.cpp:106
+msgid "Segment"
+msgstr "Segment"
+
+#: registers/registersview.cpp:68
+msgid "Format"
+msgstr "Format"
+
+#: registers/registersview.cpp:77
+msgid "Mode"
+msgstr "Režim"
+
+#: registers/registersview.cpp:213
+msgid "Update"
+msgstr "Ažuriranje"
+
+#: stty.cpp:249
 msgid ""
-"Displaying static members makes GDB slower in\n"
-"producing data within KDE and Qt.\n"
-"It may change the \"signature\" of the data\n"
-"which QString and friends rely on,\n"
-"but if you need to debug into these values then\n"
-"check this option."
+"Cannot use the tty* or pty* devices.\n"
+"Check the settings on /dev/tty* and /dev/pty*\n"
+"As root you may need to \"chmod ug+rw\" tty* and pty* devices and/or add the "
+"user to the tty group using \"usermod -aG tty username\"."
 msgstr ""
-"Prikaz statičkih članovačini GDB sporijim u\n"
-"proizvodnji podataka u KDE i Qt.\n"
-"On se može mijenjati \"potpis\" podataka\n"
-"na kome se KString i prijatelji oslanjaj,\n"
-"ali ako treba da otklanjate greške u ovim vrijednostima onda\n"
-"provjerite ovu opciju."
+"Ne mogu se koristiti tty* i pty* uređaji.\n"
+"Provjeri postavke /dev/tty* i /dev/pty*\n"
+"Kao root možda vam treba \"chmod ug+rw\" tty* i pty* uređaje i/ili dodati "
+"korisnika u tty grupu koristeći \"usermod -aG tty username\"."
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: gdbconfigpage.ui:133
-msgid "Display &demangled names:"
-msgstr "Prikaži &dešifrovana imena:"
+#: stty.cpp:298
+#, kde-format
+msgid "%1 is incorrect terminal name"
+msgstr "%1 je neispravno ime terminala"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_asmDemangle)
-#: gdbconfigpage.ui:145
+#: stty.cpp:304
+msgid "Can't create a temporary file"
+msgstr "NBe mogu kreirati privremenu datoteku"
+
+#: stty.cpp:343
+#, fuzzy, kde-format
 msgid ""
-"When displaying the disassembled code you\n"
-"can select to see the methods' mangled names.\n"
-"However, non-mangled names are easier to read."
+"Can't receive %1 tty/pty. Check that %1 is actually a terminal and that it "
+"accepts these arguments: -e sh -c \"tty> %2 ;exec<&-;exec>&-;while :;do "
+"sleep 3600;done\""
 msgstr ""
-"Pri prikazivanju disasembliranog koda\n"
-"možete odabrati da vidite šifrovana imena.\n"
-"Ipak, nešifrovana imena su lakša za čitanje."
+"Ne mogu dobaviti %1 tty/pty. Provjerite da li je %1 zaista terminal i da "
+"prihvata ove argumente: -e sh -c \"tty> %2 ;exec<&-;exec>&-;while :;do sleep "
+"3600;done\""
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: gdbconfigpage.ui:155
+#. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
+#: widgets/debuggerconsoleview.cpp:65 widgets/debuggerconsoleview.ui:14
 #, fuzzy
-#| msgid "Start Debugger with:"
-msgid "S&tart Debugger with:"
-msgstr "Pokreni debager sa:"
+#| msgid "Debugger Toolbar"
+msgid "Debugger Console"
+msgstr "Ispravljačka traka"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startWith)
-#: gdbconfigpage.ui:166
-msgid "Application Output"
-msgstr "Izlaz aplikacije"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startWith)
-#: gdbconfigpage.ui:171
-msgid "GDB Console"
-msgstr "GDB konzola"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_startWith)
-#: gdbconfigpage.ui:176
-msgid "Frame Stack"
-msgstr "Stek okvira"
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox)
-#: gdbconfigpage.ui:190
-msgid ""
-"This script is intended for the actual commands needed to connect to a "
-"remotely running executable.\n"
-"\tshell sleep 5\twait for remote program to start\n"
-"\ttarget remote ...\tconnect to the remote debugger\n"
-"\tcontinue\t[optional] run debugging to the first breakpoint"
-msgstr ""
-"Ova skripta je namenjena za stvarne komande potrebna za povezivanje na "
-"daljinski program.\n"
-"\tshell sleep 5\tčekaj na početak udaljenog programa\n"
-"\ttarget remote ...\tpoveži se na udaljeni debager\n"
-"\tcontinue\t[optional] uradi debager s prve prekidne tačke"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: gdbconfigpage.ui:193
-msgid "Remote Debugging"
-msgstr "Udaljeni debager"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, runShellScript_label)
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_runShellScript)
-#: gdbconfigpage.ui:199 gdbconfigpage.ui:215
+#: widgets/debuggerconsoleview.cpp:66
 #, fuzzy
+#| msgid ""
+#| "<b>GDB output</b><p>Shows all gdb commands being executed. You can also "
+#| "issue any other gdb command while debugging.</p>"
 msgid ""
-"<html><head/><body><p>Script to start remote application</p><p></p><p>This "
-"shell script is run after the Gdb Config script has been sourced by gdb.</"
-"p><p>It's purpose is to actually start the remote process.</p><p>1) Find a "
-"way to execute a command remotely - rsh, ssh, telnet, ...</p><p>2a) Execute "
-"\"gdbserver ... application\" on target.</p><p>or if your executable "
-"contains the gdb stub:</p><p>2b) Execute \"application\" on target.</p></"
-"body></html>"
-msgstr ""
-"Ovo skriptase pokreće nakon što je config gdb skripta učitana u GDB.\n"
-"Kada se debagovanje vrši daljinski ova skripta je namijenjena da se zaista "
-"početi daljinskog proces.\n"
-"[Očekuje se da izvršni program za otklanjanje grešaka može biti dostupan na "
-"odredištu, možda ga preuzima kao konačni korak]\n"
-"1) Pronađite način da daljinski izvršite komandu- rsh, ssh, telnet, ...\n"
-"2a) Izvrši \"gdbserver ... application\" na odredištu.\n"
-"ili ako vaš izvršni sadrži GDB klica\n"
-"2b) Izvršite \"Application\" na metu."
-
-#. i18n: ectx: property (text), widget (QLabel, runShellScript_label)
-#: gdbconfigpage.ui:202
-msgctxt "Shell script to be executed at run time"
-msgid "R&un shell script:"
-msgstr "Pokreni skript&u školjke:"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, configGdbScript_label)
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_configGdbScript)
-#: gdbconfigpage.ui:225 gdbconfigpage.ui:267
-#, fuzzy
-msgid ""
-"<html><head/><body><p>This script is sourced by gdb when the debugging "
-"starts.</p></body></html>"
-msgstr "Ovu skriptu je generisao gdb kada počne debagiranje."
-
-#. i18n: ectx: property (text), widget (QLabel, configGdbScript_label)
-#: gdbconfigpage.ui:228
-#, fuzzy
-msgid "Gdb &config script:"
-msgstr "Gdb konfiguracijska skripta"
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_runGdbScript)
-#. i18n: ectx: property (toolTip), widget (QLabel, runGdbScript_label)
-#: gdbconfigpage.ui:241 gdbconfigpage.ui:251
-#, fuzzy
-msgid ""
-"<html><head/><body><p>Script to connect with remote application</p><p>For "
-"example:</p><p>\tshell sleep 5\t #wait for remote program to start</p><p>"
-"\ttarget remote ...\t#connect to the remote debugger</p><p>\tcontinue\t#"
-"[optional] run debugging to the first breakpoint.</p></body></html>"
-msgstr ""
-"Ova skripta je namenjena za stvarne komande potrebna za povezivanje na "
-"daljinski program.\n"
-"\tshell sleep 5\tčekaj na početak udaljenog programa\n"
-"\ttarget remote ...\tpoveži se na udaljeni debager\n"
-"\tcontinue\t[optional] uradi debager s prve prekidne tačke"
-
-#. i18n: ectx: property (text), widget (QLabel, runGdbScript_label)
-#: gdbconfigpage.ui:254
-msgctxt "Gdb script to be executed at run time."
-msgid "Run &gdb script:"
-msgstr "Pokreni &gdb skriptu:"
-
-#: gdboutputwidget.cpp:63
-msgid "GDB Output"
-msgstr "GDB izlaz"
-
-#: gdboutputwidget.cpp:64
-msgid ""
-"<b>GDB output</b><p>Shows all gdb commands being executed. You can also "
-"issue any other gdb command while debugging.</p>"
+"<b>Debugger Console</b><p>Shows all debugger commands being executed. You "
+"can also issue any other debugger command while debugging.</p>"
 msgstr ""
 "<b>GDB izlaz</b><p>Prikazuje sve gdb komande koje se izvršavaju. Možete "
 "također izvesti bilo koju drugu gdb komandu pri traženju grešaka.</p>"
 
-#: gdboutputwidget.cpp:73
-msgid "&GDB cmd:"
-msgstr "&GDB cmd:"
+#: widgets/debuggerconsoleview.cpp:73
+msgid "Repeat last command when hit Return"
+msgstr ""
 
-#: gdboutputwidget.cpp:78
+#. i18n: ectx: property (toolTip), widget (QToolBar, toolBar)
+#: widgets/debuggerconsoleview.cpp:81 widgets/debuggerconsoleview.ui:62
 msgid "Pause execution of the app to enter gdb commands"
 msgstr "Pauziraj izvršenje programa  radi  unosa gdb komandi"
 
-#: gdboutputwidget.cpp:386 gdboutputwidget.cpp:436
+#: widgets/debuggerconsoleview.cpp:87
 msgid "Show Internal Commands"
 msgstr "Prikaži interne komande"
 
-#: gdboutputwidget.cpp:393 gdboutputwidget.cpp:443
+#: widgets/debuggerconsoleview.cpp:91
 msgid ""
 "Controls if commands issued internally by KDevelop will be shown or not."
 "<br>This option will affect only future commands, it will not add or remove "
@@ -385,336 +514,440 @@ msgstr ""
 "prikazane ili ne.<br>Ova opcija će uticati samo na buduće komande, to neće "
 "dodati ili ukloniti već izdate komande iz prikaza."
 
-#: gdboutputwidget.cpp:398
-msgid "Copy All"
-msgstr "Kopiraj sve"
+#: widgets/debuggerconsoleview.cpp:151
+msgid "&Command:"
+msgstr ""
 
-#. i18n: ectx: Menu (run)
-#: kdevgdbui.rc:5
-msgctxt "@title:menu"
-msgid "Run"
-msgstr "Pokreni"
-
-#. i18n: ectx: ToolBar (debugToolBar)
-#: kdevgdbui.rc:16
-msgid "Debugger Toolbar"
-msgstr "Ispravljačka traka"
-
-#: memviewdlg.cpp:74
-msgid "Start"
-msgstr "Početak"
-
-#: memviewdlg.cpp:80
-msgid "Amount"
-msgstr "Iznos"
-
-#: memviewdlg.cpp:119
-msgid "Memory view"
-msgstr "Memorijski pogled"
-
-#: memviewdlg.cpp:265
+#: widgets/debuggerconsoleview.cpp:173
 #, kde-format
-msgid "%2 (1 byte)"
-msgid_plural "%2 (%1 bytes)"
-msgstr[0] "%2 (%1 bajt)"
-msgstr[1] "%2 (%1 bajta)"
-msgstr[2] "%2 (%1 bajta)"
+msgid "%1 Command Bar"
+msgstr ""
 
-#: memviewdlg.cpp:312
-msgid "&Reload"
-msgstr "&Ponovo učitaj"
+#. i18n: ectx: property (windowTitle), widget (QToolBar, toolBar)
+#: widgets/debuggerconsoleview.ui:25
+msgid "toolBar"
+msgstr ""
 
-#: memviewdlg.cpp:321
-msgid "&Format"
-msgstr "&Format"
+#. i18n: ectx: property (text), widget (QToolBar, toolBar)
+#: widgets/debuggerconsoleview.ui:59
+msgid "Interrupt"
+msgstr ""
 
-#: memviewdlg.cpp:324
-msgid "&Binary"
-msgstr "&Binarno"
+#. i18n: ectx: property (text), widget (QToolBar, toolBar)
+#: widgets/debuggerconsoleview.ui:76
+msgid "Repeat"
+msgstr ""
 
-#: memviewdlg.cpp:329
-msgid "&Octal"
-msgstr "&Oktalno"
+#. i18n: ectx: property (toolTip), widget (QToolBar, toolBar)
+#: widgets/debuggerconsoleview.ui:79
+msgid "Repeat last sent command when hit <Return>"
+msgstr ""
 
-#: memviewdlg.cpp:334
-msgid "&Decimal"
-msgstr "&Dekadno"
+#: widgets/disassemblewidget.cpp:61
+msgid "Address Selector"
+msgstr "Izbor adrese"
 
-#: memviewdlg.cpp:339
-msgid "&Hexadecimal"
-msgstr "&Heksadekadno"
+#: widgets/disassemblewidget.cpp:105
+msgid "Change &address"
+msgstr "Promijeni &adresu"
 
-#: memviewdlg.cpp:355
-msgid "&Grouping"
-msgstr "&Grupisanje"
+#: widgets/disassemblewidget.cpp:109
+msgid "&Jump to Cursor"
+msgstr "&Skoči na kursor"
 
-#: memviewdlg.cpp:358
-msgid "&0"
-msgstr "&0"
+#: widgets/disassemblewidget.cpp:110
+msgid "Sets the execution pointer to the current cursor position."
+msgstr "Postavlja izvršavajući pokazivač na trenutnu poziciju kursora."
 
-#: memviewdlg.cpp:363
-msgid "&1"
-msgstr "&1"
+#: widgets/disassemblewidget.cpp:113
+msgid "&Run to Cursor"
+msgstr "&Idi do kursora"
 
-#: memviewdlg.cpp:368
-msgid "&2"
-msgstr "&2"
+#: widgets/disassemblewidget.cpp:114
+msgid "Continues execution until the cursor position is reached."
+msgstr "Nastavlja izvršavaje dok ne dostigne poziciju kursora."
 
-#: memviewdlg.cpp:373
-msgid "&4"
-msgstr "&4"
+#: widgets/disassemblewidget.cpp:117
+msgid "&AT&&T"
+msgstr ""
 
-#: memviewdlg.cpp:378
-msgid "&8"
-msgstr "&8"
+#: widgets/disassemblewidget.cpp:118
+#, c-format
+msgid "GDB will use the AT&T disassembly flavor (e.g. mov 0xc(%ebp),%eax)."
+msgstr ""
 
-#: memviewdlg.cpp:383
-msgid "1&6"
-msgstr "1&6"
+#: widgets/disassemblewidget.cpp:122
+msgid "&Intel"
+msgstr ""
 
-#: memviewdlg.cpp:398
-msgid "Write changes"
-msgstr "Zapiši promjene"
+#: widgets/disassemblewidget.cpp:123
+msgid ""
+"GDB will use the Intel disassembly flavor (e.g. mov eax, DWORD PTR [ebp"
+"+0xc])."
+msgstr ""
 
-#: memviewdlg.cpp:402
-msgid "Change memory range"
-msgstr "Promijeni memorijski opseg"
+#: widgets/disassemblewidget.cpp:161
+#, fuzzy
+#| msgid "Disassemble"
+msgid "Disassembly flavor"
+msgstr "Disasembliranje"
 
-#: memviewdlg.cpp:406
-msgid "Close this view"
-msgstr "Zatvori ovaj pogled"
+#: widgets/disassemblewidget.cpp:191
+msgid ""
+"<b>Machine code display</b><p>A machine code view into your running "
+"executable with the current instruction highlighted. You can step "
+"instruction by instruction using the debuggers toolbar buttons of \"step over"
+"\" instruction and \"step into\" instruction."
+msgstr ""
+"<b>Prikaz mašinskog koda</b><p>Pogled u mašinski kod vašeg izvršnog programa "
+"sa trenutno označenom instrukcijom. Možete ići instrukciju po instrukciju "
+"dugmad na debagerskoj alatnoj traci  instrukcije \"korak preko\" i "
+"instrukcije \"korak unutra\"."
 
-#: memviewdlg.cpp:473
-msgid "Memory viewer"
-msgstr "Preglednik memorije"
+#: widgets/disassemblewidget.cpp:205
+msgid "Address"
+msgstr "Adresa"
 
-#: memviewdlg.cpp:477
-msgid "New memory viewer"
-msgstr "Novi preglednik memorije"
+#: widgets/disassemblewidget.cpp:205
+msgid "Function"
+msgstr "Funkcija"
 
-#: memviewdlg.cpp:478
-msgctxt "@info:tooltip"
-msgid "Open a new memory viewer."
-msgstr "Otvori novi preglednik memorije."
+#: widgets/disassemblewidget.cpp:205
+msgid "Instruction"
+msgstr "Instrukcija"
 
-#~ msgid "Address Selector"
-#~ msgstr "Izbor adrese"
+#: widgets/disassemblewidget.cpp:224
+msgid "Disassemble/Registers View"
+msgstr "Disasemblirani/registarski pogled"
 
-#~ msgid "Change &address"
-#~ msgstr "Promijeni &adresu"
+#. i18n: ectx: property (windowTitle), widget (QDialog, SelectAddressDialog)
+#: widgets/selectaddressdialog.ui:20
+msgid "Address selector"
+msgstr "Izbor adrese"
 
-#~ msgid "&Jump to Cursor"
-#~ msgstr "&Skoči na kursor"
+#. i18n: ectx: property (toolTip), widget (QDialog, SelectAddressDialog)
+#: widgets/selectaddressdialog.ui:23
+msgid "Select the address to disassemble around"
+msgstr "Odaberi adresu za disasembliranje oko nje"
 
-#~ msgid "Sets the execution pointer to the current cursor position."
-#~ msgstr "Postavlja izvršavajući pokazivač na trenutnu poziciju kursora."
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: widgets/selectaddressdialog.ui:29
+msgid "Select address to disassemble around"
+msgstr "Odaberi adresu za disasembliranje oko nje"
 
-#~ msgid "&Run to Cursor"
-#~ msgstr "&Idi do kursora"
+#~ msgid "Disassemble/Registers"
+#~ msgstr "Disaasembliraj/Registri"
 
-#~ msgid "Continues execution until the cursor position is reached."
-#~ msgstr "Nastavlja izvršavaje dok ne dostigne poziciju kursora."
+#~ msgid "GDB"
+#~ msgstr "GDB"
+
+#~ msgid "Memory"
+#~ msgstr "Memorija"
+
+#~ msgid "Tracing Configuration"
+#~ msgstr "Konfigurisanje praćenja"
+
+#~ msgid ""
+#~ "<b>Enable tracing</b>\n"
+#~ "<p>Tracing is a mechanism to automatically print values of the chosen "
+#~ "expressions and continue execution when breakpoint is hit. You can think "
+#~ "of it as printf debugging that does not require modifying the source.</p>"
+#~ msgstr ""
+#~ "<b>Omogući praćenje</b>\n"
+#~ "<p>Praćenje je mehanizam za automatsko štampanje vrednosti izabranog "
+#~ "izraza i nastavak izvođenja nakon prekidne tačke. Možete misliti o tome "
+#~ "kao o pomoćnoj printf naredvi koja ne zahteva izmjene izvornog koda.</p>"
+
+#~ msgid "Enable tracing"
+#~ msgstr "Omogući praćenje"
+
+#~ msgid "Cancel"
+#~ msgstr "Odustani"
+
+#~ msgid "Custom format string"
+#~ msgstr "Vlastititi formatni string"
+
+#~ msgid "OK"
+#~ msgstr "U redu"
+
+#~ msgid ""
+#~ "<b>Custom format string</b>\n"
+#~ "<p>Specify a C-style format string that will be used when printing the "
+#~ "chosen expression. For example:\n"
+#~ "<p align=\"center\"> <tt>Tracepoint 1: g = %d</tt></p>\n"
+#~ "If custom format string is not enabled, names and values of all "
+#~ "expressions will be printed, using \"%d\" as format specifier for all "
+#~ "expressions."
+#~ msgstr ""
+#~ "<b>Vlastiti niz za formatiranje</b>\n"
+#~ "<p>Navedi u C-stilu format niza koji će se koristiti prilikom štampanja "
+#~ "izabranog izraza. Na primjer:\n"
+#~ "<p align=\"center\"> <tt>Pozicija 1: g = %d</tt></p>\n"
+#~ "Ako prilagođeni format string nije omogućen, imena i vrijednosti svih "
+#~ "izraza će biti štampane, koristeći \"%d\" kao format specifikatore za sve "
+#~ "izraze."
+
+#~ msgid "Expressions to print:"
+#~ msgstr "Izraz za štampu"
+
+#~ msgid ""
+#~ "No environment group specified, looks like a broken configuration, please "
+#~ "check run configuration '%1'. Using default environment group."
+#~ msgstr ""
+#~ "Nema grupe okruženja, izgleda kao slomljena konfiguracija, molimo "
+#~ "provjerite aktivnu konfiguraciju \"%1\". Koristi se podrazumijevana grupa "
+#~ "okruženja."
+
+#~ msgid "<b>You need gdb 7.0.0 or higher.</b><br />You are using: %1"
+#~ msgstr "<b>Treba vam gdb 7.0.0 ili viši.</b><br />Koristite: %1"
+
+#~ msgid "gdb error"
+#~ msgstr "gdb greška"
+
+#~ msgid "<b>Could not start debugger:</b><br />"
+#~ msgstr "<b>ne mogu pokrenuti debager:</b><br />"
+
+#~ msgid "Could not locate the debugging shell '%1'."
+#~ msgstr "Nije moguće pronaći za školjku za otklanjanje grešaka '%1'."
+
+#~ msgid "Debugging Shell Not Found"
+#~ msgstr "Školjka za otklanjanje grešaka nije nađena"
+
+#~ msgid "GDB Configuration"
+#~ msgstr "GDB konfiguracija"
+
+#~ msgid "Executes a Native application in GDB"
+#~ msgstr "Izvrši prirodnu aplikaciju u GDB"
+
+#~ msgid "Debugger Configuration"
+#~ msgstr "Debugger konfiguracija"
 
 #, fuzzy
-#~| msgid "Disassemble"
-#~ msgid "Disassembly flavor"
-#~ msgstr "Disasembliranje"
+#~| msgid "Debugger executable:"
+#~ msgid "Debugger e&xecutable:"
+#~ msgstr "Debugger izvršni program"
+
+#~ msgid "Gdb executable"
+#~ msgstr "Gdb izvršni program"
 
 #~ msgid ""
-#~ "<b>Machine code display</b><p>A machine code view into your running "
-#~ "executable with the current instruction highlighted. You can step "
-#~ "instruction by instruction using the debuggers toolbar buttons of \"step "
-#~ "over\" instruction and \"step into\" instruction."
+#~ "To run \"gdb\" binary from $PATH, leave this field empty. To run custom "
+#~ "gdb, for example, for a different architecture, enter the executable name "
+#~ "here. You can either run gdb from $PATH, but with a different name (say, "
+#~ "\"arm-gdb\"), by typing the name here, or specify full path to the gdb "
+#~ "executable."
 #~ msgstr ""
-#~ "<b>Prikaz mašinskog koda</b><p>Pogled u mašinski kod vašeg izvršnog "
-#~ "programa sa trenutno označenom instrukcijom. Možete ići instrukciju po "
-#~ "instrukciju dugmad na debagerskoj alatnoj traci  instrukcije \"korak preko"
-#~ "\" i instrukcije \"korak unutra\"."
+#~ "Da pokrenete \"gdb\" iz $PATH, ostavite ovo polje prazno. Da pokrenete "
+#~ "vlastiti gdb, na primjer za drugu arhitekturu, unesite njegovo ime. "
+#~ "Mošete pokrenuti gdb iz $PATH, ali s drugim imenom (na primjer, \"arm-gdb"
+#~ "\"), unošenjem imena ovdje, ili navođenjem pune staze do gdb programa."
 
-#~ msgid "Address"
-#~ msgstr "Adresa"
+#, fuzzy
+#~ msgid "She&ll script:"
+#~ msgstr "Pokreni skript&u školjke:"
 
-#~ msgid "Function"
-#~ msgstr "Funkcija"
+#~ msgid "Options"
+#~ msgstr "Opcije"
 
-#~ msgid "Instruction"
-#~ msgstr "Instrukcija"
-
-#~ msgid "Disassemble/Registers View"
-#~ msgstr "Disasemblirani/registarski pogled"
-
-#~ msgid "Binary"
-#~ msgstr "Binarno"
-
-#~ msgid "Octal"
-#~ msgstr "Oktalno"
-
-#~ msgid "Decimal"
-#~ msgstr "Decimalno"
-
-#~ msgid "Hexadecimal"
-#~ msgstr "Heksadecimalno"
-
-#~ msgid "Raw"
-#~ msgstr "Sirovo"
-
-#~ msgid "Unsigned"
-#~ msgstr "Nepredznačeno"
-
-#~ msgid "General"
-#~ msgstr "Opće"
-
-#~ msgid "Flags"
-#~ msgstr "Indikatori"
-
-#~ msgid "VFP single-word"
-#~ msgstr "VFP jednostruka riječ"
-
-#~ msgid "VFP double-word"
-#~ msgstr "VFP dvostruka riječ"
-
-#~ msgid "VFP quad-word"
-#~ msgstr "VFP četverostruka riječ"
-
-#~ msgid "FPU"
-#~ msgstr "FPU"
-
-#~ msgid "XMM"
-#~ msgstr "XMM"
-
-#~ msgid "Segment"
-#~ msgstr "Segment"
-
-#~ msgid "Format"
-#~ msgstr "Format"
-
-#~ msgid "Mode"
-#~ msgstr "Režim"
-
-#~ msgid "Update"
-#~ msgstr "Ažuriranje"
-
-#~ msgid "Address selector"
-#~ msgstr "Izbor adrese"
-
-#~ msgid "Select the address to disassemble around"
-#~ msgstr "Odaberi adresu za disasembliranje oko nje"
-
-#~ msgid "Select address to disassemble around"
-#~ msgstr "Odaberi adresu za disasembliranje oko nje"
-
-#~ msgid "Examine Core File..."
-#~ msgstr "Ispitaj datoteku jezgra..."
-
-#~ msgid "Examine core file"
-#~ msgstr "Ispitaj datoteku jezgra"
+#~ msgid "Display static &members:"
+#~ msgstr "Prikaži statičke &članoves:"
 
 #~ msgid ""
-#~ "<b>Examine core file</b><p>This loads a core file, which is typically "
-#~ "created after the application has crashed, e.g. with a segmentation "
-#~ "fault. The core file contains an image of the program memory at the time "
-#~ "it crashed, allowing you to do a post-mortem analysis.</p>"
+#~ "Displaying static members makes GDB slower in\n"
+#~ "producing data within KDE and Qt.\n"
+#~ "It may change the \"signature\" of the data\n"
+#~ "which QString and friends rely on,\n"
+#~ "but if you need to debug into these values then\n"
+#~ "check this option."
 #~ msgstr ""
-#~ "<b>Ispitaj datoteku jezgra</b><p>Ovo učitava datoteku jezgra, koja je "
-#~ "obično nastala nakon pada programa, na primjer, sa Greška segmentacije. "
-#~ "Datoteka jezgra sadrži sliku programske memorije u trenutku kada se "
-#~ "srušio, što vam omogućava da uradite post mortem analizu.</p>"
+#~ "Prikaz statičkih članovačini GDB sporijim u\n"
+#~ "proizvodnji podataka u KDE i Qt.\n"
+#~ "On se može mijenjati \"potpis\" podataka\n"
+#~ "na kome se KString i prijatelji oslanjaj,\n"
+#~ "ali ako treba da otklanjate greške u ovim vrijednostima onda\n"
+#~ "provjerite ovu opciju."
+
+#~ msgid "Display &demangled names:"
+#~ msgstr "Prikaži &dešifrovana imena:"
+
+#~ msgid ""
+#~ "When displaying the disassembled code you\n"
+#~ "can select to see the methods' mangled names.\n"
+#~ "However, non-mangled names are easier to read."
+#~ msgstr ""
+#~ "Pri prikazivanju disasembliranog koda\n"
+#~ "možete odabrati da vidite šifrovana imena.\n"
+#~ "Ipak, nešifrovana imena su lakša za čitanje."
+
+#, fuzzy
+#~| msgid "Start Debugger with:"
+#~ msgid "S&tart Debugger with:"
+#~ msgstr "Pokreni debager sa:"
+
+#~ msgid "Application Output"
+#~ msgstr "Izlaz aplikacije"
+
+#~ msgid "GDB Console"
+#~ msgstr "GDB konzola"
+
+#~ msgid "Frame Stack"
+#~ msgstr "Stek okvira"
+
+#~ msgid ""
+#~ "This script is intended for the actual commands needed to connect to a "
+#~ "remotely running executable.\n"
+#~ "\tshell sleep 5\twait for remote program to start\n"
+#~ "\ttarget remote ...\tconnect to the remote debugger\n"
+#~ "\tcontinue\t[optional] run debugging to the first breakpoint"
+#~ msgstr ""
+#~ "Ova skripta je namenjena za stvarne komande potrebna za povezivanje na "
+#~ "daljinski program.\n"
+#~ "\tshell sleep 5\tčekaj na početak udaljenog programa\n"
+#~ "\ttarget remote ...\tpoveži se na udaljeni debager\n"
+#~ "\tcontinue\t[optional] uradi debager s prve prekidne tačke"
+
+#~ msgid "Remote Debugging"
+#~ msgstr "Udaljeni debager"
+
+#, fuzzy
+#~ msgid ""
+#~ "<html><head/><body><p>Script to start remote application</p><p></"
+#~ "p><p>This shell script is run after the Gdb Config script has been "
+#~ "sourced by gdb.</p><p>It's purpose is to actually start the remote "
+#~ "process.</p><p>1) Find a way to execute a command remotely - rsh, ssh, "
+#~ "telnet, ...</p><p>2a) Execute \"gdbserver ... application\" on target.</"
+#~ "p><p>or if your executable contains the gdb stub:</p><p>2b) Execute "
+#~ "\"application\" on target.</p></body></html>"
+#~ msgstr ""
+#~ "Ovo skriptase pokreće nakon što je config gdb skripta učitana u GDB.\n"
+#~ "Kada se debagovanje vrši daljinski ova skripta je namijenjena da se "
+#~ "zaista početi daljinskog proces.\n"
+#~ "[Očekuje se da izvršni program za otklanjanje grešaka može biti dostupan "
+#~ "na odredištu, možda ga preuzima kao konačni korak]\n"
+#~ "1) Pronađite način da daljinski izvršite komandu- rsh, ssh, telnet, ...\n"
+#~ "2a) Izvrši \"gdbserver ... application\" na odredištu.\n"
+#~ "ili ako vaš izvršni sadrži GDB klica\n"
+#~ "2b) Izvršite \"Application\" na metu."
+
+#~ msgctxt "Shell script to be executed at run time"
+#~ msgid "R&un shell script:"
+#~ msgstr "Pokreni skript&u školjke:"
+
+#, fuzzy
+#~ msgid ""
+#~ "<html><head/><body><p>This script is sourced by gdb when the debugging "
+#~ "starts.</p></body></html>"
+#~ msgstr "Ovu skriptu je generisao gdb kada počne debagiranje."
+
+#, fuzzy
+#~ msgid "Gdb &config script:"
+#~ msgstr "Gdb konfiguracijska skripta"
+
+#, fuzzy
+#~ msgid ""
+#~ "<html><head/><body><p>Script to connect with remote application</p><p>For "
+#~ "example:</p><p>\tshell sleep 5\t #wait for remote program to start</p><p>"
+#~ "\ttarget remote ...\t#connect to the remote debugger</p><p>\tcontinue\t#"
+#~ "[optional] run debugging to the first breakpoint.</p></body></html>"
+#~ msgstr ""
+#~ "Ova skripta je namenjena za stvarne komande potrebna za povezivanje na "
+#~ "daljinski program.\n"
+#~ "\tshell sleep 5\tčekaj na početak udaljenog programa\n"
+#~ "\ttarget remote ...\tpoveži se na udaljeni debager\n"
+#~ "\tcontinue\t[optional] uradi debager s prve prekidne tačke"
+
+#~ msgctxt "Gdb script to be executed at run time."
+#~ msgid "Run &gdb script:"
+#~ msgstr "Pokreni &gdb skriptu:"
+
+#~ msgid "GDB Output"
+#~ msgstr "GDB izlaz"
+
+#~ msgid "&GDB cmd:"
+#~ msgstr "&GDB cmd:"
+
+#~ msgid "Copy All"
+#~ msgstr "Kopiraj sve"
+
+#~ msgctxt "@title:menu"
+#~ msgid "Run"
+#~ msgstr "Pokreni"
+
+#~ msgid "Start"
+#~ msgstr "Početak"
+
+#~ msgid "Amount"
+#~ msgstr "Iznos"
+
+#~ msgid "Memory view"
+#~ msgstr "Memorijski pogled"
+
+#~ msgid "%2 (1 byte)"
+#~ msgid_plural "%2 (%1 bytes)"
+#~ msgstr[0] "%2 (%1 bajt)"
+#~ msgstr[1] "%2 (%1 bajta)"
+#~ msgstr[2] "%2 (%1 bajta)"
+
+#~ msgid "&Reload"
+#~ msgstr "&Ponovo učitaj"
+
+#~ msgid "&Format"
+#~ msgstr "&Format"
+
+#~ msgid "&Binary"
+#~ msgstr "&Binarno"
+
+#~ msgid "&Octal"
+#~ msgstr "&Oktalno"
+
+#~ msgid "&Decimal"
+#~ msgstr "&Dekadno"
+
+#~ msgid "&Hexadecimal"
+#~ msgstr "&Heksadekadno"
+
+#~ msgid "&Grouping"
+#~ msgstr "&Grupisanje"
+
+#~ msgid "&0"
+#~ msgstr "&0"
+
+#~ msgid "&1"
+#~ msgstr "&1"
+
+#~ msgid "&2"
+#~ msgstr "&2"
+
+#~ msgid "&4"
+#~ msgstr "&4"
+
+#~ msgid "&8"
+#~ msgstr "&8"
+
+#~ msgid "1&6"
+#~ msgstr "1&6"
+
+#~ msgid "Write changes"
+#~ msgstr "Zapiši promjene"
+
+#~ msgid "Change memory range"
+#~ msgstr "Promijeni memorijski opseg"
+
+#~ msgid "Close this view"
+#~ msgstr "Zatvori ovaj pogled"
+
+#~ msgid "Memory viewer"
+#~ msgstr "Preglednik memorije"
+
+#~ msgid "New memory viewer"
+#~ msgstr "Novi preglednik memorije"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Open a new memory viewer."
+#~ msgstr "Otvori novi preglednik memorije."
 
 #~ msgid "Attach to Process"
 #~ msgstr "Priloži uz proces"
-
-#~ msgid "Attach to process..."
-#~ msgstr "Priloži uz proces..."
-
-#~ msgid ""
-#~ "<b>Attach to process</b><p>Attaches the debugger to a running process.</p>"
-#~ msgstr ""
-#~ "<b>Priloži uz proces</b><p>Priloži debager uz izvršavani proces.</p>"
-
-#~ msgid "KDevelop"
-#~ msgstr "KDevelop"
-
-#~ msgid "Evaluate: %1"
-#~ msgstr "Izračunaj: %1"
-
-#~ msgid ""
-#~ "<b>Evaluate expression</b><p>Shows the value of the expression under the "
-#~ "cursor.</p>"
-#~ msgstr ""
-#~ "<b>Izračinaj izraz</b><p>Prikazuje vrijednost izraza pod kurzorom.</p>"
-
-#~ msgid "Watch: %1"
-#~ msgstr "Prati: %1"
-
-#~ msgid ""
-#~ "<b>Watch expression</b><p>Adds an expression under the cursor to the "
-#~ "Variables/Watch list.</p>"
-#~ msgstr ""
-#~ "<b>Prati izraz</b><p>Dodaje izraz pod kursorom na listu varijabli/"
-#~ "praćenja.</p>"
-
-#~ msgid "Choose a core file to examine..."
-#~ msgstr "Izaberi datoteku jezgra na ispitivanje..."
-
-#~ msgid "Examining core file %1"
-#~ msgstr "Ispitujem datoteku jezgra %1"
-
-#~ msgid "Debug core file"
-#~ msgstr "Traži greške u datoteci jezgra"
-
-#~ msgid "Choose a process to attach to..."
-#~ msgstr "Izaberite proces na koji se treba zakačiti..."
-
-#~ msgid "Not attaching to process %1: cannot attach the debugger to itself."
-#~ msgstr "Ne kači se za proces %1: ne može se zakačiti za sam debager."
-
-#~ msgid "Attaching to process %1"
-#~ msgstr "Kačenje na proces %1"
-
-#~ msgid "Debug process %1"
-#~ msgstr "Traženje grešaka u procesu %1"
-
-#~ msgid "Attach to a process"
-#~ msgstr "Kačenje na proces"
-
-#~ msgid "Select Core File"
-#~ msgstr "Izaberi datoteku jezgra"
-
-#~ msgid "Executable:"
-#~ msgstr "Izvršni program:"
-
-#~ msgid "Core File:"
-#~ msgstr "Datoteka jezgra:"
-
-#~ msgid "<br>Old value: %1"
-#~ msgstr "<br>Stara vrijednost: %1"
-
-#~ msgid "<br>New value: %1"
-#~ msgstr "<br>Nova vrijednost: %1"
-
-#~ msgid "Debugger stopped"
-#~ msgstr "Debager zaustavljen"
-
-#~ msgid "Process exited"
-#~ msgstr "Proces izašao"
-
-#~ msgid "Application is running"
-#~ msgstr "Program se izvršava"
-
-#~ msgid "Application is paused"
-#~ msgstr "Program je pauziran"
-
-#, fuzzy
-#~| msgid ""
-#~| "<b>Debugger error</b><p>Debugger reported the following error:<p><tt>%1"
-#~ msgid ""
-#~ "<b>Failed to load core file</b><p>Debugger reported the following error:"
-#~ "<p><tt>%1"
-#~ msgstr ""
-#~ "<b>Debagerska greška</b><p>Debager je javio sljedeću grešku:<p><tt>%1"
-
-#~ msgid "Debugger error"
-#~ msgstr "Debagerska greška"
 
 #~ msgid ""
 #~ "<b>GDB exited abnormally</b><p>This is likely a bug in GDB. Examine the "
@@ -726,145 +959,8 @@ msgstr "Otvori novi preglednik memorije."
 #~ msgid "GDB exited abnormally"
 #~ msgstr "GDB nenormalno izašao"
 
-#~ msgid ""
-#~ "<b>Gdb command sent when debugger is not running</b><br>The command was:"
-#~ "<br> %1"
-#~ msgstr ""
-#~ "<b>Gdb komanda je poslana kada se debager nije izvršavao</b><br>Komanda "
-#~ "je bila:<br> %1"
-
-#~ msgid "Internal error"
-#~ msgstr "Unutrašnja greška"
-
-#~ msgid "<b>Invalid debugger command</b><br>%1"
-#~ msgstr "<b>Pogrešna debagerska komanda</b><br>%1"
-
-#~ msgid "Invalid debugger command"
-#~ msgstr "Pogrešna debagerska komanda"
-
-#~ msgid "Exited with return code: %1"
-#~ msgstr "Izašao s izlaznim kodom: %1"
-
-#~ msgid "Exited normally"
-#~ msgstr "Izašao normalno"
-
-#~ msgid "Exited on signal %1"
-#~ msgstr "Izašao na signal %1"
-
-#~ msgid "Program received signal %1 (%2)"
-#~ msgstr "Program primio signal %1 (%2)"
-
-#~ msgid "Running program"
-#~ msgstr "Izvršavam program"
-
-#~ msgid "Warning"
-#~ msgstr "Upozorenje"
-
-#~ msgid ""
-#~ "<b>Debugger error</b><p>Debugger reported the following error:<p><tt>%1"
-#~ msgstr ""
-#~ "<b>Debagerska greška</b><p>Debager je javio sljedeću grešku:<p><tt>%1"
-
-#~ msgid "1 command in queue\n"
-#~ msgid_plural "%1 commands in queue\n"
-#~ msgstr[0] "%1 komanda u redu čekanja\n"
-#~ msgstr[1] "%1 komande u redu čekanja\n"
-#~ msgstr[2] "%1 komandi u redu čekanja\n"
-
-#~ msgctxt "Only the 0 and 1 cases need to be translated"
-#~ msgid "1 command being processed by gdb\n"
-#~ msgid_plural "%1 commands being processed by gdb\n"
-#~ msgstr[0] "%1 komandu obrađuje gdb\n"
-#~ msgstr[1] "%1 komande obrađuje gdb\n"
-#~ msgstr[2] "%1 komandi obrađuje gdb\n"
-
-#~ msgid "Debugger state: %1\n"
-#~ msgstr "Debagersko stanje: %1\n"
-
-#~ msgid ""
-#~ "Current command class: '%1'\n"
-#~ "Current command text: '%2'\n"
-#~ "Current command original text: '%3'\n"
-#~ msgstr ""
-#~ "Klasa trenutne naredbe: '%1'\n"
-#~ "Tekst trenutne naredbe: '%2'\n"
-#~ "Originalni tekst trenutne naredbe: '%3'\n"
-
-#~ msgid "Debugger status"
-#~ msgstr "Debagerski status"
-
-#~ msgid "<b>Could not attach debugger:</b><br />"
-#~ msgstr "<b>Ne mobu prikačiti debager:</b><br />"
-
-#~ msgctxt "<b>Internal debugger error</b>"
-#~ msgid ""
-#~ "<p>The debugger component encountered internal error while processing "
-#~ "reply from gdb. Please submit a bug report."
-#~ msgstr ""
-#~ "<p>Debager komponenta je naišlana internu grešku prilikom obrade odgovora "
-#~ "od GDB. Molimo Vas da pošaljete izveštaj o grešci."
-
-#~ msgid ""
-#~ "The exception is: %1\n"
-#~ "The MI response is: %2"
-#~ msgstr ""
-#~ "Izuzetak je: %1\n"
-#~ "MI odgovor je: %2"
-
-#~ msgid "Internal debugger error"
-#~ msgstr "Interna debagerska greška"
-
-#~ msgid ""
-#~ "<b>Could not start debugger.</b><p>Could not run '%1'. Make sure that the "
-#~ "path name is specified correctly."
-#~ msgstr ""
-#~ "<b>Ne mogu pokrenuti debager.</b><p>Ne mogu pokrenuti '%1'. Uvjerite se "
-#~ "da je ime staze ispravno navedeno."
-
-#~ msgid "Could not start debugger"
-#~ msgstr "Ne mogu pokrenuti debager"
-
-#~ msgid ""
-#~ "<b>Gdb crashed.</b><p>Because of that the debug session has to be ended."
-#~ "<br>Try to reproduce the crash with plain gdb and report a bug.<br>"
-#~ msgstr ""
-#~ "<b>Gdb pao.</b><p>Zbog toga je sesija traženja grešaka prekinuta."
-#~ "<br>Pokušajte reprodukovati pad običnm gdb i prijavite grešku.<br>"
-
 #~ msgid "Gdb crashed"
 #~ msgstr "Gdb pao"
-
-#, fuzzy
-#~| msgid "Warning"
-#~ msgid "(running)"
-#~ msgstr "Upozorenje"
-
-#~ msgid ""
-#~ "Cannot use the tty* or pty* devices.\n"
-#~ "Check the settings on /dev/tty* and /dev/pty*\n"
-#~ "As root you may need to \"chmod ug+rw\" tty* and pty* devices and/or add "
-#~ "the user to the tty group using \"usermod -aG tty username\"."
-#~ msgstr ""
-#~ "Ne mogu se koristiti tty* i pty* uređaji.\n"
-#~ "Provjeri postavke /dev/tty* i /dev/pty*\n"
-#~ "Kao root možda vam treba \"chmod ug+rw\" tty* i pty* uređaje i/ili dodati "
-#~ "korisnika u tty grupu koristeći \"usermod -aG tty username\"."
-
-#~ msgid "%1 is incorrect terminal name"
-#~ msgstr "%1 je neispravno ime terminala"
-
-#~ msgid "Can't create a temporary file"
-#~ msgstr "NBe mogu kreirati privremenu datoteku"
-
-#, fuzzy
-#~ msgid ""
-#~ "Can't receive %1 tty/pty. Check that %1 is actually a terminal and that "
-#~ "it accepts these arguments: -e sh -c \"tty> %2 ;exec<&-;exec>&-;while :;"
-#~ "do sleep 3600;done\""
-#~ msgstr ""
-#~ "Ne mogu dobaviti %1 tty/pty. Provjerite da li je %1 zaista terminal i da "
-#~ "prihvata ove argumente: -e sh -c \"tty> %2 ;exec<&-;exec>&-;while :;do "
-#~ "sleep 3600;done\""
 
 #~ msgid "Application interrupted"
 #~ msgstr "Program prekinut"
