@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeys\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-10-23 08:06+0000\n"
+"POT-Creation-Date: 2016-08-05 07:14+0000\n"
 "PO-Revision-Date: 2015-02-04 14:54+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -51,23 +51,28 @@ msgstr "Tekuća komponenta"
 msgid "All Components"
 msgstr "Sve komponente"
 
-#: kglobalshortcutseditor.cpp:168
+#: kglobalshortcutseditor.cpp:239
 msgid "Import Scheme..."
 msgstr "Uvezi šemu..."
 
-#: kglobalshortcutseditor.cpp:169
+#: kglobalshortcutseditor.cpp:240
 msgid "Export Scheme..."
 msgstr "Izvezi šemu..."
 
-#: kglobalshortcutseditor.cpp:170
+#: kglobalshortcutseditor.cpp:241
 msgid "Set All Shortcuts to None"
 msgstr "Isprazni sve prečice"
 
-#: kglobalshortcutseditor.cpp:171
-msgid "Remove Component"
-msgstr "Ukloni komponentu"
+#: kglobalshortcutseditor.cpp:249
+msgid "Applications"
+msgstr ""
 
-#: kglobalshortcutseditor.cpp:180
+#: kglobalshortcutseditor.cpp:300
+#, kde-format
+msgid "Launch %1"
+msgstr ""
+
+#: kglobalshortcutseditor.cpp:337
 #, kde-format
 msgid ""
 "Component '%1' is currently active. Only global shortcuts currently not "
@@ -79,12 +84,12 @@ msgstr ""
 "prečice biće uklonjene sa spiska.</p><p>Sve globalne prečice ponovo će biti "
 "registrovane s podrazumijevanim vrijednostima pri narednom pokretanju.</p>."
 
-#: kglobalshortcutseditor.cpp:182 kglobalshortcutseditor.cpp:192
+#: kglobalshortcutseditor.cpp:339 kglobalshortcutseditor.cpp:349
 msgid "Remove component"
 msgstr "Ukloni komponentu"
 
 # rewrite-msgid: /default settings/default values/
-#: kglobalshortcutseditor.cpp:188
+#: kglobalshortcutseditor.cpp:345
 #, kde-format
 msgid ""
 "Are you sure you want to remove the registered shortcuts for component '%1'? "
@@ -95,7 +100,15 @@ msgstr ""
 "Komponenta i prečice ponovo će se registrovati s podrazumijevanim "
 "vrijednostima pri narednom pokretanju.</p>."
 
-#: kglobalshortcutseditor.cpp:386
+#: kglobalshortcutseditor.cpp:452
+msgid "Application Launchers"
+msgstr ""
+
+#: kglobalshortcutseditor.cpp:455
+msgid "Other Shortcuts"
+msgstr ""
+
+#: kglobalshortcutseditor.cpp:560
 msgid ""
 "Your current changes will be lost if you load another scheme before saving "
 "this one"
@@ -104,21 +117,21 @@ msgstr ""
 "sačuvate ovu"
 
 # >> @title:window
-#: kglobalshortcutseditor.cpp:387
+#: kglobalshortcutseditor.cpp:561
 msgid "Load Shortcut Scheme"
 msgstr "Učitavanje šeme prečica"
 
-#: kglobalshortcutseditor.cpp:388
+#: kglobalshortcutseditor.cpp:562
 msgid "Load"
 msgstr "Učitaj"
 
-#: kglobalshortcutseditor.cpp:401
+#: kglobalshortcutseditor.cpp:575
 #, kde-format
 msgid "This file (%1) does not exist. You can only select local files."
 msgstr ""
 "Fajl <filename>%1</filename> ne postoji. Možete birati samo lokalne fajlove."
 
-#: kglobalshortcutseditor.cpp:429 kglobalshortcutseditor.cpp:452
+#: kglobalshortcutseditor.cpp:603 kglobalshortcutseditor.cpp:626
 #, kde-format
 msgid ""
 "Message: %1\n"
@@ -127,19 +140,44 @@ msgstr ""
 "Poruka: %1\n"
 "Greška: %2"
 
-#: kglobalshortcutseditor.cpp:434 kglobalshortcutseditor.cpp:457
+#: kglobalshortcutseditor.cpp:608 kglobalshortcutseditor.cpp:631
 msgid "Failed to contact the KDE global shortcuts daemon\n"
 msgstr "Nema kontakta sa KDE‑ovim demonom za globalne prečice\n"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kglobalshortcutseditor.ui:19
-msgid "KDE component:"
-msgstr "Komponenta KDE‑a:"
+#. i18n: ectx: property (text), widget (QLabel, componentLabel)
+#: kglobalshortcutseditor.ui:25
+#, fuzzy
+#| msgid "Components"
+msgid "Component:"
+msgstr "Komponente"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, addButton)
+#: kglobalshortcutseditor.ui:62
+msgid "Add a new shortcut to an Application..."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QToolButton, addButton)
+#. i18n: ectx: property (text), widget (QToolButton, removeButton)
+#: kglobalshortcutseditor.ui:65 kglobalshortcutseditor.ui:75
+msgid "..."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, removeButton)
+#: kglobalshortcutseditor.ui:72
+#, fuzzy
+#| msgid "Remove component"
+msgid "Remove the selected component"
+msgstr "Ukloni komponentu"
 
 #. i18n: ectx: property (text), widget (QPushButton, menu_button)
-#: kglobalshortcutseditor.ui:36
+#: kglobalshortcutseditor.ui:95
 msgid "File"
 msgstr "Fajl"
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, SelectApplicationDialog)
+#: select_application.ui:14
+msgid "Select Application"
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, SelectSchemeDialog)
 #. i18n: ectx: property (clickMessage), widget (KUrlRequester, m_url)
@@ -166,3 +204,9 @@ msgstr "Izaberite fajl šeme prečica"
 #: select_scheme_dialog.ui:95
 msgid "&Path:"
 msgstr "&Putanja:"
+
+#~ msgid "Remove Component"
+#~ msgstr "Ukloni komponentu"
+
+#~ msgid "KDE component:"
+#~ msgstr "Komponenta KDE‑a:"
