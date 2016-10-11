@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-10-10 07:24+0000\n"
+"POT-Creation-Date: 2016-10-11 08:12+0000\n"
 "PO-Revision-Date: 2014-01-31 19:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -19,21 +19,373 @@ msgstr ""
 "X-Generator: Launchpad (build 16820)\n"
 "X-Launchpad-Export-Date: 2013-11-04 05:58+0000\n"
 
-#: csv/csvimportexportplugininterface.cpp:40
+#: csv/csvimportexportplugininterface.cpp:53
 msgid "Export CSV file..."
 msgstr "Izvezi CSV datoteku..."
 
-#: csv/csvimportexportplugininterface.cpp:41
+#: csv/csvimportexportplugininterface.cpp:54
 msgid "Export contacts to a file in comma separated value format."
 msgstr "Izvezite kontakte u datoteku u formatu zarezom odvojenih vrijednosti."
 
-#: csv/csvimportexportplugininterface.cpp:46
+#: csv/csvimportexportplugininterface.cpp:59
 msgid "Import CSV file..."
 msgstr "Uvezi CSV datoteku..."
 
-#: csv/csvimportexportplugininterface.cpp:47
+#: csv/csvimportexportplugininterface.cpp:60
 msgid "Import contacts from a file in comma separated value format."
 msgstr "Uvezite kontakte iz datoteke u formatu zarezom odvojenih vrijednosti."
+
+#: csv/csvimportexportplugininterface.cpp:201
+#: ldif/ldifimportexportplugininterface.cpp:135
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b></qt>"
+msgstr "<qt>Nije moguće otvoriti datoteku <b>%1</b></qt>"
+
+#: csv/csvimportexportplugininterface.cpp:215
+#: ldif/ldifimportexportplugininterface.cpp:167
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b>.</qt>"
+msgstr "<qt>Nije moguće otvoriti datoteku <b>%1</b>.</qt>"
+
+#: csv/import/csvimportdialog.cpp:182
+msgctxt "@title:window"
+msgid "CSV Import Dialog"
+msgstr "Prozorče CSV uvoza"
+
+#: csv/import/csvimportdialog.cpp:221
+msgctxt "@label"
+msgid "Importing contacts"
+msgstr "Uvozim kontakte"
+
+#: csv/import/csvimportdialog.cpp:293
+msgctxt "@label"
+msgid "File to import:"
+msgstr "Datoteka za uvoženje:"
+
+#: csv/import/csvimportdialog.cpp:302
+msgctxt "@info:tooltip"
+msgid "Select a csv file to import"
+msgstr "Slektujte csv direktorij za umetanje"
+
+#: csv/import/csvimportdialog.cpp:305
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to start a file chooser that will allow you to select a "
+"csv file to import."
+msgstr ""
+"Kliknite na ovo dugme da pokrenete pretraživač direktorija koji će vam "
+"omogućiti da selektujete cvs direktorij za umetanje."
+
+#: csv/import/csvimportdialog.cpp:312
+msgctxt "@title:group"
+msgid "Delimiter"
+msgstr "Razdvajač"
+
+#: csv/import/csvimportdialog.cpp:322
+msgctxt "@option:radio Field separator"
+msgid "Comma"
+msgstr "Zarez"
+
+#: csv/import/csvimportdialog.cpp:324
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a comma"
+msgstr "Setujte separator za zarez"
+
+#: csv/import/csvimportdialog.cpp:327
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the comma as a field separator."
+msgstr ""
+"Selektujte ovu opciju ako vaš csv direktorij koristi zarez kao separator "
+"između dva polja."
+
+#: csv/import/csvimportdialog.cpp:332
+msgctxt "@option:radio Field separator"
+msgid "Semicolon"
+msgstr "Polukolone"
+
+#: csv/import/csvimportdialog.cpp:334
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a semicolon"
+msgstr "Postavi razdvajač polja sa tačkom-zarez '';''"
+
+#: csv/import/csvimportdialog.cpp:337
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the semicolon as a field separator."
+msgstr ""
+"Odaberite ovu opciju ako vaša csv datoteka koristi tačka-zarez kao "
+"razdjelnik polja."
+
+#: csv/import/csvimportdialog.cpp:341
+msgctxt "@option:radio Field separator"
+msgid "Tabulator"
+msgstr "Tabulator"
+
+#: csv/import/csvimportdialog.cpp:343
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a tab character"
+msgstr "Postavi razdvajač polja na tab znak"
+
+#: csv/import/csvimportdialog.cpp:346
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the tab character as a field "
+"separator."
+msgstr ""
+"Selektujte ovu opciju ako vaš csv direktorij koristi tab znak kao razdvajač "
+"polja."
+
+#: csv/import/csvimportdialog.cpp:350
+msgctxt "@option:radio Field separator"
+msgid "Space"
+msgstr "Razmak"
+
+#: csv/import/csvimportdialog.cpp:352
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a space character"
+msgstr "Postavi razdvajač polja na space znak"
+
+#: csv/import/csvimportdialog.cpp:355
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the space character as a field "
+"separator."
+msgstr ""
+"Selektujte ovu opciju ako vaš csv direktorij koristi znak space kao "
+"razdvajač polja."
+
+#: csv/import/csvimportdialog.cpp:359
+msgctxt "@option:radio Custum field separator"
+msgid "Other"
+msgstr "Drugo"
+
+#: csv/import/csvimportdialog.cpp:361
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a custom character"
+msgstr "Postavi razdvajač polja na proizvoljan znak"
+
+#: csv/import/csvimportdialog.cpp:364
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if to use some other character as the field delimiter for "
+"the data in your csv file."
+msgstr ""
+"Odaberite ovu opciju ako ćete koristiti neki drugi znak kao graničnik polja "
+"za podatke u CSV datoteku."
+
+#: csv/import/csvimportdialog.cpp:372
+msgctxt "@info:tooltip"
+msgid "Set the custom delimiter character"
+msgstr "Postavi proizvoljan granični znak"
+
+#: csv/import/csvimportdialog.cpp:375
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter a custom character to use as the delimiter character. If you enter "
+"more than 1 character, only the first will be used and the remaining "
+"characters will be ignored."
+msgstr ""
+"Ukucajte proizvoljni znak da biste koristili granični znak. Ako ukucate više "
+"od jednog znaka, samo će prvi znak biti korišten a preostali će biti "
+"zanemareni."
+
+#: csv/import/csvimportdialog.cpp:381
+msgctxt "@label:listbox"
+msgid "Text quote:"
+msgstr "Navodnici za tekst:"
+
+#: csv/import/csvimportdialog.cpp:388
+msgctxt "@info:tooltip"
+msgid "Select the quote character"
+msgstr "Označi znake navoda"
+
+#: csv/import/csvimportdialog.cpp:391
+msgctxt "@info:whatsthis"
+msgid ""
+"Choose the character that your csv data uses to \"quote\" the field "
+"delimiter if that character happens to occur within the data.  For example, "
+"if the comma is the field delimiter, then any comma occurring with the data "
+"will be \"quoted\" by the character specified here."
+msgstr ""
+"Odaberite znak koji vaše CSV podatke koristi da \"citira\" razdvajanja polja "
+"ako se taj znak javlja unutar podataka. Na primjer, ako je zarez polje "
+"graničnik, onda svaki zarez u podacima da se \"citira\" ovdje navedenim "
+"znakom."
+
+#: csv/import/csvimportdialog.cpp:396
+msgctxt "@item:inlistbox Qoute character option"
+msgid "\""
+msgstr "\""
+
+#: csv/import/csvimportdialog.cpp:397
+msgctxt "@item:inlistbox Quote character option"
+msgid "'"
+msgstr "'"
+
+#: csv/import/csvimportdialog.cpp:398
+msgctxt "@item:inlistbox Quote character option"
+msgid "None"
+msgstr "Ništa"
+
+#: csv/import/csvimportdialog.cpp:402
+msgctxt "@label:listbox"
+msgid "Date format:"
+msgstr "Format datuma:"
+
+#: csv/import/csvimportdialog.cpp:411
+msgctxt "@info:tooltip"
+msgid ""
+"<para><list><item>y: year with 2 digits</item><item>Y: year with 4 digits</"
+"item><item>m: month with 1 or 2 digits</item><item>M: month with 2 digits</"
+"item><item>d: day with 1 or 2 digits</item><item>D: day with 2 digits</"
+"item><item>H: hours with 2 digits</item><item>I: minutes with 2 digits</"
+"item><item>S: seconds with 2 digits</item></list></para>"
+msgstr ""
+"<para><list><item>g: 2 cifre za godinu</item><item>G: 4 cifre za godinu</"
+"item><item>m: 1 ili 2 cifre za mesec</item><item>M: 2 cifre za mesec</"
+"item><item>d: 1 ili 2 cifre za dan</item><item>D: 2 cifre za dan</"
+"item><item>Č: 2 cifre za sate</item><item>O: 2 cifre za minute</"
+"item><item>S: 2 cifre za sekunde</item></list></para>"
+
+#: csv/import/csvimportdialog.cpp:423
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>Specify a format to use for dates included in your csv data. Use the "
+"following sequences to help you define the format:</"
+"para><para><list><item>y: year with 2 digits</item><item>Y: year with 4 "
+"digits</item><item>m: month with 1 or 2 digits</item><item>M: month with 2 "
+"digits</item><item>d: day with 1 or 2 digits</item><item>D: day with 2 "
+"digits</item><item>H: hours with 2 digits</item><item>I: minutes with 2 "
+"digits</item><item>S: seconds with 2 digits</item></list></"
+"para><para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</"
+"para>"
+msgstr ""
+"<para>Odredite format koristiti za datume uključene u CSV podatke. Koristite "
+"sljedeće sekvence koje će vam pomoći definirati oblik:</"
+"para><para><list><item>y: godina s dvije cifre</item><item>Y: godina s "
+"četiri cifre</item><item>m: mjesec s 1 ili 2 cifre</item><item>M: mjesec s "
+"dvije cifre</item><item>d: dan s 1 ili 2 cifre</item><item>D: dan s dvije "
+"cifre</item><item>H: sat s dvije cifre</item><item>I: minuta s dvije cifre</"
+"item><item>S: sekunda s dvije cifre</item></list></para><para>Primjer: \"Y-M-"
+"D\" odgovara datumu poput \"2012-01-04\"</para>"
+
+#: csv/import/csvimportdialog.cpp:439
+msgctxt "@label:listbox"
+msgid "Text codec:"
+msgstr "Kodek teksta:"
+
+#: csv/import/csvimportdialog.cpp:446
+msgctxt "@info:tooltip"
+msgid "Select the text codec"
+msgstr "Selektujte tekstualni codec"
+
+#: csv/import/csvimportdialog.cpp:449
+msgctxt "@info:whatsthis"
+msgid "Choose the character encoding of the data in your csv file."
+msgstr "Odaberite način kodiranja znakova podataka u Vašoj csv datoteci."
+
+#: csv/import/csvimportdialog.cpp:453
+msgctxt "@option:check"
+msgid "Skip first row of file"
+msgstr "Preskoči prvi red datoteke"
+
+#: csv/import/csvimportdialog.cpp:456
+msgctxt "@info:tooltip"
+msgid "Skip first row of csv file when importing"
+msgstr "Preskoči prvi red csv datoteke kada se uvozi"
+
+#: csv/import/csvimportdialog.cpp:459
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want the import to skip over the first row of the csv "
+"data. In many cases, the first line of a csv file will be a comment line "
+"describing the order of the data fields included in the file."
+msgstr ""
+"Označite ovu kućicu ako želite da uvoz preskoči prvi red CSV podataka. U "
+"mnogim slučajevima, prvi red CSV datoteke će biti komentar linija koja "
+"opisuje redoslijed polja podataka uključenih u datoteku."
+
+#: csv/import/csvimportdialog.cpp:475
+msgctxt "@action:button"
+msgid "Apply Template..."
+msgstr "Primijeni šablon..."
+
+#: csv/import/csvimportdialog.cpp:476
+msgctxt "@action:button"
+msgid "Save Template..."
+msgstr "Sačuvaj šablon..."
+
+#: csv/import/csvimportdialog.cpp:496
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Local (%1)"
+msgstr "Lokalni (%1)"
+
+#: csv/import/csvimportdialog.cpp:498
+msgctxt "@item:inlistbox Codec setting"
+msgid "Latin1"
+msgstr "Latin1"
+
+#: csv/import/csvimportdialog.cpp:499
+msgctxt "@item:inlistbox Codec setting"
+msgid "Unicode"
+msgstr "Unikod"
+
+#: csv/import/csvimportdialog.cpp:500
+msgctxt "@item:inlistbox Codec setting"
+msgid "Microsoft Unicode"
+msgstr "Microsoft Unicode"
+
+#: csv/import/csvimportdialog.cpp:605
+msgctxt "@info:status"
+msgid "You must assign at least one column."
+msgstr "Morate dodijeliti makar jednu kolonu."
+
+#: csv/import/csvimportdialog.cpp:617
+msgctxt "@label"
+msgid "There are no templates available yet."
+msgstr "Još uvijek nema dostupnih šablona."
+
+#: csv/import/csvimportdialog.cpp:618
+msgctxt "@title:window"
+msgid "No templates available"
+msgstr "Nema dostupnih šablona"
+
+#: csv/import/csvimportdialog.cpp:684
+msgctxt "@title:window"
+msgid "Template Name"
+msgstr "Ime šablona"
+
+#: csv/import/csvimportdialog.cpp:685
+msgctxt "@info"
+msgid "Please enter a name for the template:"
+msgstr "Molim unesite ime za šablon:"
+
+#: csv/import/csvimportdialog.cpp:739
+msgctxt "@info:status"
+msgid "Cannot open input file."
+msgstr "Nije moguće otvoriti novu ulaznu datoteku."
+
+#: csv/import/qcsvreader.cpp:111
+msgid "Device is not open"
+msgstr "Uređaj nije otovren"
+
+#: csv/import/templateselectiondialog.cpp:194
+#, kde-format
+msgctxt "@label"
+msgid "Do you really want to delete template '%1'?"
+msgstr "Da li stvarno želite da obriete šablon '%1'?"
+
+#: csv/import/templateselectiondialog.cpp:212
+msgctxt "@title:window"
+msgid "Template Selection"
+msgstr "Odabiranje šablona"
+
+#: csv/import/templateselectiondialog.cpp:215
+msgctxt "@info"
+msgid "Please select a template, that matches the CSV file:"
+msgstr "Molim odaberite šablon, koji odgovara CSV datoteci:"
 
 #: gmx/gmximportexportplugininterface.cpp:40
 msgid "Import GMX file..."
@@ -51,29 +403,59 @@ msgstr "Izvezi GMX datoteku..."
 msgid "Export contacts to a GMX address book file."
 msgstr "Izvezite kontakte u GMX datoteku adresara."
 
-#: ldap/ldapimportexportplugininterface.cpp:40
+#: ldap/ldapimportexportplugininterface.cpp:45
 msgid "Import From LDAP server..."
 msgstr "Uvezi sa LDAP servera..."
 
-#: ldap/ldapimportexportplugininterface.cpp:41
+#: ldap/ldapimportexportplugininterface.cpp:46
 msgid "Import contacts from an LDAP server."
 msgstr "Uvezite kontakte sa LDAP servera."
 
-#: ldif/ldifimportexportplugininterface.cpp:40
+#: ldif/ldifimportexportplugininterface.cpp:50
 msgid "Import LDIF file..."
 msgstr "Uvezi LDIF datoteku..."
 
-#: ldif/ldifimportexportplugininterface.cpp:41
+#: ldif/ldifimportexportplugininterface.cpp:51
 msgid "Import contacts from an LDIF file."
 msgstr "Uvezite kontakte iz LDIF datoteke."
 
-#: ldif/ldifimportexportplugininterface.cpp:46
+#: ldif/ldifimportexportplugininterface.cpp:56
 msgid "Export LDIF file..."
 msgstr "Izvezi LDIF datoteku..."
 
-#: ldif/ldifimportexportplugininterface.cpp:47
+#: ldif/ldifimportexportplugininterface.cpp:57
 msgid "Export contacts to an LDIF file."
 msgstr "Izvezite kontakte u LDIF datoteku."
+
+#: ldif/ldifimportexportplugininterface.cpp:90
+#: ldif/ldifimportexportplugininterface.cpp:127
+msgid "LDif Files (*.ldif)"
+msgstr ""
+
+#: ldif/ldifimportexportplugininterface.cpp:97
+#, kde-format
+msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
+msgstr "<qt>Ne mogu da otvorim <b>%1</b> za čitanje.</qt>"
+
+#: shared/importexportengine.cpp:81
+msgid "Select Address Book"
+msgstr "Izaberite adresar"
+
+#: shared/importexportengine.cpp:83
+msgid "Select the address book the imported contact(s) shall be saved in:"
+msgstr "Izaberite adresar u kome će biti sačuvan(i) uveženi kontakt(i)"
+
+#: shared/importexportengine.cpp:96
+msgid "Import Contacts"
+msgstr "Uvezi kontakte"
+
+#: shared/importexportengine.cpp:98
+#, kde-format
+msgid "Importing one contact to %2"
+msgid_plural "Importing %1 contacts to %2"
+msgstr[0] "Uvozim %1 kontakt u %2"
+msgstr[1] "Uvozim %1 kontakta u %2"
+msgstr[2] "Uvozim %1 kontakta u %2"
 
 #: vcards/engine/vcard_xxport.cpp:94
 msgctxt "@info"
@@ -989,320 +1371,11 @@ msgstr "Izvezite kontakte u vKard 2.1 datoteku."
 #~ "kontakata koji odogovaraju tom stringu će biti prikazan. Ovo je brz način "
 #~ "potrage za kontaktima koji vas interesuju."
 
-#~ msgid "<qt>Unable to open file <b>%1</b></qt>"
-#~ msgstr "<qt>Nije moguće otvoriti datoteku <b>%1</b></qt>"
-
-#~ msgid "<qt>Unable to open file <b>%1</b>.</qt>"
-#~ msgstr "<qt>Nije moguće otvoriti datoteku <b>%1</b>.</qt>"
-
-#~ msgctxt "@title:window"
-#~ msgid "CSV Import Dialog"
-#~ msgstr "Prozorče CSV uvoza"
-
-#~ msgctxt "@label"
-#~ msgid "Importing contacts"
-#~ msgstr "Uvozim kontakte"
-
-#~ msgctxt "@label"
-#~ msgid "File to import:"
-#~ msgstr "Datoteka za uvoženje:"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Select a csv file to import"
-#~ msgstr "Slektujte csv direktorij za umetanje"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "Click this button to start a file chooser that will allow you to select a "
-#~ "csv file to import."
-#~ msgstr ""
-#~ "Kliknite na ovo dugme da pokrenete pretraživač direktorija koji će vam "
-#~ "omogućiti da selektujete cvs direktorij za umetanje."
-
-#~ msgctxt "@title:group"
-#~ msgid "Delimiter"
-#~ msgstr "Razdvajač"
-
-#~ msgctxt "@option:radio Field separator"
-#~ msgid "Comma"
-#~ msgstr "Zarez"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Set the field separator to a comma"
-#~ msgstr "Setujte separator za zarez"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "Select this option if your csv file uses the comma as a field separator."
-#~ msgstr ""
-#~ "Selektujte ovu opciju ako vaš csv direktorij koristi zarez kao separator "
-#~ "između dva polja."
-
-#~ msgctxt "@option:radio Field separator"
-#~ msgid "Semicolon"
-#~ msgstr "Polukolone"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Set the field separator to a semicolon"
-#~ msgstr "Postavi razdvajač polja sa tačkom-zarez '';''"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "Select this option if your csv file uses the semicolon as a field "
-#~ "separator."
-#~ msgstr ""
-#~ "Odaberite ovu opciju ako vaša csv datoteka koristi tačka-zarez kao "
-#~ "razdjelnik polja."
-
-#~ msgctxt "@option:radio Field separator"
-#~ msgid "Tabulator"
-#~ msgstr "Tabulator"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Set the field separator to a tab character"
-#~ msgstr "Postavi razdvajač polja na tab znak"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "Select this option if your csv file uses the tab character as a field "
-#~ "separator."
-#~ msgstr ""
-#~ "Selektujte ovu opciju ako vaš csv direktorij koristi tab znak kao "
-#~ "razdvajač polja."
-
-#~ msgctxt "@option:radio Field separator"
-#~ msgid "Space"
-#~ msgstr "Razmak"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Set the field separator to a space character"
-#~ msgstr "Postavi razdvajač polja na space znak"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "Select this option if your csv file uses the space character as a field "
-#~ "separator."
-#~ msgstr ""
-#~ "Selektujte ovu opciju ako vaš csv direktorij koristi znak space kao "
-#~ "razdvajač polja."
-
-#~ msgctxt "@option:radio Custum field separator"
-#~ msgid "Other"
-#~ msgstr "Drugo"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Set the field separator to a custom character"
-#~ msgstr "Postavi razdvajač polja na proizvoljan znak"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "Select this option if to use some other character as the field delimiter "
-#~ "for the data in your csv file."
-#~ msgstr ""
-#~ "Odaberite ovu opciju ako ćete koristiti neki drugi znak kao graničnik "
-#~ "polja za podatke u CSV datoteku."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Set the custom delimiter character"
-#~ msgstr "Postavi proizvoljan granični znak"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "Enter a custom character to use as the delimiter character. If you enter "
-#~ "more than 1 character, only the first will be used and the remaining "
-#~ "characters will be ignored."
-#~ msgstr ""
-#~ "Ukucajte proizvoljni znak da biste koristili granični znak. Ako ukucate "
-#~ "više od jednog znaka, samo će prvi znak biti korišten a preostali će biti "
-#~ "zanemareni."
-
-#~ msgctxt "@label:listbox"
-#~ msgid "Text quote:"
-#~ msgstr "Navodnici za tekst:"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Select the quote character"
-#~ msgstr "Označi znake navoda"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "Choose the character that your csv data uses to \"quote\" the field "
-#~ "delimiter if that character happens to occur within the data.  For "
-#~ "example, if the comma is the field delimiter, then any comma occurring "
-#~ "with the data will be \"quoted\" by the character specified here."
-#~ msgstr ""
-#~ "Odaberite znak koji vaše CSV podatke koristi da \"citira\" razdvajanja "
-#~ "polja ako se taj znak javlja unutar podataka. Na primjer, ako je zarez "
-#~ "polje graničnik, onda svaki zarez u podacima da se \"citira\" ovdje "
-#~ "navedenim znakom."
-
-#~ msgctxt "@item:inlistbox Qoute character option"
-#~ msgid "\""
-#~ msgstr "\""
-
-#~ msgctxt "@item:inlistbox Quote character option"
-#~ msgid "'"
-#~ msgstr "'"
-
-#~ msgctxt "@item:inlistbox Quote character option"
-#~ msgid "None"
-#~ msgstr "Ništa"
-
-#~ msgctxt "@label:listbox"
-#~ msgid "Date format:"
-#~ msgstr "Format datuma:"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "<para><list><item>y: year with 2 digits</item><item>Y: year with 4 "
-#~ "digits</item><item>m: month with 1 or 2 digits</item><item>M: month with "
-#~ "2 digits</item><item>d: day with 1 or 2 digits</item><item>D: day with 2 "
-#~ "digits</item><item>H: hours with 2 digits</item><item>I: minutes with 2 "
-#~ "digits</item><item>S: seconds with 2 digits</item></list></para>"
-#~ msgstr ""
-#~ "<para><list><item>g: 2 cifre za godinu</item><item>G: 4 cifre za godinu</"
-#~ "item><item>m: 1 ili 2 cifre za mesec</item><item>M: 2 cifre za mesec</"
-#~ "item><item>d: 1 ili 2 cifre za dan</item><item>D: 2 cifre za dan</"
-#~ "item><item>Č: 2 cifre za sate</item><item>O: 2 cifre za minute</"
-#~ "item><item>S: 2 cifre za sekunde</item></list></para>"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "<para>Specify a format to use for dates included in your csv data. Use "
-#~ "the following sequences to help you define the format:</"
-#~ "para><para><list><item>y: year with 2 digits</item><item>Y: year with 4 "
-#~ "digits</item><item>m: month with 1 or 2 digits</item><item>M: month with "
-#~ "2 digits</item><item>d: day with 1 or 2 digits</item><item>D: day with 2 "
-#~ "digits</item><item>H: hours with 2 digits</item><item>I: minutes with 2 "
-#~ "digits</item><item>S: seconds with 2 digits</item></list></"
-#~ "para><para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</"
-#~ "para>"
-#~ msgstr ""
-#~ "<para>Odredite format koristiti za datume uključene u CSV podatke. "
-#~ "Koristite sljedeće sekvence koje će vam pomoći definirati oblik:</"
-#~ "para><para><list><item>y: godina s dvije cifre</item><item>Y: godina s "
-#~ "četiri cifre</item><item>m: mjesec s 1 ili 2 cifre</item><item>M: mjesec "
-#~ "s dvije cifre</item><item>d: dan s 1 ili 2 cifre</item><item>D: dan s "
-#~ "dvije cifre</item><item>H: sat s dvije cifre</item><item>I: minuta s "
-#~ "dvije cifre</item><item>S: sekunda s dvije cifre</item></list></"
-#~ "para><para>Primjer: \"Y-M-D\" odgovara datumu poput \"2012-01-04\"</para>"
-
-#~ msgctxt "@label:listbox"
-#~ msgid "Text codec:"
-#~ msgstr "Kodek teksta:"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Select the text codec"
-#~ msgstr "Selektujte tekstualni codec"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid "Choose the character encoding of the data in your csv file."
-#~ msgstr "Odaberite način kodiranja znakova podataka u Vašoj csv datoteci."
-
-#~ msgctxt "@option:check"
-#~ msgid "Skip first row of file"
-#~ msgstr "Preskoči prvi red datoteke"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Skip first row of csv file when importing"
-#~ msgstr "Preskoči prvi red csv datoteke kada se uvozi"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "Check this box if you want the import to skip over the first row of the "
-#~ "csv data. In many cases, the first line of a csv file will be a comment "
-#~ "line describing the order of the data fields included in the file."
-#~ msgstr ""
-#~ "Označite ovu kućicu ako želite da uvoz preskoči prvi red CSV podataka. U "
-#~ "mnogim slučajevima, prvi red CSV datoteke će biti komentar linija koja "
-#~ "opisuje redoslijed polja podataka uključenih u datoteku."
-
-#~ msgctxt "@action:button"
-#~ msgid "Apply Template..."
-#~ msgstr "Primijeni šablon..."
-
-#~ msgctxt "@action:button"
-#~ msgid "Save Template..."
-#~ msgstr "Sačuvaj šablon..."
-
-#~ msgctxt "@item:inlistbox Codec setting"
-#~ msgid "Local (%1)"
-#~ msgstr "Lokalni (%1)"
-
-#~ msgctxt "@item:inlistbox Codec setting"
-#~ msgid "Latin1"
-#~ msgstr "Latin1"
-
-#~ msgctxt "@item:inlistbox Codec setting"
-#~ msgid "Unicode"
-#~ msgstr "Unikod"
-
-#~ msgctxt "@item:inlistbox Codec setting"
-#~ msgid "Microsoft Unicode"
-#~ msgstr "Microsoft Unicode"
-
-#~ msgctxt "@info:status"
-#~ msgid "You must assign at least one column."
-#~ msgstr "Morate dodijeliti makar jednu kolonu."
-
-#~ msgctxt "@label"
-#~ msgid "There are no templates available yet."
-#~ msgstr "Još uvijek nema dostupnih šablona."
-
-#~ msgctxt "@title:window"
-#~ msgid "No templates available"
-#~ msgstr "Nema dostupnih šablona"
-
-#~ msgctxt "@title:window"
-#~ msgid "Template Name"
-#~ msgstr "Ime šablona"
-
-#~ msgctxt "@info"
-#~ msgid "Please enter a name for the template:"
-#~ msgstr "Molim unesite ime za šablon:"
-
-#~ msgctxt "@info:status"
-#~ msgid "Cannot open input file."
-#~ msgstr "Nije moguće otvoriti novu ulaznu datoteku."
-
-#~ msgid "Device is not open"
-#~ msgstr "Uređaj nije otovren"
-
-#~ msgctxt "@label"
-#~ msgid "Do you really want to delete template '%1'?"
-#~ msgstr "Da li stvarno želite da obriete šablon '%1'?"
-
-#~ msgctxt "@title:window"
-#~ msgid "Template Selection"
-#~ msgstr "Odabiranje šablona"
-
-#~ msgctxt "@info"
-#~ msgid "Please select a template, that matches the CSV file:"
-#~ msgstr "Molim odaberite šablon, koji odgovara CSV datoteci:"
-
 #~ msgid "GMX address book file (*.gmxa)"
 #~ msgstr "GMX datoteka adresara (*.gmxa)"
 
-#~ msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
-#~ msgstr "<qt>Ne mogu da otvorim <b>%1</b> za čitanje.</qt>"
-
 #~ msgid "%1 is not a GMX address book file."
 #~ msgstr "%1 nije GMX datoteka adresara."
-
-#~ msgid "Select Address Book"
-#~ msgstr "Izaberite adresar"
-
-#~ msgid "Select the address book the imported contact(s) shall be saved in:"
-#~ msgstr "Izaberite adresar u kome će biti sačuvan(i) uveženi kontakt(i)"
-
-#~ msgid "Import Contacts"
-#~ msgstr "Uvezi kontakte"
-
-#~ msgid "Importing one contact to %2"
-#~ msgid_plural "Importing %1 contacts to %2"
-#~ msgstr[0] "Uvozim %1 kontakt u %2"
-#~ msgstr[1] "Uvozim %1 kontakta u %2"
-#~ msgstr[2] "Uvozim %1 kontakta u %2"
 
 #~ msgid "Which contact do you want to export?"
 #~ msgstr "Koji kontakt želite da izvezete?"
