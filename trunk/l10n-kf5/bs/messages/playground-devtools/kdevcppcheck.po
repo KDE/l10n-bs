@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: $2\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-09-22 07:40+0000\n"
+"POT-Creation-Date: 2016-10-12 07:18+0000\n"
 "PO-Revision-Date: 2015-01-23 15:35+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: none\n"
@@ -21,35 +21,49 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: config/cppcheckpreferences.cpp:48 config/genericconfigpage.cpp:51
-#: plugin.cpp:86
+#: config/genericconfigpage.cpp:51 config/globalconfigpage.cpp:47
 msgid "Cppcheck"
 msgstr "Cppcheck"
 
-#: config/cppcheckpreferences.cpp:53
+#: config/globalconfigpage.cpp:52
 #, fuzzy
 #| msgid "Cppcheck output"
 msgid "Configure Cppcheck settings"
 msgstr "Cppcheck izlaz"
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, CppCheckSettings)
-#: config/ui/cppchecksettings.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, cppcheck::GlobalConfigPage)
+#: config/globalconfigpage.ui:14
 #, fuzzy
 #| msgid "Cppcheck output"
 msgid "Cppcheck Settings"
 msgstr "Cppcheck izlaz"
 
 #. i18n: ectx: property (title), widget (QGroupBox, pathsGroupBox)
-#: config/ui/cppchecksettings.ui:20
+#: config/globalconfigpage.ui:20
 msgid "Paths"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, cppcheckLabel)
-#: config/ui/cppchecksettings.ui:28
+#: config/globalconfigpage.ui:26
 #, fuzzy
 #| msgid "Cppcheck Executable:"
 msgid "Cppchec&k executable"
 msgstr "Cppcheck Izvršna datoteka:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, outputGroupBox)
+#: config/globalconfigpage.ui:45
+msgid "Output"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_hideOutputView)
+#: config/globalconfigpage.ui:51
+msgid "Hide output view during check"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showXmlOutput)
+#: config/globalconfigpage.ui:58
+msgid "Show cppcheck XML output in the output view"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: config/ui/genericconfig.ui:20
@@ -126,33 +140,33 @@ msgstr "Upozori ako nedostaje uključenja"
 msgid "missingInclude"
 msgstr "nedostajeuključenje"
 
-#: job.cpp:44
+#: job.cpp:49
 msgid "Cppcheck output"
 msgstr "Cppcheck izlaz"
 
-#: job.cpp:149
+#: job.cpp:181
 #, fuzzy, kde-format
 #| msgid "Failed to start cppcheck from \"%1\"."
 msgid "Failed to start Cppcheck from \"%1\"."
 msgstr "Neuspjeli početak cppcheck-a od \"%1\"."
 
-#: job.cpp:153
+#: job.cpp:186
 msgid "Cppcheck crashed."
 msgstr "Cppcheck se krahirao."
 
-#: job.cpp:157
+#: job.cpp:190
 msgid "Cppcheck process timed out."
 msgstr "Cppcheck proces se predugo izvršava."
 
-#: job.cpp:161
+#: job.cpp:194
 msgid "Write to Cppcheck process failed."
 msgstr "Zapisivanje na Cppcheck proces nije uspjelo."
 
-#: job.cpp:165
+#: job.cpp:198
 msgid "Read from Cppcheck process failed."
 msgstr "Čitanje iz Cppcheck procesa nije uspjelo."
 
-#: job.cpp:175 parsers/cppcheckparser.cpp:212
+#: job.cpp:208 parser.cpp:216
 msgid "Cppcheck Error"
 msgstr "Cppcheck Greška"
 
@@ -162,48 +176,54 @@ msgctxt "@title:menu"
 msgid "Run"
 msgstr "Pokreni"
 
-#: parsers/cppcheckparser.cpp:211
+#: parser.cpp:215
 #, kde-format
 msgid "Cppcheck XML Parsing: error at line %1, column %2: %3"
 msgstr "Cppcheck XML Parsiranje: greška u liniji %1, koloni %2: %3"
 
-#: plugin.cpp:85
-msgid "Launches Cppcheck for current file"
-msgstr "Pokreće Cppcheck za trenutnu datoteku"
+#: plugin.cpp:70
+#, fuzzy
+#| msgid "Cppcheck for current file"
+msgid "Cppcheck (Current File)"
+msgstr "Cppcheck za trenutnu datoteku"
 
-#: plugin.cpp:90
-msgid "Launches Cppcheck for all files"
-msgstr "Pokreće Cppcheck za sve datoteke"
+#: plugin.cpp:76
+#, fuzzy
+#| msgid "Cppcheck for current file"
+msgid "Cppcheck (Current Project)"
+msgstr "Cppcheck za trenutnu datoteku"
 
-#: plugin.cpp:91
-msgid "Cppcheck (all Files)"
-msgstr "Cppcheck (sve Datoteke)"
+#: plugin.cpp:106
+msgctxt "@title:window"
+msgid "Test"
+msgstr ""
 
-#: plugin.cpp:115 plugin.cpp:123 plugin.cpp:132
+#: plugin.cpp:116 plugin.cpp:124 plugin.cpp:141
 #, fuzzy
 #| msgid "Failed to start Cppcheck"
 msgid "Error starting Cppcheck"
 msgstr "Neuspjeli početak Cppcheck-a"
 
-#: plugin.cpp:116
+#: plugin.cpp:117
 msgid "No active file, unable to deduce project."
 msgstr ""
 
-#: plugin.cpp:124
+#: plugin.cpp:125
 msgid "Active file isn't in a project"
 msgstr ""
 
-#: plugin.cpp:133
+#: plugin.cpp:142
 msgid "Can't load parameters. They must be set in the project settings."
 msgstr ""
 
-#: plugin.cpp:192
-msgid "Problems"
-msgstr ""
+#~ msgid "Launches Cppcheck for current file"
+#~ msgstr "Pokreće Cppcheck za trenutnu datoteku"
 
-#: plugin.cpp:203
-msgid "Cppcheck for current file"
-msgstr "Cppcheck za trenutnu datoteku"
+#~ msgid "Launches Cppcheck for all files"
+#~ msgstr "Pokreće Cppcheck za sve datoteke"
+
+#~ msgid "Cppcheck (all Files)"
+#~ msgstr "Cppcheck (sve Datoteke)"
 
 #~ msgid "Failed to start Cppcheck"
 #~ msgstr "Neuspjeli početak Cppcheck-a"
