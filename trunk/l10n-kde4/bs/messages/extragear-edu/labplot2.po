@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-10-16 01:32+0000\n"
+"POT-Creation-Date: 2016-10-17 01:34+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -59,7 +59,7 @@ msgstr "Statistike"
 #: src/kdefrontend/ui/dockwidgets/xyintegrationcurvedockgeneraltab.ui:95
 #: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:112
 #: src/kdefrontend/ui/dockwidgets/xysmoothcurvedockgeneraltab.ui:109
-#: src/kdefrontend/widgets/FitParametersWidget.cpp:47
+#: src/kdefrontend/widgets/FitParametersWidget.cpp:54
 msgid "Name"
 msgstr "Ime"
 
@@ -100,7 +100,7 @@ msgstr "iMax"
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:328
 #: src/kdefrontend/ui/dockwidgets/xydatareductioncurvedockgeneraltab.ui:413
 #: src/kdefrontend/ui/dockwidgets/xydifferentiationcurvedockgeneraltab.ui:317
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:453
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:455
 #: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:376
 #: src/kdefrontend/ui/dockwidgets/xyfouriertransformcurvedockgeneraltab.ui:332
 #: src/kdefrontend/ui/dockwidgets/xyintegrationcurvedockgeneraltab.ui:296
@@ -427,7 +427,7 @@ msgstr "%1: promijeni tip kolone"
 #: src/backend/worksheet/plots/cartesian/XYDataReductionCurve.cpp:396
 #: src/backend/worksheet/plots/cartesian/XYDifferentiationCurve.cpp:349
 #: src/backend/worksheet/plots/cartesian/XYEquationCurve.cpp:211
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:921
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:1039
 #: src/backend/worksheet/plots/cartesian/XYFourierFilterCurve.cpp:377
 #: src/backend/worksheet/plots/cartesian/XYFourierTransformCurve.cpp:383
 #: src/backend/worksheet/plots/cartesian/XYIntegrationCurve.cpp:345
@@ -3607,6 +3607,10 @@ msgstr "Ispiši radni list"
 msgid "no note element found"
 msgstr "nema elemenata u folderu"
 
+#: src/backend/nsl/nsl_dft.c:37 src/backend/nsl/nsl_fit.c:32
+msgid "Power"
+msgstr "Snaga"
+
 #: src/backend/nsl/nsl_dft.c:37
 msgid "Magnitude"
 msgstr ""
@@ -3624,11 +3628,6 @@ msgstr ""
 #| msgid "Reading binary data..."
 msgid "imaginary part"
 msgstr "Čitanje binarne podataka..."
-
-#: src/backend/nsl/nsl_dft.c:37
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:85
-msgid "Power"
-msgstr "Snaga"
 
 #: src/backend/nsl/nsl_dft.c:37
 msgid "Phase"
@@ -3737,6 +3736,66 @@ msgstr ""
 #| msgid "Direction"
 msgid "Fraction"
 msgstr "Smjer"
+
+#: src/backend/nsl/nsl_fit.c:32
+msgid "Polynomial"
+msgstr "Polinomski"
+
+#: src/backend/nsl/nsl_fit.c:32
+msgid "Exponential"
+msgstr "Eksponencijalno"
+
+#: src/backend/nsl/nsl_fit.c:32
+msgid "Inverse Exponential"
+msgstr "Inverzni eksponent"
+
+#: src/backend/nsl/nsl_fit.c:32
+msgid "Fourier"
+msgstr "Furijer"
+
+#: src/backend/nsl/nsl_fit.c:33
+msgid "Gaussian"
+msgstr "Gaussov"
+
+#: src/backend/nsl/nsl_fit.c:33
+msgid "Lorentz (Cauchy)"
+msgstr "Lorenc(Koši)"
+
+#: src/backend/nsl/nsl_fit.c:33
+msgid "Maxwell-Boltzmann"
+msgstr "Maksvel-Bolcman"
+
+#: src/backend/nsl/nsl_fit.c:33
+msgid "Sigmoid"
+msgstr ""
+
+#: src/backend/nsl/nsl_fit.c:33
+msgid "Gompertz"
+msgstr ""
+
+#: src/backend/nsl/nsl_fit.c:33
+msgid "Weibull"
+msgstr ""
+
+#: src/backend/nsl/nsl_fit.c:34
+#, fuzzy
+#| msgid "&Normalize Columns"
+msgid "Log-Normal"
+msgstr "&Normalizuj Kolone"
+
+#: src/backend/nsl/nsl_fit.c:34
+#, fuzzy
+#| msgid "Number"
+msgid "Gumbel"
+msgstr "Broj"
+
+#: src/backend/nsl/nsl_fit.c:34
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:66
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:617
+#: src/kdefrontend/dockwidgets/WorksheetDock.cpp:292
+#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:102
+msgid "Custom"
+msgstr "Specijalno"
 
 #: src/backend/nsl/nsl_geom_linesim.c:35
 msgid "Douglas-Peucker (number)"
@@ -4147,7 +4206,7 @@ msgstr "%1: postavi vertikalno punjenje"
 #: src/kdefrontend/ui/dockwidgets/xydatareductioncurvedockgeneraltab.ui:331
 #: src/kdefrontend/ui/dockwidgets/xydifferentiationcurvedockgeneraltab.ui:235
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:402
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:332
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:334
 #: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:242
 #: src/kdefrontend/ui/dockwidgets/xyfouriertransformcurvedockgeneraltab.ui:205
 #: src/kdefrontend/ui/dockwidgets/xyintegrationcurvedockgeneraltab.ui:224
@@ -5156,7 +5215,7 @@ msgstr "nije pronađen xy element na krivoj"
 
 #: src/backend/worksheet/plots/cartesian/XYDataReductionCurve.cpp:115
 #: src/backend/worksheet/plots/cartesian/XYDifferentiationCurve.cpp:119
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:123
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:125
 #: src/backend/worksheet/plots/cartesian/XYFourierFilterCurve.cpp:124
 #: src/backend/worksheet/plots/cartesian/XYFourierTransformCurve.cpp:119
 #: src/backend/worksheet/plots/cartesian/XYIntegrationCurve.cpp:119
@@ -5168,7 +5227,7 @@ msgstr "%1: dodijeli x-podatak"
 
 #: src/backend/worksheet/plots/cartesian/XYDataReductionCurve.cpp:128
 #: src/backend/worksheet/plots/cartesian/XYDifferentiationCurve.cpp:132
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:136
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:138
 #: src/backend/worksheet/plots/cartesian/XYFourierFilterCurve.cpp:137
 #: src/backend/worksheet/plots/cartesian/XYFourierTransformCurve.cpp:132
 #: src/backend/worksheet/plots/cartesian/XYIntegrationCurve.cpp:132
@@ -5186,7 +5245,7 @@ msgstr "%1: postavi fit opcije i izvedi ih"
 
 #: src/backend/worksheet/plots/cartesian/XYDataReductionCurve.cpp:209
 #: src/backend/worksheet/plots/cartesian/XYDifferentiationCurve.cpp:213
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:613
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:684
 #: src/backend/worksheet/plots/cartesian/XYFourierFilterCurve.cpp:218
 #: src/backend/worksheet/plots/cartesian/XYFourierTransformCurve.cpp:213
 #: src/backend/worksheet/plots/cartesian/XYIntegrationCurve.cpp:213
@@ -5232,31 +5291,31 @@ msgstr "%1: postavi jedinačinu"
 msgid "no xy equation curve element found"
 msgstr "nije pronađen element xy iz jednačine krive"
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:149
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:151
 #, kde-format
 msgid "%1: assign weights"
 msgstr "%1: dodijeli širinu"
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:161
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:163
 #, kde-format
 msgid "%1: set fit options and perform the fit"
 msgstr "%1: postavi fit opcije i izvedi ih"
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:603
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:674
 msgid "Model has no parameters."
 msgstr "Model nema parametara."
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:622
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:693
 msgid "Not sufficient weight data points provided."
 msgstr "Nije dostupno dovoljno podataka o širini tačaka."
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:668
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:739
 #: src/backend/worksheet/plots/cartesian/XYFourierFilterCurve.cpp:246
 #: src/backend/worksheet/plots/cartesian/XYFourierTransformCurve.cpp:241
 msgid "No data points available."
 msgstr "Nisu dostupne tačke podataka."
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:677
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:748
 #, kde-format
 msgid ""
 "The number of data points (%1) must be greater than or equal to the number "
@@ -5264,7 +5323,7 @@ msgid ""
 msgstr ""
 "Broj tačaka podataka (%1) mora biti veći ili jedna broju parametara (%2)."
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:917
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:1035
 msgid "no xy fit curve element found"
 msgstr "nije pronađen xy element koji pristaje krivoj"
 
@@ -6434,14 +6493,6 @@ msgstr "Ime:"
 msgid "Automatic"
 msgstr "Automatski"
 
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:66
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:617
-#: src/kdefrontend/dockwidgets/WorksheetDock.cpp:292
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:97
-#: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:102
-msgid "Custom"
-msgstr "Specijalno"
-
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:91
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:102
 #: src/kdefrontend/GuiObserver.cpp:106 src/kdefrontend/GuiObserver.cpp:121
@@ -7432,7 +7483,7 @@ msgstr ""
 
 #: src/kdefrontend/dockwidgets/XYDataReductionCurveDock.cpp:556
 #: src/kdefrontend/dockwidgets/XYDifferentiationCurveDock.cpp:442
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:643
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:651
 #: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:553
 #: src/kdefrontend/dockwidgets/XYFourierTransformCurveDock.cpp:366
 #: src/kdefrontend/dockwidgets/XYIntegrationCurveDock.cpp:357
@@ -7445,7 +7496,7 @@ msgstr "status:"
 
 #: src/kdefrontend/dockwidgets/XYDataReductionCurveDock.cpp:564
 #: src/kdefrontend/dockwidgets/XYDifferentiationCurveDock.cpp:450
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:652
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:660
 #: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:561
 #: src/kdefrontend/dockwidgets/XYFourierTransformCurveDock.cpp:374
 #: src/kdefrontend/dockwidgets/XYIntegrationCurveDock.cpp:365
@@ -7457,7 +7508,7 @@ msgstr "vrijeme računanja: %1 s"
 
 #: src/kdefrontend/dockwidgets/XYDataReductionCurveDock.cpp:566
 #: src/kdefrontend/dockwidgets/XYDifferentiationCurveDock.cpp:452
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:654
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:662
 #: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:563
 #: src/kdefrontend/dockwidgets/XYFourierTransformCurveDock.cpp:376
 #: src/kdefrontend/dockwidgets/XYIntegrationCurveDock.cpp:367
@@ -7526,123 +7577,75 @@ msgstr "t, minimalan"
 msgid "t, max"
 msgstr "t, maksimalan"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:84
-msgid "Polynomial"
-msgstr "Polinomski"
-
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:86
-msgid "Exponential"
-msgstr "Eksponencijalno"
-
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:87
-msgid "Inverse Exponential"
-msgstr "Inverzni eksponent"
-
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:88
-msgid "Fourier"
-msgstr "Furijer"
-
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:89
-msgid "Gaussian"
-msgstr "Gaussov"
-
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:90
-msgid "Lorentz (Cauchy)"
-msgstr "Lorenc(Koši)"
-
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:91
-msgid "Maxwell-Boltzmann"
-msgstr "Maksvel-Bolcman"
-
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:92
-msgid "Sigmoid"
-msgstr ""
-
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:93
-msgid "Gompertz"
-msgstr ""
-
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:94
-msgid "Weibull"
-msgstr ""
-
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:95
-#, fuzzy
-#| msgid "&Normalize Columns"
-msgid "Log-Normal"
-msgstr "&Normalizuj Kolone"
-
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:96
-#, fuzzy
-#| msgid "Number"
-msgid "Gumbel"
-msgstr "Broj"
-
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:650
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:658
 #, fuzzy
 #| msgid "iterations"
 msgid "iterations:"
 msgstr "iteracije"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:656
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:664
 #, fuzzy
 #| msgid "degrees of freedom"
 msgid "degrees of freedom:"
 msgstr "stepeni slobode"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:658
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:666
 #, fuzzy
 #| msgid "Parameters"
 msgid "Parameters:"
 msgstr "Parametri"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:664
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:672
 msgid "Goodness of fit:"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:665
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:673
 #, fuzzy
 #| msgid "sum of squared errors"
-msgid "sum of squared errors:"
+msgid "sum of squared errors"
 msgstr "greške suma kvadrata"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:666
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:674
 #, fuzzy
 #| msgid "mean squared error"
 msgid "mean squared error:"
 msgstr "srednje kvadratno odstupanje"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:667
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:675
 #, fuzzy
 #| msgid "root-mean squared error"
-msgid "root-mean squared error:"
+msgid "root-mean squared error"
 msgstr "korijen srednjeg kvadratnog odstupanja"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:668
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:675
+msgid "reduced"
+msgstr ""
+
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:676
 #, fuzzy
 #| msgid "mean absolute error"
 msgid "mean absolute error:"
 msgstr "srednja apsolutna greška"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:671
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:679
 #, fuzzy
 #| msgid "residual mean square"
 msgid "residual mean square:"
 msgstr "rezidualno srednje kvadratno"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:672
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:680
 #, fuzzy
 #| msgid "residual standard deviation"
 msgid "residual standard deviation:"
 msgstr "rezidualna standardna devijacija"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:675
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:683
 #, fuzzy
 #| msgid "coefficient of determination (R²)"
 msgid "coefficient of determination (R²):"
 msgstr "koeficijent određenja (R²)"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:676
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:684
 #, fuzzy
 #| msgid "adj. coefficient of determination (R²)"
 msgid "adj. coefficient of determination (R²):"
@@ -8873,8 +8876,8 @@ msgstr "Umetni"
 #. i18n: ectx: property (text), widget (QPushButton, bCancel)
 #. i18n: ectx: property (text), widget (QPushButton, pbCancel)
 #: src/kdefrontend/ui/constantswidget.ui:88
-#: src/kdefrontend/ui/fitoptionswidget.ui:86
-#: src/kdefrontend/ui/fitparameterswidget.ui:54
+#: src/kdefrontend/ui/fitoptionswidget.ui:89
+#: src/kdefrontend/ui/fitparameterswidget.ui:67
 #: src/kdefrontend/ui/functionswidget.ui:60
 msgid "Cancel"
 msgstr "Otkaži"
@@ -10506,7 +10509,7 @@ msgstr "Opcije"
 #. i18n: ectx: property (text), widget (QLabel, lData)
 #: src/kdefrontend/ui/dockwidgets/xydatareductioncurvedockgeneraltab.ui:192
 #: src/kdefrontend/ui/dockwidgets/xydifferentiationcurvedockgeneraltab.ui:106
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:368
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:370
 #: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:118
 #: src/kdefrontend/ui/dockwidgets/xyfouriertransformcurvedockgeneraltab.ui:122
 #: src/kdefrontend/ui/dockwidgets/xyintegrationcurvedockgeneraltab.ui:108
@@ -10518,7 +10521,7 @@ msgstr "Podaci:"
 #. i18n: ectx: property (text), widget (QLabel, lXColumn)
 #: src/kdefrontend/ui/dockwidgets/xydatareductioncurvedockgeneraltab.ui:199
 #: src/kdefrontend/ui/dockwidgets/xydifferentiationcurvedockgeneraltab.ui:113
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:375
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:377
 #: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:125
 #: src/kdefrontend/ui/dockwidgets/xyfouriertransformcurvedockgeneraltab.ui:129
 #: src/kdefrontend/ui/dockwidgets/xyintegrationcurvedockgeneraltab.ui:115
@@ -10532,7 +10535,7 @@ msgstr "Podaci:"
 #. i18n: ectx: property (text), widget (QLabel, lYColumn)
 #: src/kdefrontend/ui/dockwidgets/xydatareductioncurvedockgeneraltab.ui:206
 #: src/kdefrontend/ui/dockwidgets/xydifferentiationcurvedockgeneraltab.ui:120
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:432
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:434
 #: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:132
 #: src/kdefrontend/ui/dockwidgets/xyfouriertransformcurvedockgeneraltab.ui:136
 #: src/kdefrontend/ui/dockwidgets/xyintegrationcurvedockgeneraltab.ui:122
@@ -10547,7 +10550,7 @@ msgstr "Podaci:"
 #: src/kdefrontend/ui/dockwidgets/xydatareductioncurvedockgeneraltab.ui:269
 #: src/kdefrontend/ui/dockwidgets/xydifferentiationcurvedockgeneraltab.ui:163
 #: src/kdefrontend/ui/dockwidgets/xyequationcurvedockgeneraltab.ui:379
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:309
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:311
 #: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:219
 #: src/kdefrontend/ui/dockwidgets/xyfouriertransformcurvedockgeneraltab.ui:182
 #: src/kdefrontend/ui/dockwidgets/xyintegrationcurvedockgeneraltab.ui:152
@@ -10561,7 +10564,7 @@ msgstr "Preračunaj"
 #. i18n: ectx: property (text), widget (QLabel, lResults)
 #: src/kdefrontend/ui/dockwidgets/xydatareductioncurvedockgeneraltab.ui:298
 #: src/kdefrontend/ui/dockwidgets/xydifferentiationcurvedockgeneraltab.ui:192
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:409
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:411
 #: src/kdefrontend/ui/dockwidgets/xyfourierfiltercurvedockgeneraltab.ui:186
 #: src/kdefrontend/ui/dockwidgets/xyfouriertransformcurvedockgeneraltab.ui:162
 #: src/kdefrontend/ui/dockwidgets/xyintegrationcurvedockgeneraltab.ui:181
@@ -10640,7 +10643,9 @@ msgstr "Stepen"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, pbParameters)
 #: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:256
-msgid "Specify parameters and their start values"
+#, fuzzy
+#| msgid "Specify parameters and their start values"
+msgid "Specify parameters and their properties"
 msgstr "Specifiraj parametre i njihove početne vrijednosti"
 
 #. i18n: ectx: property (text), widget (QPushButton, pbParameters)
@@ -10654,26 +10659,26 @@ msgid "Advanced fit options"
 msgstr "Napredne fit opcije"
 
 #. i18n: ectx: property (text), widget (QLabel, lWeightsColumn)
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:382
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:384
 #, fuzzy
 #| msgid "Height"
 msgid "Weights"
 msgstr "Visina"
 
 #. i18n: ectx: property (text), widget (QLabel, lModel)
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:389
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:391
 msgid "Model"
 msgstr "Model"
 
 #. i18n: ectx: property (text), widget (QLabel, lFunction)
 #. i18n: ectx: property (text), widget (QLabel, lEquation)
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:396
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:398
 #: src/kdefrontend/ui/spreadsheet/functionvalueswidget.ui:45
 msgid "f(x)"
 msgstr "f(x)"
 
 #. i18n: ectx: property (text), widget (QLabel, lName_3)
-#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:425
+#: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:427
 msgid "Fit:"
 msgstr "Podesiti:"
 
@@ -10853,28 +10858,30 @@ msgid "Right value"
 msgstr "svjetloplava"
 
 #. i18n: ectx: property (text), widget (QLabel, lRobust)
-#: src/kdefrontend/ui/fitoptionswidget.ui:23
+#: src/kdefrontend/ui/fitoptionswidget.ui:26
 msgid "Robust fit"
 msgstr "Robusno podešavanje"
 
 #. i18n: ectx: property (text), widget (QLabel, lMaxIterations)
-#: src/kdefrontend/ui/fitoptionswidget.ui:33
+#: src/kdefrontend/ui/fitoptionswidget.ui:36
 msgid "Max. iterations"
 msgstr "Max. iteracije"
 
 #. i18n: ectx: property (text), widget (QLabel, lEps)
-#: src/kdefrontend/ui/fitoptionswidget.ui:43
+#: src/kdefrontend/ui/fitoptionswidget.ui:46
 msgid "Tolerance"
 msgstr "Tolerancija"
 
-#. i18n: ectx: property (text), widget (QLabel, lFittedPoints)
-#: src/kdefrontend/ui/fitoptionswidget.ui:53
-msgid "Fitted Points"
+#. i18n: ectx: property (text), widget (QLabel, lEvaluatedPoints)
+#: src/kdefrontend/ui/fitoptionswidget.ui:56
+#, fuzzy
+#| msgid "Fitted Points"
+msgid "Evaluated Points"
 msgstr "Tačke podešavanja"
 
 #. i18n: ectx: property (text), widget (QPushButton, pbApply)
-#: src/kdefrontend/ui/fitoptionswidget.ui:79
-#: src/kdefrontend/ui/fitparameterswidget.ui:47
+#: src/kdefrontend/ui/fitoptionswidget.ui:82
+#: src/kdefrontend/ui/fitparameterswidget.ui:60
 msgid "Apply"
 msgstr "Primijeni"
 
@@ -11314,9 +11321,23 @@ msgstr "Originalna veličina"
 msgid "Processed Image"
 msgstr ""
 
-#: src/kdefrontend/widgets/FitParametersWidget.cpp:51
+#: src/kdefrontend/widgets/FitParametersWidget.cpp:58
 msgid "Start value"
 msgstr "Početna vrijednost"
+
+#: src/kdefrontend/widgets/FitParametersWidget.cpp:62
+msgid "Fixed"
+msgstr ""
+
+#: src/kdefrontend/widgets/FitParametersWidget.cpp:66
+#, fuzzy
+#| msgid "Functions"
+msgid "Lower limit"
+msgstr "Funkcije"
+
+#: src/kdefrontend/widgets/FitParametersWidget.cpp:70
+msgid "Upper limit"
+msgstr ""
 
 #: src/kdefrontend/widgets/FITSHeaderEditAddUnitDialog.cpp:36
 #, fuzzy
