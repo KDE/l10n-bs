@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeutils\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-10-22 07:34+0000\n"
+"POT-Creation-Date: 2016-10-28 07:10+0000\n"
 "PO-Revision-Date: 2015-01-09 11:52+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -131,7 +131,7 @@ msgstr "Posebna naredba za dešifrovanje:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, capEncrypt)
 #. i18n: ectx: property (windowTitle), widget (QWidget, Encryption)
-#: conf_encryption.ui:15 kgpgkeygenerate.ui:172 kgpgoptions.cpp:113
+#: conf_encryption.ui:15 kgpgkeygenerate.ui:205 kgpgoptions.cpp:113
 msgid "Encryption"
 msgstr "Šifrovanje"
 
@@ -1855,7 +1855,7 @@ msgid "Key Group"
 msgstr "Grupa ključeva"
 
 #. i18n: ectx: property (text), widget (QCheckBox, capSign)
-#: keysmanager.cpp:1117 kgpgkeygenerate.ui:152
+#: keysmanager.cpp:1117 kgpgkeygenerate.ui:185
 msgid "Signature"
 msgstr "Potpis"
 
@@ -2900,56 +2900,35 @@ msgstr ""
 "Ako odete na ekspertski režim,  koristićete komandnu liniju da biste "
 "napravili ključ."
 
-#: kgpgkeygenerate.cpp:75
-msgctxt "Key will not expire"
-msgid "Never"
-msgstr "Nikad"
-
-#: kgpgkeygenerate.cpp:76
-msgid "Days"
-msgstr "Dana"
-
-#: kgpgkeygenerate.cpp:77
-msgid "Weeks"
-msgstr "Sedmica"
-
-#: kgpgkeygenerate.cpp:78
-msgid "Months"
-msgstr "Mjeseci"
-
-#: kgpgkeygenerate.cpp:79
-msgid "Years"
-msgstr "Godina"
-
-#: kgpgkeygenerate.cpp:85
+#: kgpgkeygenerate.cpp:66
 msgid "1024"
 msgstr "1024"
 
-#: kgpgkeygenerate.cpp:86
+#: kgpgkeygenerate.cpp:67
 msgid "2048"
 msgstr "2048"
 
-#: kgpgkeygenerate.cpp:87
+#: kgpgkeygenerate.cpp:68
 msgid "4096"
 msgstr "4096"
 
-#: kgpgkeygenerate.cpp:118
+#: kgpgkeygenerate.cpp:99
 msgid "You must give a name."
 msgstr "Morate navesti ime."
 
-#: kgpgkeygenerate.cpp:124
+#: kgpgkeygenerate.cpp:105
 msgid "The name must have at least 5 characters"
 msgstr "Ime mora sadržati bar 5 znakova."
 
-#: kgpgkeygenerate.cpp:130
+#: kgpgkeygenerate.cpp:111
 msgid "The name must not start with a digit"
 msgstr "Ime ne smije počinjati cifrom."
 
-#: kgpgkeygenerate.cpp:137
+#: kgpgkeygenerate.cpp:118
 msgid "You are about to create a key with no email address"
 msgstr "Upravo ćete napraviti ključ bez e-adrese"
 
-#: kgpgkeygenerate.cpp:144
+#: kgpgkeygenerate.cpp:125
 msgid "Email address not valid"
 msgstr "E-adesa nije ispravna"
 
@@ -2998,39 +2977,60 @@ msgstr "&Komentar (opciono):"
 msgid "Expiration:"
 msgstr "Ističe:"
 
-#. i18n: ectx: property (text), widget (QLineEdit, m_days)
-#: kgpgkeygenerate.ui:88
-msgid "0"
-msgstr "0"
+#. i18n: ectx: property (text), item, widget (QComboBox, m_keyexp)
+#: kgpgkeygenerate.ui:98
+msgctxt "Key will not expire"
+msgid "Never"
+msgstr "Nikad"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_keyexp)
+#: kgpgkeygenerate.ui:103
+msgid "Days"
+msgstr "Dana"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_keyexp)
+#: kgpgkeygenerate.ui:108
+msgid "Weeks"
+msgstr "Sedmica"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_keyexp)
+#: kgpgkeygenerate.ui:113
+msgid "Months"
+msgstr "Mjeseci"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_keyexp)
+#: kgpgkeygenerate.ui:118
+msgid "Years"
+msgstr "Godina"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kgpgkeygenerate.ui:95
+#: kgpgkeygenerate.ui:128
 msgid "&Key size:"
 msgstr "&Veličina ključa:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kgpgkeygenerate.ui:108
+#: kgpgkeygenerate.ui:141
 msgid "&Algorithm:"
 msgstr "&Algoritam:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, capabilities)
 #. i18n: ectx: property (text), widget (QLabel, tl_caps)
-#: kgpgkeygenerate.ui:127 kgpgKeyInfo.ui:248
+#: kgpgkeygenerate.ui:160 kgpgKeyInfo.ui:248
 msgid "Capabilities"
 msgstr "Mogućnosti"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, capCert)
-#: kgpgkeygenerate.ui:139
+#: kgpgkeygenerate.ui:172
 msgid "Certification is automatically enabled for all keys"
 msgstr "Certifikacija je automatski omogućena za sve ključeve"
 
 #. i18n: ectx: property (text), widget (QCheckBox, capCert)
-#: kgpgkeygenerate.ui:142
+#: kgpgkeygenerate.ui:175
 msgid "Certification"
 msgstr "Certifikacija"
 
 #. i18n: ectx: property (text), widget (QCheckBox, capAuth)
-#: kgpgkeygenerate.ui:162
+#: kgpgkeygenerate.ui:195
 msgid "Authentication"
 msgstr "Autentifikacija"
 
@@ -4245,6 +4245,9 @@ msgstr "<qt>Potpis je valjan, ali je ključ nepouzdan.<br /></qt>"
 msgctxt "@info"
 msgid "<para>The signature is valid, and the key is ultimately trusted</para>"
 msgstr "<qt>Potpis je valjan i ključ je bezuslovno pouzdan.<br /></qt>"
+
+#~ msgid "0"
+#~ msgstr "0"
 
 #~ msgid "Id"
 #~ msgstr "Id."
