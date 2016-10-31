@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: choqok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-10-30 06:50+0000\n"
+"POT-Creation-Date: 2016-10-31 06:49+0000\n"
 "PO-Revision-Date: 2015-02-24 23:14+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team:  <bs@li.org>\n"
@@ -71,11 +71,11 @@ msgstr "Jeste li sigurni da želite ukloniti označeni nalog?"
 msgid "Cannot remove the account."
 msgstr "Nije moguće ukloniti nalog."
 
-#: choqok/config/accounts/accountswidget.cpp:239
+#: choqok/config/accounts/accountswidget.cpp:248
 msgid "Select Micro-Blogging Service"
 msgstr "Označi servis mikroblogginga"
 
-#: choqok/config/accounts/accountswidget.cpp:296
+#: choqok/config/accounts/accountswidget.cpp:309
 msgid ""
 "You need to restart Choqok for the accounts priority changes to take effect."
 msgstr ""
@@ -99,52 +99,79 @@ msgid "&Add..."
 msgstr "&Dodaj..."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, btnEdit)
-#: choqok/config/accounts/accountswidget_base.ui:58
+#: choqok/config/accounts/accountswidget_base.ui:57
 msgid "Modify the selected account"
 msgstr "Izmijeni odabrani nalog"
 
 #. i18n: ectx: property (text), widget (QPushButton, btnEdit)
-#: choqok/config/accounts/accountswidget_base.ui:61
+#: choqok/config/accounts/accountswidget_base.ui:60
 msgid "&Modify..."
 msgstr "&Izmijeni..."
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, btnRemove)
-#: choqok/config/accounts/accountswidget_base.ui:76
+#: choqok/config/accounts/accountswidget_base.ui:74
 msgid "Remove the selected account"
 msgstr "Ukloni odabrani nalog"
 
 #. i18n: ectx: property (text), widget (QPushButton, btnRemove)
-#: choqok/config/accounts/accountswidget_base.ui:79
+#: choqok/config/accounts/accountswidget_base.ui:77
 msgid "&Remove"
 msgstr "&Ukloni"
 
 #. i18n: ectx: property (text), widget (QTableWidget, accountsTable)
-#: choqok/config/accounts/accountswidget_base.ui:167
+#: choqok/config/accounts/accountswidget_base.ui:162
 msgid "Alias"
 msgstr "Pseudonim"
 
+#. i18n: ectx: property (toolTip), widget (QTableWidget, accountsTable)
+#: choqok/config/accounts/accountswidget_base.ui:165
+#, fuzzy
+#| msgid "Add a new account"
+msgid "An alias for the account"
+msgstr "Dodaj novi nalog"
+
 #. i18n: ectx: property (text), widget (QTableWidget, accountsTable)
-#: choqok/config/accounts/accountswidget_base.ui:172
+#: choqok/config/accounts/accountswidget_base.ui:170
 msgid "Micro-Blog"
 msgstr "Mikroblog"
 
+#. i18n: ectx: property (toolTip), widget (QTableWidget, accountsTable)
+#: choqok/config/accounts/accountswidget_base.ui:173
+#, fuzzy
+#| msgid "Twitter account"
+msgid "The type of the account"
+msgstr "Twitter analog"
+
 #. i18n: ectx: property (text), widget (QTableWidget, accountsTable)
-#: choqok/config/accounts/accountswidget_base.ui:177
+#: choqok/config/accounts/accountswidget_base.ui:178
+#, fuzzy
+#| msgid "Enable"
+msgid "Enabled"
+msgstr "Omogući"
+
+#. i18n: ectx: property (toolTip), widget (QTableWidget, accountsTable)
+#: choqok/config/accounts/accountswidget_base.ui:181
+msgid "Whether the microblog is enabled or disabled"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTableWidget, accountsTable)
+#: choqok/config/accounts/accountswidget_base.ui:186
 msgid "Read Only"
 msgstr "Samo za čitanje"
 
 #. i18n: ectx: property (toolTip), widget (QTableWidget, accountsTable)
-#: choqok/config/accounts/accountswidget_base.ui:180
+#: choqok/config/accounts/accountswidget_base.ui:189
 msgid "Read Only account"
 msgstr "Nalog samo za čitanje"
 
 #. i18n: ectx: property (text), widget (QTableWidget, accountsTable)
-#: choqok/config/accounts/accountswidget_base.ui:185
-msgid "Include in Quick Post"
-msgstr "Uključi u brzom postu"
+#: choqok/config/accounts/accountswidget_base.ui:194 choqok/mainwindow.cpp:216
+#: libchoqok/ui/quickpost.cpp:118
+msgid "Quick Post"
+msgstr "Brzo slanje"
 
 #. i18n: ectx: property (toolTip), widget (QTableWidget, accountsTable)
-#: choqok/config/accounts/accountswidget_base.ui:188
+#: choqok/config/accounts/accountswidget_base.ui:197
 msgid "Show in Quick Post"
 msgstr "Prikaži u brzom postu"
 
@@ -502,65 +529,61 @@ msgstr "Ahmed I. Khalil"
 msgid "Various improvements"
 msgstr "Razna poboljšanja"
 
-#: choqok/mainwindow.cpp:85 choqok/mainwindow.cpp:509
-#: choqok/mainwindow.cpp:585 choqok/mainwindow.cpp:641
+#: choqok/mainwindow.cpp:85 choqok/mainwindow.cpp:523
+#: choqok/mainwindow.cpp:599 choqok/mainwindow.cpp:654
 #: choqok/systrayicon.cpp:113 choqok/systrayicon.cpp:119
 #: plugins/betternotify/dummynotification.cpp:48
 #: plugins/konqueror/konqchoqok.cpp:45
 msgid "Choqok"
 msgstr "Choqok"
 
-#: choqok/mainwindow.cpp:209
+#: choqok/mainwindow.cpp:210
 msgid "Update Timelines"
 msgstr "Ažuriraj vremenske tokove"
 
-#: choqok/mainwindow.cpp:215 libchoqok/ui/quickpost.cpp:118
-msgid "Quick Post"
-msgstr "Brzo slanje"
-
-#: choqok/mainwindow.cpp:221
+#: choqok/mainwindow.cpp:222
 msgid "Mark All As Read"
 msgstr "Označi sve kao pročitane"
 
-#: choqok/mainwindow.cpp:230
+#: choqok/mainwindow.cpp:231
 msgctxt "@action"
 msgid "Minimize"
 msgstr "Minimiziraj"
 
-#: choqok/mainwindow.cpp:232
+#: choqok/mainwindow.cpp:233
 msgctxt "@action"
 msgid "Restore"
 msgstr "Obnovi"
 
-#: choqok/mainwindow.cpp:240
+#: choqok/mainwindow.cpp:241
 msgid "Enable Update Timer"
 msgstr "Omogući sat ažuriranja"
 
-#: choqok/mainwindow.cpp:246
+#: choqok/mainwindow.cpp:247
 msgid "Enable Notifications"
 msgstr "Uključi obavještenja"
 
-#: choqok/mainwindow.cpp:252
+#: choqok/mainwindow.cpp:253
 msgid "Hide Menubar"
 msgstr "Sakrij traku menija"
 
-#: choqok/mainwindow.cpp:259
+#: choqok/mainwindow.cpp:260
 msgid "Clear Avatar Cache"
 msgstr "Očisti privremenu memoriju avatara"
 
-#: choqok/mainwindow.cpp:261
+#: choqok/mainwindow.cpp:262
 msgid "You have to restart Choqok to load avatars again"
 msgstr "Potrebno je restartovati Choqok kako bi avatari bili ponovo učitani"
 
-#: choqok/mainwindow.cpp:266
+#: choqok/mainwindow.cpp:267
 msgid "Upload Medium..."
 msgstr "Slanje medija..."
 
-#: choqok/mainwindow.cpp:270
+#: choqok/mainwindow.cpp:271
 msgid "Donate"
 msgstr "Donirajte"
 
-#: choqok/mainwindow.cpp:294
+#: choqok/mainwindow.cpp:295
 msgid ""
 "No account created. You have to create an account before being able to make "
 "posts."
@@ -568,7 +591,7 @@ msgstr ""
 "Nema kreiranih naloga. Potrebno je kreirati nalog da bi objava postova bila "
 "moguća."
 
-#: choqok/mainwindow.cpp:323
+#: choqok/mainwindow.cpp:324
 msgid ""
 "In order to use Choqok you need an account at one of the supported micro-"
 "blogging services.\n"
@@ -578,20 +601,20 @@ msgstr ""
 "podržanom servisu mikroblogginga.\n"
 "Da li želite dodati jedan nalog sada?"
 
-#: choqok/mainwindow.cpp:507
+#: choqok/mainwindow.cpp:521
 #, kde-format
 msgid "Choqok (%1)"
 msgstr "Choqok (%1)"
 
-#: choqok/mainwindow.cpp:574
+#: choqok/mainwindow.cpp:588
 msgid "Restore"
 msgstr "Vrati"
 
-#: choqok/mainwindow.cpp:580
+#: choqok/mainwindow.cpp:594
 msgid "Minimize"
 msgstr "Minimiziraj"
 
-#: choqok/mainwindow.cpp:626
+#: choqok/mainwindow.cpp:639
 msgid "Loading timelines..."
 msgstr "Učitavanje vremenskih tokova..."
 
@@ -3133,6 +3156,9 @@ msgstr "Twitter  nalog:"
 #: plugins/uploaders/twitgoo/twitgooprefs.ui:50
 msgid "Get direct link to file"
 msgstr "Uzmio direktnu vezu na datoteku"
+
+#~ msgid "Include in Quick Post"
+#~ msgstr "Uključi u brzom postu"
 
 #~ msgid "View replies"
 #~ msgstr "Pogledaj odgovore"
