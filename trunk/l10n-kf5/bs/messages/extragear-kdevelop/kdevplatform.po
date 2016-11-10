@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-11-07 07:10+0000\n"
+"POT-Creation-Date: 2016-11-10 07:10+0000\n"
 "PO-Revision-Date: 2014-02-12 23:48+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -674,7 +674,7 @@ msgstr "Primjena promjena nije uspjela: %1"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, RenameDialog)
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
-#: language/codegen/basicrefactoring.ui:14 vcs/dvcs/ui/branchmanager.ui:55
+#: language/codegen/basicrefactoring.ui:14 vcs/dvcs/ui/branchmanager.ui:39
 msgid "Rename"
 msgstr "Promijeni ime"
 
@@ -4475,24 +4475,24 @@ msgstr "Grane..."
 msgid "Revision Graph..."
 msgstr "Graf revizije"
 
-#: vcs/dvcs/ui/branchmanager.cpp:50
+#: vcs/dvcs/ui/branchmanager.cpp:52
 msgid "Branch Manager"
 msgstr "Menadžer grana"
 
-#: vcs/dvcs/ui/branchmanager.cpp:103
+#: vcs/dvcs/ui/branchmanager.cpp:107
 msgid ""
 "You must select a base branch from the list before creating a new branch."
 msgstr "Morate kreirati baznu granu iz liste prije kreiranja nove grane."
 
-#: vcs/dvcs/ui/branchmanager.cpp:108
+#: vcs/dvcs/ui/branchmanager.cpp:112
 msgid "New branch"
 msgstr "Nova grana"
 
-#: vcs/dvcs/ui/branchmanager.cpp:108
+#: vcs/dvcs/ui/branchmanager.cpp:112
 msgid "Name of the new branch:"
 msgstr "Ime nove grane:"
 
-#: vcs/dvcs/ui/branchmanager.cpp:116
+#: vcs/dvcs/ui/branchmanager.cpp:120
 #, kde-format
 msgid ""
 "Branch \"%1\" already exists.\n"
@@ -4501,7 +4501,7 @@ msgstr ""
 "Grana \"%1\" već postoji.\n"
 "Molim, odaberite drugo ime."
 
-#: vcs/dvcs/ui/branchmanager.cpp:131
+#: vcs/dvcs/ui/branchmanager.cpp:135
 #, kde-format
 msgid ""
 "Currently at the branch \"%1\".\n"
@@ -4510,17 +4510,17 @@ msgstr ""
 "Trenutno na grani\"%1\".\n"
 "Da to uklonite, pređite na drugu grani"
 
-#: vcs/dvcs/ui/branchmanager.cpp:138
+#: vcs/dvcs/ui/branchmanager.cpp:142
 #, kde-format
 msgid "Are you sure you want to irreversibly remove the branch '%1'?"
 msgstr "Jeste li sigurno da želite nepovratno ukloniti granu '%1'?"
 
-#: vcs/dvcs/ui/branchmanager.cpp:158
+#: vcs/dvcs/ui/branchmanager.cpp:162 vcs/dvcs/ui/branchmanager.cpp:202
 #, kde-format
 msgid "Already on branch \"%1\"\n"
 msgstr "Već u grani\"%1\"\n"
 
-#: vcs/dvcs/ui/branchmanager.cpp:179
+#: vcs/dvcs/ui/branchmanager.cpp:183
 #, fuzzy, kde-format
 #| msgid ""
 #| "Branch \"%1\" already exists.\n"
@@ -4532,12 +4532,28 @@ msgstr ""
 "Grana \"%1\" već postoji.\n"
 "Molim, odaberite drugo ime."
 
-#: vcs/dvcs/ui/branchmanager.cpp:189
+#: vcs/dvcs/ui/branchmanager.cpp:193
 #, fuzzy
 #| msgid ""
 #| "You must select a base branch from the list before creating a new branch."
 msgid "You must select a branch to merge into current one from the list."
 msgstr "Morate kreirati baznu granu iz liste prije kreiranja nove grane."
+
+#: vcs/dvcs/ui/branchmanager.cpp:225
+#, fuzzy
+#| msgid "Unable to get difference."
+msgid "Unable to retrieve diff."
+msgstr "Ne mogu dobaviti razliku"
+
+#: vcs/dvcs/ui/branchmanager.cpp:232
+#, fuzzy
+#| msgid "There are no differences."
+msgid "There are no committed differences."
+msgstr "Nema razlika"
+
+#: vcs/dvcs/ui/branchmanager.cpp:233 vcs/vcspluginhelper.cpp:277
+msgid "VCS support"
+msgstr "VCS podrška"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, newButton)
 #: vcs/dvcs/ui/branchmanager.ui:19
@@ -4549,18 +4565,31 @@ msgstr "Kreira nove grane bazirano na odabranoj grani"
 msgid "The same as git branch -D"
 msgstr "Isto kao as git branch -D"
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, checkoutButton)
+#. i18n: ectx: property (toolTip), widget (QPushButton, diffButton)
 #: vcs/dvcs/ui/branchmanager.ui:62
+msgid ""
+"<p>Show changes between the <span style=\" font-style:italic;\">staging "
+"area</span> (if not clean or last commit on current branch, otherwise) and "
+"the last commit on the selected branch.</p>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, diffButton)
+#: vcs/dvcs/ui/branchmanager.ui:65
+msgid "Compare to Branch"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, checkoutButton)
+#: vcs/dvcs/ui/branchmanager.ui:88
 msgid "Checkout to the selected branch"
 msgstr "Izdvoji u odabranu granu"
 
 #. i18n: ectx: property (text), widget (QPushButton, checkoutButton)
-#: vcs/dvcs/ui/branchmanager.ui:65
+#: vcs/dvcs/ui/branchmanager.ui:91
 msgid "Checkout"
 msgstr "Izdvajanje"
 
 #. i18n: ectx: property (text), widget (QPushButton, mergeButton)
-#: vcs/dvcs/ui/branchmanager.ui:72
+#: vcs/dvcs/ui/branchmanager.ui:98
 msgid "Merge"
 msgstr ""
 
@@ -4734,10 +4763,6 @@ msgstr "Povuci"
 #: vcs/vcspluginhelper.cpp:276
 msgid "There are no differences."
 msgstr "Nema razlika"
-
-#: vcs/vcspluginhelper.cpp:277
-msgid "VCS support"
-msgstr "VCS podrška"
 
 #: vcs/vcspluginhelper.cpp:283
 msgid "Unable to get difference."
