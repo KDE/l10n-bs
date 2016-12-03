@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-12-02 03:12+0100\n"
+"POT-Creation-Date: 2016-12-03 13:49+0100\n"
 "PO-Revision-Date: 2015-02-24 23:30+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -30,17 +30,60 @@ msgstr "Lik pribilješke za prikaz sadržaja pribilješke"
 msgid "Annotation Shape"
 msgstr "Lik pribilješke"
 
-#: commands/AutoResizeCommand.cpp:36
-#, kde-format
-msgctxt "Enable Shrink To Fit"
-msgid "Enable"
-msgstr "Omogući"
+#: commands/AcceptChangeCommand.cpp:45
+msgctxt "(qtundo-format)"
+msgid "Accept change"
+msgstr "Prihvati promjene"
 
 #: commands/AutoResizeCommand.cpp:36
 #, kde-format
 msgctxt "Disable Shrink To Fit"
 msgid "Disable"
 msgstr "Onemogući"
+
+#: commands/AutoResizeCommand.cpp:36
+#, kde-format
+msgctxt "Enable Shrink To Fit"
+msgid "Enable"
+msgstr "Omogući"
+
+#: commands/AutoResizeCommand.cpp:39
+#, kde-format
+msgctxt "(qtundo-format) Enable/Disable Grow To Fit Width"
+msgid "%1 Grow To Fit Width"
+msgstr "%1 Rast da se popuni širinski"
+
+#: commands/AutoResizeCommand.cpp:42
+#, kde-format
+msgctxt "(qtundo-format) Enable/Disable Grow To Fit Height"
+msgid "%1 Grow To Fit Height"
+msgstr "%1 Rast da se popuni visinski"
+
+#: commands/AutoResizeCommand.cpp:45
+#, kde-format
+msgctxt "(qtundo-format) Enable/Disable Shrink To Fit"
+msgid "%1 Shrink To Fit"
+msgstr "%1 Sužavanje za popunjenje"
+
+#: commands/ChangeListLevelCommand.cpp:42
+msgctxt "(qtundo-format)"
+msgid "Change List Level"
+msgstr "Promijeni nivo liste"
+
+#: commands/RejectChangeCommand.cpp:47
+msgctxt "(qtundo-format)"
+msgid "Reject change"
+msgstr "Odbaci promjene"
+
+#: commands/ShowChangesCommand.cpp:53
+msgctxt "(qtundo-format)"
+msgid "Show Changes"
+msgstr "Pokaži promjene"
+
+#: commands/ShowChangesCommand.cpp:55
+msgctxt "(qtundo-format)"
+msgid "Hide Changes"
+msgstr "Sakrij promjene"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, AcceptRejectChangeDialog)
 #. i18n: ectx: property (windowTitle), widget (QDialog, TableOfContentsConfigure)
@@ -552,11 +595,6 @@ msgstr "Pozicija:"
 msgid "Select"
 msgstr "Izaberi"
 
-#: dialogs/CitationInsertionDialog.cpp:52 dialogs/StyleManager.cpp:440
-#, kde-format
-msgid "Warning"
-msgstr "Upozorenje"
-
 #: dialogs/CitationInsertionDialog.cpp:52
 #, kde-format
 msgid ""
@@ -565,6 +603,11 @@ msgid ""
 msgstr ""
 "Dokument već sadrži bibliografski unos s drugačijim podacima.\n"
 "Želite li izmjeniti postojeći unos?"
+
+#: dialogs/CitationInsertionDialog.cpp:52 dialogs/StyleManager.cpp:440
+#, kde-format
+msgid "Warning"
+msgstr "Upozorenje"
 
 #: dialogs/CitationInsertionDialog.cpp:67
 #: dialogs/CitationInsertionDialog.cpp:85
@@ -992,6 +1035,11 @@ msgstr "Automatska hifenacija"
 #, kde-format
 msgid "Select Font"
 msgstr "Izaberite font"
+
+#: dialogs/FontDia.cpp:81
+msgctxt "(qtundo-format)"
+msgid "Font"
+msgstr "Font"
 
 #. i18n: ectx: property (text), widget (FormattingButton, addBibliography)
 #. i18n: ectx: property (windowTitle), widget (QDialog, InsertBibliographyDialog)
@@ -2970,20 +3018,40 @@ msgstr "prati"
 msgid "Press shift to not resize this"
 msgstr "Pritisnite shift da ne promijenite veličinu ovoga"
 
+#: TextTool.cpp:950
+msgctxt "(qtundo-format)"
+msgid "Change Border Formatting"
+msgstr "Promjenite format ruba"
+
+#: TextTool.cpp:1169
+msgctxt "(qtundo-format)"
+msgid "Cut"
+msgstr "Isijeci"
+
+#: TextTool.cpp:1429
+msgctxt "(qtundo-format)"
+msgid "Adjust Column Width"
+msgstr "Prilagodi širinu kolone"
+
+#: TextTool.cpp:1472
+msgctxt "(qtundo-format)"
+msgid "Adjust Row Height"
+msgstr "Prilagodi visinu kolone"
+
 #: TextTool.cpp:2245
 #, kde-format
 msgid "Table"
 msgstr "Tabela"
 
-#: TextTool.cpp:2604
-#, kde-format
-msgid "Key Press"
-msgstr "Pritisak dugmeta"
-
 #: TextTool.cpp:2604 TextTool.cpp:2609
 #, kde-format
 msgid "Autocorrection"
 msgstr "Automatsko ispravljanje"
+
+#: TextTool.cpp:2604
+#, kde-format
+msgid "Key Press"
+msgstr "Pritisak dugmeta"
 
 #: TextTool.cpp:2894
 #, kde-format
@@ -4686,10 +4754,6 @@ msgstr "Uređivanje teksta"
 #~ msgid "Annotation Shape"
 #~ msgstr "Lik pribilješke"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Accept change"
-#~ msgstr "Prihvati promjene"
-
 #, fuzzy
 #~| msgctxt "Disable Shrink To Fit"
 #~| msgid "Disable"
@@ -4703,34 +4767,6 @@ msgstr "Uređivanje teksta"
 #~ msgctxt "(qtundo-format) Enable Shrink To Fit"
 #~ msgid "Enable"
 #~ msgstr "Omogući"
-
-#~ msgctxt "(qtundo-format) Enable/Disable Grow To Fit Width"
-#~ msgid "%1 Grow To Fit Width"
-#~ msgstr "%1 Rast da se popuni širinski"
-
-#~ msgctxt "(qtundo-format) Enable/Disable Grow To Fit Height"
-#~ msgid "%1 Grow To Fit Height"
-#~ msgstr "%1 Rast da se popuni visinski"
-
-#~ msgctxt "(qtundo-format) Enable/Disable Shrink To Fit"
-#~ msgid "%1 Shrink To Fit"
-#~ msgstr "%1 Sužavanje za popunjenje"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change List Level"
-#~ msgstr "Promijeni nivo liste"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Reject change"
-#~ msgstr "Odbaci promjene"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Show Changes"
-#~ msgstr "Pokaži promjene"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Hide Changes"
-#~ msgstr "Sakrij promjene"
 
 #, fuzzy
 #~| msgid "Ascending"
@@ -4773,10 +4809,6 @@ msgstr "Uređivanje teksta"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "This is a line of text whose format has been changed."
 #~ msgstr "Ovo je linija teksta čiji se format izmijenio"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Font"
-#~ msgstr "Font"
 
 #, fuzzy
 #~| msgid "Normal"
@@ -6060,22 +6092,6 @@ msgstr "Uređivanje teksta"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Press shift to not resize this"
 #~ msgstr "Pritisnite shift da ne promijenite veličinu ovoga"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Formatting"
-#~ msgstr "Promjenite format ruba"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Cut"
-#~ msgstr "Isijeci"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Adjust Column Width"
-#~ msgstr "Prilagodi širinu kolone"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Adjust Row Height"
-#~ msgstr "Prilagodi visinu kolone"
 
 #, fuzzy
 #~| msgid "Character"

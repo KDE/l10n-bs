@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-12-02 03:12+0100\n"
+"POT-Creation-Date: 2016-12-03 13:49+0100\n"
 "PO-Revision-Date: 2015-01-09 15:58+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -465,16 +465,16 @@ msgstr ""
 "Ovaj dokument nema sintaksnu verziju.\n"
 "Njegovo otvaranje u Plan može dovesti di gubitka informacije."
 
-#: KPlatoXmlLoader.cpp:70
-#, kde-format
-msgid "File-Format Error"
-msgstr "Greška datotečnog formata"
-
 #: KPlatoXmlLoader.cpp:70 KPlatoXmlLoader.cpp:82 KPlatoXmlLoader.cpp:124
 #: kptmaindocument.cpp:209 kptmaindocument.cpp:496
 #, kde-format
 msgid "Continue"
 msgstr "Nastavi"
+
+#: KPlatoXmlLoader.cpp:70
+#, kde-format
+msgid "File-Format Error"
+msgstr "Greška datotečnog formata"
 
 #: KPlatoXmlLoader.cpp:79
 #, kde-format
@@ -1024,6 +1024,11 @@ msgstr "Ništa za snimiti iz ovog paketa"
 msgid "Internal error, failed to insert file."
 msgstr "Interna greška, nije uspjelo umetanje datoteke."
 
+#: kptmaindocument.cpp:988
+msgctxt "(qtundo-format)"
+msgid "Insert project"
+msgstr "Ubaci projekt"
+
 #: kptschedulesdocker.cpp:38
 #, kde-format
 msgid "Schedule Selector"
@@ -1372,6 +1377,12 @@ msgstr "Izvršavanje"
 msgid "Reports"
 msgstr "Izvještaji"
 
+#: kptview.cpp:1682
+#, kde-format
+msgctxt "(qtundo-format) @info:status 1=schedule name"
+msgid "Calculate %1"
+msgstr "Izračunaj %1"
+
 #: kptview.cpp:1701
 #, kde-format
 msgid "Cannot baseline. The project is already baselined."
@@ -1384,6 +1395,46 @@ msgid "This schedule is baselined. Do you want to remove the baseline?"
 msgstr ""
 "Ovaj raspoređivač je postavljen na osnovni pravac.Želite li ukloniti osnovni "
 "pravac?"
+
+#: kptview.cpp:1710
+#, kde-format
+msgctxt "(qtundo-format)"
+msgid "Reset baseline %1"
+msgstr "Resetuj osnovni pravac %1"
+
+#: kptview.cpp:1712
+#, kde-format
+msgctxt "(qtundo-format)"
+msgid "Baseline %1"
+msgstr "Osnovni pravac %1"
+
+#: kptview.cpp:1723
+#, kde-format
+msgctxt "(qtundo-format)"
+msgid "Add schedule %1"
+msgstr "Dodaj raspored %1"
+
+#: kptview.cpp:1732
+#, kde-format
+msgctxt "(qtundo-format)"
+msgid "Delete schedule %1"
+msgstr "Izbriši raspored %1"
+
+#: kptview.cpp:1741
+#, kde-format
+msgctxt "(qtundo-format)"
+msgid "Move schedule %1"
+msgstr "Pomjeri raspored %1"
+
+#: kptview.cpp:1810
+msgctxt "(qtundo-format)"
+msgid "Add milestone"
+msgstr "Dodaj prekretnicu"
+
+#: kptview.cpp:1836
+msgctxt "(qtundo-format)"
+msgid "Add sub-milestone"
+msgstr "Dodaj pod-prekretnicu"
 
 #: kptview.cpp:1877
 #, kde-format
@@ -1408,10 +1459,66 @@ msgid ""
 msgstr ""
 "Zadatak koji je bio raspoređen će biti izbrisan.Ovo će poništiti raspored."
 
+#: kptview.cpp:2210 kptview.cpp:2214 kptview.cpp:2230 kptview.cpp:2254
+msgctxt "(qtundo-format)"
+msgid "Delete task"
+msgid_plural "Delete tasks"
+msgstr[0] "Izbriši zadatak"
+msgstr[1] "Izbriši zadatke"
+msgstr[2] "Izbriši zadatke"
+
 #: kptview.cpp:2249
 #, kde-format
 msgid "This task has been scheduled. This will invalidate the schedule."
 msgstr "Ovaj zadatak je bio raspoređen. Ovo će poništiti raspored."
+
+#: kptview.cpp:2273
+msgctxt "(qtundo-format)"
+msgid "Indent task"
+msgstr "Uvuci zadatak"
+
+#: kptview.cpp:2287
+msgctxt "(qtundo-format)"
+msgid "Unindent task"
+msgstr "Izvuci zadatak"
+
+#: kptview.cpp:2309
+msgctxt "(qtundo-format)"
+msgid "Move task up"
+msgstr "Premjesti zadatak iznad"
+
+#: kptview.cpp:2330
+msgctxt "(qtundo-format)"
+msgid "Move task down"
+msgstr "Premjesti zadatak ispod"
+
+#: kptview.cpp:2368
+msgctxt "(qtundo-format)"
+msgid "Add task dependency"
+msgstr "Dodaj zavisnost od zadatka"
+
+#: kptview.cpp:2431
+msgctxt "(qtundo-format)"
+msgid "Delete task dependency"
+msgstr "Izbriši zavisnost od zadatka"
+
+#         translations.
+#: kptview.cpp:2470 kptview.cpp:2531
+msgctxt "(qtundo-format)"
+msgid "Delete resource"
+msgid_plural "Delete resources"
+msgstr[0] "Obrisati resurs"
+msgstr[1] "Obrisati resurse"
+msgstr[2] "Obrisati resurse"
+
+#         translations.
+#: kptview.cpp:2475 kptview.cpp:2533
+msgctxt "(qtundo-format)"
+msgid "Delete resourcegroup"
+msgid_plural "Delete resourcegroups"
+msgstr[0] "Obrisati grupu resursa"
+msgstr[1] "Obrisati grupe resursa"
+msgstr[2] "Obrisati grupe resursa"
 
 #: kptview.cpp:2484 kptview.cpp:2492
 #, kde-format
@@ -1421,11 +1528,41 @@ msgid ""
 msgstr ""
 "Resurs koji je bio raspoređen će biti izbrisan. Ovo će poništiti raspoređeno."
 
+#: kptview.cpp:2529
+msgctxt "(qtundo-format)"
+msgid "Delete resourcegroups and resources"
+msgstr "Izbriši grupu resursa i resurse"
+
 #: kptview.cpp:2701
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file:<br/><filename>%1</filename>"
 msgstr "Ne mogu otvoriti datoteku:<br/><filename>%1</filename>"
+
+#: kptview.cpp:2810
+msgctxt "(qtundo-format)"
+msgid "Modify name"
+msgstr "Promijeni ime"
+
+#: kptview.cpp:2812
+msgctxt "(qtundo-format)"
+msgid "Modify task name"
+msgstr "Promijeni  ime zadatku"
+
+#: kptview.cpp:2813
+msgctxt "(qtundo-format)"
+msgid "Modify milestone name"
+msgstr "Promijeni ime prekretnici"
+
+#: kptview.cpp:2814
+msgctxt "(qtundo-format)"
+msgid "Modify summarytask name"
+msgstr "Promijeni rezultujućem zadatku ime"
+
+#: kptview.cpp:2815
+msgctxt "(qtundo-format)"
+msgid "Modify project name"
+msgstr "Promijeni ime projekta"
 
 #: kptview.cpp:2901
 #, kde-kuit-format
@@ -3142,10 +3279,6 @@ msgstr "Snimi URL:"
 #~ msgid "Internal error, failed to insert file."
 #~ msgstr "Interna greška, nije uspjelo umetanje datoteke."
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert project"
-#~ msgstr "Ubaci projekt"
-
 #, fuzzy
 #~| msgid "Schedule Selector"
 #~ msgctxt "(qtundo-format)"
@@ -3561,10 +3694,6 @@ msgstr "Snimi URL:"
 #~ msgid "Reports"
 #~ msgstr "Izvještaji"
 
-#~ msgctxt "(qtundo-format) @info:status 1=schedule name"
-#~ msgid "Calculate %1"
-#~ msgstr "Izračunaj %1"
-
 #, fuzzy
 #~| msgid "Cannot baseline. The project is already baselined."
 #~ msgctxt "(qtundo-format)"
@@ -3579,34 +3708,6 @@ msgstr "Snimi URL:"
 #~ msgstr ""
 #~ "Ovaj raspoređivač je postavljen na osnovni pravac.Želite li ukloniti "
 #~ "osnovni pravac?"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Reset baseline %1"
-#~ msgstr "Resetuj osnovni pravac %1"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Baseline %1"
-#~ msgstr "Osnovni pravac %1"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add schedule %1"
-#~ msgstr "Dodaj raspored %1"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Delete schedule %1"
-#~ msgstr "Izbriši raspored %1"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Move schedule %1"
-#~ msgstr "Pomjeri raspored %1"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add milestone"
-#~ msgstr "Dodaj prekretnicu"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add sub-milestone"
-#~ msgstr "Dodaj pod-prekretnicu"
 
 #, fuzzy
 #~| msgid "Task Defaults"
@@ -3637,58 +3738,11 @@ msgstr "Snimi URL:"
 #~ msgstr ""
 #~ "Zadatak koji je bio raspoređen će biti izbrisan.Ovo će poništiti raspored."
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Delete task"
-#~ msgid_plural "Delete tasks"
-#~ msgstr[0] "Izbriši zadatak"
-#~ msgstr[1] "Izbriši zadatke"
-#~ msgstr[2] "Izbriši zadatke"
-
 #, fuzzy
 #~| msgid "This task has been scheduled. This will invalidate the schedule."
 #~ msgctxt "(qtundo-format)"
 #~ msgid "This task has been scheduled. This will invalidate the schedule."
 #~ msgstr "Ovaj zadatak je bio raspoređen. Ovo će poništiti raspored."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Indent task"
-#~ msgstr "Uvuci zadatak"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Unindent task"
-#~ msgstr "Izvuci zadatak"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Move task up"
-#~ msgstr "Premjesti zadatak iznad"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Move task down"
-#~ msgstr "Premjesti zadatak ispod"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add task dependency"
-#~ msgstr "Dodaj zavisnost od zadatka"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Delete task dependency"
-#~ msgstr "Izbriši zavisnost od zadatka"
-
-#         translations.
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Delete resource"
-#~ msgid_plural "Delete resources"
-#~ msgstr[0] "Obrisati resurs"
-#~ msgstr[1] "Obrisati resurse"
-#~ msgstr[2] "Obrisati resurse"
-
-#         translations.
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Delete resourcegroup"
-#~ msgid_plural "Delete resourcegroups"
-#~ msgstr[0] "Obrisati grupu resursa"
-#~ msgstr[1] "Obrisati grupe resursa"
-#~ msgstr[2] "Obrisati grupe resursa"
 
 #, fuzzy
 #~| msgid ""
@@ -3702,36 +3756,12 @@ msgstr "Snimi URL:"
 #~ "Resurs koji je bio raspoređen će biti izbrisan. Ovo će poništiti "
 #~ "raspoređeno."
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Delete resourcegroups and resources"
-#~ msgstr "Izbriši grupu resursa i resurse"
-
 #, fuzzy
 #~| msgctxt "@info"
 #~| msgid "Cannot open file:<br/><filename>%1</filename>"
 #~ msgctxt "(qtundo-format) @info"
 #~ msgid "Cannot open file:<br/><filename>%1</filename>"
 #~ msgstr "Ne mogu otvoriti datoteku:<br/><filename>%1</filename>"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Modify name"
-#~ msgstr "Promijeni ime"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Modify task name"
-#~ msgstr "Promijeni  ime zadatku"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Modify milestone name"
-#~ msgstr "Promijeni ime prekretnici"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Modify summarytask name"
-#~ msgstr "Promijeni rezultujućem zadatku ime"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Modify project name"
-#~ msgstr "Promijeni ime projekta"
 
 #, fuzzy
 #~| msgctxt "@info:status"

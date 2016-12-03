@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-12-02 03:12+0100\n"
+"POT-Creation-Date: 2016-12-03 13:48+0100\n"
 "PO-Revision-Date: 2015-02-09 17:48+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -14,6 +14,11 @@ msgstr ""
 "X-Launchpad-Export-Date: 2015-02-15 06:06+0000\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: common/commands/KarbonBooleanCommand.cpp:68 ui/KarbonView.cpp:917
+msgctxt "(qtundo-format)"
+msgid "Boolean Operation"
+msgstr "Boolean Operacija"
 
 #. i18n: ectx: Menu (object_order)
 #: data/karbon.rc:16 data/karbon.rc:77
@@ -128,6 +133,16 @@ msgstr "Svojstva"
 msgid "Flatness:"
 msgstr "Spljoštenost:"
 
+#: plugins/flattenpath/KarbonPathFlattenCommand.cpp:163
+msgctxt "(qtundo-format)"
+msgid "Flatten path"
+msgstr "Spljošten put"
+
+#: plugins/refinepath/KarbonPathRefineCommand.cpp:41
+msgctxt "(qtundo-format)"
+msgid "Refine path"
+msgstr "Promjenjen put"
+
 #: plugins/refinepath/RefinePathPlugin.cpp:64
 #, kde-format
 msgid "&Refine Path..."
@@ -142,6 +157,12 @@ msgstr "Promijenjen put"
 #, kde-format
 msgid "Subdivisions:"
 msgstr "Podpodjele:"
+
+#: plugins/roundcorners/RoundCornersCommand.cpp:41
+#: plugins/roundcorners/RoundCornersPlugin.cpp:95
+msgctxt "(qtundo-format)"
+msgid "Round Corners"
+msgstr "Zaobljeni Uglovi"
 
 #: plugins/roundcorners/RoundCornersPlugin.cpp:66
 #, kde-format
@@ -158,6 +179,11 @@ msgstr "Zaobljeni Uglovi"
 #, kde-format
 msgid "Radius:"
 msgstr "Poluprečnik:"
+
+#: plugins/whirlpinch/KarbonWhirlPinchCommand.cpp:108
+msgctxt "(qtundo-format)"
+msgid "Whirl & pinch"
+msgstr "Okreni i uštini"
 
 #: plugins/whirlpinch/WhirlPinchPlugin.cpp:68
 #, kde-format
@@ -191,6 +217,18 @@ msgstr "Ugao:"
 #, kde-format
 msgid "Pinch:"
 msgstr "Uštipak:"
+
+#: ui/commands/KarbonLayerReorderCommand.cpp:37
+#: ui/commands/KarbonLayerReorderCommand.cpp:46
+msgctxt "(qtundo-format)"
+msgid "Raise Layer"
+msgstr "Podigni sloj"
+
+#: ui/commands/KarbonLayerReorderCommand.cpp:39
+#: ui/commands/KarbonLayerReorderCommand.cpp:48
+msgctxt "(qtundo-format)"
+msgid "Lower Layer"
+msgstr "Spusti sloj"
 
 #: ui/dialogs/KarbonConfigureDialog.cpp:45
 #, kde-format
@@ -298,6 +336,16 @@ msgstr "Unesi ime novog sloja:"
 msgid "New layer"
 msgstr "Novi sloj"
 
+#: ui/dockers/KarbonLayerDocker.cpp:293
+msgctxt "(qtundo-format)"
+msgid "Create Layer"
+msgstr "Stvori sloj"
+
+#: ui/dockers/KarbonLayerDocker.cpp:317
+msgctxt "(qtundo-format)"
+msgid "Delete Layer"
+msgstr "Izbriši sloj"
+
 #: ui/dockers/KarbonLayerDocker.cpp:319
 #, kde-format
 msgid "Could not delete all layers. At least one layer is required."
@@ -356,13 +404,18 @@ msgstr "Odsječen"
 
 #: ui/dockers/KarbonLayerModel.cpp:263
 #, kde-format
-msgid "yes"
-msgstr "da"
+msgid "no"
+msgstr "ne"
 
 #: ui/dockers/KarbonLayerModel.cpp:263
 #, kde-format
-msgid "no"
-msgstr "ne"
+msgid "yes"
+msgstr "da"
+
+#: ui/dockers/KarbonLayerModel.cpp:464
+msgctxt "(qtundo-format)"
+msgid "Reparent shapes"
+msgstr "Reparentni oblici"
 
 #: ui/KarbonAboutData.h:35
 #, kde-format
@@ -485,6 +538,11 @@ msgstr "Neispravan OASIS dokument. Oznaka draw:page nije pronađena."
 msgid "Master Page"
 msgstr "Glavna stranica"
 
+#: ui/KarbonDocumentMergeCommand.cpp:59 ui/KarbonView.cpp:560
+msgctxt "(qtundo-format)"
+msgid "Insert graphics"
+msgstr "Unesi grafiku"
+
 #: ui/KarbonView.cpp:491
 #, kde-format
 msgid "Choose Graphic to Add"
@@ -504,6 +562,26 @@ msgstr "Uvezi grafiku"
 #, kde-format
 msgid "Could not create image shape."
 msgstr "Ne mogu kreirati oblik slike."
+
+#: ui/KarbonView.cpp:791
+msgctxt "(qtundo-format)"
+msgid "Mirror Horizontally"
+msgstr "Preslikano vodoravno"
+
+#: ui/KarbonView.cpp:793
+msgctxt "(qtundo-format)"
+msgid "Mirror Vertically"
+msgstr "Preslikano uspravno"
+
+#: ui/KarbonView.cpp:795
+msgctxt "(qtundo-format)"
+msgid "Mirror Horizontally and Vertically"
+msgstr "Preslikano vodoravno i uspravno"
+
+#: ui/KarbonView.cpp:850
+msgctxt "(qtundo-format)"
+msgid "Separate paths"
+msgstr "Podjeli putanje"
 
 #: ui/KarbonView.cpp:1028
 #, kde-format
@@ -849,10 +927,6 @@ msgstr "Popuna:"
 #~ msgid "View"
 #~ msgstr "Pogled"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Boolean Operation"
-#~ msgstr "Boolean Operacija"
-
 #, fuzzy
 #~| msgid "&Flatten Path..."
 #~ msgctxt "(qtundo-format)"
@@ -877,14 +951,6 @@ msgstr "Popuna:"
 #~ msgid "Flatness:"
 #~ msgstr "Spljoštenost:"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Flatten path"
-#~ msgstr "Spljošten put"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Refine path"
-#~ msgstr "Promjenjen put"
-
 #, fuzzy
 #~| msgid "&Refine Path..."
 #~ msgctxt "(qtundo-format)"
@@ -903,10 +969,6 @@ msgstr "Popuna:"
 #~ msgid "Subdivisions:"
 #~ msgstr "Podpodjele:"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Round Corners"
-#~ msgstr "Zaobljeni Uglovi"
-
 #, fuzzy
 #~| msgid "&Round Corners..."
 #~ msgctxt "(qtundo-format)"
@@ -918,10 +980,6 @@ msgstr "Popuna:"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Radius:"
 #~ msgstr "Poluprečnik:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Whirl & pinch"
-#~ msgstr "Okreni i uštini"
 
 #, fuzzy
 #~| msgid "&Whirl/Pinch..."
@@ -964,14 +1022,6 @@ msgstr "Popuna:"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Pinch:"
 #~ msgstr "Uštipak:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Raise Layer"
-#~ msgstr "Podigni sloj"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Lower Layer"
-#~ msgstr "Spusti sloj"
 
 #, fuzzy
 #~| msgid "Configure"
@@ -1094,14 +1144,6 @@ msgstr "Popuna:"
 #~ msgid "New layer"
 #~ msgstr "Novi sloj"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Create Layer"
-#~ msgstr "Stvori sloj"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Delete Layer"
-#~ msgstr "Izbriši sloj"
-
 #, fuzzy
 #~| msgid "Could not delete all layers. At least one layer is required."
 #~ msgctxt "(qtundo-format)"
@@ -1179,10 +1221,6 @@ msgstr "Popuna:"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "yes"
 #~ msgstr "da"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Reparent shapes"
-#~ msgstr "Reparentni oblici"
 
 #, fuzzy
 #~| msgid "Karbon"
@@ -1318,10 +1356,6 @@ msgstr "Popuna:"
 #~ msgid "Master Page"
 #~ msgstr "Glavna stranica"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert graphics"
-#~ msgstr "Unesi grafiku"
-
 #, fuzzy
 #~| msgid "Choose Graphic to Add"
 #~ msgctxt "(qtundo-format)"
@@ -1345,22 +1379,6 @@ msgstr "Popuna:"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Could not create image shape."
 #~ msgstr "Ne mogu kreirati oblik slike."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Mirror Horizontally"
-#~ msgstr "Preslikano vodoravno"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Mirror Vertically"
-#~ msgstr "Preslikano uspravno"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Mirror Horizontally and Vertically"
-#~ msgstr "Preslikano vodoravno i uspravno"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Separate paths"
-#~ msgstr "Podjeli putanje"
 
 #, fuzzy
 #~| msgid "Outline &Mode"
