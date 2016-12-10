@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libk3b\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-11-29 03:03+0100\n"
+"POT-Creation-Date: 2016-12-10 02:32+0100\n"
 "PO-Revision-Date: 2015-02-25 20:51+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -118,7 +118,7 @@ msgstr "Upisujem stazu %1 od %2"
 msgid "Writing cue/bin Image"
 msgstr "Upisujem cue/bin odraz"
 
-#: jobs/k3bbinimagewritingjob.cpp:212 jobs/k3biso9660imagewritingjob.cpp:345
+#: jobs/k3bbinimagewritingjob.cpp:212 jobs/k3biso9660imagewritingjob.cpp:346
 #, kde-format
 msgid " - %1 Copy"
 msgid_plural " - %1 Copies"
@@ -317,7 +317,8 @@ msgid "Use CDDB entry"
 msgstr "Upotrebi CDDB unos"
 
 #: jobs/k3bcdcopyjob.cpp:483 projects/k3bcdrdaowriter.cpp:526
-#: projects/k3bcdrecordwriter.cpp:419 projects/k3bgrowisofswriter.cpp:340
+#: projects/k3bcdrecordwriter.cpp:421 projects/k3bcdrskinwriter.cpp:432
+#: projects/k3bgrowisofswriter.cpp:340
 #, kde-format
 msgid "Preparing write process..."
 msgstr "Pripremam proces upisa..."
@@ -386,8 +387,9 @@ msgstr "Upisujem kopiju (sesija %1)"
 
 #: jobs/k3bcdcopyjob.cpp:715 projects/audiocd/k3baudiojob.cpp:651
 #: projects/datacd/k3bdatajob.cpp:438 projects/k3bcdrdaowriter.cpp:568
-#: projects/k3bcdrdaowriter.cpp:586 projects/k3bcdrecordwriter.cpp:447
-#: projects/k3bgrowisofswriter.cpp:365 projects/mixedcd/k3bmixedjob.cpp:1012
+#: projects/k3bcdrdaowriter.cpp:586 projects/k3bcdrecordwriter.cpp:449
+#: projects/k3bcdrskinwriter.cpp:460 projects/k3bgrowisofswriter.cpp:365
+#: projects/mixedcd/k3bmixedjob.cpp:1012
 #, kde-format
 msgid "Simulating"
 msgstr "Simuliram"
@@ -409,7 +411,7 @@ msgstr "Upisujem kopiju"
 msgid "Waiting for media"
 msgstr "Čekam disk"
 
-#: jobs/k3bcdcopyjob.cpp:862 jobs/k3bmetawriter.cpp:476
+#: jobs/k3bcdcopyjob.cpp:862 jobs/k3bmetawriter.cpp:480
 #: projects/audiocd/k3baudiojob.cpp:302
 #, kde-format
 msgid "It is not possible to write CD-Text in TAO mode."
@@ -454,7 +456,8 @@ msgid "K3b was unable to eject the written disk. Please do so manually."
 msgstr "K3b nije mogao da izbaci izvorni disk. Učinite to ručno."
 
 #: jobs/k3bcdcopyjob.cpp:1100 jobs/k3bverificationjob.cpp:268
-#: projects/k3bcdrecordwriter.cpp:734 projects/mixedcd/k3bmixedjob.cpp:564
+#: projects/k3bcdrecordwriter.cpp:736 projects/k3bcdrskinwriter.cpp:748
+#: projects/mixedcd/k3bmixedjob.cpp:564
 #, kde-format
 msgid "Please reload the medium and press 'OK'"
 msgstr "Ponovo učitaj sredstvo i pritisni 'OK'"
@@ -511,8 +514,8 @@ msgstr[2] "Pravim %1 kopija"
 #: jobs/k3bdvdbooktypejob.cpp:287 jobs/k3bdvdformattingjob.cpp:463
 #: jobs/k3breadcdreader.cpp:106 projects/datacd/k3bmsinfofetcher.cpp:56
 #: projects/datacd/k3bmsinfofetcher.cpp:92 projects/k3bcdrdaowriter.cpp:447
-#: projects/k3bcdrecordwriter.cpp:201 projects/k3bgrowisofswriter.cpp:143
-#: projects/videocd/k3bvcdjob.cpp:201
+#: projects/k3bcdrecordwriter.cpp:201 projects/k3bcdrskinwriter.cpp:201
+#: projects/k3bgrowisofswriter.cpp:143 projects/videocd/k3bvcdjob.cpp:201
 #, kde-format
 msgid "Could not find %1 executable."
 msgstr "Ne mogu da nađem izvršni %1."
@@ -522,8 +525,9 @@ msgstr "Ne mogu da nađem izvršni %1."
 #: jobs/k3bvideodvdtitledetectclippingjob.cpp:181
 #: jobs/k3bvideodvdtitletranscodingjob.cpp:383
 #: projects/datacd/k3bisoimager.cpp:307 projects/datacd/k3bisoimager.cpp:449
-#: projects/k3bcdrdaowriter.cpp:555 projects/k3bcdrecordwriter.cpp:439
-#: projects/k3bgrowisofswriter.cpp:360 projects/videocd/k3bvcdjob.cpp:255
+#: projects/k3bcdrdaowriter.cpp:555 projects/k3bcdrecordwriter.cpp:441
+#: projects/k3bcdrskinwriter.cpp:452 projects/k3bgrowisofswriter.cpp:360
+#: projects/videocd/k3bvcdjob.cpp:255
 #, kde-format
 msgid "Could not start %1."
 msgstr "Ne mogu da pokrenem %1."
@@ -534,7 +538,8 @@ msgstr "Ne mogu da pokrenem %1."
 #: jobs/k3bvideodvdtitletranscodingjob.cpp:479
 #: projects/audiocd/k3baudionormalizejob.cpp:186
 #: projects/datacd/k3bisoimager.cpp:171 projects/k3bcdrdaowriter.cpp:766
-#: projects/k3bcdrecordwriter.cpp:895 projects/videocd/k3bvcdjob.cpp:355
+#: projects/k3bcdrecordwriter.cpp:897 projects/k3bcdrskinwriter.cpp:909
+#: projects/videocd/k3bvcdjob.cpp:355
 #, kde-format
 msgid "%1 returned an unknown error (code %2)."
 msgstr "%1 vrati nepoznatu grešku (kod %2)."
@@ -922,13 +927,13 @@ msgid "Writing mode ignored when writing DVD+R(W) media."
 msgstr "Režim upisa se ignoriše kad se upisuju DVD+R(W) diskovi."
 
 #: jobs/k3bdvdcopyjob.cpp:838 jobs/k3bdvdcopyjob.cpp:928
-#: jobs/k3bmetawriter.cpp:861 jobs/k3bmetawriter.cpp:870
+#: jobs/k3bmetawriter.cpp:939 jobs/k3bmetawriter.cpp:948
 #: projects/datacd/k3bdatajob.cpp:852 projects/datacd/k3bdatajob.cpp:974
 #, kde-format
 msgid "Writing %1."
 msgstr "Upisujem %1."
 
-#: jobs/k3bdvdcopyjob.cpp:846 jobs/k3bmetawriter.cpp:513
+#: jobs/k3bdvdcopyjob.cpp:846 jobs/k3bmetawriter.cpp:517
 #: projects/datacd/k3bdatajob.cpp:860
 #, kde-format
 msgid ""
@@ -938,13 +943,13 @@ msgstr ""
 "Vaš pisač (%1 %2) ne podržava simulaciju sa DVD‑R/DVD‑RV diskovima. Želite "
 "da nastavite? Disk će zaista biti upisan."
 
-#: jobs/k3bdvdcopyjob.cpp:851 jobs/k3bmetawriter.cpp:518
+#: jobs/k3bdvdcopyjob.cpp:851 jobs/k3bmetawriter.cpp:522
 #: projects/datacd/k3bdatajob.cpp:865
 #, kde-format
 msgid "No Simulation with DVD-R(W)"
 msgstr "Nema simulacije sa DVD-R(W)"
 
-#: jobs/k3bdvdcopyjob.cpp:872 jobs/k3bmetawriter.cpp:857
+#: jobs/k3bdvdcopyjob.cpp:872 jobs/k3bmetawriter.cpp:935
 #: projects/datacd/k3bdatajob.cpp:879
 #, kde-format
 msgid "Writing DVD-RW in restricted overwrite mode."
@@ -960,19 +965,19 @@ msgstr "Upisujem DVD-RW u DAO režimu."
 msgid "Writing DVD-RW in incremental mode."
 msgstr "Upisujem DVD-RW u rastućem režimu."
 
-#: jobs/k3bdvdcopyjob.cpp:893 jobs/k3bmetawriter.cpp:450
-#: jobs/k3bmetawriter.cpp:499 projects/datacd/k3bdatajob.cpp:920
+#: jobs/k3bdvdcopyjob.cpp:893 jobs/k3bmetawriter.cpp:454
+#: jobs/k3bmetawriter.cpp:503 projects/datacd/k3bdatajob.cpp:920
 #, kde-format
 msgid "Restricted Overwrite is not possible with DVD-R media."
 msgstr "Ograničeno prebrisavanje nije moguće sa DVD-R diskovima."
 
-#: jobs/k3bdvdcopyjob.cpp:898 jobs/k3bmetawriter.cpp:863
+#: jobs/k3bdvdcopyjob.cpp:898 jobs/k3bmetawriter.cpp:941
 #: projects/datacd/k3bdatajob.cpp:896 projects/datacd/k3bdatajob.cpp:913
 #, kde-format
 msgid "Writing %1 in DAO mode."
 msgstr "Upisujem  u DA%1O režimu."
 
-#: jobs/k3bdvdcopyjob.cpp:902 jobs/k3bmetawriter.cpp:865
+#: jobs/k3bdvdcopyjob.cpp:902 jobs/k3bmetawriter.cpp:943
 #: projects/datacd/k3bdatajob.cpp:922
 #, kde-format
 msgid "Writing %1 in incremental mode."
@@ -1009,7 +1014,8 @@ msgid "Formatting disc"
 msgstr "Formatiram disk"
 
 #: jobs/k3bdvdformattingjob.cpp:130 projects/k3bcdrdaowriter.cpp:538
-#: projects/k3bcdrecordwriter.cpp:423 projects/k3bgrowisofswriter.cpp:344
+#: projects/k3bcdrecordwriter.cpp:425 projects/k3bcdrskinwriter.cpp:436
+#: projects/k3bgrowisofswriter.cpp:344
 #, kde-format
 msgid "Unmounting medium"
 msgstr "Demontiram disk"
@@ -1113,8 +1119,8 @@ msgstr "Ne mogu da odredim trenutno stanje formatiranosti DVD‑RV diska."
 #: jobs/k3bvideodvdtitletranscodingjob.cpp:142
 #: projects/audiocd/k3baudionormalizejob.cpp:62
 #: projects/datacd/k3bmkisofshandler.cpp:62 projects/k3bcdrdaowriter.cpp:455
-#: projects/k3bcdrecordwriter.cpp:401 projects/k3bgrowisofswriter.cpp:157
-#: projects/videocd/k3bvcdjob.cpp:219
+#: projects/k3bcdrecordwriter.cpp:403 projects/k3bcdrskinwriter.cpp:414
+#: projects/k3bgrowisofswriter.cpp:157 projects/videocd/k3bvcdjob.cpp:219
 #, kde-format
 msgid "Using %1 %2 – Copyright © %3"
 msgstr "Koristi se %1 %2 – Zaštita autorskih prava © %3"
@@ -1160,29 +1166,29 @@ msgstr "Upisujem kopiju %1 od %2"
 msgid "Waiting for medium"
 msgstr "Čekam na disk"
 
-#: jobs/k3biso9660imagewritingjob.cpp:341
+#: jobs/k3biso9660imagewritingjob.cpp:342
 #, kde-format
 msgid "Simulating ISO 9660 Image"
 msgstr "Simuliram ISO9660 odraz"
 
-#: jobs/k3biso9660imagewritingjob.cpp:343
+#: jobs/k3biso9660imagewritingjob.cpp:344
 #, kde-format
 msgid "Burning ISO 9660 Image"
 msgstr "Narezujem ISO9660 odraz"
 
-#: jobs/k3bmetawriter.cpp:305 projects/datacd/k3bdatajob.cpp:781
+#: jobs/k3bmetawriter.cpp:309 projects/datacd/k3bdatajob.cpp:781
 #: projects/datacd/k3bdatajob.cpp:804
 #, kde-format
 msgid "Cannot write %1 media using %2. Falling back to default application."
 msgstr ""
 "Ne mogu da upišem %1 disk pomoću %2. Vraćam se na podrazumijevani program."
 
-#: jobs/k3bmetawriter.cpp:311
+#: jobs/k3bmetawriter.cpp:315
 #, kde-format
 msgid "DVD and Blu-ray tracks can only be written in MODE1."
 msgstr "DVD i blurej staze mogu se upisati samo u režimu 1."
 
-#: jobs/k3bmetawriter.cpp:336
+#: jobs/k3bmetawriter.cpp:340
 #, kde-format
 msgid ""
 "Missing Blu-ray support in cdrecord and growisofs. Please update the system."
@@ -1190,24 +1196,24 @@ msgstr ""
 "<command>cdrecord</command> i <command>growisofs</command> ne podržavaju "
 "blurej. Ažurirajte sistem."
 
-#: jobs/k3bmetawriter.cpp:432 projects/audiocd/k3baudiojob.cpp:252
+#: jobs/k3bmetawriter.cpp:436 projects/audiocd/k3baudiojob.cpp:252
 #, kde-format
 msgid "Track lengths below 4 seconds violate the Red Book standard."
 msgstr "Dužina numere ispod 4 sekunde narušava standard Crvene knjige."
 
-#: jobs/k3bmetawriter.cpp:464 projects/audiocd/k3baudiojob.cpp:290
+#: jobs/k3bmetawriter.cpp:468 projects/audiocd/k3baudiojob.cpp:290
 #: projects/mixedcd/k3bmixedjob.cpp:1234
 #, kde-format
 msgid "On-the-fly writing with cdrecord < 2.01a13 not supported."
 msgstr "Pisanje u letu sa cdrecord < 2.01a13 nije podržano."
 
-#: jobs/k3bmetawriter.cpp:471 projects/audiocd/k3baudiojob.cpp:297
+#: jobs/k3bmetawriter.cpp:475 projects/audiocd/k3baudiojob.cpp:297
 #: projects/mixedcd/k3bmixedjob.cpp:1240
 #, kde-format
 msgid "Cdrecord %1 does not support CD-Text writing."
 msgstr "Cdrecord %1 ne podržava upisivanje CD-teksta."
 
-#: jobs/k3bmetawriter.cpp:483 projects/datacd/k3bdatajob.cpp:903
+#: jobs/k3bmetawriter.cpp:487 projects/datacd/k3bdatajob.cpp:903
 #, kde-format
 msgid ""
 "Your writer (%1 %2) does not support Incremental Streaming with %3 media. "
@@ -1216,12 +1222,12 @@ msgstr ""
 "Pisač (%1 %2) ne podržava rastući tok sa %3. Više sesija neće biti moguće. "
 "Da ipak nastavim?"
 
-#: jobs/k3bmetawriter.cpp:488 projects/datacd/k3bdatajob.cpp:908
+#: jobs/k3bmetawriter.cpp:492 projects/datacd/k3bdatajob.cpp:908
 #, kde-format
 msgid "No Incremental Streaming"
 msgstr "Bez rastućeg toka"
 
-#: jobs/k3bmetawriter.cpp:504
+#: jobs/k3bmetawriter.cpp:508
 #, kde-format
 msgid ""
 "DVD+R(W) media do not support write simulation. Do you really want to "
@@ -1230,83 +1236,88 @@ msgstr ""
 "DVD+R i DVD+RV diskovi ne podržavaju simulaciju upisa. Želite da nastavite? "
 "Disk će zaista biti upisan."
 
-#: jobs/k3bmetawriter.cpp:507
+#: jobs/k3bmetawriter.cpp:511
 #, kde-format
 msgid "No Simulation with DVD+R(W)"
 msgstr "Nema simulacije sa DVD+R(W)"
 
-#: jobs/k3bmetawriter.cpp:533 projects/datacd/k3bdatajob.cpp:1060
+#: jobs/k3bmetawriter.cpp:537 projects/datacd/k3bdatajob.cpp:1060
 #, kde-format
 msgid "Most writers do not support writing multisession CDs in DAO mode."
 msgstr "Većina pisača ne podržava pisanje višesesijskih CD-ova u režimu DAO."
 
-#: jobs/k3bmetawriter.cpp:817
+#: jobs/k3bmetawriter.cpp:790
+#, kde-format
+msgid "No version of cdrskin can do this yet."
+msgstr ""
+
+#: jobs/k3bmetawriter.cpp:895
 #, kde-format
 msgid "Writing CD in Session At Once mode."
 msgstr "Upisujem CD u režimu SAO."
 
-#: jobs/k3bmetawriter.cpp:819
+#: jobs/k3bmetawriter.cpp:897
 #, kde-format
 msgid "Writing CD in Track At Once mode."
 msgstr "Upisujem CD u režimu TAO."
 
-#: jobs/k3bmetawriter.cpp:821
+#: jobs/k3bmetawriter.cpp:899
 #, kde-format
 msgid "Writing CD in Raw mode."
 msgstr "Upisujem CD u sirovom režimu."
 
-#: jobs/k3bmetawriter.cpp:824
+#: jobs/k3bmetawriter.cpp:902
 #, kde-format
 msgid "Appending session to CD"
 msgstr "Pridodajem sesiju na CD"
 
-#: jobs/k3bmetawriter.cpp:831
+#: jobs/k3bmetawriter.cpp:909
 #, kde-format
 msgid "Writing rewritable CD in Session At Once mode."
 msgstr "Upisujem prebrisivi CD u režimu SAO."
 
-#: jobs/k3bmetawriter.cpp:833
+#: jobs/k3bmetawriter.cpp:911
 #, kde-format
 msgid "Writing rewritable CD in Track At Once mode."
 msgstr "Upisujem prebrisivi CD u režimu TAO."
 
-#: jobs/k3bmetawriter.cpp:835
+#: jobs/k3bmetawriter.cpp:913
 #, kde-format
 msgid "Writing rewritable CD in Raw mode."
 msgstr "Upisujem prebrisivi CD u sirovom režimu."
 
-#: jobs/k3bmetawriter.cpp:838
+#: jobs/k3bmetawriter.cpp:916
 #, kde-format
 msgid "Appending session to rewritable CD."
 msgstr "Pridodajem sesiju na prebrisivi CD."
 
-#: jobs/k3bmetawriter.cpp:845
+#: jobs/k3bmetawriter.cpp:923
 #, kde-format
 msgid "Growing ISO 9660 filesystem on DVD+RW."
 msgstr "Širim datoteku sistem ISO9660 na DVD+RW-u."
 
-#: jobs/k3bmetawriter.cpp:847 projects/datacd/k3bdatajob.cpp:882
+#: jobs/k3bmetawriter.cpp:925 projects/datacd/k3bdatajob.cpp:882
 #, kde-format
 msgid "Growing ISO 9660 filesystem on DVD-RW in restricted overwrite mode."
 msgstr ""
 "Širim datoteku sistem ISO9660 na DVD-RW-u u režimu ograničenog prebrisavanja."
 
-#: jobs/k3bmetawriter.cpp:849
+#: jobs/k3bmetawriter.cpp:927
 #, kde-format
 msgid "Appending session to DVD+R."
 msgstr "Pridodajem sesiju na DVD+R."
 
-#: jobs/k3bmetawriter.cpp:851
+#: jobs/k3bmetawriter.cpp:929
 #, kde-format
 msgid "Appending session to Double Layer DVD+R."
 msgstr "Pridodajem sesiju na dvoslojni DVD+R."
 
-#: jobs/k3bmetawriter.cpp:853
+#: jobs/k3bmetawriter.cpp:931
 #, kde-format
 msgid "Appending session to %1."
 msgstr "Pridodajem sesiju na %1."
 
-#: jobs/k3bmetawriter.cpp:859
+#: jobs/k3bmetawriter.cpp:937
 #, kde-format
 msgid "Writing Double Layer DVD+R."
 msgstr "Upisujem dvoslojni DVD+R."
@@ -1776,8 +1787,8 @@ msgid "Writing track %1 of %2%3"
 msgstr "Upisujem stazu %1 od %2%3"
 
 #: projects/audiocd/k3baudiojob.cpp:655 projects/datacd/k3bdatajob.cpp:442
-#: projects/k3bcdrdaowriter.cpp:574 projects/k3bcdrecordwriter.cpp:455
-#: projects/k3bgrowisofswriter.cpp:370
+#: projects/k3bcdrdaowriter.cpp:574 projects/k3bcdrecordwriter.cpp:457
+#: projects/k3bcdrskinwriter.cpp:468 projects/k3bgrowisofswriter.cpp:370
 #, kde-format
 msgid "Writing"
 msgstr "Upisujem"
@@ -2086,7 +2097,7 @@ msgstr ""
 "koja sadrže više od jednog obrnutog kroz:"
 
 #: projects/datacd/k3bisoimager.cpp:181 projects/k3bcdrdaowriter.cpp:777
-#: projects/k3bcdrecordwriter.cpp:915
+#: projects/k3bcdrecordwriter.cpp:917 projects/k3bcdrskinwriter.cpp:929
 #, kde-format
 msgid "%1 crashed."
 msgstr "%1 se srušio."
@@ -2280,7 +2291,8 @@ msgstr "Izbacujem disk"
 msgid "Cdrdao %1 does not support disabling burnfree."
 msgstr "Cdrdao %1 ne podržava isključivanje Burnfree-ja."
 
-#: projects/k3bcdrdaowriter.cpp:271 projects/k3bcdrecordwriter.cpp:304
+#: projects/k3bcdrdaowriter.cpp:271 projects/k3bcdrecordwriter.cpp:306
+#: projects/k3bcdrskinwriter.cpp:313
 #, kde-format
 msgid "'Force unsafe operations' enabled."
 msgstr "„Forsiraj nesigurne operacije“ je uključeno."
@@ -2364,8 +2376,8 @@ msgstr ""
 "Zbog greške u cdrdao toc/cue datoteka %1 je izbrisan. K3b nije mogao da ga "
 "povrati i rezervne kopije %2."
 
-#: projects/k3bcdrdaowriter.cpp:738 projects/k3bcdrecordwriter.cpp:792
-#: projects/k3bgrowisofswriter.cpp:522
+#: projects/k3bcdrdaowriter.cpp:738 projects/k3bcdrecordwriter.cpp:794
+#: projects/k3bcdrskinwriter.cpp:806 projects/k3bgrowisofswriter.cpp:522
 #, kde-format
 msgid "Simulation successfully completed"
 msgstr "Simulacija je uspješno završena"
@@ -2375,8 +2387,8 @@ msgstr "Simulacija je uspješno završena"
 msgid "Reading successfully completed"
 msgstr "Čitanje je uspješno završeno"
 
-#: projects/k3bcdrdaowriter.cpp:746 projects/k3bcdrecordwriter.cpp:794
-#: projects/k3bgrowisofswriter.cpp:524
+#: projects/k3bcdrdaowriter.cpp:746 projects/k3bcdrecordwriter.cpp:796
+#: projects/k3bcdrskinwriter.cpp:808 projects/k3bgrowisofswriter.cpp:524
 #, kde-format
 msgid "Writing successfully completed"
 msgstr "Upisivanje je uspješno završeno"
@@ -2391,8 +2403,8 @@ msgstr "Kopiranje je uspješno završeno"
 msgid "Blanking successfully completed"
 msgstr "Brisanje je uspješno završeno"
 
-#: projects/k3bcdrdaowriter.cpp:758 projects/k3bcdrecordwriter.cpp:798
-#: projects/k3bgrowisofswriter.cpp:517
+#: projects/k3bcdrdaowriter.cpp:758 projects/k3bcdrecordwriter.cpp:800
+#: projects/k3bcdrskinwriter.cpp:812 projects/k3bgrowisofswriter.cpp:517
 #, kde-format
 msgid "Average overall write speed: %1 KB/s (%2x)"
 msgstr "Prosječna ukupna brzina upisa: %1 KB/s (%2x)"
@@ -2403,7 +2415,8 @@ msgid "Please include the debugging output in your problem report."
 msgstr "Uključite i ispravljački izlaz u vašem izvještaju o problemu."
 
 # >! When c-format is gone, put %1×.
-#: projects/k3bcdrdaowriter.cpp:794 projects/k3bcdrecordwriter.cpp:672
+#: projects/k3bcdrdaowriter.cpp:794 projects/k3bcdrecordwriter.cpp:674
+#: projects/k3bcdrskinwriter.cpp:686
 #, no-c-format, kde-format
 msgid "Medium or burner does not support writing at %1x speed"
 msgstr "Disk ili pisač ne podržavaju pisanje pri brzini %1x"
@@ -2478,18 +2491,21 @@ msgstr "Uređaj nije spreman, čekam."
 msgid "Cue sheet not accepted."
 msgstr "CUE list nije prihvaćen."
 
-#: projects/k3bcdrdaowriter.cpp:888 projects/k3bcdrecordwriter.cpp:616
+#: projects/k3bcdrdaowriter.cpp:888 projects/k3bcdrecordwriter.cpp:618
+#: projects/k3bcdrskinwriter.cpp:630
 #, kde-format
 msgid "No valid %1 option: %2"
 msgstr "Nema ispravne %1 opcije: %2"
 
-#: projects/k3bcdrdaowriter.cpp:893 projects/k3bcdrecordwriter.cpp:819
-#: projects/k3bgrowisofshandler.cpp:236 projects/mixedcd/k3bmixedjob.cpp:1040
+#: projects/k3bcdrdaowriter.cpp:893 projects/k3bcdrecordwriter.cpp:821
+#: projects/k3bcdrskinwriter.cpp:833 projects/k3bgrowisofshandler.cpp:236
+#: projects/mixedcd/k3bmixedjob.cpp:1040
 #, kde-format
 msgid "Data does not fit on disk."
 msgstr "Podaci ne mogu stati na disk."
 
-#: projects/k3bcdrdaowriter.cpp:895 projects/k3bcdrecordwriter.cpp:821
+#: projects/k3bcdrdaowriter.cpp:895 projects/k3bcdrecordwriter.cpp:823
+#: projects/k3bcdrskinwriter.cpp:835
 #, kde-format
 msgid "Enable overburning in the advanced K3b settings to burn anyway."
 msgstr ""
@@ -2505,171 +2521,173 @@ msgstr "Upisujem uvod"
 msgid "Writing leadout"
 msgstr "Upisujem izvod"
 
-#: projects/k3bcdrecordwriter.cpp:235
+#: projects/k3bcdrecordwriter.cpp:237
 #, kde-format
 msgid "Cdrecord version %1 does not support Blu-ray writing."
 msgstr "<command>cdrecord</command> %1 ne podržava upisivanje blureja."
 
-#: projects/k3bcdrecordwriter.cpp:259
+#: projects/k3bcdrecordwriter.cpp:261 projects/k3bcdrskinwriter.cpp:278
 #, kde-format
 msgid "Writer does not support disk at once (DAO) recording"
 msgstr "Pisač ne podržava snimanje tipa disk-od-jednom (DAO)"
 
-#: projects/k3bcdrecordwriter.cpp:270
+#: projects/k3bcdrecordwriter.cpp:272 projects/k3bcdrskinwriter.cpp:287
 #, kde-format
 msgid "Writer does not support raw writing."
 msgstr "Pisač ne podržava sirovo pisanje."
 
-#: projects/k3bcdrecordwriter.cpp:279
+#: projects/k3bcdrecordwriter.cpp:281
 #, kde-format
 msgid "Cdrecord does not support writing %1 media."
 msgstr "<command>cdrecord</command> ne podržava upis %1 medija."
 
-#: projects/k3bcdrecordwriter.cpp:299
+#: projects/k3bcdrecordwriter.cpp:301 projects/k3bcdrskinwriter.cpp:308
 #, kde-format
 msgid "Writer does not support buffer underrun free recording (Burnfree)"
 msgstr "Pisač ne podržava snimanje bez podilaženja bafera (Burnfree)"
 
-#: projects/k3bcdrecordwriter.cpp:335
+#: projects/k3bcdrecordwriter.cpp:337 projects/k3bcdrskinwriter.cpp:348
 #, kde-format
 msgid "Failed to write temporary file '%1'"
 msgstr "Ne mogu da upišem privremenu datoteku „%1“"
 
-#: projects/k3bcdrecordwriter.cpp:355
+#: projects/k3bcdrecordwriter.cpp:357
 #, kde-format
 msgid "Cdrecord %1 does not support overburning."
 msgstr "Cdrecord %1 ne podržava nadrezanje."
 
 # >! When c-format is gone, put %1×.
-#: projects/k3bcdrecordwriter.cpp:450
+#: projects/k3bcdrecordwriter.cpp:452 projects/k3bcdrskinwriter.cpp:463
 #, no-c-format, kde-format
 msgid "Starting simulation at %1x speed..."
 msgstr "Počinjem simulaciju pri brzini %1x..."
 
-#: projects/k3bcdrecordwriter.cpp:452
+#: projects/k3bcdrecordwriter.cpp:454 projects/k3bcdrskinwriter.cpp:465
 #, kde-format
 msgid "Starting %1 simulation at %2x speed..."
 msgstr "Počinjem %1 simulaciju pri brzini %2x..."
 
 # >! When c-format is gone, put %1×.
-#: projects/k3bcdrecordwriter.cpp:458
+#: projects/k3bcdrecordwriter.cpp:460 projects/k3bcdrskinwriter.cpp:471
 #, no-c-format, kde-format
 msgid "Starting writing at %1x speed..."
 msgstr "Počinjem upisivanje pri brzini %1x..."
 
-#: projects/k3bcdrecordwriter.cpp:460
+#: projects/k3bcdrecordwriter.cpp:462 projects/k3bcdrskinwriter.cpp:473
 #, kde-format
 msgid "Starting %1 writing at %2x speed..."
 msgstr "Počinjem %1 pisanje pri brzini %2x..."
 
-#: projects/k3bcdrecordwriter.cpp:554 projects/k3bgrowisofswriter.cpp:436
+#: projects/k3bcdrecordwriter.cpp:556 projects/k3bcdrskinwriter.cpp:567
+#: projects/k3bgrowisofswriter.cpp:436
 #, kde-format
 msgid "Writing data"
 msgstr "Upisujem podatke"
 
-#: projects/k3bcdrecordwriter.cpp:583
+#: projects/k3bcdrecordwriter.cpp:585 projects/k3bcdrskinwriter.cpp:597
 #, kde-format
 msgid "DAO (Disk At Once) recording not supported with this writer"
 msgstr "Ovaj snimač ne podržava snimanje tipa DAO (disk od-jednom)"
 
-#: projects/k3bcdrecordwriter.cpp:584
+#: projects/k3bcdrecordwriter.cpp:586 projects/k3bcdrskinwriter.cpp:598
 #, kde-format
 msgid "Please choose TAO (Track At Once) and try again"
 msgstr "Izaberite TAO (staza od-jednom) i pokušajte ponovo"
 
-#: projects/k3bcdrecordwriter.cpp:587
+#: projects/k3bcdrecordwriter.cpp:589 projects/k3bcdrskinwriter.cpp:601
 #, kde-format
 msgid "RAW recording not supported with this writer"
 msgstr "Ovaj pisač ne podržava sirovo snimanje"
 
-#: projects/k3bcdrecordwriter.cpp:590
+#: projects/k3bcdrecordwriter.cpp:592 projects/k3bcdrskinwriter.cpp:604
 #, kde-format
 msgid "Input/output error. Not necessarily serious."
 msgstr "Ulazno/izlazna greška. Ne mora biti ozbiljna."
 
-#: projects/k3bcdrecordwriter.cpp:599
+#: projects/k3bcdrecordwriter.cpp:601 projects/k3bcdrskinwriter.cpp:613
 #, kde-format
 msgid "Reloading of medium required"
 msgstr "Potrebno je ponovno ubacivanje diska"
 
-#: projects/k3bcdrecordwriter.cpp:608 projects/k3bgrowisofshandler.cpp:99
-#: projects/mixedcd/k3bmixedjob.cpp:1037
+#: projects/k3bcdrecordwriter.cpp:610 projects/k3bcdrskinwriter.cpp:622
+#: projects/k3bgrowisofshandler.cpp:99 projects/mixedcd/k3bmixedjob.cpp:1037
 #, kde-format
 msgid "Trying to write more than the official disk capacity"
 msgstr "Pokušavam da upišem više od zvaničnog kapaciteta diska"
 
-#: projects/k3bcdrecordwriter.cpp:643
+#: projects/k3bcdrecordwriter.cpp:645 projects/k3bcdrskinwriter.cpp:657
 #, kde-format
 msgid "Only session 1 will be cloned."
 msgstr "Biće klonirana samo sesija 1."
 
-#: projects/k3bcdrecordwriter.cpp:646
+#: projects/k3bcdrecordwriter.cpp:648 projects/k3bcdrskinwriter.cpp:660
 #, kde-format
 msgid "Unable to fixate the disk."
 msgstr "Ne mogu da fiksiram disk."
 
-#: projects/k3bcdrecordwriter.cpp:676
+#: projects/k3bcdrecordwriter.cpp:678 projects/k3bcdrskinwriter.cpp:690
 #, no-c-format, kde-format
 msgid "Switching burn speed up to %1x"
 msgstr "Povećavam brzinu pisanja na %1x"
 
-#: projects/k3bcdrecordwriter.cpp:679
+#: projects/k3bcdrecordwriter.cpp:681 projects/k3bcdrskinwriter.cpp:693
 #, no-c-format, kde-format
 msgid "Switching burn speed down to %1x"
 msgstr "Smanjujem brzinu pisanja na %1x"
 
-#: projects/k3bcdrecordwriter.cpp:691
+#: projects/k3bcdrecordwriter.cpp:693 projects/k3bcdrskinwriter.cpp:705
 #, kde-format
 msgid "Starting disc write"
 msgstr "Pokrećem upisivanje diska"
 
-#: projects/k3bcdrecordwriter.cpp:707 projects/k3bgrowisofshandler.cpp:138
-#: projects/k3bgrowisofshandler.cpp:145
+#: projects/k3bcdrecordwriter.cpp:709 projects/k3bcdrskinwriter.cpp:721
+#: projects/k3bgrowisofshandler.cpp:138 projects/k3bgrowisofshandler.cpp:145
 #, kde-format
 msgid "Closing Session"
 msgstr "Zatvaram sesiju"
 
-#: projects/k3bcdrecordwriter.cpp:711
+#: projects/k3bcdrecordwriter.cpp:713 projects/k3bcdrskinwriter.cpp:725
 #, kde-format
 msgid "Writing Leadin"
 msgstr "Upisujem uvod"
 
-#: projects/k3bcdrecordwriter.cpp:714
+#: projects/k3bcdrecordwriter.cpp:716 projects/k3bcdrskinwriter.cpp:728
 #, kde-format
 msgid "Writing Leadout"
 msgstr "Upisujem izvod"
 
-#: projects/k3bcdrecordwriter.cpp:717
+#: projects/k3bcdrecordwriter.cpp:719 projects/k3bcdrskinwriter.cpp:731
 #, kde-format
 msgid "Writing pregap"
 msgstr "Upisujem predrazmak"
 
-#: projects/k3bcdrecordwriter.cpp:720
+#: projects/k3bcdrecordwriter.cpp:722 projects/k3bcdrskinwriter.cpp:734
 #, kde-format
 msgid "Performing Optimum Power Calibration"
 msgstr "Izvršavam optimalnu kalibraciju snage"
 
-#: projects/k3bcdrecordwriter.cpp:723
+#: projects/k3bcdrecordwriter.cpp:725 projects/k3bcdrskinwriter.cpp:737
 #, kde-format
 msgid "Sending CUE sheet"
 msgstr "Šaljem CUE list"
 
-#: projects/k3bcdrecordwriter.cpp:726
+#: projects/k3bcdrecordwriter.cpp:728 projects/k3bcdrskinwriter.cpp:740
 #, kde-format
 msgid "Enabled Burnfree"
 msgstr "Burnfree uključen"
 
-#: projects/k3bcdrecordwriter.cpp:729
+#: projects/k3bcdrecordwriter.cpp:731 projects/k3bcdrskinwriter.cpp:743
 #, kde-format
 msgid "Disabled Burnfree"
 msgstr "Burnfree isključen"
 
-#: projects/k3bcdrecordwriter.cpp:735 projects/mixedcd/k3bmixedjob.cpp:565
+#: projects/k3bcdrecordwriter.cpp:737 projects/k3bcdrskinwriter.cpp:749
+#: projects/mixedcd/k3bmixedjob.cpp:565
 #, kde-format
 msgid "Unable to close the tray"
 msgstr "Ne mogu da zatvorim kasetu"
 
-#: projects/k3bcdrecordwriter.cpp:745
+#: projects/k3bcdrecordwriter.cpp:747 projects/k3bcdrskinwriter.cpp:759
 #, kde-format
 msgid "Burnfree was used once."
 msgid_plural "Burnfree was used %1 times."
@@ -2677,7 +2695,7 @@ msgstr[0] "Bernfri je upotrebljen %1 put."
 msgstr[1] "Bernfri je upotrebljen %1 puta."
 msgstr[2] "Bernfri je upotrebljen %1 puta."
 
-#: projects/k3bcdrecordwriter.cpp:751
+#: projects/k3bcdrecordwriter.cpp:753 projects/k3bcdrskinwriter.cpp:765
 #, kde-format
 msgid "Buffer was low once."
 msgid_plural "Buffer was low %1 times."
@@ -2685,138 +2703,141 @@ msgstr[0] "Bafer je bio nisko %1 put."
 msgstr[1] "Bafer je bio nisko %1 puta."
 msgstr[2] "Bafer je bio nisko %1 puta."
 
-#: projects/k3bcdrecordwriter.cpp:790
+#: projects/k3bcdrecordwriter.cpp:792 projects/k3bcdrskinwriter.cpp:804
 #, kde-format
 msgid "Erasing successfully completed"
 msgstr "Brisanje je uspješno završeno"
 
-#: projects/k3bcdrecordwriter.cpp:817 projects/k3bgrowisofshandler.cpp:234
+#: projects/k3bcdrecordwriter.cpp:819 projects/k3bcdrskinwriter.cpp:831
+#: projects/k3bgrowisofshandler.cpp:234
 #, kde-format
 msgid "Data did not fit on disk."
 msgstr "Podaci nisu stali na disk."
 
-#: projects/k3bcdrecordwriter.cpp:828
+#: projects/k3bcdrecordwriter.cpp:830 projects/k3bcdrskinwriter.cpp:842
 #, kde-format
 msgid "%1 could not reserve shared memory segment of requested size."
 msgstr "%1 ne mogade da rezerviše dio dijeljene memorije zahtjevane veličine."
 
-#: projects/k3bcdrecordwriter.cpp:829
+#: projects/k3bcdrecordwriter.cpp:831 projects/k3bcdrskinwriter.cpp:843
 #, kde-format
 msgid "Probably you chose a too large buffer size."
 msgstr "Verovatno ste izabrali preveliku veličinu bafera."
 
-#: projects/k3bcdrecordwriter.cpp:832
+#: projects/k3bcdrecordwriter.cpp:834 projects/k3bcdrskinwriter.cpp:846
 #, kde-format
 msgid "OPC failed. Probably the writer does not like the medium."
 msgstr "OPC nije prošla. Verovatno pisač ne voli ubačeni disk."
 
-#: projects/k3bcdrecordwriter.cpp:835
+#: projects/k3bcdrecordwriter.cpp:837 projects/k3bcdrskinwriter.cpp:849
 #, kde-format
 msgid "Unable to set write speed to %1."
 msgstr "Ne mogu da postavim brzinu pisanja na %1."
 
-#: projects/k3bcdrecordwriter.cpp:836
+#: projects/k3bcdrecordwriter.cpp:838 projects/k3bcdrskinwriter.cpp:850
 #, kde-format
 msgid "Probably this is lower than your writer's lowest writing speed."
 msgstr "Ovo je verovatno niže od najniže brzine pisanja vašeg pisača."
 
-#: projects/k3bcdrecordwriter.cpp:839
+#: projects/k3bcdrecordwriter.cpp:841 projects/k3bcdrskinwriter.cpp:853
 #, kde-format
 msgid "Unable to send CUE sheet."
 msgstr "Ne mogu da pošaljem CUE list."
 
-#: projects/k3bcdrecordwriter.cpp:841 projects/k3bcdrecordwriter.cpp:880
-#: projects/k3bcdrecordwriter.cpp:900
+#: projects/k3bcdrecordwriter.cpp:843 projects/k3bcdrecordwriter.cpp:882
+#: projects/k3bcdrecordwriter.cpp:902 projects/k3bcdrskinwriter.cpp:855
+#: projects/k3bcdrskinwriter.cpp:894 projects/k3bcdrskinwriter.cpp:914
 #, kde-format
 msgid "Sometimes using TAO writing mode solves this issue."
 msgstr "Ponekad se ovaj problem rješava režimom pisanja TAO."
 
-#: projects/k3bcdrecordwriter.cpp:844
+#: projects/k3bcdrecordwriter.cpp:846 projects/k3bcdrskinwriter.cpp:858
 #, kde-format
 msgid "Unable to open new session."
 msgstr "Ne mogu da otvorim novu sesiju."
 
-#: projects/k3bcdrecordwriter.cpp:845
+#: projects/k3bcdrecordwriter.cpp:847 projects/k3bcdrskinwriter.cpp:859
 #, kde-format
 msgid "Probably a problem with the medium."
 msgstr "Verovatno je problem do diska."
 
-#: projects/k3bcdrecordwriter.cpp:848
+#: projects/k3bcdrecordwriter.cpp:850 projects/k3bcdrskinwriter.cpp:862
 #, kde-format
 msgid "The disk might still be readable."
 msgstr "Disk još uvijek može biti čitljiv."
 
-#: projects/k3bcdrecordwriter.cpp:850
+#: projects/k3bcdrecordwriter.cpp:852 projects/k3bcdrskinwriter.cpp:864
 #, kde-format
 msgid "Try DAO writing mode."
 msgstr "Probaj DAO režim upisa."
 
-#: projects/k3bcdrecordwriter.cpp:853
+#: projects/k3bcdrecordwriter.cpp:855 projects/k3bcdrskinwriter.cpp:867
 #, kde-format
 msgid "%1 has no permission to open the device."
 msgstr "%1 nema dozvole da otvori uređaj."
 
-#: projects/k3bcdrecordwriter.cpp:854
+#: projects/k3bcdrecordwriter.cpp:856 projects/k3bcdrskinwriter.cpp:868
 #, kde-format
 msgid "Modify device settings in K3b to solve this problem."
 msgstr "Podesi postavke uređaja u K3b da bi riješio ovaj problem."
 
-#: projects/k3bcdrecordwriter.cpp:857
+#: projects/k3bcdrecordwriter.cpp:859 projects/k3bcdrskinwriter.cpp:871
 #, kde-format
 msgid "Probably a buffer underrun occurred."
 msgstr "Verovatno je došlo do podilaženja bafera."
 
-#: projects/k3bcdrecordwriter.cpp:859
+#: projects/k3bcdrecordwriter.cpp:861 projects/k3bcdrskinwriter.cpp:873
 #, kde-format
 msgid "Please enable Burnfree or choose a lower burning speed."
 msgstr "Uključite Burnfree ili izaberite nižu brzinu rezanja."
 
-#: projects/k3bcdrecordwriter.cpp:861
+#: projects/k3bcdrecordwriter.cpp:863 projects/k3bcdrskinwriter.cpp:875
 #, kde-format
 msgid "Please choose a lower burning speed."
 msgstr "Izaberite nižu brzinu rezanja."
 
-#: projects/k3bcdrecordwriter.cpp:864
+#: projects/k3bcdrecordwriter.cpp:866 projects/k3bcdrskinwriter.cpp:878
 #, kde-format
 msgid "Found a high-speed medium not suitable for the writer being used."
 msgstr "Nađeni visoko-brzinski disk nije pogodan za pisač koji se koristi."
 
-#: projects/k3bcdrecordwriter.cpp:865 projects/k3bcdrecordwriter.cpp:869
+#: projects/k3bcdrecordwriter.cpp:867 projects/k3bcdrecordwriter.cpp:871
+#: projects/k3bcdrskinwriter.cpp:879 projects/k3bcdrskinwriter.cpp:883
 #, kde-format
 msgid "Use the 'force unsafe operations' option to ignore this."
 msgstr "Koristite opciju „Forsiraj nesigurne operacije“ za ignorisanje ovoga."
 
-#: projects/k3bcdrecordwriter.cpp:868
+#: projects/k3bcdrecordwriter.cpp:870 projects/k3bcdrskinwriter.cpp:882
 #, kde-format
 msgid "Found a low-speed medium not suitable for the writer being used."
 msgstr "Nađeni nisko-brzinski disk nije pogodan za pisač koji se koristi."
 
-#: projects/k3bcdrecordwriter.cpp:872
+#: projects/k3bcdrecordwriter.cpp:874 projects/k3bcdrskinwriter.cpp:886
 #, kde-format
 msgid "Most likely the burning failed due to low-quality media."
 msgstr "Rezanje verovatno nije uspelo zbog niskog kvaliteta diska."
 
-#: projects/k3bcdrecordwriter.cpp:875
+#: projects/k3bcdrecordwriter.cpp:877 projects/k3bcdrskinwriter.cpp:889
 #, kde-format
 msgid "Another application is blocking the device (most likely automounting)."
 msgstr "Drugi program blokira uređaj (najverovatnije automatsko montiranje)."
 
-#: projects/k3bcdrecordwriter.cpp:878
+#: projects/k3bcdrecordwriter.cpp:880 projects/k3bcdrskinwriter.cpp:892
 #, kde-format
 msgid "A write error occurred."
 msgstr "Desila se greška pri upisu."
 
-#: projects/k3bcdrecordwriter.cpp:883
+#: projects/k3bcdrecordwriter.cpp:885 projects/k3bcdrskinwriter.cpp:897
 #, kde-format
 msgid "Some drives do not support all erase types."
 msgstr "Neki uređaji ne podržavaju sve vrste brisanja."
 
-#: projects/k3bcdrecordwriter.cpp:884
+#: projects/k3bcdrecordwriter.cpp:886 projects/k3bcdrskinwriter.cpp:898
 #, kde-format
 msgid "Try again using 'Complete' erasing."
 msgstr "Pokušajte ponovo uz pomoć „Potpunog“ brisanja."
 
-#: projects/k3bcdrecordwriter.cpp:891
+#: projects/k3bcdrecordwriter.cpp:893
 #, kde-format
 msgid ""
 "Since kernel version 2.6.8 cdrecord cannot use SCSI transport when running "
@@ -2825,32 +2846,68 @@ msgstr ""
 "Od verzije 2.6.8 kernela, cdrecord ne može da koristi SCSI prijenos kada "
 "radi kao suid root."
 
-#: projects/k3bcdrecordwriter.cpp:892
+#: projects/k3bcdrecordwriter.cpp:894 projects/k3bcdrskinwriter.cpp:906
 #, kde-format
 msgid ""
 "You may use K3b::Setup to solve this problem or remove the suid bit manually."
 msgstr ""
 "Upotrijebite K3b‑postavu da riješite ovaj problem, ili sami uklonite sUID."
 
-#: projects/k3bcdrecordwriter.cpp:903
+#: projects/k3bcdrecordwriter.cpp:905
 #, kde-format
 msgid "If you are running an unpatched cdrecord version..."
 msgstr "Ako koristite nezakrpljenu verziju cdrecord-a..."
 
-#: projects/k3bcdrecordwriter.cpp:904
+#: projects/k3bcdrecordwriter.cpp:906 projects/k3bcdrskinwriter.cpp:918
 #, kde-format
 msgid "...and this error also occurs with high quality media..."
 msgstr "...i ova greška se dešava i sa visokokvalitetnim diskovima..."
 
-#: projects/k3bcdrecordwriter.cpp:905
+#: projects/k3bcdrecordwriter.cpp:907 projects/k3bcdrskinwriter.cpp:919
 #, kde-format
 msgid "...and the K3b FAQ does not help you..."
 msgstr "...i FAQ K3b-a vam nije od pomoći..."
 
-#: projects/k3bcdrecordwriter.cpp:906
+#: projects/k3bcdrecordwriter.cpp:908 projects/k3bcdrskinwriter.cpp:920
 #, kde-format
 msgid "...please include the debugging output in your problem report."
 msgstr "...uključite ispravljački izlaz u vašem izvještaju o problemu."
+
+#: projects/k3bcdrskinwriter.cpp:247
+#, fuzzy, kde-format
+#| msgid "Cdrecord version %1 does not support Blu-ray writing."
+msgid "Cdrskin version %1 does not support Blu-ray writing."
+msgstr "<command>cdrecord</command> %1 ne podržava upisivanje blureja."
+
+#: projects/k3bcdrskinwriter.cpp:293
+#, fuzzy, kde-format
+#| msgid "Cdrecord does not support writing %1 media."
+msgid "Cdrskin does not support writing %1 media."
+msgstr "<command>cdrecord</command> ne podržava upis %1 medija."
+
+#: projects/k3bcdrskinwriter.cpp:368
+#, fuzzy, kde-format
+#| msgid "Cdrdao %1 does not support overburning."
+msgid "Cdrskin %1 does not support overburning."
+msgstr "Cdrdao %1 ne podržava nadrezanje."
+
+#: projects/k3bcdrskinwriter.cpp:905
+#, fuzzy, kde-format
+#| msgid ""
+#| "Since kernel version 2.6.8 cdrecord cannot use SCSI transport when "
+#| "running suid root anymore."
+msgid ""
+"Since kernel version 2.6.8 cdrskin cannot use SCSI transport when running "
+"suid root anymore."
+msgstr ""
+"Od verzije 2.6.8 kernela, cdrecord ne može da koristi SCSI prijenos kada "
+"radi kao suid root."
+
+#: projects/k3bcdrskinwriter.cpp:917
+#, fuzzy, kde-format
+#| msgid "If you are running an unpatched cdrecord version..."
+msgid "If you are running an unpatched cdrskin version..."
+msgstr "Ako koristite nezakrpljenu verziju cdrecord-a..."
 
 #: projects/k3bgrowisofshandler.cpp:81
 #, kde-format
