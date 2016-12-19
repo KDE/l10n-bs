@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-12-18 01:19+0100\n"
+"POT-Creation-Date: 2016-12-19 01:17+0100\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -314,7 +314,7 @@ msgid "incompatible filter type"
 msgstr "nekompatibilan filter tip"
 
 #: src/backend/core/AbstractSimpleFilter.cpp:382
-#: src/backend/core/column/Column.cpp:790 src/backend/core/Folder.cpp:105
+#: src/backend/core/column/Column.cpp:788 src/backend/core/Folder.cpp:105
 #: src/backend/core/Project.cpp:281
 #: src/backend/datapicker/DatapickerCurve.cpp:634
 #: src/backend/datapicker/DatapickerImage.cpp:818
@@ -439,7 +439,7 @@ msgstr "Brojčano"
 msgid "%1: change column type"
 msgstr "%1: promijeni tip kolone"
 
-#: src/backend/core/column/Column.cpp:753
+#: src/backend/core/column/Column.cpp:751
 #: src/backend/datapicker/DatapickerCurve.cpp:531
 #: src/backend/datapicker/DatapickerImage.cpp:555
 #: src/backend/datapicker/DatapickerPoint.cpp:476
@@ -458,7 +458,7 @@ msgstr "%1: promijeni tip kolone"
 #: src/backend/worksheet/plots/cartesian/XYDataReductionCurve.cpp:394
 #: src/backend/worksheet/plots/cartesian/XYDifferentiationCurve.cpp:347
 #: src/backend/worksheet/plots/cartesian/XYEquationCurve.cpp:202
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:1234
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:1240
 #: src/backend/worksheet/plots/cartesian/XYFourierFilterCurve.cpp:373
 #: src/backend/worksheet/plots/cartesian/XYFourierTransformCurve.cpp:383
 #: src/backend/worksheet/plots/cartesian/XYIntegrationCurve.cpp:343
@@ -474,17 +474,17 @@ msgstr ""
 "Atribut '%1' nedostaje ili je prazan, podrazumijevana vrijednost je "
 "iskorištena"
 
-#: src/backend/core/column/Column.cpp:804
+#: src/backend/core/column/Column.cpp:802
 #, kde-format
 msgid "no column element found"
 msgstr "nema elemenata u koloni"
 
-#: src/backend/core/column/Column.cpp:902
+#: src/backend/core/column/Column.cpp:900
 #, kde-format
 msgid "invalid or missing row index"
 msgstr "pogrešan ili nedostaje indeks reda"
 
-#: src/backend/core/column/Column.cpp:912
+#: src/backend/core/column/Column.cpp:910
 #, kde-format
 msgid "invalid row value"
 msgstr "pogrešna vrijednost reda"
@@ -500,50 +500,45 @@ msgstr "%1: promijeni vrijednost ćelije"
 msgid "%1: set plot designation"
 msgstr "%1: postavi oznake"
 
-#: src/backend/core/column/columncommands.cpp:562
-#, kde-format
-msgid "%1: set width"
-msgstr "%1: postavi širinu"
-
-#: src/backend/core/column/columncommands.cpp:614
+#: src/backend/core/column/columncommands.cpp:577
 #, kde-format
 msgid "%1: clear column"
 msgstr "%1: isprazni kolonu"
 
-#: src/backend/core/column/columncommands.cpp:710
+#: src/backend/core/column/columncommands.cpp:673
 #: src/backend/matrix/matrixcommands.cpp:211
 #, kde-format
 msgid "%1: set formula"
 msgstr "%1: postavi fomulu"
 
-#: src/backend/core/column/columncommands.cpp:765
+#: src/backend/core/column/columncommands.cpp:728
 #, kde-format
 msgid "%1: set cell formula"
 msgstr "%1: postavi formulu za ćeliju"
 
-#: src/backend/core/column/columncommands.cpp:809
+#: src/backend/core/column/columncommands.cpp:772
 #, kde-format
 msgid "%1: clear all formulas"
 msgstr "%1: obriši sve formule"
 
-#: src/backend/core/column/columncommands.cpp:870
+#: src/backend/core/column/columncommands.cpp:833
 #, kde-format
 msgid "%1: set text for row %2"
 msgstr "%1: postavi tekst za red %2"
 
-#: src/backend/core/column/columncommands.cpp:929
-#: src/backend/core/column/columncommands.cpp:988
+#: src/backend/core/column/columncommands.cpp:892
+#: src/backend/core/column/columncommands.cpp:951
 #, kde-format
 msgid "%1: set value for row %2"
 msgstr "%1: postavi vrijednost za red %2"
 
-#: src/backend/core/column/columncommands.cpp:1052
+#: src/backend/core/column/columncommands.cpp:1015
 #, kde-format
 msgid "%1: replace the texts for rows %2 to %3"
 msgstr "%1: zamijeni tekstove za redove %2 i %3"
 
-#: src/backend/core/column/columncommands.cpp:1121
-#: src/backend/core/column/columncommands.cpp:1190
+#: src/backend/core/column/columncommands.cpp:1084
+#: src/backend/core/column/columncommands.cpp:1153
 #, kde-format
 msgid "%1: replace the values for rows %2 to %3"
 msgstr "%1: zamijeni vrijednosti za redove %2 i %3"
@@ -1786,7 +1781,7 @@ msgstr ""
 msgid "Tangent"
 msgstr "ljubičastocrvena"
 
-#: src/backend/gsl/ExpressionParser.cpp:134
+#: src/backend/gsl/ExpressionParser.cpp:134 src/backend/nsl/nsl_fit.c:39
 #, kde-format
 msgid "Hyperbolic tangent"
 msgstr ""
@@ -4270,63 +4265,91 @@ msgid "Logistic (sech squared)"
 msgstr ""
 
 #: src/backend/nsl/nsl_fit.c:39
+#, fuzzy, kde-format
+#| msgid "magenta"
+msgid "Arctangent"
+msgstr "ljubičastocrvena"
+
+#: src/backend/nsl/nsl_fit.c:39
 #, kde-format
-msgid "Sigmoid"
+msgid "Algebraic sigmoid"
 msgstr ""
 
 #: src/backend/nsl/nsl_fit.c:39
+#, fuzzy, kde-format
+#| msgid "Beta Distribution"
+msgid "Logistic function"
+msgstr "Beta Distribucija"
+
+#: src/backend/nsl/nsl_fit.c:40
+#, fuzzy, kde-format
+#| msgid "Functions"
+msgid "Error function (erf)"
+msgstr "Funkcije"
+
+#: src/backend/nsl/nsl_fit.c:40
+#, kde-format
+msgid "Hill"
+msgstr ""
+
+#: src/backend/nsl/nsl_fit.c:40
 #, kde-format
 msgid "Gompertz"
 msgstr ""
 
 #: src/backend/nsl/nsl_fit.c:40
 #, kde-format
+msgid "Gudermann (gd)"
+msgstr ""
+
+#: src/backend/nsl/nsl_fit.c:41
+#, kde-format
 msgid "Maxwell-Boltzmann"
 msgstr "Maksvel-Bolcman"
 
-#: src/backend/nsl/nsl_fit.c:40
+#: src/backend/nsl/nsl_fit.c:41
 #, fuzzy, kde-format
 #| msgid "&Normalize Columns"
 msgid "Log-Normal"
 msgstr "&Normalizuj Kolone"
 
-#: src/backend/nsl/nsl_fit.c:40
+#: src/backend/nsl/nsl_fit.c:41
 #, kde-format
 msgid "Gamma"
 msgstr ""
 
-#: src/backend/nsl/nsl_fit.c:40
+#: src/backend/nsl/nsl_fit.c:41
 #, fuzzy, kde-format
 #| msgid "Replace"
 msgid "Laplace"
 msgstr "Zamijeni"
 
-#: src/backend/nsl/nsl_fit.c:40
+#: src/backend/nsl/nsl_fit.c:41
 #, kde-format
 msgid "Rayleigh"
 msgstr ""
 
-#: src/backend/nsl/nsl_fit.c:41
+#: src/backend/nsl/nsl_fit.c:42
 #, kde-format
 msgid "Levy"
 msgstr ""
 
-#: src/backend/nsl/nsl_fit.c:41
+#: src/backend/nsl/nsl_fit.c:42
 #, kde-format
 msgid "Chi-Square"
 msgstr ""
 
-#: src/backend/nsl/nsl_fit.c:41
+#: src/backend/nsl/nsl_fit.c:42
 #, kde-format
 msgid "Weibull"
 msgstr ""
 
-#: src/backend/nsl/nsl_fit.c:41
+#: src/backend/nsl/nsl_fit.c:42
 #, kde-format
 msgid "Frechet (inverse Weibull)"
 msgstr ""
 
-#: src/backend/nsl/nsl_fit.c:41
+#: src/backend/nsl/nsl_fit.c:42
 #, fuzzy, kde-format
 #| msgid "Number"
 msgid "Gumbel"
@@ -5890,7 +5913,7 @@ msgstr "%1: postavi fit opcije i izvedi ih"
 
 #: src/backend/worksheet/plots/cartesian/XYDataReductionCurve.cpp:207
 #: src/backend/worksheet/plots/cartesian/XYDifferentiationCurve.cpp:211
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:850
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:856
 #: src/backend/worksheet/plots/cartesian/XYFourierFilterCurve.cpp:216
 #: src/backend/worksheet/plots/cartesian/XYFourierTransformCurve.cpp:211
 #: src/backend/worksheet/plots/cartesian/XYIntegrationCurve.cpp:211
@@ -5948,24 +5971,24 @@ msgstr "%1: dodijeli širinu"
 msgid "%1: set fit options and perform the fit"
 msgstr "%1: postavi fit opcije i izvedi ih"
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:840
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:846
 #, kde-format
 msgid "Model has no parameters."
 msgstr "Model nema parametara."
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:859
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:865
 #, kde-format
 msgid "Not sufficient weight data points provided."
 msgstr "Nije dostupno dovoljno podataka o širini tačaka."
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:905
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:911
 #: src/backend/worksheet/plots/cartesian/XYFourierFilterCurve.cpp:244
 #: src/backend/worksheet/plots/cartesian/XYFourierTransformCurve.cpp:239
 #, kde-format
 msgid "No data points available."
 msgstr "Nisu dostupne tačke podataka."
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:914
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:920
 #, kde-format
 msgid ""
 "The number of data points (%1) must be greater than or equal to the number "
@@ -5973,7 +5996,7 @@ msgid ""
 msgstr ""
 "Broj tačaka podataka (%1) mora biti veći ili jedna broju parametara (%2)."
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:1230
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:1236
 #, kde-format
 msgid "no xy fit curve element found"
 msgstr "nije pronađen xy element koji pristaje krivoj"
@@ -8465,7 +8488,7 @@ msgstr ""
 
 #: src/kdefrontend/dockwidgets/XYDataReductionCurveDock.cpp:556
 #: src/kdefrontend/dockwidgets/XYDifferentiationCurveDock.cpp:442
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:762
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:774
 #: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:553
 #: src/kdefrontend/dockwidgets/XYFourierTransformCurveDock.cpp:366
 #: src/kdefrontend/dockwidgets/XYIntegrationCurveDock.cpp:357
@@ -8478,7 +8501,7 @@ msgstr "status:"
 
 #: src/kdefrontend/dockwidgets/XYDataReductionCurveDock.cpp:564
 #: src/kdefrontend/dockwidgets/XYDifferentiationCurveDock.cpp:450
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:771
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:783
 #: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:561
 #: src/kdefrontend/dockwidgets/XYFourierTransformCurveDock.cpp:374
 #: src/kdefrontend/dockwidgets/XYIntegrationCurveDock.cpp:365
@@ -8490,7 +8513,7 @@ msgstr "vrijeme računanja: %1 s"
 
 #: src/kdefrontend/dockwidgets/XYDataReductionCurveDock.cpp:566
 #: src/kdefrontend/dockwidgets/XYDifferentiationCurveDock.cpp:452
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:773
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:785
 #: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:563
 #: src/kdefrontend/dockwidgets/XYFourierTransformCurveDock.cpp:376
 #: src/kdefrontend/dockwidgets/XYIntegrationCurveDock.cpp:367
@@ -8581,77 +8604,77 @@ msgstr "Stepen"
 msgid "Number of peaks"
 msgstr "Broj tačaka"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:769
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:781
 #, fuzzy, kde-format
 #| msgid "iterations"
 msgid "iterations:"
 msgstr "iteracije"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:775
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:787
 #, fuzzy, kde-format
 #| msgid "degrees of freedom"
 msgid "degrees of freedom:"
 msgstr "stepeni slobode"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:777
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:789
 #, fuzzy, kde-format
 #| msgid "Parameters"
 msgid "Parameters:"
 msgstr "Parametri"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:787
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:799
 #, kde-format
 msgid "Goodness of fit:"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:788
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:800
 #, fuzzy, kde-format
 #| msgid "sum of squared errors"
 msgid "sum of squared errors"
 msgstr "greške suma kvadrata"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:789
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:801
 #, fuzzy, kde-format
 #| msgid "mean squared error"
 msgid "mean squared error:"
 msgstr "srednje kvadratno odstupanje"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:790
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:802
 #, fuzzy, kde-format
 #| msgid "root-mean squared error"
 msgid "root-mean squared error"
 msgstr "korijen srednjeg kvadratnog odstupanja"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:790
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:802
 #, kde-format
 msgid "reduced"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:791
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:803
 #, fuzzy, kde-format
 #| msgid "mean absolute error"
 msgid "mean absolute error:"
 msgstr "srednja apsolutna greška"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:794
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:806
 #, fuzzy, kde-format
 #| msgid "residual mean square"
 msgid "residual mean square:"
 msgstr "rezidualno srednje kvadratno"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:795
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:807
 #, fuzzy, kde-format
 #| msgid "residual standard deviation"
 msgid "residual standard deviation:"
 msgstr "rezidualna standardna devijacija"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:798
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:810
 #, fuzzy, kde-format
 #| msgid "coefficient of determination (R²)"
 msgid "coefficient of determination"
 msgstr "koeficijent određenja (R²)"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:799
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:811
 #, fuzzy, kde-format
 #| msgid "adj. coefficient of determination (R²)"
 msgid "adj. coefficient of determination"
@@ -13022,6 +13045,9 @@ msgstr "Vertikalni razmaci"
 #| msgid "Orientation"
 msgid "Quit presentation"
 msgstr "Orijentacija"
+
+#~ msgid "%1: set width"
+#~ msgstr "%1: postavi širinu"
 
 #~ msgid "Lorentz (Cauchy)"
 #~ msgstr "Lorenc(Koši)"
