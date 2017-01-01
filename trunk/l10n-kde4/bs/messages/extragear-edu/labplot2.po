@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-12-31 01:16+0100\n"
+"POT-Creation-Date: 2017-01-01 01:16+0100\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -458,7 +458,7 @@ msgstr "%1: promijeni tip kolone"
 #: src/backend/worksheet/plots/cartesian/XYDataReductionCurve.cpp:394
 #: src/backend/worksheet/plots/cartesian/XYDifferentiationCurve.cpp:347
 #: src/backend/worksheet/plots/cartesian/XYEquationCurve.cpp:202
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:1249
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:1218
 #: src/backend/worksheet/plots/cartesian/XYFourierFilterCurve.cpp:373
 #: src/backend/worksheet/plots/cartesian/XYFourierTransformCurve.cpp:383
 #: src/backend/worksheet/plots/cartesian/XYIntegrationCurve.cpp:343
@@ -4244,7 +4244,7 @@ msgstr "Logistička Distribucija"
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:66
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:619
 #: src/kdefrontend/dockwidgets/WorksheetDock.cpp:292
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:366
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:368
 #: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:102
 #, kde-format
 msgid "Custom"
@@ -4271,6 +4271,12 @@ msgstr "Inverzni eksponent"
 msgid "Fourier"
 msgstr "Furijer"
 
+#: src/backend/nsl/nsl_fit.c:40 src/backend/nsl/nsl_sf_stats.c:37
+#, fuzzy, kde-format
+#| msgid "solid line"
+msgid "Hyperbolic secant (sech)"
+msgstr "puna linija"
+
 #: src/backend/nsl/nsl_fit.c:40
 #, fuzzy, kde-format
 #| msgid "Gaussian"
@@ -4281,12 +4287,6 @@ msgstr "Gaussov"
 #, kde-format
 msgid "Cauchy-Lorentz"
 msgstr ""
-
-#: src/backend/nsl/nsl_fit.c:40
-#, fuzzy, kde-format
-#| msgid "solid line"
-msgid "Hyperbolic secant (sech)"
-msgstr "puna linija"
 
 #: src/backend/nsl/nsl_fit.c:40
 #, kde-format
@@ -4677,6 +4677,21 @@ msgstr "Hipergeometrijska Distribucija"
 #| msgid "Logarithmic Distribution"
 msgid "Logarithmic"
 msgstr "Logaritamska Distribucija"
+
+#: src/backend/nsl/nsl_sf_stats.c:37
+#, kde-format
+msgid "Maxwell-Boltzmann"
+msgstr "Maksvel-Bolcman"
+
+#: src/backend/nsl/nsl_sf_stats.c:37
+#, kde-format
+msgid "Levy"
+msgstr ""
+
+#: src/backend/nsl/nsl_sf_stats.c:37
+#, kde-format
+msgid "Frechet (inverse Weibull)"
+msgstr ""
 
 #: src/backend/nsl/nsl_sf_window.c:34 src/backend/nsl/nsl_smooth.c:40
 #, kde-format
@@ -6057,7 +6072,7 @@ msgstr "%1: postavi fit opcije i izvedi ih"
 
 #: src/backend/worksheet/plots/cartesian/XYDataReductionCurve.cpp:207
 #: src/backend/worksheet/plots/cartesian/XYDifferentiationCurve.cpp:211
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:861
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:830
 #: src/backend/worksheet/plots/cartesian/XYFourierFilterCurve.cpp:216
 #: src/backend/worksheet/plots/cartesian/XYFourierTransformCurve.cpp:211
 #: src/backend/worksheet/plots/cartesian/XYIntegrationCurve.cpp:211
@@ -6115,24 +6130,24 @@ msgstr "%1: dodijeli širinu"
 msgid "%1: set fit options and perform the fit"
 msgstr "%1: postavi fit opcije i izvedi ih"
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:851
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:820
 #, kde-format
 msgid "Model has no parameters."
 msgstr "Model nema parametara."
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:870
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:839
 #, kde-format
 msgid "Not sufficient weight data points provided."
 msgstr "Nije dostupno dovoljno podataka o širini tačaka."
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:916
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:885
 #: src/backend/worksheet/plots/cartesian/XYFourierFilterCurve.cpp:244
 #: src/backend/worksheet/plots/cartesian/XYFourierTransformCurve.cpp:239
 #, kde-format
 msgid "No data points available."
 msgstr "Nisu dostupne tačke podataka."
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:925
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:894
 #, kde-format
 msgid ""
 "The number of data points (%1) must be greater than or equal to the number "
@@ -6140,7 +6155,7 @@ msgid ""
 msgstr ""
 "Broj tačaka podataka (%1) mora biti veći ili jedna broju parametara (%2)."
 
-#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:1245
+#: src/backend/worksheet/plots/cartesian/XYFitCurve.cpp:1214
 #, kde-format
 msgid "no xy fit curve element found"
 msgstr "nije pronađen xy element koji pristaje krivoj"
@@ -8612,7 +8627,7 @@ msgstr ""
 
 #: src/kdefrontend/dockwidgets/XYDataReductionCurveDock.cpp:556
 #: src/kdefrontend/dockwidgets/XYDifferentiationCurveDock.cpp:442
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:906
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:904
 #: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:553
 #: src/kdefrontend/dockwidgets/XYFourierTransformCurveDock.cpp:366
 #: src/kdefrontend/dockwidgets/XYIntegrationCurveDock.cpp:358
@@ -8625,7 +8640,7 @@ msgstr "status:"
 
 #: src/kdefrontend/dockwidgets/XYDataReductionCurveDock.cpp:564
 #: src/kdefrontend/dockwidgets/XYDifferentiationCurveDock.cpp:450
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:915
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:913
 #: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:561
 #: src/kdefrontend/dockwidgets/XYFourierTransformCurveDock.cpp:374
 #: src/kdefrontend/dockwidgets/XYIntegrationCurveDock.cpp:366
@@ -8637,7 +8652,7 @@ msgstr "vrijeme računanja: %1 s"
 
 #: src/kdefrontend/dockwidgets/XYDataReductionCurveDock.cpp:566
 #: src/kdefrontend/dockwidgets/XYDifferentiationCurveDock.cpp:452
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:917
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:915
 #: src/kdefrontend/dockwidgets/XYFourierFilterCurveDock.cpp:563
 #: src/kdefrontend/dockwidgets/XYFourierTransformCurveDock.cpp:376
 #: src/kdefrontend/dockwidgets/XYIntegrationCurveDock.cpp:368
@@ -8716,89 +8731,89 @@ msgid "t, max"
 msgstr "t, maksimalan"
 
 #. i18n: ectx: property (text), widget (QLabel, lDegree)
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:395
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:397
 #: src/kdefrontend/ui/dockwidgets/xyfitcurvedockgeneraltab.ui:254
 #, kde-format
 msgid "Degree"
 msgstr "Stepen"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:425
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:427
 #, fuzzy, kde-format
 #| msgid "Number of points"
 msgid "Number of peaks"
 msgstr "Broj tačaka"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:913
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:911
 #, fuzzy, kde-format
 #| msgid "iterations"
 msgid "iterations:"
 msgstr "iteracije"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:919
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:917
 #, fuzzy, kde-format
 #| msgid "degrees of freedom"
 msgid "degrees of freedom:"
 msgstr "stepeni slobode"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:921
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:919
 #, fuzzy, kde-format
 #| msgid "Parameters"
 msgid "Parameters:"
 msgstr "Parametri"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:931
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:929
 #, kde-format
 msgid "Goodness of fit:"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:932
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:930
 #, fuzzy, kde-format
 #| msgid "sum of squared errors"
 msgid "sum of squared errors"
 msgstr "greške suma kvadrata"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:933
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:931
 #, fuzzy, kde-format
 #| msgid "mean squared error"
 msgid "mean squared error:"
 msgstr "srednje kvadratno odstupanje"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:934
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:932
 #, fuzzy, kde-format
 #| msgid "root-mean squared error"
 msgid "root-mean squared error"
 msgstr "korijen srednjeg kvadratnog odstupanja"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:934
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:932
 #, kde-format
 msgid "reduced"
 msgstr ""
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:935
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:933
 #, fuzzy, kde-format
 #| msgid "mean absolute error"
 msgid "mean absolute error:"
 msgstr "srednja apsolutna greška"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:938
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:936
 #, fuzzy, kde-format
 #| msgid "residual mean square"
 msgid "residual mean square:"
 msgstr "rezidualno srednje kvadratno"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:939
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:937
 #, fuzzy, kde-format
 #| msgid "residual standard deviation"
 msgid "residual standard deviation:"
 msgstr "rezidualna standardna devijacija"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:942
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:940
 #, fuzzy, kde-format
 #| msgid "coefficient of determination (R²)"
 msgid "coefficient of determination"
 msgstr "koeficijent određenja (R²)"
 
-#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:943
+#: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:941
 #, fuzzy, kde-format
 #| msgid "adj. coefficient of determination (R²)"
 msgid "adj. coefficient of determination"
@@ -10153,7 +10168,7 @@ msgstr "Učitaj iz"
 msgid "Template \"%1\" was loaded."
 msgstr "Predložak \"%1\" je učitan."
 
-#: src/kdefrontend/TemplateHandler.cpp:152 src/kdefrontend/ThemeHandler.cpp:155
+#: src/kdefrontend/TemplateHandler.cpp:152 src/kdefrontend/ThemeHandler.cpp:157
 #, kde-format
 msgid "Save as"
 msgstr "Sačuvaj kao"
@@ -10178,33 +10193,23 @@ msgstr "Šablon\"%1\" je sačuvan."
 msgid "New default template was saved."
 msgstr "Novi podrazumijevani šablon je sačuvan."
 
-#: src/kdefrontend/ThemeHandler.cpp:103
+#: src/kdefrontend/ThemeHandler.cpp:104
 #, fuzzy, kde-format
 #| msgid "Template \"%1\" was loaded."
 msgid "Theme \"%1\" was loaded."
 msgstr "Predložak \"%1\" je učitan."
 
-#: src/kdefrontend/ThemeHandler.cpp:162
+#: src/kdefrontend/ThemeHandler.cpp:164
 #, fuzzy, kde-format
 #| msgid "Filter name:"
 msgid "Enter name:"
 msgstr "Ime filtera:"
 
-#: src/kdefrontend/ThemeHandler.cpp:181
+#: src/kdefrontend/ThemeHandler.cpp:183
 #, fuzzy, kde-format
 #| msgid "New template \"%1\" was saved."
 msgid "New theme \"%1\" was saved."
 msgstr "Novi šablon \"%1\" je sačuvan."
-
-#: src/kdefrontend/ThemeHandler.cpp:196
-#, kde-format
-msgid "Do you want to upload your theme %1 to public web server?"
-msgstr ""
-
-#: src/kdefrontend/ThemeHandler.cpp:197
-#, kde-format
-msgid "Publish Theme"
-msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lValue)
 #: src/kdefrontend/ui/constantswidget.ui:48
@@ -13165,9 +13170,6 @@ msgstr "Orijentacija"
 #~| msgid "magenta"
 #~ msgid "Arctangent"
 #~ msgstr "ljubičastocrvena"
-
-#~ msgid "Maxwell-Boltzmann"
-#~ msgstr "Maksvel-Bolcman"
 
 #, fuzzy
 #~| msgid "Number"
