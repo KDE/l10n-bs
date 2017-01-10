@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: katepart4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-01-09 03:49+0100\n"
+"POT-Creation-Date: 2017-01-10 07:47+0100\n"
 "PO-Revision-Date: 2014-01-31 20:37+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -1887,15 +1887,24 @@ msgstr "&Alternativno kodiranje:"
 
 #. i18n: ectx: property (whatsThis), widget (KComboBox, cmbEncodingFallback)
 #: dialogs/opensaveconfigwidget.ui:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This defines the fallback encoding to try for opening files if neither "
+#| "the encoding chosen as standard above, nor the encoding specified in the "
+#| "open/save dialog, nor the encoding specified on command line match the "
+#| "content of the file.  Before this is used, an attempt will be made to "
+#| "determine the encoding to use by looking for a byte order marker at start "
+#| "of file: if one is found, the right unicode encoding will be chosen; "
+#| "otherwise encoding detection will run, if both fail fallback encoding "
+#| "will be tried."
 msgid ""
 "This defines the fallback encoding to try for opening files if neither the "
 "encoding chosen as standard above, nor the encoding specified in the open/"
 "save dialog, nor the encoding specified on command line match the content of "
 "the file.  Before this is used, an attempt will be made to determine the "
-"encoding to use by looking for a byte order marker at start of file: if one "
-"is found, the right unicode encoding will be chosen; otherwise encoding "
-"detection will run, if both fail fallback encoding will be tried."
+"encoding to use by looking for a byte order mark at start of file: if one is "
+"found, the right Unicode encoding will be chosen; otherwise encoding "
+"detection will run, if both fail the fallback encoding will be tried."
 msgstr ""
 "Definiše odstupno kodiranje pri otvaranju datoteka, za slučaj da sadržaju "
 "datoteke ne odgovara nijedno od kodiranja izabranog iznad kao standardno, "
@@ -1947,11 +1956,16 @@ msgstr "&Automatsko otkrivanje kraja reda"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, chkEnableBOM)
 #: dialogs/opensaveconfigwidget.ui:115
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The byte order mark is a special sequence at the beginning of unicode "
+#| "encoded documents. It helps editors to open text documents with the "
+#| "correct unicode encoding. The byte order mark is not visible in the "
+#| "displayed document."
 msgid ""
-"The byte order mark is a special sequence at the beginning of unicode "
+"The byte order mark is a special sequence at the beginning of Unicode "
 "encoded documents. It helps editors to open text documents with the correct "
-"unicode encoding. The byte order mark is not visible in the displayed "
+"Unicode encoding. The byte order mark is not visible in the displayed "
 "document."
 msgstr ""
 "Marker redoslijeda bajtova je poseban niz na početku Unicode tekstualnih "
@@ -1960,8 +1974,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkEnableBOM)
 #: dialogs/opensaveconfigwidget.ui:118
-#, kde-format
-msgid "Enable byte order marker"
+#, fuzzy, kde-format
+#| msgid "Enable byte order marker"
+msgid "Enable byte order mark (BOM)"
 msgstr "Marker redoslijeda bajtova"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -2342,9 +2357,12 @@ msgid "Possible Data Loss"
 msgstr "Moguć gubitak podataka"
 
 #: document/katedocument.cpp:2360
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The selected encoding cannot encode every unicode character in this "
+#| "document. Do you really want to save it? There could be some data lost."
 msgid ""
-"The selected encoding cannot encode every unicode character in this "
+"The selected encoding cannot encode every Unicode character in this "
 "document. Do you really want to save it? There could be some data lost."
 msgstr ""
 "Izabrani kodni raspored ne sadrži sve potrebne Unicode znakove koji su "
@@ -3169,7 +3187,7 @@ msgid "Marker Colors"
 msgstr "Oznake boja"
 
 # >> @item:inlistbox
-#: schema/kateschemaconfig.cpp:206 view/kateviewhelpers.cpp:1337
+#: schema/kateschemaconfig.cpp:206 view/kateviewhelpers.cpp:1342
 #, kde-format
 msgid "Bookmark"
 msgstr "obilježivač"
@@ -6060,9 +6078,11 @@ msgid "Enable block selection mode."
 msgstr "Omogući režim izbora bloka."
 
 #: variableeditor/variablelineedit.cpp:164
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "short translation please"
+#| msgid "Enable the byte order marker when saving unicode files."
 msgctxt "short translation please"
-msgid "Enable the byte order marker when saving unicode files."
+msgid "Enable the byte order mark (BOM) when saving Unicode files."
 msgstr "Omogući marker redoslijeda bajtova pri snimanju unicode datoteka."
 
 #: variableeditor/variablelineedit.cpp:169
@@ -7001,9 +7021,12 @@ msgid "Add &Byte Order Mark (BOM)"
 msgstr "Dodaj marker &redoslijeda bajtova (BOM)"
 
 #: view/kateview.cpp:792
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable/disable adding of byte order markers for UTF-8/UTF-16 encoded "
+#| "files while saving"
 msgid ""
-"Enable/disable adding of byte order markers for UTF-8/UTF-16 encoded files "
+"Enable/disable adding of byte order marks for UTF-8/UTF-16 encoded files "
 "while saving"
 msgstr ""
 "Da li dodavati markere redoslijeda bajtova u UTF‑8/UTF‑16 kodirane datoteke "
@@ -7383,18 +7406,18 @@ msgid "Export File as HTML"
 msgstr ""
 
 #: view/kateviewhelpers.cpp:213 view/kateviewhelpers.cpp:260
-#: view/kateviewhelpers.cpp:836
+#: view/kateviewhelpers.cpp:841
 #, kde-format
 msgctxt "from line - to line"
 msgid "<center>%1<br/>&#x2014;<br/>%2</center>"
 msgstr "<center>%1<br/>&#x2014;<br/>%2</center>"
 
-#: view/kateviewhelpers.cpp:1010
+#: view/kateviewhelpers.cpp:1015
 #, kde-format
 msgid "Available Commands"
 msgstr "Naredbe na raspolaganju"
 
-#: view/kateviewhelpers.cpp:1012
+#: view/kateviewhelpers.cpp:1017
 #, kde-format
 msgid ""
 "<p>For help on individual commands, do <code>'help &lt;command&gt;'</code></"
@@ -7403,17 +7426,17 @@ msgstr ""
 "<qt><p>Za pomoć za pojedinačnu naredbu, kucajte <icode>help &lt;naredba&gt;</"
 "icode></p></qt>"
 
-#: view/kateviewhelpers.cpp:1020
+#: view/kateviewhelpers.cpp:1025
 #, kde-format
 msgid "No help for '%1'"
 msgstr "<qt>Nema pomoći za <command>%1</command></qt>"
 
-#: view/kateviewhelpers.cpp:1023
+#: view/kateviewhelpers.cpp:1028
 #, kde-format
 msgid "No such command <b>%1</b>"
 msgstr "<qt>Naredba <command>%1</command> ne postoji</qt>"
 
-#: view/kateviewhelpers.cpp:1029
+#: view/kateviewhelpers.cpp:1034
 #, kde-format
 msgid ""
 "<p>This is the Katepart <b>command line</b>.<br />Syntax: <code><b>command "
@@ -7426,37 +7449,37 @@ msgstr ""
 "unesite <icode>help list</icode><br />Za pomoć za pojedinačne naredbe, "
 "unesite <icode>help &lt;naredba&gt;</icode></p></qt>"
 
-#: view/kateviewhelpers.cpp:1115 vimode/emulatedcommandbar/commandmode.cpp:222
+#: view/kateviewhelpers.cpp:1120 vimode/emulatedcommandbar/commandmode.cpp:222
 #, kde-format
 msgid "No such command: \"%1\""
 msgstr "Naredba <command>%1</command> ne postoji."
 
-#: view/kateviewhelpers.cpp:1119 vimode/emulatedcommandbar/commandmode.cpp:203
+#: view/kateviewhelpers.cpp:1124 vimode/emulatedcommandbar/commandmode.cpp:203
 #, kde-format
 msgid "Error: No range allowed for command \"%1\"."
 msgstr "Greška: Opseg nije dozvoljen za naredbu „%1“."
 
-#: view/kateviewhelpers.cpp:1130 vimode/emulatedcommandbar/commandmode.cpp:208
+#: view/kateviewhelpers.cpp:1135 vimode/emulatedcommandbar/commandmode.cpp:208
 #, kde-format
 msgid "Success: "
 msgstr "Uspjeh: "
 
-#: view/kateviewhelpers.cpp:1144 vimode/emulatedcommandbar/commandmode.cpp:217
+#: view/kateviewhelpers.cpp:1149 vimode/emulatedcommandbar/commandmode.cpp:217
 #, kde-format
 msgid "Command \"%1\" failed."
 msgstr "Naredba <command>%1</command> nije uspjela."
 
-#: view/kateviewhelpers.cpp:2227 view/kateviewhelpers.cpp:2228
+#: view/kateviewhelpers.cpp:2232 view/kateviewhelpers.cpp:2233
 #, kde-format
 msgid "Mark Type %1"
 msgstr "Obilježje tipa %1"
 
-#: view/kateviewhelpers.cpp:2250
+#: view/kateviewhelpers.cpp:2255
 #, kde-format
 msgid "Set Default Mark Type"
 msgstr "Postavi podrazumijevani tip obilježja"
 
-#: view/kateviewhelpers.cpp:2309
+#: view/kateviewhelpers.cpp:2314
 #, kde-format
 msgid "Disable Annotation Bar"
 msgstr "Isključi traku tumačenja"
