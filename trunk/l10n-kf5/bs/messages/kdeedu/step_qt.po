@@ -28,10 +28,10 @@ msgctxt "ObjectClass|"
 msgid "Body"
 msgstr "Tijelo"
 
-#: body.cc:26 joints.cc:29 joints.cc:35 motor.cc:30 motor.cc:36
+#: body.cc:26
 #, fuzzy
 #| msgid "Body"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Body"
 msgstr "Tijelo"
 
@@ -45,18 +45,25 @@ msgstr "CollisionSolver"
 
 #: collisionsolver.cc:33 solver.cc:28
 #, fuzzy
+#| msgid "Allowed absolute tolerance"
+msgctxt "PropertyDescription|"
+msgid "Allowed absolute tolerance"
+msgstr "Dozvoljena apsolutna greška"
+
+#: collisionsolver.cc:33 solver.cc:28
+#, fuzzy
 #| msgctxt "PropertyName"
 #| msgid "toleranceAbs"
 msgctxt "PropertyName|"
 msgid "toleranceAbs"
 msgstr "toleranceAbs"
 
-#: collisionsolver.cc:33 solver.cc:28
+#: collisionsolver.cc:34 solver.cc:31
 #, fuzzy
-#| msgid "Allowed absolute tolerance"
-msgctxt "StepCore|"
-msgid "Allowed absolute tolerance"
-msgstr "Dozvoljena apsolutna greška"
+#| msgid "Maximal local error during last step"
+msgctxt "PropertyDescription|"
+msgid "Maximal local error during last step"
+msgstr "Maksimalna lokalna greška tokom posljednjeg koraka"
 
 #: collisionsolver.cc:34 solver.cc:31
 #, fuzzy
@@ -65,13 +72,6 @@ msgstr "Dozvoljena apsolutna greška"
 msgctxt "PropertyName|"
 msgid "localError"
 msgstr "localError"
-
-#: collisionsolver.cc:34 solver.cc:31
-#, fuzzy
-#| msgid "Maximal local error during last step"
-msgctxt "StepCore|"
-msgid "Maximal local error during last step"
-msgstr "Maksimalna lokalna greška tokom posljednjeg koraka"
 
 #: collisionsolver.cc:36
 #, fuzzy
@@ -108,7 +108,7 @@ msgstr "KulonovaSila"
 #: coulombforce.cc:27
 #, fuzzy
 #| msgid "Coulomb force"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Coulomb force"
 msgstr "Kulonova sila"
 
@@ -131,7 +131,7 @@ msgstr "N m²/C²"
 #: coulombforce.cc:30
 #, fuzzy
 #| msgid "Coulomb constant"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Coulomb constant"
 msgstr "Kulonova kontstanta"
 
@@ -146,7 +146,7 @@ msgstr "CoulombForceErrors"
 #: coulombforce.cc:32
 #, fuzzy
 #| msgid "Errors class for CoulombForce"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Errors class for CoulombForce"
 msgstr "Klasa s greškama za KulonovuSilu"
 
@@ -161,7 +161,7 @@ msgstr "coulombConstVariance"
 #: coulombforce.cc:35
 #, fuzzy
 #| msgid "Coulomb constant variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Coulomb constant variance"
 msgstr "Odstupanje Kulonove konstante"
 
@@ -176,7 +176,7 @@ msgstr "GenericEulerSolver"
 #: eulersolver.cc:28
 #, fuzzy
 #| msgid "Generic Euler solver"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Generic Euler solver"
 msgstr "Opći Ojlerov rješavač"
 
@@ -191,7 +191,7 @@ msgstr "EulerSolver"
 #: eulersolver.cc:29
 #, fuzzy
 #| msgid "Non-adaptive Euler solver"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Non-adaptive Euler solver"
 msgstr "Neprilagodljivi Ojlerov rješavač"
 
@@ -206,7 +206,7 @@ msgstr "AdaptiveEulerSolver"
 #: eulersolver.cc:30
 #, fuzzy
 #| msgid "Adaptive Euler solver"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Adaptive Euler solver"
 msgstr "Prilagodljivi Ojlerov rješavač"
 
@@ -220,7 +220,7 @@ msgstr "Sila"
 #: force.cc:27
 #, fuzzy
 #| msgid "Force"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Force"
 msgstr "Sila"
 
@@ -235,7 +235,7 @@ msgstr "GasParticle"
 #: gas.cc:28
 #, fuzzy
 #| msgid "Gas particle"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Gas particle"
 msgstr "Čestica gasa"
 
@@ -250,9 +250,16 @@ msgstr "GasLJForce"
 #: gas.cc:30
 #, fuzzy
 #| msgid "Lennard-Jones force"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Lennard-Jones force"
 msgstr "Lennard-Jonesova sila"
+
+#: gas.cc:32
+#, fuzzy
+#| msgid "Potential depth"
+msgctxt "PropertyDescription|"
+msgid "Potential depth"
+msgstr "Potencijalna dubina"
 
 #: gas.cc:32
 #, fuzzy
@@ -261,13 +268,6 @@ msgstr "Lennard-Jonesova sila"
 msgctxt "PropertyName|"
 msgid "depth"
 msgstr "depth"
-
-#: gas.cc:32
-#, fuzzy
-#| msgid "Potential depth"
-msgctxt "StepCore|"
-msgid "Potential depth"
-msgstr "Potencijalna dubina"
 
 #: gas.cc:32 gas.cc:38 gas.cc:60 gas.cc:75 particle.cc:38 particle.cc:54
 #: rigidbody.cc:49 rigidbody.cc:80
@@ -280,28 +280,28 @@ msgstr "J"
 
 #: gas.cc:33
 #, fuzzy
+#| msgid "Distance at which the force is zero"
+msgctxt "PropertyDescription|"
+msgid "Distance at which the force is zero"
+msgstr "Udaljenost na kojoj je sila jednaka nuli"
+
+#: gas.cc:33
+#, fuzzy
 #| msgctxt "PropertyName"
 #| msgid "rmin"
 msgctxt "PropertyName|"
 msgid "rmin"
 msgstr "rmin"
 
-#: gas.cc:33
-#, fuzzy
-#| msgid "Distance at which the force is zero"
-msgctxt "StepCore|"
-msgid "Distance at which the force is zero"
-msgstr "Udaljenost na kojoj je sila jednaka nuli"
-
 #: gas.cc:33 gas.cc:34 gas.cc:40 gas.cc:46 gas.cc:48 joints.cc:30 joints.cc:36
 #: joints.cc:37 joints.cc:41 joints.cc:44 joints.cc:46 joints.cc:48
 #: joints.cc:49 motor.cc:31 motor.cc:37 particle.cc:30 particle.cc:42
 #: rigidbody.cc:28 rigidbody.cc:53 rigidbody.cc:84 rigidbody.cc:89
-#: rigidbody.cc:92 rigidbody.cc:96 rigidbody.cc:97 softbody.cc:36 spring.cc:30
-#: spring.cc:31 spring.cc:36 spring.cc:38 spring.cc:40 spring.cc:41
-#: spring.cc:47 spring.cc:49 spring.cc:55 spring.cc:57 spring.cc:59
-#: spring.cc:61 tool.cc:38 tool.cc:39 tool.cc:45 tool.cc:46 tool.cc:67
-#: tool.cc:68 tool.cc:79 tool.cc:80 tool.cc:98 tool.cc:100 tool.cc:101
+#: rigidbody.cc:92 softbody.cc:36 spring.cc:30 spring.cc:31 spring.cc:36
+#: spring.cc:38 spring.cc:40 spring.cc:41 spring.cc:47 spring.cc:49
+#: spring.cc:55 spring.cc:57 spring.cc:59 spring.cc:61 tool.cc:38 tool.cc:39
+#: tool.cc:45 tool.cc:46 tool.cc:67 tool.cc:68 tool.cc:79 tool.cc:80 tool.cc:98
+#: tool.cc:100 tool.cc:101
 #, fuzzy
 #| msgctxt "Units"
 #| msgid "m"
@@ -311,18 +311,18 @@ msgstr "m"
 
 #: gas.cc:34
 #, fuzzy
+#| msgid "Cut-off distance"
+msgctxt "PropertyDescription|"
+msgid "Cut-off distance"
+msgstr "Distanca odsjecanja"
+
+#: gas.cc:34
+#, fuzzy
 #| msgctxt "PropertyName"
 #| msgid "cutoff"
 msgctxt "PropertyName|"
 msgid "cutoff"
 msgstr "cutoff"
-
-#: gas.cc:34
-#, fuzzy
-#| msgid "Cut-off distance"
-msgctxt "StepCore|"
-msgid "Cut-off distance"
-msgstr "Distanca odsjecanja"
 
 #: gas.cc:36
 #, fuzzy
@@ -335,7 +335,7 @@ msgstr "GasLJForceErrors"
 #: gas.cc:36
 #, fuzzy
 #| msgid "Errors class for GasLJForce"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Errors class for GasLJForce"
 msgstr "Klasa grešaka za GasLJForce"
 
@@ -350,7 +350,7 @@ msgstr "depthVariance"
 #: gas.cc:39
 #, fuzzy
 #| msgid "Potential depth variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Potential depth variance"
 msgstr "Odstupanje potencijalne dubine"
 
@@ -365,7 +365,7 @@ msgstr "rminVariance"
 #: gas.cc:41
 #, fuzzy
 #| msgid "Variance of the distance at which the force is zero"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Variance of the distance at which the force is zero"
 msgstr "Odstupanje udaljenosti na kojoj je sila jednaka nuli"
 
@@ -380,7 +380,7 @@ msgstr "Gas"
 #: gas.cc:45
 #, fuzzy
 #| msgid "Particle gas"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Particle gas"
 msgstr "Čestica gasa"
 
@@ -395,7 +395,7 @@ msgstr "measureRectCenter"
 #: gas.cc:47
 #, fuzzy
 #| msgid "Center of the rect for measurements"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Center of the rect for measurements"
 msgstr "Centar pravougaonika za mjerenja"
 
@@ -410,7 +410,7 @@ msgstr "measureRectSize"
 #: gas.cc:49
 #, fuzzy
 #| msgid "Size of the rect for measurements"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Size of the rect for measurements"
 msgstr "Veličina pravougaonika za mjerenja"
 
@@ -433,7 +433,7 @@ msgstr "m²"
 #: gas.cc:51
 #, fuzzy
 #| msgid "Volume of the measureRect"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Volume of the measureRect"
 msgstr "Obim mjernogPravougaonika"
 
@@ -448,7 +448,7 @@ msgstr "rectParticleCount"
 #: gas.cc:53
 #, fuzzy
 #| msgid "Count of particles in the measureRect"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Count of particles in the measureRect"
 msgstr "Broj čestica u mjernomPravougaoniku"
 
@@ -471,7 +471,7 @@ msgstr "1/m²"
 #: gas.cc:55
 #, fuzzy
 #| msgid "Concentration of particles in the measureRect"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Concentration of particles in the measureRect"
 msgstr "Koncentracija čestica u mjernomPravougaoniku"
 
@@ -494,7 +494,7 @@ msgstr "Pa"
 #: gas.cc:57
 #, fuzzy
 #| msgid "Pressure of particles in the measureRect"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Pressure of particles in the measureRect"
 msgstr "Pritisak čestica u mjernomPravougaoniku"
 
@@ -517,7 +517,7 @@ msgstr "K"
 #: gas.cc:59
 #, fuzzy
 #| msgid "Temperature of particles in the measureRect"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Temperature of particles in the measureRect"
 msgstr "Temperatura čestica u mjernomPravougaoniku"
 
@@ -532,7 +532,7 @@ msgstr "rectMeanKineticEnergy"
 #: gas.cc:61
 #, fuzzy
 #| msgid "Mean kinetic energy of particles in the measureRect"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Mean kinetic energy of particles in the measureRect"
 msgstr "Srednja kinetička energija čestica u mjernomPravougaoniku"
 
@@ -556,7 +556,7 @@ msgstr "m/s"
 #: gas.cc:63
 #, fuzzy
 #| msgid "Mean velocity of particles in the measureRect"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Mean velocity of particles in the measureRect"
 msgstr "Srednja brzina čestica u mjernomPravougaoniku"
 
@@ -580,7 +580,7 @@ msgstr "kg"
 #: gas.cc:65
 #, fuzzy
 #| msgid "Mean mass of particles in the measureRect"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Mean mass of particles in the measureRect"
 msgstr "Srednja masa čestica u mjernomPravougaoniku"
 
@@ -595,7 +595,7 @@ msgstr "rectMass"
 #: gas.cc:67
 #, fuzzy
 #| msgid "Total mass of particles in the measureRect"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Total mass of particles in the measureRect"
 msgstr "Ukupna masa čestica u mjernomPravougaoniku"
 
@@ -610,7 +610,7 @@ msgstr "GasErrors"
 #: gas.cc:70
 #, fuzzy
 #| msgid "Errors class for Gas"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Errors class for Gas"
 msgstr "Klasa grešaka za Gas"
 
@@ -625,7 +625,7 @@ msgstr "rectPressureVariance"
 #: gas.cc:72
 #, fuzzy
 #| msgid "Variance of pressure of particles in the measureRect"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Variance of pressure of particles in the measureRect"
 msgstr "Odstupanje pritiska čestica u mjernomPravougaoniku"
 
@@ -640,7 +640,7 @@ msgstr "rectTemperatureVariance"
 #: gas.cc:74
 #, fuzzy
 #| msgid "Variance of temperature of particles in the measureRect"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Variance of temperature of particles in the measureRect"
 msgstr "Odstupanje temperature čestica u mjernomPravougaoniku"
 
@@ -655,7 +655,7 @@ msgstr "rectMeanKineticEnergyVariance"
 #: gas.cc:76
 #, fuzzy
 #| msgid "Variance of mean kinetic energy of particles in the measureRect"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Variance of mean kinetic energy of particles in the measureRect"
 msgstr "Odstupanje srednje kinetičke energije čestica u mjernomPravougaoniku"
 
@@ -670,7 +670,7 @@ msgstr "rectMeanVelocityVariance"
 #: gas.cc:78
 #, fuzzy
 #| msgid "Variance of mean velocity of particles in the measureRect"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Variance of mean velocity of particles in the measureRect"
 msgstr "Odstupanje srednje brzine čestica u mjernomPravougaoniku"
 
@@ -685,7 +685,7 @@ msgstr "rectMeanParticleMassVariance"
 #: gas.cc:80
 #, fuzzy
 #| msgid "Variance of mean mass of particles in the measureRect"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Variance of mean mass of particles in the measureRect"
 msgstr "Odstupanje srednje mase čestica u mjernomPravougaoniku"
 
@@ -700,7 +700,7 @@ msgstr "rectMassVariance"
 #: gas.cc:82
 #, fuzzy
 #| msgid "Variance of total mass of particles in the measureRect"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Variance of total mass of particles in the measureRect"
 msgstr "Odstupanje ukupne mase čestica u mjernomPravougaoniku"
 
@@ -715,7 +715,7 @@ msgstr "GravitationForce"
 #: gravitation.cc:28
 #, fuzzy
 #| msgid "Gravitation force"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Gravitation force"
 msgstr "Sila gravitacije"
 
@@ -738,7 +738,7 @@ msgstr "N m²/kg²"
 #: gravitation.cc:31
 #, fuzzy
 #| msgid "Gravitation constant"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Gravitation constant"
 msgstr "Gravitaciona konstanta"
 
@@ -753,7 +753,7 @@ msgstr "GravitationForceErrors"
 #: gravitation.cc:33
 #, fuzzy
 #| msgid "Errors class for GravitationForce"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Errors class for GravitationForce"
 msgstr "Klasa grešaka za SiluGravitacije"
 
@@ -768,7 +768,7 @@ msgstr "gravitationConstVariance"
 #: gravitation.cc:36
 #, fuzzy
 #| msgid "Gravitation constant variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Gravitation constant variance"
 msgstr "Odstupanje gravitacione konstante"
 
@@ -783,9 +783,16 @@ msgstr "WeightForce"
 #: gravitation.cc:38
 #, fuzzy
 #| msgid "Weight force"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Weight force"
 msgstr "Sila teže"
+
+#: gravitation.cc:40
+#, fuzzy
+#| msgid "Weight constant"
+msgctxt "PropertyDescription|"
+msgid "Weight constant"
+msgstr "Konstanta težine"
 
 #: gravitation.cc:40
 #, fuzzy
@@ -794,13 +801,6 @@ msgstr "Sila teže"
 msgctxt "PropertyName|"
 msgid "weightConst"
 msgstr "weightConst"
-
-#: gravitation.cc:40
-#, fuzzy
-#| msgid "Weight constant"
-msgctxt "StepCore|"
-msgid "Weight constant"
-msgstr "Konstanta težine"
 
 #: gravitation.cc:40 gravitation.cc:45 particle.cc:32 particle.cc:46
 #: rigidbody.cc:34 rigidbody.cc:63 softbody.cc:43
@@ -822,7 +822,7 @@ msgstr "GreškeSileTeže"
 #: gravitation.cc:43
 #, fuzzy
 #| msgid "Errors class for WeightForce"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Errors class for WeightForce"
 msgstr "Klasa grešaka za SiluTeže"
 
@@ -837,7 +837,7 @@ msgstr "weightConstVariance"
 #: gravitation.cc:46
 #, fuzzy
 #| msgid "Weight constant variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Weight constant variance"
 msgstr "Odstupanje konstante težine"
 
@@ -852,7 +852,7 @@ msgstr "GslGenericSolver"
 #: gslsolver.cc:31
 #, fuzzy
 #| msgid "GSL generic solver"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "GSL generic solver"
 msgstr "GSL opći razrješivač"
 
@@ -867,7 +867,7 @@ msgstr "GslSolver"
 #: gslsolver.cc:33
 #, fuzzy
 #| msgid "GSL non-adaptive solver"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "GSL non-adaptive solver"
 msgstr "GSL neprilagodljivi razrješivač"
 
@@ -882,7 +882,7 @@ msgstr "GslAdaptiveSolver"
 #: gslsolver.cc:36
 #, fuzzy
 #| msgid "GSL adaptive solver"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "GSL adaptive solver"
 msgstr "GSL prilagodljivi razrješivač"
 
@@ -897,7 +897,7 @@ msgstr "GslRK2Solver"
 #: gslsolver.cc:39
 #, fuzzy
 #| msgid "Runge-Kutta second-order solver from GSL library"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Runge-Kutta second-order solver from GSL library"
 msgstr "Runge-Kuttov rješavač drugog reda iz GSL biblioteke"
 
@@ -912,7 +912,7 @@ msgstr "GslAdaptiveRK2Solver"
 #: gslsolver.cc:41
 #, fuzzy
 #| msgid "Adaptive Runge-Kutta second-order solver from GSL library"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Adaptive Runge-Kutta second-order solver from GSL library"
 msgstr "Prilagodljivi Runge-Kuttov rješavač drugog reda iz GSL biblioteke"
 
@@ -927,7 +927,7 @@ msgstr "GslRK4Solver"
 #: gslsolver.cc:44
 #, fuzzy
 #| msgid "Runge-Kutta classical fourth-order solver from GSL library"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Runge-Kutta classical fourth-order solver from GSL library"
 msgstr "Runge-Kuttov klasični rješavač četvrtog reda iz GSL biblioteke"
 
@@ -942,7 +942,7 @@ msgstr "GslAdaptiveRK4Solver"
 #: gslsolver.cc:46
 #, fuzzy
 #| msgid "Adaptive Runge-Kutta classical fourth-order solver from GSL library"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Adaptive Runge-Kutta classical fourth-order solver from GSL library"
 msgstr ""
 "Prilagodljivi Runge-Kuttov klasični rješavač četvrtog reda iz GSL biblioteke"
@@ -958,7 +958,7 @@ msgstr "GslRKF45Solver"
 #: gslsolver.cc:49
 #, fuzzy
 #| msgid "Runge-Kutta-Fehlberg (4,5) solver from GSL library"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Runge-Kutta-Fehlberg (4,5) solver from GSL library"
 msgstr "Runge-Kutta-Fehlbergov (4,5) rješavač iz GSL biblioteke"
 
@@ -973,7 +973,7 @@ msgstr "GslAdaptiveRKF45Solver"
 #: gslsolver.cc:51
 #, fuzzy
 #| msgid "Adaptive Runge-Kutta-Fehlberg (4,5) solver from GSL library"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Adaptive Runge-Kutta-Fehlberg (4,5) solver from GSL library"
 msgstr "Prilagodljivi Runge-Kutta-Fehlbergov (4,5) rješavač iz GSL biblioteke"
 
@@ -988,7 +988,7 @@ msgstr "GslRKCKSolver"
 #: gslsolver.cc:54
 #, fuzzy
 #| msgid "Runge-Kutta Cash-Karp (4,5) solver from GSL library"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Runge-Kutta Cash-Karp (4,5) solver from GSL library"
 msgstr "Runge-Kutta Cash-Karpov (4,5) rješavač iz GSL biblioteke"
 
@@ -1003,7 +1003,7 @@ msgstr "GslAdaptiveRKCKSolver"
 #: gslsolver.cc:56
 #, fuzzy
 #| msgid "Adaptive Runge-Kutta Cash-Karp (4,5) solver from GSL library"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Adaptive Runge-Kutta Cash-Karp (4,5) solver from GSL library"
 msgstr "Prilagodljivi Runge-Kutta Cash-Karpov (4,5) rješavač iz GSL biblioteke"
 
@@ -1018,7 +1018,7 @@ msgstr "GslRK8PDSolver"
 #: gslsolver.cc:59
 #, fuzzy
 #| msgid "Runge-Kutta Prince-Dormand (8,9) solver from GSL library"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Runge-Kutta Prince-Dormand (8,9) solver from GSL library"
 msgstr "Runge-Kutta Prince-Dormandov (8,9) rješavač iz GSL biblioteke"
 
@@ -1033,7 +1033,7 @@ msgstr "GslAdaptiveRK8PDSolver"
 #: gslsolver.cc:61
 #, fuzzy
 #| msgid "Adaptive Runge-Kutta Prince-Dormand (8,9) solver from GSL library"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Adaptive Runge-Kutta Prince-Dormand (8,9) solver from GSL library"
 msgstr ""
 "Prilagodljivi Runge-Kutta Prince-Dormandov (8,9) rješavač iz GSL biblioteke"
@@ -1049,7 +1049,7 @@ msgstr "GslRK2IMPSolver"
 #: gslsolver.cc:64
 #, fuzzy
 #| msgid "Runge-Kutta implicit second-order solver from GSL library"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Runge-Kutta implicit second-order solver from GSL library"
 msgstr "Runge-Kuttov implicitni rješavač drugog reda iz GSL biblioteke"
 
@@ -1064,7 +1064,7 @@ msgstr "GslAdaptiveRK2IMPSolver"
 #: gslsolver.cc:66
 #, fuzzy
 #| msgid "Adaptive Runge-Kutta implicit second-order solver from GSL library"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Adaptive Runge-Kutta implicit second-order solver from GSL library"
 msgstr ""
 "Prilagodljivi Runge-Kuttov implicitni rješavač drugog reda iz GSL bilbioteke"
@@ -1080,7 +1080,7 @@ msgstr "GslRK4IMPSolver"
 #: gslsolver.cc:69
 #, fuzzy
 #| msgid "Runge-Kutta implicit fourth-order solver from GSL library"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Runge-Kutta implicit fourth-order solver from GSL library"
 msgstr "Runge-Kuttov implicitni rješavač četvrtog reda iz GSL biblioteke"
 
@@ -1095,7 +1095,7 @@ msgstr "GslAdaptiveRK4IMPSolver"
 #: gslsolver.cc:71
 #, fuzzy
 #| msgid "Adaptive Runge-Kutta implicit fource-order solver from GSL library"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Adaptive Runge-Kutta implicit fource-order solver from GSL library"
 msgstr ""
 "Prilagodljivi Runge-Kuttov implicitni rješavač četvrtog reda iz GSL "
@@ -1111,7 +1111,7 @@ msgstr "Predmet"
 #: item.cc:28
 #, fuzzy
 #| msgid "Item"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Item"
 msgstr "Predmet"
 
@@ -1126,7 +1126,7 @@ msgstr "color"
 #: item.cc:31
 #, fuzzy
 #| msgid "Item color"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Item color"
 msgstr "Boja predmeta"
 
@@ -1140,7 +1140,7 @@ msgstr "GrupaPredmeta"
 #: itemgroup.cc:28
 #, fuzzy
 #| msgid "ItemGroup"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "ItemGroup"
 msgstr "GrupaPredmeta"
 
@@ -1154,7 +1154,7 @@ msgstr "Spoj"
 #: joint.cc:26
 #, fuzzy
 #| msgid "Joint"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Joint"
 msgstr "Spoj"
 
@@ -1169,9 +1169,16 @@ msgstr "Anchor"
 #: joints.cc:27
 #, fuzzy
 #| msgid "Anchor: fixes position of the body"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Anchor: fixes position of the body"
 msgstr "Sidro: fiksira položaj tijela"
+
+#: joints.cc:29 joints.cc:35 motor.cc:30 motor.cc:36
+#, fuzzy
+#| msgid "Body"
+msgctxt "PropertyDescription|"
+msgid "Body"
+msgstr "Tijelo"
 
 #: joints.cc:29 joints.cc:35 motor.cc:30 motor.cc:36 tool.cc:97
 #, fuzzy
@@ -1181,6 +1188,13 @@ msgctxt "PropertyName|"
 msgid "body"
 msgstr "tijelo"
 
+#: joints.cc:30 tool.cc:100
+#, fuzzy
+#| msgid "Position"
+msgctxt "PropertyDescription|"
+msgid "Position"
+msgstr "Položaj"
+
 #: joints.cc:30 joints.cc:37 particle.cc:30 rigidbody.cc:28 softbody.cc:36
 #: tool.cc:38 tool.cc:45 tool.cc:67 tool.cc:79 tool.cc:100
 #, fuzzy
@@ -1189,12 +1203,12 @@ msgctxt "PropertyName|"
 msgid "position"
 msgstr "položaj"
 
-#: joints.cc:30 tool.cc:100
+#: joints.cc:31
 #, fuzzy
-#| msgid "Position"
-msgctxt "StepCore|"
-msgid "Position"
-msgstr "Položaj"
+#| msgid "Angle"
+msgctxt "PropertyDescription|"
+msgid "Angle"
+msgstr "Ugao"
 
 #: joints.cc:31 rigidbody.cc:29
 #, fuzzy
@@ -1203,13 +1217,6 @@ msgstr "Položaj"
 msgctxt "PropertyName|"
 msgid "angle"
 msgstr "ugao"
-
-#: joints.cc:31
-#, fuzzy
-#| msgid "Angle"
-msgctxt "StepCore|"
-msgid "Angle"
-msgstr "Ugao"
 
 #: joints.cc:31 rigidbody.cc:29 rigidbody.cc:55
 #, fuzzy
@@ -1230,9 +1237,16 @@ msgstr "Pin"
 #: joints.cc:33
 #, fuzzy
 #| msgid "Pin: fixes position of a given point on the body"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Pin: fixes position of a given point on the body"
 msgstr "Čioda: fiksira položaj date tačke na tijelu"
+
+#: joints.cc:36
+#, fuzzy
+#| msgid "Position on the body"
+msgctxt "PropertyDescription|"
+msgid "Position on the body"
+msgstr "Položaj na tijelu"
 
 #: joints.cc:36 motor.cc:31 motor.cc:37 tool.cc:98
 #, fuzzy
@@ -1242,17 +1256,10 @@ msgctxt "PropertyName|"
 msgid "localPosition"
 msgstr "localPosition"
 
-#: joints.cc:36
-#, fuzzy
-#| msgid "Position on the body"
-msgctxt "StepCore|"
-msgid "Position on the body"
-msgstr "Položaj na tijelu"
-
 #: joints.cc:37
 #, fuzzy
 #| msgid "Position in the world"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Position in the world"
 msgstr "Položaj na svijetu"
 
@@ -1267,9 +1274,16 @@ msgstr "Štap"
 #: joints.cc:39
 #, fuzzy
 #| msgid "Massless stick which can be connected to bodies"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Massless stick which can be connected to bodies"
 msgstr "Štap bez mase koji može biti povezan sa tijelima"
+
+#: joints.cc:41
+#, fuzzy
+#| msgid "Rest length of the stick"
+msgctxt "PropertyDescription|"
+msgid "Rest length of the stick"
+msgstr "Preostala dužina štapa"
 
 #: joints.cc:41 spring.cc:30
 #, fuzzy
@@ -1279,12 +1293,12 @@ msgctxt "PropertyName|"
 msgid "restLength"
 msgstr "preostalaDužina"
 
-#: joints.cc:41
+#: joints.cc:42 spring.cc:34
 #, fuzzy
-#| msgid "Rest length of the stick"
-msgctxt "StepCore|"
-msgid "Rest length of the stick"
-msgstr "Preostala dužina štapa"
+#| msgid "Body1"
+msgctxt "PropertyDescription|"
+msgid "Body1"
+msgstr "Tijelo1"
 
 #: joints.cc:42 spring.cc:34
 #, fuzzy
@@ -1294,12 +1308,12 @@ msgctxt "PropertyName|"
 msgid "body1"
 msgstr "tijelo1"
 
-#: joints.cc:42 spring.cc:34
+#: joints.cc:43 spring.cc:35
 #, fuzzy
-#| msgid "Body1"
-msgctxt "StepCore|"
-msgid "Body1"
-msgstr "Tijelo1"
+#| msgid "Body2"
+msgctxt "PropertyDescription|"
+msgid "Body2"
+msgstr "Tijelo2"
 
 #: joints.cc:43 spring.cc:35
 #, fuzzy
@@ -1308,13 +1322,6 @@ msgstr "Tijelo1"
 msgctxt "PropertyName|"
 msgid "body2"
 msgstr "tijelo2"
-
-#: joints.cc:43 spring.cc:35
-#, fuzzy
-#| msgid "Body2"
-msgctxt "StepCore|"
-msgid "Body2"
-msgstr "Tijelo2"
 
 #: joints.cc:44 spring.cc:36
 #, fuzzy
@@ -1327,7 +1334,7 @@ msgstr "localPosition1"
 #: joints.cc:45 spring.cc:37
 #, fuzzy
 #| msgid "Local position 1"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Local position 1"
 msgstr "Lokalna pozicija 1"
 
@@ -1342,9 +1349,16 @@ msgstr "localPosition2"
 #: joints.cc:47 spring.cc:39
 #, fuzzy
 #| msgid "Local position 2"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Local position 2"
 msgstr "Lokalna pozicija 2"
+
+#: joints.cc:48 spring.cc:40
+#, fuzzy
+#| msgid "Position1"
+msgctxt "PropertyDescription|"
+msgid "Position1"
+msgstr "Položaj1"
 
 #: joints.cc:48 spring.cc:40
 #, fuzzy
@@ -1354,12 +1368,12 @@ msgctxt "PropertyName|"
 msgid "position1"
 msgstr "položaj1"
 
-#: joints.cc:48 spring.cc:40
+#: joints.cc:49 spring.cc:41
 #, fuzzy
-#| msgid "Position1"
-msgctxt "StepCore|"
-msgid "Position1"
-msgstr "Položaj1"
+#| msgid "Position2"
+msgctxt "PropertyDescription|"
+msgid "Position2"
+msgstr "Položaj2"
 
 #: joints.cc:49 spring.cc:41
 #, fuzzy
@@ -1368,13 +1382,6 @@ msgstr "Položaj1"
 msgctxt "PropertyName|"
 msgid "position2"
 msgstr "položaj2"
-
-#: joints.cc:49 spring.cc:41
-#, fuzzy
-#| msgid "Position2"
-msgctxt "StepCore|"
-msgid "Position2"
-msgstr "Položaj2"
 
 #: joints.cc:52
 #, fuzzy
@@ -1387,7 +1394,7 @@ msgstr "Konopac"
 #: joints.cc:52
 #, fuzzy
 #| msgid "Massless rope which can be connected to bodies"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Massless rope which can be connected to bodies"
 msgstr "Konopac bez mase koji može biti vezan za tijela"
 
@@ -1403,16 +1410,23 @@ msgstr "LinearniMotor"
 #, fuzzy
 #| msgid ""
 #| "Linear motor: applies a constant force to a given position of the body"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Linear motor: applies a constant force to a given position of the body"
 msgstr "Linearni motor: primjenjuje konstantnu silu na datu poziciju tijela"
 
 #: motor.cc:31 motor.cc:37
 #, fuzzy
 #| msgid "Position of the motor on a body"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Position of the motor on a body"
 msgstr "Pozicija motora"
+
+#: motor.cc:32
+#, fuzzy
+#| msgid "Value of the force, acting on the body"
+msgctxt "PropertyDescription|"
+msgid "Value of the force, acting on the body"
+msgstr "Vrijednost sile koja djeluje na tijelo"
 
 #: motor.cc:32
 #, fuzzy
@@ -1421,13 +1435,6 @@ msgstr "Pozicija motora"
 msgctxt "PropertyName|"
 msgid "forceValue"
 msgstr "vrijednostSile"
-
-#: motor.cc:32
-#, fuzzy
-#| msgid "Value of the force, acting on the body"
-msgctxt "StepCore|"
-msgid "Value of the force, acting on the body"
-msgstr "Vrijednost sile koja djeluje na tijelo"
 
 #: motor.cc:32 particle.cc:34 particle.cc:48 rigidbody.cc:39 rigidbody.cc:68
 #: softbody.cc:48 spring.cc:42 spring.cc:63
@@ -1449,9 +1456,16 @@ msgstr "CircularMotor"
 #: motor.cc:34
 #, fuzzy
 #| msgid "Circular motor: applies a constant torque to the body"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Circular motor: applies a constant torque to the body"
 msgstr "Kružeći motor: primjenjuje konstantan moment sile na tijelo"
+
+#: motor.cc:38
+#, fuzzy
+#| msgid "Value of the torque, acting on the body"
+msgctxt "PropertyDescription|"
+msgid "Value of the torque, acting on the body"
+msgstr "Vrijednost momenta sile koja djeluje na tijelo"
 
 #: motor.cc:38
 #, fuzzy
@@ -1460,13 +1474,6 @@ msgstr "Kružeći motor: primjenjuje konstantan moment sile na tijelo"
 msgctxt "PropertyName|"
 msgid "torqueValue"
 msgstr "torqueValue"
-
-#: motor.cc:38
-#, fuzzy
-#| msgid "Value of the torque, acting on the body"
-msgctxt "StepCore|"
-msgid "Value of the torque, acting on the body"
-msgstr "Vrijednost momenta sile koja djeluje na tijelo"
 
 #: motor.cc:38 rigidbody.cc:40 rigidbody.cc:69 softbody.cc:49
 #, fuzzy
@@ -1486,9 +1493,16 @@ msgstr "Objekat"
 #: object.cc:26
 #, fuzzy
 #| msgid "Object"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Object"
 msgstr "Objekat"
+
+#: object.cc:27
+#, fuzzy
+#| msgid "Object name"
+msgctxt "PropertyDescription|"
+msgid "Object name"
+msgstr "Ime objekta"
 
 #: object.cc:27
 #, fuzzy
@@ -1497,13 +1511,6 @@ msgstr "Objekat"
 msgctxt "PropertyName|"
 msgid "name"
 msgstr "name"
-
-#: object.cc:27
-#, fuzzy
-#| msgid "Object name"
-msgctxt "StepCore|"
-msgid "Object name"
-msgstr "Ime objekta"
 
 #: objecterrors.cc:26
 #, fuzzy
@@ -1515,7 +1522,7 @@ msgstr "GreškeObjekta"
 #: objecterrors.cc:26
 #, fuzzy
 #| msgid "ObjectErrors"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "ObjectErrors"
 msgstr "GreškeObjekta"
 
@@ -1530,28 +1537,28 @@ msgstr "Čestica"
 #: particle.cc:28
 #, fuzzy
 #| msgid "Simple zero-size particle"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Simple zero-size particle"
 msgstr "Jednostavna čestica zanemarljive veličine"
 
 #: particle.cc:30
 #, fuzzy
 #| msgid "position"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "position"
 msgstr "položaj"
+
+#: particle.cc:31
+#, fuzzy
+#| msgid "velocity"
+msgctxt "PropertyDescription|"
+msgid "velocity"
+msgstr "brzina"
 
 #: particle.cc:31 rigidbody.cc:31 softbody.cc:38
 #, fuzzy
 #| msgid "velocity"
 msgctxt "PropertyName|"
-msgid "velocity"
-msgstr "brzina"
-
-#: particle.cc:31
-#, fuzzy
-#| msgid "velocity"
-msgctxt "StepCore|"
 msgid "velocity"
 msgstr "brzina"
 
@@ -1565,9 +1572,16 @@ msgstr "ubrzanje"
 #: particle.cc:33
 #, fuzzy
 #| msgid "acceleration"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "acceleration"
 msgstr "ubrzanje"
+
+#: particle.cc:34
+#, fuzzy
+#| msgid "force"
+msgctxt "PropertyDescription|"
+msgid "force"
+msgstr "sila"
 
 #: particle.cc:34 rigidbody.cc:39 softbody.cc:48 spring.cc:42
 #, fuzzy
@@ -1576,12 +1590,12 @@ msgctxt "PropertyName|"
 msgid "force"
 msgstr "sila"
 
-#: particle.cc:34
+#: particle.cc:35
 #, fuzzy
-#| msgid "force"
-msgctxt "StepCore|"
-msgid "force"
-msgstr "sila"
+#| msgid "mass"
+msgctxt "PropertyDescription|"
+msgid "mass"
+msgstr "masa"
 
 #: particle.cc:35 rigidbody.cc:42 softbody.cc:50
 #, fuzzy
@@ -1590,24 +1604,17 @@ msgctxt "PropertyName|"
 msgid "mass"
 msgstr "masa"
 
-#: particle.cc:35
-#, fuzzy
-#| msgid "mass"
-msgctxt "StepCore|"
-msgid "mass"
-msgstr "masa"
-
 #: particle.cc:36 rigidbody.cc:45
 #, fuzzy
 #| msgid "momentum"
-msgctxt "PropertyName|"
+msgctxt "PropertyDescription|"
 msgid "momentum"
 msgstr "impuls"
 
 #: particle.cc:36 rigidbody.cc:45
 #, fuzzy
 #| msgid "momentum"
-msgctxt "StepCore|"
+msgctxt "PropertyName|"
 msgid "momentum"
 msgstr "impuls"
 
@@ -1621,18 +1628,18 @@ msgstr "kg m/s"
 
 #: particle.cc:38 rigidbody.cc:49
 #, fuzzy
+#| msgid "kinetic energy"
+msgctxt "PropertyDescription|"
+msgid "kinetic energy"
+msgstr "kinetička energija"
+
+#: particle.cc:38 rigidbody.cc:49
+#, fuzzy
 #| msgctxt "PropertyName"
 #| msgid "kineticEnergy"
 msgctxt "PropertyName|"
 msgid "kineticEnergy"
 msgstr "kineticEnergy"
-
-#: particle.cc:38 rigidbody.cc:49
-#, fuzzy
-#| msgid "kinetic energy"
-msgctxt "StepCore|"
-msgid "kinetic energy"
-msgstr "kinetička energija"
 
 #: particle.cc:41
 #, fuzzy
@@ -1645,7 +1652,7 @@ msgstr "ParticleErrors"
 #: particle.cc:41
 #, fuzzy
 #| msgid "Errors class for Particle"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Errors class for Particle"
 msgstr "Klasa grešaka za Česticu"
 
@@ -1660,7 +1667,7 @@ msgstr "promjenaPoložaja"
 #: particle.cc:43 rigidbody.cc:54
 #, fuzzy
 #| msgid "position variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "position variance"
 msgstr "promjena položaja"
 
@@ -1675,7 +1682,7 @@ msgstr "velocityVariance"
 #: particle.cc:45 rigidbody.cc:59
 #, fuzzy
 #| msgid "velocity variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "velocity variance"
 msgstr "odstupanje brzine"
 
@@ -1690,7 +1697,7 @@ msgstr "accelerationVariance"
 #: particle.cc:47 rigidbody.cc:64
 #, fuzzy
 #| msgid "acceleration variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "acceleration variance"
 msgstr "odstupanje ubrzanja"
 
@@ -1705,7 +1712,7 @@ msgstr "forceVariance"
 #: particle.cc:49 rigidbody.cc:68
 #, fuzzy
 #| msgid "force variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "force variance"
 msgstr "odstupanje sile"
 
@@ -1720,7 +1727,7 @@ msgstr "massVariance"
 #: particle.cc:51 rigidbody.cc:72
 #, fuzzy
 #| msgid "mass variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "mass variance"
 msgstr "odstupanje mase"
 
@@ -1735,7 +1742,7 @@ msgstr "momentumVariance"
 #: particle.cc:53 rigidbody.cc:76
 #, fuzzy
 #| msgid "momentum variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "momentum variance"
 msgstr "odstupanje impulsa"
 
@@ -1750,7 +1757,7 @@ msgstr "kineticEnergyVariance"
 #: particle.cc:55 rigidbody.cc:81
 #, fuzzy
 #| msgid "kinetic energy variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "kinetic energy variance"
 msgstr "odstupanje kinetičke energije"
 
@@ -1765,21 +1772,21 @@ msgstr "NaelektrisanaČestica"
 #: particle.cc:57
 #, fuzzy
 #| msgid "Charged zero-size particle"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Charged zero-size particle"
 msgstr "Naelektrisana čestica zanemarljivih dimenzija"
 
 #: particle.cc:58
 #, fuzzy
 #| msgid "charge"
-msgctxt "PropertyName|"
+msgctxt "PropertyDescription|"
 msgid "charge"
 msgstr "naelektrisanje"
 
 #: particle.cc:58
 #, fuzzy
 #| msgid "charge"
-msgctxt "StepCore|"
+msgctxt "PropertyName|"
 msgid "charge"
 msgstr "naelektrisanje"
 
@@ -1802,7 +1809,7 @@ msgstr "ChargedParticleErrors"
 #: particle.cc:60
 #, fuzzy
 #| msgid "Errors class for ChargedParticle"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Errors class for ChargedParticle"
 msgstr "Klasa grešaka za NaelektrisanuČesticu"
 
@@ -1817,7 +1824,7 @@ msgstr "chargeVariance"
 #: particle.cc:63
 #, fuzzy
 #| msgid "charge variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "charge variance"
 msgstr "odstupanje naelektrisanja"
 
@@ -1832,30 +1839,37 @@ msgstr "RigidBody"
 #: rigidbody.cc:27
 #, fuzzy
 #| msgid "Generic rigid body"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Generic rigid body"
 msgstr "Generičko nesavitljivo tijelo"
 
 #: rigidbody.cc:28 softbody.cc:36
 #, fuzzy
 #| msgid "Position of the center of mass"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Position of the center of mass"
 msgstr "Pozicija centra mase"
 
 #: rigidbody.cc:29
 #, fuzzy
 #| msgid "Rotation angle"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Rotation angle"
 msgstr "Ugao rotacije"
 
 #: rigidbody.cc:31 softbody.cc:38
 #, fuzzy
 #| msgid "Velocity of the center of mass"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Velocity of the center of mass"
 msgstr "Brzina centra mase"
+
+#: rigidbody.cc:32 softbody.cc:39
+#, fuzzy
+#| msgid "Angular velocity of the body"
+msgctxt "PropertyDescription|"
+msgid "Angular velocity of the body"
+msgstr "Ugaona brzina tijela"
 
 #: rigidbody.cc:32 softbody.cc:39
 #, fuzzy
@@ -1864,13 +1878,6 @@ msgstr "Brzina centra mase"
 msgctxt "PropertyName|"
 msgid "angularVelocity"
 msgstr "angularVelocity"
-
-#: rigidbody.cc:32 softbody.cc:39
-#, fuzzy
-#| msgid "Angular velocity of the body"
-msgctxt "StepCore|"
-msgid "Angular velocity of the body"
-msgstr "Ugaona brzina tijela"
 
 #: rigidbody.cc:32 rigidbody.cc:60 softbody.cc:39
 #, fuzzy
@@ -1883,7 +1890,7 @@ msgstr "rad/s"
 #: rigidbody.cc:35 softbody.cc:44
 #, fuzzy
 #| msgid "Acceleration of the center of mass"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Acceleration of the center of mass"
 msgstr "Ubrzanje centra mase"
 
@@ -1906,16 +1913,23 @@ msgstr "rad/s²"
 #: rigidbody.cc:37 softbody.cc:46
 #, fuzzy
 #| msgid "Angular acceleration of the body"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Angular acceleration of the body"
 msgstr "Ugaono ubrzanje tijela"
 
 #: rigidbody.cc:39 softbody.cc:48
 #, fuzzy
 #| msgid "Force that acts upon the body"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Force that acts upon the body"
 msgstr "Sila koja djeluje na tijelo"
+
+#: rigidbody.cc:40 softbody.cc:49
+#, fuzzy
+#| msgid "Torque that acts upon the body"
+msgctxt "PropertyDescription|"
+msgid "Torque that acts upon the body"
+msgstr "Moment sile koji djeluje na tijelo"
 
 #: rigidbody.cc:40 softbody.cc:49
 #, fuzzy
@@ -1925,17 +1939,10 @@ msgctxt "PropertyName|"
 msgid "torque"
 msgstr "moment sile"
 
-#: rigidbody.cc:40 softbody.cc:49
-#, fuzzy
-#| msgid "Torque that acts upon the body"
-msgctxt "StepCore|"
-msgid "Torque that acts upon the body"
-msgstr "Moment sile koji djeluje na tijelo"
-
 #: rigidbody.cc:42 softbody.cc:50
 #, fuzzy
 #| msgid "Total mass of the body"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Total mass of the body"
 msgstr "Ukupna masa tijela"
 
@@ -1958,9 +1965,16 @@ msgstr "kg m²"
 #: rigidbody.cc:44 softbody.cc:52
 #, fuzzy
 #| msgid "Inertia \"tensor\" of the body"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Inertia \"tensor\" of the body"
 msgstr "Inercija \"tenzor\" tijela"
+
+#: rigidbody.cc:47
+#, fuzzy
+#| msgid "angular momentum"
+msgctxt "PropertyDescription|"
+msgid "angular momentum"
+msgstr "moment impulsa"
 
 #: rigidbody.cc:47 softbody.cc:40
 #, fuzzy
@@ -1969,13 +1983,6 @@ msgstr "Inercija \"tenzor\" tijela"
 msgctxt "PropertyName|"
 msgid "angularMomentum"
 msgstr "angularMomentum"
-
-#: rigidbody.cc:47
-#, fuzzy
-#| msgid "angular momentum"
-msgctxt "StepCore|"
-msgid "angular momentum"
-msgstr "moment impulsa"
 
 #: rigidbody.cc:47 rigidbody.cc:77
 #, fuzzy
@@ -1996,7 +2003,7 @@ msgstr "RigidBodyErrors"
 #: rigidbody.cc:52
 #, fuzzy
 #| msgid "Errors class for RigidBody"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Errors class for RigidBody"
 msgstr "Klasa grešaka za NesavitljivoTijelo"
 
@@ -2011,7 +2018,7 @@ msgstr "angleVariance"
 #: rigidbody.cc:56
 #, fuzzy
 #| msgid "angle variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "angle variance"
 msgstr "odstupanje ugla"
 
@@ -2026,7 +2033,7 @@ msgstr "angularVelocityVariance"
 #: rigidbody.cc:61
 #, fuzzy
 #| msgid "angularVelocity variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "angularVelocity variance"
 msgstr "odstupanjeUgaone brzine"
 
@@ -2041,9 +2048,16 @@ msgstr "angularAccelerationVariance"
 #: rigidbody.cc:66
 #, fuzzy
 #| msgid "angularAcceleration variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "angularAcceleration variance"
 msgstr "odstupanjeUgaonog ubrzanja"
+
+#: rigidbody.cc:69
+#, fuzzy
+#| msgid "torque variance"
+msgctxt "PropertyDescription|"
+msgid "torque variance"
+msgstr "odstupanje momenta sile"
 
 #: rigidbody.cc:69
 #, fuzzy
@@ -2052,13 +2066,6 @@ msgstr "odstupanjeUgaonog ubrzanja"
 msgctxt "PropertyName|"
 msgid "torqueVariance"
 msgstr "torqueVariance"
-
-#: rigidbody.cc:69
-#, fuzzy
-#| msgid "torque variance"
-msgctxt "StepCore|"
-msgid "torque variance"
-msgstr "odstupanje momenta sile"
 
 #: rigidbody.cc:73
 #, fuzzy
@@ -2071,7 +2078,7 @@ msgstr "inertiaVariance"
 #: rigidbody.cc:74
 #, fuzzy
 #| msgid "inertia variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "inertia variance"
 msgstr "odstupanje inercije"
 
@@ -2086,7 +2093,7 @@ msgstr "angularMomentumVariance"
 #: rigidbody.cc:78
 #, fuzzy
 #| msgid "angular momentum variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "angular momentum variance"
 msgstr "odstupanje ugaonog impulsa"
 
@@ -2101,9 +2108,16 @@ msgstr "Disk"
 #: rigidbody.cc:83
 #, fuzzy
 #| msgid "Rigid disk"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Rigid disk"
 msgstr "Krut disk"
+
+#: rigidbody.cc:84
+#, fuzzy
+#| msgid "Radius of the disk"
+msgctxt "PropertyDescription|"
+msgid "Radius of the disk"
+msgstr "Poluprečnik diska"
 
 #: rigidbody.cc:84
 #, fuzzy
@@ -2112,13 +2126,6 @@ msgstr "Krut disk"
 msgctxt "PropertyName|"
 msgid "radius"
 msgstr "radius"
-
-#: rigidbody.cc:84
-#, fuzzy
-#| msgid "Radius of the disk"
-msgctxt "StepCore|"
-msgid "Radius of the disk"
-msgstr "Poluprečnik diska"
 
 #: rigidbody.cc:86
 #, fuzzy
@@ -2131,7 +2138,7 @@ msgstr "BasePolygon"
 #: rigidbody.cc:86
 #, fuzzy
 #| msgid "Base polygon body"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Base polygon body"
 msgstr "Bazni poligon tijela"
 
@@ -2146,9 +2153,16 @@ msgstr "Box"
 #: rigidbody.cc:88
 #, fuzzy
 #| msgid "Rigid box"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Rigid box"
 msgstr "Kruti okvir"
+
+#: rigidbody.cc:89
+#, fuzzy
+#| msgid "Size of the box"
+msgctxt "PropertyDescription|"
+msgid "Size of the box"
+msgstr "Veličina okvira"
 
 #: rigidbody.cc:89 tool.cc:39 tool.cc:46 tool.cc:68 tool.cc:80
 #, fuzzy
@@ -2157,13 +2171,6 @@ msgstr "Kruti okvir"
 msgctxt "PropertyName|"
 msgid "size"
 msgstr "size"
-
-#: rigidbody.cc:89
-#, fuzzy
-#| msgid "Size of the box"
-msgctxt "StepCore|"
-msgid "Size of the box"
-msgstr "Veličina okvira"
 
 #: rigidbody.cc:91
 #, fuzzy
@@ -2176,9 +2183,16 @@ msgstr "Polygon"
 #: rigidbody.cc:91
 #, fuzzy
 #| msgid "Rigid polygon body"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Rigid polygon body"
 msgstr "Nesavitljivo mnogougaono tijelo"
+
+#: rigidbody.cc:92
+#, fuzzy
+#| msgid "Vertex list"
+msgctxt "PropertyDescription|"
+msgid "Vertex list"
+msgstr "Lista tjemena"
 
 #: rigidbody.cc:92
 #, fuzzy
@@ -2187,58 +2201,6 @@ msgstr "Nesavitljivo mnogougaono tijelo"
 msgctxt "PropertyName|"
 msgid "vertices"
 msgstr "vertices"
-
-#: rigidbody.cc:92
-#, fuzzy
-#| msgid "Vertex list"
-msgctxt "StepCore|"
-msgid "Vertex list"
-msgstr "Lista tjemena"
-
-#: rigidbody.cc:95
-#, fuzzy
-#| msgctxt "ObjectClass"
-#| msgid "Plane"
-msgctxt "ObjectClass|"
-msgid "Plane"
-msgstr "Plane"
-
-#: rigidbody.cc:95
-#, fuzzy
-#| msgid "Unmovable rigid plane"
-msgctxt "StepCore|"
-msgid "Unmovable rigid plane"
-msgstr "Nepokretna kruta ravan"
-
-#: rigidbody.cc:96
-#, fuzzy
-#| msgctxt "PropertyName"
-#| msgid "point1"
-msgctxt "PropertyName|"
-msgid "point1"
-msgstr "tačka1"
-
-#: rigidbody.cc:96
-#, fuzzy
-#| msgid "First point which defines the plane"
-msgctxt "StepCore|"
-msgid "First point which defines the plane"
-msgstr "Prva tačka koja određuje ravan"
-
-#: rigidbody.cc:97
-#, fuzzy
-#| msgctxt "PropertyName"
-#| msgid "point2"
-msgctxt "PropertyName|"
-msgid "point2"
-msgstr "tačka2"
-
-#: rigidbody.cc:97
-#, fuzzy
-#| msgid "Second point which defines the plane"
-msgctxt "StepCore|"
-msgid "Second point which defines the plane"
-msgstr "Druga tačka koja određuje ravan"
 
 #: softbody.cc:31
 #, fuzzy
@@ -2251,7 +2213,7 @@ msgstr "SoftBodyParticle"
 #: softbody.cc:31
 #, fuzzy
 #| msgid "SoftBody particle"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "SoftBody particle"
 msgstr "Čestica LaganogTijela"
 
@@ -2266,7 +2228,7 @@ msgstr "SoftBodySpring"
 #: softbody.cc:32
 #, fuzzy
 #| msgid "SoftBody spring"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "SoftBody spring"
 msgstr "Opruga LaganogTijela"
 
@@ -2281,9 +2243,16 @@ msgstr "SoftBody"
 #: softbody.cc:33
 #, fuzzy
 #| msgid "Deformable SoftBody"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Deformable SoftBody"
 msgstr "Deformativno LaganoTijelo"
+
+#: softbody.cc:34
+#, fuzzy
+#| msgid "Show internal items"
+msgctxt "PropertyDescription|"
+msgid "Show internal items"
+msgstr "Prikaži unutrašnje stavke"
 
 #: softbody.cc:34
 #, fuzzy
@@ -2292,13 +2261,6 @@ msgstr "Deformativno LaganoTijelo"
 msgctxt "PropertyName|"
 msgid "showInternalItems"
 msgstr "showInternalItems"
-
-#: softbody.cc:34
-#, fuzzy
-#| msgid "Show internal items"
-msgctxt "StepCore|"
-msgid "Show internal items"
-msgstr "Prikaži unutrašnje stavke"
 
 #: softbody.cc:40
 #, fuzzy
@@ -2311,7 +2273,7 @@ msgstr "kg m²/s"
 #: softbody.cc:41
 #, fuzzy
 #| msgid "Angular momentum of the body"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Angular momentum of the body"
 msgstr "Ugaoni impuls tijela"
 
@@ -2326,7 +2288,7 @@ msgstr "borderParticleNames"
 #: softbody.cc:54
 #, fuzzy
 #| msgid "Border particle names (temporal property)"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Border particle names (temporal property)"
 msgstr "Imena graničnih čestica (privremena osobina)"
 
@@ -2340,9 +2302,16 @@ msgstr "Sistem za rješavanje"
 #: solver.cc:25
 #, fuzzy
 #| msgid "Solver"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Solver"
 msgstr "Sistem za rješavanje"
+
+#: solver.cc:26
+#, fuzzy
+#| msgid "Solver type"
+msgctxt "PropertyDescription|"
+msgid "Solver type"
+msgstr "Tip sistema za rješavanje"
 
 #: solver.cc:26
 #, fuzzy
@@ -2352,12 +2321,12 @@ msgctxt "PropertyName|"
 msgid "solverType"
 msgstr "solverType"
 
-#: solver.cc:26
+#: solver.cc:27
 #, fuzzy
-#| msgid "Solver type"
-msgctxt "StepCore|"
-msgid "Solver type"
-msgstr "Tip sistema za rješavanje"
+#| msgid "Step size"
+msgctxt "PropertyDescription|"
+msgid "Step size"
+msgstr "Veličina koraka"
 
 #: solver.cc:27
 #, fuzzy
@@ -2366,13 +2335,6 @@ msgstr "Tip sistema za rješavanje"
 msgctxt "PropertyName|"
 msgid "stepSize"
 msgstr "stepSize"
-
-#: solver.cc:27
-#, fuzzy
-#| msgid "Step size"
-msgctxt "StepCore|"
-msgid "Step size"
-msgstr "Veličina koraka"
 
 #: solver.cc:27 world.cc:35
 #, fuzzy
@@ -2384,18 +2346,25 @@ msgstr "s"
 
 #: solver.cc:29
 #, fuzzy
+#| msgid "Allowed relative tolerance"
+msgctxt "PropertyDescription|"
+msgid "Allowed relative tolerance"
+msgstr "Dozvoljena relativna greška"
+
+#: solver.cc:29
+#, fuzzy
 #| msgctxt "PropertyName"
 #| msgid "toleranceRel"
 msgctxt "PropertyName|"
 msgid "toleranceRel"
 msgstr "toleranceRel"
 
-#: solver.cc:29
+#: solver.cc:30
 #, fuzzy
-#| msgid "Allowed relative tolerance"
-msgctxt "StepCore|"
-msgid "Allowed relative tolerance"
-msgstr "Dozvoljena relativna greška"
+#| msgid "Count of dynamic variables"
+msgctxt "PropertyDescription|"
+msgid "Count of dynamic variables"
+msgstr "Broj dinamičkih promjenljivih"
 
 #: solver.cc:30
 #, fuzzy
@@ -2405,12 +2374,12 @@ msgctxt "PropertyName|"
 msgid "dimension"
 msgstr "dimension"
 
-#: solver.cc:30
+#: solver.cc:32
 #, fuzzy
-#| msgid "Count of dynamic variables"
-msgctxt "StepCore|"
-msgid "Count of dynamic variables"
-msgstr "Broj dinamičkih promjenljivih"
+#| msgid "Maximal local error ratio during last step"
+msgctxt "PropertyDescription|"
+msgid "Maximal local error ratio during last step"
+msgstr "Maksimalni lokalni omjer greške tokom posljednjeg koraka"
 
 #: solver.cc:32
 #, fuzzy
@@ -2419,13 +2388,6 @@ msgstr "Broj dinamičkih promjenljivih"
 msgctxt "PropertyName|"
 msgid "localErrorRatio"
 msgstr "localErrorRatio"
-
-#: solver.cc:32
-#, fuzzy
-#| msgid "Maximal local error ratio during last step"
-msgctxt "StepCore|"
-msgid "Maximal local error ratio during last step"
-msgstr "Maksimalni lokalni omjer greške tokom posljednjeg koraka"
 
 #: spring.cc:28
 #, fuzzy
@@ -2438,16 +2400,23 @@ msgstr "Opruga"
 #: spring.cc:28
 #, fuzzy
 #| msgid "Massless spring which can be connected to bodies"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Massless spring which can be connected to bodies"
 msgstr "Opruga bez mase koja može biti vezana za tijela"
 
 #: spring.cc:30
 #, fuzzy
 #| msgid "Rest length"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Rest length"
 msgstr "Dužina mirovanja"
+
+#: spring.cc:31
+#, fuzzy
+#| msgid "Current length"
+msgctxt "PropertyDescription|"
+msgid "Current length"
+msgstr "Trenutna dužina"
 
 #: spring.cc:31
 #, fuzzy
@@ -2457,12 +2426,12 @@ msgctxt "PropertyName|"
 msgid "length"
 msgstr "dužina"
 
-#: spring.cc:31
+#: spring.cc:32
 #, fuzzy
-#| msgid "Current length"
-msgctxt "StepCore|"
-msgid "Current length"
-msgstr "Trenutna dužina"
+#| msgid "Stiffness"
+msgctxt "PropertyDescription|"
+msgid "Stiffness"
+msgstr "Krutost"
 
 #: spring.cc:32
 #, fuzzy
@@ -2471,13 +2440,6 @@ msgstr "Trenutna dužina"
 msgctxt "PropertyName|"
 msgid "stiffness"
 msgstr "stiffness"
-
-#: spring.cc:32
-#, fuzzy
-#| msgid "Stiffness"
-msgctxt "StepCore|"
-msgid "Stiffness"
-msgstr "Krutost"
 
 #: spring.cc:32 spring.cc:51 spring.cc:53
 #, fuzzy
@@ -2489,18 +2451,18 @@ msgstr "N/m"
 
 #: spring.cc:33
 #, fuzzy
+#| msgid "Damping"
+msgctxt "PropertyDescription|"
+msgid "Damping"
+msgstr "Prigušivanje"
+
+#: spring.cc:33
+#, fuzzy
 #| msgctxt "PropertyName"
 #| msgid "damping"
 msgctxt "PropertyName|"
 msgid "damping"
 msgstr "damping"
-
-#: spring.cc:33
-#, fuzzy
-#| msgid "Damping"
-msgctxt "StepCore|"
-msgid "Damping"
-msgstr "Prigušivanje"
 
 #: spring.cc:33
 #, fuzzy
@@ -2513,7 +2475,7 @@ msgstr "N s/m"
 #: spring.cc:42
 #, fuzzy
 #| msgid "Spring tension force"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Spring tension force"
 msgstr "Sila napetosti opruge"
 
@@ -2528,7 +2490,7 @@ msgstr "SpringErrors"
 #: spring.cc:45
 #, fuzzy
 #| msgid "Errors class for Spring"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Errors class for Spring"
 msgstr "Klasa grešaka za oprugu"
 
@@ -2543,7 +2505,7 @@ msgstr "restLengthVariance"
 #: spring.cc:48
 #, fuzzy
 #| msgid "Rest length variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Rest length variance"
 msgstr "Odstupanje dužine mirovanja"
 
@@ -2558,7 +2520,7 @@ msgstr "lengthVariance"
 #: spring.cc:50
 #, fuzzy
 #| msgid "Current length variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Current length variance"
 msgstr "Odstupanje trenutne dužine"
 
@@ -2573,7 +2535,7 @@ msgstr "stiffnessVariance"
 #: spring.cc:52
 #, fuzzy
 #| msgid "Stiffness variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Stiffness variance"
 msgstr "Odstupanje krutosti"
 
@@ -2588,7 +2550,7 @@ msgstr "dampingVariance"
 #: spring.cc:54
 #, fuzzy
 #| msgid "Damping variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Damping variance"
 msgstr "Odstupanje prigušivanja"
 
@@ -2603,7 +2565,7 @@ msgstr "localPosition1Variance"
 #: spring.cc:56
 #, fuzzy
 #| msgid "Local position 1 variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Local position 1 variance"
 msgstr "Odstupanje lokalnog položaja 1"
 
@@ -2618,7 +2580,7 @@ msgstr "localPosition2Variance"
 #: spring.cc:58
 #, fuzzy
 #| msgid "Local position 2 variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Local position 2 variance"
 msgstr "Odstupanje lokalnog položaja 2"
 
@@ -2633,7 +2595,7 @@ msgstr "position1Variance"
 #: spring.cc:60
 #, fuzzy
 #| msgid "Position1 variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Position1 variance"
 msgstr "Odstupanje položaja1"
 
@@ -2648,14 +2610,14 @@ msgstr "position2Variance"
 #: spring.cc:62
 #, fuzzy
 #| msgid "Position2 variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Position2 variance"
 msgstr "Odstupanje položaja2"
 
 #: spring.cc:64
 #, fuzzy
 #| msgid "Spring tension force variance"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Spring tension force variance"
 msgstr "Odstupanje sile napetosti opruge"
 
@@ -2670,9 +2632,16 @@ msgstr "NoteImage"
 #: tool.cc:26
 #, fuzzy
 #| msgid "NoteImage: an image embedded in Note"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "NoteImage: an image embedded in Note"
 msgstr "SlikaBilješke: slika umetnuta u Bilješku"
+
+#: tool.cc:28
+#, fuzzy
+#| msgid "Image data"
+msgctxt "PropertyDescription|"
+msgid "Image data"
+msgstr "Podaci o slici"
 
 #: tool.cc:28
 #, fuzzy
@@ -2681,13 +2650,6 @@ msgstr "SlikaBilješke: slika umetnuta u Bilješku"
 msgctxt "PropertyName|"
 msgid "image"
 msgstr "slika"
-
-#: tool.cc:28
-#, fuzzy
-#| msgid "Image data"
-msgctxt "StepCore|"
-msgid "Image data"
-msgstr "Podaci o slici"
 
 #: tool.cc:31
 #, fuzzy
@@ -2700,9 +2662,16 @@ msgstr "NoteFormula"
 #: tool.cc:31
 #, fuzzy
 #| msgid "NoteFormula: a formula embedded in Note"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "NoteFormula: a formula embedded in Note"
 msgstr "FormulaBilješke: formula umetnuta u Bilješku"
+
+#: tool.cc:33
+#, fuzzy
+#| msgid "Formula code"
+msgctxt "PropertyDescription|"
+msgid "Formula code"
+msgstr "Kod formule"
 
 #: tool.cc:33
 #, fuzzy
@@ -2711,13 +2680,6 @@ msgstr "FormulaBilješke: formula umetnuta u Bilješku"
 msgctxt "PropertyName|"
 msgid "code"
 msgstr "code"
-
-#: tool.cc:33
-#, fuzzy
-#| msgid "Formula code"
-msgctxt "StepCore|"
-msgid "Formula code"
-msgstr "Kod formule"
 
 #: tool.cc:36
 #, fuzzy
@@ -2730,23 +2692,30 @@ msgstr "Note"
 #: tool.cc:36
 #, fuzzy
 #| msgid "Note: displays a textual note on the scene"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Note: displays a textual note on the scene"
 msgstr "Bilješka: prikazuje tekstualnu bilješku o sceni"
 
 #: tool.cc:38
 #, fuzzy
 #| msgid "Note position on the scene"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Note position on the scene"
 msgstr "Zabilježi položaj na sceni"
 
 #: tool.cc:39
 #, fuzzy
 #| msgid "Note size on the scene"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Note size on the scene"
 msgstr "Veličina bilješke na sceni"
+
+#: tool.cc:40
+#, fuzzy
+#| msgid "Text"
+msgctxt "PropertyDescription|"
+msgid "Text"
+msgstr "Tekst"
 
 #: tool.cc:40
 #, fuzzy
@@ -2755,13 +2724,6 @@ msgstr "Veličina bilješke na sceni"
 msgctxt "PropertyName|"
 msgid "text"
 msgstr "text"
-
-#: tool.cc:40
-#, fuzzy
-#| msgid "Text"
-msgctxt "StepCore|"
-msgid "Text"
-msgstr "Tekst"
 
 #: tool.cc:43
 #, fuzzy
@@ -2774,23 +2736,30 @@ msgstr "Graph"
 #: tool.cc:43
 #, fuzzy
 #| msgid "Graph: plots a graph of any properties"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Graph: plots a graph of any properties"
 msgstr "Graf: iscrtava graf bilo kojeg svojstva"
 
 #: tool.cc:45
 #, fuzzy
 #| msgid "Graph position on the scene"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Graph position on the scene"
 msgstr "Položaj grafa na sceni"
 
 #: tool.cc:46
 #, fuzzy
 #| msgid "Graph size on the scene"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Graph size on the scene"
 msgstr "Veličina grafa na sceni"
+
+#: tool.cc:47
+#, fuzzy
+#| msgid "X axis: object"
+msgctxt "PropertyDescription|"
+msgid "X axis: object"
+msgstr "X osa: objekat"
 
 #: tool.cc:47
 #, fuzzy
@@ -2800,12 +2769,12 @@ msgctxt "PropertyName|"
 msgid "objectX"
 msgstr "objectX"
 
-#: tool.cc:47
+#: tool.cc:48
 #, fuzzy
-#| msgid "X axis: object"
-msgctxt "StepCore|"
-msgid "X axis: object"
-msgstr "X osa: objekat"
+#| msgid "X axis: object property"
+msgctxt "PropertyDescription|"
+msgid "X axis: object property"
+msgstr "X osa: svojstvo objekta"
 
 #: tool.cc:48
 #, fuzzy
@@ -2815,12 +2784,12 @@ msgctxt "PropertyName|"
 msgid "propertyX"
 msgstr "propertyX"
 
-#: tool.cc:48
+#: tool.cc:49
 #, fuzzy
-#| msgid "X axis: object property"
-msgctxt "StepCore|"
-msgid "X axis: object property"
-msgstr "X osa: svojstvo objekta"
+#| msgid "X axis: vector index"
+msgctxt "PropertyDescription|"
+msgid "X axis: vector index"
+msgstr "X osa: indeks vektora"
 
 #: tool.cc:49
 #, fuzzy
@@ -2830,12 +2799,12 @@ msgctxt "PropertyName|"
 msgid "indexX"
 msgstr "indexX"
 
-#: tool.cc:49
+#: tool.cc:50
 #, fuzzy
-#| msgid "X axis: vector index"
-msgctxt "StepCore|"
-msgid "X axis: vector index"
-msgstr "X osa: indeks vektora"
+#| msgid "Y axis: object"
+msgctxt "PropertyDescription|"
+msgid "Y axis: object"
+msgstr "Y osa: objekat"
 
 #: tool.cc:50
 #, fuzzy
@@ -2845,12 +2814,12 @@ msgctxt "PropertyName|"
 msgid "objectY"
 msgstr "objectY"
 
-#: tool.cc:50
+#: tool.cc:51
 #, fuzzy
-#| msgid "Y axis: object"
-msgctxt "StepCore|"
-msgid "Y axis: object"
-msgstr "Y osa: objekat"
+#| msgid "Y axis: property"
+msgctxt "PropertyDescription|"
+msgid "Y axis: property"
+msgstr "Y osa: svojstvo"
 
 #: tool.cc:51
 #, fuzzy
@@ -2860,12 +2829,12 @@ msgctxt "PropertyName|"
 msgid "propertyY"
 msgstr "propertyY"
 
-#: tool.cc:51
+#: tool.cc:52
 #, fuzzy
-#| msgid "Y axis: property"
-msgctxt "StepCore|"
-msgid "Y axis: property"
-msgstr "Y osa: svojstvo"
+#| msgid "Y axis: vector index"
+msgctxt "PropertyDescription|"
+msgid "Y axis: vector index"
+msgstr "Y osa: indeks vektora"
 
 #: tool.cc:52
 #, fuzzy
@@ -2875,12 +2844,12 @@ msgctxt "PropertyName|"
 msgid "indexY"
 msgstr "indexY"
 
-#: tool.cc:52
+#: tool.cc:53
 #, fuzzy
-#| msgid "Y axis: vector index"
-msgctxt "StepCore|"
-msgid "Y axis: vector index"
-msgstr "Y osa: indeks vektora"
+#| msgid "Auto-limits along X axis"
+msgctxt "PropertyDescription|"
+msgid "Auto-limits along X axis"
+msgstr "Automatske granice duž X ose"
 
 #: tool.cc:53
 #, fuzzy
@@ -2890,12 +2859,12 @@ msgctxt "PropertyName|"
 msgid "autoLimitsX"
 msgstr "autoLimitsX"
 
-#: tool.cc:53
+#: tool.cc:54
 #, fuzzy
-#| msgid "Auto-limits along X axis"
-msgctxt "StepCore|"
-msgid "Auto-limits along X axis"
-msgstr "Automatske granice duž X ose"
+#| msgid "Auto-limits along Y axis"
+msgctxt "PropertyDescription|"
+msgid "Auto-limits along Y axis"
+msgstr "Automatske granice duž Y ose"
 
 #: tool.cc:54
 #, fuzzy
@@ -2905,12 +2874,12 @@ msgctxt "PropertyName|"
 msgid "autoLimitsY"
 msgstr "autoLimitsY"
 
-#: tool.cc:54
+#: tool.cc:55
 #, fuzzy
-#| msgid "Auto-limits along Y axis"
-msgctxt "StepCore|"
-msgid "Auto-limits along Y axis"
-msgstr "Automatske granice duž Y ose"
+#| msgid "Limits along X axis"
+msgctxt "PropertyDescription|"
+msgid "Limits along X axis"
+msgstr "Granice duž X ose"
 
 #: tool.cc:55
 #, fuzzy
@@ -2920,12 +2889,12 @@ msgctxt "PropertyName|"
 msgid "limitsX"
 msgstr "limitsX"
 
-#: tool.cc:55
+#: tool.cc:56
 #, fuzzy
-#| msgid "Limits along X axis"
-msgctxt "StepCore|"
-msgid "Limits along X axis"
-msgstr "Granice duž X ose"
+#| msgid "Limits along Y axis"
+msgctxt "PropertyDescription|"
+msgid "Limits along Y axis"
+msgstr "Granice duž Y ose"
 
 #: tool.cc:56
 #, fuzzy
@@ -2935,12 +2904,12 @@ msgctxt "PropertyName|"
 msgid "limitsY"
 msgstr "limitsY"
 
-#: tool.cc:56
+#: tool.cc:57
 #, fuzzy
-#| msgid "Limits along Y axis"
-msgctxt "StepCore|"
-msgid "Limits along Y axis"
-msgstr "Granice duž Y ose"
+#| msgid "Show points on the graph"
+msgctxt "PropertyDescription|"
+msgid "Show points on the graph"
+msgstr "Prikaži tačke na grafu"
 
 #: tool.cc:57
 #, fuzzy
@@ -2950,12 +2919,12 @@ msgctxt "PropertyName|"
 msgid "showPoints"
 msgstr "showPoints"
 
-#: tool.cc:57
+#: tool.cc:58
 #, fuzzy
-#| msgid "Show points on the graph"
-msgctxt "StepCore|"
-msgid "Show points on the graph"
-msgstr "Prikaži tačke na grafu"
+#| msgid "Show lines on the graph"
+msgctxt "PropertyDescription|"
+msgid "Show lines on the graph"
+msgstr "Prikaži linije na grafu"
 
 #: tool.cc:58
 #, fuzzy
@@ -2965,26 +2934,26 @@ msgctxt "PropertyName|"
 msgid "showLines"
 msgstr "showLines"
 
-#: tool.cc:58
+#: tool.cc:59
 #, fuzzy
-#| msgid "Show lines on the graph"
-msgctxt "StepCore|"
-msgid "Show lines on the graph"
-msgstr "Prikaži linije na grafu"
+#| msgid "Current value"
+msgctxt "PropertyDescription|"
+msgid "Current value"
+msgstr "Trenutna vrijednost"
 
 #: tool.cc:59
 #, fuzzy
 #| msgid "currentValue"
-msgctxt "StepCore|"
+msgctxt "PropertyName|"
 msgid "currentValue"
 msgstr "currentValue"
 
-#: tool.cc:59
+#: tool.cc:60 tool.cc:101
 #, fuzzy
-#| msgid "Current value"
-msgctxt "StepCore|"
-msgid "Current value"
-msgstr "Trenutna vrijednost"
+#| msgid "points"
+msgctxt "PropertyDescription|"
+msgid "points"
+msgstr "tačke"
 
 #: tool.cc:60 tool.cc:101
 #, fuzzy
@@ -2993,38 +2962,31 @@ msgctxt "PropertyName|"
 msgid "points"
 msgstr "tačke"
 
-#: tool.cc:60 tool.cc:101
-#, fuzzy
-#| msgid "points"
-msgctxt "StepCore|"
-msgid "points"
-msgstr "tačke"
-
 #: tool.cc:61
 #, fuzzy
 #| msgid "unitsX"
-msgctxt "StepCore|"
+msgctxt "PropertyName|"
 msgid "unitsX"
 msgstr "unitsX"
 
 #: tool.cc:61
 #, fuzzy
 #| msgid "Units along X axis"
-msgctxt "StepCore|"
+msgctxt "PropertyName|"
 msgid "Units along X axis"
 msgstr "Jedinice duž X ose"
 
 #: tool.cc:62
 #, fuzzy
 #| msgid "unitsY"
-msgctxt "StepCore|"
+msgctxt "PropertyName|"
 msgid "unitsY"
 msgstr "unitsY"
 
 #: tool.cc:62
 #, fuzzy
 #| msgid "Units along Y axis"
-msgctxt "StepCore|"
+msgctxt "PropertyName|"
 msgid "Units along Y axis"
 msgstr "Jedinice duž Y ose"
 
@@ -3039,23 +3001,30 @@ msgstr "Meter"
 #: tool.cc:65
 #, fuzzy
 #| msgid "Meter: displays any property on the scene"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Meter: displays any property on the scene"
 msgstr "Metar: prikazuje bilo koje svojstvo na sceni"
 
 #: tool.cc:67
 #, fuzzy
 #| msgid "Meter position on the scene"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Meter position on the scene"
 msgstr "Položaj metra na sceni"
 
 #: tool.cc:68
 #, fuzzy
 #| msgid "Meter size on the scene"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Meter size on the scene"
 msgstr "Veličina metra na sceni"
+
+#: tool.cc:69
+#, fuzzy
+#| msgid "Observed object"
+msgctxt "PropertyDescription|"
+msgid "Observed object"
+msgstr "Posmatrani objekat"
 
 #: tool.cc:69 tool.cc:81
 #, fuzzy
@@ -3065,12 +3034,12 @@ msgctxt "PropertyName|"
 msgid "object"
 msgstr "object"
 
-#: tool.cc:69
+#: tool.cc:70
 #, fuzzy
-#| msgid "Observed object"
-msgctxt "StepCore|"
-msgid "Observed object"
-msgstr "Posmatrani objekat"
+#| msgid "Observed property"
+msgctxt "PropertyDescription|"
+msgid "Observed property"
+msgstr "Posmatrano svojstvo"
 
 #: tool.cc:70 tool.cc:82
 #, fuzzy
@@ -3080,12 +3049,12 @@ msgctxt "PropertyName|"
 msgid "property"
 msgstr "property"
 
-#: tool.cc:70
+#: tool.cc:71 tool.cc:83
 #, fuzzy
-#| msgid "Observed property"
-msgctxt "StepCore|"
-msgid "Observed property"
-msgstr "Posmatrano svojstvo"
+#| msgid "Vector index"
+msgctxt "PropertyDescription|"
+msgid "Vector index"
+msgstr "Indeks vektora"
 
 #: tool.cc:71 tool.cc:83
 #, fuzzy
@@ -3095,12 +3064,12 @@ msgctxt "PropertyName|"
 msgid "index"
 msgstr "index"
 
-#: tool.cc:71 tool.cc:83
+#: tool.cc:72
 #, fuzzy
-#| msgid "Vector index"
-msgctxt "StepCore|"
-msgid "Vector index"
-msgstr "Indeks vektora"
+#| msgid "Display digits"
+msgctxt "PropertyDescription|"
+msgid "Display digits"
+msgstr "Prikaži cifre"
 
 #: tool.cc:72
 #, fuzzy
@@ -3110,40 +3079,33 @@ msgctxt "PropertyName|"
 msgid "digits"
 msgstr "digits"
 
-#: tool.cc:72
-#, fuzzy
-#| msgid "Display digits"
-msgctxt "StepCore|"
-msgid "Display digits"
-msgstr "Prikaži cifre"
-
-#: tool.cc:73
-#, fuzzy
-#| msgid "value"
-msgctxt "StepCore|"
-msgid "value"
-msgstr "vrijednost"
-
 #: tool.cc:73 tool.cc:90
 #, fuzzy
 #| msgid "Value"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Value"
 msgstr "Vrijednost"
 
-#: tool.cc:74 tool.cc:92
+#: tool.cc:73 tool.cc:90
 #, fuzzy
-#| msgid "units"
-msgctxt "StepCore|"
-msgid "units"
-msgstr "jedinice"
+#| msgid "value"
+msgctxt "PropertyName|"
+msgid "value"
+msgstr "vrijednost"
 
 #: tool.cc:74
 #, fuzzy
 #| msgid "Units of measured property"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Units of measured property"
 msgstr "Jedinice mjerenog svojstva"
+
+#: tool.cc:74 tool.cc:92
+#, fuzzy
+#| msgid "units"
+msgctxt "PropertyName|"
+msgid "units"
+msgstr "jedinice"
 
 #: tool.cc:77
 #, fuzzy
@@ -3156,37 +3118,44 @@ msgstr "Controller"
 #: tool.cc:77
 #, fuzzy
 #| msgid "Controller: allows to easily control any property"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Controller: allows to easily control any property"
 msgstr "Regulator: dozvoljava da se lako reguliše bilo koje svojstvo"
 
 #: tool.cc:79
 #, fuzzy
 #| msgid "Controller position on the scene"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Controller position on the scene"
 msgstr "Položaj regulatora na sceni"
 
 #: tool.cc:80
 #, fuzzy
 #| msgid "Controller size on the scene"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Controller size on the scene"
 msgstr "Veličina regulatora na sceni"
 
 #: tool.cc:81
 #, fuzzy
 #| msgid "Controlled object"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Controlled object"
 msgstr "Kontrolisani objekat"
 
 #: tool.cc:82
 #, fuzzy
 #| msgid "Controlled property"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Controlled property"
 msgstr "Kontrolisano svojstvo"
+
+#: tool.cc:84
+#, fuzzy
+#| msgid "Limits"
+msgctxt "PropertyDescription|"
+msgid "Limits"
+msgstr "Granice"
 
 #: tool.cc:84
 #, fuzzy
@@ -3195,13 +3164,6 @@ msgstr "Kontrolisano svojstvo"
 msgctxt "PropertyName|"
 msgid "limits"
 msgstr "limits"
-
-#: tool.cc:84
-#, fuzzy
-#| msgid "Limits"
-msgctxt "StepCore|"
-msgid "Limits"
-msgstr "Granice"
 
 #: tool.cc:85
 #, fuzzy
@@ -3214,7 +3176,7 @@ msgstr "increaseShortcut"
 #: tool.cc:86
 #, fuzzy
 #| msgid "Shortcut to increase the value"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Shortcut to increase the value"
 msgstr "Kratica za uvećavanje vrijednosti"
 
@@ -3229,9 +3191,16 @@ msgstr "decreaseShortcut"
 #: tool.cc:88
 #, fuzzy
 #| msgid "Shortcut to decrease the value"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Shortcut to decrease the value"
 msgstr "Kratica za smanjenje vrijednosti"
+
+#: tool.cc:89
+#, fuzzy
+#| msgid "Increment value"
+msgctxt "PropertyDescription|"
+msgid "Increment value"
+msgstr "Vrijednost prirasta"
 
 #: tool.cc:89
 #, fuzzy
@@ -3241,24 +3210,10 @@ msgctxt "PropertyName|"
 msgid "increment"
 msgstr "increment"
 
-#: tool.cc:89
-#, fuzzy
-#| msgid "Increment value"
-msgctxt "StepCore|"
-msgid "Increment value"
-msgstr "Vrijednost prirasta"
-
-#: tool.cc:90
-#, fuzzy
-#| msgid "value"
-msgctxt "PropertyName|"
-msgid "value"
-msgstr "vrijednost"
-
 #: tool.cc:92
 #, fuzzy
 #| msgid "Units of controlled property"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Units of controlled property"
 msgstr "Jedinice kontrolisanog svojstva"
 
@@ -3273,21 +3228,21 @@ msgstr "Tracer"
 #: tool.cc:95
 #, fuzzy
 #| msgid "Tracer: traces trajectory of a point on a body"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Tracer: traces trajectory of a point on a body"
 msgstr "Tragač: prati putanju tačke na tijelu"
 
 #: tool.cc:97
 #, fuzzy
 #| msgid "Traced body"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Traced body"
 msgstr "Praćeno tijelo"
 
 #: tool.cc:99
 #, fuzzy
 #| msgid "Local position"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Local position"
 msgstr "Lokalni položaj"
 
@@ -3301,7 +3256,7 @@ msgstr "Alat"
 #: world.cc:32
 #, fuzzy
 #| msgid "Tool"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "Tool"
 msgstr "Alat"
 
@@ -3315,9 +3270,16 @@ msgstr "Svijet"
 #: world.cc:34
 #, fuzzy
 #| msgid "World"
-msgctxt "StepCore|"
+msgctxt "ObjectDescription|"
 msgid "World"
 msgstr "Svijet"
+
+#: world.cc:35
+#, fuzzy
+#| msgid "Current time"
+msgctxt "PropertyDescription|"
+msgid "Current time"
+msgstr "Trenutno vrijeme"
 
 #: world.cc:35
 #, fuzzy
@@ -3327,38 +3289,31 @@ msgctxt "PropertyName|"
 msgid "time"
 msgstr "time"
 
-#: world.cc:35
+#: world.cc:36
 #, fuzzy
-#| msgid "Current time"
-msgctxt "StepCore|"
-msgid "Current time"
-msgstr "Trenutno vrijeme"
+#| msgid "Simulation speed scale"
+msgctxt "PropertyDescription|"
+msgid "Simulation speed scale"
+msgstr "Skala brzine simulacije"
 
 #: world.cc:36
 #, fuzzy
 #| msgid "timeScale"
-msgctxt "StepCore|"
+msgctxt "PropertyName|"
 msgid "timeScale"
 msgstr "vremenskaSkala"
-
-#: world.cc:36
-#, fuzzy
-#| msgid "Simulation speed scale"
-msgctxt "StepCore|"
-msgid "Simulation speed scale"
-msgstr "Skala brzine simulacije"
 
 #: world.cc:37
 #, fuzzy
 #| msgid "errorsCalculation"
-msgctxt "StepCore|"
+msgctxt "PropertyName|"
 msgid "errorsCalculation"
 msgstr "proračunGrešaka"
 
 #: world.cc:38
 #, fuzzy
 #| msgid "Enable global error calculation"
-msgctxt "StepCore|"
+msgctxt "PropertyDescription|"
 msgid "Enable global error calculation"
 msgstr "Omogući globalno računanje greške"
 
@@ -3424,6 +3379,159 @@ msgstr "Svojstvo \"%1\" od \"%2\" ima nedopuštenu vrijednost"
 msgctxt "QObject|"
 msgid "File is not writable."
 msgstr "Datoteka nije za pisanje."
+
+#, fuzzy
+#~| msgid "Body"
+#~ msgctxt "StepCore|"
+#~ msgid "Body"
+#~ msgstr "Tijelo"
+
+#, fuzzy
+#~| msgid "Force"
+#~ msgctxt "StepCore|"
+#~ msgid "Force"
+#~ msgstr "Sila"
+
+#, fuzzy
+#~| msgid "Item"
+#~ msgctxt "StepCore|"
+#~ msgid "Item"
+#~ msgstr "Predmet"
+
+#, fuzzy
+#~| msgid "ItemGroup"
+#~ msgctxt "StepCore|"
+#~ msgid "ItemGroup"
+#~ msgstr "GrupaPredmeta"
+
+#, fuzzy
+#~| msgid "Joint"
+#~ msgctxt "StepCore|"
+#~ msgid "Joint"
+#~ msgstr "Spoj"
+
+#, fuzzy
+#~| msgid "Object"
+#~ msgctxt "StepCore|"
+#~ msgid "Object"
+#~ msgstr "Objekat"
+
+#, fuzzy
+#~| msgid "ObjectErrors"
+#~ msgctxt "StepCore|"
+#~ msgid "ObjectErrors"
+#~ msgstr "GreškeObjekta"
+
+#, fuzzy
+#~| msgid "position"
+#~ msgctxt "StepCore|"
+#~ msgid "position"
+#~ msgstr "položaj"
+
+#, fuzzy
+#~| msgid "velocity"
+#~ msgctxt "StepCore|"
+#~ msgid "velocity"
+#~ msgstr "brzina"
+
+#, fuzzy
+#~| msgid "acceleration"
+#~ msgctxt "StepCore|"
+#~ msgid "acceleration"
+#~ msgstr "ubrzanje"
+
+#, fuzzy
+#~| msgid "force"
+#~ msgctxt "StepCore|"
+#~ msgid "force"
+#~ msgstr "sila"
+
+#, fuzzy
+#~| msgid "mass"
+#~ msgctxt "StepCore|"
+#~ msgid "mass"
+#~ msgstr "masa"
+
+#, fuzzy
+#~| msgid "momentum"
+#~ msgctxt "StepCore|"
+#~ msgid "momentum"
+#~ msgstr "impuls"
+
+#, fuzzy
+#~| msgid "charge"
+#~ msgctxt "StepCore|"
+#~ msgid "charge"
+#~ msgstr "naelektrisanje"
+
+#, fuzzy
+#~| msgctxt "ObjectClass"
+#~| msgid "Plane"
+#~ msgctxt "ObjectClass|"
+#~ msgid "Plane"
+#~ msgstr "Plane"
+
+#, fuzzy
+#~| msgid "Unmovable rigid plane"
+#~ msgctxt "StepCore|"
+#~ msgid "Unmovable rigid plane"
+#~ msgstr "Nepokretna kruta ravan"
+
+#, fuzzy
+#~| msgctxt "PropertyName"
+#~| msgid "point1"
+#~ msgctxt "PropertyName|"
+#~ msgid "point1"
+#~ msgstr "tačka1"
+
+#, fuzzy
+#~| msgid "First point which defines the plane"
+#~ msgctxt "StepCore|"
+#~ msgid "First point which defines the plane"
+#~ msgstr "Prva tačka koja određuje ravan"
+
+#, fuzzy
+#~| msgctxt "PropertyName"
+#~| msgid "point2"
+#~ msgctxt "PropertyName|"
+#~ msgid "point2"
+#~ msgstr "tačka2"
+
+#, fuzzy
+#~| msgid "Second point which defines the plane"
+#~ msgctxt "StepCore|"
+#~ msgid "Second point which defines the plane"
+#~ msgstr "Druga tačka koja određuje ravan"
+
+#, fuzzy
+#~| msgid "Solver"
+#~ msgctxt "StepCore|"
+#~ msgid "Solver"
+#~ msgstr "Sistem za rješavanje"
+
+#, fuzzy
+#~| msgid "points"
+#~ msgctxt "StepCore|"
+#~ msgid "points"
+#~ msgstr "tačke"
+
+#, fuzzy
+#~| msgid "value"
+#~ msgctxt "StepCore|"
+#~ msgid "value"
+#~ msgstr "vrijednost"
+
+#, fuzzy
+#~| msgid "Tool"
+#~ msgctxt "StepCore|"
+#~ msgid "Tool"
+#~ msgstr "Alat"
+
+#, fuzzy
+#~| msgid "World"
+#~ msgctxt "StepCore|"
+#~ msgid "World"
+#~ msgstr "Svijet"
 
 #~ msgctxt "ObjectClass"
 #~ msgid "Body"
