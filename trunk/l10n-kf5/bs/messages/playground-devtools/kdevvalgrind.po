@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-01-31 09:42+0100\n"
+"POT-Creation-Date: 2017-02-01 03:57+0100\n"
 "PO-Revision-Date: 2015-01-05 15:41+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian\n"
@@ -19,11 +19,6 @@ msgstr ""
 "X-Launchpad-Export-Date: 2015-02-15 06:24+0000\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-
-#: config/genericconfigpage.cpp:101
-#, kde-format
-msgid "Global settings"
-msgstr "Globalne postavke"
 
 #: config/globalconfigpage.cpp:49 launcher.cpp:116 plugin.cpp:115
 #, kde-format
@@ -90,41 +85,7 @@ msgstr "Cachegrind"
 msgid "&Massif Visualizer"
 msgstr "Pokreni Massif Visualizer"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: config/ui/genericconfig.ui:25
-#, fuzzy, kde-format
-#| msgid "Extra Parameters:"
-msgid "E&xtra valgrind parameters"
-msgstr "Ekstra parametri:"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: config/ui/genericconfig.ui:45
-#, fuzzy, kde-format
-#| msgid "Display stack to &depth:"
-msgid "Display stac&k to depth"
-msgstr "Prikaži stek do &dubine:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: config/ui/genericconfig.ui:71
-#, fuzzy, kde-format
-#| msgid "Maximum &frame stack size:"
-msgid "&Maximum frame stack size (bytes)"
-msgstr "Makismalna &veličina okvira steka"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: config/ui/genericconfig.ui:97
-#, fuzzy, kde-format
-#| msgid "Valgrind tool:"
-msgid "Default valgrind tool"
-msgstr "Valgrind alat:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, limitErrors)
-#: config/ui/genericconfig.ui:135
-#, kde-format
-msgid "Limit errors if too many"
-msgstr "Ogranicite pogreske ako ih je previse"
-
-#: interfaces/ijob.cpp:115
+#: interfaces/ijob.cpp:116
 #, kde-format
 msgid ""
 "No environment group specified, looks like a broken configuration, please "
@@ -133,43 +94,43 @@ msgstr ""
 "Nema grupe okruženja, izgleda kao slomljena konfiguracija, molimo provjerite "
 "aktivnu konfiguraciju \"%1\". Koristi se podrazumijevana grupa okruženja."
 
-#: interfaces/ijob.cpp:274 interfaces/ijob.cpp:326 interfaces/ijob.cpp:377
-#: tools/memcheck/parser.cpp:156
+#: interfaces/ijob.cpp:279 interfaces/ijob.cpp:330 interfaces/ijob.cpp:381
+#: tools/memcheck/parser.cpp:160
 #, kde-format
 msgid "Valgrind Error"
 msgstr "Valgrind Greška"
 
-#: interfaces/ijob.cpp:298
+#: interfaces/ijob.cpp:302
 #, kde-format
 msgid "Failed to start valgrind from \"%1\"."
 msgstr "Neuspjeli početak valgrind-a od \"%1\"."
 
-#: interfaces/ijob.cpp:305
+#: interfaces/ijob.cpp:309
 #, kde-format
 msgid "Valgrind crashed."
 msgstr "Valgrind je prestao sa radom."
 
-#: interfaces/ijob.cpp:309
+#: interfaces/ijob.cpp:313
 #, kde-format
 msgid "Valgrind process timed out."
 msgstr "Valgrind proces se predugo izvršava."
 
-#: interfaces/ijob.cpp:313
+#: interfaces/ijob.cpp:317
 #, kde-format
 msgid "Write to Valgrind process failed."
 msgstr "Proces pisanja u Valgrind nije uspio."
 
-#: interfaces/ijob.cpp:317
+#: interfaces/ijob.cpp:321
 #, kde-format
 msgid "Read from Valgrind process failed."
 msgstr "Proces čitanja iz Valgrind-a nije uspio."
 
-#: interfaces/ijob.cpp:321
+#: interfaces/ijob.cpp:325
 #, kde-format
 msgid "Unknown Valgrind process error."
 msgstr "Nepoznata Valgrind greška u procesu."
 
-#: interfaces/ijob.cpp:376
+#: interfaces/ijob.cpp:380
 #, kde-format
 msgid "Unable to launch the process %1 (%2)"
 msgstr "Nije moguće pokrenuti proces %1 (%2)"
@@ -191,7 +152,7 @@ msgstr "Profilna aplikacija sa Valgrind-om"
 msgid "Valgrind (Current Launch Configuration)"
 msgstr ""
 
-#: tools/cachegrind/configpage.cpp:68
+#: tools/cachegrind/configpage.cpp:44
 #, kde-format
 msgid "Cachegrind"
 msgstr "Cachegrind"
@@ -373,7 +334,7 @@ msgstr "Bi (Indirektni odjeljci terminirani)"
 msgid "Bim (Indirect branches mispredicted)"
 msgstr "Bim (Indirektni skokovi pogrešno predviđeni)"
 
-#: tools/callgrind/configpage.cpp:68
+#: tools/callgrind/configpage.cpp:43
 #, kde-format
 msgid "Callgrind"
 msgstr "Callgrind"
@@ -439,7 +400,47 @@ msgstr "Pozivač"
 msgid "Callee"
 msgstr "Pozvani"
 
-#: tools/massif/configpage.cpp:92
+#: tools/generic/configpage.cpp:55
+#, fuzzy, kde-format
+#| msgid "Global settings"
+msgid "Valgrind global settings"
+msgstr "Globalne postavke"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: tools/generic/configpage.ui:25
+#, fuzzy, kde-format
+#| msgid "Extra Parameters:"
+msgid "&Extra parameters"
+msgstr "Ekstra parametri:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: tools/generic/configpage.ui:45
+#, fuzzy, kde-format
+#| msgid "Display stack to &depth:"
+msgid "Display stac&k to depth"
+msgstr "Prikaži stek do &dubine:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: tools/generic/configpage.ui:71
+#, fuzzy, kde-format
+#| msgid "Maximum &frame stack size:"
+msgid "&Maximum frame stack size (bytes)"
+msgstr "Makismalna &veličina okvira steka"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: tools/generic/configpage.ui:97
+#, fuzzy, kde-format
+#| msgid "Valgrind tool:"
+msgid "Default valgrind tool"
+msgstr "Valgrind alat:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, limitErrors)
+#: tools/generic/configpage.ui:135
+#, kde-format
+msgid "Limit errors if too many"
+msgstr "Ogranicite pogreske ako ih je previse"
+
+#: tools/massif/configpage.cpp:56
 #, kde-format
 msgid "Massif"
 msgstr "Massif"
@@ -536,7 +537,7 @@ msgstr "Profil stack ( uveliko usporava profiliranje )"
 #: tools/massif/configpage.ui:228
 #, fuzzy, kde-format
 #| msgid "Launch Massif Visualizer"
-msgid "Launch Massif Visualizer  after finish"
+msgid "Launch Massif Visualizer after finish"
 msgstr "Pokreni Massif Visualizer"
 
 #: tools/massif/model.cpp:147
@@ -564,7 +565,7 @@ msgstr "mem_heap_extra_B"
 msgid "mem_stacks_B"
 msgstr "mem_stacks_B"
 
-#: tools/memcheck/configpage.cpp:130
+#: tools/memcheck/configpage.cpp:49
 #, kde-format
 msgid "Memcheck"
 msgstr "Provjera memorije"
@@ -631,11 +632,19 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, undefValueErrors)
 #: tools/memcheck/configpage.ui:94
-#, kde-format
-msgid "Undef Value Errors"
+#, fuzzy, kde-format
+#| msgid "Undef Value Errors"
+msgid "Undef value errors"
 msgstr "Greške Nedefinisane Vrijednosti"
 
-#: tools/memcheck/parser.cpp:152
+#. i18n: ectx: property (text), widget (QCheckBox, showInstructionPointer)
+#: tools/memcheck/configpage.ui:104
+#, fuzzy, kde-format
+#| msgid "CPU instructions"
+msgid "Show instruction pointer"
+msgstr "CPU instrukcije"
+
+#: tools/memcheck/parser.cpp:156
 #, kde-format
 msgid "Valgrind XML Parsing: error at line %1, column %2: %3"
 msgstr ""
@@ -665,6 +674,11 @@ msgstr ""
 ">prosljeđivanje i/ili neadresirane memorije na sistemske pozive;<br/"
 ">neprilagođena upotreba malloc/new/new [] u odnosu na free/delete/delete [];"
 "<br/>isorištavanje POSIX pthread API-ja.</p>"
+
+#, fuzzy
+#~| msgid "Extra Parameters:"
+#~ msgid "E&xtra valgrind parameters"
+#~ msgstr "Ekstra parametri:"
 
 #, fuzzy
 #~| msgid "Valgrind Executable:"
