@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2016-08-23 08:31+0000\n"
+"POT-Creation-Date: 2017-02-21 09:07+0000\n"
 "PO-Revision-Date: 2015-02-05 00:34+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -30,7 +30,9 @@ msgstr ""
 msgid ""
 "The Geolocation Editor allows for adding and editing GPS coordinates of "
 "picture metadata. The geo-data is stored into the image (EXIF tags) and the "
-"location can be displayed in an external browser map."
+"location can be displayed in an internal or external browser map. The "
+"Geolocation Editor also offers a <firstterm>reverse geolocation</firstterm> "
+"tool."
 msgstr ""
 "Dodatak Kipi Geolociranja dozvoljava dodavanje i montažu GPS koordinate "
 "metapodataka fotografija. Geo-podatak je postavljen u slici (EXIF oznake) i "
@@ -58,6 +60,37 @@ msgstr "Urednik Geolociranja"
 
 #. Tag: para
 #: tool-geolocationeditor.docbook:18
+#, no-c-format
+msgid ""
+"There are three tools regarding geolocation in &digikam;: <orderedlist "
+"numeration=\"arabic\"> <listitem><para> The <link linkend=\"using-mainwindow-"
+"mapview\">Map View</link> on the Left Sidebar which is the search tool for "
+"finding images by their GPS data. </para></listitem> <listitem><para> The "
+"Geolocation Editor we describe in this chapter and which is accessible via "
+"<menuchoice><shortcut><keycombo action=\"simul\">&Ctrl;&Shift;<keycap>G</"
+"keycap></keycombo></shortcut><guimenu>Item</guimenu><guimenuitem>Edit "
+"Geolocation...</guimenuitem></menuchoice> </para></listitem> "
+"<listitem><para> The <link linkend=\"using-sidebar-maps\">Map</link> tab on "
+"the Right Sidebar which shows the location of the image on a map and is "
+"purely informative. </para></listitem> </orderedlist> All three are based on "
+"the &marble; widget."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:48
+#, fuzzy, no-c-format
+#| msgid ""
+#| "The plugin only works for image formats that have EXIF metadata supported "
+#| "by <ulink url=\"http://www.exiv2.org\">libkexiv2</ulink>."
+msgid ""
+"These tools only work for image formats that have EXIF or XMP metadata "
+"supported by <ulink url=\"http://www.exiv2.org\">Exiv2 library</ulink>."
+msgstr ""
+"Dodatak radi samo za format slika koji ima EXIF metapodatak podržan od "
+"strane <ulink url=\"http://www.exiv2.org\">libkexiv2</ulink>."
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:59
 #, fuzzy, no-c-format
 #| msgid ""
 #| "The Kipi plugin <quote>Geolocation</quote> provides the tools to localize "
@@ -66,58 +99,276 @@ msgstr "Urednik Geolociranja"
 msgid ""
 "The <quote>Geolocation Editor</quote> provides the tools to localize "
 "pictures geographically in the common spherical coordinate system (used by "
-"GPS/Galileo). Altitude, latitude and longitude are used."
+"GPS/Galileo). Altitude, latitude and longitude, speeed, number of "
+"satellites, fix type and DOP are editable."
 msgstr ""
 "Kipi dodatak <quote>Geolocation</quote> pruža alate za geografsko "
 "ograničenje fotografija  u zajedničkom sferičnom koordinatnom sustavu "
 "(korisčen od GPS/Galileo). Koriste se visina, širina i dužina."
 
-#. Tag: para
-#: tool-geolocationeditor.docbook:23
-#, fuzzy, no-c-format
-#| msgid ""
-#| "The plugin only works for image formats that have EXIF metadata supported "
-#| "by <ulink url=\"http://www.exiv2.org\">libkexiv2</ulink>."
-msgid ""
-"The tool only works for image formats that have EXIF or XMP metadata "
-"supported by <ulink url=\"http://www.exiv2.org\">Exiv2 library</ulink>."
-msgstr ""
-"Dodatak radi samo za format slika koji ima EXIF metapodatak podržan od "
-"strane <ulink url=\"http://www.exiv2.org\">libkexiv2</ulink>."
-
 #. Tag: title
-#: tool-geolocationeditor.docbook:28
+#: tool-geolocationeditor.docbook:63
 #, no-c-format
 msgid "Geolocation"
 msgstr "Geolociranje"
 
 #. Tag: para
-#: tool-geolocationeditor.docbook:29
+#: tool-geolocationeditor.docbook:65
 #, fuzzy, no-c-format
 #| msgid "The plugin has two methods to mark the pictures with coordinates:"
-msgid "The tool has two methods to mark the pictures with coordinates:"
+msgid "The editor has two methods to mark the pictures with coordinates:"
 msgstr "Dodatak ima dve metode za obilježavanje slika sa koordinatama:"
 
 #. Tag: para
-#: tool-geolocationeditor.docbook:34
-#, no-c-format
-msgid "Batch correlation of GPS tracking data with a series of images."
-msgstr "Batch korelacija GPS praćenja podataka s nizom slika."
-
-#. Tag: para
-#: tool-geolocationeditor.docbook:37
-#, no-c-format
-msgid "Semi-automatic coordinate attribution to single pictures."
+#: tool-geolocationeditor.docbook:70
+#, fuzzy, no-c-format
+#| msgid "Semi-automatic coordinate attribution to single pictures."
+msgid ""
+"Semi-automatic coordinate attribution to single pictures, accessible via the "
+"<guilabel>Details</guilabel> tab on the Right Sidebar."
 msgstr "Polu-automatske koordinate pripisivanje pojedinačnih fotografija."
 
+#. Tag: para
+#: tool-geolocationeditor.docbook:73
+#, no-c-format
+msgid ""
+"Batch correlation of GPS tracking data with a series of images you will find "
+"in the <link linkend=\"geolocation-correlator\">GPS Correlator</link> tab."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:79
+#, no-c-format
+msgid "Furthermore the Right Sidebar offers three more tools:"
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:84
+#, no-c-format
+msgid "The <guilabel>Undo/Redo</guilabel> tab."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:87
+#, no-c-format
+msgid ""
+"The <guilabel>Reverse Geocoding</guilabel> tab which allows to find "
+"geographic names (cities, street names, ...) by using a public reverse "
+"geocoding service and the GPS data of an image."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:90
+#, no-c-format
+msgid ""
+"The <guilabel>Search</guilabel> tab which allows to find positions on the "
+"map from geographic names (cities, monuments, ...) by using a public geoname "
+"service (GeoNames and OpenStreetMap at the time of writing)."
+msgstr ""
+
 #. Tag: title
-#: tool-geolocationeditor.docbook:41
+#: tool-geolocationeditor.docbook:95
+#, no-c-format
+msgid "The map"
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:97
+#, no-c-format
+msgid ""
+"For navigating on the map refer to &marble; handbook, Chapter 2. Also for "
+"the sky context menu see &marble; documentation."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:101
+#, no-c-format
+msgid ""
+"Right under the map you find a row of buttons. I shall use the tooltip texts "
+"as designations in the following description. From left to right we have"
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:105
+#, no-c-format
+msgid ""
+"The Map-settings button opens a small menu which allows you to choose "
+"between Google Maps and &marble; and depending on that choice to choose the "
+"kind of map you want to use. Furthermore you can select the projection for "
+"&marble; (spherical, Mercator, equirectangular) and you can display a few "
+"additional tools like compass and scale on the map."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:108
+#, no-c-format
+msgid "The Zoom-in button."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:111
+#, no-c-format
+msgid "The Zoom-out button."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:114
+#, no-c-format
+msgid ""
+"The Switch-between-markers-and-thumbnails button lets you choose whether you "
+"want the positions of your images indicated by a marker symbol or by a "
+"thumbnail on the map. If you choose thumbnails the next two buttons are of "
+"particular interest."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:117
+#, no-c-format
+msgid ""
+"The Increase-the-thumbnail-size-on-the-map button is doing just that and ..."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:120
+#, no-c-format
+msgid "... the Decrease-the-thumbnail-size-on-the-map button as well."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:123
+#, no-c-format
+msgid ""
+"The Pan-mode button lets you move the map by left-click and holding on it "
+"and then drag it with the mouse to where you need it. The cursor symbol will "
+"change to a hand."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:126
+#, no-c-format
+msgid ""
+"The Zoom-into-a-group button is useful if you have images so close to each "
+"other on the map that all but the topmost are obscured. Once you click on "
+"the visible image the zoom factor will be adjusted so that all the other "
+"images behind it become visible. If you click on a group of images and "
+"nothing really happens they either have exactly the same geographic position "
+"and/or the zoom factor is already at its maximum."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:129
+#, no-c-format
+msgid ""
+"The Select-images button toggles the selection of an image in the list of "
+"images right below the buttons once you click on it on the map. The "
+"selection status of all other images in the list remain unchanged."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:132
+#, no-c-format
+msgid ""
+"The Display-bookmarked-positions-on-the-map button is not working at the "
+"time of writing because the whole bookmark issue needs to be reorganized. "
+"This also affects the <menuchoice><guimenu>Bookmarks</guimenu> "
+"<guimenuitem>Edit Bookmarks...</guimenuitem></menuchoice> item in the "
+"context menu on the list of images below the map and the <guilabel>Add "
+"Bookmark</guilabel> item in the context menu on the map."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:144
+#, no-c-format
+msgid ""
+"The use of <guilabel>Add Bookmark</guilabel> in the context menu on the map "
+"can lead to loss of your bookmarks in &marble;!"
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:151
+#, no-c-format
+msgid ""
+"From the context menu on the map only <guilabel>Copy Coordinates</guilabel> "
+"is of interest for geotagging. It copies the geographic coordinates at the "
+"cursor position to the clipboard. For all other menu items see &marble; "
+"handbook."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:155
+#, no-c-format
+msgid ""
+"Note that you can change the layout from one map to two maps, beside each "
+"other or stacked via the little drop-down menu at the bottom of the "
+"Geolocation Editor."
+msgstr ""
+
+#. Tag: title
+#: tool-geolocationeditor.docbook:161
+#, no-c-format
+msgid "Edit Coordinates"
+msgstr "Urediti Koordinate"
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:162
+#, no-c-format
+msgid ""
+"The coordinates can be set manually in the <guilabel>Details</guilabel> tab "
+"(see sreenshot above). The location can be found and fixed iteratively with "
+"the displayed map. Move mouse cursor to the region of interest, zoom in, "
+"adjust location, zoom in again, and so on until sufficient accuracy is "
+"achieved. Note that the zoom center will always be at the cursor position. "
+"Eventually you right click at the desired position and choose <guilabel>Copy "
+"Coordinates</guilabel>. Now you can go to the list of images below the map, "
+"select one or more images, right-click on them and choose <guilabel>Paste "
+"Coordinates</guilabel>. The coordinates will then be displayed in the "
+"Latitude and Longitude fields to the right of the map. To save your changes "
+"you click the <guilabel>Apply</guilabel> button."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:166
+#, no-c-format
+msgid ""
+"If you have one or more images that already have GPS data you can copy the "
+"coordinates from one of those and paste them to one or more other images by "
+"using the respective items from the context menu on the list of images. This "
+"comes in handy if there is a series of photos taken at the same location."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:170
+#, no-c-format
+msgid ""
+"To the right of the map there are beside latitude and longitude fields for "
+"altitude, speed, number of satellites, fix type and uncertainty (DOP). You "
+"may see these fields already filled in if you select a photograph where your "
+"camera wrote these information into the EXIF data. Otherwise you can fill "
+"them in manually if you have these data from somewhere else, &eg; a separate "
+"GPS receiver. Only for <guilabel>Altitude</guilabel> the context menu on the "
+"list of images offers <guilabel>Look up missing altitude values</guilabel> "
+"which causes the editor to look up these data in the map data provided the "
+"position (latitude and longitude) is already assigned to the photograph."
+msgstr ""
+
+#. Tag: para
+#: tool-geolocationeditor.docbook:174
+#, no-c-format
+msgid ""
+"Other than that the context menu on the list of images offer items to remove "
+"some of the data from the image. Regarding the last item "
+"<guilabel>Bookmarks</guilabel> see <link linkend=\"bookmarkstatus.anchor"
+"\">here</link>."
+msgstr ""
+
+#. Tag: title
+#: tool-geolocationeditor.docbook:181
 #, no-c-format
 msgid "The correlator"
 msgstr "Korelator"
 
 #. Tag: para
-#: tool-geolocationeditor.docbook:42
+#: tool-geolocationeditor.docbook:182
 #, no-c-format
 msgid ""
 "In order to correlate your images with geographic data you need to have a "
@@ -135,7 +386,7 @@ msgstr ""
 "praćenja GPS uređaja za vas)."
 
 #. Tag: para
-#: tool-geolocationeditor.docbook:48
+#: tool-geolocationeditor.docbook:190
 #, no-c-format
 msgid ""
 "<menuchoice><guimenu>Image</guimenu> <guimenuitem>Geolocation</guimenuitem> "
@@ -149,7 +400,7 @@ msgstr ""
 "GPS pračenja."
 
 #. Tag: title
-#: tool-geolocationeditor.docbook:56
+#: tool-geolocationeditor.docbook:199
 #, no-c-format
 msgid ""
 "The geo-correlation dialog based on EXIF date/time and tracking data (gpx "
@@ -159,7 +410,7 @@ msgstr ""
 "(gpx format)"
 
 #. Tag: para
-#: tool-geolocationeditor.docbook:59
+#: tool-geolocationeditor.docbook:203
 #, no-c-format
 msgid ""
 "Select the images you want to correlate in the application main view, then "
@@ -175,7 +426,7 @@ msgstr ""
 "kao fotografija sa vaše kamere."
 
 #. Tag: para
-#: tool-geolocationeditor.docbook:66
+#: tool-geolocationeditor.docbook:207
 #, no-c-format
 msgid ""
 "When the file is loaded, an automatic correlation is done showing the "
@@ -191,7 +442,7 @@ msgstr ""
 "zone</emphasis> ovdje."
 
 #. Tag: para
-#: tool-geolocationeditor.docbook:73
+#: tool-geolocationeditor.docbook:213
 #, no-c-format
 msgid ""
 "The <guilabel>Max. time gap</guilabel> setting specifies the limit within "
@@ -202,7 +453,7 @@ msgstr ""
 "vremena i vremenske kamere poklapaju. Maksimalna vrijednost je 2000 sekunde."
 
 #. Tag: para
-#: tool-geolocationeditor.docbook:78
+#: tool-geolocationeditor.docbook:218
 #, no-c-format
 msgid ""
 "If you have no tracking data for pictures that were taken in the same place "
@@ -216,7 +467,7 @@ msgstr ""
 "su uslikane u zadnjih 20 minuta."
 
 #. Tag: para
-#: tool-geolocationeditor.docbook:84
+#: tool-geolocationeditor.docbook:224
 #, no-c-format
 msgid ""
 "The option <guilabel>Interpolate</guilabel> and <guilabel>Difference in min."
@@ -232,198 +483,180 @@ msgstr ""
 "<guilabel>Correlate</guilabel> dugme da bi interpolirati."
 
 #. Tag: title
-#: tool-geolocationeditor.docbook:92
+#: tool-geolocationeditor.docbook:232
 #, no-c-format
 msgid "Correlation"
 msgstr "Korelacija"
 
 #. Tag: para
-#: tool-geolocationeditor.docbook:95
+#: tool-geolocationeditor.docbook:235
 #, no-c-format
 msgid "240 minutes is the maximum time difference that can be introduced here."
 msgstr ""
 "240 minuta je maksimalna razlika vremena koja može biti predstavljena ovdje."
 
-#. Tag: title
-#: tool-geolocationeditor.docbook:101
-#, no-c-format
-msgid "Edit Coordinates"
-msgstr "Urediti Koordinate"
+#~ msgid "Batch correlation of GPS tracking data with a series of images."
+#~ msgstr "Batch korelacija GPS praćenja podataka s nizom slika."
 
-#. Tag: title
-#: tool-geolocationeditor.docbook:103
-#, no-c-format
-msgid "Semi-automatic attributing of coordinates through map interaction"
-msgstr "Polu-automatsko pripisivanje koordinata kroz interakciju karte"
+#~ msgid "Semi-automatic attributing of coordinates through map interaction"
+#~ msgstr "Polu-automatsko pripisivanje koordinata kroz interakciju karte"
 
-#. Tag: para
-#: tool-geolocationeditor.docbook:106
-#, no-c-format
-msgid ""
-"The coordinates can be set manually with this dialog. This comes in handy if "
-"there is a series of photos taken at the same location. Since the "
-"coordinates are memorized from one dialog call to another, it is as easy as "
-"clicking on <guilabel>OK</guilabel> to set the previous data to the current "
-"photo."
-msgstr ""
-"Koordinate mogu biti postavljene ručno sa dijalogom. Ovo pomaže ako je niz "
-"fotografija uslikano na istu lokaciju. Kako su koordinate zapamćene iz "
-"jednog dijaloga poziva na drugi, lako je kao i klik na <guilabel>OK</"
-"guilabel> da bi postavili prethodne podatke na tekuće fotografije."
+#~ msgid ""
+#~ "The coordinates can be set manually with this dialog. This comes in handy "
+#~ "if there is a series of photos taken at the same location. Since the "
+#~ "coordinates are memorized from one dialog call to another, it is as easy "
+#~ "as clicking on <guilabel>OK</guilabel> to set the previous data to the "
+#~ "current photo."
+#~ msgstr ""
+#~ "Koordinate mogu biti postavljene ručno sa dijalogom. Ovo pomaže ako je "
+#~ "niz fotografija uslikano na istu lokaciju. Kako su koordinate zapamćene "
+#~ "iz jednog dijaloga poziva na drugi, lako je kao i klik na <guilabel>OK</"
+#~ "guilabel> da bi postavili prethodne podatke na tekuće fotografije."
 
-#. Tag: para
-#: tool-geolocationeditor.docbook:113
-#, no-c-format
-msgid ""
-"Otherwise the location can be found and fixed iteratively with the displayed "
-"map. Click on the region of interest, zoom in, adjust location by clicking "
-"again, and so on until sufficient accuracy is achieved. The altitude must "
-"always be entered manually. The map can be switched between map mode, "
-"satellite image or mixed mode."
-msgstr ""
-"Inače lokacija može biti pronađena i prepravljena sa prikazanom kartom. "
-"Klikom na regije interesa, zumirati, podesiti lokaciju tako što kliknete "
-"opet, i tako dalje dok se ne postigne dovoljna tačnost. Visina se mora "
-"ubaciti ručno. Karta može biti uključena kao način karte, satelitska slika "
-"ili pomiješan način."
+#~ msgid ""
+#~ "Otherwise the location can be found and fixed iteratively with the "
+#~ "displayed map. Click on the region of interest, zoom in, adjust location "
+#~ "by clicking again, and so on until sufficient accuracy is achieved. The "
+#~ "altitude must always be entered manually. The map can be switched between "
+#~ "map mode, satellite image or mixed mode."
+#~ msgstr ""
+#~ "Inače lokacija može biti pronađena i prepravljena sa prikazanom kartom. "
+#~ "Klikom na regije interesa, zumirati, podesiti lokaciju tako što kliknete "
+#~ "opet, i tako dalje dok se ne postigne dovoljna tačnost. Visina se mora "
+#~ "ubaciti ručno. Karta može biti uključena kao način karte, satelitska "
+#~ "slika ili pomiješan način."
 
-#. Tag: title
-#: tool-geolocationeditor.docbook:122
-#, no-c-format
-msgid "Commandline tagging"
-msgstr "Označavanje linije komande"
+#~ msgid "Commandline tagging"
+#~ msgstr "Označavanje linije komande"
 
-#. Tag: para
-#: tool-geolocationeditor.docbook:123
-#, fuzzy, no-c-format
-#| msgid ""
-#| "Completely outside of the kipi-plugin context, the are ways to GPS tag "
-#| "images. Here is a shell script that uses <command>exiftool</command> to "
-#| "tag a batch of images."
-msgid ""
-"Completely outside of the &digikam; context, the are ways to GPS tag images. "
-"Here is a shell script that uses <command>exiftool</command> to tag a batch "
-"of images."
-msgstr ""
-"Skroz izvan konteksta kipi-dodatka, su načini označavanja slika GPS-om.  "
-"Ovdje je skripta koja se koristi <command>exiftool</command> za označavanje "
-"serija slika."
+#, fuzzy
+#~| msgid ""
+#~| "Completely outside of the kipi-plugin context, the are ways to GPS tag "
+#~| "images. Here is a shell script that uses <command>exiftool</command> to "
+#~| "tag a batch of images."
+#~ msgid ""
+#~ "Completely outside of the &digikam; context, the are ways to GPS tag "
+#~ "images. Here is a shell script that uses <command>exiftool</command> to "
+#~ "tag a batch of images."
+#~ msgstr ""
+#~ "Skroz izvan konteksta kipi-dodatka, su načini označavanja slika GPS-om.  "
+#~ "Ovdje je skripta koja se koristi <command>exiftool</command> za "
+#~ "označavanje serija slika."
 
-#. Tag: programlisting
-#: tool-geolocationeditor.docbook:130
-#, no-c-format
-msgid ""
-"#!/bin/sh\n"
-"# exiftool wrapper script for easy commandline use. It treats regex files or "
-"whole directories.\n"
-"#\n"
-"#                        FMT                  Output\n"
-"#                \"%d deg %d' %.2f\"\\\"    54 deg 59' 22.80\"\n"
-"#                \"%d deg %.4f min\"      54 deg 59.3800 min\n"
-"#                \"%.6f degrees\"         54.989667 degrees\n"
-"\n"
-"if [ -z $1 ]; then \n"
-"   echo \"Usage: exiftool-gps-wrapper lat long [alt] file || dir (use signed "
-"floating coordinates)\"\n"
-"else\n"
-"\n"
-"   if  [ -z \"$4\" ]; then  foo=\"$3\"; alt=0\n"
-"   else                          foo=\"$4\"; alt=$3\n"
-"   fi\n"
-"\n"
-"   echo $foo\n"
-"   if [ -e \"$foo\" ] ; then\n"
-"        latR=$(echo \"$1\" | awk '{if ($1 &lt; 0) print \"S\"; else print \"N"
-"\"}')\n"
-"        lonR=$(echo \"$2\" | awk '{if ($1 &lt; 0) print \"W\"; else print \"E"
-"\"}')\n"
-"        lat=$(echo \"$1\" | awk '{val = $1; if ($1 &lt; 0) sub(/-/, \"\", "
-"val); print val}') # absolute value\n"
-"        lon=$(echo \"$2\" | awk '{val = $1; if ($1 &lt; 0) sub(/-/, \"\", "
-"val); print val}') # absolute value\n"
-"        # use the following syntax for easy googlian paste of "
-"ll=-1.23456,53.345345\n"
-"        #lonR=$(echo \"$2\" | awk '{if ($2 &lt; 0) print \"W\"; else print "
-"\"E\"}')\n"
-"        echo $lat, $latR, $lon, $lonR, $3, $4, $foo\n"
-"        \n"
-"        function setgpsinfo ()\n"
-"        {\n"
-"            exiftool -c \"%.6f\" -GPSMapDatum=\"WGS-84\" -GPSAltitude=$5 \\\n"
-"            -GPSLongitudeRef=$4 -GPSLongitude=$3 -GPSLatitudeRef=$2 -"
-"GPSLatitude=$1 \"$6\"\n"
-"            exiftool -GPS:ALL \"$6\"\n"
-"        }\n"
-"\n"
-"        if [ -d \"$foo\" ] ; then\n"
-"\n"
-"            for i in \"$foo\" ; do    # the selection of files treated "
-"depend on the passed regex\n"
-"                echo \"i= \"$i\n"
-"                setgpsinfo $lat $latR $lon $lonR $alt \"$i\"\n"
-"            done\n"
-"        else\n"
-"            setgpsinfo $lat $latR $lon $lonR $alt \"$foo\"\n"
-"        fi\n"
-"   else        echo \"file or folder is wrong\"\n"
-"   fi\n"
-"fi"
-msgstr ""
-"#!/bin/sh\n"
-"# exiftool wrapper script for easy commandline use. It treats regex files or "
-"whole directories.\n"
-"#\n"
-"#                        FMT                  Output\n"
-"#                \"%d deg %d' %.2f\"\\\"    54 deg 59' 22.80\"\n"
-"#                \"%d deg %.4f min\"      54 deg 59.3800 min\n"
-"#                \"%.6f degrees\"         54.989667 degrees\n"
-"\n"
-"if [ -z $1 ]; then \n"
-"   echo \"Usage: exiftool-gps-wrapper lat long [alt] file || dir (use signed "
-"floating coordinates)\"\n"
-"else\n"
-"\n"
-"   if  [ -z \"$4\" ]; then  foo=\"$3\"; alt=0\n"
-"   else                          foo=\"$4\"; alt=$3\n"
-"   fi\n"
-"\n"
-"   echo $foo\n"
-"   if [ -e \"$foo\" ] ; then\n"
-"        latR=$(echo \"$1\" | awk '{if ($1 &lt; 0) print \"S\"; else print \"N"
-"\"}')\n"
-"        lonR=$(echo \"$2\" | awk '{if ($1 &lt; 0) print \"W\"; else print \"E"
-"\"}')\n"
-"        lat=$(echo \"$1\" | awk '{val = $1; if ($1 &lt; 0) sub(/-/, \"\", "
-"val); print val}') # absolute value\n"
-"        lon=$(echo \"$2\" | awk '{val = $1; if ($1 &lt; 0) sub(/-/, \"\", "
-"val); print val}') # absolute value\n"
-"        # use the following syntax for easy googlian paste of "
-"ll=-1.23456,53.345345\n"
-"        #lonR=$(echo \"$2\" | awk '{if ($2 &lt; 0) print \"W\"; else print "
-"\"E\"}')\n"
-"        echo $lat, $latR, $lon, $lonR, $3, $4, $foo\n"
-"        \n"
-"        function setgpsinfo ()\n"
-"        {\n"
-"            exiftool -c \"%.6f\" -GPSMapDatum=\"WGS-84\" -GPSAltitude=$5 \\\n"
-"            -GPSLongitudeRef=$4 -GPSLongitude=$3 -GPSLatitudeRef=$2 -"
-"GPSLatitude=$1 \"$6\"\n"
-"            exiftool -GPS:ALL \"$6\"\n"
-"        }\n"
-"\n"
-"        if [ -d \"$foo\" ] ; then\n"
-"\n"
-"            for i in \"$foo\" ; do    # the selection of files treated "
-"depend on the passed regex\n"
-"                echo \"i= \"$i\n"
-"                setgpsinfo $lat $latR $lon $lonR $alt \"$i\"\n"
-"            done\n"
-"        else\n"
-"            setgpsinfo $lat $latR $lon $lonR $alt \"$foo\"\n"
-"        fi\n"
-"   else        echo \"file or folder is wrong\"\n"
-"   fi\n"
-"fi"
+#~ msgid ""
+#~ "#!/bin/sh\n"
+#~ "# exiftool wrapper script for easy commandline use. It treats regex files "
+#~ "or whole directories.\n"
+#~ "#\n"
+#~ "#                        FMT                  Output\n"
+#~ "#                \"%d deg %d' %.2f\"\\\"    54 deg 59' 22.80\"\n"
+#~ "#                \"%d deg %.4f min\"      54 deg 59.3800 min\n"
+#~ "#                \"%.6f degrees\"         54.989667 degrees\n"
+#~ "\n"
+#~ "if [ -z $1 ]; then \n"
+#~ "   echo \"Usage: exiftool-gps-wrapper lat long [alt] file || dir (use "
+#~ "signed floating coordinates)\"\n"
+#~ "else\n"
+#~ "\n"
+#~ "   if  [ -z \"$4\" ]; then  foo=\"$3\"; alt=0\n"
+#~ "   else                          foo=\"$4\"; alt=$3\n"
+#~ "   fi\n"
+#~ "\n"
+#~ "   echo $foo\n"
+#~ "   if [ -e \"$foo\" ] ; then\n"
+#~ "        latR=$(echo \"$1\" | awk '{if ($1 &lt; 0) print \"S\"; else print "
+#~ "\"N\"}')\n"
+#~ "        lonR=$(echo \"$2\" | awk '{if ($1 &lt; 0) print \"W\"; else print "
+#~ "\"E\"}')\n"
+#~ "        lat=$(echo \"$1\" | awk '{val = $1; if ($1 &lt; 0) sub(/-/, \"\", "
+#~ "val); print val}') # absolute value\n"
+#~ "        lon=$(echo \"$2\" | awk '{val = $1; if ($1 &lt; 0) sub(/-/, \"\", "
+#~ "val); print val}') # absolute value\n"
+#~ "        # use the following syntax for easy googlian paste of "
+#~ "ll=-1.23456,53.345345\n"
+#~ "        #lonR=$(echo \"$2\" | awk '{if ($2 &lt; 0) print \"W\"; else "
+#~ "print \"E\"}')\n"
+#~ "        echo $lat, $latR, $lon, $lonR, $3, $4, $foo\n"
+#~ "        \n"
+#~ "        function setgpsinfo ()\n"
+#~ "        {\n"
+#~ "            exiftool -c \"%.6f\" -GPSMapDatum=\"WGS-84\" -GPSAltitude=$5 "
+#~ "\\\n"
+#~ "            -GPSLongitudeRef=$4 -GPSLongitude=$3 -GPSLatitudeRef=$2 -"
+#~ "GPSLatitude=$1 \"$6\"\n"
+#~ "            exiftool -GPS:ALL \"$6\"\n"
+#~ "        }\n"
+#~ "\n"
+#~ "        if [ -d \"$foo\" ] ; then\n"
+#~ "\n"
+#~ "            for i in \"$foo\" ; do    # the selection of files treated "
+#~ "depend on the passed regex\n"
+#~ "                echo \"i= \"$i\n"
+#~ "                setgpsinfo $lat $latR $lon $lonR $alt \"$i\"\n"
+#~ "            done\n"
+#~ "        else\n"
+#~ "            setgpsinfo $lat $latR $lon $lonR $alt \"$foo\"\n"
+#~ "        fi\n"
+#~ "   else        echo \"file or folder is wrong\"\n"
+#~ "   fi\n"
+#~ "fi"
+#~ msgstr ""
+#~ "#!/bin/sh\n"
+#~ "# exiftool wrapper script for easy commandline use. It treats regex files "
+#~ "or whole directories.\n"
+#~ "#\n"
+#~ "#                        FMT                  Output\n"
+#~ "#                \"%d deg %d' %.2f\"\\\"    54 deg 59' 22.80\"\n"
+#~ "#                \"%d deg %.4f min\"      54 deg 59.3800 min\n"
+#~ "#                \"%.6f degrees\"         54.989667 degrees\n"
+#~ "\n"
+#~ "if [ -z $1 ]; then \n"
+#~ "   echo \"Usage: exiftool-gps-wrapper lat long [alt] file || dir (use "
+#~ "signed floating coordinates)\"\n"
+#~ "else\n"
+#~ "\n"
+#~ "   if  [ -z \"$4\" ]; then  foo=\"$3\"; alt=0\n"
+#~ "   else                          foo=\"$4\"; alt=$3\n"
+#~ "   fi\n"
+#~ "\n"
+#~ "   echo $foo\n"
+#~ "   if [ -e \"$foo\" ] ; then\n"
+#~ "        latR=$(echo \"$1\" | awk '{if ($1 &lt; 0) print \"S\"; else print "
+#~ "\"N\"}')\n"
+#~ "        lonR=$(echo \"$2\" | awk '{if ($1 &lt; 0) print \"W\"; else print "
+#~ "\"E\"}')\n"
+#~ "        lat=$(echo \"$1\" | awk '{val = $1; if ($1 &lt; 0) sub(/-/, \"\", "
+#~ "val); print val}') # absolute value\n"
+#~ "        lon=$(echo \"$2\" | awk '{val = $1; if ($1 &lt; 0) sub(/-/, \"\", "
+#~ "val); print val}') # absolute value\n"
+#~ "        # use the following syntax for easy googlian paste of "
+#~ "ll=-1.23456,53.345345\n"
+#~ "        #lonR=$(echo \"$2\" | awk '{if ($2 &lt; 0) print \"W\"; else "
+#~ "print \"E\"}')\n"
+#~ "        echo $lat, $latR, $lon, $lonR, $3, $4, $foo\n"
+#~ "        \n"
+#~ "        function setgpsinfo ()\n"
+#~ "        {\n"
+#~ "            exiftool -c \"%.6f\" -GPSMapDatum=\"WGS-84\" -GPSAltitude=$5 "
+#~ "\\\n"
+#~ "            -GPSLongitudeRef=$4 -GPSLongitude=$3 -GPSLatitudeRef=$2 -"
+#~ "GPSLatitude=$1 \"$6\"\n"
+#~ "            exiftool -GPS:ALL \"$6\"\n"
+#~ "        }\n"
+#~ "\n"
+#~ "        if [ -d \"$foo\" ] ; then\n"
+#~ "\n"
+#~ "            for i in \"$foo\" ; do    # the selection of files treated "
+#~ "depend on the passed regex\n"
+#~ "                echo \"i= \"$i\n"
+#~ "                setgpsinfo $lat $latR $lon $lonR $alt \"$i\"\n"
+#~ "            done\n"
+#~ "        else\n"
+#~ "            setgpsinfo $lat $latR $lon $lonR $alt \"$foo\"\n"
+#~ "        fi\n"
+#~ "   else        echo \"file or folder is wrong\"\n"
+#~ "   fi\n"
+#~ "fi"
 
 #~ msgid "<firstname>Gerhard</firstname><surname>Kulzer</surname>"
 #~ msgstr "<firstname>Gerhard</firstname><surname>Kulzer</surname>"
