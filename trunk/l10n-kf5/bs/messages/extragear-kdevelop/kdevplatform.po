@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-02-21 08:43+0100\n"
+"POT-Creation-Date: 2017-02-24 03:55+0100\n"
 "PO-Revision-Date: 2014-02-12 23:48+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -388,7 +388,7 @@ msgstr "Ime"
 
 #: debugger/variable/variablecollection.cpp:422
 #: debugger/variable/variabletooltip.cpp:102
-#: shell/settings/environmentgroupmodel.cpp:98
+#: shell/settings/environmentprofilemodel.cpp:106
 #, kde-format
 msgid "Value"
 msgstr "Vrijednost"
@@ -1178,7 +1178,7 @@ msgid "Class"
 msgstr "Klasa"
 
 #: language/duchain/navigation/abstractnavigationcontext.cpp:403
-#: shell/settings/environmentgroupmodel.cpp:95
+#: shell/settings/environmentprofilemodel.cpp:104
 #, kde-format
 msgid "Variable"
 msgstr "Promjenljiva"
@@ -3240,7 +3240,7 @@ msgid "Provide a name for the project"
 msgstr "Navedi ime projekta"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: shell/projectinfopage.ui:30
+#: shell/projectinfopage.ui:30 shell/settings/environmentwidget.cpp:188
 #, kde-format
 msgid "Name:"
 msgstr "Naziv:"
@@ -3850,71 +3850,82 @@ msgstr "Nema formatera izvornog koda"
 msgid "Preview"
 msgstr "Pregled"
 
-#: shell/settings/environmentpreferences.cpp:84
+#: shell/settings/environmentpreferences.cpp:86
 #, fuzzy, kde-format
 #| msgid "Environment group:"
 msgid "Environment"
 msgstr "Zivotna sredina:"
 
-#: shell/settings/environmentpreferences.cpp:89
+#: shell/settings/environmentpreferences.cpp:91
 #, fuzzy, kde-format
 #| msgid "Configure environment variables"
 msgid "Configure Environment Variables"
 msgstr "konfiguracija okolnih varijabli"
 
-#: shell/settings/environmentwidget.cpp:53
-#, kde-format
-msgid "Enter variable ..."
+#: shell/settings/environmentprofilelistmodel.cpp:61
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Use default profile (currently: %1)"
+msgid "%1 (default profile)"
+msgstr "Koristi podrazumijevani profil  (trenutno: %1)"
+
+#: shell/settings/environmentwidget.cpp:94
+#, fuzzy, kde-format
+#| msgid "Enter variable ..."
+msgid "Enter variable..."
 msgstr "Unesite varijablu..."
 
+#: shell/settings/environmentwidget.cpp:182
+#, fuzzy, kde-format
+#| msgid "New Environment Variable"
+msgid "Enter Name of New Environment Profile"
+msgstr "Nova promjenjiva okruženja"
+
 #. i18n: ectx: property (toolTip), widget (QPushButton, batchModeEditButton)
-#: shell/settings/environmentwidget.cpp:154
-#: shell/settings/environmentwidget.ui:115
+#: shell/settings/environmentwidget.cpp:245
+#: shell/settings/environmentwidget.ui:130
 #, kde-format
 msgid "Batch Edit Mode"
 msgstr ""
 
-#: shell/settings/environmentwidget.cpp:202
-#, fuzzy, kde-format
-#| msgctxt "project name (branch name)"
-#| msgid "%1 (%2)"
-msgctxt "a copy of the existing environment was created"
-msgid "%1 (Cloned %2)"
-msgstr "%1 (%2)"
-
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: shell/settings/environmentwidget.ui:22
-#, kde-format
-msgid "Environment group:"
+#, fuzzy, kde-format
+#| msgid "Environment group:"
+msgid "Environment profile:"
 msgstr "Zivotna sredina:"
 
-#. i18n: ectx: property (text), widget (QPushButton, addgrpBtn)
-#: shell/settings/environmentwidget.ui:42
-#, kde-format
-msgid "Add Group"
-msgstr "Dodaj grupu"
+#. i18n: ectx: property (toolTip), widget (QPushButton, addProfileButton)
+#: shell/settings/environmentwidget.ui:39
+#, fuzzy, kde-format
+#| msgid "Add New..."
+msgid "Add profile..."
+msgstr "Dodaj novi"
 
-#. i18n: ectx: property (text), widget (QPushButton, clonegrpBtn)
+#. i18n: ectx: property (toolTip), widget (QPushButton, cloneProfileButton)
 #: shell/settings/environmentwidget.ui:49
 #, fuzzy, kde-format
-#| msgid "Remove Group"
-msgid "Clone Group"
-msgstr "Ukloni grupu"
+#| msgid "Close file"
+msgid "Clone profile..."
+msgstr "Zatvori datoteku"
 
-#. i18n: ectx: property (text), widget (QPushButton, removegrpBtn)
-#: shell/settings/environmentwidget.ui:56
-#, kde-format
-msgid "Remove Group"
-msgstr "Ukloni grupu"
+#. i18n: ectx: property (toolTip), widget (QPushButton, removeProfileButton)
+#: shell/settings/environmentwidget.ui:59
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Remove lock file"
+msgid "Remove profile"
+msgstr "Ukloni datoteku zaključavanja"
 
-#. i18n: ectx: property (text), widget (QPushButton, setAsDefaultBtn)
-#: shell/settings/environmentwidget.ui:63
-#, kde-format
-msgid "Set As Default Group"
+#. i18n: ectx: property (toolTip), widget (QPushButton, setAsDefaultProfileButton)
+#: shell/settings/environmentwidget.ui:69
+#, fuzzy, kde-format
+#| msgid "Set As Default Group"
+msgid "Set as default"
 msgstr "Postavi kao podrazumijevanu grupu"
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, deleteButton)
-#: shell/settings/environmentwidget.ui:102
+#. i18n: ectx: property (toolTip), widget (QPushButton, removeVariableButton)
+#: shell/settings/environmentwidget.ui:114
 #, kde-format
 msgid "Remove variable"
 msgstr "Izbrisi varijablu"
@@ -5652,8 +5663,23 @@ msgstr "Razlika između revizija"
 msgid "Logview"
 msgstr "Pogled dnevnika"
 
-#~ msgid "Add New..."
-#~ msgstr "Dodaj novi"
+#, fuzzy
+#~| msgctxt "project name (branch name)"
+#~| msgid "%1 (%2)"
+#~ msgctxt "a copy of the existing environment was created"
+#~ msgid "%1 (Cloned %2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "Add Group"
+#~ msgstr "Dodaj grupu"
+
+#, fuzzy
+#~| msgid "Remove Group"
+#~ msgid "Clone Group"
+#~ msgstr "Ukloni grupu"
+
+#~ msgid "Remove Group"
+#~ msgstr "Ukloni grupu"
 
 #~ msgid "Remove Selected"
 #~ msgstr "Ukloni izabrano"
@@ -6165,9 +6191,6 @@ msgstr "Pogled dnevnika"
 #~ msgid "Unable to load the project file %1"
 #~ msgstr "Ne mogu da učitam projektnu datoteku %1"
 
-#~ msgid "New Environment Variable"
-#~ msgstr "Nova promjenjiva okruženja"
-
 #~ msgctxt "Name of an environment variable"
 #~ msgid "Variable Name:"
 #~ msgstr "Ime promjenjive:"
@@ -6284,10 +6307,6 @@ msgstr "Pogled dnevnika"
 #~ "instancu?<br/><strong>Pazite:</strong> To uradite samo ako ste sigurni da "
 #~ "nema aktivnih procesa koji koriste ovu sesiju.</p><p>Inače. zatvorite "
 #~ "kopiju kritične aplikacije ili odaberite novu sesiju za pokretanje.</p>"
-
-#~ msgctxt "@action:button"
-#~ msgid "Remove lock file"
-#~ msgstr "Ukloni datoteku zaključavanja"
 
 #~ msgid "Area Switcher"
 #~ msgstr "Prebacivač područja"
