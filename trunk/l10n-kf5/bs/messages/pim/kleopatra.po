@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgpgcertmanager\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-03-04 04:05+0100\n"
+"POT-Creation-Date: 2017-03-25 02:58+0100\n"
 "PO-Revision-Date: 2015-01-09 11:46+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -710,6 +710,7 @@ msgid ""
 msgstr ""
 
 #: src/commands/exportpaperkeycommand.cpp:91
+#: src/commands/importpaperkeycommand.cpp:174
 #, fuzzy, kde-format
 #| msgid "Could not find gpgconf executable"
 msgctxt "@title"
@@ -1166,6 +1167,87 @@ msgstr "CRL datoteka je uspješno uvezena."
 #, kde-format
 msgid "Import CRL Finished"
 msgstr "Uvoz CRL Završen"
+
+#: src/commands/importpaperkeycommand.cpp:108
+#: src/crypto/autodecryptverifyfilescontroller.cpp:225
+#, fuzzy, kde-kuit-format
+#| msgid "Could not open file \"%1\" for reading"
+msgid "Cannot open <filename>%1</filename> for reading."
+msgstr "Nije u mogućnosti da otvori datoteku \"%1\" za čitanje"
+
+#: src/commands/importpaperkeycommand.cpp:151
+#, fuzzy, kde-format
+#| msgid "Failed to execute %1: %2"
+msgid "Failed to restore any secret keys."
+msgstr "Neuspjelo izvršavanje %1: %2"
+
+#: src/commands/importpaperkeycommand.cpp:170
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para><application>Kleopatra</application> uses <application>PaperKey</"
+"application> to import your text backup.</para><para>Please make sure it is "
+"installed.</para>"
+msgstr ""
+
+#: src/commands/importpaperkeycommand.cpp:179
+#, fuzzy, kde-format
+#| msgid "Select File"
+msgid "Select input file"
+msgstr "Odaberi datoteku"
+
+#: src/commands/importpaperkeycommand.cpp:198
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Error Deleting Registry Key"
+msgctxt "@title:window"
+msgid "Error importing secret key"
+msgstr "Greška u brisanju registarskog ključa"
+
+#: src/commands/importpaperkeycommand.cpp:204
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>The GPG or GpgSM process that tried to export the secret key ended "
+#| "prematurely because of an unexpected error.</para><para>Please check the "
+#| "output of <icode>%1</icode> for details.</para>"
+msgctxt "@info"
+msgid ""
+"<para>The GPG process that tried to restore the secret key ended prematurely "
+"because of an unexpected error.</para><para>Please check the output of "
+"<icode>%1</icode> for details.</para>"
+msgstr ""
+"<para>Proces GPG ili GpgSM koji je pokušao da izveze tajni ključ prerano je "
+"stao zbog neočekivane greške.</para><para>Pogledajte izlaz iz <icode>%1</"
+"icode> za detalje.</para>"
+
+#: src/commands/importpaperkeycommand.cpp:213
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>An error occurred while trying to export the secret key.</para> "
+#| "<para>The output from <command>%1</command> was: <message>%2</message></"
+#| "para>"
+msgctxt "@info"
+msgid ""
+"<para>An error occurred while trying to restore the secret key.</para> "
+"<para>The output from <command>%1</command> was:</para><para><message>%2</"
+"message></para>"
+msgstr ""
+"<para>Desila se greška pri pokušaju izvoza tajnog ključa.</para> <para>Izlaz "
+"iz <command>%1</command> je bio: <message>%2</message></para>"
+
+#: src/commands/importpaperkeycommand.cpp:221
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Could not copy temporary file <filename>%1</filename> to file <filename>"
+#| "%2</filename>: <message>%3</message>"
+msgctxt "@info"
+msgid "Successfully restored the secret key parts from <filename>%1</filename>"
+msgstr ""
+"Ne mogu kreirati privremenu datoteku <filename>%1</filename> u datoteku "
+"<filename>%2</filename>: <message>%3</message>"
 
 #: src/commands/keytocardcommand.cpp:103
 #, fuzzy, kde-format
@@ -2176,12 +2258,6 @@ msgid "Failed to move <filename>%1</filename> to <filename>%2</filename>."
 msgstr ""
 "Ne mogu kreirati privremenu datoteku <filename>%1</filename> u datoteku "
 "<filename>%2</filename>: <message>%3</message>"
-
-#: src/crypto/autodecryptverifyfilescontroller.cpp:225
-#, fuzzy, kde-kuit-format
-#| msgid "Could not open file \"%1\" for reading"
-msgid "Cannot open <filename>%1</filename> for reading."
-msgstr "Nije u mogućnosti da otvori datoteku \"%1\" za čitanje"
 
 #: src/crypto/autodecryptverifyfilescontroller.cpp:230
 #, kde-kuit-format
@@ -4846,25 +4922,30 @@ msgstr ""
 msgid "Set Initial PIN (SigG)"
 msgstr "Postavi početni PIN (SigG)"
 
-#: src/dialogs/subkeyswidget.cpp:86
+#: src/dialogs/subkeyswidget.cpp:76
+#, kde-format
+msgid "Restore printed backup"
+msgstr ""
+
+#: src/dialogs/subkeyswidget.cpp:95
 #, fuzzy, kde-format
 #| msgid "SmartCard"
 msgid "Transfer to smartcard"
 msgstr "PametnaKartica"
 
-#: src/dialogs/subkeyswidget.cpp:128
+#: src/dialogs/subkeyswidget.cpp:144
 #, kde-format
 msgctxt "stored..."
 msgid "on SmartCard with serial no. %1"
 msgstr "na pametnoj kartici serijskog broja %1"
 
-#: src/dialogs/subkeyswidget.cpp:130
+#: src/dialogs/subkeyswidget.cpp:146
 #, kde-format
 msgctxt "stored..."
 msgid "on this computer"
 msgstr "na ovom računaru"
 
-#: src/dialogs/subkeyswidget.cpp:145
+#: src/dialogs/subkeyswidget.cpp:161
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Subkeys"
