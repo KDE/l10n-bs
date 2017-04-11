@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libakonadi\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-04-07 02:53+0200\n"
+"POT-Creation-Date: 2017-04-11 05:25+0200\n"
 "PO-Revision-Date: 2014-01-31 20:40+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -542,17 +542,33 @@ msgstr "Bezimeni dodatak"
 msgid "No description available"
 msgstr "Nema dostupnog opisa"
 
+#: core/servermanager.cpp:255
+#, kde-format
+msgid ""
+"The Akonadi server protocol version differs from the protocol version used "
+"by this application.\n"
+"If you recently updated your system please log out and back in to make sure "
+"all applications use the correct protocol version."
+msgstr ""
+
+#: core/servermanager.cpp:272
+#, kde-format
+msgid ""
+"There are no Akonadi Agents available. Please verify your KDE PIM "
+"installation."
+msgstr ""
+
 #: core/session.cpp:187
 #, kde-format
 msgid ""
-"Protocol version mismatch. Server version is newer (%1) than ours (%2). If "
+"Protocol version mismatch. Server version is older (%1) than ours (%2). If "
 "you updated your system recently please restart the Akonadi server."
 msgstr ""
 
 #: core/session.cpp:193
 #, kde-format
 msgid ""
-"Protocol version mismatch. Server version is older (%1) than ours (%2). If "
+"Protocol version mismatch. Server version is newer (%1) than ours (%2). If "
 "you updated your system recently please restart all KDE PIM applications."
 msgstr ""
 
@@ -921,24 +937,34 @@ msgstr "&Poveži ovdje"
 msgid "C&ancel"
 msgstr "&Odustani"
 
-#: widgets/erroroverlay.cpp:239 widgets/erroroverlay.cpp:240
+#: widgets/erroroverlay.cpp:239
+#, fuzzy, kde-format
+#| msgid "Cannot connect to the Akonadi service."
+msgctxt "%1 is a reason why"
+msgid ""
+"Cannot connect to the Personal information management service.\n"
+"\n"
+"%1"
+msgstr "Ne mogu da se povežem sa servisom Akonadija."
+
+#: widgets/erroroverlay.cpp:244 widgets/erroroverlay.cpp:245
 #, kde-format
 msgid "Personal information management service is starting..."
 msgstr "Servis za upravljanje osobnim podacima je startao sa radom..."
 
-#: widgets/erroroverlay.cpp:244 widgets/erroroverlay.cpp:245
+#: widgets/erroroverlay.cpp:249 widgets/erroroverlay.cpp:250
 #, kde-format
 msgid "Personal information management service is shutting down..."
 msgstr "Servis za upravljanje osobnim podacima se gasi..."
 
-#: widgets/erroroverlay.cpp:249
+#: widgets/erroroverlay.cpp:254
 #, kde-format
 msgid ""
 "Personal information management service is performing a database upgrade."
 msgstr ""
 "Servis za upravljanje osobnim podacima ima nadogradnju baze podataka..."
 
-#: widgets/erroroverlay.cpp:250
+#: widgets/erroroverlay.cpp:255
 #, kde-format
 msgid ""
 "Personal information management service is performing a database upgrade.\n"
@@ -955,7 +981,7 @@ msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QWidget, notRunningPage)
 #. i18n: ectx: property (text), widget (QLabel, notRunningDescription)
-#: widgets/erroroverlay.ui:21 widgets/erroroverlay.ui:50
+#: widgets/erroroverlay.ui:21 widgets/erroroverlay.ui:71
 #, kde-format
 msgid ""
 "The Akonadi personal information management service is not running. This "
@@ -965,14 +991,14 @@ msgstr ""
 "se ne može koristiti bez njega."
 
 #. i18n: ectx: property (text), widget (QPushButton, startButton)
-#: widgets/erroroverlay.ui:80
+#: widgets/erroroverlay.ui:116
 #, kde-format
 msgctxt "@action:button Start the Akonadi server"
 msgid "Start"
 msgstr "Početak"
 
 #. i18n: ectx: property (toolTip), widget (QWidget, brokenPage)
-#: widgets/erroroverlay.ui:122
+#: widgets/erroroverlay.ui:158
 #, kde-format
 msgid ""
 "The Akonadi personal information management framework is not operational.\n"
@@ -982,13 +1008,13 @@ msgstr ""
 "Kliknite na Detalji... za detaljne informacije o ovom problemu."
 
 #. i18n: ectx: property (text), widget (QLabel, brokenDescription)
-#: widgets/erroroverlay.ui:151
+#: widgets/erroroverlay.ui:208
 #, kde-format
 msgid "The Akonadi personal information management service is not operational."
 msgstr "Akonadi, servis za upravljanje ličnim podacima, nije operativan."
 
 #. i18n: ectx: property (text), widget (QPushButton, selfTestButton)
-#: widgets/erroroverlay.ui:187
+#: widgets/erroroverlay.ui:259
 #, kde-format
 msgid "Details..."
 msgstr "Detalji..."
