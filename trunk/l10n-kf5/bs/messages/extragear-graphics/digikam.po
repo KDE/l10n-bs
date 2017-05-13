@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: digikam\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-05-12 02:54+0200\n"
+"POT-Creation-Date: 2017-05-13 03:10+0200\n"
 "PO-Revision-Date: 2015-02-26 21:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -424,13 +424,6 @@ msgstr "Mora imati ovu oznaku"
 #, kde-format
 msgid "Must Not Have This Tag"
 msgstr "Ne smije imati ovu oznaku"
-
-#: app/items/digikamimageview.cpp:342 app/main/digikamapp.cpp:898
-#: app/views/tableview/tableview.cpp:252
-#, kde-format
-msgctxt "View the selected image"
-msgid "Preview"
-msgstr "Pregled"
 
 #: app/items/imagecategorydrawer.cpp:250 app/items/imagecategorydrawer.cpp:332
 #: app/items/imagecategorydrawer.cpp:349
@@ -822,6 +815,12 @@ msgctxt "@action Go to thumbnails (icon) view"
 msgid "Thumbnails"
 msgstr "Umanjeni prikazi"
 
+#: app/main/digikamapp.cpp:898 app/views/digikamview.cpp:2590
+#, kde-format
+msgctxt "View the selected image"
+msgid "Preview"
+msgstr "Pregled"
+
 #: app/main/digikamapp.cpp:907 utilities/importui/main/importui.cpp:471
 #, kde-format
 msgctxt "@action Switch to map view"
@@ -867,7 +866,8 @@ msgstr "Uređivač slika"
 msgid "Open the image editor."
 msgstr "Otvori uređivač slike."
 
-#: app/main/digikamapp.cpp:942 utilities/lighttable/lighttablewindow.cpp:125
+#: app/main/digikamapp.cpp:942 libs/settings/applicationsettings_miscs.cpp:375
+#: utilities/lighttable/lighttablewindow.cpp:125
 #: utilities/lighttable/lighttablewindow.cpp:1402 utilities/setup/setup.cpp:211
 #, kde-format
 msgid "Light Table"
@@ -896,6 +896,7 @@ msgstr ""
 "Dodajte odabrane stavke u traku umanjenih prikaza svjetlosnog pregleda."
 
 #: app/main/digikamapp.cpp:961 app/utils/contextmenuhelper.cpp:735
+#: libs/settings/applicationsettings_miscs.cpp:377
 #: utilities/queuemanager/main/queuemgrwindow.cpp:113
 #: utilities/queuemanager/main/queuemgrwindow.cpp:247
 #: utilities/queuemanager/views/workflowlist.cpp:123
@@ -1174,7 +1175,7 @@ msgstr "Uvećaj na 100%"
 msgid "Fit to &Window"
 msgstr "Uklopi u pro&zor"
 
-#: app/main/digikamapp.cpp:1264
+#: app/main/digikamapp.cpp:1264 libs/settings/applicationsettings_miscs.cpp:379
 #: utilities/imageeditor/editor/editorwindow.cpp:858
 #: utilities/lighttable/lighttablewindow.cpp:565
 #: utilities/slideshow/slideshow.cpp:111
@@ -1758,6 +1759,7 @@ msgstr "ne"
 #: libs/imageproperties/cameraitempropertiestab.cpp:433
 #: libs/imageproperties/cameraitempropertiestab.cpp:511
 #: libs/imageproperties/imagepropertiescolorstab.cpp:680
+#: utilities/setup/setupmisc.cpp:283
 #, kde-format
 msgid "Yes"
 msgstr "Da"
@@ -1861,6 +1863,7 @@ msgstr "Pozadina baze podataka"
 #: libs/imageproperties/cameraitempropertiestab.cpp:429
 #: libs/imageproperties/cameraitempropertiestab.cpp:515
 #: libs/imageproperties/imagepropertiescolorstab.cpp:680
+#: utilities/setup/setupmisc.cpp:282
 #, kde-format
 msgid "No"
 msgstr "Ne"
@@ -2598,51 +2601,51 @@ msgstr "Tehnički parametri"
 msgid "<i>Binary Data</i>"
 msgstr "<i>Binarni podaci</i>"
 
-#: app/views/digikamview.cpp:207
+#: app/views/digikamview.cpp:210
 #, kde-format
 msgid "Fuzzy Sketch Search"
 msgstr "Pretraga po približnoj skici"
 
-#: app/views/digikamview.cpp:211
+#: app/views/digikamview.cpp:214
 #, kde-format
 msgid "Fuzzy Image Search"
 msgstr "Pretraga po približnoj slici"
 
-#: app/views/digikamview.cpp:215
+#: app/views/digikamview.cpp:218
 #, kde-format
 msgid "Map Search"
 msgstr "Pretraga po mapi"
 
-#: app/views/digikamview.cpp:220
+#: app/views/digikamview.cpp:223
 #: libs/database/coredb/coredbschemaupdater.cpp:1003
 #, kde-format
 msgid "Last Search"
 msgstr "Posljednja pretraga"
 
-#: app/views/digikamview.cpp:224 app/views/leftsidebarwidgets.cpp:913
+#: app/views/digikamview.cpp:227 app/views/leftsidebarwidgets.cpp:913
 #, kde-format
 msgid "Timeline"
 msgstr "Vremenska linija"
 
-#: app/views/digikamview.cpp:379
+#: app/views/digikamview.cpp:384
 #: utilities/queuemanager/views/toolslistview.cpp:79
 #, kde-format
 msgid "Filters"
 msgstr "Filteri"
 
-#: app/views/digikamview.cpp:1310
+#: app/views/digikamview.cpp:1311
 #, kde-format
 msgid "Cannot open the root album. It is not a physical location."
 msgstr "Ne može se otvoriti izvorni album. To nije fizička lokacija."
 
-#: app/views/digikamview.cpp:1719
+#: app/views/digikamview.cpp:1720
 #, kde-format
 msgctxt "@info"
 msgid ""
 "<i>The storage location of this image<br/>is currently not available</i>"
 msgstr "<i>Lokacija smiještanja za ovu sliku <br/>nije trenutno dostupna</i>"
 
-#: app/views/digikamview.cpp:2461 libs/widgets/metadata/metadatawidget.cpp:152
+#: app/views/digikamview.cpp:2540 libs/widgets/metadata/metadatawidget.cpp:152
 #: utilities/imageeditor/editor/editortooliface.cpp:98
 #: utilities/imageeditor/editor/editortooliface.cpp:207
 #: utilities/queuemanager/views/workflowlist.cpp:99
@@ -2689,7 +2692,7 @@ msgstr ""
 #: libs/album/albumselectors.cpp:131 libs/album/albumselecttabs.cpp:186
 #: libs/database/utils/dbstatdlg.cpp:70 libs/models/albummodel.cpp:50
 #: utilities/assistants/htmlgallery/wizard/htmlintropage.cpp:96
-#: utilities/kdesupport/kipi/kipiimagecollection.cpp:302
+#: utilities/kdesupport/kipi/kipiimagecollection.cpp:208
 #, kde-format
 msgid "Albums"
 msgstr "Albumi"
@@ -2895,17 +2898,17 @@ msgstr ""
 msgid "An error has occurred with the media player...."
 msgstr "Desila se greška sa media player-om...."
 
-#: app/views/tableview/tableview.cpp:501
+#: app/views/tableview/tableview.cpp:302
 #, kde-format
 msgid "Hide grouped items"
 msgstr "Sakrij grupisane stavke"
 
-#: app/views/tableview/tableview.cpp:511
+#: app/views/tableview/tableview.cpp:312
 #, kde-format
 msgid "Ignore grouping"
 msgstr "Zanemari grupiranje"
 
-#: app/views/tableview/tableview.cpp:521
+#: app/views/tableview/tableview.cpp:322
 #, kde-format
 msgid "Show grouping in tree"
 msgstr "Prikaži grupiranje na stablu"
@@ -9945,7 +9948,7 @@ msgstr "Označite kako geolokacija treba uticati na slike koje su prikazane."
 msgid "All Files"
 msgstr "Sve datoteke"
 
-#: libs/filters/mimefilter.cpp:37 utilities/setup/album/setupmime.cpp:104
+#: libs/filters/mimefilter.cpp:37 utilities/setup/album/setupmime.cpp:105
 #, kde-format
 msgid "Image Files"
 msgstr "Datoteke slika"
@@ -9980,12 +9983,12 @@ msgstr "DNG datoteke"
 msgid "RAW Files"
 msgstr "RAW datoteke"
 
-#: libs/filters/mimefilter.cpp:44 utilities/setup/album/setupmime.cpp:136
+#: libs/filters/mimefilter.cpp:44 utilities/setup/album/setupmime.cpp:137
 #, kde-format
 msgid "Movie Files"
 msgstr "Datoteke filmova"
 
-#: libs/filters/mimefilter.cpp:45 utilities/setup/album/setupmime.cpp:171
+#: libs/filters/mimefilter.cpp:45 utilities/setup/album/setupmime.cpp:172
 #, kde-format
 msgid "Audio Files"
 msgstr "Audio datoteke"
@@ -10764,6 +10767,7 @@ msgstr "XMP"
 
 #: libs/imageproperties/imagepropertiessidebar.cpp:85
 #: libs/imageproperties/imagepropertiessidebarcamgui.cpp:96
+#: libs/settings/applicationsettings_miscs.cpp:373
 #: showfoto/setup/showfotosetup.cpp:117
 #: utilities/queuemanager/views/toolslistview.cpp:89
 #: utilities/setup/setup.cpp:187
@@ -11039,42 +11043,111 @@ msgstr "Sakrij detaljni prozor napretka"
 msgid "Show detailed progress window"
 msgstr "Prikaži detaljni prozor napretka"
 
-#: libs/settings/applicationsettings_p.cpp:244
+#: libs/settings/applicationsettings_miscs.cpp:346
+#, kde-format
+msgid "Do you want to do this operation on all group items?"
+msgstr ""
+
+#: libs/settings/applicationsettings_miscs.cpp:348
+#, fuzzy, kde-format
+#| msgid "Cancel this operation."
+msgid "Remember choice for this operation"
+msgstr "Prekini ovu operaciju."
+
+#: libs/settings/applicationsettings_miscs.cpp:381
+#, fuzzy, kde-format
+#| msgid "File Renaming"
+msgid "Renaming"
+msgstr "Preimenovanje datoteke"
+
+#: libs/settings/applicationsettings_miscs.cpp:383
+#, kde-format
+msgid "Import/Export) plugins"
+msgstr ""
+
+#: libs/settings/applicationsettings_miscs.cpp:385
+#, kde-format
+msgid "Tools (editor, panorama, stack blending, calendar, external program)"
+msgstr ""
+
+#: libs/settings/applicationsettings_miscs.cpp:397
+#, kde-format
+msgid ""
+"Operations related to metadata, labels, ratings, tags, geolocation and "
+"rotation"
+msgstr ""
+
+#: libs/settings/applicationsettings_miscs.cpp:399
+#, fuzzy, kde-format
+#| msgid "Add to Light Table"
+msgid "Adding items to the Light Table"
+msgstr "Dodaj na Svjetlosni Pregled"
+
+#: libs/settings/applicationsettings_miscs.cpp:401
+#, fuzzy, kde-format
+#| msgid "Add Crop tool to Batch Queue Manager;"
+msgid "Adding items to the Batch Queue Manager"
+msgstr "Dodaj alatku za rezanje u Batch Queue Manager;"
+
+#: libs/settings/applicationsettings_miscs.cpp:403
+#, kde-format
+msgid "Opening items in the Slideshow"
+msgstr ""
+
+#: libs/settings/applicationsettings_miscs.cpp:405
+#, fuzzy, kde-format
+#| msgid "Renaming images"
+msgid "Renaming items"
+msgstr "Preimenovanje slika"
+
+#: libs/settings/applicationsettings_miscs.cpp:407
+#, kde-format
+msgid "Passing items to import/export plugins"
+msgstr ""
+
+#: libs/settings/applicationsettings_miscs.cpp:409
+#, kde-format
+msgid ""
+"Several tools including the editor, panorama, stack blending, calendar, html "
+"gallery and opening with external programs"
+msgstr ""
+
+#: libs/settings/applicationsettings_p.cpp:267
 #, kde-format
 msgid "Category"
 msgstr "Kategorija"
 
-#: libs/settings/applicationsettings_p.cpp:245
+#: libs/settings/applicationsettings_p.cpp:268
 #, kde-format
 msgid "Travel"
 msgstr "Putovanja"
 
-#: libs/settings/applicationsettings_p.cpp:246
+#: libs/settings/applicationsettings_p.cpp:269
 #, kde-format
 msgid "Holidays"
 msgstr "Odmori"
 
-#: libs/settings/applicationsettings_p.cpp:247
+#: libs/settings/applicationsettings_p.cpp:270
 #, kde-format
 msgid "Friends"
 msgstr "Prijatelji"
 
-#: libs/settings/applicationsettings_p.cpp:248
+#: libs/settings/applicationsettings_p.cpp:271
 #, kde-format
 msgid "Nature"
 msgstr "Priroda"
 
-#: libs/settings/applicationsettings_p.cpp:249
+#: libs/settings/applicationsettings_p.cpp:272
 #, kde-format
 msgid "Party"
 msgstr "Žurke"
 
-#: libs/settings/applicationsettings_p.cpp:250
+#: libs/settings/applicationsettings_p.cpp:273
 #, kde-format
 msgid "Todo"
 msgstr "Za uraditi"
 
-#: libs/settings/applicationsettings_p.cpp:251
+#: libs/settings/applicationsettings_p.cpp:274
 #: showfoto/setup/showfotosetup.cpp:153 utilities/setup/setup.cpp:253
 #, kde-format
 msgid "Miscellaneous"
@@ -17248,7 +17321,7 @@ msgstr ""
 "i></qt>"
 
 #: showfoto/setup/showfotosetupmetadata.cpp:94
-#: utilities/setup/metadata/setupmetadata.cpp:426
+#: utilities/setup/metadata/setupmetadata.cpp:407
 #, fuzzy, kde-format
 #| msgctxt "@title:tab"
 #| msgid "Rotation"
@@ -17257,25 +17330,25 @@ msgid "Rotate actions"
 msgstr "Rotacija"
 
 #: showfoto/setup/showfotosetupmetadata.cpp:99
-#: utilities/setup/metadata/setupmetadata.cpp:431
+#: utilities/setup/metadata/setupmetadata.cpp:412
 #, kde-format
 msgid "Show images/thumbnails &rotated according to orientation tag."
 msgstr "Prikaži slike/ikone &rotated u skladu sa oznakom za orijentaciju."
 
 #: showfoto/setup/showfotosetupmetadata.cpp:101
-#: utilities/setup/metadata/setupmetadata.cpp:433
+#: utilities/setup/metadata/setupmetadata.cpp:414
 #, kde-format
 msgid "Set orientation tag to normal after rotate/flip."
 msgstr "Postavi oznaku orjentacije na normalnu nakon rotiranja/prevrtanja."
 
 #: showfoto/setup/showfotosetupmetadata.cpp:119
-#: utilities/setup/metadata/setupmetadata.cpp:310
+#: utilities/setup/metadata/setupmetadata.cpp:291
 #, kde-format
 msgid "Visit Exiv2 project website"
 msgstr "Posjetite veb sajt Exiv2 projekta"
 
 #: showfoto/setup/showfotosetupmetadata.cpp:126
-#: utilities/setup/metadata/setupmetadata.cpp:317
+#: utilities/setup/metadata/setupmetadata.cpp:298
 #, kde-format
 msgid ""
 "<p><a href='http://en.wikipedia.org/wiki/Exif'>EXIF</a> - a standard used by "
@@ -17287,7 +17360,7 @@ msgstr ""
 "brzina okidača) koji koristi većina današnjih digitalnih fotoaparata.</p>"
 
 #: showfoto/setup/showfotosetupmetadata.cpp:130
-#: utilities/setup/metadata/setupmetadata.cpp:321
+#: utilities/setup/metadata/setupmetadata.cpp:302
 #, kde-format
 msgid ""
 "<p><a href='http://en.wikipedia.org/wiki/"
@@ -17299,7 +17372,7 @@ msgstr ""
 "digitalnoj fotografiji za pohranjivanje informacija fotografa u slikama.</p>"
 
 #: showfoto/setup/showfotosetupmetadata.cpp:136
-#: utilities/setup/metadata/setupmetadata.cpp:326
+#: utilities/setup/metadata/setupmetadata.cpp:307
 #, kde-format
 msgid ""
 "<p><a href='http://en.wikipedia.org/wiki/Extensible_Metadata_Platform'>XMP</"
@@ -17399,33 +17472,33 @@ msgid "Set this option to indicate if image has geolocation information."
 msgstr ""
 "Postavite ovu opciju da ukaže da li slika ima geolokacijske informacije."
 
-#: showfoto/setup/showfotosetupmisc.cpp:146 utilities/setup/setupmisc.cpp:150
+#: showfoto/setup/showfotosetupmisc.cpp:146 utilities/setup/setupmisc.cpp:165
 #, fuzzy, kde-format
 #| msgid "IIM Application 2"
 msgid "Application Behavior"
 msgstr "IIM program 2"
 
-#: showfoto/setup/showfotosetupmisc.cpp:149 utilities/setup/setupmisc.cpp:153
+#: showfoto/setup/showfotosetupmisc.cpp:149 utilities/setup/setupmisc.cpp:168
 #, kde-format
 msgid "Scroll current item to center of thumbbar"
 msgstr ""
 
-#: showfoto/setup/showfotosetupmisc.cpp:150 utilities/setup/setupmisc.cpp:155
+#: showfoto/setup/showfotosetupmisc.cpp:150 utilities/setup/setupmisc.cpp:170
 #, kde-format
 msgid "&Show splash screen at startup"
 msgstr "Prikaži &početni ekran pri pokretanju"
 
-#: showfoto/setup/showfotosetupmisc.cpp:153 utilities/setup/setupmisc.cpp:172
+#: showfoto/setup/showfotosetupmisc.cpp:153 utilities/setup/setupmisc.cpp:187
 #, kde-format
 msgid "Sidebar tab title:"
 msgstr "Naziv kartice bočne trake :"
 
-#: showfoto/setup/showfotosetupmisc.cpp:155 utilities/setup/setupmisc.cpp:174
+#: showfoto/setup/showfotosetupmisc.cpp:155 utilities/setup/setupmisc.cpp:189
 #, kde-format
 msgid "Only For Active Tab"
 msgstr "Samo za aktivni tab"
 
-#: showfoto/setup/showfotosetupmisc.cpp:156 utilities/setup/setupmisc.cpp:175
+#: showfoto/setup/showfotosetupmisc.cpp:156 utilities/setup/setupmisc.cpp:190
 #, kde-format
 msgid "For All Tabs"
 msgstr "Za sve tabove"
@@ -17437,38 +17510,38 @@ msgstr ""
 "Postavite ovu opciju za konfiguraciju vidljivosti naziva kartice bočnih "
 "traka."
 
-#: showfoto/setup/showfotosetupmisc.cpp:160 utilities/setup/setupmisc.cpp:180
+#: showfoto/setup/showfotosetupmisc.cpp:160 utilities/setup/setupmisc.cpp:195
 #, kde-format
 msgid "Widget style:"
 msgstr "Stil grafičke kontrole:"
 
-#: showfoto/setup/showfotosetupmisc.cpp:162 utilities/setup/setupmisc.cpp:182
+#: showfoto/setup/showfotosetupmisc.cpp:162 utilities/setup/setupmisc.cpp:197
 #, kde-format
 msgid "Set this option to choose the default window decoration and looks."
 msgstr "Postavite ovu opciju da izaberete zadanu dekoraciju i izgled prozora."
 
-#: showfoto/setup/showfotosetupmisc.cpp:177 utilities/setup/setupmisc.cpp:197
+#: showfoto/setup/showfotosetupmisc.cpp:177 utilities/setup/setupmisc.cpp:212
 #, kde-format
 msgid "Icon theme (changes after restart):"
 msgstr ""
 
-#: showfoto/setup/showfotosetupmisc.cpp:179 utilities/setup/setupmisc.cpp:199
+#: showfoto/setup/showfotosetupmisc.cpp:179 utilities/setup/setupmisc.cpp:214
 #, fuzzy, kde-format
 #| msgid "Set this option to choose the default window decoration and looks."
 msgid "Set this option to choose the default icon theme."
 msgstr "Postavite ovu opciju da izaberete zadanu dekoraciju i izgled prozora."
 
-#: showfoto/setup/showfotosetupmisc.cpp:181 utilities/setup/setupmisc.cpp:201
+#: showfoto/setup/showfotosetupmisc.cpp:181 utilities/setup/setupmisc.cpp:216
 #, kde-format
 msgid "Use Icon Theme From System"
 msgstr ""
 
-#: showfoto/setup/showfotosetupmisc.cpp:194 utilities/setup/setupmisc.cpp:214
+#: showfoto/setup/showfotosetupmisc.cpp:194 utilities/setup/setupmisc.cpp:229
 #, kde-format
 msgid "Breeze"
 msgstr ""
 
-#: showfoto/setup/showfotosetupmisc.cpp:200 utilities/setup/setupmisc.cpp:220
+#: showfoto/setup/showfotosetupmisc.cpp:200 utilities/setup/setupmisc.cpp:235
 #, kde-format
 msgid "Breeze Dark"
 msgstr ""
@@ -21394,7 +21467,7 @@ msgstr ""
 "učestvovala u izgradnji eksperimentalne baze podataka. "
 
 #: utilities/facemanagement/facescandialog.cpp:356
-#: utilities/setup/metadata/setupmetadata.cpp:538
+#: utilities/setup/metadata/setupmetadata.cpp:519
 #, kde-format
 msgctxt "@title:tab"
 msgid "Advanced"
@@ -28158,8 +28231,8 @@ msgstr "Nije nađen unos knjige adresa"
 msgid "BalooTags/"
 msgstr "Baloooznake/"
 
-#: utilities/kdesupport/kipi/kipiimagecollection.cpp:99
-#: utilities/kdesupport/kipi/kipiimagecollection.cpp:121
+#: utilities/kdesupport/kipi/kipiimagecollection.cpp:92
+#: utilities/kdesupport/kipi/kipiimagecollection.cpp:114
 #, kde-format
 msgid "Tag: %1"
 msgstr "Oznaka: %1"
@@ -28531,7 +28604,7 @@ msgstr "Prepoznavanje lica"
 msgid "shrinking databases"
 msgstr "Incijalizacija baze podataka..."
 
-#: utilities/maintenance/dbcleaner.cpp:390
+#: utilities/maintenance/dbcleaner.cpp:393
 #, kde-format
 msgid ""
 "<p>Database shrinking in progress.</p><p>Currently, your databases are being "
@@ -28541,20 +28614,20 @@ msgid ""
 "Status:"
 msgstr ""
 
-#: utilities/maintenance/dbcleaner.cpp:403
+#: utilities/maintenance/dbcleaner.cpp:406
 #, fuzzy, kde-format
 #| msgid "Schema Name"
 msgid "Core DB"
 msgstr "Ime šeme"
 
-#: utilities/maintenance/dbcleaner.cpp:404
+#: utilities/maintenance/dbcleaner.cpp:407
 #, fuzzy, kde-format
 #| msgctxt "@action Go to thumbnails (icon) view"
 #| msgid "Thumbnails"
 msgid "Thumbnails DB"
 msgstr "Umanjeni prikazi"
 
-#: utilities/maintenance/dbcleaner.cpp:405
+#: utilities/maintenance/dbcleaner.cpp:408
 #, fuzzy, kde-format
 #| msgid "Face Recognition"
 msgid "Face Recognition DB"
@@ -35808,7 +35881,7 @@ msgstr "Dod&aj..."
 msgid "&Remove"
 msgstr "&Ukloni"
 
-#: utilities/setup/album/setupmime.cpp:92
+#: utilities/setup/album/setupmime.cpp:93
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>digiKam attempts to support all of the image formats that digital "
@@ -35831,7 +35904,7 @@ msgstr ""
 "koje digiKam podržava, dodavanjem ekstenzije tipa koji želite dodati. "
 "Višestruke ekstenzije moraju biti razdvojene razmakom.</p>"
 
-#: utilities/setup/album/setupmime.cpp:110
+#: utilities/setup/album/setupmime.cpp:111
 #, kde-format
 msgid ""
 "Additional &image file extensions (<a href='image'>Currently-supported "
@@ -35840,7 +35913,7 @@ msgstr ""
 "Dopunske ekstenzije &slikovne datoteke (<a href='image'>Trenutno podržani "
 "tipovi</a>):"
 
-#: utilities/setup/album/setupmime.cpp:114
+#: utilities/setup/album/setupmime.cpp:115
 #, kde-format
 msgid ""
 "<p>Here you can add the extensions of image files (including RAW files) to "
@@ -35862,13 +35935,13 @@ msgstr ""
 "prikazivati u digiKam-u.</p><p><b>Upozorenje:</b> Uklanjanje datoteka iz "
 "baze podataka znači gubitak svih njihovih oznaka i ocjena.</p>"
 
-#: utilities/setup/album/setupmime.cpp:124
+#: utilities/setup/album/setupmime.cpp:125
 #, fuzzy, kde-format
 #| msgid "Enter the editorial usage instructions."
 msgid "Enter additional image file extensions."
 msgstr "Unesite editorijalne instrukcije za korištenje."
 
-#: utilities/setup/album/setupmime.cpp:143
+#: utilities/setup/album/setupmime.cpp:144
 #, kde-format
 msgid ""
 "Additional &movie file extensions (<a href='video'>Currently-supported "
@@ -35877,7 +35950,7 @@ msgstr ""
 "Dopunske ekstenzije &filmskih datoteka (<a href='video'>Trenutno podržani "
 "tipovi</a>):"
 
-#: utilities/setup/album/setupmime.cpp:147
+#: utilities/setup/album/setupmime.cpp:148
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>Here you can add extra extensions of video files to be displayed in "
@@ -35911,13 +35984,13 @@ msgstr ""
 "p><p><b>Upozorenje:</b> Uklanjanje datoteka iz baze podataka znači gubitak "
 "svih njihovih oznaka i ocjena.</p>"
 
-#: utilities/setup/album/setupmime.cpp:159
+#: utilities/setup/album/setupmime.cpp:160
 #, fuzzy, kde-format
 #| msgid "Ignored file extensions:"
 msgid "Enter additional movie file extensions."
 msgstr "Ignorisani nastavci datoteka:"
 
-#: utilities/setup/album/setupmime.cpp:178
+#: utilities/setup/album/setupmime.cpp:179
 #, kde-format
 msgid ""
 "Additional &audio file extensions (<a href='audio'>Currently-supported "
@@ -35926,7 +35999,7 @@ msgstr ""
 "Dopunske ekstenzije &audio datoteka (<a href='video'>Trenutno podržani "
 "tipovi</a>):"
 
-#: utilities/setup/album/setupmime.cpp:182
+#: utilities/setup/album/setupmime.cpp:183
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>Here you can add extra extensions of video files to be displayed in "
@@ -35960,13 +36033,13 @@ msgstr ""
 "p><p><b>Upozorenje:</b> Uklanjanje datoteka iz baze podataka znači gubitak "
 "svih njihovih oznaka i ocjena.</p>"
 
-#: utilities/setup/album/setupmime.cpp:194
+#: utilities/setup/album/setupmime.cpp:195
 #, fuzzy, kde-format
 #| msgid "Ignored file extensions:"
 msgid "Enter additional audio file extensions."
 msgstr "Ignorisani nastavci datoteka:"
 
-#: utilities/setup/album/setupmime.cpp:257
+#: utilities/setup/album/setupmime.cpp:258
 #, kde-format
 msgid ""
 "<p>You have chosen to remove the following image formats from the list of "
@@ -37244,7 +37317,7 @@ msgstr ""
 msgid "Only one character is now supported as tag path separator"
 msgstr ""
 
-#: utilities/setup/metadata/setupmetadata.cpp:165
+#: utilities/setup/metadata/setupmetadata.cpp:171
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -37261,31 +37334,31 @@ msgstr ""
 "omogućava očuvanje ovih informacija pri pomjeranju ili slanju datoteka na "
 "druge sisteme.</para>"
 
-#: utilities/setup/metadata/setupmetadata.cpp:175
+#: utilities/setup/metadata/setupmetadata.cpp:181
 #, kde-format
 msgctxt "@label"
 msgid "Write This Information to the Metadata"
 msgstr "Napišite ovu informaciju na Meta-podatku"
 
-#: utilities/setup/metadata/setupmetadata.cpp:178
+#: utilities/setup/metadata/setupmetadata.cpp:184
 #, kde-format
 msgctxt "@option:check"
 msgid "Image tags"
 msgstr "Oznake slike"
 
-#: utilities/setup/metadata/setupmetadata.cpp:179
+#: utilities/setup/metadata/setupmetadata.cpp:185
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Turn on this option to store the image tags in the XMP and IPTC tags."
 msgstr "Uključite ovu opciju za pohranu oznaka slike u XMP i IPTC oznake."
 
-#: utilities/setup/metadata/setupmetadata.cpp:183
+#: utilities/setup/metadata/setupmetadata.cpp:189
 #, kde-format
 msgctxt "@option:check"
 msgid "Captions and title"
 msgstr "Naslovi i natpisi"
 
-#: utilities/setup/metadata/setupmetadata.cpp:184
+#: utilities/setup/metadata/setupmetadata.cpp:190
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -37295,13 +37368,13 @@ msgstr ""
 "Uključite ovu opciju za pohranu naziva slike u JFIF odjeljak za "
 "komentiranje, EXIF oznaku, XMP oznaku i IPTC oznaku."
 
-#: utilities/setup/metadata/setupmetadata.cpp:189
+#: utilities/setup/metadata/setupmetadata.cpp:195
 #, kde-format
 msgctxt "@option:check"
 msgid "Rating"
 msgstr "Ocjena"
 
-#: utilities/setup/metadata/setupmetadata.cpp:190
+#: utilities/setup/metadata/setupmetadata.cpp:196
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -37310,37 +37383,37 @@ msgid ""
 msgstr ""
 "Uključite ovu opciju za pohranu ocjene slike u EXIF oznaku i XMP oznake."
 
-#: utilities/setup/metadata/setupmetadata.cpp:194
+#: utilities/setup/metadata/setupmetadata.cpp:200
 #, kde-format
 msgctxt "@option:check"
 msgid "Pick label"
 msgstr "Izaberi etiketu"
 
-#: utilities/setup/metadata/setupmetadata.cpp:195
+#: utilities/setup/metadata/setupmetadata.cpp:201
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Turn on this option to store the image pick label in the XMP tags."
 msgstr "Uključite ovu opciju za pohranu etikete slike u XMP oznake."
 
-#: utilities/setup/metadata/setupmetadata.cpp:199
+#: utilities/setup/metadata/setupmetadata.cpp:205
 #, kde-format
 msgctxt "@option:check"
 msgid "Color label"
 msgstr "Oboji etiketu"
 
-#: utilities/setup/metadata/setupmetadata.cpp:200
+#: utilities/setup/metadata/setupmetadata.cpp:206
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Turn on this option to store the image color label in the XMP tags."
 msgstr "Uključite ovu opciju za pohranu boje etikete slike u XMP oznake."
 
-#: utilities/setup/metadata/setupmetadata.cpp:204
+#: utilities/setup/metadata/setupmetadata.cpp:210
 #, kde-format
 msgctxt "@option:check"
 msgid "Timestamps"
 msgstr "Vremenske oznake"
 
-#: utilities/setup/metadata/setupmetadata.cpp:205
+#: utilities/setup/metadata/setupmetadata.cpp:211
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -37350,13 +37423,13 @@ msgstr ""
 "Uključite ovu opciju za spremanje datuma i vremena slike u EXIF, XMP, i IPTC "
 "oznakama."
 
-#: utilities/setup/metadata/setupmetadata.cpp:209
+#: utilities/setup/metadata/setupmetadata.cpp:215
 #, kde-format
 msgctxt "@option:check"
 msgid "Metadata templates (Copyright etc.)"
 msgstr "Predlošci meta-podataka (Copyright itd)"
 
-#: utilities/setup/metadata/setupmetadata.cpp:210
+#: utilities/setup/metadata/setupmetadata.cpp:216
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -37366,13 +37439,13 @@ msgstr ""
 "Uključite ovu opciju za pohranu šablona metapodataka u XMP i IPTC oznake. "
 "Možete postaviti vrijednosti šablona na stranicu Postavke šablona."
 
-#: utilities/setup/metadata/setupmetadata.cpp:214
+#: utilities/setup/metadata/setupmetadata.cpp:220
 #, kde-format
 msgctxt "@option:check"
 msgid "Face Tags (including face areas)"
 msgstr "Oznake lica (uključujući oblasti lica)"
 
-#: utilities/setup/metadata/setupmetadata.cpp:215
+#: utilities/setup/metadata/setupmetadata.cpp:221
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -37381,19 +37454,19 @@ msgstr ""
 "Uključite ovu opciju za pohranu oznaka lika sa pravougaonicima oko lica u "
 "XMP oznake."
 
-#: utilities/setup/metadata/setupmetadata.cpp:239
+#: utilities/setup/metadata/setupmetadata.cpp:245
 #, kde-format
 msgctxt "@label"
 msgid "Reading and Writing Metadata"
 msgstr "Čitanje i pisanje meta-podataka"
 
-#: utilities/setup/metadata/setupmetadata.cpp:242
+#: utilities/setup/metadata/setupmetadata.cpp:248
 #, fuzzy, kde-format
 msgctxt "@option:check"
 msgid "Use lazy synchronization"
 msgstr "Koristi kompenzaciju crne tačke"
 
-#: utilities/setup/metadata/setupmetadata.cpp:244
+#: utilities/setup/metadata/setupmetadata.cpp:250
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -37402,66 +37475,13 @@ msgid ""
 "digikam exit"
 msgstr ""
 
-#: utilities/setup/metadata/setupmetadata.cpp:247
-#, kde-format
-msgctxt "@option:check"
-msgid "Read from sidecar files"
-msgstr "Čitaj sa datoteka \"prikolica\""
-
-#: utilities/setup/metadata/setupmetadata.cpp:249
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid ""
-"Turn on this option to read metadata from XMP sidecar files when reading "
-"metadata."
-msgstr ""
-"Uključite ovu opciju za čitanje metapodataka sa XMP datoteka \"prikolica\" "
-"prilikom čitanja metapodataka."
-
 #: utilities/setup/metadata/setupmetadata.cpp:253
-#, kde-format
-msgctxt "@option:check"
-msgid "Write to sidecar files"
-msgstr "Piši na datoteke \"prikolice\""
-
-#: utilities/setup/metadata/setupmetadata.cpp:255
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid ""
-"Turn on this option to save, as specified, metadata to XMP sidecar files."
-msgstr ""
-"Uključite ovu opciju za snimanje, kao što je utvrđeno, metapodataka u XMP "
-"prikolične datoteke."
-
-#: utilities/setup/metadata/setupmetadata.cpp:259
-#, kde-format
-msgid "Write to XMP sidecar for read-only image only"
-msgstr ""
-"Piši na XMP \"prikolice\" samo u slučaju slika za koje je onemogućena izmjena"
-
-#: utilities/setup/metadata/setupmetadata.cpp:260
-#, kde-format
-msgid "Write to XMP sidecar only"
-msgstr "Pišite samo na XMP prikolicu"
-
-#: utilities/setup/metadata/setupmetadata.cpp:261
-#, kde-format
-msgid "Write to image and XMP Sidecar"
-msgstr "Pišite na sliku i XMP prikolicu"
-
-#: utilities/setup/metadata/setupmetadata.cpp:262
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Specify the exact mode of XMP sidecar writing"
-msgstr "Navedite tačan način XMP bočne prikolice za pisanje"
-
-#: utilities/setup/metadata/setupmetadata.cpp:269
 #, kde-format
 msgctxt "@option:check"
 msgid "If possible write Metadata to RAW files (experimental)"
 msgstr "Ako je moguće pišite Metapodatke na RAW datoteke (eksperimentalno)"
 
-#: utilities/setup/metadata/setupmetadata.cpp:270
+#: utilities/setup/metadata/setupmetadata.cpp:254
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -37473,13 +37493,13 @@ msgstr ""
 "značajka zahtijeva Exiv2 dijeljenu biblioteku, verzije >= 0.18.0. Još uvijek "
 "je eksperimentalna, te je podrazumijevano isključena."
 
-#: utilities/setup/metadata/setupmetadata.cpp:276
+#: utilities/setup/metadata/setupmetadata.cpp:260
 #, kde-format
 msgctxt "@option:check"
 msgid "&Update file timestamp when files are modified"
 msgstr "&Ažuriraj vremensku oznaku datoteke kada su datoteke modifikovane"
 
-#: utilities/setup/metadata/setupmetadata.cpp:278
+#: utilities/setup/metadata/setupmetadata.cpp:262
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -37494,13 +37514,13 @@ msgstr ""
 "aplikacijama koje koriste svojstva vremenskih oznaka datoteke za otkrivanje "
 "izmjena datoteke automatski."
 
-#: utilities/setup/metadata/setupmetadata.cpp:283
+#: utilities/setup/metadata/setupmetadata.cpp:267
 #, fuzzy, kde-format
 msgctxt "@option:check"
 msgid "&Rescan file when files are modified"
 msgstr "&Ažuriraj vremensku oznaku datoteke kada su datoteke modifikovane"
 
-#: utilities/setup/metadata/setupmetadata.cpp:285
+#: utilities/setup/metadata/setupmetadata.cpp:269
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -37510,49 +37530,49 @@ msgid ""
 "when digiKam starts."
 msgstr ""
 
-#: utilities/setup/metadata/setupmetadata.cpp:345
+#: utilities/setup/metadata/setupmetadata.cpp:326
 #, kde-format
 msgctxt "@title:tab"
 msgid "Behavior"
 msgstr "Ponašanje"
 
-#: utilities/setup/metadata/setupmetadata.cpp:355
+#: utilities/setup/metadata/setupmetadata.cpp:336
 #, kde-format
 msgctxt "@label"
 msgid "When rotating a file"
 msgstr "Kada rotirate datoteku"
 
-#: utilities/setup/metadata/setupmetadata.cpp:359
+#: utilities/setup/metadata/setupmetadata.cpp:340
 #, kde-format
 msgctxt "@option:radio"
 msgid "Rotate by only setting a flag"
 msgstr "Rotiraj za samo postavljane zastave"
 
-#: utilities/setup/metadata/setupmetadata.cpp:360
+#: utilities/setup/metadata/setupmetadata.cpp:341
 #, kde-format
 msgctxt "@option:radio"
 msgid "Rotate by changing the content if possible"
 msgstr "Rotirajte promjenom sadržaja ako je moguće"
 
-#: utilities/setup/metadata/setupmetadata.cpp:361
+#: utilities/setup/metadata/setupmetadata.cpp:342
 #, kde-format
 msgctxt "@option:check"
 msgid "Even allow lossy rotation if necessary"
 msgstr "Čak dopustite gubljenje rotacije ako je potrebno"
 
-#: utilities/setup/metadata/setupmetadata.cpp:362
+#: utilities/setup/metadata/setupmetadata.cpp:343
 #, kde-format
 msgctxt "@option:check"
 msgid "Write flag to metadata if possible"
 msgstr "Napišite zastavu metapodataka ako je moguće"
 
-#: utilities/setup/metadata/setupmetadata.cpp:374
+#: utilities/setup/metadata/setupmetadata.cpp:355
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Rotate files only by changing a flag, not touching the pixel data"
 msgstr "Rotirajte datoteke samo promjenom zastave, bez dodirivanja piksela"
 
-#: utilities/setup/metadata/setupmetadata.cpp:376
+#: utilities/setup/metadata/setupmetadata.cpp:357
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -37573,13 +37593,13 @@ msgstr ""
 "zastavica na metapodatke ako želite dijeliti svoje datoteke van digiKam-a.</"
 "para>"
 
-#: utilities/setup/metadata/setupmetadata.cpp:385
+#: utilities/setup/metadata/setupmetadata.cpp:366
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "If possible rotate files by changing the pixel data"
 msgstr "Ako je moguće rotirajte datoteke promjenom piksela"
 
-#: utilities/setup/metadata/setupmetadata.cpp:387
+#: utilities/setup/metadata/setupmetadata.cpp:368
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -37601,7 +37621,7 @@ msgstr ""
 "čitanje, a ne i pisanje, te će oni biti rotirani samo postavljanjem "
 "zastavice.</para>"
 
-#: utilities/setup/metadata/setupmetadata.cpp:397
+#: utilities/setup/metadata/setupmetadata.cpp:378
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -37611,7 +37631,7 @@ msgstr ""
 "Rotirajte datoteke promjenom piksela, čak i ako će zbog operacije nastati "
 "gubitak kvalitete"
 
-#: utilities/setup/metadata/setupmetadata.cpp:399
+#: utilities/setup/metadata/setupmetadata.cpp:380
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -37624,7 +37644,7 @@ msgstr ""
 "omogućavanje rotacije sa gubicima. Ako nije omogućena, ove datoteke će biti "
 "rotirane zastavicom."
 
-#: utilities/setup/metadata/setupmetadata.cpp:405
+#: utilities/setup/metadata/setupmetadata.cpp:386
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -37634,7 +37654,7 @@ msgstr ""
 "Kada rotirate datoteku postavljanjem zastava, također promijenite ovu "
 "zastavu u metapodacima datoteke"
 
-#: utilities/setup/metadata/setupmetadata.cpp:407
+#: utilities/setup/metadata/setupmetadata.cpp:388
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -37645,36 +37665,36 @@ msgstr ""
 "biti prikazana rotirana. Omogućite ovu opciju da dozvolite uređivanje ovog "
 "polja. "
 
-#: utilities/setup/metadata/setupmetadata.cpp:449
+#: utilities/setup/metadata/setupmetadata.cpp:430
 #, kde-format
 msgctxt "@title:tab"
 msgid "Rotation"
 msgstr "Rotacija"
 
-#: utilities/setup/metadata/setupmetadata.cpp:456
+#: utilities/setup/metadata/setupmetadata.cpp:437
 #, kde-format
 msgctxt "@info:label"
 msgid "Select Metadata Fields to Be Displayed"
 msgstr "Odaberite Polja Metapodataka koja će se prikazati"
 
-#: utilities/setup/metadata/setupmetadata.cpp:470
+#: utilities/setup/metadata/setupmetadata.cpp:451
 #, fuzzy, kde-format
 #| msgid "Views"
 msgctxt "@title:tab"
 msgid "Views"
 msgstr "Pogledi"
 
-#: utilities/setup/metadata/setupmetadata.cpp:479
+#: utilities/setup/metadata/setupmetadata.cpp:460
 #, kde-format
 msgid "Baloo Desktop Search"
 msgstr "Baloo Pretraga radne površine"
 
-#: utilities/setup/metadata/setupmetadata.cpp:483
+#: utilities/setup/metadata/setupmetadata.cpp:464
 #, kde-format
 msgid "Store metadata from digiKam in Baloo"
 msgstr "Pohranite metapodatke iz digiKam-a u Baloo"
 
-#: utilities/setup/metadata/setupmetadata.cpp:484
+#: utilities/setup/metadata/setupmetadata.cpp:465
 #, kde-format
 msgid ""
 "Turn on this option to push rating, comments and tags from digiKam into the "
@@ -37683,12 +37703,12 @@ msgstr ""
 "Uključite ovu opciju za smještanje procjene, komentara i oznaka iz digiKam-a "
 "u Baloo spremište"
 
-#: utilities/setup/metadata/setupmetadata.cpp:488
+#: utilities/setup/metadata/setupmetadata.cpp:469
 #, kde-format
 msgid "Read metadata from Baloo"
 msgstr "Pročitaj metapodatke iz Baloo-a"
 
-#: utilities/setup/metadata/setupmetadata.cpp:489
+#: utilities/setup/metadata/setupmetadata.cpp:470
 #, kde-format
 msgid ""
 "Turn on this option if you want to apply changes to rating, comments and "
@@ -37699,13 +37719,13 @@ msgstr ""
 "oznake napravljene u Baloo-u u dikiKam-ovo spremište metapodataka. Molimo "
 "primjetite da metapodaci slike neće biti izmijenjeni automatski."
 
-#: utilities/setup/metadata/setupmetadata.cpp:496
+#: utilities/setup/metadata/setupmetadata.cpp:477
 #, kde-format
 msgctxt "@title:tab"
 msgid "Baloo"
 msgstr "Baloo"
 
-#: utilities/setup/metadata/setupmetadata.cpp:512
+#: utilities/setup/metadata/setupmetadata.cpp:493
 #, kde-format
 msgid ""
 "<p><a href='http://community.kde.org/Baloo'>Baloo</a> provides the basis to "
@@ -37721,7 +37741,108 @@ msgstr ""
 "sinhronizirati metapodatke spašene digiKam-ovom prostranom radnom površinom "
 "sa Baloo pretragom radne površine.</p> "
 
-#: utilities/setup/metadata/setupmetadata.cpp:725
+#: utilities/setup/metadata/setupmetadata.cpp:531
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Reading and Writing Metadata"
+msgctxt "@label"
+msgid "Reading and Writing to Sidecars"
+msgstr "Čitanje i pisanje meta-podataka"
+
+#: utilities/setup/metadata/setupmetadata.cpp:534
+#, kde-format
+msgctxt "@option:check"
+msgid "Read from sidecar files"
+msgstr "Čitaj sa datoteka \"prikolica\""
+
+#: utilities/setup/metadata/setupmetadata.cpp:536
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Turn on this option to read metadata from XMP sidecar files when reading "
+"metadata."
+msgstr ""
+"Uključite ovu opciju za čitanje metapodataka sa XMP datoteka \"prikolica\" "
+"prilikom čitanja metapodataka."
+
+#: utilities/setup/metadata/setupmetadata.cpp:540
+#, kde-format
+msgctxt "@option:check"
+msgid "Write to sidecar files"
+msgstr "Piši na datoteke \"prikolice\""
+
+#: utilities/setup/metadata/setupmetadata.cpp:542
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Turn on this option to save, as specified, metadata to XMP sidecar files."
+msgstr ""
+"Uključite ovu opciju za snimanje, kao što je utvrđeno, metapodataka u XMP "
+"prikolične datoteke."
+
+#: utilities/setup/metadata/setupmetadata.cpp:546
+#, kde-format
+msgid "Write to XMP sidecar for read-only image only"
+msgstr ""
+"Piši na XMP \"prikolice\" samo u slučaju slika za koje je onemogućena izmjena"
+
+#: utilities/setup/metadata/setupmetadata.cpp:547
+#, kde-format
+msgid "Write to XMP sidecar only"
+msgstr "Pišite samo na XMP prikolicu"
+
+#: utilities/setup/metadata/setupmetadata.cpp:548
+#, kde-format
+msgid "Write to image and XMP Sidecar"
+msgstr "Pišite na sliku i XMP prikolicu"
+
+#: utilities/setup/metadata/setupmetadata.cpp:549
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Specify the exact mode of XMP sidecar writing"
+msgstr "Navedite tačan način XMP bočne prikolice za pisanje"
+
+#: utilities/setup/metadata/setupmetadata.cpp:568
+#, kde-format
+msgid ""
+"<p>Add file types to be recognised as sidecars.</p><p>digiKam (optionally) "
+"writes metadata to *.xmp sidecar files. Other programs might use different "
+"types, which can be specified below. digiKam will neither display these nor "
+"read from or write to them. But whenever a matching album item (e.g. \"image."
+"dng\" for \"image.dng.pp3\") is renamed, moved, copied or deleted, the same "
+"operation will be doneon these sidecar files.</p><p>Multiple extensions must "
+"be separated by a semicolon or a space.</p>"
+msgstr ""
+
+#: utilities/setup/metadata/setupmetadata.cpp:584
+#, kde-format
+msgid ""
+"<p>Here you can add extra extensions of sidecars files to be processed "
+"alongside regular items. These files won't be visible, but regarded as an "
+"extension of the main file.Just write \"xyz abc\" to support files with the "
+"*.xyz and *.abc extensions. The internally used sidecars type *.xmp is "
+"always included.</p>"
+msgstr ""
+
+#: utilities/setup/metadata/setupmetadata.cpp:592
+#, fuzzy, kde-format
+#| msgid "Enter the editorial usage instructions."
+msgid "Enter additional sidecars file extensions."
+msgstr "Unesite editorijalne instrukcije za korištenje."
+
+#: utilities/setup/metadata/setupmetadata.cpp:595
+#, fuzzy, kde-format
+#| msgid "Enter the editorial usage instructions."
+msgid "Additional &sidecar file extensions"
+msgstr "Unesite editorijalne instrukcije za korištenje."
+
+#: utilities/setup/metadata/setupmetadata.cpp:610
+#, kde-format
+msgctxt "@title:tab"
+msgid "Sidecars"
+msgstr ""
+
+#: utilities/setup/metadata/setupmetadata.cpp:801
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -37880,14 +38001,14 @@ msgstr ""
 "Napomena: obrada sličice može potrajati. Možete pčeti ovaj posao kasnije iz "
 "\"Alati-Održavanje\" menija."
 
-#: utilities/setup/setupdatabase.cpp:113
+#: utilities/setup/setupdatabase.cpp:114
 #, fuzzy, kde-format
 #| msgid "Database Statistics"
 msgctxt "@title:tab"
 msgid "Database Settings"
 msgstr "Statistike baze podataka"
 
-#: utilities/setup/setupdatabase.cpp:121
+#: utilities/setup/setupdatabase.cpp:122
 #, kde-format
 msgid ""
 "<p>Set the names of directories that you want to ignore from your photo "
@@ -37900,7 +38021,7 @@ msgid ""
 "default prefix it with a minus, e.g. -@eaDir.</p>"
 msgstr ""
 
-#: utilities/setup/setupdatabase.cpp:139
+#: utilities/setup/setupdatabase.cpp:140
 #, fuzzy, kde-format
 #| msgid ""
 #| "Additional &image file extensions (<a href='image'>Currently-supported "
@@ -37912,20 +38033,20 @@ msgstr ""
 "Dopunske ekstenzije &slikovne datoteke (<a href='image'>Trenutno podržani "
 "tipovi</a>):"
 
-#: utilities/setup/setupdatabase.cpp:144
+#: utilities/setup/setupdatabase.cpp:145
 #, kde-format
 msgid ""
 "Enter directories that you want to ignore from adding to your collections."
 msgstr ""
 
-#: utilities/setup/setupdatabase.cpp:165
+#: utilities/setup/setupdatabase.cpp:166
 #, fuzzy, kde-format
 #| msgid "Ignore grouping"
 msgctxt "@title:tab"
 msgid "Ignored Directories"
 msgstr "Zanemari grupiranje"
 
-#: utilities/setup/setupdatabase.cpp:260
+#: utilities/setup/setupdatabase.cpp:262
 #, fuzzy, kde-format
 msgctxt "@info"
 msgid ""
@@ -37940,19 +38061,19 @@ msgstr ""
 "svoju bazu podataka sa verzijom digiKama starijom od 2.0.</note></para> "
 "<para>Da li želite započeti ažuriranje?</para>"
 
-#: utilities/setup/setupdatabase.cpp:275
+#: utilities/setup/setupdatabase.cpp:277
 #, kde-format
 msgctxt "@title:group"
 msgid "Updates"
 msgstr "Nadogradnje"
 
-#: utilities/setup/setupdatabase.cpp:278
+#: utilities/setup/setupdatabase.cpp:280
 #, kde-format
 msgctxt "@action:button"
 msgid "Update File Hashes"
 msgstr "Ažuriraj kontrolne sume datoteka"
 
-#: utilities/setup/setupdatabase.cpp:280
+#: utilities/setup/setupdatabase.cpp:282
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -37969,14 +38090,14 @@ msgstr ""
 "ove nadogradnje, nećete moći koristiti svoju bazu podataka sa verzijom "
 "digiKama starijom od 2.0.</note>"
 
-#: utilities/setup/setupdatabase.cpp:289
+#: utilities/setup/setupdatabase.cpp:291
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Get information about <interface>Update File Hashes</interface>"
 msgstr ""
 "Primi informacije o opciji <interface>Ažuriraj ključeve datoteka</interface>"
 
-#: utilities/setup/setupdatabase.cpp:313
+#: utilities/setup/setupdatabase.cpp:315
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>Files with these extensions will be recognized as movie files and "
@@ -38575,24 +38696,24 @@ msgstr ""
 "zatvaranja, ili je onemogućite da biste sačuvali slike koje su trenutno na "
 "osvijetljenoj tabli."
 
-#: utilities/setup/setupmisc.cpp:115
+#: utilities/setup/setupmisc.cpp:130
 #, kde-format
 msgid "String comparison type:"
 msgstr "Način poređenja stringova:"
 
-#: utilities/setup/setupmisc.cpp:117
+#: utilities/setup/setupmisc.cpp:132
 #, kde-format
 msgctxt "method to compare strings"
 msgid "Natural"
 msgstr "Prirodan"
 
-#: utilities/setup/setupmisc.cpp:118
+#: utilities/setup/setupmisc.cpp:133
 #, kde-format
 msgctxt "method to compare strings"
 msgid "Normal"
 msgstr "Normalan"
 
-#: utilities/setup/setupmisc.cpp:119
+#: utilities/setup/setupmisc.cpp:134
 #, kde-format
 msgid ""
 "<qt>Sets the way in which strings are compared inside digiKam. This eg. "
@@ -38611,27 +38732,27 @@ msgstr ""
 "stil ako želite npr. dati naslov albumu koristeći ISO datume (201006 ili "
 "20090523) i ako albumi trebaju biti sortirani na osnovu ovih datuma.</qt>"
 
-#: utilities/setup/setupmisc.cpp:129
+#: utilities/setup/setupmisc.cpp:144
 #, kde-format
 msgid "Confirm when moving items to the &trash"
 msgstr "Potvrda kada se pomjeraju stvari u &smeće"
 
-#: utilities/setup/setupmisc.cpp:130
+#: utilities/setup/setupmisc.cpp:145
 #, kde-format
 msgid "Confirm when permanently deleting items"
 msgstr "Potvrda kada su trajno obrisane stvari"
 
-#: utilities/setup/setupmisc.cpp:131
+#: utilities/setup/setupmisc.cpp:146
 #, kde-format
 msgid "Do not confirm when applying changes in the &right sidebar"
 msgstr "Prilikom primjene izmjena, ne potvrđujte ih u &desnoj bočnoj traci"
 
-#: utilities/setup/setupmisc.cpp:132
+#: utilities/setup/setupmisc.cpp:147
 #, kde-format
 msgid "&Scan for new items at startup (makes startup slower)"
 msgstr ""
 
-#: utilities/setup/setupmisc.cpp:133
+#: utilities/setup/setupmisc.cpp:148
 #, kde-format
 msgid ""
 "Set this option to force digiKam to scan all collections for new items to\n"
@@ -38648,12 +38769,12 @@ msgid ""
 "a manual scan through the maintenance tool at the right moment."
 msgstr ""
 
-#: utilities/setup/setupmisc.cpp:142
+#: utilities/setup/setupmisc.cpp:157
 #, kde-format
 msgid "Remove obsolete core database objects (makes startup slower)"
 msgstr ""
 
-#: utilities/setup/setupmisc.cpp:143
+#: utilities/setup/setupmisc.cpp:158
 #, kde-format
 msgid ""
 "Set this option to force digiKam to clean up the core database from obsolete "
@@ -38666,17 +38787,17 @@ msgid ""
 "For clean up routines for other databases, please use the maintenance."
 msgstr ""
 
-#: utilities/setup/setupmisc.cpp:154
+#: utilities/setup/setupmisc.cpp:169
 #, kde-format
 msgid "Show only face tags for assigning names in people sidebar"
 msgstr ""
 
-#: utilities/setup/setupmisc.cpp:158
+#: utilities/setup/setupmisc.cpp:173
 #, kde-format
 msgid "Lower bound for minimum similarity:"
 msgstr ""
 
-#: utilities/setup/setupmisc.cpp:164
+#: utilities/setup/setupmisc.cpp:179
 #, kde-format
 msgid ""
 "Select here the lower bound of the minimum similarity threshold for fuzzy "
@@ -38684,13 +38805,46 @@ msgid ""
 "than 40 can make the search <b>really</b> slow."
 msgstr ""
 
-#: utilities/setup/setupmisc.cpp:176
+#: utilities/setup/setupmisc.cpp:191
 #, kde-format
 msgid ""
 "Set this option to configure how sidebar tab titles are visible. Use \"Only "
 "For Active Tab\" option if you use a small screen resolution as with a "
 "laptop computer."
 msgstr ""
+
+#: utilities/setup/setupmisc.cpp:264
+#, fuzzy, kde-format
+#| msgid "Behavior"
+msgctxt "@title:tab"
+msgid "Behaviour"
+msgstr "Ponašanje"
+
+#: utilities/setup/setupmisc.cpp:275
+#, kde-format
+msgid "Perform the following oparations on all group members:"
+msgstr ""
+
+#: utilities/setup/setupmisc.cpp:276
+#, kde-format
+msgid ""
+"When images are grouped the following operations<br/>are performed only on "
+"the displayed item (No)<br/>or on all the hidden items in the group as well "
+"(Yes).<br/>If Ask is selected, there will be a prompt every<br/>time this "
+"operation is executed."
+msgstr ""
+
+#: utilities/setup/setupmisc.cpp:284
+#, kde-format
+msgid "Ask"
+msgstr ""
+
+#: utilities/setup/setupmisc.cpp:329
+#, fuzzy, kde-format
+#| msgid "Group"
+msgctxt "@title:tab"
+msgid "Grouping"
+msgstr "Grupiši"
 
 #: utilities/setup/setupslideshow.cpp:106
 #, fuzzy, kde-format
@@ -40274,9 +40428,6 @@ msgstr "Ekran %1"
 #~ msgstr ""
 #~ "Dodaj koncept toka rada za učitavanje/snimanje redoslijeda postavki "
 #~ "između sesija u Batch Queue Manager-u;"
-
-#~ msgid "Add Crop tool to Batch Queue Manager;"
-#~ msgstr "Dodaj alatku za rezanje u Batch Queue Manager;"
 
 #~ msgid "Add Color Effect tool to Batch Queue Manager;"
 #~ msgstr "Dodaj alatku za mijenjanje utjecaja boja u Batch Queue Manager;"
