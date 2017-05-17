@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: digikam\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-05-16 02:54+0200\n"
+"POT-Creation-Date: 2017-05-17 04:53+0200\n"
 "PO-Revision-Date: 2015-02-26 21:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -794,7 +794,7 @@ msgid "N&ew..."
 msgstr "N&ova..."
 
 #: app/main/digikamapp.cpp:874 app/utils/editablesearchtreeview.cpp:67
-#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:299
+#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:336
 #: utilities/setup/metadata/advancedmetadatatab.cpp:355
 #, kde-format
 msgid "Delete"
@@ -2991,7 +2991,7 @@ msgstr "Oboji etiketu"
 #: app/views/tableview/tableview_column_digikam.cpp:78
 #: app/views/tableview/tableview_column_digikam.cpp:96
 #: libs/template/templatelist.cpp:83
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:217
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:298
 #: utilities/queuemanager/views/workflowlist.cpp:98
 #: utilities/searchwindow/searchfields.cpp:557
 #: utilities/setup/camera/setupcamera.cpp:299
@@ -10704,32 +10704,32 @@ msgstr "Puna slika"
 msgid "Image Region"
 msgstr "Oblast Slike"
 
-#: libs/imageproperties/imagepropertiesgpstab.cpp:151
+#: libs/imageproperties/imagepropertiesgpstab.cpp:147
 #, kde-format
 msgid "<b>Altitude</b>:"
 msgstr "<b>Visina</b>:"
 
-#: libs/imageproperties/imagepropertiesgpstab.cpp:152
+#: libs/imageproperties/imagepropertiesgpstab.cpp:148
 #, kde-format
 msgid "<b>Latitude</b>:"
 msgstr "<b>Geografska širina</b>:"
 
-#: libs/imageproperties/imagepropertiesgpstab.cpp:153
+#: libs/imageproperties/imagepropertiesgpstab.cpp:149
 #, kde-format
 msgid "<b>Longitude</b>:"
 msgstr "<b>Geografska dužina</b>:"
 
-#: libs/imageproperties/imagepropertiesgpstab.cpp:154
+#: libs/imageproperties/imagepropertiesgpstab.cpp:150
 #, kde-format
 msgid "<b>Date</b>:"
 msgstr "<b>Datum</b>:"
 
-#: libs/imageproperties/imagepropertiesgpstab.cpp:177
+#: libs/imageproperties/imagepropertiesgpstab.cpp:173
 #, kde-format
 msgid "See more information on the Internet"
 msgstr "Vidite više informacija na Internetu"
 
-#: libs/imageproperties/imagepropertiesgpstab.cpp:389
+#: libs/imageproperties/imagepropertiesgpstab.cpp:386
 #, kde-format
 msgid "Undefined"
 msgstr "Nedefinisano"
@@ -10882,7 +10882,6 @@ msgid "Used Filters"
 msgstr "Korišteni filteri"
 
 #: libs/imageproperties/imagepropertiesversionstab.cpp:161
-#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:295
 #, fuzzy, kde-format
 msgid "Open"
 msgstr "Otvori..."
@@ -12161,6 +12160,7 @@ msgid "<p>Select here the country where the photograph was taken.</p>"
 msgstr "<p>Ovdje označite državu gdje je fotografija snimljena.</p>"
 
 #: libs/template/templatepanel.cpp:310 libs/template/templateviewer.cpp:201
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:300
 #, kde-format
 msgid "Location"
 msgstr "Lokacija"
@@ -21840,36 +21840,36 @@ msgstr ""
 "za izvođenje\n"
 "nejasne pretrage"
 
-#: utilities/geolocation/editor/bookmark/bookmarknode.cpp:154
+#: utilities/geolocation/editor/bookmark/bookmarknode.cpp:178
 #, fuzzy, kde-format
 #| msgid "Database conversion canceled."
 msgid "The file is not an XBEL version 1.0 file."
 msgstr "Konverzija baze podataka otkazana."
 
-#: utilities/geolocation/editor/bookmark/bookmarknode.cpp:239
+#: utilities/geolocation/editor/bookmark/bookmarknode.cpp:263
 #, fuzzy, kde-format
 #| msgid "Unknown filter"
 msgid "Unknown title"
 msgstr "Nepoznati filter"
 
-#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:62
+#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:95
 #, fuzzy
 #| msgid "Bookmarks"
 msgid "Add Bookmark"
 msgstr "Obilježivači"
 
-#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:71
+#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:100
 msgid "Type a name for the bookmark, and choose where to keep it."
 msgstr ""
 
-#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:193
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:142
-#: utilities/geolocation/editor/searches/searchwidget.cpp:228
-#, kde-format
-msgid "Bookmarks"
+#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:208
+#: utilities/geolocation/editor/bookmark/gpsbookmarkowner.cpp:153
+#, fuzzy, kde-format
+#| msgid "Bookmarks"
+msgid "Edit Bookmarks"
 msgstr "Obilježivači"
 
-#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:194
+#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:226
 #: utilities/setup/album/setupcategory.cpp:107
 #: utilities/setup/camera/setupcamera.cpp:318
 #: utilities/setup/camera/setupcamera.cpp:434
@@ -21878,105 +21878,106 @@ msgstr "Obilježivači"
 msgid "&Remove"
 msgstr "&Ukloni"
 
-#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:195
-#, fuzzy
+#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:230
+#, fuzzy, kde-format
 #| msgid "Add Folders..."
 msgid "Add Folder"
 msgstr "Dodaj direktorije..."
 
-#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:327
+#: utilities/geolocation/editor/bookmark/bookmarksdlg.cpp:364
 #, fuzzy, kde-format
 #| msgid "By Folder"
 msgid "New Folder"
 msgstr "Po direktoriju"
 
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:57
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:59
 #, fuzzy, kde-format
 #| msgid "Remove tool"
 msgid "Remove Bookmark"
 msgstr "Ukloni alat"
 
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:94
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:98
 #, fuzzy, kde-format
 #| msgid "Bookmarks"
 msgid "Insert Bookmark"
 msgstr "Obilježivači"
 
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:111
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:147
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Save Changes"
 msgid "Name Change"
 msgstr "Snimi izmjene"
 
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:116
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:152
 #, fuzzy, kde-format
 #| msgid "Address:"
 msgid "Address Change"
 msgstr "Adresa:"
 
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:218
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:682
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:888
 #, fuzzy, kde-format
-#| msgid "Address:"
-msgid "Address"
-msgstr "Adresa:"
+#| msgid "Bookmarks"
+msgid "Loading Bookmark"
+msgstr "Obilježivači"
 
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:518
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:707
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:683
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:889
 #, kde-format
 msgid ""
 "Error when loading bookmarks on line %1, column %2:\n"
 "%3"
 msgstr ""
 
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:533
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:700
 #, fuzzy, kde-format
 #| msgid "Bookmarks"
 msgid "Toolbar Bookmarks"
 msgstr "Obilježivači"
 
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:544
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:711
 #, kde-format
 msgid "Menu"
 msgstr ""
 
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:697
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:877
 #, fuzzy, kde-format
 msgid "Open File"
 msgstr "Otvori direktorij"
 
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:699
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:720
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:879
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:906
 #, kde-format
 msgid "XBEL (*.xbel *.xml)"
 msgstr ""
 
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:712
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:896
 #, fuzzy, kde-format
 #| msgid "Import"
 msgid "Imported %1"
 msgstr "Uvezi"
 
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:718
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:903
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "Save in file"
 msgid "Save File"
 msgstr "Spasi u datoteku"
 
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:719
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:904
 #, fuzzy, kde-format
 #| msgid "Bookmarks"
 msgid "%1 Bookmarks.xbel"
 msgstr "Obilježivači"
 
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:726
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:913
 #, fuzzy, kde-format
 #| msgid "Export Tools"
 msgid "Export error"
 msgstr "Izvozni alati"
 
-#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:726
+#: utilities/geolocation/editor/bookmark/bookmarksmngr.cpp:913
 #, kde-format
 msgid "error saving bookmarks"
 msgstr ""
@@ -21990,13 +21991,7 @@ msgstr[0] "%1 slika namještena na '%2'"
 msgstr[1] "%1 slike namještene na '%2'"
 msgstr[2] "%1 slika namješteno na '%2'"
 
-#: utilities/geolocation/editor/bookmark/gpsbookmarkowner.cpp:156
-#, fuzzy, kde-format
-#| msgid "Bookmarks"
-msgid "Show All Bookmarks"
-msgstr "Obilježivači"
-
-#: utilities/geolocation/editor/bookmark/gpsbookmarkowner.cpp:162
+#: utilities/geolocation/editor/bookmark/gpsbookmarkowner.cpp:159
 #, fuzzy, kde-format
 #| msgid "Add Border..."
 msgid "Add Bookmark..."
@@ -22170,7 +22165,7 @@ msgid "#points"
 msgstr "#poeni"
 
 #: utilities/geolocation/editor/dialog/geolocationedit.cpp:264
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:479
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:478
 #, fuzzy, kde-format
 msgid "Geolocation Editor"
 msgstr "Geolokacijski filter"
@@ -22428,50 +22423,56 @@ msgstr "Neuspjelo snimanje oznaka na dokumentu."
 msgid "Unable to save changes to file"
 msgstr "Nije moguće snimiti promjene na dokumentu"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:108
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:109
 #: utilities/geolocation/editor/searches/searchwidget.cpp:196
 #, kde-format
 msgid "Copy coordinates"
 msgstr "Kopiraj koordinate"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:110
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:111
 #, kde-format
 msgid "Paste coordinates"
 msgstr "Umetni koordinate"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:112
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:113
 #, kde-format
 msgid "Remove coordinates"
 msgstr "Ukloni koordinate"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:113
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:114
 #, kde-format
 msgid "Remove altitude"
 msgstr "Ukloni nadmorsku visinu"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:114
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:115
 #, kde-format
 msgid "Remove uncertainty"
 msgstr "Ukloni nesigurnost"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:115
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:646
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:116
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:645
 #, kde-format
 msgid "Remove speed"
 msgstr "Ukloni brzinu"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:116
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:117
 #, kde-format
 msgid "Look up missing altitude values"
 msgstr "Pogledaj nedostajuće vrijednosti visine"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:420
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:750
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:143
+#: utilities/geolocation/editor/searches/searchwidget.cpp:228
+#, kde-format
+msgid "Bookmarks"
+msgstr "Obilježivači"
+
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:419
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:749
 #, kde-format
 msgid "GPS Sync"
 msgstr "GPS sinhronizacija"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:420
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:419
 #, kde-format
 msgid ""
 "Found more than one point on the clipboard - can only assign one point at a "
@@ -22480,42 +22481,42 @@ msgstr ""
 "Pronađeno više od jedne tačke na klipbordu - može se samo dodijeliti jedna "
 "tačka na vrijeme."
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:479
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:478
 #, kde-format
 msgid "Could not find any coordinates on the clipboard."
 msgstr "Ne mogu naći nijednu koordinatu na klipbordu."
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:483
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:482
 #, kde-format
 msgid "Coordinates pasted"
 msgstr "Koordinate zalijepljene"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:515
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:514
 #, kde-format
 msgid "Bookmark selected"
 msgstr "Zabilješke odabrane"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:625
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:624
 #, kde-format
 msgid "Remove coordinates information"
 msgstr "Ukloni informacije o koordinatama"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:630
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:629
 #, kde-format
 msgid "Remove altitude information"
 msgstr "Ukloni informacije o uzvišenjima"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:636
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:635
 #, kde-format
 msgid "Remove uncertainty information"
 msgstr "Ukloni nesigurne informacije"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:698
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:697
 #, kde-format
 msgid "Looking up altitudes"
 msgstr "Pregledaj uzvišenja"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:749
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:748
 #, kde-format
 msgid ""
 "Altitude lookup failed:\n"
@@ -22524,7 +22525,7 @@ msgstr ""
 "Pregled uzvišenja propao:\n"
 "%1"
 
-#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:756
+#: utilities/geolocation/editor/items/gpsimagelistcontextmenu.cpp:755
 #, kde-format
 msgid "Altitude looked up"
 msgstr "Uzvišenja su pregledana"
@@ -39704,6 +39705,16 @@ msgstr "Promijeni ekran"
 msgctxt "%1 is the screen number (0, 1, ...)"
 msgid "Screen %1"
 msgstr "Ekran %1"
+
+#, fuzzy
+#~| msgid "Address:"
+#~ msgid "Address"
+#~ msgstr "Adresa:"
+
+#, fuzzy
+#~| msgid "Bookmarks"
+#~ msgid "Show All Bookmarks"
+#~ msgstr "Obilježivači"
 
 #~ msgid ""
 #~ "Manage your photographs like a professional, with the power of open source"
