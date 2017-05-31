@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-05-25 02:57+0200\n"
+"POT-Creation-Date: 2017-05-31 06:44+0200\n"
 "PO-Revision-Date: 2015-02-24 23:27+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -8653,7 +8653,7 @@ msgstr "Linije"
 #: plugins/flake/pathshapes/ellipse/EllipseShapeConfigWidget.ui:35
 #: plugins/flake/pathshapes/spiral/SpiralShapeConfigWidget.ui:20
 #: plugins/impex/ppm/kis_wdg_options_ppm.ui:17
-#: plugins/tools/basictools/wdgmultihandtool.ui:35
+#: plugins/tools/basictools/wdgmultihandtool.ui:57
 #, kde-format
 msgid "Type:"
 msgstr "Tip:"
@@ -9076,8 +9076,10 @@ msgstr "Veličina"
 #. i18n: ectx: property (suffix), widget (KisIntParseSpinBox, intHalfWidth)
 #. i18n: ectx: property (suffix), widget (KisIntParseSpinBox, intHalfHeight)
 #. i18n: ectx: property (suffix), widget (KisIntParseSpinBox, radius)
+#. i18n: ectx: property (suffix), widget (KisDoubleParseSpinBox, spinMoveStep)
 #. i18n: ectx: property (suffix), widget (KisIntParseSpinBox, intX)
 #. i18n: ectx: property (suffix), widget (KisIntParseSpinBox, intY)
+#. i18n: ectx: property (suffix), widget (QSpinBox, patchRadius)
 #: libs/image/brushengine/kis_standard_uniform_properties_factory.cpp:60
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:593
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:596
@@ -9135,14 +9137,16 @@ msgstr "Veličina"
 #: plugins/tools/basictools/kis_tool_fill.cc:196
 #: plugins/tools/basictools/kis_tool_movetooloptionswidget.cpp:63
 #: plugins/tools/basictools/kis_tool_movetooloptionswidget.cpp:64
-#: plugins/tools/basictools/kis_tool_multihand.cpp:302
+#: plugins/tools/basictools/kis_tool_multihand.cpp:304
 #: plugins/tools/basictools/wdgcolorpicker.ui:64
-#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:231
-#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:234
+#: plugins/tools/basictools/wdgmovetool.ui:127
+#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:223
+#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:226
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:113
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:138
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:246
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:271
+#: plugins/tools/tool_smart_patch/kis_tool_smart_patch_options_widget.ui:130
 #: plugins/tools/tool_transform2/kis_tool_transform_config_widget.cpp:108
 #: plugins/tools/tool_transform2/kis_tool_transform_config_widget.cpp:109
 #: plugins/tools/tool_transform2/kis_tool_transform_config_widget.cpp:118
@@ -21184,10 +21188,12 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, CurveResetButton)
 #. i18n: ectx: property (text), widget (QPushButton, bnReset)
 #. i18n: ectx: property (text), widget (QPushButton, btnResetCustomLine)
+#. i18n: ectx: property (text), widget (QPushButton, resetOriginButton)
 #: libs/widgetutils/xmlgui/kedittoolbar.cpp:679
 #: plugins/dockers/artisticcolorselector/forms/wdgArtisticColorSelector.ui:32
 #: plugins/impex/video/video_export_options_dialog.ui:128
 #: plugins/paintops/libpaintop/forms/wdgcurveoption.ui:197
+#: plugins/tools/basictools/wdgmultihandtool.ui:97
 #, kde-format
 msgid "Reset"
 msgstr "Resetuj"
@@ -26748,7 +26754,7 @@ msgstr "Oblik:"
 #: plugins/filters/blur/wdg_lens_blur.ui:73
 #: plugins/filters/blur/wdg_lens_blur.ui:92
 #: plugins/filters/unsharp/wdgunsharp.ui:23
-#: plugins/tools/basictools/wdgmultihandtool.ui:58
+#: plugins/tools/basictools/wdgmultihandtool.ui:221
 #, kde-format
 msgid "Radius:"
 msgstr "Poluprečnik:"
@@ -26760,7 +26766,7 @@ msgstr "Poluprečnik:"
 #: plugins/filters/blur/wdg_lens_blur.ui:102
 #: plugins/filters/blur/wdg_lens_blur.ui:124
 #: plugins/paintops/libpaintop/forms/wdgpredefinedbrushchooser.ui:144
-#: plugins/tools/basictools/wdgmultihandtool.ui:77
+#: plugins/tools/basictools/wdgmultihandtool.ui:118
 #, kde-format
 msgid "Rotation:"
 msgstr "Rotacija:"
@@ -27869,7 +27875,9 @@ msgstr "Maska ublažavanja"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #. i18n: ectx: property (text), widget (QLabel, lblAmount)
+#. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/filters/unsharp/wdgunsharp.ui:68
+#: plugins/tools/basictools/wdgmovetool.ui:149
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:1952
 #, kde-format
 msgid "Amount:"
@@ -29159,7 +29167,7 @@ msgstr "Sjenka teksta"
 #. i18n: ectx: property (title), widget (QGroupBox, positionGroupBox)
 #. i18n: ectx: property (title), widget (QGroupBox, moveGroup)
 #: plugins/flake/textshape/dialogs/FontDecorations.ui:289
-#: plugins/tools/basictools/wdgmovetool.ui:138
+#: plugins/tools/basictools/wdgmovetool.ui:184
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:998
 #, kde-format
 msgid "Position"
@@ -33546,7 +33554,7 @@ msgstr "0%"
 #: plugins/paintops/filterop/kis_filterop_settings_widget.cpp:53
 #: plugins/paintops/hatching/kis_hatching_paintop_settings_widget.cpp:60
 #: plugins/paintops/tangentnormal/kis_tangent_normal_paintop_settings_widget.cpp:62
-#: plugins/tools/basictools/kis_tool_multihand.cpp:272
+#: plugins/tools/basictools/kis_tool_multihand.cpp:274
 #, kde-format
 msgid "Mirror"
 msgstr "Ogledalo"
@@ -33920,8 +33928,10 @@ msgstr "Swirl CCW"
 
 #. i18n: ectx: property (text), widget (QRadioButton, moveBtn)
 #. i18n: ectx: property (text), widget (QToolButton, liquifyMove)
+#. i18n: ectx: property (text), widget (QPushButton, moveOriginButton)
 #: plugins/paintops/deform/kis_deform_paintop_settings.cpp:172
 #: plugins/paintops/deform/wdgdeformoptions.ui:75
+#: plugins/tools/basictools/wdgmultihandtool.ui:78
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:1737
 #, kde-format
 msgid "Move"
@@ -35294,9 +35304,7 @@ msgstr "%1 s"
 msgid "360°"
 msgstr "360°"
 
-#. i18n: ectx: property (text), widget (QLabel, Fast)
 #: plugins/paintops/libpaintop/kis_dynamic_sensor.cc:262
-#: plugins/tools/tool_smart_patch/kis_tool_smart_patch_options_widget.ui:100
 #, kde-format
 msgid "Fast"
 msgstr "Brzo"
@@ -36140,6 +36148,12 @@ msgstr "Pomoćni magnetizam"
 msgid "Toggle Assistant"
 msgstr "Preklopi pomoćnika"
 
+#: plugins/tools/basictools/kis_tool_brush.cc:439
+#, fuzzy, kde-format
+#| msgid "Magnetify"
+msgid "Magnetism:"
+msgstr "Magnetizacija"
+
 #: plugins/tools/basictools/kis_tool_brush.cc:442
 #, fuzzy, kde-format
 msgid "Snap Single:"
@@ -36218,7 +36232,7 @@ msgid "Grow selection: "
 msgstr "Izbor rasta: "
 
 #: plugins/tools/basictools/kis_tool_fill.cc:191
-#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:209
+#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:200
 #, kde-format
 msgid "Feathering radius: "
 msgstr "Perjani poluprečnik: "
@@ -36409,22 +36423,22 @@ msgctxt "(qtundo-format)"
 msgid "Multibrush Stroke"
 msgstr "Potez sa više četki"
 
-#: plugins/tools/basictools/kis_tool_multihand.cpp:271
+#: plugins/tools/basictools/kis_tool_multihand.cpp:273
 #, kde-format
 msgid "Symmetry"
 msgstr "Simetrija"
 
-#: plugins/tools/basictools/kis_tool_multihand.cpp:273
+#: plugins/tools/basictools/kis_tool_multihand.cpp:275
 #, kde-format
 msgid "Translate"
 msgstr "Pomjeri"
 
-#: plugins/tools/basictools/kis_tool_multihand.cpp:274
+#: plugins/tools/basictools/kis_tool_multihand.cpp:276
 #, kde-format
 msgid "Snowflake"
 msgstr ""
 
-#: plugins/tools/basictools/kis_tool_multihand.h:102
+#: plugins/tools/basictools/kis_tool_multihand.h:103
 #, kde-format
 msgid "Multibrush Tool"
 msgstr "Alat s više četki"
@@ -36514,13 +36528,13 @@ msgid "Sample All Visible Layers"
 msgstr "Stopi sve vidljive slojeve"
 
 #. i18n: ectx: property (title), widget (QGroupBox, grpSelectionMethod)
-#: plugins/tools/basictools/wdgmovetool.ui:17
+#: plugins/tools/basictools/wdgmovetool.ui:23
 #, kde-format
 msgid "Selection Mode"
 msgstr "Režim izbora"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioSelectedLayer)
-#: plugins/tools/basictools/wdgmovetool.ui:23
+#: plugins/tools/basictools/wdgmovetool.ui:29
 #, kde-format
 msgid ""
 "Move the layer that you have currently selected in the layerbox with its "
@@ -36530,14 +36544,14 @@ msgstr ""
 "maskama. Kratica: ctrl-klik."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioSelectedLayer)
-#: plugins/tools/basictools/wdgmovetool.ui:26
+#: plugins/tools/basictools/wdgmovetool.ui:32
 #, fuzzy, kde-format
 #| msgid "Move current layer"
 msgid "&Move current layer"
 msgstr "Pomjeri trenutni sloj"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioFirstLayer)
-#: plugins/tools/basictools/wdgmovetool.ui:36
+#: plugins/tools/basictools/wdgmovetool.ui:42
 #, kde-format
 msgid ""
 "Move the first layer with visible content at the place where you click. This "
@@ -36547,14 +36561,14 @@ msgstr ""
 "Ovo će, takođe, izabrati taj sloj u kutiji slojeva."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioFirstLayer)
-#: plugins/tools/basictools/wdgmovetool.ui:39
+#: plugins/tools/basictools/wdgmovetool.ui:45
 #, fuzzy, kde-format
 #| msgid "Move layer with content"
 msgid "Mo&ve layer with content"
 msgstr "Pomjeri sloj sa sadržajem"
 
 #. i18n: ectx: property (toolTip), widget (QRadioButton, radioGroup)
-#: plugins/tools/basictools/wdgmovetool.ui:49
+#: plugins/tools/basictools/wdgmovetool.ui:55
 #, kde-format
 msgid ""
 "Move the group containing the first layer that contains visible content. "
@@ -36564,54 +36578,48 @@ msgstr ""
 "Kratica: ctrl-shift-click."
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioGroup)
-#: plugins/tools/basictools/wdgmovetool.ui:52
+#: plugins/tools/basictools/wdgmovetool.ui:58
 #, fuzzy, kde-format
 #| msgid "Move the whole group"
 msgid "Move &the whole group"
 msgstr "Pomjeri cijelu grupu"
 
 #. i18n: ectx: property (title), widget (QGroupBox, grpMoveStep)
-#: plugins/tools/basictools/wdgmovetool.ui:65
+#: plugins/tools/basictools/wdgmovetool.ui:74
 #, fuzzy, kde-format
-msgid "Shortcut Move Distance"
-msgstr "Scalable distanca"
-
-#. i18n: ectx: property (toolTip), widget (KisDoubleParseSpinBox, spinMoveStep)
-#: plugins/tools/basictools/wdgmovetool.ui:71
-#, kde-format
-msgid "Number of pixels to move after move shortcut keypress."
-msgstr ""
+msgid "Move Shortcut"
+msgstr "Konfiguriši..."
 
 #. i18n: ectx: property (toolTip), widget (KisDoubleParseSpinBox, spinMoveScale)
-#: plugins/tools/basictools/wdgmovetool.ui:90
+#: plugins/tools/basictools/wdgmovetool.ui:86
 #, kde-format
 msgid "When holding shift, move keyboard shortcuts scale up by this amount."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, scaleLabel)
-#: plugins/tools/basictools/wdgmovetool.ui:106
+#: plugins/tools/basictools/wdgmovetool.ui:108
+#, fuzzy, kde-format
+#| msgid "Multiline"
+msgid "Multiplier:"
+msgstr "Višelinijski"
+
+#. i18n: ectx: property (toolTip), widget (KisDoubleParseSpinBox, spinMoveStep)
+#: plugins/tools/basictools/wdgmovetool.ui:124
 #, kde-format
-msgid "Large Move Scale"
+msgid "Number of pixels to move after move shortcut keypress."
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, chkShowCoordinates)
-#: plugins/tools/basictools/wdgmovetool.ui:116
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: plugins/tools/basictools/wdgmovetool.ui:162
 #, fuzzy, kde-format
-#| msgid "Show Decorations"
-msgid "Show coordinates on canvas"
-msgstr "Prikaži dekoracije"
-
-#. i18n: ectx: property (text), widget (QCheckBox, chkShowCoordinates)
-#: plugins/tools/basictools/wdgmovetool.ui:119
-#, fuzzy, kde-format
-#| msgid "Show Decorations"
-msgid "Show coordinates"
-msgstr "Prikaži dekoracije"
+#| msgid "Unit:"
+msgid "Unit:"
+msgstr "Jedinica:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_offsetX)
 #. i18n: ectx: property (toolTip), widget (KisIntParseSpinBox, translateXBox)
-#: plugins/tools/basictools/wdgmovetool.ui:176
-#: plugins/tools/basictools/wdgmovetool.ui:198
+#: plugins/tools/basictools/wdgmovetool.ui:234
+#: plugins/tools/basictools/wdgmovetool.ui:256
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:1036
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:1058
 #, kde-format
@@ -36620,7 +36628,7 @@ msgstr "Horizontalna translacija"
 
 #. i18n: ectx: property (text), widget (QLabel, label_rotateX)
 #. i18n: ectx: property (text), widget (QLabel, label_offsetX)
-#: plugins/tools/basictools/wdgmovetool.ui:182
+#: plugins/tools/basictools/wdgmovetool.ui:240
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:728
 #, fuzzy, kde-format
 #| msgid "x:"
@@ -36629,8 +36637,8 @@ msgstr "x:"
 
 #. i18n: ectx: property (toolTip), widget (KisIntParseSpinBox, translateYBox)
 #. i18n: ectx: property (toolTip), widget (QLabel, label_offsetY)
-#: plugins/tools/basictools/wdgmovetool.ui:214
-#: plugins/tools/basictools/wdgmovetool.ui:227
+#: plugins/tools/basictools/wdgmovetool.ui:272
+#: plugins/tools/basictools/wdgmovetool.ui:285
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:1074
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:1087
 #, kde-format
@@ -36639,45 +36647,55 @@ msgstr "Vertikalna translacija"
 
 #. i18n: ectx: property (text), widget (QLabel, label_rotateY)
 #. i18n: ectx: property (text), widget (QLabel, label_offsetY)
-#: plugins/tools/basictools/wdgmovetool.ui:230
+#: plugins/tools/basictools/wdgmovetool.ui:288
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:763
 #, fuzzy, kde-format
 #| msgid "y:"
 msgid "&y:"
 msgstr "y:"
 
+#. i18n: ectx: property (toolTip), widget (QCheckBox, chkShowCoordinates)
+#. i18n: ectx: property (text), widget (QCheckBox, chkShowCoordinates)
+#: plugins/tools/basictools/wdgmovetool.ui:303
+#: plugins/tools/basictools/wdgmovetool.ui:306
+#, fuzzy, kde-format
+#| msgid "Show Decorations"
+msgid "Show coordinates on canvas"
+msgstr "Prikaži dekoracije"
+
+#. i18n: ectx: property (text), widget (QCheckBox, showAxesCheckbox)
+#: plugins/tools/basictools/wdgmultihandtool.ui:153
+#, fuzzy, kde-format
+msgid "Show Origin"
+msgstr "Prikaži mrežu:"
+
 #. i18n: ectx: property (text), widget (QLabel, brushesLabel)
-#: plugins/tools/basictools/wdgmultihandtool.ui:45
+#: plugins/tools/basictools/wdgmultihandtool.ui:166
 #, fuzzy, kde-format
 #| msgid "Brushes"
 msgid "Brushes:"
 msgstr "Četke"
 
-#. i18n: ectx: property (text), widget (QCheckBox, verticalCheckbox)
-#: plugins/tools/basictools/wdgmultihandtool.ui:87
-#, fuzzy, kde-format
-#| msgid "Vertical"
-msgid "Vertical"
-msgstr "Vertikalno"
-
 #. i18n: ectx: property (text), widget (QCheckBox, horizontalCheckbox)
-#: plugins/tools/basictools/wdgmultihandtool.ui:94
+#: plugins/tools/basictools/wdgmultihandtool.ui:182
 #, fuzzy, kde-format
 #| msgid "Horizontal"
 msgid "Horizontal"
 msgstr "Horizontalno"
 
-#. i18n: ectx: property (text), widget (QPushButton, moveOriginButton)
-#: plugins/tools/basictools/wdgmultihandtool.ui:110
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: plugins/tools/basictools/wdgmultihandtool.ui:198
 #, fuzzy, kde-format
-msgid "Move Origin"
-msgstr "Pomakni sloj desno"
+#| msgid "Origin X:"
+msgid "Origin:"
+msgstr "Ishodište X:"
 
-#. i18n: ectx: property (text), widget (QCheckBox, showAxesCheckbox)
-#: plugins/tools/basictools/wdgmultihandtool.ui:145
+#. i18n: ectx: property (text), widget (QCheckBox, verticalCheckbox)
+#: plugins/tools/basictools/wdgmultihandtool.ui:208
 #, fuzzy, kde-format
-msgid "Show Origin"
-msgstr "Prikaži mrežu:"
+#| msgid "Vertical"
+msgid "Vertical"
+msgstr "Vertikalno"
 
 #. i18n: ectx: property (text), widget (QCheckBox, toggleEditMode)
 #: plugins/tools/defaulttool/connectionTool/ConnectionPointWidget.ui:30
@@ -37465,28 +37483,28 @@ msgstr "Opcije uzorka"
 msgid "Pattern editing"
 msgstr "Uređivanje uzorka"
 
-#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:59
+#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:58
 #, kde-format
 msgid "Contiguous Area Selection"
 msgstr "Izbor dodirne oblasti"
 
-#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:136
+#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:135
 msgctxt "(qtundo-format)"
 msgid "Select Contiguous Area"
 msgstr "Selektiraj susjednu oblast"
 
-#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:180
+#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:179
 #: plugins/tools/selectiontools/kis_tool_select_similar.cc:151
 #, kde-format
 msgid "Fuzziness: "
 msgstr "Nejasnoća: "
 
-#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:195
+#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:190
 #, kde-format
 msgid "Grow/shrink selection: "
 msgstr "Povećaj/Smanji izbor: "
 
-#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:222
+#: plugins/tools/selectiontools/kis_tool_select_contiguous.cc:214
 #, kde-format
 msgid "Limit to current layer"
 msgstr "Ograniči na tekući sloj"
@@ -37790,23 +37808,32 @@ msgstr "Stuart Martin"
 msgid "Smart Patch Tool"
 msgstr "Alat za ručno crtanje puta"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#. i18n: ectx: property (text), widget (QLabel, Fast)
 #: plugins/tools/tool_smart_patch/kis_tool_smart_patch_options_widget.ui:23
 #, fuzzy, kde-format
-msgid "Inpaint Tool"
-msgstr "Gradijent"
+#| msgctxt "(qtundo-format)"
+#| msgid "Paste"
+msgid "low/fast"
+msgstr "Umetni"
 
 #. i18n: ectx: property (text), widget (QLabel, Accurate)
-#: plugins/tools/tool_smart_patch/kis_tool_smart_patch_options_widget.ui:84
+#: plugins/tools/tool_smart_patch/kis_tool_smart_patch_options_widget.ui:46
+#, fuzzy, kde-format
+#| msgid "Flower"
+msgid "high/slow"
+msgstr "Cvijet"
+
+#. i18n: ectx: property (text), widget (QLabel, Fast_2)
+#: plugins/tools/tool_smart_patch/kis_tool_smart_patch_options_widget.ui:94
 #, kde-format
-msgid "Accurate"
+msgid "Accuracy:"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: plugins/tools/tool_smart_patch/kis_tool_smart_patch_options_widget.ui:114
+#. i18n: ectx: property (text), widget (QLabel, patchRadiusLabel)
+#: plugins/tools/tool_smart_patch/kis_tool_smart_patch_options_widget.ui:111
 #, fuzzy, kde-format
 #| msgid "Vertical Radius"
-msgid "Patch Radius"
+msgid "Patch Radius:"
 msgstr "Vertikalni Radijus"
 
 #: plugins/tools/tool_text/kis_tool_text.h:93
@@ -38315,6 +38342,23 @@ msgstr "Prikaži dekoracije"
 #, kde-format
 msgid "Work Recursively"
 msgstr "Radi rekurzivno"
+
+#, fuzzy
+#~ msgid "Shortcut Move Distance"
+#~ msgstr "Scalable distanca"
+
+#, fuzzy
+#~| msgid "Show Decorations"
+#~ msgid "Show coordinates"
+#~ msgstr "Prikaži dekoracije"
+
+#, fuzzy
+#~ msgid "Move Origin"
+#~ msgstr "Pomakni sloj desno"
+
+#, fuzzy
+#~ msgid "Inpaint Tool"
+#~ msgstr "Gradijent"
 
 #, fuzzy
 #~| msgid "Start Search From"
@@ -64886,23 +64930,6 @@ msgstr "Radi rekurzivno"
 #~ "translations"
 #~ msgid "faster"
 #~ msgstr "Umetni"
-
-#, fuzzy
-#~| msgctxt "(qtundo-format)"
-#~| msgid "Paste"
-#~ msgctxt ""
-#~ "(qtundo-format) h264 preset name, check simplescreenrecorder for standard "
-#~ "translations"
-#~ msgid "fast"
-#~ msgstr "Umetni"
-
-#, fuzzy
-#~| msgid "Flower"
-#~ msgctxt ""
-#~ "(qtundo-format) h264 preset name, check simplescreenrecorder for standard "
-#~ "translations"
-#~ msgid "slow"
-#~ msgstr "Cvijet"
 
 #, fuzzy
 #~| msgid "Flower"
