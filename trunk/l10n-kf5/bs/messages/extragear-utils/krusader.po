@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krusader\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-07-07 03:08+0200\n"
+"POT-Creation-Date: 2017-07-10 03:00+0200\n"
 "PO-Revision-Date: 2014-10-20 19:23+0000\n"
 "Last-Translator: Admir Becirbasic <abecirbasi1@etf.unsa.ba>\n"
 "Language-Team: <bhld@lists.linux.org.ba>\n"
@@ -983,7 +983,7 @@ msgstr "Direktoriji"
 #: krusader/BookMan/kraddbookmarkdlg.cpp:113
 #: krusader/BookMan/krbookmarkbutton.cpp:42
 #: krusader/BookMan/krbookmarkhandler.cpp:62
-#: krusader/Panel/listpanelactions.cpp:129
+#: krusader/Panel/listpanelactions.cpp:132
 #, kde-format
 msgid "Bookmarks"
 msgstr "Markeri"
@@ -1067,7 +1067,7 @@ msgid "Jump back"
 msgstr "Skoči unazad"
 
 #: krusader/BookMan/krbookmarkhandler.cpp:597 krusader/GUI/mediabutton.cpp:335
-#: krusader/Panel/krpopupmenu.cpp:131
+#: krusader/Panel/panelcontextmenu.cpp:132
 #, kde-format
 msgid "Open"
 msgstr "Otvori"
@@ -1080,9 +1080,10 @@ msgstr "Otvori u novoj kartici"
 #: krusader/BookMan/krbookmarkhandler.cpp:603
 #: krusader/Dialogs/krmaskchoice.cpp:103
 #: krusader/Dialogs/kurllistrequester.cpp:150
-#: krusader/DiskUsage/diskusage.cpp:746 krusader/GUI/kfnkeys.cpp:106
-#: krusader/Konfigurator/kgcolors.cpp:532 krusader/Panel/krpopupmenu.cpp:235
-#: krusader/Panel/listpanelactions.cpp:96
+#: krusader/DiskUsage/diskusage.cpp:746 krusader/GUI/kfnkeys.cpp:52
+#: krusader/Konfigurator/kgcolors.cpp:532
+#: krusader/Panel/listpanelactions.cpp:99
+#: krusader/Panel/panelcontextmenu.cpp:237
 #, kde-format
 msgid "Delete"
 msgstr "Obriši"
@@ -1689,7 +1690,7 @@ msgstr "Sljedeća"
 msgid "Previous"
 msgstr "Prethodna"
 
-#: krusader/DiskUsage/diskusage.cpp:808 krusader/GUI/kfnkeys.cpp:101
+#: krusader/DiskUsage/diskusage.cpp:808 krusader/GUI/kfnkeys.cpp:47
 #: krusader/Konfigurator/kgpanel.cpp:346
 #, kde-format
 msgid "View"
@@ -2564,46 +2565,40 @@ msgstr ""
 msgid "Execution mode"
 msgstr "Režim izvršavanja"
 
-#: krusader/GUI/kfnkeys.cpp:68
-#, kde-format
-msgid "Quit Krusader."
-msgstr "Završi Krusader."
-
-#: krusader/GUI/kfnkeys.cpp:100 krusader/Panel/krpopupmenu.cpp:224
-#: krusader/Panel/listpanelactions.cpp:88
+#: krusader/GUI/kfnkeys.cpp:46 krusader/Panel/listpanelactions.cpp:91
 #, kde-format
 msgid "Rename"
 msgstr "Preimenuj"
 
-#: krusader/GUI/kfnkeys.cpp:102
+#: krusader/GUI/kfnkeys.cpp:48
 #, kde-format
 msgid "Edit"
 msgstr "Uredi"
 
-#: krusader/GUI/kfnkeys.cpp:103
+#: krusader/GUI/kfnkeys.cpp:49
 #, kde-format
 msgid "Copy"
 msgstr "Kopiraj"
 
-#: krusader/GUI/kfnkeys.cpp:104
+#: krusader/GUI/kfnkeys.cpp:50
 #, kde-format
 msgid "Move"
 msgstr "Premjesti"
 
-#: krusader/GUI/kfnkeys.cpp:105
+#: krusader/GUI/kfnkeys.cpp:51
 #, kde-format
 msgid "Mkdir"
 msgstr "Mkdir"
 
-#: krusader/GUI/kfnkeys.cpp:107
+#: krusader/GUI/kfnkeys.cpp:53
 #, kde-format
 msgid "Term"
 msgstr "Uslov"
 
-#: krusader/GUI/kfnkeys.cpp:108
+#: krusader/GUI/kfnkeys.cpp:54 krusader/kractions.cpp:299
 #, kde-format
-msgid " Quit"
-msgstr " Završi"
+msgid "Quit"
+msgstr "Odustani"
 
 #: krusader/GUI/krremoteencodingmenu.cpp:124
 #, kde-format
@@ -2689,20 +2684,21 @@ msgid "Recordable CD/DVD-ROM"
 msgstr "CD/DVD-ROM sa snimanjem"
 
 #: krusader/GUI/mediabutton.cpp:342 krusader/MountMan/kmountman.cpp:429
-#: krusader/MountMan/kmountmangui.cpp:426 krusader/Panel/krpopupmenu.cpp:266
-#: krusader/useraction_examples.xml:22
+#: krusader/MountMan/kmountmangui.cpp:426
+#: krusader/Panel/panelcontextmenu.cpp:269 krusader/useraction_examples.xml:22
 #, kde-format
 msgid "Mount"
 msgstr "Montiraj"
 
 #: krusader/GUI/mediabutton.cpp:345 krusader/MountMan/kmountman.cpp:429
-#: krusader/MountMan/kmountmangui.cpp:431 krusader/Panel/krpopupmenu.cpp:264
+#: krusader/MountMan/kmountmangui.cpp:431
+#: krusader/Panel/panelcontextmenu.cpp:267
 #, kde-format
 msgid "Unmount"
 msgstr "Demontiraj"
 
 #: krusader/GUI/mediabutton.cpp:349 krusader/MountMan/kmountmangui.cpp:438
-#: krusader/Panel/krpopupmenu.cpp:268
+#: krusader/Panel/panelcontextmenu.cpp:271
 #, kde-format
 msgid "Eject"
 msgstr "Izbaci"
@@ -3441,7 +3437,7 @@ msgid "Statusbar, inactive background:"
 msgstr "Statusna traka, neaktivni pozadinski:"
 
 #: krusader/Konfigurator/kgcolors.cpp:257 krusader/Konfigurator/kgpanel.cpp:646
-#: krusader/Panel/krpopupmenu.cpp:161
+#: krusader/Panel/panelcontextmenu.cpp:163
 #, kde-format
 msgid "Preview"
 msgstr "Pregled"
@@ -3763,7 +3759,8 @@ msgstr "Obriši datoteke"
 msgid "Files will be permanently deleted."
 msgstr "Datoteke će biti trajno obrisane."
 
-#: krusader/Konfigurator/kggeneral.cpp:278 krusader/Panel/krpopupmenu.cpp:186
+#: krusader/Konfigurator/kggeneral.cpp:278
+#: krusader/Panel/panelcontextmenu.cpp:189
 #, kde-format
 msgid "Terminal"
 msgstr "Terminal"
@@ -5086,7 +5083,7 @@ msgid "Set the full path of the external applications"
 msgstr "Postavi punu putanju spoljašnjih aplikacija"
 
 #: krusader/Konfigurator/konfigurator.cpp:152
-#: krusader/Panel/krpopupmenu.cpp:197
+#: krusader/Panel/panelcontextmenu.cpp:199
 #: krusader/UserAction/useractionpopupmenu.cpp:31
 #, kde-format
 msgid "User Actions"
@@ -5328,7 +5325,7 @@ msgstr "Prikaži &skrivene datoteke"
 msgid "S&wap Panels"
 msgstr "&Razmijeni panele"
 
-#: krusader/kractions.cpp:219 krusader/Panel/krpopupmenu.cpp:280
+#: krusader/kractions.cpp:219 krusader/Panel/panelcontextmenu.cpp:283
 #, kde-format
 msgid "Empty Trash"
 msgstr "Isprazni smeće"
@@ -5485,43 +5482,43 @@ msgstr "Upravljanje korisničkim akcijama..."
 msgid "Select Remote Charset"
 msgstr "Izaberi udaljeni skup znakova"
 
-#: krusader/kractions.cpp:299
-#, kde-format
-msgid "Quit"
-msgstr "Odustani"
-
 #: krusader/kractions.cpp:300
+#, kde-format
+msgid "Quit Krusader."
+msgstr "Završi Krusader."
+
+#: krusader/kractions.cpp:302
 #, kde-format
 msgid "Popular URLs..."
 msgstr "Popularni URL-ovi..."
 
-#: krusader/kractions.cpp:301
+#: krusader/kractions.cpp:303
 #, fuzzy, kde-format
 #| msgid "Toggle Fullscreen Terminal Emulator"
 msgid "Toggle Fullscreen Embedded Terminal"
 msgstr "Servisni terminalni emulator preko cijelog ekrana"
 
-#: krusader/kractions.cpp:305
+#: krusader/kractions.cpp:307
 #, kde-format
 msgid "Move Focus Up"
 msgstr "Pomjeri fokus gore"
 
-#: krusader/kractions.cpp:306
+#: krusader/kractions.cpp:308
 #, kde-format
 msgid "Move Focus Down"
 msgstr "Pomjeri fokus dole"
 
-#: krusader/kractions.cpp:321
+#: krusader/kractions.cpp:323
 #, kde-format
 msgid "Setup Krusader the way you like it"
 msgstr "Podesite Krusader kako vama odgovara"
 
-#: krusader/kractions.cpp:322
+#: krusader/kractions.cpp:324
 #, kde-format
 msgid "Search for files"
 msgstr "Pretraga za datotekama"
 
-#: krusader/kractions.cpp:328
+#: krusader/kractions.cpp:330
 #, kde-format
 msgid "JavaScript Console..."
 msgstr "JavaScript konzola..."
@@ -7155,122 +7152,6 @@ msgstr "Klasično"
 msgid "Custom layout: \"%1\""
 msgstr "Poseban raspored: \"%1\""
 
-#: krusader/Panel/krpopupmenu.cpp:124
-#, kde-format
-msgid "Open/Run"
-msgstr "Otvori/Pokreni"
-
-#: krusader/Panel/krpopupmenu.cpp:131
-#, kde-format
-msgid "Run"
-msgstr "Pokreni"
-
-#: krusader/Panel/krpopupmenu.cpp:134 krusader/Panel/krpopupmenu.cpp:137
-#, kde-format
-msgid "Open in New Tab"
-msgstr "Otvori u novoj kartici"
-
-#: krusader/Panel/krpopupmenu.cpp:147
-#, kde-format
-msgid "Browse"
-msgstr ""
-
-#: krusader/Panel/krpopupmenu.cpp:150
-#, fuzzy, kde-format
-#| msgid "T&est Archive"
-msgid "Browse Archive"
-msgstr "T&estiraj arhivu"
-
-#: krusader/Panel/krpopupmenu.cpp:187
-#, kde-format
-msgid "Other..."
-msgstr "Drugo..."
-
-#: krusader/Panel/krpopupmenu.cpp:190
-#, kde-format
-msgid "Open With"
-msgstr "Otvori pomoću"
-
-#: krusader/Panel/krpopupmenu.cpp:218
-#, kde-format
-msgid "Copy..."
-msgstr "Kopiraj..."
-
-#: krusader/Panel/krpopupmenu.cpp:220 krusader/Panel/listpanelactions.cpp:92
-#, kde-format
-msgid "Move..."
-msgstr "Premjesti..."
-
-#: krusader/Panel/krpopupmenu.cpp:231
-#, kde-format
-msgid "Move to Trash"
-msgstr "Baci u smeće"
-
-#: krusader/Panel/krpopupmenu.cpp:245 krusader/Panel/listpanelactions.cpp:110
-#, kde-format
-msgid "New Symlink..."
-msgstr "Nova simbolička veza..."
-
-#: krusader/Panel/krpopupmenu.cpp:246
-#, kde-format
-msgid "New Hardlink..."
-msgstr "Nova tvrda veza (hardlink)..."
-
-#: krusader/Panel/krpopupmenu.cpp:248
-#, kde-format
-msgid "Redirect Link..."
-msgstr "Preusmjeri vezu..."
-
-#: krusader/Panel/krpopupmenu.cpp:251
-#, kde-format
-msgid "Link Handling"
-msgstr "Rad sa vezama"
-
-#: krusader/Panel/krpopupmenu.cpp:274
-#, kde-format
-msgid "Send by Email"
-msgstr "Pošalji e-poštom"
-
-#: krusader/Panel/krpopupmenu.cpp:279
-#, kde-format
-msgid "Restore"
-msgstr "Vrati"
-
-#: krusader/Panel/krpopupmenu.cpp:286
-#, kde-format
-msgid "Synchronize Selected Files..."
-msgstr "Sinhronizuj izabrane datoteke..."
-
-#: krusader/Panel/krpopupmenu.cpp:293
-#, kde-format
-msgid "Copy to Clipboard"
-msgstr "Kopiraj u clipboard"
-
-#: krusader/Panel/krpopupmenu.cpp:295
-#, kde-format
-msgid "Cut to Clipboard"
-msgstr "Izreži u clipboard"
-
-#: krusader/Panel/krpopupmenu.cpp:297 krusader/Panel/krpopupmenu.cpp:306
-#, kde-format
-msgid "Paste from Clipboard"
-msgstr "Umetni iz clipboarda"
-
-#: krusader/Panel/krpopupmenu.cpp:312
-#, kde-format
-msgid "Folder..."
-msgstr "Fascikla..."
-
-#: krusader/Panel/krpopupmenu.cpp:314
-#, kde-format
-msgid "Text File..."
-msgstr "Tekstualnu datoteku..."
-
-#: krusader/Panel/krpopupmenu.cpp:318
-#, kde-format
-msgid "Create New"
-msgstr "Napravi novi"
-
 #: krusader/Panel/krpreviewpopup.cpp:102
 #, kde-format
 msgid "Preview not available"
@@ -7309,7 +7190,7 @@ msgstr "Odaberi grupni dijalog"
 msgid "Saved search text to history"
 msgstr ""
 
-#: krusader/Panel/listpanel.cpp:163
+#: krusader/Panel/listpanel.cpp:164
 #, fuzzy, kde-format
 #| msgid ""
 #| "The statusbar displays information about the filesystem which holds your "
@@ -7321,7 +7202,7 @@ msgstr ""
 "Statusna traka prikazuje informacije o sistemskom fajlu koji drzi trenutni "
 "direktorij: velicina, slobodni prostor , tip sistemskog fajla itd."
 
-#: krusader/Panel/listpanel.cpp:187
+#: krusader/Panel/listpanel.cpp:188
 #, kde-format
 msgid ""
 "Open menu with bookmarks. You can also add current location to the list, "
@@ -7330,7 +7211,7 @@ msgstr ""
 "Otvori meni sa markerima. Možete takođe dodati trenutnu lokaciju u listu, "
 "uređivati markere ili dodati poddirektorijum u listu."
 
-#: krusader/Panel/listpanel.cpp:194
+#: krusader/Panel/listpanel.cpp:195
 #, fuzzy, kde-format
 #| msgid ""
 #| "Name of directory where you are. You can also enter name of desired "
@@ -7343,7 +7224,7 @@ msgstr ""
 "lokacije za prelazak u nju. Korištenje mrežnih protokola kao što je ftp ili "
 "fish je moguće."
 
-#: krusader/Panel/listpanel.cpp:231
+#: krusader/Panel/listpanel.cpp:232
 #, kde-format
 msgid ""
 "The totals bar shows how many files exist, how many selected and the bytes "
@@ -7352,22 +7233,22 @@ msgstr ""
 "Zbirna traka prikazuje koliko datoteka postoji, koliko je izabrano i "
 "bajtovsku matematiku"
 
-#: krusader/Panel/listpanel.cpp:250
+#: krusader/Panel/listpanel.cpp:251
 #, kde-format
 msgid "Cancel directory space calculation"
 msgstr ""
 
-#: krusader/Panel/listpanel.cpp:270
+#: krusader/Panel/listpanel.cpp:271
 #, kde-format
 msgid "Move popup panel clockwise"
 msgstr ""
 
-#: krusader/Panel/listpanel.cpp:281 krusader/Panel/listpanel.cpp:587
+#: krusader/Panel/listpanel.cpp:282 krusader/Panel/listpanel.cpp:588
 #, kde-format
 msgid "Open the popup panel"
 msgstr "Otvori iskačući panel"
 
-#: krusader/Panel/listpanel.cpp:304
+#: krusader/Panel/listpanel.cpp:305
 #, fuzzy, kde-format
 #| msgid ""
 #| "This button toggles the sync-browse mode.\n"
@@ -7382,18 +7263,18 @@ msgstr ""
 "Kada je aktivno, svaka promjena direktorijuma se izvršava u\n"
 "aktivnom i neaktivnom panelu - ako je moguće."
 
-#: krusader/Panel/listpanel.cpp:580
+#: krusader/Panel/listpanel.cpp:581
 #, kde-format
 msgid "Close the popup panel"
 msgstr "Zatvori iskačući panel"
 
-#: krusader/Panel/listpanel.cpp:640
+#: krusader/Panel/listpanel.cpp:641
 #: krusader/Synchronizer/synchronizergui.cpp:1017
 #, kde-format
 msgid "Warning: The left and the right side are showing the same folder."
 msgstr ""
 
-#: krusader/Panel/listpanel.cpp:798
+#: krusader/Panel/listpanel.cpp:799
 #, kde-format
 msgctxt ""
 "%1=free space,%2=total space,%3=percentage of usage, %4=mountpoint,"
@@ -7401,267 +7282,294 @@ msgctxt ""
 msgid "%1 free out of %2 (%3%) on %4 [(%5)]"
 msgstr "%1 slobodan od %2 (%3%) na %4 [(%5)]"
 
-#: krusader/Panel/listpanel.cpp:801
+#: krusader/Panel/listpanel.cpp:802
 #, kde-format
 msgid "%1 free"
 msgstr "%1 slobodno"
 
-#: krusader/Panel/listpanel.cpp:1020
+#: krusader/Panel/listpanel.cpp:1021
 #, kde-format
 msgid "loading previews: %p%"
 msgstr "ucitavanje prikaza: %p%"
 
-#: krusader/Panel/listpanel.cpp:1064
+#: krusader/Panel/listpanel.cpp:1065
 #, kde-format
 msgid ">> Reading..."
 msgstr ">> Čitam..."
 
-#: krusader/Panel/listpanel.cpp:1090
+#: krusader/Panel/listpanel.cpp:1091
 #, kde-format
 msgid ">> Reading: %1 % complete..."
 msgstr ">> Čitanje: %1 % kompletirano..."
 
-#: krusader/Panel/listpanel.cpp:1096
+#: krusader/Panel/listpanel.cpp:1097
 #, kde-format
 msgid ">> Reading: %1"
 msgstr ">> Čitanje: %1"
 
-#: krusader/Panel/listpanel.cpp:1135
+#: krusader/Panel/listpanel.cpp:1136
 #, kde-format
 msgid "Error: %1"
 msgstr "Greška: %1"
 
-#: krusader/Panel/listpanelactions.cpp:89
+#: krusader/Panel/listpanelactions.cpp:80
+#, kde-format
+msgid "Cut to Clipboard"
+msgstr "Izreži u clipboard"
+
+#: krusader/Panel/listpanelactions.cpp:86
+#, kde-format
+msgid "Copy to Clipboard"
+msgstr "Kopiraj u clipboard"
+
+#: krusader/Panel/listpanelactions.cpp:88
+#, kde-format
+msgid "Paste from Clipboard"
+msgstr "Umetni iz clipboarda"
+
+#: krusader/Panel/listpanelactions.cpp:92
 #, kde-format
 msgid "View File"
 msgstr "Pregledaj datoteku"
 
-#: krusader/Panel/listpanelactions.cpp:90
+#: krusader/Panel/listpanelactions.cpp:93
 #, kde-format
 msgid "Edit File"
 msgstr "Uredi datoteku"
 
-#: krusader/Panel/listpanelactions.cpp:91
+#: krusader/Panel/listpanelactions.cpp:94
 #, kde-format
 msgid "Copy to other panel"
 msgstr "Kopiraj na drugi panel"
 
-#: krusader/Panel/listpanelactions.cpp:93
+#: krusader/Panel/listpanelactions.cpp:95
+#, fuzzy, kde-format
+#| msgid "Copy to other panel"
+msgid "Move to other panel"
+msgstr "Kopiraj na drugi panel"
+
+#: krusader/Panel/listpanelactions.cpp:96
 #, fuzzy, kde-format
 #| msgid "Copy by queue..."
 msgid "Copy delayed..."
 msgstr "Kopiraj po redu..."
 
-#: krusader/Panel/listpanelactions.cpp:94
+#: krusader/Panel/listpanelactions.cpp:97
 #, fuzzy, kde-format
 #| msgid "Move by queue..."
 msgid "Move delayed..."
 msgstr "Pomjeri po redu..."
 
-#: krusader/Panel/listpanelactions.cpp:95
+#: krusader/Panel/listpanelactions.cpp:98
 #, fuzzy, kde-format
 #| msgid "New Folder"
 msgid "New Folder..."
 msgstr "Nova fascikla"
 
-#: krusader/Panel/listpanelactions.cpp:97
+#: krusader/Panel/listpanelactions.cpp:100
 #, kde-format
 msgid "Start Terminal Here"
 msgstr "Pokreni terminal ovdje"
 
-#: krusader/Panel/listpanelactions.cpp:98
+#: krusader/Panel/listpanelactions.cpp:101
 #, kde-format
 msgid "&New Text File..."
 msgstr "Uredi &novu tekstualnu datoteku..."
 
-#: krusader/Panel/listpanelactions.cpp:99
+#: krusader/Panel/listpanelactions.cpp:102
 #, kde-format
 msgid "F3 View Dialog"
 msgstr "F3 Dijalog pregleda"
 
-#: krusader/Panel/listpanelactions.cpp:102
+#: krusader/Panel/listpanelactions.cpp:105
 #, kde-format
 msgid "Right-click Menu"
 msgstr "Meni desnog klika"
 
-#: krusader/Panel/listpanelactions.cpp:103
+#: krusader/Panel/listpanelactions.cpp:106
 #, kde-format
 msgid "&Properties..."
 msgstr "&Svojstva..."
 
-#: krusader/Panel/listpanelactions.cpp:104
+#: krusader/Panel/listpanelactions.cpp:107
 #, fuzzy, kde-format
 #| msgid "&Compare Files"
 msgid "&Compare Folders"
 msgstr "&Uporedi datoteke"
 
-#: krusader/Panel/listpanelactions.cpp:105
+#: krusader/Panel/listpanelactions.cpp:108
 #, kde-format
 msgid "Calculate &Occupied Space"
 msgstr "Izračunaj &zauzeti prostor"
 
-#: krusader/Panel/listpanelactions.cpp:106
+#: krusader/Panel/listpanelactions.cpp:109
 #, kde-format
 msgid "Pac&k..."
 msgstr "Zapa&kuj..."
 
-#: krusader/Panel/listpanelactions.cpp:107
+#: krusader/Panel/listpanelactions.cpp:110
 #, kde-format
 msgid "&Unpack..."
 msgstr "&Raspakuj..."
 
-#: krusader/Panel/listpanelactions.cpp:108
+#: krusader/Panel/listpanelactions.cpp:111
 #, kde-format
 msgid "Create Checksum..."
 msgstr "Napravi kontrolnu sumu..."
 
-#: krusader/Panel/listpanelactions.cpp:109
+#: krusader/Panel/listpanelactions.cpp:112
 #, kde-format
 msgid "Verify Checksum..."
 msgstr "Provjeri kontrolnu sumu..."
 
-#: krusader/Panel/listpanelactions.cpp:111
+#: krusader/Panel/listpanelactions.cpp:113
+#: krusader/Panel/panelcontextmenu.cpp:248
+#, kde-format
+msgid "New Symlink..."
+msgstr "Nova simbolička veza..."
+
+#: krusader/Panel/listpanelactions.cpp:114
 #, kde-format
 msgid "T&est Archive"
 msgstr "T&estiraj arhivu"
 
-#: krusader/Panel/listpanelactions.cpp:112
+#: krusader/Panel/listpanelactions.cpp:115
 #, fuzzy, kde-format
 #| msgid "Alternate selected background:"
 msgid "Alternative Delete"
 msgstr "Alternativna pozadina označenih:"
 
-#: krusader/Panel/listpanelactions.cpp:115
+#: krusader/Panel/listpanelactions.cpp:118
 #, kde-format
 msgid "Root"
 msgstr "Korijen"
 
-#: krusader/Panel/listpanelactions.cpp:116
+#: krusader/Panel/listpanelactions.cpp:119
 #, fuzzy, kde-format
 #| msgid "Go to Other Panel's Directory"
 msgid "Go to Other Panel's Folder"
 msgstr "Odi u direktorij drugih panela"
 
-#: krusader/Panel/listpanelactions.cpp:117
+#: krusader/Panel/listpanelactions.cpp:120
 #, kde-format
 msgid "&Reload"
 msgstr "&Ponovo učitaj"
 
-#: krusader/Panel/listpanelactions.cpp:118
+#: krusader/Panel/listpanelactions.cpp:121
 #, kde-format
 msgid "Cancel Refresh of View"
 msgstr "Otkazi osvjezavanje pogleda"
 
-#: krusader/Panel/listpanelactions.cpp:119
+#: krusader/Panel/listpanelactions.cpp:122
 #, kde-format
 msgid "New Net &Connection..."
 msgstr "Nova mrežna &veza..."
 
-#: krusader/Panel/listpanelactions.cpp:120
+#: krusader/Panel/listpanelactions.cpp:123
 #, kde-format
 msgid "Disconnect &from Net"
 msgstr "P&rekini vezu sa Mrežom"
 
-#: krusader/Panel/listpanelactions.cpp:121
+#: krusader/Panel/listpanelactions.cpp:124
 #, kde-format
 msgid "Sync Panels"
 msgstr "Sinh. panele"
 
-#: krusader/Panel/listpanelactions.cpp:122
+#: krusader/Panel/listpanelactions.cpp:125
 #, kde-format
 msgid "Jump Back"
 msgstr "Skoči unazad"
 
-#: krusader/Panel/listpanelactions.cpp:123
+#: krusader/Panel/listpanelactions.cpp:126
 #, kde-format
 msgid "Set Jump Back Point"
 msgstr "Postavi ovdje tačku skoka unazad"
 
-#: krusader/Panel/listpanelactions.cpp:124
+#: krusader/Panel/listpanelactions.cpp:127
 #, fuzzy, kde-format
 #| msgid "S&ynchron Directory Changes"
 msgid "S&ynchron Folder Changes"
 msgstr "S&inhr. promjene direktorijuma"
 
-#: krusader/Panel/listpanelactions.cpp:125
+#: krusader/Panel/listpanelactions.cpp:128
 #, kde-format
 msgid "Go to Location Bar"
 msgstr "Idi na traku lokacije"
 
-#: krusader/Panel/listpanelactions.cpp:126
+#: krusader/Panel/listpanelactions.cpp:129
 #, fuzzy, kde-format
 #| msgid "Folder..."
 msgid "Find in folder..."
 msgstr "Fascikla..."
 
-#: krusader/Panel/listpanelactions.cpp:127
+#: krusader/Panel/listpanelactions.cpp:130
 #, fuzzy, kde-format
 #| msgid "Start Terminal Here"
 msgid "Open search filter"
 msgstr "Pokreni terminal ovdje"
 
-#: krusader/Panel/listpanelactions.cpp:128
+#: krusader/Panel/listpanelactions.cpp:131
 #, kde-format
 msgid "Toggle Popup Panel"
 msgstr "Uključi/isključi iskačući panel"
 
-#: krusader/Panel/listpanelactions.cpp:130
+#: krusader/Panel/listpanelactions.cpp:133
 #, kde-format
 msgid "Left Bookmarks"
 msgstr "Lijevi markeri"
 
-#: krusader/Panel/listpanelactions.cpp:131
+#: krusader/Panel/listpanelactions.cpp:134
 #, kde-format
 msgid "Right Bookmarks"
 msgstr "Desni markeri"
 
-#: krusader/Panel/listpanelactions.cpp:132
+#: krusader/Panel/listpanelactions.cpp:135
 #, kde-format
 msgid "History"
 msgstr "Historija"
 
-#: krusader/Panel/listpanelactions.cpp:133
+#: krusader/Panel/listpanelactions.cpp:136
 #, kde-format
 msgid "Left History"
 msgstr "Lijeva historija"
 
-#: krusader/Panel/listpanelactions.cpp:134
+#: krusader/Panel/listpanelactions.cpp:137
 #, kde-format
 msgid "Right History"
 msgstr "Desna historija"
 
-#: krusader/Panel/listpanelactions.cpp:135
+#: krusader/Panel/listpanelactions.cpp:138
 #, kde-format
 msgid "Media"
 msgstr "Medijum"
 
-#: krusader/Panel/listpanelactions.cpp:136
+#: krusader/Panel/listpanelactions.cpp:139
 #, kde-format
 msgid "Left Media"
 msgstr "Lijevi mediji"
 
-#: krusader/Panel/listpanelactions.cpp:137
+#: krusader/Panel/listpanelactions.cpp:140
 #, kde-format
 msgid "Right Media"
 msgstr "Desni mediji"
 
-#: krusader/Panel/listpanelactions.cpp:140
+#: krusader/Panel/listpanelactions.cpp:143
 #, kde-format
 msgid "ROOT (/)"
 msgstr "KORIJEN (/)"
 
-#: krusader/Panel/listpanelactions.cpp:142
+#: krusader/Panel/listpanelactions.cpp:145
 #, fuzzy, kde-format
 #| msgid "Rename file, directory, etc."
 msgid "Rename file, folder, etc."
 msgstr "Preimenuj datoteku, direktorijum, itd."
 
-#: krusader/Panel/listpanelactions.cpp:143
+#: krusader/Panel/listpanelactions.cpp:146
 #, kde-format
 msgid "Open file in viewer."
 msgstr "Otvori datoteku u pregledaču."
 
-#: krusader/Panel/listpanelactions.cpp:144
+#: krusader/Panel/listpanelactions.cpp:147
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>Edit file.</p><p>The editor can be defined in Konfigurator, default is "
@@ -7673,29 +7581,29 @@ msgstr ""
 "<p>Uredi datoteku.</p><p>Uređivač se može podesiti u Kontrolnom centru, "
 "podrazumijevani je <b>'internal editor'</b>.</p>"
 
-#: krusader/Panel/listpanelactions.cpp:147
+#: krusader/Panel/listpanelactions.cpp:150
 #, kde-format
 msgid "Copy file from one panel to the other."
 msgstr "Kopiraj datoteku iz jednog panela u drugi."
 
-#: krusader/Panel/listpanelactions.cpp:148
+#: krusader/Panel/listpanelactions.cpp:151
 #, kde-format
 msgid "Move file from one panel to the other."
 msgstr "Premjesti datoteku iz jednog panela u drugi."
 
-#: krusader/Panel/listpanelactions.cpp:149
+#: krusader/Panel/listpanelactions.cpp:152
 #, fuzzy, kde-format
 #| msgid "Create directory in current panel."
 msgid "Create folder in current panel."
 msgstr "Kreiraj direktorijum u trenutnom panelu."
 
-#: krusader/Panel/listpanelactions.cpp:150
+#: krusader/Panel/listpanelactions.cpp:153
 #, fuzzy, kde-format
 #| msgid "Delete file, directory, etc."
 msgid "Delete file, folder, etc."
 msgstr "Obriši datoteku, direktorijum, itd."
 
-#: krusader/Panel/listpanelactions.cpp:151
+#: krusader/Panel/listpanelactions.cpp:154
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>Open terminal in current directory.</p><p>The terminal can be defined "
@@ -7706,6 +7614,93 @@ msgid ""
 msgstr ""
 "<p>Otvori terminal u trenutnom direktorijumu.</p><p>Možete definisati "
 "terminal u Kontrolnom centru, podrazumjevan je<b> konsole.</b></p>"
+
+#: krusader/Panel/panelcontextmenu.cpp:125
+#, kde-format
+msgid "Open/Run"
+msgstr "Otvori/Pokreni"
+
+#: krusader/Panel/panelcontextmenu.cpp:132
+#, kde-format
+msgid "Run"
+msgstr "Pokreni"
+
+#: krusader/Panel/panelcontextmenu.cpp:135
+#: krusader/Panel/panelcontextmenu.cpp:138
+#, kde-format
+msgid "Open in New Tab"
+msgstr "Otvori u novoj kartici"
+
+#: krusader/Panel/panelcontextmenu.cpp:148
+#, kde-format
+msgid "Browse"
+msgstr ""
+
+#: krusader/Panel/panelcontextmenu.cpp:151
+#, fuzzy, kde-format
+#| msgid "T&est Archive"
+msgid "Browse Archive"
+msgstr "T&estiraj arhivu"
+
+#: krusader/Panel/panelcontextmenu.cpp:190
+#, kde-format
+msgid "Other..."
+msgstr "Drugo..."
+
+#: krusader/Panel/panelcontextmenu.cpp:192
+#, kde-format
+msgid "Open With"
+msgstr "Otvori pomoću"
+
+#: krusader/Panel/panelcontextmenu.cpp:233
+#, kde-format
+msgid "Move to Trash"
+msgstr "Baci u smeće"
+
+#: krusader/Panel/panelcontextmenu.cpp:249
+#, kde-format
+msgid "New Hardlink..."
+msgstr "Nova tvrda veza (hardlink)..."
+
+#: krusader/Panel/panelcontextmenu.cpp:251
+#, kde-format
+msgid "Redirect Link..."
+msgstr "Preusmjeri vezu..."
+
+#: krusader/Panel/panelcontextmenu.cpp:254
+#, kde-format
+msgid "Link Handling"
+msgstr "Rad sa vezama"
+
+#: krusader/Panel/panelcontextmenu.cpp:277
+#, kde-format
+msgid "Send by Email"
+msgstr "Pošalji e-poštom"
+
+#: krusader/Panel/panelcontextmenu.cpp:282
+#, kde-format
+msgid "Restore"
+msgstr "Vrati"
+
+#: krusader/Panel/panelcontextmenu.cpp:289
+#, kde-format
+msgid "Synchronize Selected Files..."
+msgstr "Sinhronizuj izabrane datoteke..."
+
+#: krusader/Panel/panelcontextmenu.cpp:314
+#, kde-format
+msgid "Folder..."
+msgstr "Fascikla..."
+
+#: krusader/Panel/panelcontextmenu.cpp:316
+#, kde-format
+msgid "Text File..."
+msgstr "Tekstualnu datoteku..."
+
+#: krusader/Panel/panelcontextmenu.cpp:319
+#, kde-format
+msgid "Create New"
+msgstr "Napravi novi"
 
 #: krusader/Panel/panelfunc.cpp:368
 #, kde-format
@@ -10013,6 +10008,15 @@ msgid ""
 "Backs current file up in current folder and asks the user for a new "
 "filename. By default \".old\" is appended to the original filename."
 msgstr ""
+
+#~ msgid " Quit"
+#~ msgstr " Završi"
+
+#~ msgid "Copy..."
+#~ msgstr "Kopiraj..."
+
+#~ msgid "Move..."
+#~ msgstr "Premjesti..."
 
 #~ msgid ""
 #~ "A configuration of 1.51 or older was detected. Krusader has to reset your "
