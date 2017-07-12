@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-07-11 03:08+0200\n"
+"POT-Creation-Date: 2017-07-12 06:46+0200\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -167,7 +167,7 @@ msgstr "nije pronađen element u radnom listu"
 #: src/backend/datapicker/DatapickerImage.cpp:554
 #: src/backend/datapicker/DatapickerPoint.cpp:476
 #: src/backend/datasources/FileDataSource.cpp:366
-#: src/backend/datasources/filters/AsciiFilter.cpp:637
+#: src/backend/datasources/filters/AsciiFilter.cpp:685
 #: src/backend/datasources/filters/BinaryFilter.cpp:446
 #: src/backend/matrix/Matrix.cpp:746 src/backend/note/Note.cpp:151
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:1944
@@ -1166,7 +1166,7 @@ msgstr ""
 msgid "C format"
 msgstr "Format podataka"
 
-#: src/backend/datasources/filters/AsciiFilter.cpp:633
+#: src/backend/datasources/filters/AsciiFilter.cpp:681
 #, kde-format
 msgid "no ascii filter element found"
 msgstr "nije pronađen element ascii filtera"
@@ -11663,14 +11663,28 @@ msgstr "iteracije"
 msgid "Foreground"
 msgstr "Pozadina"
 
+#. i18n: ectx: property (text), widget (QLabel, lVectorNames)
+#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:46
+#, kde-format
+msgid "Vector names:"
+msgstr "Imena vektora:"
+
+#. i18n: ectx: property (text), widget (QLabel, lSeparatingCharacter)
+#. i18n: ectx: property (text), widget (QLabel, lSeparator)
+#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:53
+#: src/kdefrontend/ui/spreadsheet/exportspreadsheetwidget.ui:156
+#, kde-format
+msgid "Separating character"
+msgstr "Karakter za odvajanje"
+
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:26
+#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:73
 #, kde-format
 msgid "Comment character"
 msgstr "Komentar karakter"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chbSimplifyWhitespaces)
-#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:33
+#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:80
 #, kde-format
 msgid ""
 "Removes the whitespaces from the start and the end, and replaces each "
@@ -11680,13 +11694,19 @@ msgstr ""
 "internih praznih mjesta sa jednim praznim mjestom."
 
 #. i18n: ectx: property (text), widget (QCheckBox, chbSimplifyWhitespaces)
-#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:36
+#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:83
 #, kde-format
 msgid "Simplify whitespaces"
 msgstr "Pojednostavni prazna mjesta"
 
+#. i18n: ectx: property (text), widget (QCheckBox, chbHeader)
+#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:109
+#, kde-format
+msgid "Use the first row to name the vectors"
+msgstr "Koristi prvi red za imenovanje vektora"
+
 #. i18n: ectx: property (text), widget (QLabel, lDateTimeFormat)
-#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:59
+#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:119
 #: src/kdefrontend/ui/datasources/importsqldatabasewidget.ui:86
 #, fuzzy, kde-format
 #| msgid "Data format"
@@ -11694,59 +11714,23 @@ msgid "DateTime format"
 msgstr "Format podataka"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kleVectorNames)
-#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:82
+#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:129
 #, kde-format
 msgid "Vector names, space separated. E.g. \"x y\""
 msgstr "Imena vektora, odvojena razmakom. Npr \"x y\""
 
 #. i18n: ectx: property (text), widget (QLabel, lNumbersFormat)
-#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:92
+#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:139
 #, fuzzy, kde-format
 #| msgid "Number"
 msgid "Numbers"
 msgstr "Broj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chbSkipEmptyParts)
-#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:115
+#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:162
 #, kde-format
 msgid "Skip empty parts"
 msgstr "Preskoči prazne dijelove"
-
-#. i18n: ectx: property (text), widget (QCheckBox, chbHeader)
-#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:138
-#, kde-format
-msgid "Use the first row to name the vectors"
-msgstr "Koristi prvi red za imenovanje vektora"
-
-#. i18n: ectx: property (toolTip), widget (QCheckBox, chbTranspose)
-#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:161
-#, kde-format
-msgid ""
-"Interchanges the role of the rows and the columns. Treats the rows as data "
-"vectors, if selected."
-msgstr ""
-"Interno mijenja ulogu redova i kolona. Redove tretira kao vektore podataka, "
-"ako su označeni."
-
-#. i18n: ectx: property (text), widget (QCheckBox, chbTranspose)
-#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:164
-#, kde-format
-msgid "Transpose"
-msgstr "Prenesi"
-
-#. i18n: ectx: property (text), widget (QLabel, lVectorNames)
-#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:174
-#, kde-format
-msgid "Vector names:"
-msgstr "Imena vektora:"
-
-#. i18n: ectx: property (text), widget (QLabel, lSeparatingCharacter)
-#. i18n: ectx: property (text), widget (QLabel, lSeparator)
-#: src/kdefrontend/ui/datasources/asciioptionswidget.ui:188
-#: src/kdefrontend/ui/spreadsheet/exportspreadsheetwidget.ui:156
-#, kde-format
-msgid "Separating character"
-msgstr "Karakter za odvajanje"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, sbSkipStartBytes)
 #: src/kdefrontend/ui/datasources/binaryoptionswidget.ui:17
@@ -14375,6 +14359,16 @@ msgstr "Vertikalni razmaci"
 #| msgid "Orientation"
 msgid "Quit presentation"
 msgstr "Orijentacija"
+
+#~ msgid ""
+#~ "Interchanges the role of the rows and the columns. Treats the rows as "
+#~ "data vectors, if selected."
+#~ msgstr ""
+#~ "Interno mijenja ulogu redova i kolona. Redove tretira kao vektore "
+#~ "podataka, ako su označeni."
+
+#~ msgid "Transpose"
+#~ msgstr "Prenesi"
 
 #, fuzzy
 #~| msgid "Data:"
