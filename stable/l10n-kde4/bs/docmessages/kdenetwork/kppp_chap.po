@@ -1,0 +1,433 @@
+# Bosnian translation for bosnianuniversetranslation
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the bosnianuniversetranslation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bosnianuniversetranslation\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-28 02:14+0000\n"
+"PO-Revision-Date: 2014-12-25 02:16+0000\n"
+"Last-Translator: Samir Polutak <sp14940@etf.unsa.ba>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-12-26 06:18+0000\n"
+"X-Generator: Launchpad (build 17286)\n"
+
+#. Tag: title
+#: chap.docbook:2
+#, no-c-format
+msgid "<acronym>PAP</acronym> and <acronym>CHAP</acronym>"
+msgstr "<acronym>PAP</acronym> i <acronym>CHAP</acronym>"
+
+#. Tag: para
+#: chap.docbook:4
+#, no-c-format
+msgid ""
+"Starting with version 0.9.1, &kppp; has supported directly the most commonly "
+"used form of <acronym>PAP</acronym> authentication."
+msgstr ""
+"Počevši od verzije 0.9.1, &kppp; podržava direktno najčešće korišteni oblik "
+"<acronym>PAP</acronym> ovjere."
+
+#. Tag: title
+#: chap.docbook:8
+#, no-c-format
+msgid "<acronym>PAP</acronym> with &kppp;"
+msgstr "<acronym>PAP</acronym> sa &kppp;"
+
+#. Tag: para
+#: chap.docbook:10
+#, no-c-format
+msgid "There are two different ways to use <acronym>PAP</acronym>."
+msgstr "Postoje dva različita načina korištenja <acronym>PAP</acronym>."
+
+#. Tag: title
+#: chap.docbook:13
+#, no-c-format
+msgid "Client side authentication"
+msgstr "Ovjera sa strane klijenta"
+
+#. Tag: para
+#: chap.docbook:15
+#, no-c-format
+msgid ""
+"This variant is used by many commercial <acronym>ISP</acronym>'s. It "
+"basically means that you (or rather, your computer) must authenticate "
+"yourself to the <acronym>ISP</acronym>'s <acronym>PPP</acronym> server. The "
+"<acronym>PPP</acronym> server does not need to authenticate itself to your "
+"computer. This is no security issue, as you should know which computer you "
+"just tried to dial to."
+msgstr ""
+"Ovu varijantu koriste mnogi komercijalni <acronym>ISP</acronym> 'vi. To u "
+"osnovi znači da (ili bolje rečeno, vaš računar) morate potvrditi svoju "
+"ovjeru na <acronym>ISP</acronym>'u<acronym>PPP</acronym> serveru. "
+"<acronym>PPP</acronym> server ne treba da ovjeri sebe za vaš računar. Ovo "
+"nije pitanje sigurnosti, zato što bi trebali znati koji računar ste upravo "
+"pokušali da birate."
+
+#. Tag: para
+#: chap.docbook:22
+#, no-c-format
+msgid ""
+"If your <acronym>ISP</acronym> gives you a username and password, and tells "
+"you to use <acronym>PAP</acronym> authentication, this is the variant you "
+"should choose."
+msgstr ""
+"Ako vaš <acronym>ISP</acronym> vam daje korisničko ime i lozinku, i kaže vam "
+"da koristite <acronym>PAP</acronym> ovjeru, ovo je varijanta koju bi trebali "
+"izabrati."
+
+#. Tag: title
+#: chap.docbook:29
+#, no-c-format
+msgid "Two way authentication"
+msgstr "Dvostruka ovjera"
+
+#. Tag: para
+#: chap.docbook:31
+#, no-c-format
+msgid ""
+"As above, but in this case your computer requires the <acronym>ISP</acronym> "
+"<acronym>PPP</acronym> server to authenticate itself. In order to establish "
+"a connection, you must chose the authentication method <guilabel>Script "
+"based</guilabel>, not <guilabel>PAP</guilabel>, and you will have to "
+"manually edit <filename>/etc/ppp/pap-secrets</filename>. While &kppp; "
+"doesn't provide built in support for this variant, it is nevertheless easy "
+"to establish a connection."
+msgstr ""
+"Kao što je gore, ali u ovom slučaju vaš računar zahtijeva <acronym>ISP</"
+"acronym> <acronym>PPP</acronym> server za svoju ovjeru. U cilju "
+"uspostavljanja veze, morate odabrati metodu provjere autentičnosti "
+"<guilabel>Skripta bazirano</guilabel>, a ne <guilabel>PAP</guilabel>, i vi "
+"ćete morati da ručno uredite <filename>/etc/ppp/pap-secrets</filename>. Dok "
+"&kppp; ne pruža ugrađenu podrškom za ovu varijantu, ipak je lahko "
+"uspostaviti vezu."
+
+#. Tag: title
+#: chap.docbook:42
+#, no-c-format
+msgid "Preparing &kppp; for <acronym>PAP</acronym>"
+msgstr "Pripremanje &kppp; za <acronym>PAP</acronym>"
+
+#. Tag: para
+#: chap.docbook:46
+#, no-c-format
+msgid ""
+"Make sure that the file <filename>/etc/ppp/options</filename> (and "
+"<filename>&tilde;/.ppprc</filename> if it exists) do <emphasis>not</"
+"emphasis> contain one of the following arguments:"
+msgstr ""
+"Budite sigurni da datoteka <filename>/etc/ppp/options</filename> (i "
+"<filename>&tilde;/.ppprc</filename> ako postoji) <emphasis>ne</emphasis> "
+"sadrži jedan od sljedećih argumenata:"
+
+#. Tag: option
+#: chap.docbook:52
+#, no-c-format
+msgid "+pap"
+msgstr "+pap"
+
+#. Tag: option
+#: chap.docbook:55
+#, no-c-format
+msgid "-pap"
+msgstr "-pap"
+
+#. Tag: option
+#: chap.docbook:58
+#, no-c-format
+msgid "papcrypt"
+msgstr "papcrypt"
+
+#. Tag: option
+#: chap.docbook:61 chap.docbook:64
+#, no-c-format
+msgid "+chap"
+msgstr "+chap"
+
+#. Tag: option
+#: chap.docbook:67
+#, no-c-format
+msgid "<option>+ua</option>"
+msgstr "<option>+ua</option>"
+
+#. Tag: option
+#: chap.docbook:70
+#, no-c-format
+msgid "remotename"
+msgstr "ime udaljenog"
+
+#. Tag: para
+#: chap.docbook:74
+#, no-c-format
+msgid ""
+"It is very unlikely that any of these options are already there, but just to "
+"be sure, please check."
+msgstr ""
+"Vrlo je vjerovatno da je bilo koja od ovih opcija već tu, ali samo da bi "
+"bili sigurni, molimo vas provjerite."
+
+#. Tag: para
+#: chap.docbook:78
+#, no-c-format
+msgid "Start &kppp;"
+msgstr "Pokrenite &kppp;"
+
+#. Tag: para
+#: chap.docbook:81
+#, no-c-format
+msgid "Click <guibutton>Configure</guibutton>"
+msgstr "Kliknite <guibutton>Konfiguriranje</guibutton>"
+
+#. Tag: para
+#: chap.docbook:84
+#, no-c-format
+msgid ""
+"Choose the account you want to use <acronym>PAP</acronym> with and click "
+"<guibutton>Edit</guibutton>"
+msgstr ""
+"Izaberite račun sa kojim želite koristiti <acronym>PAP</acronym> i kliknite "
+"<guibutton>Uredi</guibutton>"
+
+#. Tag: para
+#: chap.docbook:88
+#, no-c-format
+msgid "Choose the <guilabel>Dial</guilabel> tab"
+msgstr "Izaberite <guilabel>Biraj</guilabel> tabular"
+
+#. Tag: para
+#: chap.docbook:91
+#, no-c-format
+msgid ""
+"Select <acronym>PAP</acronym> in the <guilabel>Authentication</guilabel> "
+"drop down box."
+msgstr ""
+"Odaberite <acronym>PAP</acronym> u <guilabel>Ovjera</guilabel> padajućem "
+"okviru."
+
+#. Tag: para
+#: chap.docbook:95
+#, no-c-format
+msgid ""
+"If you do not want to retype the password each time you dial in, select "
+"<guilabel>Store password</guilabel>. This will save the password to a file, "
+"so make sure that nobody else has access to your account."
+msgstr ""
+"Ako ne želite da ponovo unosite lozinku svaki put kad birate, odaberite "
+"<guilabel>Čuvaj lozinku</guilabel>. Ovo će spasiti lozinku u datoteku, zato "
+"budite sigurni da niko drugi nema pristup vašem račun."
+
+#. Tag: para
+#: chap.docbook:100
+#, no-c-format
+msgid ""
+"That's it. Close the dialogs, type in the username and password your "
+"<acronym>ISP</acronym> supplied, and click <guibutton>Connect</guibutton>."
+msgstr ""
+"To je to. Zatvorite dijaloge, ukucajte korisničko ime i lozinku u "
+"<acronym>ISP</acronym>, i kliknite <guibutton>Spoji</guibutton>."
+
+#. Tag: title
+#: chap.docbook:112
+#, no-c-format
+msgid ""
+"An alternative method of using <acronym>PAP</acronym> and <acronym>CHAP</"
+"acronym> with &kppp;"
+msgstr ""
+"Alternativna metoda korištenja <acronym>PAP</acronym> i <acronym>CHAP</"
+"acronym> sa &kppp;"
+
+#. Tag: para
+#: chap.docbook:115
+#, no-c-format
+msgid ""
+"This section is based on an email from Keith Brown <email>kbrown@pdq.net</"
+"email> and explains how to make &kppp; work with a generic <acronym>PAP</"
+"acronym> or <acronym>CHAP</acronym> account. If your <acronym>ISP</acronym> "
+"just gave you a user id and a password for an account, you probably can skip "
+"this section, and the instructions in the previous one will be all you need."
+msgstr ""
+"Ovaj odjeljak je zasnovan na mailu od Keith Browna <email>kbrown@pdq.net</"
+"email> i objašnjava kako napraviti da &kppp; radi sa generičkim "
+"<acronym>PAP</acronym> ili <acronym>CHAP</acronym> računom. Ako vaš "
+"<acronym>ISP</acronym> vam upravo da korisnički id i lozinku za račun, "
+"vjerovatno možete preskočiti ovaj odjeljak, a instrukcije u prethodnom su "
+"sve što vam treba."
+
+#. Tag: para
+#: chap.docbook:122
+#, no-c-format
+msgid ""
+"<acronym>PAP</acronym> seems a lot more complicated at first glance than it "
+"really is. The server (the machine you are connecting to) basically tells "
+"the client (your machine) to authenticate using <acronym>PAP</acronym>. The "
+"client (<application>pppd</application>) looks in a specific file for an "
+"entry that contains a matching server name, and a client name for this "
+"connection, and then sends the password it finds there. That's about it!"
+msgstr ""
+"<acronym>PAP</acronym> izgleda mnogo složeniji nego što jeste na prvi "
+"pogled. Server (mašina na koju se povezujete) u osnovi govori klijentu (vaš "
+"uređaj) da provjeri autentičnost pomoću <acronym>PAP</acronym>. Klijent "
+"(<application>pppd</application>) gleda u određenu datoteku za unos koja "
+"sadrži ime podudarajućeg servera, i ime klijenta za ovo spajanje, a zatim "
+"šalje lozinku koju nađe tamo. To je sve!"
+
+#. Tag: para
+#: chap.docbook:129
+#, no-c-format
+msgid ""
+"Now here's how to make that happen. I am assuming a <acronym>pppd</acronym> "
+"version of 2.2.x or better and a standard installation of configuration "
+"files under <filename class=\"directory\">/etc/ppp</filename>."
+msgstr ""
+"Evo kako to da se dogodi. Ja pretpostavljam <acronym>pppd</acronym> verziju "
+"2.2.x ili veću i standardna instalacija konfiguracijske datoteke pod "
+"<filename class=\"directory\">/etc/ppp</filename>."
+
+#. Tag: para
+#: chap.docbook:134
+#, no-c-format
+msgid ""
+"For the purposes of illustration, imagine that you have an internet account "
+"with <systemitem>glob.net</systemitem> with the username "
+"<systemitem>userbaz</systemitem> and the password <literal>foobar</literal>"
+msgstr ""
+"Za potrebe ilustracije, zamislite da imate internet račun kod "
+"<systemitem>glob.net</systemitem> s korisničkim imenom "
+"<systemitem>korisnikbaz</systemitem> i lozinku <literal>foobar</literal>"
+
+#. Tag: para
+#: chap.docbook:139
+#, no-c-format
+msgid ""
+"First, you need to add all this to a file called <filename>/etc/ppp/pap-"
+"secrets</filename>. The format of an entry for our purposes is:"
+msgstr ""
+"Prvo, trebate dodati sve to u datoteku pod nazivom <filename>/etc/ppp/pap-"
+"secrets</filename>. Format unosa za naše svrhe je:"
+
+#. Tag: screen
+#: chap.docbook:143
+#, no-c-format
+msgid "<userinput>USERNAME    SERVERNAME     PASSWORD</userinput>"
+msgstr "<userinput>KORISNIČKO IME  SERVERIME  LOZINKA</userinput>"
+
+#. Tag: para
+#: chap.docbook:145
+#, no-c-format
+msgid ""
+"So you would add the following line to <filename>/etc/ppp/pap-secrets</"
+"filename> and then save it :"
+msgstr ""
+"Dakle, vi dodajte sljedeću liniju na <filename>/etc/ppp/pap-secrets</"
+"filename>, a zatim je sačuvajte:"
+
+#. Tag: screen
+#: chap.docbook:148
+#, no-c-format
+msgid "<userinput>userbaz     glob           foobar</userinput>"
+msgstr "<userinput>korisnikbaz glob foobar</userinput>"
+
+#. Tag: para
+#: chap.docbook:151
+#, no-c-format
+msgid ""
+"You can use any name for the server you wish, so long as you use the same "
+"name in the <application>pppd</application> arguments, as you'll see "
+"shortly. Here it's been shortened to <userinput>glob</userinput>, but this "
+"name is only used to locate the correct password."
+msgstr ""
+"Možete koristiti bilo koje ime za server koji želite, sve dok koristite isto "
+"ime u <application>pppd</application> argumenti, kao što ćete vidjeti "
+"uskoro. Ovdje je to skraćeno na <userinput>glob</userinput>, ali ovo ime se "
+"koristi samo za lociranje ispravne lozinke."
+
+#. Tag: para
+#: chap.docbook:157
+#, no-c-format
+msgid ""
+"Next you need to set up the connection in &kppp;. The basics are the same as "
+"any other connection, so we won't go into details here, except to say that "
+"you probably want to make sure that <filename>/etc/ppp/options</filename> is "
+"empty, and you don't want to create a login script either."
+msgstr ""
+"Sljedeće trebate podesiti spajanje u &kppp;. Osnove su iste kao i za bilo "
+"koje drugo spajanje, tako da nećemo ići u detalje ovdje, osim što ćemo reći "
+"da vjerovatno želite biti sigurni da je <filename>/etc/ppp/options</"
+"filename> prazna, a vi također ne želite stvoriti skriptu za prijavljivanje."
+
+#. Tag: para
+#: chap.docbook:162
+#, no-c-format
+msgid ""
+"In the &kppp; settings dialog, at the bottom of the <guilabel>Dial</"
+"guilabel> tab, is a <guibutton>Customize pppd Arguments</guibutton> button. "
+"This brings up an editing dialog. Here you can enter values that will be "
+"sent to <application>pppd</application> as command line arguments, and in "
+"the case of multiple value arguments, you need to enter each value as a "
+"separate entry in the listbox, in the correct order."
+msgstr ""
+"U &kppp; dijalogu postavki, na dnu <guilabel>Biraj</guilabel>, je "
+"<guibutton>Prilagodi pppd</guibutton>. To dovodi do dijaloga uređivanja. "
+"Ovdje možete unijeti vrijednosti koje će biti poslane na <application>pppd</"
+"application> kao argumenti komandne linije, a u slučaju kada imamo više "
+"vrijednosti argumenata, potrebno je da unesete svaku vrijednost kao poseban "
+"unos u okvir listu, u ispravnom redoslijedu."
+
+#. Tag: para
+#: chap.docbook:169
+#, no-c-format
+msgid ""
+"You can put in any other arguments you want first. Then add the arguments "
+"that <application>pppd</application> uses to handle <acronym>PAP</acronym> "
+"authentication. In this example, we are going to add <userinput>user</"
+"userinput>, <userinput>userbaz</userinput>, <userinput>remotename</"
+"userinput> and <userinput>glob</userinput> in that order."
+msgstr ""
+"Možete staviti bilo koji drugi argument ako želite kao prvi. Zatim dodajte "
+"argumente koje <application>pppd</application> koristi za rukovanje "
+"<acronym>PAP</acronym> ovjerom. U ovom primjeru, mi ćemo dodati "
+"<userinput>korisnik</userinput>, <userinput>korisnikbaz</userinput>, "
+"<userinput>ime udaljenog</userinput> i <userinput>glob</userinput> u tom "
+"redoslijedu."
+
+#. Tag: para
+#: chap.docbook:176
+#, no-c-format
+msgid ""
+"The <option>user</option> tells the <application>pppd</application> what "
+"user name to look for in the <filename>pap-secrets</filename> file and then "
+"to send to the server. The remotename is used by <application>pppd</"
+"application> to match the entry in the <filename>pap-secrets</filename> "
+"file, so again, it can be anything you want so long as it is consistent with "
+"the entry in the <filename>pap-secrets</filename> file."
+msgstr ""
+"<option>korisnik</option> govori <application>pppd</application> koje "
+"korisničko ime da traži u <filename>pap-secrets</filename> datoteci i zatim "
+"šalje na server. Ime udaljenog se koristi od <application>pppd</application> "
+"tako da odgovara ulazu u <filename>pap-secrets</filename> datoteku ali opet, "
+"to može biti sve što želite sve dok je to u skladu sa ulazom u <filename>pap-"
+"secrets</filename>."
+
+#. Tag: para
+#: chap.docbook:183
+#, no-c-format
+msgid ""
+"That's all there is to it, and you should now be able to set up your own "
+"connection to a server with <acronym>PAP</acronym> authentication. "
+"<acronym>CHAP</acronym> is not much different. You can see the &Linux; "
+"Network Administrators Guide for a <filename>chap-secrets</filename> file "
+"format, and the <application>pppd</application> arguments used, and the rest "
+"should be simple."
+msgstr ""
+"To je sve što se ima reći, a ti bi sada trebao biti u mogućnosti da postaviš "
+"svoj vlastiti priključak na server sa <acronym>PAP</acronym> ovjerom. "
+"<acronym>CHAP</acronym> se ne razlikuje puno. Možete vidjeti &Linux; Vodič "
+"Mrežnih Administratora za <filename>chap-secrets</filename> format datoteke, "
+"a <application>pppd</application> korištenih argumenata, a ostatak bi trebao "
+"biti jednostavan."
