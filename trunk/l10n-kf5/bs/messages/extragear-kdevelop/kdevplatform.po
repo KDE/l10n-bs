@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-07-28 03:11+0200\n"
+"POT-Creation-Date: 2017-07-29 03:15+0200\n"
 "PO-Revision-Date: 2014-02-12 23:48+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1765,6 +1765,7 @@ msgstr[1] "Sesija krahirala %1 puta zaredom"
 msgstr[2] "Sesija krahirala %1 puta zaredom"
 
 #: serialization/itemrepositoryregistry.cpp:91
+#: serialization/itemrepositoryregistry.cpp:95
 #, kde-format
 msgctxt "@action"
 msgid "Clear cache"
@@ -1777,17 +1778,28 @@ msgid "Session crashed"
 msgstr "Sesija obrisana"
 
 #: serialization/itemrepositoryregistry.cpp:93
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The crash may be caused by a corruption of cached data.\n"
+#| "\n"
+#| "Press OK if you want KDevelop to clear the cache, otherwise press Cancel "
+#| "if you are sure the crash has another origin."
 msgid ""
 "The crash may be caused by a corruption of cached data.\n"
 "\n"
-"Press OK if you want KDevelop to clear the cache, otherwise press Cancel if "
-"you are sure the crash has another origin."
+"Press Clear if you want KDevelop to clear the cache, otherwise press "
+"Continue if you are sure the crash has another origin."
 msgstr ""
 "Krah je možda uzrokovan oštećenjem keširanih podataka.\n"
 "\n"
 "Pritisnite U redu ako želite da KDevelop očisti keš, inače pritisnite "
 "odustani ako krah ima drugi izvor."
+
+#: serialization/itemrepositoryregistry.cpp:96
+#, fuzzy, kde-format
+#| msgid "&Continue"
+msgid "Continue"
+msgstr "&Nastavi"
 
 #: shell/areadisplay.cpp:55
 #, kde-format
@@ -4429,7 +4441,7 @@ msgid "No Language selected"
 msgstr "Nema izabranog jezika"
 
 #: shell/settings/sourceformattersettings.cpp:528
-#: shell/sourceformattercontroller.cpp:103
+#: shell/sourceformattercontroller.cpp:105
 #, fuzzy, kde-format
 #| msgid "No Source Formatter available"
 msgid "Source Formatter"
@@ -4697,62 +4709,90 @@ msgstr ""
 msgid "Configure User Interface"
 msgstr "Korisnički interfejs"
 
-#: shell/sourceformattercontroller.cpp:109
+#: shell/sourceformattercontroller.cpp:111
 #, kde-format
 msgid "&Reformat Source"
 msgstr "&Reformatiraj izvorni kod"
 
-#: shell/sourceformattercontroller.cpp:110
+#: shell/sourceformattercontroller.cpp:112
 #, kde-format
 msgid "Reformat source using AStyle"
 msgstr "Reformatiraj izvorni kod koristeći AStyle"
 
-#: shell/sourceformattercontroller.cpp:111
+#: shell/sourceformattercontroller.cpp:113
 #, kde-format
 msgid "Source reformatting functionality using <b>astyle</b> library."
 msgstr ""
 "Izvor formatiranja funkcionalnost koristeći <b> astyle </b> biblioteku."
 
-#: shell/sourceformattercontroller.cpp:115
+#: shell/sourceformattercontroller.cpp:117
 #, kde-format
 msgid "Reformat Line"
 msgstr "Reformatiraj liniju"
 
-#: shell/sourceformattercontroller.cpp:116
+#: shell/sourceformattercontroller.cpp:118
 #, kde-format
 msgid "Reformat current line using AStyle"
 msgstr "Reformatiraj tekuću liniju koristeći AStyle"
 
-#: shell/sourceformattercontroller.cpp:117
+#: shell/sourceformattercontroller.cpp:119
 #, kde-format
 msgid "Source reformatting of line under cursor using <b>astyle</b> library."
 msgstr "Izvor formatiranja funkcionalnost koristeći <b> stil </b> biblioteku."
 
-#: shell/sourceformattercontroller.cpp:121
-#, kde-format
-msgid "Format Files"
-msgstr "Formatiraj datoteke"
+#: shell/sourceformattercontroller.cpp:123
+#, fuzzy, kde-format
+#| msgid "Reformat Line"
+msgid "Reformat Files..."
+msgstr "Reformatiraj liniju"
 
-#: shell/sourceformattercontroller.cpp:122
+#: shell/sourceformattercontroller.cpp:124
 #, kde-format
 msgid "Format file(s) using the current theme"
 msgstr "Formatiraj datoteke koristeći trenutnu temu"
 
-#: shell/sourceformattercontroller.cpp:123
+#: shell/sourceformattercontroller.cpp:125
 #, kde-format
 msgid "Formatting functionality using <b>astyle</b> library."
 msgstr "Formatiranje funkcionalnosti koristeci <b>astyle</b>biblioteku."
 
-#: shell/sourceformattercontroller.cpp:558
+#: shell/sourceformattercontroller.cpp:561
 #, fuzzy, kde-format
 #| msgid "Reformat Line"
 msgid "Reformat files?"
 msgstr "Reformatiraj liniju"
 
-#: shell/sourceformattercontroller.cpp:558
+#: shell/sourceformattercontroller.cpp:562
 #, kde-format
 msgid "Reformat all files in the selected folder?"
 msgstr ""
+
+#: shell/sourceformattercontroller.cpp:566
+#, fuzzy, kde-format
+#| msgid "Reformat Line"
+msgid "Reformat"
+msgstr "Reformatiraj liniju"
+
+#: shell/sourceformatterjob.cpp:53
+#, fuzzy, kde-format
+#| msgid "Reformat Line"
+msgid "Reformatting"
+msgstr "Reformatiraj liniju"
+
+#: shell/sourceformatterjob.cpp:64
+#, fuzzy, kde-format
+#| msgid "Reformat Line"
+msgid "Reformat Files"
+msgstr "Reformatiraj liniju"
+
+#: shell/sourceformatterjob.cpp:75
+#, fuzzy, kde-format
+#| msgid "Reformat Line"
+msgid "Reformatting one file"
+msgid_plural "Reformatting %1 files"
+msgstr[0] "Reformatiraj liniju"
+msgstr[1] "Reformatiraj liniju"
+msgstr[2] "Reformatiraj liniju"
 
 #: shell/textdocument.cpp:407
 #, kde-format
@@ -4861,39 +4901,39 @@ msgstr ""
 msgid "Load"
 msgstr "Učitaj"
 
-#: sublime/container.cpp:289
+#: sublime/container.cpp:291
 #, kde-format
 msgid "Line: 00000 Col: 000"
 msgstr "Linija: 00000 kolona: 000"
 
-#: sublime/container.cpp:320
+#: sublime/container.cpp:322
 #, kde-format
 msgid "Show sorted list of opened documents"
 msgstr "Prikaži sortiranu listu otvorenih dokumenata"
 
-#: sublime/container.cpp:467
+#: sublime/container.cpp:334
 #, kde-format
-msgid " <i><small>(Press Ctrl+Tab to switch)</small></i>"
+msgid "(Press Ctrl+Tab to switch)"
 msgstr ""
 
-#: sublime/container.cpp:646
+#: sublime/container.cpp:662
 #, fuzzy, kde-format
 #| msgid "Filename"
 msgid "Copy Filename"
 msgstr "Ime datoteke"
 
-#: sublime/container.cpp:649
+#: sublime/container.cpp:665
 #, kde-format
 msgid "Close"
 msgstr "Zatvori"
 
-#: sublime/container.cpp:651
+#: sublime/container.cpp:667
 #, fuzzy, kde-format
 #| msgid "Close All Ot&hers"
 msgid "Close All Other"
 msgstr "Zatvori sve d&ruge"
 
-#: sublime/container.cpp:653
+#: sublime/container.cpp:669
 #, fuzzy, kde-format
 #| msgid "Clos&e All"
 msgid "Close All"
@@ -5159,24 +5199,24 @@ msgstr ""
 msgid "Run all tests in %1"
 msgstr "Pokreni sve testove u %1"
 
-#: util/shellutils.cpp:90
+#: util/shellutils.cpp:96
 #, kde-format
 msgid ""
 "You don't have write permissions for the following files; add write "
 "permissions for owner before saving?"
 msgstr ""
 
-#: util/shellutils.cpp:91
+#: util/shellutils.cpp:97
 #, kde-format
 msgid "Some files are write-protected"
 msgstr ""
 
-#: util/shellutils.cpp:103
+#: util/shellutils.cpp:109
 #, kde-format
 msgid "Failed adding write permissions for some files."
 msgstr ""
 
-#: util/shellutils.cpp:103
+#: util/shellutils.cpp:109
 #, kde-format
 msgid "Failed setting permissions"
 msgstr ""
@@ -5711,6 +5751,9 @@ msgstr "Razlika između revizija"
 #, kde-format
 msgid "Logview"
 msgstr "Pogled dnevnika"
+
+#~ msgid "Format Files"
+#~ msgstr "Formatiraj datoteke"
 
 #~ msgid "Close File"
 #~ msgstr "Zatvori datoteku"
