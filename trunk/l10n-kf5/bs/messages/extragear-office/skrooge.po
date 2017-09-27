@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skrooge.po\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-09-18 03:21+0200\n"
+"POT-Creation-Date: 2017-09-27 06:44+0200\n"
 "PO-Revision-Date: 2015-02-26 23:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -691,7 +691,7 @@ msgstr "Dobrodošli u %1"
 #: plugins/generic/skg_dashboard/skgdashboardpluginwidget_base.ui:37
 #: plugins/generic/skg_dashboard/skgdashboardpluginwidget_base.ui:40
 #: plugins/skrooge/skrooge_calculator/skgcalculatorpluginwidget_base.ui:795
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:148
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:193
 #: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:544
 #: plugins/skrooge/skrooge_report/skgreportpluginwidget_base.ui:547
 #: plugins/skrooge/skrooge_search/skgsearchpluginwidget_base.ui:352
@@ -1480,9 +1480,9 @@ msgid "Property created"
 msgstr "Svojstvo kreirano"
 
 #: plugins/generic/skg_properties/skgpropertiesplugin.cpp:190
-#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:127
-#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:165
-#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:247
+#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:130
+#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:168
+#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:250
 #: plugins/import/skrooge_import_pdf/skgimportpluginpdf.cpp:136
 #: skgbankmodeler/skgunitobject.cpp:932 skgbankmodeler/skgunitobject.cpp:1241
 #: skgbasegui/skgmainpanel.cpp:2666 skgbasegui/skgmainpanel.cpp:2673
@@ -1587,7 +1587,7 @@ msgstr "Izbor"
 #: plugins/generic/skg_properties/skgpropertiesplugindockwidget.cpp:68
 #: plugins/skrooge/skrooge_bank/skgbankpluginwidget.cpp:129
 #: plugins/skrooge/skrooge_categories/skgcategoriespluginwidget.cpp:61
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:47
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:48
 #: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget.cpp:56
 #: plugins/skrooge/skrooge_tracker/skgtrackerpluginwidget.cpp:45
 #, kde-format
@@ -1970,7 +1970,7 @@ msgid "-1 for no limit"
 msgstr "-1 za isključenje limita"
 
 #: plugins/import/skrooge_import_afb120/skgimportpluginafb120.cpp:76
-#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:143
+#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:146
 #: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:288
 #: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:718
 #: plugins/import/skrooge_import_gnc/skgimportplugingnc.cpp:67
@@ -2014,7 +2014,7 @@ msgid "Import %1 file"
 msgstr "Uvoz %1 datoteke"
 
 #: plugins/import/skrooge_import_afb120/skgimportpluginafb120.cpp:88
-#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:169
+#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:172
 #: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:174
 #: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:228
 #: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:314
@@ -2100,13 +2100,31 @@ msgctxt "A file format"
 msgid "AFB120 file (cfomb)"
 msgstr "AFB120 datoteka (cfomb)"
 
-#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:148
+#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "Error message"
+#| msgid ""
+#| "The following command line failed:\n"
+#| "'%1'"
+msgctxt "A warning message"
+msgid "WARNING: The command %1 failed with code %2 (Retry %3)"
+msgstr ""
+"Sljedeća komandna linija nije uspjela:\n"
+"'%1'"
+
+#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:123
+#, kde-format
+msgctxt "A warning message"
+msgid "WARNING: The command %1 failed due to a time out (Retry %2)"
+msgstr ""
+
+#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:151
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Import with %1"
 msgstr "Uvezi sa %1"
 
-#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:202
+#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:205
 #, kde-format
 msgctxt "Error message"
 msgid ""
@@ -2116,13 +2134,13 @@ msgstr ""
 "Nije moguće pronaći identifikaciju računa sa redovnim izrazom '%1' u liniji "
 "'%2'"
 
-#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:214
+#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:217
 #, kde-format
 msgctxt "Progress message"
 msgid "Download operations"
 msgstr "Operacije preuzimanja"
 
-#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:217
+#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:220
 #, kde-format
 msgctxt "Error message"
 msgid ""
@@ -2131,7 +2149,7 @@ msgid ""
 msgstr ""
 "Vaš backend '%1' izgleda da nije dobro konfigurisan jer nije pronađen račun."
 
-#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:285
+#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:288
 #, kde-format
 msgctxt "Error message"
 msgid ""
@@ -2143,7 +2161,7 @@ msgstr ""
 "%1\n"
 "Provjerite instalaciju vašeg backenda."
 
-#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:288
+#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:291
 #, fuzzy, kde-format
 #| msgctxt "Warning message"
 #| msgid "Some accounts have not been downloaded"
@@ -2151,13 +2169,13 @@ msgctxt "Warning message"
 msgid "Some accounts have not been downloaded. %1"
 msgstr "Neki računi nisu preuzeti"
 
-#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:295
+#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:298
 #, kde-format
 msgctxt "Progress message"
 msgid "Import"
 msgstr "Uvezi"
 
-#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:298
+#: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:301
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Import one account with %1"
@@ -3130,7 +3148,7 @@ msgstr "Kreditna kartica"
 
 #: plugins/skrooge/skrooge_bank/skgaccountboardwidget.cpp:82
 #: plugins/skrooge/skrooge_bank/skgbankpluginwidget.cpp:156
-#: skgbankmodeler/skgdocumentbank.cpp:612
+#: skgbankmodeler/skgdocumentbank.cpp:613
 #, kde-format
 msgctxt "Noun, a type of account"
 msgid "Saving"
@@ -3145,7 +3163,7 @@ msgstr "Investicija"
 
 #: plugins/skrooge/skrooge_bank/skgaccountboardwidget.cpp:106
 #: plugins/skrooge/skrooge_bank/skgbankpluginwidget.cpp:159
-#: skgbankmodeler/skgdocumentbank.cpp:611
+#: skgbankmodeler/skgdocumentbank.cpp:612
 #, kde-format
 msgctxt "Noun, a type of account"
 msgid "Loan"
@@ -3153,7 +3171,7 @@ msgstr "Zajam"
 
 #: plugins/skrooge/skrooge_bank/skgaccountboardwidget.cpp:114
 #: plugins/skrooge/skrooge_bank/skgbankpluginwidget.cpp:160
-#: skgbankmodeler/skgdocumentbank.cpp:613
+#: skgbankmodeler/skgdocumentbank.cpp:614
 #, kde-format
 msgctxt "Noun, a type of account"
 msgid "Pension"
@@ -3161,7 +3179,7 @@ msgstr "Penzija"
 
 #: plugins/skrooge/skrooge_bank/skgaccountboardwidget.cpp:122
 #: plugins/skrooge/skrooge_bank/skgbankpluginwidget.cpp:161
-#: skgbankmodeler/skgdocumentbank.cpp:610
+#: skgbankmodeler/skgdocumentbank.cpp:611
 #, kde-format
 msgctxt "Noun, a type of account"
 msgid "Wallet"
@@ -3192,7 +3210,7 @@ msgid "Total of %1"
 msgstr "Ukupno od %1"
 
 #: plugins/skrooge/skrooge_bank/skgaccountboardwidget.cpp:376
-#: skgbankmodeler/skgdocumentbank.cpp:3198 skgbankmodeler/skgreportbank.cpp:136
+#: skgbankmodeler/skgdocumentbank.cpp:3210 skgbankmodeler/skgreportbank.cpp:136
 #: skgbankmodeler/skgreportbank.cpp:374 skgbankmodeler/skgreportbank.cpp:462
 #, kde-format
 msgctxt "Noun, the numerical total of a sum of values"
@@ -3349,7 +3367,7 @@ msgid "reopening of the account failed"
 msgstr "ponovno otvaranje računa nije uspjelo"
 
 #: plugins/skrooge/skrooge_bank/skgbankplugin.cpp:305
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2351
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2352
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Create fake operation"
@@ -3362,9 +3380,9 @@ msgid "Fake operation"
 msgstr "Lažna operacija"
 
 #: plugins/skrooge/skrooge_bank/skgbankplugin.cpp:323
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1217
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1604
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2399
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1218
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1605
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2400
 #, fuzzy, kde-format
 #| msgctxt "An information message"
 #| msgid "Operation '%1' has been inserted"
@@ -3373,14 +3391,14 @@ msgid "The operation '%1' has been added"
 msgstr "Operacija '%1' je ubačena"
 
 #: plugins/skrooge/skrooge_bank/skgbankplugin.cpp:327
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2403
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2404
 #, kde-format
 msgctxt "Successful message after an user action"
 msgid "Fake operation created."
 msgstr "Lažna operacija kreirana."
 
 #: plugins/skrooge/skrooge_bank/skgbankplugin.cpp:329
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2405
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2406
 #, kde-format
 msgctxt "Error message"
 msgid "Creation failed"
@@ -3419,8 +3437,9 @@ msgstr "Kreiranje nije uspjelo"
 #: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:74
 #: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:75
 #: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:76
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:53
 #: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:54
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:55
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:56
 #: plugins/skrooge/skrooge_tracker/skgtrackerpluginwidget.cpp:50
 #: plugins/skrooge/skrooge_tracker/skgtrackerpluginwidget.cpp:51
 #: plugins/skrooge/skrooge_unit/skgunitpluginwidget.cpp:62
@@ -3588,7 +3607,7 @@ msgid "Update failed"
 msgstr "Ažuriranje neuspjelo"
 
 #: plugins/skrooge/skrooge_bank/skgbankpluginwidget.cpp:796
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1645
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1646
 #, kde-format
 msgctxt "Message"
 msgid "Computing..."
@@ -4077,7 +4096,7 @@ msgstr "Kreiranje budžeta neuspjelo"
 #: plugins/skrooge/skrooge_budget/skgbudgetpluginwidget.cpp:714
 #: plugins/skrooge/skrooge_budget/skgbudgetpluginwidget.cpp:758
 #: plugins/skrooge/skrooge_budget/skgbudgetpluginwidget.cpp:802
-#: skgbankgui/skgobjectmodel.cpp:918
+#: skgbankgui/skgobjectmodel.cpp:923
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Budget rule update"
@@ -4088,7 +4107,7 @@ msgstr "Ažuriranje pravila budžeta"
 #: plugins/skrooge/skrooge_budget/skgbudgetpluginwidget.cpp:733
 #: plugins/skrooge/skrooge_budget/skgbudgetpluginwidget.cpp:777
 #: plugins/skrooge/skrooge_budget/skgbudgetpluginwidget.cpp:817
-#: skgbankgui/skgobjectmodel.cpp:931
+#: skgbankgui/skgobjectmodel.cpp:936
 #, fuzzy, kde-format
 #| msgctxt "Information message"
 #| msgid "Tracker '%1' has been created"
@@ -4117,7 +4136,7 @@ msgid "Budget rule update failed"
 msgstr "Ažuriranje pravila budžeta neuspjelo"
 
 #: plugins/skrooge/skrooge_budget/skgbudgetpluginwidget.cpp:461
-#: skgbankgui/skgobjectmodel.cpp:941
+#: skgbankgui/skgobjectmodel.cpp:946
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Budget update"
@@ -4847,7 +4866,7 @@ msgstr "Ažuriraj parametre kamate (Shift+Enter)"
 #. i18n: ectx: property (text), widget (QPushButton, kModifyBtn)
 #. i18n: ectx: property (text), widget (QPushButton, kUnitUpdate)
 #: plugins/skrooge/skrooge_calculator/skgcalculatorpluginwidget_base.ui:814
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:161
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:206
 #: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget_base.ui:270
 #: plugins/skrooge/skrooge_search/skgsearchpluginwidget_base.ui:374
 #: plugins/skrooge/skrooge_tracker/skgtrackerpluginwidget_base.ui:161
@@ -5172,19 +5191,19 @@ msgid "Add category"
 msgstr "Dodaj kategoriju"
 
 #: plugins/skrooge/skrooge_categories/skgcategoriespluginwidget.cpp:62
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:48
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:49
 #, kde-format
 msgid "Income"
 msgstr "Prihodi"
 
 #: plugins/skrooge/skrooge_categories/skgcategoriespluginwidget.cpp:63
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:49
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:50
 #, kde-format
 msgid "Expenditure"
 msgstr "Rashod"
 
 #: plugins/skrooge/skrooge_categories/skgcategoriespluginwidget.cpp:64
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:50
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:51
 #, kde-format
 msgid "Highlighted"
 msgstr "Istaknuto"
@@ -5284,15 +5303,15 @@ msgstr "Ažuriraj odabrane kategorije (Shift+Enter)"
 #. i18n: ectx: property (statusTip), widget (QPushButton, kDeleteUnusedButton)
 #: plugins/skrooge/skrooge_categories/skgcategoriespluginwidget_base.ui:138
 #: plugins/skrooge/skrooge_categories/skgcategoriespluginwidget_base.ui:141
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:168
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:171
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:213
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:216
 #, kde-format
 msgid "Delete unused categories"
 msgstr "Obriši nekorištene kategorije"
 
 #. i18n: ectx: property (text), widget (QPushButton, kDeleteUnusedButton)
 #: plugins/skrooge/skrooge_categories/skgcategoriespluginwidget_base.ui:144
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:174
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:219
 #, kde-format
 msgctxt "Verb, delete unused categories"
 msgid "Delete unused"
@@ -6251,6 +6270,7 @@ msgstr "Račun operacije"
 #: plugins/skrooge/skrooge_importexport/skgimportexportpluginwidget_pref.ui:467
 #: plugins/skrooge/skrooge_importexport/skgimportexportpluginwidget_pref.ui:470
 #: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_base.ui:841
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:154
 #, kde-format
 msgid "Category of the operation"
 msgstr "Kategorija operacije"
@@ -7172,7 +7192,7 @@ msgid "Switch to pointed"
 msgstr "Prebaci na označeno"
 
 #: plugins/skrooge/skrooge_operation/skgoperationplugin.cpp:620
-#: skgbankgui/skgobjectmodel.cpp:886
+#: skgbankgui/skgobjectmodel.cpp:891
 #, fuzzy, kde-format
 #| msgctxt "An information message"
 #| msgid "Operation '%1' has been inserted"
@@ -7187,7 +7207,7 @@ msgid "Operation pointed."
 msgstr "Operacija označena."
 
 #: plugins/skrooge/skrooge_operation/skgoperationplugin.cpp:629
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2483
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2484
 #, kde-format
 msgctxt "Error message"
 msgid "Switch failed"
@@ -7705,51 +7725,51 @@ msgstr ""
 "Ovo polje je zaleđeno (Brzo uređivanje neće uticati na njega). Dvoklik da se "
 "odledi"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:653
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:654
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Operation update"
 msgstr "Ažuriranje operacije"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:658
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:659
 #, kde-format
 msgctxt "Successful message after an user action"
 msgid "Operation canceled"
 msgstr "Operacija otkazana"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:660
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:661
 #, kde-format
 msgctxt "Error message"
 msgid "Operation update failed"
 msgstr "Ažuriranje operacije neuspjelo"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:694
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:695
 #, kde-format
 msgctxt "An information message"
 msgid "You modified one part of a transfer"
 msgstr "Promijenili ste jedan dio transfera"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:735
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:736
 #, kde-format
 msgctxt "Error message"
 msgid "Cannot update a split operation"
 msgstr "Ne može se ažurirati podijeljena operacija"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:851
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:852
 #, kde-format
 msgctxt "An information message"
 msgid "Absolute value has been used for transfer creation."
 msgstr "Apsolutna vrijednost je korištena za kreiranje transfera."
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:906
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1026
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:907
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1027
 #, kde-format
 msgctxt "Question"
 msgid "Confirmation"
 msgstr "Potvrda"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:907
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1027
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:908
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1028
 #, kde-format
 msgctxt "Question"
 msgid ""
@@ -7761,13 +7781,13 @@ msgstr ""
 "Kliknite na Otkaži ako ipak želite nastaviti; u protivnom, unesite "
 "vrijednost u jedinici ciljanog računa (%1):"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1049
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1050
 #, kde-format
 msgctxt "Warning message"
 msgid "You created an operation in %1 in an account in %2."
 msgstr "Kreirali ste operaciju u %1 na računu u %2."
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1062
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1063
 #, fuzzy, kde-format
 #| msgctxt "An information message"
 #| msgid "Operation '%1' has been inserted"
@@ -7775,124 +7795,124 @@ msgctxt "An information message"
 msgid "The operation '%1' has been updated"
 msgstr "Operacija '%1' je ubačena"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1080
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1595
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1081
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1596
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Operation creation"
 msgstr "Kreiranje operacije"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1092
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1093
 #, kde-format
 msgctxt "Error message"
 msgid "Impossible to create an operation with one attribute valuated with %1"
 msgstr "Nemoguće kreiranje operacije sa jednim svojstvom vrednovanim sa %1"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1177
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1178
 #, kde-format
 msgctxt "Noun"
 msgid "Shares"
 msgstr "Dijeljenja"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1222
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1609
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1223
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1610
 #, kde-format
 msgctxt "Successful message after an user action"
 msgid "Operation created"
 msgstr "Operacija kreirana"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1225
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1612
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1226
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1613
 #, kde-format
 msgctxt "Error message"
 msgid "Operation creation failed"
 msgstr "Kreiranje operacije neuspjelo"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1462
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1463
 #, kde-format
 msgctxt "Option to for display of operations"
 msgid "All"
 msgstr "Sve"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1516
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1517
 #, kde-format
 msgctxt "Option to for display of operations"
 msgid "Operations"
 msgstr "Operacije"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1518
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1519
 #, kde-format
 msgctxt "Option to for display of operations"
 msgid "Templates"
 msgstr "Predlošci"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1521
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1522
 #, kde-format
 msgctxt "Option to for display of operations"
 msgid "Hide pointed operations"
 msgstr "Sakrij označene operacije"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1522
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1523
 #, kde-format
 msgctxt "Option to for display of operations"
 msgid "Hide checked operations"
 msgstr "Sakrij označene operacije"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1545
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1546
 #, kde-format
 msgctxt "Message"
 msgid "First you have to create an account."
 msgstr "Prvo trebate kreirati račun."
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1678
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1679
 #, kde-format
 msgctxt "Message"
 msgid "Balance: %1     Checked: %2     To be Checked: %3"
 msgstr "Bilans: %1     Provjereno: %2     Za provjeru: %3"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1685
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1686
 #, kde-format
 msgctxt "Message"
 msgid "<p>Balance: %1</p><p>Checked: %2</p><p>To be Checked: %3</p>"
 msgstr "<p>Bilans: %1</p><p>Provjereno: %2</p><p>Da se provjeri: %3</p>"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1721
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1722
 #, kde-format
 msgctxt "A title"
 msgid "Total amount:"
 msgstr "Ukupan iznos:"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1724
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1725
 #, kde-format
 msgctxt "A title"
 msgid "Final balance:"
 msgstr "Krajnji balans:"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1740
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1741
 #, kde-format
 msgctxt "Description"
 msgid "You must select only one account to use reconciliation."
 msgstr "Morate odabrati samo jedan račun da bi koristili usklađivanje."
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1748
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1749
 #, kde-format
 msgctxt "Message"
 msgid "%1 - Delta: %2     Expenditure: %3     Income: %4"
 msgstr "%1 - Delta: %2 Rashod: %3 Prihod: %4"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1762
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:1763
 #, kde-format
 msgctxt "Message"
 msgid "<p>Delta: %1</p><p>Expenditure: %2</p><p>Income: %3</p>"
 msgstr "<p>Delta: %1</p><p>Rashod: %2</p><p>Prihod: %3</p>"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2330
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2331
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Auto point account"
 msgstr "Automatsko označavanje računa"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2337
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2338
 #, fuzzy, kde-format
 #| msgctxt "An information message"
 #| msgid "Operation '%1' has been inserted"
@@ -7900,21 +7920,21 @@ msgctxt "An information message"
 msgid "The account '%1' has been auto pointed"
 msgstr "Operacija '%1' je ubačena"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2340
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2341
 #, kde-format
 msgctxt "Successful message after an user action"
 msgid "Account auto pointed."
 msgstr "Račun automatski označen."
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2430
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2455
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2431
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2456
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Switch to checked"
 msgstr "Prebacivanje na provjereno"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2445
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2473
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2446
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2474
 #, fuzzy, kde-format
 #| msgctxt "Advice on making the best (action)"
 #| msgid "Open account '%1' for reconciliation"
@@ -7922,7 +7942,7 @@ msgctxt "An information message"
 msgid "The account '%1' has been reconciliated"
 msgstr "Otvori račun '%1' za usaglašenje"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2463
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2464
 #, fuzzy, kde-format
 #| msgctxt "An information message"
 #| msgid "Operation '%1' has been inserted"
@@ -7930,13 +7950,13 @@ msgctxt "An information message"
 msgid "The operation '%1' has been checked"
 msgstr "Operacija '%1' je ubačena"
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2481
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2482
 #, kde-format
 msgctxt "Successful message after an user action"
 msgid "Operation checked."
 msgstr "Operacija provjerena."
 
-#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2556
+#: plugins/skrooge/skrooge_operation/skgoperationpluginwidget.cpp:2557
 #, kde-format
 msgctxt "Error message"
 msgid "No Operation Selected"
@@ -8025,6 +8045,7 @@ msgstr "Na račun:"
 
 #. i18n: ectx: property (toolTip), widget (SKGComboBox, kCategoryEdit)
 #: plugins/skrooge/skrooge_operation/skgoperationpluginwidget_base.ui:838
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:151
 #, kde-format
 msgid ""
 "Category of the operation.\n"
@@ -8457,13 +8478,13 @@ msgctxt "Error message"
 msgid "Unused payees deletion failed"
 msgstr "Brisanje nekorištenih primaoca neuspjelo"
 
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:181
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:186
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Payee creation '%1'"
 msgstr "Kreiranje primaoca '%1'"
 
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:188
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:200
 #, fuzzy, kde-format
 #| msgctxt "Information message"
 #| msgid "Payee '%1' has been created"
@@ -8471,25 +8492,25 @@ msgctxt "An information message"
 msgid "The payee '%1' has been added"
 msgstr "Primalac '%1' je kreiran"
 
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:192
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:204
 #, kde-format
 msgctxt "Successful message after an user action"
 msgid "Payee '%1' created"
 msgstr "Primaoc '%1' kreiran"
 
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:195
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:207
 #, kde-format
 msgctxt "Error message"
 msgid "Payee creation failed"
 msgstr "Kreiranje primaoca neuspjelo"
 
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:213
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:225
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Payee update"
 msgstr "Ažuriranje primaoca"
 
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:216
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:228
 #, kde-format
 msgctxt "Information message"
 msgid ""
@@ -8498,7 +8519,7 @@ msgstr ""
 "Pokušali ste da promijenite sva imena odabranih priomaoca. Primaoci su "
 "spojeni."
 
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:224
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:236
 #, fuzzy, kde-format
 #| msgctxt "Information message"
 #| msgid "Payee '%1' has been created"
@@ -8506,7 +8527,7 @@ msgctxt "An information message"
 msgid "The payee '%1' has been merged with payee '%2'"
 msgstr "Primalac '%1' je kreiran"
 
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:243
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:264
 #, fuzzy, kde-format
 #| msgctxt "Information message"
 #| msgid "Payee '%1' has been created"
@@ -8514,13 +8535,13 @@ msgctxt "An information message"
 msgid "The payee '%1' has been updated"
 msgstr "Primalac '%1' je kreiran"
 
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:248
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:269
 #, kde-format
 msgctxt "Successful message after an user action"
 msgid "Payee updated"
 msgstr "Primaoc ažuriran"
 
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:250
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget.cpp:271
 #, kde-format
 msgctxt "Error message"
 msgid "Payee update failed"
@@ -8544,16 +8565,16 @@ msgstr "Adresa primaoca"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, kAddButton)
 #. i18n: ectx: property (statusTip), widget (QPushButton, kAddButton)
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:142
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:145
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:187
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:190
 #, kde-format
 msgid "Create a payee (Ctrl+Enter)"
 msgstr "Kreiraj primaoca (Ctrl+Enter)"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, kModifyButton)
 #. i18n: ectx: property (statusTip), widget (QPushButton, kModifyButton)
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:155
-#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:158
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:200
+#: plugins/skrooge/skrooge_payee/skgpayeepluginwidget_base.ui:203
 #, kde-format
 msgid "Modify selected payee (Shift+Enter)"
 msgstr "Izmijeni odabranog primaoca (Shift+Enter)"
@@ -8892,7 +8913,7 @@ msgstr "Otvori..."
 
 #: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:490
 #: plugins/skrooge/skrooge_report/skgreportpluginwidget.cpp:1024
-#: skgbankmodeler/skgdocumentbank.cpp:765
+#: skgbankmodeler/skgdocumentbank.cpp:768
 #, kde-format
 msgctxt "Noun"
 msgid "All"
@@ -9547,14 +9568,14 @@ msgid "Operations of the schedule"
 msgstr "Operacije rasporeda"
 
 #: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget.cpp:274
-#: skgbankgui/skgobjectmodel.cpp:897
+#: skgbankgui/skgobjectmodel.cpp:902
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Recurrent operation update"
 msgstr "Ažuriranje povratne operacije"
 
 #: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget.cpp:294
-#: skgbankgui/skgobjectmodel.cpp:908
+#: skgbankgui/skgobjectmodel.cpp:913
 #, fuzzy, kde-format
 #| msgctxt "User interrupted something that Skrooge was performing"
 #| msgid "The current operation has been interrupted"
@@ -9862,7 +9883,7 @@ msgstr ""
 
 #: plugins/skrooge/skrooge_search/skgsearchpluginwidget.cpp:50
 #: skgbankgui/skgobjectmodel.cpp:231 skgbankgui/skgobjectmodel.cpp:272
-#: skgbankgui/skgobjectmodel.cpp:816
+#: skgbankgui/skgobjectmodel.cpp:821
 #, kde-format
 msgctxt "Noun, a search"
 msgid "Search"
@@ -9870,7 +9891,7 @@ msgstr "Pretraga"
 
 #: plugins/skrooge/skrooge_search/skgsearchpluginwidget.cpp:51
 #: skgbankgui/skgobjectmodel.cpp:233 skgbankgui/skgobjectmodel.cpp:274
-#: skgbankgui/skgobjectmodel.cpp:818
+#: skgbankgui/skgobjectmodel.cpp:823
 #, kde-format
 msgctxt "Noun, a modification"
 msgid "Update"
@@ -9878,7 +9899,7 @@ msgstr "Ažuriranje"
 
 #: plugins/skrooge/skrooge_search/skgsearchpluginwidget.cpp:52
 #: skgbankgui/skgobjectmodel.cpp:235 skgbankgui/skgobjectmodel.cpp:276
-#: skgbankgui/skgobjectmodel.cpp:820
+#: skgbankgui/skgobjectmodel.cpp:825
 #, kde-format
 msgctxt "Noun, an alarm"
 msgid "Alarm"
@@ -9891,7 +9912,7 @@ msgid "Template"
 msgstr "Predložak"
 
 #: plugins/skrooge/skrooge_search/skgsearchpluginwidget.cpp:55
-#: skgbankmodeler/skgdocumentbank.cpp:3021
+#: skgbankmodeler/skgdocumentbank.cpp:3033
 #, kde-format
 msgctxt "Adjective, an highlighted item"
 msgid "Highlighted"
@@ -10755,7 +10776,7 @@ msgstr "Sve"
 
 #: plugins/skrooge/skrooge_unit/skgunitpluginwidget.cpp:82
 #: plugins/skrooge/skrooge_unit/skgunitpluginwidget.cpp:204
-#: skgbankmodeler/skgdocumentbank.cpp:411
+#: skgbankmodeler/skgdocumentbank.cpp:412
 #, kde-format
 msgctxt "Noun, a country's currency"
 msgid "Currency"
@@ -10763,7 +10784,7 @@ msgstr "Valuta"
 
 #: plugins/skrooge/skrooge_unit/skgunitpluginwidget.cpp:88
 #: plugins/skrooge/skrooge_unit/skgunitpluginwidget.cpp:205
-#: skgbankmodeler/skgdocumentbank.cpp:412
+#: skgbankmodeler/skgdocumentbank.cpp:413
 #, kde-format
 msgctxt "Noun, a financial share, as in a stock market"
 msgid "Share"
@@ -10771,7 +10792,7 @@ msgstr "Dionica"
 
 #: plugins/skrooge/skrooge_unit/skgunitpluginwidget.cpp:94
 #: plugins/skrooge/skrooge_unit/skgunitpluginwidget.cpp:206
-#: skgbankmodeler/skgdocumentbank.cpp:413
+#: skgbankmodeler/skgdocumentbank.cpp:414
 #, kde-format
 msgctxt "Noun, a financial index like the Dow Jones, NASDAQ, CAC40..."
 msgid "Index"
@@ -10779,7 +10800,7 @@ msgstr "Indeks"
 
 #: plugins/skrooge/skrooge_unit/skgunitpluginwidget.cpp:100
 #: plugins/skrooge/skrooge_unit/skgunitpluginwidget.cpp:207
-#: skgbankmodeler/skgdocumentbank.cpp:414
+#: skgbankmodeler/skgdocumentbank.cpp:415
 #, kde-format
 msgctxt "Noun, a physical object like a house or a car"
 msgid "Object"
@@ -10851,14 +10872,14 @@ msgid "Display the edit panel for values of units"
 msgstr "Prikaži ploču za uređivanje za vrijednosti jedinica"
 
 #: plugins/skrooge/skrooge_unit/skgunitpluginwidget.cpp:202
-#: skgbankmodeler/skgdocumentbank.cpp:409
+#: skgbankmodeler/skgdocumentbank.cpp:410
 #, kde-format
 msgctxt "Noun"
 msgid "Primary currency"
 msgstr "Osnovna valuta"
 
 #: plugins/skrooge/skrooge_unit/skgunitpluginwidget.cpp:203
-#: skgbankmodeler/skgdocumentbank.cpp:410
+#: skgbankmodeler/skgdocumentbank.cpp:411
 #, kde-format
 msgctxt "Noun"
 msgid "Secondary currency"
@@ -11401,109 +11422,115 @@ msgctxt "Noun"
 msgid "Day +5"
 msgstr "Dan +5"
 
-#: skgbankgui/skgobjectmodel.cpp:674
+#: skgbankgui/skgobjectmodel.cpp:397
+#, fuzzy, kde-format
+#| msgid "Auto"
+msgid "Auto: %1"
+msgstr "Auto"
+
+#: skgbankgui/skgobjectmodel.cpp:679
 #, kde-format
 msgctxt "Noun"
 msgid "Original amount=%1 (%2 = %3 / year)"
 msgstr "Originalan iznos=%1 (%2 = %3 / year)"
 
-#: skgbankgui/skgobjectmodel.cpp:696
+#: skgbankgui/skgobjectmodel.cpp:701
 #, kde-format
 msgctxt "Noun"
 msgid "Amount at creation date=%1 (%2 = %3 / year)"
 msgstr "Iznos datuma kreiranja=%1 (%2 = %3 / year)"
 
-#: skgbankgui/skgobjectmodel.cpp:704
+#: skgbankgui/skgobjectmodel.cpp:709
 #, kde-format
 msgctxt "Noun"
 msgid "Account balance=%1"
 msgstr "Bilans računa=%1"
 
-#: skgbankgui/skgobjectmodel.cpp:718
+#: skgbankgui/skgobjectmodel.cpp:723
 #, kde-format
 msgctxt "Noun"
 msgid "Original delta=%1"
 msgstr "Originalno delta=%1"
 
-#: skgbankgui/skgobjectmodel.cpp:796
+#: skgbankgui/skgobjectmodel.cpp:801
 #, kde-format
 msgctxt "A tool tip"
 msgid "This operation is pointed but not checked yet."
 msgstr "Ova operacija je označena ali još nije provjerena."
 
-#: skgbankgui/skgobjectmodel.cpp:798
+#: skgbankgui/skgobjectmodel.cpp:803
 #, kde-format
 msgctxt "A tool tip"
 msgid "You can use the reconciliation mode to validate pointed operations."
 msgstr "Možete koristiti način usklađivanja da ovjerite označene operacije."
 
-#: skgbankgui/skgobjectmodel.cpp:800
+#: skgbankgui/skgobjectmodel.cpp:805
 #, kde-format
 msgctxt "A tool tip"
 msgid "Click to switch back status."
 msgstr "Kliknite za prebacivanje na povratni status."
 
-#: skgbankgui/skgobjectmodel.cpp:802 skgbankgui/skgobjectmodel.cpp:810
+#: skgbankgui/skgobjectmodel.cpp:807 skgbankgui/skgobjectmodel.cpp:815
 #, kde-format
 msgctxt "A tool tip"
 msgid "Ctrl+click to force checked status."
 msgstr "Ctrl+click za forsiranje provjerenog statusa."
 
-#: skgbankgui/skgobjectmodel.cpp:804
+#: skgbankgui/skgobjectmodel.cpp:809
 #, kde-format
 msgctxt "A tool tip"
 msgid "This operation is already checked."
 msgstr "Ova operacija je već provjerena."
 
-#: skgbankgui/skgobjectmodel.cpp:806
+#: skgbankgui/skgobjectmodel.cpp:811
 #, kde-format
 msgctxt "A tool tip"
 msgid "This operation is not pointed yet."
 msgstr "Ova operacija još nije označena."
 
-#: skgbankgui/skgobjectmodel.cpp:808
+#: skgbankgui/skgobjectmodel.cpp:813
 #, kde-format
 msgctxt "A tool tip"
 msgid "Click to set pointed status."
 msgstr "Kliknite da postavite označeni status."
 
-#: skgbankgui/skgobjectmodel.cpp:852
+#: skgbankgui/skgobjectmodel.cpp:857
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Close account '%1'"
 msgstr "Zatvaranje računa '%1'"
 
-#: skgbankgui/skgobjectmodel.cpp:852
+#: skgbankgui/skgobjectmodel.cpp:857
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Open account '%1'"
 msgstr "Otvaranje računa '%1'"
 
-#: skgbankgui/skgobjectmodel.cpp:854
+#: skgbankgui/skgobjectmodel.cpp:859
 #, kde-format
 msgctxt "An information message"
 msgid "Warning, you closed an account with money"
 msgstr "Upozorenje, zatvorili ste račun sa novcem"
 
-#: skgbankgui/skgobjectmodel.cpp:861
+#: skgbankgui/skgobjectmodel.cpp:866
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Close tracker '%1'"
 msgstr "Zatvaranje pratioca '%1'"
 
-#: skgbankgui/skgobjectmodel.cpp:861
+#: skgbankgui/skgobjectmodel.cpp:866
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Open tracker '%1'"
 msgstr "Otvaranje pratioca '%1'"
 
-#: skgbankgui/skgobjectmodel.cpp:869
+#: skgbankgui/skgobjectmodel.cpp:874
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Change operation status"
 msgstr "Promjena statusa operacije"
 
-#: skgbankgui/skgobjectmodel.cpp:947
+#: skgbankgui/skgobjectmodel.cpp:952
 #, fuzzy, kde-format
 #| msgctxt "Information message"
 #| msgid "Payee '%1' has been created"
@@ -11511,13 +11538,13 @@ msgctxt "An information to the user"
 msgid "The budget '%1' have been updated"
 msgstr "Primalac '%1' je kreiran"
 
-#: skgbankgui/skgobjectmodel.cpp:1032
+#: skgbankgui/skgobjectmodel.cpp:1037
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Move category"
 msgstr "Pomjeranje kategorije"
 
-#: skgbankgui/skgobjectmodel.cpp:1053
+#: skgbankgui/skgobjectmodel.cpp:1058
 #, fuzzy, kde-format
 #| msgctxt "Information message"
 #| msgid "Category '%1' has been created"
@@ -11525,13 +11552,13 @@ msgctxt "An information to the user"
 msgid "The category '%1' has been moved to '%2'"
 msgstr "Kategorija '%1' je kreirana"
 
-#: skgbankgui/skgobjectmodel.cpp:1062
+#: skgbankgui/skgobjectmodel.cpp:1067
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Merge payees"
 msgstr "Spajanje primalaca"
 
-#: skgbankgui/skgobjectmodel.cpp:1074
+#: skgbankgui/skgobjectmodel.cpp:1079
 #, fuzzy, kde-format
 #| msgctxt "Information message"
 #| msgid "Payee '%1' has been created"
@@ -11539,37 +11566,37 @@ msgctxt "An information to the user"
 msgid "The payee '%1' has been merged with payee '%2'"
 msgstr "Primalac '%1' je kreiran"
 
-#: skgbankgui/skgobjectmodel.cpp:1085
+#: skgbankgui/skgobjectmodel.cpp:1090
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Merge accounts"
 msgstr "Spajanje računa"
 
-#: skgbankgui/skgobjectmodel.cpp:1097
+#: skgbankgui/skgobjectmodel.cpp:1102
 #, kde-format
 msgctxt "An information to the user"
 msgid "The account '%1' has been merged with account '%2'"
 msgstr ""
 
-#: skgbankgui/skgobjectmodel.cpp:1108
+#: skgbankgui/skgobjectmodel.cpp:1113
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Merge units"
 msgstr "Spajanje jedinica"
 
-#: skgbankgui/skgobjectmodel.cpp:1120
+#: skgbankgui/skgobjectmodel.cpp:1125
 #, kde-format
 msgctxt "An information to the user"
 msgid "The unit '%1' has been merged with unit '%2'"
 msgstr ""
 
-#: skgbankgui/skgobjectmodel.cpp:1131
+#: skgbankgui/skgobjectmodel.cpp:1136
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Merge trackers"
 msgstr "Spajanje pratilaca"
 
-#: skgbankgui/skgobjectmodel.cpp:1143
+#: skgbankgui/skgobjectmodel.cpp:1148
 #, fuzzy, kde-format
 #| msgctxt "Information message"
 #| msgid "Tracker '%1' has been created"
@@ -11805,8 +11832,8 @@ msgctxt "Error message"
 msgid "You cannot create a loop."
 msgstr "Ne možete kreirati petlju."
 
-#: skgbankmodeler/skgdocumentbank.cpp:462
-#: skgbankmodeler/skgdocumentbank.cpp:492
+#: skgbankmodeler/skgdocumentbank.cpp:463
+#: skgbankmodeler/skgdocumentbank.cpp:493
 #, fuzzy, kde-format
 #| msgctxt "Noun, a type of account"
 #| msgid "Wallet"
@@ -11814,7 +11841,7 @@ msgctxt "Noun"
 msgid "Wallets"
 msgstr "Novčanik"
 
-#: skgbankmodeler/skgdocumentbank.cpp:485
+#: skgbankmodeler/skgdocumentbank.cpp:486
 #, kde-format
 msgctxt "Error message"
 msgid ""
@@ -11823,7 +11850,7 @@ msgstr ""
 "Niste ovlašteni da izbrišete ovu operaciju zato jer je u statusu \"provjereno"
 "\""
 
-#: skgbankmodeler/skgdocumentbank.cpp:506
+#: skgbankmodeler/skgdocumentbank.cpp:507
 #, kde-format
 msgctxt "Error message"
 msgid ""
@@ -11833,79 +11860,79 @@ msgstr ""
 "Niste ovlašteni da izbrišete ovaj račun zato što on sadrži neke provjerene "
 "operacije"
 
-#: skgbankmodeler/skgdocumentbank.cpp:536
+#: skgbankmodeler/skgdocumentbank.cpp:537
 #, kde-format
 msgctxt "Noun"
 msgid "year(s)"
 msgstr "godina(e)"
 
-#: skgbankmodeler/skgdocumentbank.cpp:537
+#: skgbankmodeler/skgdocumentbank.cpp:538
 #, kde-format
 msgctxt "Noun"
 msgid "month(s)"
 msgstr "mjesec(i)"
 
-#: skgbankmodeler/skgdocumentbank.cpp:538
+#: skgbankmodeler/skgdocumentbank.cpp:539
 #, kde-format
 msgctxt "Noun"
 msgid "week(s)"
 msgstr "sedmica(e)"
 
-#: skgbankmodeler/skgdocumentbank.cpp:539
+#: skgbankmodeler/skgdocumentbank.cpp:540
 #, kde-format
 msgctxt "Noun"
 msgid "day(s)"
 msgstr "dan(a)"
 
-#: skgbankmodeler/skgdocumentbank.cpp:576
-#: skgbankmodeler/skgdocumentbank.cpp:640
-#: skgbankmodeler/skgdocumentbank.cpp:734
-#: skgbankmodeler/skgdocumentbank.cpp:2879
+#: skgbankmodeler/skgdocumentbank.cpp:577
+#: skgbankmodeler/skgdocumentbank.cpp:641
+#: skgbankmodeler/skgdocumentbank.cpp:737
+#: skgbankmodeler/skgdocumentbank.cpp:2891
 #, kde-format
 msgctxt "Noun, financial operations with a negative amount"
 msgid "Expenditure"
 msgstr "Rashod"
 
-#: skgbankmodeler/skgdocumentbank.cpp:576
-#: skgbankmodeler/skgdocumentbank.cpp:640
-#: skgbankmodeler/skgdocumentbank.cpp:734
-#: skgbankmodeler/skgdocumentbank.cpp:2875
+#: skgbankmodeler/skgdocumentbank.cpp:577
+#: skgbankmodeler/skgdocumentbank.cpp:641
+#: skgbankmodeler/skgdocumentbank.cpp:737
+#: skgbankmodeler/skgdocumentbank.cpp:2887
 #, kde-format
 msgctxt "Noun, financial operations with a positive amount"
 msgid "Income"
 msgstr "Prihod"
 
-#: skgbankmodeler/skgdocumentbank.cpp:606
+#: skgbankmodeler/skgdocumentbank.cpp:607
 #, kde-format
 msgctxt "Adjective, a current account"
 msgid "Current"
 msgstr "Tekuće"
 
-#: skgbankmodeler/skgdocumentbank.cpp:607
+#: skgbankmodeler/skgdocumentbank.cpp:608
 #, kde-format
 msgctxt "Noun"
 msgid "Credit card"
 msgstr "Kreditna kartica"
 
-#: skgbankmodeler/skgdocumentbank.cpp:608
+#: skgbankmodeler/skgdocumentbank.cpp:609
 #, kde-format
 msgctxt "Noun, the type of an account"
 msgid "Assets"
 msgstr "Imovina"
 
-#: skgbankmodeler/skgdocumentbank.cpp:609
+#: skgbankmodeler/skgdocumentbank.cpp:610
 #, kde-format
 msgctxt "Noun, a type of account WHERE you invest money"
 msgid "Investment"
 msgstr "Investicija"
 
-#: skgbankmodeler/skgdocumentbank.cpp:614
+#: skgbankmodeler/skgdocumentbank.cpp:615
 #, kde-format
 msgctxt "Noun, as in other type of item"
 msgid "Other"
 msgstr "Ostalo"
 
-#: skgbankmodeler/skgdocumentbank.cpp:670
+#: skgbankmodeler/skgdocumentbank.cpp:671
 #, kde-format
 msgctxt "Error message"
 msgid ""
@@ -11915,7 +11942,7 @@ msgstr ""
 "Niste ovlašteni da izbrišete ovog pratioca zato što ga koriste neke "
 "provjerene operacije"
 
-#: skgbankmodeler/skgdocumentbank.cpp:692
+#: skgbankmodeler/skgdocumentbank.cpp:693
 #, kde-format
 msgctxt "Error message"
 msgid ""
@@ -11925,7 +11952,7 @@ msgstr ""
 "Niste ovlašteni da izbrišete ovog primaoca zato što ga koriste neke "
 "provjerene operacije"
 
-#: skgbankmodeler/skgdocumentbank.cpp:711
+#: skgbankmodeler/skgdocumentbank.cpp:714
 #, kde-format
 msgctxt "Error message"
 msgid ""
@@ -11935,93 +11962,93 @@ msgstr ""
 "Niste ovlašteni da izbrišete ovu kategoriju zato što je koriste neke "
 "provjerene operacije"
 
-#: skgbankmodeler/skgdocumentbank.cpp:763
+#: skgbankmodeler/skgdocumentbank.cpp:766
 #, kde-format
 msgctxt "Noun"
 msgid "Negative"
 msgstr "Negativno"
 
-#: skgbankmodeler/skgdocumentbank.cpp:764
+#: skgbankmodeler/skgdocumentbank.cpp:767
 #, kde-format
 msgctxt "Noun"
 msgid "Positive"
 msgstr "Pozitivno"
 
-#: skgbankmodeler/skgdocumentbank.cpp:769
+#: skgbankmodeler/skgdocumentbank.cpp:772
 #, kde-format
 msgctxt "Noun"
 msgid "Next"
 msgstr "Slijedeće"
 
-#: skgbankmodeler/skgdocumentbank.cpp:770
+#: skgbankmodeler/skgdocumentbank.cpp:773
 #, kde-format
 msgctxt "Noun"
 msgid "Current"
 msgstr "Trenutni"
 
-#: skgbankmodeler/skgdocumentbank.cpp:771
-#: skgbankmodeler/skgdocumentbank.cpp:3079
+#: skgbankmodeler/skgdocumentbank.cpp:774
+#: skgbankmodeler/skgdocumentbank.cpp:3091
 #, kde-format
 msgctxt "Noun"
 msgid "Year"
 msgstr "Godina"
 
-#: skgbankmodeler/skgdocumentbank.cpp:1871 skgbasemodeler/skgdocument.cpp:1775
+#: skgbankmodeler/skgdocumentbank.cpp:1880 skgbasemodeler/skgdocument.cpp:1775
 #, kde-format
 msgctxt "Progression step"
 msgid "Migrate document"
 msgstr "Preseljenje dokumenta"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2118 skgbasemodeler/skgdocument.cpp:1810
+#: skgbankmodeler/skgdocumentbank.cpp:2128 skgbasemodeler/skgdocument.cpp:1810
 #, kde-format
 msgctxt "Error message"
 msgid "Impossible to load a document generated by a more recent version"
 msgstr "Nemoguće učitati dokument generiran novijom verzijom"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2154 skgbasemodeler/skgdocument.cpp:2051
+#: skgbankmodeler/skgdocumentbank.cpp:2164 skgbasemodeler/skgdocument.cpp:2051
 #, kde-format
 msgctxt "Progression step"
 msgid "Refresh views"
 msgstr "Osvježi poglede"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2158
+#: skgbankmodeler/skgdocumentbank.cpp:2168
 #, kde-format
 msgctxt "Progression step"
 msgid "Computation of balances"
 msgstr "Izračunavanje bilansa"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2160
+#: skgbankmodeler/skgdocumentbank.cpp:2170
 #, kde-format
 msgctxt "Progression step"
 msgid "Computation of budgets"
 msgstr "Izračunavanje budžeta"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2170 skgbasemodeler/skgdocument.cpp:2070
+#: skgbankmodeler/skgdocumentbank.cpp:2180 skgbasemodeler/skgdocument.cpp:2070
 #, kde-format
 msgctxt "Error message: Could not perform database migration"
 msgid "Database migration from version %1 to version %2 failed"
 msgstr "Preseljenje baze podataka iz verzije %1 u verziju %2 nije uspjelo"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2271
-#: skgbankmodeler/skgdocumentbank.cpp:2396
+#: skgbankmodeler/skgdocumentbank.cpp:2281
+#: skgbankmodeler/skgdocumentbank.cpp:2408
 #, kde-format
 msgctxt "Error message"
 msgid "Operation '%1' on '%2' failed"
 msgstr "Operacija '%1' na '%2' neuspjela"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2434
-#: skgbankmodeler/skgdocumentbank.cpp:2494
-#: skgbankmodeler/skgdocumentbank.cpp:2510
-#: skgbankmodeler/skgdocumentbank.cpp:2531
-#: skgbankmodeler/skgdocumentbank.cpp:2559
-#: skgbankmodeler/skgdocumentbank.cpp:2573
-#: skgbankmodeler/skgdocumentbank.cpp:2580
-#: skgbankmodeler/skgdocumentbank.cpp:2594
-#: skgbankmodeler/skgdocumentbank.cpp:2608
-#: skgbankmodeler/skgdocumentbank.cpp:2615
-#: skgbankmodeler/skgdocumentbank.cpp:2629
-#: skgbankmodeler/skgdocumentbank.cpp:2643
-#: skgbankmodeler/skgdocumentbank.cpp:2657 skgbasemodeler/skgdocument.cpp:2633
+#: skgbankmodeler/skgdocumentbank.cpp:2446
+#: skgbankmodeler/skgdocumentbank.cpp:2506
+#: skgbankmodeler/skgdocumentbank.cpp:2522
+#: skgbankmodeler/skgdocumentbank.cpp:2543
+#: skgbankmodeler/skgdocumentbank.cpp:2571
+#: skgbankmodeler/skgdocumentbank.cpp:2585
+#: skgbankmodeler/skgdocumentbank.cpp:2592
+#: skgbankmodeler/skgdocumentbank.cpp:2606
+#: skgbankmodeler/skgdocumentbank.cpp:2620
+#: skgbankmodeler/skgdocumentbank.cpp:2627
+#: skgbankmodeler/skgdocumentbank.cpp:2641
+#: skgbankmodeler/skgdocumentbank.cpp:2655
+#: skgbankmodeler/skgdocumentbank.cpp:2669 skgbasemodeler/skgdocument.cpp:2633
 #: skgbasemodeler/skgdocument.cpp:2647 skgbasemodeler/skgdocument.cpp:2654
 #: skgbasemodeler/skgdocument.cpp:2661
 #, kde-format
@@ -12029,186 +12056,186 @@ msgctxt "Noun, the default value of an item"
 msgid "Default"
 msgstr "Zadano"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2446
-#: skgbankmodeler/skgdocumentbank.cpp:2502
-#: skgbankmodeler/skgdocumentbank.cpp:2517
-#: skgbankmodeler/skgdocumentbank.cpp:2538
-#: skgbankmodeler/skgdocumentbank.cpp:2566
-#: skgbankmodeler/skgdocumentbank.cpp:2587
-#: skgbankmodeler/skgdocumentbank.cpp:2601
-#: skgbankmodeler/skgdocumentbank.cpp:2622
-#: skgbankmodeler/skgdocumentbank.cpp:2636
-#: skgbankmodeler/skgdocumentbank.cpp:2650 skgbasemodeler/skgdocument.cpp:2640
+#: skgbankmodeler/skgdocumentbank.cpp:2458
+#: skgbankmodeler/skgdocumentbank.cpp:2514
+#: skgbankmodeler/skgdocumentbank.cpp:2529
+#: skgbankmodeler/skgdocumentbank.cpp:2550
+#: skgbankmodeler/skgdocumentbank.cpp:2578
+#: skgbankmodeler/skgdocumentbank.cpp:2599
+#: skgbankmodeler/skgdocumentbank.cpp:2613
+#: skgbankmodeler/skgdocumentbank.cpp:2634
+#: skgbankmodeler/skgdocumentbank.cpp:2648
+#: skgbankmodeler/skgdocumentbank.cpp:2662 skgbasemodeler/skgdocument.cpp:2640
 #, kde-format
 msgctxt "Noun, the minimum value of an item"
 msgid "Minimum"
 msgstr "Najmanje"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2458
+#: skgbankmodeler/skgdocumentbank.cpp:2470
 #, kde-format
 msgctxt "Noun"
 msgid "Amount in 2 columns"
 msgstr "Iznos u 2 kolone"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2470
-#: skgbankmodeler/skgdocumentbank.cpp:2896
+#: skgbankmodeler/skgdocumentbank.cpp:2482
+#: skgbankmodeler/skgdocumentbank.cpp:2908
 #, kde-format
 msgctxt "Noun"
 msgid "Amount entered"
 msgstr "Uneseni iznos"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2482
+#: skgbankmodeler/skgdocumentbank.cpp:2494
 #, kde-format
 msgctxt "Noun"
 msgid "Amount entered in 2 columns"
 msgstr "Iznos unesen u 2 kolone"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2524
+#: skgbankmodeler/skgdocumentbank.cpp:2536
 #, kde-format
 msgctxt "Noun, an intermediate value between two extremums"
 msgid "Intermediate"
 msgstr "Srednja"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2545
+#: skgbankmodeler/skgdocumentbank.cpp:2557
 #, kde-format
 msgctxt "Noun"
 msgid "With operations"
 msgstr "Sa operacijama"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2552
+#: skgbankmodeler/skgdocumentbank.cpp:2564
 #, kde-format
 msgctxt "Noun"
 msgid "With cumulative operations"
 msgstr "Sa kumulativnim operacijama"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2845
+#: skgbankmodeler/skgdocumentbank.cpp:2857
 #, kde-format
 msgctxt "Noun, an account as in a bank account"
 msgid "Account"
 msgstr "Račun"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2848
+#: skgbankmodeler/skgdocumentbank.cpp:2860
 #, kde-format
 msgctxt "Noun, an account as in a bank account"
 msgid "Account's type"
 msgstr "Vrsta računa"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2851
+#: skgbankmodeler/skgdocumentbank.cpp:2863
 #, kde-format
 msgctxt "Noun, a financial operation"
 msgid "Operation"
 msgstr "Operacija"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2854 skgbasemodeler/skgdocument.cpp:2683
+#: skgbankmodeler/skgdocumentbank.cpp:2866 skgbasemodeler/skgdocument.cpp:2683
 #, kde-format
 msgctxt "Noun, the name of an item"
 msgid "Name"
 msgstr "Ime"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2858
+#: skgbankmodeler/skgdocumentbank.cpp:2870
 #, kde-format
 msgctxt "Noun, as in commercial balance"
 msgid "Balance"
 msgstr "Bilans"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2861
+#: skgbankmodeler/skgdocumentbank.cpp:2873
 #, kde-format
 msgctxt "Noun, as in commercial balance"
 msgid "Balance entered"
 msgstr "Bilans unešen"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2864
-#: skgbankmodeler/skgdocumentbank.cpp:2868
+#: skgbankmodeler/skgdocumentbank.cpp:2876
+#: skgbankmodeler/skgdocumentbank.cpp:2880
 #, kde-format
 msgctxt "Name, the numerical amount of a financial operation"
 msgid "Amount"
 msgstr "Iznos"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2871
+#: skgbankmodeler/skgdocumentbank.cpp:2883
 #, kde-format
 msgctxt "Name, the numerical amount of a financial operation"
 msgid "Today amount"
 msgstr "Današnji iznos"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2883
+#: skgbankmodeler/skgdocumentbank.cpp:2895
 #, kde-format
 msgctxt "Noun"
 msgid "Income entered"
 msgstr "Unešeni prihod"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2887
+#: skgbankmodeler/skgdocumentbank.cpp:2899
 #, kde-format
 msgctxt "Noun"
 msgid "Expenditure entered"
 msgstr "Unešeni rashod"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2890
+#: skgbankmodeler/skgdocumentbank.cpp:2902
 #, kde-format
 msgctxt "Noun"
 msgid "Quantity owned"
 msgstr "Količina u vlasništvu"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2893
+#: skgbankmodeler/skgdocumentbank.cpp:2905
 #, kde-format
 msgctxt "Noun"
 msgid "Amount owned"
 msgstr "Iznos u vlasništvu"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2899
+#: skgbankmodeler/skgdocumentbank.cpp:2911
 #, kde-format
 msgctxt "Noun"
 msgid "Account number"
 msgstr "Broj računa"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2903
+#: skgbankmodeler/skgdocumentbank.cpp:2915
 #, kde-format
 msgctxt "Noun, a number identifying an item"
 msgid "Number"
 msgstr "Broj"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2906
+#: skgbankmodeler/skgdocumentbank.cpp:2918
 #, kde-format
 msgctxt "Noun"
 msgid "Bank number"
 msgstr "Broj banke"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2909
+#: skgbankmodeler/skgdocumentbank.cpp:2921
 #, kde-format
 msgctxt "Noun"
 msgid "Agency number"
 msgstr "Broj agencije"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2912
+#: skgbankmodeler/skgdocumentbank.cpp:2924
 #, kde-format
 msgctxt "Noun"
 msgid "Agency address"
 msgstr "Adresa agencije"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2915
+#: skgbankmodeler/skgdocumentbank.cpp:2927
 #, kde-format
 msgctxt "Noun"
 msgid "Address"
 msgstr "Adresa"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2918
+#: skgbankmodeler/skgdocumentbank.cpp:2930
 #, kde-format
 msgctxt "A person or institution receiving a payment, or paying the operation"
 msgid "Payee"
 msgstr "Primalac uplate"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2921
+#: skgbankmodeler/skgdocumentbank.cpp:2933
 #, kde-format
 msgctxt "Noun, a user comment on an item"
 msgid "Comment"
 msgstr "Komentar"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2924
+#: skgbankmodeler/skgdocumentbank.cpp:2936
 #, kde-format
 msgctxt "Noun, a user comment on an item"
 msgid "Sub comment"
 msgstr "Podkomentar"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2927
+#: skgbankmodeler/skgdocumentbank.cpp:2939
 #, kde-format
 msgctxt ""
 "Noun, the mode used for payment of the operation (Credit Card, Cheque, "
@@ -12216,19 +12243,19 @@ msgctxt ""
 msgid "Mode"
 msgstr "Režim"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2930
+#: skgbankmodeler/skgdocumentbank.cpp:2942
 #, kde-format
 msgctxt "Noun"
 msgid "Next occurrence"
 msgstr "Slijedeći nastanak"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2934 skgbasemodeler/skgdocument.cpp:2685
+#: skgbankmodeler/skgdocumentbank.cpp:2946 skgbasemodeler/skgdocument.cpp:2685
 #, kde-format
 msgctxt "Noun, the date of an item"
 msgid "Date"
 msgstr "Datum"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2937
+#: skgbankmodeler/skgdocumentbank.cpp:2949
 #, fuzzy, kde-format
 #| msgctxt "Error message"
 #| msgid "Creation failed"
@@ -12236,350 +12263,350 @@ msgctxt "Noun, the date of creation of an item"
 msgid "Creation date"
 msgstr "Kreiranje nije uspjelo"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2940
+#: skgbankmodeler/skgdocumentbank.cpp:2952
 #, kde-format
 msgctxt "Noun, 7 days"
 msgid "Week"
 msgstr "Sedmica"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2943
+#: skgbankmodeler/skgdocumentbank.cpp:2955
 #, kde-format
 msgctxt "Noun, the months in a year"
 msgid "Month"
 msgstr "Mjesec"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2946
+#: skgbankmodeler/skgdocumentbank.cpp:2958
 #, kde-format
 msgctxt "Noun, 3 months"
 msgid "Quarter"
 msgstr "Kvartal"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2949
+#: skgbankmodeler/skgdocumentbank.cpp:2961
 #, kde-format
 msgctxt "Noun, 6 months"
 msgid "Semester"
 msgstr "Polugodište"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2952
+#: skgbankmodeler/skgdocumentbank.cpp:2964
 #, kde-format
 msgctxt "Noun, the years in a century"
 msgid "Year"
 msgstr "Godina"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2955
+#: skgbankmodeler/skgdocumentbank.cpp:2967
 #, kde-format
 msgctxt "Noun, the date of an item"
 msgid "First date"
 msgstr "First date"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2958
+#: skgbankmodeler/skgdocumentbank.cpp:2970
 #, kde-format
 msgctxt "Noun, the date of an item"
 msgid "Last date"
 msgstr "Posljednji datum"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2961
+#: skgbankmodeler/skgdocumentbank.cpp:2973
 #, kde-format
 msgctxt "Noun, the date of the last download"
 msgid "Download date"
 msgstr "Datum preuzimanja"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2964
+#: skgbankmodeler/skgdocumentbank.cpp:2976
 #, kde-format
 msgctxt "Noun, the date of the last reconciliation"
 msgid "Reconciliation date"
 msgstr "Datum usklađivanja"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2969
+#: skgbankmodeler/skgdocumentbank.cpp:2981
 #, kde-format
 msgctxt "Noun, the category of an item"
 msgid "Category"
 msgstr "Kategorija"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2972
+#: skgbankmodeler/skgdocumentbank.cpp:2984
 #, kde-format
 msgctxt "Noun, a financial institution"
 msgid "Bank"
 msgstr "Banka"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2975
+#: skgbankmodeler/skgdocumentbank.cpp:2987
 #, kde-format
 msgctxt "Noun, the unit of an operation, usually a currency or a share"
 msgid "Unit"
 msgstr "Jedinica"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2978
+#: skgbankmodeler/skgdocumentbank.cpp:2990
 #, kde-format
 msgctxt "Noun, the unit of an operation, usually a currency or a share"
 msgid "Unit's type"
 msgstr "Tip jedinice"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2981
+#: skgbankmodeler/skgdocumentbank.cpp:2993
 #, kde-format
 msgctxt "Adjective, has an item been checked or not"
 msgid "Checked"
 msgstr "Provjereno"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2984
+#: skgbankmodeler/skgdocumentbank.cpp:2996
 #, kde-format
 msgctxt "Adjective, a foreseen value"
 msgid "To be Checked"
 msgstr "Da se provjeri"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2987
+#: skgbankmodeler/skgdocumentbank.cpp:2999
 #, kde-format
 msgctxt "Noun, ahe unit symbol, something in the line of $, €, £..."
 msgid "Symbol"
 msgstr "Simbol"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2990
+#: skgbankmodeler/skgdocumentbank.cpp:3002
 #, kde-format
 msgctxt "Noun, a country in the world (France, China...)"
 msgid "Country"
 msgstr "Država"
 
-#: skgbankmodeler/skgdocumentbank.cpp:2994
-#: skgbankmodeler/skgdocumentbank.cpp:2997
+#: skgbankmodeler/skgdocumentbank.cpp:3006
+#: skgbankmodeler/skgdocumentbank.cpp:3009
 #, kde-format
 msgctxt "Noun, the type of an item"
 msgid "Type"
 msgstr "Tip"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3000
+#: skgbankmodeler/skgdocumentbank.cpp:3012
 #, kde-format
 msgctxt "Noun"
 msgid "Internet code"
 msgstr "Internet šifra"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3003
+#: skgbankmodeler/skgdocumentbank.cpp:3015
 #, kde-format
 msgctxt "Noun"
 msgid "Number of operations"
 msgstr "Broj operacija"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3006
+#: skgbankmodeler/skgdocumentbank.cpp:3018
 #, kde-format
 msgctxt "Noun, how frequently something occurs"
 msgid "Periodicity"
 msgstr "Periodičnost"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3009
+#: skgbankmodeler/skgdocumentbank.cpp:3021
 #, kde-format
 msgctxt "Automatically write something"
 msgid "Auto write"
 msgstr "Automatsko pisanje"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3012
+#: skgbankmodeler/skgdocumentbank.cpp:3024
 #, kde-format
 msgctxt "Noun"
 msgid "Nb of occurrences"
 msgstr "Broj događaja"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3015
+#: skgbankmodeler/skgdocumentbank.cpp:3027
 #, kde-format
 msgctxt "Verb, warn the user about an event"
 msgid "Warn"
 msgstr "Upozori"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3018
+#: skgbankmodeler/skgdocumentbank.cpp:3030
 #, kde-format
 msgctxt "Adjective, a closed item"
 msgid "Closed"
 msgstr "Zatvoreno"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3024
+#: skgbankmodeler/skgdocumentbank.cpp:3036
 #, kde-format
 msgctxt "Noun, the status of an item"
 msgid "Status"
 msgstr "Status"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3027
+#: skgbankmodeler/skgdocumentbank.cpp:3039
 #, kde-format
 msgctxt "Adjective, an item scheduled to happen on a regular basis"
 msgid "Scheduled"
 msgstr "Raspoređeno"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3030
+#: skgbankmodeler/skgdocumentbank.cpp:3042
 #, kde-format
 msgctxt "Noun"
 msgid "Number of operations (cumulative)"
 msgstr "Broj operacija (kumulativno)"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3033
+#: skgbankmodeler/skgdocumentbank.cpp:3045
 #, kde-format
 msgctxt "Noun"
 msgid "Amount (cumulative)"
 msgstr "Iznos (kumulativno)"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3036
+#: skgbankmodeler/skgdocumentbank.cpp:3048
 #, kde-format
 msgctxt "Noun"
 msgid "Search description"
 msgstr "Opis pretrage"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3039
+#: skgbankmodeler/skgdocumentbank.cpp:3051
 #, kde-format
 msgctxt "Noun"
 msgid "Process description"
 msgstr "Opis obrade"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3042
+#: skgbankmodeler/skgdocumentbank.cpp:3054
 #, kde-format
 msgctxt "Noun, the type of action"
 msgid "Action type"
 msgstr "Vrsta akcije"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3046
+#: skgbankmodeler/skgdocumentbank.cpp:3058
 #, kde-format
 msgctxt "Noun, something that is used to track items"
 msgid "Tracker"
 msgstr "Tragač"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3049
+#: skgbankmodeler/skgdocumentbank.cpp:3061
 #, kde-format
 msgctxt "Noun"
 msgid "Import status"
 msgstr "Status uvoza"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3052
+#: skgbankmodeler/skgdocumentbank.cpp:3064
 #, kde-format
 msgctxt "Noun, after the dot"
 msgid "Nb decimal"
 msgstr "Broj decimala"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3055
+#: skgbankmodeler/skgdocumentbank.cpp:3067
 #, kde-format
 msgctxt "Noun, for a share"
 msgid "Rate"
 msgstr "Stopa"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3058
+#: skgbankmodeler/skgdocumentbank.cpp:3070
 #, kde-format
 msgctxt "Noun"
 msgid "Value date"
 msgstr "Datum vrijednosti"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3061
+#: skgbankmodeler/skgdocumentbank.cpp:3073
 #, kde-format
 msgctxt "Noun"
 msgid "Coef"
 msgstr "Koeficijent"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3064
+#: skgbankmodeler/skgdocumentbank.cpp:3076
 #, kde-format
 msgctxt "Noun"
 msgid "Annual Interest"
 msgstr "Godišnja kamata"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3067
+#: skgbankmodeler/skgdocumentbank.cpp:3079
 #, kde-format
 msgctxt "Noun"
 msgid "Accrued Interest"
 msgstr "Obračunata kamata"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3070
+#: skgbankmodeler/skgdocumentbank.cpp:3082
 #, kde-format
 msgctxt "Noun"
 msgid "Value date for credit"
 msgstr "Datum vrijednosti za kredit"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3073
+#: skgbankmodeler/skgdocumentbank.cpp:3085
 #, kde-format
 msgctxt "Noun"
 msgid "Value date for debit"
 msgstr "Datum vrijednosti za dug"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3076
+#: skgbankmodeler/skgdocumentbank.cpp:3088
 #, kde-format
 msgctxt "Noun"
 msgid "Base computation"
 msgstr "Osnovno računanje"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3082
+#: skgbankmodeler/skgdocumentbank.cpp:3094
 #, kde-format
 msgctxt "Noun"
 msgid "Month"
 msgstr "Mjesec"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3085
+#: skgbankmodeler/skgdocumentbank.cpp:3097
 #, kde-format
 msgctxt "Noun"
 msgid "Period"
 msgstr "Period"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3088
+#: skgbankmodeler/skgdocumentbank.cpp:3100
 #, kde-format
 msgctxt "Noun, sort order"
 msgid "Order"
 msgstr "Redoslijed"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3091
+#: skgbankmodeler/skgdocumentbank.cpp:3103
 #, kde-format
 msgctxt "Noun"
 msgid "When"
 msgstr "Kada"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3094
+#: skgbankmodeler/skgdocumentbank.cpp:3106
 #, kde-format
 msgctxt "Noun"
 msgid "What"
 msgstr "Šta"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3097
+#: skgbankmodeler/skgdocumentbank.cpp:3109
 #, kde-format
 msgctxt "Noun"
 msgid "Impacted budget"
 msgstr "Budžet na koji utiče"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3100
+#: skgbankmodeler/skgdocumentbank.cpp:3112
 #, kde-format
 msgctxt "Noun"
 msgid "Rules"
 msgstr "Pravila"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3103
+#: skgbankmodeler/skgdocumentbank.cpp:3115
 #, kde-format
 msgctxt "Noun"
 msgid "Entered Budget"
 msgstr "Unešeni budžet"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3106
+#: skgbankmodeler/skgdocumentbank.cpp:3118
 #, kde-format
 msgctxt "Noun"
 msgid "Corrected budget"
 msgstr "Ispravljeni budžet"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3109
+#: skgbankmodeler/skgdocumentbank.cpp:3121
 #, kde-format
 msgctxt "Noun"
 msgid "Delta after rules"
 msgstr "Delta nakon pravila"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3112
+#: skgbankmodeler/skgdocumentbank.cpp:3124
 #, kde-format
 msgctxt "Noun"
 msgid "Delta"
 msgstr "Delta"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3115
+#: skgbankmodeler/skgdocumentbank.cpp:3127
 #, kde-format
 msgctxt "Noun"
 msgid "Download source"
 msgstr "Izvor preuzimanja"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3118
+#: skgbankmodeler/skgdocumentbank.cpp:3130
 #, kde-format
 msgctxt "Noun"
 msgid "Transfer"
 msgstr "Prijenos"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3121
+#: skgbankmodeler/skgdocumentbank.cpp:3133
 #, kde-format
 msgctxt "Noun, a target account of a transfer"
 msgid "To account"
 msgstr "Na račun"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3124
+#: skgbankmodeler/skgdocumentbank.cpp:3136
 #, fuzzy, kde-format
 #| msgctxt "Noun, a target account of a transfer"
 #| msgid "Maximum limit"
@@ -12587,7 +12614,7 @@ msgctxt "Noun, a maximum limit"
 msgid "Maximum limit"
 msgstr "Maksimalna granica"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3127
+#: skgbankmodeler/skgdocumentbank.cpp:3139
 #, fuzzy, kde-format
 #| msgctxt "Noun, a target account of a transfer"
 #| msgid "Minimum limit"
@@ -12595,7 +12622,7 @@ msgctxt "Noun, a minimum limit"
 msgid "Minimum limit"
 msgstr "Minimalna granica"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3130
+#: skgbankmodeler/skgdocumentbank.cpp:3142
 #, fuzzy, kde-format
 #| msgctxt "Noun, a financial operation"
 #| msgid "Operation"
@@ -12603,13 +12630,13 @@ msgctxt "Noun, the id of an operation"
 msgid "Operation id"
 msgstr "Operacija"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3133
+#: skgbankmodeler/skgdocumentbank.cpp:3145
 #, kde-format
 msgctxt "Noun, the absence of anything"
 msgid "-- Nothing --"
 msgstr "-- Ništa --"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3136
+#: skgbankmodeler/skgdocumentbank.cpp:3148
 #, fuzzy, kde-format
 #| msgctxt "Progression step"
 #| msgid "Clean import"
@@ -12617,14 +12644,14 @@ msgctxt "Noun"
 msgid "Balance import"
 msgstr "Čist uvoz"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3241
+#: skgbankmodeler/skgdocumentbank.cpp:3253
 #, fuzzy, kde-format
 #| msgid "Other"
 msgctxt "an other category"
 msgid "Others"
 msgstr "Drugo"
 
-#: skgbankmodeler/skgdocumentbank.cpp:3301
+#: skgbankmodeler/skgdocumentbank.cpp:3313
 #, kde-format
 msgid ""
 "Expenses in category <b>'%1'</b> increased by <b>%2</b> for a total of <b>"
@@ -12632,7 +12659,7 @@ msgid ""
 msgstr ""
 "Troškovi u kategoriji <b>'%1'</b> povećani za <b>%2</b> za ukupno <b>%3</b>."
 
-#: skgbankmodeler/skgdocumentbank.cpp:3305
+#: skgbankmodeler/skgdocumentbank.cpp:3317
 #, kde-format
 msgid ""
 "Expenses in category <b>'%1'</b> decreased by <b>%2</b> for a total of <b>"
@@ -12641,7 +12668,7 @@ msgstr ""
 "Troškovi u kategoriji <b>'%1'</b> smanjeni za <b>%2</b> za ukupno od <b>%3</"
 "b>."
 
-#: skgbankmodeler/skgdocumentbank.cpp:3313
+#: skgbankmodeler/skgdocumentbank.cpp:3325
 #, kde-format
 msgid ""
 "Incomes in category <b>'%1'</b> increased by <b>%2</b> for a total of <b>%3</"
@@ -12649,7 +12676,7 @@ msgid ""
 msgstr ""
 "Prihodi u kategoriji <b>'%1'</b> povećani za <b>%2</b> za ukupno <b>%3</b>."
 
-#: skgbankmodeler/skgdocumentbank.cpp:3317
+#: skgbankmodeler/skgdocumentbank.cpp:3329
 #, kde-format
 msgid ""
 "Incomes in category <b>'%1'</b> decreased by <b>%2</b> for a total of <b>%3</"
@@ -12796,7 +12823,7 @@ msgctxt "An information message"
 msgid "Amount has been changed to be aligned with the imported operation"
 msgstr "Iznos je promijenjen da bi se poravnao sa uvezenom operacijom"
 
-#: skgbankmodeler/skgpayeeobject.cpp:77
+#: skgbankmodeler/skgpayeeobject.cpp:78
 #, kde-format
 msgctxt "Information message"
 msgid "Payee '%1' has been created"
@@ -13807,13 +13834,13 @@ msgctxt "logical operator in a search query"
 msgid " or "
 msgstr " ili "
 
-#: skgbankmodeler/skgsuboperationobject.cpp:145
+#: skgbankmodeler/skgsuboperationobject.cpp:144
 #, kde-format
 msgctxt "Error message"
 msgid "Impossible to remove an operation from a closed tracker"
 msgstr "Nije moguće ukloniti operaciju iz zatvorenog pratioca"
 
-#: skgbankmodeler/skgsuboperationobject.cpp:147
+#: skgbankmodeler/skgsuboperationobject.cpp:146
 #, kde-format
 msgctxt "Error message"
 msgid "Impossible to add an operation in a closed tracker"
