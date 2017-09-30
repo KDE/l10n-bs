@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-09-29 05:32+0200\n"
+"POT-Creation-Date: 2017-09-30 05:48+0200\n"
 "PO-Revision-Date: 2015-02-24 23:27+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -8978,8 +8978,8 @@ msgstr "Veličina"
 #: plugins/paintops/libpaintop/forms/wdgbrushchooser.ui:128
 #: plugins/paintops/libpaintop/kis_auto_brush_widget.cpp:59
 #: plugins/paintops/libpaintop/kis_brush_chooser.cpp:113
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:86
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:96
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:99
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:109
 #: plugins/paintops/roundmarker/kis_roundmarker_option.cpp:31
 #: plugins/paintops/sketch/kis_sketchop_option.cpp:44
 #: plugins/paintops/spray/kis_spray_shape_option.cpp:57
@@ -10329,7 +10329,7 @@ msgstr "Čisto"
 #: libs/pigment/colorspaces/KoAlphaColorSpace.cpp:122
 #: libs/pigment/compositeops/KoCompositeOps.h:141
 #: libs/pigment/KoCompositeOpRegistry.cpp:49
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:105
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:118
 #, kde-format
 msgid "Subtract"
 msgstr "Oduzmi"
@@ -10337,7 +10337,7 @@ msgstr "Oduzmi"
 #: libs/pigment/colorspaces/KoAlphaColorSpace.cpp:194
 #: libs/pigment/compositeops/KoCompositeOps.h:143
 #: libs/pigment/KoCompositeOpRegistry.cpp:50
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:105
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:118
 #: plugins/tools/karbonplugins/filtereffects/BlendEffectConfigWidget.cpp:39
 #, kde-format
 msgid "Multiply"
@@ -11254,7 +11254,7 @@ msgstr "Kombinuj ugao:"
 #: libs/pigment/resources/KoColorSet.cpp:485
 #: libs/pigment/resources/KoColorSet.cpp:504
 #: libs/pigment/resources/KoColorSet.cpp:545
-#: libs/ui/actions/kis_selection_action_factories.cpp:421
+#: libs/ui/actions/kis_selection_action_factories.cpp:398
 #: libs/ui/KisView.cpp:705
 #: plugins/extensions/animationrenderer/DlgAnimationRenderer.cpp:63
 #, kde-format
@@ -11304,29 +11304,29 @@ msgctxt "(qtundo-format)"
 msgid "Copy Merged"
 msgstr "Kopija ujedinjena"
 
-#: libs/ui/actions/kis_selection_action_factories.cpp:396
-#: libs/ui/actions/kis_selection_action_factories.cpp:428
-#, kde-format
-msgid "(pasted)"
-msgstr "(umetnuto)"
-
-#: libs/ui/actions/kis_selection_action_factories.cpp:426
+#: libs/ui/actions/kis_selection_action_factories.cpp:403
 #, kde-format
 msgid "Pasted"
 msgstr "Zaljepljeno"
 
-#: libs/ui/actions/kis_selection_action_factories.cpp:470
+#: libs/ui/actions/kis_selection_action_factories.cpp:405
+#: libs/ui/actions/KisPasteActionFactory.cpp:86
+#, kde-format
+msgid "(pasted)"
+msgstr "(umetnuto)"
+
+#: libs/ui/actions/kis_selection_action_factories.cpp:447
 msgctxt "(qtundo-format)"
 msgid "Convert to Vector Selection"
 msgstr "Konvertuj u odabir vektora"
 
-#: libs/ui/actions/kis_selection_action_factories.cpp:503
+#: libs/ui/actions/kis_selection_action_factories.cpp:480
 msgctxt "(qtundo-format)"
 msgid "Convert shapes to vector selection"
 msgstr "Konvertuj oblike u odabir vektora"
 
-#: libs/ui/actions/kis_selection_action_factories.cpp:575
-#: libs/ui/actions/kis_selection_action_factories.cpp:635
+#: libs/ui/actions/kis_selection_action_factories.cpp:552
+#: libs/ui/actions/kis_selection_action_factories.cpp:612
 #: plugins/tools/tool_polyline/kis_tool_polyline.cc:73
 msgctxt "(qtundo-format)"
 msgid "Draw Polyline"
@@ -15769,12 +15769,12 @@ msgctxt "Auto-generated layer style name for embedded styles (style itself)"
 msgid "<%1> (embedded)"
 msgstr ""
 
-#: libs/ui/kis_selection_manager.cc:553
+#: libs/ui/kis_selection_manager.cc:555
 #, kde-format
 msgid "Stroked Shapes"
 msgstr "Udarni oblici"
 
-#: libs/ui/kis_selection_manager.cc:555
+#: libs/ui/kis_selection_manager.cc:557
 msgctxt "(qtundo-format)"
 msgid "Stroke Shapes"
 msgstr "Oblici poteza"
@@ -25030,6 +25030,7 @@ msgstr "Jak"
 
 #. i18n: ectx: property (text), widget (QLabel, label_20)
 #: plugins/extensions/metadataeditor/editors/exif.ui:873
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:93
 #, kde-format
 msgid "Contrast:"
 msgstr "Kontrast:"
@@ -34523,48 +34524,58 @@ msgstr ""
 "U auto modu razmaku kista će se automatski izračunati ovisno o njegovoj "
 "veličini"
 
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:85
+#, fuzzy, kde-format
+msgid "Makes texture lighter or darker"
+msgstr "Učini boju četke tamnijom"
+
 #: plugins/paintops/libpaintop/kis_texture_option.cpp:87
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:97
+#, fuzzy, kde-format
+msgid "Brightness:"
+msgstr "Osvetljenost"
+
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:100
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:110
 #, kde-format
 msgid "Random Offset"
 msgstr "Proizvoljni pomak"
 
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:90
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:103
 #, kde-format
 msgid "Horizontal Offset:"
 msgstr "Horizontalno odstupanje"
 
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:100
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:113
 #, kde-format
 msgid "Vertical Offset:"
 msgstr "Vertikalno odstupanje:"
 
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:107
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:120
 #, kde-format
 msgid "Texturing Mode:"
 msgstr "Način postavljanja tekstura:"
 
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:113
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:126
 #, kde-format
 msgid "Cut Off Brush"
 msgstr "Odrezivanje četke"
 
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:113
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:126
 #, kde-format
 msgid "Cut Off Disabled"
 msgstr "Odrezivanje onemogućeno"
 
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:113
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:126
 #, kde-format
 msgid "Cut Off Pattern"
 msgstr "Odrezivanje uzorka"
 
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:115
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:128
 #, kde-format
 msgid "Cutoff Policy:"
 msgstr "Pravila odrezivanja"
 
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:121
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:134
 #, kde-format
 msgid ""
 "When pattern texture values are outside the range specified by the slider, "
@@ -34573,17 +34584,17 @@ msgstr ""
 "Kada su uzorci teksture izvan opsega odabrani na klizaču, politika prekida "
 "će biti primjenjena"
 
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:123
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:136
 #, kde-format
 msgid "Cutoff:"
 msgstr "Odsjecanje:"
 
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:127
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:140
 #, kde-format
 msgid "Invert Pattern:"
 msgstr "Invertiraj patern:"
 
-#: plugins/paintops/libpaintop/kis_texture_option.cpp:260
+#: plugins/paintops/libpaintop/kis_texture_option.cpp:285
 #, kde-format
 msgctxt "PaintOp instant preview limitation"
 msgid "Texture->Pattern (low quality preview)"
