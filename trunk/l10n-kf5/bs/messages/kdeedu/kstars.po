@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-10-05 03:25+0200\n"
+"POT-Creation-Date: 2017-10-07 03:30+0200\n"
 "PO-Revision-Date: 2015-01-30 09:02+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -10206,22 +10206,22 @@ msgstr ""
 msgid "Failed to update site location to %1. City not found."
 msgstr ""
 
-#: ekos/ekosmanager.cpp:2582
+#: ekos/ekosmanager.cpp:2584
 #, kde-format
 msgid "Enabling debug logging for %1..."
 msgstr ""
 
-#: ekos/ekosmanager.cpp:2590
+#: ekos/ekosmanager.cpp:2592
 #, kde-format
 msgid "Disabling debug logging for %1..."
 msgstr ""
 
-#: ekos/ekosmanager.cpp:2612
+#: ekos/ekosmanager.cpp:2614
 #, kde-format
 msgid "Re-enabling debug logging for %1..."
 msgstr ""
 
-#: ekos/ekosmanager.cpp:2623
+#: ekos/ekosmanager.cpp:2625
 #, kde-format
 msgid "Re-disabling debug logging for %1..."
 msgstr ""
@@ -11984,7 +11984,7 @@ msgid "Autoguiding stopped."
 msgstr "Automatsko navođenje je završeno."
 
 #: ekos/guide/internalguide/guider.cpp:432
-#: ekos/guide/internalguide/internalguider.cpp:829
+#: ekos/guide/internalguide/internalguider.cpp:855
 #, kde-format
 msgid ""
 "Lost track of the guide star. Try increasing the square size and check the "
@@ -11994,7 +11994,7 @@ msgstr ""
 "provjerite  postolje."
 
 #: ekos/guide/internalguide/guider.cpp:450
-#: ekos/guide/internalguide/internalguider.cpp:848
+#: ekos/guide/internalguide/internalguider.cpp:874
 #, kde-format
 msgid "Lost track of the guide star. Aborting guiding..."
 msgstr "Izbuljen trag navodeće zvijezde. Prekidam navođenje..."
@@ -12151,19 +12151,44 @@ msgstr ""
 "Trag vodeće zvijezde je izgubljen. Pokusajte povećati velicinu kvadrata ili "
 "reducirati trajnje pulsa."
 
-#: ekos/guide/internalguide/internalguider.cpp:384
+#: ekos/guide/internalguide/internalguider.cpp:379
 #, fuzzy, kde-format
 #| msgid "GUIDE_RA Drifting..."
 msgid "RA drifting forward..."
 msgstr "GUIDE_RA Strujanje..."
 
-#: ekos/guide/internalguide/internalguider.cpp:444
+#: ekos/guide/internalguide/internalguider.cpp:431
 #, fuzzy, kde-format
 #| msgid "GUIDE_RA Drifting..."
 msgid "RA drifting reverse..."
 msgstr "GUIDE_RA Strujanje..."
 
-#: ekos/guide/internalguide/internalguider.cpp:497
+#: ekos/guide/internalguide/internalguider.cpp:435
+#: ekos/guide/internalguide/internalguider.cpp:562
+#: ekos/guide/internalguide/internalguider.cpp:731
+#, fuzzy, kde-format
+#| msgid "Calibration rejected. Star drift is too short."
+msgid ""
+"Calibration rejected. Star drift is too short. Check for mount, cable, or "
+"backlash problems."
+msgstr "Kalibracija odbijena. Strujanje zvijezde je prekratko."
+
+#: ekos/guide/internalguide/internalguider.cpp:441
+#: ekos/guide/internalguide/internalguider.cpp:527
+#: ekos/guide/internalguide/internalguider.cpp:569
+#: ekos/guide/internalguide/internalguider.cpp:621
+#: ekos/guide/internalguide/internalguider.cpp:702
+#: ekos/guide/internalguide/internalguider.cpp:738
+#: ekos/guide/internalguide/rcalibration.cpp:465
+#: ekos/guide/internalguide/rcalibration.cpp:631
+#: ekos/guide/internalguide/rcalibration.cpp:692
+#: ekos/guide/internalguide/rcalibration.cpp:805
+#: ekos/guide/internalguide/rcalibration.cpp:847
+#, fuzzy, kde-format
+msgid "Guiding calibration failed with errors"
+msgstr "Provjera skripte nije uspjela"
+
+#: ekos/guide/internalguide/internalguider.cpp:521
 #, fuzzy, kde-format
 #| msgid ""
 #| "GUIDE_RA: Scope cannot reach the start point after %1 iteration.\n"
@@ -12187,27 +12212,14 @@ msgstr[2] ""
 "GUIDE_RA: Opseg ne može dosegnuti startnu tačku nakon  %1 iteracija.\n"
 "Moguci problemi sa postoljem ili drajverom..."
 
-#: ekos/guide/internalguide/internalguider.cpp:504
-#: ekos/guide/internalguide/internalguider.cpp:560
-#: ekos/guide/internalguide/internalguider.cpp:676
-#: ekos/guide/internalguide/internalguider.cpp:712
-#: ekos/guide/internalguide/rcalibration.cpp:465
-#: ekos/guide/internalguide/rcalibration.cpp:631
-#: ekos/guide/internalguide/rcalibration.cpp:692
-#: ekos/guide/internalguide/rcalibration.cpp:805
-#: ekos/guide/internalguide/rcalibration.cpp:847
-#, fuzzy, kde-format
-msgid "Guiding calibration failed with errors"
-msgstr "Provjera skripte nije uspjela"
-
-#: ekos/guide/internalguide/internalguider.cpp:533
+#: ekos/guide/internalguide/internalguider.cpp:547
 #, fuzzy, kde-format
 #| msgid "GUIDE_DEC drifting..."
 msgid "DEC drifting forward..."
 msgstr "GUIDE_DEC tok..."
 
-#: ekos/guide/internalguide/internalguider.cpp:547
-#: ekos/guide/internalguide/internalguider.cpp:698
+#: ekos/guide/internalguide/internalguider.cpp:558
+#: ekos/guide/internalguide/internalguider.cpp:724
 #: ekos/guide/internalguide/rcalibration.cpp:423
 #: ekos/guide/internalguide/rcalibration.cpp:453
 #: ekos/guide/internalguide/rcalibration.cpp:675
@@ -12216,22 +12228,14 @@ msgstr "GUIDE_DEC tok..."
 msgid "Guiding calibration completed successfully"
 msgstr "Telescope Wizard je uspješno završen."
 
-#: ekos/guide/internalguide/internalguider.cpp:553
-#: ekos/guide/internalguide/internalguider.cpp:705
-#, fuzzy, kde-format
-#| msgid "Calibration rejected. Star drift is too short."
-msgid ""
-"Calibration rejected. Star drift is too short. Check for mount, cable, or "
-"backlash problems."
-msgstr "Kalibracija odbijena. Strujanje zvijezde je prekratko."
-
-#: ekos/guide/internalguide/internalguider.cpp:612
+#: ekos/guide/internalguide/internalguider.cpp:605
 #, fuzzy, kde-format
 #| msgid "GUIDE_DEC drifting..."
 msgid "DEC drifting reverse..."
 msgstr "GUIDE_DEC tok..."
 
-#: ekos/guide/internalguide/internalguider.cpp:669
+#: ekos/guide/internalguide/internalguider.cpp:614
+#: ekos/guide/internalguide/internalguider.cpp:695
 #, fuzzy, kde-format
 #| msgid ""
 #| "GUIDE_DEC: Scope cannot reach the start point after %1 iteration.\n"
@@ -12243,7 +12247,7 @@ msgid ""
 "Guide DEC: Scope cannot reach the start point after %1 iteration.\n"
 "Possible mount or backlash problems..."
 msgid_plural ""
-"GUIDE_DEC: Scope cannot reach the start point after %1 iterations.\n"
+"GUIDE DEC: Scope cannot reach the start point after %1 iterations.\n"
 "Possible mount or backlash problems..."
 msgstr[0] ""
 "GUIDE_DEC: Opseg ne moze dosegnuti startnu tacku nakon %1 iteracije.\n"
@@ -12255,26 +12259,26 @@ msgstr[2] ""
 "GUIDE_DEC: Opseg ne moze dosegnuti startnu tacku nakon %1 iteracija.\n"
 "Moguci problemi sa postoljem ili drajverom..."
 
-#: ekos/guide/internalguide/internalguider.cpp:689
+#: ekos/guide/internalguide/internalguider.cpp:715
 #: ekos/guide/internalguide/rcalibration.cpp:416
 #: ekos/guide/internalguide/rcalibration.cpp:818
 #, kde-format
 msgid "DEC swap enabled."
 msgstr "DEC zamjena omogućena."
 
-#: ekos/guide/internalguide/internalguider.cpp:691
+#: ekos/guide/internalguide/internalguider.cpp:717
 #: ekos/guide/internalguide/rcalibration.cpp:418
 #: ekos/guide/internalguide/rcalibration.cpp:820
 #, kde-format
 msgid "DEC swap disabled."
 msgstr "DEC zamjena onemogućena."
 
-#: ekos/guide/internalguide/internalguider.cpp:895
+#: ekos/guide/internalguide/internalguider.cpp:921
 #, kde-format
 msgid "Lost track of phase shift."
 msgstr ""
 
-#: ekos/guide/internalguide/internalguider.cpp:914
+#: ekos/guide/internalguide/internalguider.cpp:940
 #, fuzzy, kde-format
 #| msgid "Lost track of the guide star. Aborting guiding..."
 msgid "Lost track of phase shift. Aborting guiding..."
@@ -17122,13 +17126,13 @@ msgstr "Nemoguće pisati u  korisnikov dnevnik"
 msgid "%1 Preview"
 msgstr "Predpregled"
 
-#: indi/indidevice.cpp:271
+#: indi/indidevice.cpp:272
 #, fuzzy, kde-format
 msgctxt "INDI message shown in status bar"
 msgid "%1"
 msgstr "%"
 
-#: indi/indidevice.cpp:285
+#: indi/indidevice.cpp:286
 #, fuzzy, kde-format
 msgctxt "Message shown in INDI control panel"
 msgid "%1"
