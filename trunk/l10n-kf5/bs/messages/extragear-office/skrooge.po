@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skrooge.po\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-10-15 03:18+0200\n"
+"POT-Creation-Date: 2017-10-18 06:25+0200\n"
 "PO-Revision-Date: 2015-02-26 23:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -1978,7 +1978,7 @@ msgstr "-1 za isključenje limita"
 #: plugins/import/skrooge_import_afb120/skgimportpluginafb120.cpp:75
 #: plugins/import/skrooge_import_backend/skgimportpluginbackend.cpp:144
 #: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:288
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:718
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:730
 #: plugins/import/skrooge_import_gnc/skgimportplugingnc.cpp:66
 #: plugins/import/skrooge_import_gsb/skgimportplugingsb.cpp:61
 #: plugins/import/skrooge_import_iif/skgimportpluginiif.cpp:81
@@ -2024,8 +2024,8 @@ msgstr "Uvoz %1 datoteke"
 #: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:174
 #: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:228
 #: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:314
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:800
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:910
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:812
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:922
 #: plugins/import/skrooge_import_gnc/skgimportplugingnc.cpp:74
 #: plugins/import/skrooge_import_gsb/skgimportplugingsb.cpp:70
 #: plugins/import/skrooge_import_iif/skgimportpluginiif.cpp:97
@@ -2084,7 +2084,7 @@ msgid "Default account '%1' created for import"
 msgstr "Zadani račun '%1' kreiran za uvoz."
 
 #: plugins/import/skrooge_import_afb120/skgimportpluginafb120.cpp:168
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:690
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:702
 #: plugins/import/skrooge_import_mt940/skgimportpluginmt940.cpp:165
 #: plugins/import/skrooge_import_ofx/skgimportpluginofx.cpp:193
 #, kde-format
@@ -2346,8 +2346,8 @@ msgstr ""
 "Kolone datum i iznos nisu pronađene. Postavite parametre uvoza u postavkama."
 
 #: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:303
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:790
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:900
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:802
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:912
 #, kde-format
 msgctxt "An information message"
 msgid "Use automatic search of the columns"
@@ -2366,7 +2366,7 @@ msgid "Header not found in CSV file"
 msgstr "Zaglavlje nije pronađeno u CSV datoteci"
 
 #: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:390
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:839
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:851
 #: plugins/import/skrooge_import_qif/skgimportpluginqif.cpp:145
 #, kde-format
 msgctxt "Error message"
@@ -2408,25 +2408,70 @@ msgid "Check"
 msgstr "Ček"
 
 #: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:483
+#, fuzzy, kde-format
+#| msgctxt "Noun, type of OFX transaction"
+#| msgid "Deposit"
+msgctxt "An operation mode"
+msgid "Deposit"
+msgstr "Depozit"
+
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:485
+#, kde-format
+msgctxt "An operation mode"
+msgid "Payback"
+msgstr ""
+
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:487
 #: plugins/import/skrooge_import_ofx/skgimportpluginofx.cpp:466
 #, kde-format
 msgctxt "An operation mode"
 msgid "Withdrawal"
 msgstr "Povlačenje"
 
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:485
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:489
 #, kde-format
 msgctxt "An operation mode"
 msgid "Card"
 msgstr "Kartica"
 
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:487
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:491
+#, fuzzy, kde-format
+#| msgctxt "Noun, type of OFX transaction"
+#| msgid "Repeating payment"
+msgctxt "An operation mode"
+msgid "Loan payment"
+msgstr "Ponovljeno plaćanje"
+
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:493
 #, kde-format
 msgctxt "An operation mode"
 msgid "Subscription"
 msgstr "Pretplata"
 
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:574
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:497
+#, fuzzy, kde-format
+#| msgctxt "Noun, type of OFX transaction"
+#| msgid "Deposit"
+msgctxt "An operation mode"
+msgid "Cash deposit"
+msgstr "Depozit"
+
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:499
+#, fuzzy, kde-format
+#| msgid "Loan Summary"
+msgctxt "An operation mode"
+msgid "Card summary"
+msgstr "Pregled pozajmice"
+
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:501
+#, fuzzy, kde-format
+#| msgctxt "Noun: type of payement"
+#| msgid "Credit card"
+msgctxt "An operation mode"
+msgid "Deferred card"
+msgstr "Kreditna kartica"
+
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:586
 #: plugins/import/skrooge_import_iif/skgimportpluginiif.cpp:150
 #: plugins/import/skrooge_import_qif/skgimportpluginqif.cpp:253
 #, kde-format
@@ -2434,21 +2479,22 @@ msgctxt "Noun"
 msgid "Bank for import %1"
 msgstr "Banka za uviz %1"
 
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:578
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:590
 #, kde-format
 msgctxt "An information message"
 msgid "Default bank '%1' created for import"
 msgstr "Zadana banka '%1' kreirana za uvoz"
 
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:687
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:699
 #: plugins/import/skrooge_import_ofx/skgimportpluginofx.cpp:119
 #, kde-format
 msgctxt "An information message"
 msgid "The initial balance of '%1' has been set"
 msgstr "Početni bilans od '%1' postavljen"
 
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:743
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:755
 #: plugins/import/skrooge_import_iif/skgimportpluginiif.cpp:353
+#: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:82
 #: plugins/import/skrooge_import_qif/skgimportpluginqif.cpp:865
 #, fuzzy, kde-format
 #| msgctxt "An information message"
@@ -2457,7 +2503,7 @@ msgctxt "An information message"
 msgid "Only selected accounts and operations have been exported"
 msgstr "Sve raspoređene operacije su konvertovane u predložak"
 
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:749
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:761
 #: plugins/import/skrooge_import_iif/skgimportpluginiif.cpp:359
 #: plugins/import/skrooge_import_json/skgimportpluginjson.cpp:62
 #: plugins/import/skrooge_import_kmy/skgimportpluginkmy.cpp:1499
@@ -2472,14 +2518,14 @@ msgctxt "Error message"
 msgid "Save file '%1' failed"
 msgstr "Spremanje datoteke '%1' nije uspjelo"
 
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:771
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:783
 #, kde-format
 msgctxt "A file format"
 msgid "CSV file"
 msgstr "CSV datoteka"
 
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:781
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:849
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:793
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:861
 #: plugins/import/skrooge_import_gnc/skgimportplugingnc.cpp:107
 #: plugins/import/skrooge_import_gnc/skgimportplugingnc.cpp:619
 #: plugins/import/skrooge_import_gsb/skgimportplugingsb.cpp:115
@@ -2493,7 +2539,7 @@ msgctxt "Import step"
 msgid "Import units"
 msgstr "Uvezi jedinice"
 
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:841
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:853
 #, fuzzy, kde-format
 #| msgctxt "An information message"
 #| msgid "Import of '%1' with code '%2' and date format '%3'"
@@ -2501,15 +2547,15 @@ msgctxt "An information message"
 msgid "Import of '%1' with codec '%2' and date format '%3'"
 msgstr "Uvezi '%1' sa kodom '%2' i formatom datuma  '%3'"
 
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:895
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:944
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:907
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:956
 #: plugins/import/skrooge_import_skg/skgimportpluginskg.cpp:236
 #, kde-format
 msgctxt "Import step"
 msgid "Import rules"
 msgstr "Uvoz pravila"
 
-#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:936
+#: plugins/import/skrooge_import_csv/skgimportplugincsv.cpp:948
 #, fuzzy, kde-format
 #| msgctxt "Noun, name of the user action"
 #| msgid "Import with codec %1"
@@ -2627,7 +2673,7 @@ msgstr "Grisbi datoteka"
 
 #: plugins/import/skrooge_import_iif/skgimportpluginiif.cpp:366
 #: plugins/import/skrooge_import_kmy/skgimportpluginkmy.cpp:1508
-#: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:69
+#: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:92
 #: plugins/import/skrooge_import_qif/skgimportpluginqif.cpp:878
 #, kde-format
 msgctxt "Export step"
@@ -2658,7 +2704,7 @@ msgstr "Izvoz dobavljača"
 
 #: plugins/import/skrooge_import_iif/skgimportpluginiif.cpp:447
 #: plugins/import/skrooge_import_kmy/skgimportpluginkmy.cpp:1114
-#: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:101
+#: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:124
 #: plugins/import/skrooge_import_qif/skgimportpluginqif.cpp:914
 #, kde-format
 msgctxt "Export step"
@@ -2692,7 +2738,7 @@ msgstr "Uvoz budžeta"
 
 #: plugins/import/skrooge_import_kmy/skgimportpluginkmy.cpp:822
 #: plugins/import/skrooge_import_kmy/skgimportpluginkmy.cpp:913
-#: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:76
+#: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:99
 #: plugins/import/skrooge_import_qif/skgimportpluginqif.cpp:1115
 #, kde-format
 msgctxt "Export step"
@@ -2723,14 +2769,14 @@ msgctxt "A file format"
 msgid "KMyMoney document"
 msgstr "KMyMoney dokument"
 
-#: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:139
+#: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:167
 #, fuzzy, kde-format
 #| msgid "Account"
 msgctxt "The default category for the accounts for ledger export"
 msgid "Account"
 msgstr "Nalog"
 
-#: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:152
+#: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:180
 #, fuzzy, kde-format
 #| msgctxt "Error message"
 #| msgid "No database defined"
@@ -2738,14 +2784,14 @@ msgctxt "Category not defined"
 msgid "Not defined"
 msgstr "Nije definisana baza podataka"
 
-#: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:161
+#: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:189
 #, fuzzy, kde-format
 #| msgid "Category"
 msgctxt "The default category for the categories for ledger export"
 msgid "Category"
 msgstr "Kategorija"
 
-#: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:190
+#: plugins/import/skrooge_import_ledger/skgimportpluginledger.cpp:223
 #, fuzzy, kde-format
 #| msgctxt "A file format"
 #| msgid "QIF file"
