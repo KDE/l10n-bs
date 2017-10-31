@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: partitionmanager\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-10-10 03:18+0200\n"
+"POT-Creation-Date: 2017-10-31 03:05+0100\n"
 "PO-Revision-Date: 2015-01-10 12:07+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <kde-i18n-bs@kde.org>\n"
@@ -2446,29 +2446,27 @@ msgctxt "@info:progress"
 msgid "Delete the partition <filename>%1</filename>"
 msgstr "Brisanje particije <filename>%1</filename>"
 
-#: jobs/job.cpp:45
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info/plain"
-#| msgid ""
-#| "The logical sector sizes in the source and target for copying are not the "
-#| "same. This is currently unsupported."
-msgctxt "@info:progress"
-msgid ""
-"The logical sector sizes in the source and target for copying are not the "
-"same. This is currently unsupported."
+#: jobs/job.cpp:55
+#, kde-format
+msgctxt "direction: left"
+msgid "left"
 msgstr ""
-"Velicina logickog sektora za kopiranje u izvoru i primaocu nije ista. Ovo "
-"trenutacno nije moguce."
 
-#: jobs/job.cpp:63
+#: jobs/job.cpp:55
+#, kde-format
+msgctxt "direction: right"
+msgid "right"
+msgstr ""
+
+#: jobs/job.cpp:55
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid "Copying %1 blocks (%2 sectors) from %3 to %4, direction: %5."
 msgctxt "@info:progress"
-msgid "Copying %1 blocks (%2 sectors) from %3 to %4, direction: %5."
+msgid "Copying %1 blocks (%2 bytes) from %3 to %4, direction: %5."
 msgstr "Kopiram %1 blokova (%2 sektora) iz %3 u %4, smjer: %5."
 
-#: jobs/job.cpp:85
+#: jobs/job.cpp:76
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid "Copying %1 MiB/second, estimated time left: %2"
@@ -2476,22 +2474,21 @@ msgctxt "@info:progress"
 msgid "Copying %1 MiB/second, estimated time left: %2"
 msgstr "Kopiram %1 MiB/s, procijenjeno preostalo vrijeme: %2"
 
-#: jobs/job.cpp:100
+#: jobs/job.cpp:90
 #, fuzzy, kde-kuit-format
 msgctxt "@info:progress"
 msgid "Copying remainder of block size %1 from %2 to %3."
 msgstr "Kopiram ostatak blokova veličine %1 sa %2 na %3."
 
-# >> @item:intext inserted into next message
-#: jobs/job.cpp:113
+#: jobs/job.cpp:102
 #, kde-format
-msgid "1 sector"
-msgid_plural "%1 sectors"
-msgstr[0] "%1 sektora"
-msgstr[1] "%1 sektora"
-msgstr[2] "%1 sektora"
+msgid "1 byte"
+msgid_plural "%1 bytes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
-#: jobs/job.cpp:113
+#: jobs/job.cpp:102
 #, fuzzy, kde-kuit-format
 #| msgctxt ""
 #| "@info/plain argument 2 is a string such as 7 sectors (localized "
@@ -2499,15 +2496,14 @@ msgstr[2] "%1 sektora"
 #| msgid "Copying 1 block (%2) finished."
 #| msgid_plural "Copying %1 blocks (%2) finished."
 msgctxt ""
-"@info:progress argument 2 is a string such as 7 sectors (localized "
-"accordingly)"
+"@info:progress argument 2 is a string such as 7 bytes (localized accordingly)"
 msgid "Copying 1 block (%2) finished."
 msgid_plural "Copying %1 blocks (%2) finished."
 msgstr[0] "Kopiranje %1 bloka (%2) završeno."
 msgstr[1] "Kopiranje %1 bloka (%2) završeno."
 msgstr[2] "Kopiranje %1 blokova (%2) završeno."
 
-#: jobs/job.cpp:121
+#: jobs/job.cpp:110
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid ""
@@ -2518,23 +2514,23 @@ msgstr ""
 "Izvor i odredište za kopiranje se ne preklapaju: vraćanje unazad nije "
 "potrebno."
 
-#: jobs/job.cpp:145
+#: jobs/job.cpp:134
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid "Rollback from: First sector: %1, last sector: %2."
 msgctxt "@info:progress"
-msgid "Rollback from: First sector: %1, last sector: %2."
+msgid "Rollback from: First byte: %1, last byte: %2."
 msgstr "Vraćanje unazad od: prvi sektor %1, zadnji sektor %2."
 
-#: jobs/job.cpp:146
+#: jobs/job.cpp:135
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid "Rollback to: First sector: %1, last sector: %2."
 msgctxt "@info:progress"
-msgid "Rollback to: First sector: %1, last sector: %2."
+msgid "Rollback to: First byte: %1, last byte: %2."
 msgstr "Vraćanje unazad do: prvi sektor %1, zadnji sektor %2."
 
-#: jobs/job.cpp:150 jobs/job.cpp:156
+#: jobs/job.cpp:139 jobs/job.cpp:145
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid "Could not open device <filename>%1</filename> to rollback copying."
@@ -2544,7 +2540,7 @@ msgstr ""
 "Ne mogu da otvorim uređaj <filename>%1</filename> radi vraćanja unazad "
 "kopiranja."
 
-#: jobs/job.cpp:162
+#: jobs/job.cpp:151
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid "Rollback failed: Source or target are not devices."
@@ -2552,7 +2548,7 @@ msgctxt "@info:progress"
 msgid "Rollback failed: Source or target are not devices."
 msgstr "Vraćanje unazad nije uspelo: izvor ili odredište nisu uređaji."
 
-#: jobs/job.cpp:177
+#: jobs/job.cpp:166
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid "Job: %1"
@@ -2560,7 +2556,7 @@ msgctxt "@info:progress"
 msgid "Job: %1"
 msgstr "Posao: %1"
 
-#: jobs/job.cpp:186
+#: jobs/job.cpp:175
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain job status (error, warning, ...)"
 #| msgid "%1: %2"
@@ -2569,27 +2565,27 @@ msgid "%1: %2"
 msgstr "%1: %2"
 
 # >> @item:intext job status
-#: jobs/job.cpp:210
+#: jobs/job.cpp:199
 #, kde-kuit-format
 msgctxt "@info:progress job"
 msgid "Pending"
 msgstr "Nastupa"
 
 # >> @item:intext job status
-#: jobs/job.cpp:211
+#: jobs/job.cpp:200
 #, kde-kuit-format
 msgctxt "@info:progress job"
 msgid "Success"
 msgstr "Uspješan"
 
 # >> @item:intext job status
-#: jobs/job.cpp:212
+#: jobs/job.cpp:201
 #, kde-kuit-format
 msgctxt "@info:progress job"
 msgid "Error"
 msgstr "Greška"
 
-#: jobs/movefilesystemjob.cpp:62
+#: jobs/movefilesystemjob.cpp:63
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid ""
@@ -2602,7 +2598,7 @@ msgstr ""
 "Ne mogu da otvorim datotečni sistem na particiji <filename>%1</filename> "
 "radi pomeranja."
 
-#: jobs/movefilesystemjob.cpp:64
+#: jobs/movefilesystemjob.cpp:65
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid ""
@@ -2616,7 +2612,7 @@ msgstr ""
 "Ne mogu da napravim odredište za pomeranje datotečnog sistema na particiji "
 "<filename>%1</filename>."
 
-#: jobs/movefilesystemjob.cpp:73
+#: jobs/movefilesystemjob.cpp:74
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid ""
@@ -2627,7 +2623,7 @@ msgstr ""
 "Vraćanje unazad za datotečni sistem na particiji <filename>%1</filename> "
 "nije uspelo."
 
-#: jobs/movefilesystemjob.cpp:75 jobs/restorefilesystemjob.cpp:100
+#: jobs/movefilesystemjob.cpp:76 jobs/restorefilesystemjob.cpp:100
 #: jobs/shredfilesystemjob.cpp:76
 #, fuzzy, kde-format, kde-kuit-format
 #| msgctxt "@info/plain"
@@ -2637,7 +2633,7 @@ msgid "Closing device. This may take a few seconds."
 msgstr "Zatvaram uređaj. Može potrajati nekoliko sekundi."
 
 # >> Job description, used as tooltip and in job lists.
-#: jobs/movefilesystemjob.cpp:89
+#: jobs/movefilesystemjob.cpp:90
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/plain"
 #| msgid ""
@@ -4116,6 +4112,26 @@ msgstr "Verzija KDE‑a:"
 #, kde-format
 msgid "Machine:"
 msgstr "Mašina:"
+
+#, fuzzy
+#~| msgctxt "@info/plain"
+#~| msgid ""
+#~| "The logical sector sizes in the source and target for copying are not "
+#~| "the same. This is currently unsupported."
+#~ msgctxt "@info:progress"
+#~ msgid ""
+#~ "The logical sector sizes in the source and target for copying are not the "
+#~ "same. This is currently unsupported."
+#~ msgstr ""
+#~ "Velicina logickog sektora za kopiranje u izvoru i primaocu nije ista. Ovo "
+#~ "trenutacno nije moguce."
+
+# >> @item:intext inserted into next message
+#~ msgid "1 sector"
+#~ msgid_plural "%1 sectors"
+#~ msgstr[0] "%1 sektora"
+#~ msgstr[1] "%1 sektora"
+#~ msgstr[2] "%1 sektora"
 
 #~ msgctxt "@title:menu"
 #~ msgid "Columns"
