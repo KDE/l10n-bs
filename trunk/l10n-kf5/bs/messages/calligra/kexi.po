@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2017-12-19 02:59+0100\n"
+"POT-Creation-Date: 2018-01-07 03:03+0100\n"
 "PO-Revision-Date: 2015-02-26 22:24+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -5312,8 +5312,8 @@ msgstr "Idi na izvor podataka izabranog obrasca"
 msgid "Goes to selected form's data source"
 msgstr "Odlazak u izvor podataka odabranog obrasca"
 
-#: plugins/forms/kexidbfactorybase.cpp:49 plugins/forms/kexiformpart.cpp:365
-#: plugins/reports/kexireportpart.cpp:175
+#: plugins/forms/kexidbfactorybase.cpp:49 plugins/forms/kexiformpart.cpp:366
+#: plugins/reports/kexireportpart.cpp:210
 #, kde-kuit-format
 msgid "Data Source"
 msgstr "Izvor podataka"
@@ -5475,24 +5475,32 @@ msgstr "Na najuže"
 msgid "To Widest"
 msgstr "Na najšire"
 
-#: plugins/forms/kexiformpart.cpp:319
+#: plugins/forms/kexiformpart.cpp:320
 #, fuzzy, kde-format
 #| msgid "Design of form <resource>%1</resource> has been modified."
 msgctxt "@info"
 msgid "Design of form <resource>%1</resource> has been modified."
 msgstr "Dizajn obrasca <resource>%1</resource> je izmijenjen."
 
-#: plugins/forms/kexiformpart.cpp:321
+#: plugins/forms/kexiformpart.cpp:322
 #, fuzzy, kde-format
 #| msgid "Form <resource>%1</resource> already exists."
 msgctxt "@info"
 msgid "Form <resource>%1</resource> already exists."
 msgstr "Forma <resource>%1</resource> već postoji."
 
-#: plugins/forms/kexiformpart.cpp:376
+#: plugins/forms/kexiformpart.cpp:377
 #, kde-kuit-format
 msgid "Widgets"
 msgstr "Kontrole"
+
+#: plugins/forms/kexiformpart.cpp:446
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info Object \"objectname\""
+#| msgid "%1 <resource>%2</resource>"
+msgctxt "@info"
+msgid "Form <resource>%1</resource>"
+msgstr "%1 <resource>%2</resource>"
 
 #: plugins/forms/kexiformview.cpp:246
 #: plugins/forms/widgets/main/KexiMainFormWidgetsFactory.cpp:86
@@ -7435,7 +7443,7 @@ msgstr ""
 "<para>File <filename>%1</filename> već postoji </para><para>Da li želite da "
 "ga zamijenite novim?</para>"
 
-#: plugins/queries/kexiquerypart.cpp:45
+#: plugins/queries/kexiquerypart.cpp:48
 #, kde-kuit-format
 msgctxt ""
 "Translate this word using only lowercase alphanumeric characters (a..z, "
@@ -7445,38 +7453,79 @@ msgctxt ""
 msgid "query"
 msgstr "upit"
 
-#: plugins/queries/kexiquerypart.cpp:46
+#: plugins/queries/kexiquerypart.cpp:49
 #, kde-kuit-format
 msgctxt "tooltip"
 msgid "Create new query"
 msgstr "Kreiraj novi upit"
 
-#: plugins/queries/kexiquerypart.cpp:47
+#: plugins/queries/kexiquerypart.cpp:50
 #, kde-kuit-format
 msgctxt "what's this"
 msgid "Creates new query."
 msgstr "kreira novi upit."
 
-#: plugins/queries/kexiquerypart.cpp:50
+#: plugins/queries/kexiquerypart.cpp:53
 #, kde-kuit-format
 msgid "SQL"
 msgstr "SQL"
 
-#: plugins/queries/kexiquerypart.cpp:174
+#: plugins/queries/kexiquerypart.cpp:108
+#, fuzzy, kde-kuit-format
+#| msgid ""
+#| "You are about to remove table <resource>%1</resource> but following "
+#| "objects using this table are opened:"
+msgid ""
+"<para>You are about to delete query <resource>%1</resource> but it is used "
+"by following opened windows:</para>"
+msgstr ""
+"Spremate se da uklonite tabelu <resource>%1</resource>, ali su sljedeći "
+"objekti koji je koriste otvoreni:"
+
+#: plugins/queries/kexiquerypart.cpp:186
 #, fuzzy, kde-format
 #| msgid "Design of query <resource>%1</resource> has been modified."
 msgctxt "@info"
 msgid "Design of query <resource>%1</resource> has been modified."
 msgstr "Dizajn upita <resource>%1</resource> je izmijenjen."
 
-#: plugins/queries/kexiquerypart.cpp:176
+#: plugins/queries/kexiquerypart.cpp:188
 #, fuzzy, kde-format
 #| msgid "Query <resource>%1</resource> already exists."
 msgctxt "@info"
 msgid "Query <resource>%1</resource> already exists."
 msgstr "Upit  <resource>%1</resource> već postoji."
 
-#: plugins/queries/kexiquerypart.cpp:202
+#: plugins/queries/kexiquerypart.cpp:236 plugins/tables/kexitablepart.cpp:207
+#, kde-format
+msgctxt "@info/plain Sentence1 Sentence2 Sentence3"
+msgid "%1%2%3"
+msgstr ""
+
+#: plugins/queries/kexiquerypart.cpp:239 plugins/tables/kexitablepart.cpp:210
+#, fuzzy, kde-kuit-format
+#| msgid "Do you want to save the design now?"
+msgctxt "@info"
+msgid ""
+"<para>Do you want to close these windows and save the design or cancel "
+"saving?</para>"
+msgstr "Želite li sada da snimite dizajn?"
+
+#: plugins/queries/kexiquerypart.cpp:244 plugins/tables/kexitablepart.cpp:215
+#, fuzzy, kde-kuit-format
+#| msgid "Close Window"
+msgctxt "@action:button Close all windows and save"
+msgid "Close Windows and Save"
+msgstr "Ztvori prozor"
+
+#: plugins/queries/kexiquerypart.cpp:246 plugins/tables/kexitablepart.cpp:217
+#, fuzzy, kde-kuit-format
+#| msgid "Close Window"
+msgctxt "@info:tooltip Close all windows and save design"
+msgid "Close all windows and save design"
+msgstr "Ztvori prozor"
+
+#: plugins/queries/kexiquerypart.cpp:273
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info Object \"objectname\""
 #| msgid "%1 <resource>%2</resource>"
@@ -7489,22 +7538,22 @@ msgstr "%1 <resource>%2</resource>"
 msgid "Query executing failed."
 msgstr "Izvršavanje upita nije uspelo."
 
-#: plugins/reports/kexireportdesignview.cpp:57
+#: plugins/reports/kexireportdesignview.cpp:58
 #, kde-kuit-format
 msgid "Edit Sections"
 msgstr "Uredi izbor"
 
-#: plugins/reports/kexireportdesignview.cpp:60
+#: plugins/reports/kexireportdesignview.cpp:61
 #, kde-kuit-format
 msgid "Raise"
 msgstr "Uzdigni"
 
-#: plugins/reports/kexireportdesignview.cpp:62
+#: plugins/reports/kexireportdesignview.cpp:63
 #, kde-kuit-format
 msgid "Lower"
 msgstr "Spusti"
 
-#: plugins/reports/kexireportpart.cpp:64
+#: plugins/reports/kexireportpart.cpp:65
 #, kde-kuit-format
 msgctxt ""
 "Translate this word using only lowercase alphanumeric characters (a..z, "
@@ -7514,241 +7563,249 @@ msgctxt ""
 msgid "report"
 msgstr "izvjesti"
 
-#: plugins/reports/kexireportpart.cpp:65
+#: plugins/reports/kexireportpart.cpp:66
 #, kde-kuit-format
 msgctxt "tooltip"
 msgid "Create new report"
 msgstr "Kreiraj novi izvještaj"
 
-#: plugins/reports/kexireportpart.cpp:66
+#: plugins/reports/kexireportpart.cpp:67
 #, kde-kuit-format
 msgctxt "what's this"
 msgid "Creates new report."
 msgstr "Kreira novi izvještaj."
 
-#: plugins/reports/kexireportpart.cpp:85
+#: plugins/reports/kexireportpart.cpp:86
 #, fuzzy, kde-format
 #| msgid "Design of report <resource>%1</resource> has been modified."
 msgctxt "@info"
 msgid "Design of report <resource>%1</resource> has been modified."
 msgstr "Dizajn izvještaja  <resource>%1</resource> je promjenjen."
 
-#: plugins/reports/kexireportpart.cpp:87
+#: plugins/reports/kexireportpart.cpp:88
 #, fuzzy, kde-format
 #| msgid "Report <resource>%1</resource> already exists."
 msgctxt "@info"
 msgid "Report <resource>%1</resource> already exists."
 msgstr "Izvještaj <resource>%1</resource> već postoji."
 
-#: plugins/reports/kexireportview.cpp:68
+#: plugins/reports/kexireportpart.cpp:183
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info Object \"objectname\""
+#| msgid "%1 <resource>%2</resource>"
+msgctxt "@info"
+msgid "Report <resource>%1</resource>"
+msgstr "%1 <resource>%2</resource>"
+
+#: plugins/reports/kexireportview.cpp:64
 #, fuzzy, kde-kuit-format
 #| msgid "Page"
 msgctxt "Page selector label"
 msgid "Page:"
 msgstr "Stranica"
 
-#: plugins/reports/kexireportview.cpp:69
+#: plugins/reports/kexireportview.cpp:65
 #, kde-kuit-format
 msgid "Go to first page"
 msgstr "Idi na prvu stranicu"
 
-#: plugins/reports/kexireportview.cpp:70
+#: plugins/reports/kexireportview.cpp:66
 #, kde-kuit-format
 msgid "Goes to first page"
 msgstr "Ide na prvu stranicu"
 
-#: plugins/reports/kexireportview.cpp:71
+#: plugins/reports/kexireportview.cpp:67
 #, kde-kuit-format
 msgid "Go to previous page"
 msgstr "Idi na prethodnu stranicu"
 
-#: plugins/reports/kexireportview.cpp:72
+#: plugins/reports/kexireportview.cpp:68
 #, kde-kuit-format
 msgid "Goes to previous page"
 msgstr "Ide na prethodnu stranicu"
 
-#: plugins/reports/kexireportview.cpp:73
+#: plugins/reports/kexireportview.cpp:69
 #, kde-kuit-format
 msgid "Go to next page"
 msgstr "Idi na sljedeću stranicu"
 
-#: plugins/reports/kexireportview.cpp:74
+#: plugins/reports/kexireportview.cpp:70
 #, kde-kuit-format
 msgid "Goes to next page"
 msgstr "Ide na sljedeću stranicu"
 
-#: plugins/reports/kexireportview.cpp:75
+#: plugins/reports/kexireportview.cpp:71
 #, kde-kuit-format
 msgid "Go to last page"
 msgstr "Idi na posljednju stranicu"
 
-#: plugins/reports/kexireportview.cpp:76
+#: plugins/reports/kexireportview.cpp:72
 #, kde-kuit-format
 msgid "Goes to last page"
 msgstr "Ide na posljednju stranicu"
 
-#: plugins/reports/kexireportview.cpp:77
+#: plugins/reports/kexireportview.cpp:73
 #, kde-kuit-format
 msgid "Current page number"
 msgstr "Broj trenutne stranice"
 
-#: plugins/reports/kexireportview.cpp:77
+#: plugins/reports/kexireportview.cpp:73
 #, kde-kuit-format
 msgid "Number of pages"
 msgstr "Broj stranica"
 
-#: plugins/reports/kexireportview.cpp:86
+#: plugins/reports/kexireportview.cpp:82
 #, kde-kuit-format
 msgid "Print"
 msgstr "Štampaj"
 
-#: plugins/reports/kexireportview.cpp:88
+#: plugins/reports/kexireportview.cpp:84
 #, kde-kuit-format
 msgid "Print report"
 msgstr "Izvještaj ispisa"
 
-#: plugins/reports/kexireportview.cpp:89
+#: plugins/reports/kexireportview.cpp:85
 #, kde-kuit-format
 msgid "Prints the current report."
 msgstr "Ispisuje trenutni izvještaj."
 
-#: plugins/reports/kexireportview.cpp:92
+#: plugins/reports/kexireportview.cpp:88
 #, kde-kuit-format
 msgctxt "@title:menu"
 msgid "E&xport As"
 msgstr "&Izvezi kao"
 
-#: plugins/reports/kexireportview.cpp:99
+#: plugins/reports/kexireportview.cpp:95
 #, kde-kuit-format
 msgid "Export:"
 msgstr "Izvezi:"
 
-#: plugins/reports/kexireportview.cpp:106
+#: plugins/reports/kexireportview.cpp:102
 #, kde-kuit-format
 msgctxt "open dialog to export as text document"
 msgid "Text Document..."
 msgstr "Tekstualni dokument..."
 
-#: plugins/reports/kexireportview.cpp:109
+#: plugins/reports/kexireportview.cpp:105
 #, kde-kuit-format
 msgid "Export the report as a text document (in OpenDocument Text format)"
 msgstr "Izvezi izvještaj kao tektualni dokument (u OpenDocument formatu)"
 
-#: plugins/reports/kexireportview.cpp:110
+#: plugins/reports/kexireportview.cpp:106
 #, kde-kuit-format
 msgid "Exports the report as a text document (in OpenDocument Text format)."
 msgstr "Izvozi izvještaje kao tekstualne dokumente( u OpenDocument formatu)."
 
-#: plugins/reports/kexireportview.cpp:119
+#: plugins/reports/kexireportview.cpp:115
 #, kde-kuit-format
 msgctxt "Portable Document Format..."
 msgid "PDF..."
 msgstr "PDF..."
 
-#: plugins/reports/kexireportview.cpp:122
+#: plugins/reports/kexireportview.cpp:118
 #, kde-kuit-format
 msgid "Export as PDF"
 msgstr "Izvezi kao PDF"
 
-#: plugins/reports/kexireportview.cpp:123
+#: plugins/reports/kexireportview.cpp:119
 #, kde-kuit-format
 msgid "Exports the current report as PDF."
 msgstr "Izvezi trenutni izvještaj kao PDF."
 
-#: plugins/reports/kexireportview.cpp:132
+#: plugins/reports/kexireportview.cpp:128
 #, kde-kuit-format
 msgctxt "open dialog to export as spreadsheet"
 msgid "Spreadsheet..."
 msgstr "Tablični kalkulator..."
 
-#: plugins/reports/kexireportview.cpp:135
+#: plugins/reports/kexireportview.cpp:131
 #, kde-kuit-format
 msgid "Export the report as a spreadsheet (in OpenDocument Spreadsheet format)"
 msgstr "Izvezi izvještaj kao tablicu (u OpenDocument tabličnom formatu)"
 
-#: plugins/reports/kexireportview.cpp:136
+#: plugins/reports/kexireportview.cpp:132
 #, kde-kuit-format
 msgid ""
 "Exports the report as a spreadsheet (in OpenDocument Spreadsheet format)."
 msgstr "izvozi izvještaj kao tablicu (u OpenDocument tabličnom formatu)."
 
-#: plugins/reports/kexireportview.cpp:146
+#: plugins/reports/kexireportview.cpp:142
 #, kde-kuit-format
 msgctxt "open dialog to export as web page"
 msgid "Web Page..."
 msgstr "Web stranica..."
 
-#: plugins/reports/kexireportview.cpp:149
+#: plugins/reports/kexireportview.cpp:145
 #, kde-kuit-format
 msgid "Export the report as a web page (in HTML format)"
 msgstr "Izvezi izvještaj kao web stranicu (u HTML formatu)"
 
-#: plugins/reports/kexireportview.cpp:150
+#: plugins/reports/kexireportview.cpp:146
 #, kde-kuit-format
 msgid "Exports the report as a web page (in HTML format)."
 msgstr "Izvozi izvještaj kao web stranicu (u HTML formatu)."
 
-#: plugins/reports/kexireportview.cpp:185
+#: plugins/reports/kexireportview.cpp:181
 #, fuzzy, kde-kuit-format
 #| msgid "Exporting the report as PDF to %1 failed."
 msgid "Printing the report failed."
 msgstr "Izvezi izvještaj kao PDF za %1 nije uspio."
 
-#: plugins/reports/kexireportview.cpp:186
+#: plugins/reports/kexireportview.cpp:182
 #, fuzzy, kde-kuit-format
 #| msgid "Export Failed"
 msgid "Print Failed"
 msgstr "Neuspjelo izvoženje"
 
-#: plugins/reports/kexireportview.cpp:198
+#: plugins/reports/kexireportview.cpp:194
 #, kde-kuit-format
 msgid "Export Report as PDF"
 msgstr "Izvezi izvještaj kao PDF."
 
-#: plugins/reports/kexireportview.cpp:217
+#: plugins/reports/kexireportview.cpp:213
 #, kde-kuit-format
 msgid "Exporting the report as PDF to %1 failed."
 msgstr "Izvezi izvještaj kao PDF za %1 nije uspio."
 
-#: plugins/reports/kexireportview.cpp:218
-#: plugins/reports/kexireportview.cpp:274
-#: plugins/reports/kexireportview.cpp:299
-#: plugins/reports/kexireportview.cpp:339
+#: plugins/reports/kexireportview.cpp:214
+#: plugins/reports/kexireportview.cpp:270
+#: plugins/reports/kexireportview.cpp:295
+#: plugins/reports/kexireportview.cpp:335
 #, kde-kuit-format
 msgid "Export Failed"
 msgstr "Neuspjelo izvoženje"
 
-#: plugins/reports/kexireportview.cpp:246
+#: plugins/reports/kexireportview.cpp:242
 #, kde-kuit-format
 msgid "Do you want to open exported document?"
 msgstr "Da li želite otvoriti izvežen dokument?"
 
-#: plugins/reports/kexireportview.cpp:264
+#: plugins/reports/kexireportview.cpp:260
 #, kde-kuit-format
 msgid "Export Report as Spreadsheet"
 msgstr "Izvezi izvještaj kao tablicu"
 
-#: plugins/reports/kexireportview.cpp:273
+#: plugins/reports/kexireportview.cpp:269
 #, kde-kuit-format
 msgid "Failed to export the report as spreadsheet to %1."
 msgstr "Neuspjelo izvoženje izvještaja kao tablice na %1."
 
-#: plugins/reports/kexireportview.cpp:289
+#: plugins/reports/kexireportview.cpp:285
 #, kde-kuit-format
 msgid "Export Report as Text Document"
 msgstr "Izvještaj izvoženja kao tekstualnog dokumenta"
 
-#: plugins/reports/kexireportview.cpp:298
+#: plugins/reports/kexireportview.cpp:294
 #, kde-kuit-format
 msgid "Exporting the report as text document to %1 failed."
 msgstr "Neuspjelo izvoženje izvještaja kao tekstualnog dokumenta na %1."
 
-#: plugins/reports/kexireportview.cpp:309
+#: plugins/reports/kexireportview.cpp:305
 #, kde-kuit-format
 msgid "Export Report as Web Page"
 msgstr "Izvezi Izvještaj kao Web Stranicu"
 
-#: plugins/reports/kexireportview.cpp:323
+#: plugins/reports/kexireportview.cpp:319
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -7757,36 +7814,36 @@ msgid ""
 "original.</note></para>"
 msgstr ""
 
-#: plugins/reports/kexireportview.cpp:327
+#: plugins/reports/kexireportview.cpp:323
 #, fuzzy, kde-kuit-format
 #| msgid "Use CSS"
 msgctxt "@action:button"
 msgid "Use CSS"
 msgstr "Koristi CS5"
 
-#: plugins/reports/kexireportview.cpp:328
+#: plugins/reports/kexireportview.cpp:324
 #, fuzzy, kde-kuit-format
 #| msgid "Use Table"
 msgctxt "@action:button"
 msgid "Use Table"
 msgstr "Koristi tablu"
 
-#: plugins/reports/kexireportview.cpp:338
+#: plugins/reports/kexireportview.cpp:334
 #, kde-kuit-format
 msgid "Exporting the report as web page to %1 failed."
 msgstr "Neuspjelo Izvoženje izvještaja kao web stranice na %1."
 
-#: plugins/reports/kexireportview.cpp:400
+#: plugins/reports/kexireportview.cpp:396
 #, kde-kuit-format
 msgid "Opening failed"
 msgstr "Otvaranje nije uspjelo"
 
-#: plugins/reports/kexireportview.cpp:400
+#: plugins/reports/kexireportview.cpp:396
 #, kde-kuit-format
 msgid "Report schema appears to be invalid or corrupt"
 msgstr "Izvješće shema čini se nevažećim ili oštećenim."
 
-#: plugins/reports/kexisourceselector.cpp:60
+#: plugins/reports/kexisourceselector.cpp:59
 #, fuzzy, kde-kuit-format
 #| msgid "Form's data source"
 msgid "Report's data source:"
@@ -8363,13 +8420,13 @@ msgstr "Id%1"
 #| "objects using this table are opened:"
 msgctxt "@info"
 msgid ""
-"You are about to change the design of table <resource>%1</resource> but "
-"following objects using this table are opened:"
+"<para>You are about to change the design of table <resource>%1</resource> "
+"but following objects using this table are open:</para>"
 msgstr ""
 "Spremate se da uklonite tabelu <resource>%1</resource>, ali su sljedeći "
 "objekti koji je koriste otvoreni:"
 
-#: plugins/tables/kexitabledesignerview.cpp:1622
+#: plugins/tables/kexitabledesignerview.cpp:1627
 #, fuzzy, kde-kuit-format
 #| msgctxt "@title:window Delete Object %1."
 #| msgid "Delete <resource>%1</resource>?"
@@ -8377,7 +8434,7 @@ msgctxt "@info"
 msgid "Table field <resource>%1</resource>"
 msgstr "Obriši  <resource>%1</resource>?"
 
-#: plugins/tables/kexitabledesignerview.cpp:1624
+#: plugins/tables/kexitabledesignerview.cpp:1629
 #, kde-kuit-format
 msgctxt "Empty table row"
 msgid "Empty Row"
@@ -8390,7 +8447,7 @@ msgctxt "@info"
 msgid "<para>Do you want to save the design now?</para>%1"
 msgstr "Želite li sada da snimite dizajn?"
 
-#: plugins/tables/kexitablepart.cpp:62
+#: plugins/tables/kexitablepart.cpp:63
 #, kde-kuit-format
 msgctxt ""
 "Translate this word using only lowercase alphanumeric characters (a..z, "
@@ -8400,69 +8457,57 @@ msgctxt ""
 msgid "table"
 msgstr "tabela"
 
-#: plugins/tables/kexitablepart.cpp:63
+#: plugins/tables/kexitablepart.cpp:64
 #, kde-kuit-format
 msgctxt "tooltip"
 msgid "Create new table"
 msgstr "Kreiranje nove tablice"
 
-#: plugins/tables/kexitablepart.cpp:64
+#: plugins/tables/kexitablepart.cpp:65
 #, kde-kuit-format
 msgctxt "what's this"
 msgid "Creates new table."
 msgstr "Kreira novu tablicu."
 
-#: plugins/tables/kexitablepart.cpp:136
-#, kde-kuit-format
-msgid ""
-"You are about to remove table <resource>%1</resource> but following objects "
-"using this table are opened:"
-msgstr ""
-"Spremate se da uklonite tabelu <resource>%1</resource>, ali su sljedeći "
-"objekti koji je koriste otvoreni:"
-
-#: plugins/tables/kexitablepart.cpp:156
-#, kde-kuit-format
-msgid ""
-"You are about to rename table <resource>%1</resource> but following objects "
-"using this table are opened:"
-msgstr ""
-"Spremate se da uklonite tabelu <resource>%1</resource>, ali su sljedeći "
-"objekti koji je koriste otvoreni:"
-
-#: plugins/tables/kexitablepart.cpp:203
-#, kde-format
-msgctxt "@info"
-msgid "<para>%1</para><para>%2</para>"
-msgstr ""
-
-#: plugins/tables/kexitablepart.cpp:205
-#, kde-kuit-format
-msgid "Do you want to close all windows for these objects?"
-msgstr "Želite li da zatvorite sve prozore za ove objekte?"
-
-#: plugins/tables/kexitablepart.cpp:207
+#: plugins/tables/kexitablepart.cpp:137
 #, fuzzy, kde-kuit-format
-#| msgid "Close Window"
-msgctxt "@action:button Close All Windows"
-msgid "Close Windows"
-msgstr "Ztvori prozor"
+#| msgid ""
+#| "You are about to remove table <resource>%1</resource> but following "
+#| "objects using this table are opened:"
+msgid ""
+"<para>You are about to delete table <resource>%1</resource> but it is used "
+"by following opened windows:</para>"
+msgstr ""
+"Spremate se da uklonite tabelu <resource>%1</resource>, ali su sljedeći "
+"objekti koji je koriste otvoreni:"
 
-#: plugins/tables/kexitablepart.cpp:225
+#: plugins/tables/kexitablepart.cpp:158
+#, fuzzy, kde-format
+#| msgid ""
+#| "You are about to rename table <resource>%1</resource> but following "
+#| "objects using this table are opened:"
+msgid ""
+"<para>You are about to rename table <resource>%1</resource> but it is used "
+"by following opened windows:"
+msgstr ""
+"Spremate se da uklonite tabelu <resource>%1</resource>, ali su sljedeći "
+"objekti koji je koriste otvoreni:"
+
+#: plugins/tables/kexitablepart.cpp:239
 #, fuzzy, kde-format
 #| msgid "Design of table <resource>%1</resource> has been modified."
 msgctxt "@info"
 msgid "Design of table <resource>%1</resource> has been modified."
 msgstr "Dizajn tabele <resource>%1</resource> je izmijenjen."
 
-#: plugins/tables/kexitablepart.cpp:228
+#: plugins/tables/kexitablepart.cpp:242
 #, fuzzy, kde-format
 #| msgid "Table <resource>%1</resource> already exists."
 msgctxt "@info"
 msgid "Table <resource>%1</resource> already exists."
 msgstr "Tabela <resource>%1</resource> već postoji."
 
-#: plugins/tables/kexitablepart.cpp:232
+#: plugins/tables/kexitablepart.cpp:246
 #, fuzzy, kde-format
 #| msgid ""
 #| "Warning! Any data in this table will be removed upon design's saving!"
@@ -8473,12 +8518,12 @@ msgid ""
 msgstr ""
 "Upozorenje! Svi podaci u ovoj tabeli biće uklonjeni pri snimanju dizajna."
 
-#: plugins/tables/kexitablepart.cpp:261
+#: plugins/tables/kexitablepart.cpp:275
 #, kde-kuit-format
 msgid "Lookup column"
 msgstr "Kolona za potragu"
 
-#: plugins/tables/kexitablepart.cpp:290
+#: plugins/tables/kexitablepart.cpp:304
 #, fuzzy, kde-kuit-format
 #| msgctxt "@title:window Delete Object %1."
 #| msgid "Delete <resource>%1</resource>?"
@@ -9674,6 +9719,15 @@ msgstr "Pomiče kursor na posljednji zapis."
 #, kde-kuit-format
 msgid "Moves cursor to new record and allows inserting."
 msgstr "Pomiče kursor na novi zapis i omogućuje umetanje."
+
+#~ msgid "Do you want to close all windows for these objects?"
+#~ msgstr "Želite li da zatvorite sve prozore za ove objekte?"
+
+#, fuzzy
+#~| msgid "Close Window"
+#~ msgctxt "@action:button Close All Windows"
+#~ msgid "Close Windows"
+#~ msgstr "Ztvori prozor"
 
 #~ msgid "Set Data"
 #~ msgstr "Postavi podatke"
