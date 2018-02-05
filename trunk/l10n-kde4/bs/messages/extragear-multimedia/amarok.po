@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amarok\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-01-29 01:47+0100\n"
+"POT-Creation-Date: 2018-02-05 01:46+0100\n"
 "PO-Revision-Date: 2015-02-25 23:38+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -8044,44 +8044,21 @@ msgstr "%1 - %2"
 #, kde-format
 msgid ""
 "The bitrate is a measure of the quantity of data used to represent a second "
-"of the audio track.<br>The <b>AAC</b> encoder used by Amarok supports a <a "
-"href=http://en.wikipedia.org/wiki/"
-"Variable_bitrate#Advantages_and_disadvantages_of_VBR>variable bitrate (VBR)</"
-"a> setting, which means that the bitrate value fluctuates along the track "
-"based on the complexity of the audio content. More complex intervals of data "
-"are encoded with a higher bitrate than less complex ones; this approach "
-"yields overall better quality and a smaller file than having a constant "
-"bitrate throughout the track.<br>For this reason, the bitrate measure in "
-"this slider is just an estimate of the <a href=http://www.ffmpeg.org/faq."
-"html#SEC21>average bitrate</a> of the encoded track.<br><b>150kb/s</b> is a "
-"good choice for music listening on a portable player.<br/>Anything below "
-"<b>120kb/s</b> might be unsatisfactory for music and anything above <b>200kb/"
-"s</b> is probably overkill."
+"of the audio track.<br>The encoder used by Amarok operates better with a "
+"constant bitrate.<br>VBR is experimental and likely to get even worse "
+"results than the CBR.<br>For this reason, the bitrate measure in this slider "
+"is a pretty accurate estimate of the bitrate of the encoded track.<br>The "
+"encoder is transparent at 128kbps for most samples tested with artifacts "
+"only appearing in extreme cases."
 msgstr ""
-"Bitni protok je mjera količine podataka korištenih za predstavljanje sekunde "
-"u audio zapisu.<br><b>AAC</b> koder koga podržava Amarok koristi <a "
-"href=http://en.wikipedia.org/wiki/"
-"Variable_bitrate#Advantages_and_disadvantages_of_VBR>promjenjivi bitni "
-"protok (VBR)</a> postavku, što znači da je u pitanju vrijednost bitnog "
-"protoka koja varira duž staza na osnovu složenosti audio sadržaja. Složeniji "
-"intervali podataka su kodirani sa većim protokom bita nego manje složeni, "
-"ovaj pristup daje bolji opšti  kvalitet i manju datoteku nego konstantan "
-"protok kroz pjesmu.<br>Iz ovog razloga, bitni protok mjeren u ovom klizaču "
-"je samo procjena <a href=http://www.ffmpeg.org/faq.html#SEC21>prosječnog "
-"protoka</a> kodiranog muzičkog zapisa.<br><b>150kb/s</b> je dobar izbor za "
-"muziku koja se sluša na prenosnom plejeru.<br/>Sve ispod <b>120kb/s</b> može "
-"biti nezadovoljavajuće na muziku a sve iznad<b>200kb/s</b> je vjerovatno "
-"previše."
 
-#: core/transcoding/formats/TranscodingAacFormat.cpp:58
-#: core/transcoding/formats/TranscodingMp3Format.cpp:55
-#: core/transcoding/formats/TranscodingOpusFormat.cpp:64
+#: core/transcoding/formats/TranscodingAacFormat.cpp:48
+#: core/transcoding/formats/TranscodingWmaFormat.cpp:59
 #, kde-format
-msgid "Expected average bitrate for variable bitrate encoding"
-msgstr ""
-"Očikivan prosječni protok bita za kodiranje s promjenjivim protokom bita"
+msgid "Bitrate target for constant bitrate encoding"
+msgstr "Odredišni protok bita za kodiranje konstantnog protoka bita"
 
-#: core/transcoding/formats/TranscodingAacFormat.cpp:59
+#: core/transcoding/formats/TranscodingAacFormat.cpp:49
 #: core/transcoding/formats/TranscodingFlacFormat.cpp:42
 #: core/transcoding/formats/TranscodingMp3Format.cpp:56
 #: core/transcoding/formats/TranscodingOpusFormat.cpp:65
@@ -8091,7 +8068,7 @@ msgstr ""
 msgid "Smaller file"
 msgstr "Manja datoteka"
 
-#: core/transcoding/formats/TranscodingAacFormat.cpp:59
+#: core/transcoding/formats/TranscodingAacFormat.cpp:49
 #: core/transcoding/formats/TranscodingMp3Format.cpp:56
 #: core/transcoding/formats/TranscodingOpusFormat.cpp:65
 #: core/transcoding/formats/TranscodingVorbisFormat.cpp:60
@@ -8100,13 +8077,22 @@ msgstr "Manja datoteka"
 msgid "Better sound quality"
 msgstr "Bolji kvalitet zvuka"
 
-#: core/transcoding/formats/TranscodingAacFormat.cpp:66
+#: core/transcoding/formats/TranscodingAacFormat.cpp:56
 #, kde-format
-msgid "AAC (Non-Free)"
-msgstr "AAC (neslobodni)"
+msgid "AAC"
+msgstr ""
 
-#: core/transcoding/formats/TranscodingAacFormat.cpp:74
-#, kde-format
+#: core/transcoding/formats/TranscodingAacFormat.cpp:64
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Feel free to redirect the english Wikipedia link to a local version, if "
+#| "it exists."
+#| msgid ""
+#| "<a href=http://en.wikipedia.org/wiki/Advanced_Audio_Coding>Advanced Audio "
+#| "Coding</a> (AAC) is a patented lossy codec for digital audio.<br>AAC "
+#| "generally achieves better sound quality than MP3 at similar bit rates. It "
+#| "is a reasonable choice for the iPod and some other portable music "
+#| "players. Non-Free implementation."
 msgctxt ""
 "Feel free to redirect the english Wikipedia link to a local version, if it "
 "exists."
@@ -8114,8 +8100,7 @@ msgid ""
 "<a href=http://en.wikipedia.org/wiki/Advanced_Audio_Coding>Advanced Audio "
 "Coding</a> (AAC) is a patented lossy codec for digital audio.<br>AAC "
 "generally achieves better sound quality than MP3 at similar bit rates. It is "
-"a reasonable choice for the iPod and some other portable music players. Non-"
-"Free implementation."
+"a reasonable choice for the iPod and some other portable music players."
 msgstr ""
 "<a href=http://en.wikipedia.org/wiki/Advanced_Audio_Coding>Napredno audio "
 "kodiranje</a> (AAC) je patentirani kodek za digitalni audio.<br>AAC "
@@ -8222,6 +8207,13 @@ msgstr ""
 "protoka kodiranog zapisa.<br><b>160kb/s</b> je dobar izbor za muziku koja se "
 "sluša na prenosnom plejeru.<br/>Sve ispod <b>120kb/s</b> može biti "
 "nezadovoljavajuće na muziku a sve iznad<b>205kb/s</b> je vjerovatno previše."
+
+#: core/transcoding/formats/TranscodingMp3Format.cpp:55
+#: core/transcoding/formats/TranscodingOpusFormat.cpp:64
+#, kde-format
+msgid "Expected average bitrate for variable bitrate encoding"
+msgstr ""
+"Očikivan prosječni protok bita za kodiranje s promjenjivim protokom bita"
 
 #: core/transcoding/formats/TranscodingMp3Format.cpp:71
 #, kde-format
@@ -8366,11 +8358,6 @@ msgstr ""
 "<br><b>136kb/s</b> je dobar izbor za muziku koja se sluša na prenosnom "
 "plejeru.<br/>Sve ispod <b>112kb/s</b> može biti nezadovoljavajuće na muziku "
 "a sve iznad<b>182kb/s</b> je vjerovatno previše."
-
-#: core/transcoding/formats/TranscodingWmaFormat.cpp:59
-#, kde-format
-msgid "Bitrate target for constant bitrate encoding"
-msgstr "Odredišni protok bita za kodiranje konstantnog protoka bita"
 
 #: core/transcoding/formats/TranscodingWmaFormat.cpp:67
 #, kde-format
@@ -17413,12 +17400,12 @@ msgstr "Jačina: %1%"
 msgid "Transcode Tracks"
 msgstr "KOnvertuj zvučne zapise"
 
-#: transcoding/TranscodingAssistantDialog.cpp:50
+#: transcoding/TranscodingAssistantDialog.cpp:49
 #, kde-format
 msgid "Transc&ode"
 msgstr "K&onverzija"
 
-#: transcoding/TranscodingAssistantDialog.cpp:61
+#: transcoding/TranscodingAssistantDialog.cpp:60
 #, kde-format
 msgid ""
 "While copying, you can choose to transcode your music files into another "
@@ -17431,17 +17418,17 @@ msgstr ""
 "ili da bi učinilo vaše datoteke čitljivim od strane prijenosnog muzičkog "
 "plejera ili određenog softverskog programa."
 
-#: transcoding/TranscodingAssistantDialog.cpp:66
+#: transcoding/TranscodingAssistantDialog.cpp:65
 #, kde-format
 msgid "&Copy"
 msgstr "&Kopiraj"
 
-#: transcoding/TranscodingAssistantDialog.cpp:67
+#: transcoding/TranscodingAssistantDialog.cpp:66
 #, kde-format
 msgid "Just copy the tracks without transcoding them."
 msgstr "Samo kopiraj numere bez transkodiranja."
 
-#: transcoding/TranscodingAssistantDialog.cpp:71
+#: transcoding/TranscodingAssistantDialog.cpp:70
 #, kde-format
 msgid ""
 "While moving, you can choose to transcode your music files into another "
@@ -17455,23 +17442,23 @@ msgstr ""
 "ili da bi učinilo vaše datoteke čitljivim od strane prijenosnog muzičkog "
 "plejera ili određenog softverskog programa."
 
-#: transcoding/TranscodingAssistantDialog.cpp:77
+#: transcoding/TranscodingAssistantDialog.cpp:76
 #, kde-format
 msgid "&Move"
 msgstr "&Pomjeri"
 
-#: transcoding/TranscodingAssistantDialog.cpp:78
+#: transcoding/TranscodingAssistantDialog.cpp:77
 #, kde-format
 msgid "Just move the tracks without transcoding them."
 msgstr "Samo pomjeri numere bez prepisivanja."
 
-#: transcoding/TranscodingAssistantDialog.cpp:145
+#: transcoding/TranscodingAssistantDialog.cpp:144
 #, kde-format
 msgctxt "Tooltip of a disabled transcoding encoder option"
 msgid "Not currently available on your system."
 msgstr "Nije trenutno dostupno na vašem sistemu."
 
-#: transcoding/TranscodingAssistantDialog.cpp:152
+#: transcoding/TranscodingAssistantDialog.cpp:151
 #, kde-format
 msgid "Target collection indicates this format would not be playable."
 msgstr "Ciljana kolekcija pokazuje da ovaj format neće biti odsviran."
@@ -18002,6 +17989,40 @@ msgstr "Izvođač: %1"
 #, kde-format
 msgid "empty"
 msgstr "prazno"
+
+#~ msgid ""
+#~ "The bitrate is a measure of the quantity of data used to represent a "
+#~ "second of the audio track.<br>The <b>AAC</b> encoder used by Amarok "
+#~ "supports a <a href=http://en.wikipedia.org/wiki/"
+#~ "Variable_bitrate#Advantages_and_disadvantages_of_VBR>variable bitrate "
+#~ "(VBR)</a> setting, which means that the bitrate value fluctuates along "
+#~ "the track based on the complexity of the audio content. More complex "
+#~ "intervals of data are encoded with a higher bitrate than less complex "
+#~ "ones; this approach yields overall better quality and a smaller file than "
+#~ "having a constant bitrate throughout the track.<br>For this reason, the "
+#~ "bitrate measure in this slider is just an estimate of the <a href=http://"
+#~ "www.ffmpeg.org/faq.html#SEC21>average bitrate</a> of the encoded track."
+#~ "<br><b>150kb/s</b> is a good choice for music listening on a portable "
+#~ "player.<br/>Anything below <b>120kb/s</b> might be unsatisfactory for "
+#~ "music and anything above <b>200kb/s</b> is probably overkill."
+#~ msgstr ""
+#~ "Bitni protok je mjera količine podataka korištenih za predstavljanje "
+#~ "sekunde u audio zapisu.<br><b>AAC</b> koder koga podržava Amarok koristi "
+#~ "<a href=http://en.wikipedia.org/wiki/"
+#~ "Variable_bitrate#Advantages_and_disadvantages_of_VBR>promjenjivi bitni "
+#~ "protok (VBR)</a> postavku, što znači da je u pitanju vrijednost bitnog "
+#~ "protoka koja varira duž staza na osnovu složenosti audio sadržaja. "
+#~ "Složeniji intervali podataka su kodirani sa većim protokom bita nego "
+#~ "manje složeni, ovaj pristup daje bolji opšti  kvalitet i manju datoteku "
+#~ "nego konstantan protok kroz pjesmu.<br>Iz ovog razloga, bitni protok "
+#~ "mjeren u ovom klizaču je samo procjena <a href=http://www.ffmpeg.org/faq."
+#~ "html#SEC21>prosječnog protoka</a> kodiranog muzičkog zapisa.<br><b>150kb/"
+#~ "s</b> je dobar izbor za muziku koja se sluša na prenosnom plejeru.<br/"
+#~ ">Sve ispod <b>120kb/s</b> može biti nezadovoljavajuće na muziku a sve "
+#~ "iznad<b>200kb/s</b> je vjerovatno previše."
+
+#~ msgid "AAC (Non-Free)"
+#~ msgstr "AAC (neslobodni)"
 
 #~ msgid "New Format Preset"
 #~ msgstr "Novo pretpodešavanje formata"
