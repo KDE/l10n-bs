@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacomtablet\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-02-10 03:07+0100\n"
+"POT-Creation-Date: 2018-03-08 03:21+0100\n"
 "PO-Revision-Date: 2015-01-21 20:39+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -217,7 +217,7 @@ msgstr "Dugmad ploče"
 
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroupBox)
 #: src/kcmodule/buttonpagewidget.ui:29
-#: src/kcmodule/kcmwacomtabletwidget.cpp:427
+#: src/kcmodule/kcmwacomtabletwidget.cpp:434
 #, kde-format
 msgid "Express Buttons"
 msgstr "Ekspresna dugmad"
@@ -423,6 +423,20 @@ msgstr ""
 msgid "No Tablet Found"
 msgstr "Nema nađenog tableta"
 
+#. i18n: ectx: property (text), widget (QCommandLinkButton, buttonRunTabletFinder)
+#: src/kcmodule/errorwidget.ui:107
+#, kde-format
+msgid "Manually register a tablet device"
+msgstr ""
+
+#. i18n: ectx: property (description), widget (QCommandLinkButton, buttonRunTabletFinder)
+#: src/kcmodule/errorwidget.ui:110
+#, kde-format
+msgid ""
+"This will open another window, prompting you to describe your tablet device. "
+"After you're done, please restart your desktop session."
+msgstr ""
+
 #: src/kcmodule/generalpagewidget.cpp:79
 #, kde-format
 msgid "Wacom Tablet Settings"
@@ -495,12 +509,12 @@ msgstr "Konfigurator grafičkih tableta"
 msgid "In this module you can configure your Wacom tablet profiles"
 msgstr "U ovom modulu možete konfigurisati profile Wacom tableta"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:156
+#: src/kcmodule/kcmwacomtabletwidget.cpp:160
 #, kde-format
 msgid "KDE tablet service not found"
 msgstr "Usliga KDE tableta nije nađena"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:157
+#: src/kcmodule/kcmwacomtabletwidget.cpp:161
 #, kde-format
 msgid ""
 "Please start the KDE wacom tablet service to use this configuration dialog.\n"
@@ -510,50 +524,64 @@ msgstr ""
 "dijalog\n"
 "Usluga je potrebna za prepoznavanje tableta i podršku profilima."
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:162
+#: src/kcmodule/kcmwacomtabletwidget.cpp:165
+#, kde-format
+msgid "Unsupported platform detected"
+msgstr ""
+
+#: src/kcmodule/kcmwacomtabletwidget.cpp:166
+#, kde-format
+msgid "Currently only X11 is supported."
+msgstr ""
+
+#: src/kcmodule/kcmwacomtabletwidget.cpp:169
 #, kde-format
 msgid "No tablet device detected"
 msgstr "Nema prepoznatpg tablet uređaja"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:163
-#, kde-format
+#: src/kcmodule/kcmwacomtabletwidget.cpp:170
+#, fuzzy, kde-format
+#| msgid ""
+#| "Please connect a tablet device to continue.\n"
+#| "If your device is already connected it is currently unsupported."
 msgid ""
 "Please connect a tablet device to continue.\n"
-"If your device is already connected it is currently unsupported."
+"If your device is already connected, it is currently not in the device "
+"database."
 msgstr ""
 "Molim povežite tablet uređaj za nastavak.\n"
 "Ako je uređaj već povezan, on trenutno nije podržan."
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:216
+#: src/kcmodule/kcmwacomtabletwidget.cpp:222
 #, kde-format
 msgid "Add new profile"
 msgstr "Dodaj novi profil"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:217
+#: src/kcmodule/kcmwacomtabletwidget.cpp:223
 #, kde-format
 msgid "Profile name:"
 msgstr "Ime profila:"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:411
+#: src/kcmodule/kcmwacomtabletwidget.cpp:418
 #, kde-format
 msgctxt "Name of the default profile that will be created if none exist."
 msgid "Default"
 msgstr "Podrazumijevano"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:420
+#: src/kcmodule/kcmwacomtabletwidget.cpp:427
 #, kde-format
 msgctxt "Basic overview page for the tablet hardware"
 msgid "General"
 msgstr "Opšte"
 
-#: src/kcmodule/kcmwacomtabletwidget.cpp:421
+#: src/kcmodule/kcmwacomtabletwidget.cpp:428
 #, kde-format
 msgid "Stylus"
 msgstr "Pisaljka"
 
 #. i18n: ectx: property (title), widget (QGroupBox, generalGroupBox)
 #. i18n: ectx: property (title), widget (QGroupBox, tabletGroupBox)
-#: src/kcmodule/kcmwacomtabletwidget.cpp:430
+#: src/kcmodule/kcmwacomtabletwidget.cpp:437
 #: src/kcmodule/tabletareaselectionview.ui:160
 #: src/kcmodule/tabletpagewidget.ui:17
 #, kde-format
@@ -561,10 +589,15 @@ msgid "Tablet"
 msgstr "Tablet"
 
 #. i18n: ectx: property (title), widget (QGroupBox, touchGroupBox)
-#: src/kcmodule/kcmwacomtabletwidget.cpp:436 src/kcmodule/touchpagewidget.ui:17
+#: src/kcmodule/kcmwacomtabletwidget.cpp:443 src/kcmodule/touchpagewidget.ui:17
 #, kde-format
 msgid "Touch"
 msgstr "Dodir"
+
+#: src/kcmodule/kcmwacomtabletwidget.cpp:496
+#, kde-format
+msgid "Failed to launch Wacom tablet finder tool. Check your installation."
+msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KCMWacomTabletWidget)
 #: src/kcmodule/kcmwacomtabletwidget.ui:14
@@ -1281,15 +1314,16 @@ msgstr "ima Točak"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: src/tabletfinder/dialog.ui:162
-#, kde-format
-msgid "GroupBox"
-msgstr "Okvir grupe"
+#, fuzzy, kde-format
+#| msgid "Button Settings"
+msgid "Button mapping"
+msgstr "Postvke dugmeta"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: src/tabletfinder/dialog.ui:170
 #, kde-format
-msgid "Number of available Express Keys:"
-msgstr "Broj dostupnih brzih tipki:"
+msgid "Number of available buttons (including pen tip):"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, mapButtons)
 #: src/tabletfinder/dialog.ui:182
@@ -1302,12 +1336,12 @@ msgstr "Dugmad Mape Hardvera"
 msgid "Please press Button %1 on the tablet now."
 msgstr "Molimo pritisnite sada dugme %1 na tabletu."
 
-#: src/tabletfinder/hwbuttondialog.cpp:81
+#: src/tabletfinder/hwbuttondialog.cpp:89
 #, kde-format
 msgid "Hardware button %1 detected."
 msgstr "Hardver dugme %1 detektovan."
 
-#: src/tabletfinder/hwbuttondialog.cpp:93
+#: src/tabletfinder/hwbuttondialog.cpp:101
 #, kde-format
 msgid "All buttons detected. Please close dialog"
 msgstr "Sva dugmad detektovana. Molimo zatvorite prozor"
@@ -1327,6 +1361,12 @@ msgid ""
 msgstr ""
 "Pomjerite kursor miša unutar prozora ali <b>nemojte</b> kliknuti s mišem "
 "unutar njega."
+
+#~ msgid "GroupBox"
+#~ msgstr "Okvir grupe"
+
+#~ msgid "Number of available Express Keys:"
+#~ msgstr "Broj dostupnih brzih tipki:"
 
 #~ msgctxt ""
 #~ "@action Maps the area of the tablet to all available screen space (space "
