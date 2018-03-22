@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-03-21 03:39+0100\n"
+"POT-Creation-Date: 2018-03-22 03:32+0100\n"
 "PO-Revision-Date: 2015-02-04 15:11+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -176,6 +176,7 @@ msgid "OpenPGP/MIME"
 msgstr "OpenPGP/MIME"
 
 #: kleo/enum.cpp:67 ui/keyselectioncombo.cpp:245
+#: ui/newkeyapprovaldialog.cpp:221
 #, kde-format
 msgid "S/MIME"
 msgstr "S/MIME"
@@ -185,58 +186,70 @@ msgstr "S/MIME"
 msgid "S/MIME Opaque"
 msgstr "S/MIME, neprozirno"
 
-#: kleo/enum.cpp:104
+#: kleo/enum.cpp:77
+#, fuzzy, kde-format
+#| msgid "S/MIME"
+msgid "Any S/MIME"
+msgstr "S/MIME"
+
+#: kleo/enum.cpp:82
+#, fuzzy, kde-format
+#| msgid "OpenPGP"
+msgid "Any OpenPGP"
+msgstr "OpenPGP"
+
+#: kleo/enum.cpp:114
 #, kde-format
 msgid "Any"
 msgstr "Bilo koji"
 
-#: kleo/enum.cpp:177
+#: kleo/enum.cpp:187
 #, kde-format
 msgid "Never Encrypt"
 msgstr "Nikad ne šifruj"
 
-#: kleo/enum.cpp:179
+#: kleo/enum.cpp:189
 #, kde-format
 msgid "Always Encrypt"
 msgstr "Uvijek šifruj"
 
-#: kleo/enum.cpp:181
+#: kleo/enum.cpp:191
 #, kde-format
 msgid "Always Encrypt If Possible"
 msgstr "Uvijek šifruj ako je moguće"
 
-#: kleo/enum.cpp:183 kleo/enum.cpp:240
+#: kleo/enum.cpp:193 kleo/enum.cpp:250
 #, kde-format
 msgid "Ask"
 msgstr "Pitaj"
 
-#: kleo/enum.cpp:185 kleo/enum.cpp:242
+#: kleo/enum.cpp:195 kleo/enum.cpp:252
 #, kde-format
 msgid "Ask Whenever Possible"
 msgstr "Pitaj kada je moguće"
 
-#: kleo/enum.cpp:187
+#: kleo/enum.cpp:197
 #, kde-kuit-format
 msgctxt "no specific preference"
 msgid "<placeholder>none</placeholder>"
 msgstr "<placeholder>ništa</placeholder>"
 
-#: kleo/enum.cpp:234
+#: kleo/enum.cpp:244
 #, kde-format
 msgid "Never Sign"
 msgstr "Nikad ne potpisuj"
 
-#: kleo/enum.cpp:236
+#: kleo/enum.cpp:246
 #, kde-format
 msgid "Always Sign"
 msgstr "Uvijek potpisuj"
 
-#: kleo/enum.cpp:238
+#: kleo/enum.cpp:248
 #, kde-format
 msgid "Always Sign If Possible"
 msgstr "Uvijek potpisuj ako je moguće"
 
-#: kleo/enum.cpp:244
+#: kleo/enum.cpp:254
 #, kde-format
 msgctxt "no specific preference"
 msgid "<none>"
@@ -901,7 +914,8 @@ msgctxt "Name <email>"
 msgid "%1 <%2>"
 msgstr ""
 
-#: ui/keyselectioncombo.cpp:245 utils/formatting.cpp:579
+#: ui/keyselectioncombo.cpp:245 ui/newkeyapprovaldialog.cpp:220
+#: utils/formatting.cpp:579
 #, kde-format
 msgid "OpenPGP"
 msgstr "OpenPGP"
@@ -1203,6 +1217,96 @@ msgstr "Greška šifrovanja"
 #, kde-format
 msgid "&Show Audit Log"
 msgstr "&Prikaži dnevnik revizije"
+
+#: ui/newkeyapprovaldialog.cpp:131 ui/newkeyapprovaldialog.cpp:144
+#, kde-format
+msgid "Remove Filter"
+msgstr ""
+
+#: ui/newkeyapprovaldialog.cpp:148
+#, kde-format
+msgid "Add Filter"
+msgstr ""
+
+#: ui/newkeyapprovaldialog.cpp:216
+#, fuzzy, kde-format
+#| msgid "Encryption Key Approval"
+msgid "Security approval"
+msgstr "Odobrenje ključa za šifrovanje"
+
+#: ui/newkeyapprovaldialog.cpp:275
+#, fuzzy, kde-format
+#| msgid "Generating DSA key..."
+msgid "Generating key for '%1'..."
+msgstr "Pravim DSA ključ..."
+
+#: ui/newkeyapprovaldialog.cpp:308
+#, fuzzy, kde-format
+#| msgid "Decryption failed: %1"
+msgid "Operation Failed"
+msgstr "Dešifrovanje nije uspjelo: %1"
+
+#: ui/newkeyapprovaldialog.cpp:365 ui/newkeyapprovaldialog.cpp:433
+#, kde-format
+msgid "Generate a new key pair"
+msgstr ""
+
+#: ui/newkeyapprovaldialog.cpp:368
+#, kde-format
+msgid "Don't confirm identity and integrity"
+msgstr ""
+
+#: ui/newkeyapprovaldialog.cpp:389
+#, kde-format
+msgctxt "Caption for signing key selection"
+msgid "Confirm identity '%1' as:"
+msgstr ""
+
+#: ui/newkeyapprovaldialog.cpp:406
+#, kde-format
+msgctxt "Caption for signing key selection, no key found"
+msgid "No key found for the address '%1':"
+msgstr ""
+
+#: ui/newkeyapprovaldialog.cpp:437
+#, fuzzy, kde-format
+#| msgid "Recipient:"
+msgid "Ignore recipient"
+msgstr "Primalac:"
+
+#: ui/newkeyapprovaldialog.cpp:461
+#, fuzzy, kde-format
+#| msgid "Never Encrypt"
+msgid "Encrypt to:"
+msgstr "Nikad ne šifruj"
+
+#: ui/newkeyapprovaldialog.cpp:487
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "Generate"
+msgstr "Općenito"
+
+#: ui/newkeyapprovaldialog.cpp:534
+#, fuzzy, kde-format
+#| msgid "All Certificates"
+msgctxt ""
+"VS-NfD-conforming is a German standard for restricted documents for which "
+"special restrictions about algorithms apply.  The string states that all "
+"cryptographic operations necessary for the communication are compliant with "
+"that."
+msgid "VS-NfD-compliant communication possible."
+msgstr "Svi certifikati"
+
+#: ui/newkeyapprovaldialog.cpp:536
+#, fuzzy, kde-format
+#| msgid "All Certificates"
+msgctxt ""
+"VS-NfD-conforming is a German standard for restricted documents for which "
+"special restrictions about algorithms apply.  The string states that all "
+"cryptographic operations necessary for the communication are compliant with "
+"that."
+msgid "VS-NfD-compliant communication not possible."
+msgstr "Svi certifikati"
 
 #: ui/progressdialog.cpp:90
 #, kde-format
@@ -1711,9 +1815,6 @@ msgstr ""
 #~ msgid "4 - Guru (all of the debug messages you can get)"
 #~ msgstr "4 - Guru (sve poruke za traženje grešaka koje se mogu dobiti)"
 
-#~ msgid "General"
-#~ msgstr "Općenito"
-
 #~ msgid "Chiasmus"
 #~ msgstr "Chiasmus"
 
@@ -1728,9 +1829,6 @@ msgstr ""
 
 #~ msgid "Output from chiasmus"
 #~ msgstr "Rezultat iz chiasmus-a"
-
-#~ msgid "Decryption failed: %1"
-#~ msgstr "Dešifrovanje nije uspjelo: %1"
 
 #~ msgid ""
 #~ "The following was received on stderr:\n"
@@ -1782,9 +1880,6 @@ msgstr ""
 
 #~ msgid "Error from gpgconf while saving configuration: %1"
 #~ msgstr "Greška od gpgconf u toku snimanja podešavanja: %1"
-
-#~ msgid "Generating DSA key..."
-#~ msgstr "Pravim DSA ključ..."
 
 #~ msgid "Generating ElGamal key..."
 #~ msgstr "Pravim ElGamal ključ..."
