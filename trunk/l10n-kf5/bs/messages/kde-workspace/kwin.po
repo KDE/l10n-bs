@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwin\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-05-20 03:40+0200\n"
+"POT-Creation-Date: 2018-05-21 03:42+0200\n"
 "PO-Revision-Date: 2014-10-20 20:21+0000\n"
 "Last-Translator: Lejla Agic <lagic1@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -37,7 +37,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Samir.ribic@etf.unsa.ba,lagic1@etf.unsa.ba"
 
-#: abstract_client.cpp:1775
+#: abstract_client.cpp:1848
 #, kde-format
 msgctxt "Application is not responding, appended to window title"
 msgid "(Not Responding)"
@@ -1426,6 +1426,66 @@ msgstr ""
 msgid "Automatic Screen Rotation"
 msgstr ""
 
+#: plugins/scenes/opengl/scene_opengl.cpp:574
+#, kde-format
+msgid "Desktop effects were restarted due to a graphics reset"
+msgstr "Efekti zaslona su ponovo pokrenuti zbog ponovnog pokretanja grafike"
+
+#: plugins/scenes/opengl/scene_opengl.cpp:826
+#, kde-format
+msgid ""
+"<h1>OpenGL desktop effects not possible</h1>Your system cannot perform "
+"OpenGL Desktop Effects at the current resolution<br><br>You can try to "
+"select the XRender backend, but it might be very slow for this resolution as "
+"well.<br>Alternatively, lower the combined resolution of all screens to %1x"
+"%2 "
+msgstr ""
+"<h1>OpenGL efekti zaslona nisu mogući</h1>Vaš sistem ne može izvesti OpenGL "
+"efekte zaslona u trenutnoj rezoluciji<br><br>Možete pokušati označiti "
+"XRender backend, ali i to može biti veoma sporo za ovu rezoluciju."
+"<br>Alternativno, smanjite kombiniranu rezoluciju svih ekrana na %1x%2 "
+
+#: plugins/scenes/opengl/scene_opengl.cpp:833
+#, kde-format
+msgid ""
+"The demanded resolution exceeds the GL_MAX_VIEWPORT_DIMS limitation of your "
+"GPU and is therefore not compatible with the OpenGL compositor.<br>XRender "
+"does not know such limitation, but the performance will usually be impacted "
+"by the hardware limitations that restrict the OpenGL viewport size."
+msgstr ""
+"Zahtijevana rezolucija prevazilazi GL_MAX_VIEWPORT_DIMS ograničenja vašeg "
+"GPU-a i zbog toga nije kompatibilna sa OpenGL kompozitorom.<br>XRender ne "
+"poznaje takvo ograničenje, ali performanse će uobičajeno biti pod uticajem "
+"hardverskih ograničenja koje ograničavaju OpenGL veličinu prozora."
+
+#: plugins/scenes/opengl/scene_opengl.cpp:858
+#, kde-format
+msgid ""
+"<h1>OpenGL desktop effects might be unusable</h1>OpenGL Desktop Effects at "
+"the current resolution are supported but might be exceptionally slow."
+"<br>Also large windows will turn entirely black.<br><br>Consider to suspend "
+"compositing, switch to the XRender backend or lower the resolution to %1x%1."
+msgstr ""
+"<h1>OpenGL efekti zaslona mogu biti neupotrebljivi</h1>OpenGL efekti zaslona "
+"u trenutnoj rezoluciji su podržani ali mogu biti izuzetno spori.<br>Također, "
+"veliki prozori će se u potpunosti zacrniti.<br><br>Razmislite da obustavite "
+"slaganje, prebacite na XRender pozadinu ili smanjite rezoluciju na %1x%1."
+
+#: plugins/scenes/opengl/scene_opengl.cpp:864
+#, kde-format
+msgid ""
+"The demanded resolution exceeds the GL_MAX_TEXTURE_SIZE limitation of your "
+"GPU, thus windows of that size cannot be assigned to textures and will be "
+"entirely black.<br>Also this limit will often be a performance level barrier "
+"despite below GL_MAX_VIEWPORT_DIMS, because the driver might fall back to "
+"software rendering in this case."
+msgstr ""
+"Zahtijevana rezolucija prelazi GL_MAX_TEXTURE_SIZE ograničenja vašeg GPU-a, "
+"dakle prozoru te veličine ne može se dodijeliti tekstura i bit će potpuno "
+"crn.<br>Također, to ograničenje će često biti prepreka na razini "
+"performansi, unatoč nastavku GL_MAX_VIEWPORT_DIMS, jer drajver može pasti "
+"natrag u softversko vraćanje u ovom slučaju."
+
 #: pointer_input.cpp:651
 #, kde-format
 msgctxt "notification about mouse pointer confined"
@@ -1702,49 +1762,49 @@ msgctxt "Switch to tab -> Next"
 msgid "Next"
 msgstr "Sljedeći"
 
-#: useractions.cpp:575
+#: useractions.cpp:574
 #, kde-format
 msgctxt "There's no window available to be attached as tab to this one"
 msgid "None available"
 msgstr "Nije dostupno"
 
-#: useractions.cpp:584
+#: useractions.cpp:583
 #, kde-format
 msgid "Switch to Tab"
 msgstr "Prebaci na karticu"
 
-#: useractions.cpp:595
+#: useractions.cpp:594
 #, kde-format
 msgid "&Attach as tab to"
 msgstr "&Postavite kao tab u"
 
-#: useractions.cpp:618
+#: useractions.cpp:617
 #, kde-format
 msgid "Move To &Desktop"
 msgstr "Pomjeri na ra&dnu površinu"
 
-#: useractions.cpp:634
+#: useractions.cpp:633
 #, kde-format
 msgid "Move To &Screen"
 msgstr "Pomjeri na &ekran"
 
-#: useractions.cpp:649
+#: useractions.cpp:648
 #, kde-format
 msgid "Ac&tivities"
 msgstr "&Aktivnosti"
 
-#: useractions.cpp:661
+#: useractions.cpp:660
 #, kde-format
 msgid "&All Desktops"
 msgstr "&Sve površi"
 
-#: useractions.cpp:687
+#: useractions.cpp:686
 #, kde-format
 msgctxt "Create a new desktop and move there the window"
 msgid "&New Desktop"
 msgstr "&Nova radna površina"
 
-#: useractions.cpp:707
+#: useractions.cpp:706
 #, fuzzy, kde-format
 #| msgctxt "@item:inmenu List of all Screens to send a window to"
 #| msgid "Screen &%1"
@@ -1754,29 +1814,29 @@ msgctxt ""
 msgid "Screen &%1 (%2)"
 msgstr "Ekran &%1"
 
-#: useractions.cpp:728
+#: useractions.cpp:727
 #, kde-format
 msgid "&All Activities"
 msgstr "S&ve aktivnosti"
 
-#: useractions.cpp:943
+#: useractions.cpp:942
 #, kde-format
 msgctxt "'%1' is a keyboard shortcut like 'ctrl+w'"
 msgid "<b>%1</b> is already in use"
 msgstr "<b>%1</b> je već u upotrebi"
 
-#: useractions.cpp:945
+#: useractions.cpp:944
 #, kde-format
 msgctxt "keyboard shortcut '%1' is used by action '%2' in application '%3'"
 msgid "<b>%1</b> is used by %2 in %3"
 msgstr "<b>%1</b> se koristi od strane %2 u %3"
 
-#: useractions.cpp:1076
+#: useractions.cpp:1075
 #, kde-format
 msgid "Activate Window (%1)"
 msgstr "Aktiviraj prozor (%1)"
 
-#: useractions.cpp:1281
+#: useractions.cpp:1280
 #, kde-format
 msgid ""
 "The window manager is configured to consider the screen with the mouse on it "
@@ -1865,61 +1925,6 @@ msgstr ""
 "Molimo, navedite informacije koje se nalaze ispod uvodnog teksta u paste.bin "
 "servis\n"
 "poput http://paste.kde.org umjesto umentanja u nizove poruka podrške.\n"
-
-#~ msgid "Desktop effects were restarted due to a graphics reset"
-#~ msgstr "Efekti zaslona su ponovo pokrenuti zbog ponovnog pokretanja grafike"
-
-#~ msgid ""
-#~ "<h1>OpenGL desktop effects not possible</h1>Your system cannot perform "
-#~ "OpenGL Desktop Effects at the current resolution<br><br>You can try to "
-#~ "select the XRender backend, but it might be very slow for this resolution "
-#~ "as well.<br>Alternatively, lower the combined resolution of all screens "
-#~ "to %1x%2 "
-#~ msgstr ""
-#~ "<h1>OpenGL efekti zaslona nisu mogući</h1>Vaš sistem ne može izvesti "
-#~ "OpenGL efekte zaslona u trenutnoj rezoluciji<br><br>Možete pokušati "
-#~ "označiti XRender backend, ali i to može biti veoma sporo za ovu "
-#~ "rezoluciju.<br>Alternativno, smanjite kombiniranu rezoluciju svih ekrana "
-#~ "na %1x%2 "
-
-#~ msgid ""
-#~ "The demanded resolution exceeds the GL_MAX_VIEWPORT_DIMS limitation of "
-#~ "your GPU and is therefore not compatible with the OpenGL compositor."
-#~ "<br>XRender does not know such limitation, but the performance will "
-#~ "usually be impacted by the hardware limitations that restrict the OpenGL "
-#~ "viewport size."
-#~ msgstr ""
-#~ "Zahtijevana rezolucija prevazilazi GL_MAX_VIEWPORT_DIMS ograničenja vašeg "
-#~ "GPU-a i zbog toga nije kompatibilna sa OpenGL kompozitorom.<br>XRender ne "
-#~ "poznaje takvo ograničenje, ali performanse će uobičajeno biti pod "
-#~ "uticajem hardverskih ograničenja koje ograničavaju OpenGL veličinu "
-#~ "prozora."
-
-#~ msgid ""
-#~ "<h1>OpenGL desktop effects might be unusable</h1>OpenGL Desktop Effects "
-#~ "at the current resolution are supported but might be exceptionally slow."
-#~ "<br>Also large windows will turn entirely black.<br><br>Consider to "
-#~ "suspend compositing, switch to the XRender backend or lower the "
-#~ "resolution to %1x%1."
-#~ msgstr ""
-#~ "<h1>OpenGL efekti zaslona mogu biti neupotrebljivi</h1>OpenGL efekti "
-#~ "zaslona u trenutnoj rezoluciji su podržani ali mogu biti izuzetno spori."
-#~ "<br>Također, veliki prozori će se u potpunosti zacrniti."
-#~ "<br><br>Razmislite da obustavite slaganje, prebacite na XRender pozadinu "
-#~ "ili smanjite rezoluciju na %1x%1."
-
-#~ msgid ""
-#~ "The demanded resolution exceeds the GL_MAX_TEXTURE_SIZE limitation of "
-#~ "your GPU, thus windows of that size cannot be assigned to textures and "
-#~ "will be entirely black.<br>Also this limit will often be a performance "
-#~ "level barrier despite below GL_MAX_VIEWPORT_DIMS, because the driver "
-#~ "might fall back to software rendering in this case."
-#~ msgstr ""
-#~ "Zahtijevana rezolucija prelazi GL_MAX_TEXTURE_SIZE ograničenja vašeg GPU-"
-#~ "a, dakle prozoru te veličine ne može se dodijeliti tekstura i bit će "
-#~ "potpuno crn.<br>Također, to ograničenje će često biti prepreka na razini "
-#~ "performansi, unatoč nastavku GL_MAX_VIEWPORT_DIMS, jer drajver može pasti "
-#~ "natrag u softversko vraćanje u ovom slučaju."
 
 #~ msgid ""
 #~ "<b>OpenGL compositing (the default) has crashed KWin in the past.</"
