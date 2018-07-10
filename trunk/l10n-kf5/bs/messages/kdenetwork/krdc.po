@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krdc\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-06-01 03:37+0200\n"
+"POT-Creation-Date: 2018-07-10 03:40+0200\n"
 "PO-Revision-Date: 2015-02-22 22:25+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -1265,7 +1265,7 @@ msgstr "Unesite korisničko ime"
 msgid "Please enter the username you would like to use for login."
 msgstr "Molimo vas unesite korisničko ime koje želite da koristite za prijavu."
 
-#: nx/nxview.cpp:140 rdp/rdpview.cpp:140 vnc/vncview.cpp:291
+#: nx/nxview.cpp:140 rdp/rdpview.cpp:140 vnc/vncview.cpp:340
 #, kde-format
 msgid "Access to the system requires a password."
 msgstr "Pristup sistemu zahtijeva šifru."
@@ -1707,20 +1707,21 @@ msgstr "Diskonektovano: %1."
 msgid "Reconnecting."
 msgstr "Ponovo se povezuje."
 
-#: vnc/vncclientthread.cpp:567
+#: vnc/vncclientthread.cpp:562
 #, kde-format
 msgid "Reconnected."
 msgstr "Ponovo povezano."
 
-#: vnc/vncclientthread.cpp:569
+#: vnc/vncclientthread.cpp:564
 #, kde-format
 msgid "Connected."
 msgstr "Povezano."
 
 #. i18n: ectx: property (text), widget (QLabel, connectionLabel)
 #: vnc/vncpreferences.ui:23
-#, kde-format
-msgid "Connection type:"
+#, fuzzy, kde-format
+#| msgid "Connection type:"
+msgid "Connection &type:"
 msgstr "Vrsta veze:"
 
 #. i18n: ectx: property (whatsThis), widget (KComboBox, kcfg_Quality)
@@ -1766,15 +1767,74 @@ msgstr "Nizak kvalitet (modem, ISDN, spori internet)"
 msgid "Scale to Size:"
 msgstr "Razmjer prema veličini :"
 
-#: vnc/vncview.cpp:292
+#. i18n: ectx: property (text), widget (QCheckBox, use_ssh_tunnel)
+#: vnc/vncpreferences.ui:204
+#, kde-format
+msgid "Connect via SSH tunnel"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, ssh_groupBox)
+#: vnc/vncpreferences.ui:211
+#, kde-format
+msgid "SSH tunnel options"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, use_loopback)
+#: vnc/vncpreferences.ui:217
+#, kde-format
+msgid "Tunnel via loopback address"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: vnc/vncpreferences.ui:224
+#, kde-format
+msgid "Port:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: vnc/vncpreferences.ui:244
+#, fuzzy, kde-format
+#| msgid "Enter Username"
+msgid "User name:"
+msgstr "Unesite korisničko ime"
+
+#: vnc/vncsshtunnelthread.cpp:108
+#, fuzzy, kde-format
+#| msgid "Connecting to %1"
+msgid "Error connecting to %1: %2"
+msgstr "Povezujem se na %1"
+
+#: vnc/vncsshtunnelthread.cpp:128
+#, fuzzy, kde-format
+#| msgid "Authenticating at %1"
+msgid "Error authenticating with password: %1"
+msgstr "Provjera autentičnosti na %1"
+
+#: vnc/vncsshtunnelthread.cpp:134 vnc/vncsshtunnelthread.cpp:152
+#: vnc/vncsshtunnelthread.cpp:158
+#, kde-format
+msgid "Error creating tunnel socket"
+msgstr ""
+
+#: vnc/vncview.cpp:341
 #, kde-format
 msgid "Authentication failed. Please try again."
 msgstr "Autentifikacija nije uspjela.Molimo pokušajte kasnije."
 
-#: vnc/vncview.cpp:317 vnc/vncview.cpp:319
+#: vnc/vncview.cpp:369
+#, kde-format
+msgid "Please enter the SSH password."
+msgstr ""
+
+#: vnc/vncview.cpp:391 vnc/vncview.cpp:393
 #, kde-format
 msgid "VNC failure"
 msgstr "VNC nije uspjela"
+
+#: vnc/vncview.cpp:402 vnc/vncview.cpp:404
+#, kde-format
+msgid "SSH Tunnel failure"
+msgstr ""
 
 #: vnc/vncviewfactory.cpp:65
 #, kde-format
