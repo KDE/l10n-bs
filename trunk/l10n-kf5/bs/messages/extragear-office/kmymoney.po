@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmymoney\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-08-18 03:42+0200\n"
+"POT-Creation-Date: 2018-08-19 03:37+0200\n"
 "PO-Revision-Date: 2015-02-09 11:02+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -914,6 +914,7 @@ msgstr "Datum"
 #. i18n: ectx: property (text), widget (QLabel, memoLabel)
 #. i18n: ectx: property (text), widget (QCheckBox, m_checkMemo)
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
+#. i18n: ectx: attribute (title), widget (QWidget, memoTab)
 #. i18n: ectx: property (text), widget (QLabel, labelInv_memo)
 #. i18n: ectx: property (text), widget (QLabel, labelBnk_memo)
 #: kmymoney/dialogs/investtransactioneditor.cpp:480
@@ -927,6 +928,7 @@ msgstr "Datum"
 #: kmymoney/plugins/csv/import/investmentwizardpage.cpp:71
 #: kmymoney/plugins/csv/import/investmentwizardpage.ui:86
 #: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:78
+#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:192
 #: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:251
 #: kmymoney/plugins/views/reports/core/listtable.cpp:630
 #: kmymoney/plugins/views/reports/reporttabrowcolquery.ui:159
@@ -6020,7 +6022,7 @@ msgid "Duplicate"
 msgstr "Umnoži"
 
 #: kmymoney/kmymoney.cpp:1452 kmymoney/views/kgloballedgerview.cpp:280
-#: kmymoney/views/kgloballedgerview.cpp:1757
+#: kmymoney/views/kgloballedgerview.cpp:1759
 #, kde-format
 msgctxt "Button text for match transaction"
 msgid "Match"
@@ -11705,7 +11707,7 @@ msgstr "Iz %1 u %2, Kategorija %3, iznos od %4"
 msgid "From account %1, Pay to %2, Category %3, sum of %4"
 msgstr "S računa %1, platiti %2, Kategorija %3, iznos od %4"
 
-#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.cpp:82
+#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.cpp:84
 #, kde-format
 msgid ""
 "You selected to extract the payee from the memo field but did not supply a "
@@ -11715,7 +11717,7 @@ msgstr ""
 "Odabrali za izdvajanje primatelja iz memo polja, ali niste dali regularni "
 "izraz za primatelja i  vađenje memo polja. Opcija neće biti aktiviran."
 
-#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.cpp:82
+#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.cpp:84
 #, kde-format
 msgid "Missing information"
 msgstr "Nedostaju podaci"
@@ -11732,26 +11734,20 @@ msgstr "Koristite polje primatelja kako je navedeno od strane ustanove"
 msgid "Extract payee from memo field using regular expressions"
 msgstr "Izvuci primatelja iz područja dopisa koristeći regularne izraze"
 
-#. i18n: ectx: property (enabled), widget (KEditListWidget, m_payeeExceptions)
-#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:98
-#, kde-format
-msgid "Exceptions"
-msgstr "Izuzeci"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:108
+#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:104
 #, kde-format
 msgid "Regular Expression for"
 msgstr "Regularni izraz za"
 
 #. i18n: ectx: attribute (title), widget (QWidget, downloadTab)
-#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:122
+#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:118
 #, kde-format
 msgid "Download"
 msgstr "Preuzmi"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, m_transactionDownload)
-#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:128
+#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:124
 #, kde-format
 msgid ""
 "The plugin usually downloads the account balance and transactions. In some "
@@ -11764,40 +11760,66 @@ msgstr ""
 "Sljedeća opcija omogućuje isključivanje zahtjeva za transakciju podataka."
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_transactionDownload)
-#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:131
+#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:127
 #, kde-format
 msgid "Download transactions from institution"
 msgstr "Preuzmi transakcije od institucije"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_preferredStatementDate)
-#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:144
+#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:140
 #, kde-format
 msgid "Ask user"
 msgstr "Pitaj korisnika"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_preferredStatementDate)
-#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:149
+#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:145
 #, kde-format
 msgid "No date"
 msgstr "Nema datuma"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_preferredStatementDate)
-#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:154
+#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:150
 #, kde-format
 msgid "Last download"
 msgstr "Zadnje preuzimanje"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_preferredStatementDate)
-#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:159
+#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:155
 #, kde-format
 msgid "First possible"
 msgstr "Prvo dostupno"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2_2)
-#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:167
+#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:163
 #, kde-format
 msgid "Default start date for statement download"
 msgstr "Zadani početni datum za preuzimanje izvještaja"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, m_removeLineBreaksFromMemo)
+#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:198
+#, kde-format
+msgid ""
+"<html><head/><body><p>Remove the line breaks in the memo field that have "
+"been inserted between multiple purpose fields of the transaction.</p></"
+"body></html>"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, m_removeLineBreaksFromMemo)
+#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:201
+#, kde-format
+msgid ""
+"<html><head/><body><p>Some institutions take multiple purpose fields of a "
+"transaction and treat it as a single one. In this case the line break "
+"characters inserted after each purpose field are destracting and are removed "
+"when this option is enabled.</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, m_removeLineBreaksFromMemo)
+#: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:204
+#, fuzzy, kde-format
+#| msgid "Remove this price item from the file"
+msgid "Remove line breaks from memo field"
+msgstr "Ukloniti cijenu stavke iz datoteke"
 
 #. i18n: ectx: property (windowTitle), widget (QWizard, MapAccountWizard)
 #. i18n: ectx: property (windowTitle), widget (QDialog, KBMapAccount)
@@ -11960,12 +11982,12 @@ msgstr ""
 "<qt>Ne mogu staviti posao u red čekanja.\n"
 "</qt>"
 
-#: kmymoney/plugins/kbanking/kbanking.cpp:1510
+#: kmymoney/plugins/kbanking/kbanking.cpp:1516
 #, kde-format
 msgid "Error importing statement. Do you want to continue?"
 msgstr "Greška pri uvozu iskaza. želite li nastaviti?"
 
-#: kmymoney/plugins/kbanking/kbanking.cpp:1511
+#: kmymoney/plugins/kbanking/kbanking.cpp:1517
 #: kmymoney/plugins/views/reports/kreportsview.cpp:326
 #: kmymoney/plugins/views/reports/kreportsview.cpp:383
 #: kmymoney/plugins/views/reports/kreportsview.cpp:402
@@ -18524,7 +18546,7 @@ msgstr ""
 "nastaviti uređivati transakcije?"
 
 #: kmymoney/views/kgloballedgerview.cpp:791
-#: kmymoney/views/kgloballedgerview.cpp:1462
+#: kmymoney/views/kgloballedgerview.cpp:1464
 #, kde-format
 msgid "Transaction already reconciled"
 msgstr "Transakcija je vec usklađena"
@@ -18557,68 +18579,68 @@ msgstr ""
 msgid "Account closed"
 msgstr "Nalog zatvoren"
 
-#: kmymoney/views/kgloballedgerview.cpp:1094
+#: kmymoney/views/kgloballedgerview.cpp:1096
 #, kde-format
 msgid "Creating transactions can only be performed in the ledger view"
 msgstr "Kreiranje transakcija može se obavljati samo u ledger prikazu"
 
-#: kmymoney/views/kgloballedgerview.cpp:1098
+#: kmymoney/views/kgloballedgerview.cpp:1100
 #, kde-format
 msgid "Cannot create transactions when no account is selected."
 msgstr "Nije moguće kreirati transakcije kad nije označen nijedan nalog."
 
-#: kmymoney/views/kgloballedgerview.cpp:1103
+#: kmymoney/views/kgloballedgerview.cpp:1105
 #, kde-format
 msgid "Cannot create transactions in the context of a category."
 msgstr "Nije moguće kreirati transakciju u okviru kategorije."
 
-#: kmymoney/views/kgloballedgerview.cpp:1108
+#: kmymoney/views/kgloballedgerview.cpp:1110
 #, kde-format
 msgid "Cannot create transactions in a closed account."
 msgstr "Nije moguće kreirati transakcije u zatvorenom nalogu."
 
-#: kmymoney/views/kgloballedgerview.cpp:1142
+#: kmymoney/views/kgloballedgerview.cpp:1144
 #, kde-format
 msgid "Cannot edit transactions with frozen splits."
 msgstr "Nije moguće uređivati transakcije sa zamrznutim podjelama."
 
-#: kmymoney/views/kgloballedgerview.cpp:1153
+#: kmymoney/views/kgloballedgerview.cpp:1155
 #, kde-format
 msgid "Cannot edit transactions in the context of a category."
 msgstr "Nije moguće uređivanje transakcije u okviru kategorije."
 
-#: kmymoney/views/kgloballedgerview.cpp:1159
+#: kmymoney/views/kgloballedgerview.cpp:1161
 #, kde-format
 msgid "Cannot create or edit any transactions in Account %1 as it is closed"
 msgstr ""
 "Ne može biti kreirana ili uređena nijedna transakcija u Nalogu %1 koji je "
 "zatvoren"
 
-#: kmymoney/views/kgloballedgerview.cpp:1181
+#: kmymoney/views/kgloballedgerview.cpp:1183
 #, kde-format
 msgid "Cannot edit mixed investment action/type transactions together."
 msgstr "Ne mogu se urediti mješane akcije ulaganja/tipovi ulagana  zajedno."
 
-#: kmymoney/views/kgloballedgerview.cpp:1195
+#: kmymoney/views/kgloballedgerview.cpp:1197
 #, kde-format
 msgid ""
 "Cannot edit investment transactions and non-investment transactions together."
 msgstr ""
 "Nije moguće uređivanje investicijskih i neinvesticijskih transakcija zajedno."
 
-#: kmymoney/views/kgloballedgerview.cpp:1204
+#: kmymoney/views/kgloballedgerview.cpp:1206
 #, kde-format
 msgid "Cannot edit multiple split transactions at once."
 msgstr "Nije moguće uređivanje više podijeljenih transakcija odjednom."
 
-#: kmymoney/views/kgloballedgerview.cpp:1225
+#: kmymoney/views/kgloballedgerview.cpp:1227
 #, kde-format
 msgid "Cannot edit investment transactions in the context of this account."
 msgstr ""
 "Nije moguće uređivanje investicijskih transakcija u okviru ovog naloga."
 
-#: kmymoney/views/kgloballedgerview.cpp:1357
-#: kmymoney/views/kgloballedgerview.cpp:1360
+#: kmymoney/views/kgloballedgerview.cpp:1359
+#: kmymoney/views/kgloballedgerview.cpp:1362
 #, kde-format
 msgid ""
 "<p>Please select what you want to do: discard the changes, save the changes "
@@ -18631,13 +18653,13 @@ msgstr ""
 "postaviti opciju za automatsko spremanje transakcije kada npr..odabirom "
 "druge transakcije. </p>"
 
-#: kmymoney/views/kgloballedgerview.cpp:1357
-#: kmymoney/views/kgloballedgerview.cpp:1360
+#: kmymoney/views/kgloballedgerview.cpp:1359
+#: kmymoney/views/kgloballedgerview.cpp:1362
 #, kde-format
 msgid "End transaction edit"
 msgstr "Zavši uređivanje transakcije"
 
-#: kmymoney/views/kgloballedgerview.cpp:1460
+#: kmymoney/views/kgloballedgerview.cpp:1462
 #, kde-format
 msgid ""
 "At least one split of the selected transactions has been reconciled. Do you "
@@ -18646,7 +18668,7 @@ msgstr ""
 "Barem jedno razdvajanje odabrane trasakcije je usaglašeno. Da li ipak želite "
 "obrisati transakciju?"
 
-#: kmymoney/views/kgloballedgerview.cpp:1466
+#: kmymoney/views/kgloballedgerview.cpp:1468
 #, kde-format
 msgid "Do you really want to delete the selected transaction?"
 msgid_plural "Do you really want to delete all %1 selected transactions?"
@@ -18654,31 +18676,31 @@ msgstr[0] "Da li zasita želite izbrisati odabranu %1 transakciju?"
 msgstr[1] "Da li zaista želite izabrati sve %1 odabrane transakcije?"
 msgstr[2] "Da li zaista želite izabrati svih %1 odabranih transakcija?"
 
-#: kmymoney/views/kgloballedgerview.cpp:1470
+#: kmymoney/views/kgloballedgerview.cpp:1472
 #, kde-format
 msgid "Delete transaction"
 msgstr "Brisanje transakcije"
 
-#: kmymoney/views/kgloballedgerview.cpp:1516
+#: kmymoney/views/kgloballedgerview.cpp:1518
 #, fuzzy, kde-format
 #| msgid "Unable to add transactions"
 msgid "Unable to duplicate transaction(s)"
 msgstr "Nemoguće dodavanje transakcija"
 
-#: kmymoney/views/kgloballedgerview.cpp:1591
+#: kmymoney/views/kgloballedgerview.cpp:1593
 #, fuzzy, kde-format
 #| msgid "Unable to add transactions"
 msgid "Unable to accept transaction"
 msgstr "Nemoguće dodavanje transakcija"
 
-#: kmymoney/views/kgloballedgerview.cpp:1632
+#: kmymoney/views/kgloballedgerview.cpp:1634
 #: kmymoney/views/kgloballedgerview_p.h:1382
 #, fuzzy, kde-format
 #| msgid "Unable to add transactions"
 msgid "Unable to modify transaction"
 msgstr "Nemoguće dodavanje transakcija"
 
-#: kmymoney/views/kgloballedgerview.cpp:1890
+#: kmymoney/views/kgloballedgerview.cpp:1892
 #, kde-format
 msgid ""
 "You are about to finish the reconciliation of this account with a difference "
@@ -18689,7 +18711,7 @@ msgstr ""
 "izvoda i transakcija označenim kao zatvorenim.\n"
 "Jeste li sigurni da želite završiti usaglašenje?"
 
-#: kmymoney/views/kgloballedgerview.cpp:1892
+#: kmymoney/views/kgloballedgerview.cpp:1894
 #, kde-format
 msgid "Confirm end of reconciliation"
 msgstr "Potvrdite kraj izjednačavanja"
@@ -24692,6 +24714,9 @@ msgstr ""
 "konekcije? Samo odaberite datoteku (OFX ili QIF) iz menija Datoteka->Uvezi.</"
 "p>\n"
 "<p>Osigurava Jose Jorge</p>\n"
+
+#~ msgid "Exceptions"
+#~ msgstr "Izuzeci"
 
 #~ msgid "Encryption"
 #~ msgstr "Kodovanje"
