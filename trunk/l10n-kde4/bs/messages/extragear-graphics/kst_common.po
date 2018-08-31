@@ -350,8 +350,8 @@ msgctxt "BISSourcePlugin|"
 msgid "BIT Image Stream Reader"
 msgstr "FITS čitač izvora slike"
 
-#: ../src/datasources/dirfilesource/dirfilesource.cpp:442
-#: ../src/datasources/dirfilesource/dirfilesource.cpp:443
+#: ../src/datasources/dirfilesource/dirfilesource.cpp:475
+#: ../src/datasources/dirfilesource/dirfilesource.cpp:476
 msgctxt "DirFilePlugin|"
 msgid "DirFile Reader"
 msgstr "DirFile čitač"
@@ -530,13 +530,13 @@ msgstr ""
 "Ne može se naći izvor podataka za  '%1'(%2), ali je pronađen jedan "
 "prethodno.  Nešta nije uredu sa Kst."
 
-#: ../src/libkst/datastring.cpp:101
+#: ../src/libkst/datastring.cpp:113
 #, qt-format
 msgctxt "Kst::DataString|"
 msgid "Data file for string %1 was not opened."
 msgstr "Datoteka podataka za string %1 nije otvorena."
 
-#: ../src/libkst/datastring.cpp:168
+#: ../src/libkst/datastring.cpp:193
 #, qt-format
 msgctxt "Kst::DataString|"
 msgid ""
@@ -548,7 +548,7 @@ msgstr ""
 "  %2\n"
 "  Polje: %3"
 
-#: ../src/libkst/datastring.cpp:178
+#: ../src/libkst/datastring.cpp:203
 #, qt-format
 msgctxt "Kst::DataString|"
 msgid "%1 of %2"
@@ -790,7 +790,7 @@ msgctxt "QObject|"
 msgid "Error creating string from Kst file."
 msgstr "Greška pri kreiranju stringa iz Kst datoteke,."
 
-#: ../src/libkst/stringfactory.cpp:124
+#: ../src/libkst/stringfactory.cpp:126
 #, fuzzy
 #| msgctxt "QObject|"
 #| msgid "Error creating string from Kst file."
@@ -833,7 +833,7 @@ msgctxt "Kst::VScalar|"
 msgid "Data file for scalar %1 was not opened."
 msgstr "Datoteka podataka za skalar %1 nije otvorena."
 
-#: ../src/libkst/vscalar.cpp:168
+#: ../src/libkst/vscalar.cpp:179
 #, qt-format
 msgctxt "Kst::VScalar|"
 msgid ""
@@ -847,7 +847,7 @@ msgstr ""
 "  Polje: %3\n"
 "  Okvir: %5"
 
-#: ../src/libkst/vscalar.cpp:202
+#: ../src/libkst/vscalar.cpp:213
 #, qt-format
 msgctxt ""
 "Kst::VScalar|%2 is field name.  %3 is frame/index.  %1 is the file name.  %4 "
@@ -5860,7 +5860,7 @@ msgctxt "Kst::MainWindow|"
 msgid "Ready"
 msgstr "Spremno"
 
-#: ../src/libkstapp/mainwindow.cpp:2262
+#: ../src/libkstapp/mainwindow.cpp:2406
 #, fuzzy
 #| msgctxt "Dialog|"
 #| msgid "Save as default"
@@ -5868,14 +5868,14 @@ msgctxt "Kst::MainWindow|"
 msgid "Clear all settings and defaults?"
 msgstr "Snimi kao zadano"
 
-#: ../src/libkstapp/mainwindow.cpp:2263
+#: ../src/libkstapp/mainwindow.cpp:2407
 msgctxt "Kst::MainWindow|"
 msgid ""
 "You are about to clear all settings defaults in all dialogs in kst.\n"
 "This can not be undone."
 msgstr ""
 
-#: ../src/libkstapp/mainwindow.cpp:2284
+#: ../src/libkstapp/mainwindow.cpp:2428
 #, fuzzy
 #| msgctxt "MatlabSourcePlugin|"
 #| msgid "Matlab Datasource Reader"
@@ -5883,7 +5883,7 @@ msgctxt "Kst::MainWindow|"
 msgid "Clear datasource settings?"
 msgstr "Matlab čitač podataka"
 
-#: ../src/libkstapp/mainwindow.cpp:2285
+#: ../src/libkstapp/mainwindow.cpp:2429
 msgctxt "Kst::MainWindow|"
 msgid ""
 "You are about to clear all\n"
@@ -7209,12 +7209,12 @@ msgctxt "Kst::StringTab|"
 msgid "String"
 msgstr "String"
 
-#: ../src/libkstapp/stringdialog.cpp:203
+#: ../src/libkstapp/stringdialog.cpp:244
 msgctxt "Kst::StringDialog|"
 msgid "Edit String"
 msgstr "Izmjeni string"
 
-#: ../src/libkstapp/stringdialog.cpp:205
+#: ../src/libkstapp/stringdialog.cpp:246
 msgctxt "Kst::StringDialog|"
 msgid "New String"
 msgstr "Novi string"
@@ -7232,27 +7232,43 @@ msgctxt "StringTab|"
 msgid "&File name:"
 msgstr "&Naziv Datoteke:"
 
-#: ../src/libkstapp/stringtab.ui:48
-msgctxt "StringTab|"
-msgid "Fie&ld:"
-msgstr ""
-
-#: ../src/libkstapp/stringtab.ui:104
+#: ../src/libkstapp/stringtab.ui:78
 msgctxt "StringTab|"
 msgid "&Connect"
 msgstr "&Poveži"
 
-#: ../src/libkstapp/stringtab.ui:114
+#: ../src/libkstapp/stringtab.ui:88
 msgctxt "StringTab|"
 msgid "Co&nfigure..."
 msgstr "Po&desi..."
 
-#: ../src/libkstapp/stringtab.ui:126
+#: ../src/libkstapp/stringtab.ui:97
+msgctxt "StringTab|"
+msgid "Fie&ld:"
+msgstr ""
+
+#: ../src/libkstapp/stringtab.ui:119
+#, fuzzy
+#| msgctxt "ScalarTab|"
+#| msgid "F&rame:"
+msgctxt "StringTab|"
+msgid "Frame:"
+msgstr "O&kvir:"
+
+#: ../src/libkstapp/stringtab.ui:136
+#, fuzzy
+#| msgctxt "ScalarTab|"
+#| msgid "&last frame"
+msgctxt "StringTab|"
+msgid "Last Frame"
+msgstr "&posljednji okvir"
+
+#: ../src/libkstapp/stringtab.ui:156
 msgctxt "StringTab|"
 msgid "&Generate"
 msgstr "&Generiši"
 
-#: ../src/libkstapp/stringtab.ui:164
+#: ../src/libkstapp/stringtab.ui:194
 msgctxt "StringTab|"
 msgid "&Value: "
 msgstr "&Vrijednost: "
