@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kopete\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-10-17 01:54+0200\n"
+"POT-Creation-Date: 2018-10-18 01:52+0200\n"
 "PO-Revision-Date: 2014-10-20 19:38+0000\n"
 "Last-Translator: Zlatan Čilić <zcilic1@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -28,10 +28,123 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Samir.ribic@etf.unsa.ba,zcilic1@etf.unsa.ba"
 
+#. i18n: ectx: label, entry (Password), group (SMPPPDCS Plugin)
+#: smpppdcs.kcfg:7
+#, kde-format
+msgid "Password to connect to the SMPPPD."
+msgstr "Šifra koja će se povezati sa SMPPPD-om."
+
+#. i18n: ectx: label, entry (ignoredAccounts), group (SMPPPDCS Plugin)
+#: smpppdcs.kcfg:10
+#, kde-format
+msgid "Accounts to ignore in the plugin."
+msgstr "Račun koji će se ignorisati u dodatku."
+
+#. i18n: ectx: label, entry (server), group (SMPPPDCS Plugin)
+#: smpppdcs.kcfg:13
+#, kde-format
+msgid "SMPPPD-Server to connect."
+msgstr "SMPPPD-Server na koji se povezati."
+
+#. i18n: ectx: label, entry (port), group (SMPPPDCS Plugin)
+#: smpppdcs.kcfg:17
+#, kde-format
+msgid "SMPPPD-Server port to connect."
+msgstr "SMPPPD ulaz servera na koji se povezati."
+
+#. i18n: ectx: label, entry (useNetstat), group (SMPPPDCS Plugin)
+#: smpppdcs.kcfg:21
+#, kde-format
+msgid "Use the netstat tool to determine the connection status."
+msgstr "Koristi netstat alat za određivanje statusa veze."
+
+#. i18n: ectx: label, entry (useSmpppd), group (SMPPPDCS Plugin)
+#: smpppdcs.kcfg:25
+#, kde-format
+msgid "Use the SMPPPD to determine the connection status."
+msgstr "Koristi SMPPPD za određivanje statusa veze."
+
 #: smpppdcspreferences.cpp:62
 #, kde-format
 msgid "connection status is managed by Kopete"
 msgstr "statusom konekcije upravlja Kopete"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, SMPPPDCSPrefsUI)
+#: smpppdcsprefsbase.ui:14
+#, kde-format
+msgid "SMPPPDCS Preferences"
+msgstr "Podešavanja SMPPPDCS-a"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: smpppdcsprefsbase.ui:39
+#, kde-format
+msgid "&Connection"
+msgstr "&Veza"
+
+#. i18n: ectx: property (title), widget (QGroupBox, csMethod)
+#: smpppdcsprefsbase.ui:60
+#, kde-format
+msgid "Method of Connection Status Detection"
+msgstr "Metod otkrivanja statusa veze"
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, useNetstat)
+#: smpppdcsprefsbase.ui:81
+#, kde-format
+msgid ""
+"Uses the netstat command to find a gateway; suitable on dial-up computers"
+msgstr ""
+"Koristi naredbu netstat za pronalaženje mrežnog prolaza; pogodno na "
+"modemskim računarima"
+
+#. i18n: ectx: property (text), widget (QRadioButton, useNetstat)
+#: smpppdcsprefsbase.ui:84
+#, kde-format
+msgid "&netstat - Standard method of connection status detection"
+msgstr "&netstat - standardni metod otkrivanja statusa veze"
+
+#. i18n: ectx: property (toolTip), widget (QRadioButton, useSmpppd)
+#: smpppdcsprefsbase.ui:94
+#, kde-format
+msgid ""
+"Uses the smpppd on a gateway; suitable for a computer in a private network"
+msgstr ""
+"Koristi smpppd na mrežnom prolazu; pogodno za računare u privatnoj mreži"
+
+#. i18n: ectx: property (text), widget (QRadioButton, useSmpppd)
+#: smpppdcsprefsbase.ui:97
+#, kde-format
+msgid "smpppd - Ad&vanced method of connection status detection"
+msgstr "smpppd - N&apredan metod otkrivanja statusa veze"
+
+#. i18n: ectx: property (toolTip), widget (KPushButton, autoCSTest)
+#: smpppdcsprefsbase.ui:134
+#, kde-format
+msgid "Tries to find an appropriate connection method"
+msgstr "Pokušava da nađe odgovarajući metod povezivanja"
+
+#. i18n: ectx: property (text), widget (KPushButton, autoCSTest)
+#: smpppdcsprefsbase.ui:137
+#, kde-format
+msgid "&Try to Detect Automatically"
+msgstr "&Prepoznaj automatski"
+
+#. i18n: ectx: property (title), widget (QGroupBox, smpppdPrefs)
+#: smpppdcsprefsbase.ui:165
+#, kde-format
+msgid "Location of the SMPPPD"
+msgstr "Lokacija SMPPPD"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: smpppdcsprefsbase.ui:209
+#, kde-format
+msgid "Acco&unts"
+msgstr "&Računi"
+
+#. i18n: ectx: property (text), widget (QLabel, toIgnoreLabel)
+#: smpppdcsprefsbase.ui:246
+#, kde-format
+msgid "Choose the accounts to ignore:"
+msgstr "Izaberite račune koje treba ignorisati:"
 
 #: smpppdcsprefsimpl.cpp:104
 #, kde-format
@@ -43,91 +156,59 @@ msgstr "Tražim"
 msgid "Searching for a SMPPPD on the local network..."
 msgstr "Tražim SMPPPD na lokalnoj mreži..."
 
-#~ msgid "Password to connect to the SMPPPD."
-#~ msgstr "Šifra koja će se povezati sa SMPPPD-om."
+#. i18n: ectx: property (windowTitle), widget (QWidget, SMPPPDLocationWidgetUI)
+#: smpppdlocationbase.ui:13
+#, kde-format
+msgid "SMPPPDLocation"
+msgstr "SMPPPDLocation"
 
-#~ msgid "Accounts to ignore in the plugin."
-#~ msgstr "Račun koji će se ignorisati u dodatku."
+#. i18n: ectx: property (toolTip), widget (KLineEdit, password)
+#: smpppdlocationbase.ui:53
+#, kde-format
+msgid "The password to authenticate with the smpppd"
+msgstr "Šifra za identifikaciju sa SMPPPD-om"
 
-#~ msgid "SMPPPD-Server to connect."
-#~ msgstr "SMPPPD-Server na koji se povezati."
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: smpppdlocationbase.ui:63
+#, kde-format
+msgid "Pass&word:"
+msgstr "Lo&zinka:"
 
-#~ msgid "SMPPPD-Server port to connect."
-#~ msgstr "SMPPPD ulaz servera na koji se povezati."
+#. i18n: ectx: property (toolTip), widget (KIntNumInput, port)
+#: smpppdlocationbase.ui:93
+#, kde-format
+msgid "The port on which the SMPPPD is running on"
+msgstr "Port na kojem je SMPPPD pokrenut"
 
-#~ msgid "Use the netstat tool to determine the connection status."
-#~ msgstr "Koristi netstat alat za određivanje statusa veze."
+#. i18n: ectx: property (text), widget (QLabel, defaultPortLabel)
+#: smpppdlocationbase.ui:106
+#, kde-format
+msgid "Default: 3185"
+msgstr "Podrazumijevano 3185"
 
-#~ msgid "Use the SMPPPD to determine the connection status."
-#~ msgstr "Koristi SMPPPD za određivanje statusa veze."
+#. i18n: ectx: property (text), widget (QLabel, portLabel)
+#: smpppdlocationbase.ui:131
+#, kde-format
+msgid "P&ort:"
+msgstr "P&ort:"
 
-#~ msgid "SMPPPDCS Preferences"
-#~ msgstr "Podešavanja SMPPPDCS-a"
+#. i18n: ectx: property (toolTip), widget (KLineEdit, server)
+#: smpppdlocationbase.ui:144
+#, kde-format
+msgid "The server on which the SMPPPD is running"
+msgstr "Server na kojem je SMPPPD pokrenut"
 
-#~ msgid "&Connection"
-#~ msgstr "&Veza"
+#. i18n: ectx: property (text), widget (KLineEdit, server)
+#: smpppdlocationbase.ui:147
+#, kde-format
+msgid "localhost"
+msgstr "localhost"
 
-#~ msgid "Method of Connection Status Detection"
-#~ msgstr "Metod otkrivanja statusa veze"
-
-#~ msgid ""
-#~ "Uses the netstat command to find a gateway; suitable on dial-up computers"
-#~ msgstr ""
-#~ "Koristi naredbu netstat za pronalaženje mrežnog prolaza; pogodno na "
-#~ "modemskim računarima"
-
-#~ msgid "&netstat - Standard method of connection status detection"
-#~ msgstr "&netstat - standardni metod otkrivanja statusa veze"
-
-#~ msgid ""
-#~ "Uses the smpppd on a gateway; suitable for a computer in a private network"
-#~ msgstr ""
-#~ "Koristi smpppd na mrežnom prolazu; pogodno za računare u privatnoj mreži"
-
-#~ msgid "smpppd - Ad&vanced method of connection status detection"
-#~ msgstr "smpppd - N&apredan metod otkrivanja statusa veze"
-
-#~ msgid "Tries to find an appropriate connection method"
-#~ msgstr "Pokušava da nađe odgovarajući metod povezivanja"
-
-#~ msgid "&Try to Detect Automatically"
-#~ msgstr "&Prepoznaj automatski"
-
-#~ msgid "Location of the SMPPPD"
-#~ msgstr "Lokacija SMPPPD"
-
-#~ msgid "Acco&unts"
-#~ msgstr "&Računi"
-
-#~ msgid "Choose the accounts to ignore:"
-#~ msgstr "Izaberite račune koje treba ignorisati:"
-
-#~ msgid "SMPPPDLocation"
-#~ msgstr "SMPPPDLocation"
-
-#~ msgid "The password to authenticate with the smpppd"
-#~ msgstr "Šifra za identifikaciju sa SMPPPD-om"
-
-#~ msgid "Pass&word:"
-#~ msgstr "Lo&zinka:"
-
-#~ msgid "The port on which the SMPPPD is running on"
-#~ msgstr "Port na kojem je SMPPPD pokrenut"
-
-#~ msgid "Default: 3185"
-#~ msgstr "Podrazumijevano 3185"
-
-#~ msgid "P&ort:"
-#~ msgstr "P&ort:"
-
-#~ msgid "The server on which the SMPPPD is running"
-#~ msgstr "Server na kojem je SMPPPD pokrenut"
-
-#~ msgid "localhost"
-#~ msgstr "localhost"
-
-#~ msgid "Ser&ver:"
-#~ msgstr "Ser&ver:"
+#. i18n: ectx: property (text), widget (QLabel, serverLabel)
+#: smpppdlocationbase.ui:157
+#, kde-format
+msgid "Ser&ver:"
+msgstr "Ser&ver:"
 
 #~ msgid "SMPPPDClientTests"
 #~ msgstr "SMPPPDTestoviKlijenta"
