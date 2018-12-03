@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-12-02 02:54+0100\n"
+"POT-Creation-Date: 2018-12-03 02:56+0100\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -68,7 +68,7 @@ msgstr ""
 #: src/backend/worksheet/plots/cartesian/XYInterpolationCurve.cpp:481
 #: src/backend/worksheet/plots/cartesian/XYSmoothCurve.cpp:310
 #: src/backend/worksheet/plots/PlotArea.cpp:437
-#: src/backend/worksheet/TextLabel.cpp:710
+#: src/backend/worksheet/TextLabel.cpp:932
 #: src/backend/worksheet/Worksheet.cpp:817
 #: src/commonfrontend/ProjectExplorer.cpp:727
 #, kde-format
@@ -99,7 +99,7 @@ msgstr ""
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:2119
 #: src/backend/worksheet/plots/cartesian/CustomPoint.cpp:480
 #: src/backend/worksheet/plots/PlotArea.cpp:539
-#: src/backend/worksheet/TextLabel.cpp:811
+#: src/backend/worksheet/TextLabel.cpp:1009
 #: src/backend/worksheet/Worksheet.cpp:940
 #, kde-format
 msgid "unknown element '%1'"
@@ -789,7 +789,7 @@ msgstr "%1: postavi grešku bar stila"
 #: src/backend/worksheet/plots/cartesian/Histogram.cpp:165
 #: src/backend/worksheet/plots/cartesian/XYCurve.cpp:216
 #: src/backend/worksheet/plots/PlotArea.cpp:96
-#: src/backend/worksheet/TextLabel.cpp:294
+#: src/backend/worksheet/TextLabel.cpp:328
 #: src/backend/worksheet/WorksheetElementContainer.cpp:84
 #: src/backend/worksheet/WorksheetElementContainer.cpp:85
 #, kde-format
@@ -804,7 +804,7 @@ msgstr "%1: postavi vidljivo"
 #: src/backend/worksheet/plots/cartesian/Histogram.cpp:165
 #: src/backend/worksheet/plots/cartesian/XYCurve.cpp:216
 #: src/backend/worksheet/plots/PlotArea.cpp:96
-#: src/backend/worksheet/TextLabel.cpp:294
+#: src/backend/worksheet/TextLabel.cpp:328
 #: src/backend/worksheet/WorksheetElementContainer.cpp:87
 #: src/backend/worksheet/WorksheetElementContainer.cpp:97
 #, kde-format
@@ -836,7 +836,7 @@ msgstr "%1: postavi pozadinsku sliku"
 
 #: src/backend/datapicker/DatapickerImage.cpp:280
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:266
-#: src/backend/worksheet/TextLabel.cpp:274
+#: src/backend/worksheet/TextLabel.cpp:285
 #, kde-format
 msgid "%1: set rotation angle"
 msgstr "%1: postavi ugao rotacije"
@@ -868,7 +868,7 @@ msgstr "%1: postavi osnu poziciju"
 #: src/backend/datapicker/DatapickerPoint.cpp:211
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:259
 #: src/backend/worksheet/plots/cartesian/CustomPoint.cpp:144
-#: src/backend/worksheet/TextLabel.cpp:245
+#: src/backend/worksheet/TextLabel.cpp:256
 #, kde-format
 msgid "%1: set position"
 msgstr "%1: postavi poziciju"
@@ -4569,8 +4569,8 @@ msgstr "Logistička Distribucija"
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:262
 #: src/kdefrontend/dockwidgets/XYFitCurveDock.cpp:658
 #: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:112
-#: src/kdefrontend/widgets/LabelWidget.cpp:84
-#: src/kdefrontend/widgets/LabelWidget.cpp:89
+#: src/kdefrontend/widgets/LabelWidget.cpp:87
+#: src/kdefrontend/widgets/LabelWidget.cpp:92
 #, kde-format
 msgid "Custom"
 msgstr "Specijalno"
@@ -5308,7 +5308,7 @@ msgstr "Nazivi dana"
 
 #: src/backend/spreadsheet/SpreadsheetModel.cpp:410
 #: src/kdefrontend/dockwidgets/ColumnDock.cpp:229
-#: src/kdefrontend/widgets/LabelWidget.cpp:514
+#: src/kdefrontend/widgets/LabelWidget.cpp:549
 #, kde-format
 msgid "Date and Time"
 msgstr "Datum i vrijeme"
@@ -5332,7 +5332,7 @@ msgstr "%1: postavi vertikalno punjenje"
 #: src/backend/worksheet/plots/cartesian/CustomPoint.cpp:92
 #: src/backend/worksheet/plots/cartesian/Histogram.cpp:138
 #: src/backend/worksheet/plots/cartesian/XYCurve.cpp:156
-#: src/backend/worksheet/TextLabel.cpp:190
+#: src/backend/worksheet/TextLabel.cpp:197
 #: src/kdefrontend/ui/datapickercurvewidget.ui:223
 #: src/kdefrontend/ui/datapickerimagewidget.ui:917
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:259
@@ -5351,7 +5351,7 @@ msgstr "%1: postavi vertikalno punjenje"
 #: src/kdefrontend/ui/dockwidgets/xyintegrationcurvedockgeneraltab.ui:96
 #: src/kdefrontend/ui/dockwidgets/xyinterpolationcurvedockgeneraltab.ui:407
 #: src/kdefrontend/ui/dockwidgets/xysmoothcurvedockgeneraltab.ui:445
-#: src/kdefrontend/ui/labelwidget.ui:503
+#: src/kdefrontend/ui/labelwidget.ui:647
 #, fuzzy, kde-format
 #| msgid "visible"
 msgid "Visible"
@@ -6384,6 +6384,7 @@ msgid "%1: set border corner radius"
 msgstr "%1: postavi ugaoni radijus linije"
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:347
+#: src/backend/worksheet/TextLabel.cpp:321
 #, kde-format
 msgid "%1: set border opacity"
 msgstr "%1: postavi prozirnost linije"
@@ -7064,37 +7065,49 @@ msgstr "%1: postavi granice za područje u kojem se crta"
 msgid "%1: set plot area border opacity"
 msgstr "%1: postavi linijsku providnost za područje u kojem se crta"
 
-#: src/backend/worksheet/TextLabel.cpp:217
+#: src/backend/worksheet/TextLabel.cpp:228
 #, kde-format
 msgid "%1: set label text"
 msgstr "%1: postavi tekst oznake"
 
-#: src/backend/worksheet/TextLabel.cpp:224
+#: src/backend/worksheet/TextLabel.cpp:235
 #, fuzzy, kde-format
 #| msgid "%1: set TeX font size"
 msgid "%1: set TeX main font"
 msgstr "%1: postavi TeX veličinu fonta"
 
-#: src/backend/worksheet/TextLabel.cpp:231
+#: src/backend/worksheet/TextLabel.cpp:242
 #, kde-format
 msgid "%1: set TeX font color"
 msgstr "%1: postavi TeX boju fonta"
 
-#: src/backend/worksheet/TextLabel.cpp:238
+#: src/backend/worksheet/TextLabel.cpp:249
 #, fuzzy, kde-format
 #| msgid "%1: set background first color"
 msgid "%1: set TeX background color"
 msgstr "%1: postavi prvu pozadinsku boju"
 
-#: src/backend/worksheet/TextLabel.cpp:281
+#: src/backend/worksheet/TextLabel.cpp:292
 #, kde-format
 msgid "%1: set horizontal alignment"
 msgstr "%1: postavi horizontalno poravnanje"
 
-#: src/backend/worksheet/TextLabel.cpp:288
+#: src/backend/worksheet/TextLabel.cpp:299
 #, kde-format
 msgid "%1: set vertical alignment"
 msgstr "%1: postavi vertikalno poravnanje"
+
+#: src/backend/worksheet/TextLabel.cpp:307
+#, fuzzy, kde-format
+#| msgid "%1: set border style"
+msgid "%1: set border shape"
+msgstr "%1: postavi stil inije"
+
+#: src/backend/worksheet/TextLabel.cpp:314
+#, fuzzy, kde-format
+#| msgid "%1: set border style"
+msgid "%1: set border"
+msgstr "%1: postavi stil inije"
 
 #: src/backend/worksheet/Worksheet.cpp:439
 #, kde-format
@@ -9423,8 +9436,8 @@ msgstr "Vrijednosti"
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:493
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:259
 #: src/kdefrontend/SettingsGeneralPage.cpp:95
-#: src/kdefrontend/widgets/LabelWidget.cpp:86
-#: src/kdefrontend/widgets/LabelWidget.cpp:95
+#: src/kdefrontend/widgets/LabelWidget.cpp:89
+#: src/kdefrontend/widgets/LabelWidget.cpp:98
 #, kde-format
 msgid "Top"
 msgstr "Vrh"
@@ -9435,8 +9448,8 @@ msgstr "Vrh"
 #: src/kdefrontend/dockwidgets/AxisDock.cpp:494
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:261
 #: src/kdefrontend/SettingsGeneralPage.cpp:96
-#: src/kdefrontend/widgets/LabelWidget.cpp:88
-#: src/kdefrontend/widgets/LabelWidget.cpp:97
+#: src/kdefrontend/widgets/LabelWidget.cpp:91
+#: src/kdefrontend/widgets/LabelWidget.cpp:100
 #, kde-format
 msgid "Bottom"
 msgstr "Dno"
@@ -9502,8 +9515,8 @@ msgstr "polu-popunjen, veliki"
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:406
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:415
 #: src/kdefrontend/SettingsGeneralPage.cpp:97
-#: src/kdefrontend/widgets/LabelWidget.cpp:81
-#: src/kdefrontend/widgets/LabelWidget.cpp:91
+#: src/kdefrontend/widgets/LabelWidget.cpp:84
+#: src/kdefrontend/widgets/LabelWidget.cpp:94
 #, kde-format
 msgid "Left"
 msgstr "Lijevo"
@@ -9516,8 +9529,8 @@ msgstr "Lijevo"
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:407
 #: src/kdefrontend/dockwidgets/XYCurveDock.cpp:416
 #: src/kdefrontend/SettingsGeneralPage.cpp:98
-#: src/kdefrontend/widgets/LabelWidget.cpp:83
-#: src/kdefrontend/widgets/LabelWidget.cpp:93
+#: src/kdefrontend/widgets/LabelWidget.cpp:86
+#: src/kdefrontend/widgets/LabelWidget.cpp:96
 #, kde-format
 msgid "Right"
 msgstr "Desno"
@@ -9878,6 +9891,7 @@ msgstr "centrirano popločan"
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:466
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:925
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1336
+#: src/kdefrontend/ui/labelwidget.ui:111
 #: src/kdefrontend/worksheet/GridDialog.cpp:80
 #, fuzzy, kde-format
 #| msgid "Color"
@@ -9946,10 +9960,10 @@ msgstr "najveći u redu"
 
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:256
 #: src/kdefrontend/dockwidgets/CartesianPlotLegendDock.cpp:260
-#: src/kdefrontend/widgets/LabelWidget.cpp:82
-#: src/kdefrontend/widgets/LabelWidget.cpp:87
-#: src/kdefrontend/widgets/LabelWidget.cpp:92
-#: src/kdefrontend/widgets/LabelWidget.cpp:96
+#: src/kdefrontend/widgets/LabelWidget.cpp:85
+#: src/kdefrontend/widgets/LabelWidget.cpp:90
+#: src/kdefrontend/widgets/LabelWidget.cpp:95
+#: src/kdefrontend/widgets/LabelWidget.cpp:99
 #, fuzzy, kde-format
 #| msgid "center"
 msgid "Center"
@@ -13118,7 +13132,7 @@ msgstr "Simbol"
 #: src/kdefrontend/ui/dockwidgets/histogramdock.ui:455
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:132
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:617
-#: src/kdefrontend/ui/labelwidget.ui:230
+#: src/kdefrontend/ui/labelwidget.ui:377
 #, fuzzy, kde-format
 #| msgid "Size"
 msgid "Size:"
@@ -13126,6 +13140,7 @@ msgstr "Veličina"
 
 #. i18n: ectx: property (text), widget (QLabel, lBorder)
 #. i18n: ectx: property (text), widget (QLabel, lSymbolBorder)
+#. i18n: ectx: property (text), widget (QLabel, lGeometry_2)
 #: src/kdefrontend/ui/datapickercurvewidget.ui:209
 #: src/kdefrontend/ui/datapickerimagewidget.ui:853
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:1033
@@ -13133,6 +13148,7 @@ msgstr "Veličina"
 #: src/kdefrontend/ui/dockwidgets/custompointdock.ui:398
 #: src/kdefrontend/ui/dockwidgets/histogramdock.ui:623
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:479
+#: src/kdefrontend/ui/labelwidget.ui:158
 #, kde-format
 msgid "Border"
 msgstr "Ivica"
@@ -13204,6 +13220,7 @@ msgstr "Ivica"
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1062
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1072
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1309
+#: src/kdefrontend/ui/labelwidget.ui:469
 #: src/kdefrontend/worksheet/GridDialog.cpp:55
 #, fuzzy, kde-format
 #| msgid "Style"
@@ -13261,7 +13278,8 @@ msgstr "Stil"
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:720
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1326
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1360
-#: src/kdefrontend/ui/labelwidget.ui:421 src/kdefrontend/ui/labelwidget.ui:447
+#: src/kdefrontend/ui/labelwidget.ui:78 src/kdefrontend/ui/labelwidget.ui:101
+#: src/kdefrontend/ui/labelwidget.ui:607
 #, kde-format
 msgid " pt"
 msgstr " pt"
@@ -13280,7 +13298,7 @@ msgstr " pt"
 #: src/kdefrontend/ui/dockwidgets/histogramdock.ui:780
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:532
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:730
-#: src/kdefrontend/ui/labelwidget.ui:480
+#: src/kdefrontend/ui/labelwidget.ui:42
 #, fuzzy, kde-format
 #| msgid "Rotation"
 msgid "Rotation:"
@@ -13326,6 +13344,7 @@ msgstr "Rotacija"
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:772
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1115
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1383
+#: src/kdefrontend/ui/labelwidget.ui:124
 #, kde-format
 msgid ""
 "The opacity ranges from 0 to 100, where 0 is fully transparent and 100 is "
@@ -13377,6 +13396,7 @@ msgstr ""
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:775
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1118
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1386
+#: src/kdefrontend/ui/labelwidget.ui:127
 #: src/kdefrontend/worksheet/GridDialog.cpp:95
 #, no-c-format, kde-format
 msgid " %"
@@ -13412,6 +13432,7 @@ msgstr " %"
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:273
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:486
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1353
+#: src/kdefrontend/ui/labelwidget.ui:455
 #, fuzzy, kde-format
 #| msgid "Width"
 msgid "Width:"
@@ -13432,7 +13453,7 @@ msgstr "Širina"
 #: src/kdefrontend/ui/dockwidgets/histogramdock.ui:793
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:368
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:743
-#: src/kdefrontend/ui/labelwidget.ui:487
+#: src/kdefrontend/ui/labelwidget.ui:572
 #, kde-format
 msgid "°"
 msgstr "°"
@@ -13498,6 +13519,7 @@ msgstr "Ispunjavanje (Bojenje):"
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:759
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1102
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:1370
+#: src/kdefrontend/ui/labelwidget.ui:532
 #: src/kdefrontend/worksheet/GridDialog.cpp:87
 #, fuzzy, kde-format
 #| msgid "Opacity"
@@ -13698,12 +13720,12 @@ msgstr "Gustina"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, lPositionY)
 #. i18n: ectx: property (toolTip), widget (KComboBox, cbPlotImageType)
-#. i18n: ectx: property (toolTip), widget (KComboBox, cbPositionY)
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, sbPositionY)
+#. i18n: ectx: property (toolTip), widget (KComboBox, cbPositionY)
 #: src/kdefrontend/ui/datapickerimagewidget.ui:962
 #: src/kdefrontend/ui/dockwidgets/custompointdock.ui:132
-#: src/kdefrontend/ui/labelwidget.ui:369 src/kdefrontend/ui/labelwidget.ui:379
-#: src/kdefrontend/ui/labelwidget.ui:392
+#: src/kdefrontend/ui/labelwidget.ui:23 src/kdefrontend/ui/labelwidget.ui:174
+#: src/kdefrontend/ui/labelwidget.ui:432
 #, kde-format
 msgid "Vertical position relative to label's parent"
 msgstr "Vertikalna pozicija u odnosu na roditelja labele"
@@ -14824,7 +14846,7 @@ msgstr "Datum i vrijeme"
 #: src/kdefrontend/ui/dockwidgets/histogramdock.ui:972
 #: src/kdefrontend/ui/dockwidgets/notedock.ui:89
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:915
-#: src/kdefrontend/ui/labelwidget.ui:210
+#: src/kdefrontend/ui/labelwidget.ui:68
 #, fuzzy, kde-format
 #| msgid "Font"
 msgid "Font:"
@@ -14869,7 +14891,7 @@ msgstr "Manja mreža:"
 #: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:96
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:190
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:107
-#: src/kdefrontend/ui/labelwidget.ui:311
+#: src/kdefrontend/ui/labelwidget.ui:448
 #, fuzzy, kde-format
 #| msgid "Geometry:"
 msgid "Geometry"
@@ -14922,7 +14944,7 @@ msgstr "Lijevo"
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:479
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:528
 #: src/kdefrontend/ui/dockwidgets/worksheetdock.ui:548
-#: src/kdefrontend/ui/labelwidget.ui:350 src/kdefrontend/ui/labelwidget.ui:395
+#: src/kdefrontend/ui/labelwidget.ui:26 src/kdefrontend/ui/labelwidget.ui:403
 #, kde-format
 msgid " cm"
 msgstr " cm"
@@ -15235,7 +15257,7 @@ msgstr "Linija+širina simbola"
 #. i18n: ectx: property (text), widget (QLabel, lPositionX)
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:197
 #: src/kdefrontend/ui/dockwidgets/custompointdock.ui:112
-#: src/kdefrontend/ui/labelwidget.ui:321
+#: src/kdefrontend/ui/labelwidget.ui:499
 #, fuzzy, kde-format
 #| msgid "x"
 msgid "x:"
@@ -15244,7 +15266,7 @@ msgstr "x"
 #. i18n: ectx: property (text), widget (QLabel, lPositionY)
 #: src/kdefrontend/ui/dockwidgets/cartesianplotlegenddock.ui:233
 #: src/kdefrontend/ui/dockwidgets/custompointdock.ui:135
-#: src/kdefrontend/ui/labelwidget.ui:372
+#: src/kdefrontend/ui/labelwidget.ui:177
 #, fuzzy, kde-format
 #| msgid "y"
 msgid "y:"
@@ -15329,11 +15351,11 @@ msgid "Plot designation:"
 msgstr "Oznaka grafa"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, lPositionX)
-#. i18n: ectx: property (toolTip), widget (KComboBox, cbPositionX)
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, sbPositionX)
+#. i18n: ectx: property (toolTip), widget (KComboBox, cbPositionX)
 #: src/kdefrontend/ui/dockwidgets/custompointdock.ui:109
-#: src/kdefrontend/ui/labelwidget.ui:318 src/kdefrontend/ui/labelwidget.ui:334
-#: src/kdefrontend/ui/labelwidget.ui:347
+#: src/kdefrontend/ui/labelwidget.ui:400 src/kdefrontend/ui/labelwidget.ui:489
+#: src/kdefrontend/ui/labelwidget.ui:496
 #, kde-format
 msgid "Horizontal position relative to label's parent"
 msgstr "Horizontala pozicija u odnosu na roditelja labele"
@@ -15535,7 +15557,7 @@ msgstr "Popunjavanje:"
 #. i18n: ectx: property (text), widget (QLabel, bgcolor)
 #. i18n: ectx: property (text), widget (QLabel, lBackgroundColor)
 #: src/kdefrontend/ui/dockwidgets/notedock.ui:69
-#: src/kdefrontend/ui/labelwidget.ui:263
+#: src/kdefrontend/ui/labelwidget.ui:387
 #, fuzzy, kde-format
 #| msgid "Background"
 msgid "Background color:"
@@ -16617,68 +16639,74 @@ msgid "Close File"
 msgstr "Zatvori &sve"
 
 #. i18n: ectx: property (text), widget (QLabel, lText)
-#: src/kdefrontend/ui/labelwidget.ui:26
+#: src/kdefrontend/ui/labelwidget.ui:58
 #, kde-format
 msgid "Text:"
 msgstr "Tekst:"
 
+#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, sbOffsetX)
+#. i18n: ectx: property (toolTip), widget (QLabel, lOffsetY)
+#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, sbOffsetY)
+#. i18n: ectx: property (toolTip), widget (QLabel, lOffsetX)
+#: src/kdefrontend/ui/labelwidget.ui:75 src/kdefrontend/ui/labelwidget.ui:555
+#: src/kdefrontend/ui/labelwidget.ui:604 src/kdefrontend/ui/labelwidget.ui:637
+#, kde-format
+msgid "Distance to the axis tick labels"
+msgstr "Udaljenost do ose kvačice labele"
+
+#. i18n: ectx: property (text), widget (QLabel, lVerticalAlignment)
+#: src/kdefrontend/ui/labelwidget.ui:94
+#, fuzzy, kde-format
+#| msgid "Vert. align."
+msgid "Vert. align.:"
+msgstr "Vert. poravnanje."
+
 #. i18n: ectx: property (toolTip), widget (QToolButton, tbTexUsed)
-#: src/kdefrontend/ui/labelwidget.ui:178
+#: src/kdefrontend/ui/labelwidget.ui:313
 #, kde-format
 msgid "TeX mode"
 msgstr "TeX način"
 
-#. i18n: ectx: property (text), widget (QLabel, lFontTeX)
-#: src/kdefrontend/ui/labelwidget.ui:220
-#, fuzzy, kde-format
-#| msgid "Main"
-msgid "Main font:"
-msgstr "Glavni"
+#. i18n: ectx: property (text), widget (QLabel, lBorderShape)
+#: src/kdefrontend/ui/labelwidget.ui:462
+#, kde-format
+msgid "Shape:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lFontColor)
-#: src/kdefrontend/ui/labelwidget.ui:240
+#: src/kdefrontend/ui/labelwidget.ui:476
 #, fuzzy, kde-format
 #| msgid "Background"
 msgid "Foreground color:"
 msgstr "Pozadina"
 
-#. i18n: ectx: property (toolTip), widget (QLabel, lOffsetX)
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, sbOffsetX)
-#. i18n: ectx: property (toolTip), widget (QLabel, lOffsetY)
-#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, sbOffsetY)
-#: src/kdefrontend/ui/labelwidget.ui:408 src/kdefrontend/ui/labelwidget.ui:418
-#: src/kdefrontend/ui/labelwidget.ui:434 src/kdefrontend/ui/labelwidget.ui:444
-#, kde-format
-msgid "Distance to the axis tick labels"
-msgstr "Udaljenost do ose kvačice labele"
-
-#. i18n: ectx: property (text), widget (QLabel, lOffsetX)
-#: src/kdefrontend/ui/labelwidget.ui:411
-#, fuzzy, kde-format
-#| msgid "Offset"
-msgid "Offset X:"
-msgstr "Pomak"
-
 #. i18n: ectx: property (text), widget (QLabel, lOffsetY)
-#: src/kdefrontend/ui/labelwidget.ui:437
+#: src/kdefrontend/ui/labelwidget.ui:558
 #, fuzzy, kde-format
 #| msgid "Offset"
 msgid "Offset Y:"
 msgstr "Pomak"
 
+#. i18n: ectx: property (text), widget (QLabel, lFontTeX)
+#: src/kdefrontend/ui/labelwidget.ui:565
+#, fuzzy, kde-format
+#| msgid "Main"
+msgid "Main font:"
+msgstr "Glavni"
+
 #. i18n: ectx: property (text), widget (QLabel, lHorizontalAlignment)
-#: src/kdefrontend/ui/labelwidget.ui:460
+#: src/kdefrontend/ui/labelwidget.ui:620
 #, fuzzy, kde-format
 #| msgid "Hor. align."
 msgid "Hor. align.:"
 msgstr "Hor. poravnanje."
 
-#. i18n: ectx: property (text), widget (QLabel, lVerticalAlignment)
-#: src/kdefrontend/ui/labelwidget.ui:470
+#. i18n: ectx: property (text), widget (QLabel, lOffsetX)
+#: src/kdefrontend/ui/labelwidget.ui:640
 #, fuzzy, kde-format
-#| msgid "Vert. align."
-msgid "Vert. align.:"
-msgstr "Vert. poravnanje."
+#| msgid "Offset"
+msgid "Offset X:"
+msgstr "Pomak"
 
 #. i18n: ectx: property (text), widget (QLabel, lY)
 #: src/kdefrontend/ui/matrix/matrixfunctionwidget.ui:116
@@ -17588,12 +17616,111 @@ msgstr ""
 msgid "Removing Keyword"
 msgstr "&Ukloni redove"
 
-#: src/kdefrontend/widgets/LabelWidget.cpp:362
+#: src/kdefrontend/widgets/LabelWidget.cpp:102
+#, fuzzy, kde-format
+#| msgid "Border"
+msgid "No Border"
+msgstr "Ivica"
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:103
+#, kde-format
+msgid "Rectangle"
+msgstr ""
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:104
+#, kde-format
+msgid "Ellipse"
+msgstr ""
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:105
+#, kde-format
+msgid "Round sided rectangle"
+msgstr ""
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:106
+#, kde-format
+msgid "Round corner rectangle"
+msgstr ""
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:107
+#, kde-format
+msgid "Inwards round corner rectangle"
+msgstr ""
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:108
+#, fuzzy, kde-format
+#| msgid "%1: set border style"
+msgid "Dented border rectangle"
+msgstr "%1: postavi stil inije"
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:109
+#, kde-format
+msgid "Cuboid"
+msgstr ""
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:110
+#, kde-format
+msgid "Up Pointing rectangle"
+msgstr ""
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:111
+#, kde-format
+msgid "Down Pointing rectangle"
+msgstr ""
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:112
+#, kde-format
+msgid "Left Pointing rectangle"
+msgstr ""
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:113
+#, fuzzy, kde-format
+#| msgid "light orange"
+msgid "Right Pointing rectangle"
+msgstr "svetlonarandžasta"
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:115
+#, fuzzy, kde-format
+#| msgid "no line"
+msgid "No line"
+msgstr "bez linije"
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:116
+#, fuzzy, kde-format
+#| msgid "solid line"
+msgid "Solid line"
+msgstr "puna linija"
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:117
+#, fuzzy, kde-format
+#| msgid "dash line"
+msgid "Dash line"
+msgstr "crtkasta linija"
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:118
+#, fuzzy, kde-format
+#| msgid "dot line"
+msgid "Dot line"
+msgstr "tačkasta linija"
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:119
+#, fuzzy, kde-format
+#| msgid "dash-dot line"
+msgid "Dash dot line"
+msgstr "crta-tačka lnija"
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:120
+#, fuzzy, kde-format
+#| msgid "dash-dot-dot line"
+msgid "Dash dot dot line"
+msgstr "crta-tačka-tačka linija"
+
+#: src/kdefrontend/widgets/LabelWidget.cpp:397
 #, kde-format
 msgid "LaTeX typesetting not possible. Please check the settings."
 msgstr ""
 
-#: src/kdefrontend/widgets/LabelWidget.cpp:506
+#: src/kdefrontend/widgets/LabelWidget.cpp:541
 #, kde-format
 msgid "Date"
 msgstr "Datum"
@@ -18097,12 +18224,6 @@ msgstr "Orijentacija"
 
 #~ msgid "asymmetric"
 #~ msgstr "nesimetrična"
-
-#~ msgid "no line"
-#~ msgstr "bez linije"
-
-#~ msgid "dot line"
-#~ msgstr "tačkasta linija"
 
 #~ msgid "red"
 #~ msgstr "crvena"
