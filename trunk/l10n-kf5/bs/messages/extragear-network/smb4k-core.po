@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2018-11-25 02:55+0100\n"
+"POT-Creation-Date: 2018-12-05 03:01+0100\n"
 "PO-Revision-Date: 2015-02-24 23:17+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -495,7 +495,7 @@ msgstr ""
 "datoteci ili je ime hosta."
 
 #. i18n: ectx: label, entry (DomainName), group (Samba)
-#: smb4k.kcfg:184
+#: smb4k.kcfg:184 smb4kclient_p.cpp:1799
 #, kde-format
 msgid "Domain:"
 msgstr "Domena:"
@@ -1999,7 +1999,7 @@ msgstr "Očisti listu"
 msgid "Login:"
 msgstr "Prijava:"
 
-#: smb4kbookmarkhandler_p.cpp:482 smb4kmounter_p.cpp:118 smb4kprint_p.cpp:399
+#: smb4kbookmarkhandler_p.cpp:482 smb4kclient_p.cpp:1792 smb4kmounter_p.cpp:118
 #, kde-format
 msgid "IP Address:"
 msgstr "IP adresa:"
@@ -2009,76 +2009,131 @@ msgstr "IP adresa:"
 msgid "Group name:"
 msgstr "Ime grupe:"
 
-#: smb4kclient_p.cpp:472 smb4kclient_p.cpp:684 smb4kclient_p.cpp:733
+#: smb4kclient_p.cpp:409 smb4kclient_p.cpp:894 smb4kclient_p.cpp:1032
+#: smb4kclient_p.cpp:1244
 #, kde-format
 msgid "Out of memory"
 msgstr ""
 
-#: smb4kclient_p.cpp:478 smb4kclient_p.cpp:702 smb4kclient_p.cpp:776
+#: smb4kclient_p.cpp:415 smb4kclient_p.cpp:900
+#, kde-format
+msgid "Permission denied"
+msgstr ""
+
+#: smb4kclient_p.cpp:421 smb4kclient_p.cpp:888
+#, kde-format
+msgid "An invalid URL was passed"
+msgstr ""
+
+#: smb4kclient_p.cpp:427
+#, kde-format
+msgid "The URL does not exist"
+msgstr ""
+
+#: smb4kclient_p.cpp:433
+#, kde-format
+msgid "Name is not a directory"
+msgstr ""
+
+#: smb4kclient_p.cpp:440
+#, kde-format
+msgid "Operation not permitted"
+msgstr ""
+
+#: smb4kclient_p.cpp:446
+#, kde-format
+msgid "The workgroup or server could not be found"
+msgstr ""
+
+#: smb4kclient_p.cpp:452 smb4kclient_p.cpp:906 smb4kclient_p.cpp:1038
+#: smb4kclient_p.cpp:1262
 #, fuzzy, kde-format
 #| msgid "unknown"
 msgid "Unknown error"
 msgstr "nepoznat"
 
-#: smb4kclient_p.cpp:690
+#: smb4kclient_p.cpp:1250
 #, kde-format
 msgid "NULL context given"
 msgstr ""
 
-#: smb4kclient_p.cpp:696
+#: smb4kclient_p.cpp:1256
 #, kde-format
 msgid "The smb.conf file would not load"
 msgstr ""
 
-#: smb4kclient_p.cpp:739
-#, kde-format
-msgid "Permission denied"
-msgstr ""
-
-#: smb4kclient_p.cpp:745
-#, kde-format
-msgid "An invalid URL was passed"
-msgstr ""
-
-#: smb4kclient_p.cpp:751
-#, kde-format
-msgid "The URL does not exist"
-msgstr ""
-
-#: smb4kclient_p.cpp:757
-#, kde-format
-msgid "Name is not a directory"
-msgstr ""
-
-#: smb4kclient_p.cpp:764
-#, kde-format
-msgid "Operation not permitted"
-msgstr ""
-
-#: smb4kclient_p.cpp:770
-#, kde-format
-msgid "The workgroup or server could not be found"
-msgstr ""
-
-#: smb4kclient_p.cpp:1198
+#: smb4kclient_p.cpp:1319
 #, kde-format
 msgid "Preview of %1"
 msgstr "Pregled za %1"
 
-#: smb4kclient_p.cpp:1234
+#: smb4kclient_p.cpp:1355
 #, kde-format
 msgid "Reload"
 msgstr "Ponovo učitaj"
 
-#: smb4kclient_p.cpp:1236
+#: smb4kclient_p.cpp:1357
 #, kde-format
 msgid "Abort"
 msgstr "Prekid"
 
-#: smb4kclient_p.cpp:1248
+#: smb4kclient_p.cpp:1369
 #, kde-format
 msgid "Up"
 msgstr "Gore"
+
+#: smb4kclient_p.cpp:1765
+#, kde-format
+msgid "Print File"
+msgstr "Štampaj datoteku"
+
+#: smb4kclient_p.cpp:1781
+#, kde-format
+msgid "Information"
+msgstr ""
+
+#: smb4kclient_p.cpp:1785
+#, fuzzy, kde-format
+#| msgid "Printer"
+msgid "Printer:"
+msgstr "Štampač"
+
+#: smb4kclient_p.cpp:1810
+#, kde-format
+msgid "File and Settings"
+msgstr ""
+
+#: smb4kclient_p.cpp:1814
+#, kde-format
+msgid "File:"
+msgstr "Datoteka:"
+
+#: smb4kclient_p.cpp:1818
+#, kde-format
+msgid ""
+"This is the file you want to print on the remote printer. Currently only a "
+"few mimetypes are supported such as PDF, Postscript, plain text, and images. "
+"If the file's mimetype is not supported, you need to convert it."
+msgstr ""
+"Ovo je datoteka koju želite štampati na vašem udaljenom štampaču. Trenutno "
+"je par tipova datoteka podržano kao što su PDF, Postscript, plain text i "
+"slike. Ako tip datoteke nije podržan, trebate je pretvoriti u podržani tip."
+
+#: smb4kclient_p.cpp:1827
+#, kde-format
+msgid "Copies:"
+msgstr "Kopija:"
+
+#: smb4kclient_p.cpp:1831
+#, kde-format
+msgid "This is the number of copies you want to print."
+msgstr "Ovo je broj kopija koje želite odštampati."
+
+#: smb4kclient_p.cpp:1842
+#, fuzzy, kde-format
+#| msgid "Printer"
+msgid "Print"
+msgstr "Štampač"
 
 #: smb4kcustomoptionsmanager_p.cpp:70
 #, kde-format
@@ -2246,7 +2301,7 @@ msgstr ""
 "Unesite lokaciju (UNC adresu) i opcionalno IP adresu i radnu grupu da bismo "
 "namjestili razmjenu."
 
-#: smb4kmounter_p.cpp:107 smb4kprint_p.cpp:397
+#: smb4kmounter_p.cpp:107
 #, kde-format
 msgid "UNC Address:"
 msgstr "UNC Addresa:"
@@ -2274,7 +2329,7 @@ msgstr ""
 "192.168.2.11) i verzija 6 formata (npr. "
 "2001:0db8:85a3:08d3:1319:8a2e:0370:7334)."
 
-#: smb4kmounter_p.cpp:129 smb4kprint_p.cpp:401
+#: smb4kmounter_p.cpp:129
 #, kde-format
 msgid "Workgroup:"
 msgstr "Radna grupa:"
@@ -3558,75 +3613,6 @@ msgstr "<p>URL koji je proslijeđen nije ispravan.</p>"
 msgid "<p>There are no broadcast areas defined.</p>"
 msgstr "<p>Nema definisanih oblasti emitiranja.</p>"
 
-#: smb4kprint_p.cpp:355
-#, kde-format
-msgid "Print File"
-msgstr "Štampaj datoteku"
-
-#: smb4kprint_p.cpp:382 smb4kshare.cpp:328
-#, kde-format
-msgid "Printer"
-msgstr "Štampač"
-
-#: smb4kprint_p.cpp:400
-#, kde-format
-msgid "unknown"
-msgstr "nepoznat"
-
-#: smb4kprint_p.cpp:419
-#, kde-format
-msgid "File"
-msgstr "Datoteka"
-
-#: smb4kprint_p.cpp:424
-#, kde-format
-msgid "File:"
-msgstr "Datoteka:"
-
-#: smb4kprint_p.cpp:427
-#, kde-format
-msgid ""
-"This is the file you want to print on the remote printer. Currently only a "
-"few mimetypes are supported such as PDF, Postscript, plain text, and images. "
-"If the file's mimetype is not supported, you need to convert it."
-msgstr ""
-"Ovo je datoteka koju želite štampati na vašem udaljenom štampaču. Trenutno "
-"je par tipova datoteka podržano kao što su PDF, Postscript, plain text i "
-"slike. Ako tip datoteke nije podržan, trebate je pretvoriti u podržani tip."
-
-#: smb4kprint_p.cpp:436
-#, kde-format
-msgid "Options"
-msgstr "Opcije"
-
-#: smb4kprint_p.cpp:441
-#, kde-format
-msgid "Copies:"
-msgstr "Kopija:"
-
-#: smb4kprint_p.cpp:445
-#, kde-format
-msgid "This is the number of copies you want to print."
-msgstr "Ovo je broj kopija koje želite odštampati."
-
-#: smb4kprint_p.cpp:454 smb4kprint_p.cpp:503
-#, fuzzy, kde-format
-#| msgid "Options"
-msgid "Options >>"
-msgstr "Opcije"
-
-#: smb4kprint_p.cpp:455
-#, fuzzy, kde-format
-#| msgid "Printer"
-msgid "Print"
-msgstr "Štampač"
-
-#: smb4kprint_p.cpp:508
-#, fuzzy, kde-format
-#| msgid "Options"
-msgid "Options <<"
-msgstr "Opcije"
-
 #: smb4kprofilemanager_p.cpp:53
 #, kde-format
 msgid "Profile Migration Assistant"
@@ -3661,6 +3647,11 @@ msgstr "Novi profil:"
 #, kde-format
 msgid "Disk"
 msgstr "Disk"
+
+#: smb4kshare.cpp:328
+#, kde-format
+msgid "Printer"
+msgstr "Štampač"
 
 #: smb4kshare.cpp:333
 #, kde-format
@@ -3751,6 +3742,25 @@ msgstr "<qt>Molimo unesite korisničko ime i šifru za host <b>%1</b>.</qt>"
 msgid ""
 "<qt>Please enter a username and a password for the share <b>%1</b>.</qt>"
 msgstr "<qt>Molimo unesite korisničko ime i šifru za razmjenu <b>%1</b>.</qt>"
+
+#~ msgid "unknown"
+#~ msgstr "nepoznat"
+
+#~ msgid "File"
+#~ msgstr "Datoteka"
+
+#~ msgid "Options"
+#~ msgstr "Opcije"
+
+#, fuzzy
+#~| msgid "Options"
+#~ msgid "Options >>"
+#~ msgstr "Opcije"
+
+#, fuzzy
+#~| msgid "Options"
+#~ msgid "Options <<"
+#~ msgstr "Opcije"
 
 #~ msgid "Name resolve order:"
 #~ msgstr "Red riješenih imena:"
