@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgpgcertmanager\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2019-01-19 03:20+0100\n"
+"POT-Creation-Date: 2019-02-28 03:18+0100\n"
 "PO-Revision-Date: 2015-01-09 11:46+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -777,7 +777,7 @@ msgstr ""
 "icode> za detalje.</para>"
 
 #: src/commands/exportpaperkeycommand.cpp:146
-#: src/commands/exportsecretkeycommand.cpp:156
+#: src/commands/exportsecretkeycommand.cpp:162
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -787,19 +787,31 @@ msgstr ""
 "<para>Desila se greška pri pokušaju izvoza tajnog ključa.</para> <para>Izlaz "
 "iz <command>%1</command> je bio: <message>%2</message></para>"
 
-#: src/commands/exportsecretkeycommand.cpp:137
+#: src/commands/exportsecretkeycommand.cpp:97
+#, fuzzy, kde-format
+#| msgid "Export Secret Keys..."
+msgid "Export Secret Key"
+msgstr "Izvoz tajnih ključeva..."
+
+#: src/commands/exportsecretkeycommand.cpp:101
+#: src/commands/exportsecretkeycommand.cpp:102
+#, kde-format
+msgid "Secret Key Files"
+msgstr "Datoteke tajnih ključeva"
+
+#: src/commands/exportsecretkeycommand.cpp:143
 #, kde-format
 msgctxt "@title:window"
 msgid "Secret Key Export Error"
 msgstr "Greška u izvozu tajnog ključa"
 
-#: src/commands/exportsecretkeycommand.cpp:142
+#: src/commands/exportsecretkeycommand.cpp:148
 #, kde-format
 msgctxt "@title:window"
 msgid "Secret Key Export Finished"
 msgstr "Izvoz tajnog ključa završen"
 
-#: src/commands/exportsecretkeycommand.cpp:148
+#: src/commands/exportsecretkeycommand.cpp:154
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -811,7 +823,7 @@ msgstr ""
 "stao zbog neočekivane greške.</para><para>Pogledajte izlaz iz <icode>%1</"
 "icode> za detalje.</para>"
 
-#: src/commands/exportsecretkeycommand.cpp:163
+#: src/commands/exportsecretkeycommand.cpp:169
 #, kde-format
 msgctxt "@info"
 msgid "Secret key successfully exported."
@@ -4276,7 +4288,7 @@ msgstr "Kreiraj novi certifikat"
 #. i18n: ectx: property (text), widget (QPushButton, certifyBtn)
 #: src/dialogs/certificatedetailswidget.ui:67
 #: src/dialogs/certifycertificatedialog.cpp:199
-#: src/newcertificatewizard/newcertificatewizard.cpp:1646
+#: src/newcertificatewizard/newcertificatewizard.cpp:1649
 #, kde-format
 msgid "Certify"
 msgstr "Provjeri"
@@ -4789,65 +4801,6 @@ msgstr "Neuspjelo izvršavanje %1: %2"
 #| msgid "Export"
 msgid "Export..."
 msgstr "Izvoz"
-
-#: src/dialogs/exportsecretkeydialog.cpp:104
-#, kde-format
-msgid "Secret Key Files"
-msgstr "Datoteke tajnih ključeva"
-
-#: src/dialogs/exportsecretkeydialog.cpp:128
-#, kde-format
-msgctxt "@info"
-msgid "Please select export options for %1:"
-msgstr "Molim odaberite izvozne opcije za %1:"
-
-#: src/dialogs/exportsecretkeydialog.cpp:142
-#, kde-format
-msgid "Secret Key Files (*.pem *.p12 *.gpg *.asc *.pgp)"
-msgstr "Datoteke s tajnim ključevima (*.pem *.p12 *.gpg *.asc *.pgp)"
-
-#: src/dialogs/exportsecretkeydialog.cpp:221
-#, kde-format
-msgctxt "@info"
-msgid "You have to enter an output filename."
-msgstr "Morat e unijeti ime izlazne datoteke."
-
-#: src/dialogs/exportsecretkeydialog.cpp:222
-#: src/dialogs/exportsecretkeydialog.cpp:231
-#, kde-format
-msgctxt "@title"
-msgid "Incomplete data"
-msgstr "Nekompletni podaci"
-
-#: src/dialogs/exportsecretkeydialog.cpp:230
-#, kde-format
-msgctxt "@info"
-msgid "You have to choose a passphrase character set."
-msgstr "Trebate izabrati skup znakova lozinke."
-
-#. i18n: ectx: property (windowTitle), widget (QDialog, ExportSecretKeyDialog)
-#: src/dialogs/exportsecretkeydialog.ui:13
-#, kde-format
-msgid "Export Secret Certificate"
-msgstr "Izvezi tajni certifikat"
-
-#. i18n: ectx: property (text), widget (QLabel, outputFileLB)
-#: src/dialogs/exportsecretkeydialog.ui:26
-#, kde-format
-msgid "Output file:"
-msgstr "Izlazna datoteka:"
-
-#. i18n: ectx: property (text), widget (QLabel, charsetLB)
-#: src/dialogs/exportsecretkeydialog.ui:36
-#, kde-format
-msgid "Passphrase charset:"
-msgstr "Skup znakova lozinke:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, armorCB)
-#: src/dialogs/exportsecretkeydialog.ui:66
-#, kde-format
-msgid "ASCII armor"
-msgstr "ASCII oklop"
 
 #: src/dialogs/gencardkeydialog.cpp:77
 #: src/newcertificatewizard/newcertificatewizard.cpp:1708
@@ -6533,18 +6486,18 @@ msgctxt "@title"
 msgid "Key Pair Creation Wizard"
 msgstr "Čarobnjak za stvaranje sertifikata"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1638
+#: src/newcertificatewizard/newcertificatewizard.cpp:1639
 #, kde-format
 msgid "Sign"
 msgstr "Potpiši"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1642
+#: src/newcertificatewizard/newcertificatewizard.cpp:1643
 #: src/newcertificatewizard/newcertificatewizard.cpp:1671
 #, kde-format
 msgid "Encrypt"
 msgstr "Šifruj"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1649
+#: src/newcertificatewizard/newcertificatewizard.cpp:1646
 #, kde-format
 msgid "Authenticate"
 msgstr "Autenticiraj"
@@ -8750,6 +8703,37 @@ msgstr "Uvezeni certifikati iz %1"
 #, kde-format
 msgid "To import from a public keyserver use \"Lookup on Server\" instead."
 msgstr ""
+
+#~ msgctxt "@info"
+#~ msgid "Please select export options for %1:"
+#~ msgstr "Molim odaberite izvozne opcije za %1:"
+
+#~ msgid "Secret Key Files (*.pem *.p12 *.gpg *.asc *.pgp)"
+#~ msgstr "Datoteke s tajnim ključevima (*.pem *.p12 *.gpg *.asc *.pgp)"
+
+#~ msgctxt "@info"
+#~ msgid "You have to enter an output filename."
+#~ msgstr "Morat e unijeti ime izlazne datoteke."
+
+#~ msgctxt "@title"
+#~ msgid "Incomplete data"
+#~ msgstr "Nekompletni podaci"
+
+#~ msgctxt "@info"
+#~ msgid "You have to choose a passphrase character set."
+#~ msgstr "Trebate izabrati skup znakova lozinke."
+
+#~ msgid "Export Secret Certificate"
+#~ msgstr "Izvezi tajni certifikat"
+
+#~ msgid "Output file:"
+#~ msgstr "Izlazna datoteka:"
+
+#~ msgid "Passphrase charset:"
+#~ msgstr "Skup znakova lozinke:"
+
+#~ msgid "ASCII armor"
+#~ msgstr "ASCII oklop"
 
 #, fuzzy
 #~| msgid "Please select a certificate"
