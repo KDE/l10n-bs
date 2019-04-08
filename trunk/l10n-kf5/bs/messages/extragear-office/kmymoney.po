@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmymoney\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2019-04-06 03:16+0200\n"
+"POT-Creation-Date: 2019-04-08 03:15+0200\n"
 "PO-Revision-Date: 2015-02-09 11:02+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -6399,7 +6399,7 @@ msgstr ""
 "Nemoguće uvesti %1 koristeći %2 dodatak. Dodatak je vratio sljedeću grešku: "
 "%3"
 
-#: kmymoney/kmymoney.cpp:3119 kmymoney/plugins/ofx/import/ofximporter.cpp:827
+#: kmymoney/kmymoney.cpp:3119 kmymoney/plugins/ofx/import/ofximporter.cpp:884
 #, kde-format
 msgid "Importing error"
 msgstr "Greška pri uvozu"
@@ -11929,7 +11929,7 @@ msgid "Pick &date"
 msgstr "Odaberi datum"
 
 #: kmymoney/plugins/kbanking/kbanking.cpp:293
-#: kmymoney/plugins/ofx/import/ofximporter.cpp:694
+#: kmymoney/plugins/ofx/import/ofximporter.cpp:753
 #, kde-format
 msgid "Online settings"
 msgstr "Online postavke"
@@ -12596,7 +12596,7 @@ msgid ""
 msgstr ""
 "Čestitamo: uspješno ste postavili Vašu banku za online bankarstvo preko OFX."
 
-#: kmymoney/plugins/ofx/import/dialogs/konlinebankingstatus.cpp:63
+#: kmymoney/plugins/ofx/import/dialogs/konlinebankingstatus.cpp:64
 #, kde-format
 msgid "Enabled & configured"
 msgstr "Omogućeno & podešeno"
@@ -12688,30 +12688,50 @@ msgstr "dana"
 msgid "Pi&ck date"
 msgstr "Odaberi &datum"
 
+#. i18n: ectx: property (title), widget (QGroupBox, m_optionGroupBox)
+#. i18n: ectx: property (title), widget (QGroupBox, buttonGroupBox1)
+#: kmymoney/plugins/ofx/import/dialogs/konlinebankingstatusdecl.ui:384
+#: kmymoney/plugins/ofx/import/importoption.ui:29
+#: kmymoney/plugins/qif/import/kimportdlgdecl.ui:76
+#, kde-format
+msgid "Import options"
+msgstr "Opcije importovanja"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kmymoney/plugins/ofx/import/dialogs/konlinebankingstatusdecl.ui:409
+#: kmymoney/plugins/ofx/import/importoption.ui:70
+#, fuzzy, kde-format
+#| msgid "Unable to add transactions"
+msgid "Method to detect duplicate transactions during import"
+msgstr "Nemoguće dodavanje transakcija"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_uniqueTransactionId)
+#. i18n: ectx: property (text), item, widget (QComboBox, m_uniqueIdSource)
+#: kmymoney/plugins/ofx/import/dialogs/konlinebankingstatusdecl.ui:417
+#: kmymoney/plugins/ofx/import/importoption.ui:78
+#, kde-format
+msgid "OFX FITID"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, m_uniqueTransactionId)
+#. i18n: ectx: property (text), item, widget (QComboBox, m_uniqueIdSource)
+#: kmymoney/plugins/ofx/import/dialogs/konlinebankingstatusdecl.ui:422
+#: kmymoney/plugins/ofx/import/importoption.ui:83
+#, fuzzy, kde-format
+#| msgid "KMyMoney"
+msgid "KMyMoney Hash"
+msgstr "KMyMoney"
+
 #. i18n: ectx: property (text), widget (QLabel, textLabel3_2)
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kmymoney/plugins/ofx/import/dialogs/konlinebankingstatusdecl.ui:396
-#: kmymoney/plugins/ofx/import/importoption.ui:17
+#: kmymoney/plugins/ofx/import/dialogs/konlinebankingstatusdecl.ui:436
+#: kmymoney/plugins/ofx/import/importoption.ui:41
 #, kde-format
 msgid "Payee's name is based on contents of the OFX tag"
 msgstr "Primateljevo ime se bazira na sadržaju OFX oznake"
 
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox)
-#: kmymoney/plugins/ofx/import/dialogs/konlinebankingstatusdecl.ui:428
-#, kde-format
-msgid ""
-"<html><head/><body><p>In case the server is located in a different timezone "
-"than your local time, then the post date of imported transactions is off by "
-"a day.</p><p>This setting can be used to adjust the timestamps of the "
-"transactions during import to reflect your local time. It does not affect "
-"previously imported transactions. </p><p>If you are located west of your "
-"bank's server than enter a negative time, in case you are located east of it "
-"enter a positive time.</p><p>If you are not sure, leave this setting at 0:00."
-"</p></body></html>"
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: kmymoney/plugins/ofx/import/dialogs/konlinebankingstatusdecl.ui:436
+#: kmymoney/plugins/ofx/import/dialogs/konlinebankingstatusdecl.ui:446
+#: kmymoney/plugins/ofx/import/importoption.ui:91
 #, kde-format
 msgid "Timezone offset"
 msgstr ""
@@ -12719,7 +12739,8 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, TextLabel21_1_2)
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #. i18n: ectx: property (text), item, widget (KComboBox, m_timestampOffsetSign)
-#: kmymoney/plugins/ofx/import/dialogs/konlinebankingstatusdecl.ui:444
+#: kmymoney/plugins/ofx/import/dialogs/konlinebankingstatusdecl.ui:456
+#: kmymoney/plugins/ofx/import/importoption.ui:101
 #: kmymoney/wizards/newaccountwizard/kloanpaymentpage.ui:81
 #: kmymoney/wizards/newloanwizard/additionalfeeswizardpage.ui:126
 #, kde-format
@@ -12727,7 +12748,8 @@ msgid "+"
 msgstr "+"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, m_timestampOffsetSign)
-#: kmymoney/plugins/ofx/import/dialogs/konlinebankingstatusdecl.ui:449
+#: kmymoney/plugins/ofx/import/dialogs/konlinebankingstatusdecl.ui:461
+#: kmymoney/plugins/ofx/import/importoption.ui:106
 #, kde-format
 msgid "-"
 msgstr ""
@@ -12865,23 +12887,23 @@ msgstr "MS-Money (Expert)"
 msgid "Enter your password for account <b>%1</b>"
 msgstr "Unesite lozinku"
 
-#: kmymoney/plugins/ofx/import/ofximporter.cpp:108
+#: kmymoney/plugins/ofx/import/ofximporter.cpp:124
 #, fuzzy, kde-format
 #| msgid "QIF Import"
 msgid "OFX Importer"
 msgstr "QIF import"
 
-#: kmymoney/plugins/ofx/import/ofximporter.cpp:136
+#: kmymoney/plugins/ofx/import/ofximporter.cpp:152
 #, kde-format
 msgid "OFX..."
 msgstr "OFX..."
 
-#: kmymoney/plugins/ofx/import/ofximporter.cpp:147
+#: kmymoney/plugins/ofx/import/ofximporter.cpp:163
 #, kde-format
 msgid "OFX import file selection"
 msgstr "Odabir OFX uvoznih datoteka"
 
-#: kmymoney/plugins/ofx/import/ofximporter.cpp:163
+#: kmymoney/plugins/ofx/import/ofximporter.cpp:181
 #, kde-format
 msgid ""
 "Unable to import %1 using the OFX importer plugin.  This file is not the "
@@ -12890,27 +12912,27 @@ msgstr ""
 "Nije moguće uvesti %1 pomoću OFX dodatka za uvoz. Datoteka nije u ispravnom "
 "formatu."
 
-#: kmymoney/plugins/ofx/import/ofximporter.cpp:163
+#: kmymoney/plugins/ofx/import/ofximporter.cpp:181
 #, kde-format
 msgid "Incorrect format"
 msgstr "Nepravilan format"
 
-#: kmymoney/plugins/ofx/import/ofximporter.cpp:213
+#: kmymoney/plugins/ofx/import/ofximporter.cpp:231
 #, kde-format
 msgid "Unable to parse file"
 msgstr "Nije moguće raščlaniti datoteku"
 
-#: kmymoney/plugins/ofx/import/ofximporter.cpp:641
+#: kmymoney/plugins/ofx/import/ofximporter.cpp:700
 #, kde-format
 msgid "No accounts found."
 msgstr "Nema pronađenih računa."
 
-#: kmymoney/plugins/ofx/import/ofximporter.cpp:817
+#: kmymoney/plugins/ofx/import/ofximporter.cpp:874
 #, kde-format
 msgid "Error connecting to bank: %1"
 msgstr "Greska nastala pri pokušaju povezivanja sa bankom: %1"
 
-#: kmymoney/plugins/ofx/import/ofximporter.cpp:827
+#: kmymoney/plugins/ofx/import/ofximporter.cpp:884
 #, kde-format
 msgid ""
 "<p>Unable to import <b>'%1'</b> using the OFX importer plugin.  The plugin "
@@ -12919,12 +12941,12 @@ msgstr ""
 "<p>Nije moguće uvesti  <b>'%1'</b> pomoću OFX dodatka za uvoz. Dodatak je "
 "vratio sljedeću grešku:</p><p>%2</p>"
 
-#: kmymoney/plugins/ofx/import/ofximporter.cpp:861
+#: kmymoney/plugins/ofx/import/ofximporter.cpp:918
 #, kde-format
 msgid "Importing process terminated unexpectedly."
 msgstr "Proces uvoza prekinut neočekivano."
 
-#: kmymoney/plugins/ofx/import/ofximporter.cpp:861
+#: kmymoney/plugins/ofx/import/ofximporter.cpp:918
 #, kde-format
 msgid "Failed to import all statements."
 msgstr "Nije uspio uvoz svih izvještaja."
@@ -13564,12 +13586,6 @@ msgstr ""
 #, kde-format
 msgid "QIF File to Import:"
 msgstr "QIF fajl za Import:"
-
-#. i18n: ectx: property (title), widget (QGroupBox, m_optionGroupBox)
-#: kmymoney/plugins/qif/import/kimportdlgdecl.ui:76
-#, kde-format
-msgid "Import options"
-msgstr "Opcije importovanja"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: kmymoney/plugins/qif/import/kimportdlgdecl.ui:82
