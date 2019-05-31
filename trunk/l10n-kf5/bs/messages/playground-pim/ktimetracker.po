@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-05-30 03:11+0200\n"
+"POT-Creation-Date: 2019-05-31 03:12+0200\n"
 "PO-Revision-Date: 2013-10-18 20:14+0000\n"
 "Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -20,7 +20,15 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: src/csvexportdialog.cpp:98
+#. i18n("Exporting to CSV..."), i18n("Cancel"),
+#. 0, static_cast<int>(2 * storage()->tasksModel()->getAllTasks().size()), m_tasksWidget, nullptr);
+#. dialog.setAutoClose(true);
+#. dialog.setWindowTitle(i18nc("@title:window", "Export Progress"));
+#.
+#. if (storage()->tasksModel()->getAllTasks().size() > 1) {
+#. dialog.show();
+#. }
+#: src/csvexportdialog.cpp:104
 #, fuzzy, kde-format
 #| msgid "Export to:"
 msgctxt "@title:window"
@@ -28,20 +36,20 @@ msgid "Export as CSV"
 msgstr "Izvezi u:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, combodecimalminutes)
-#: src/csvexportdialog.cpp:112 src/csvexportdialog.ui:170
+#: src/csvexportdialog.cpp:124 src/csvexportdialog.ui:170
 #, kde-format
 msgctxt "format to display times"
 msgid "Decimal"
 msgstr "Decimalni"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, combosessiontimes)
-#: src/csvexportdialog.cpp:131 src/csvexportdialog.ui:189
+#: src/csvexportdialog.cpp:143 src/csvexportdialog.ui:189
 #, kde-format
 msgid "Session Times"
 msgstr "Vrijeme sesije"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboalltasks)
-#: src/csvexportdialog.cpp:132 src/csvexportdialog.ui:198
+#: src/csvexportdialog.cpp:144 src/csvexportdialog.ui:198
 #, kde-format
 msgid "All Tasks"
 msgstr "Svi zadaci"
@@ -266,7 +274,7 @@ msgstr ""
 msgid "Edit Times"
 msgstr "Izmijeni vrijeme"
 
-#: src/export/export.cpp:66
+#: src/export/export.cpp:60
 #, kde-format
 msgid "Could not open \"%1\"."
 msgstr "Nije moguće otvoriti \"%1\"."
@@ -411,61 +419,124 @@ msgid "KDE Time tracker tool"
 msgstr "KDE-ov alat za praćenje vremena"
 
 #: src/main.cpp:91
-#, kde-format
-msgid "Copyright © 1997-2012 KDE PIM authors"
+#, fuzzy, kde-format
+#| msgid "Copyright © 1997-2012 KDE PIM authors"
+msgid "Copyright © 1997-2019 KTimeTracker developers"
 msgstr "Copyright © 1997-2012 KDE PIM authors"
 
 #: src/main.cpp:95
 #, kde-format
+msgctxt "@info:credit"
+msgid "Alexander Potashev"
+msgstr ""
+
+#: src/main.cpp:96
+#, fuzzy, kde-format
+#| msgid "Current Maintainer"
+msgctxt "@info:credit"
+msgid "Current Maintainer (since 2019)"
+msgstr "Trenutno održava"
+
+#: src/main.cpp:98
+#, fuzzy, kde-format
+#| msgid "Thorsten Stärk"
+msgctxt "@info:credit"
 msgid "Thorsten Stärk"
 msgstr "Thorsten Stärk"
 
-#: src/main.cpp:95
-#, kde-format
-msgid "Current Maintainer"
-msgstr "Trenutno održava"
-
-#: src/main.cpp:96
-#, kde-format
-msgid "Sirtaj Singh Kang"
-msgstr "Sirtaj Singh Kang"
-
-#: src/main.cpp:96
-#, kde-format
-msgid "Original Author"
-msgstr "Prvobitni autor"
-
-#: src/main.cpp:97
-#, kde-format
-msgid "Allen Winter"
-msgstr "Allen Winter"
-
-#: src/main.cpp:98
-#, kde-format
-msgid "David Faure"
-msgstr "David Faure"
-
 #: src/main.cpp:99
 #, kde-format
-msgid "Mathias Soeken"
-msgstr "Mathias Soeken"
-
-#: src/main.cpp:100
-#, kde-format
-msgid "Jesper Pedersen"
-msgstr "Jesper Pedersen"
+msgctxt "@info:credit"
+msgid "Maintainer (2006-2012)"
+msgstr ""
 
 #: src/main.cpp:101
-#, kde-format
-msgid "Kalle Dalheimer"
-msgstr "Kalle Dalheimer"
-
-#: src/main.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mark Bucciarelli"
+msgctxt "@info:credit"
 msgid "Mark Bucciarelli"
 msgstr "Mark Bucciarelli"
 
+#: src/main.cpp:102
+#, kde-format
+msgctxt "@info:credit"
+msgid "Maintainer (2005-2006)"
+msgstr ""
+
+#: src/main.cpp:104
+#, fuzzy, kde-format
+#| msgid "Jesper Pedersen"
+msgctxt "@info:credit"
+msgid "Jesper Pedersen"
+msgstr "Jesper Pedersen"
+
+#: src/main.cpp:105
+#, kde-format
+msgctxt "@info:credit"
+msgid "Maintainer (2000-2005)"
+msgstr ""
+
+#: src/main.cpp:107
+#, fuzzy, kde-format
+#| msgid "Sirtaj Singh Kang"
+msgctxt "@info:credit"
+msgid "Sirtaj Singh Kang"
+msgstr "Sirtaj Singh Kang"
+
+#: src/main.cpp:108
+#, fuzzy, kde-format
+#| msgid "Original Author"
+msgctxt "@info:credit"
+msgid "Original Author"
+msgstr "Prvobitni autor"
+
+#: src/main.cpp:110
+#, fuzzy, kde-format
+#| msgid "Mathias Soeken"
+msgctxt "@info:credit"
+msgid "Mathias Soeken"
+msgstr "Mathias Soeken"
+
+#: src/main.cpp:111
+#, kde-format
+msgctxt "@info:credit"
+msgid "Developer (in 2007)"
+msgstr ""
+
 #: src/main.cpp:113
+#, fuzzy, kde-format
+#| msgid "Kalle Dalheimer"
+msgctxt "@info:credit"
+msgid "Kalle Dalheimer"
+msgstr "Kalle Dalheimer"
+
+#: src/main.cpp:114
+#, kde-format
+msgctxt "@info:credit"
+msgid "Developer (1999-2000)"
+msgstr ""
+
+#: src/main.cpp:116
+#, fuzzy, kde-format
+#| msgid "Allen Winter"
+msgctxt "@info:credit"
+msgid "Allen Winter"
+msgstr "Allen Winter"
+
+#: src/main.cpp:117 src/main.cpp:120
+#, kde-format
+msgctxt "@info:credit"
+msgid "Developer"
+msgstr ""
+
+#: src/main.cpp:119
+#, fuzzy, kde-format
+#| msgid "David Faure"
+msgctxt "@info:credit"
+msgid "David Faure"
+msgstr "David Faure"
+
+#: src/main.cpp:132
 #, kde-format
 msgid "The iCalendar file to open"
 msgstr "iCalendar datoteka za otvaranje"
@@ -676,37 +747,37 @@ msgstr ""
 "Virtualni broj vašeg desktopa je previsok, praćenje vašeg desktopa neće "
 "raditi"
 
-#: src/taskview.cpp:348
+#: src/taskview.cpp:332
 #, kde-format
 msgid "Could not save. Disk full?"
 msgstr "Ne mogu snimiti. Da li je disk pun?"
 
-#: src/taskview.cpp:350
+#: src/taskview.cpp:334
 #, kde-format
 msgid "Could not save."
 msgstr "Nemoguće sačuvati."
 
-#: src/taskview.cpp:390
+#: src/taskview.cpp:374
 #, kde-format
 msgid "Stopping timers..."
 msgstr ""
 
-#: src/taskview.cpp:390
+#: src/taskview.cpp:374
 #, kde-format
 msgid "Cancel"
 msgstr ""
 
-#: src/taskview.cpp:482
+#: src/taskview.cpp:466
 #, kde-format
 msgid "New Task"
 msgstr "Novi zadatak"
 
-#: src/taskview.cpp:492 src/taskview.cpp:571
+#: src/taskview.cpp:476 src/taskview.cpp:555
 #, kde-format
 msgid "Unnamed Task"
 msgstr "Bezimeni zadatak"
 
-#: src/taskview.cpp:511
+#: src/taskview.cpp:495
 #, fuzzy, kde-format
 #| msgid ""
 #| "Error storing new task. Your changes were not saved. Make sure you can "
@@ -723,22 +794,22 @@ msgstr ""
 "programe koji koriste ovaj datoteku i uklonite svaku datoteku zaključavanja "
 "koji se odnosi na njega iz ~/.kde/share/apps/kabc/lock/ "
 
-#: src/taskview.cpp:549
+#: src/taskview.cpp:533
 #, kde-format
 msgid "New Sub Task"
 msgstr "Novi podzadatak"
 
-#: src/taskview.cpp:566
+#: src/taskview.cpp:550
 #, kde-format
 msgid "Edit Task"
 msgstr "Izmijeni zadatak"
 
-#: src/taskview.cpp:602 src/taskview.cpp:644 src/taskview.cpp:665
+#: src/taskview.cpp:586 src/taskview.cpp:628 src/taskview.cpp:649
 #, kde-format
 msgid "No task selected."
 msgstr "Nema izabranih zadataka."
 
-#: src/taskview.cpp:649
+#: src/taskview.cpp:633
 #, kde-format
 msgid ""
 "Are you sure you want to delete the selected task and its entire history?\n"
@@ -747,7 +818,7 @@ msgstr ""
 "Da li ste sigurni da želite da izbrišete izabrani zadatak i svu istoriju?\n"
 "NAPOMENA: svi podzadaci i njihova istorija će takođe biti obrisani."
 
-#: src/taskview.cpp:653
+#: src/taskview.cpp:637
 #, kde-format
 msgid "Deleting Task"
 msgstr "Brišem zadatak"
@@ -757,22 +828,22 @@ msgstr "Brišem zadatak"
 msgid "Error loading \"%1\": could not find parent (uid=%2)"
 msgstr "Greška tokom učitavanja '%1': nije moguće pronaći roditelja (uid=%2)"
 
-#: src/timetrackerwidget.cpp:121
+#: src/timetrackerwidget.cpp:122
 #, kde-format
 msgid "Cannot create new file."
 msgstr "Nemoguće kreirati novu datoteku."
 
-#: src/timetrackerwidget.cpp:167
+#: src/timetrackerwidget.cpp:168
 #, kde-format
 msgid "Start &New Session"
 msgstr "Započni &novu sesiju"
 
-#: src/timetrackerwidget.cpp:168
+#: src/timetrackerwidget.cpp:169
 #, kde-format
 msgid "Starts a new session"
 msgstr "Počinje nova sesija"
 
-#: src/timetrackerwidget.cpp:169
+#: src/timetrackerwidget.cpp:170
 #, kde-format
 msgid ""
 "This will reset the session time to 0 for all tasks, to start a new session, "
@@ -781,17 +852,17 @@ msgstr ""
 "Ovo će poništiti vrijeme sesije na nulu za sve zadatke da bi se pokrenula "
 "nova sesija bez uticaja na ukupne vrijednosti."
 
-#: src/timetrackerwidget.cpp:175
+#: src/timetrackerwidget.cpp:176
 #, kde-format
 msgid "Edit History..."
 msgstr "Izmijeni historiju"
 
-#: src/timetrackerwidget.cpp:176
+#: src/timetrackerwidget.cpp:177
 #, kde-format
 msgid "Edits history of all tasks of the current document"
 msgstr "Uređuje historiju svih zadataka trenutnih dokumenata"
 
-#: src/timetrackerwidget.cpp:177
+#: src/timetrackerwidget.cpp:178
 #, kde-format
 msgid ""
 "A window will be opened where you can change start and stop times of tasks "
@@ -800,17 +871,17 @@ msgstr ""
 "Prozor će se otvoriti gdje možete promijeniti vrijeme početka i završetka "
 "zadataka ili dodati kometar na njih."
 
-#: src/timetrackerwidget.cpp:184
+#: src/timetrackerwidget.cpp:185
 #, kde-format
 msgid "&Reset All Times"
 msgstr "&Poništi sva vremena"
 
-#: src/timetrackerwidget.cpp:185
+#: src/timetrackerwidget.cpp:186
 #, kde-format
 msgid "Resets all times"
 msgstr "Poništi sva vremena"
 
-#: src/timetrackerwidget.cpp:186
+#: src/timetrackerwidget.cpp:187
 #, kde-format
 msgid ""
 "This will reset the session and total time to 0 for all tasks, to restart "
@@ -819,17 +890,17 @@ msgstr ""
 "Ovo će poništiti ukupno vrijeme i vrijeme sesije na nulu za sve zadatke da "
 "bi se počelo od početka."
 
-#: src/timetrackerwidget.cpp:191
+#: src/timetrackerwidget.cpp:192
 #, kde-format
 msgid "&Start"
 msgstr "&Počni"
 
-#: src/timetrackerwidget.cpp:192
+#: src/timetrackerwidget.cpp:193
 #, kde-format
 msgid "Starts timing for selected task"
 msgstr "Počinje računanje vremena za odabrani zadatak"
 
-#: src/timetrackerwidget.cpp:193
+#: src/timetrackerwidget.cpp:194
 #, kde-format
 msgid ""
 "This will start timing for the selected task.\n"
@@ -843,42 +914,42 @@ msgstr ""
 "Vi možete takođe početi mjerenje zadataka dvostrukim klikom lijeve tipke "
 "miša na određeni zadatak. To će, međutim, zaustaviti mjerenje drugih poslova."
 
-#: src/timetrackerwidget.cpp:203
+#: src/timetrackerwidget.cpp:204
 #, kde-format
 msgid "S&top"
 msgstr "Zaus&tavi"
 
-#: src/timetrackerwidget.cpp:204 src/timetrackerwidget.cpp:205
+#: src/timetrackerwidget.cpp:205 src/timetrackerwidget.cpp:206
 #, kde-format
 msgid "Stops timing of the selected task"
 msgstr "Zaustavlja proračun vremena za odabrani zadatak"
 
-#: src/timetrackerwidget.cpp:210
+#: src/timetrackerwidget.cpp:211
 #, kde-format
 msgid "Focus on Searchbar"
 msgstr "Fokus na traku za pretragu"
 
-#: src/timetrackerwidget.cpp:211 src/timetrackerwidget.cpp:212
+#: src/timetrackerwidget.cpp:212 src/timetrackerwidget.cpp:213
 #, kde-format
 msgid "Sets the focus on the searchbar"
 msgstr "Postavlja fokus na traku za pretragu"
 
-#: src/timetrackerwidget.cpp:217
+#: src/timetrackerwidget.cpp:218
 #, kde-format
 msgid "Stop &All Timers"
 msgstr "Zaustavi sve &satove"
 
-#: src/timetrackerwidget.cpp:218 src/timetrackerwidget.cpp:219
+#: src/timetrackerwidget.cpp:219 src/timetrackerwidget.cpp:220
 #, kde-format
 msgid "Stops all of the active timers"
 msgstr "Zaustavlja sve aktivne brojače"
 
-#: src/timetrackerwidget.cpp:225
+#: src/timetrackerwidget.cpp:226
 #, kde-format
 msgid "Track Active Applications"
 msgstr "Slijedi aktivnu aplikaciju"
 
-#: src/timetrackerwidget.cpp:226
+#: src/timetrackerwidget.cpp:227
 #, kde-format
 msgid ""
 "Auto-creates and updates tasks when the focus of the current window has "
@@ -886,7 +957,7 @@ msgid ""
 msgstr ""
 "Stvara sam i ažurira poslove kada se fokus trenutnog prozora promijenio"
 
-#: src/timetrackerwidget.cpp:228
+#: src/timetrackerwidget.cpp:229
 #, kde-format
 msgid ""
 "If the focus of a window changes for the first time when this action is "
@@ -897,62 +968,62 @@ msgstr ""
 "novi zadatak će biti kreiran pod imenom datog prozora i počeće sa radom. "
 "Ukoliko već postoji takav zadatak, počeće sa radom."
 
-#: src/timetrackerwidget.cpp:235
+#: src/timetrackerwidget.cpp:236
 #, kde-format
 msgid "&New Task..."
 msgstr "&Novi zadatak..."
 
-#: src/timetrackerwidget.cpp:236
+#: src/timetrackerwidget.cpp:237
 #, kde-format
 msgid "Creates new top level task"
 msgstr "Kreira zadatak najvišeg nivoa"
 
-#: src/timetrackerwidget.cpp:237
+#: src/timetrackerwidget.cpp:238
 #, kde-format
 msgid "This will create a new top level task."
 msgstr "Ovo će napraviti novi zadatak najvišeg nivoa."
 
-#: src/timetrackerwidget.cpp:243
+#: src/timetrackerwidget.cpp:244
 #, kde-format
 msgid "New &Subtask..."
 msgstr "Novi &podzadatak..."
 
-#: src/timetrackerwidget.cpp:244
+#: src/timetrackerwidget.cpp:245
 #, kde-format
 msgid "Creates a new subtask to the current selected task"
 msgstr "Stvara novi podzadatak za trenutno odabrani zadatak"
 
-#: src/timetrackerwidget.cpp:245
+#: src/timetrackerwidget.cpp:246
 #, kde-format
 msgid "This will create a new subtask to the current selected task."
 msgstr "Ovo će stvoritit novi podzadatak za trenutno odabrani zadatak"
 
-#: src/timetrackerwidget.cpp:251
+#: src/timetrackerwidget.cpp:252
 #, kde-format
 msgid "&Delete"
 msgstr "&Obriši"
 
-#: src/timetrackerwidget.cpp:252
+#: src/timetrackerwidget.cpp:253
 #, kde-format
 msgid "Deletes selected task"
 msgstr "Briše izabrani zadatak"
 
-#: src/timetrackerwidget.cpp:253
+#: src/timetrackerwidget.cpp:254
 #, kde-format
 msgid "This will delete the selected task(s) and all subtasks."
 msgstr "Ovo će obrisati označene zadatake(zadatak) i sve podzadatke"
 
-#: src/timetrackerwidget.cpp:259
+#: src/timetrackerwidget.cpp:260
 #, kde-format
 msgid "&Edit..."
 msgstr "&Izmijeni..."
 
-#: src/timetrackerwidget.cpp:260
+#: src/timetrackerwidget.cpp:261
 #, kde-format
 msgid "Edits name or times for selected task"
 msgstr "Uređuje naziv ili vrijeme računanja odabranog zadatka"
 
-#: src/timetrackerwidget.cpp:261
+#: src/timetrackerwidget.cpp:262
 #, kde-format
 msgid ""
 "This will bring up a dialog box where you may edit the parameters for the "
@@ -960,51 +1031,51 @@ msgid ""
 msgstr ""
 "Pojavit će se dijalog u kojem možete uređivati parametre izabranog zadatka."
 
-#: src/timetrackerwidget.cpp:268
+#: src/timetrackerwidget.cpp:269
 #, kde-format
 msgid "&Mark as Complete"
 msgstr "&Označi kao završeno"
 
-#: src/timetrackerwidget.cpp:274
+#: src/timetrackerwidget.cpp:275
 #, kde-format
 msgid "&Mark as Incomplete"
 msgstr "&Označi kao nezavršeno"
 
-#: src/timetrackerwidget.cpp:280
+#: src/timetrackerwidget.cpp:281
 #, fuzzy, kde-format
 #| msgid "&Export"
 msgid "&Export..."
 msgstr "&Izvezi"
 
-#: src/timetrackerwidget.cpp:285
+#: src/timetrackerwidget.cpp:286
 #, kde-format
 msgid "Import Tasks From &Planner..."
 msgstr "Uvezi zadatke iz &planera..."
 
-#: src/timetrackerwidget.cpp:295
+#: src/timetrackerwidget.cpp:296
 #, kde-format
 msgid "Show Searchbar"
 msgstr "Prikaži traku za pretragu"
 
-#: src/timetrackerwidget.cpp:416
+#: src/timetrackerwidget.cpp:417
 #, kde-format
 msgctxt "@title:tab"
 msgid "Behavior"
 msgstr ""
 
-#: src/timetrackerwidget.cpp:417
+#: src/timetrackerwidget.cpp:418
 #, kde-format
 msgctxt "@title:tab"
 msgid "Appearance"
 msgstr ""
 
-#: src/timetrackerwidget.cpp:418
+#: src/timetrackerwidget.cpp:419
 #, kde-format
 msgctxt "@title:tab"
 msgid "Storage"
 msgstr ""
 
-#: src/timetrackerwidget.cpp:503
+#: src/timetrackerwidget.cpp:504
 #, kde-format
 msgctxt "@info in message box"
 msgid ""
@@ -1014,7 +1085,7 @@ msgstr ""
 "Nema historije još. Počnite i zavšite zadatak i imaćete pristup vašoj "
 "historiji."
 
-#: src/timetrackerwidget.cpp:513
+#: src/timetrackerwidget.cpp:514
 #, kde-format
 msgid ""
 "Do you really want to reset the time to zero for all tasks? This will delete "
@@ -1023,59 +1094,59 @@ msgstr ""
 "Da li želite zaista vratiti vrijeme na početak za sve zadatke. To će "
 "obrisati cijelu istoriju."
 
-#: src/timetrackerwidget.cpp:514
+#: src/timetrackerwidget.cpp:515
 #, kde-format
 msgid "Confirmation Required"
 msgstr "Potrebna je potvrda"
 
-#: src/timetrackerwidget.cpp:515
+#: src/timetrackerwidget.cpp:516
 #, kde-format
 msgid "Reset All Times"
 msgstr "Resetuj sva vremena"
 
-#: src/timetrackerwidget.cpp:694
+#: src/timetrackerwidget.cpp:695
 #, kde-format
 msgid "Save failed, most likely because the file could not be locked."
 msgstr ""
 "Snimanje nije uspjelo, verovatno zato što datoteka nije mogla biti "
 "zaključana."
 
-#: src/timetrackerwidget.cpp:696
+#: src/timetrackerwidget.cpp:697
 #, kde-format
 msgid "Could not modify calendar resource."
 msgstr "Ne mogu da izmijenim izvor kalendara."
 
-#: src/timetrackerwidget.cpp:698
+#: src/timetrackerwidget.cpp:699
 #, kde-format
 msgid "Out of memory--could not create object."
 msgstr "Nedostatak memorije--ne mogu da napravim objekat."
 
-#: src/timetrackerwidget.cpp:700
+#: src/timetrackerwidget.cpp:701
 #, kde-format
 msgid "UID not found."
 msgstr "UID nije pronađen."
 
-#: src/timetrackerwidget.cpp:702
+#: src/timetrackerwidget.cpp:703
 #, kde-format
 msgid "Invalidate date--format is YYYY-MM-DD."
 msgstr "Neispravan datum--format je GGGG-MM-DD."
 
-#: src/timetrackerwidget.cpp:704
+#: src/timetrackerwidget.cpp:705
 #, kde-format
 msgid "Invalid time--format is YYYY-MM-DDTHH:MM:SS."
 msgstr "Neispravno vrijeme--format je GGGG-MM-DDTHH:MM:SS"
 
-#: src/timetrackerwidget.cpp:706
+#: src/timetrackerwidget.cpp:707
 #, kde-format
 msgid "Invalid task duration--must be greater than zero."
 msgstr "Neispravno trajanje zadatka--mora biti veće od nule."
 
-#: src/timetrackerwidget.cpp:708
+#: src/timetrackerwidget.cpp:709
 #, kde-format
 msgid "Invalid error number: %1"
 msgstr "Neispravan broj greške: %1"
 
-#: src/timetrackerwidget.cpp:922
+#: src/timetrackerwidget.cpp:925
 #, kde-format
 msgid ""
 "This is ktimetracker, KDE's program to help you track your time. Best, start "
@@ -1086,7 +1157,7 @@ msgstr ""
 "Najbolje je započeti sa stvaranjem svog prvog zadatka - ući u polje gdje "
 "možete vidjeti \"pretraživanje ili dodajte zadatak\"."
 
-#: src/timetrackerwidget.cpp:924
+#: src/timetrackerwidget.cpp:927
 #, kde-format
 msgid "You have already created a task. You can now start and stop timing"
 msgstr ""
