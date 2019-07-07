@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: artikulate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-06-23 13:40+0200\n"
+"POT-Creation-Date: 2019-07-07 02:57+0200\n"
 "PO-Revision-Date: 2014-11-11 13:57+0000\n"
 "Last-Translator: Timur Ćerimagić <tcerimagic1@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -99,12 +99,10 @@ msgid "Spanish"
 msgstr "Španski"
 
 #: liblearnerprofile/src/models/learninggoalmodel.cpp:172
-#: src/models/coursemodel.cpp:142 src/models/languageresourcemodel.cpp:88
-#: src/models/phonememodel.cpp:78 src/models/phraselistmodel.cpp:114
-#: src/models/profilemodel.cpp:104 src/models/skeletonmodel.cpp:98
-#: src/models/unitmodel.cpp:101
-#, kde-format
-msgctxt "@item:inlistbox:"
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox:"
+#| msgid "unknown"
+msgctxt "@item:inlistbox unknown learning goal"
 msgid "unknown"
 msgstr "nepoznato"
 
@@ -197,7 +195,7 @@ msgstr ""
 msgid "Please select a course"
 msgstr "Izaberite jezik:"
 
-#: src/core/resources/editablecourseresource.cpp:198 src/qml/Editor.qml:226
+#: src/core/resources/editablecourseresource.cpp:211 src/qml/Editor.qml:226
 #, kde-format
 msgid "New Unit"
 msgstr "Nova Jedinica"
@@ -393,6 +391,15 @@ msgstr ""
 "Trenutno otvoreni kurs sadrži izmjene koje nisu spašene. Želite li da ih "
 "spasite?"
 
+#: src/models/coursemodel.cpp:142 src/models/languageresourcemodel.cpp:88
+#: src/models/phonememodel.cpp:78 src/models/phraselistmodel.cpp:114
+#: src/models/profilemodel.cpp:104 src/models/skeletonmodel.cpp:98
+#: src/models/unitmodel.cpp:101
+#, kde-format
+msgctxt "@item:inlistbox:"
+msgid "unknown"
+msgstr "nepoznato"
+
 #: src/models/coursemodel.cpp:223
 #, kde-format
 msgctxt "@title:column"
@@ -496,17 +503,20 @@ msgstr ""
 
 #: src/qml/DownloadPage.qml:91
 #, kde-format
-msgid "update"
+msgctxt "@action:button"
+msgid "Update"
 msgstr ""
 
 #: src/qml/DownloadPage.qml:96
 #, kde-format
-msgid "install"
+msgctxt "@action:button"
+msgid "Install"
 msgstr ""
 
 #: src/qml/DownloadPage.qml:101
 #, kde-format
-msgid "remove"
+msgctxt "@action:button"
+msgid "Remove"
 msgstr ""
 
 #: src/qml/Editor.qml:73
@@ -555,8 +565,9 @@ msgid "Units & Phrases"
 msgstr ""
 
 #: src/qml/PhraseEditor.qml:63
-#, kde-format
-msgid "Original Phrase:"
+#, fuzzy, kde-format
+#| msgid "Original Phrase:"
+msgid "Original Phrase: <i>%1</i>"
 msgstr "Originalna fraza:"
 
 #: src/qml/PhraseEditorEditStateComponent.qml:62
@@ -565,17 +576,23 @@ msgid "Edit State:"
 msgstr "Uredi stanje:"
 
 #: src/qml/PhraseEditorEditStateComponent.qml:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unknown"
+msgctxt "state"
 msgid "Unknown"
 msgstr "Nepoznato"
 
 #: src/qml/PhraseEditorEditStateComponent.qml:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Translated"
+msgctxt "state"
 msgid "Translated"
 msgstr "Prevedeno"
 
 #: src/qml/PhraseEditorEditStateComponent.qml:85
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Completed"
+msgctxt "state"
 msgid "Completed"
 msgstr "Završeno"
 
@@ -595,8 +612,9 @@ msgid "Create New Recording:"
 msgstr "Napravi novi snimak:"
 
 #: src/qml/PhraseEditorSoundComponent.qml:74
-#, kde-format
-msgid "Replace existing recording"
+#, fuzzy, kde-format
+#| msgid "Replace existing recording"
+msgid "Replace Existing Recording"
 msgstr "Zamjeni postojeći snimak"
 
 #: src/qml/PhraseEditorSoundComponent.qml:82
@@ -730,9 +748,8 @@ msgid "Category: no category selected"
 msgstr ""
 
 #: src/qml/TrainingPage.qml:44
-#, fuzzy, kde-format
-#| msgid "Category: %1"
-msgid "Category: "
+#, kde-format
+msgid "Category: %1"
 msgstr "Kategorija: %1"
 
 #: src/qml/TrainingPage.qml:53
@@ -788,6 +805,19 @@ msgstr "Kreiraj novi kurs"
 #| msgid "Configure Artikulate"
 msgid "Welcome to Artikulate"
 msgstr "Podešavanje Artikulate"
+
+#: src/qml/WelcomePage.qml:61
+#, kde-format
+msgctxt "@title:window language / course name"
+msgid "%1 / %2"
+msgstr ""
+
+#: src/qml/WelcomePage.qml:75
+#, fuzzy, kde-format
+#| msgid "Start Training"
+msgctxt "@action:button"
+msgid "Start Training"
+msgstr "Počni obuku"
 
 #: src/ui/exportghnsdialog.cpp:42
 #, kde-format
@@ -914,6 +944,11 @@ msgstr "Podešavanje zvučnika"
 msgid "Volume"
 msgstr "Jačina"
 
+#, fuzzy
+#~| msgid "Category: %1"
+#~ msgid "Category: "
+#~ msgstr "Kategorija: %1"
+
 #~ msgctxt "@item:inmenu"
 #~ msgid "Download New Language Course"
 #~ msgstr "Preuzimanje  kursa o novom jeziku"
@@ -985,9 +1020,6 @@ msgstr "Jačina"
 
 #~ msgid "Identifier"
 #~ msgstr "Identifikator"
-
-#~ msgid "Category: %1"
-#~ msgstr "Kategorija: %1"
 
 #, fuzzy
 #~| msgid "Copyright (C) 2013-2014, The Artikulate Developers"
