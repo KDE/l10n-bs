@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-07-07 02:42+0200\n"
+"POT-Creation-Date: 2019-07-17 02:43+0200\n"
 "PO-Revision-Date: 2014-02-12 23:48+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -386,7 +386,7 @@ msgstr "Automatski"
 #. i18n: ectx: property (text), widget (QLabel, configName)
 #: debugger/variable/variablecollection.cpp:423
 #: debugger/variable/variabletooltip.cpp:96
-#: shell/launchconfigurationdialog.ui:114
+#: shell/launchconfigurationdialog.ui:114 shell/sessioncontroller.cpp:606
 #, kde-format
 msgid "Name"
 msgstr "Ime"
@@ -3672,35 +3672,41 @@ msgstr ""
 msgid "Running"
 msgstr "Pokrenuto"
 
-#: shell/sessionchooserdialog.cpp:204
+#: shell/sessionchooserdialog.cpp:206
 #, kde-format
 msgctxt "@title"
 msgid "Cannot Delete Session"
 msgstr "Ne mogu obrisati sesiju"
 
-#: shell/sessionchooserdialog.cpp:205
+#: shell/sessionchooserdialog.cpp:207
 #, kde-format
 msgctxt "@info"
 msgid "<p>Cannot delete a locked session."
 msgstr "<p>Ne mogu obrisati zaključanu sesiju."
 
-#: shell/sessionchooserdialog.cpp:208
-#, kde-format
+#: shell/sessionchooserdialog.cpp:210
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "<p>The session is locked by %1 on %2 (PID %3)."
 msgctxt "@info"
-msgid "<p>The session is locked by %1 on %2 (PID %3)."
+msgid "<p>The session <b>%1</b> is locked by %2 on %3 (PID %4)."
 msgstr "<p>Sesiju je zaključao %1 na %2 (PID %3)."
 
-#: shell/sessionchooserdialog.cpp:216
-#, kde-format
+#: shell/sessionchooserdialog.cpp:218
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The session and all contained settings will be deleted. The projects will "
+#| "stay unaffected. Do you really want to continue?"
 msgctxt "@info"
 msgid ""
-"The session and all contained settings will be deleted. The projects will "
-"stay unaffected. Do you really want to continue?"
+"The session <b>%1</b> and all contained settings will be deleted. The "
+"projects will stay unaffected. Do you really want to continue?"
 msgstr ""
 "Sjednica i sve sadržane postavke bit će izbrisani. Projekti će ostati "
 "nepromijenjen. Da li stvarno želite nastaviti?"
 
-#: shell/sessionchooserdialog.cpp:217
+#: shell/sessionchooserdialog.cpp:219
 #, kde-format
 msgctxt "@title"
 msgid "Delete Session"
@@ -3780,12 +3786,12 @@ msgstr "Identitet"
 msgid "Contents"
 msgstr "Sadržaj"
 
-#: shell/sessioncontroller.cpp:611
+#: shell/sessioncontroller.cpp:612
 #, kde-format
 msgid "Filter:"
 msgstr "Filter:"
 
-#: shell/sessioncontroller.cpp:642
+#: shell/sessioncontroller.cpp:644
 #, kde-format
 msgid "Create New Session"
 msgstr "Kreiraj novu sesiju"
