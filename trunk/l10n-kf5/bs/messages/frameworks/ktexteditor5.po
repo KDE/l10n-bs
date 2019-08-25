@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: katepart4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-08-24 02:46+0200\n"
+"POT-Creation-Date: 2019-08-25 02:37+0200\n"
 "PO-Revision-Date: 2014-01-31 20:37+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -1627,7 +1627,7 @@ msgstr "Ignoriši riječ"
 msgid "Ignores the changes on disk without any action."
 msgstr "Ignoriši izmjene. Nećete biti ponovo upitani."
 
-#: dialogs/katedialogs.cpp:1405 swapfile/kateswapdiffcreator.cpp:137
+#: dialogs/katedialogs.cpp:1405 swapfile/kateswapdiffcreator.cpp:139
 #, kde-format
 msgid ""
 "The diff command failed. Please make sure that diff(1) is installed and in "
@@ -1636,17 +1636,18 @@ msgstr ""
 "Naredba <command>diff</command> nije uspjela. Uvjerite se da je <command "
 "section='1'>diff</command> instalirana i da se nalazi u putanji."
 
-#: dialogs/katedialogs.cpp:1407 swapfile/kateswapdiffcreator.cpp:139
+#: dialogs/katedialogs.cpp:1407 swapfile/kateswapdiffcreator.cpp:107
+#: swapfile/kateswapdiffcreator.cpp:141
 #, kde-format
 msgid "Error Creating Diff"
 msgstr "Greška pri razlikovanju"
 
-#: dialogs/katedialogs.cpp:1415 swapfile/kateswapdiffcreator.cpp:147
+#: dialogs/katedialogs.cpp:1415 swapfile/kateswapdiffcreator.cpp:149
 #, kde-format
 msgid "The files are identical."
 msgstr "Datoteke su identične."
 
-#: dialogs/katedialogs.cpp:1416 swapfile/kateswapdiffcreator.cpp:148
+#: dialogs/katedialogs.cpp:1416 swapfile/kateswapdiffcreator.cpp:150
 #, kde-format
 msgid "Diff Output"
 msgstr "Izlaz razlike"
@@ -3353,7 +3354,7 @@ msgid "Marker Colors"
 msgstr "Oznake boja"
 
 # >> @item:inlistbox
-#: schema/kateschemaconfig.cpp:206 view/kateviewhelpers.cpp:1453
+#: schema/kateschemaconfig.cpp:206 view/kateviewhelpers.cpp:1455
 #, kde-format
 msgid "Bookmark"
 msgstr "obilježivač"
@@ -4392,8 +4393,8 @@ msgid "Bad quoting in call: %1. Please escape single quotes with a backslash."
 msgstr ""
 "Loše navođenje u pozivu: %1. Izbjegnite jednostruke navodnike kontrakrozom."
 
-#: script/katecommandlinescript.cpp:93 script/katescriptmanager.cpp:316
-#: utils/katecmds.cpp:203 vimode/cmds.cpp:56
+#: script/katecommandlinescript.cpp:93 utils/katecmds.cpp:203
+#: vimode/cmds.cpp:56
 #, kde-format
 msgid "Could not access view"
 msgstr "Ne mogu da pristupim prikazu"
@@ -4420,19 +4421,18 @@ msgstr "Greška pri učitavanju skripte <filename>%1</filename>\n"
 msgid "Error loading script %1"
 msgstr "Greška pri učitavanju skripte <filename>%1</filename>"
 
-#: script/katescriptmanager.cpp:324 script/katescriptmanager.cpp:337
-#: script/katescriptview.cpp:136
-#, kde-format
-msgid "Command not found: %1"
-msgstr "Naredba nije nađena: %1"
-
 # >> @info
-#: script/katescriptmanager.cpp:334
+#: script/katescriptmanager.cpp:330
 #, kde-format
 msgid "Reload all JavaScript files (indenters, command line scripts, etc)."
 msgstr ""
 "Ponovo učitava sve JavaScript datoteke (uvlakače, skripte komandne linije, "
 "itd.)"
+
+#: script/katescriptview.cpp:136
+#, kde-format
+msgid "Command not found: %1"
+msgstr "Naredba nije nađena: %1"
 
 #: search/katesearchbar.cpp:88
 #, kde-format
@@ -5046,6 +5046,18 @@ msgstr "Ignoriši riječ"
 msgid "Add to Dictionary"
 msgstr "Dodaj u rječnik"
 
+#: swapfile/kateswapdiffcreator.cpp:105
+#, fuzzy, kde-format
+#| msgid ""
+#| "The diff command failed. Please make sure that diff(1) is installed and "
+#| "in your PATH."
+msgid ""
+"The diff command could not be started. Please make sure that diff(1) is "
+"installed and in your PATH."
+msgstr ""
+"Naredba <command>diff</command> nije uspjela. Uvjerite se da je <command "
+"section='1'>diff</command> instalirana i da se nalazi u putanji."
+
 #: swapfile/kateswapfile.cpp:641
 #, kde-format
 msgid "The file was not closed properly."
@@ -5625,7 +5637,7 @@ msgid ""
 msgstr ""
 "Upotreba: set-remove-trailing-spaces 0|-|none or 1|+|mod|modified or 2|*|all"
 
-#: utils/katecmds.cpp:432 vimode/cmds.cpp:179
+#: utils/katecmds.cpp:432 vimode/cmds.cpp:180
 #, kde-format
 msgid "Unknown command '%1'"
 msgstr "Nepoznata naredba „%1“"
@@ -7727,12 +7739,12 @@ msgctxt "from line - to line"
 msgid "<center>%1<br/>&#x2014;<br/>%2</center>"
 msgstr "<center>%1<br/>&#x2014;<br/>%2</center>"
 
-#: view/kateviewhelpers.cpp:1127
+#: view/kateviewhelpers.cpp:1128
 #, kde-format
 msgid "Available Commands"
 msgstr "Naredbe na raspolaganju"
 
-#: view/kateviewhelpers.cpp:1129
+#: view/kateviewhelpers.cpp:1130
 #, kde-format
 msgid ""
 "<p>For help on individual commands, do <code>'help &lt;command&gt;'</code></"
@@ -7741,17 +7753,17 @@ msgstr ""
 "<qt><p>Za pomoć za pojedinačnu naredbu, kucajte <icode>help &lt;naredba&gt;</"
 "icode></p></qt>"
 
-#: view/kateviewhelpers.cpp:1137
+#: view/kateviewhelpers.cpp:1138
 #, kde-format
 msgid "No help for '%1'"
 msgstr "<qt>Nema pomoći za <command>%1</command></qt>"
 
-#: view/kateviewhelpers.cpp:1140
+#: view/kateviewhelpers.cpp:1141
 #, kde-format
 msgid "No such command <b>%1</b>"
 msgstr "<qt>Naredba <command>%1</command> ne postoji</qt>"
 
-#: view/kateviewhelpers.cpp:1146
+#: view/kateviewhelpers.cpp:1147
 #, kde-format
 msgid ""
 "<p>This is the Katepart <b>command line</b>.<br />Syntax: <code><b>command "
@@ -7764,53 +7776,53 @@ msgstr ""
 "unesite <icode>help list</icode><br />Za pomoć za pojedinačne naredbe, "
 "unesite <icode>help &lt;naredba&gt;</icode></p></qt>"
 
-#: view/kateviewhelpers.cpp:1232 vimode/emulatedcommandbar/commandmode.cpp:221
+#: view/kateviewhelpers.cpp:1233 vimode/emulatedcommandbar/commandmode.cpp:222
 #, kde-format
 msgid "No such command: \"%1\""
 msgstr "Naredba <command>%1</command> ne postoji."
 
-#: view/kateviewhelpers.cpp:1235 vimode/emulatedcommandbar/commandmode.cpp:202
+#: view/kateviewhelpers.cpp:1236 vimode/emulatedcommandbar/commandmode.cpp:203
 #, kde-format
 msgid "Error: No range allowed for command \"%1\"."
 msgstr "Greška: Opseg nije dozvoljen za naredbu „%1“."
 
-#: view/kateviewhelpers.cpp:1246 vimode/emulatedcommandbar/commandmode.cpp:207
+#: view/kateviewhelpers.cpp:1247 vimode/emulatedcommandbar/commandmode.cpp:208
 #, kde-format
 msgid "Success: "
 msgstr "Uspjeh: "
 
-#: view/kateviewhelpers.cpp:1260 vimode/emulatedcommandbar/commandmode.cpp:216
+#: view/kateviewhelpers.cpp:1261 vimode/emulatedcommandbar/commandmode.cpp:217
 #, kde-format
 msgid "Command \"%1\" failed."
 msgstr "Naredba <command>%1</command> nije uspjela."
 
-#: view/kateviewhelpers.cpp:2462 view/kateviewhelpers.cpp:2463
+#: view/kateviewhelpers.cpp:2464 view/kateviewhelpers.cpp:2465
 #, kde-format
 msgid "Mark Type %1"
 msgstr "Obilježje tipa %1"
 
-#: view/kateviewhelpers.cpp:2486
+#: view/kateviewhelpers.cpp:2488
 #, kde-format
 msgid "Set Default Mark Type"
 msgstr "Postavi podrazumijevani tip obilježja"
 
-#: view/kateviewhelpers.cpp:2628
+#: view/kateviewhelpers.cpp:2630
 #, kde-format
 msgid "Disable Annotation Bar"
 msgstr "Isključi traku tumačenja"
 
-#: vimode/appcommands.cpp:76
+#: vimode/appcommands.cpp:78
 #, fuzzy, kde-format
 #| msgid "Document written to disk"
 msgid "All documents written to disk"
 msgstr "Dokument upisan na disk"
 
-#: vimode/appcommands.cpp:79
+#: vimode/appcommands.cpp:81
 #, kde-format
 msgid "Document written to disk"
 msgstr "Dokument upisan na disk"
 
-#: vimode/appcommands.cpp:207
+#: vimode/appcommands.cpp:209
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p><b>w/wa &mdash; write document(s) to disk</b></p><p>Usage: "
@@ -7832,7 +7844,7 @@ msgstr ""
 "<tt>wa</tt> &mdash; piše sve dokumente na disk.</p><p>Ako nijedno ime "
 "datoteke nije vezano s dokumentom, prikazaće se datotečni dijalog.</p>"
 
-#: vimode/appcommands.cpp:217
+#: vimode/appcommands.cpp:219
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p><b>w/wa &mdash; write document(s) to disk</b></p><p>Usage: "
@@ -7859,7 +7871,7 @@ msgstr ""
 "<tt>wa</tt> &mdash; piše sve dokumente na disk.</p><p>Ako nijedno ime "
 "datoteke nije vezano s dokumentom, prikazaće se datotečni dijalog.</p>"
 
-#: vimode/appcommands.cpp:231
+#: vimode/appcommands.cpp:233
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p><b>w/wa &mdash; write document(s) to disk</b></p><p>Usage: "
@@ -7884,7 +7896,7 @@ msgstr ""
 "<tt>wa</tt> &mdash; piše sve dokumente na disk.</p><p>Ako nijedno ime "
 "datoteke nije vezano s dokumentom, prikazaće se datotečni dijalog.</p>"
 
-#: vimode/appcommands.cpp:244
+#: vimode/appcommands.cpp:246
 #, kde-format
 msgid ""
 "<p><b>sp,split&mdash; Split horizontally the current view into two</b></"
@@ -7892,7 +7904,7 @@ msgid ""
 "same document.</p>"
 msgstr ""
 
-#: vimode/appcommands.cpp:249
+#: vimode/appcommands.cpp:251
 #, kde-format
 msgid ""
 "<p><b>vs,vsplit&mdash; Split vertically the current view into two</b></"
@@ -7900,14 +7912,14 @@ msgid ""
 "same document.</p>"
 msgstr ""
 
-#: vimode/appcommands.cpp:254
+#: vimode/appcommands.cpp:256
 #, kde-format
 msgid ""
 "<p><b>clo[se]&mdash; Close the current view</b></p><p>Usage: <tt><b>clo[se]</"
 "b></tt></p><p>After executing it, the current view will be closed.</p>"
 msgstr ""
 
-#: vimode/appcommands.cpp:259
+#: vimode/appcommands.cpp:261
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p><b>w/wa &mdash; write document(s) to disk</b></p><p>Usage: "
@@ -7930,7 +7942,7 @@ msgstr ""
 "<tt>wa</tt> &mdash; piše sve dokumente na disk.</p><p>Ako nijedno ime "
 "datoteke nije vezano s dokumentom, prikazaće se datotečni dijalog.</p>"
 
-#: vimode/appcommands.cpp:268
+#: vimode/appcommands.cpp:270
 #, kde-format
 msgid ""
 "<p><b>e[dit] &mdash; reload current document</b></p><p>Usage: <tt><b>e[dit]</"
@@ -7939,14 +7951,14 @@ msgid ""
 "program.</p>"
 msgstr ""
 
-#: vimode/appcommands.cpp:485
+#: vimode/appcommands.cpp:487
 #, kde-format
 msgid ""
 "<p><b>b,buffer &mdash; Edit document N from the document list</b></"
 "p><p>Usage: <tt><b>b[uffer] [N]</b></tt></p>"
 msgstr ""
 
-#: vimode/appcommands.cpp:490
+#: vimode/appcommands.cpp:492
 #, kde-format
 msgid ""
 "<p><b>bp,bprev &mdash; previous buffer</b></p><p>Usage: <tt><b>bp[revious] "
@@ -7955,7 +7967,7 @@ msgid ""
 "around the start of the document list.</p>"
 msgstr ""
 
-#: vimode/appcommands.cpp:498
+#: vimode/appcommands.cpp:500
 #, kde-format
 msgid ""
 "<p><b>bn,bnext &mdash; switch to next document</b></p><p>Usage: "
@@ -7964,7 +7976,7 @@ msgid ""
 "p><p>Wraps around the end of the document list.</p>"
 msgstr ""
 
-#: vimode/appcommands.cpp:506
+#: vimode/appcommands.cpp:508
 #, kde-format
 msgid ""
 "<p><b>bf,bfirst &mdash; first document</b></p><p>Usage: <tt><b>bf[irst]</b></"
@@ -7972,7 +7984,7 @@ msgid ""
 "list.</p>"
 msgstr ""
 
-#: vimode/appcommands.cpp:512
+#: vimode/appcommands.cpp:514
 #, kde-format
 msgid ""
 "<p><b>bl,blast &mdash; last document</b></p><p>Usage: <tt><b>bl[ast]</b></"
@@ -7980,7 +7992,7 @@ msgid ""
 "list.</p>"
 msgstr ""
 
-#: vimode/appcommands.cpp:517
+#: vimode/appcommands.cpp:519
 #, kde-format
 msgid "<p><b>ls</b></p><p>list current buffers<p>"
 msgstr ""
@@ -8005,7 +8017,7 @@ msgstr "„%1“ je mapirano na „%2“"
 msgid "Missing argument(s). Usage: %1 <from> [<to>]"
 msgstr "Nedostaju argumenti. Upotreba: %1 &lt;od&gt; [&lt;do&gt;]"
 
-#: vimode/cmds.cpp:155 vimode/cmds.cpp:172
+#: vimode/cmds.cpp:156 vimode/cmds.cpp:173
 #, kde-format
 msgid "Wrong arguments"
 msgstr "Pogrešni argumenti"
