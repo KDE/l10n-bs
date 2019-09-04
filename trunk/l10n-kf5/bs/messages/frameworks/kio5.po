@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkio\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-09-03 02:50+0200\n"
+"POT-Creation-Date: 2019-09-04 02:56+0200\n"
 "PO-Revision-Date: 2013-01-14 19:16+0000\n"
 "Last-Translator: Admir Salkanović <asalkanovi2@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -2326,7 +2326,7 @@ msgstr ""
 msgid "Undocumented Error"
 msgstr "Nedokumentovana greška"
 
-#: core/kcoredirlister.cpp:395 widgets/krun.cpp:954 widgets/paste.cpp:275
+#: core/kcoredirlister.cpp:395 widgets/krun.cpp:1019 widgets/paste.cpp:275
 #: widgets/renamedialog.cpp:458
 #, kde-format
 msgid ""
@@ -9064,7 +9064,27 @@ msgstr "Izvršne datoteke su podržani samo na lokalnom datotečnom sistemu."
 msgid "Advanced Options for %1"
 msgstr "Napredne opcije za %1"
 
-#: widgets/krun.cpp:204
+#: widgets/krun.cpp:254
+#, fuzzy, kde-format
+#| msgctxt "Warning about executing unknown .desktop file"
+#| msgid "Warning"
+msgctxt "Warning about executing unknown program"
+msgid "Warning"
+msgstr "Upozorenje"
+
+#: widgets/krun.cpp:271
+#, kde-format
+msgctxt "program name follows in a line edit below"
+msgid "This will start the program:"
+msgstr "Ovo će pokrenuti program:"
+
+#: widgets/krun.cpp:281
+#, kde-format
+msgid "If you do not trust this program, click Cancel"
+msgstr ""
+"Ako ne vjerujete programu, kliknite na <interface>Odustani</interface>."
+
+#: widgets/krun.cpp:347
 #, kde-format
 msgid ""
 "<qt>Unable to enter <b>%1</b>.\n"
@@ -9073,7 +9093,15 @@ msgstr ""
 "<qt>Ne mogu da uđem u <filename>%1</filename>.\n"
 "Nemate prava pristupa ovoj lokaciji.</qt>"
 
-#: widgets/krun.cpp:234
+#: widgets/krun.cpp:374
+#, fuzzy, kde-format
+#| msgid "<qt>The template file <b>%1</b> does not exist.</qt>"
+msgid ""
+"<qt>Unable to make file <b>%1</b> executable.\n"
+"%2.</qt>"
+msgstr "<qt>Datoteka šablona <filename>%1</filename> ne postoji.</qt>"
+
+#: widgets/krun.cpp:405
 #, kde-format
 msgid ""
 "<qt>The file <b>%1</b> is an executable program. For safety it will not be "
@@ -9082,60 +9110,45 @@ msgstr ""
 "<qt>Datoteka <filename>%1</filename> je izvršni program. Neće biti pokrenut "
 "iz bezbjednosnih razloga.</qt>"
 
-#: widgets/krun.cpp:240
+#: widgets/krun.cpp:411
 #, kde-format
 msgid "<qt>You do not have permission to run <b>%1</b>.</qt>"
 msgstr "<qt>Nemate dozvolu da pokrenete <filename>%1</filename>.</qt>"
 
-#: widgets/krun.cpp:270
+#: widgets/krun.cpp:441
 #, kde-format
 msgid "You are not authorized to select an application to open this file."
 msgstr "Niste ovlašćeni da izaberete program za otvaranje ove datoteke."
 
-#: widgets/krun.cpp:332
+#: widgets/krun.cpp:503
 #, kde-format
 msgid "You are not authorized to execute this file."
 msgstr "Niste ovlašćeni da izvršite ovu datoteku."
 
-#: widgets/krun.cpp:356
+#: widgets/krun.cpp:527
 #, kde-format
 msgid "Launching %1"
 msgstr "Pokrećem %1"
 
-#: widgets/krun.cpp:460
+#: widgets/krun.cpp:631
 #, kde-format
 msgid "Error processing Exec field in %1"
 msgstr "Greška u obradi izvršnog polja u %1"
 
-#: widgets/krun.cpp:667
+#: widgets/krun.cpp:783
 #, kde-format
 msgid "You are not authorized to execute this service."
 msgstr "Niste ovlašćeni da izvršite ovaj servis."
 
-#: widgets/krun.cpp:672
-#, kde-format
-msgctxt "Warning about executing unknown .desktop file"
-msgid "Warning"
-msgstr "Upozorenje"
-
-#: widgets/krun.cpp:689
-#, kde-format
-msgctxt "program name follows in a line edit below"
-msgid "This will start the program:"
-msgstr "Ovo će pokrenuti program:"
-
-#: widgets/krun.cpp:706
-#, kde-format
-msgid "If you do not trust this program, click Cancel"
-msgstr ""
-"Ako ne vjerujete programu, kliknite na <interface>Odustani</interface>."
-
-#: widgets/krun.cpp:749
-#, kde-format
-msgid "Unable to make the service %1 executable, aborting execution"
+#: widgets/krun.cpp:813
+#, fuzzy, kde-format
+#| msgid "Unable to make the service %1 executable, aborting execution"
+msgid ""
+"Unable to make the service %1 executable, aborting execution.\n"
+"%2."
 msgstr "Ne mogu da učinim servis %1 izvršnim, obustavljam izvršavanje."
 
-#: widgets/krun.cpp:989
+#: widgets/krun.cpp:1054
 #, kde-format
 msgid ""
 "<qt>Unable to run the command specified. The file or folder <b>%1</b> does "
@@ -9144,13 +9157,13 @@ msgstr ""
 "<qt>Ne mogu da izvršim zadatu naredbu. Datoteka ili direktorij <filename>%1</"
 "filename> ne postoji.</qt>"
 
-#: widgets/krun.cpp:1049
+#: widgets/krun.cpp:1114
 #, fuzzy, kde-format
 #| msgid "Could not change ownership for %1."
 msgid "Could not find any application or handler for %1"
 msgstr "Ne mogu da promijenim vlasništvo nad <filename>%1</filename>."
 
-#: widgets/krun.cpp:1671
+#: widgets/krun.cpp:1738
 #, kde-format
 msgid "Could not find the program '%1'"
 msgstr "Ne mogu da pronađem program <application>%1</application>"
