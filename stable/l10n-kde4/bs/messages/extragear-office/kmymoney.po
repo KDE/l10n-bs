@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmymoney\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-10-12 01:43+0200\n"
+"POT-Creation-Date: 2019-10-29 01:43+0100\n"
 "PO-Revision-Date: 2015-03-16 22:54+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1546,7 +1546,7 @@ msgstr "Aktivnost"
 #: kmymoney/plugins/csvexport/csvwriter.cpp:112
 #: kmymoney/plugins/csvimport/bankingwizardpage.ui:327
 #: kmymoney/plugins/csvimport/investmentwizardpage.ui:329
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:231
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:240
 #: kmymoney/reports/listtable.cpp:214 kmymoney/views/khomeview.cpp:430
 #: kmymoney/views/khomeview.cpp:485 kmymoney/views/khomeview.cpp:518
 #: kmymoney/widgets/register.cpp:509 kmymoney/widgets/transaction.cpp:971
@@ -1568,7 +1568,7 @@ msgstr "Datum"
 #: kmymoney/plugins/csvimport/bankingwizardpage.ui:571
 #: kmymoney/plugins/csvimport/investmentwizardpage.ui:495
 #: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:78
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:234
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:243
 #: kmymoney/reports/listtable.cpp:221
 #: kmymoney/widgets/kmymoneyreportconfigtab3decl.ui:167
 #: kmymoney/widgets/transaction.cpp:1018 kmymoney/widgets/transaction.cpp:1658
@@ -2176,7 +2176,7 @@ msgstr "Tecaj/Urednik Cjena"
 #: kmymoney/plugins/csvexport/csvwriter.cpp:112
 #: kmymoney/plugins/csvimport/redefinedlg.cpp:124
 #: kmymoney/plugins/onlinetasks/sepa/ui/sepacredittransferedit.ui:61
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:236
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:245
 #: kmymoney/reports/listtable.cpp:215 kmymoney/views/khomeview.cpp:439
 #: kmymoney/views/khomeview.cpp:494 kmymoney/views/khomeview.cpp:527
 #: kmymoney/views/kscheduledviewdecl.ui:99 kmymoney/widgets/register.cpp:69
@@ -2500,7 +2500,7 @@ msgstr "Sljedeći rok"
 #: kmymoney/dialogs/transactioneditor.cpp:952
 #: kmymoney/plugins/csvexport/csvwriter.cpp:112
 #: kmymoney/plugins/ofx/import/dialogs/konlinebankingsetupwizard.ui:318
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:232
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:241
 #: kmymoney/widgets/kmymoneyreportconfigtab3decl.ui:238
 #: kmymoney/widgets/register.cpp:70 kmymoney/widgets/transaction.cpp:942
 #, kde-format
@@ -3165,7 +3165,7 @@ msgstr "Tekst"
 #: kmymoney/dialogs/transactioneditor.cpp:1627
 #: kmymoney/dialogs/transactioneditor.cpp:1689
 #: kmymoney/dialogs/transactioneditor.cpp:1698
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:235
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:244
 #: kmymoney/reports/listtable.cpp:219
 #: kmymoney/widgets/kmymoneyreportconfigtab3decl.ui:295
 #: kmymoney/widgets/register.cpp:73 kmymoney/widgets/transaction.cpp:793
@@ -3353,7 +3353,7 @@ msgstr "Označi ništa"
 #: kmymoney/plugins/csvexport/csvwriter.cpp:112
 #: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:21
 #: kmymoney/plugins/kbanking/dialogs/kbaccountsettings.ui:68
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:233
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:242
 #: kmymoney/reports/listtable.cpp:217 kmymoney/views/kscheduledviewdecl.ui:94
 #: kmymoney/widgets/kmymoneyreportconfigtab3decl.ui:276
 #: kmymoney/widgets/register.cpp:68
@@ -9426,7 +9426,7 @@ msgstr ""
 "Barem jedno razdvajanje odabrane trasakcije je usaglašeno. Da li ipak želite "
 "obrisati transakciju?"
 
-#: kmymoney/kmymoney.cpp:5478 kmymoney/views/kgloballedgerview.cpp:1135
+#: kmymoney/kmymoney.cpp:5478 kmymoney/views/kgloballedgerview.cpp:1139
 #, kde-format
 msgid "Transaction already reconciled"
 msgstr "Transakcija je vec usklađena"
@@ -14972,7 +14972,17 @@ msgstr[0] "%1 očišćeno plaćanje"
 msgstr[1] "%1 očišćena plaćanja"
 msgstr[2] "%1 očišćenih plaćanja"
 
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:142
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:143
+#, fuzzy, kde-format
+#| msgid "%1 cleared payment"
+#| msgid_plural "%1 cleared payments in total"
+msgid "%1 cleared charge"
+msgid_plural "%1 cleared charges in total"
+msgstr[0] "%1 očišćeno plaćanje"
+msgstr[1] "%1 očišćena plaćanja"
+msgstr[2] "%1 očišćenih plaćanja"
+
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:145
 #, kde-format
 msgid "%1 cleared deposit"
 msgid_plural "%1 cleared deposits in total"
@@ -14980,17 +14990,17 @@ msgstr[0] "%1 očisćen depozit"
 msgstr[1] "%1 očisćena depozita"
 msgstr[2] "%1 očisćenih depozita"
 
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:148
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:151
 #, kde-format
 msgid "Ending balance on bank statement"
 msgstr "Krajnje stanje na bankovnom izvodu"
 
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:158
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:161
 #, kde-format
 msgid "Cleared balance"
 msgstr "Očišćeno stanje"
 
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:164
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:167
 #, kde-format
 msgid "%1 outstanding payment"
 msgid_plural "%1 outstanding payments in total"
@@ -14998,7 +15008,17 @@ msgstr[0] "%1 nepodmireno dugovanje"
 msgstr[1] "%1 ukupna nepodmirena dugovanja"
 msgstr[2] "%1 ukupnih nepodmirenih dugovanja"
 
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:170
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:174
+#, fuzzy, kde-format
+#| msgid "%1 outstanding payment"
+#| msgid_plural "%1 outstanding payments in total"
+msgid "%1 outstanding charge"
+msgid_plural "%1 outstanding charges in total"
+msgstr[0] "%1 nepodmireno dugovanje"
+msgstr[1] "%1 ukupna nepodmirena dugovanja"
+msgstr[2] "%1 ukupnih nepodmirenih dugovanja"
+
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:176
 #, kde-format
 msgid "%1 outstanding deposit"
 msgid_plural "%1 outstanding deposits in total"
@@ -15006,12 +15026,12 @@ msgstr[0] "%1 vanredni deposit"
 msgstr[1] "%1 vanredna deposita ukupno"
 msgstr[2] "%1 vanrednih deposita ukupno"
 
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:176
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:182
 #, kde-format
 msgid "Register balance as of %1"
 msgstr "Registriraj balans od %1"
 
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:209
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:215
 #, kde-format
 msgid "%1 payment after %2"
 msgid_plural "%1 payments after %2"
@@ -15019,7 +15039,17 @@ msgstr[0] "%1 plaćanje nakon %2"
 msgstr[1] "%1 plaćanja nakon %2"
 msgstr[2] "%1 plaćanja nakon %2"
 
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:215
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:222
+#, fuzzy, kde-format
+#| msgid "%1 payment after %2"
+#| msgid_plural "%1 payments after %2"
+msgid "%1 charge after %2"
+msgid_plural "%1 charges after %2"
+msgstr[0] "%1 plaćanje nakon %2"
+msgstr[1] "%1 plaćanja nakon %2"
+msgstr[2] "%1 plaćanja nakon %2"
+
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:224
 #, kde-format
 msgid "%1 deposit after %2"
 msgid_plural "%1 deposits after %2"
@@ -15027,17 +15057,17 @@ msgstr[0] "%1 depozit nakon %2"
 msgstr[1] "%1 depozita nakon %2"
 msgstr[2] "%1 depozita nakon %2"
 
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:221
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:230
 #, kde-format
 msgid "Register ending balance"
 msgstr "Registruj krajnji bilans"
 
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:240
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:249
 #, kde-format
 msgid "Outstanding payments"
 msgstr "Nepodmirena dugovanja"
 
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:273
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:282
 #, kde-format
 msgid "One outstanding payment of"
 msgid_plural "Total of %1 outstanding payments amounting to"
@@ -15045,12 +15075,28 @@ msgstr[0] "%1 nepodmiren dug od"
 msgstr[1] "%1 nepodmirena duga od"
 msgstr[2] "%1 nepodmirenih dugaova od"
 
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:276
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:286
+#, fuzzy, kde-format
+#| msgid "Outstanding payments"
+msgid "Outstanding charges"
+msgstr "Nepodmirena dugovanja"
+
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:286
 #, kde-format
 msgid "Outstanding deposits"
 msgstr "Nepodmireni depoziti"
 
-#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:309
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:321
+#, fuzzy, kde-format
+#| msgid "One outstanding payment of"
+#| msgid_plural "Total of %1 outstanding payments amounting to"
+msgid "One outstanding charge of"
+msgid_plural "Total of %1 outstanding charges amounting to"
+msgstr[0] "%1 nepodmiren dug od"
+msgstr[1] "%1 nepodmirena duga od"
+msgstr[2] "%1 nepodmirenih dugaova od"
+
+#: kmymoney/plugins/reconciliationreport/reconciliationreport.cpp:322
 #, kde-format
 msgid "One outstanding deposit of"
 msgid_plural "Total of %1 outstanding deposits amounting to"
@@ -16540,7 +16586,7 @@ msgid "Statement Payment Details"
 msgstr "Detalji izvješća plaćanja"
 
 #: kmymoney/views/kgloballedgerview.cpp:700
-#: kmymoney/views/kgloballedgerview.cpp:712
+#: kmymoney/views/kgloballedgerview.cpp:716
 #, kde-format
 msgid "%1 deposit (%2)"
 msgid_plural "%1 deposits (%2)"
@@ -16549,7 +16595,17 @@ msgstr[1] "%1 depozita  (%2)"
 msgstr[2] "%1 depozita  (%2)"
 
 #: kmymoney/views/kgloballedgerview.cpp:702
-#: kmymoney/views/kgloballedgerview.cpp:708
+#, fuzzy, kde-format
+#| msgid "%1 payment (%2)"
+#| msgid_plural "%1 payments (%2)"
+msgid "%1 charge (%2)"
+msgid_plural "%1 charges (%2)"
+msgstr[0] "%1 uplata (%2)"
+msgstr[1] "%1 uplate (%2)"
+msgstr[2] "%1 uplata (%2)"
+
+#: kmymoney/views/kgloballedgerview.cpp:704
+#: kmymoney/views/kgloballedgerview.cpp:712
 #, kde-format
 msgid "%1 payment (%2)"
 msgid_plural "%1 payments (%2)"
@@ -16557,51 +16613,51 @@ msgstr[0] "%1 uplata (%2)"
 msgstr[1] "%1 uplate (%2)"
 msgstr[2] "%1 uplata (%2)"
 
-#: kmymoney/views/kgloballedgerview.cpp:705
+#: kmymoney/views/kgloballedgerview.cpp:707
 #, kde-format
 msgctxt "%1 is a string, e.g. 7 deposits; %2 is a string, e.g. 4 payments"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: kmymoney/views/kgloballedgerview.cpp:768
+#: kmymoney/views/kgloballedgerview.cpp:772
 #, kde-format
 msgid "Statement: %1"
 msgstr "Izvod: %1"
 
-#: kmymoney/views/kgloballedgerview.cpp:769
-#: kmymoney/views/kgloballedgerview.cpp:785
+#: kmymoney/views/kgloballedgerview.cpp:773
+#: kmymoney/views/kgloballedgerview.cpp:789
 #, kde-format
 msgctxt "Cleared balance"
 msgid "Cleared: %1"
 msgstr "Očišćeno: %1"
 
-#: kmymoney/views/kgloballedgerview.cpp:777
+#: kmymoney/views/kgloballedgerview.cpp:781
 #, kde-format
 msgid "Last reconciled: %1"
 msgstr "Posljedni put usklađeno: %1"
 
-#: kmymoney/views/kgloballedgerview.cpp:779
+#: kmymoney/views/kgloballedgerview.cpp:783
 #, kde-format
 msgid "Never reconciled"
 msgstr "Nikad usklađeno"
 
-#: kmymoney/views/kgloballedgerview.cpp:837
+#: kmymoney/views/kgloballedgerview.cpp:841
 #, kde-format
 msgid "Difference: %1"
 msgstr "Razlika: %1"
 
-#: kmymoney/views/kgloballedgerview.cpp:841 kmymoney/views/kpayeesview.cpp:503
+#: kmymoney/views/kgloballedgerview.cpp:845 kmymoney/views/kpayeesview.cpp:503
 #: kmymoney/views/ktagsview.cpp:390
 #, kde-format
 msgid "Balance: %1"
 msgstr "Stanje: %1"
 
-#: kmymoney/views/kgloballedgerview.cpp:851
+#: kmymoney/views/kgloballedgerview.cpp:855
 #, kde-format
 msgid "Investment value: %1%2"
 msgstr "Investicijska vrijednost: %1 %2"
 
-#: kmymoney/views/kgloballedgerview.cpp:1132
+#: kmymoney/views/kgloballedgerview.cpp:1136
 #, kde-format
 msgid ""
 "At least one split of the selected transactions has been reconciled. Do you "
@@ -16610,7 +16666,7 @@ msgstr ""
 "Bar jedna podjela označene transakcije je usklađena. Želite li ipak "
 "nastaviti uređivati transakcije?"
 
-#: kmymoney/views/kgloballedgerview.cpp:1143
+#: kmymoney/views/kgloballedgerview.cpp:1147
 #, kde-format
 msgid ""
 "At least one split of the selected transactions has been frozen. Editing the "
@@ -16619,12 +16675,12 @@ msgstr ""
 "Bar jedna podjela označene transakcije je zamrznuta. Uređivanje transakcije "
 "stoga nije dozvoljeno."
 
-#: kmymoney/views/kgloballedgerview.cpp:1145
+#: kmymoney/views/kgloballedgerview.cpp:1149
 #, kde-format
 msgid "Transaction already frozen"
 msgstr "Transakcija je već zamrznuta"
 
-#: kmymoney/views/kgloballedgerview.cpp:1150
+#: kmymoney/views/kgloballedgerview.cpp:1154
 #, kde-format
 msgid ""
 "At least one split of the selected transaction references an account that "
@@ -16633,71 +16689,71 @@ msgstr ""
 "Bar jedna podjela označene transakcije ukazuje na nalog koji je zatvoren. "
 "Uređivanje transakcije stoga nije dozvoljeno."
 
-#: kmymoney/views/kgloballedgerview.cpp:1152
+#: kmymoney/views/kgloballedgerview.cpp:1156
 #, kde-format
 msgid "Account closed"
 msgstr "Nalog zatvoren"
 
-#: kmymoney/views/kgloballedgerview.cpp:1445
+#: kmymoney/views/kgloballedgerview.cpp:1449
 #, kde-format
 msgid "Cannot create transactions when no account is selected."
 msgstr "Nije moguće kreirati transakcije kad nije označen nijedan nalog."
 
-#: kmymoney/views/kgloballedgerview.cpp:1450
+#: kmymoney/views/kgloballedgerview.cpp:1454
 #, kde-format
 msgid "Cannot create transactions in the context of a category."
 msgstr "Nije moguće kreirati transakciju u okviru kategorije."
 
-#: kmymoney/views/kgloballedgerview.cpp:1455
+#: kmymoney/views/kgloballedgerview.cpp:1459
 #, kde-format
 msgid "Cannot create transactions in a closed account."
 msgstr "Nije moguće kreirati transakcije u zatvorenom nalogu."
 
-#: kmymoney/views/kgloballedgerview.cpp:1483
+#: kmymoney/views/kgloballedgerview.cpp:1487
 #, kde-format
 msgid "Cannot process transactions in account %1, which is closed."
 msgstr "Ne može biti obrađena transakcija u nalogu %1, koji je zatvoren."
 
-#: kmymoney/views/kgloballedgerview.cpp:1489
+#: kmymoney/views/kgloballedgerview.cpp:1493
 #, kde-format
 msgid "Cannot process transaction with focus if it is not selected."
 msgstr "Nije moguće obraditi transakciju s fokusom ako nije označena."
 
-#: kmymoney/views/kgloballedgerview.cpp:1521
+#: kmymoney/views/kgloballedgerview.cpp:1525
 #, kde-format
 msgid "Cannot edit transactions with frozen splits."
 msgstr "Nije moguće uređivati transakcije sa zamrznutim podjelama."
 
-#: kmymoney/views/kgloballedgerview.cpp:1532
+#: kmymoney/views/kgloballedgerview.cpp:1536
 #, kde-format
 msgid "Cannot edit transactions in the context of a category."
 msgstr "Nije moguće uređivanje transakcije u okviru kategorije."
 
-#: kmymoney/views/kgloballedgerview.cpp:1538
+#: kmymoney/views/kgloballedgerview.cpp:1542
 #, kde-format
 msgid "Cannot create or edit any transactions in Account %1 as it is closed"
 msgstr ""
 "Ne može biti kreirana ili uređena nijedna transakcija u Nalogu %1 koji je "
 "zatvoren"
 
-#: kmymoney/views/kgloballedgerview.cpp:1560
+#: kmymoney/views/kgloballedgerview.cpp:1564
 #, kde-format
 msgid "Cannot edit mixed investment action/type transactions together."
 msgstr "Ne mogu se urediti mješane akcije ulaganja/tipovi ulagana  zajedno."
 
-#: kmymoney/views/kgloballedgerview.cpp:1574
+#: kmymoney/views/kgloballedgerview.cpp:1578
 #, kde-format
 msgid ""
 "Cannot edit investment transactions and non-investment transactions together."
 msgstr ""
 "Nije moguće uređivanje investicijskih i neinvesticijskih transakcija zajedno."
 
-#: kmymoney/views/kgloballedgerview.cpp:1583
+#: kmymoney/views/kgloballedgerview.cpp:1587
 #, kde-format
 msgid "Cannot edit multiple split transactions at once."
 msgstr "Nije moguće uređivanje više podijeljenih transakcija odjednom."
 
-#: kmymoney/views/kgloballedgerview.cpp:1604
+#: kmymoney/views/kgloballedgerview.cpp:1608
 #, kde-format
 msgid "Cannot edit investment transactions in the context of this account."
 msgstr ""
