@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kstars\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-12-08 02:33+0100\n"
+"POT-Creation-Date: 2019-12-09 02:28+0100\n"
 "PO-Revision-Date: 2015-01-30 09:02+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <lokal@lugbih.org>\n"
@@ -2489,7 +2489,7 @@ msgstr ""
 #: ekos/align/align.cpp:1284 ekos/align/align.cpp:1442
 #: ekos/capture/capture.cpp:3642 ekos/capture/capture.cpp:4020
 #: ekos/guide/guide.cpp:519 ekos/scheduler/scheduler.cpp:3643
-#: ekos/scheduler/scheduler.cpp:3977 fitsviewer/fitstab.cpp:449
+#: ekos/scheduler/scheduler.cpp:3977 fitsviewer/fitstab.cpp:687
 #: tools/scriptbuilder.cpp:864 tools/scriptbuilder.cpp:962
 #, kde-format
 msgid "Invalid URL"
@@ -5234,7 +5234,7 @@ msgstr "Sekvencijalni red"
 #: ekos/align/align.cpp:1441 ekos/capture/capture.cpp:3641
 #: ekos/capture/capture.cpp:4019 ekos/guide/guide.cpp:518
 #: ekos/scheduler/scheduler.cpp:3642 ekos/scheduler/scheduler.cpp:3976
-#: fitsviewer/fitstab.cpp:448 tools/scriptbuilder.cpp:864
+#: fitsviewer/fitstab.cpp:686 tools/scriptbuilder.cpp:864
 #: tools/scriptbuilder.cpp:961
 #, kde-format
 msgid "Invalid URL: %1"
@@ -6799,7 +6799,7 @@ msgstr "Greška mjerenja visine"
 msgid "Correct Alt Error"
 msgstr "Koriguj grešku mjerenja visine"
 
-#: ekos/align/alignview.cpp:151 fitsviewer/fitsview.cpp:1010
+#: ekos/align/alignview.cpp:151 fitsviewer/fitsview.cpp:1095
 #, fuzzy, kde-format
 #| msgctxt "string from libindi, used in the config dialog"
 #| msgid "NGC"
@@ -6807,7 +6807,7 @@ msgctxt "North Celestial Pole"
 msgid "NCP"
 msgstr "NGC"
 
-#: ekos/align/alignview.cpp:153 fitsviewer/fitsview.cpp:1027
+#: ekos/align/alignview.cpp:153 fitsviewer/fitsview.cpp:1112
 #, fuzzy, kde-format
 #| msgctxt "string from libindi, used in the config dialog"
 #| msgid "NGC"
@@ -7228,22 +7228,30 @@ msgid "Turning off option --no-fits2fits"
 msgstr ""
 
 #: ekos/align/offlineastrometryparser.cpp:195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Index file %1 is missing. Astrometry.net would not be able to adequately "
+#| "solve plates until you install the missing index files. Download the "
+#| "index files from http://www.astrometry.net"
 msgid ""
 "Index file %1 is missing. Astrometry.net would not be able to adequately "
 "solve plates until you install the missing index files. Download the index "
-"files from http://www.astrometry.net"
+"files from http://astrometry.net"
 msgstr ""
 "Indeksna datoteka %1 nedostaje. Astrometry.net možda neće riješiti ploče dok "
 "ne instalirate nedostajuće indeksne datoteke. Preuzmite indeksne datoteke s "
 "http://www.astrometry.net"
 
 #: ekos/align/offlineastrometryparser.cpp:199
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Index files %1 to %2 are missing. Astrometry.net would not be able to "
+#| "adequately solve plates until you install the missing index files. "
+#| "Download the index files from http://www.astrometry.net"
 msgid ""
 "Index files %1 to %2 are missing. Astrometry.net would not be able to "
 "adequately solve plates until you install the missing index files. Download "
-"the index files from http://www.astrometry.net"
+"the index files from http://astrometry.net"
 msgstr ""
 "Indeksne datoteke %1 do %2 nedostaju. Astrometry.net možda neće riješiti "
 "ploče dok ne instalirate nedostajuće indeksne datoteke. Preuzmite indeksne "
@@ -9343,7 +9351,7 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, focusGroup)
 #. i18n: ectx: property (text), widget (QCheckBox, focusStepCheck)
 #: ekos/auxiliary/opslogs.ui:166 ekos/manager.cpp:2132 ekos/manager.ui:1189
-#: ekos/scheduler/scheduler.ui:278 fitsviewer/fitsviewer.cpp:366
+#: ekos/scheduler/scheduler.ui:278 fitsviewer/fitsviewer.cpp:359
 #, kde-format
 msgid "Focus"
 msgstr "Fokus"
@@ -9383,7 +9391,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, guideStepCheck)
 #: ekos/auxiliary/opslogs.ui:202 ekos/guide/guide.cpp:121
 #: ekos/guide/guide.ui:205 ekos/manager.cpp:2269 ekos/manager.ui:1386
-#: ekos/scheduler/scheduler.ui:253 fitsviewer/fitsviewer.cpp:370
+#: ekos/scheduler/scheduler.ui:253 fitsviewer/fitsviewer.cpp:363
 #, kde-format
 msgid "Guide"
 msgstr "Vodilja"
@@ -11554,14 +11562,23 @@ msgstr "Opcije kalibriranja"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ekos/capture/dslrinfo.ui:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><head/><body><p align=\"right\">For help: <a href=\"http://en."
+#| "wikipedia.org/wiki/Bortle_Dark-Sky_Scale\"><span style=\" text-"
+#| "decoration: underline; color:#004183;\">Wikipedia Link for Bortle dark-"
+#| "sky scale</span></a></p></body></html>"
 msgid ""
 "<html><head/><body><p>Please fill the required information below. This is a "
 "one-time setup. You can obtain these values from your camera manual or from "
-"online sources such as <a href=\"http://www.digicamdb.com/\"><span style=\" "
+"online sources such as <a href=\"https://www.digicamdb.com/\"><span style=\" "
 "text-decoration: underline; color:#007af4;\">Digital Camera Database</span></"
 "a>.</p></body></html>"
 msgstr ""
+"<html><head/><body><p align=\"right\">Za pomoć: <a href=\"http://en."
+"wikipedia.org/wiki/Bortle_Dark-Sky_Scale\"><span style=\" text-decoration: "
+"underline; color:#004183;\">Wikipedia veza za Bortle dark-sky skalu</span></"
+"a></p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_3)
 #: ekos/capture/dslrinfo.ui:58
@@ -15260,7 +15277,7 @@ msgstr "CCD"
 
 #. i18n: ectx: property (text), widget (QCheckBox, alignStepCheck)
 #: ekos/manager.cpp:2096 ekos/scheduler/scheduler.ui:231
-#: fitsviewer/fitsviewer.cpp:374
+#: fitsviewer/fitsviewer.cpp:367
 #, fuzzy, kde-format
 #| msgid "Alignment"
 msgid "Align"
@@ -15293,7 +15310,7 @@ msgstr ""
 msgid "Failed to update site location to %1. City not found."
 msgstr ""
 
-#: ekos/manager.cpp:2795 fitsviewer/fitsviewer.cpp:523 indi/indiccd.cpp:1714
+#: ekos/manager.cpp:2795 fitsviewer/fitsviewer.cpp:514 indi/indiccd.cpp:1714
 #, kde-format
 msgid "Preview"
 msgstr "Predpregled"
@@ -15482,7 +15499,7 @@ msgstr "Opcije..."
 #. i18n: ectx: property (text), widget (QPushButton, clearB)
 #. i18n: ectx: property (text), widget (QPushButton, ClearButton)
 #. i18n: ectx: property (text), widget (QPushButton, Clear)
-#: ekos/manager.ui:1654 fitsviewer/fitstab.cpp:140 indi/guimanager.cpp:73
+#: ekos/manager.ui:1654 fitsviewer/fitstab.cpp:378 indi/guimanager.cpp:73
 #: tools/conjunctions.ui:205 tools/eclipsetool.ui:167 tools/modcalcgeod.ui:160
 #, kde-format
 msgid "Clear"
@@ -17836,14 +17853,23 @@ msgstr "INDI server"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: ekos/profilewizard.ui:949
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><head/><body><p align=\"right\">For help: <a href=\"http://en."
+#| "wikipedia.org/wiki/Bortle_Dark-Sky_Scale\"><span style=\" text-"
+#| "decoration: underline; color:#004183;\">Wikipedia Link for Bortle dark-"
+#| "sky scale</span></a></p></body></html>"
 msgid ""
 "<html><head/><body><p><span style=\" font-weight:600;\">Tip</span>: External "
-"INDI Server can be <a href=\"http://www.cloudmakers.eu/indiserver/\"><span "
+"INDI Server can be <a href=\"http://www.cloudmakers.eu/indigoserver/\"><span "
 "style=\" text-decoration: underline; color:#007af4;\">INDI Server for OSX</"
 "span></a> or an INDI Server launched manually locally. If unsure, select "
 "Internal INDI Server.</p></body></html>"
 msgstr ""
+"<html><head/><body><p align=\"right\">Za pomoć: <a href=\"http://en."
+"wikipedia.org/wiki/Bortle_Dark-Sky_Scale\"><span style=\" text-decoration: "
+"underline; color:#004183;\">Wikipedia veza za Bortle dark-sky skalu</span></"
+"a></p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #: ekos/profilewizard.ui:971
@@ -17963,7 +17989,7 @@ msgid ""
 "<html><head/><body><p>If you plan to use SkySafari to monitor and/or control "
 "your mount, check this box to start INDI SkySafari Server. You can connect "
 "SkySafari to this server and it shall enable you to connect and control your "
-"mount. For more details, please check the <a href=\"http://indilib.org/"
+"mount. For more details, please check the <a href=\"https://indilib.org/"
 "devices/telescopes/skysafari.html\"><span style=\" text-decoration: "
 "underline; color:#007af4;\">INDI SkySafari Documentation.</span></a></p></"
 "body></html>"
@@ -20372,14 +20398,14 @@ msgid "Y Offset:"
 msgstr "Pomak"
 
 #. i18n: ectx: property (text), widget (QLineEdit, statusEdit)
-#: fitsviewer/fitsdebayer.ui:130 fitsviewer/fitsviewer.cpp:397
-#: fitsviewer/fitsviewer.cpp:992 fitsviewer/fitsviewer.cpp:1009
+#: fitsviewer/fitsdebayer.ui:130 fitsviewer/fitsviewer.cpp:390
+#: fitsviewer/fitsviewer.cpp:981
 #, fuzzy, kde-format
 msgid "Ready."
 msgstr "Reading"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, fitsHeaderDialog)
-#: fitsviewer/fitsheaderdialog.ui:14 fitsviewer/fitstab.cpp:132
+#: fitsviewer/fitsheaderdialog.ui:14 fitsviewer/fitstab.cpp:370
 #: fitsviewer/fitsviewer.cpp:143
 #, kde-format
 msgid "FITS Header"
@@ -20392,7 +20418,7 @@ msgid "Keyword"
 msgstr "Ključna riječ"
 
 #. i18n: ectx: property (text), widget (QTableWidget, tableWidget)
-#: fitsviewer/fitsheaderdialog.ui:53 fitsviewer/fitstab.cpp:308
+#: fitsviewer/fitsheaderdialog.ui:53 fitsviewer/fitstab.cpp:546
 #, kde-format
 msgid "Value"
 msgstr "Vrijednost"
@@ -20447,7 +20473,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, FITSHistogramUI)
-#: fitsviewer/fitshistogramui.ui:32 fitsviewer/fitstab.cpp:129
+#: fitsviewer/fitshistogramui.ui:32 fitsviewer/fitstab.cpp:367
 #: fitsviewer/fitsviewer.cpp:124
 #, kde-format
 msgid "Histogram"
@@ -20539,12 +20565,12 @@ msgstr "HFR:"
 msgid "Continue Slew"
 msgstr "Prekinuti umnozavanje"
 
-#: fitsviewer/fitstab.cpp:57
+#: fitsviewer/fitstab.cpp:65
 #, kde-format
 msgid "Save Changes to FITS?"
 msgstr "Spasiti izmjene FITS-a?"
 
-#: fitsviewer/fitstab.cpp:58
+#: fitsviewer/fitstab.cpp:66
 #, kde-format
 msgid ""
 "The current FITS file has unsaved changes.  Would you like to save before "
@@ -20554,63 +20580,63 @@ msgstr ""
 "nego što je zatvorite?"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, statForm)
-#: fitsviewer/fitstab.cpp:127 fitsviewer/fitsviewer.cpp:185
+#: fitsviewer/fitstab.cpp:365 fitsviewer/fitsviewer.cpp:178
 #: fitsviewer/statform.ui:14
 #, kde-format
 msgid "Statistics"
 msgstr "Statistika"
 
-#: fitsviewer/fitstab.cpp:137
+#: fitsviewer/fitstab.cpp:375
 #, fuzzy, kde-format
 #| msgid "Reference Images:"
 msgid "Recent Images"
 msgstr "Referentne slike:"
 
-#: fitsviewer/fitstab.cpp:320
+#: fitsviewer/fitstab.cpp:558
 #, fuzzy, kde-format
 #| msgid "RA"
 msgctxt "Red"
 msgid "R"
 msgstr "RA"
 
-#: fitsviewer/fitstab.cpp:398
+#: fitsviewer/fitstab.cpp:636
 #, fuzzy, kde-format
 msgid "Save FITS"
 msgstr "Snimi"
 
-#: fitsviewer/fitstab.cpp:436
+#: fitsviewer/fitstab.cpp:674
 #, kde-format
 msgid "FITS file save error: %1"
 msgstr "FITS greška snimanja: %1"
 
-#: fitsviewer/fitstab.cpp:436
+#: fitsviewer/fitstab.cpp:674
 #, kde-format
 msgid "FITS Save"
 msgstr "FITS Snimi"
 
 #. i18n("File saved."), 3);
-#: fitsviewer/fitstab.cpp:442
+#: fitsviewer/fitstab.cpp:680
 #, kde-format
 msgid "File saved to %1"
 msgstr "Datoteka snimljena na %1"
 
-#: fitsviewer/fitsview.cpp:263 fitsviewer/fitsview.cpp:273
+#: fitsviewer/fitsview.cpp:346 fitsviewer/fitsview.cpp:356
 #, fuzzy, kde-format
 #| msgid "Saving of the image %1 failed."
 msgid "Rescaling image failed."
 msgstr "Snimanje slike %1 nije uspjelo."
 
-#: fitsviewer/fitsview.cpp:485
+#: fitsviewer/fitsview.cpp:563
 #, kde-format
 msgid "Cannot zoom in further due to active limited resources mode."
 msgstr ""
 
-#: fitsviewer/fitsview.cpp:1354
+#: fitsviewer/fitsview.cpp:1443
 #, fuzzy, kde-format
 msgid "Finding stars..."
 msgstr "Dodavanje zvijezde"
 
-#: fitsviewer/fitsview.cpp:1359
+#: fitsviewer/fitsview.cpp:1448
 #, kde-format
 msgid "1 star detected."
 msgid_plural "%1 stars detected."
@@ -20618,71 +20644,71 @@ msgstr[0] "%1 zvijezda detektovana."
 msgstr[1] "%1 zvijezde detektovane."
 msgstr[2] "%1 zvijezda detektovano."
 
-#: fitsviewer/fitsview.cpp:1568
+#: fitsviewer/fitsview.cpp:1661
 #, kde-format
 msgid "Zoom In"
 msgstr ""
 
-#: fitsviewer/fitsview.cpp:1571
+#: fitsviewer/fitsview.cpp:1664
 #, kde-format
 msgid "Zoom Out"
 msgstr ""
 
-#: fitsviewer/fitsview.cpp:1574
+#: fitsviewer/fitsview.cpp:1667
 #, fuzzy, kde-format
 #| msgid "&Default Zoom"
 msgid "Default Zoom"
 msgstr "&Podrazumijevani zoom"
 
-#: fitsviewer/fitsview.cpp:1577
+#: fitsviewer/fitsview.cpp:1670
 #, kde-format
 msgid "Zoom to Fit"
 msgstr ""
 
-#: fitsviewer/fitsview.cpp:1580
+#: fitsviewer/fitsview.cpp:1673
 #, fuzzy, kde-format
 #| msgid "Auto Stretch"
 msgid "Toggle Stretch"
 msgstr "Automatsko razvlacenje"
 
-#: fitsviewer/fitsview.cpp:1588 fitsviewer/fitsviewer.cpp:190
+#: fitsviewer/fitsview.cpp:1681 fitsviewer/fitsviewer.cpp:183
 #, fuzzy, kde-format
 #| msgid "Crosshairs"
 msgid "Show Cross Hairs"
 msgstr "Krst"
 
-#: fitsviewer/fitsview.cpp:1592 fitsviewer/fitsviewer.cpp:196
+#: fitsviewer/fitsview.cpp:1685 fitsviewer/fitsviewer.cpp:189
 #, fuzzy, kde-format
 #| msgid "Show satellites"
 msgid "Show Pixel Gridlines"
 msgstr "Pokaži satelite"
 
-#: fitsviewer/fitsview.cpp:1597 fitsviewer/fitsview.cpp:1706
+#: fitsviewer/fitsview.cpp:1690 fitsviewer/fitsview.cpp:1799
 #, fuzzy, kde-format
 msgid "Detect Stars in Image"
 msgstr "Otvori FITS..."
 
-#: fitsviewer/fitsview.cpp:1603 fitsviewer/starprofileviewer.cpp:63
+#: fitsviewer/fitsview.cpp:1696 fitsviewer/starprofileviewer.cpp:63
 #, fuzzy, kde-format
 #| msgid "Arc file"
 msgid "View Star Profile"
 msgstr "Arc datoteka"
 
-#: fitsviewer/fitsview.cpp:1613 fitsviewer/fitsviewer.cpp:202
-#: fitsviewer/fitsviewer.cpp:863
+#: fitsviewer/fitsview.cpp:1706 fitsviewer/fitsviewer.cpp:195
+#: fitsviewer/fitsviewer.cpp:852
 #, fuzzy, kde-format
 #| msgid "Equatorial Coordinates"
 msgid "Show Equatorial Gridlines"
 msgstr "Ekvatorijalne koordinate"
 
-#: fitsviewer/fitsview.cpp:1619 fitsviewer/fitsviewer.cpp:209
-#: fitsviewer/fitsviewer.cpp:865
+#: fitsviewer/fitsview.cpp:1712 fitsviewer/fitsviewer.cpp:202
+#: fitsviewer/fitsviewer.cpp:854
 #, fuzzy, kde-format
 #| msgid "Show Objects"
 msgid "Show Objects in Image"
 msgstr "Prikaži objekte"
 
-#: fitsviewer/fitsview.cpp:1625
+#: fitsviewer/fitsview.cpp:1718
 #, fuzzy, kde-format
 #| msgid "Center in Telescope"
 msgid "Center Telescope"
@@ -20742,47 +20768,40 @@ msgstr "Vertikalno"
 msgid "Debayer..."
 msgstr ""
 
-#: fitsviewer/fitsviewer.cpp:153 fitsviewer/fitsviewer.cpp:401
-#: fitsviewer/fitsviewer.cpp:600 fitsviewer/fitsviewer.cpp:1005
-#, fuzzy, kde-format
-#| msgid "Auto stretch"
-msgid "Toggle Auto stretch"
-msgstr "Automatsko rastezanje"
-
-#: fitsviewer/fitsviewer.cpp:216 fitsviewer/fitsviewer.cpp:875
+#: fitsviewer/fitsviewer.cpp:209 fitsviewer/fitsviewer.cpp:864
 #, kde-format
 msgid ""
 "Center Telescope\n"
 "*No Telescopes Detected*"
 msgstr ""
 
-#: fitsviewer/fitsviewer.cpp:223
+#: fitsviewer/fitsviewer.cpp:216
 #, kde-format
 msgid "Zoom To Fit"
 msgstr ""
 
-#: fitsviewer/fitsviewer.cpp:229 fitsviewer/fitsviewer.cpp:593
-#: fitsviewer/fitsviewer.cpp:607 fitsviewer/fitsviewer.cpp:957
+#: fitsviewer/fitsviewer.cpp:222 fitsviewer/fitsviewer.cpp:584
+#: fitsviewer/fitsviewer.cpp:596 fitsviewer/fitsviewer.cpp:946
 #, kde-format
 msgid "View 3D Graph"
 msgstr ""
 
-#: fitsviewer/fitsviewer.cpp:235 fitsviewer/fitsviewer.cpp:965
+#: fitsviewer/fitsviewer.cpp:228 fitsviewer/fitsviewer.cpp:954
 #, kde-format
 msgid "Mark Stars"
 msgstr "Označi zvijezde"
 
-#: fitsviewer/fitsviewer.cpp:251
+#: fitsviewer/fitsviewer.cpp:244
 #, kde-format
 msgid "KStars FITS Viewer"
 msgstr "KStars FITS Preglednik"
 
-#: fitsviewer/fitsviewer.cpp:362
+#: fitsviewer/fitsviewer.cpp:355
 #, kde-format
 msgid "Calibrate"
 msgstr "Kalibriraj"
 
-#: fitsviewer/fitsviewer.cpp:572
+#: fitsviewer/fitsviewer.cpp:563
 #, kde-format
 msgid "%1 star detected."
 msgid_plural "%1 stars detected."
@@ -20790,47 +20809,47 @@ msgstr[0] "%1 zvijezda detektovana."
 msgstr[1] "%1 zvijezde detektovane."
 msgstr[2] "%1 zvijezda detektovano."
 
-#: fitsviewer/fitsviewer.cpp:594 fitsviewer/fitsviewer.cpp:926
+#: fitsviewer/fitsviewer.cpp:585 fitsviewer/fitsviewer.cpp:915
 #, fuzzy, kde-format
 #| msgid "Crosshairs"
 msgid "Cross Hairs"
 msgstr "Krst"
 
-#: fitsviewer/fitsviewer.cpp:595
+#: fitsviewer/fitsviewer.cpp:586
 #, fuzzy, kde-format
 #| msgid "Equatorial Coordinates"
 msgid "Equatorial Gridines"
 msgstr "Ekvatorijalne koordinate"
 
-#: fitsviewer/fitsviewer.cpp:596 fitsviewer/fitsviewer.cpp:941
+#: fitsviewer/fitsviewer.cpp:587 fitsviewer/fitsviewer.cpp:930
 #, fuzzy, kde-format
 #| msgid "Show Objects"
 msgid "Objects in Image"
 msgstr "Prikaži objekte"
 
-#: fitsviewer/fitsviewer.cpp:597 fitsviewer/fitsviewer.cpp:949
+#: fitsviewer/fitsviewer.cpp:588 fitsviewer/fitsviewer.cpp:938
 #, fuzzy, kde-format
 #| msgid "Show satellites"
 msgid "Pixel Gridlines"
 msgstr "Pokaži satelite"
 
-#: fitsviewer/fitsviewer.cpp:613
+#: fitsviewer/fitsviewer.cpp:602
 #, fuzzy, kde-format
 msgid "Open FITS Image"
 msgstr "Otvori FITS..."
 
-#: fitsviewer/fitsviewer.cpp:841
+#: fitsviewer/fitsviewer.cpp:830
 #, kde-format
 msgid "Hide %1"
 msgstr ""
 
-#: fitsviewer/fitsviewer.cpp:846
+#: fitsviewer/fitsviewer.cpp:835
 #, fuzzy, kde-format
 #| msgid "Show"
 msgid "Show %1"
 msgstr "Prikaži"
 
-#: fitsviewer/fitsviewer.cpp:870
+#: fitsviewer/fitsviewer.cpp:859
 #, fuzzy, kde-format
 #| msgid "Center in Telescope"
 msgid ""
@@ -20838,14 +20857,14 @@ msgid ""
 "*Ready*"
 msgstr "Centriraj na teleskopu"
 
-#: fitsviewer/fitsviewer.cpp:881
+#: fitsviewer/fitsviewer.cpp:870
 #, kde-format
 msgid ""
 "Show Equatorial Gridlines\n"
 "*No WCS Info*"
 msgstr ""
 
-#: fitsviewer/fitsviewer.cpp:883
+#: fitsviewer/fitsviewer.cpp:872
 #, fuzzy, kde-format
 #| msgid "Center in Telescope"
 msgid ""
@@ -20853,33 +20872,28 @@ msgid ""
 "*No WCS Info*"
 msgstr "Centriraj na teleskopu"
 
-#: fitsviewer/fitsviewer.cpp:885
+#: fitsviewer/fitsviewer.cpp:874
 #, kde-format
 msgid ""
 "Show Objects in Image\n"
 "*No WCS Info*"
 msgstr ""
 
-#: fitsviewer/fitsviewer.cpp:933
+#: fitsviewer/fitsviewer.cpp:922
 #, fuzzy, kde-format
 #| msgid "Equatorial Coordinates"
 msgid "Equatorial Gridlines"
 msgstr "Ekvatorijalne koordinate"
 
-#: fitsviewer/fitsviewer.cpp:970
+#: fitsviewer/fitsviewer.cpp:959
 #, kde-format
 msgid "Unmark Stars"
 msgstr "Odznači zvijezde"
 
-#: fitsviewer/fitsviewer.cpp:986
+#: fitsviewer/fitsviewer.cpp:975
 #, fuzzy, kde-format
 msgid "Processing %1..."
 msgstr "Fokusiranje..."
-
-#: fitsviewer/fitsviewer.cpp:1001
-#, kde-format
-msgid "Processing toggle stretch"
-msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, FITSViewerGroup)
 #: fitsviewer/opsfits.ui:37
@@ -106026,7 +106040,7 @@ msgstr ""
 #: tips:53
 #, kde-format
 msgid ""
-"\t\t<p>Help us improve the KStars project! Visit our website at http://edu."
+"\t\t<p>Help us improve the KStars project! Visit our website at https://edu."
 "kde.org/kstars and join our mailing list at kstars-devel@kde.org to learn "
 "more. We welcome you to help us with bug reports, contributions of astronomy "
 "know-how and knowledge, code contributions, translations and many more kinds "
@@ -111611,9 +111625,14 @@ msgstr "9  "
 
 #. i18n: ectx: property (text), widget (QLabel, bortleHelpText)
 #: tools/whatsinteresting/wilpsettings.ui:147
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<html><head/><body><p align=\"right\">For help: <a href=\"http://en."
+#| "wikipedia.org/wiki/Bortle_Dark-Sky_Scale\"><span style=\" text-"
+#| "decoration: underline; color:#004183;\">Wikipedia Link for Bortle dark-"
+#| "sky scale</span></a></p></body></html>"
 msgid ""
-"<html><head/><body><p align=\"right\">For help: <a href=\"http://en."
+"<html><head/><body><p align=\"right\">For help: <a href=\"https://en."
 "wikipedia.org/wiki/Bortle_Dark-Sky_Scale\"><span style=\" text-decoration: "
 "underline; color:#004183;\">Wikipedia Link for Bortle dark-sky scale</span></"
 "a></p></body></html>"
@@ -112874,6 +112893,11 @@ msgid "Set the color for the background."
 msgstr "Postavi boju pozadine."
 
 #, fuzzy
+#~| msgid "Auto stretch"
+#~ msgid "Toggle Auto stretch"
+#~ msgstr "Automatsko rastezanje"
+
+#, fuzzy
 #~ msgid "Image is saturated."
 #~ msgstr "Slika dohvaćena..."
 
@@ -113117,23 +113141,6 @@ msgstr "Postavi boju pozadine."
 #~| msgid "Delay:"
 #~ msgid "Delay (se&c):"
 #~ msgstr "Zastoj:"
-
-#, fuzzy
-#~| msgid ""
-#~| "<html><head/><body><p align=\"right\">For help: <a href=\"http://en."
-#~| "wikipedia.org/wiki/Bortle_Dark-Sky_Scale\"><span style=\" text-"
-#~| "decoration: underline; color:#004183;\">Wikipedia Link for Bortle dark-"
-#~| "sky scale</span></a></p></body></html>"
-#~ msgid ""
-#~ "<html><head/><body><p>To use Ekos with your equipment locally on Windows, "
-#~ "you need to download and install <a href=\"http://www.cloudmakers.eu/"
-#~ "windi/\"><span style=\" text-decoration: underline; color:#007af4;\">INDI "
-#~ "Server for Windows</span></a>.</p></body></html>"
-#~ msgstr ""
-#~ "<html><head/><body><p align=\"right\">Za pomoć: <a href=\"http://en."
-#~ "wikipedia.org/wiki/Bortle_Dark-Sky_Scale\"><span style=\" text-"
-#~ "decoration: underline; color:#004183;\">Wikipedia veza za Bortle dark-sky "
-#~ "skalu</span></a></p></body></html>"
 
 #, fuzzy
 #~| msgctxt "string from libindi, used in the config dialog"
