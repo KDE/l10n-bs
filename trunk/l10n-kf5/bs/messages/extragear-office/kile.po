@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-12-02 02:48+0100\n"
+"POT-Creation-Date: 2019-12-16 02:46+0100\n"
 "PO-Revision-Date: 2015-02-09 09:30+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bhld@linux.org.ba>\n"
@@ -512,7 +512,7 @@ msgstr "Ime:"
 msgid "Directory:"
 msgstr "Direktorij:"
 
-#: dialogs/findfilesdialog.cpp:119 dialogs/texdocumentationdialog.cpp:70
+#: dialogs/findfilesdialog.cpp:119 dialogs/texdocumentationdialog.cpp:69
 #, kde-format
 msgid "Search"
 msgstr "Pretraga"
@@ -592,7 +592,7 @@ msgid "Scan directories recursively"
 msgstr "Rekurzivno skeniranje direktorija"
 
 #: dialogs/findfilesdialog.cpp:216 dialogs/findfilesdialog.cpp:586
-#: dialogs/texdocumentationdialog.cpp:79
+#: dialogs/texdocumentationdialog.cpp:78
 #, kde-format
 msgid "&Search"
 msgstr "&Traži"
@@ -2436,13 +2436,13 @@ msgid "The password should be at least 6 characters long."
 msgstr "Šifra mora biti duga najmanje 6 karaktera."
 
 #: dialogs/pdf-wizard/pdfdialog.cpp:1773 dialogs/postscriptdialog.cpp:513
-#: dialogs/texdocumentationdialog.cpp:550
+#: dialogs/texdocumentationdialog.cpp:431
 #, kde-format
 msgid "<center>"
 msgstr "<center>"
 
 #: dialogs/pdf-wizard/pdfdialog.cpp:1773 dialogs/postscriptdialog.cpp:513
-#: dialogs/texdocumentationdialog.cpp:550
+#: dialogs/texdocumentationdialog.cpp:432
 #, kde-format
 msgid "</center>"
 msgstr "</center>"
@@ -2824,8 +2824,7 @@ msgstr "Gotovo"
 msgid "Execute"
 msgstr "Izvrši"
 
-#: dialogs/postscriptdialog.cpp:197 dialogs/texdocumentationdialog.cpp:291
-#: dialogs/texdocumentationdialog.cpp:325 quickpreview.cpp:339
+#: dialogs/postscriptdialog.cpp:197 quickpreview.cpp:339
 #, kde-format
 msgid "Could not create a temporary file."
 msgstr "Nisam mogao da napravim privremenu datoteku."
@@ -4686,29 +4685,27 @@ msgstr "Nema sadržaja umetnutog u tablicu prijenosnik je prazan."
 msgid "Empty Clipboard"
 msgstr "Prazan Međuspremnik"
 
-#: dialogs/texdocumentationdialog.cpp:58 kile.cpp:1025
+#: dialogs/texdocumentationdialog.cpp:57 kile.cpp:1025
 #, kde-format
 msgid "Documentation Browser"
 msgstr "Preglednik dokumentacije"
 
-#: dialogs/texdocumentationdialog.cpp:67 dialogs/texdocumentationdialog.cpp:500
+#: dialogs/texdocumentationdialog.cpp:66 dialogs/texdocumentationdialog.cpp:381
 #: kilestdactions.cpp:42
 #, kde-format
 msgid "Table of Contents"
 msgstr "Sadržaj"
 
-#: dialogs/texdocumentationdialog.cpp:84
+#: dialogs/texdocumentationdialog.cpp:83
 #, kde-format
 msgid ""
-"A list of available documents, which are listed in 'texdoctk.dat', that come "
-"with TexLive/teTeX. Double clicking with the mouse or pressing the space key "
-"will open a viewer to show this file."
+"<p>A list of the documentation provided by the installed TeX distribution."
+"<br/><p>Double clicking on an item or pressing the space key will open a "
+"viewer to show the corresponding file.</p><p>Items that are grayed out are "
+"not installed.</p>"
 msgstr ""
-"Popis dostupnih dokumenata, koje su navedene u 'texdoctk.dat', koji dolaze s "
-"TexLive / teTeX. Dvaput klikom miša ili pritiskom na tipku prostor će se "
-"otvoriti, preglednik će pokazati ovu sliku."
 
-#: dialogs/texdocumentationdialog.cpp:85
+#: dialogs/texdocumentationdialog.cpp:86
 #, kde-format
 msgid ""
 "You can choose a keyword to show only document files that are related to "
@@ -4717,78 +4714,81 @@ msgstr ""
 "Možete odabrati ključne riječi za prikaz samo dokumenta datoteka koje su "
 "vezane za tu ključnu riječ."
 
-#: dialogs/texdocumentationdialog.cpp:86
+#: dialogs/texdocumentationdialog.cpp:87
 #, kde-format
 msgid "Start the search for the chosen keyword."
 msgstr "Započnite potragu za odabranu ključnu riječ."
 
-#: dialogs/texdocumentationdialog.cpp:88
+#: dialogs/texdocumentationdialog.cpp:89
 #, fuzzy, kde-format
 #| msgid "Reset TOC to show all available files."
 msgid "Reset list to all available documentation files."
 msgstr "Ponovno prikazati TOC sve dostupne datoteke."
 
-#: dialogs/texdocumentationdialog.cpp:89
+#: dialogs/texdocumentationdialog.cpp:90
 #, fuzzy, kde-format
 #| msgid "&Search"
 msgid "Cancel &Search"
 msgstr "&Traži"
 
-#: dialogs/texdocumentationdialog.cpp:136
+#: dialogs/texdocumentationdialog.cpp:137
 #, kde-format
 msgid "Could not read 'texdoctk.dat'."
 msgstr "Ne mogu očitati 'texdoctk.dat'."
 
-#: dialogs/texdocumentationdialog.cpp:313
-#, kde-format
-msgid "Could not read the style file."
-msgstr "Ne mogu pročitati stil datoteke."
-
-#: dialogs/texdocumentationdialog.cpp:394
+#: dialogs/texdocumentationdialog.cpp:300
 #, kde-format
 msgid "No KDE service found for this file."
 msgstr "Ne mogu pronaći KDE uslugu za tu datoteku."
 
-#: dialogs/texdocumentationdialog.cpp:428
-#, kde-format
-msgid "Could not find '%1'"
-msgstr "Ne mogu pronaći '%1'"
+#: dialogs/texdocumentationdialog.cpp:328
+#, fuzzy, kde-format
+#| msgid "Could not find template: %1"
+msgid "Could not find the documentation file '%1'"
+msgstr "Nisam mogao da pronađem šablon: %1"
 
-#: dialogs/texdocumentationdialog.cpp:463
+#: dialogs/texdocumentationdialog.cpp:344
 #, kde-format
 msgid "No keyword given."
 msgstr "Nije data ključna riječ."
 
-#: dialogs/texdocumentationdialog.cpp:489
+#: dialogs/texdocumentationdialog.cpp:370
 #, kde-format
 msgid "Search results for keyword '%1'"
 msgstr "Rezultati pretrage za ključne riječi '%1'"
 
-#: dialogs/texdocumentationdialog.cpp:492
+#: dialogs/texdocumentationdialog.cpp:373
 #, kde-format
 msgid "No documents found for keyword '%1'."
 msgstr "Dokumenti nisu pronađeni za ključne riječi '%1'."
 
-#: dialogs/texdocumentationdialog.cpp:550
-#, kde-format
+#: dialogs/texdocumentationdialog.cpp:431
+#, fuzzy, kde-format
+#| msgid ""
+#| "Could not determine the search paths of TexLive/teTeX or file 'texdoctk."
+#| "dat'.<br> Hence, this dialog is unable to provide any useful information."
 msgid ""
 "Could not determine the search paths of TexLive/teTeX or file 'texdoctk.dat'."
-"<br> Hence, this dialog is unable to provide any useful information."
+"<br/>Unfortunately, Kile cannot show any useful information."
 msgstr ""
 "Nije moguće utvrditi pretraživanja dijela TexLive / teTeX ili datoteke "
 "'texdoctk.dat'. <br> Dakle, ovaj dijalog je u mogućnosti dati korisne "
 "informacije."
 
-#: dialogs/texdocumentationdialog.cpp:550
+#: dialogs/texdocumentationdialog.cpp:432
 #, kde-format
 msgid "TexDoc Dialog"
 msgstr "TexDoc Dialog"
 
-#: dialogs/texdocumentationdialog.cpp:562
-#, kde-format
+#: dialogs/texdocumentationdialog.cpp:444
+#, fuzzy, kde-format
+#| msgid ""
+#| "Could not determine the search paths of TexLive or file 'texdoctk.dat'."
+#| "<br> Hence, this dialog is unable to provide any useful information."
 msgid ""
-"Could not determine the search paths of TexLive or file 'texdoctk.dat'.<br> "
-"Hence, this dialog is unable to provide any useful information."
+"Could not determine the installation path of your TeX distribution or find "
+"the file 'texdoctk.dat'.<br>Hence, we cannot provide you with an overview of "
+"the installed TeX documentation."
 msgstr ""
 "Nije moguće utvrditi pretraživanja dijela TexLive ili datoteke 'texdoctk."
 "dat'. <br> Dakle, ovaj dijalog je u mogućnosti dati korisne informacije."
@@ -13158,6 +13158,21 @@ msgstr "Prikaži korisnički meni u LaTeX meniju"
 #| msgid "Show the user menu in the menu bar"
 msgid "Show the &user menu in the menu bar"
 msgstr "Prikaži korisnički meni iz trake menija"
+
+#~ msgid ""
+#~ "A list of available documents, which are listed in 'texdoctk.dat', that "
+#~ "come with TexLive/teTeX. Double clicking with the mouse or pressing the "
+#~ "space key will open a viewer to show this file."
+#~ msgstr ""
+#~ "Popis dostupnih dokumenata, koje su navedene u 'texdoctk.dat', koji "
+#~ "dolaze s TexLive / teTeX. Dvaput klikom miša ili pritiskom na tipku "
+#~ "prostor će se otvoriti, preglednik će pokazati ovu sliku."
+
+#~ msgid "Could not read the style file."
+#~ msgstr "Ne mogu pročitati stil datoteke."
+
+#~ msgid "Could not find '%1'"
+#~ msgstr "Ne mogu pronaći '%1'"
 
 #~ msgid ""
 #~ "Sorry, but you do not have the necessary permissions to remove the "
