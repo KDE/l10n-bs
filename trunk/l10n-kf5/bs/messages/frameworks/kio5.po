@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkio\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-05 02:56+0200\n"
+"POT-Creation-Date: 2020-05-09 03:01+0200\n"
 "PO-Revision-Date: 2013-01-14 19:16+0000\n"
 "Last-Translator: Admir Salkanović <asalkanovi2@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -57,13 +57,13 @@ msgstr "Ne mogu da napravim U/I zahvat: %1"
 msgid "Folder Already Exists"
 msgstr "Direktorij već postoji"
 
-#: core/copyjob.cpp:1484 core/copyjob.cpp:2070 core/filecopyjob.cpp:350
+#: core/copyjob.cpp:1484 core/copyjob.cpp:2043 core/filecopyjob.cpp:350
 #: core/job_error.cpp:516 widgets/paste.cpp:90
 #, kde-format
 msgid "File Already Exists"
 msgstr "Datoteka već postoji"
 
-#: core/copyjob.cpp:1484 core/copyjob.cpp:2070
+#: core/copyjob.cpp:1484 core/copyjob.cpp:2043
 #, kde-format
 msgid "Already Exists as Folder"
 msgstr "Već postoji kao direktorij"
@@ -2327,8 +2327,8 @@ msgstr ""
 msgid "Undocumented Error"
 msgstr "Nedokumentovana greška"
 
-#: core/kcoredirlister.cpp:396 widgets/krun.cpp:467 widgets/paste.cpp:275
-#: widgets/renamedialog.cpp:470
+#: core/kcoredirlister.cpp:396 gui/openurljob.cpp:148 widgets/krun.cpp:388
+#: widgets/paste.cpp:275 widgets/renamedialog.cpp:470
 #, kde-format
 msgid ""
 "Malformed URL\n"
@@ -2588,7 +2588,7 @@ msgstr "Ne mogu da otvorim sertifikat. Da pokušate s novom lozinkom?"
 msgid "The procedure to set the client certificate for the session failed."
 msgstr "Postupak za postavljanje sertifikata klijenta za sesiju nije uspio."
 
-#: core/tcpslavebase.cpp:698 widgets/jobuidelegate.cpp:391
+#: core/tcpslavebase.cpp:698 widgets/jobuidelegate.cpp:395
 #, kde-format
 msgid "SSL"
 msgstr "SSL"
@@ -2693,9 +2693,9 @@ msgstr "Učitaj ponovo"
 msgid "New Folder..."
 msgstr "Novi direktorij..."
 
-#: filewidgets/kdiroperator.cpp:1982 widgets/jobuidelegate.cpp:282
-#: widgets/jobuidelegate.cpp:283 widgets/jobuidelegate.cpp:291
-#: widgets/jobuidelegate.cpp:292
+#: filewidgets/kdiroperator.cpp:1982 widgets/jobuidelegate.cpp:286
+#: widgets/jobuidelegate.cpp:287 widgets/jobuidelegate.cpp:295
+#: widgets/jobuidelegate.cpp:296
 #, kde-format
 msgid "Move to Trash"
 msgstr "Premjesti u smeće"
@@ -3849,19 +3849,19 @@ msgstr "Kliknite za kretanje kroz lokacije"
 msgid "Click to Edit Location"
 msgstr "Kliknite za uređivanje lokacije"
 
-#: gui/applicationlauncherjob.cpp:105 gui/kprocessrunner.cpp:183
+#: gui/applicationlauncherjob.cpp:108 gui/kprocessrunner.cpp:183
 #, kde-format
 msgid "You are not authorized to execute this file."
 msgstr "Niste ovlašćeni da izvršite ovu datoteku."
 
-#: gui/applicationlauncherjob.cpp:111 gui/commandlauncherjob.cpp:100
+#: gui/applicationlauncherjob.cpp:114 gui/commandlauncherjob.cpp:100
 #, fuzzy, kde-format
 #| msgid "Launching %1"
 msgctxt "Launching application"
 msgid "Launching %1"
 msgstr "Pokrećem %1"
 
-#: gui/applicationlauncherjob.cpp:147
+#: gui/applicationlauncherjob.cpp:150
 #, fuzzy, kde-format
 #| msgid "Unable to make the service %1 executable, aborting execution"
 msgid ""
@@ -3920,6 +3920,67 @@ msgstr "Greška u obradi izvršnog polja u %1"
 #, kde-format
 msgid "Launching %1"
 msgstr "Pokrećem %1"
+
+#: gui/openurljob.cpp:162
+#, kde-format
+msgid "Failed to open %1"
+msgstr ""
+
+# literal-segment: URL=
+#: gui/openurljob.cpp:410 widgets/kdesktopfileactions.cpp:131
+#, kde-format
+msgid ""
+"The desktop entry file\n"
+"%1\n"
+"is of type Link but has no URL=... entry."
+msgstr ""
+"Datoteka s elementima radne površine\n"
+"%1\n"
+"tipa je veze, ali nema unos <icode>URL=...</icode>."
+
+#: gui/openurljob.cpp:477
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>The file <b>%1</b> is an executable program. For safety it will not "
+#| "be started.</qt>"
+msgid ""
+"The file \"%1\" is an executable program. For safety it will not be started."
+msgstr ""
+"<qt>Datoteka <filename>%1</filename> je izvršni program. Neće biti pokrenut "
+"iz bezbjednosnih razloga.</qt>"
+
+#: gui/openurljob.cpp:500
+#, kde-format
+msgid ""
+"The program \"%1\" needs to have executable permission before it can be "
+"launched."
+msgstr ""
+
+#: gui/openurljob.cpp:511
+#, fuzzy, kde-format
+#| msgid "<qt>The template file <b>%1</b> does not exist.</qt>"
+msgid ""
+"Unable to make file \"%1\" executable.\n"
+"%2."
+msgstr "<qt>Datoteka šablona <filename>%1</filename> ne postoji.</qt>"
+
+#: gui/openurljob.cpp:569 widgets/kdesktopfileactions.cpp:68
+#, kde-format
+msgid "The desktop entry file %1 has no Type=... entry."
+msgstr ""
+"Datoteka s elementima radne površine <filename>%1</filename> nema unos "
+"<icode>Type=...</icode>."
+
+#: gui/openurljob.cpp:609 widgets/krun.cpp:199
+#, kde-format
+msgid "You are not authorized to select an application to open this file."
+msgstr "Niste ovlašćeni da izaberete program za otvaranje ove datoteke."
+
+#: gui/openurljob.cpp:620
+#, fuzzy, kde-format
+#| msgid "Cannot open file"
+msgid "Failed to open the file."
+msgstr "Ne mogu da otvorim datoteku"
 
 #: ioslaves/file/file.cpp:188
 #, kde-format
@@ -7473,7 +7534,7 @@ msgstr ""
 msgid "Undo File Copy Confirmation"
 msgstr "Potvrda poništavanja kopiranja datoteka"
 
-#: widgets/jobuidelegate.cpp:250
+#: widgets/jobuidelegate.cpp:254
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -7488,14 +7549,14 @@ msgstr ""
 "Želite li da trajno obrišete sve stavke u smeću? Ova radnja se ne može "
 "poništiti."
 
-#: widgets/jobuidelegate.cpp:251 widgets/jobuidelegate.cpp:260
-#: widgets/jobuidelegate.cpp:270
+#: widgets/jobuidelegate.cpp:255 widgets/jobuidelegate.cpp:264
+#: widgets/jobuidelegate.cpp:274
 #, fuzzy, kde-format
 #| msgid "Delete Entry"
 msgid "Delete Permanently"
 msgstr "Obriši stavku"
 
-#: widgets/jobuidelegate.cpp:258
+#: widgets/jobuidelegate.cpp:262
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -7518,7 +7579,7 @@ msgstr[2] ""
 "Želite li da trajno obrišete sve stavke u smeću? Ova radnja se ne može "
 "poništiti."
 
-#: widgets/jobuidelegate.cpp:269
+#: widgets/jobuidelegate.cpp:273
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -7532,13 +7593,13 @@ msgstr ""
 "Želite li da trajno obrišete sve stavke u smeću? Ova radnja se ne može "
 "poništiti."
 
-#: widgets/jobuidelegate.cpp:271
+#: widgets/jobuidelegate.cpp:275
 #, kde-format
 msgctxt "@action:button"
 msgid "Empty Trash"
 msgstr "Isprazni smeće"
 
-#: widgets/jobuidelegate.cpp:281
+#: widgets/jobuidelegate.cpp:285
 #, fuzzy, kde-kuit-format
 #| msgid "Do you really want to move this item to the trash?"
 #| msgid_plural "Do you really want to move these %1 items to the trash?"
@@ -7548,7 +7609,7 @@ msgid ""
 "filename>"
 msgstr "Želite li zaista da bacite ovu %1 stavku u smeće?"
 
-#: widgets/jobuidelegate.cpp:289
+#: widgets/jobuidelegate.cpp:293
 #, fuzzy, kde-format
 #| msgid "Do you really want to move this item to the trash?"
 #| msgid_plural "Do you really want to move these %1 items to the trash?"
@@ -7558,7 +7619,7 @@ msgstr[0] "Želite li zaista da bacite ovu %1 stavku u smeće?"
 msgstr[1] "Želite li zaista da bacite ovu %1 stavku u smeće?"
 msgstr[2] "Želite li zaista da bacite ovu %1 stavku u smeće?"
 
-#: widgets/jobuidelegate.cpp:390
+#: widgets/jobuidelegate.cpp:394
 #, kde-format
 msgid "The peer SSL certificate chain appears to be corrupt."
 msgstr "Lanac parnjaka za SSL sertifikate djeluje iskvareno."
@@ -7714,13 +7775,6 @@ msgstr "Ažuriranje postave sistema"
 msgid "Updating system configuration."
 msgstr "Ažuriram postavu sistema..."
 
-#: widgets/kdesktopfileactions.cpp:68
-#, kde-format
-msgid "The desktop entry file %1 has no Type=... entry."
-msgstr ""
-"Datoteka s elementima radne površine <filename>%1</filename> nema unos "
-"<icode>Type=...</icode>."
-
 #: widgets/kdesktopfileactions.cpp:86
 #, kde-format
 msgid ""
@@ -7743,18 +7797,6 @@ msgstr ""
 "Datoteka s elementima radne površine\n"
 "%1\n"
 "tipa je <icode>FSDevice</icode>, ali nema elementa <icode>Dev=...</icode>."
-
-# literal-segment: URL=
-#: widgets/kdesktopfileactions.cpp:131
-#, kde-format
-msgid ""
-"The desktop entry file\n"
-"%1\n"
-"is of type Link but has no URL=... entry."
-msgstr ""
-"Datoteka s elementima radne površine\n"
-"%1\n"
-"tipa je veze, ali nema unos <icode>URL=...</icode>."
 
 #: widgets/kdesktopfileactions.cpp:179
 #, kde-format
@@ -7874,12 +7916,12 @@ msgstr "nepoznat"
 msgid "Known Applications"
 msgstr "Poznati programi"
 
-#: widgets/kopenwithdialog.cpp:567
+#: widgets/kopenwithdialog.cpp:568
 #, kde-format
 msgid "Open With"
 msgstr "Otvori pomoću"
 
-#: widgets/kopenwithdialog.cpp:571
+#: widgets/kopenwithdialog.cpp:572
 #, kde-format
 msgid ""
 "<qt>Select the program that should be used to open <b>%1</b>. If the program "
@@ -7888,17 +7930,17 @@ msgstr ""
 "<qt>Izaberite program kojim će se otvoriti <b>%1</b>. Ako program nije na "
 "spisku, unesite njegovo ime ili kliknite na dugme za pregledanje.</qt>"
 
-#: widgets/kopenwithdialog.cpp:577
+#: widgets/kopenwithdialog.cpp:578
 #, kde-format
 msgid "Choose the name of the program with which to open the selected files."
 msgstr "Izaberite ime programa kojim će se otvoriti izabrane datoteke."
 
-#: widgets/kopenwithdialog.cpp:593
+#: widgets/kopenwithdialog.cpp:601
 #, kde-format
 msgid "<qt>Select the program you want to use to open the file<br/>%1</qt>"
 msgstr ""
 
-#: widgets/kopenwithdialog.cpp:595
+#: widgets/kopenwithdialog.cpp:603
 #, kde-format
 msgid "<qt>Select the program you want to use to open the file.</qt>"
 msgid_plural ""
@@ -7908,17 +7950,17 @@ msgstr[1] ""
 msgstr[2] ""
 
 # >> @title:window
-#: widgets/kopenwithdialog.cpp:599 widgets/kopenwithdialog.cpp:628
+#: widgets/kopenwithdialog.cpp:607 widgets/kopenwithdialog.cpp:635
 #, kde-format
 msgid "Choose Application"
 msgstr "Izbor programa"
 
-#: widgets/kopenwithdialog.cpp:610
+#: widgets/kopenwithdialog.cpp:622
 #, kde-format
 msgid "Choose Application for %1"
 msgstr "Izaberite program za %1"
 
-#: widgets/kopenwithdialog.cpp:611
+#: widgets/kopenwithdialog.cpp:623
 #, kde-format
 msgid ""
 "<qt>Select the program for the file type: <b>%1</b>. If the program is not "
@@ -7927,7 +7969,7 @@ msgstr ""
 "<qt>Izaberite program za tip datoteke: <b>%1</b>. Ako program nije na "
 "spisku, unesite njegovo ime ili kliknite na dugme za pregledanje.</qt>"
 
-#: widgets/kopenwithdialog.cpp:629
+#: widgets/kopenwithdialog.cpp:636
 #, kde-format
 msgid ""
 "<qt>Select a program. If the program is not listed, enter the name or click "
@@ -7936,14 +7978,14 @@ msgstr ""
 "<qt>Izaberite program. Ako program nije na spisku, unesite njegovo ime ili "
 "kliknite na dugme za pregledanje.</qt>"
 
-#: widgets/kopenwithdialog.cpp:669
+#: widgets/kopenwithdialog.cpp:683
 #, kde-format
 msgid ""
 "Type to filter the applications below, or specify the name of a command.\n"
 "Press down arrow to navigate the results."
 msgstr ""
 
-#: widgets/kopenwithdialog.cpp:692
+#: widgets/kopenwithdialog.cpp:706
 #, kde-format
 msgid ""
 "Following the command, you can have several place holders which will be "
@@ -7972,7 +8014,7 @@ msgstr ""
 "%m — mini‑ikona\n"
 "%c — komentar"
 
-#: widgets/kopenwithdialog.cpp:734
+#: widgets/kopenwithdialog.cpp:748
 #, fuzzy, kde-format
 #| msgid "&Remember application association for this type of file"
 msgid ""
@@ -7980,23 +8022,23 @@ msgid ""
 "\"%1\" (%2)"
 msgstr "Zapamti &program koji otvara ovaj tip datoteke"
 
-#: widgets/kopenwithdialog.cpp:743
+#: widgets/kopenwithdialog.cpp:757
 #, fuzzy, kde-format
 #| msgid "&Terminal options:"
 msgid "Terminal options"
 msgstr "&Opcije terminala:"
 
-#: widgets/kopenwithdialog.cpp:748
+#: widgets/kopenwithdialog.cpp:762
 #, kde-format
 msgid "Run in &terminal"
 msgstr "Pokreni u &terminalu"
 
-#: widgets/kopenwithdialog.cpp:766
+#: widgets/kopenwithdialog.cpp:780
 #, kde-format
 msgid "&Do not close when command exits"
 msgstr "Ne &zatvaraj kad se naredba završi"
 
-#: widgets/kopenwithdialog.cpp:957
+#: widgets/kopenwithdialog.cpp:971
 #, kde-format
 msgid ""
 "Could not extract executable name from '%1', please type a valid program "
@@ -8005,7 +8047,7 @@ msgstr ""
 "Ne mogu da izvučem izvršno ime iz <filename>%1</filename>, unesite ispravno "
 "ime programa."
 
-#: widgets/kopenwithdialog.cpp:1007
+#: widgets/kopenwithdialog.cpp:1021
 #, kde-format
 msgid "'%1' not found, please type a valid program name."
 msgstr ""
@@ -9080,34 +9122,7 @@ msgstr "Izvršne datoteke su podržani samo na lokalnom datotečnom sistemu."
 msgid "Advanced Options for %1"
 msgstr "Napredne opcije za %1"
 
-#: widgets/krun.cpp:213
-#, fuzzy, kde-format
-#| msgid "<qt>The template file <b>%1</b> does not exist.</qt>"
-msgid ""
-"<qt>Unable to make file <b>%1</b> executable.\n"
-"%2.</qt>"
-msgstr "<qt>Datoteka šablona <filename>%1</filename> ne postoji.</qt>"
-
-#: widgets/krun.cpp:245
-#, kde-format
-msgid ""
-"<qt>The file <b>%1</b> is an executable program. For safety it will not be "
-"started.</qt>"
-msgstr ""
-"<qt>Datoteka <filename>%1</filename> je izvršni program. Neće biti pokrenut "
-"iz bezbjednosnih razloga.</qt>"
-
-#: widgets/krun.cpp:251
-#, kde-format
-msgid "<qt>You do not have permission to run <b>%1</b>.</qt>"
-msgstr "<qt>Nemate dozvolu da pokrenete <filename>%1</filename>.</qt>"
-
-#: widgets/krun.cpp:281
-#, kde-format
-msgid "You are not authorized to select an application to open this file."
-msgstr "Niste ovlašćeni da izaberete program za otvaranje ove datoteke."
-
-#: widgets/krun.cpp:502
+#: widgets/krun.cpp:423
 #, kde-format
 msgid ""
 "<qt>Unable to run the command specified. The file or folder <b>%1</b> does "
@@ -9116,7 +9131,7 @@ msgstr ""
 "<qt>Ne mogu da izvršim zadatu naredbu. Datoteka ili direktorij <filename>%1</"
 "filename> ne postoji.</qt>"
 
-#: widgets/krun.cpp:570
+#: widgets/krun.cpp:491
 #, fuzzy, kde-format
 #| msgid "Could not change ownership for %1."
 msgid "Could not find any application or handler for %1"
@@ -9640,6 +9655,9 @@ msgstr "Ovo će pokrenuti program:"
 msgid "If you do not trust this program, click Cancel"
 msgstr ""
 "Ako ne vjerujete programu, kliknite na <interface>Odustani</interface>."
+
+#~ msgid "<qt>You do not have permission to run <b>%1</b>.</qt>"
+#~ msgstr "<qt>Nemate dozvolu da pokrenete <filename>%1</filename>.</qt>"
 
 #~ msgid ""
 #~ "<qt>Unable to enter <b>%1</b>.\n"
