@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdevplatform\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-09 02:48+0200\n"
+"POT-Creation-Date: 2020-05-31 18:03+0200\n"
 "PO-Revision-Date: 2014-02-12 23:48+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -190,7 +190,7 @@ msgstr "Uslov"
 msgid "Active status"
 msgstr "Aktivni status"
 
-#: debugger/breakpoint/breakpointmodel.cpp:228 shell/sessioncontroller.cpp:611
+#: debugger/breakpoint/breakpointmodel.cpp:228
 #, kde-format
 msgid "State"
 msgstr "Stanje"
@@ -303,8 +303,7 @@ msgstr "Dubina"
 msgid "Function"
 msgstr "Funkcija"
 
-#. i18n: ectx: property (title), widget (QGroupBox, sourceBox)
-#: debugger/framestack/framestackmodel.cpp:297 shell/projectsourcepage.ui:78
+#: debugger/framestack/framestackmodel.cpp:297
 #, kde-format
 msgid "Source"
 msgstr "Izvor"
@@ -361,16 +360,13 @@ msgstr "Udaljena staza"
 msgid "Local Path"
 msgstr "Lokalna Putanja"
 
-#. i18n: ectx: property (text), widget (QPushButton, btnDelStyle)
-#: debugger/util/pathmappings.cpp:232 shell/sourceformatterselectionedit.ui:154
-#: shell/workingsets/workingsettooltipwidget.cpp:105
+#: debugger/util/pathmappings.cpp:232
 #, kde-format
 msgid "Delete"
 msgstr "Obriši"
 
 #: debugger/variable/variablecollection.cpp:224
 #: language/duchain/problem.cpp:203 shell/filteredproblemstore.cpp:168
-#: shell/problem.cpp:182
 #, kde-format
 msgid "Error"
 msgstr "Greška"
@@ -383,14 +379,13 @@ msgstr "Automatski"
 #. i18n: ectx: property (text), widget (QLabel, configName)
 #: debugger/variable/variablecollection.cpp:423
 #: debugger/variable/variabletooltip.cpp:96
-#: shell/launchconfigurationdialog.ui:114 shell/sessioncontroller.cpp:612
+#: shell/launchconfigurationdialog.ui:114
 #, kde-format
 msgid "Name"
 msgstr "Ime"
 
 #: debugger/variable/variablecollection.cpp:423
 #: debugger/variable/variabletooltip.cpp:96
-#: shell/settings/environmentprofilemodel.cpp:106
 #, kde-format
 msgid "Value"
 msgstr "Vrijednost"
@@ -494,7 +489,6 @@ msgid "Recent Expressions"
 msgstr "Nedavni izrazi"
 
 #: debugger/variable/variablewidget.cpp:335
-#: shell/workingsets/workingsettooltipwidget.cpp:148
 #, kde-format
 msgid "Remove All"
 msgstr "Ukloni sve"
@@ -531,19 +525,23 @@ msgstr "Prekidna tačka pri upisu podataka"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: documentation/documentationfindwidget.ui:43
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Find:"
+msgctxt "@label:textbox"
 msgid "Find:"
 msgstr "Nađi:"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, nextButton)
 #: documentation/documentationfindwidget.ui:57
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Jump to next match"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, previousButton)
 #: documentation/documentationfindwidget.ui:71
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Jump to previous match"
 msgstr ""
 
@@ -551,67 +549,84 @@ msgstr ""
 #: documentation/documentationfindwidget.ui:85
 #, fuzzy, kde-format
 #| msgid "Match case"
+msgctxt "@info:tooltip"
 msgid "Match case sensitive"
 msgstr "Da se podudaraju velika i mala slova"
 
-#: documentation/documentationview.cpp:50 shell/documentationcontroller.cpp:130
-#: shell/documentationcontroller.cpp:239
+#: documentation/documentationview.cpp:50
 #: shell/settings/documentationpreferences.cpp:39
 #, kde-format
 msgid "Documentation"
 msgstr "Dokumentacija"
 
 #: documentation/documentationview.cpp:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Back"
+msgctxt "@action go back"
 msgid "Back"
 msgstr "Nazad"
 
 #: documentation/documentationview.cpp:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Forward"
+msgctxt "@action go forward"
 msgid "Forward"
 msgstr "Naprijed"
 
 #: documentation/documentationview.cpp:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Home"
+msgctxt "@action go to start page"
 msgid "Home"
 msgstr "LičniDirektorij"
 
-#: documentation/documentationview.cpp:105
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, branchFilterEdit)
+#: documentation/documentationview.cpp:105 shell/sessioncontroller.cpp:586
+#: vcs/dvcs/ui/branchmanager.ui:155
 #, fuzzy, kde-format
 #| msgid "Search"
+msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Traži"
 
 #: documentation/documentationview.cpp:123
 #, kde-format
+msgctxt "@action"
 msgid "Find in Text..."
 msgstr ""
 
 #: documentation/documentationview.cpp:124
 #, fuzzy, kde-format
 #| msgid "Show Annotate on current document"
-msgid "Find in text of current documentation page."
+msgctxt "@info:tooltip"
+msgid "Find in text of current documentation page"
 msgstr "Pokazi zabiljeske na trenutnom dokumentu"
 
-#: interfaces/contextmenuextension.cpp:146 shell/debugcontroller.cpp:385
-#: shell/runcontroller.cpp:100 shell/uicontroller.cpp:103
-#, kde-format
+#: interfaces/contextmenuextension.cpp:146
+#, fuzzy, kde-format
+#| msgid "Debug"
+msgctxt "@title:menu"
 msgid "Debug"
 msgstr "Ispravka grešaka"
 
 #: interfaces/contextmenuextension.cpp:147
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Refactor"
+msgctxt "@title:menu"
 msgid "Refactor"
 msgstr "Refaktoriši"
 
 #: interfaces/contextmenuextension.cpp:149
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Commit Current Project..."
+msgctxt "@title:menu"
 msgid "Analyze Current File With"
-msgstr ""
+msgstr "Potvrdi trenutni projekt..."
 
 #: interfaces/contextmenuextension.cpp:150
 #, fuzzy, kde-format
 #| msgid "Commit Current Project..."
+msgctxt "@title:menu"
 msgid "Analyze Current Project With"
 msgstr "Potvrdi trenutni projekt..."
 
@@ -641,9 +656,7 @@ msgstr "Preimenujem \"%1\" u \"%2\""
 msgid "Failed to apply changes: %1"
 msgstr "Neuspjelo zaključavanje sesije %1"
 
-#. i18n: ectx: property (windowTitle), widget (QDialog, RenameDialog)
 #: language/assistant/renameassistant.cpp:118
-#: language/codegen/basicrefactoring.ui:14
 #, kde-format
 msgid "Rename"
 msgstr "Promijeni ime"
@@ -734,7 +747,9 @@ msgid "not implemented"
 msgstr "kreiraj implementaciju"
 
 #: language/codegen/basicrefactoring.cpp:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename \"%1\"..."
+msgctxt "@action"
 msgid "Rename \"%1\"..."
 msgstr "Preimenuj \"%1\"..."
 
@@ -750,18 +765,24 @@ msgid "Declaration is located in non-writable file %1."
 msgstr "Deklaracija se nalazi u neupisivoj datoteci %1."
 
 #: language/codegen/basicrefactoring.cpp:304
-#, kde-format
-msgctxt "Renaming some declaration"
+#, fuzzy, kde-format
+#| msgctxt "Renaming some declaration"
+#| msgid "Rename \"%1\""
+msgctxt "@title:window Renaming some declaration"
 msgid "Rename \"%1\""
 msgstr "Preimenuj \"%1\""
 
 #: language/codegen/basicrefactoring.cpp:308
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Uses"
+msgctxt "@title:tab"
 msgid "Uses"
 msgstr "Upotrebe"
 
 #: language/codegen/basicrefactoring.cpp:310
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Declaration Info"
+msgctxt "@title:tab"
 msgid "Declaration Info"
 msgstr "Informacija o deklaraciji"
 
@@ -770,9 +791,19 @@ msgstr "Informacija o deklaraciji"
 msgid "Renaming \"%1\" to \"%2\""
 msgstr "Preimenujem \"%1\" u \"%2\""
 
+#. i18n: ectx: property (windowTitle), widget (QDialog, RenameDialog)
+#: language/codegen/basicrefactoring.ui:14
+#, fuzzy, kde-format
+#| msgid "Rename"
+msgctxt "@title:window"
+msgid "Rename"
+msgstr "Promijeni ime"
+
 #. i18n: ectx: property (text), widget (QLabel, newNameLabel)
 #: language/codegen/basicrefactoring.ui:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&New name:"
+msgctxt "@label:textbox"
 msgid "&New name:"
 msgstr "&Novo ime:"
 
@@ -789,13 +820,17 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, goButton)
 #: language/codegen/basicrefactoring.ui:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Rename"
+msgctxt "@action:button"
 msgid "&Rename"
 msgstr "Preimenuj"
 
 #. i18n: ectx: property (text), widget (QPushButton, cancelButton)
 #: language/codegen/basicrefactoring.ui:45
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Cancel"
+msgctxt "@action:button"
 msgid "&Cancel"
 msgstr "&Odustani"
 
@@ -877,13 +912,17 @@ msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, RefactoringDialog)
 #: language/codegen/progressdialogs/refactoringdialog.ui:14
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Refactoring"
+msgctxt "@title:window"
 msgid "Refactoring"
 msgstr "Refaktorisanje"
 
 #. i18n: ectx: property (text), widget (QPushButton, abortButton)
 #: language/codegen/progressdialogs/refactoringdialog.ui:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Abort"
+msgctxt "@action:button"
 msgid "&Abort"
 msgstr "P&rekini"
 
@@ -1213,7 +1252,6 @@ msgid "Class"
 msgstr "Klasa"
 
 #: language/duchain/navigation/abstractnavigationcontext.cpp:509
-#: shell/settings/environmentprofilemodel.cpp:104
 #, kde-format
 msgid "Variable"
 msgstr "Promjenljiva"
@@ -1383,13 +1421,11 @@ msgid "Collapse all"
 msgstr "Sažmi sve"
 
 #: language/duchain/problem.cpp:205 shell/filteredproblemstore.cpp:169
-#: shell/problem.cpp:181
 #, kde-format
 msgid "Warning"
 msgstr "Upozorenje"
 
 #: language/duchain/problem.cpp:207 shell/filteredproblemstore.cpp:170
-#: shell/problem.cpp:180
 #, kde-format
 msgid "Hint"
 msgstr "Savjet"
@@ -1602,7 +1638,9 @@ msgstr ""
 "Projekat će se zatvoriti."
 
 #: project/abstractfilemanagerplugin.cpp:342
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Project Folder Deleted"
+msgctxt "@title:window"
 msgid "Project Folder Deleted"
 msgstr "Direktorij projekta obrisan"
 
@@ -1701,7 +1739,9 @@ msgid "Path"
 msgstr "Putanja"
 
 #: project/projectchangesmodel.cpp:293
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "no branch"
+msgctxt "@item:intext"
 msgid "no branch"
 msgstr "ne grana"
 
@@ -1712,18 +1752,24 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: project/projectitemlineedit.cpp:169
-#, kde-format
-msgid "Enter the path to an item from the projects tree"
+#, fuzzy, kde-format
+#| msgid "Enter the path to an item from the projects tree"
+msgctxt "@info:placeholder"
+msgid "Enter the path to an item from the projects tree..."
 msgstr "Unesite stazu do stavke iz stabla projekta"
 
 #: project/projectitemlineedit.cpp:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select..."
+msgctxt "@action"
 msgid "Select..."
 msgstr "Izaberi..."
 
 #: project/projectitemlineedit.cpp:195
-#, kde-format
-msgid "Select an item..."
+#, fuzzy, kde-format
+#| msgid "Select an item..."
+msgctxt "@title:window"
+msgid "Select an Item"
 msgstr "Odaberite stavku..."
 
 #: project/projectitemlineedit.cpp:205
@@ -1732,28 +1778,37 @@ msgid "Select the item you want to get the path from."
 msgstr "Odaberite stavku od koje želite dobaviti stazu"
 
 #. i18n: ectx: property (toolTip), widget (ProjectItemLineEdit, targetDependency)
-#. i18n: ectx: property (placeholderText), widget (ProjectItemLineEdit, targetDependency)
 #: project/widgets/dependencieswidget.ui:32
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Enter a dependency to add to the list"
+msgstr ""
+
+#. i18n: ectx: property (placeholderText), widget (ProjectItemLineEdit, targetDependency)
 #: project/widgets/dependencieswidget.ui:35
 #, kde-format
-msgid "Enter a dependency to add to the list"
+msgctxt "@info:placedholder"
+msgid "Enter a dependency to add to the list..."
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, addDependency)
 #: project/widgets/dependencieswidget.ui:55
 #, kde-format
-msgid "Adds the listed target to the dependency list."
+msgctxt "@info:tooltip"
+msgid "Add the listed target to the dependency list"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QListWidget, dependencies)
 #: project/widgets/dependencieswidget.ui:68
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "List of indirect dependent targets."
 msgstr ""
 
 #. i18n: ectx: property (whatsThis), widget (QListWidget, dependencies)
 #: project/widgets/dependencieswidget.ui:71
 #, kde-format
+msgctxt "@info:whatsthis"
 msgid ""
 "This list should contain targets that the application does not directly "
 "depend on, but for which an action needs to be taken before running the "
@@ -1763,19 +1818,22 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QPushButton, removeDependency)
 #: project/widgets/dependencieswidget.ui:87
 #, kde-format
-msgid "Removes the selected dependencies from the list."
+msgctxt "@info:tooltip"
+msgid "Remove the selected dependencies from the list"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, moveDepUp)
 #: project/widgets/dependencieswidget.ui:103
 #, kde-format
-msgid "Moves the selected dependency up in the list."
+msgctxt "@info:tooltip"
+msgid "Move the selected dependency up in the list"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, moveDepDown)
 #: project/widgets/dependencieswidget.ui:119
 #, kde-format
-msgid "Moves the selected dependency down in the list."
+msgctxt "@info:tooltip"
+msgid "Move the selected dependency down in the list"
 msgstr ""
 
 #: serialization/itemrepository.h:213 serialization/itemrepository.h:2060
@@ -1794,15 +1852,19 @@ msgstr[1] "Sesija krahirala %1 puta zaredom"
 msgstr[2] "Sesija krahirala %1 puta zaredom"
 
 #: serialization/itemrepositoryregistry.cpp:83
-#, kde-format
-msgctxt "@action"
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Clear cache"
+msgctxt "tty action"
 msgid "Clear cache"
 msgstr "Obriši predmemoriju"
 
 #: serialization/itemrepositoryregistry.cpp:84
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Session crashed"
 msgctxt "@title"
-msgid "Session crashed"
+msgid "Session Crashed"
 msgstr "Sesija obrisana"
 
 #: serialization/itemrepositoryregistry.cpp:85
@@ -1827,13 +1889,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Clear cache"
-msgctxt "@action"
+msgctxt "@action:button"
 msgid "Clear Cache"
 msgstr "Obriši predmemoriju"
 
 #: serialization/itemrepositoryregistry.cpp:88
 #, fuzzy, kde-format
 #| msgid "&Continue"
+msgctxt "@action:button"
 msgid "Continue"
 msgstr "&Nastavi"
 
@@ -1852,8 +1915,10 @@ msgstr ""
 "konfiguracija za odredjeni slucaj koristenja."
 
 #: shell/areadisplay.cpp:81
-#, kde-format
-msgid "Back to code"
+#, fuzzy, kde-format
+#| msgid "Back to code"
+msgctxt "@action:inmenu"
+msgid "Back to Code"
 msgstr "Nazad u kod"
 
 #: shell/checkerstatus.cpp:50
@@ -1872,6 +1937,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "@info:status"
 #| msgid "configure"
+msgctxt "@title:window"
 msgid "Configure"
 msgstr "konfiguriraj"
 
@@ -1884,14 +1950,16 @@ msgstr ""
 
 #: shell/configdialog.cpp:93
 #, kde-format
+msgctxt "@title:window"
 msgid "Apply Settings"
 msgstr ""
 
 #: shell/core.cpp:126
 #, fuzzy, kde-format
-#| msgid "Could not find an open document"
-msgid "Could not find any plugins"
-msgstr "Nemogu naći otvoreni dokument"
+#| msgid "Loaded Plugins"
+msgctxt "@title:window"
+msgid "No Plugins Found"
+msgstr "Učitani priključci"
 
 #: shell/core.cpp:127
 #, kde-format
@@ -1909,17 +1977,23 @@ msgid "Debugger"
 msgstr "Debager:"
 
 #: shell/debugcontroller.cpp:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Frame Stack"
+msgctxt "@title:window"
 msgid "Frame Stack"
 msgstr "Stek okvira"
 
 #: shell/debugcontroller.cpp:128
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Breakpoints"
+msgctxt "@title:window"
 msgid "Breakpoints"
 msgstr "Prekidne tačke"
 
 #: shell/debugcontroller.cpp:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Variables"
+msgctxt "@title:window"
 msgid "Variables"
 msgstr "Promjenljive"
 
@@ -1939,62 +2013,89 @@ msgid "Restarts applications from the beginning."
 msgstr "Restartuj aplikaciju iz pocetka."
 
 #: shell/debugcontroller.cpp:208
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Interrupt"
+msgctxt "@action"
 msgid "Interrupt"
 msgstr "Prekid"
 
 #: shell/debugcontroller.cpp:209
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Interrupt application"
+msgctxt "@info:tooltip"
 msgid "Interrupt application"
 msgstr "Prekini aplikaciju"
 
 #: shell/debugcontroller.cpp:210
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Interrupts the debugged process or current debugger command."
+msgctxt "@info:whatsthis"
 msgid "Interrupts the debugged process or current debugger command."
 msgstr "Prekida debagovani proces ili trenutnu debugger komandu."
 
 #: shell/debugcontroller.cpp:214
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Run to &Cursor"
+msgctxt "@action"
 msgid "Run to &Cursor"
 msgstr "Idi do &kursora"
 
 #: shell/debugcontroller.cpp:215
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Run to cursor"
+msgctxt "@info:tooltip"
 msgid "Run to cursor"
 msgstr "Idi do kursora"
 
 #: shell/debugcontroller.cpp:216
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Continues execution until the cursor position is reached."
+msgctxt "@info:whatsthis"
 msgid "Continues execution until the cursor position is reached."
 msgstr "Nastavlja izvršavanje dok ne dostigne poziciju kursora."
 
 #: shell/debugcontroller.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Set E&xecution Position to Cursor"
+msgctxt "@action"
 msgid "Set E&xecution Position to Cursor"
 msgstr "Postavi izvr&šnu poziciju na kursor"
 
 #: shell/debugcontroller.cpp:222
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Jump to cursor"
+msgctxt "@info:tooltip"
 msgid "Jump to cursor"
 msgstr "Skoči na kursot"
 
 #: shell/debugcontroller.cpp:223
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Continue execution from the current cursor position."
+msgctxt "@info:whatsthis"
 msgid "Continue execution from the current cursor position."
 msgstr "Nastavlja izvršavanje od trenutne kursorke pozicije"
 
 #: shell/debugcontroller.cpp:227
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Step &Over"
+msgctxt "@action"
 msgid "Step &Over"
 msgstr "Korak prek&o"
 
 #: shell/debugcontroller.cpp:229
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Step over the next line"
+msgctxt "@info:tooltip"
 msgid "Step over the next line"
 msgstr "Korak preko naredne linije"
 
 #: shell/debugcontroller.cpp:230
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Executes one line of source in the current source file. If the source "
+#| "line is a call to a function the whole function is executed and the app "
+#| "will stop at the line following the function call."
+msgctxt "@info:whatsthis"
 msgid ""
 "Executes one line of source in the current source file. If the source line "
 "is a call to a function the whole function is executed and the app will stop "
@@ -2005,32 +2106,46 @@ msgstr ""
 "prateci funkcijski poziv."
 
 #: shell/debugcontroller.cpp:238
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Step over Ins&truction"
+msgctxt "@action"
 msgid "Step over Ins&truction"
 msgstr "Korak preko ins&trukcije"
 
 #: shell/debugcontroller.cpp:239
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Step over instruction"
+msgctxt "@info:tooltip"
 msgid "Step over instruction"
 msgstr "Korak preko instrukcije"
 
 #: shell/debugcontroller.cpp:240
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Steps over the next assembly instruction."
+msgctxt "@info:whatsthis"
 msgid "Steps over the next assembly instruction."
 msgstr "Koraci u narednih skupom instrukcija"
 
 #: shell/debugcontroller.cpp:245
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Step &Into"
+msgctxt "@action"
 msgid "Step &Into"
 msgstr "&Uskoči"
 
 #: shell/debugcontroller.cpp:247
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Step into the next statement"
+msgctxt "@info:tooltip"
 msgid "Step into the next statement"
 msgstr "Korak u narednu naredbu"
 
 #: shell/debugcontroller.cpp:248
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Executes exactly one line of source. If the source line is a call to a "
+#| "function then execution will stop after the function has been entered."
+msgctxt "@info:whatsthis"
 msgid ""
 "Executes exactly one line of source. If the source line is a call to a "
 "function then execution will stop after the function has been entered."
@@ -2039,32 +2154,48 @@ msgstr ""
 "funkciju tada ce izvrsenje zaustaviti  nakon sto funkcija bude unesena."
 
 #: shell/debugcontroller.cpp:255
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Step into I&nstruction"
+msgctxt "@action"
 msgid "Step into I&nstruction"
 msgstr "Korak u I&nstrukciju"
 
 #: shell/debugcontroller.cpp:256
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Step into instruction"
+msgctxt "@info:tooltip"
 msgid "Step into instruction"
 msgstr "Korak u instrukciju"
 
 #: shell/debugcontroller.cpp:257
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Steps into the next assembly instruction."
+msgctxt "@info:whatsthis"
 msgid "Steps into the next assembly instruction."
 msgstr "Koraci u narednom skupom instrukcija"
 
 #: shell/debugcontroller.cpp:261
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Step O&ut"
+msgctxt "@action"
 msgid "Step O&ut"
 msgstr "Korak iz&van"
 
 #: shell/debugcontroller.cpp:263
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Step out of the current function"
+msgctxt "@info:tooltip"
 msgid "Step out of the current function"
 msgstr "istupite iz trenutne funkcije"
 
 #: shell/debugcontroller.cpp:264
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Executes the application until the currently executing function is "
+#| "completed. The debugger will then display the line after the original "
+#| "call to that function. If program execution is in the outermost frame (i."
+#| "e. in main()) then this operation has no effect."
+msgctxt "@whatsthis"
 msgid ""
 "Executes the application until the currently executing function is "
 "completed. The debugger will then display the line after the original call "
@@ -2077,7 +2208,9 @@ msgstr ""
 "ova operacija nema efekta"
 
 #: shell/debugcontroller.cpp:272
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggle Breakpoint"
+msgctxt "@action"
 msgid "Toggle Breakpoint"
 msgstr "Prekidna tačka"
 
@@ -2087,48 +2220,62 @@ msgid "Ctrl+Alt+B"
 msgstr "Ctrl+Alt+B"
 
 #: shell/debugcontroller.cpp:274
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggle breakpoint"
+msgctxt "@info:tooltip"
 msgid "Toggle breakpoint"
 msgstr "Preklopi prekidnu tačku"
 
 #: shell/debugcontroller.cpp:275
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Toggles the breakpoint at the current line in editor."
+msgctxt "@info:whatsthis"
 msgid "Toggles the breakpoint at the current line in editor."
 msgstr "Ukljucuje prekidnu tacku  na odgovarajucu liniju u editoru."
 
 #: shell/debugcontroller.cpp:279
 #, fuzzy, kde-format
 #| msgid "Show Documentation"
+msgctxt "@action"
 msgid "Show Current Line"
 msgstr "Prikaži dokumentaciju"
 
 #: shell/debugcontroller.cpp:280
 #, fuzzy, kde-format
 #| msgid "Step out of the current function"
+msgctxt "@info:tooltip"
 msgid "Show the current execution position"
 msgstr "istupite iz trenutne funkcije"
 
 #: shell/debugcontroller.cpp:281
 #, kde-format
+msgctxt "@info:whatsthis"
 msgid "Jumps to the execution line in the editor."
 msgstr ""
 
+#: shell/debugcontroller.cpp:385
+#, fuzzy, kde-format
+#| msgid "Debug"
+msgctxt "@title:window"
+msgid "Debug"
+msgstr "Ispravka grešaka"
+
 #: shell/debugcontroller.cpp:435 shell/runcontroller.cpp:457
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Debug Launch"
+msgctxt "@action"
 msgid "Debug Launch"
 msgstr "Potraži greške u pokretanju"
 
-#: shell/debugcontroller.cpp:437 shell/runcontroller.cpp:461
+#: shell/debugcontroller.cpp:437 shell/runcontroller.cpp:460
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Debug current launch"
 msgstr "Pokreni trenutno uklanjanje gresaka"
 
-#: shell/debugcontroller.cpp:438
-#, fuzzy, kde-format
-#| msgctxt "@info:whatsthis"
-#| msgid ""
-#| "Executes the target or the program specified in currently active launch "
-#| "configuration inside a Debugger."
+#: shell/debugcontroller.cpp:438 shell/runcontroller.cpp:462
+#, kde-format
+msgctxt "@info:whatsthis"
 msgid ""
 "Executes the target or the program specified in currently active launch "
 "configuration inside a Debugger."
@@ -2137,17 +2284,26 @@ msgstr ""
 "konfiguracije unutar debuggera."
 
 #: shell/debugcontroller.cpp:441
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Continue"
+msgctxt "@action"
 msgid "&Continue"
 msgstr "&Nastavi"
 
 #: shell/debugcontroller.cpp:443
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Continue application execution"
+msgctxt "@info:tooltip"
 msgid "Continue application execution"
 msgstr "Nastavi aplikacijko uklanjanje"
 
 #: shell/debugcontroller.cpp:444
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Continues the execution of your application in the debugger. This only "
+#| "takes effect when the application has been halted by the debugger (i.e. a "
+#| "breakpoint has been activated or the interrupt was pressed)."
+msgctxt "@info:whatsthis"
 msgid ""
 "Continues the execution of your application in the debugger. This only takes "
 "effect when the application has been halted by the debugger (i.e. a "
@@ -2164,9 +2320,18 @@ msgid "Debugger Toolbar"
 msgstr "Ispravljačka traka"
 
 #: shell/documentationcontroller.cpp:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Documentation"
+msgctxt "@action"
 msgid "Show Documentation"
 msgstr "Prikaži dokumentaciju"
+
+#: shell/documentationcontroller.cpp:130 shell/documentationcontroller.cpp:239
+#, fuzzy, kde-format
+#| msgid "Documentation"
+msgctxt "@title:window"
+msgid "Documentation"
+msgstr "Dokumentacija"
 
 #: shell/documentcontroller.cpp:73 sublime/urldocument.cpp:68
 #, kde-format
@@ -2174,7 +2339,9 @@ msgid "Untitled"
 msgstr "Bez naslova"
 
 #: shell/documentcontroller.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open File"
+msgctxt "@title:window"
 msgid "Open File"
 msgstr "Otvori datoteku"
 
@@ -2199,22 +2366,32 @@ msgid "Could Not Find Editor"
 msgstr "Ne mogu naći uređivač"
 
 #: shell/documentcontroller.cpp:604
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Open..."
+msgctxt "@action"
 msgid "&Open..."
 msgstr "&Otvori..."
 
 #: shell/documentcontroller.cpp:607
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open file"
+msgctxt "@info:tooltip"
 msgid "Open file"
 msgstr "Otvori datoteku"
 
 #: shell/documentcontroller.cpp:608
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Opens a file for editing."
+msgctxt "@info:whatsthis"
 msgid "Opens a file for editing."
 msgstr "Otvori datoteku za uredjivanje."
 
 #: shell/documentcontroller.cpp:612
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This lists files which you have opened recently, and allows you to easily "
+#| "open them again."
+msgctxt "@info:whatsthis"
 msgid ""
 "This lists files which you have opened recently, and allows you to easily "
 "open them again."
@@ -2223,65 +2400,93 @@ msgstr ""
 "ponovo otvoriti."
 
 #: shell/documentcontroller.cpp:617
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Al&l"
+msgctxt "@action"
 msgid "Save Al&l"
 msgstr "Snmi s&ve"
 
 #: shell/documentcontroller.cpp:619
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save all open documents"
+msgctxt "@info:tooltip"
 msgid "Save all open documents"
 msgstr "Snimi sve otvorene dokumente"
 
 #: shell/documentcontroller.cpp:620
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Save all open documents, prompting for additional information when "
+#| "necessary."
+msgctxt "@info:whatsthis"
 msgid ""
 "Save all open documents, prompting for additional information when necessary."
 msgstr ""
 "Otvori sve otvorene dokumente, navedeno za dodatne informacije kada je to "
 "potrebno."
 
-#: shell/documentcontroller.cpp:626 shell/mainwindow_p.cpp:376
-#, kde-format
+#: shell/documentcontroller.cpp:626
+#, fuzzy, kde-format
+#| msgid "Reload All"
+msgctxt "@action"
 msgid "Reload All"
 msgstr "Ponovo učitaj sve"
 
 #: shell/documentcontroller.cpp:628
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Revert all open documents"
+msgctxt "@info:tooltip"
 msgid "Revert all open documents"
 msgstr "Vrati sve otvorene dokumente"
 
 #: shell/documentcontroller.cpp:629
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Revert all open documents, returning to the previously saved state."
+msgctxt "@info:whatsthis"
 msgid "Revert all open documents, returning to the previously saved state."
 msgstr "Vrati sve otvorene dokumente, vratite prijasnje spaseno stanje."
 
 #: shell/documentcontroller.cpp:635
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Close"
+msgctxt "@action"
 msgid "&Close"
 msgstr "&Zatvori"
 
 #: shell/documentcontroller.cpp:637
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Close file"
+msgctxt "@info:tooltip"
 msgid "Close file"
 msgstr "Zatvori datoteku"
 
 #: shell/documentcontroller.cpp:638
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Closes current file."
+msgctxt "@info:whatsthis"
 msgid "Closes current file."
 msgstr "Zatvori trentnu datoteku."
 
 #: shell/documentcontroller.cpp:643
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clos&e All"
+msgctxt "@action"
 msgid "Clos&e All"
 msgstr "Zatvori sv&e"
 
 #: shell/documentcontroller.cpp:645
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Close all open documents"
+msgctxt "@info:tooltip"
 msgid "Close all open documents"
 msgstr "Zatvori sve otvorene dokumente"
 
 #: shell/documentcontroller.cpp:646
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Close all open documents, prompting for additional information when "
+#| "necessary."
+msgctxt "@info:whatsthis"
 msgid ""
 "Close all open documents, prompting for additional information when "
 "necessary."
@@ -2290,17 +2495,25 @@ msgstr ""
 "potrebno."
 
 #: shell/documentcontroller.cpp:652
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Close All Ot&hers"
+msgctxt "@action"
 msgid "Close All Ot&hers"
 msgstr "Zatvori sve d&ruge"
 
 #: shell/documentcontroller.cpp:654
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Close all other documents"
+msgctxt "@info:tooltip"
 msgid "Close all other documents"
 msgstr "Zatvori ostale dokumente"
 
 #: shell/documentcontroller.cpp:655
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Close all open documents, with the exception of the currently active "
+#| "document."
+msgctxt "@info:whatsthis"
 msgid ""
 "Close all open documents, with the exception of the currently active "
 "document."
@@ -2308,12 +2521,16 @@ msgstr ""
 "Zatvori sve otvorene dokumente, sa izuzetkom trenutno aktiviranog dokumenta."
 
 #: shell/documentcontroller.cpp:660
-#, kde-format
-msgid "Show Annotate on current document"
+#, fuzzy, kde-format
+#| msgid "Show Annotate on current document"
+msgctxt "@action"
+msgid "Show Annotate on Current Document"
 msgstr "Pokazi zabiljeske na trenutnom dokumentu"
 
 #: shell/documentcontroller.cpp:661
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Annotate"
+msgctxt "@action"
 msgid "Annotate"
 msgstr "Zabilježi"
 
@@ -2328,6 +2545,7 @@ msgstr ""
 #: shell/editorconfigpage.cpp:101
 #, fuzzy, kde-format
 #| msgid "Edit"
+msgctxt "@title:tab"
 msgid "Editor"
 msgstr "Izmijeni"
 
@@ -2338,12 +2556,16 @@ msgid "Configure Text Editor"
 msgstr "Podesi uređivač..."
 
 #: shell/environmentconfigurebutton.cpp:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure environment variables"
+msgctxt "@info:tooltip"
 msgid "Configure environment variables"
 msgstr "konfiguracija okolnih varijabli"
 
 #: shell/launchconfigurationdialog.cpp:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Launch Configurations"
+msgctxt "@title:window"
 msgid "Launch Configurations"
 msgstr "Pokretačke konfiguracije"
 
@@ -2366,13 +2588,17 @@ msgid ""
 msgstr ""
 
 #: shell/launchconfigurationdialog.cpp:209
-#, kde-format
-msgid "Rename configuration"
+#, fuzzy, kde-format
+#| msgid "Rename configuration"
+msgctxt "@action:inmenu"
+msgid "Rename Configuration"
 msgstr "Preimenuj konfiguraciju"
 
 #: shell/launchconfigurationdialog.cpp:210
-#, kde-format
-msgid "Delete configuration"
+#, fuzzy, kde-format
+#| msgid "Delete configuration"
+msgctxt "@action:inmenu"
+msgid "Delete Configuration"
 msgstr "Ukloni konfiguraciju"
 
 #: shell/launchconfigurationdialog.cpp:264
@@ -2384,7 +2610,9 @@ msgstr ""
 "snimiti?"
 
 #: shell/launchconfigurationdialog.cpp:264
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unsaved Changes"
+msgctxt "@title:window"
 msgid "Unsaved Changes"
 msgstr "Nesnimljene izmjene"
 
@@ -2412,39 +2640,49 @@ msgid "Editing %2: <b>%1</b>"
 msgstr "Uređujem %2: <b>%1</b>"
 
 #: shell/launchconfigurationdialog.cpp:720
-#, kde-format
-msgctxt "Name of the Launch Configurations"
+#, fuzzy, kde-format
+#| msgid "Name"
+msgctxt "@title:column Name of the Launch Configurations"
 msgid "Name"
 msgstr "Ime"
 
 #: shell/launchconfigurationdialog.cpp:723
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Type"
 msgctxt ""
-"The type of the Launch Configurations (i.e. Python Application, C++ "
-"Application)"
+"@title:column Type of the Launch Configurations (i.e. Python Application, C+"
+"+ Application)"
 msgid "Type"
-msgstr "Tip"
+msgstr "Vrsta:"
 
 #. i18n: ectx: property (text), widget (QPushButton, addConfig)
 #: shell/launchconfigurationdialog.ui:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add"
+msgctxt "@action:button"
 msgid "Add"
 msgstr "Dodaj"
 
 #. i18n: ectx: property (text), widget (QPushButton, deleteConfig)
 #: shell/launchconfigurationdialog.ui:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:button"
 msgid "Remove"
 msgstr "Ukloni"
 
 #. i18n: ectx: property (text), widget (QLabel, debugLabel)
 #: shell/launchconfigurationdialog.ui:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Debugger:"
+msgctxt "@label:listbox"
 msgid "Debugger:"
 msgstr "Debager:"
 
-#: shell/loadedpluginsdialog.cpp:308 shell/mainwindow_p.cpp:243
-#, kde-format
+#: shell/loadedpluginsdialog.cpp:308
+#, fuzzy, kde-format
+#| msgid "Loaded Plugins"
+msgctxt "@title:window"
 msgid "Loaded Plugins"
 msgstr "Učitani priključci"
 
@@ -2459,18 +2697,24 @@ msgid " (read only)"
 msgstr ""
 
 #: shell/mainwindow_p.cpp:233
-#, kde-format
-msgctxt "%1 = application name"
+#, fuzzy, kde-format
+#| msgctxt "%1 = application name"
+#| msgid "Configure %1"
+msgctxt "@info:tooltip %1 = application name"
 msgid "Configure %1"
 msgstr "Podesi %1"
 
 #: shell/mainwindow_p.cpp:234
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Lets you customize %1."
+msgctxt "@info:whatsthis"
 msgid "Lets you customize %1."
 msgstr "Omogućava da prilagodite %1."
 
 #: shell/mainwindow_p.cpp:237
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Notifications..."
+msgctxt "@action"
 msgid "Configure Notifications..."
 msgstr "Podesi obavještenja..."
 
@@ -2486,8 +2730,17 @@ msgctxt "@info:whatsthis"
 msgid "Shows a dialog that lets you configure notifications."
 msgstr "prikazi dijalog koji dopusta konfiguraciju obavijesti."
 
+#: shell/mainwindow_p.cpp:243
+#, fuzzy, kde-format
+#| msgid "Loaded Plugins"
+msgctxt "@action"
+msgid "Loaded Plugins"
+msgstr "Učitani priključci"
+
 #: shell/mainwindow_p.cpp:244
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show a list of all loaded plugins"
+msgctxt "@info:tooltip"
 msgid "Show a list of all loaded plugins"
 msgstr "Prikazuje listu učitanih priključaka"
 
@@ -2498,7 +2751,9 @@ msgid "Shows a dialog with information about all loaded plugins."
 msgstr "Prikazi dijalog sa informacijama sa svim ucitanim dodacima."
 
 #: shell/mainwindow_p.cpp:248
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Next Window"
+msgctxt "@action"
 msgid "&Next Window"
 msgstr "&Sljedeći prozor"
 
@@ -2515,7 +2770,9 @@ msgid "Switches to the next window."
 msgstr "Prebacuje na sljedeći prozor."
 
 #: shell/mainwindow_p.cpp:256
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Previous Window"
+msgctxt "@action"
 msgid "&Previous Window"
 msgstr "&Prethodni prozor"
 
@@ -2533,16 +2790,20 @@ msgstr "Prebacuje na prethodni prozor."
 
 #: shell/mainwindow_p.cpp:264
 #, kde-format
+msgctxt "@action"
 msgid "Jump to Next Outputmark"
 msgstr ""
 
 #: shell/mainwindow_p.cpp:270
 #, kde-format
+msgctxt "@action"
 msgid "Jump to Previous Outputmark"
 msgstr ""
 
 #: shell/mainwindow_p.cpp:277
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Split View &Top/Bottom"
+msgctxt "@action"
 msgid "Split View &Top/Bottom"
 msgstr "Podijeli pogled &vodoravno"
 
@@ -2559,7 +2820,9 @@ msgid "Splits the current view horizontally."
 msgstr "Razdvojite trenutni pogled horizontalno"
 
 #: shell/mainwindow_p.cpp:285
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Split View &Left/Right"
+msgctxt "@action"
 msgid "Split View &Left/Right"
 msgstr "Podijeli pogled &uspravno"
 
@@ -2576,7 +2839,9 @@ msgid "Splits the current view vertically."
 msgstr "Razdvojite trenutni pogled vertikalno."
 
 #: shell/mainwindow_p.cpp:292
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Next Split View"
+msgctxt "@action"
 msgid "&Next Split View"
 msgstr "&Sljedece razdvajanje pogleda"
 
@@ -2593,7 +2858,9 @@ msgid "Switches to the next split view."
 msgstr "Promijeni na sljedeci razdvojeni pogled"
 
 #: shell/mainwindow_p.cpp:300
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Previous Split View"
+msgctxt "@action"
 msgid "&Previous Split View"
 msgstr "&Prijasnji razdvojeni pogled"
 
@@ -2610,15 +2877,18 @@ msgid "Switches to the previous split view."
 msgstr "Promijeni na prijasnji razdvojeni pogled"
 
 #: shell/mainwindow_p.cpp:312
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&New"
+msgctxt "@action new file"
 msgid "&New"
 msgstr "&Nova"
 
 #: shell/mainwindow_p.cpp:313
-#, kde-format
-msgctxt "Shorter Text for 'New File' shown in the toolbar"
+#, fuzzy, kde-format
+#| msgid "New"
+msgctxt "@action Shorter Text for 'New File' shown in the toolbar"
 msgid "New"
-msgstr "Nova"
+msgstr "Novi"
 
 #: shell/mainwindow_p.cpp:315
 #, kde-format
@@ -2633,7 +2903,9 @@ msgid "Creates an empty file."
 msgstr "Stvori jednu praznu datoteku."
 
 #: shell/mainwindow_p.cpp:321
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Add Tool View..."
+msgctxt "@action"
 msgid "&Add Tool View..."
 msgstr "Dodaj &ladni pogled..."
 
@@ -2650,32 +2922,50 @@ msgid "Adds a new tool view to this window."
 msgstr "Dodaj novi alatni prikaz na ovom prozoru."
 
 #: shell/mainwindow_p.cpp:360
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Split View Top/Bottom"
+msgctxt "@action:inmenu"
 msgid "Split View Top/Bottom"
 msgstr "Razdvojeni prikaz gore/dolje"
 
 #: shell/mainwindow_p.cpp:363
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Split View Left/Right"
+msgctxt "@action:inmenu"
 msgid "Split View Left/Right"
 msgstr "Razdvojeni prikaz lijevo/desno"
 
 #: shell/mainwindow_p.cpp:367
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New File"
+msgctxt "@action:inmenu"
 msgid "New File"
 msgstr "Nova datoteka"
 
 #: shell/mainwindow_p.cpp:373
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Reload"
+msgctxt "@action:inmenu"
 msgid "Reload"
 msgstr "Ponovo učitaj"
 
+#: shell/mainwindow_p.cpp:376
+#, fuzzy, kde-format
+#| msgid "Reload All"
+msgctxt "@action:inmenu"
+msgid "Reload All"
+msgstr "Ponovo učitaj sve"
+
 #: shell/mainwindow_p.cpp:416
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Tool View"
+msgctxt "@action:inmenu"
 msgid "Add Tool View"
 msgstr "Dodaj alatni pogled"
 
 #: shell/mainwindow_p.cpp:439
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Lock the Panel from Hiding"
 msgstr ""
 
@@ -2685,7 +2975,9 @@ msgid "%1|All Project Files (%1)"
 msgstr "%1|Sve projektne datoteke (%1)"
 
 #: shell/openprojectdialog.cpp:125
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select Source"
+msgctxt "@title:tab"
 msgid "Select Source"
 msgstr "Izaberi izvor"
 
@@ -2699,12 +2991,16 @@ msgstr ""
 "ili bilo koji folder koji je otvoren ako projekt"
 
 #: shell/openprojectdialog.cpp:140 shell/openprojectdialog.cpp:160
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Project"
+msgctxt "@title:window"
 msgid "Open Project"
 msgstr "Otvori projekt"
 
 #: shell/openprojectdialog.cpp:148
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Project Information"
+msgctxt "@title:tab"
 msgid "Project Information"
 msgstr "Informacija o projektu"
 
@@ -2723,12 +3019,14 @@ msgstr "Odabrani URL je nevažeći"
 #: shell/openprojectdialog.cpp:258
 #, fuzzy, kde-format
 #| msgid "Open Existing File"
+msgctxt "@item:inlistbox"
 msgid "Open existing file \"%1\""
 msgstr "Otvori postojeću datoteku"
 
 #: shell/partcontroller.cpp:257
 #, kde-format
-msgid "Use this command to show or hide the view's statusbar"
+msgctxt "@info:whatsthis"
+msgid "Use this command to show or hide the view's statusbar."
 msgstr ""
 
 #: shell/partdocument.cpp:116
@@ -2738,6 +3036,7 @@ msgstr "Dokument \"%1\" ima nesnimljene promjene. Želite li ih snimiti?"
 
 #: shell/partdocument.cpp:117 shell/partdocument.cpp:125
 #, kde-format
+msgctxt "@title:window"
 msgid "Close Document"
 msgstr "Zatvori dokument"
 
@@ -2766,6 +3065,27 @@ msgstr ""
 #, kde-format
 msgid "Todo"
 msgstr ""
+
+#: shell/problem.cpp:180
+#, fuzzy, kde-format
+#| msgid "Hint"
+msgctxt "@item problem severity"
+msgid "Hint"
+msgstr "Savjet"
+
+#: shell/problem.cpp:181
+#, fuzzy, kde-format
+#| msgid "Warning"
+msgctxt "@item problem severity"
+msgid "Warning"
+msgstr "Upozorenje"
+
+#: shell/problem.cpp:182
+#, fuzzy, kde-format
+#| msgid "Error"
+msgctxt "@item problem severity"
+msgid "Error"
+msgstr "Greška"
 
 #: shell/problemmodel.cpp:51
 #, fuzzy, kde-format
@@ -2808,27 +3128,37 @@ msgid "Column"
 msgstr ""
 
 #: shell/progresswidget/progressdialog.cpp:168
-#, kde-format
-msgid "Cancel this operation."
+#, fuzzy, kde-format
+#| msgid "Cancel this operation."
+msgctxt "@info:tooltip"
+msgid "Cancel this operation"
 msgstr "Prekini ovu operaciju."
 
 #: shell/progresswidget/progressmanager.cpp:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Aborting..."
+msgctxt "@info"
 msgid "Aborting..."
 msgstr "Prekidam..."
 
 #: shell/progresswidget/statusbarprogresswidget.cpp:128
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open detailed progress dialog"
+msgctxt "@info:tooltip"
 msgid "Open detailed progress dialog"
 msgstr "Otvori detaljni dijalog napretka"
 
 #: shell/progresswidget/statusbarprogresswidget.cpp:365
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hide detailed progress window"
+msgctxt "@info:tooltip"
 msgid "Hide detailed progress window"
 msgstr "Sakrij detaljni prozor napretka"
 
 #: shell/progresswidget/statusbarprogresswidget.cpp:369
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show detailed progress window"
+msgctxt "@info:tooltip"
 msgid "Show detailed progress window"
 msgstr "Prikaži detaljni prozor napretka"
 
@@ -2902,7 +3232,9 @@ msgstr ""
 "Pažnja: Projektne postavke koje ste izmijenili mogu biti izgubljene."
 
 #: shell/projectcontroller.cpp:174
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Project %1"
+msgctxt "@title:window"
 msgid "Configure Project %1"
 msgstr "Konfiguriši projekt %1"
 
@@ -2917,37 +3249,49 @@ msgid "Already opening %1, not opening again"
 msgstr "Već otvaram %1, ne otvara se ponovo"
 
 #: shell/projectcontroller.cpp:489
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Override"
+msgctxt "@action:button"
 msgid "Override"
 msgstr "Potiskivanje"
 
 #: shell/projectcontroller.cpp:490
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Continue to open the project and use the just provided project "
+#| "configuration."
 msgctxt "@info:tooltip"
 msgid ""
-"Continue to open the project and use the just provided project configuration."
+"Continue to open the project and use the just provided project configuration"
 msgstr ""
 "Nastavite da biste otvorili projekat i koristite samo navedenu konfiguraciju "
 "projekta."
 
 #: shell/projectcontroller.cpp:493
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Existing File"
+msgctxt "@action:button"
 msgid "Open Existing File"
 msgstr "Otvori postojeću datoteku"
 
 #: shell/projectcontroller.cpp:494
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Continue to open the project but use the existing project configuration."
 msgctxt "@info:tooltip"
-msgid ""
-"Continue to open the project but use the existing project configuration."
+msgid "Continue to open the project but use the existing project configuration"
 msgstr ""
 "Nastavite da biste otvorili projekat ali koristite postojeću konfiguraciju "
 "projekta."
 
 #: shell/projectcontroller.cpp:497
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Cancel and do not open the project."
 msgctxt "@info:tooltip"
-msgid "Cancel and do not open the project."
+msgid "Cancel and do not open the project"
 msgstr "Otkaži i ne otvaraj projekat."
 
 #: shell/projectcontroller.cpp:499
@@ -2960,8 +3304,10 @@ msgstr ""
 "Da li želite da je zamijenite ili otvorite postojeću datoteku?"
 
 #: shell/projectcontroller.cpp:501
-#, kde-format
-msgid "Override existing project configuration"
+#, fuzzy, kde-format
+#| msgid "Override existing project configuration"
+msgctxt "@title:window"
+msgid "Override Existing Project Configuration"
 msgstr "Zamijeni postojeću projektnu konfiguraciju"
 
 #: shell/projectcontroller.cpp:521
@@ -3042,22 +3388,30 @@ msgid "Closes all currently selected projects"
 msgstr "Zatvara sve ternutno odabrane projekte"
 
 #: shell/projectcontroller.cpp:613
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Configuration..."
+msgctxt "@action"
 msgid "Open Configuration..."
 msgstr "Otvori konfiguraciju...."
 
 #: shell/projectcontroller.cpp:619
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Commit Current Project..."
+msgctxt "@action"
 msgid "Commit Current Project..."
 msgstr "Potvrdi trenutni projekt..."
 
 #: shell/projectcontroller.cpp:620
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Commit..."
+msgctxt "@action"
 msgid "Commit..."
 msgstr "Upis..."
 
 #: shell/projectcontroller.cpp:631
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Recent Project"
+msgctxt "@action"
 msgid "Open Recent Project"
 msgstr "Otvori trenutni projekt"
 
@@ -3068,7 +3422,9 @@ msgid "Opens recently opened project."
 msgstr "otvoreni nedavni otvoren projekt."
 
 #: shell/projectcontroller.cpp:637
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Project for Current File"
+msgctxt "@action"
 msgid "Open Project for Current File"
 msgstr "Otvori projekt za trenutnu datoteku"
 
@@ -3083,7 +3439,9 @@ msgid "No active document"
 msgstr "Nema aktivnih dokumenta"
 
 #: shell/projectcontroller.cpp:873
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Project Already Open"
+msgctxt "@title:window"
 msgid "Project Already Open"
 msgstr "projekt je vec otvoren"
 
@@ -3097,12 +3455,16 @@ msgstr ""
 "Sta zelite da uradite?"
 
 #: shell/projectcontroller.cpp:880
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add project to current session"
+msgctxt "@option:radio"
 msgid "Add project to current session"
 msgstr "Dodaj projekt u trenutnu sesiju"
 
 #: shell/projectcontroller.cpp:884
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open session %1"
+msgctxt "@option:radio"
 msgid "Open session %1"
 msgstr "Otvori sesiju %1"
 
@@ -3114,13 +3476,16 @@ msgstr ""
 #: shell/projectcontroller.cpp:1251
 #, fuzzy, kde-format
 #| msgid "Reopen the current project?"
+msgctxt "@action"
 msgid "Reparse the Entire Project"
 msgstr "Ponovo otvori trenutni projekt?"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_2)
 #. i18n: ectx: property (toolTip), widget (QComboBox, managerCombo)
 #: shell/projectinfopage.ui:29 shell/projectinfopage.ui:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the Management Plugin to use for this project"
+msgctxt "@info:tooltip"
 msgid "Select the Management Plugin to use for this project"
 msgstr "Izaberite Menadžment dodatak koji se koristi za ovaj projekat"
 
@@ -3129,24 +3494,31 @@ msgstr "Izaberite Menadžment dodatak koji se koristi za ovaj projekat"
 #, fuzzy, kde-format
 #| msgctxt "@title:group"
 #| msgid "Project Management"
+msgctxt "@label:listbox"
 msgid "Project manager:"
 msgstr "Upravljanje Projektom"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, nameEdit)
 #: shell/projectinfopage.ui:39 shell/projectinfopage.ui:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Provide a name for the project"
+msgctxt "@info:tooltip"
 msgid "Provide a name for the project"
 msgstr "Navedi ime projekta"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: shell/projectinfopage.ui:42 shell/settings/environmentwidget.cpp:188
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Naziv:"
 
 #: shell/projectsourcepage.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "From File System"
+msgctxt "@item:inlistbox"
 msgid "From File System"
 msgstr "Iz sistema datoteka"
 
@@ -3185,41 +3557,70 @@ msgstr "Trebate da specificirate  validnu projektsku lokaciju"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: shell/projectsourcepage.ui:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Source:"
+msgctxt "@label:listbox"
 msgid "Source:"
 msgstr "Izvor:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: shell/projectsourcepage.ui:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Destination"
+msgctxt "@title:group"
 msgid "Destination"
 msgstr "Odredište"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: shell/projectsourcepage.ui:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Directory:"
+msgctxt "@label:textbox"
 msgid "Directory:"
 msgstr "Direktorij:"
 
 #. i18n: ectx: property (placeholderText), widget (KUrlRequester, workingDir)
 #: shell/projectsourcepage.ui:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the directory to use..."
+msgctxt "@info:placeholder"
 msgid "Select the directory to use..."
 msgstr "Odaberi direktorij za upotrebu..."
 
+#. i18n: ectx: property (title), widget (QGroupBox, sourceBox)
+#: shell/projectsourcepage.ui:78
+#, fuzzy, kde-format
+#| msgid "Source"
+msgctxt "@title:group"
+msgid "Source"
+msgstr "Izvor"
+
 #. i18n: ectx: property (text), widget (QPushButton, get)
 #: shell/projectsourcepage.ui:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Get"
+msgctxt "@action:button"
 msgid "Get"
 msgstr "Dohvati"
 
+#: shell/runcontroller.cpp:100
+#, fuzzy, kde-format
+#| msgid "Debug"
+msgctxt "launch mode"
+msgid "Debug"
+msgstr "Ispravka grešaka"
+
 #: shell/runcontroller.cpp:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Profile"
+msgctxt "launch mode"
 msgid "Profile"
 msgstr "Profil"
 
 #: shell/runcontroller.cpp:118
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Execute"
+msgctxt "launch mode"
 msgid "Execute"
 msgstr "Izvrši"
 
@@ -3229,7 +3630,9 @@ msgid "The current launch configuration does not support the '%1' mode."
 msgstr "Trenutna pokretačka konfiguracija ne podržava '%1' režim."
 
 #: shell/runcontroller.cpp:440
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Launches..."
+msgctxt "@action"
 msgid "Configure Launches..."
 msgstr "Podesi pokretanja..."
 
@@ -3255,13 +3658,16 @@ msgstr ""
 "postojecu."
 
 #: shell/runcontroller.cpp:448
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Execute Launch"
+msgctxt "@action"
 msgid "Execute Launch"
 msgstr "Izvrši pokretanje"
 
 #: shell/runcontroller.cpp:449
-#, kde-format
-msgctxt "Short text for 'Execute launch' used in the toolbar"
+#, fuzzy, kde-format
+#| msgid "Execute"
+msgctxt "@action Short text for 'Execute Launch' used in the toolbar"
 msgid "Execute"
 msgstr "Izvrši"
 
@@ -3286,26 +3692,16 @@ msgstr ""
 "Izvrsi  metu programa  specificiranu u trenutnom pokretanju konfiguracije."
 
 #: shell/runcontroller.cpp:459
-#, kde-format
-msgctxt "Short text for 'Debug launch' used in the toolbar"
+#, fuzzy, kde-format
+#| msgid "Debug"
+msgctxt "@action Short text for 'Debug Launch' used in the toolbar"
 msgid "Debug"
-msgstr "Praćenje grešaka"
+msgstr "Ispravka grešaka"
 
-#: shell/runcontroller.cpp:460
+#: shell/runcontroller.cpp:461
 #, kde-format
-msgctxt "@info:tooltip"
 msgid "Debug current launch"
 msgstr "Pokreni trenutno uklanjanje gresaka"
-
-#: shell/runcontroller.cpp:462
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid ""
-"Executes the target or the program specified in currently active launch "
-"configuration inside a Debugger."
-msgstr ""
-"Izvrsi metu programa specificiranu u trenutno aktivnom pokretanju "
-"konfiguracije unutar debuggera."
 
 #. i18n("Profile Launch"), this);
 #. profileAction->setToolTip(i18nc("@info:tooltip", "Profile current launch"));
@@ -3314,13 +3710,17 @@ msgstr ""
 #. ac->addAction("run_profile", profileAction);
 #. connect(profileAction, SIGNAL(triggered(bool)), this, SLOT(slotProfile()));
 #: shell/runcontroller.cpp:475
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Stop All Jobs"
+msgctxt "@action"
 msgid "Stop All Jobs"
 msgstr "Zaustavi sve poslove"
 
 #: shell/runcontroller.cpp:476
-#, kde-format
-msgctxt "Short text for 'Stop All Jobs' used in the toolbar"
+#, fuzzy, kde-format
+#| msgctxt "Short text for 'Stop All Jobs' used in the toolbar"
+#| msgid "Stop All"
+msgctxt "@action Short text for 'Stop All Jobs' used in the toolbar"
 msgid "Stop All"
 msgstr "Zaustavi sve"
 
@@ -3337,13 +3737,16 @@ msgid "Requests that all running jobs are stopped."
 msgstr "Zahtijevi za svim poslovima koji su jos u tijeku su stopirani"
 
 #: shell/runcontroller.cpp:486
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Stop"
+msgctxt "@action"
 msgid "Stop"
 msgstr "Prekini"
 
 #: shell/runcontroller.cpp:487
-#, kde-format
-msgctxt "Short text for 'Stop' used in the toolbar"
+#, fuzzy, kde-format
+#| msgid "Stop"
+msgctxt "@action Short text for 'Stop' used in the toolbar"
 msgid "Stop"
 msgstr "Prekini"
 
@@ -3360,7 +3763,9 @@ msgid "List of jobs that can be stopped individually."
 msgstr "Lista poslova koja moze biti zaustavljena pojedinacno."
 
 #: shell/runcontroller.cpp:493
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Current Launch Configuration"
+msgctxt "@title:menu"
 msgid "Current Launch Configuration"
 msgstr "Trenutna konfiguracija pokretanja"
 
@@ -3382,7 +3787,9 @@ msgid "Select which launch configuration to run when run is invoked."
 msgstr "Odaberite koje pokretanje konfiguracije se pokrece kada se pokrece run"
 
 #: shell/runcontroller.cpp:612
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "<%1> Unnamed job"
+msgctxt "@item:inmenu"
 msgid "<%1> Unnamed job"
 msgstr "<%1> Neimenovan posao"
 
@@ -3392,7 +3799,9 @@ msgid "New %1 Launcher"
 msgstr "Novi %1 pokretač"
 
 #: shell/runcontroller.cpp:1028
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1 As..."
+msgctxt "@title:menu"
 msgid "%1 As..."
 msgstr "%1 kao..."
 
@@ -3412,7 +3821,9 @@ msgid "Runtime: %1"
 msgstr ""
 
 #: shell/savedialog.cpp:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Modified Files?"
+msgctxt "@title:window"
 msgid "Save Modified Files?"
 msgstr "Da li da snimi izmijenjene datoteke?"
 
@@ -3422,12 +3833,16 @@ msgid "The following files have been modified. Save them?"
 msgstr "Sljedeće datoteke su izmijenjene. Da li da ih snimim?"
 
 #: shell/savedialog.cpp:78
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save &None"
+msgctxt "@action:button"
 msgid "Save &None"
 msgstr "Ne snimaj &ništa"
 
 #: shell/savedialog.cpp:79
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Discard all modifications"
+msgctxt "@info:tooltip"
 msgid "Discard all modifications"
 msgstr "Odbaci sve promjene"
 
@@ -3437,23 +3852,33 @@ msgid "(no projects)"
 msgstr "(nema projekata)"
 
 #: shell/sessionchooserdialog.cpp:51
-#, kde-format
-msgctxt "@info"
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Delete session"
+msgctxt "@info:tooltip"
 msgid "Delete session"
 msgstr "Obriši sesiju"
 
 #: shell/sessionchooserdialog.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pick a Session"
+msgctxt "@title:window"
 msgid "Pick a Session"
 msgstr "Odaberite sesiju"
 
 #: shell/sessionchooserdialog.cpp:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Run"
+msgctxt "@action:button"
 msgid "Run"
 msgstr "Pokreni"
 
 #: shell/sessionchooserdialog.cpp:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Active session.\n"
+#| "pid %1, app %2, host %3"
+msgctxt "@info:tooltip"
 msgid ""
 "Active session.\n"
 "pid %1, app %2, host %3"
@@ -3467,8 +3892,10 @@ msgid "Running"
 msgstr "Pokrenuto"
 
 #: shell/sessionchooserdialog.cpp:206
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Cannot Delete Session"
+msgctxt "@title:window"
 msgid "Cannot Delete Session"
 msgstr "Ne mogu obrisati sesiju"
 
@@ -3501,8 +3928,10 @@ msgstr ""
 "nepromijenjen. Da li stvarno želite nastaviti?"
 
 #: shell/sessionchooserdialog.cpp:219
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Delete Session"
+msgctxt "@title:window"
 msgid "Delete Session"
 msgstr "Obrisi ssesiju"
 
@@ -3516,14 +3945,17 @@ msgstr ""
 "ostati nepromenjeni. Da li zaista želite da nastavite?"
 
 #: shell/sessioncontroller.cpp:157
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename Session"
+msgctxt "@title:window"
 msgid "Rename Session"
 msgstr "Preimenuj sesiju"
 
 #: shell/sessioncontroller.cpp:157
 #, fuzzy, kde-format
 #| msgid "New Session Name"
-msgid "New Session Name:"
+msgctxt "@label:textbox"
+msgid "New session name:"
 msgstr "Novo ime sesije"
 
 #: shell/sessioncontroller.cpp:264
@@ -3546,17 +3978,23 @@ msgid "Start a new KDevelop instance with an empty session"
 msgstr "Pokreni novu KDevelop instancu s praznom sesijom"
 
 #: shell/sessioncontroller.cpp:283
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename Current Session..."
+msgctxt "@action"
 msgid "Rename Current Session..."
 msgstr "Preimenuj trenutnu sesiju..."
 
 #: shell/sessioncontroller.cpp:289
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete Current Session..."
+msgctxt "@action"
 msgid "Delete Current Session..."
 msgstr "Obriši  trenutnu sesiju..."
 
 #: shell/sessioncontroller.cpp:293
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Quit"
+msgctxt "@action"
 msgid "Quit"
 msgstr "Izlaz"
 
@@ -3565,23 +4003,38 @@ msgstr "Izlaz"
 msgid "Copy of %1"
 msgstr "Kopija od %1"
 
-#: shell/sessioncontroller.cpp:586
-#, kde-format
-msgid "Search"
-msgstr "Traži"
-
 #: shell/sessioncontroller.cpp:609
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Identity"
+msgctxt "@title:column"
 msgid "Identity"
 msgstr "Identitet"
 
 #: shell/sessioncontroller.cpp:610
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Contents"
+msgctxt "@title:column"
 msgid "Contents"
 msgstr "Sadržaj"
 
+#: shell/sessioncontroller.cpp:611
+#, fuzzy, kde-format
+#| msgid "State"
+msgctxt "@title:column"
+msgid "State"
+msgstr "Stanje"
+
+#: shell/sessioncontroller.cpp:612
+#, fuzzy, kde-format
+#| msgid "Name"
+msgctxt "@title:column"
+msgid "Name"
+msgstr "Ime"
+
 #: shell/sessioncontroller.cpp:618
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Filter:"
+msgctxt "@label:textbox"
 msgid "Filter:"
 msgstr "Filter:"
 
@@ -3652,15 +4105,19 @@ msgstr ""
 "pokretanje</p>"
 
 #: shell/sessionlock.cpp:196
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Retry startup"
 msgctxt "@action:button"
-msgid "Retry startup"
+msgid "Retry Startup"
 msgstr "Ponovi pokretanje"
 
 #: shell/sessionlock.cpp:199
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Choose another session"
 msgctxt "@action:button"
-msgid "Choose another session"
+msgid "Choose Another Session"
 msgstr "Odaberi drugu sesiju"
 
 #: shell/sessionlock.cpp:202
@@ -3694,7 +4151,12 @@ msgstr "Uključi pozadinski parser"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_enable)
 #: shell/settings/bgpreferences.ui:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>Enables or disables the background parser.<br>If unsure, leave it "
+#| "enabled. Disabling the background parser will disable large parts of "
+#| "KDevelop's functionality.</p>"
+msgctxt "@info:tooltip"
 msgid ""
 "<p>Enables or disables the background parser.<br>If unsure, leave it "
 "enabled. Disabling the background parser will disable large parts of "
@@ -3706,34 +4168,47 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_enable)
 #: shell/settings/bgpreferences.ui:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable Background Parser"
+msgctxt "@title:group"
 msgid "Enable Background Parser"
 msgstr "Uključi pozadinski parser"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_delay)
 #: shell/settings/bgpreferences.ui:35 shell/settings/bgpreferences.ui:45
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The time to wait before the document is re-analyzed when you edit it."
+msgctxt "@info:tooltip"
 msgid "The time to wait before the document is re-analyzed when you edit it."
 msgstr ""
 "Vrijeme čekanaj prije nego se dokument ponovo analizira kada ga uređujete."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: shell/settings/bgpreferences.ui:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delay:"
+msgctxt "@label:spinbox"
 msgid "Delay:"
 msgstr "Odlaganje:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_delay)
 #: shell/settings/bgpreferences.ui:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid " ms"
+msgctxt "@item:valuesuffix"
 msgid " ms"
 msgstr " ms"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_3)
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_threads)
 #: shell/settings/bgpreferences.ui:61 shell/settings/bgpreferences.ui:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The maximum number of parallel instances the background parser uses. If "
+#| "unsure, select 1 or 2."
+msgctxt "@info:tooltip"
 msgid ""
 "The maximum number of parallel instances the background parser uses. If "
 "unsure, select 1 or 2."
@@ -3743,13 +4218,17 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: shell/settings/bgpreferences.ui:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Maximum number of threads:"
+msgctxt "@label:spinbox"
 msgid "Maximum number of threads:"
 msgstr "Maksimalni broj prijetnji"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_threads)
 #: shell/settings/bgpreferences.ui:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid " threads"
+msgctxt "@item:valuesuffix"
 msgid " threads"
 msgstr " niti"
 
@@ -3769,7 +4248,9 @@ msgstr "Nema formatera izvornog koda"
 #. i18n: ectx: property (text), widget (QLabel, previewLabel)
 #: shell/settings/editstyledialog.ui:40
 #: shell/sourceformatterselectionedit.ui:83
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preview:"
+msgctxt "@label"
 msgid "Preview:"
 msgstr "Pregled:"
 
@@ -3792,22 +4273,37 @@ msgstr "konfiguracija okolnih varijabli"
 msgid "%1 (default profile)"
 msgstr "Koristi podrazumijevani profil  (trenutno: %1)"
 
+#: shell/settings/environmentprofilemodel.cpp:104
+#, fuzzy, kde-format
+#| msgid "Variable"
+msgctxt "@title:column"
+msgid "Variable"
+msgstr "Promjenljiva"
+
+#: shell/settings/environmentprofilemodel.cpp:106
+#, fuzzy, kde-format
+#| msgid "Value"
+msgctxt "@title:column"
+msgid "Value"
+msgstr "Vrijednost"
+
 #: shell/settings/environmentwidget.cpp:94
 #, fuzzy, kde-format
 #| msgid "Enter variable ..."
+msgctxt "@info:placeholder"
 msgid "Enter variable..."
 msgstr "Unesite varijablu..."
 
 #: shell/settings/environmentwidget.cpp:182
 #, fuzzy, kde-format
 #| msgid "New Environment Variable"
+msgctxt "@title:window"
 msgid "Enter Name of New Environment Profile"
 msgstr "Nova promjenjiva okruženja"
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, batchModeEditButton)
 #: shell/settings/environmentwidget.cpp:246
-#: shell/settings/environmentwidget.ui:130
 #, kde-format
+msgctxt "@title:window"
 msgid "Batch Edit Mode"
 msgstr ""
 
@@ -3815,6 +4311,7 @@ msgstr ""
 #: shell/settings/environmentwidget.ui:22
 #, fuzzy, kde-format
 #| msgid "Environment group:"
+msgctxt "@label:listbox"
 msgid "Environment profile:"
 msgstr "Zivotna sredina:"
 
@@ -3822,6 +4319,7 @@ msgstr "Zivotna sredina:"
 #: shell/settings/environmentwidget.ui:39
 #, fuzzy, kde-format
 #| msgid "Add New..."
+msgctxt "@info:tooltip"
 msgid "Add profile..."
 msgstr "Dodaj novi"
 
@@ -3829,6 +4327,7 @@ msgstr "Dodaj novi"
 #: shell/settings/environmentwidget.ui:49
 #, fuzzy, kde-format
 #| msgid "Close file"
+msgctxt "@info:tooltip"
 msgid "Clone profile..."
 msgstr "Zatvori datoteku"
 
@@ -3837,6 +4336,7 @@ msgstr "Zatvori datoteku"
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Remove lock file"
+msgctxt "@info:tooltip"
 msgid "Remove profile"
 msgstr "Ukloni datoteku zaključavanja"
 
@@ -3844,18 +4344,29 @@ msgstr "Ukloni datoteku zaključavanja"
 #: shell/settings/environmentwidget.ui:69
 #, fuzzy, kde-format
 #| msgid "Set As Default Group"
+msgctxt "@info:tooltip"
 msgid "Set as default"
 msgstr "Postavi kao podrazumijevanu grupu"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, removeVariableButton)
 #: shell/settings/environmentwidget.ui:114
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove variable"
+msgctxt "@info:tooltip"
 msgid "Remove variable"
 msgstr "Izbrisi varijablu"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, batchModeEditButton)
+#: shell/settings/environmentwidget.ui:130
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Batch edit mode"
+msgstr ""
 
 #: shell/settings/languagepreferences.cpp:49
 #, fuzzy, kde-format
 #| msgid " files"
+msgctxt "@item:valuesuffix"
 msgid " file"
 msgid_plural " files"
 msgstr[0] " datoteke"
@@ -3876,7 +4387,9 @@ msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: shell/settings/languagepreferences.ui:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Code Completion"
+msgctxt "@title:group"
 msgid "Code Completion"
 msgstr "Kompletiranje koda"
 
@@ -3884,7 +4397,10 @@ msgstr "Kompletiranje koda"
 #. i18n: ectx: property (toolTip), widget (QLabel, label_6)
 #: shell/settings/languagepreferences.ui:35
 #: shell/settings/languagepreferences.ui:90
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "If disabled, the code completion widget will never show automatically."
+msgctxt "@info:tooltip"
 msgid "If disabled, the code completion widget will never show automatically."
 msgstr ""
 "Ako je isključeno, kontrola za kompletiranje koda se nikad neće automatski "
@@ -3892,7 +4408,11 @@ msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showMultiLineSelectionInformation)
 #: shell/settings/languagepreferences.ui:45
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Choose whether to display additional information for the currently "
+#| "selected code completion item."
+msgctxt "info:tooltip"
 msgid ""
 "Choose whether to display additional information for the currently selected "
 "code completion item."
@@ -3914,37 +4434,51 @@ msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_completionDetail)
 #: shell/settings/languagepreferences.ui:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Never"
+msgctxt "@item:inlistbox"
 msgid "Never"
 msgstr "Nikad"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_completionDetail)
 #: shell/settings/languagepreferences.ui:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "When Invoked Manually"
+msgctxt "@item:inlistbox"
 msgid "When Invoked Manually"
 msgstr "run je manualan"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_completionDetail)
 #: shell/settings/languagepreferences.ui:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Always"
+msgctxt "@item:inlistbox"
 msgid "Always"
 msgstr "Uvijek"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: shell/settings/languagepreferences.ui:83
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Detailed completion:"
+msgctxt "@label"
 msgid "Detailed completion:"
 msgstr "Detalji kompletni:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: shell/settings/languagepreferences.ui:93
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable automatic invocation:"
+msgctxt "@label"
 msgid "Enable automatic invocation:"
 msgstr "Ukljuci automatko pozivanje:"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_7)
 #: shell/settings/languagepreferences.ui:100
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Choose whether to display additional information for the currently "
+#| "selected codecompletion item."
+msgctxt "@info:tooltip"
 msgid ""
 "Choose whether to display additional information for the currently selected "
 "codecompletion item."
@@ -3954,13 +4488,17 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: shell/settings/languagepreferences.ui:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Additional information for current item:"
+msgctxt "@label"
 msgid "Additional information for current item:"
 msgstr "Dodatne informacije za trenutne alate:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: shell/settings/languagepreferences.ui:113
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Semantic Code Highlighting"
+msgctxt "@title:group"
 msgid "Semantic Code Highlighting"
 msgstr "Semantičko označavanje koda"
 
@@ -3978,7 +4516,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, localColorizationLabel)
 #: shell/settings/languagepreferences.ui:125
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Local colorization intensity:"
+msgctxt "@label:slider"
 msgid "Local colorization intensity:"
 msgstr "Lokalno bojenje intezitet:"
 
@@ -3996,7 +4536,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, globalColorizationLabel)
 #: shell/settings/languagepreferences.ui:160
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Global colorization intensity:"
+msgctxt "@label:slider"
 msgid "Global colorization intensity:"
 msgstr "Globalno bojenje intezitet:"
 
@@ -4014,7 +4556,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: shell/settings/languagepreferences.ui:195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Highlight semantic problems:"
+msgctxt "@label"
 msgid "Highlight semantic problems:"
 msgstr "Oznacite semanticke probleme:"
 
@@ -4032,26 +4576,36 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: shell/settings/languagepreferences.ui:215
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Highlight problematic lines:"
+msgctxt "@label"
 msgid "Highlight problematic lines:"
 msgstr "Oznacite probleme linija"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_3)
 #: shell/settings/languagepreferences.ui:232
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Space-separated list of words that make a comment represent a TODO item"
+msgctxt "@info:tooltip"
 msgid "Space-separated list of words that make a comment represent a TODO item"
 msgstr ""
 "Razmacima razdvojena lista riječi koja predstavlja komentar budućih zadataka."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: shell/settings/languagepreferences.ui:235
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "TODO marker words:"
+msgctxt "@label:textbox"
 msgid "TODO marker words:"
 msgstr "TODO oznacavac rijeci:"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_todoMarkerWords)
 #: shell/settings/languagepreferences.ui:242
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Space-separated list of words that make a comment represent a TODO item."
+msgctxt "@info:tooltip"
 msgid ""
 "Space-separated list of words that make a comment represent a TODO item."
 msgstr ""
@@ -4075,12 +4629,14 @@ msgstr ""
 #: shell/settings/languagepreferences.ui:255
 #, fuzzy, kde-format
 #| msgid "( resolved forward-declaration: "
+msgctxt "@label"
 msgid "Bold font for declarations:"
 msgstr "( razriješena deklaracija unaprijed: "
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_problemInlineNotesLevel)
 #: shell/settings/languagepreferences.ui:266
 #, kde-format
+msgctxt "@item:inlistbox inline problems shown"
 msgid "None"
 msgstr ""
 
@@ -4088,30 +4644,36 @@ msgstr ""
 #: shell/settings/languagepreferences.ui:271
 #, fuzzy, kde-format
 #| msgid "Error"
+msgctxt "@item:inlistbox inline problems shown"
 msgid "Errors"
 msgstr "Greška"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_problemInlineNotesLevel)
 #: shell/settings/languagepreferences.ui:276
 #, kde-format
+msgctxt "@item:inlistbox inline problems shown"
 msgid "Warnings and Errors"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_problemInlineNotesLevel)
 #: shell/settings/languagepreferences.ui:281
 #, kde-format
+msgctxt "@item:inlistbox inline problems shown"
 msgid "Hints, Warnings and Errors"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: shell/settings/languagepreferences.ui:289
 #, kde-format
+msgctxt "@label:listbox"
 msgid "Problems shown as inline notes:"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: shell/settings/languagepreferences.ui:313
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Project Parsing"
+msgctxt "@title:group"
 msgid "Project Parsing"
 msgstr "Analiza projekta"
 
@@ -4133,7 +4695,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: shell/settings/languagepreferences.ui:326
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Minimum project size for simplified parsing:"
+msgctxt "@label:spinbox"
 msgid "Minimum project size for simplified parsing:"
 msgstr "Minimalna velicina projekta za pojednostavljeno parsiranje"
 
@@ -4279,37 +4843,49 @@ msgstr "Konfiguriši projekt %1"
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_projectsBaseDirectory)
 #: shell/settings/projectpreferences.ui:22
 #: shell/settings/projectpreferences.ui:35
-#, kde-format
-msgid "Select the base directory where new projects are to be created."
+#, fuzzy, kde-format
+#| msgid "Select the base directory where new projects are to be created."
+msgctxt "@info:tooltip"
+msgid "Select the base directory where new projects are to be created"
 msgstr "Odaberi bazni direktorij i kome će se novi projekti kreirati:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: shell/settings/projectpreferences.ui:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Projects base directory:"
+msgctxt "@label:textbox"
 msgid "Projects base directory:"
 msgstr "Projekti baze direktorija:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_parseAllProjectSources)
 #: shell/settings/projectpreferences.ui:47
-#, kde-format
-msgid "Parse all files in a project after the project has been opened."
+#, fuzzy, kde-format
+#| msgid "Parse all files in a project after the project has been opened."
+msgctxt "@info:tolltip"
+msgid "Parse all files in a project after the project has been opened"
 msgstr "Parsiraj sve datoteke u projektu nako što se projekt otvori"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_parseAllProjectSources)
 #: shell/settings/projectpreferences.ui:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Schedule all project files for parsing"
+msgctxt "@option:check"
 msgid "Schedule all project files for parsing"
 msgstr "Rasporedi sve projekte za parsiranje"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_saveDocuments)
 #: shell/settings/projectpreferences.ui:57
-#, kde-format
-msgid "Save all modified documents when the \"build\" action is triggered."
+#, fuzzy, kde-format
+#| msgid "Save all modified documents when the \"build\" action is triggered."
+msgctxt "@info:tooltip"
+msgid "Save all modified documents when the \"build\" action is triggered"
 msgstr "Spremite sve modificirane dokumente kada je aktivirana opcija gradnje"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_saveDocuments)
 #: shell/settings/projectpreferences.ui:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save all documents before building"
+msgctxt "@option:check"
 msgid "Save all documents before building"
 msgstr "Snimi sve dokumente prije gradnje"
 
@@ -4339,13 +4915,19 @@ msgstr "Nema formatera izvornog koda"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: shell/settings/sourceformattersettings.ui:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group"
 msgid "General"
 msgstr "Opšte"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chkKateOverrideIndentation)
 #: shell/settings/sourceformattersettings.ui:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Override the editor indentation mode according to the formatting style "
+#| "for documents without Kate modeline."
+msgctxt "@info:tolltip"
 msgid ""
 "Override the editor indentation mode according to the formatting style for "
 "documents without Kate modeline."
@@ -4355,13 +4937,19 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkKateOverrideIndentation)
 #: shell/settings/sourceformattersettings.ui:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Override Kate Indentation Mode"
+msgctxt "@option:check"
 msgid "Override Kate Indentation Mode"
 msgstr "Prevaziđi Kate režim uvlačenja"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chkKateModelines)
 #: shell/settings/sourceformattersettings.ui:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Add a Kate modeline according to the formatting style to formatted "
+#| "documents."
+msgctxt "@info:tooltip"
 msgid ""
 "Add a Kate modeline according to the formatting style to formatted documents."
 msgstr ""
@@ -4369,13 +4957,17 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkKateModelines)
 #: shell/settings/sourceformattersettings.ui:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Kate Modeline"
+msgctxt "@option:check"
 msgid "Add Kate Modeline"
 msgstr "Dodaj Kate red režima"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: shell/settings/sourceformattersettings.ui:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Formatting Styles"
+msgctxt "@title:group"
 msgid "Formatting Styles"
 msgstr "Stilovi formatiranja"
 
@@ -4393,25 +4985,33 @@ msgstr "Podesi pokretanja..."
 
 #. i18n: ectx: property (text), widget (QPushButton, loadButton)
 #: shell/settings/templatepage.ui:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load Template From File"
+msgctxt "@action:button"
 msgid "Load Template From File"
 msgstr "Učitaj predložak iz datoteke"
 
 #. i18n: ectx: property (text), widget (QPushButton, getNewButton)
 #: shell/settings/templatepage.ui:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Get More Templates"
+msgctxt "@action:button"
 msgid "Get More Templates"
 msgstr "Dobavi još predložaka"
 
 #. i18n: ectx: property (text), widget (QPushButton, shareButton)
 #: shell/settings/templatepage.ui:50
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Share Templates"
+msgctxt "@action:button"
 msgid "Share Templates"
 msgstr "Dijeli predloške"
 
 #. i18n: ectx: property (text), widget (QPushButton, extractButton)
 #: shell/settings/templatepage.ui:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clone Template"
+msgctxt "@action:button"
 msgid "Clone Template"
 msgstr "Kloniraj predložak"
 
@@ -4423,7 +5023,9 @@ msgstr "Korisnički interfejs"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: shell/settings/uiconfig.ui:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Dock Window Behavior"
+msgctxt "@title:group"
 msgid "Dock Window Behavior"
 msgstr "Ponašanje sidrišnog prozora"
 
@@ -4440,7 +5042,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: shell/settings/uiconfig.ui:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Bottom left corner occupied by:"
+msgctxt "@label:listbox"
 msgid "Bottom left corner occupied by:"
 msgstr "Donji lijevi ugao zauzeo:"
 
@@ -4457,50 +5061,68 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: shell/settings/uiconfig.ui:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Bottom right corner occupied by:"
+msgctxt "@label:listbox"
 msgid "Bottom right corner occupied by:"
 msgstr "Donji desni ugao zauzeo:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomLeftCornerOwner)
 #: shell/settings/uiconfig.ui:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Left Dock"
+msgctxt "@item:inlistbox"
 msgid "Left Dock"
 msgstr "Lijevo sidrište"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomLeftCornerOwner)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomRightCornerOwner)
 #: shell/settings/uiconfig.ui:58 shell/settings/uiconfig.ui:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Bottom Dock"
+msgctxt "@item:inlistbox"
 msgid "Bottom Dock"
 msgstr "Donje sidrište"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_BottomRightCornerOwner)
 #: shell/settings/uiconfig.ui:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Right Dock"
+msgctxt "@item:inlistbox"
 msgid "Right Dock"
 msgstr "Desno sidrište"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: shell/settings/uiconfig.ui:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tabbed Browsing"
+msgctxt "@title:group"
 msgid "Tabbed Browsing"
 msgstr "Pregledanje sa karticama"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_TabBarOpenAfterCurrent)
 #: shell/settings/uiconfig.ui:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Controls whether to open new tabs next to the active one."
+msgctxt "@info:tooltip"
 msgid "Controls whether to open new tabs next to the active one."
 msgstr "Kontroliše da li otvoriti nove kartice pored aktivnih"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_TabBarOpenAfterCurrent)
 #: shell/settings/uiconfig.ui:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open new tab after current"
+msgctxt "@option:check"
 msgid "Open new tab after current"
 msgstr "Otvori novu karticu nakon trenutne"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_TabBarArrangeBuddies)
 #: shell/settings/uiconfig.ui:106
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "When enabled, plugins can group related files side by side.\n"
+#| "For example, a header file will be opened next to the implementation file."
+msgctxt "@info:tooltip"
 msgid ""
 "When enabled, plugins can group related files side by side.\n"
 "For example, a header file will be opened next to the implementation file."
@@ -4511,13 +5133,19 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_TabBarArrangeBuddies)
 #: shell/settings/uiconfig.ui:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Arrange related documents side by side"
+msgctxt "@option:check"
 msgid "Arrange related documents side by side"
 msgstr "Rasporedi povezane datoteke rame uz rame."
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_TabBarVisibility)
 #: shell/settings/uiconfig.ui:116
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enables or disables the display of the tab bar at the top of the editor "
+#| "window."
+msgctxt "@info:tooltip"
 msgid ""
 "Enables or disables the display of the tab bar at the top of the editor "
 "window."
@@ -4525,7 +5153,9 @@ msgstr "O(ne)mogućuje prikaz kartične trake na vrhu editorskog prozora"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_TabBarVisibility)
 #: shell/settings/uiconfig.ui:119
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show tabs"
+msgctxt "@option:check"
 msgid "Show tabs"
 msgstr "Prikaži kartice"
 
@@ -4535,6 +5165,7 @@ msgstr "Prikaži kartice"
 #| msgid ""
 #| "Enables or disables the display of the tab bar at the top of the editor "
 #| "window."
+msgctxt "@info:tooltip"
 msgid ""
 "Enables or disables the display of a close button in each tab in the tab bar "
 "at the top of the editor window."
@@ -4543,18 +5174,21 @@ msgstr "O(ne)mogućuje prikaz kartične trake na vrhu editorskog prozora"
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_CloseButtonsOnTabs)
 #: shell/settings/uiconfig.ui:132
 #, kde-format
+msgctxt "@option:check"
 msgid "Show close buttons on tabs"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: shell/settings/uiconfig.ui:145
 #, kde-format
+msgctxt "@title:group"
 msgid "Coloring"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_ColorizeByProject)
 #: shell/settings/uiconfig.ui:151
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
 "When enabled, tabs and other widgets are colored based on the project "
 "affiliation"
@@ -4563,6 +5197,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ColorizeByProject)
 #: shell/settings/uiconfig.ui:154
 #, kde-format
+msgctxt "@option:check"
 msgid "Color widgets based on the project affiliation"
 msgstr ""
 
@@ -4573,56 +5208,75 @@ msgid "Configure User Interface"
 msgstr "Korisnički interfejs"
 
 #: shell/sourceformattercontroller.cpp:163
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Reformat Source"
+msgctxt "@action"
 msgid "&Reformat Source"
 msgstr "&Reformatiraj izvorni kod"
 
 #: shell/sourceformattercontroller.cpp:164
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Reformat source using AStyle"
+msgctxt "@info:tooltip"
 msgid "Reformat source using AStyle"
 msgstr "Reformatiraj izvorni kod koristeći AStyle"
 
 #: shell/sourceformattercontroller.cpp:165
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Source reformatting functionality using <b>astyle</b> library."
+msgctxt "@info:whatsthis"
 msgid "Source reformatting functionality using <b>astyle</b> library."
 msgstr ""
 "Izvor formatiranja funkcionalnost koristeći <b> astyle </b> biblioteku."
 
 #: shell/sourceformattercontroller.cpp:170
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Reformat Line"
+msgctxt "@action"
 msgid "Reformat Line"
 msgstr "Reformatiraj liniju"
 
 #: shell/sourceformattercontroller.cpp:171
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Reformat current line using AStyle"
+msgctxt "@info:tooltip"
 msgid "Reformat current line using AStyle"
 msgstr "Reformatiraj tekuću liniju koristeći AStyle"
 
 #: shell/sourceformattercontroller.cpp:172
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Source reformatting of line under cursor using <b>astyle</b> library."
+msgctxt "@info:whatsthis"
 msgid "Source reformatting of line under cursor using <b>astyle</b> library."
 msgstr "Izvor formatiranja funkcionalnost koristeći <b> stil </b> biblioteku."
 
 #: shell/sourceformattercontroller.cpp:177
 #, fuzzy, kde-format
 #| msgid "Reformat Line"
+msgctxt "@action"
 msgid "Reformat Files..."
 msgstr "Reformatiraj liniju"
 
 #: shell/sourceformattercontroller.cpp:178
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Format file(s) using the current theme"
+msgctxt "@info:tooltip"
 msgid "Format file(s) using the current theme"
 msgstr "Formatiraj datoteke koristeći trenutnu temu"
 
 #: shell/sourceformattercontroller.cpp:179
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Formatting functionality using <b>astyle</b> library."
+msgctxt "@info:whatsthis"
 msgid "Formatting functionality using <b>astyle</b> library."
 msgstr "Formatiranje funkcionalnosti koristeci <b>astyle</b>biblioteku."
 
 #: shell/sourceformattercontroller.cpp:743
 #, fuzzy, kde-format
 #| msgid "Reformat Line"
-msgid "Reformat files?"
+msgctxt "@title:window"
+msgid "Reformat Files?"
 msgstr "Reformatiraj liniju"
 
 #: shell/sourceformattercontroller.cpp:744
@@ -4633,6 +5287,7 @@ msgstr ""
 #: shell/sourceformattercontroller.cpp:748
 #, fuzzy, kde-format
 #| msgid "Reformat Line"
+msgctxt "@action:button"
 msgid "Reformat"
 msgstr "Reformatiraj liniju"
 
@@ -4669,9 +5324,11 @@ msgstr ""
 "Da li ga sigurno želite obrisati?"
 
 #: shell/sourceformatterselectionedit.cpp:470
-#, kde-format
-msgid "Style being deleted"
-msgstr "Stil je obrisan"
+#, fuzzy, kde-format
+#| msgid "Delete Working Set"
+msgctxt "@title:window"
+msgid "Deleting Style"
+msgstr "Obriši radni skup"
 
 #: shell/sourceformatterselectionedit.cpp:525
 #, kde-format
@@ -4691,33 +5348,54 @@ msgstr "Nema izabranog jezika"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: shell/sourceformatterselectionedit.ui:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Language:"
+msgctxt "@label:listbox"
 msgid "Language:"
 msgstr "Jezik:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: shell/sourceformatterselectionedit.ui:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Formatter:"
+msgctxt "@label:listbox"
 msgid "Formatter:"
 msgstr "Formater:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: shell/sourceformatterselectionedit.ui:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Style:"
+msgctxt "@label:listbox"
 msgid "Style:"
 msgstr "Stil:"
 
 #. i18n: ectx: property (text), widget (QPushButton, btnNewStyle)
 #: shell/sourceformatterselectionedit.ui:140
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New"
+msgctxt "@action:button"
 msgid "New"
 msgstr "Novi"
 
 #. i18n: ectx: property (text), widget (QPushButton, btnEditStyle)
 #: shell/sourceformatterselectionedit.ui:147
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit..."
+msgctxt "@action:button"
 msgid "Edit..."
 msgstr "Izmijeni..."
+
+#. i18n: ectx: property (text), widget (QPushButton, btnDelStyle)
+#. i18n: ectx: property (text), widget (QPushButton, deleteButton)
+#: shell/sourceformatterselectionedit.ui:154
+#: shell/workingsets/workingsettooltipwidget.cpp:105
+#: vcs/dvcs/ui/branchmanager.ui:47
+#, fuzzy, kde-format
+#| msgid "Delete"
+msgctxt "@action:button"
+msgid "Delete"
+msgstr "Obriši"
 
 #: shell/textdocument.cpp:448
 #, kde-format
@@ -4743,17 +5421,30 @@ msgid " Line: %1 Col: %2 "
 msgstr " red: %1 kol: %2 "
 
 #: shell/uicontroller.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Code"
+msgctxt "area"
 msgid "Code"
 msgstr "Kôd"
 
+#: shell/uicontroller.cpp:103
+#, fuzzy, kde-format
+#| msgid "Debug"
+msgctxt "area"
+msgid "Debug"
+msgstr "Ispravka grešaka"
+
 #: shell/uicontroller.cpp:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Review"
+msgctxt "area"
 msgid "Review"
 msgstr "Pregled"
 
 #: shell/uicontroller.cpp:465
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select Tool View to Add"
+msgctxt "@title:window"
 msgid "Select Tool View to Add"
 msgstr "Odaberi pogled alata za dodati"
 
@@ -4768,34 +5459,55 @@ msgid "<b>Working Set</b>"
 msgstr "<b>radni skup</b>"
 
 #: shell/workingsets/workingsettooltipwidget.cpp:106
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove this working set. The contained documents are not affected."
+msgctxt "@info:tooltip"
 msgid "Remove this working set. The contained documents are not affected."
 msgstr "Ukloni ovaj radni skup. Sadržani dokumenti nisu izmijenjeni"
 
 #: shell/workingsets/workingsettooltipwidget.cpp:132
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Documents:"
+msgctxt "@label"
 msgid "Documents:"
 msgstr "Dockumenti:"
 
 #: shell/workingsets/workingsettooltipwidget.cpp:140
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add All"
+msgctxt "@action:button"
 msgid "Add All"
 msgstr "Dodaj sve"
 
 #: shell/workingsets/workingsettooltipwidget.cpp:141
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Add all documents that are part of this working set to the currently "
+#| "active working set."
+msgctxt "@info:tooltip"
 msgid ""
 "Add all documents that are part of this working set to the currently active "
-"working set."
+"working set"
 msgstr ""
 "Dodaj sve dokumente koji su dio ovog radnog skupa na trenutno aktivni radni "
 "skup."
 
+#: shell/workingsets/workingsettooltipwidget.cpp:148
+#, fuzzy, kde-format
+#| msgid "Remove All"
+msgctxt "@action:button"
+msgid "Remove All"
+msgstr "Ukloni sve"
+
 #: shell/workingsets/workingsettooltipwidget.cpp:149
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Remove all documents that are part of this working set from the currently "
+#| "active working set."
+msgctxt "@info:tooltip"
 msgid ""
 "Remove all documents that are part of this working set from the currently "
-"active working set."
+"active working set"
 msgstr ""
 "Ukloni sve dokumente koji su dio ovog radnog skupa sa trenutno aktivnog "
 "radnog skupa."
@@ -4807,22 +5519,29 @@ msgid "Click to open and activate this document."
 msgstr "Klikni da otvoriš i aktiviraš ovaj dokument"
 
 #: shell/workingsets/workingsettooltipwidget.cpp:293
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove this file from the current working set"
+msgctxt "@info:tooltip"
 msgid "Remove this file from the current working set"
 msgstr "Ukloni ovu datoteku iz trenutnog radnog skupa."
 
 #: shell/workingsets/workingsettooltipwidget.cpp:298
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add this file to the current working set"
+msgctxt "@info:tooltip"
 msgid "Add this file to the current working set"
 msgstr "Dodaj ovu datoteku u trenutni radni skup."
 
 #: shell/workingsets/workingsettooltipwidget.cpp:327
 #, kde-format
+msgctxt "@action:button"
 msgid "Stash"
 msgstr ""
 
 #: shell/workingsets/workingsettooltipwidget.cpp:333
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load"
+msgctxt "@action:button"
 msgid "Load"
 msgstr "Učitaj"
 
@@ -4832,41 +5551,51 @@ msgid "Line: 00000 Col: 000"
 msgstr "Linija: 00000 kolona: 000"
 
 #: sublime/container.cpp:329
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show sorted list of opened documents"
+msgctxt "@info:tooltip"
 msgid "Show sorted list of opened documents"
 msgstr "Prikaži sortiranu listu otvorenih dokumenata"
 
 #: sublime/container.cpp:341
 #, kde-format
+msgctxt "@info"
 msgid "(Press Ctrl+Tab to switch)"
 msgstr ""
 
 #: sublime/container.cpp:722
 #, fuzzy, kde-format
 #| msgid "Filename"
+msgctxt "@action:inmenu"
 msgid "Copy Filename"
 msgstr "Ime datoteke"
 
 #: sublime/container.cpp:725
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:inmenu"
 msgid "Close"
 msgstr "Zatvori"
 
 #: sublime/container.cpp:727
 #, fuzzy, kde-format
 #| msgid "Close All Ot&hers"
+msgctxt "@action:inmenu"
 msgid "Close All Other"
 msgstr "Zatvori sve d&ruge"
 
 #: sublime/container.cpp:729
 #, fuzzy, kde-format
 #| msgid "Clos&e All"
+msgctxt "@action:inmenu"
 msgid "Close All"
 msgstr "Zatvori sv&e"
 
 #: sublime/idealbuttonbarwidget.cpp:51
-#, kde-format
-msgid "Toggle '%1' tool view."
+#, fuzzy, kde-format
+#| msgid "Toggle '%1' tool view."
+msgctxt "@info:tooltip"
+msgid "Toggle '%1' tool view"
 msgstr "Preklopi '%1' alatni pogled."
 
 #: sublime/idealbuttonbarwidget.cpp:113
@@ -4878,12 +5607,14 @@ msgstr "Desni klik za dodavanje novog pogleda alata."
 #: sublime/idealcontroller.cpp:108
 #, fuzzy, kde-format
 #| msgid "%1 Tool Bar"
+msgctxt "@title:window"
 msgid "%1 Toolbar"
 msgstr "%1 alatna traka"
 
 #: sublime/idealdockwidget.cpp:121
 #, fuzzy, kde-format
 #| msgid "Toolview Position"
+msgctxt "@title:menu"
 msgid "Tool View Position"
 msgstr "Pozivija alatnog pogleda"
 
@@ -4891,7 +5622,7 @@ msgstr "Pozivija alatnog pogleda"
 #, fuzzy, kde-format
 #| msgctxt "toolview position"
 #| msgid "Left"
-msgctxt "tool view position"
+msgctxt "@option:radio tool view position"
 msgid "Left"
 msgstr "Lijevo"
 
@@ -4899,7 +5630,7 @@ msgstr "Lijevo"
 #, fuzzy, kde-format
 #| msgctxt "toolview position"
 #| msgid "Bottom"
-msgctxt "tool view position"
+msgctxt "@option:radio tool view position"
 msgid "Bottom"
 msgstr "Dno"
 
@@ -4907,7 +5638,7 @@ msgstr "Dno"
 #, fuzzy, kde-format
 #| msgctxt "toolview position"
 #| msgid "Right"
-msgctxt "tool view position"
+msgctxt "@option:radio tool view position"
 msgid "Right"
 msgstr "Desno"
 
@@ -4915,55 +5646,69 @@ msgstr "Desno"
 #, fuzzy, kde-format
 #| msgctxt "toolview position"
 #| msgid "Detached"
-msgctxt "tool view position"
+msgctxt "@option:radio tool view position"
 msgid "Detached"
 msgstr "Odvojeno"
 
 #: sublime/idealdockwidget.cpp:146
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Assign Shortcut..."
+msgctxt "@action:inmenu"
 msgid "Assign Shortcut..."
 msgstr "Dodijeli kraticu..."
 
 #: sublime/idealdockwidget.cpp:147
 #, fuzzy, kde-format
 #| msgid "Use this shortcut to trigger visibility of the toolview."
+msgctxt "@info:tooltip"
 msgid "Use this shortcut to trigger visibility of the tool view."
 msgstr "Koristi ovu kraticu za preklapanje vidljivosti pogleda alata."
 
 #: sublime/idealdockwidget.cpp:150
 #, fuzzy, kde-format
 #| msgid "Remove Toolview"
+msgctxt "@action:inmenu"
 msgid "Remove Tool View"
 msgstr "Ukloni pogled alata"
 
 #: sublime/idealdockwidget.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Assign Shortcut For '%1' Tool View"
+msgctxt "@title:window"
 msgid "Assign Shortcut For '%1' Tool View"
 msgstr "Dodijeli kraticu za '%1' pogled alata"
 
 #: sublime/mainwindow_p.cpp:90
 #, fuzzy, kde-format
 #| msgid "Documentation"
+msgctxt "@option:check"
 msgid "Concentration Mode"
 msgstr "Dokumentacija"
 
 #: sublime/mainwindow_p.cpp:92
 #, kde-format
-msgid "Removes most of the controls so you can focus on what matters."
+msgctxt "@info:tooltip"
+msgid "Remove most of the controls so you can focus on what matters"
 msgstr ""
 
 #: sublime/mainwindow_p.cpp:99
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Left Dock"
+msgctxt "@option:check"
 msgid "Show Left Dock"
 msgstr "Prikaži lijevo sidrište"
 
 #: sublime/mainwindow_p.cpp:106
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Right Dock"
+msgctxt "@option:check"
 msgid "Show Right Dock"
 msgstr "Prikaži desno sidrište"
 
 #: sublime/mainwindow_p.cpp:112
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Bottom Dock"
+msgctxt "@option:check"
 msgid "Show Bottom Dock"
 msgstr "Prikaži donje sidrište"
 
@@ -4974,22 +5719,30 @@ msgid "Focus Editor"
 msgstr "Fokus editora"
 
 #: sublime/mainwindow_p.cpp:123
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hide/Restore Docks"
+msgctxt "@action"
 msgid "Hide/Restore Docks"
 msgstr "Sakrij/prikaži sidrišta"
 
 #: sublime/mainwindow_p.cpp:128
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Next Tool View"
+msgctxt "@action"
 msgid "Next Tool View"
 msgstr "Sljedeći prikaz alata"
 
 #: sublime/mainwindow_p.cpp:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Previous Tool View"
+msgctxt "@action"
 msgid "Previous Tool View"
 msgstr "Prethodni prikaz alata"
 
 #: sublime/mainwindow_p.cpp:140
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tool Views"
+msgctxt "@title:menu"
 msgid "Tool Views"
 msgstr "Pogledi alata"
 
@@ -5159,7 +5912,8 @@ msgstr ""
 
 #: util/shellutils.cpp:108
 #, kde-format
-msgid "Some files are write-protected"
+msgctxt "@title:window"
+msgid "Some Files are Write-Protected"
 msgstr ""
 
 #: util/shellutils.cpp:122
@@ -5169,7 +5923,8 @@ msgstr ""
 
 #: util/shellutils.cpp:123
 #, kde-format
-msgid "Failed setting permissions"
+msgctxt "@title:window"
+msgid "Failed Setting Permissions"
 msgstr ""
 
 #: vcs/dvcs/dvcsjob.cpp:187
@@ -5330,14 +6085,6 @@ msgctxt "@info:tooltip"
 msgid "The same as git branch -D"
 msgstr "Isto kao as git branch -D"
 
-#. i18n: ectx: property (text), widget (QPushButton, deleteButton)
-#: vcs/dvcs/ui/branchmanager.ui:47
-#, fuzzy, kde-format
-#| msgid "Delete"
-msgctxt "@action:button"
-msgid "Delete"
-msgstr "Obriši"
-
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
 #: vcs/dvcs/ui/branchmanager.ui:57
 #, fuzzy, kde-format
@@ -5384,14 +6131,6 @@ msgstr "Izdvajanje"
 msgctxt "@action:button merge a branch"
 msgid "Merge"
 msgstr ""
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, branchFilterEdit)
-#: vcs/dvcs/ui/branchmanager.ui:155
-#, fuzzy, kde-format
-#| msgid "Search"
-msgctxt "@info:placeholder"
-msgid "Search..."
-msgstr "Traži"
 
 #. i18n: ectx: property (text), widget (QLabel, labelUrl)
 #: vcs/dvcs/ui/dvcsimportmetadatawidget.ui:19
@@ -5888,6 +6627,68 @@ msgctxt "@title:window"
 msgid "Difference between Revisions"
 msgstr "Razlika između revizija"
 
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search..."
+#~ msgstr "Traži"
+
+#, fuzzy
+#~| msgid "Could not find an open document"
+#~ msgid "Could not find any plugins"
+#~ msgstr "Nemogu naći otvoreni dokument"
+
+#, fuzzy
+#~| msgctxt "@info:whatsthis"
+#~| msgid ""
+#~| "Executes the target or the program specified in currently active launch "
+#~| "configuration inside a Debugger."
+#~ msgid ""
+#~ "Executes the target or the program specified in currently active launch "
+#~ "configuration inside a Debugger."
+#~ msgstr ""
+#~ "Izvrsi metu programa specificiranu u trenutno aktivnom pokretanju "
+#~ "konfiguracije unutar debuggera."
+
+#~ msgctxt "Name of the Launch Configurations"
+#~ msgid "Name"
+#~ msgstr "Ime"
+
+#~ msgctxt ""
+#~ "The type of the Launch Configurations (i.e. Python Application, C++ "
+#~ "Application)"
+#~ msgid "Type"
+#~ msgstr "Tip"
+
+#~ msgctxt "Shorter Text for 'New File' shown in the toolbar"
+#~ msgid "New"
+#~ msgstr "Nova"
+
+#~ msgid "Close Document"
+#~ msgstr "Zatvori dokument"
+
+#~ msgctxt "Short text for 'Execute launch' used in the toolbar"
+#~ msgid "Execute"
+#~ msgstr "Izvrši"
+
+#~ msgctxt "Short text for 'Debug launch' used in the toolbar"
+#~ msgid "Debug"
+#~ msgstr "Praćenje grešaka"
+
+#~ msgctxt "Short text for 'Stop' used in the toolbar"
+#~ msgid "Stop"
+#~ msgstr "Prekini"
+
+#~ msgid "Search"
+#~ msgstr "Traži"
+
+#, fuzzy
+#~| msgid "Reformat Line"
+#~ msgid "Reformat files?"
+#~ msgstr "Reformatiraj liniju"
+
+#~ msgid "Style being deleted"
+#~ msgstr "Stil je obrisan"
+
 #~ msgctxt "file was added to versioncontrolsystem"
 #~ msgid "Added"
 #~ msgstr "Dodato"
@@ -6275,10 +7076,6 @@ msgstr "Razlika između revizija"
 
 #~ msgid "Add Multiple Variables"
 #~ msgstr "Dodaj više varijabli"
-
-#~ msgctxt "@title:window"
-#~ msgid "Close Document"
-#~ msgstr "Zatvori dokument"
 
 #~ msgid "Recover"
 #~ msgstr "Obnovi"
@@ -6752,9 +7549,6 @@ msgstr "Razlika između revizija"
 
 #~ msgid "Load Working Set (Left Click)"
 #~ msgstr "Učitaj radni skup (Lijevi klik)"
-
-#~ msgid "Delete Working Set"
-#~ msgstr "Obriši radni skup"
 
 #~ msgid "Could not show the Branch Manager, current branch is unavailable."
 #~ msgstr "Ne mogu prikayati menad\\er grana, trenutna grana je nedostupna"
