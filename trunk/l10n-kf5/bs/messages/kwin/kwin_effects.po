@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kwin_effects\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-31 18:12+0200\n"
+"POT-Creation-Date: 2020-06-02 02:11+0200\n"
 "PO-Revision-Date: 2015-01-02 10:39+0000\n"
 "Last-Translator: Fadil Ademovic <fademovic2@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -211,7 +211,7 @@ msgstr "Napredno"
 #: showpaint/showpaint_config.cpp:47
 #: thumbnailaside/thumbnailaside_config.cpp:68
 #: trackmouse/trackmouse_config.cpp:65
-#: windowgeometry/windowgeometry_config.cpp:56 zoom/zoom_config.cpp:65
+#: windowgeometry/windowgeometry_config.cpp:56 zoom/zoom_config.cpp:70
 #, kde-format
 msgid "KWin"
 msgstr ""
@@ -2079,52 +2079,52 @@ msgstr "Manje"
 msgid "More"
 msgstr "Više"
 
-#: zoom/zoom.cpp:84
+#: zoom/zoom.cpp:85
 #, kde-format
 msgid "Move Zoomed Area to Left"
 msgstr "Pomjeri uvećano područje lijevo"
 
-#: zoom/zoom.cpp:92
+#: zoom/zoom.cpp:93
 #, kde-format
 msgid "Move Zoomed Area to Right"
 msgstr "Pomjeri uvećano područje desno"
 
-#: zoom/zoom.cpp:100
+#: zoom/zoom.cpp:101
 #, kde-format
 msgid "Move Zoomed Area Upwards"
 msgstr "Pomjeri uvećano područje gore"
 
-#: zoom/zoom.cpp:108
+#: zoom/zoom.cpp:109
 #, kde-format
 msgid "Move Zoomed Area Downwards"
 msgstr "Pomjeri uvećano područje dolje"
 
-#: zoom/zoom.cpp:117 zoom/zoom_config.cpp:115
+#: zoom/zoom.cpp:118 zoom/zoom_config.cpp:120
 #, kde-format
 msgid "Move Mouse to Focus"
 msgstr "Pomjeri miša u fokus"
 
-#: zoom/zoom.cpp:125 zoom/zoom_config.cpp:122
+#: zoom/zoom.cpp:126 zoom/zoom_config.cpp:127
 #, kde-format
 msgid "Move Mouse to Center"
 msgstr "Pomjeri miša u centar"
 
-#: zoom/zoom_config.cpp:87
+#: zoom/zoom_config.cpp:92
 #, kde-format
 msgid "Move Left"
 msgstr "Pomjeri ulijevo"
 
-#: zoom/zoom_config.cpp:94
+#: zoom/zoom_config.cpp:99
 #, kde-format
 msgid "Move Right"
 msgstr "Pomjeri udesno"
 
-#: zoom/zoom_config.cpp:101
+#: zoom/zoom_config.cpp:106
 #, kde-format
 msgid "Move Up"
 msgstr "Pomjeri nagore"
 
-#: zoom/zoom_config.cpp:108
+#: zoom/zoom_config.cpp:113
 #, kde-format
 msgid "Move Down"
 msgstr "Pomjeri nadolje"
@@ -2145,10 +2145,13 @@ msgstr "Faktor zumiranja:"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableFocusTracking)
 #: zoom/zoom_config.ui:66
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable tracking of the focused location. This needs QAccessible to be "
+#| "enabled per application (\"export QT_ACCESSIBILITY=1\")."
 msgid ""
 "Enable tracking of the focused location. This needs QAccessible to be "
-"enabled per application (\"export QT_ACCESSIBILITY=1\")."
+"enabled per application (\"export QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1\")."
 msgstr ""
 "Omogućite praćenje fokusirane lokacije. Treba da bude omogućen QAccessible "
 "po programu (\"export QT_ACCESSIBILITY=1\")."
@@ -2159,84 +2162,99 @@ msgstr ""
 msgid "Enable Focus Tracking"
 msgstr "Omogući praćenje fokusa"
 
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableFollowFocus)
-#: zoom/zoom_config.ui:79
-#, kde-format
-msgid "When the focus changes, move the zoom area to the focused location."
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_EnableTextCaretTracking)
+#: zoom/zoom_config.ui:76
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable tracking of the focused location. This needs QAccessible to be "
+#| "enabled per application (\"export QT_ACCESSIBILITY=1\")."
+msgid ""
+"Enable tracking of the text cursor. This needs QAccessible to be enabled per "
+"application (\"export QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1\")."
 msgstr ""
-"Kada se promijeni fokus, premjesti područje zumiranja na fokusiranu lokaciju."
+"Omogućite praćenje fokusirane lokacije. Treba da bude omogućen QAccessible "
+"po programu (\"export QT_ACCESSIBILITY=1\")."
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableFollowFocus)
-#: zoom/zoom_config.ui:82
-#, kde-format
-msgid "Follow Focus"
-msgstr "Prati fokus"
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableTextCaretTracking)
+#: zoom/zoom_config.ui:79
+#, fuzzy, kde-format
+#| msgid "Enable Focus Tracking"
+msgid "Enable Text Cursor Tracking"
+msgstr "Omogući praćenje fokusa"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: zoom/zoom_config.ui:89
+#: zoom/zoom_config.ui:86
 #, kde-format
 msgid "Mouse Pointer:"
 msgstr "Pokazivač miša:"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, kcfg_MousePointer)
-#: zoom/zoom_config.ui:102
+#: zoom/zoom_config.ui:99
 #, kde-format
 msgid "Visibility of the mouse-pointer."
 msgstr "Vidljivost pokazivača miša."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MousePointer)
-#: zoom/zoom_config.ui:106
+#: zoom/zoom_config.ui:103
 #, kde-format
 msgid "Scale"
 msgstr "Srazmjerno"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MousePointer)
-#: zoom/zoom_config.ui:111
+#: zoom/zoom_config.ui:108
 #, kde-format
 msgid "Keep"
 msgstr "Zadrži"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MousePointer)
-#: zoom/zoom_config.ui:116
+#: zoom/zoom_config.ui:113
 #, kde-format
 msgid "Hide"
 msgstr "Sakrij"
 
 #. i18n: ectx: property (whatsThis), widget (QComboBox, kcfg_MouseTracking)
-#: zoom/zoom_config.ui:124
+#: zoom/zoom_config.ui:121
 #, kde-format
 msgid "Track moving of the mouse."
 msgstr "Prati kretanje miša."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MouseTracking)
-#: zoom/zoom_config.ui:128
+#: zoom/zoom_config.ui:125
 #, kde-format
 msgid "Proportional"
 msgstr "Proporcionalno"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MouseTracking)
-#: zoom/zoom_config.ui:133
+#: zoom/zoom_config.ui:130
 #, kde-format
 msgid "Centered"
 msgstr "Centrirano"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MouseTracking)
-#: zoom/zoom_config.ui:138
+#: zoom/zoom_config.ui:135
 #, kde-format
 msgid "Push"
 msgstr "Pritisni"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_MouseTracking)
-#: zoom/zoom_config.ui:143
+#: zoom/zoom_config.ui:140
 #, kde-format
 msgid "Disabled"
 msgstr "Isključeno"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: zoom/zoom_config.ui:151
+#: zoom/zoom_config.ui:148
 #, kde-format
 msgid "Mouse Tracking:"
 msgstr "Praćenje miša:"
+
+#~ msgid "When the focus changes, move the zoom area to the focused location."
+#~ msgstr ""
+#~ "Kada se promijeni fokus, premjesti područje zumiranja na fokusiranu "
+#~ "lokaciju."
+
+#~ msgid "Follow Focus"
+#~ msgstr "Prati fokus"
 
 #~ msgctxt "Name of a KWin Effect"
 #~ msgid "Dim Screen for Administrator Mode"
