@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-07-22 02:21+0200\n"
+"POT-Creation-Date: 2020-07-28 02:17+0200\n"
 "PO-Revision-Date: 2015-02-22 22:52+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team:  <bs@li.org>\n"
@@ -462,13 +462,17 @@ msgid "Invert Selection"
 msgstr "Obrni izbor"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_collapse_all)
+#. i18n: ectx: property (text), widget (QPushButton, btnCollapseAll)
 #: ktorrent/dialogs/fileselectdlg.ui:165
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:36
 #, kde-format
 msgid "Collapse All"
 msgstr "Sažmi sve"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_expand_all)
+#. i18n: ectx: property (text), widget (QPushButton, btnExpandAll)
 #: ktorrent/dialogs/fileselectdlg.ui:172
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:29
 #, kde-format
 msgid "Expand All"
 msgstr "Raširi sve"
@@ -487,6 +491,7 @@ msgstr "Postojeće datoteke nisu nađeni"
 #: ktorrent/dialogs/torrentcreatordlg.ui:63
 #: plugins/logviewer/logprefwidget.ui:36
 #: plugins/scanfolder/scanfolderprefpage.ui:72
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:98
 #: plugins/syndication/filtereditor.ui:242
 #, kde-format
 msgid "Options"
@@ -693,6 +698,7 @@ msgstr "Otkaži, nemoj pokretati torent."
 #. i18n: ectx: property (text), widget (QPushButton, m_cancel)
 #. i18n: ectx: property (text), widget (QPushButton, cancel_button)
 #: ktorrent/dialogs/missingfilesdlg.ui:80 ktorrent/view/scanextender.ui:214
+#: plugins/scanforlostfiles/scanforlostfileswidget.cpp:156
 #, kde-format
 msgid "Cancel"
 msgstr "Odustani"
@@ -5346,6 +5352,7 @@ msgid "Show Filter"
 msgstr "Prikaži filter"
 
 #: plugins/infowidget/fileview.cpp:338
+#: plugins/scanforlostfiles/scanforlostfileswidget.cpp:188
 #, kde-format
 msgid "You will lose all data in this file, are you sure you want to do this?"
 msgid_plural ""
@@ -6366,20 +6373,26 @@ msgstr "Bogati tekst za izlaz dnevnika"
 msgid "Log widget position:"
 msgstr "Položaj dnevničkog grafičke kontrole:"
 
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_ScanForLostFilesWidgetPosition)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
 #: plugins/logviewer/logprefwidget.ui:68
+#: plugins/scanforlostfiles/scanforlostfilesprefpage.ui:33
 #, kde-format
 msgid "Separate activity"
 msgstr "Zasebna aktivnost"
 
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_ScanForLostFilesWidgetPosition)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
 #: plugins/logviewer/logprefwidget.ui:73
+#: plugins/scanforlostfiles/scanforlostfilesprefpage.ui:38
 #, kde-format
 msgid "Dockable widget"
 msgstr "Usidriva grafička kontrola"
 
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_ScanForLostFilesWidgetPosition)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_logWidgetPosition)
 #: plugins/logviewer/logprefwidget.ui:78
+#: plugins/scanforlostfiles/scanforlostfilesprefpage.ui:43
 #, kde-format
 msgid "Torrent activity"
 msgstr "Aktivnost torenta"
@@ -6783,8 +6796,10 @@ msgstr "Ukloni direktorij sa spiska."
 msgid "Remove Folder"
 msgstr "Ukloni direktorij"
 
+#. i18n: ectx: property (toolTip), widget (QCheckBox, cbShowAllFiles)
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_openSilently)
 #: plugins/scanfolder/scanfolderprefpage.ui:78
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:104
 #, kde-format
 msgid "Open the torrents without asking any questions."
 msgstr "Otvori torente bez ikakvih pitanja."
@@ -6848,6 +6863,78 @@ msgstr "Dodaj torente otvorene ovim priključkom u grupu."
 #, kde-format
 msgid "Group to add torrents to."
 msgstr "Grupa gdje će se dodati torenti."
+
+#: plugins/scanforlostfiles/scanforlostfilesprefpage.cpp:35
+#, kde-format
+msgctxt "plugin name"
+msgid "Scan for lost files"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: plugins/scanforlostfiles/scanforlostfilesprefpage.ui:19
+#, fuzzy, kde-format
+#| msgid "Log widget position:"
+msgid "Widget position:"
+msgstr "Položaj dnevničkog grafičke kontrole:"
+
+#: plugins/scanforlostfiles/scanforlostfileswidget.cpp:44
+#, kde-format
+msgid "Scan for lost files"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, btnScanFolder)
+#: plugins/scanforlostfiles/scanforlostfileswidget.cpp:161
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:82
+#, kde-format
+msgid "Scan"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:17
+#, fuzzy, kde-format
+#| msgid "Select &All"
+msgid "Select folder:"
+msgstr "Izaberi &sve"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbShowAllFiles)
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:107
+#, fuzzy, kde-format
+#| msgid "Show a file list"
+msgid "Show all files"
+msgstr "Prikaži spisak datoteka"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbShowAllFiles)
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:121
+#, fuzzy, kde-format
+#| msgid "Open silently"
+msgid "Open file"
+msgstr "Otvori tiho"
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbShowAllFiles)
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:130
+#, fuzzy, kde-format
+#| msgid "Delete File(s)"
+msgid "Delete on disk"
+msgstr "Izbriši datoteku(e)"
+
+#. i18n: ectx: property (shortcut), widget (QCheckBox, cbShowAllFiles)
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:133
+#, kde-format
+msgid "Ctrl+Del"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, cbShowAllFiles)
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:142
+#, fuzzy, kde-format
+#| msgid "Magnet link copied to clipboard"
+msgid "Copy to clipboard"
+msgstr "Magnetska veza kopirana u klipbord"
+
+#. i18n: ectx: property (shortcut), widget (QCheckBox, cbShowAllFiles)
+#: plugins/scanforlostfiles/scanforlostfileswidget.ui:145
+#, kde-format
+msgid "Ctrl+C"
+msgstr ""
 
 #. i18n: ectx: ToolBar (ScriptingToolbar)
 #. i18n: ectx: Menu (ScriptingMenu)
