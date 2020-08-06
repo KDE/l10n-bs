@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: digikam\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-08-05 02:09+0200\n"
+"POT-Creation-Date: 2020-08-06 02:11+0200\n"
 "PO-Revision-Date: 2015-02-26 21:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -3531,7 +3531,7 @@ msgstr "Putanja"
 
 #: core/app/views/tableview/tableview_column_file.cpp:65
 #: core/app/views/tableview/tableview_column_file.cpp:98
-#: core/dplugins/editor/enhance/hotpixels/blackframelistview.cpp:157
+#: core/libs/dimg/filters/hotpixels/blackframelistview.cpp:157
 #: core/libs/widgets/fonts/dfontproperties.cpp:332
 #, kde-format
 msgid "Size"
@@ -4010,7 +4010,8 @@ msgstr "Automatska ekspozicija"
 
 #: core/dplugins/bqm/colors/autocorrection/autocorrection.cpp:69
 #: core/dplugins/bqm/enhance/restoration/restoration.cpp:66
-#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:117
+#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:116
+#: core/libs/dimg/filters/hotpixels/hotpixelsettings.cpp:87
 #, kde-format
 msgid "Filter:"
 msgstr "Filter:"
@@ -6881,62 +6882,48 @@ msgstr ""
 "Ovaj filter može biti korišten da se oboji dio u slici. Da bi koristili ovu "
 "opciju, označite područje koje se treba obojiti."
 
-#. i18n: ectx: property (title), widget (QGroupBox, previewGroupBox)
-#: core/dplugins/editor/enhance/hotpixels/blackframelistview.cpp:156
-#: core/dplugins/generic/tools/calendar/ui/caltemplate.ui:26
-#, kde-format
-msgid "Preview"
-msgstr "Pregled"
-
-#: core/dplugins/editor/enhance/hotpixels/blackframelistview.cpp:159
-#, kde-format
-msgctxt ""
-"This is a column which will contain the amount of HotPixels found in the "
-"black frame file"
-msgid "HP"
-msgstr "HP"
-
-#: core/dplugins/editor/enhance/hotpixels/hotpixelfixer.cpp:90
-#, kde-format
-msgid "Hot Pixels Tool"
-msgstr "Alat Vrući pikseli"
-
-#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:104
+#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:103
 #: core/dplugins/editor/enhance/hotpixels/hotpixelstoolplugin.cpp:52
 #, kde-format
 msgid "Hot Pixels"
 msgstr "Vrući pikseli"
 
-#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:119
+#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:118
+#: core/libs/dimg/filters/hotpixels/hotpixelsettings.cpp:89
 #, kde-format
 msgctxt "average filter mode"
 msgid "Average"
 msgstr "Prosječni"
 
-#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:120
+#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:119
+#: core/libs/dimg/filters/hotpixels/hotpixelsettings.cpp:90
 #, kde-format
 msgctxt "linear filter mode"
 msgid "Linear"
 msgstr "Linearni"
 
-#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:121
+#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:120
+#: core/libs/dimg/filters/hotpixels/hotpixelsettings.cpp:91
 #, kde-format
 msgctxt "quadratic filter mode"
 msgid "Quadratic"
 msgstr "Kvadratni"
 
-#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:122
+#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:121
+#: core/libs/dimg/filters/hotpixels/hotpixelsettings.cpp:92
 #, kde-format
 msgctxt "cubic filter mode"
 msgid "Cubic"
 msgstr "Kubni"
 
-#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:125
+#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:124
+#: core/libs/dimg/filters/hotpixels/hotpixelsettings.cpp:95
 #, kde-format
 msgid "Black Frame..."
 msgstr "Crni okvir..."
 
-#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:127
+#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:126
+#: core/libs/dimg/filters/hotpixels/hotpixelsettings.cpp:97
 #, kde-format
 msgid ""
 "Use this button to add a new black frame file which will be used by the hot "
@@ -6945,17 +6932,17 @@ msgstr ""
 "Koristite ovo dugme za dodavanje novog crnog okvira koji će biti korišten od "
 "strane filtera za uklanjanje vrućih filtera."
 
-#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:186
+#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:185
 #, kde-format
 msgid "Loading: "
 msgstr "Učitavanje: "
 
-#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:230
+#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:229
 #, kde-format
 msgid "Select Black Frame Image"
 msgstr "Izaberite sliku crnog okvira"
 
-#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:289
+#: core/dplugins/editor/enhance/hotpixels/hotpixelstool.cpp:288
 #, kde-format
 msgid "Hot Pixels Correction"
 msgstr "Ispravka Vrućih piksela"
@@ -13674,6 +13661,13 @@ msgstr "Ukupno stavki"
 #| msgid "Create Database Folder Failed"
 msgid "Create Template for Calendar"
 msgstr "Kreiranje foldera za bazu podataka nije uspjelo"
+
+#. i18n: ectx: property (title), widget (QGroupBox, previewGroupBox)
+#: core/dplugins/generic/tools/calendar/ui/caltemplate.ui:26
+#: core/libs/dimg/filters/hotpixels/blackframelistview.cpp:156
+#, kde-format
+msgid "Preview"
+msgstr "Pregled"
 
 #. i18n: ectx: property (text), widget (QLabel, paperSizeLabel)
 #: core/dplugins/generic/tools/calendar/ui/caltemplate.ui:57
@@ -26005,7 +25999,7 @@ msgstr "Automatsko Izjednačavanje"
 msgid "Auto Normalize"
 msgstr "Automatska normalizacija"
 
-#: core/libs/dimg/filters/bcg/bcgfilter.cpp:138
+#: core/libs/dimg/filters/bcg/bcgfilter.cpp:95
 #, kde-format
 msgid "Brightness / Contrast / Gamma Filter"
 msgstr "Osvjetljenje/Kontrast/Gamma filter"
@@ -27536,6 +27530,19 @@ msgstr "Brzo procjenjivanje"
 #, kde-format
 msgid "Enable fast approximation when rendering images."
 msgstr "Omogući brzo približavanje pri donošenju slike."
+
+#: core/libs/dimg/filters/hotpixels/blackframelistview.cpp:159
+#, kde-format
+msgctxt ""
+"This is a column which will contain the amount of HotPixels found in the "
+"black frame file"
+msgid "HP"
+msgstr "HP"
+
+#: core/libs/dimg/filters/hotpixels/hotpixelfixer.cpp:90
+#, kde-format
+msgid "Hot Pixels Tool"
+msgstr "Alat Vrući pikseli"
 
 #: core/libs/dimg/filters/hsl/hslfilter.cpp:94
 #, kde-format
