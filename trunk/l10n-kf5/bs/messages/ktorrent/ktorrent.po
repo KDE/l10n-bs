@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktorrent\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-09-23 02:26+0200\n"
+"POT-Creation-Date: 2020-10-07 02:21+0200\n"
 "PO-Revision-Date: 2015-02-22 22:52+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team:  <bs@li.org>\n"
@@ -315,7 +315,7 @@ msgstr ""
 "torentima. Torentima nije dopušteno da pišu u iste datoteke. Molim odaberite "
 "drugu lokaciju."
 
-#: ktorrent/dialogs/fileselectdlg.cpp:450 ktorrent/dialogs/pastedialog.cpp:71
+#: ktorrent/dialogs/fileselectdlg.cpp:450 ktorrent/dialogs/pastedialog.cpp:77
 #: ktorrent/dialogs/torrentcreatordlg.cpp:134 libktcore/groups/allgroup.cpp:27
 #, kde-format
 msgid "All Torrents"
@@ -704,12 +704,24 @@ msgid "Cancel"
 msgstr "Odustani"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, PasteDlgBase)
-#: ktorrent/dialogs/pastedialog.cpp:44 ktorrent/dialogs/pastedlgbase.ui:14
+#: ktorrent/dialogs/pastedialog.cpp:50 ktorrent/dialogs/pastedlgbase.ui:14
 #, kde-format
 msgid "Open an URL"
 msgstr "Otvori URL"
 
-#: ktorrent/dialogs/pastedialog.cpp:115
+#: ktorrent/dialogs/pastedialog.cpp:136
+#, kde-format
+msgid "Error fetching tracker list"
+msgstr ""
+
+#: ktorrent/dialogs/pastedialog.cpp:137
+#, kde-format
+msgid ""
+"Please check if the URL in Settings > Advanced > Tracker list URL is "
+"reachable."
+msgstr ""
+
+#: ktorrent/dialogs/pastedialog.cpp:164
 #: ktorrent/dialogs/torrentcreatordlg.cpp:262 ktorrent/gui.cpp:344
 #, kde-format
 msgid "Invalid URL: %1"
@@ -2219,8 +2231,23 @@ msgstr ""
 msgid "Do not use KIO for tracker announces"
 msgstr "Ne koristi K‑U/I za objavljivanja pratioca"
 
-#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
+#. i18n: ectx: property (text), widget (QLabel, label_4)
 #: ktorrent/pref/advancedpref.ui:300
+#, fuzzy, kde-format
+#| msgid "Copy Torrent URL"
+msgid "Tracker list URL:"
+msgstr "Kopiraj URL torenta"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, kcfg_trackerListUrl)
+#: ktorrent/pref/advancedpref.ui:308
+#, kde-format
+msgid ""
+"URL of the tracker list used when adding a torrent by infohash\n"
+"NOTE: Each tracker must be on it's own line. Blank lines are ignored."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
+#: ktorrent/pref/advancedpref.ui:319
 #, kde-format
 msgid ""
 "Resolve the hostname of each peer. This will result in the hostname of a "
@@ -2234,7 +2261,7 @@ msgstr ""
 "smeta povećanje mrežnog saobraćaja do kojeg dovodi.</p>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_lookUpHostnameOfPeers)
-#: ktorrent/pref/advancedpref.ui:303
+#: ktorrent/pref/advancedpref.ui:322
 #, kde-format
 msgid "Resolve hostnames of peers"
 msgstr "Razrješavaj imena računara saradnika"
@@ -4871,18 +4898,18 @@ msgstr ""
 "Sljedeći torenti su dostigli najveći odnos dijeljenja. Želite li ipak da ih "
 "pokrenete?"
 
-#: libktcore/torrent/queuemanager.cpp:773
+#: libktcore/torrent/queuemanager.cpp:781
 #, kde-format
 msgid "Error starting torrent %1: %2"
 msgstr "Greška pri pokretanju torenta %1 : %2"
 
-#: libktcore/torrent/queuemanager.cpp:775
-#: libktcore/torrent/queuemanager.cpp:791
+#: libktcore/torrent/queuemanager.cpp:783
+#: libktcore/torrent/queuemanager.cpp:799
 #, kde-format
 msgid "Error"
 msgstr "Greška"
 
-#: libktcore/torrent/queuemanager.cpp:789
+#: libktcore/torrent/queuemanager.cpp:797
 #, kde-format
 msgid "Error stopping torrent %1: %2"
 msgstr "Greška pri zaustavljanju torenta %1 : %2"
