@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-01-14 09:04+0100\n"
+"POT-Creation-Date: 2021-01-18 09:21+0100\n"
 "PO-Revision-Date: 2015-02-04 14:43+0000\n"
 "Last-Translator: Samir Ribic <Unknown>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -1506,7 +1506,7 @@ msgstr ""
 
 #: main/KoPrintingDialog.cpp:188 ui/kptaccountseditor.cpp:73
 #: ui/kptaccountsviewconfigdialog.cpp:89 ui/kptdependencyeditor.cpp:1999
-#: ui/kptganttview.cpp:193 ui/kptganttview.cpp:1406 ui/kptganttview.cpp:1842
+#: ui/kptganttview.cpp:185 ui/kptganttview.cpp:1403 ui/kptganttview.cpp:1838
 #: ui/kptitemviewsettup.cpp:201 ui/kptitemviewsettup.cpp:285
 #: ui/kptresourceappointmentsview.cpp:105
 #: ui/performance/ProjectStatusView.cpp:184
@@ -5344,8 +5344,8 @@ msgid "Settings"
 msgstr "Postavke"
 
 #: ui/kptaccountseditor.cpp:74 ui/kptaccountsviewconfigdialog.cpp:90
-#: ui/kptdependencyeditor.cpp:2000 ui/kptganttview.cpp:193
-#: ui/kptganttview.cpp:1406 ui/kptganttview.cpp:1842
+#: ui/kptdependencyeditor.cpp:2000 ui/kptganttview.cpp:185
+#: ui/kptganttview.cpp:1403 ui/kptganttview.cpp:1838
 #: ui/kptitemviewsettup.cpp:201 ui/kptitemviewsettup.cpp:285
 #: ui/kptresourceappointmentsview.cpp:106
 #: ui/performance/ProjectStatusView.cpp:185
@@ -5477,9 +5477,8 @@ msgstr "Odstupanje"
 msgid "Start date"
 msgstr "Početni datum"
 
-#. i18n: ectx: property (text), widget (QRadioButton, ui_projectStartBtn)
 #. i18n: ectx: property (text), widget (QRadioButton, ui_projectstartBtn)
-#: ui/kptaccountsviewconfigurepanelbase.ui:107 ui/kptganttprintingoptions.ui:88
+#: ui/kptaccountsviewconfigurepanelbase.ui:107
 #, kde-format
 msgid "Project start"
 msgstr "Početak projekta"
@@ -5508,10 +5507,8 @@ msgstr "Krajnji datum"
 msgid "Current date"
 msgstr "Tekući datum"
 
-#. i18n: ectx: property (text), widget (QRadioButton, ui_projectEndBtn)
 #. i18n: ectx: property (text), widget (QRadioButton, ui_projectendBtn)
 #: ui/kptaccountsviewconfigurepanelbase.ui:158
-#: ui/kptganttprintingoptions.ui:121
 #, kde-format
 msgid "Project end"
 msgstr "Kraj projekta"
@@ -6071,6 +6068,7 @@ msgstr "Ime: %1<nl/>Planirano: %2 - %3"
 #: ui/kptganttprintingoptions.ui:17
 #, fuzzy, kde-format
 #| msgid "Header"
+msgctxt "@title:group"
 msgid "Headers"
 msgstr "Zaglavlje"
 
@@ -6079,25 +6077,32 @@ msgstr "Zaglavlje"
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Modify task name"
+msgctxt "@option:check"
 msgid "Print task names"
 msgstr "Promijeni  ime zadatku"
 
 #. i18n: ectx: property (text), widget (QCheckBox, ui_printColumnLabels)
 #: ui/kptganttprintingoptions.ui:30
-#, kde-format
-msgid "Print time scale header"
-msgstr ""
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Modify task name"
+msgctxt "@option:check"
+msgid "Print time scale"
+msgstr "Promijeni  ime zadatku"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: ui/kptganttprintingoptions.ui:40
 #, fuzzy, kde-format
 #| msgid "Scheduling"
+msgctxt "@title:group"
 msgid "Scaling"
 msgstr "Raspoređivanje"
 
 #. i18n: ectx: property (text), widget (QRadioButton, ui_noFitting)
 #: ui/kptganttprintingoptions.ui:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Divide chart on multiple pages"
+msgctxt "@option:radio"
 msgid "Divide chart on multiple pages"
 msgstr "Podijeli dijagram na više strana"
 
@@ -6105,6 +6110,7 @@ msgstr "Podijeli dijagram na više strana"
 #: ui/kptganttprintingoptions.ui:53
 #, fuzzy, kde-format
 #| msgid "Print chart on a single page"
+msgctxt "@option:radio"
 msgid "Fit chart to page height"
 msgstr "Prikaži dijagram na jednoj stranici"
 
@@ -6112,6 +6118,7 @@ msgstr "Prikaži dijagram na jednoj stranici"
 #: ui/kptganttprintingoptions.ui:60
 #, fuzzy, kde-format
 #| msgid "Print chart on a single page"
+msgctxt "@option:radio"
 msgid "Fit chart to a single page"
 msgstr "Prikaži dijagram na jednoj stranici"
 
@@ -6119,17 +6126,41 @@ msgstr "Prikaži dijagram na jednoj stranici"
 #: ui/kptganttprintingoptions.ui:73
 #, fuzzy, kde-format
 #| msgid "Change..."
+msgctxt "@title:group"
 msgid "Range"
 msgstr "Izmijeni..."
 
-#. i18n: ectx: property (text), widget (QRadioButton, ui_startTimeBtn)
-#. i18n: ectx: property (text), widget (QRadioButton, ui_endTimeBtn)
-#: ui/kptganttprintingoptions.ui:97 ui/kptganttprintingoptions.ui:130
+#. i18n: ectx: property (text), widget (QRadioButton, ui_projectStartBtn)
+#: ui/kptganttprintingoptions.ui:88
 #, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Time"
-msgid "Time:"
-msgstr "Trajanje"
+#| msgid "Can start"
+msgctxt "@option:radio"
+msgid "Chart start:"
+msgstr "Može započeti"
+
+#. i18n: ectx: property (text), widget (QRadioButton, ui_startTimeBtn)
+#: ui/kptganttprintingoptions.ui:105
+#, fuzzy, kde-format
+#| msgctxt "Interval start time"
+#| msgid "Start"
+msgctxt "@option:radio"
+msgid "Start:"
+msgstr "Početak"
+
+#. i18n: ectx: property (text), widget (QRadioButton, ui_projectEndBtn)
+#: ui/kptganttprintingoptions.ui:137
+#, fuzzy, kde-format
+#| msgid "Chart type"
+msgctxt "@option:radio"
+msgid "Chart end:"
+msgstr "Vrsta dijagrama"
+
+#. i18n: ectx: property (text), widget (QRadioButton, ui_endTimeBtn)
+#: ui/kptganttprintingoptions.ui:154
+#, kde-format
+msgctxt "@option:radio"
+msgid "End:"
+msgstr ""
 
 #: ui/kptganttview.cpp:176 ui/performance/PerformanceStatusView.cpp:391
 #: ui/performance/ProjectStatusView.cpp:169
@@ -6142,13 +6173,13 @@ msgstr "Grafikon"
 msgid "Gantt Chart Settings"
 msgstr "Postavke Gantovog dijagrama"
 
-#: ui/kptganttview.cpp:277
+#: ui/kptganttview.cpp:273
 #, kde-kuit-format
 msgctxt "@title:tab"
 msgid "Chart"
 msgstr "Grafikon"
 
-#: ui/kptganttview.cpp:1027
+#: ui/kptganttview.cpp:1025
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -6160,63 +6191,63 @@ msgid ""
 "><link url='%1'>More...</link></para>"
 msgstr ""
 
-#: ui/kptganttview.cpp:1073 ui/kpttaskeditor.cpp:921 ui/kpttaskeditor.cpp:1445
+#: ui/kptganttview.cpp:1071 ui/kpttaskeditor.cpp:921 ui/kpttaskeditor.cpp:1445
 #, kde-format
 msgid "Show Project"
 msgstr "Prikaži projekt"
 
-#: ui/kptganttview.cpp:1081
+#: ui/kptganttview.cpp:1079
 #, fuzzy, kde-format
 #| msgid "Not scheduled"
 msgid "Show Unscheduled Tasks"
 msgstr "Nije raspoređeno"
 
-#: ui/kptganttview.cpp:1092 ui/kptganttview.cpp:1656 ui/kptganttview.cpp:1994
+#: ui/kptganttview.cpp:1090 ui/kptganttview.cpp:1653 ui/kptganttview.cpp:1990
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Auto"
 msgstr ""
 
-#: ui/kptganttview.cpp:1099 ui/kptganttview.cpp:1663 ui/kptganttview.cpp:2001
+#: ui/kptganttview.cpp:1097 ui/kptganttview.cpp:1660 ui/kptganttview.cpp:1997
 #, fuzzy, kde-format
 #| msgid "Month"
 msgctxt "@action:inmenu"
 msgid "Month"
 msgstr "Mjesec"
 
-#: ui/kptganttview.cpp:1105 ui/kptganttview.cpp:1669 ui/kptganttview.cpp:2007
+#: ui/kptganttview.cpp:1103 ui/kptganttview.cpp:1666 ui/kptganttview.cpp:2003
 #, fuzzy, kde-format
 #| msgid "Week"
 msgctxt "@action:inmenu"
 msgid "Week"
 msgstr "Sedmica"
 
-#: ui/kptganttview.cpp:1111 ui/kptganttview.cpp:1675 ui/kptganttview.cpp:2013
+#: ui/kptganttview.cpp:1109 ui/kptganttview.cpp:1672 ui/kptganttview.cpp:2009
 #, fuzzy, kde-format
 #| msgid "Day"
 msgctxt "@action:inmenu"
 msgid "Day"
 msgstr "Dan"
 
-#: ui/kptganttview.cpp:1117 ui/kptganttview.cpp:1681 ui/kptganttview.cpp:2019
+#: ui/kptganttview.cpp:1115 ui/kptganttview.cpp:1678 ui/kptganttview.cpp:2015
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hour"
 msgstr ""
 
-#: ui/kptganttview.cpp:1123 ui/kptganttview.cpp:1687 ui/kptganttview.cpp:2025
+#: ui/kptganttview.cpp:1121 ui/kptganttview.cpp:1684 ui/kptganttview.cpp:2021
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Zoom In"
 msgstr ""
 
-#: ui/kptganttview.cpp:1128 ui/kptganttview.cpp:1692 ui/kptganttview.cpp:2030
+#: ui/kptganttview.cpp:1126 ui/kptganttview.cpp:1689 ui/kptganttview.cpp:2026
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Zoom Out"
 msgstr ""
 
-#: ui/kptganttview.cpp:1477
+#: ui/kptganttview.cpp:1474
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -6228,7 +6259,7 @@ msgid ""
 "url='%1'>More...</link></para>"
 msgstr ""
 
-#: ui/kptganttview.cpp:1909
+#: ui/kptganttview.cpp:1905
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -9696,6 +9727,12 @@ msgstr "Distribucija"
 #, kde-format
 msgid "All supported formats"
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "@title:column"
+#~| msgid "Time"
+#~ msgid "Time:"
+#~ msgstr "Trajanje"
 
 #~ msgid "Print row labels"
 #~ msgstr "Prikaži oznake redova"
