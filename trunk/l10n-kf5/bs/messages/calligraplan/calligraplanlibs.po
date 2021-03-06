@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-03-05 02:41+0100\n"
+"POT-Creation-Date: 2021-03-06 02:52+0100\n"
 "PO-Revision-Date: 2015-02-04 14:43+0000\n"
 "Last-Translator: Samir Ribic <Unknown>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -212,8 +212,8 @@ msgstr "Greška u raspoređivanju"
 #: models/kptnodeitemmodel.cpp:451 models/kptnodeitemmodel.cpp:664
 #: models/kptnodeitemmodel.cpp:681 models/kptnodeitemmodel.cpp:699
 #: models/kptnodeitemmodel.cpp:717 models/kptnodeitemmodel.cpp:752
-#: models/kptnodeitemmodel.cpp:769 models/kptresourceallocationmodel.cpp:739
-#: models/kptresourceallocationmodel.cpp:814 models/kptschedulemodel.cpp:618
+#: models/kptnodeitemmodel.cpp:769 models/kptresourceallocationmodel.cpp:889
+#: models/kptresourceallocationmodel.cpp:964 models/kptschedulemodel.cpp:618
 #: models/kpttreecombobox.cpp:123 models/ResourceModel.cpp:200
 #: models/ResourceModel.cpp:232 models/ResourceModel.cpp:353
 #: models/ResourceModel.cpp:357 models/ResourceModel.cpp:366
@@ -526,12 +526,12 @@ msgstr "Kraj-kraj"
 msgid "Start-Start"
 msgstr "Početak-početak"
 
-#: kernel/kptresourcerequest.cpp:889
+#: kernel/kptresourcerequest.cpp:898
 #, kde-format
 msgid "Could not match effort. Want: %1 got: %2"
 msgstr "Ne mogu dostići trud. Željeno: %1 dobijeno: %2"
 
-#: kernel/kptresourcerequest.cpp:892
+#: kernel/kptresourcerequest.cpp:901
 #, kde-format
 msgid "Resource %1 available from %2 to %3"
 msgstr "Resurs %1 raspoloživ od %2 do %3"
@@ -1769,9 +1769,9 @@ msgstr "Alokacija"
 #: models/AllocatedResourceItemModel.cpp:165
 #: models/kptresourceallocationmodel.cpp:145
 #: models/kptresourceallocationmodel.cpp:158
-#: models/kptresourceallocationmodel.cpp:285
-#: models/kptresourceallocationmodel.cpp:316
-#: models/kptresourceallocationmodel.cpp:672
+#: models/kptresourceallocationmodel.cpp:414
+#: models/kptresourceallocationmodel.cpp:445
+#: models/kptresourceallocationmodel.cpp:801
 #, no-c-format, kde-format
 msgctxt "<value>%"
 msgid "%1%"
@@ -1779,8 +1779,8 @@ msgstr "%1%"
 
 #: models/AllocatedResourceItemModel.cpp:169
 #: models/kptresourceallocationmodel.cpp:155
-#: models/kptresourceallocationmodel.cpp:292
-#: models/kptresourceallocationmodel.cpp:678
+#: models/kptresourceallocationmodel.cpp:421
+#: models/kptresourceallocationmodel.cpp:807
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Not allocated"
@@ -1796,7 +1796,7 @@ msgstr[2] "Ima %1 raspoloživih resursa u ovoj grupi"
 
 #: models/GroupAllocationItemModel.cpp:184 models/kptaccountsmodel.cpp:125
 #: models/kptaccountsmodel.cpp:1068 models/kptdocumentmodel.cpp:200
-#: models/kptresourceallocationmodel.cpp:409
+#: models/kptresourceallocationmodel.cpp:538
 #: models/kptresourceappointmentsmodel.cpp:805
 #: models/kptresourceappointmentsmodel.cpp:820
 #: models/kptresourceappointmentsmodel.cpp:1317 models/kptschedulemodel.cpp:991
@@ -1810,7 +1810,7 @@ msgid "Name"
 msgstr "Naziv"
 
 #: models/GroupAllocationItemModel.cpp:185 models/kptdocumentmodel.cpp:201
-#: models/kptrelationmodel.cpp:138 models/kptresourceallocationmodel.cpp:410
+#: models/kptrelationmodel.cpp:138 models/kptresourceallocationmodel.cpp:539
 #: models/kptresourceappointmentsmodel.cpp:1318
 #: models/ResourceGroupModel.cpp:205 models/ResourceModel.cpp:412
 #, kde-format
@@ -1818,20 +1818,20 @@ msgid "Type"
 msgstr "Vrsta"
 
 #: models/GroupAllocationItemModel.cpp:186
-#: models/kptresourceallocationmodel.cpp:411
+#: models/kptresourceallocationmodel.cpp:540
 #, kde-format
 msgid "Allocation"
 msgstr "Alokacija"
 
 #: models/GroupAllocationItemModel.cpp:187
-#: models/kptresourceallocationmodel.cpp:412
+#: models/kptresourceallocationmodel.cpp:541
 #, kde-kuit-format
 msgctxt "@title:column"
 msgid "Available"
 msgstr "Dostupno"
 
 #: models/GroupAllocationItemModel.cpp:199
-#: models/kptresourceallocationmodel.cpp:426
+#: models/kptresourceallocationmodel.cpp:555
 #, kde-format
 msgid "Resource allocation"
 msgstr "Alokacija resursa"
@@ -4318,7 +4318,7 @@ msgctxt "(qtundo-format)"
 msgid "Insert %1"
 msgstr "Ubaci %1"
 
-#: models/kptnodeitemmodel.cpp:4136 ui/kptrequestresourcespanel.cpp:102
+#: models/kptnodeitemmodel.cpp:4136 ui/kptrequestresourcespanel.cpp:114
 #: ui/ResourceAllocationView.cpp:154
 msgctxt "(qtundo-format)"
 msgid "Modify resource allocations"
@@ -4381,25 +4381,25 @@ msgid "Modify relation time lag"
 msgstr "Izmijeni kašnjenje vremena relacije"
 
 #: models/kptresourceallocationmodel.cpp:159
-#: models/kptresourceallocationmodel.cpp:680
+#: models/kptresourceallocationmodel.cpp:809
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "%1 allocated out of %2 available"
 msgstr "%1 alociran od %2 raspoloživih"
 
-#: models/kptresourceallocationmodel.cpp:295
+#: models/kptresourceallocationmodel.cpp:424
 #, no-c-format, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Allocated units: %1%"
 msgstr "Alocirane jedinice: %1%"
 
-#: models/kptresourceallocationmodel.cpp:321
+#: models/kptresourceallocationmodel.cpp:450
 #, no-c-format, kde-format
 msgid "Maximum units available: %1%"
 msgstr "Maksimalno rapoloživih jedinica: %1%"
 
-#: models/kptresourceallocationmodel.cpp:344
-#: models/kptresourceallocationmodel.cpp:439
+#: models/kptresourceallocationmodel.cpp:473
+#: models/kptresourceallocationmodel.cpp:568
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:whatsthis"
 #| msgid ""
@@ -4420,8 +4420,8 @@ msgstr ""
 "da koristi material resurs kao potrebni resurs, material resurs mora biti "
 "dio grupe tipa Material.</para>"
 
-#: models/kptresourceallocationmodel.cpp:378
-#: models/kptresourceallocationmodel.cpp:435
+#: models/kptresourceallocationmodel.cpp:507
+#: models/kptresourceallocationmodel.cpp:564
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -4430,20 +4430,20 @@ msgid ""
 "then select the most appropriate resource to use.</para>"
 msgstr ""
 
-#: models/kptresourceallocationmodel.cpp:413
+#: models/kptresourceallocationmodel.cpp:542
 #, fuzzy, kde-kuit-format
 #| msgid "Negative"
 msgctxt "@title:column"
 msgid "Alternative Resources"
 msgstr "Negativ"
 
-#: models/kptresourceallocationmodel.cpp:414
+#: models/kptresourceallocationmodel.cpp:543
 #, kde-kuit-format
 msgctxt "@title:column"
 msgid "Required Resources"
 msgstr "Zahtijevani resursi"
 
-#: models/kptresourceallocationmodel.cpp:427
+#: models/kptresourceallocationmodel.cpp:556
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:tootip"
 #| msgid "Available resources or resource units"
@@ -4451,7 +4451,7 @@ msgctxt "@info:tooltip"
 msgid "Available resources or resource units"
 msgstr "Raspoloživi resursi ili jedinice resursa"
 
-#: models/kptresourceallocationmodel.cpp:428
+#: models/kptresourceallocationmodel.cpp:557
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:tooltip"
 #| msgid "No resources has been allocated"
@@ -4459,7 +4459,7 @@ msgctxt "@info:tooltip"
 msgid "List of resources that can be used as an alternative"
 msgstr "Nema dodijeljenih resursa"
 
-#: models/kptresourceallocationmodel.cpp:429
+#: models/kptresourceallocationmodel.cpp:558
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:tootip"
 #| msgid "Required material resources"
@@ -4467,25 +4467,25 @@ msgctxt "@info:tooltip"
 msgid "Required material resources"
 msgstr "Potrebni material resursi"
 
-#: models/kptresourceallocationmodel.cpp:748
+#: models/kptresourceallocationmodel.cpp:898
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "No material resources available"
 msgstr "Nema dostupnih materijal resursa"
 
-#: models/kptresourceallocationmodel.cpp:757
+#: models/kptresourceallocationmodel.cpp:907
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "No required resources"
 msgstr "Nema potrebnih resursa"
 
-#: models/kptresourceallocationmodel.cpp:760
+#: models/kptresourceallocationmodel.cpp:910
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Material resources cannot have required resources"
 msgstr "Materijalni resursi ne mogu imati potrebne resurse"
 
-#: models/kptresourceallocationmodel.cpp:762
+#: models/kptresourceallocationmodel.cpp:912
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid "Team resources cannot have required resources"
