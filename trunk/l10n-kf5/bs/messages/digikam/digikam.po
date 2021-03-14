@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: digikam\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-03-13 02:27+0100\n"
+"POT-Creation-Date: 2021-03-14 02:41+0100\n"
 "PO-Revision-Date: 2015-02-26 21:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1107,7 +1107,6 @@ msgstr "Naziv:"
 
 #: core/app/items/utils/tooltipfiller.cpp:92
 #: core/app/items/utils/tooltipfiller.cpp:604
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:231
 #: core/libs/properties/captions/itemdescedittab.cpp:210
 #: core/showfoto/thumbbar/showfototooltipfiller.cpp:79
 #: core/showfoto/thumbbar/showfototooltipfiller.cpp:179
@@ -14464,6 +14463,13 @@ msgstr "Podešavanja:"
 
 #: core/dplugins/generic/metadata/timeadjust/timeadjustdialog.cpp:475
 #: core/dplugins/generic/tools/expoblending/blendingdlg/expoblendingdlg.cpp:687
+#: core/dplugins/generic/webservices/google/gswindow.cpp:519
+#: core/dplugins/generic/webservices/google/gswindow.cpp:544
+#: core/dplugins/generic/webservices/google/gswindow.cpp:952
+#: core/dplugins/generic/webservices/google/gswindow.cpp:973
+#: core/dplugins/generic/webservices/google/gswindow.cpp:1022
+#: core/dplugins/generic/webservices/google/gswindow.cpp:1264
+#: core/dplugins/generic/webservices/onedrive/odwindow.cpp:265
 #: core/utilities/imageeditor/editor/editorwindow.cpp:537
 #, fuzzy, kde-format
 #| msgid "Cancel"
@@ -16932,6 +16938,8 @@ msgstr ""
 
 #: core/dplugins/generic/tools/panorama/wizard/panolastpage.cpp:220
 #: core/dplugins/generic/tools/panorama/wizard/panolastpage.cpp:229
+#: core/dplugins/generic/webservices/box/boxwindow.cpp:260
+#: core/dplugins/generic/webservices/flickr/flickrwindow.cpp:857
 #, fuzzy, kde-format
 #| msgid "Warning"
 msgctxt "@title: dialog"
@@ -17021,21 +17029,21 @@ msgstr "Greška"
 #: core/dplugins/generic/tools/panorama/wizard/panooptimizepage.cpp:107
 #, fuzzy, kde-format
 #| msgid "<b>Optimization</b>"
-msgctxt "@title:window"
-msgid "<b>Optimization</b>"
+msgctxt "@title: window"
+msgid "Optimization"
 msgstr "<b>Optimizacija</b>"
 
 #: core/dplugins/generic/tools/panorama/wizard/panooptimizepage.cpp:121
 #, fuzzy, kde-format
 #| msgid "Flip horizontally"
-msgctxt "@option:check"
+msgctxt "@option: check"
 msgid "Level horizon"
 msgstr "Prevrni vodoravno"
 
 #: core/dplugins/generic/tools/panorama/wizard/panooptimizepage.cpp:123
 #, fuzzy, kde-format
 #| msgid "Detect the horizon and adapt the project to make it horizontal."
-msgctxt "@info:tooltip"
+msgctxt "@info: tooltip"
 msgid "Detect the horizon and adapt the project to make it horizontal."
 msgstr "Detektuj videokrug i prilagodi projekt da ga napravi horizontalnim."
 
@@ -17044,66 +17052,81 @@ msgstr "Detektuj videokrug i prilagodi projekt da ga napravi horizontalnim."
 #| msgid ""
 #| "<b>Level horizon</b>: Detect the horizon and adapt the projection so that "
 #| "the detected horizon is an horizontal line in the final panorama"
-msgctxt "@info:whatsthis"
+msgctxt "@info: whatsthis"
 msgid ""
-"<b>Level horizon</b>: Detect the horizon and adapt the projection so that "
-"the detected horizon is an horizontal line in the final panorama"
+"\"Level horizon\": Detect the horizon and adapt the projection so that the "
+"detected horizon is an horizontal line in the final panorama"
 msgstr ""
 "<b>Nivo videokruga</b>: Detektuj videokrug i prilagodi projekt da "
 "detektovani videokrug je horizontalna linija u završnoj panorami"
 
-#: core/dplugins/generic/tools/panorama/wizard/panooptimizepage.cpp:191
-#, kde-format
-msgid ""
-"<qt><p>Optimization is in progress, please wait.</p><p>This can take a "
-"while...</p></qt>"
-msgstr ""
-"<qt><p>Optimizacija je u progresu, molimo sačekajte.</p><p>Ovo može "
-"potrajati...</p></qt>"
-
-#: core/dplugins/generic/tools/panorama/wizard/panooptimizepage.cpp:220
+#: core/dplugins/generic/tools/panorama/wizard/panooptimizepage.cpp:195
 #, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p><h1><b>Images Pre-Processing is Done</b></h1></p><p>The "
-#| "optimization step according to your settings is ready to be performed.</"
-#| "p><p>This step can include an automatic leveling of the horizon, and also "
-#| "an automatic projection selection and size</p><p>To perform this "
-#| "operation, the <b>%1</b> program from the <a href='%2'>%3</a> project "
-#| "will be used.</p><p>Press the \"Next\" button to run the optimization.</"
-#| "p></qt>"
-msgid ""
-"<qt><p>The optimization step according to your settings is ready to be "
-"performed.</p><p>This step can include an automatic leveling of the horizon, "
-"and also an automatic projection selection and size</p><p>To perform this "
-"operation, the <command>%1</command> program from the <a href='%2'>%3</a> "
-"project will be used.</p><p>Press the \"Next\" button to run the "
-"optimization.</p></qt>"
-msgstr ""
-"<qt><p><h1><b>Pripremna obrada slika je gotova</b></h1></p><p>Optimizacijski "
-"korak u odnosu na vaše postavke je spreman da bude pokrenut.</p><p>Ovaj "
-"korak može uključiti automatsko izravnanje vidokruga, i takođe automatsku "
-"projekciju izbora i veličine</p><p>Za nastavak ove operacije, <b>%1</b> "
-"program iz <a href='%2'>%3</a> projekt će biti korišten.</p><p>Pritisnite "
-"\"Sljedeće\" dugme za početak optimizacije.</p></qt>"
+#| msgid "Device detection under progress, please wait..."
+msgctxt "@info"
+msgid "Optimization is in progress, please wait."
+msgstr "Otkivanje uređaja u toku,molimo Vas da sačekate..."
 
-#: core/dplugins/generic/tools/panorama/wizard/panooptimizepage.cpp:327
+#: core/dplugins/generic/tools/panorama/wizard/panooptimizepage.cpp:196
+#: core/dplugins/generic/tools/panorama/wizard/panopreprocesspage.cpp:166
 #, kde-format
-msgid ""
-"<qt><h1>Optimization has failed.</h1><p>See processing messages below.</p></"
-"qt>"
+msgctxt "@info"
+msgid "This can take a while..."
 msgstr ""
+
+#: core/dplugins/generic/tools/panorama/wizard/panooptimizepage.cpp:229
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The optimization step according to your settings is ready to be performed."
+msgstr ""
+
+#: core/dplugins/generic/tools/panorama/wizard/panooptimizepage.cpp:230
+#, kde-format
+msgctxt "@info"
+msgid ""
+"This step can include an automatic leveling of the horizon, and also an "
+"automatic projection selection and size."
+msgstr ""
+
+#: core/dplugins/generic/tools/panorama/wizard/panooptimizepage.cpp:232
+#, kde-format
+msgctxt "@info"
+msgid "To perform this operation, the \"%1\" program will be used."
+msgstr ""
+
+#: core/dplugins/generic/tools/panorama/wizard/panooptimizepage.cpp:234
+#, kde-format
+msgctxt "@info"
+msgid "Press the \"Next\" button to run the optimization."
+msgstr ""
+
+#: core/dplugins/generic/tools/panorama/wizard/panooptimizepage.cpp:335
+#, fuzzy, kde-format
+#| msgid "Correlation failed"
+msgctxt "@info"
+msgid "Optimization has failed."
+msgstr "Uzajamna veza propala"
+
+#: core/dplugins/generic/tools/panorama/wizard/panooptimizepage.cpp:336
+#: core/dplugins/generic/tools/panorama/wizard/panopreprocesspage.cpp:310
+#, fuzzy, kde-format
+#| msgid "Processing under progress"
+msgctxt "@info"
+msgid "See processing messages below."
+msgstr "Procesiranje u napretku"
 
 #: core/dplugins/generic/tools/panorama/wizard/panopreprocesspage.cpp:104
 #, fuzzy, kde-format
 #| msgid "Processing under progress"
-msgctxt "@title:window"
-msgid "<b>Pre-Processing Images</b>"
+msgctxt "@title: window"
+msgid "Pre-Processing Images"
 msgstr "Procesiranje u napretku"
 
 #: core/dplugins/generic/tools/panorama/wizard/panopreprocesspage.cpp:118
 #, fuzzy, kde-format
 #| msgid "Detect Noise"
-msgctxt "@option:check"
+msgctxt "@option: check"
 msgid "Detect moving skies"
 msgstr "Otkrij šumove"
 
@@ -17112,7 +17135,7 @@ msgstr "Otkrij šumove"
 #| msgid ""
 #| "Automatic detection of clouds to prevent wrong keypoints matching between "
 #| "images due to moving clouds."
-msgctxt "@info:tooltip"
+msgctxt "@info: tooltip"
 msgid ""
 "Automatic detection of clouds to prevent wrong keypoints matching between "
 "images due to moving clouds."
@@ -17127,50 +17150,58 @@ msgstr ""
 #| "matching, this option discards any points that are associated to a "
 #| "possible cloud. This is useful to prevent moving clouds from altering the "
 #| "control points matching process."
-msgctxt "@info:whatsthis"
+msgctxt "@info: whatsthis"
 msgid ""
-"<b>Detect moving skies</b>: During the control points selection and "
-"matching, this option discards any points that are associated to a possible "
-"cloud. This is useful to prevent moving clouds from altering the control "
-"points matching process."
+"\"Detect moving skies\": During the control points selection and matching, "
+"this option discards any points that are associated to a possible cloud. "
+"This is useful to prevent moving clouds from altering the control points "
+"matching process."
 msgstr ""
 "<b>Detekcija pokretnih oblaka</b>: Tokom kontrolnih tačaka selekcije i "
 "preklapanja, ova opcija poništava sve tačke koje su povezane sa mogućim "
 "oblacima. Ovo je korisno za sprečavanje pokretnih oblaka za ulazak u "
 "kontrolne tačke procesa."
 
-#: core/dplugins/generic/tools/panorama/wizard/panopreprocesspage.cpp:161
-#, kde-format
-msgid ""
-"<qt><p>Pre-processing is in progress, please wait.</p><p>This can take a "
-"while...</p></qt>"
-msgstr ""
-"<qt><p>Pripremna obrada je u toku, molimo sačekajte.</p><p>Ovo može "
-"potrajati...</p></qt>"
+#: core/dplugins/generic/tools/panorama/wizard/panopreprocesspage.cpp:165
+#, fuzzy, kde-format
+#| msgid "Device detection under progress, please wait..."
+msgctxt "@info"
+msgid "Pre-processing is in progress, please wait."
+msgstr "Otkivanje uređaja u toku,molimo Vas da sačekate..."
 
-#: core/dplugins/generic/tools/panorama/wizard/panopreprocesspage.cpp:199
+#: core/dplugins/generic/tools/panorama/wizard/panopreprocesspage.cpp:207
 #, kde-format
-msgid ""
-"<qt><p>Now, we will pre-process images before stitching them.</p><p>Pre-"
-"processing operations include Raw demosaicing. Raw images will be converted "
-"to 16-bit sRGB images with auto-gamma.</p><p>Pre-processing also include a "
-"calculation of some control points to match overlaps between images. For "
-"that purpose, the <b>%1</b> program from the <a href='%2'>%3</a> project "
-"will be used.</p><p>Press \"Next\" to start pre-processing.</p></qt>"
+msgctxt "@info"
+msgid "Now, we will pre-process images before stitching them."
 msgstr ""
-"<qt><p>Sada, mi ćemo obraditi slike prije spajanja.</p><p>Operacije "
-"pripremne obrade uključuju Raw demozaik. Raw slike će biti konvertovane u 16-"
-"bitne sRGB slike sa auto-gamom.</p><p>Pripremna obrada takođe uključuje "
-"proračun kontrolnih tačaka da popune praznine između slika. Za tu svrhu, <b>"
-"%1</b> program sa <a href='%2'>%3</a> projekta će biti korišten</"
-"p><p>Pritisnite \"Sljedeće\" za početak obrade</p></qt>"
 
-#: core/dplugins/generic/tools/panorama/wizard/panopreprocesspage.cpp:302
+#: core/dplugins/generic/tools/panorama/wizard/panopreprocesspage.cpp:208
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<qt><h1>Pre-processing has failed.</h1><p>See processing messages below.</"
-"p></qt>"
+"Pre-processing operations include Raw demosaicing. Raw images will be "
+"converted to 16-bit sRGB images with auto-gamma."
 msgstr ""
+
+#: core/dplugins/generic/tools/panorama/wizard/panopreprocesspage.cpp:210
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Pre-processing also include a calculation of some control points to match "
+"overlaps between images. For that purpose, the \"%1\" program will be used."
+msgstr ""
+
+#: core/dplugins/generic/tools/panorama/wizard/panopreprocesspage.cpp:213
+#, kde-format
+msgctxt "@info"
+msgid "Press the \"Next\" button to start pre-processing."
+msgstr ""
+
+#: core/dplugins/generic/tools/panorama/wizard/panopreprocesspage.cpp:309
+#, fuzzy, kde-format
+msgctxt "@info"
+msgid "Pre-processing has failed."
+msgstr "Spasi u datoteku"
 
 #: core/dplugins/generic/tools/panorama/wizard/panopreviewpage.cpp:100
 #, fuzzy, kde-format
@@ -17628,7 +17659,7 @@ msgstr " (%1 od %2)"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, AdvPrintCustomLayout)
 #: core/dplugins/generic/tools/printcreator/ui/advprintcustomlayout.ui:26
-#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:1105
+#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:1106
 #, fuzzy, kde-format
 #| msgid "Custom Font"
 msgid "Custom layout"
@@ -17655,7 +17686,7 @@ msgstr "Foto blic"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, m_photoUnits)
 #: core/dplugins/generic/tools/printcreator/ui/advprintcustomlayout.ui:203
-#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:951
+#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:952
 #, kde-format
 msgid "cm"
 msgstr ""
@@ -17668,7 +17699,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, m_photoUnits)
 #: core/dplugins/generic/tools/printcreator/ui/advprintcustomlayout.ui:213
-#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:946
+#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:947
 #, fuzzy, kde-format
 #| msgid "Inches"
 msgid "inches"
@@ -17703,7 +17734,6 @@ msgstr "Svojstva slike"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_doneButton)
 #: core/dplugins/generic/tools/printcreator/ui/advprintcustomlayout.ui:388
-#: core/dplugins/generic/webservices/google/gswindow.cpp:1071
 #: core/utilities/imageeditor/editor/editortoolsettings.cpp:203
 #: core/utilities/maintenance/facesdetector.cpp:76
 #: core/utilities/searchwindow/searchutilities.cpp:642
@@ -17784,7 +17814,7 @@ msgstr ""
 #: core/dplugins/generic/tools/printcreator/wizard/advprintcaptionpage.cpp:130
 #, fuzzy, kde-format
 #| msgid "Caption"
-msgctxt "@title:column"
+msgctxt "@title: column"
 msgid "Caption"
 msgstr "Naslov"
 
@@ -17972,34 +18002,37 @@ msgid "Open in File Browser"
 msgstr "Otvori u terminalu"
 
 #: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Custom"
+msgctxt "@info layout page"
 msgid "Custom"
 msgstr "Proizvoljno"
 
-#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:122
+#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:123
 #, fuzzy, kde-format
 #| msgid "Select the profile of the color space to convert to."
+msgctxt "@info"
 msgid "Select your preferred print output."
 msgstr "Odaberite profil prostora boje za pretvaranje."
 
-#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:482
+#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:483
 #, fuzzy, kde-format
 #| msgid "Add film grain"
 msgid "Add again"
 msgstr "Dodaj zrnatost filma"
 
-#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:496
+#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:497
 #: core/utilities/geolocation/geoiface/bookmark/bookmarksdlg.cpp:369
 #, fuzzy, kde-format
 msgid "Remove"
 msgstr "&Ukloni"
 
-#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:1106
+#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:1107
 #, kde-format
 msgid "The selected custom photo size can not be applied to the paper size."
 msgstr ""
 
-#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:1312
+#: core/dplugins/generic/tools/printcreator/wizard/advprintphotopage.cpp:1313
 #, fuzzy, kde-format
 #| msgid "Custom Font"
 msgid ""
@@ -18744,15 +18777,15 @@ msgstr "Izvozni alati"
 
 #: core/dplugins/generic/tools/wallpaper/wallpaperplugin_dbus.cpp:100
 #: core/dplugins/generic/tools/wallpaper/wallpaperplugin_macos.cpp:72
-#: core/dplugins/generic/tools/wallpaper/wallpaperplugin_windows.cpp:76
 #, fuzzy, kde-format
 #| msgid "Convert image to a color space."
-msgctxt "@title:window"
+msgctxt "@title: window"
 msgid "Error while to set image as wallpaper"
 msgstr "Pretvaranje slike u prostor boje."
 
 #: core/dplugins/generic/tools/wallpaper/wallpaperplugin_dbus.cpp:101
 #, kde-format
+msgctxt "@info"
 msgid ""
 "Cannot change wallpaper image from current desktop with\n"
 "%1\n"
@@ -18761,17 +18794,25 @@ msgid ""
 msgstr ""
 
 #: core/dplugins/generic/tools/wallpaper/wallpaperplugin_macos.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+msgctxt "@info"
 msgid ""
 "Cannot change wallpaper image from current desktop with\n"
 "%1"
-msgstr ""
+msgstr "Ne mogu da sačuvam \"%1\" datoteku"
 
 #: core/dplugins/generic/tools/wallpaper/wallpaperplugin_windows.cpp:71
 #, fuzzy, kde-format
 #| msgid "Unknown filter"
 msgid "Unknown Error %1"
 msgstr "Nepoznati filter"
+
+#: core/dplugins/generic/tools/wallpaper/wallpaperplugin_windows.cpp:76
+#, fuzzy, kde-format
+#| msgid "Convert image to a color space."
+msgctxt "@title:window"
+msgid "Error while to set image as wallpaper"
+msgstr "Pretvaranje slike u prostor boje."
 
 #: core/dplugins/generic/tools/wallpaper/wallpaperplugin_windows.cpp:77
 #, kde-format
@@ -19105,7 +19146,6 @@ msgstr "Pregled"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: core/dplugins/generic/view/presentation/audio/presentation_audiopage.ui:322
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:461
 #: core/dplugins/generic/webservices/piwigo/piwigowindow.cpp:163
 #: core/dplugins/generic/webservices/smugmug/smugwidget.cpp:159
 #: core/dplugins/generic/webservices/vkontakte/vkwindow.cpp:174
@@ -20188,20 +20228,24 @@ msgstr "Ekran %1"
 
 #: core/dplugins/generic/webservices/box/boxplugin.cpp:56
 #, kde-format
+msgctxt "@title"
 msgid "Box"
 msgstr ""
 
 #: core/dplugins/generic/webservices/box/boxplugin.cpp:71
 #, fuzzy, kde-format
 #| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export to Box web-service"
 msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/box/boxplugin.cpp:76
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export items to Box web-service.</p><p>See Box web "
-"site for details: <a href='https://box.com/'>https://box.com/</a></p>"
+"This tool permit to export items to Box web-service.\n"
+"\n"
+"See Box web site for details: %1"
 msgstr ""
 
 #: core/dplugins/generic/webservices/box/boxplugin.cpp:93
@@ -20241,25 +20285,18 @@ msgstr "Neuspjelo učitavanje slike"
 #: core/dplugins/generic/webservices/box/boxwindow.cpp:88
 #, fuzzy, kde-format
 #| msgid "Export Tools"
+msgctxt "@title"
 msgid "Export to Box"
 msgstr "Izvozni alati"
 
 #: core/dplugins/generic/webservices/box/boxwindow.cpp:90
-#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:88
-#: core/dplugins/generic/webservices/facebook/fbwindow.cpp:125
 #: core/dplugins/generic/webservices/google/gswindow.cpp:150
 #: core/dplugins/generic/webservices/google/gswindow.cpp:197
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwindow.cpp:110
 #: core/dplugins/generic/webservices/onedrive/odwindow.cpp:90
-#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:90
-#: core/dplugins/generic/webservices/piwigo/piwigowindow.cpp:240
-#: core/dplugins/generic/webservices/rajce/rajcewindow.cpp:53
-#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:140
-#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:91
-#: core/dplugins/generic/webservices/vkontakte/vkwindow.cpp:211
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Select Image to Upload"
+msgctxt "@action"
 msgid "Start Upload"
 msgstr "Izaberite sliku za postavljanje"
 
@@ -20267,145 +20304,80 @@ msgstr "Izaberite sliku za postavljanje"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Select Image to Upload"
+msgctxt "@action"
 msgid "Start upload to Box"
 msgstr "Izaberite sliku za postavljanje"
 
 #: core/dplugins/generic/webservices/box/boxwindow.cpp:252
-#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:252
-#: core/dplugins/generic/webservices/google/gphoto/gptalker.cpp:633
-#: core/dplugins/generic/webservices/google/gswindow.cpp:370
 #: core/dplugins/generic/webservices/google/gswindow.cpp:411
-#: core/dplugins/generic/webservices/google/gswindow.cpp:437
 #: core/dplugins/generic/webservices/google/gswindow.cpp:498
 #: core/dplugins/generic/webservices/google/gswindow.cpp:994
-#: core/dplugins/generic/webservices/google/gswindow.cpp:1202
-#: core/dplugins/generic/webservices/google/gswindow.cpp:1219
+#: core/dplugins/generic/webservices/google/gswindow.cpp:1203
+#: core/dplugins/generic/webservices/google/gswindow.cpp:1220
 #: core/dplugins/generic/webservices/onedrive/odwindow.cpp:252
-#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:252
-#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:256
-#: core/libs/dplugins/webservices/wslogindialog.cpp:172
 #, fuzzy, kde-format
 #| msgid "Error"
-msgctxt "@title:window"
+msgctxt "@title: window"
 msgid "Error"
 msgstr "Greška"
 
 #: core/dplugins/generic/webservices/box/boxwindow.cpp:253
-#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:253
 #: core/dplugins/generic/webservices/google/gswindow.cpp:499
 #: core/dplugins/generic/webservices/onedrive/odwindow.cpp:253
-#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:253
-#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:257
 #, kde-format
+msgctxt "@info"
 msgid "No image selected. Please select which images should be uploaded."
 msgstr ""
-
-#: core/dplugins/generic/webservices/box/boxwindow.cpp:260
-#: core/dplugins/generic/webservices/flickr/flickrwindow.cpp:857
-#: core/dplugins/generic/webservices/google/gswindow.cpp:514
-#: core/dplugins/generic/webservices/google/gswindow.cpp:539
-#: core/dplugins/generic/webservices/google/gswindow.cpp:946
-#: core/dplugins/generic/webservices/google/gswindow.cpp:967
-#: core/dplugins/generic/webservices/google/gswindow.cpp:1015
-#: core/dplugins/generic/webservices/google/gswindow.cpp:1065
-#: core/dplugins/generic/webservices/google/gswindow.cpp:1257
-#: core/dplugins/generic/webservices/onedrive/odwindow.cpp:260
-#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:260
-#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:678
-#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:264
-#, kde-format
-msgid "Warning"
-msgstr "Upozorenje"
 
 #: core/dplugins/generic/webservices/box/boxwindow.cpp:261
 #: core/dplugins/generic/webservices/google/gswindow.cpp:515
 #: core/dplugins/generic/webservices/google/gswindow.cpp:540
 #: core/dplugins/generic/webservices/onedrive/odwindow.cpp:261
-#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:261
-#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:265
 #, kde-format
+msgctxt "@info"
 msgid "Authentication failed. Click \"Continue\" to authenticate."
 msgstr ""
 
 #: core/dplugins/generic/webservices/box/boxwindow.cpp:264
-#: core/dplugins/generic/webservices/flickr/flickrwindow.cpp:862
-#: core/dplugins/generic/webservices/google/gswindow.cpp:518
-#: core/dplugins/generic/webservices/google/gswindow.cpp:543
-#: core/dplugins/generic/webservices/google/gswindow.cpp:951
-#: core/dplugins/generic/webservices/google/gswindow.cpp:972
-#: core/dplugins/generic/webservices/google/gswindow.cpp:1021
-#: core/dplugins/generic/webservices/google/gswindow.cpp:1262
-#: core/dplugins/generic/webservices/onedrive/odwindow.cpp:264
-#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:264
-#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:683
-#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:268
-#: core/libs/database/utils/ifaces/dio.cpp:363
-#: core/libs/dialogs/dmessagebox.cpp:164
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Continue"
+msgctxt "@action: button"
 msgid "Continue"
 msgstr "Nastavi"
 
 #: core/dplugins/generic/webservices/box/boxwindow.cpp:265
-#: core/dplugins/generic/webservices/flickr/flickrwindow.cpp:863
-#: core/dplugins/generic/webservices/google/gswindow.cpp:519
-#: core/dplugins/generic/webservices/google/gswindow.cpp:544
-#: core/dplugins/generic/webservices/google/gswindow.cpp:952
-#: core/dplugins/generic/webservices/google/gswindow.cpp:973
-#: core/dplugins/generic/webservices/google/gswindow.cpp:1022
-#: core/dplugins/generic/webservices/google/gswindow.cpp:1263
-#: core/dplugins/generic/webservices/onedrive/odwindow.cpp:265
-#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:265
-#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:684
-#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:269
-#: core/libs/database/utils/widgets/dbmigrationdlg.cpp:149
-#: core/libs/dplugins/webservices/wstooldialog.cpp:118
-#: core/utilities/imageeditor/editor/editortoolsettings.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action: button"
 msgid "Cancel"
 msgstr "Odustani"
 
 #: core/dplugins/generic/webservices/box/boxwindow.cpp:293
-#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:284
-#: core/dplugins/generic/webservices/facebook/fbwindow.cpp:489
 #: core/dplugins/generic/webservices/google/gswindow.cpp:393
 #: core/dplugins/generic/webservices/google/gswindow.cpp:614
-#: core/dplugins/generic/webservices/imageshack/imageshackwindow.cpp:246
 #: core/dplugins/generic/webservices/onedrive/odwindow.cpp:293
-#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:293
-#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:768
-#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:804
-#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:297
 #, kde-format
+msgctxt "@info: progress bar"
 msgid "%v / %m"
 msgstr ""
 
 #: core/dplugins/generic/webservices/box/boxwindow.cpp:297
 #, fuzzy, kde-format
 #| msgid "Start: "
+msgctxt "@info"
 msgid "Box export"
 msgstr "Početak: "
 
 #: core/dplugins/generic/webservices/box/boxwindow.cpp:333
-#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:325
-#: core/dplugins/generic/webservices/facebook/fbwindow.cpp:627
-#: core/dplugins/generic/webservices/imageshack/imageshackwindow.cpp:422
-#: core/dplugins/generic/webservices/imgur/imgurwindow.cpp:286
-#: core/dplugins/generic/webservices/imgur/imgurwindow.cpp:293
-#: core/dplugins/generic/webservices/ipfs/ipfswindow.cpp:234
-#: core/dplugins/generic/webservices/ipfs/ipfswindow.cpp:240
 #: core/dplugins/generic/webservices/onedrive/odwindow.cpp:333
-#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:333
-#: core/dplugins/generic/webservices/piwigo/piwigowindow.cpp:592
-#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:926
-#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:336
-#: core/dplugins/generic/webservices/unified/manager/wsauthentication.cpp:427
-#: core/dplugins/generic/webservices/yandexfotki/yfwindow.cpp:778
 #, fuzzy, kde-format
+msgctxt "@title"
 msgid "Uploading Failed"
 msgstr "Spasi u datoteku"
 
 #: core/dplugins/generic/webservices/box/boxwindow.cpp:334
 #, fuzzy, kde-format
+msgctxt "@info"
 msgid ""
 "Failed to upload photo to Box.\n"
 "%1\n"
@@ -20415,23 +20387,16 @@ msgstr ""
 "nastaviti?"
 
 #: core/dplugins/generic/webservices/box/boxwindow.cpp:392
-#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:259
-#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:383
-#: core/dplugins/generic/webservices/onedrive/odwindow.cpp:390
-#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:390
-#: core/dplugins/generic/webservices/piwigo/piwigowindow.cpp:376
-#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:399
+#: core/dplugins/generic/webservices/onedrive/odwindow.cpp:391
 #, fuzzy, kde-format
+msgctxt "@title"
 msgid "Login Failed"
 msgstr "Spasi u datoteku"
 
 #: core/dplugins/generic/webservices/box/boxwindow.cpp:393
-#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:260
-#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:384
-#: core/dplugins/generic/webservices/onedrive/odwindow.cpp:391
-#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:391
-#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:400
+#: core/dplugins/generic/webservices/onedrive/odwindow.cpp:392
 #, kde-format
+msgctxt "@info"
 msgid "Authentication failed. Do you want to try again?"
 msgstr ""
 
@@ -20441,6 +20406,7 @@ msgstr ""
 #| msgid ""
 #| "Your search failed:\n"
 #| "%1"
+msgctxt "@info"
 msgid ""
 "Box call failed:\n"
 "%1"
@@ -20450,21 +20416,24 @@ msgstr ""
 
 #: core/dplugins/generic/webservices/dropbox/dbplugin.cpp:56
 #, kde-format
+msgctxt "@title"
 msgid "Dropbox"
 msgstr ""
 
 #: core/dplugins/generic/webservices/dropbox/dbplugin.cpp:71
 #, fuzzy, kde-format
 #| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export to Dropbox web-service"
 msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/dropbox/dbplugin.cpp:76
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export items to Dropbox web-service.</p><p>See "
-"Dropbox web site for details: <a href='https://www.dropbox.com/'>https://www."
-"dropbox.com/</a></p>"
+"This tool permit to export items to Dropbox web-service.\n"
+"\n"
+"See Dropbox web site for details: %1"
 msgstr ""
 
 #: core/dplugins/generic/webservices/dropbox/dbplugin.cpp:96
@@ -20480,15 +20449,95 @@ msgstr "Izvozni alati"
 msgid "Export to Dropbox"
 msgstr "Izvozni alati"
 
+#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:88
+#: core/dplugins/generic/webservices/facebook/fbwindow.cpp:125
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwindow.cpp:110
+#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:90
+#: core/dplugins/generic/webservices/piwigo/piwigowindow.cpp:240
+#: core/dplugins/generic/webservices/rajce/rajcewindow.cpp:53
+#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:140
+#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:91
+#: core/dplugins/generic/webservices/vkontakte/vkwindow.cpp:211
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select Image to Upload"
+msgid "Start Upload"
+msgstr "Izaberite sliku za postavljanje"
+
 #: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:89
 #, kde-format
 msgid "Start upload to Dropbox"
+msgstr ""
+
+#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:252
+#: core/dplugins/generic/webservices/google/gphoto/gptalker.cpp:633
+#: core/dplugins/generic/webservices/google/gswindow.cpp:370
+#: core/dplugins/generic/webservices/google/gswindow.cpp:437
+#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:252
+#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:256
+#: core/libs/dplugins/webservices/wslogindialog.cpp:172
+#, fuzzy, kde-format
+#| msgid "Error"
+msgctxt "@title:window"
+msgid "Error"
+msgstr "Greška"
+
+#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:253
+#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:253
+#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:257
+#, kde-format
+msgid "No image selected. Please select which images should be uploaded."
+msgstr ""
+
+#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:259
+#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:383
+#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:390
+#: core/dplugins/generic/webservices/piwigo/piwigowindow.cpp:376
+#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:399
+#, fuzzy, kde-format
+msgid "Login Failed"
+msgstr "Spasi u datoteku"
+
+#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:260
+#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:384
+#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:391
+#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:400
+#, kde-format
+msgid "Authentication failed. Do you want to try again?"
+msgstr ""
+
+#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:284
+#: core/dplugins/generic/webservices/facebook/fbwindow.cpp:489
+#: core/dplugins/generic/webservices/imageshack/imageshackwindow.cpp:246
+#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:293
+#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:768
+#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:804
+#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:297
+#, kde-format
+msgid "%v / %m"
 msgstr ""
 
 #: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:288
 #, kde-format
 msgid "Dropbox export"
 msgstr ""
+
+#: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:325
+#: core/dplugins/generic/webservices/facebook/fbwindow.cpp:627
+#: core/dplugins/generic/webservices/imageshack/imageshackwindow.cpp:422
+#: core/dplugins/generic/webservices/imgur/imgurwindow.cpp:286
+#: core/dplugins/generic/webservices/imgur/imgurwindow.cpp:293
+#: core/dplugins/generic/webservices/ipfs/ipfswindow.cpp:234
+#: core/dplugins/generic/webservices/ipfs/ipfswindow.cpp:240
+#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:333
+#: core/dplugins/generic/webservices/piwigo/piwigowindow.cpp:592
+#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:926
+#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:336
+#: core/dplugins/generic/webservices/unified/manager/wsauthentication.cpp:427
+#: core/dplugins/generic/webservices/yandexfotki/yfwindow.cpp:778
+#, fuzzy, kde-format
+msgid "Uploading Failed"
+msgstr "Spasi u datoteku"
 
 #: core/dplugins/generic/webservices/dropbox/dbwindow.cpp:326
 #, fuzzy, kde-format
@@ -20800,19 +20849,23 @@ msgstr ""
 #: core/dplugins/generic/webservices/filecopy/fcplugin.cpp:57
 #, fuzzy, kde-format
 #| msgid "File"
-msgid "FileCopy"
+msgctxt "@title"
+msgid "File Copy"
 msgstr "Datoteka"
 
 #: core/dplugins/generic/webservices/filecopy/fcplugin.cpp:72
 #, fuzzy, kde-format
 #| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export items to a local storage"
 msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/filecopy/fcplugin.cpp:77
-#, kde-format
-msgid "<p>This tool permit to export items to a local storage.</p>"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Sort by rating"
+msgctxt "@info"
+msgid "This tool permit to export items to a local storage."
+msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/filecopy/fcplugin.cpp:102
 #, fuzzy, kde-format
@@ -20833,26 +20886,26 @@ msgstr ""
 msgid "Select export location..."
 msgstr "Geolokacija"
 
-#: core/dplugins/generic/webservices/filetransfer/ftexportwidget.cpp:101
+#: core/dplugins/generic/webservices/filetransfer/ftexportwidget.cpp:102
 #, fuzzy, kde-format
 #| msgid "This is the list of images to batch process."
 msgid "This is the list of images to upload to the specified target."
 msgstr "Ovo je lista slika za grupnu obradu."
 
-#: core/dplugins/generic/webservices/filetransfer/ftexportwidget.cpp:168
+#: core/dplugins/generic/webservices/filetransfer/ftexportwidget.cpp:170
 #, fuzzy, kde-format
 #| msgid "Select None"
 msgid "Select target..."
 msgstr "Bez izbora"
 
-#: core/dplugins/generic/webservices/filetransfer/ftexportwidget.cpp:169
-#: core/dplugins/generic/webservices/filetransfer/ftimportwidget.cpp:104
+#: core/dplugins/generic/webservices/filetransfer/ftexportwidget.cpp:171
+#: core/dplugins/generic/webservices/filetransfer/ftimportwidget.cpp:107
 #, fuzzy, kde-format
 #| msgid "All Files"
 msgid "All Files (*)"
 msgstr "Sve datoteke"
 
-#: core/dplugins/generic/webservices/filetransfer/ftexportwidget.cpp:192
+#: core/dplugins/generic/webservices/filetransfer/ftexportwidget.cpp:194
 #, fuzzy, kde-format
 #| msgid "No script selected"
 msgid "<i>not selected</i>"
@@ -20881,13 +20934,13 @@ msgstr ""
 msgid "Select import location..."
 msgstr "Geolokacija"
 
-#: core/dplugins/generic/webservices/filetransfer/ftimportwidget.cpp:75
+#: core/dplugins/generic/webservices/filetransfer/ftimportwidget.cpp:76
 #, fuzzy, kde-format
 #| msgid "This is the list of images to batch process."
 msgid "This is the list of images to import into the current album."
 msgstr "Ovo je lista slika za grupnu obradu."
 
-#: core/dplugins/generic/webservices/filetransfer/ftimportwidget.cpp:102
+#: core/dplugins/generic/webservices/filetransfer/ftimportwidget.cpp:105
 #, fuzzy, kde-format
 msgid "Select items to import..."
 msgstr "Izaberite MIME tipove"
@@ -20910,13 +20963,13 @@ msgstr "Pokreni uređivač slika"
 msgid "Start importing the specified images into the currently selected album."
 msgstr "Promijenite naziv datoteke trenutno odabrane stavke."
 
-#: core/dplugins/generic/webservices/filetransfer/ftimportwindow.cpp:145
+#: core/dplugins/generic/webservices/filetransfer/ftimportwindow.cpp:146
 #, fuzzy, kde-format
 #| msgid "Imported comments"
 msgid "Import not completed"
 msgstr "Ubačeni komentari"
 
-#: core/dplugins/generic/webservices/filetransfer/ftimportwindow.cpp:146
+#: core/dplugins/generic/webservices/filetransfer/ftimportwindow.cpp:147
 #, kde-format
 msgid ""
 "Some of the images have not been transferred and are still in the list. You "
@@ -20926,19 +20979,24 @@ msgstr ""
 #: core/dplugins/generic/webservices/filetransfer/ftplugin.cpp:58
 #, fuzzy, kde-format
 #| msgid "Transform"
-msgid "FileTransfer"
+msgctxt "@title"
+msgid "File Transfer"
 msgstr "Trasformiši"
 
 #: core/dplugins/generic/webservices/filetransfer/ftplugin.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Filter by geolocation"
+msgctxt "@info"
 msgid "A tool to export and import items with a remote location"
-msgstr ""
+msgstr "Filtrirano po geolokaciji"
 
 #: core/dplugins/generic/webservices/filetransfer/ftplugin.cpp:78
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export and import items with a remote location.</"
-"p><p>Many protocols can be used, as FTP, SFTP, SAMBA, etc.</p>"
+"This tool permit to export and import items with a remote location.\n"
+"\n"
+"Many protocols can be used, as FTP, SFTP, SAMBA, etc."
 msgstr ""
 
 #: core/dplugins/generic/webservices/filetransfer/ftplugin.cpp:101
@@ -21004,24 +21062,26 @@ msgstr ""
 #: core/dplugins/generic/webservices/flickr/flickrplugin.cpp:56
 #, fuzzy, kde-format
 #| msgid "Sync &Export"
+msgctxt "@title"
 msgid "Flickr"
 msgstr "Sinhronizacija i izvoz"
 
 #: core/dplugins/generic/webservices/flickr/flickrplugin.cpp:71
 #, fuzzy, kde-format
 #| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export to Flickr web-service"
 msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/flickr/flickrplugin.cpp:76
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export items to Flickr web-service.</p><p>See Flickr "
-"web site for details: <a href='https://www.flickr.com/'>https://www.flickr."
-"com/</a></p>"
+"This tool permit to export items to Flickr web-service.See Flickr web site "
+"for details: %1"
 msgstr ""
 
-#: core/dplugins/generic/webservices/flickr/flickrplugin.cpp:105
+#: core/dplugins/generic/webservices/flickr/flickrplugin.cpp:106
 #, fuzzy, kde-format
 #| msgid "Export Tools"
 msgctxt "@action"
@@ -21430,6 +21490,27 @@ msgstr ""
 "Nije uspjelo postavljanje datoteke <filename>%1</filename>. Da li želite "
 "nastaviti?"
 
+#: core/dplugins/generic/webservices/flickr/flickrwindow.cpp:862
+#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:264
+#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:683
+#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:268
+#: core/libs/database/utils/ifaces/dio.cpp:363
+#: core/libs/dialogs/dmessagebox.cpp:164
+#, kde-format
+msgid "Continue"
+msgstr "Nastavi"
+
+#: core/dplugins/generic/webservices/flickr/flickrwindow.cpp:863
+#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:265
+#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:684
+#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:269
+#: core/libs/database/utils/widgets/dbmigrationdlg.cpp:149
+#: core/libs/dplugins/webservices/wstooldialog.cpp:118
+#: core/utilities/imageeditor/editor/editortoolsettings.cpp:207
+#, kde-format
+msgid "Cancel"
+msgstr "Odustani"
+
 #: core/dplugins/generic/webservices/google/gdrive/gdtalker.cpp:445
 #, fuzzy, kde-format
 #| msgid "Failed to create file..."
@@ -21526,39 +21607,43 @@ msgstr ""
 #: core/dplugins/generic/webservices/google/gsplugin.cpp:58
 #, fuzzy, kde-format
 #| msgid "Google Maps"
+msgctxt "@title"
 msgid "Google"
 msgstr "Google mape"
 
 #: core/dplugins/generic/webservices/google/gsplugin.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export and import items with Google web-service"
-msgstr ""
+msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/google/gsplugin.cpp:78
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export and import items with Google web-services.</"
-"p>Google Photo and Google Drive web services are supported.<p>See Google web "
-"sites for details: <a href='https://photos.google.com'>https://photos.google."
-"com</a> and <a href='https://www.google.com/drive/'>https://www.google.com/"
-"drive/</a></p>"
+"This tool permit to export and import items with Google web-services.\n"
+"\n"
+"Google Photo and Google Drive web services are supported.\n"
+"\n"
+"See Google web sites for details: %1"
 msgstr ""
 
-#: core/dplugins/generic/webservices/google/gsplugin.cpp:105
+#: core/dplugins/generic/webservices/google/gsplugin.cpp:106
 #, fuzzy, kde-format
 #| msgid "Import from Scanner..."
 msgctxt "@action"
 msgid "Export to &Google Photos..."
 msgstr "Unesi sa skenera..."
 
-#: core/dplugins/generic/webservices/google/gsplugin.cpp:117
+#: core/dplugins/generic/webservices/google/gsplugin.cpp:118
 #, fuzzy, kde-format
 #| msgid "Import from Scanner..."
 msgctxt "@action"
 msgid "Import from &Google Photos..."
 msgstr "Unesi sa skenera..."
 
-#: core/dplugins/generic/webservices/google/gsplugin.cpp:129
+#: core/dplugins/generic/webservices/google/gsplugin.cpp:130
 #, fuzzy, kde-format
 #| msgid "Export Tools"
 msgctxt "@action"
@@ -21631,6 +21716,7 @@ msgstr "Odredište:"
 #: core/dplugins/generic/webservices/google/gsreplacedlg.cpp:184
 #, fuzzy, kde-format
 #| msgid "Source:"
+msgctxt "@label: source file"
 msgid "Source"
 msgstr "Izvor:"
 
@@ -21672,18 +21758,24 @@ msgid "Build a combined tag string."
 msgstr ""
 
 #: core/dplugins/generic/webservices/google/gswindow.cpp:148
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Export Tools"
+msgctxt "@title"
 msgid "Export to Google Drive"
-msgstr ""
+msgstr "Izvozni alati"
 
 #: core/dplugins/generic/webservices/google/gswindow.cpp:151
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Select Image to Upload"
+msgctxt "@info"
 msgid "Start upload to Google Drive"
-msgstr ""
+msgstr "Izaberite sliku za postavljanje"
 
 #: core/dplugins/generic/webservices/google/gswindow.cpp:195
 #, fuzzy, kde-format
 #| msgid "Import from Scanner..."
+msgctxt "@title"
 msgid "Export to Google Photos Service"
 msgstr "Unesi sa skenera..."
 
@@ -21691,20 +21783,22 @@ msgstr "Unesi sa skenera..."
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Select Image to Upload"
+msgctxt "@info"
 msgid "Start upload to Google Photos Service"
 msgstr "Izaberite sliku za postavljanje"
 
 #: core/dplugins/generic/webservices/google/gswindow.cpp:204
 #, fuzzy, kde-format
 #| msgid "Import from Scanner..."
+msgctxt "@title"
 msgid "Import from Google Photos Service"
 msgstr "Unesi sa skenera..."
 
 #: core/dplugins/generic/webservices/google/gswindow.cpp:206
-#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:131
 #, fuzzy, kde-format
 #| msgctxt "@title:menu"
 #| msgid "Download"
+msgctxt "@action"
 msgid "Start Download"
 msgstr "Preuzmi"
 
@@ -21712,6 +21806,7 @@ msgstr "Preuzmi"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Select Image to Upload"
+msgctxt "@info"
 msgid "Start download from Google Photos service"
 msgstr "Izaberite sliku za postavljanje"
 
@@ -21721,6 +21816,7 @@ msgstr "Izaberite sliku za postavljanje"
 #| msgid ""
 #| "Your search failed:\n"
 #| "%1"
+msgctxt "@info"
 msgid "Google Photos call failed: %1\n"
 msgstr ""
 "Vaša pretraga nije uspjela:\n"
@@ -21731,25 +21827,59 @@ msgstr ""
 #| msgid ""
 #| "Your search failed:\n"
 #| "%1"
+msgctxt "@info"
 msgid "Google Drive call failed: %1\n"
 msgstr ""
 "Vaša pretraga nije uspjela:\n"
 "%1"
 
+#: core/dplugins/generic/webservices/google/gswindow.cpp:514
+#: core/dplugins/generic/webservices/google/gswindow.cpp:539
+#: core/dplugins/generic/webservices/google/gswindow.cpp:946
+#: core/dplugins/generic/webservices/google/gswindow.cpp:967
+#: core/dplugins/generic/webservices/google/gswindow.cpp:1015
+#: core/dplugins/generic/webservices/google/gswindow.cpp:1065
+#: core/dplugins/generic/webservices/google/gswindow.cpp:1258
+#: core/dplugins/generic/webservices/onedrive/odwindow.cpp:260
+#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:260
+#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:678
+#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:264
+#, fuzzy, kde-format
+#| msgid "Warning"
+msgctxt "@title: window"
+msgid "Warning"
+msgstr "Upozorenje"
+
+#: core/dplugins/generic/webservices/google/gswindow.cpp:518
+#: core/dplugins/generic/webservices/google/gswindow.cpp:543
+#: core/dplugins/generic/webservices/google/gswindow.cpp:951
+#: core/dplugins/generic/webservices/google/gswindow.cpp:972
+#: core/dplugins/generic/webservices/google/gswindow.cpp:1021
+#: core/dplugins/generic/webservices/google/gswindow.cpp:1263
+#: core/dplugins/generic/webservices/onedrive/odwindow.cpp:264
+#, fuzzy, kde-format
+#| msgid "Continue"
+msgctxt "@action"
+msgid "Continue"
+msgstr "Nastavi"
+
 #: core/dplugins/generic/webservices/google/gswindow.cpp:622
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Google Maps"
+msgctxt "@info"
 msgid "Google Drive export"
-msgstr ""
+msgstr "Google mape"
 
 #: core/dplugins/generic/webservices/google/gswindow.cpp:628
 #, fuzzy, kde-format
 #| msgid "Google Maps"
+msgctxt "@info"
 msgid "Google Photo export"
 msgstr "Google mape"
 
 #: core/dplugins/generic/webservices/google/gswindow.cpp:947
-#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:993
 #, fuzzy, kde-format
+msgctxt "@info"
 msgid ""
 "Failed to save photo: %1\n"
 "Do you want to continue?"
@@ -21758,8 +21888,8 @@ msgstr ""
 "nastaviti?"
 
 #: core/dplugins/generic/webservices/google/gswindow.cpp:968
-#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:1006
 #, fuzzy, kde-format
+msgctxt "@info"
 msgid ""
 "Failed to download photo: %1\n"
 "Do you want to continue?"
@@ -21770,11 +21900,13 @@ msgstr ""
 #: core/dplugins/generic/webservices/google/gswindow.cpp:995
 #, fuzzy, kde-format
 #| msgid "Failed to save tags to file."
+msgctxt "@info"
 msgid "Failed to save image to %1"
 msgstr "Neuspjelo snimanje oznaka na dokumentu."
 
 #: core/dplugins/generic/webservices/google/gswindow.cpp:1016
 #, fuzzy, kde-format
+msgctxt "@info"
 msgid ""
 "Failed to upload photo to %1.\n"
 "%2\n"
@@ -21785,6 +21917,7 @@ msgstr ""
 
 #: core/dplugins/generic/webservices/google/gswindow.cpp:1066
 #, fuzzy, kde-format
+msgctxt "@info"
 msgid ""
 "Failed to finish uploading photo to %1.\n"
 "%2\n"
@@ -21793,11 +21926,22 @@ msgstr ""
 "Nije uspjelo postavljanje datoteke <filename>%1</filename>. Da li želite "
 "nastaviti?"
 
-#: core/dplugins/generic/webservices/google/gswindow.cpp:1203
+#: core/dplugins/generic/webservices/google/gswindow.cpp:1071
+#: core/utilities/facemanagement/widgets/assignnamewidget_p.cpp:184
+#: core/utilities/facemanagement/widgets/assignnamewidget_p.cpp:213
+#: core/utilities/imageeditor/editor/editorwindow.cpp:532
+#, fuzzy, kde-format
+#| msgid "OK"
+msgctxt "@action"
+msgid "OK"
+msgstr "OK"
+
+#: core/dplugins/generic/webservices/google/gswindow.cpp:1204
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your search failed:\n"
 #| "%1"
+msgctxt "@info"
 msgid ""
 "Google Drive call failed:\n"
 "%1"
@@ -21805,11 +21949,12 @@ msgstr ""
 "Vaša pretraga nije uspjela:\n"
 "%1"
 
-#: core/dplugins/generic/webservices/google/gswindow.cpp:1220
+#: core/dplugins/generic/webservices/google/gswindow.cpp:1221
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your search failed:\n"
 #| "%1"
+msgctxt "@info"
 msgid ""
 "Google Photos call failed:\n"
 "%1"
@@ -21817,8 +21962,9 @@ msgstr ""
 "Vaša pretraga nije uspjela:\n"
 "%1"
 
-#: core/dplugins/generic/webservices/google/gswindow.cpp:1258
+#: core/dplugins/generic/webservices/google/gswindow.cpp:1259
 #, kde-format
+msgctxt "@info"
 msgid ""
 "You will be logged out of your account, click \"Continue\" to authenticate "
 "for another account"
@@ -21827,23 +21973,27 @@ msgstr ""
 #: core/dplugins/generic/webservices/imageshack/imageshackplugin.cpp:56
 #, fuzzy, kde-format
 #| msgid "Image has no tags"
+msgctxt "@title"
 msgid "ImageShack"
 msgstr "Slika nema oznaka"
 
 #: core/dplugins/generic/webservices/imageshack/imageshackplugin.cpp:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export to ImageShack web-service"
-msgstr ""
+msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/imageshack/imageshackplugin.cpp:76
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export items to ImageShack web-service.</p><p>See "
-"ImageShack web site for details: <a href='https://imageshack.us/'>https://"
-"imageshack.us/</a></p>"
+"This tool permit to export items to ImageShack web-service.\n"
+"\n"
+"See ImageShack web site for details: %1"
 msgstr ""
 
-#: core/dplugins/generic/webservices/imageshack/imageshackplugin.cpp:93
+#: core/dplugins/generic/webservices/imageshack/imageshackplugin.cpp:94
 #, fuzzy, kde-format
 #| msgid "Export Tools"
 msgctxt "@action"
@@ -21870,18 +22020,21 @@ msgstr ""
 #: core/dplugins/generic/webservices/imageshack/imageshackwidget.cpp:53
 #, fuzzy, kde-format
 #| msgid "Makernote"
+msgctxt "@option"
 msgid "Make private"
 msgstr "Napomena"
 
 #: core/dplugins/generic/webservices/imageshack/imageshackwidget.cpp:57
 #, fuzzy, kde-format
 #| msgid "Tags filter options"
+msgctxt "@label"
 msgid "Tags (optional):"
 msgstr "Opcije filtera oznaka"
 
 #: core/dplugins/generic/webservices/imageshack/imageshackwidget.cpp:59
 #, fuzzy, kde-format
 #| msgid "See more information on the Internet"
+msgctxt "@option"
 msgid "Remove information bar on thumbnails"
 msgstr "Vidite više informacija na Internetu"
 
@@ -21975,24 +22128,29 @@ msgstr ""
 
 #: core/dplugins/generic/webservices/imgur/imgurplugin.cpp:56
 #, kde-format
+msgctxt "@title"
 msgid "ImgUr"
 msgstr ""
 
 #: core/dplugins/generic/webservices/imgur/imgurplugin.cpp:71
 #, fuzzy, kde-format
 #| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export to ImgUr web-service"
 msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/imgur/imgurplugin.cpp:76
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export items to ImgUr web-service.</p><p>You can "
-"export items as anonymous or with an user account.</p><p>See ImgUr web site "
-"for details: <a href='https://imgur.com/'>https://imgur.com/</a></p>"
+"This tool permit to export items to ImgUr web-service.\n"
+"\n"
+"You can export items as anonymous or with an user account.\n"
+"\n"
+"See ImgUr web site for details: %1"
 msgstr ""
 
-#: core/dplugins/generic/webservices/imgur/imgurplugin.cpp:103
+#: core/dplugins/generic/webservices/imgur/imgurplugin.cpp:104
 #, fuzzy, kde-format
 #| msgid "Export Tools"
 msgctxt "@action"
@@ -22086,23 +22244,27 @@ msgstr ""
 
 #: core/dplugins/generic/webservices/ipfs/ipfsplugin.cpp:56
 #, kde-format
+msgctxt "@title"
 msgid "IPFS"
 msgstr ""
 
 #: core/dplugins/generic/webservices/ipfs/ipfsplugin.cpp:71
 #, fuzzy, kde-format
 #| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export to IPFS web-service"
 msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/ipfs/ipfsplugin.cpp:76
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export items to IPFS web-service.</p><p>See IPFS web "
-"site for details: <a href='https://ipfs.io/'>https://ipfs.io/</a></p>"
+"This tool permit to export items to IPFS web-service.\n"
+"\n"
+"See IPFS web site for details: %1"
 msgstr ""
 
-#: core/dplugins/generic/webservices/ipfs/ipfsplugin.cpp:93
+#: core/dplugins/generic/webservices/ipfs/ipfsplugin.cpp:94
 #, fuzzy, kde-format
 #| msgid "Export Tools"
 msgctxt "@action"
@@ -22149,27 +22311,29 @@ msgid ""
 msgstr ""
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiplugin.cpp:56
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:289
 #, fuzzy, kde-format
 #| msgid "Median:"
+msgctxt "@title"
 msgid "MediaWiki"
 msgstr "Median:"
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiplugin.cpp:71
 #, fuzzy, kde-format
 #| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export to MediaWiki web-service"
 msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiplugin.cpp:76
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export items to MediaWiki web-service.</p><p>See "
-"MediaWiki web site for details: <a href='https://www.mediawiki.org/'>https://"
-"www.mediawiki.org/</a></p>"
+"This tool permit to export items to MediaWiki web-service.\n"
+"\n"
+"See MediaWiki web site for details: %1"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiplugin.cpp:102
+#: core/dplugins/generic/webservices/mediawiki/mediawikiplugin.cpp:103
 #, fuzzy, kde-format
 #| msgid "Export Tools"
 msgctxt "@action"
@@ -22196,11 +22360,13 @@ msgstr ""
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:105
 #, fuzzy, kde-format
 #| msgid "Select an Image"
+msgctxt "@info"
 msgid "Select an image"
 msgstr "Odaberite sliku"
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:173
 #, kde-format
+msgctxt "@info"
 msgid ""
 "This is a clickable link to open the MediaWiki home page in a web browser."
 msgstr ""
@@ -22208,393 +22374,471 @@ msgstr ""
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:183
 #, fuzzy, kde-format
 #| msgid "This is the list of images to batch process."
+msgctxt "@info"
 msgid "This is the list of images to upload to the wiki."
 msgstr "Ovo je lista slika za grupnu obradu."
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:208
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:381
-#, kde-format
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:384
+#, fuzzy, kde-format
+#| msgid "This is the list of images to batch process."
+msgctxt "@info"
 msgid "This is the login form to your account on the chosen wiki."
-msgstr ""
+msgstr "Ovo je lista slika za grupnu obradu."
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:229
-#: core/dplugins/generic/webservices/vkontakte/vknewalbumdlg.cpp:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "@label: properties"
 msgid "Title:"
 msgstr "Naslov:"
 
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:231
+#, fuzzy, kde-format
+#| msgid "Date:"
+msgctxt "@label: properties"
+msgid "Date:"
+msgstr "Datum:"
+
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:233
-#: core/utilities/queuemanager/views/workflowdlg.cpp:120
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description:"
+msgctxt "@label: properties"
 msgid "Description:"
 msgstr "Opis:"
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:235
 #, fuzzy, kde-format
 #| msgid "Categories"
+msgctxt "@label: properties"
 msgid "Categories:"
 msgstr "Kategorije"
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:237
 #, fuzzy, kde-format
 #| msgid "Latitude"
+msgctxt "@label: properties"
 msgid "Latitude:"
 msgstr "Geografska širina"
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:239
 #, fuzzy, kde-format
 #| msgid "Longitude"
+msgctxt "@label: properties"
 msgid "Longitude:"
 msgstr "Geografska dužina"
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:267
-#: core/dplugins/generic/webservices/smugmug/smugwidget.cpp:81
-#: core/dplugins/generic/webservices/vkontakte/vkauthwidget.cpp:71
-#: core/libs/dplugins/webservices/wssettingswidget.cpp:147
 #, fuzzy, kde-format
 #| msgid "Amount:"
+msgctxt "@option"
 msgid "Account"
 msgstr "Količina:"
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:268
-#, kde-format
-msgid "This is the login form to your MediaWiki account."
-msgstr ""
-
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:275
 #, fuzzy, kde-format
-#| msgid "News"
-msgid "New"
-msgstr "Novosti"
+#| msgid "This is the list of images to batch process."
+msgctxt "@info"
+msgid "This is the login form to your MediaWiki account."
+msgstr "Ovo je lista slika za grupnu obradu."
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:276
 #, fuzzy, kde-format
+#| msgid "News"
+msgctxt "@option: button"
+msgid "New"
+msgstr "Novosti"
+
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:277
+#, fuzzy, kde-format
 #| msgid "Add a new value to the list"
+msgctxt "@info"
 msgid "Add a wiki to this list"
 msgstr "Dodaj novu vrijednost na listu"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:281
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:282
 #, fuzzy, kde-format
 #| msgid "Edit Comments"
+msgctxt "@item"
 msgid "Wikimedia Commons"
 msgstr "Izmjeni komentare"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:282
-#, kde-format
-msgid "Wikimedia Meta"
-msgstr ""
-
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:283
-#, kde-format
-msgid "Wikipedia"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Edit Comments"
+msgctxt "@item"
+msgid "Wikimedia Meta"
+msgstr "Izmjeni komentare"
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:284
-#, kde-format
-msgid "Wikibooks"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Edit Comments"
+msgctxt "@item"
+msgid "Wikipedia"
+msgstr "Izmjeni komentare"
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:285
 #, kde-format
-msgid "Wikinews"
+msgctxt "@item"
+msgid "Wikibooks"
 msgstr ""
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:286
 #, kde-format
-msgid "Wikiquote"
+msgctxt "@item"
+msgid "Wikinews"
 msgstr ""
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:287
 #, fuzzy, kde-format
 #| msgid "Light source:"
-msgid "Wikisource"
+msgctxt "@item"
+msgid "Wikiquote"
 msgstr "Svjetlosni izvor:"
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:288
 #, fuzzy, kde-format
+#| msgid "Light source:"
+msgctxt "@item"
+msgid "Wikisource"
+msgstr "Svjetlosni izvor:"
+
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:289
+#, fuzzy, kde-format
 #| msgid "MacBinary II"
+msgctxt "@item"
 msgid "Wiktionary"
 msgstr "MacBinary II"
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:290
-#, kde-format
-msgid "Wikia Foto"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Median:"
+msgctxt "@item"
+msgid "MediaWiki"
+msgstr "Median:"
 
 #: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:291
 #, kde-format
+msgctxt "@item"
+msgid "Wikia Foto"
+msgstr ""
+
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:292
+#, kde-format
+msgctxt "@item"
 msgid "Wikia Uncyclopedia"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:296
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:297
 #, kde-format
+msgctxt "@label"
 msgid "Wiki:"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:307
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:308
 #, kde-format
+msgctxt "@info"
 msgid "These are options for adding a Wiki."
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:312
-#: core/dplugins/generic/webservices/vkontakte/vkauthwidget.cpp:80
-#, kde-format
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:313
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label: name of wiki area"
 msgid "Name:"
 msgstr "Ime:"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:315
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:316
 #, fuzzy, kde-format
 #| msgid "URL:"
+msgctxt "@label"
 msgid "API URL:"
 msgstr "URL:"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:320
-#: core/utilities/setup/metadata/advancedmetadatatab.cpp:342
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:322
 #, fuzzy, kde-format
+msgctxt "@action: button"
 msgid "Add"
 msgstr "&Dodaj"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:321
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:323
 #, fuzzy, kde-format
 #| msgid "Add new tag"
+msgctxt "@info"
 msgid "Add a new wiki"
 msgstr "Dodaj novu oznaku"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:330
-#: core/libs/dplugins/webservices/wslogindialog.cpp:94
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:332
 #, kde-format
+msgctxt "@label"
 msgid "Login:"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:333
-#: core/dplugins/generic/webservices/smugmug/smugnewalbumdlg.cpp:160
-#: core/dplugins/generic/webservices/yandexfotki/yfnewalbumdlg.cpp:82
-#: core/libs/database/utils/widgets/dbsettingswidget.cpp:190
-#: core/libs/dplugins/webservices/wslogindialog.cpp:97
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:335
 #, fuzzy, kde-format
 #| msgid "Password"
+msgctxt "@label"
 msgid "Password:"
 msgstr "Šifra"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:338
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:340
 #, kde-format
+msgctxt "@action"
 msgid "&Log in"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:354
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:356
 #, fuzzy, kde-format
 #| msgid "Crop Information"
+msgctxt "@option"
 msgid "Login Information"
 msgstr "Informacije o rezanju"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:360
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:362
 #, kde-format
-msgctxt "Name of the wiki the user is currently logged on"
+msgctxt "@label: name of the wiki the user is currently logged on"
 msgid "Logged on: "
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:364
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:366
 #, kde-format
-msgctxt "Username which is used to connect to the wiki"
+msgctxt "@label: username which is used to connect to the wiki"
 msgid "Logged as: "
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:367
-#: core/dplugins/generic/webservices/piwigo/piwigowindow.cpp:159
-#: core/dplugins/generic/webservices/smugmug/smugwidget.cpp:97
-#: core/dplugins/generic/webservices/vkontakte/vkauthwidget.cpp:85
-#: core/libs/dplugins/webservices/wssettingswidget.cpp:198
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:370
 #, fuzzy, kde-format
 #| msgid "Change Case"
+msgctxt "@action: button"
 msgid "Change Account"
 msgstr "Promjena u velika/mala slova"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:368
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:371
 #, kde-format
+msgctxt "@info"
 msgid "Logout and change the account used for transfer"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:380
-#: core/libs/properties/captions/itemdescedittab.cpp:350
-#: core/utilities/advancedrename/common/tooltipdialog.cpp:62
-#, kde-format
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:383
+#, fuzzy, kde-format
+#| msgid "Information"
+msgctxt "@option"
 msgid "Information"
 msgstr "Informacije"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:386
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:389
 #, fuzzy, kde-format
 #| msgid "Author"
+msgctxt "@label"
 msgid "Author:"
 msgstr "Autor"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:389
-#, kde-format
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:392
+#, fuzzy, kde-format
+#| msgid "Source:"
+msgctxt "@label: source file"
 msgid "Source:"
 msgstr "Izvor:"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:392
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:395
 #, kde-format
+msgctxt "@label"
 msgid "License:"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:396
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:399
 #, kde-format
+msgctxt "@item"
 msgid "Own work, Creative Commons Attribution-Share Alike 4.0"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:398
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:401
 #, kde-format
+msgctxt "@item"
 msgid "Own work, multi-license with CC-BY-SA-3.0 and GFDL"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:400
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:403
 #, kde-format
+msgctxt "@item"
 msgid "Own work, multi-license with CC-BY-SA-3.0 and older"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:402
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:405
 #, kde-format
+msgctxt "@item"
 msgid "Own work, Creative Commons Attribution-Share Alike 3.0"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:404
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:407
 #, kde-format
+msgctxt "@item"
 msgid "Own work, Creative Commons Attribution 3.0"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:406
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:409
 #, kde-format
+msgctxt "@item"
 msgid "Own work, release into public domain under the CC-Zero license"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:408
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:411
 #, kde-format
+msgctxt "@item"
 msgid "Author died more than 100 years ago"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:410
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:413
 #, kde-format
+msgctxt "@item"
 msgid ""
 "Photo of a two-dimensional work whose author died more than 100 years ago"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:412
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:415
 #, kde-format
+msgctxt "@item"
 msgid "First published in the United States before 1923"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:414
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:417
 #, kde-format
+msgctxt "@item"
 msgid "Work of a U.S. government agency"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:416
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:419
 #, kde-format
+msgctxt "@item"
 msgid "Simple typefaces, individual words or geometric shapes"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:418
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:421
 #, kde-format
+msgctxt "@item"
 msgid "Logos with only simple typefaces, individual words or geometric shapes"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:420
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:423
 #, kde-format
+msgctxt "@item"
 msgid "No license specified (not recommended for public wiki sites)"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:423
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:426
 #, fuzzy, kde-format
 #| msgid "Supplemental categories:"
+msgctxt "@label"
 msgid "Generic categories:"
 msgstr "Dopunske kategorije:"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:426
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:429
 #, fuzzy, kde-format
 #| msgid ""
 #| "This value in degrees will be added to main angle value to set fine "
 #| "target angle."
+msgctxt "@info"
 msgid ""
 "This is a place to enter categories that will be added to all the files."
 msgstr ""
 "Ova vrijednost u stepenima će biti dodana vrijednosti glavnog ugla da se "
 "postaviti željeni ugao."
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:429
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:432
 #, fuzzy, kde-format
 #| msgctxt "generic black and white film"
 #| msgid "Generic"
+msgctxt "@label"
 msgid "Generic text:"
 msgstr "Generička"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:432
-#, kde-format
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:435
+#, fuzzy, kde-format
+#| msgid ""
+#| "This value in degrees will be added to main angle value to set fine "
+#| "target angle."
+msgctxt "@info"
 msgid ""
 "This is a place to enter text that will be added to all the files, below the "
 "Information template."
 msgstr ""
+"Ova vrijednost u stepenima će biti dodana vrijednosti glavnog ugla da se "
+"postaviti željeni ugao."
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:436
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:439
 #, fuzzy, kde-format
 #| msgid "Imported comments"
+msgctxt "@label"
 msgid "Upload comments:"
 msgstr "Ubačeni komentari"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:439
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:442
 #, kde-format
+msgctxt "@info"
 msgid ""
 "This is a place to enter text that will be used as upload comments. The "
 "default of 'Uploaded via digiKam uploader' will be used if empty."
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:462
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:464
+#, fuzzy, kde-format
+#| msgid "Options"
+msgctxt "@option"
+msgid "Options"
+msgstr "Opcije"
+
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:465
 #, kde-format
+msgctxt "@info"
 msgid "These are options that will be applied to photos before upload."
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:468
-#: core/dplugins/generic/webservices/piwigo/piwigowindow.cpp:167
-#: core/dplugins/generic/webservices/smugmug/smugwidget.cpp:164
-#: core/libs/dplugins/webservices/wssettingswidget.cpp:258
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:471
 #, kde-format
+msgctxt "@option"
 msgid "Resize photos before uploading"
 msgstr ""
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:478
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:481
 #, fuzzy, kde-format
 #| msgid "Matrix size:"
+msgctxt "@label"
 msgid "Maximum size:"
 msgstr "Veličina matrice:"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:486
-#: core/dplugins/generic/webservices/smugmug/smugwidget.cpp:182
-#: core/libs/dimg/loaders/jpegsettings.cpp:86
-#, kde-format
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:489
+#, fuzzy, kde-format
+#| msgid "JPEG quality:"
+msgctxt "@label"
 msgid "JPEG quality:"
 msgstr "JPEG kvalitet:"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:489
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:492
 #, fuzzy, kde-format
 #| msgid "Read metadata from Baloo"
+msgctxt "@option"
 msgid "Remove metadata from file"
 msgstr "Pročitaj metapodatke iz Baloo-a"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:493
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:496
 #, fuzzy, kde-format
 #| msgid "Remove coordinates information"
+msgctxt "@option"
 msgid "Remove coordinates from file"
 msgstr "Ukloni informacije o koordinatama"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:510
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:513
 #, fuzzy, kde-format
 #| msgid "Item Properties"
+msgctxt "@item"
 msgid "Items Properties"
 msgstr "Podaci stavke"
 
-#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:511
+#: core/dplugins/generic/webservices/mediawiki/mediawikiwidget.cpp:514
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox"
 #| msgid "Local Settings"
+msgctxt "@item"
 msgid "Upload Settings"
 msgstr "Lokalne postavke"
 
@@ -22633,24 +22877,27 @@ msgstr ""
 #: core/dplugins/generic/webservices/onedrive/odplugin.cpp:56
 #, fuzzy, kde-format
 #| msgid "LibJasper support"
+msgctxt "@title"
 msgid "OneDrive"
 msgstr "LibJasper podrška"
 
 #: core/dplugins/generic/webservices/onedrive/odplugin.cpp:71
 #, fuzzy, kde-format
 #| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export to OneDrive web-service"
 msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/onedrive/odplugin.cpp:76
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export items to OneDrive web-service.</p><p>See "
-"OneDrive web site for details: <a href='https://onedrive.live.com/'>https://"
-"onedrive.live.com/</a></p>"
+"This tool permit to export items to OneDrive web-service.\n"
+"\n"
+"See OneDrive web site for details: %1"
 msgstr ""
 
-#: core/dplugins/generic/webservices/onedrive/odplugin.cpp:93
+#: core/dplugins/generic/webservices/onedrive/odplugin.cpp:94
 #, fuzzy, kde-format
 #| msgid "Export Tools"
 msgctxt "@action"
@@ -22660,6 +22907,7 @@ msgstr "Izvozni alati"
 #: core/dplugins/generic/webservices/onedrive/odwindow.cpp:88
 #, fuzzy, kde-format
 #| msgid "Export Tools"
+msgctxt "@title"
 msgid "Export to Onedrive"
 msgstr "Izvozni alati"
 
@@ -22667,17 +22915,20 @@ msgstr "Izvozni alati"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Select Image to Upload"
+msgctxt "@info"
 msgid "Start upload to Onedrive"
 msgstr "Izaberite sliku za postavljanje"
 
 #: core/dplugins/generic/webservices/onedrive/odwindow.cpp:297
 #, fuzzy, kde-format
 #| msgid "LibJasper support"
+msgctxt "@info"
 msgid "Onedrive export"
 msgstr "LibJasper podrška"
 
 #: core/dplugins/generic/webservices/onedrive/odwindow.cpp:334
 #, fuzzy, kde-format
+msgctxt "@info"
 msgid ""
 "Failed to upload photo to OneDrive.\n"
 "%1\n"
@@ -22686,12 +22937,13 @@ msgstr ""
 "Nije uspjelo postavljanje datoteke <filename>%1</filename>. Da li želite "
 "nastaviti?"
 
-#: core/dplugins/generic/webservices/onedrive/odwindow.cpp:405
-#: core/dplugins/generic/webservices/onedrive/odwindow.cpp:410
+#: core/dplugins/generic/webservices/onedrive/odwindow.cpp:406
+#: core/dplugins/generic/webservices/onedrive/odwindow.cpp:411
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your search failed:\n"
 #| "%1"
+msgctxt "@info"
 msgid ""
 "Onedrive call failed:\n"
 "%1"
@@ -22702,24 +22954,27 @@ msgstr ""
 #: core/dplugins/generic/webservices/pinterest/pplugin.cpp:56
 #, fuzzy, kde-format
 #| msgid "Start: "
+msgctxt "@title"
 msgid "Pinterest"
 msgstr "Početak: "
 
 #: core/dplugins/generic/webservices/pinterest/pplugin.cpp:71
 #, fuzzy, kde-format
 #| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export to Pinterest web-service"
 msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/pinterest/pplugin.cpp:76
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export items to Pinterest web-service.</p><p>See "
-"Pinterest web site for details: <a href='https://www.pinterest.com/'>https://"
-"www.pinterest.com/</a></p>"
+"This tool permit to export items to Pinterest web-service.\n"
+"\n"
+"See Pinterest web site for details: %1"
 msgstr ""
 
-#: core/dplugins/generic/webservices/pinterest/pplugin.cpp:93
+#: core/dplugins/generic/webservices/pinterest/pplugin.cpp:94
 #, fuzzy, kde-format
 #| msgid "Export Tools"
 msgctxt "@action"
@@ -22747,6 +23002,12 @@ msgstr "Izvozni alati"
 #: core/dplugins/generic/webservices/pinterest/pwindow.cpp:91
 #, kde-format
 msgid "Start upload to Pinterest"
+msgstr ""
+
+#: core/dplugins/generic/webservices/pinterest/pwindow.cpp:261
+#: core/dplugins/generic/webservices/twitter/twitterwindow.cpp:265
+#, kde-format
+msgid "Authentication failed. Click \"Continue\" to authenticate."
 msgstr ""
 
 #: core/dplugins/generic/webservices/pinterest/pwindow.cpp:297
@@ -22802,24 +23063,26 @@ msgstr "Šifra"
 #: core/dplugins/generic/webservices/piwigo/piwigoplugin.cpp:56
 #, fuzzy, kde-format
 #| msgid "Export"
+msgctxt "@title"
 msgid "Piwigo"
 msgstr "Izvezi"
 
 #: core/dplugins/generic/webservices/piwigo/piwigoplugin.cpp:71
 #, fuzzy, kde-format
 #| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export to Piwigo web-service"
 msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/piwigo/piwigoplugin.cpp:76
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export items to Piwigo web-service.</p><p>See Piwigo "
-"web site for details: <a href='https://piwigo.org/'>https://piwigo.org/</a></"
-"p>"
+"This tool permit to export items to Piwigo web-service.See Piwigo web site "
+"for details: %1"
 msgstr ""
 
-#: core/dplugins/generic/webservices/piwigo/piwigoplugin.cpp:105
+#: core/dplugins/generic/webservices/piwigo/piwigoplugin.cpp:106
 #, fuzzy, kde-format
 #| msgid "Export Tools"
 msgctxt "@action"
@@ -22908,6 +23171,22 @@ msgstr ""
 msgid "Visit Piwigo website"
 msgstr "Posjetite veb stranu digiKam projekta"
 
+#: core/dplugins/generic/webservices/piwigo/piwigowindow.cpp:159
+#: core/dplugins/generic/webservices/smugmug/smugwidget.cpp:97
+#: core/dplugins/generic/webservices/vkontakte/vkauthwidget.cpp:85
+#: core/libs/dplugins/webservices/wssettingswidget.cpp:198
+#, fuzzy, kde-format
+#| msgid "Change Case"
+msgid "Change Account"
+msgstr "Promjena u velika/mala slova"
+
+#: core/dplugins/generic/webservices/piwigo/piwigowindow.cpp:167
+#: core/dplugins/generic/webservices/smugmug/smugwidget.cpp:164
+#: core/libs/dplugins/webservices/wssettingswidget.cpp:258
+#, kde-format
+msgid "Resize photos before uploading"
+msgstr ""
+
 #: core/dplugins/generic/webservices/piwigo/piwigowindow.cpp:170
 #, kde-format
 msgid "Maximum width:"
@@ -22995,40 +23274,47 @@ msgstr "Da li želite primijeniti Vaše izmjene?"
 
 #: core/dplugins/generic/webservices/rajce/rajcenewalbumdlg.cpp:48
 #, kde-format
+msgctxt "@option"
 msgid "Visibility"
 msgstr ""
 
 #: core/dplugins/generic/webservices/rajce/rajcenewalbumdlg.cpp:49
 #, fuzzy, kde-format
 #| msgid "Select the input intensity of the histogram here."
+msgctxt "@info"
 msgid "Set the visibility of the album"
 msgstr "Ovdje označite jačinu ulaza histograma ."
 
 #: core/dplugins/generic/webservices/rajce/rajcenewalbumdlg.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Quick Access List"
+msgctxt "@label: properties"
 msgid "Public"
-msgstr ""
+msgstr "Lista brzog pristupa"
 
 #: core/dplugins/generic/webservices/rajce/rajceplugin.cpp:56
 #, kde-format
+msgctxt "@title"
 msgid "Rajce"
 msgstr ""
 
 #: core/dplugins/generic/webservices/rajce/rajceplugin.cpp:71
 #, fuzzy, kde-format
 #| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export to Rajce web-service"
 msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/rajce/rajceplugin.cpp:76
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export items to Rajce web-service.</p><p>See Rajce "
-"web site for details: <a href='https://www.rajce.idnes.cz/'>https://www."
-"rajce.idnes.cz/</a></p>"
+"This tool permit to export items to Rajce web-service.\n"
+"\n"
+"See Rajce web site for details: %1"
 msgstr ""
 
-#: core/dplugins/generic/webservices/rajce/rajceplugin.cpp:93
+#: core/dplugins/generic/webservices/rajce/rajceplugin.cpp:94
 #, fuzzy, kde-format
 #| msgid "Export Tools"
 msgctxt "@action"
@@ -23236,6 +23522,15 @@ msgstr ""
 msgid "Password hint to present to users in the password prompt (optional)."
 msgstr ""
 
+#: core/dplugins/generic/webservices/smugmug/smugnewalbumdlg.cpp:160
+#: core/dplugins/generic/webservices/yandexfotki/yfnewalbumdlg.cpp:82
+#: core/libs/database/utils/widgets/dbsettingswidget.cpp:190
+#: core/libs/dplugins/webservices/wslogindialog.cpp:97
+#, fuzzy, kde-format
+#| msgid "Password"
+msgid "Password:"
+msgstr "Šifra"
+
 #: core/dplugins/generic/webservices/smugmug/smugnewalbumdlg.cpp:161
 #, fuzzy, kde-format
 #| msgid "Password"
@@ -23245,30 +23540,34 @@ msgstr "Šifra"
 #: core/dplugins/generic/webservices/smugmug/smugplugin.cpp:57
 #, fuzzy, kde-format
 #| msgid "Import"
+msgctxt "@title"
 msgid "SmugMug"
 msgstr "Uvezi"
 
 #: core/dplugins/generic/webservices/smugmug/smugplugin.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export and import items with SmugMug web-service"
-msgstr ""
+msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/smugmug/smugplugin.cpp:77
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export and import items with SmugMug web-service.</"
-"p><p>See SmugMug web site for details: <a href='https://www.smugmug."
-"com'>https://www.smugmug.com</a></p>"
+"This tool permit to export and import items with SmugMug web-service.\n"
+"\n"
+"See SmugMug web site for details: %1"
 msgstr ""
 
-#: core/dplugins/generic/webservices/smugmug/smugplugin.cpp:103
+#: core/dplugins/generic/webservices/smugmug/smugplugin.cpp:104
 #, fuzzy, kde-format
 #| msgid "Export Tools"
 msgctxt "@action"
 msgid "Export to &SmugMug..."
 msgstr "Izvozni alati"
 
-#: core/dplugins/generic/webservices/smugmug/smugplugin.cpp:115
+#: core/dplugins/generic/webservices/smugmug/smugplugin.cpp:116
 #, fuzzy, kde-format
 #| msgid "Import from Scanner..."
 msgctxt "@action"
@@ -23313,6 +23612,14 @@ msgstr "Ovo je lista slika za grupnu obradu."
 msgid ""
 "This is a clickable link to open the SmugMug home page in a web browser."
 msgstr ""
+
+#: core/dplugins/generic/webservices/smugmug/smugwidget.cpp:81
+#: core/dplugins/generic/webservices/vkontakte/vkauthwidget.cpp:71
+#: core/libs/dplugins/webservices/wssettingswidget.cpp:147
+#, fuzzy, kde-format
+#| msgid "Amount:"
+msgid "Account"
+msgstr "Količina:"
 
 #: core/dplugins/generic/webservices/smugmug/smugwidget.cpp:82
 #, kde-format
@@ -23393,7 +23700,6 @@ msgid "Password for SmugMug album."
 msgstr ""
 
 #: core/dplugins/generic/webservices/smugmug/smugwidget.cpp:130
-#: core/dplugins/generic/webservices/vkontakte/vkalbumchooser.cpp:99
 #: core/libs/dplugins/webservices/wssettingswidget.cpp:217
 #, kde-format
 msgid "New Album"
@@ -23435,10 +23741,23 @@ msgstr ""
 msgid "Maximum dimension:"
 msgstr "Prikažite dimenzije predmeta"
 
+#: core/dplugins/generic/webservices/smugmug/smugwidget.cpp:182
+#: core/libs/dimg/loaders/jpegsettings.cpp:86
+#, kde-format
+msgid "JPEG quality:"
+msgstr "JPEG kvalitet:"
+
 #: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:129
 #, kde-format
 msgid "Import from SmugMug Web Service"
 msgstr ""
+
+#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:131
+#, fuzzy, kde-format
+#| msgctxt "@title:menu"
+#| msgid "Download"
+msgid "Start Download"
+msgstr "Preuzmi"
 
 #: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:132
 #, kde-format
@@ -23498,27 +23817,48 @@ msgstr ""
 "Nije uspjelo postavljanje datoteke <filename>%1</filename>. Da li želite "
 "nastaviti?"
 
+#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:993
+#, fuzzy, kde-format
+msgid ""
+"Failed to save photo: %1\n"
+"Do you want to continue?"
+msgstr ""
+"Nije uspjelo postavljanje datoteke <filename>%1</filename>. Da li želite "
+"nastaviti?"
+
+#: core/dplugins/generic/webservices/smugmug/smugwindow.cpp:1006
+#, fuzzy, kde-format
+msgid ""
+"Failed to download photo: %1\n"
+"Do you want to continue?"
+msgstr ""
+"Nije uspjelo skidanje datoteke <filename>%1</filename>. Da li želite "
+"nastaviti?"
+
 #: core/dplugins/generic/webservices/twitter/twitterplugin.cpp:56
 #, fuzzy, kde-format
 #| msgid "Start: "
+msgctxt "@title"
 msgid "Twitter"
 msgstr "Početak: "
 
 #: core/dplugins/generic/webservices/twitter/twitterplugin.cpp:71
 #, fuzzy, kde-format
 #| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export to Twitter web-service"
 msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/twitter/twitterplugin.cpp:76
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export items to Twitter web-service.</p><p>See "
-"Twitter web site for details: <a href='https://twitter.com/'>https://twitter."
-"com/</a></p>"
+"This tool permit to export items to Twitter web-service.\n"
+"\n"
+"See Twitter web site for details: %1"
 msgstr ""
 
-#: core/dplugins/generic/webservices/twitter/twitterplugin.cpp:96
+#: core/dplugins/generic/webservices/twitter/twitterplugin.cpp:97
 #, fuzzy, kde-format
 #| msgid "Export Tools"
 msgctxt "@action"
@@ -23630,20 +23970,24 @@ msgstr ""
 #: core/dplugins/generic/webservices/unified/unifiedplugin.cpp:52
 #, fuzzy, kde-format
 #| msgid "Unspecified"
+msgctxt "@title"
 msgid "Unified"
 msgstr "Nenavedeno"
 
 #: core/dplugins/generic/webservices/unified/unifiedplugin.cpp:67
 #, fuzzy, kde-format
 #| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export items to web-services"
 msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/unified/unifiedplugin.cpp:72
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export items to many web-services.</p><p>This is a "
-"unified tool, grouping many tools in one.</p>"
+"This tool permit to export items to many web-services.\n"
+"\n"
+"This is a unified tool, grouping many tools in one."
 msgstr ""
 
 #: core/dplugins/generic/webservices/unified/unifiedplugin.cpp:95
@@ -23788,39 +24132,47 @@ msgstr "Prilikom zatvaranja editor-a"
 #: core/dplugins/generic/webservices/vkontakte/backend/vkontakte_authenticationdialog.cpp:112
 #, fuzzy, kde-format
 #| msgid "Loading: "
+msgctxt "@label"
 msgid "Loading Page:"
 msgstr "Učitavanje: "
 
 #: core/dplugins/generic/webservices/vkontakte/backend/vkontakte_authenticationdialog.cpp:192
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<b>VKontakte Error Description:</b> %1<br><b>VKontakte Error:</b> %2<br>"
+"VKontakte Error Description: %1\n"
+"VKontakte Error: %2\n"
 msgstr ""
 
 #: core/dplugins/generic/webservices/vkontakte/backend/vkontakte_authenticationdialog.cpp:194
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "When closing the editor"
+msgctxt "@title"
 msgid "Authentication with VKontakte was not successful."
-msgstr ""
+msgstr "Prilikom zatvaranja editor-a"
 
 #: core/dplugins/generic/webservices/vkontakte/backend/vkontakte_authenticationdialog.cpp:195
 #, fuzzy, kde-format
 #| msgid "Settings..."
-msgctxt "@title:window"
+msgctxt "@title: window"
 msgid "Authentication Problem"
 msgstr "Podešavanja..."
 
 #: core/dplugins/generic/webservices/vkontakte/backend/vkontakte_authenticationdialog.cpp:240
 #, kde-format
+msgctxt "@info"
 msgid ""
 "There was a network error when trying to authenticate with VKontakte web "
 "service."
 msgstr ""
 
 #: core/dplugins/generic/webservices/vkontakte/backend/vkontakte_authenticationdialog.cpp:241
-#, kde-format
-msgctxt "@title:window"
+#, fuzzy, kde-format
+#| msgid "Error"
+msgctxt "@title: window"
 msgid "Network Error"
-msgstr ""
+msgstr "Greška"
 
 #: core/dplugins/generic/webservices/vkontakte/backend/vkontakte_deletealbumjob.cpp:52
 #, fuzzy, kde-format
@@ -23879,36 +24231,51 @@ msgstr ""
 #: core/dplugins/generic/webservices/vkontakte/vkalbumchooser.cpp:87
 #, fuzzy, kde-format
 #| msgid "Album"
-msgctxt "@title:group Header above controls for managing albums"
+msgctxt "@title: group Header above controls for managing albums"
 msgid "Album"
 msgstr "Album"
 
 #: core/dplugins/generic/webservices/vkontakte/vkalbumchooser.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "These albums will be moved to Trash."
+msgctxt "@info"
 msgid "This is the VKontakte album that will be used for the transfer."
-msgstr ""
+msgstr "Ovi albumi će biti premješteni u Smeće."
+
+#: core/dplugins/generic/webservices/vkontakte/vkalbumchooser.cpp:99
+#, fuzzy, kde-format
+#| msgid "New Album"
+msgctxt "@action"
+msgid "New Album"
+msgstr "Novi album"
 
 #: core/dplugins/generic/webservices/vkontakte/vkalbumchooser.cpp:100
 #, fuzzy, kde-format
 #| msgid "Create new album"
+msgctxt "@info"
 msgid "Create new VKontakte album"
 msgstr "Kreiraj novi album"
 
 #: core/dplugins/generic/webservices/vkontakte/vkalbumchooser.cpp:103
-#, kde-format
-msgctxt "reload albums list"
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Upload..."
+msgctxt "@action: reload albums list"
 msgid "Reload"
-msgstr ""
+msgstr "Pošalji..."
 
 #: core/dplugins/generic/webservices/vkontakte/vkalbumchooser.cpp:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load playlist"
+msgctxt "@info"
 msgid "Reload albums list"
-msgstr ""
+msgstr "Učitaj listu pjesama"
 
 #: core/dplugins/generic/webservices/vkontakte/vkalbumchooser.cpp:107
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Reset selected albums"
+msgctxt "@info"
 msgid "Edit selected album"
 msgstr "Poništi odabrane albume"
 
@@ -23916,32 +24283,33 @@ msgstr "Poništi odabrane albume"
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Reset selected albums"
+msgctxt "@info"
 msgid "Delete selected album"
 msgstr "Poništi odabrane albume"
 
 #: core/dplugins/generic/webservices/vkontakte/vkalbumchooser.cpp:329
 #, fuzzy, kde-format
-msgctxt "@title:window"
+msgctxt "@title: window"
 msgid "Confirm Album Deletion"
 msgstr "Korelacija:"
 
 #: core/dplugins/generic/webservices/vkontakte/vkalbumchooser.cpp:330
-#, kde-format
+#, fuzzy, kde-format
+msgctxt "@info"
 msgid ""
-"<qt>Are you sure you want to remove the album <b>%1</b> including all photos "
-"in it?</qt>"
-msgstr ""
+"Are you sure you want to remove the album \"%1\" including all photos in it?"
+msgstr "Da li sigurno želite izbrisati odabrani radni tok \"%1\"?"
 
 #: core/dplugins/generic/webservices/vkontakte/vkalbumchooser.cpp:443
-#: core/dplugins/generic/webservices/vkontakte/vkauthwidget.cpp:182
-#: core/dplugins/generic/webservices/vkontakte/vkwindow.cpp:402
-#, kde-format
-msgctxt "@title:window"
+#, fuzzy, kde-format
+#| msgid "Create new album"
+msgctxt "@title: window"
 msgid "Request to VKontakte failed"
-msgstr ""
+msgstr "Kreiraj novi album"
 
 #: core/dplugins/generic/webservices/vkontakte/vkalbumchooser.cpp:444
 #, kde-format
+msgctxt "@info"
 msgid "Internal error: Null pointer to KJob instance."
 msgstr ""
 
@@ -23949,6 +24317,13 @@ msgstr ""
 #, kde-format
 msgid "This account is used for authentication."
 msgstr ""
+
+#: core/dplugins/generic/webservices/vkontakte/vkauthwidget.cpp:80
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label: account properties"
+msgid "Name:"
+msgstr "Ime:"
 
 #: core/dplugins/generic/webservices/vkontakte/vkauthwidget.cpp:81
 #, kde-format
@@ -23974,6 +24349,13 @@ msgstr "%1 %2"
 #| msgid "Uncategorized Album"
 msgid "Unauthorized"
 msgstr "Nerazvrstani album"
+
+#: core/dplugins/generic/webservices/vkontakte/vkauthwidget.cpp:182
+#: core/dplugins/generic/webservices/vkontakte/vkwindow.cpp:402
+#, kde-format
+msgctxt "@title:window"
+msgid "Request to VKontakte failed"
+msgstr ""
 
 #: core/dplugins/generic/webservices/vkontakte/vknewalbumdlg.cpp:96
 #, fuzzy, kde-format
@@ -24001,6 +24383,13 @@ msgstr "Album"
 #| msgid "Reset all settings to their default values."
 msgid "These are basic settings for the new VKontakte album."
 msgstr "Resetujte sve postavke na njihove zadane vrijednosti."
+
+#: core/dplugins/generic/webservices/vkontakte/vknewalbumdlg.cpp:126
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "@option: album properties"
+msgid "Title:"
+msgstr "Naslov:"
 
 #: core/dplugins/generic/webservices/vkontakte/vknewalbumdlg.cpp:127
 #, fuzzy, kde-format
@@ -24055,27 +24444,29 @@ msgid "Title cannot be empty."
 msgstr "Ime oznake ne može biti prazno"
 
 #: core/dplugins/generic/webservices/vkontakte/vkplugin.cpp:56
-#: core/dplugins/generic/webservices/vkontakte/vkwindow.cpp:393
 #, fuzzy, kde-format
 #| msgid "Contact"
+msgctxt "@title"
 msgid "VKontakte"
 msgstr "Kontakt"
 
 #: core/dplugins/generic/webservices/vkontakte/vkplugin.cpp:71
 #, fuzzy, kde-format
 #| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export to VKontakte web-service"
 msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/vkontakte/vkplugin.cpp:76
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export items to VKontakte web-service.</p><p>See "
-"VKontakte web site for details: <a href='https://vk.com/'>https://vk.com/</"
-"a></p>"
+"This tool permit to export items to VKontakte web-service.\n"
+"\n"
+"See VKontakte web site for details: %1"
 msgstr ""
 
-#: core/dplugins/generic/webservices/vkontakte/vkplugin.cpp:93
+#: core/dplugins/generic/webservices/vkontakte/vkplugin.cpp:94
 #, fuzzy, kde-format
 #| msgid "Export Tools"
 msgctxt "@action"
@@ -24110,6 +24501,12 @@ msgstr ""
 msgid "Start upload to VKontakte service"
 msgstr ""
 
+#: core/dplugins/generic/webservices/vkontakte/vkwindow.cpp:393
+#, fuzzy, kde-format
+#| msgid "Contact"
+msgid "VKontakte"
+msgstr "Kontakt"
+
 #: core/dplugins/generic/webservices/vkontakte/vkwindow.cpp:417
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
@@ -24129,23 +24526,27 @@ msgstr ""
 
 #: core/dplugins/generic/webservices/yandexfotki/yfplugin.cpp:56
 #, kde-format
+msgctxt "@title"
 msgid "YandexFotki"
 msgstr ""
 
 #: core/dplugins/generic/webservices/yandexfotki/yfplugin.cpp:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sort by rating"
+msgctxt "@info"
 msgid "A tool to export to YandexFotki web-service"
-msgstr ""
+msgstr "Sortiraj prema ocjenama"
 
 #: core/dplugins/generic/webservices/yandexfotki/yfplugin.cpp:76
 #, kde-format
+msgctxt "@info"
 msgid ""
-"<p>This tool permit to export items to YandexFotki web-service.</p><p>See "
-"YandexFotki web site for details: <a href='https://fotki.yandex.ru/'>https://"
-"fotki.yandex.ru/</a></p>"
+"This tool permit to export items to YandexFotki web-service.\n"
+"\n"
+"See YandexFotki web site for details: %1"
 msgstr ""
 
-#: core/dplugins/generic/webservices/yandexfotki/yfplugin.cpp:96
+#: core/dplugins/generic/webservices/yandexfotki/yfplugin.cpp:97
 #, fuzzy, kde-format
 #| msgid "Export Tools"
 msgctxt "@action"
@@ -32273,6 +32674,11 @@ msgstr "Priručnik za Kipi priključke"
 msgid "Various"
 msgstr "Prethodno"
 
+#: core/libs/dplugins/webservices/wslogindialog.cpp:94
+#, kde-format
+msgid "Login:"
+msgstr ""
+
 #: core/libs/dplugins/webservices/wslogindialog.cpp:108
 #, kde-format
 msgid "&Login"
@@ -34911,6 +35317,12 @@ msgstr "Oznake su već dodjeljene"
 #, kde-format
 msgid "Recent Tags"
 msgstr "Skorašnje oznake"
+
+#: core/libs/properties/captions/itemdescedittab.cpp:350
+#: core/utilities/advancedrename/common/tooltipdialog.cpp:62
+#, kde-format
+msgid "Information"
+msgstr "Informacije"
 
 #: core/libs/properties/captions/itemdescedittab.cpp:602
 #, kde-format
@@ -45987,15 +46399,6 @@ msgstr "Nije nađen unos knjige adresa"
 msgid "Applying face changes"
 msgstr "Primjenjujem promjene na licu"
 
-#: core/utilities/facemanagement/widgets/assignnamewidget_p.cpp:184
-#: core/utilities/facemanagement/widgets/assignnamewidget_p.cpp:213
-#: core/utilities/imageeditor/editor/editorwindow.cpp:532
-#, fuzzy, kde-format
-#| msgid "OK"
-msgctxt "@action"
-msgid "OK"
-msgstr "OK"
-
 #: core/utilities/facemanagement/widgets/assignnamewidget_p.cpp:188
 #, fuzzy, kde-format
 #| msgid "Confirm"
@@ -52526,6 +52929,11 @@ msgctxt "@title: batch worklow name"
 msgid "&Title:"
 msgstr "&Naslov:"
 
+#: core/utilities/queuemanager/views/workflowdlg.cpp:120
+#, kde-format
+msgid "Description:"
+msgstr "Opis:"
+
 #: core/utilities/queuemanager/views/workflowlist.cpp:98
 #, fuzzy, kde-format
 #| msgid "Title"
@@ -55609,6 +56017,11 @@ msgstr "Opcije pregleda"
 msgid "Unify read and write"
 msgstr ""
 
+#: core/utilities/setup/metadata/advancedmetadatatab.cpp:342
+#, fuzzy, kde-format
+msgid "Add"
+msgstr "&Dodaj"
+
 #: core/utilities/setup/metadata/advancedmetadatatab.cpp:351
 #, fuzzy, kde-format
 msgid "Move Up"
@@ -57911,6 +58324,79 @@ msgid ""
 "Some settings are hardware dependent and may have no effect.</b>"
 msgstr ""
 
+#~ msgid ""
+#~ "<qt><p>Optimization is in progress, please wait.</p><p>This can take a "
+#~ "while...</p></qt>"
+#~ msgstr ""
+#~ "<qt><p>Optimizacija je u progresu, molimo sačekajte.</p><p>Ovo može "
+#~ "potrajati...</p></qt>"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt><p><h1><b>Images Pre-Processing is Done</b></h1></p><p>The "
+#~| "optimization step according to your settings is ready to be performed.</"
+#~| "p><p>This step can include an automatic leveling of the horizon, and "
+#~| "also an automatic projection selection and size</p><p>To perform this "
+#~| "operation, the <b>%1</b> program from the <a href='%2'>%3</a> project "
+#~| "will be used.</p><p>Press the \"Next\" button to run the optimization.</"
+#~| "p></qt>"
+#~ msgid ""
+#~ "<qt><p>The optimization step according to your settings is ready to be "
+#~ "performed.</p><p>This step can include an automatic leveling of the "
+#~ "horizon, and also an automatic projection selection and size</p><p>To "
+#~ "perform this operation, the <command>%1</command> program from the <a "
+#~ "href='%2'>%3</a> project will be used.</p><p>Press the \"Next\" button to "
+#~ "run the optimization.</p></qt>"
+#~ msgstr ""
+#~ "<qt><p><h1><b>Pripremna obrada slika je gotova</b></h1></"
+#~ "p><p>Optimizacijski korak u odnosu na vaše postavke je spreman da bude "
+#~ "pokrenut.</p><p>Ovaj korak može uključiti automatsko izravnanje "
+#~ "vidokruga, i takođe automatsku projekciju izbora i veličine</p><p>Za "
+#~ "nastavak ove operacije, <b>%1</b> program iz <a href='%2'>%3</a> projekt "
+#~ "će biti korišten.</p><p>Pritisnite \"Sljedeće\" dugme za početak "
+#~ "optimizacije.</p></qt>"
+
+#, fuzzy
+#~| msgid "Processing under progress"
+#~ msgctxt "@title:window"
+#~ msgid "<b>Pre-Processing Images</b>"
+#~ msgstr "Procesiranje u napretku"
+
+#~ msgid ""
+#~ "<qt><p>Pre-processing is in progress, please wait.</p><p>This can take a "
+#~ "while...</p></qt>"
+#~ msgstr ""
+#~ "<qt><p>Pripremna obrada je u toku, molimo sačekajte.</p><p>Ovo može "
+#~ "potrajati...</p></qt>"
+
+#~ msgid ""
+#~ "<qt><p>Now, we will pre-process images before stitching them.</p><p>Pre-"
+#~ "processing operations include Raw demosaicing. Raw images will be "
+#~ "converted to 16-bit sRGB images with auto-gamma.</p><p>Pre-processing "
+#~ "also include a calculation of some control points to match overlaps "
+#~ "between images. For that purpose, the <b>%1</b> program from the <a "
+#~ "href='%2'>%3</a> project will be used.</p><p>Press \"Next\" to start pre-"
+#~ "processing.</p></qt>"
+#~ msgstr ""
+#~ "<qt><p>Sada, mi ćemo obraditi slike prije spajanja.</p><p>Operacije "
+#~ "pripremne obrade uključuju Raw demozaik. Raw slike će biti konvertovane u "
+#~ "16-bitne sRGB slike sa auto-gamom.</p><p>Pripremna obrada takođe "
+#~ "uključuje proračun kontrolnih tačaka da popune praznine između slika. Za "
+#~ "tu svrhu, <b>%1</b> program sa <a href='%2'>%3</a> projekta će biti "
+#~ "korišten</p><p>Pritisnite \"Sljedeće\" za početak obrade</p></qt>"
+
+#, fuzzy
+#~| msgid "Caption"
+#~ msgctxt "@title:column"
+#~ msgid "Caption"
+#~ msgstr "Naslov"
+
+#, fuzzy
+#~| msgid "Album"
+#~ msgctxt "@title:group Header above controls for managing albums"
+#~ msgid "Album"
+#~ msgstr "Album"
+
 #, fuzzy
 #~| msgid ""
 #~| "<qt><p><h1><b>Welcome to Panorama tool</b></h1></p><p>This tool stitches "
@@ -58484,11 +58970,6 @@ msgstr ""
 #~| msgid "Remove Tag"
 #~ msgid "Remove Face Tags"
 #~ msgstr "Ukloni oznaku"
-
-#, fuzzy
-#~| msgid "Error"
-#~ msgid "Save Error"
-#~ msgstr "Greška"
 
 #, fuzzy
 #~| msgid "Error"
@@ -60156,12 +60637,6 @@ msgstr ""
 #~| msgid "Copy to Clipboard"
 #~ msgid "Copy to Clip&board"
 #~ msgstr "Kopiraj u Clipboard"
-
-#, fuzzy
-#~| msgid "Processing under progress"
-#~ msgctxt "@title:window"
-#~ msgid "Pre-Processing Messages"
-#~ msgstr "Procesiranje u napretku"
 
 #, fuzzy
 #~ msgctxt "@item filename"
