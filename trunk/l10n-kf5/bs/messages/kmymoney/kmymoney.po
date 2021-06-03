@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmymoney\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-30 00:17+0000\n"
+"POT-Creation-Date: 2021-06-03 00:17+0000\n"
 "PO-Revision-Date: 2015-02-09 11:02+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1772,18 +1772,18 @@ msgctxt "Online quote source"
 msgid "Source"
 msgstr "Izvor"
 
-#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:232
+#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:240
 #, kde-format
 msgid "%1 units in %2"
 msgstr "%1 jedinica u %2"
 
-#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:277
+#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:285
 #: kmymoney/misc/webpricequote.cpp:228
 #, fuzzy, kde-format
 msgid "[No identifier]"
 msgstr "Bankovna stavka:"
 
-#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:505
+#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:513
 #, kde-format
 msgid ""
 "Failed to retrieve an exchange rate for %1 from %2. It will be skipped this "
@@ -1791,14 +1791,14 @@ msgid ""
 msgstr ""
 "Neuspjelo popravljanje tečaja za %1 sa %2. To će biti preskočeno ovaj put."
 
-#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:505
-#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:511
-#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:531
+#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:513
+#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:519
+#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:539
 #, kde-format
 msgid "Price Update Failed"
 msgstr "Ažuriranje cijena nije uspjelo"
 
-#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:511
+#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:519
 #, kde-format
 msgid ""
 "Failed to retrieve a quote for %1 from %2.  Press <b>No</b> to remove the "
@@ -1811,32 +1811,32 @@ msgstr ""
 "ažuriranja ovog osiguranja tokom budućih nadgradnji cijena ili  <b>Odustani</"
 "b> za prekid trenutnih operacija ažuriranja."
 
-#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:531
+#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:539
 #, kde-format
 msgid "Cannot update security <b>%1</b>: %2"
 msgstr "Nemogu nadograditi zaštitu <b>%1</b>: %2"
 
-#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:622
+#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:630
 #, kde-format
 msgid ""
 "For <b>%1</b> on <b>%2</b> price <b>%3</b> already exists.<br>Do you want to "
 "replace it with <b>%4</b>?"
 msgstr ""
 
-#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:627
+#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:635
 #, fuzzy, kde-format
 #| msgid "File already exists"
 msgid "Price Already Exists"
 msgstr "Datoteka već postoji"
 
-#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:670
-#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:746
+#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:678
+#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:754
 #, kde-format
 msgid "Price for %1 updated (id %2)"
 msgstr "Cijena za %1 je ažurirana (id %2)"
 
-#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:688
-#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:766
+#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:696
+#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:774
 #, kde-format
 msgid ""
 "Received a price for %1 (id %2), but this symbol is not on the list. "
@@ -1845,7 +1845,7 @@ msgstr ""
 "Cijena za %1 primljena(id %2), ali ovaj simbol nije na listi. Obustavljam "
 "cijelo ažuriranje."
 
-#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:750
+#: kmymoney/dialogs/kequitypriceupdatedlg.cpp:758
 #, kde-format
 msgid "Received an invalid price for %1, unable to update."
 msgstr "Primljena nevažeća cijena za %1, nemoguće ažurirati."
@@ -21835,49 +21835,89 @@ msgctxt "@info:tooltip icon description"
 msgid "This transaction is matched. Accept or un-match it."
 msgstr "Prva transakcija ne odgovara zahtjevu za podudaranje"
 
-#: kmymoney/views/ledgerview.cpp:686
+#: kmymoney/views/ledgerview.cpp:685
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete the selected price entry?"
 #| msgid_plural "Do you really want to delete the selected price entries?"
-msgctxt ""
+msgctxt "@info:tooltip No button"
+msgid "Do not enter the overdue scheduled transaction."
+msgstr "Da li stvarno želite izbrisati odabrani unos cijene?"
+
+#: kmymoney/views/ledgerview.cpp:686
+#, fuzzy, kde-format
+#| msgid "Enter scheduled transaction"
+msgctxt "@info:tooltip Yes button"
+msgid "Enter the overdue scheduled transaction."
+msgstr "Unesi planiranu transakciju"
+
+#: kmymoney/views/ledgerview.cpp:689
+#, fuzzy, kde-format
+#| msgid "Do you really want to delete the selected price entry?"
+#| msgid_plural "Do you really want to delete the selected price entries?"
+msgctxt "Question about the overdue action"
 msgid "Do you want to enter the overdue schedule now?"
 msgstr "Da li stvarno želite izbrisati odabrani unos cijene?"
 
-#: kmymoney/views/ledgerview.cpp:687
+#: kmymoney/views/ledgerview.cpp:690
 #, fuzzy, kde-format
 #| msgctxt "Dialog caption for 'Enter or schedule' dialog"
 #| msgid "Enter or schedule?"
-msgctxt ""
+msgctxt "@title:window"
 msgid "Enter overdue schedule"
 msgstr "Unos ili Raspoređivanje?"
 
-#: kmymoney/views/ledgerview.cpp:697
+#: kmymoney/views/ledgerview.cpp:700
+#, fuzzy, kde-format
+#| msgid "Accepts the entered data and stores it as schedule"
+msgctxt "@info:tooltip Accept button"
+msgid "Accept the transaction and mark it cleared."
+msgstr "Prihvaća unesene podatke i pohranjuje ih kao raspored"
+
+#: kmymoney/views/ledgerview.cpp:703
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete the selected transaction?"
 #| msgid_plural "Do you really want to delete all %1 selected transactions?"
-msgctxt ""
+msgctxt "Question about the accept action"
 msgid "Do you want to accept the imported transaction now?"
 msgstr "Da li zasita želite izbrisati odabranu %1 transakciju?"
 
-#: kmymoney/views/ledgerview.cpp:698
+#: kmymoney/views/ledgerview.cpp:704
 #, fuzzy, kde-format
 #| msgid "Split transaction"
-msgctxt ""
+msgctxt "@title:window"
 msgid "Accept transaction"
 msgstr "Razdvajajuća transakcija"
 
-#: kmymoney/views/ledgerview.cpp:715
+#: kmymoney/views/ledgerview.cpp:720
+#, fuzzy, kde-format
+#| msgid ""
+#| "Use this to schedule the transaction for later entry into the ledger."
+msgctxt "@info:tooltip Unmatch button"
+msgid ""
+"Detach the hidden (matched) transaction from the one shown and enter it into "
+"the ledger again."
+msgstr "Koristi ovo za raspoređivanje transakcija za kasniji pristup knjizi."
+
+#: kmymoney/views/ledgerview.cpp:722
+#, kde-format
+msgctxt "@info:tooltip Accept button"
+msgid ""
+"Accept the match as shown and remove the data of the hidden (matched) "
+"transaction."
+msgstr ""
+
+#: kmymoney/views/ledgerview.cpp:726
 #, fuzzy, kde-format
 #| msgid "Do you really want to delete the selected transaction?"
 #| msgid_plural "Do you really want to delete all %1 selected transactions?"
-msgctxt ""
+msgctxt "Question about the accept or unmatch action"
 msgid "Do you want to accept or unmatch the matched transaction now?"
 msgstr "Da li zasita želite izbrisati odabranu %1 transakciju?"
 
-#: kmymoney/views/ledgerview.cpp:716
+#: kmymoney/views/ledgerview.cpp:727
 #, fuzzy, kde-format
 #| msgid "Attempt to match similar transactions"
-msgctxt ""
+msgctxt "@title:window"
 msgid "Accept or unmatch transaction"
 msgstr "Pokusaj usklađivanja sličnih transakcija"
 
