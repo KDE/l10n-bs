@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-25 00:13+0000\n"
+"POT-Creation-Date: 2021-06-28 00:13+0000\n"
 "PO-Revision-Date: 2014-01-31 20:51+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -384,14 +384,12 @@ msgstr ""
 msgid "Path to the Julia native REPL"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_variableManagement)
 #. i18n: ectx: label, entry (variableManagement), group (JuliaBackend)
 #. i18n: ectx: label, entry (variableManagement), group (PythonBackend)
 #. i18n: ectx: label, entry (variableManagement), group (RBackend)
 #. i18n: ectx: label, entry (variableManagement), group (MaximaBackend)
 #: backends/julia/juliabackend.kcfg:16 backends/maxima/maximabackend.kcfg:29
 #: backends/python/pythonbackend.kcfg:17 backends/R/rserver/rserver.kcfg:16
-#: backends/R/settings.ui:71
 #, kde-format
 msgid "Enable Variable Management"
 msgstr "Uključi upravljanje varijablama"
@@ -429,7 +427,7 @@ msgid "Julia script file (*.jl)"
 msgstr "*.R|R skriptna datoteka"
 
 #: backends/julia/juliasession.cpp:117 backends/julia/juliasession.cpp:126
-#: backends/maxima/maximasession.cpp:274 cantor_part.cpp:999
+#: backends/maxima/maximasession.cpp:274 cantor_part.cpp:997
 #: lib/session.cpp:287 lib/session.cpp:289 worksheet.cpp:1203
 #: worksheet.cpp:1231 worksheet.cpp:1246 worksheet.cpp:1263 worksheet.cpp:1307
 #: worksheet.cpp:1319
@@ -488,11 +486,12 @@ msgid "General"
 msgstr "Opšte"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: backends/julia/settings.ui:27
-#, fuzzy, kde-format
-#| msgid "Path to Maxima:"
-msgid "Path to Julia:"
-msgstr "Staza do Maxima"
+#: backends/julia/settings.ui:27 backends/maxima/settings.ui:27
+#: backends/octave/settings.ui:27 backends/sage/settings.ui:27
+#: backends/scilab/settings.ui:27
+#, kde-format
+msgid "Executable:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lPlotIntegration)
 #: backends/julia/settings.ui:37 backends/maxima/settings.ui:61
@@ -506,7 +505,7 @@ msgstr "Integriši"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_integratePlots)
 #: backends/julia/settings.ui:44 backends/maxima/settings.ui:68
 #: backends/octave/settings.ui:58 backends/python/settings.ui:51
-#: backends/R/settings.ui:51 backends/scilab/settings.ui:44
+#: backends/R/settings.ui:57 backends/scilab/settings.ui:44
 #, fuzzy, kde-format
 #| msgid ""
 #| "If true, plots will be displayed inside the worksheet. If not they appear "
@@ -537,8 +536,9 @@ msgstr ""
 #: backends/qalculate/settings.ui:174 backends/qalculate/settings.ui:227
 #: backends/qalculate/settings.ui:339 backends/qalculate/settings.ui:360
 #: backends/qalculate/settings.ui:381 backends/qalculate/settings.ui:402
+#: backends/R/settings.ui:60 backends/R/settings.ui:77
 #: backends/sage/settings.ui:61 backends/scilab/settings.ui:47
-#: commandentry.cpp:345
+#: commandentry.cpp:348
 #, kde-format
 msgid "Enabled"
 msgstr "Uključeno"
@@ -546,7 +546,7 @@ msgstr "Uključeno"
 #. i18n: ectx: property (text), widget (QLabel, lVariableManagement)
 #: backends/julia/settings.ui:54 backends/maxima/settings.ui:34
 #: backends/octave/settings.ui:68 backends/python/settings.ui:61
-#: backends/R/settings.ui:61
+#: backends/R/settings.ui:67
 #, fuzzy, kde-format
 #| msgid "Enable Variable Management"
 msgid "Variable Management:"
@@ -555,7 +555,7 @@ msgstr "Uključi upravljanje varijablama"
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_variableManagement)
 #: backends/julia/settings.ui:61 backends/maxima/settings.ui:41
 #: backends/octave/settings.ui:75 backends/python/settings.ui:68
-#: backends/R/settings.ui:68
+#: backends/R/settings.ui:74
 #, kde-format
 msgid ""
 "Monitor the creation and destruction of variables and show the existing "
@@ -621,7 +621,7 @@ msgstr ""
 #. i18n: ectx: attribute (title), widget (QWidget, tabAutorun)
 #: backends/julia/settings.ui:149 backends/lua/settings.ui:51
 #: backends/maxima/settings.ui:99 backends/octave/settings.ui:128
-#: backends/python/settings.ui:172 backends/R/settings.ui:95
+#: backends/python/settings.ui:172 backends/R/settings.ui:101
 #: backends/sage/settings.ui:85 backends/scilab/settings.ui:68
 #, kde-format
 msgid "Autorun"
@@ -634,7 +634,7 @@ msgstr ""
 #: backends/julia/settings.ui:155 backends/kalgebra/settings.ui:20
 #: backends/lua/settings.ui:57 backends/maxima/settings.ui:105
 #: backends/octave/settings.ui:134 backends/python/settings.ui:178
-#: backends/qalculate/settings.ui:183 backends/R/settings.ui:101
+#: backends/qalculate/settings.ui:183 backends/R/settings.ui:107
 #: backends/sage/settings.ui:91 backends/scilab/settings.ui:74
 #, fuzzy, kde-format
 #| msgid "Scripts to autorun"
@@ -644,7 +644,7 @@ msgstr "Skripte za automatsko pokretanje"
 #. i18n: ectx: attribute (title), widget (QWidget, tabDocumentation)
 #: backends/julia/settings.ui:169 backends/lua/settings.ui:71
 #: backends/maxima/settings.ui:119 backends/octave/settings.ui:148
-#: backends/python/settings.ui:192 backends/R/settings.ui:115
+#: backends/python/settings.ui:192 backends/R/settings.ui:121
 #: backends/sage/settings.ui:105 backends/scilab/settings.ui:88
 #, fuzzy, kde-format
 #| msgid "Document to open"
@@ -826,13 +826,6 @@ msgstr ""
 "Maxima se srušila dva puta u kratkom vremenu. Zaustavljam da bih pokušao "
 "ponovno pokretanje"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: backends/maxima/settings.ui:27 backends/octave/settings.ui:27
-#: backends/sage/settings.ui:27 backends/scilab/settings.ui:27
-#, kde-format
-msgid "Executable:"
-msgstr ""
-
 #. i18n: ectx: property (toolTip), widget (KUrlRequester, kcfg_localDoc)
 #: backends/maxima/settings.ui:51 backends/octave/settings.ui:44
 #: backends/python/settings.ui:37 backends/R/settings.ui:37
@@ -909,7 +902,7 @@ msgstr ""
 #: backends/sage/sagesession.cpp:267 backends/sage/sagesession.cpp:346
 #: backends/sage/sagesession.cpp:357 cantor.cpp:219 cantor.cpp:221
 #: cantor.cpp:339 cantor.cpp:346 lib/session.cpp:358 main.cpp:67 main.cpp:131
-#: markdownentry.cpp:793 textentry.cpp:556 worksheet.cpp:1286
+#: markdownentry.cpp:793 textentry.cpp:553 worksheet.cpp:1286
 #, kde-format
 msgid "Cantor"
 msgstr "Cantor"
@@ -2149,34 +2142,29 @@ msgstr "Dokument za otvaranje"
 msgid "Download additional documentations"
 msgstr "Staza za  python2 naredbu"
 
-#: backends/qthelpconfig.cpp:139
-#, kde-format
-msgid "Documentation provided by GHNS"
-msgstr ""
-
-#: backends/qthelpconfig.cpp:168
+#: backends/qthelpconfig.cpp:171
 #, kde-format
 msgid "Qt Compressed Help file is not valid."
 msgstr ""
 
-#: backends/qthelpconfig.cpp:177
+#: backends/qthelpconfig.cpp:180
 #, kde-format
 msgid "Documentation already imported"
 msgstr ""
 
-#: backends/qthelpconfig.cpp:266
+#: backends/qthelpconfig.cpp:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Modify"
 msgstr ""
 
-#: backends/qthelpconfig.cpp:271
+#: backends/qthelpconfig.cpp:275
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete"
 msgstr ""
 
-#: backends/qthelpconfig.cpp:279
+#: backends/qthelpconfig.cpp:283
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Please uninstall this via GHNS."
@@ -2210,7 +2198,7 @@ msgctxt "@action:button"
 msgid "Add"
 msgstr "Dodaj"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
+#. i18n: ectx: property (text), widget (QLabel, lIcon)
 #: backends/qthelpconfigeditdialog.ui:17
 #, kde-format
 msgctxt "@label:chooser"
@@ -2225,7 +2213,7 @@ msgctxt "@info:tooltip"
 msgid "Select an icon"
 msgstr "Ponovo pokreni Pozadinu"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, lName)
 #: backends/qthelpconfigeditdialog.ui:37
 #, fuzzy, kde-format
 #| msgid "Name:"
@@ -2247,7 +2235,7 @@ msgctxt "@info:placeholder"
 msgid "Select a name..."
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, lPath)
 #: backends/qthelpconfigeditdialog.ui:54
 #, kde-format
 msgctxt "@label:textbox"
@@ -2333,12 +2321,6 @@ msgstr "Dvaput kliknite da biste otvorili dijalog za izbor datoteke"
 #, kde-format
 msgid "*.R *.r|R source files (*.R, *.r)"
 msgstr "*.R *.r|R izvorne datoteke (*.R, *.r)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_integratePlots)
-#: backends/R/settings.ui:54
-#, kde-format
-msgid "Integrate Plots in Worksheet"
-msgstr "Integriraj grafike u radnom listu"
 
 #: backends/sage/sagebackend.cpp:81
 #, fuzzy, kde-format
@@ -2524,8 +2506,9 @@ msgid "Open file"
 msgstr "Otvori datoteku slike"
 
 #: cantor.cpp:147
-#, kde-format
-msgid "Download Example Worksheets"
+#, fuzzy, kde-format
+#| msgid "Download Example Worksheets"
+msgid "Download Examples"
 msgstr "Preuzmite primjer radnih listova"
 
 #: cantor.cpp:152
@@ -2610,12 +2593,12 @@ msgstr "Sesija %1"
 msgid "Failed to find the Cantor Part with error %1"
 msgstr "Nemogu da nađem Cantor dio."
 
-#: cantor.cpp:438 cantor_part.cpp:662
+#: cantor.cpp:438 cantor_part.cpp:660
 #, kde-format
 msgid "Calculating..."
 msgstr "Računam..."
 
-#: cantor.cpp:441 cantor_part.cpp:673 cantor_part.cpp:735
+#: cantor.cpp:441 cantor_part.cpp:671 cantor_part.cpp:733
 #, kde-format
 msgid "Ready"
 msgstr "Spreman"
@@ -2856,120 +2839,120 @@ msgstr ""
 msgid "Hierarchy font bold for subparagraph"
 msgstr ""
 
-#: cantor_part.cpp:158
+#: cantor_part.cpp:156
 #, kde-format
 msgid "Save Plain Text"
 msgstr "Snimi kao obični tekst"
 
-#: cantor_part.cpp:200 cantor_part.cpp:573
+#: cantor_part.cpp:198 cantor_part.cpp:571
 #, kde-format
 msgid "Export to LaTeX"
 msgstr "Izvezi u  LaTeX"
 
-#: cantor_part.cpp:216 cantor_part.cpp:669 worksheet.cpp:1928
+#: cantor_part.cpp:214 cantor_part.cpp:667 worksheet.cpp:1928
 #, kde-format
 msgid "Evaluate Worksheet"
 msgstr "Procjeni radni list"
 
-#: cantor_part.cpp:224
+#: cantor_part.cpp:222
 #, kde-format
 msgid "Zoom"
 msgstr ""
 
-#: cantor_part.cpp:239
+#: cantor_part.cpp:237
 #, kde-format
 msgid "Typeset using LaTeX"
 msgstr "Štampa pomoću LaTeX"
 
-#: cantor_part.cpp:248
+#: cantor_part.cpp:246
 #, kde-format
 msgid "Syntax Highlighting"
 msgstr "Sintaksno isticanje"
 
-#: cantor_part.cpp:253
+#: cantor_part.cpp:251
 #, kde-format
 msgid "Completion"
 msgstr "Dovršavanje"
 
-#: cantor_part.cpp:258
+#: cantor_part.cpp:256
 #, kde-format
 msgid "Line Numbers"
 msgstr "Brojevi linija:"
 
-#: cantor_part.cpp:263
+#: cantor_part.cpp:261
 #, kde-format
 msgid "Animate Worksheet"
 msgstr "Animiraj radni list"
 
-#: cantor_part.cpp:270
+#: cantor_part.cpp:268
 #, kde-format
 msgid "Embedded Math"
 msgstr ""
 
-#: cantor_part.cpp:276
+#: cantor_part.cpp:274
 #, kde-format
 msgid "Restart Backend"
 msgstr "Ponovo pokreni Pozadinu"
 
-#: cantor_part.cpp:283 worksheetentry.cpp:833
+#: cantor_part.cpp:281 worksheetentry.cpp:833
 #, kde-format
 msgid "Evaluate Entry"
 msgstr "Procjeni ulazne podatke"
 
-#: cantor_part.cpp:289
+#: cantor_part.cpp:287
 #, kde-format
 msgid "Insert Command Entry"
 msgstr "Ubacivanje komandnog unosa"
 
-#: cantor_part.cpp:295
+#: cantor_part.cpp:293
 #, kde-format
 msgid "Insert Text Entry"
 msgstr "Ubacivanje tekstualnog unosa"
 
-#: cantor_part.cpp:301
+#: cantor_part.cpp:299
 #, fuzzy, kde-format
 #| msgid "Insert Command Entry"
 msgid "Insert Markdown Entry"
 msgstr "Ubacivanje komandnog unosa"
 
-#: cantor_part.cpp:308
+#: cantor_part.cpp:306
 #, kde-format
 msgid "Insert LaTeX Entry"
 msgstr "Ubaci LaTeX element"
 
-#: cantor_part.cpp:314
+#: cantor_part.cpp:312
 #, kde-format
 msgid "Insert Page Break"
 msgstr "Ubaci kraj strane"
 
-#: cantor_part.cpp:319 markdownentry.cpp:62
+#: cantor_part.cpp:317 markdownentry.cpp:62
 #, kde-format
 msgid "Insert Image"
 msgstr "Dodaj Sliku"
 
-#: cantor_part.cpp:324
+#: cantor_part.cpp:322
 #, kde-format
 msgid "Collapse All Results"
 msgstr ""
 
-#: cantor_part.cpp:329
+#: cantor_part.cpp:327
 #, fuzzy, kde-format
 #| msgid "Results"
 msgid "Expand All Results"
 msgstr "Rezultati"
 
-#: cantor_part.cpp:334
+#: cantor_part.cpp:332
 #, fuzzy, kde-format
 #| msgid "Remove result"
 msgid "Remove All Results"
 msgstr "Ukloni rezultate"
 
-#: cantor_part.cpp:339
+#: cantor_part.cpp:337
 #, kde-format
 msgid "Remove current Entry"
 msgstr "Odstrani trenutne ulazne podatke"
 
-#: cantor_part.cpp:346 commandentry.cpp:340
+#: cantor_part.cpp:344 commandentry.cpp:342
 #, fuzzy, kde-format
 #| msgid "Show %1 Help"
 msgid "Show Help"
@@ -2980,119 +2963,119 @@ msgstr "Prikaži %1 Pomoć"
 #. collection->addAction(QLatin1String("file_publish_worksheet"), publishWorksheet);
 #. connect(publishWorksheet, &QAction::triggered, this, SLOT(publishWorksheet()));
 #.
-#: cantor_part.cpp:365
+#: cantor_part.cpp:363
 #, kde-format
 msgid "Show Script Editor"
 msgstr "Pokaži skriptni Urednik"
 
-#: cantor_part.cpp:370
+#: cantor_part.cpp:368
 #, kde-format
 msgid "Show Completion"
 msgstr "Prikaži dovršavanje"
 
-#: cantor_part.cpp:389 cantor_part.cpp:910
+#: cantor_part.cpp:387 cantor_part.cpp:908
 #, kde-format
 msgid "Show %1 Help"
 msgstr "Prikaži %1 Pomoć"
 
-#: cantor_part.cpp:446
+#: cantor_part.cpp:444
 #, kde-format
 msgid "CantorPart"
 msgstr "Cantor dio"
 
-#: cantor_part.cpp:448
+#: cantor_part.cpp:446
 #, fuzzy, kde-format
 #| msgid "(C) 2009-2013 Alexander Rieder"
 msgid "(C) 2009-2015 Alexander Rieder"
 msgstr "(C) 2009-2013 Alexander Rieder"
 
-#: cantor_part.cpp:452 main.cpp:82
+#: cantor_part.cpp:450 main.cpp:82
 #, kde-format
 msgid "Alexander Rieder"
 msgstr "Alexander Rieder"
 
-#: cantor_part.cpp:503
+#: cantor_part.cpp:501
 #, fuzzy, kde-format
 #| msgid "*.cws|Cantor Worksheet"
 msgid "Cantor Worksheet (*.cws)"
 msgstr "*.cws|Cantor Radni list"
 
-#: cantor_part.cpp:504
+#: cantor_part.cpp:502
 #, kde-format
 msgid "Jupyter Notebook (*.ipynb)"
 msgstr ""
 
-#: cantor_part.cpp:520
+#: cantor_part.cpp:518
 #, fuzzy, kde-format
 #| msgid "Save result"
 msgid "Save as"
 msgstr "Spasi rezultat"
 
-#: cantor_part.cpp:566 panelplugins/variablemgr/variablemanagerwidget.cpp:168
+#: cantor_part.cpp:564 panelplugins/variablemgr/variablemanagerwidget.cpp:168
 #, kde-format
 msgid "Save"
 msgstr ""
 
-#: cantor_part.cpp:618
+#: cantor_part.cpp:616
 #, kde-format
 msgid ""
 "All the available calculation results will be lost. Do you really want to "
 "restart %1?"
 msgstr ""
 
-#: cantor_part.cpp:619
+#: cantor_part.cpp:617
 #, fuzzy, kde-format
 #| msgid "Restart Backend"
 msgid "Restart %1?"
 msgstr "Ponovo pokreni Pozadinu"
 
-#: cantor_part.cpp:659 worksheet.cpp:1931
+#: cantor_part.cpp:657 worksheet.cpp:1931
 #, kde-format
 msgid "Interrupt"
 msgstr "Prekid"
 
-#: cantor_part.cpp:685
+#: cantor_part.cpp:683
 #, kde-format
 msgid "Session Error: %1"
 msgstr "Sesija Greška: %1"
 
-#: cantor_part.cpp:725
+#: cantor_part.cpp:723
 #, kde-format
 msgid "Initialization complete"
 msgstr "Inicijalizacija završena"
 
-#: cantor_part.cpp:730
+#: cantor_part.cpp:728
 #, fuzzy, kde-format
 #| msgid "Initializing Session"
 msgid "Initializing..."
 msgstr "Inicijalizacija Sesije"
 
-#: cantor_part.cpp:776
+#: cantor_part.cpp:774
 #, kde-format
 msgid "[read-only]"
 msgstr ""
 
-#: cantor_part.cpp:916
+#: cantor_part.cpp:914
 #, kde-format
 msgid "Do you want to upload current Worksheet to public web server?"
 msgstr "Da li želite da učitate trenutni radni list na javni web server?"
 
-#: cantor_part.cpp:917
+#: cantor_part.cpp:915
 #, kde-format
 msgid "Question - Cantor"
 msgstr "Pitanje - Cantor"
 
-#: cantor_part.cpp:923
+#: cantor_part.cpp:921
 #, kde-format
 msgid "The Worksheet is not saved. You should save it before uploading."
 msgstr "Radni list nije spašen. Trebali bi ste da ga spasite prije učitavanja."
 
-#: cantor_part.cpp:924
+#: cantor_part.cpp:922
 #, kde-format
 msgid "Warning - Cantor"
 msgstr "Upozorenje - Cantor"
 
-#: cantor_part.cpp:999
+#: cantor_part.cpp:997
 #, kde-format
 msgid "This backend does not support scripts."
 msgstr "Pozadina nepodržava skripte."
@@ -3224,12 +3207,12 @@ msgstr "Rezultati"
 msgid "Hide Results"
 msgstr "Rezultati"
 
-#: commandentry.cpp:352
+#: commandentry.cpp:355
 #, kde-format
 msgid "Appearance"
 msgstr ""
 
-#: commandentry.cpp:593 commandentry.cpp:987
+#: commandentry.cpp:596 commandentry.cpp:990
 #, kde-format
 msgid "Interrupted"
 msgstr "Prekinuto"
@@ -3254,7 +3237,7 @@ msgstr "..."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: extendedsearchbar.ui:47
-#: panelplugins/documentationpanel/documentationpanelwidget.cpp:141
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:126
 #, kde-format
 msgid "Find:"
 msgstr "Nađi:"
@@ -3820,61 +3803,61 @@ msgstr "Nemogu da nađem Cantor dio."
 msgid "--- Page Break ---"
 msgstr "--- Nova strana ---"
 
-#: panelplugins/documentationpanel/documentationpanelwidget.cpp:66
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:51
 #, kde-format
 msgctxt "@button go to contents page"
 msgid "Go to the contents"
 msgstr ""
 
-#: panelplugins/documentationpanel/documentationpanelwidget.cpp:73
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:58
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search through keywords..."
 msgstr ""
 
-#: panelplugins/documentationpanel/documentationpanelwidget.cpp:84
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:69
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Find in text of current documentation page"
 msgstr ""
 
-#: panelplugins/documentationpanel/documentationpanelwidget.cpp:90
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reset zoom level to 100%"
 msgstr ""
 
-#: panelplugins/documentationpanel/documentationpanelwidget.cpp:138
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:123
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close"
 msgstr ""
 
-#: panelplugins/documentationpanel/documentationpanelwidget.cpp:148
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:133
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Jump to next match"
 msgstr ""
 
-#: panelplugins/documentationpanel/documentationpanelwidget.cpp:152
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:137
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Jump to previous match"
 msgstr ""
 
-#: panelplugins/documentationpanel/documentationpanelwidget.cpp:156
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:141
 #, fuzzy, kde-format
 #| msgid "&Match case"
 msgctxt "@info:tooltip"
 msgid "Match case sensitively"
 msgstr "&Razlikuj veličinu slova"
 
-#: panelplugins/documentationpanel/documentationpanelwidget.cpp:418
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:404
 #, kde-format
 msgid "The file has been downloaded successfully at Downloads."
 msgstr ""
 
-#: panelplugins/documentationpanel/documentationpanelwidget.cpp:418
+#: panelplugins/documentationpanel/documentationpanelwidget.cpp:404
 #, kde-format
 msgid "Download Successful"
 msgstr ""
@@ -4260,7 +4243,7 @@ msgstr "Ubacivanje tekstualnog unosa"
 msgid "Convert to Raw Cell"
 msgstr ""
 
-#: textentry.cpp:556
+#: textentry.cpp:553
 #, kde-format
 msgid "Target MIME type:"
 msgstr ""
@@ -4813,6 +4796,14 @@ msgstr "Ukloni stavku"
 #, kde-format
 msgid "Drag Entry"
 msgstr "Prevuci element"
+
+#, fuzzy
+#~| msgid "Path to Maxima:"
+#~ msgid "Path to Julia:"
+#~ msgstr "Staza do Maxima"
+
+#~ msgid "Integrate Plots in Worksheet"
+#~ msgstr "Integriraj grafike u radnom listu"
 
 #~ msgid "Clear Variables"
 #~ msgstr "Obriši varijable"
