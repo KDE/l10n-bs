@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-07-04 00:18+0000\n"
+"POT-Creation-Date: 2021-07-17 00:18+0000\n"
 "PO-Revision-Date: 2013-11-10 23:14+0000\n"
 "Last-Translator: Emrah Dautbegovic <edautbegov1@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -630,7 +630,7 @@ msgstr ""
 "tokom interaktivnog i obdukcionog ispravljanja.</p>"
 
 #: backtracewidget.cpp:135
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:661
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:88
 #, kde-format
 msgctxt "@info:status"
 msgid "Loading..."
@@ -805,6 +805,341 @@ msgstr "Nedostaju paketi sa ispravljačkim podacima"
 msgctxt "@info %1 is an error message from the backend"
 msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgstr "Greška pri slanju izvještaja o padu: <message>%1</message>"
+
+#: bugzillaintegration/bugzillareportconfirmationdialog.cpp:33
+#, kde-format
+msgctxt "@title:window"
+msgid "Related Bug Report"
+msgstr "Povezani izvještaj o grešci"
+
+#: bugzillaintegration/bugzillareportconfirmationdialog.cpp:36
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel (Go back to the report)"
+msgstr "Odustani (nazad na izvještaj)"
+
+#: bugzillaintegration/bugzillareportconfirmationdialog.cpp:40
+#, kde-format
+msgctxt "@action:button continue with the selected option and close the dialog"
+msgid "Continue"
+msgstr "Nastavi"
+
+#: bugzillaintegration/bugzillareportconfirmationdialog.cpp:47
+#, fuzzy, kde-format
+#| msgid "You are going to mark your crash as related to bug <numid>%1</numid>"
+msgid "You are going to mark your crash as related to bug %1"
+msgstr "Obilježićete svoj pad kao povezan sa greškom <numid>%1</numid>"
+
+#: bugzillaintegration/bugzillareportconfirmationdialog.cpp:59
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The report is closed because %1. <i>If the crash is the same, adding further "
+"information will be useless and will consume developers' time.</i>"
+msgstr ""
+"Ovaj izvještaj je zatvoren uz razlog „%1“. <i>Ako je pad isti, dodavati nove "
+"informacije je beskorisno i traći vrijeme programerâ̂.</i>"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "Bug Description"
+msgstr "Opis greške"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:35
+#: bugzillaintegration/reportassistantpages_bugzilla.cpp:701
+#, kde-format
+msgctxt "@action:button"
+msgid "Retry..."
+msgstr "Pokušaj ponovo..."
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:38
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Use this button to retry loading the bug report."
+msgstr "Ovim dugmetom ponovo učitavate izvještaj o grešci."
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:45
+#, kde-format
+msgctxt "@action:button"
+msgid "Suggest this crash is related"
+msgstr "Sugeriši vezu sa ovim padom"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to suggest that the crash you experienced is related to this "
+"bug report"
+msgstr ""
+"Ovim dugmetom sugerišete da je pad koji ste iskusili povezan sa ovim "
+"izvještajem o grešci."
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:91
+#, kde-kuit-format
+msgctxt "@info"
+msgid "<link url='%1'>Report's webpage</link>"
+msgstr "<link url='%1'>Veb stranica izvještaja</link>"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:94
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid "Loading information about bug <numid>%1</numid> from %2...."
+msgctxt "@info:status"
+msgid "Loading information about bug %1 from %2...."
+msgstr "Učitavam podatke o grešci <numid>%1</numid> sa %2..."
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:99
+#, fuzzy, kde-format
+#| msgctxt "@info/plain"
+#| msgid ""
+#| "Backtrace of the crash I experienced:\n"
+#| "\n"
+msgctxt "@info"
+msgid ""
+"Backtrace of the crash I experienced:\n"
+"\n"
+msgstr ""
+"Kontratrag pada koji mi se događa:\n"
+"\n"
+
+# >> @item:intext +
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:121
+#, kde-format
+msgctxt "@info bug status"
+msgid "Opened (Unconfirmed)"
+msgstr "otvoreno (nepotvrđeno)"
+
+# >> @item:intext +
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:125
+#, kde-format
+msgctxt "@info bug status"
+msgid "Opened (Unfixed)"
+msgstr "otvoreno (nepopravljeno)"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:134
+#, kde-format
+msgctxt "@info bug resolution, fixed in version"
+msgid "Fixed in version \"%1\""
+msgstr "Popravljeno u verziji \"%1\""
+
+# >> @item:intext +
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:135
+#, kde-format
+msgctxt "@info bug resolution, fixed by kde devs in version"
+msgid "the bug was fixed by KDE developers in version \"%1\""
+msgstr "grešku su popravili programeri KDE‑a u verzini \"%1\""
+
+# >> @item:intext +
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:137
+#, kde-format
+msgctxt "@info bug resolution"
+msgid "Fixed"
+msgstr "popravljeno"
+
+# >> @item:intext +
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:137
+#, kde-format
+msgctxt "@info bug resolution"
+msgid "the bug was fixed by KDE developers"
+msgstr "grešku su popravili programeri KDE‑a"
+
+# >> @item:intext +
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:141
+#, kde-format
+msgctxt "@info bug resolution"
+msgid "Non-reproducible"
+msgstr "nije ponovljivo"
+
+# >> @item:intext +
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:143
+#, kde-format
+msgctxt "@info bug resolution"
+msgid "Duplicate report (Already reported before)"
+msgstr "dupliran izvještaj (već prijavljeno ranije)"
+
+# >> @item:intext +
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:145
+#, kde-format
+msgctxt "@info bug resolution"
+msgid "Not a valid report/crash"
+msgstr "loš izvještaj/pad"
+
+# >> @item:intext +
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:149
+#, kde-format
+msgctxt "@info bug resolution"
+msgid "Not caused by a problem in the KDE's Applications or libraries"
+msgstr "nije izazvano problemom u KDE programima ili bibliotekama"
+
+# >> @item:intext +
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:150
+#, kde-format
+msgctxt "@info bug resolution"
+msgid ""
+"the bug is caused by a problem in an external application or library, or by "
+"a distribution or packaging issue"
+msgstr ""
+"grešku izaziva problem u spoljašnjem programu ili biblioteci, ili je do "
+"pakovanja i distribucije"
+
+# >> @item:intext +
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:166
+#, kde-format
+msgctxt "@info bug status"
+msgid "Temporarily closed, because of a lack of information"
+msgstr "privremen zatvoren zbog nedostatka podataka"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:182
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Invalid report information (malformed data). This could mean that the bug "
+"report does not exist, or the bug tracking site is experiencing a problem."
+msgstr ""
+"Loši podaci izvještaja. Ovo može značiti da izvještaj o grešci ne postoji, "
+"ili da sajt za praćenje grešaka trenutno ima problema."
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:199
+#, kde-format
+msgctxt "@action:button let the user to choose to read the main report"
+msgid "Yes, read the main report"
+msgstr "Da, pročitaću glavni izvještaj"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:205
+#, kde-format
+msgctxt "@action:button let the user choose to read the original report"
+msgid "No, let me read the report I selected"
+msgstr "Ne, pročitaću odabrani izvještaj"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:209
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The report you selected (bug <numid>%1</numid>) is already marked as "
+#| "duplicate of bug <numid>%2</numid>. Do you want to read that report "
+#| "instead? (recommended)"
+msgctxt "@info"
+msgid ""
+"The report you selected (bug %1) is already marked as duplicate of bug %2. "
+"Do you want to read that report instead? (recommended)"
+msgstr ""
+"Izvještaj koji ste odabrali (greška <numid>%1</numid>) već je označen kao "
+"duplikat greške <numid>%2</numid>. Želite li da pročitate izvještaj o njoj "
+"(preporučujemo)?"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:214
+#, kde-format
+msgctxt "@title:window"
+msgid "Nested duplicate detected"
+msgstr "Otkriveni ugniježđeni duplikati"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:255
+#, kde-format
+msgctxt "comment $number to use as subtitle"
+msgid "<h4>Comment %1:</h4>"
+msgstr "<h4>Komentar %1:</h4>"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:274
+#, kde-kuit-format
+msgid ""
+"<p><note>The bug report's title is often written by its reporter and may not "
+"reflect the bug's nature, root cause or other visible symptoms you could use "
+"to compare to your crash. Please read the complete report and all the "
+"comments below.</note></p>"
+msgstr ""
+"<html><p><note>Naslov izvještaja o grešci često piše onaj ko ga prijavljuje, "
+"pa može da ne odražava prirodu greške, korjeni uzrok i druge vidljive "
+"simptome koje biste mogli uporediti sa svojim padom. Molimo vas da pročitate "
+"cio izvještaj i sve komentare u njemu.</note></p></html>"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:281
+#, kde-kuit-format
+msgid ""
+"<p><note>This bug report has %1 duplicate report. That means this is "
+"probably a <strong>common crash</strong>. <i>Please consider only adding a "
+"comment or a note if you can provide new valuable information which was not "
+"already mentioned.</i></note></p>"
+msgid_plural ""
+"<p><note>This bug report has %1 duplicate reports. That means this is "
+"probably a <strong>common crash</strong>. <i>Please consider only adding a "
+"comment or a note if you can provide new valuable information which was not "
+"already mentioned.</i></note></p>"
+msgstr[0] ""
+"<html><p><note>Ovaj izvještaj o grešci ima %1 duplikat. Ovo znači da se "
+"verovatno radi o <strong>čestom padu</strong>. <i>Molimo vas da radije "
+"dodate komentar ili napomenu, ako možete da pružite još informacija u odnosu "
+"na one koje su već iznesene.</i></note></p></html>"
+msgstr[1] ""
+"<html><p><note>Ovaj izvještaj o grešci ima %1 duplikata. Ovo znači da se "
+"verovatno radi o <strong>čestom padu</strong>. <i>Molimo vas da radije "
+"dodate komentar ili napomenu, ako možete da pružite još informacija u odnosu "
+"na one koje su već iznesene.</i></note></p></html>"
+msgstr[2] ""
+"<html><p><note>Ovaj izvještaj o grešci ima %1 duplikata. Ovo znači da se "
+"verovatno radi o <strong>čestom padu</strong>. <i>Molimo vas da radije "
+"dodate komentar ili napomenu, ako možete da pružite još informacija u odnosu "
+"na one koje su već iznesene.</i></note></p></html>"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:293
+#, kde-format
+msgctxt "@info bug report title (quoted)"
+msgid "<h3>\"%1\"</h3>"
+msgstr "<h3>„%1“</h3>"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:294
+#, kde-format
+msgctxt "@info bug report status"
+msgid "<h4>Bug Report Status: %1</h4>"
+msgstr "<h4>Stanje izvještaja o grešci: %1</h4>"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:295
+#, kde-format
+msgctxt "@info bug report product and component"
+msgid "<h4>Affected Component: %1 (%2)</h4>"
+msgstr "<h4>Komponenta koje se tiče: %1 (%2)</h4>"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:296
+#, kde-format
+msgctxt "@info bug report description"
+msgid "<h3>Description of the bug</h3><p>%1</p>"
+msgstr "<h3>Opis greške</h3><p>%1</p>"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:299
+#, kde-format
+msgctxt "@label:textbox bug report comments (already formatted)"
+msgid "<h2>Additional Comments</h2>%1"
+msgstr "<h2>Dodatni komentari</h2>%1"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:308
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid "Showing bug <numid>%1</numid>"
+msgctxt "@info:status"
+msgid "Showing bug %1"
+msgstr "Prikazujem grešku <numid>%1</numid>"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:340
+#, kde-kuit-format
+msgctxt "@info/rich"
+msgid ""
+"Error fetching the bug report<nl/><message>%1.</message><nl/>Please wait "
+"some time and try again."
+msgstr ""
+"Greška u dobavljanju izvještaja o grešci.<nl/><message>%1</message><nl/"
+">Sačekajte malo, pa pokušajte ponovo."
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:345
+#, kde-format
+msgctxt "@info"
+msgid "Error fetching the bug report"
+msgstr "Greška u dobavljanju izvještaja o grešci"
+
+#: bugzillaintegration/bugzillareportinformationdialog.cpp:346
+#, kde-format
+msgctxt "@info:status"
+msgid "Error fetching the bug report"
+msgstr "Greška u dobavljanju izvještaja o grešci"
 
 #: bugzillaintegration/reportassistantdialog.cpp:33
 #, kde-format
@@ -1368,13 +1703,6 @@ msgctxt ""
 msgid "Examples: %1"
 msgstr "Primjeri: %1"
 
-#: bugzillaintegration/reportassistantpages_bugzilla.cpp:701
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:608
-#, kde-format
-msgctxt "@action:button"
-msgid "Retry..."
-msgstr "Pokušaj ponovo..."
-
 #: bugzillaintegration/reportassistantpages_bugzilla.cpp:704
 #, kde-format
 msgctxt "@info:tooltip"
@@ -1418,32 +1746,13 @@ msgctxt "@info report to KDE bugtracker address"
 msgid "Report to %1"
 msgstr "Prijavi na %1"
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:47
-#, kde-format
-msgctxt "@item:intable custom/manaul bug report number"
-msgid "Manual"
-msgstr "ručni"
-
-# rewrite-msgid: /bug//
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:48
-#, kde-format
-msgctxt "@item:intable custom bug report number description"
-msgid "Manually enter a bug report ID"
-msgstr "ručni unos ID‑a izvještaja"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:52
-#, kde-format
-msgctxt "@info:tooltip / whatsthis"
-msgid "Select this option to manually load a specific bug report"
-msgstr "Izaberite ovu opciju da ručno učitate određeni izvještaj o grešci."
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:60
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Search for more reports"
 msgstr "Potraži još izvještaja"
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:63
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:45
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1452,60 +1761,60 @@ msgctxt "@info:tooltip"
 msgid "Use this button to search for more similar bug reports"
 msgstr "Ovim dugmetom potražite još sličnih izvještaja o greškama od ranije."
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:68
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:50
 #, kde-format
 msgctxt "@action:button"
 msgid "Retry search"
 msgstr "Ponovi pretragu"
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:71
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:53
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to retry the search that previously failed."
 msgstr "Ovim dugmetom ponavljate prethodno neuspjelu pretragu."
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:76
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:58
 #, kde-format
 msgctxt "@action:button"
 msgid "Open selected report"
 msgstr "Otvori izabrani izvještaj"
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:79
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:61
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to view the information of the selected bug report."
 msgstr "Ovim dugmetom prikazujete detalje izabranog izvještaja o grešci."
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:84
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop searching"
 msgstr "Zaustavi traženje"
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:87
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:69
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to stop the current search."
 msgstr "Ovim dugmetom zaustavljate trenutnu pretragu."
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:99
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:81
 #, kde-format
 msgctxt "@action:button remove the selected item from a list"
 msgid "Remove"
 msgstr "Ukloni"
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:101
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:83
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to remove a selected possible duplicate"
 msgstr "Ovim dugmetom uklanjate izabrani mogući duplikat."
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:160
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:140
 #, kde-format
 msgid "There are no real duplicates"
 msgstr "Nema pravih duplikata"
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:162
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:142
 #, kde-format
 msgid ""
 "Press this button to declare that, in your opinion and according to your "
@@ -1518,12 +1827,12 @@ msgstr ""
 "iskusili, a vi vjerujete da je malo vjerovatno da će bolje poklapanje biti "
 "kasnije nađeno."
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:170
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:150
 #, kde-format
 msgid "Let me check more reports"
 msgstr "Potražiću još izvještaja"
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:172
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:152
 #, kde-format
 msgid ""
 "Press this button if you would rather review more reports in order to find a "
@@ -1532,7 +1841,7 @@ msgstr ""
 "Pritisnite ovo dugme da biste radije pregledali više izvještaja u cilju "
 "pronalaženja poklapanja s krahom koji ste iskusili."
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:179
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:159
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1544,13 +1853,13 @@ msgstr ""
 "priložili svoje podatke o padu. Jeste li pročitali date izvještaje i možete "
 "tvrditi da nema stvarnih duplikata?"
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:182
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:162
 #, kde-format
 msgctxt "@title:window"
 msgid "No selected possible duplicates"
 msgstr "Mogući duplikati nisu izabrani"
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:209
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:188
 #, fuzzy, kde-format
 #| msgctxt "@info:status"
 #| msgid "Searching for duplicates (from %1 to %2)..."
@@ -1558,13 +1867,13 @@ msgctxt "@info:status"
 msgid "Searching for duplicates..."
 msgstr "Tražim duplikate (od %1 do %2)..."
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:228
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:207
 #, kde-format
 msgctxt "@info:status"
 msgid "Search stopped."
 msgstr "Pretraga zaustavljena."
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:230
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:209
 #, fuzzy, kde-format
 #| msgctxt "@info:status"
 #| msgid "Search stopped. Showing results from %1 to %2"
@@ -1573,7 +1882,7 @@ msgid "Search stopped. Showing results."
 msgstr "Pretraga zaustavljena. Prikazujem rezultate od %1 do %2"
 
 # >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:272
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:251
 #, fuzzy, kde-format
 #| msgctxt "@info/plain bug status"
 #| msgid "[Open]"
@@ -1582,7 +1891,7 @@ msgid "[Open]"
 msgstr "[otvoreno]"
 
 # >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:279
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:258
 #, fuzzy, kde-format
 #| msgctxt "@info/plain bug resolution"
 #| msgid "[Fixed]"
@@ -1591,7 +1900,7 @@ msgid "[Fixed]"
 msgstr "[popravljeno]"
 
 # >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:281
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:260
 #, fuzzy, kde-format
 #| msgctxt "@info/plain bug resolution"
 #| msgid "[Non-reproducible]"
@@ -1600,7 +1909,7 @@ msgid "[Non-reproducible]"
 msgstr "[nije ponovljivo]"
 
 # >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:283
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:262
 #, fuzzy, kde-format
 #| msgctxt "@info/plain bug resolution"
 #| msgid "[Duplicate report]"
@@ -1609,7 +1918,7 @@ msgid "[Duplicate report]"
 msgstr "[duplikat izvještaja]"
 
 # >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:285
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:264
 #, fuzzy, kde-format
 #| msgctxt "@info/plain bug resolution"
 #| msgid "[Invalid]"
@@ -1618,7 +1927,7 @@ msgid "[Invalid]"
 msgstr "[loš izvještaj]"
 
 # >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:288
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:267
 #, fuzzy, kde-format
 #| msgctxt "@info/plain bug resolution"
 #| msgid "[External problem]"
@@ -1627,7 +1936,7 @@ msgid "[External problem]"
 msgstr "[spoljašnji problem]"
 
 # >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:303
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:282
 #, fuzzy, kde-format
 #| msgctxt "@info/plain bug status"
 #| msgid "[Incomplete]"
@@ -1635,7 +1944,7 @@ msgctxt "@info bug status"
 msgid "[Incomplete]"
 msgstr "[nepotpuno]"
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:322
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:301
 #, fuzzy, kde-format
 #| msgctxt "@info:status"
 #| msgid "Showing results from %1 to %2"
@@ -1643,13 +1952,13 @@ msgctxt "@info:status"
 msgid "Showing results."
 msgstr "Prikazujem rezultate od %1 do %2"
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:363
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:342
 #, kde-format
 msgctxt "@info:status"
 msgid "Search Finished. No reports found."
 msgstr "Pretraga završena. Nije nađen nijedan izvještaj."
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:426
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:405
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -1659,7 +1968,7 @@ msgstr ""
 "Vaš krah je <strong>duplikat</strong> i već je prijavljen kao <a href="
 "\"%1\">Bug %1</a>."
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:429
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:408
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -1669,7 +1978,7 @@ msgstr ""
 "Vaš krah je već prijavljen kao <a href=\"%1\">Bug %1</a>, koji je "
 "<strong>duplikat</strong> za <a href=\"%2\">Bug %2</a>"
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:435
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:414
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -1679,7 +1988,7 @@ msgstr ""
 "Samo <strong><a href=\"%1\">priložite</a></strong> ako možete dodati "
 "potrebne informacije izvještaju."
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:440
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:419
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -1689,7 +1998,7 @@ msgstr ""
 "Vaš krah je već bio prijavljen kao <a href=\"%1\">Bug %1</a> koji je "
 "<strong>zatvoren</strong>."
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:443
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:422
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -1699,13 +2008,13 @@ msgstr ""
 "Vaš krah je već prijavljen kao <a href=\"%1\">Bug %1</a>, koji je duplikat "
 "<strong>zatvorenog</strong> <a href=\"%2\">Buga %2</a>."
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:469
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:448
 #, kde-format
 msgctxt "@info:status"
 msgid "Error fetching the bug report list"
 msgstr "Greška u dobavljanju spiska izvještajâ o greškama"
 
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:473
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:452
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -1715,20 +2024,7 @@ msgstr ""
 "Greška u dobavljanju spiska izvještajâ o greškama.<nl/><message>%1</"
 "message><nl/>Sačekajte malo, pa pokušajte ponovo."
 
-# rewrite-msgid: /bug//
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:498
-#, kde-format
-msgctxt "@title:window"
-msgid "Enter a custom bug report number"
-msgstr "Unos posebnog broja izvještaja"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:499
-#, kde-format
-msgctxt "@label"
-msgid "Enter the number of the bug report you want to check"
-msgstr "Unesite broj izvještaja o grešci koji želite da provjerite"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:575
+#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:532
 #, fuzzy, kde-kuit-format
 #| msgctxt "@label"
 #| msgid ""
@@ -1741,343 +2037,6 @@ msgid ""
 msgstr ""
 "Izvještaj će biti <strong>priložen</strong> uz grešku <numid>%1</numid>. <a "
 "href=\"#\">Odustani</a>"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:603
-#, kde-format
-msgctxt "@title:window"
-msgid "Bug Description"
-msgstr "Opis greške"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:611
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to retry loading the bug report."
-msgstr "Ovim dugmetom ponovo učitavate izvještaj o grešci."
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:618
-#, kde-format
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr "Sugeriši vezu sa ovim padom"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:621
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that the crash you experienced is related to this "
-"bug report"
-msgstr ""
-"Ovim dugmetom sugerišete da je pad koji ste iskusili povezan sa ovim "
-"izvještajem o grešci."
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:664
-#, kde-kuit-format
-msgctxt "@info"
-msgid "<link url='%1'>Report's webpage</link>"
-msgstr "<link url='%1'>Veb stranica izvještaja</link>"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:667
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid "Loading information about bug <numid>%1</numid> from %2...."
-msgctxt "@info:status"
-msgid "Loading information about bug %1 from %2...."
-msgstr "Učitavam podatke o grešci <numid>%1</numid> sa %2..."
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:672
-#, fuzzy, kde-format
-#| msgctxt "@info/plain"
-#| msgid ""
-#| "Backtrace of the crash I experienced:\n"
-#| "\n"
-msgctxt "@info"
-msgid ""
-"Backtrace of the crash I experienced:\n"
-"\n"
-msgstr ""
-"Kontratrag pada koji mi se događa:\n"
-"\n"
-
-# >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:694
-#, kde-format
-msgctxt "@info bug status"
-msgid "Opened (Unconfirmed)"
-msgstr "otvoreno (nepotvrđeno)"
-
-# >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:698
-#, kde-format
-msgctxt "@info bug status"
-msgid "Opened (Unfixed)"
-msgstr "otvoreno (nepopravljeno)"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:707
-#, kde-format
-msgctxt "@info bug resolution, fixed in version"
-msgid "Fixed in version \"%1\""
-msgstr "Popravljeno u verziji \"%1\""
-
-# >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:708
-#, kde-format
-msgctxt "@info bug resolution, fixed by kde devs in version"
-msgid "the bug was fixed by KDE developers in version \"%1\""
-msgstr "grešku su popravili programeri KDE‑a u verzini \"%1\""
-
-# >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:710
-#, kde-format
-msgctxt "@info bug resolution"
-msgid "Fixed"
-msgstr "popravljeno"
-
-# >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:710
-#, kde-format
-msgctxt "@info bug resolution"
-msgid "the bug was fixed by KDE developers"
-msgstr "grešku su popravili programeri KDE‑a"
-
-# >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:714
-#, kde-format
-msgctxt "@info bug resolution"
-msgid "Non-reproducible"
-msgstr "nije ponovljivo"
-
-# >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:716
-#, kde-format
-msgctxt "@info bug resolution"
-msgid "Duplicate report (Already reported before)"
-msgstr "dupliran izvještaj (već prijavljeno ranije)"
-
-# >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:718
-#, kde-format
-msgctxt "@info bug resolution"
-msgid "Not a valid report/crash"
-msgstr "loš izvještaj/pad"
-
-# >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:722
-#, kde-format
-msgctxt "@info bug resolution"
-msgid "Not caused by a problem in the KDE's Applications or libraries"
-msgstr "nije izazvano problemom u KDE programima ili bibliotekama"
-
-# >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:723
-#, kde-format
-msgctxt "@info bug resolution"
-msgid ""
-"the bug is caused by a problem in an external application or library, or by "
-"a distribution or packaging issue"
-msgstr ""
-"grešku izaziva problem u spoljašnjem programu ili biblioteci, ili je do "
-"pakovanja i distribucije"
-
-# >> @item:intext +
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:739
-#, kde-format
-msgctxt "@info bug status"
-msgid "Temporarily closed, because of a lack of information"
-msgstr "privremen zatvoren zbog nedostatka podataka"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:755
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Invalid report information (malformed data). This could mean that the bug "
-"report does not exist, or the bug tracking site is experiencing a problem."
-msgstr ""
-"Loši podaci izvještaja. Ovo može značiti da izvještaj o grešci ne postoji, "
-"ili da sajt za praćenje grešaka trenutno ima problema."
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:772
-#, kde-format
-msgctxt "@action:button let the user to choose to read the main report"
-msgid "Yes, read the main report"
-msgstr "Da, pročitaću glavni izvještaj"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:778
-#, kde-format
-msgctxt "@action:button let the user choose to read the original report"
-msgid "No, let me read the report I selected"
-msgstr "Ne, pročitaću odabrani izvještaj"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:782
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The report you selected (bug <numid>%1</numid>) is already marked as "
-#| "duplicate of bug <numid>%2</numid>. Do you want to read that report "
-#| "instead? (recommended)"
-msgctxt "@info"
-msgid ""
-"The report you selected (bug %1) is already marked as duplicate of bug %2. "
-"Do you want to read that report instead? (recommended)"
-msgstr ""
-"Izvještaj koji ste odabrali (greška <numid>%1</numid>) već je označen kao "
-"duplikat greške <numid>%2</numid>. Želite li da pročitate izvještaj o njoj "
-"(preporučujemo)?"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:787
-#, kde-format
-msgctxt "@title:window"
-msgid "Nested duplicate detected"
-msgstr "Otkriveni ugniježđeni duplikati"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:828
-#, kde-format
-msgctxt "comment $number to use as subtitle"
-msgid "<h4>Comment %1:</h4>"
-msgstr "<h4>Komentar %1:</h4>"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:847
-#, kde-kuit-format
-msgid ""
-"<p><note>The bug report's title is often written by its reporter and may not "
-"reflect the bug's nature, root cause or other visible symptoms you could use "
-"to compare to your crash. Please read the complete report and all the "
-"comments below.</note></p>"
-msgstr ""
-"<html><p><note>Naslov izvještaja o grešci često piše onaj ko ga prijavljuje, "
-"pa može da ne odražava prirodu greške, korjeni uzrok i druge vidljive "
-"simptome koje biste mogli uporediti sa svojim padom. Molimo vas da pročitate "
-"cio izvještaj i sve komentare u njemu.</note></p></html>"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:854
-#, kde-kuit-format
-msgid ""
-"<p><note>This bug report has %1 duplicate report. That means this is "
-"probably a <strong>common crash</strong>. <i>Please consider only adding a "
-"comment or a note if you can provide new valuable information which was not "
-"already mentioned.</i></note></p>"
-msgid_plural ""
-"<p><note>This bug report has %1 duplicate reports. That means this is "
-"probably a <strong>common crash</strong>. <i>Please consider only adding a "
-"comment or a note if you can provide new valuable information which was not "
-"already mentioned.</i></note></p>"
-msgstr[0] ""
-"<html><p><note>Ovaj izvještaj o grešci ima %1 duplikat. Ovo znači da se "
-"verovatno radi o <strong>čestom padu</strong>. <i>Molimo vas da radije "
-"dodate komentar ili napomenu, ako možete da pružite još informacija u odnosu "
-"na one koje su već iznesene.</i></note></p></html>"
-msgstr[1] ""
-"<html><p><note>Ovaj izvještaj o grešci ima %1 duplikata. Ovo znači da se "
-"verovatno radi o <strong>čestom padu</strong>. <i>Molimo vas da radije "
-"dodate komentar ili napomenu, ako možete da pružite još informacija u odnosu "
-"na one koje su već iznesene.</i></note></p></html>"
-msgstr[2] ""
-"<html><p><note>Ovaj izvještaj o grešci ima %1 duplikata. Ovo znači da se "
-"verovatno radi o <strong>čestom padu</strong>. <i>Molimo vas da radije "
-"dodate komentar ili napomenu, ako možete da pružite još informacija u odnosu "
-"na one koje su već iznesene.</i></note></p></html>"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:869
-#, kde-kuit-format
-msgid ""
-"<p><note>This bug report is not about a crash or about any other critical "
-"bug.</note></p>"
-msgstr ""
-"<html><p><note>Ovaj izvještaj o grešci nije o padu ili bilo kakvom drugom "
-"kritičnom problemu.</note></p></html>"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:874
-#, kde-format
-msgctxt "@info bug report title (quoted)"
-msgid "<h3>\"%1\"</h3>"
-msgstr "<h3>„%1“</h3>"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:875
-#, kde-format
-msgctxt "@info bug report status"
-msgid "<h4>Bug Report Status: %1</h4>"
-msgstr "<h4>Stanje izvještaja o grešci: %1</h4>"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:876
-#, kde-format
-msgctxt "@info bug report product and component"
-msgid "<h4>Affected Component: %1 (%2)</h4>"
-msgstr "<h4>Komponenta koje se tiče: %1 (%2)</h4>"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:877
-#, kde-format
-msgctxt "@info bug report description"
-msgid "<h3>Description of the bug</h3><p>%1</p>"
-msgstr "<h3>Opis greške</h3><p>%1</p>"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:880
-#, kde-format
-msgctxt "@label:textbox bug report comments (already formatted)"
-msgid "<h2>Additional Comments</h2>%1"
-msgstr "<h2>Dodatni komentari</h2>%1"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:889
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid "Showing bug <numid>%1</numid>"
-msgctxt "@info:status"
-msgid "Showing bug %1"
-msgstr "Prikazujem grešku <numid>%1</numid>"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:921
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Error fetching the bug report<nl/><message>%1.</message><nl/>Please wait "
-"some time and try again."
-msgstr ""
-"Greška u dobavljanju izvještaja o grešci.<nl/><message>%1</message><nl/"
-">Sačekajte malo, pa pokušajte ponovo."
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:926
-#, kde-format
-msgctxt "@info"
-msgid "Error fetching the bug report"
-msgstr "Greška u dobavljanju izvještaja o grešci"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:927
-#, kde-format
-msgctxt "@info:status"
-msgid "Error fetching the bug report"
-msgstr "Greška u dobavljanju izvještaja o grešci"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:967
-#, kde-format
-msgctxt "@title:window"
-msgid "Related Bug Report"
-msgstr "Povezani izvještaj o grešci"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:970
-#, kde-format
-msgctxt "@action:button"
-msgid "Cancel (Go back to the report)"
-msgstr "Odustani (nazad na izvještaj)"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:974
-#, kde-format
-msgctxt "@action:button continue with the selected option and close the dialog"
-msgid "Continue"
-msgstr "Nastavi"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:981
-#, fuzzy, kde-format
-#| msgid "You are going to mark your crash as related to bug <numid>%1</numid>"
-msgid "You are going to mark your crash as related to bug %1"
-msgstr "Obilježićete svoj pad kao povezan sa greškom <numid>%1</numid>"
-
-#: bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp:993
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The report is closed because %1. <i>If the crash is the same, adding further "
-"information will be useless and will consume developers' time.</i>"
-msgstr ""
-"Ovaj izvještaj je zatvoren uz razlog „%1“. <i>Ako je pad isti, dodavati nove "
-"informacije je beskorisno i traći vrijeme programerâ̂.</i>"
 
 #: bugzillaintegration/reportinterface.cpp:170
 #, kde-kuit-format
@@ -3007,6 +2966,35 @@ msgstr "&Ponovo pokreni aplikaciju"
 #, kde-format
 msgid "Show backtrace content (advanced)"
 msgstr "Prikaži sadržaj kontratraga (napredno)"
+
+#~ msgctxt "@item:intable custom/manaul bug report number"
+#~ msgid "Manual"
+#~ msgstr "ručni"
+
+# rewrite-msgid: /bug//
+#~ msgctxt "@item:intable custom bug report number description"
+#~ msgid "Manually enter a bug report ID"
+#~ msgstr "ručni unos ID‑a izvještaja"
+
+#~ msgctxt "@info:tooltip / whatsthis"
+#~ msgid "Select this option to manually load a specific bug report"
+#~ msgstr "Izaberite ovu opciju da ručno učitate određeni izvještaj o grešci."
+
+# rewrite-msgid: /bug//
+#~ msgctxt "@title:window"
+#~ msgid "Enter a custom bug report number"
+#~ msgstr "Unos posebnog broja izvještaja"
+
+#~ msgctxt "@label"
+#~ msgid "Enter the number of the bug report you want to check"
+#~ msgstr "Unesite broj izvještaja o grešci koji želite da provjerite"
+
+#~ msgid ""
+#~ "<p><note>This bug report is not about a crash or about any other critical "
+#~ "bug.</note></p>"
+#~ msgstr ""
+#~ "<html><p><note>Ovaj izvještaj o grešci nije o padu ili bilo kakvom drugom "
+#~ "kritičnom problemu.</note></p></html>"
 
 #~ msgctxt "@label:listbox KDE distribution method"
 #~ msgid "Unspecified"
