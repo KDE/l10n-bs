@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-14 00:15+0000\n"
+"POT-Creation-Date: 2021-08-17 00:15+0000\n"
 "PO-Revision-Date: 2015-02-24 23:27+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -18470,11 +18470,9 @@ msgstr "Sličice"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnDelete)
 #. i18n: ectx: property (text), widget (QPushButton, deleteAllAssistantsButton)
-#. i18n: ectx: property (text), widget (QRadioButton, btnAllView)
 #: libs/resources/KisTagModel.cpp:117 libs/resources/KisTagModel.cpp:279
 #: libs/ui/widgets/kis_paintop_presets_editor.cpp:593
 #: plugins/assistants/Assistants/AssistantsToolOptions.ui:262
-#: plugins/dockers/storyboarddocker/wdgarrangemenu.ui:70
 #: plugins/tools/defaulttool/referenceimagestool/WdgToolOptions.ui:207
 #, kde-format
 msgid "All"
@@ -20741,10 +20739,8 @@ msgid "Snap to:"
 msgstr "Poravnaj s rešetkom:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
-#. i18n: ectx: property (text), widget (QRadioButton, btnGridMode)
 #: libs/ui/canvas/kis_guides_manager.cpp:776
 #: plugins/dockers/griddocker/grid_config_widget.ui:43
-#: plugins/dockers/storyboarddocker/wdgarrangemenu.ui:49
 #, kde-format
 msgid "Grid"
 msgstr "Mreža"
@@ -22001,11 +21997,6 @@ msgstr "Novo ime"
 #, kde-format
 msgid "Vector Layer %1"
 msgstr "Vektor razina %1"
-
-#: libs/ui/flake/kis_shape_layer.cc:617
-#, kde-format
-msgid "No store backend"
-msgstr "Skladište nema zadnji dio"
 
 #: libs/ui/flake/kis_take_all_shapes_command.cpp:15
 msgctxt "(qtundo-format)"
@@ -37759,14 +37750,11 @@ msgctxt "Remove current scene from storyboards"
 msgid "Remove Scene"
 msgstr "Ukloni segment"
 
-#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup1)
 #. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: ectx: property (text), widget (QToolButton, btnArrange)
 #: plugins/dockers/storyboarddocker/wdgarrangemenu.ui:28
-#: plugins/dockers/storyboarddocker/wdgstoryboarddock.ui:76
-#: plugins/filters/dodgeburn/DodgeBurnConfigurationBaseWidget.ui:21
-#: plugins/python/channels2layers/channels2layers.py:1076
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mode"
+msgctxt "list view layout mode"
 msgid "Mode"
 msgstr "Režim"
 
@@ -37774,6 +37762,7 @@ msgstr "Režim"
 #: plugins/dockers/storyboarddocker/wdgarrangemenu.ui:35
 #, fuzzy, kde-format
 #| msgid "Columns:"
+msgctxt "list view layout mode"
 msgid "Column"
 msgstr "Kolone:"
 
@@ -37781,19 +37770,38 @@ msgstr "Kolone:"
 #: plugins/dockers/storyboarddocker/wdgarrangemenu.ui:42
 #, fuzzy, kde-format
 #| msgid "Rows:"
+msgctxt "list view layout mode"
 msgid "Row"
 msgstr "Redovi:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, btnGridMode)
+#: plugins/dockers/storyboarddocker/wdgarrangemenu.ui:49
+#, fuzzy, kde-format
+#| msgid "Grid"
+msgctxt "list view layout mode"
+msgid "Grid"
+msgstr "Mreža"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/dockers/storyboarddocker/wdgarrangemenu.ui:63
 #, fuzzy, kde-format
+msgctxt "list view fields visibility"
 msgid "View"
 msgstr "&Pogled"
+
+#. i18n: ectx: property (text), widget (QRadioButton, btnAllView)
+#: plugins/dockers/storyboarddocker/wdgarrangemenu.ui:70
+#, fuzzy, kde-format
+#| msgid "All"
+msgctxt "list view fields visibility"
+msgid "All"
+msgstr "Sve"
 
 #. i18n: ectx: property (text), widget (QRadioButton, btnThumbnailsView)
 #: plugins/dockers/storyboarddocker/wdgarrangemenu.ui:77
 #, fuzzy, kde-format
 #| msgid "Thumbnails"
+msgctxt "list view fields visibility"
 msgid "Thumbnails Only"
 msgstr "Sličice"
 
@@ -37801,6 +37809,7 @@ msgstr "Sličice"
 #: plugins/dockers/storyboarddocker/wdgarrangemenu.ui:84
 #, fuzzy, kde-format
 #| msgid "Comments"
+msgctxt "list view fields visibility"
 msgid "Comments Only"
 msgstr "Komentari"
 
@@ -37926,6 +37935,15 @@ msgstr ""
 #, kde-format
 msgid "Comments"
 msgstr "Komentari"
+
+#. i18n: ectx: property (title), widget (QGroupBox, buttonGroup1)
+#. i18n: ectx: property (text), widget (QToolButton, btnArrange)
+#: plugins/dockers/storyboarddocker/wdgstoryboarddock.ui:76
+#: plugins/filters/dodgeburn/DodgeBurnConfigurationBaseWidget.ui:21
+#: plugins/python/channels2layers/channels2layers.py:1076
+#, kde-format
+msgid "Mode"
+msgstr "Režim"
 
 #: plugins/dockers/svgcollectiondocker/SvgSymbolCollectionDocker.cpp:156
 #, fuzzy, kde-format
@@ -56383,6 +56401,9 @@ msgstr "Uvećaj sve"
 msgctxt "action"
 msgid "Reference Images Tool"
 msgstr "Referentne slike"
+
+#~ msgid "No store backend"
+#~ msgstr "Skladište nema zadnji dio"
 
 #, fuzzy
 #~ msgid ""
