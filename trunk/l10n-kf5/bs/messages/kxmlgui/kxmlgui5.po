@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"POT-Creation-Date: 2021-09-12 00:15+0000\n"
 "PO-Revision-Date: 2013-12-21 17:26+0000\n"
 "Last-Translator: Ademovic Saudin <sademovic1@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -28,35 +28,67 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: kaboutapplicationdialog.cpp:59 kaboutplugindialog.cpp:65
+#: kaboutapplicationcomponentlistdelegate_p.cpp:52
+#, fuzzy, kde-format
+#| msgid "Visit contributor's homepage"
+msgid "Visit component's homepage"
+msgstr "Posjeti domaću stranicu doprinosioca"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:100
+#, fuzzy, kde-format
+#| msgid ""
+#| "Visit contributor's homepage\n"
+#| "%1"
+msgctxt "@info:tooltip"
+msgid ""
+"Visit components's homepage\n"
+"%1"
+msgstr ""
+"Posjeti stranicu doprinosioca\n"
+"%1"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:141
+#, fuzzy, kde-format
+#| msgctxt "@item Contributor name in about dialog."
+#| msgid "%1"
+msgctxt "@item Component name in about dialog."
+msgid "%1"
+msgstr "%1"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:144
+#, fuzzy, kde-format
+#| msgid "Version %1"
+msgid "Version %1"
+msgstr "verzija %1"
+
+#: kaboutapplicationcomponentlistdelegate_p.cpp:153
+#: kabstractaboutdialog_p.cpp:85
+#, kde-format
+msgid "License: %1"
+msgstr "Licenca: %1"
+
+#: kaboutapplicationdialog.cpp:60 kaboutplugindialog.cpp:65
 #, fuzzy, kde-format
 #| msgid "About %1"
 msgctxt "@title:window"
 msgid "About %1"
 msgstr "O modulu %1"
 
-#: kaboutapplicationdialog.cpp:97 kaboutplugindialog.cpp:83
+#: kaboutapplicationdialog.cpp:98 kaboutplugindialog.cpp:83
 #, fuzzy, kde-format
 #| msgid "&About"
 msgctxt "@title:tab"
 msgid "About"
 msgstr "&O programu"
 
-#: kaboutapplicationdialog.cpp:103
-#, kde-format
-msgid ""
-"<ul><li>KDE Frameworks %1</li><li>Qt %2 (built against %3)</li><li>The <em>"
-"%4</em> windowing system</li></ul>"
-msgstr ""
-
-#: kaboutapplicationdialog.cpp:111
+#: kaboutapplicationdialog.cpp:104
 #, fuzzy, kde-format
-#| msgid "Libraries"
+#| msgid "Comments"
 msgctxt "@title:tab"
-msgid "Libraries"
-msgstr "Biblioteke"
+msgid "Components"
+msgstr "Komentari"
 
-#: kaboutapplicationdialog.cpp:123 kaboutplugindialog.cpp:91
+#: kaboutapplicationdialog.cpp:117 kaboutplugindialog.cpp:91
 #, fuzzy, kde-format
 #| msgid "Author"
 msgctxt "@title:tab"
@@ -66,14 +98,14 @@ msgstr[0] "Autor"
 msgstr[1] "Autor"
 msgstr[2] "Autor"
 
-#: kaboutapplicationdialog.cpp:130 kaboutplugindialog.cpp:98
+#: kaboutapplicationdialog.cpp:124 kaboutplugindialog.cpp:98
 #, fuzzy, kde-format
 #| msgid "&Thanks To"
 msgctxt "@title:tab"
 msgid "Thanks To"
 msgstr "&Zahvalnice"
 
-#: kaboutapplicationdialog.cpp:137 kaboutplugindialog.cpp:104
+#: kaboutapplicationdialog.cpp:131 kaboutplugindialog.cpp:104
 #, fuzzy, kde-format
 #| msgid "Translation"
 msgctxt "@title:tab"
@@ -285,37 +317,52 @@ msgctxt "@title:tab"
 msgid "&Support KDE"
 msgstr "&Podržite KDE"
 
-#: kabstractaboutdialog_p.cpp:38
+#: kabstractaboutdialog_p.cpp:42
 #, fuzzy, kde-format
 #| msgid "Version %1"
 msgctxt "Version version-number"
 msgid "Version %1"
 msgstr "verzija %1"
 
-#: kabstractaboutdialog_p.cpp:81
+#: kabstractaboutdialog_p.cpp:107
 #, kde-format
-msgid "License: %1"
-msgstr "Licenca: %1"
+msgid "The <em>%1</em> windowing system"
+msgstr ""
 
-#: kabstractaboutdialog_p.cpp:101
+#: kabstractaboutdialog_p.cpp:108
+#, kde-format
+msgid "Qt"
+msgstr "Qt"
+
+#: kabstractaboutdialog_p.cpp:108
+#, kde-format
+msgid "%1 (built against %2)"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:109
+#, kde-format
+msgid "KDE Frameworks"
+msgstr ""
+
+#: kabstractaboutdialog_p.cpp:130
 #, fuzzy, kde-format
 #| msgid "Show author information"
 msgid "Show author photos"
 msgstr "Prikaži podatke o autorima"
 
-#: kabstractaboutdialog_p.cpp:102
+#: kabstractaboutdialog_p.cpp:131
 #, kde-format
 msgid "Enabling this will fetch images from an online location"
 msgstr ""
 
-#: kabstractaboutdialog_p.cpp:141
+#: kabstractaboutdialog_p.cpp:170
 #, fuzzy, kde-format
 #| msgid "Please use http://bugs.kde.org to report bugs.\n"
 msgctxt "Reference to website"
 msgid "Please use %1 to report bugs.\n"
 msgstr "Koristite http://bugs.kde.org za prijavu grešaka.\n"
 
-#: kabstractaboutdialog_p.cpp:149
+#: kabstractaboutdialog_p.cpp:178
 #, fuzzy, kde-format
 #| msgid "Please report bugs to %1.\n"
 msgctxt "Reference to email address"
@@ -1677,6 +1724,12 @@ msgid "Main Toolbar"
 msgstr "Glavna traka"
 
 #, fuzzy
+#~| msgid "Libraries"
+#~ msgctxt "@title:tab"
+#~ msgid "Libraries"
+#~ msgstr "Biblioteke"
+
+#, fuzzy
 #~| msgid ""
 #~| "Visit contributor's page\n"
 #~| "%1"
@@ -2978,9 +3031,6 @@ msgstr "Glavna traka"
 
 #~ msgid "KDE Application"
 #~ msgstr "KDE program"
-
-#~ msgid "Qt"
-#~ msgstr "Qt"
 
 #~ msgid "KDE"
 #~ msgstr "KDE"
@@ -9268,9 +9318,6 @@ msgstr "Glavna traka"
 
 #~ msgid "Loading Preview"
 #~ msgstr "Učitavam pregled"
-
-#~ msgid "Comments"
-#~ msgstr "Komentari"
 
 #~ msgid "Changelog"
 #~ msgstr "Dnevnik izmjena"
