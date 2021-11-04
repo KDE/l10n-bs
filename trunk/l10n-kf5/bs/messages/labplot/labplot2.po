@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-03 00:16+0000\n"
+"POT-Creation-Date: 2021-11-04 00:14+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -1105,19 +1105,20 @@ msgstr "U %1"
 msgid "Import Data"
 msgstr "Uvezi u"
 
-#: src/backend/core/AbstractPart.cpp:95 src/kdefrontend/MainWin.cpp:562
+#: src/backend/core/AbstractPart.cpp:95 src/kdefrontend/MainWin.cpp:555
+#: src/kdefrontend/MainWin.cpp:562
 #, fuzzy, kde-format
 #| msgid "image"
-msgid "From File"
+msgid "From File..."
 msgstr "slika"
 
 #: src/backend/core/AbstractPart.cpp:96 src/kdefrontend/MainWin.cpp:567
 #, kde-format
-msgid "From SQL Database"
+msgid "From SQL Database..."
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, gbExport)
-#: src/backend/core/AbstractPart.cpp:102 src/kdefrontend/MainWin.cpp:589
+#: src/backend/core/AbstractPart.cpp:102
 #: src/kdefrontend/spreadsheet/ExportSpreadsheetDialog.cpp:277
 #: src/kdefrontend/ui/spreadsheet/exportspreadsheetwidget.ui:23
 #: src/kdefrontend/ui/worksheet/exportworksheetwidget.ui:17
@@ -1816,19 +1817,17 @@ msgid "There is no download URL present in the metadata file!"
 msgstr ""
 
 #: src/backend/datasources/filters/AbstractFileFilter.cpp:205
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:91
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:123
 #, fuzzy, kde-format
 #| msgid "ASCII vector data"
-msgid "ASCII data"
+msgid "ASCII Data"
 msgstr "ASCII  vektorski podaci"
 
 #: src/backend/datasources/filters/AbstractFileFilter.cpp:206
-#: src/kdefrontend/datasources/ImportFileWidget.cpp:92
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:124
 #, fuzzy, kde-format
 #| msgid "Reading binary data..."
-msgid "Binary data"
+msgid "Binary Data"
 msgstr "Čitanje binarne podataka..."
 
 #: src/backend/datasources/filters/AbstractFileFilter.cpp:207
@@ -1871,7 +1870,7 @@ msgstr ""
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:103
 #, fuzzy, kde-format
 #| msgid "ASCII vector data"
-msgid "JSON data"
+msgid "JSON Data"
 msgstr "ASCII  vektorski podaci"
 
 #: src/backend/datasources/filters/AbstractFileFilter.cpp:212
@@ -9551,8 +9550,9 @@ msgstr "Očisti matricu"
 
 #: src/commonfrontend/matrix/MatrixView.cpp:141
 #: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:252
-#, kde-format
-msgid "&Go to Cell"
+#, fuzzy, kde-format
+#| msgid "&Go to Cell"
+msgid "&Go to Cell..."
 msgstr "&Idi na ćeliju"
 
 #: src/commonfrontend/matrix/MatrixView.cpp:143
@@ -9636,7 +9636,6 @@ msgstr "Očisti kolone"
 
 #: src/commonfrontend/matrix/MatrixView.cpp:181
 #: src/commonfrontend/matrix/MatrixView.cpp:188
-#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:253
 #, fuzzy, kde-format
 #| msgid "Statistics"
 msgid "Statisti&cs"
@@ -9929,6 +9928,12 @@ msgstr "Očisti maske"
 #, kde-format
 msgid "&Sort Spreadsheet"
 msgstr "&Sortiraj Tabelarni prikaz"
+
+#: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:253
+#, fuzzy, kde-format
+#| msgid "Statistics"
+msgid "Statisti&cs..."
+msgstr "Statistike"
 
 #: src/commonfrontend/spreadsheet/SpreadsheetView.cpp:256
 #, fuzzy, kde-format
@@ -10968,7 +10973,8 @@ msgstr "Datoteka podatak izvor"
 #: src/kdefrontend/datasources/DatabaseManagerWidget.cpp:216
 #, fuzzy, kde-format
 #| msgid "Select the image file"
-msgid "Select the database file"
+msgctxt "@title:window"
+msgid "Select the Database File"
 msgstr "Odaberi slikovnu datoteku"
 
 #: src/kdefrontend/datasources/DatabaseManagerWidget.cpp:359
@@ -11133,9 +11139,10 @@ msgid "Import to"
 msgstr "Uvezi u"
 
 #: src/kdefrontend/datasources/ImportDialog.cpp:75
-#, kde-format
-msgid "Data container"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "orange"
+msgid "Data container:"
+msgstr "narandžasta"
 
 #: src/kdefrontend/datasources/ImportDialog.cpp:76
 #: src/kdefrontend/datasources/ImportDialog.cpp:82
@@ -11155,17 +11162,26 @@ msgstr "&Novo"
 msgid "Add new data container to the project"
 msgstr "Datoteka podatak izvor"
 
-#. i18n: ectx: property (text), widget (QLabel, lPosition_2)
+#. i18n: ectx: property (text), widget (QLabel, lYBreakPosition)
+#. i18n: ectx: property (text), widget (QLabel, lXBreakPosition)
 #. i18n: ectx: property (text), widget (QLabel, lPosition)
-#. i18n: ectx: property (text), widget (QLabel, lMajorGrid_2)
+#. i18n: ectx: property (text), widget (QLabel, lArrowPosition)
+#. i18n: ectx: property (text), widget (QLabel, lLabelsPosition)
+#. i18n: ectx: property (text), widget (QLabel, lValuesPosition)
+#. i18n: ectx: property (text), widget (QLabel, lPositionDateTime)
 #: src/kdefrontend/datasources/ImportDialog.cpp:102
-#: src/kdefrontend/ui/dockwidgets/axisdock.ui:1096
-#: src/kdefrontend/ui/dockwidgets/custompointdock.ui:115
-#: src/kdefrontend/ui/dockwidgets/imagedock.ui:314
-#: src/kdefrontend/ui/dockwidgets/referencelinedock.ui:83
+#: src/kdefrontend/ui/dockwidgets/axisdock.ui:42
+#: src/kdefrontend/ui/dockwidgets/axisdock.ui:547
+#: src/kdefrontend/ui/dockwidgets/axisdock.ui:1103
+#: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:741
+#: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:905
+#: src/kdefrontend/ui/dockwidgets/histogramdock.ui:615
+#: src/kdefrontend/ui/dockwidgets/infoelementdock.ui:46
+#: src/kdefrontend/ui/dockwidgets/infoelementdock.ui:184
+#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:642
 #, kde-format
-msgid "Position"
-msgstr "Pozicija"
+msgid "Position:"
+msgstr "Pozicija:"
 
 #: src/kdefrontend/datasources/ImportDialog.cpp:108
 #, kde-format
@@ -11322,6 +11338,18 @@ msgid ""
 "filter is not ASCII."
 msgstr ""
 
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:91
+#, fuzzy, kde-format
+#| msgid "ASCII vector data"
+msgid "ASCII data"
+msgstr "ASCII  vektorski podaci"
+
+#: src/kdefrontend/datasources/ImportFileWidget.cpp:92
+#, fuzzy, kde-format
+#| msgid "Reading binary data..."
+msgid "Binary data"
+msgstr "Čitanje binarne podataka..."
+
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:105
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:126
 #, kde-format
@@ -11367,7 +11395,7 @@ msgstr "Automatski"
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:149
 #, fuzzy, kde-format
 #| msgid "Watch the file"
-msgid "Whole file"
+msgid "Whole File"
 msgstr "Pogledaj fajl"
 
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:179
@@ -11426,7 +11454,9 @@ msgid ""
 msgstr ""
 
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:783
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the File Data Source"
+msgctxt "@title:window"
 msgid "Select the File Data Source"
 msgstr "Označi Izvor podataka"
 
@@ -11448,8 +11478,9 @@ msgstr "novi filter"
 #. i18n: ectx: attribute (title), widget (QWidget, tabDataFormat)
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:937
 #: src/kdefrontend/ui/datasources/importfilewidget.ui:400
-#, kde-format
-msgid "Data format"
+#, fuzzy, kde-format
+#| msgid "Data format"
+msgid "Data Format"
 msgstr "Format podataka"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
@@ -11466,8 +11497,9 @@ msgstr "Pregled"
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:940
 #: src/kdefrontend/ui/datasources/importfilewidget.ui:526
 #: src/kdefrontend/ui/datasources/importsqldatabasewidget.ui:239
-#, kde-format
-msgid "Data portion to read"
+#, fuzzy, kde-format
+#| msgid "Data portion to read"
+msgid "Data Portion to Read"
 msgstr "Dio podataka za čitanje"
 
 #: src/kdefrontend/datasources/ImportFileWidget.cpp:970
@@ -11786,7 +11818,7 @@ msgstr "Varijanca"
 #: src/kdefrontend/datasources/ImportSQLDatabaseWidget.cpp:40
 #, fuzzy, kde-format
 #| msgid "Custom grid"
-msgid "Custom query"
+msgid "Custom Query"
 msgstr "Podesi meržu"
 
 #: src/kdefrontend/datasources/ImportSQLDatabaseWidget.cpp:43
@@ -14313,6 +14345,7 @@ msgstr "svijetlosiva"
 #: src/kdefrontend/GuiTools.cpp:271
 #, fuzzy, kde-format
 #| msgid "new filter"
+msgctxt "@title:window"
 msgid "Open Image File"
 msgstr "novi filter"
 
@@ -14546,17 +14579,18 @@ msgstr ""
 #: src/kdefrontend/LabPlot.cpp:120
 #, fuzzy, kde-format
 #| msgid "do not show the splash screen"
-msgid "disable splash screen"
+msgid "Disable splash screen"
 msgstr "ne prikazuj uvodnu sliku pri pokretanju"
 
 #: src/kdefrontend/LabPlot.cpp:123
 #, kde-format
-msgid "start in the presenter mode"
+msgid "Start in the presenter mode"
 msgstr ""
 
 #: src/kdefrontend/LabPlot.cpp:126
-#, kde-format
-msgid "open a project file"
+#, fuzzy, kde-format
+#| msgid "open a project file"
+msgid "Open a project file."
 msgstr "otvori projekat"
 
 #: src/kdefrontend/LabPlot.cpp:144
@@ -14758,9 +14792,7 @@ msgstr ""
 #. i18n("Note/Script"),this);
 #. actionCollection()->addAction("new_script", m_newScriptAction);
 #. connect(m_newScriptAction, &QAction::triggered,SLOT(newScript()));
-#. i18n: ectx: property (text), widget (QLabel, lFolder)
 #: src/kdefrontend/MainWin.cpp:543 src/kdefrontend/MainWin.cpp:1775
-#: src/kdefrontend/ui/datasources/importprojectwidget.ui:74
 #, kde-format
 msgid "Folder"
 msgstr "Direktorij"
@@ -14773,19 +14805,13 @@ msgstr ""
 #: src/kdefrontend/MainWin.cpp:549
 #, fuzzy, kde-format
 #| msgid "File Data Source"
-msgid "Live Data Source"
+msgid "Live Data Source..."
 msgstr "Datoteka Podatak Izvor"
 
 #: src/kdefrontend/MainWin.cpp:550
 #, kde-format
 msgid "Creates a live data source to read data from a real time device"
 msgstr ""
-
-#: src/kdefrontend/MainWin.cpp:555
-#, fuzzy, kde-format
-#| msgid "Import To"
-msgid "Import from File"
-msgstr "Uvezi u"
 
 #: src/kdefrontend/MainWin.cpp:557 src/kdefrontend/MainWin.cpp:564
 #, kde-format
@@ -14800,7 +14826,7 @@ msgstr ""
 #: src/kdefrontend/MainWin.cpp:572
 #, fuzzy, kde-format
 #| msgid "Connection:"
-msgid "From Dataset Collection"
+msgid "From Dataset Collection..."
 msgstr "Veza:"
 
 #: src/kdefrontend/MainWin.cpp:573
@@ -14812,7 +14838,7 @@ msgstr "Uvezi u"
 #: src/kdefrontend/MainWin.cpp:577
 #, fuzzy, kde-format
 #| msgid "Close Project"
-msgid "LabPlot Project"
+msgid "LabPlot Project..."
 msgstr "Zatvori projekat"
 
 #: src/kdefrontend/MainWin.cpp:578
@@ -14823,13 +14849,19 @@ msgstr ""
 #: src/kdefrontend/MainWin.cpp:583
 #, fuzzy, kde-format
 #| msgid "Open project"
-msgid "Origin Project (OPJ)"
+msgid "Origin Project (OPJ)..."
 msgstr "Otvori projekat"
 
 #: src/kdefrontend/MainWin.cpp:584
 #, kde-format
 msgid "Import a project from an OriginLab Origin project file (.opj)"
 msgstr ""
+
+#: src/kdefrontend/MainWin.cpp:589
+#, fuzzy, kde-format
+#| msgid "Export"
+msgid "Export..."
+msgstr "Izvoz"
 
 #: src/kdefrontend/MainWin.cpp:590
 #, fuzzy, kde-format
@@ -14849,7 +14881,7 @@ msgstr ""
 
 #: src/kdefrontend/MainWin.cpp:606
 #, kde-format
-msgid "FITS Metadata Editor"
+msgid "FITS Metadata Editor..."
 msgstr ""
 
 #: src/kdefrontend/MainWin.cpp:607
@@ -14858,8 +14890,9 @@ msgid "Open editor to edit FITS meta data"
 msgstr ""
 
 #: src/kdefrontend/MainWin.cpp:616
-#, kde-format
-msgid "Undo/Redo History"
+#, fuzzy, kde-format
+#| msgid "Undo/Redo History"
+msgid "Undo/Redo History..."
 msgstr "Vrati na staro/Idi na novo historija"
 
 #: src/kdefrontend/MainWin.cpp:634
@@ -14969,7 +15002,7 @@ msgstr "Mapa boja"
 
 #: src/kdefrontend/MainWin.cpp:839
 #, kde-format
-msgid "Configure CAS"
+msgid "Configure CAS..."
 msgstr ""
 
 #: src/kdefrontend/MainWin.cpp:869
@@ -15011,9 +15044,10 @@ msgstr ""
 msgid "All supported files (%1)"
 msgstr ""
 
-#: src/kdefrontend/MainWin.cpp:1311 src/kdefrontend/MainWin.cpp:1328
+#: src/kdefrontend/MainWin.cpp:1311
 #, fuzzy, kde-format
 #| msgid "Open project"
+msgctxt "@title:window"
 msgid "Open Project"
 msgstr "Otvori projekat"
 
@@ -15021,6 +15055,12 @@ msgstr "Otvori projekat"
 #, kde-format
 msgid "The project file %1 is already opened."
 msgstr "Projektna datoteka %1 je već otvorena."
+
+#: src/kdefrontend/MainWin.cpp:1328
+#, fuzzy, kde-format
+#| msgid "Open project"
+msgid "Open Project"
+msgstr "Otvori projekat"
 
 #: src/kdefrontend/MainWin.cpp:1389 src/kdefrontend/MainWin.cpp:1393
 #: src/kdefrontend/MainWin.cpp:1398 src/kdefrontend/MainWin.cpp:1403
@@ -15061,6 +15101,7 @@ msgstr "Projekat uspješno otvoren (u %1 sekundi)."
 #: src/kdefrontend/MainWin.cpp:1582
 #, fuzzy, kde-format
 #| msgid "Save Project"
+msgctxt "@title:window"
 msgid "Save Project As"
 msgstr "Spasi projekat"
 
@@ -15284,23 +15325,27 @@ msgid "min."
 msgstr "min."
 
 #: src/kdefrontend/SettingsGeneralPage.cpp:156
-#, kde-format
-msgid "Do nothing"
+#, fuzzy, kde-format
+#| msgid "Do nothing"
+msgid "Do Nothing"
 msgstr "Ne radi ništa"
 
 #: src/kdefrontend/SettingsGeneralPage.cpp:157
-#, kde-format
-msgid "Create new empty project"
+#, fuzzy, kde-format
+#| msgid "Create new empty project"
+msgid "Create New Empty Project"
 msgstr "Kreiraj novi prazan projekat"
 
 #: src/kdefrontend/SettingsGeneralPage.cpp:158
-#, kde-format
-msgid "Create new project with worksheet"
+#, fuzzy, kde-format
+#| msgid "Create new project with worksheet"
+msgid "Create New Project with Worksheet"
 msgstr "Kreiraj novi projekat sa radnim listom"
 
 #: src/kdefrontend/SettingsGeneralPage.cpp:159
-#, kde-format
-msgid "Load last used project"
+#, fuzzy, kde-format
+#| msgid "Load last used project"
+msgid "Load Last Used Project"
 msgstr "Učitaj zadnji korišten projekat"
 
 #: src/kdefrontend/SettingsGeneralPage.cpp:163
@@ -15322,28 +15367,33 @@ msgid "Show Project Name"
 msgstr "Projekat spašen"
 
 #: src/kdefrontend/SettingsGeneralPage.cpp:168
-#, kde-format
-msgid "Sub-window view"
+#, fuzzy, kde-format
+#| msgid "Sub-window view"
+msgid "Sub-window View"
 msgstr "Pod-prozor pregled"
 
 #: src/kdefrontend/SettingsGeneralPage.cpp:169
-#, kde-format
-msgid "Tabbed view"
+#, fuzzy, kde-format
+#| msgid "Tabbed view"
+msgid "Tabbed View"
 msgstr "Tabbovan pregled"
 
 #: src/kdefrontend/SettingsGeneralPage.cpp:172
-#, kde-format
-msgid "Show windows of the current folder only"
+#, fuzzy, kde-format
+#| msgid "Show windows of the current folder only"
+msgid "Show Windows of the Current Folder Only"
 msgstr "Prikaži jedino prozore trenutnog direktorija"
 
 #: src/kdefrontend/SettingsGeneralPage.cpp:173
-#, kde-format
-msgid "Show windows of the current folder and its subfolders only"
+#, fuzzy, kde-format
+#| msgid "Show windows of the current folder and its subfolders only"
+msgid "Show Windows of the Current Folder and its Subfolders Only"
 msgstr "Prikaži jedino prozore trenutnog direktorija i njegove poddirektorije"
 
 #: src/kdefrontend/SettingsGeneralPage.cpp:174
-#, kde-format
-msgid "Show all windows"
+#, fuzzy, kde-format
+#| msgid "Show all windows"
+msgid "Show all Windows"
 msgstr "Prikaži sve prozore"
 
 #: src/kdefrontend/SettingsGeneralPage.cpp:182
@@ -15741,8 +15791,10 @@ msgstr ""
 
 #: src/kdefrontend/spreadsheet/ExportSpreadsheetDialog.cpp:343
 #: src/kdefrontend/worksheet/ExportWorksheetDialog.cpp:253
-#, kde-format
-msgid "Export to file"
+#, fuzzy, kde-format
+#| msgid "Export to file"
+msgctxt "@title:window"
+msgid "Export to File"
 msgstr "Izvoz u datoteku"
 
 #: src/kdefrontend/spreadsheet/FormattingHeatmapDialog.cpp:33
@@ -16793,26 +16845,28 @@ msgstr "Komentar karakter"
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:56
 #, fuzzy, kde-format
 #| msgid "column major"
-msgid "Column Separator"
+msgid "Column Separator:"
 msgstr "najveći u koloni"
 
 #. i18n: ectx: property (text), widget (QLabel, lDecimalSeparator)
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:70
 #: src/kdefrontend/ui/datasources/importsqldatabasewidget.ui:91
 #: src/kdefrontend/ui/datasources/jsonoptionswidget.ui:76
+#: src/kdefrontend/ui/settingsgeneralpage.ui:50
 #: src/kdefrontend/ui/spreadsheet/exportspreadsheetwidget.ui:152
 #, fuzzy, kde-format
 #| msgid "Decimal notation"
-msgid "Decimal Separator:"
+msgid "Decimal separator:"
 msgstr "Decimalni zapis"
 
 #. i18n: ectx: property (text), widget (QLabel, lDateTimeFormat)
 #: src/kdefrontend/ui/datasources/asciioptionswidget.ui:80
+#: src/kdefrontend/ui/datasources/datasetmetadatamanagerwidget.ui:100
 #: src/kdefrontend/ui/datasources/importsqldatabasewidget.ui:98
 #: src/kdefrontend/ui/datasources/jsonoptionswidget.ui:40
 #, fuzzy, kde-format
 #| msgid "Data format"
-msgid "DateTime Format:"
+msgid "DateTime format:"
 msgstr "Format podataka"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chbCreateIndex)
@@ -17077,13 +17131,6 @@ msgstr "Karakter za odvajanje"
 #, fuzzy, kde-format
 #| msgid "Data format"
 msgid "Number format:"
-msgstr "Format podataka"
-
-#. i18n: ectx: property (text), widget (QLabel, lDateTimeFormat)
-#: src/kdefrontend/ui/datasources/datasetmetadatamanagerwidget.ui:100
-#, fuzzy, kde-format
-#| msgid "Data format"
-msgid "DateTime format:"
 msgstr "Format podataka"
 
 #. i18n: ectx: property (text), widget (QLabel, lFileName)
@@ -17515,6 +17562,13 @@ msgstr "Podaci:"
 msgid "Import unused object"
 msgstr "Uvezi sliku iz fajla"
 
+#. i18n: ectx: property (text), widget (QLabel, lFolder)
+#: src/kdefrontend/ui/datasources/importprojectwidget.ui:74
+#, fuzzy, kde-format
+#| msgid "Folder"
+msgid "Folder:"
+msgstr "Direktorij"
+
 #. i18n: ectx: property (text), widget (QLabel, lImportFrom)
 #: src/kdefrontend/ui/datasources/importsqldatabasewidget.ui:65
 #, fuzzy, kde-format
@@ -17682,26 +17736,6 @@ msgstr "Prva Boja"
 #| msgid "Start row:"
 msgid "Last row:"
 msgstr "Početni red:"
-
-#. i18n: ectx: property (text), widget (QLabel, lYBreakPosition)
-#. i18n: ectx: property (text), widget (QLabel, lXBreakPosition)
-#. i18n: ectx: property (text), widget (QLabel, lPosition)
-#. i18n: ectx: property (text), widget (QLabel, lArrowPosition)
-#. i18n: ectx: property (text), widget (QLabel, lLabelsPosition)
-#. i18n: ectx: property (text), widget (QLabel, lValuesPosition)
-#. i18n: ectx: property (text), widget (QLabel, lPositionDateTime)
-#: src/kdefrontend/ui/dockwidgets/axisdock.ui:42
-#: src/kdefrontend/ui/dockwidgets/axisdock.ui:547
-#: src/kdefrontend/ui/dockwidgets/axisdock.ui:1103
-#: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:741
-#: src/kdefrontend/ui/dockwidgets/cartesianplotdock.ui:905
-#: src/kdefrontend/ui/dockwidgets/histogramdock.ui:615
-#: src/kdefrontend/ui/dockwidgets/infoelementdock.ui:46
-#: src/kdefrontend/ui/dockwidgets/infoelementdock.ui:184
-#: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:642
-#, kde-format
-msgid "Position:"
-msgstr "Pozicija:"
 
 #. i18n: ectx: property (text), widget (QLabel, lEnd)
 #. i18n: ectx: property (text), widget (QLabel, lEndDateTime)
@@ -17962,6 +17996,17 @@ msgstr ""
 #, kde-format
 msgid "Labels"
 msgstr "Oznake"
+
+#. i18n: ectx: property (text), widget (QLabel, lPosition_2)
+#. i18n: ectx: property (text), widget (QLabel, lPosition)
+#. i18n: ectx: property (text), widget (QLabel, lMajorGrid_2)
+#: src/kdefrontend/ui/dockwidgets/axisdock.ui:1096
+#: src/kdefrontend/ui/dockwidgets/custompointdock.ui:115
+#: src/kdefrontend/ui/dockwidgets/imagedock.ui:314
+#: src/kdefrontend/ui/dockwidgets/referencelinedock.ui:83
+#, kde-format
+msgid "Position"
+msgstr "Pozicija"
 
 #. i18n: ectx: property (text), widget (QLabel, lLabelsOffset)
 #. i18n: ectx: property (text), widget (QLabel, lRugOffset)
@@ -20048,7 +20093,7 @@ msgstr ""
 #: src/kdefrontend/ui/fitsheadereditwidget.ui:56
 #, fuzzy, kde-format
 #| msgid "new filter"
-msgid "Open File"
+msgid "Open File..."
 msgstr "novi filter"
 
 #. i18n: ectx: property (text), widget (QPushButton, bClose)
@@ -20349,13 +20394,6 @@ msgstr ""
 msgid "Omit group separator"
 msgstr "Max. iteracije"
 
-#. i18n: ectx: property (text), widget (QLabel, lDecimalSeparator)
-#: src/kdefrontend/ui/settingsgeneralpage.ui:50
-#, fuzzy, kde-format
-#| msgid "Decimal notation"
-msgid "Decimal separator:"
-msgstr "Decimalni zapis"
-
 #. i18n: ectx: property (text), widget (QLabel, lMdiVisibility)
 #: src/kdefrontend/ui/settingsgeneralpage.ui:60
 #, fuzzy, kde-format
@@ -20402,7 +20440,7 @@ msgstr "Interfejs"
 #: src/kdefrontend/ui/settingsgeneralpage.ui:146
 #, fuzzy, kde-format
 #| msgid "Auto-Save"
-msgid "Auto-Save:"
+msgid "Auto-save:"
 msgstr "Auto-Sačuvaj"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkAutoSave)
@@ -21066,9 +21104,11 @@ msgid "Close file"
 msgstr "Zatvori &sve"
 
 #: src/kdefrontend/widgets/FITSHeaderEditWidget.cpp:172
-#, kde-format
-msgid "Open FITS file"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "new filter"
+msgctxt "@title:window"
+msgid "Open FITS File"
+msgstr "novi filter"
 
 #: src/kdefrontend/widgets/FITSHeaderEditWidget.cpp:208
 #, fuzzy, kde-format
@@ -21341,19 +21381,19 @@ msgstr ""
 
 #: src/kdefrontend/worksheet/ExportWorksheetDialog.cpp:70
 #, kde-format
-msgid "Object's bounding box"
+msgid "Object's Bounding Box"
 msgstr ""
 
 #: src/kdefrontend/worksheet/ExportWorksheetDialog.cpp:71
 #, fuzzy, kde-format
 #| msgid "Fit to selection"
-msgid "Current selection"
+msgid "Current Selection"
 msgstr "Uklopi u selektovano"
 
 #: src/kdefrontend/worksheet/ExportWorksheetDialog.cpp:72
 #, fuzzy, kde-format
 #| msgid "Export worksheet"
-msgid "Complete worksheet"
+msgid "Complete Worksheet"
 msgstr "Izvezi radni list"
 
 #: src/kdefrontend/worksheet/ExportWorksheetDialog.cpp:74
@@ -21456,6 +21496,21 @@ msgid ""
 "Couldn't open the color map collections file %1. Please check your "
 "installation."
 msgstr ""
+
+#, fuzzy
+#~| msgid "Import To"
+#~ msgid "Import from File"
+#~ msgstr "Uvezi u"
+
+#, fuzzy
+#~| msgid "Decimal notation"
+#~ msgid "Decimal Separator:"
+#~ msgstr "Decimalni zapis"
+
+#, fuzzy
+#~| msgid "Data format"
+#~ msgid "DateTime Format:"
+#~ msgstr "Format podataka"
 
 #, fuzzy
 #~| msgid "Date and Time"
