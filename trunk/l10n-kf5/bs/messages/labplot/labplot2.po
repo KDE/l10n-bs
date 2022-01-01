@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-31 00:40+0000\n"
+"POT-Creation-Date: 2022-01-01 00:40+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -10915,7 +10915,7 @@ msgstr ""
 #: src/kdefrontend/dockwidgets/XYInterpolationCurveDock.cpp:60
 #: src/kdefrontend/dockwidgets/XYSmoothCurveDock.cpp:55
 #: src/kdefrontend/labplot2ui.rc:28 src/kdefrontend/MainWin.cpp:510
-#: src/kdefrontend/MainWin.cpp:1828 src/kdefrontend/SettingsDialog.cpp:60
+#: src/kdefrontend/MainWin.cpp:1828 src/kdefrontend/SettingsDialog.cpp:64
 #, kde-format
 msgid "Spreadsheet"
 msgstr "Tablica"
@@ -15137,7 +15137,7 @@ msgstr "Otvaranje neuspješno"
 
 #. i18n: ectx: ToolBar (worksheet_toolbar)
 #: src/kdefrontend/labplot2ui.rc:20 src/kdefrontend/MainWin.cpp:522
-#: src/kdefrontend/MainWin.cpp:1864 src/kdefrontend/SettingsDialog.cpp:55
+#: src/kdefrontend/MainWin.cpp:1864 src/kdefrontend/SettingsDialog.cpp:59
 #, kde-format
 msgid "Worksheet"
 msgstr "Radni list"
@@ -15152,6 +15152,7 @@ msgstr "Podaci:"
 
 #. i18n: ectx: ToolBar (notebook_toolbar)
 #: src/kdefrontend/labplot2ui.rc:32 src/kdefrontend/MainWin.cpp:767
+#: src/kdefrontend/SettingsDialog.cpp:70
 #, fuzzy, kde-format
 #| msgid "Notes"
 msgid "Notebook"
@@ -15800,8 +15801,8 @@ msgstr "Skup podataka"
 msgid "Downloaded files successfully deleted."
 msgstr ""
 
-#: src/kdefrontend/SettingsDialog.cpp:41 src/kdefrontend/SettingsDialog.cpp:102
-#: src/kdefrontend/SettingsDialog.cpp:109
+#: src/kdefrontend/SettingsDialog.cpp:45 src/kdefrontend/SettingsDialog.cpp:113
+#: src/kdefrontend/SettingsDialog.cpp:120
 #, fuzzy, kde-format
 #| msgid "Preferences"
 msgctxt "@title:window"
@@ -15815,7 +15816,7 @@ msgstr "Podešavanja"
 #. i18n: ectx: attribute (title), widget (QWidget, general)
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #. i18n: ectx: attribute (title), widget (QWidget, tGeneral)
-#: src/kdefrontend/SettingsDialog.cpp:50
+#: src/kdefrontend/SettingsDialog.cpp:54
 #: src/kdefrontend/ui/datapickercurvewidget.ui:27
 #: src/kdefrontend/ui/datapickerimagewidget.ui:27
 #: src/kdefrontend/ui/dockwidgets/axisdock.ui:36
@@ -15836,25 +15837,25 @@ msgstr "Podešavanja"
 msgid "General"
 msgstr "Općenito"
 
-#: src/kdefrontend/SettingsDialog.cpp:65
+#: src/kdefrontend/SettingsDialog.cpp:76
 #, fuzzy, kde-format
 #| msgid "Dataset"
 msgid "Datasets"
 msgstr "Skup podataka"
 
-#: src/kdefrontend/SettingsDialog.cpp:79
+#: src/kdefrontend/SettingsDialog.cpp:90
 #, kde-format
 msgid "User Feedback"
 msgstr ""
 
-#: src/kdefrontend/SettingsDialog.cpp:106
+#: src/kdefrontend/SettingsDialog.cpp:117
 #, kde-format
 msgid "All settings will be reset to default values. Do you want to continue?"
 msgstr ""
 "Sva podešavanja će biti vraćena na početne (podrazumijevane) vrijednosti. Da "
 "li želite nastaviti?"
 
-#: src/kdefrontend/SettingsDialog.cpp:117
+#: src/kdefrontend/SettingsDialog.cpp:128
 #, fuzzy, kde-format
 #| msgid "Preferences    [Changed]"
 msgctxt "@title:window"
@@ -15964,6 +15965,47 @@ msgstr ""
 #: src/kdefrontend/SettingsGeneralPage.cpp:190
 #, kde-format
 msgid "Arabic (٫)"
+msgstr ""
+
+#: src/kdefrontend/SettingsNotebookPage.cpp:22
+#, fuzzy, kde-format
+#| msgid "Height"
+msgid "Enable syntax highlighting"
+msgstr "Visina"
+
+#: src/kdefrontend/SettingsNotebookPage.cpp:23
+#, fuzzy, kde-format
+#| msgid "Data format"
+msgid "Enable syntax completion"
+msgstr "Format podataka"
+
+#: src/kdefrontend/SettingsNotebookPage.cpp:24
+#, fuzzy, kde-format
+#| msgid "Row Numbers"
+msgid "Show line numbers"
+msgstr "Brojevi redova"
+
+#: src/kdefrontend/SettingsNotebookPage.cpp:25
+#, kde-format
+msgid ""
+"Use LaTeX typesetting for the results of calculations, if supported by the "
+"backend system."
+msgstr ""
+
+#: src/kdefrontend/SettingsNotebookPage.cpp:26
+#, fuzzy, kde-format
+#| msgid "iterations"
+msgid "Animate transitions"
+msgstr "iteracije"
+
+#: src/kdefrontend/SettingsNotebookPage.cpp:28
+#, kde-format
+msgid "Automatically re-evaluate all entries below the current one."
+msgstr ""
+
+#: src/kdefrontend/SettingsNotebookPage.cpp:29
+#, kde-format
+msgid "Ask for confirmation when restarting the backend system."
 msgstr ""
 
 #: src/kdefrontend/SettingsWorksheetPage.cpp:28
@@ -21026,6 +21068,76 @@ msgstr ""
 msgid "Save in compatible format"
 msgstr "nekompatibilan filter tip"
 
+#. i18n: ectx: property (windowTitle), widget (QWidget, SettingsNotebookPage)
+#: src/kdefrontend/ui/settingsnotebookpage.ui:14
+#, fuzzy, kde-format
+#| msgid "Form"
+msgid "Form"
+msgstr "Forma"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#. i18n: ectx: property (text), widget (QLabel, lPresenterMode_2)
+#: src/kdefrontend/ui/settingsnotebookpage.ui:26
+#: src/kdefrontend/ui/settingsworksheetpage.ui:23
+#, fuzzy, kde-format
+#| msgid "Variance"
+msgid "Appearance"
+msgstr "Varijanca"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkSyntaxHighlighting)
+#: src/kdefrontend/ui/settingsnotebookpage.ui:33
+#, fuzzy, kde-format
+#| msgid "Height"
+msgid "Syntax Highlighting"
+msgstr "Visina"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkSyntaxCompletion)
+#: src/kdefrontend/ui/settingsnotebookpage.ui:40
+#, fuzzy, kde-format
+#| msgid "Data format"
+msgid "Syntax Completion"
+msgstr "Format podataka"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkLineNumbers)
+#: src/kdefrontend/ui/settingsnotebookpage.ui:47
+#, fuzzy, kde-format
+#| msgid "Row Numbers"
+msgid "Line Numbers"
+msgstr "Brojevi redova"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkLatexTypesetting)
+#: src/kdefrontend/ui/settingsnotebookpage.ui:54
+#, fuzzy, kde-format
+#| msgid "Tree options"
+msgid "LaTeX Typesetting"
+msgstr "Opcije stabla"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkAnimations)
+#: src/kdefrontend/ui/settingsnotebookpage.ui:61
+#, fuzzy, kde-format
+#| msgid "iterations"
+msgid "Animations"
+msgstr "iteracije"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: src/kdefrontend/ui/settingsnotebookpage.ui:90
+#, fuzzy, kde-format
+#| msgid "Equation type"
+msgid "Evaluation"
+msgstr "Tip jednačine"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkReevaluateEntries)
+#: src/kdefrontend/ui/settingsnotebookpage.ui:97
+#, kde-format
+msgid "Re-evaluate entries automatically"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkAskConfirmation)
+#: src/kdefrontend/ui/settingsnotebookpage.ui:104
+#, kde-format
+msgid "Ask for confirmation when restarting"
+msgstr ""
+
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: src/kdefrontend/ui/settingsprintingpage.ui:16
 #, kde-format
@@ -21065,13 +21177,6 @@ msgstr "%1: postavi oznake"
 #| msgid "%1: set layout"
 msgid "Reset Layout"
 msgstr "%1: postavi raspored"
-
-#. i18n: ectx: property (text), widget (QLabel, lPresenterMode_2)
-#: src/kdefrontend/ui/settingsworksheetpage.ui:23
-#, fuzzy, kde-format
-#| msgid "Variance"
-msgid "Appearance"
-msgstr "Varijanca"
 
 #. i18n: ectx: property (text), widget (QLabel, lTheme)
 #: src/kdefrontend/ui/settingsworksheetpage.ui:30
@@ -22050,29 +22155,9 @@ msgid ""
 msgstr ""
 
 #, fuzzy
-#~| msgid "Row Numbers"
-#~ msgid "Line Numbers"
-#~ msgstr "Brojevi redova"
-
-#, fuzzy
 #~| msgid "Print worksheet"
 #~ msgid "Animate Worksheet"
 #~ msgstr "Ispiši radni list"
-
-#, fuzzy
-#~| msgid "Tree options"
-#~ msgid "LaTeX Typesetting"
-#~ msgstr "Opcije stabla"
-
-#, fuzzy
-#~| msgid "Height"
-#~ msgid "Syntax Highlighting"
-#~ msgstr "Visina"
-
-#, fuzzy
-#~| msgid "Data format"
-#~ msgid "Syntax Completion"
-#~ msgstr "Format podataka"
 
 #, fuzzy
 #~| msgid "Data format"
@@ -22288,11 +22373,6 @@ msgstr ""
 
 #~ msgid "Import"
 #~ msgstr "Uvezi"
-
-#, fuzzy
-#~| msgid "Form"
-#~ msgid "Form"
-#~ msgstr "Forma"
 
 #, fuzzy
 #~| msgid "%1: set symbol type"
@@ -22682,11 +22762,6 @@ msgstr ""
 #~| msgid "status"
 #~ msgid "status:"
 #~ msgstr "status:"
-
-#, fuzzy
-#~| msgid "iterations"
-#~ msgid "iterations:"
-#~ msgstr "iteracije"
 
 #, fuzzy
 #~| msgid "Tolerance"
