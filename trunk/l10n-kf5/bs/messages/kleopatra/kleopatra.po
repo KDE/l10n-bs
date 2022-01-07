@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgpgcertmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-06 00:45+0000\n"
+"POT-Creation-Date: 2022-01-07 00:44+0000\n"
 "PO-Revision-Date: 2015-01-09 11:46+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -1101,6 +1101,10 @@ msgstr "Nije u mogućnosti da otvori datoteku \"%1\" za čitanje"
 #: src/commands/exportgroupscommand.cpp:245
 #: src/commands/exportgroupscommand.cpp:253
 #: src/commands/exportgroupscommand.cpp:264
+#: src/commands/exportsecretsubkeycommand.cpp:241
+#: src/commands/exportsecretsubkeycommand.cpp:249
+#: src/commands/exportsecretsubkeycommand.cpp:260
+#: src/commands/exportsecretsubkeycommand.cpp:272
 #, fuzzy, kde-format
 #| msgid "Certificate Export Failed"
 msgctxt "@title:window"
@@ -1350,6 +1354,84 @@ msgstr ""
 msgctxt "@info"
 msgid "Failed to write data."
 msgstr "Ne mogu naći program gpgconf"
+
+#: src/commands/exportsecretsubkeycommand.cpp:79
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Subkeys"
+msgctxt "Generic filename for exported subkeys"
+msgid "subkeys"
+msgstr "Podključevi"
+
+#: src/commands/exportsecretsubkeycommand.cpp:90
+#, fuzzy, kde-format
+#| msgid "Export Secret Keys..."
+msgctxt "@title:window"
+msgid "Export Subkey"
+msgid_plural "Export Subkeys"
+msgstr[0] "Izvoz tajnih ključeva..."
+msgstr[1] "Izvoz tajnih ključeva..."
+msgstr[2] "Izvoz tajnih ključeva..."
+
+#: src/commands/exportsecretsubkeycommand.cpp:93
+#, fuzzy, kde-format
+#| msgid "Secret Key Files"
+msgctxt "description of filename filter"
+msgid "Secret Key Files"
+msgstr "Datoteke tajnih ključeva"
+
+#: src/commands/exportsecretsubkeycommand.cpp:222
+#, fuzzy, kde-format
+#| msgid "Export"
+msgctxt "@info:status"
+msgid "Exporting subkeys..."
+msgstr "Izvoz"
+
+#: src/commands/exportsecretsubkeycommand.cpp:240
+#, kde-format
+msgctxt "@info"
+msgid "The result of the export is empty."
+msgstr ""
+
+#: src/commands/exportsecretsubkeycommand.cpp:248
+#, fuzzy, kde-kuit-format
+#| msgid "Could not open file \"%1\" for reading"
+msgctxt "@info"
+msgid "Cannot open file <filename>%1</filename> for writing."
+msgstr "Nije u mogućnosti da otvori datoteku \"%1\" za čitanje"
+
+#: src/commands/exportsecretsubkeycommand.cpp:257
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Could not copy temporary file <filename>%1</filename> to file <filename>"
+#| "%2</filename>: <message>%3</message>"
+msgctxt "@info"
+msgid "Writing subkey to file <filename>%1</filename> failed."
+msgid_plural "Writing subkeys to file <filename>%1</filename> failed."
+msgstr[0] ""
+"Ne mogu kreirati privremenu datoteku <filename>%1</filename> u datoteku "
+"<filename>%2</filename>: <message>%3</message>"
+msgstr[1] ""
+"Ne mogu kreirati privremenu datoteku <filename>%1</filename> u datoteku "
+"<filename>%2</filename>: <message>%3</message>"
+msgstr[2] ""
+"Ne mogu kreirati privremenu datoteku <filename>%1</filename> u datoteku "
+"<filename>%2</filename>: <message>%3</message>"
+
+#: src/commands/exportsecretsubkeycommand.cpp:269
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>An error occurred while loading the certifications: <message>%1</"
+#| "message></para>"
+msgctxt "@info"
+msgid ""
+"<para>An error occurred during the export:</para><para><message>%1</"
+"message></para>"
+msgstr ""
+"<para>Greška se desila pri učitavanju certifikata: <message>%1</message></"
+"para>"
 
 #: src/commands/genrevokecommand.cpp:73
 #, fuzzy, kde-format
@@ -6493,41 +6575,47 @@ msgstr ""
 msgid "(optional) Set Initial PIN (SigG)"
 msgstr "Postavi početni PIN (SigG)"
 
-#: src/dialogs/subkeyswidget.cpp:68 src/view/keylistcontroller.cpp:424
+#: src/dialogs/subkeyswidget.cpp:79 src/view/keylistcontroller.cpp:424
 #, kde-format
 msgid "Change Expiry Date..."
 msgstr "Izmijeni datum isteka..."
 
-#: src/dialogs/subkeyswidget.cpp:88
+#: src/dialogs/subkeyswidget.cpp:99
 #, fuzzy, kde-format
 #| msgid "Export Secret Keys..."
 msgid "Export OpenSSH key"
 msgstr "Izvoz tajnih ključeva..."
 
-#: src/dialogs/subkeyswidget.cpp:99
+#: src/dialogs/subkeyswidget.cpp:110
 #, kde-format
 msgid "Restore printed backup"
 msgstr ""
 
-#: src/dialogs/subkeyswidget.cpp:113
+#: src/dialogs/subkeyswidget.cpp:124
 #, fuzzy, kde-format
 #| msgid "SmartCard"
 msgid "Transfer to smartcard"
 msgstr "PametnaKartica"
 
-#: src/dialogs/subkeyswidget.cpp:178
+#: src/dialogs/subkeyswidget.cpp:141
+#, fuzzy, kde-format
+#| msgid "Selected secret key:"
+msgid "Export secret subkey"
+msgstr "Odabrani tajni ključ:"
+
+#: src/dialogs/subkeyswidget.cpp:206
 #, kde-format
 msgctxt "stored..."
 msgid "on SmartCard with serial no. %1"
 msgstr "na pametnoj kartici serijskog broja %1"
 
-#: src/dialogs/subkeyswidget.cpp:180
+#: src/dialogs/subkeyswidget.cpp:208
 #, kde-format
 msgctxt "stored..."
 msgid "on this computer"
 msgstr "na ovom računaru"
 
-#: src/dialogs/subkeyswidget.cpp:196
+#: src/dialogs/subkeyswidget.cpp:224
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Subkeys"
@@ -10956,12 +11044,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Certifikat: %1\n"
 #~ "Otisak: %2"
-
-#, fuzzy
-#~| msgid "Selected secret key:"
-#~ msgctxt "@title"
-#~ msgid "Print secret key"
-#~ msgstr "Odabrani tajni ključ:"
 
 #~ msgid ""
 #~ "<p>You seem to be searching for a fingerPrint or a key-id.</"
