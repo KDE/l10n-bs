@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgpgcertmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-07 00:44+0000\n"
+"POT-Creation-Date: 2022-01-11 00:44+0000\n"
 "PO-Revision-Date: 2015-01-09 11:46+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -707,7 +707,7 @@ msgid ""
 msgstr "Uvezeni certifikati iz %1"
 
 #: src/commands/createcsrforcardkeycommand.cpp:208
-#: src/newcertificatewizard/newcertificatewizard.cpp:1073
+#: src/newcertificatewizard/newcertificatewizard.cpp:1080
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -718,21 +718,21 @@ msgstr ""
 "para><para>Trebate poslati zahtjev certifikacijskom Autoritetu (CA).</para>"
 
 #: src/commands/createcsrforcardkeycommand.cpp:211
-#: src/newcertificatewizard/newcertificatewizard.cpp:1076
+#: src/newcertificatewizard/newcertificatewizard.cpp:1083
 #, kde-format
 msgctxt "@title"
 msgid "Request Saved"
 msgstr "Zahtjev spašen"
 
 #: src/commands/createcsrforcardkeycommand.cpp:245
-#: src/newcertificatewizard/newcertificatewizard.cpp:1054
+#: src/newcertificatewizard/newcertificatewizard.cpp:1061
 #, kde-format
 msgctxt "@title"
 msgid "Save Request"
 msgstr "Snimanje zahtjeva"
 
 #: src/commands/createcsrforcardkeycommand.cpp:245
-#: src/newcertificatewizard/newcertificatewizard.cpp:1055
+#: src/newcertificatewizard/newcertificatewizard.cpp:1062
 #, kde-format
 msgid "PKCS#10 Requests (*.p10)"
 msgstr "PKCS#10 Zahtjevi (*.p10)"
@@ -751,7 +751,7 @@ msgstr ""
 "para>"
 
 #: src/commands/createcsrforcardkeycommand.cpp:254
-#: src/newcertificatewizard/newcertificatewizard.cpp:1069
+#: src/newcertificatewizard/newcertificatewizard.cpp:1076
 #, kde-format
 msgctxt "@title"
 msgid "Error Saving Request"
@@ -1104,7 +1104,7 @@ msgstr "Nije u mogućnosti da otvori datoteku \"%1\" za čitanje"
 #: src/commands/exportsecretsubkeycommand.cpp:241
 #: src/commands/exportsecretsubkeycommand.cpp:249
 #: src/commands/exportsecretsubkeycommand.cpp:260
-#: src/commands/exportsecretsubkeycommand.cpp:272
+#: src/commands/exportsecretsubkeycommand.cpp:279
 #, fuzzy, kde-format
 #| msgid "Certificate Export Failed"
 msgctxt "@title:window"
@@ -1290,7 +1290,7 @@ msgstr ""
 "icode> za detalje.</para>"
 
 #: src/commands/exportpaperkeycommand.cpp:121
-#: src/commands/exportsecretkeycommand.cpp:145
+#: src/commands/exportsecretkeycommand_old.cpp:137
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1300,31 +1300,120 @@ msgstr ""
 "<para>Desila se greška pri pokušaju izvoza tajnog ključa.</para> <para>Izlaz "
 "iz <command>%1</command> je bio: <message>%2</message></para>"
 
-#: src/commands/exportsecretkeycommand.cpp:80
+#: src/commands/exportsecretkeycommand.cpp:102
+#: src/commands/exportsecretkeycommand.cpp:104
+#: src/commands/exportsecretsubkeycommand.cpp:93
+#, fuzzy, kde-format
+#| msgid "Secret Key Files"
+msgctxt "description of filename filter"
+msgid "Secret Key Files"
+msgstr "Datoteke tajnih ključeva"
+
+#: src/commands/exportsecretkeycommand.cpp:107
+#, fuzzy, kde-format
+#| msgid "Any files"
+msgctxt "description of filename filter"
+msgid "All Files"
+msgstr "Bilo koja datoteka"
+
+#: src/commands/exportsecretkeycommand.cpp:115
+#: src/commands/exportsecretkeycommand.cpp:274
+#: src/commands/exportsecretsubkeycommand.cpp:269
+#, fuzzy, kde-format
+#| msgid "Secret Key Files"
+msgctxt "@title:window"
+msgid "Secret Key Backup"
+msgstr "Datoteke tajnih ključeva"
+
+#: src/commands/exportsecretkeycommand.cpp:133
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Secret Key Export Error"
+msgctxt "@title:window"
+msgid "Secret Key Backup Error"
+msgstr "Greška u izvozu tajnog ključa"
+
+#: src/commands/exportsecretkeycommand.cpp:233
+#, fuzzy, kde-format
+#| msgid "Export Secret Keys..."
+msgctxt "@info:status"
+msgid "Backing up secret key..."
+msgstr "Izvoz tajnih ključeva..."
+
+#: src/commands/exportsecretkeycommand.cpp:251
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The result of the backup is empty. Maybe you entered an empty or a wrong "
+"passphrase."
+msgstr ""
+
+#: src/commands/exportsecretkeycommand.cpp:259
+#: src/commands/exportsecretsubkeycommand.cpp:248
+#, fuzzy, kde-kuit-format
+#| msgid "Could not open file \"%1\" for reading"
+msgctxt "@info"
+msgid "Cannot open file <filename>%1</filename> for writing."
+msgstr "Nije u mogućnosti da otvori datoteku \"%1\" za čitanje"
+
+#: src/commands/exportsecretkeycommand.cpp:267
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Could not copy temporary file <filename>%1</filename> to file <filename>"
+#| "%2</filename>: <message>%3</message>"
+msgctxt "@info"
+msgid "Writing key to file <filename>%1</filename> failed."
+msgstr ""
+"Ne mogu kreirati privremenu datoteku <filename>%1</filename> u datoteku "
+"<filename>%2</filename>: <message>%3</message>"
+
+#: src/commands/exportsecretkeycommand.cpp:273
+#, fuzzy, kde-format
+#| msgid "Certificate created successfully."
+msgctxt "@info"
+msgid "The backup of the secret key was created successfully."
+msgstr "Certifikat napravljen uspješno."
+
+#: src/commands/exportsecretkeycommand.cpp:281
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>An error occurred while loading the certifications: <message>%1</"
+#| "message></para>"
+msgctxt "@info"
+msgid ""
+"<para>An error occurred during the backup of the secret key:</"
+"para><para><message>%1</message></para>"
+msgstr ""
+"<para>Greška se desila pri učitavanju certifikata: <message>%1</message></"
+"para>"
+
+#: src/commands/exportsecretkeycommand_old.cpp:72
 #, fuzzy, kde-format
 #| msgid "Export Secret Keys..."
 msgid "Backup Secret Key"
 msgstr "Izvoz tajnih ključeva..."
 
-#: src/commands/exportsecretkeycommand.cpp:84
-#: src/commands/exportsecretkeycommand.cpp:85
+#: src/commands/exportsecretkeycommand_old.cpp:76
+#: src/commands/exportsecretkeycommand_old.cpp:77
 #, kde-format
 msgid "Secret Key Files"
 msgstr "Datoteke tajnih ključeva"
 
-#: src/commands/exportsecretkeycommand.cpp:126
+#: src/commands/exportsecretkeycommand_old.cpp:118
 #, kde-format
 msgctxt "@title:window"
 msgid "Secret Key Export Error"
 msgstr "Greška u izvozu tajnog ključa"
 
-#: src/commands/exportsecretkeycommand.cpp:131
+#: src/commands/exportsecretkeycommand_old.cpp:123
 #, kde-format
 msgctxt "@title:window"
 msgid "Secret Key Export Finished"
 msgstr "Izvoz tajnog ključa završen"
 
-#: src/commands/exportsecretkeycommand.cpp:137
+#: src/commands/exportsecretkeycommand_old.cpp:129
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -1336,19 +1425,19 @@ msgstr ""
 "stao zbog neočekivane greške.</para><para>Pogledajte izlaz iz <icode>%1</"
 "icode> za detalje.</para>"
 
-#: src/commands/exportsecretkeycommand.cpp:155
+#: src/commands/exportsecretkeycommand_old.cpp:147
 #, kde-format
 msgctxt "@info"
 msgid "Secret key successfully exported."
 msgstr "Tajni ključ uspješno izvezen."
 
-#: src/commands/exportsecretkeycommand.cpp:163
+#: src/commands/exportsecretkeycommand_old.cpp:155
 #, kde-format
 msgctxt "@info"
 msgid "Possibly bad passphrase given."
 msgstr ""
 
-#: src/commands/exportsecretkeycommand.cpp:172
+#: src/commands/exportsecretkeycommand_old.cpp:164
 #, fuzzy, kde-format
 #| msgid "Could not find gpgconf executable"
 msgctxt "@info"
@@ -1373,13 +1462,6 @@ msgstr[0] "Izvoz tajnih ključeva..."
 msgstr[1] "Izvoz tajnih ključeva..."
 msgstr[2] "Izvoz tajnih ključeva..."
 
-#: src/commands/exportsecretsubkeycommand.cpp:93
-#, fuzzy, kde-format
-#| msgid "Secret Key Files"
-msgctxt "description of filename filter"
-msgid "Secret Key Files"
-msgstr "Datoteke tajnih ključeva"
-
 #: src/commands/exportsecretsubkeycommand.cpp:222
 #, fuzzy, kde-format
 #| msgid "Export"
@@ -1393,13 +1475,6 @@ msgctxt "@info"
 msgid "The result of the export is empty."
 msgstr ""
 
-#: src/commands/exportsecretsubkeycommand.cpp:248
-#, fuzzy, kde-kuit-format
-#| msgid "Could not open file \"%1\" for reading"
-msgctxt "@info"
-msgid "Cannot open file <filename>%1</filename> for writing."
-msgstr "Nije u mogućnosti da otvori datoteku \"%1\" za čitanje"
-
 #: src/commands/exportsecretsubkeycommand.cpp:257
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
@@ -1407,8 +1482,8 @@ msgstr "Nije u mogućnosti da otvori datoteku \"%1\" za čitanje"
 #| "Could not copy temporary file <filename>%1</filename> to file <filename>"
 #| "%2</filename>: <message>%3</message>"
 msgctxt "@info"
-msgid "Writing subkey to file <filename>%1</filename> failed."
-msgid_plural "Writing subkeys to file <filename>%1</filename> failed."
+msgid "Writing subkey to file <filename>%2</filename> failed."
+msgid_plural "Writing subkeys to file <filename>%2</filename> failed."
 msgstr[0] ""
 "Ne mogu kreirati privremenu datoteku <filename>%1</filename> u datoteku "
 "<filename>%2</filename>: <message>%3</message>"
@@ -1419,7 +1494,18 @@ msgstr[2] ""
 "Ne mogu kreirati privremenu datoteku <filename>%1</filename> u datoteku "
 "<filename>%2</filename>: <message>%3</message>"
 
-#: src/commands/exportsecretsubkeycommand.cpp:269
+#: src/commands/exportsecretsubkeycommand.cpp:266
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "OpenPGP certificates exported successfully."
+msgctxt "@info"
+msgid "The subkey was exported successfully."
+msgid_plural "%1 subkeys were exported successfully."
+msgstr[0] "OpenPGP certifikati uspješno izvezeni."
+msgstr[1] "OpenPGP certifikati uspješno izvezeni."
+msgstr[2] "OpenPGP certifikati uspješno izvezeni."
+
+#: src/commands/exportsecretsubkeycommand.cpp:276
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -5218,7 +5304,7 @@ msgid "Advanced"
 msgstr "Napredno"
 
 #: src/dialogs/addemaildialog.cpp:55 src/dialogs/adduseriddialog.cpp:51
-#: src/newcertificatewizard/newcertificatewizard.cpp:1302
+#: src/newcertificatewizard/newcertificatewizard.cpp:1309
 #, kde-format
 msgid "EMail"
 msgstr "Email"
@@ -5231,7 +5317,7 @@ msgstr ""
 
 #: src/dialogs/adduseriddialog.cpp:47
 #: src/dialogs/certificatedetailswidget.cpp:415
-#: src/newcertificatewizard/newcertificatewizard.cpp:1299
+#: src/newcertificatewizard/newcertificatewizard.cpp:1306
 #, kde-format
 msgid "Name"
 msgstr "Ime"
@@ -5243,7 +5329,7 @@ msgstr "Komentar"
 
 #: src/dialogs/adduseriddialog.cpp:67
 #: src/dialogs/certificatedetailsinputwidget.cpp:59
-#: src/newcertificatewizard/newcertificatewizard.cpp:1318
+#: src/newcertificatewizard/newcertificatewizard.cpp:1325
 #, kde-format
 msgctxt "Format string for the labels in the \"Your Personal Data\" page"
 msgid "%1 (%2)"
@@ -5251,7 +5337,7 @@ msgstr "%1 (%2)"
 
 #: src/dialogs/adduseriddialog.cpp:99
 #: src/dialogs/certificatedetailsinputwidget.cpp:70
-#: src/newcertificatewizard/newcertificatewizard.cpp:1406
+#: src/newcertificatewizard/newcertificatewizard.cpp:1413
 #, kde-format
 msgctxt "interpunctation for labels"
 msgid "%1:"
@@ -5263,21 +5349,21 @@ msgstr "%1:"
 #: src/dialogs/certificatedetailsinputwidget.cpp:84
 #: src/newcertificatewizard/enterdetailspage.ui:26
 #: src/newcertificatewizard/enterdetailspage.ui:43
-#: src/newcertificatewizard/newcertificatewizard.cpp:1408
+#: src/newcertificatewizard/newcertificatewizard.cpp:1415
 #, kde-format
 msgid "(required)"
 msgstr "(obavezno)"
 
 #: src/dialogs/adduseriddialog.cpp:101
 #: src/dialogs/certificatedetailsinputwidget.cpp:84
-#: src/newcertificatewizard/newcertificatewizard.cpp:1408
+#: src/newcertificatewizard/newcertificatewizard.cpp:1415
 #, kde-format
 msgid "(optional)"
 msgstr "(opcionalan)"
 
 #: src/dialogs/adduseriddialog.cpp:282
 #: src/dialogs/certificatedetailsinputwidget.cpp:112
-#: src/newcertificatewizard/newcertificatewizard.cpp:1584
+#: src/newcertificatewizard/newcertificatewizard.cpp:1591
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<interface>%1</interface> is required, but empty."
@@ -5285,7 +5371,7 @@ msgstr "<interface>%1</interface> je potrebno ali je prazno."
 
 #: src/dialogs/adduseriddialog.cpp:284
 #: src/dialogs/certificatedetailsinputwidget.cpp:114
-#: src/newcertificatewizard/newcertificatewizard.cpp:1586
+#: src/newcertificatewizard/newcertificatewizard.cpp:1593
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -5297,7 +5383,7 @@ msgstr ""
 
 #: src/dialogs/adduseriddialog.cpp:290
 #: src/dialogs/certificatedetailsinputwidget.cpp:120
-#: src/newcertificatewizard/newcertificatewizard.cpp:1592
+#: src/newcertificatewizard/newcertificatewizard.cpp:1599
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<interface>%1</interface> is incomplete."
@@ -5305,7 +5391,7 @@ msgstr "<interface>%1</interface> je nekompletno."
 
 #: src/dialogs/adduseriddialog.cpp:292
 #: src/dialogs/certificatedetailsinputwidget.cpp:122
-#: src/newcertificatewizard/newcertificatewizard.cpp:1594
+#: src/newcertificatewizard/newcertificatewizard.cpp:1601
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -5317,7 +5403,7 @@ msgstr ""
 
 #: src/dialogs/adduseriddialog.cpp:297
 #: src/dialogs/certificatedetailsinputwidget.cpp:127
-#: src/newcertificatewizard/newcertificatewizard.cpp:1599
+#: src/newcertificatewizard/newcertificatewizard.cpp:1606
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<interface>%1</interface> is invalid."
@@ -5325,7 +5411,7 @@ msgstr "<interface>%1</interface> je nevažeće."
 
 #: src/dialogs/adduseriddialog.cpp:299
 #: src/dialogs/certificatedetailsinputwidget.cpp:129
-#: src/newcertificatewizard/newcertificatewizard.cpp:1601
+#: src/newcertificatewizard/newcertificatewizard.cpp:1608
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -5458,7 +5544,7 @@ msgid "More details..."
 msgstr "Detalji..."
 
 #: src/dialogs/certificatedetailswidget.cpp:294
-#: src/view/keylistcontroller.cpp:354
+#: src/view/keylistcontroller.cpp:361
 #, fuzzy, kde-format
 #| msgid "Export"
 msgid "Export..."
@@ -5520,7 +5606,7 @@ msgid "Revoke this User ID"
 msgstr ""
 
 #: src/dialogs/certificatedetailswidget.cpp:625
-#: src/dialogs/weboftrustwidget.cpp:100 src/view/keylistcontroller.cpp:416
+#: src/dialogs/weboftrustwidget.cpp:100 src/view/keylistcontroller.cpp:423
 #, fuzzy, kde-format
 #| msgid "Certify..."
 msgid "Certify..."
@@ -5528,7 +5614,7 @@ msgstr "Certificirah..."
 
 #: src/dialogs/certificatedetailswidget.cpp:639
 #: src/dialogs/weboftrustwidget.cpp:115 src/dialogs/weboftrustwidget.cpp:142
-#: src/view/keylistcontroller.cpp:420
+#: src/view/keylistcontroller.cpp:427
 #, fuzzy, kde-format
 #| msgid "Revoke This Certificate..."
 msgid "Revoke Certification..."
@@ -5629,7 +5715,7 @@ msgid "Reload"
 msgstr "Ponovo učitaj"
 
 #: src/dialogs/certificateselectiondialog.cpp:166
-#: src/view/keylistcontroller.cpp:374 src/view/welcomewidget.cpp:71
+#: src/view/keylistcontroller.cpp:381 src/view/welcomewidget.cpp:71
 #, fuzzy, kde-format
 #| msgid "Import"
 msgid "Import..."
@@ -6468,7 +6554,7 @@ msgid "Show all test results"
 msgstr "Prikaži sve rezultate testova"
 
 #. i18n: ectx: property (title), widget (QGroupBox, detailsGB)
-#: src/dialogs/selftestdialog.ui:76 src/view/keylistcontroller.cpp:407
+#: src/dialogs/selftestdialog.ui:76 src/view/keylistcontroller.cpp:414
 #, kde-format
 msgid "Details"
 msgstr "Detalji"
@@ -6575,7 +6661,7 @@ msgstr ""
 msgid "(optional) Set Initial PIN (SigG)"
 msgstr "Postavi početni PIN (SigG)"
 
-#: src/dialogs/subkeyswidget.cpp:79 src/view/keylistcontroller.cpp:424
+#: src/dialogs/subkeyswidget.cpp:79 src/view/keylistcontroller.cpp:431
 #, kde-format
 msgid "Change Expiry Date..."
 msgstr "Izmijeni datum isteka..."
@@ -7767,13 +7853,13 @@ msgstr ""
 msgid "Ongoing Background Tasks"
 msgstr "Pozadinski zadaci u toku"
 
-#: src/mainwindow.cpp:651 src/view/keylistcontroller.cpp:382
+#: src/mainwindow.cpp:651 src/view/keylistcontroller.cpp:389
 #, kde-format
 msgid "Sign/Encrypt..."
 msgstr "Potpis/Šifrovanje..."
 
 #: src/mainwindow.cpp:652 src/utils/clipboardmenu.cpp:47
-#: src/view/keylistcontroller.cpp:378
+#: src/view/keylistcontroller.cpp:385
 #, kde-format
 msgid "Decrypt/Verify..."
 msgstr "Dešifrirati/Potvrditi..."
@@ -7796,7 +7882,7 @@ msgstr "Napredna podešavanja"
 
 #. i18n: ectx: attribute (title), widget (QWidget, technicalTab)
 #: src/newcertificatewizard/advancedsettingsdialog.ui:21
-#: src/view/keylistcontroller.cpp:461
+#: src/view/keylistcontroller.cpp:468
 #, kde-format
 msgid "Technical Details"
 msgstr "Tehnički detalji"
@@ -7870,7 +7956,7 @@ msgstr "Provjera autentičnosti"
 
 #. i18n: ectx: attribute (title), widget (QWidget, personalTab)
 #: src/newcertificatewizard/advancedsettingsdialog.ui:250
-#: src/newcertificatewizard/newcertificatewizard.cpp:1898
+#: src/newcertificatewizard/newcertificatewizard.cpp:1905
 #, kde-format
 msgid "Personal Details"
 msgstr "Lični detalji"
@@ -8019,22 +8105,22 @@ msgid ""
 "may require several minutes..."
 msgstr ""
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:430
+#: src/newcertificatewizard/newcertificatewizard.cpp:437
 #, kde-format
 msgid "new email"
 msgstr "nova e-pošta"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:431
+#: src/newcertificatewizard/newcertificatewizard.cpp:438
 #, kde-format
 msgid "new dns name"
 msgstr "novo dns ime"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:432
+#: src/newcertificatewizard/newcertificatewizard.cpp:439
 #, kde-format
 msgid "new uri"
 msgstr "novi uri"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:789
+#: src/newcertificatewizard/newcertificatewizard.cpp:796
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Create Key"
@@ -8042,24 +8128,24 @@ msgctxt "@action"
 msgid "Create"
 msgstr "Napravi ključ"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:882
+#: src/newcertificatewizard/newcertificatewizard.cpp:889
 #, fuzzy, kde-format
 #| msgid "Could not start certificate creation: %1"
 msgid "Could not start key pair creation: %1"
 msgstr "Nije u moućnosti da pokrene kreaciju certifikata: %1"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:899
+#: src/newcertificatewizard/newcertificatewizard.cpp:906
 #, kde-format
 msgid "Operation canceled."
 msgstr "Operacija otkazana."
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:900
+#: src/newcertificatewizard/newcertificatewizard.cpp:907
 #, fuzzy, kde-format
 #| msgid "Could not create socket: %1"
 msgid "Could not create key pair: %1"
 msgstr "Ne mogu kreirati soket: %1"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:907
+#: src/newcertificatewizard/newcertificatewizard.cpp:914
 #, fuzzy, kde-format
 #| msgid ""
 #| "Certificate created successfully.\n"
@@ -8071,35 +8157,35 @@ msgstr ""
 "Certifikate kreiran uspješno.\n"
 "Otisak: %1"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:913
+#: src/newcertificatewizard/newcertificatewizard.cpp:920
 #, kde-format
 msgid "Could not write output file %1: %2"
 msgstr "Ne može se pisati u  izlaznu datoteku %1: %2"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:921
+#: src/newcertificatewizard/newcertificatewizard.cpp:928
 #, fuzzy, kde-format
 #| msgid "Certificate created successfully."
 msgid "Key pair created successfully."
 msgstr "Certifikat napravljen uspješno."
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:989
+#: src/newcertificatewizard/newcertificatewizard.cpp:996
 #, kde-format
 msgctxt "@title"
 msgid "Key Creation Failed"
 msgstr "Neuspjelo kreiranje ključa"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:990
+#: src/newcertificatewizard/newcertificatewizard.cpp:997
 #, kde-format
 msgid "Key pair creation failed. Please find details about the failure below."
 msgstr "Neuspjelo kreiranje para ključeva. Molim nađite detalje o neuspjehu."
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:992
+#: src/newcertificatewizard/newcertificatewizard.cpp:999
 #, kde-format
 msgctxt "@title"
 msgid "Key Pair Successfully Created"
 msgstr "Uspjelo kreiranje para ključeva"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:993
+#: src/newcertificatewizard/newcertificatewizard.cpp:1000
 #, kde-format
 msgid ""
 "Your new key pair was created successfully. Please find details on the "
@@ -8108,7 +8194,7 @@ msgstr ""
 "Vaš novi par ključeva je uspješno kreiran. Molim nađite detalje o rezultatu "
 "i neke predložene korake."
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1066
+#: src/newcertificatewizard/newcertificatewizard.cpp:1073
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -8118,12 +8204,12 @@ msgstr ""
 "Ne mogu kreirati privremenu datoteku <filename>%1</filename> u datoteku "
 "<filename>%2</filename>: <message>%3</message>"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1086
+#: src/newcertificatewizard/newcertificatewizard.cpp:1093
 #, kde-format
 msgid "Please process this certificate."
 msgstr "Molimo obradite ovaj certifikat."
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1087
+#: src/newcertificatewizard/newcertificatewizard.cpp:1094
 #, kde-format
 msgid ""
 "Please process this certificate and inform the sender about the location to "
@@ -8136,19 +8222,19 @@ msgstr ""
 "\n"
 "Hvala,\n"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1116
+#: src/newcertificatewizard/newcertificatewizard.cpp:1123
 #, fuzzy, kde-format
 #| msgid "My new OpenPGP certificate"
 msgid "My new public OpenPGP key"
 msgstr "Moja novi OpenPGP certifikat"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1117
+#: src/newcertificatewizard/newcertificatewizard.cpp:1124
 #, fuzzy, kde-format
 #| msgid "Please find attached my new OpenPGP certificate."
 msgid "Please find attached my new public OpenPGP key."
 msgstr "Molim nađite priložen moj novi OpenPGP certifikat."
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1153
+#: src/newcertificatewizard/newcertificatewizard.cpp:1160
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -8168,13 +8254,13 @@ msgstr ""
 "za sastavljanje poruke vašeg kllijenta elektronske pošte.</para><para>Ako "
 "ovo ne radi, snimite zahtjev nad datotekom i priložit to.</para>"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1157
+#: src/newcertificatewizard/newcertificatewizard.cpp:1164
 #, kde-format
 msgctxt "@title"
 msgid "Sending Mail"
 msgstr "Slanje pošte"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1205
+#: src/newcertificatewizard/newcertificatewizard.cpp:1212
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -8184,13 +8270,13 @@ msgstr ""
 "Ova operacija će izbrisati zahtjev za sertifikat. Proverite da li ste ga "
 "poslali ili sačuvali prije nego što nastavite."
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1207
+#: src/newcertificatewizard/newcertificatewizard.cpp:1214
 #, kde-format
 msgctxt "@title"
 msgid "Certification Request About To Be Deleted"
 msgstr "Zahtjev za certifikatom pred brisanjem"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1241
+#: src/newcertificatewizard/newcertificatewizard.cpp:1248
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Certificate Creation Wizard"
@@ -8198,7 +8284,7 @@ msgctxt "@title:window"
 msgid "Key Pair Creation Wizard"
 msgstr "Čarobnjak za stvaranje sertifikata"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1740
+#: src/newcertificatewizard/newcertificatewizard.cpp:1747
 #, kde-format
 msgctxt "%2: some admin-supplied text, %1: key size in bits"
 msgid "%2 (1 bit)"
@@ -8207,7 +8293,7 @@ msgstr[0] "%2 (%1 bit)"
 msgstr[1] "%2 (%1 bita)"
 msgstr[2] "%2 (%1 bitova)"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1741
+#: src/newcertificatewizard/newcertificatewizard.cpp:1748
 #, kde-format
 msgctxt "%1: key size in bits"
 msgid "1 bit"
@@ -8216,7 +8302,7 @@ msgstr[0] "%1 bit"
 msgstr[1] "%1 bita"
 msgstr[2] "%1 bitova"
 
-#: src/newcertificatewizard/newcertificatewizard.cpp:1903
+#: src/newcertificatewizard/newcertificatewizard.cpp:1910
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Adding more than one User ID is not yet implemented."
@@ -9559,175 +9645,175 @@ msgstr "Ne mogu ukloniti datoteku %1: %2"
 msgid "Loading certificate cache..."
 msgstr "Učitavanje keša certifikata..."
 
-#: src/view/keylistcontroller.cpp:350 src/view/welcomewidget.cpp:67
+#: src/view/keylistcontroller.cpp:357 src/view/welcomewidget.cpp:67
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Create Key"
 msgid "New Key Pair..."
 msgstr "Napravi ključ"
 
-#: src/view/keylistcontroller.cpp:354
+#: src/view/keylistcontroller.cpp:361
 #, kde-format
 msgid "Export the selected certificate (public key) to a file"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:358
+#: src/view/keylistcontroller.cpp:365
 #, fuzzy, kde-format
 #| msgid "Lookup Certificates on Server..."
 msgid "Publish on Server..."
 msgstr "Pregled certifikata na serveru..."
 
-#: src/view/keylistcontroller.cpp:358
+#: src/view/keylistcontroller.cpp:365
 #, kde-format
 msgid "Publish the selected certificate (public key) on a public keyserver"
 msgstr ""
 
-#: src/view/keylistcontroller.cpp:362
+#: src/view/keylistcontroller.cpp:369
 #, fuzzy, kde-format
 #| msgid "Export Secret Keys..."
 msgid "Backup Secret Keys..."
 msgstr "Izvoz tajnih ključeva..."
 
-#: src/view/keylistcontroller.cpp:366
+#: src/view/keylistcontroller.cpp:373
 #, fuzzy, kde-format
 #| msgid "Export Secret Keys..."
 msgid "Print Secret Key..."
 msgstr "Izvoz tajnih ključeva..."
 
-#: src/view/keylistcontroller.cpp:370
+#: src/view/keylistcontroller.cpp:377
 #, fuzzy, kde-format
 #| msgid "Lookup Certificates on Server..."
 msgid "Lookup on Server..."
 msgstr "Pregled certifikata na serveru..."
 
-#: src/view/keylistcontroller.cpp:370
+#: src/view/keylistcontroller.cpp:377
 #, fuzzy, kde-format
 #| msgid "Search for Certificate by fingerprint"
 msgid "Search for certificates online using a public keyserver"
 msgstr "Potraži certifikat putem otiska prsta"
 
-#: src/view/keylistcontroller.cpp:374
+#: src/view/keylistcontroller.cpp:381
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Imported Certificates from %1"
 msgid "Import a certificate from a file"
 msgstr "Uvezeni certifikati iz %1"
 
-#: src/view/keylistcontroller.cpp:378
+#: src/view/keylistcontroller.cpp:385
 #, fuzzy, kde-format
 #| msgid "Decrypt and/or verify file(s)"
 msgid "Decrypt and/or verify files"
 msgstr "Dešifriraj i/ili ovjeri datoteku(e)"
 
-#: src/view/keylistcontroller.cpp:382
+#: src/view/keylistcontroller.cpp:389
 #, fuzzy, kde-format
 #| msgid "Decrypt and/or verify file(s)"
 msgid "Encrypt and/or sign files"
 msgstr "Dešifriraj i/ili ovjeri datoteku(e)"
 
-#: src/view/keylistcontroller.cpp:386
+#: src/view/keylistcontroller.cpp:393
 #, fuzzy, kde-format
 #| msgid "Sign/Encrypt Files..."
 msgid "Sign/Encrypt Folder..."
 msgstr "Potpiši/kriptuj datoteke..."
 
-#: src/view/keylistcontroller.cpp:386
+#: src/view/keylistcontroller.cpp:393
 #, fuzzy, kde-format
 #| msgid "Decrypt and/or verify file(s)"
 msgid "Encrypt and/or sign folders"
 msgstr "Dešifriraj i/ili ovjeri datoteku(e)"
 
-#: src/view/keylistcontroller.cpp:390
+#: src/view/keylistcontroller.cpp:397
 #, kde-format
 msgid "Create Checksum Files..."
 msgstr "Kreiraj datoteke kontrolnih suma..."
 
-#: src/view/keylistcontroller.cpp:394
+#: src/view/keylistcontroller.cpp:401
 #, kde-format
 msgid "Verify Checksum Files..."
 msgstr "Provjeri datoteke kontrolnih suma..."
 
-#: src/view/keylistcontroller.cpp:399
+#: src/view/keylistcontroller.cpp:406
 #, kde-format
 msgid "Redisplay"
 msgstr "Ponovo prikaži"
 
-#: src/view/keylistcontroller.cpp:403
+#: src/view/keylistcontroller.cpp:410
 #, kde-format
 msgid "Stop Operation"
 msgstr "Zaustavi operaciju"
 
-#: src/view/keylistcontroller.cpp:412
+#: src/view/keylistcontroller.cpp:419
 #, kde-format
 msgid "Delete"
 msgstr "Obriši"
 
-#: src/view/keylistcontroller.cpp:412
+#: src/view/keylistcontroller.cpp:419
 #, fuzzy, kde-format
 #| msgid "Please select a certificate"
 msgid "Delete selected certificates"
 msgstr "Molim odaberite certifikat"
 
-#: src/view/keylistcontroller.cpp:416
+#: src/view/keylistcontroller.cpp:423
 #, fuzzy, kde-format
 #| msgid "The validity of the signature cannot be verified."
 msgid "Certify the validity of the selected certificate"
 msgstr "Ispravnost potpisa ne može biti potvrđena."
 
-#: src/view/keylistcontroller.cpp:420
+#: src/view/keylistcontroller.cpp:427
 #, fuzzy, kde-format
 #| msgid "The validity of the signature cannot be verified."
 msgid "Revoke the certification of the selected certificate"
 msgstr "Ispravnost potpisa ne može biti potvrđena."
 
-#: src/view/keylistcontroller.cpp:428
+#: src/view/keylistcontroller.cpp:435
 #, fuzzy, kde-format
 #| msgid "Change Owner Trust..."
 msgid "Change Certification Trust..."
 msgstr "Promijeni vlasničko povjerenje..."
 
-#: src/view/keylistcontroller.cpp:432
+#: src/view/keylistcontroller.cpp:439
 #, kde-format
 msgid "Change Passphrase..."
 msgstr "Izmijeni lozinku..."
 
-#: src/view/keylistcontroller.cpp:436
+#: src/view/keylistcontroller.cpp:443
 #, kde-format
 msgid "Add User-ID..."
 msgstr "Dodaj korisnički-ID..."
 
-#: src/view/keylistcontroller.cpp:441
+#: src/view/keylistcontroller.cpp:448
 #, kde-format
 msgid "Refresh OpenPGP Certificates"
 msgstr "Osvježi OpenPGP certifikate"
 
-#: src/view/keylistcontroller.cpp:453
+#: src/view/keylistcontroller.cpp:460
 #, kde-format
 msgid "Trust Root Certificate"
 msgstr "Vjeruj korijenskom certifikatu"
 
-#: src/view/keylistcontroller.cpp:457
+#: src/view/keylistcontroller.cpp:464
 #, kde-format
 msgid "Distrust Root Certificate"
 msgstr "Ne vjeruj korijenskom certifikatu"
 
-#: src/view/keylistcontroller.cpp:466
+#: src/view/keylistcontroller.cpp:473
 #, fuzzy, kde-format
 #| msgid "S/MIME Certificates"
 msgid "Refresh S/MIME Certificates"
 msgstr "S/MIME certifikati"
 
-#: src/view/keylistcontroller.cpp:470
+#: src/view/keylistcontroller.cpp:477
 #, kde-format
 msgid "Clear CRL Cache"
 msgstr "Očisti CRL keš"
 
-#: src/view/keylistcontroller.cpp:474
+#: src/view/keylistcontroller.cpp:481
 #, kde-format
 msgid "Dump CRL Cache"
 msgstr "Izdvoji CRL keš"
 
-#: src/view/keylistcontroller.cpp:478
+#: src/view/keylistcontroller.cpp:485
 #, kde-format
 msgid "Import CRL From File..."
 msgstr "Uvezi CRL iz datoteke..."
