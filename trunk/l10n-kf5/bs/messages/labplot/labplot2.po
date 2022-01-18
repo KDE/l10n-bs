@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LabPlot\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-17 00:39+0000\n"
+"POT-Creation-Date: 2022-01-18 00:40+0000\n"
 "PO-Revision-Date: 2015-02-25 20:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -623,7 +623,7 @@ msgstr "Veličina"
 #. i18n: ectx: property (text), widget (QCheckBox, chkVisible)
 #. i18n: ectx: property (text), widget (QCheckBox, chbSymbolVisible)
 #: labelwidget_marker.ui:572 src/backend/worksheet/Image.cpp:123
-#: src/backend/worksheet/InfoElement.cpp:150
+#: src/backend/worksheet/InfoElement.cpp:151
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:201
 #: src/backend/worksheet/plots/cartesian/BoxPlot.cpp:154
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:509
@@ -815,7 +815,7 @@ msgid "Couldn't find panel plugins. Please check your installation."
 msgstr ""
 
 #: src/backend/cantorWorksheet/CantorWorksheet.cpp:406
-#: src/backend/core/column/Column.cpp:1355
+#: src/backend/core/column/Column.cpp:1402
 #: src/backend/datapicker/DatapickerCurve.cpp:437
 #: src/backend/datapicker/DatapickerImage.cpp:474
 #: src/backend/datapicker/DatapickerPoint.cpp:480
@@ -827,7 +827,7 @@ msgstr ""
 #: src/backend/datasources/MQTTClient.cpp:1205
 #: src/backend/datasources/MQTTTopic.cpp:219 src/backend/matrix/Matrix.cpp:1122
 #: src/backend/note/Note.cpp:137 src/backend/worksheet/Image.cpp:471
-#: src/backend/worksheet/InfoElement.cpp:1115
+#: src/backend/worksheet/InfoElement.cpp:1117
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:2796
 #: src/backend/worksheet/plots/cartesian/BoxPlot.cpp:1712
 #: src/backend/worksheet/plots/cartesian/CartesianPlot.cpp:5100
@@ -851,7 +851,7 @@ msgstr ""
 #: src/backend/worksheet/plots/cartesian/XYInterpolationCurve.cpp:474
 #: src/backend/worksheet/plots/cartesian/XYSmoothCurve.cpp:314
 #: src/backend/worksheet/plots/PlotArea.cpp:454
-#: src/backend/worksheet/TextLabel.cpp:1041
+#: src/backend/worksheet/TextLabel.cpp:1042
 #: src/backend/worksheet/Worksheet.cpp:1622
 #: src/backend/worksheet/WorksheetElement.cpp:441
 #: src/commonfrontend/ProjectExplorer.cpp:976
@@ -863,7 +863,7 @@ msgstr ""
 
 #: src/backend/cantorWorksheet/CantorWorksheet.cpp:457
 #: src/backend/core/AbstractSimpleFilter.cpp:359
-#: src/backend/core/column/Column.cpp:1463 src/backend/core/Folder.cpp:148
+#: src/backend/core/column/Column.cpp:1531 src/backend/core/Folder.cpp:148
 #: src/backend/core/Project.cpp:684
 #: src/backend/datapicker/DatapickerCurve.cpp:594
 #: src/backend/datapicker/DatapickerImage.cpp:715
@@ -872,14 +872,14 @@ msgstr ""
 #: src/backend/datasources/MQTTClient.cpp:1381
 #: src/backend/datasources/MQTTSubscription.cpp:168
 #: src/backend/datasources/MQTTTopic.cpp:284 src/backend/matrix/Matrix.cpp:1275
-#: src/backend/spreadsheet/Spreadsheet.cpp:888
+#: src/backend/spreadsheet/Spreadsheet.cpp:889
 #: src/backend/worksheet/Image.cpp:507
 #: src/backend/worksheet/plots/cartesian/Axis.cpp:2931
 #: src/backend/worksheet/plots/cartesian/BoxPlot.cpp:1830
 #: src/backend/worksheet/plots/cartesian/CustomPoint.cpp:328
 #: src/backend/worksheet/plots/cartesian/ReferenceLine.cpp:432
 #: src/backend/worksheet/plots/PlotArea.cpp:557
-#: src/backend/worksheet/TextLabel.cpp:1106
+#: src/backend/worksheet/TextLabel.cpp:1107
 #: src/backend/worksheet/Worksheet.cpp:1761
 #, kde-format
 msgid "unknown element '%1'"
@@ -1367,14 +1367,14 @@ msgstr "&Selektovane Kolone"
 msgid "%1: change column type"
 msgstr "%1: promijeni tip kolone"
 
-#: src/backend/core/column/Column.cpp:1582
+#: src/backend/core/column/Column.cpp:1667
 #, kde-format
 msgid "invalid or missing row index"
 msgstr "pogrešan ili nedostaje indeks reda"
 
-#: src/backend/core/column/Column.cpp:1591
-#: src/backend/core/column/Column.cpp:1600
-#: src/backend/core/column/Column.cpp:1609
+#: src/backend/core/column/Column.cpp:1676
+#: src/backend/core/column/Column.cpp:1685
+#: src/backend/core/column/Column.cpp:1694
 #, kde-format
 msgid "invalid row value"
 msgstr "pogrešna vrijednost reda"
@@ -1412,28 +1412,19 @@ msgstr "%1: postavi formulu za ćeliju"
 msgid "%1: clear all formulas"
 msgstr "%1: obriši sve formule"
 
-#: src/backend/core/column/columncommands.cpp:825
-#, kde-format
-msgid "%1: set text for row %2"
-msgstr "%1: postavi tekst za red %2"
-
-#: src/backend/core/column/columncommands.cpp:881
-#: src/backend/core/column/columncommands.cpp:910
-#: src/backend/core/column/columncommands.cpp:939
-#: src/backend/core/column/columncommands.cpp:995
+#: src/backend/core/column/columncommands.h:221
 #, kde-format
 msgid "%1: set value for row %2"
 msgstr "%1: postavi vrijednost za red %2"
 
-#: src/backend/core/column/columncommands.cpp:1056
-#, kde-format
-msgid "%1: replace the texts for rows %2 to %3"
-msgstr "%1: zamijeni tekstove za redove %2 i %3"
+#: src/backend/core/column/columncommands.h:275
+#: src/backend/matrix/matrixcommands.cpp:91
+#, fuzzy, kde-format
+#| msgid "%1: rotate values"
+msgid "%1: replace values"
+msgstr "%1: rotiraj vrijednosti"
 
-#: src/backend/core/column/columncommands.cpp:1120
-#: src/backend/core/column/columncommands.cpp:1151
-#: src/backend/core/column/columncommands.cpp:1182
-#: src/backend/core/column/columncommands.cpp:1246
+#: src/backend/core/column/columncommands.h:277
 #, kde-format
 msgid "%1: replace the values for rows %2 to %3"
 msgstr "%1: zamijeni vrijednosti za redove %2 i %3"
@@ -1569,7 +1560,7 @@ msgstr "nije pronađen element projekta"
 msgid "no valid XML document found"
 msgstr "nije pronađen validan XML dokument"
 
-#: src/backend/core/Project.cpp:950
+#: src/backend/core/Project.cpp:954
 #, kde-format
 msgid "Invalid project modification time. Using current time."
 msgstr "Pogrešno vrijeme modificiranja projekta. Koristiti trenutno vrijeme."
@@ -1722,7 +1713,7 @@ msgstr "%1: postavi grešku bar stila"
 
 #: src/backend/datapicker/DatapickerCurve.cpp:295
 #: src/backend/datapicker/DatapickerImage.cpp:269
-#: src/backend/worksheet/InfoElement.cpp:750
+#: src/backend/worksheet/InfoElement.cpp:752
 #: src/backend/worksheet/WorksheetElement.cpp:135
 #: src/backend/worksheet/WorksheetElementContainer.cpp:69
 #: src/backend/worksheet/WorksheetElementContainer.cpp:70
@@ -1789,7 +1780,7 @@ msgid "%1: remove all axis points"
 msgstr "%1: postavi osnu poziciju"
 
 #: src/backend/datapicker/DatapickerPoint.cpp:211
-#: src/backend/worksheet/InfoElement.cpp:720
+#: src/backend/worksheet/InfoElement.cpp:722
 #: src/backend/worksheet/WorksheetElement.cpp:559
 #, kde-format
 msgid "%1: set position"
@@ -5993,12 +5984,6 @@ msgstr[2] "%1: umetni %2 redova"
 msgid "%1: set matrix coordinates"
 msgstr "%1: postavi koordinate matrice"
 
-#: src/backend/matrix/matrixcommands.cpp:91
-#, fuzzy, kde-format
-#| msgid "%1: rotate values"
-msgid "%1: replace values"
-msgstr "%1: rotiraj vrijednosti"
-
 #: src/backend/matrix/matrixcommands.h:53
 #, kde-format
 msgid "%1: remove %2 column"
@@ -7031,7 +7016,7 @@ msgstr "%1: pomjeri kolonu %2 sa pozicije %3 na %4."
 msgid "%1: sort columns"
 msgstr "%1: sortiraj kolone"
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:1080
+#: src/backend/spreadsheet/Spreadsheet.cpp:1081
 #, fuzzy, kde-format
 #| msgid "numerical data, %1 element"
 #| msgid_plural "numerical data, %1 elements"
@@ -7041,7 +7026,7 @@ msgstr[0] "numerički podatak, %1 element"
 msgstr[1] "numerički podatak, %1 elementa"
 msgstr[2] "numerički podatak, %1 elemenata"
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:1083
+#: src/backend/spreadsheet/Spreadsheet.cpp:1084
 #, fuzzy, kde-format
 #| msgid "numerical data, %1 element"
 #| msgid_plural "numerical data, %1 elements"
@@ -7051,7 +7036,7 @@ msgstr[0] "numerički podatak, %1 element"
 msgstr[1] "numerički podatak, %1 elementa"
 msgstr[2] "numerički podatak, %1 elemenata"
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:1086
+#: src/backend/spreadsheet/Spreadsheet.cpp:1087
 #, fuzzy, kde-format
 #| msgid "numerical data, %1 element"
 #| msgid_plural "numerical data, %1 elements"
@@ -7061,7 +7046,7 @@ msgstr[0] "numerički podatak, %1 element"
 msgstr[1] "numerički podatak, %1 elementa"
 msgstr[2] "numerički podatak, %1 elemenata"
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:1089
+#: src/backend/spreadsheet/Spreadsheet.cpp:1090
 #, fuzzy, kde-format
 #| msgid "numerical data, %1 element"
 #| msgid_plural "numerical data, %1 elements"
@@ -7071,7 +7056,7 @@ msgstr[0] "numerički podatak, %1 element"
 msgstr[1] "numerički podatak, %1 elementa"
 msgstr[2] "numerički podatak, %1 elemenata"
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:1092
+#: src/backend/spreadsheet/Spreadsheet.cpp:1093
 #, fuzzy, kde-format
 #| msgid "numerical data, %1 element"
 #| msgid_plural "numerical data, %1 elements"
@@ -7081,7 +7066,7 @@ msgstr[0] "numerički podatak, %1 element"
 msgstr[1] "numerički podatak, %1 elementa"
 msgstr[2] "numerički podatak, %1 elemenata"
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:1095
+#: src/backend/spreadsheet/Spreadsheet.cpp:1096
 #, fuzzy, kde-format
 #| msgid "numerical data, %1 element"
 #| msgid_plural "numerical data, %1 elements"
@@ -7091,7 +7076,7 @@ msgstr[0] "numerički podatak, %1 element"
 msgstr[1] "numerički podatak, %1 elementa"
 msgstr[2] "numerički podatak, %1 elemenata"
 
-#: src/backend/spreadsheet/Spreadsheet.cpp:1098
+#: src/backend/spreadsheet/Spreadsheet.cpp:1099
 #, fuzzy, kde-format
 #| msgid "numerical data, %1 element"
 #| msgid_plural "numerical data, %1 elements"
@@ -7133,7 +7118,7 @@ msgstr "%1: postavi ugao rotacije"
 #: src/backend/worksheet/Image.cpp:165 src/backend/worksheet/Image.cpp:205
 #: src/backend/worksheet/plots/cartesian/BoxPlot.cpp:454
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:315
-#: src/backend/worksheet/TextLabel.cpp:344
+#: src/backend/worksheet/TextLabel.cpp:345
 #, kde-format
 msgid "%1: set border opacity"
 msgstr "%1: postavi prozirnost linije"
@@ -7156,7 +7141,7 @@ msgstr "%1: postavi ugao rotacije"
 msgid "%1: change keep ratio"
 msgstr "%1: postavi geometrijski rect"
 
-#: src/backend/worksheet/Image.cpp:198 src/backend/worksheet/TextLabel.cpp:337
+#: src/backend/worksheet/Image.cpp:198 src/backend/worksheet/TextLabel.cpp:338
 #, fuzzy, kde-format
 #| msgid "%1: set border style"
 msgid "%1: set border"
@@ -7169,8 +7154,8 @@ msgid "Failed to read image data"
 msgstr "Otvaranje neuspješno"
 
 #. i18n: ectx: property (text), widget (QTableWidget, twLabels)
-#: src/backend/worksheet/InfoElement.cpp:133
-#: src/backend/worksheet/InfoElement.cpp:1154
+#: src/backend/worksheet/InfoElement.cpp:134
+#: src/backend/worksheet/InfoElement.cpp:1156
 #: src/kdefrontend/ui/dockwidgets/columndock.ui:196
 #, fuzzy, kde-format
 #| msgid "Labels"
@@ -7178,7 +7163,7 @@ msgid "Label"
 msgstr "Oznake"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabSymbol)
-#: src/backend/worksheet/InfoElement.cpp:253
+#: src/backend/worksheet/InfoElement.cpp:255
 #: src/kdefrontend/ui/dockwidgets/custompointdock.ui:237
 #: src/kdefrontend/ui/dockwidgets/histogramdock.ui:470
 #: src/kdefrontend/ui/dockwidgets/xycurvedock.ui:353
@@ -7186,37 +7171,37 @@ msgstr "Oznake"
 msgid "Symbol"
 msgstr "Simbol"
 
-#: src/backend/worksheet/InfoElement.cpp:736
+#: src/backend/worksheet/InfoElement.cpp:738
 #, fuzzy, kde-format
 #| msgid "%1: set TeX font size"
 msgid "%1: set gluepoint index"
 msgstr "%1: postavi TeX veličinu fonta"
 
-#: src/backend/worksheet/InfoElement.cpp:743
+#: src/backend/worksheet/InfoElement.cpp:745
 #, fuzzy, kde-format
 #| msgid "%1: set font color"
 msgid "%1: set connectionline curve name"
 msgstr "%1: postavi boju fonta"
 
-#: src/backend/worksheet/InfoElement.cpp:758
+#: src/backend/worksheet/InfoElement.cpp:760
 #, fuzzy, kde-format
 #| msgid "%1: set vertical alignment"
 msgid "%1: set vertical line style"
 msgstr "%1: postavi vertikalno poravnanje"
 
-#: src/backend/worksheet/InfoElement.cpp:765
+#: src/backend/worksheet/InfoElement.cpp:767
 #, fuzzy, kde-format
 #| msgid "%1: set vertical alignment"
 msgid "%1: set vertical line opacity"
 msgstr "%1: postavi vertikalno poravnanje"
 
-#: src/backend/worksheet/InfoElement.cpp:773
+#: src/backend/worksheet/InfoElement.cpp:775
 #, fuzzy, kde-format
 #| msgid "%1: set invisible"
 msgid "%1: set connection line style"
 msgstr "%1: postavi nevidljivo"
 
-#: src/backend/worksheet/InfoElement.cpp:780
+#: src/backend/worksheet/InfoElement.cpp:782
 #, fuzzy, kde-format
 #| msgid "%1: set width"
 msgid "%1: set connection line opacity"
@@ -8475,7 +8460,7 @@ msgid "%1: set font"
 msgstr "%1: postavi font"
 
 #: src/backend/worksheet/plots/cartesian/CartesianPlotLegend.cpp:222
-#: src/backend/worksheet/TextLabel.cpp:315
+#: src/backend/worksheet/TextLabel.cpp:316
 #, kde-format
 msgid "%1: set font color"
 msgstr "%1: postavi boju fonta"
@@ -9516,31 +9501,31 @@ msgstr "%1: postavi granice za područje u kojem se crta"
 msgid "%1: set plot area border opacity"
 msgstr "%1: postavi linijsku providnost za područje u kojem se crta"
 
-#: src/backend/worksheet/TextLabel.cpp:285
-#: src/backend/worksheet/TextLabel.cpp:287
+#: src/backend/worksheet/TextLabel.cpp:286
+#: src/backend/worksheet/TextLabel.cpp:288
 #, kde-format
 msgid "%1: set label text"
 msgstr "%1: postavi tekst oznake"
 
-#: src/backend/worksheet/TextLabel.cpp:301
+#: src/backend/worksheet/TextLabel.cpp:302
 #, fuzzy, kde-format
 #| msgid "%1: set label text"
 msgid "%1: set label placeholdertext"
 msgstr "%1: postavi tekst oznake"
 
-#: src/backend/worksheet/TextLabel.cpp:308
+#: src/backend/worksheet/TextLabel.cpp:309
 #, fuzzy, kde-format
 #| msgid "%1: set TeX font size"
 msgid "%1: set TeX main font"
 msgstr "%1: postavi TeX veličinu fonta"
 
-#: src/backend/worksheet/TextLabel.cpp:322
+#: src/backend/worksheet/TextLabel.cpp:323
 #, fuzzy, kde-format
 #| msgid "%1: set background first color"
 msgid "%1: set background color"
 msgstr "%1: postavi prvu pozadinsku boju"
 
-#: src/backend/worksheet/TextLabel.cpp:330
+#: src/backend/worksheet/TextLabel.cpp:331
 #, fuzzy, kde-format
 #| msgid "%1: set border style"
 msgid "%1: set border shape"
@@ -22144,6 +22129,12 @@ msgid ""
 "Couldn't open the color map collections file %1. Please check your "
 "installation."
 msgstr ""
+
+#~ msgid "%1: set text for row %2"
+#~ msgstr "%1: postavi tekst za red %2"
+
+#~ msgid "%1: replace the texts for rows %2 to %3"
+#~ msgstr "%1: zamijeni tekstove za redove %2 i %3"
 
 #, fuzzy
 #~| msgid "X-error"
