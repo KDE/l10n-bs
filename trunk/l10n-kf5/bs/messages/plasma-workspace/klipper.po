@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-16 00:46+0000\n"
+"POT-Creation-Date: 2022-01-29 00:45+0000\n"
 "PO-Revision-Date: 2014-10-20 20:12+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -37,7 +37,7 @@ msgstr "Ukloni praznine pri izvršavanju radnji"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableMagicMimeActions)
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: actionsconfig.ui:31 klipper.kcfg:84
+#: actionsconfig.ui:31 klipper.kcfg:88
 #, kde-format
 msgid "Enable MIME-based actions"
 msgstr "Radnje po MIME tipu"
@@ -106,66 +106,142 @@ msgstr ""
 "o regularnim izrazima, možete pogledati <link url='http://en.wikipedia.org/"
 "wiki/Regular_expression'>Wikipedijin unos na tu temu.</link>.</p></html>."
 
-#: configdialog.cpp:24
+#: configdialog.cpp:71
+#, fuzzy, kde-format
+#| msgid "Selection and Clipboard"
+msgid "Selection and Clipboard:"
+msgstr "Izbor i klipbord"
+
+#: configdialog.cpp:78
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"When text or an area of the screen is highlighted with the mouse or "
+"keyboard, this is the <emphasis>selection</emphasis>. It can be pasted using "
+"the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
+"using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
+"is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
+"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
+"keeps the selection and the clipboard the same, so that any selection is "
+"immediately available to paste by any means. If it is turned off, the "
+"selection may still be saved in the clipboard history (subject to the "
+"options below), but it can only be pasted using the middle mouse button."
+msgstr ""
+
+#: configdialog.cpp:104 configdialog.cpp:139
+#, fuzzy, kde-format
+#| msgid "Replay action in history"
+msgid "Always save in history"
+msgstr "Ponovi radnju iz istorijata"
+
+#: configdialog.cpp:107
+#, fuzzy, kde-format
+#| msgid "Text selection only"
+msgid "Text selection:"
+msgstr "Samo izabrani tekst"
+
+#: configdialog.cpp:109 configdialog.cpp:144
 #, kde-format
+msgid "Only when explicitly copied"
+msgstr ""
+
+#: configdialog.cpp:114
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Whether text selections are saved in the clipboard history."
+msgstr "Zaista obrisati čitav istorijat klipborda?"
+
+#: configdialog.cpp:142
+#, fuzzy, kde-format
+#| msgid "Ignore selection"
+msgid "Non-text selection:"
+msgstr "Ignoriši izbor"
+
+#: configdialog.cpp:149
+#, fuzzy, kde-format
+#| msgid "Replay action in history"
+msgid "Never save in history"
+msgstr "Ponovi radnju iz istorijata"
+
+#: configdialog.cpp:154
+#, kde-format
+msgid ""
+"Whether non-text selections (such as images) are saved in the clipboard "
+"history."
+msgstr ""
+
+#: configdialog.cpp:163
+#, fuzzy, kde-format
+#| msgid " second"
+#| msgid_plural " seconds"
+msgctxt "Unit of time"
 msgid " second"
 msgid_plural " seconds"
 msgstr[0] " sekunda"
 msgstr[1] " sekunde"
 msgstr[2] " sekundi"
 
-#: configdialog.cpp:25
+#: configdialog.cpp:164
 #, kde-format
+msgctxt "No timeout"
+msgid "None"
+msgstr ""
+
+#: configdialog.cpp:173
+#, fuzzy, kde-format
+#| msgid " entry"
+#| msgid_plural " entries"
+msgctxt "NUmber of entries"
 msgid " entry"
 msgid_plural " entries"
 msgstr[0] " stavka"
 msgstr[1] " stavke"
 msgstr[2] " stavki"
 
-#: configdialog.cpp:235
+#: configdialog.cpp:424
 #, kde-format
 msgid "Advanced Settings"
 msgstr "Napredne postavke"
 
-#: configdialog.cpp:259
+#: configdialog.cpp:448
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Opšte"
 
-#: configdialog.cpp:259
+#: configdialog.cpp:448
 #, kde-format
 msgid "General Configuration"
 msgstr "Opće konfigurisanje"
 
-#: configdialog.cpp:260
+#: configdialog.cpp:449
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions"
 msgstr "Radnje"
 
-#: configdialog.cpp:260
+#: configdialog.cpp:449
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Konfiguracija akcija"
 
-#: configdialog.cpp:263
+#: configdialog.cpp:452
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Prečice"
 
-#: configdialog.cpp:263
+#: configdialog.cpp:452
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Konfiguracija prečica"
 
-#: configdialog.cpp:321
+#: configdialog.cpp:518
 #, kde-format
 msgid "D&isable Actions for Windows of Type WM_CLASS"
 msgstr "&Isključi radnje za prozore tipa WM_CLASS"
 
-#: configdialog.cpp:330
+#: configdialog.cpp:527
 #, kde-format
 msgid ""
 "<qt>This lets you specify windows in which Klipper should not invoke "
@@ -273,62 +349,6 @@ msgstr "Ukloni naredbu"
 #, kde-format
 msgid "Double-click an item to edit"
 msgstr "Dvokliknite na stavku da je uredite"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_KeepClipboardContents)
-#: generalconfig.ui:17
-#, kde-format
-msgid "Save clipboard contents on exit"
-msgstr "Sačuvaj sadržaj klipborda pri izlasku"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PreventEmptyClipboard)
-#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
-#: generalconfig.ui:24 klipper.kcfg:16
-#, kde-format
-msgid "Prevent empty clipboard"
-msgstr "Spriječi prazan klipbord"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreImages)
-#. i18n: ectx: label, entry (IgnoreImages), group (General)
-#: generalconfig.ui:31 klipper.kcfg:21
-#, kde-format
-msgid "Ignore images"
-msgstr "Ignoriši slike"
-
-#. i18n: ectx: property (title), widget (QGroupBox, selection_group)
-#: generalconfig.ui:38
-#, kde-format
-msgid "Selection and Clipboard"
-msgstr "Izbor i klipbord"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreSelection)
-#: generalconfig.ui:44
-#, kde-format
-msgid "Ignore selection"
-msgstr "Ignoriši izbor"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SelectionTextOnly)
-#: generalconfig.ui:51
-#, kde-format
-msgid "Text selection only"
-msgstr "Samo izabrani tekst"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SyncClipboards)
-#: generalconfig.ui:58
-#, kde-format
-msgid "Synchronize contents of the clipboard and the selection"
-msgstr "Sinhronizuj sadržaj klipborda i izbor"
-
-#. i18n: ectx: property (text), widget (QLabel, timeout_label)
-#: generalconfig.ui:68
-#, kde-format
-msgid "Timeout for action popups:"
-msgstr "Prekovrijeme iskakanja radnje:"
-
-#. i18n: ectx: property (text), widget (QLabel, history_size_label)
-#: generalconfig.ui:82
-#, kde-format
-msgid "Clipboard history size:"
-msgstr "Veličina istorijata klipborda:"
 
 #: historyimageitem.cpp:38
 #, kde-format
@@ -466,171 +486,178 @@ msgstr "Verzija Klippera"
 #. i18n: ectx: label, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:12
 #, kde-format
-msgid "Keep clipboard contents"
-msgstr "Zadrži sadržaj klipborda"
+msgid "Save the clipboard history across desktop sessions"
+msgstr ""
 
-#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
-#: klipper.kcfg:18
+#. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:14
 #, kde-format
 msgid ""
-"Selecting this option has the effect, that the clipboard can never be "
-"emptied. E.g. when an application exits, the clipboard would usually be "
-"emptied."
+"Retain the clipboard history, so it will be available the next time you log "
+"in."
 msgstr ""
-"Izborom ove opcije klipbord nikada neće biti potpuno ispražnjen. Na primjer, "
-"kada se program napusti, klipbord se obično prazni."
+
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Prevent empty clipboard"
+msgid "Prevent the clipboard from being cleared"
+msgstr "Spriječi prazan klipbord"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:19
+#, kde-format
+msgid ""
+"Do not allow the clipboard to be cleared, for example when an application "
+"exits."
+msgstr ""
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:26
+#, fuzzy, kde-format
+#| msgid "Selection and Clipboard"
+msgid "Keep the selection and clipboard the same"
+msgstr "Izbor i klipbord"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:28
+#, kde-format
+msgid ""
+"Content selected with the cursor is automatically copied to the clipboard so "
+"that it can be pasted with either a Paste action or a middle-click.<br/><a "
+"href=\"1\">More about the selection and clipboard</a>."
+msgstr ""
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
-#: klipper.kcfg:25
-#, kde-format
-msgid "Ignore Selection"
+#: klipper.kcfg:31
+#, fuzzy, kde-format
+#| msgid "Ignore selection"
+msgid "Ignore the selection"
 msgstr "Ignoriši izbor"
 
 #. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
-#: klipper.kcfg:27
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt>When an area of the screen is selected with mouse or keyboard, this "
-#| "is called \"the selection\".<br/>If this option is set, the selection is "
-#| "not entered into the clipboard history, though it is still available for "
-#| "pasting using the middle mouse button.</qt>"
-msgid ""
-"When an area of the screen is selected with mouse or keyboard, this is "
-"called \"the selection\".<br/>If this option is set, the selection is not "
-"entered into the clipboard history, though it is still available for pasting "
-"using the middle mouse button."
-msgstr ""
-"<qt>Kada je površina ekrana je izabrana pomoću miša ili tastature, ovo se "
-"zove \"izbor\".<br/>Ako je ova opcija podešena, izbor nije ušao u Clipboard "
-"istoriju, iako je još uvijek dostupan za liepljenje koristeći srednji taster "
-"miša.</qt>"
-
-#. i18n: ectx: label, entry (SyncClipboards), group (General)
-#: klipper.kcfg:34
+#: klipper.kcfg:33
 #, kde-format
-msgid "Synchronize clipboard and selection"
-msgstr "Sinhronizuj klipbord i izbor"
-
-#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
-#: klipper.kcfg:36
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt>When an area of the screen is selected with mouse or keyboard, this "
-#| "is called \"the selection\".<br/>If this option is selected, the "
-#| "selection and the clipboard is kept the same, so that anything in the "
-#| "selection is immediately available for pasting elsewhere using any "
-#| "method, including the traditional middle mouse button. Otherwise, the "
-#| "selection is recorded in the clipboard history, but the selection can "
-#| "only be pasted using the middle mouse button. Also see the 'Ignore "
-#| "Selection' option.</qt>"
 msgid ""
-"When an area of the screen is selected with mouse or keyboard, this is "
-"called \"the selection\".<br/>If this option is selected, the selection and "
-"the clipboard is kept the same, so that anything in the selection is "
-"immediately available for pasting elsewhere using any method, including the "
-"traditional middle mouse button. Otherwise, the selection is recorded in the "
-"clipboard history, but the selection can only be pasted using the middle "
-"mouse button. Also see the 'Ignore Selection' option."
+"Content selected with the cursor but not explicitly copied to the clipboard "
+"is not automatically stored in the clipboard history, and can only be pasted "
+"using a middle-click."
 msgstr ""
-"<qt>Kada je površina ekrana je izabrana pomoću miša ili tastature, ovo se "
-"zove \"izbor\".<br/>Ako je izabrana ova opcija, a izbor se čuva isti u "
-"odlagalištu, tako da je sve u izboru odmah dostupno za ljepljenje na drugom "
-"mjestu korišteći bilo koji način, uključujući i tradicionalno srednje dugme "
-"miša. U suprotnom, izbor je zabeležen u istoriji clipboard odlagališta, ali "
-"izbor može biti zalepljeni koristeći samo srednji taster miša. Takođe "
-"pogledajte opciju na 'Ignoriši izbor.</qt>"
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
-#: klipper.kcfg:39
+#: klipper.kcfg:36
 #, kde-format
-msgid "Selection text only"
+msgid "Text selection only"
 msgstr "Samo izabrani tekst"
 
 #. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:38
+#, kde-format
+msgid ""
+"Only store text selections in the clipboard history, not images or any other "
+"type of data."
+msgstr ""
+
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:41
 #, fuzzy, kde-format
-#| msgid ""
-#| "<qt>When an area of the screen is selected with mouse or keyboard, this "
-#| "is called \"the selection\".<br/>If this option is selected, only text "
-#| "selections are stored in the history, while images and other selections "
-#| "are not.</qt>"
+#| msgid "Ignore images"
+msgid "Always ignore images"
+msgstr "Ignoriši slike"
+
+#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
+#: klipper.kcfg:43
+#, kde-format
 msgid ""
-"When an area of the screen is selected with mouse or keyboard, this is "
-"called \"the selection\".<br/>If this option is selected, only text "
-"selections are stored in the history, while images and other selections are "
-"not."
+"Do not store images in the clipboard history, even if explicitly copied."
 msgstr ""
-"<qt>Kada je površina ekrana je izabrana pomoću miša ili tastature, ovo se "
-"zove \"izbor\".<br/>Ako je ova opcija izabrana, samo tekstualne selekcije "
-"čuvaju u istoriji, dok slike i drugi izbori ne.</qt>"
 
 #. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
-#: klipper.kcfg:44
+#: klipper.kcfg:46
 #, kde-format
 msgid "Use graphical regexp editor"
 msgstr "Grafički uređivač regiza"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:48
+#: klipper.kcfg:50
 #, kde-format
 msgid "URL grabber enabled"
 msgstr "Uključen hvatač URL‑ova"
 
 #. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
-#: klipper.kcfg:53
+#: klipper.kcfg:55
 #, kde-format
 msgid "No actions for WM_CLASS"
 msgstr "Bez radnji za WM_CLASS"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
-#, kde-format
-msgid "Timeout for action popups (seconds)"
-msgstr "Prekovrijeme iskakanja radnje (sekundi)"
+#: klipper.kcfg:58
+#, fuzzy, kde-format
+#| msgid "Timeout for action popups:"
+msgid "Automatic action popup time:"
+msgstr "Prekovrijeme iskakanja radnje:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:62
 #, kde-format
-msgid "A value of 0 disables the timeout"
-msgstr "Vrijednost 0 isključuje prekovrijeme"
+msgid "Display the automatic action popup for this time."
+msgstr ""
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
+#: klipper.kcfg:65
 #, kde-format
-msgid "Clipboard history size"
-msgstr "Veličina istorijata klipborda"
+msgid "Clipboard history size:"
+msgstr "Veličina istorijata klipborda:"
+
+#. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
+#: klipper.kcfg:69
+#, kde-format
+msgid "The clipboard history will store up to this many items."
+msgstr ""
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:69
+#: klipper.kcfg:72
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "Lažni unos za ukazivanje na izmjene u grafičkoj kontroli stabla radnji"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:75
+#: klipper.kcfg:78
 #, kde-format
 msgid "Strip whitespace when executing an action"
 msgstr "Ukloni praznine pri izvršavanju radnje"
 
-#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:77
+#. i18n: ectx: tooltip, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:80
 #, kde-format
 msgid ""
-"Sometimes, the selected text has some whitespace at the end, which, if "
-"loaded as URL in a browser would cause an error. Enabling this option "
-"removes any whitespace at the beginning or end of the selected string (the "
-"original clipboard contents will not be modified)."
+"Remove white space from the start and end of clipboard text before "
+"performing an action. For example, this ensures that the URL pasted in a "
+"browser is interpreted as expected.<br/><br/>The text saved on the clipboard "
+"is not affected."
 msgstr ""
-"Ponekad izabrani tekst ima nešto praznina na kraju, koje ako se učitaju kao "
-"URL u pregledaču, mogu izazvati greške. Uključivanjem ove opcije uklanjaju "
-"se sve praznine na početku ili kraju izabrane niske (sam sadržaj klipborda "
-"neće biti izmijenjen)."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:80
+#: klipper.kcfg:83
 #, kde-format
 msgid "Replay action in history"
 msgstr "Ponovi radnju iz istorijata"
+
+#. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:85
+#, kde-format
+msgid ""
+"When a clipboard item is selected from the history popup, automatically "
+"perform the configured actions on it."
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:90
+#, kde-format
+msgid ""
+"If this option is set, and a file name or URL is selected, include "
+"applications that can handle its MIME type in the actions popup."
+msgstr ""
 
 #: klipperpopup.cpp:60 tray.cpp:25 tray.cpp:41
 #, kde-format
@@ -766,6 +793,112 @@ msgstr "Isključi ovo iskakanje"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Odustani"
+
+#~ msgid "Save clipboard contents on exit"
+#~ msgstr "Sačuvaj sadržaj klipborda pri izlasku"
+
+#~ msgid "Synchronize contents of the clipboard and the selection"
+#~ msgstr "Sinhronizuj sadržaj klipborda i izbor"
+
+#~ msgid "Keep clipboard contents"
+#~ msgstr "Zadrži sadržaj klipborda"
+
+#~ msgid ""
+#~ "Selecting this option has the effect, that the clipboard can never be "
+#~ "emptied. E.g. when an application exits, the clipboard would usually be "
+#~ "emptied."
+#~ msgstr ""
+#~ "Izborom ove opcije klipbord nikada neće biti potpuno ispražnjen. Na "
+#~ "primjer, kada se program napusti, klipbord se obično prazni."
+
+#~ msgid "Ignore Selection"
+#~ msgstr "Ignoriši izbor"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#~| "is called \"the selection\".<br/>If this option is set, the selection is "
+#~| "not entered into the clipboard history, though it is still available for "
+#~| "pasting using the middle mouse button.</qt>"
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is set, the selection is not "
+#~ "entered into the clipboard history, though it is still available for "
+#~ "pasting using the middle mouse button."
+#~ msgstr ""
+#~ "<qt>Kada je površina ekrana je izabrana pomoću miša ili tastature, ovo se "
+#~ "zove \"izbor\".<br/>Ako je ova opcija podešena, izbor nije ušao u "
+#~ "Clipboard istoriju, iako je još uvijek dostupan za liepljenje koristeći "
+#~ "srednji taster miša.</qt>"
+
+#~ msgid "Synchronize clipboard and selection"
+#~ msgstr "Sinhronizuj klipbord i izbor"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#~| "is called \"the selection\".<br/>If this option is selected, the "
+#~| "selection and the clipboard is kept the same, so that anything in the "
+#~| "selection is immediately available for pasting elsewhere using any "
+#~| "method, including the traditional middle mouse button. Otherwise, the "
+#~| "selection is recorded in the clipboard history, but the selection can "
+#~| "only be pasted using the middle mouse button. Also see the 'Ignore "
+#~| "Selection' option.</qt>"
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is selected, the selection "
+#~ "and the clipboard is kept the same, so that anything in the selection is "
+#~ "immediately available for pasting elsewhere using any method, including "
+#~ "the traditional middle mouse button. Otherwise, the selection is recorded "
+#~ "in the clipboard history, but the selection can only be pasted using the "
+#~ "middle mouse button. Also see the 'Ignore Selection' option."
+#~ msgstr ""
+#~ "<qt>Kada je površina ekrana je izabrana pomoću miša ili tastature, ovo se "
+#~ "zove \"izbor\".<br/>Ako je izabrana ova opcija, a izbor se čuva isti u "
+#~ "odlagalištu, tako da je sve u izboru odmah dostupno za ljepljenje na "
+#~ "drugom mjestu korišteći bilo koji način, uključujući i tradicionalno "
+#~ "srednje dugme miša. U suprotnom, izbor je zabeležen u istoriji clipboard "
+#~ "odlagališta, ali izbor može biti zalepljeni koristeći samo srednji taster "
+#~ "miša. Takođe pogledajte opciju na 'Ignoriši izbor.</qt>"
+
+#~ msgid "Selection text only"
+#~ msgstr "Samo izabrani tekst"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#~| "is called \"the selection\".<br/>If this option is selected, only text "
+#~| "selections are stored in the history, while images and other selections "
+#~| "are not.</qt>"
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is selected, only text "
+#~ "selections are stored in the history, while images and other selections "
+#~ "are not."
+#~ msgstr ""
+#~ "<qt>Kada je površina ekrana je izabrana pomoću miša ili tastature, ovo se "
+#~ "zove \"izbor\".<br/>Ako je ova opcija izabrana, samo tekstualne selekcije "
+#~ "čuvaju u istoriji, dok slike i drugi izbori ne.</qt>"
+
+#~ msgid "Timeout for action popups (seconds)"
+#~ msgstr "Prekovrijeme iskakanja radnje (sekundi)"
+
+#~ msgid "A value of 0 disables the timeout"
+#~ msgstr "Vrijednost 0 isključuje prekovrijeme"
+
+#~ msgid "Clipboard history size"
+#~ msgstr "Veličina istorijata klipborda"
+
+#~ msgid ""
+#~ "Sometimes, the selected text has some whitespace at the end, which, if "
+#~ "loaded as URL in a browser would cause an error. Enabling this option "
+#~ "removes any whitespace at the beginning or end of the selected string "
+#~ "(the original clipboard contents will not be modified)."
+#~ msgstr ""
+#~ "Ponekad izabrani tekst ima nešto praznina na kraju, koje ako se učitaju "
+#~ "kao URL u pregledaču, mogu izazvati greške. Uključivanjem ove opcije "
+#~ "uklanjaju se sve praznine na početku ili kraju izabrane niske (sam "
+#~ "sadržaj klipborda neće biti izmijenjen)."
 
 #~ msgid "%1 - Actions For: %2"
 #~ msgstr "%1 — radnje za: %2"
