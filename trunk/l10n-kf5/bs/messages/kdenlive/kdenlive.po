@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-03 00:43+0000\n"
+"POT-Creation-Date: 2022-02-04 00:43+0000\n"
 "PO-Revision-Date: 2015-01-09 12:00+0100\n"
 "Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -203,9 +203,8 @@ msgid "Direction of the color gradient."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
-#. i18n: ectx: property (text), widget (QLabel, label_3)
 #: data/effects/audiolevelgraph.xml:53 data/kdenliveeffectscategory.rc:85
-#: src/ui/configcapture_ui.ui:106 src/ui/configcapture_ui.ui:577
+#: src/ui/configcapture_ui.ui:106
 #, kde-format
 msgid "Channels"
 msgstr "Kanali"
@@ -542,6 +541,7 @@ msgstr "T"
 
 #: data/effects/channelcopy.xml:15 data/effects/copychannelstostereo.xml:15
 #: data/effects/swapchannels.xml:3
+#: src/mltcontroller/clippropertiescontroller.cpp:863
 #, fuzzy, kde-format
 msgid "Swap channels"
 msgstr "Zvučni kanali"
@@ -566,8 +566,7 @@ msgstr "Normalna skala"
 msgid "Vertical scatter"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, lblScale)
-#: data/effects/charcoal.xml:13 src/ui/histogram_ui.ui:101
+#: data/effects/charcoal.xml:13
 #, fuzzy, kde-format
 msgid "Scale"
 msgstr "Razmjera"
@@ -718,10 +717,8 @@ msgstr "Odredište"
 msgid "Initial Zoom"
 msgstr "Paniraj i uvećaj"
 
-#. i18n: ectx: property (text), widget (QLabel, label_itemzoom)
 #: data/effects/dance.xml:22 data/effects/vidstab.xml:39 src/bin/bin.cpp:1173
 #: src/project/dialogs/slideshowclip.cpp:64 src/titler/titlewidget.cpp:353
-#: src/ui/titlewidget_ui.ui:633
 #, kde-format
 msgid "Zoom"
 msgstr "Uvećaj"
@@ -889,20 +886,14 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, durationLabel)
 #. i18n: ectx: property (windowTitle), widget (QDialog, ClipDurationDialog_UI)
-#. i18n: ectx: property (text), widget (QLabel, duration_label)
-#. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, label_duration)
-#. i18n: ectx: property (text), widget (QLabel, duration_label_2)
 #: data/effects/fade_from_black.xml:7 data/effects/fade_to_black.xml:7
 #: data/effects/fadein.xml:10 data/effects/fadeout.xml:7 src/bin/bin.cpp:1120
-#: src/bin/generators/generators.cpp:56 src/bin/projectitemmodel.cpp:265
-#: src/mltcontroller/clippropertiescontroller.cpp:324
+#: src/bin/projectitemmodel.cpp:265
 #: src/timeline2/view/dialogs/speeddialog.cpp:53
 #: src/timeline2/view/qml/Track.qml:329 src/timeline2/view/qml/Track.qml:403
 #: src/timeline2/view/qml/Track.qml:424 src/ui/clipdurationdialog_ui.ui:14
-#: src/ui/clipdurationdialog_ui.ui:40 src/ui/clipproperties_ui.ui:58
-#: src/ui/colorclip_ui.ui:37 src/ui/editsub_ui.ui:81 src/ui/qtextclip_ui.ui:223
-#: src/ui/titlewidget_ui.ui:626
+#: src/ui/clipproperties_ui.ui:58 src/ui/qtextclip_ui.ui:223
 #, kde-format
 msgid "Duration"
 msgstr "Trajanje"
@@ -1017,7 +1008,6 @@ msgstr ""
 #: data/effects/mute.xml:7 data/effects/normalise.xml:7
 #: data/effects/volume.xml:7 src/assets/view/widgets/lumaliftgainparam.cpp:32
 #: src/effects/effectstack/view/qml/LiftGammaGain.qml:81
-#: src/mltcontroller/clippropertiescontroller.cpp:912
 #, kde-format
 msgid "Gain"
 msgstr ""
@@ -1522,7 +1512,6 @@ msgstr ""
 #: data/transitions/composite.xml:31 data/transitions/dissolve.xml:9
 #: data/transitions/luma.xml:10 data/transitions/region.xml:29
 #: data/transitions/wipe.xml:10 src/ui/clipproperties_ui.ui:302
-#: src/ui/slideshowclip_ui.ui:220
 #, kde-format
 msgid "Softness"
 msgstr "Mekoća"
@@ -1735,9 +1724,7 @@ msgstr ""
 msgid "Create an echo effect (blur) outside of an area of interest."
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_blur)
 #: data/effects/pillar_echo.xml:10 data/effects/tracker.xml:29
-#: src/ui/titlewidget_ui.ui:750
 #, kde-format
 msgid "Blur"
 msgstr "Zamagli"
@@ -2813,9 +2800,7 @@ msgstr ""
 msgid "Crop to fill"
 msgstr "Poravnanje vrha"
 
-#. i18n: ectx: property (text), widget (QLabel, label_textAlign)
 #: data/transitions/composite.xml:17 data/transitions/region.xml:17
-#: src/ui/titlewidget_ui.ui:1136
 #, kde-format
 msgid "Align"
 msgstr "Poravnanje"
@@ -3097,12 +3082,16 @@ msgid "Countdown"
 msgstr "Odbrojavanje"
 
 #: plugins/sampleplugin/sampleplugin.cpp:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Noise Clip"
+msgctxt "@title:window"
 msgid "Create Noise Clip"
 msgstr "Kreiraj isječak šuma"
 
 #: plugins/sampleplugin/sampleplugin.cpp:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Countdown Clip"
+msgctxt "@title:window"
 msgid "Create Countdown Clip"
 msgstr "Kreiraj isječak za odbrojavanje"
 
@@ -3222,12 +3211,10 @@ msgid "Export XML…"
 msgstr "Zvučni izvoz"
 
 #. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#. i18n: ectx: property (text), widget (QLabel, label_3)
 #: src/assets/assetlist/view/qml/assetList.qml:363 src/bin/bin.cpp:1104
 #: src/bin/projectitemmodel.cpp:250
 #: src/timeline2/view/dialogs/tracksconfigdialog.cpp:62
-#: src/ui/colorclip_ui.ui:20 src/ui/qtextclip_ui.ui:111
-#: src/ui/slideshowclip_ui.ui:20
+#: src/ui/qtextclip_ui.ui:111
 #, kde-format
 msgid "Name"
 msgstr "Naziv"
@@ -3244,10 +3231,9 @@ msgid "Adjust clip"
 msgstr "Podesi dužinu isječka"
 
 #: src/assets/assetpanel.cpp:86
-#: src/effects/effectstack/view/effectstackview.cpp:465
 #, fuzzy, kde-format
 #| msgid "Effect Stack"
-msgid "Save Effect Stack"
+msgid "Save Effect Stack…"
 msgstr "Stek Efekata"
 
 #: src/assets/assetpanel.cpp:93
@@ -3505,7 +3491,7 @@ msgstr "Restartuj efekat"
 #: src/assets/view/assetparameterview.cpp:52
 #, fuzzy, kde-format
 #| msgid "Save markers"
-msgid "Save preset"
+msgid "Save preset…"
 msgstr "Sačuvaj obilježivač"
 
 #: src/assets/view/assetparameterview.cpp:53
@@ -3524,13 +3510,14 @@ msgstr "Izbriši proxies"
 #: src/dialogs/kdenlivesettingsdialog.cpp:1276
 #, fuzzy, kde-format
 #| msgid "Enter sequence name"
-msgid "Enter preset name"
+msgctxt "@title:window"
+msgid "Enter Preset Name"
 msgstr "Unesi ime sekvence"
 
 #: src/assets/view/assetparameterview.cpp:332
 #: src/dialogs/kdenlivesettingsdialog.cpp:1276
 #, kde-format
-msgid "Enter the name of this preset"
+msgid "Enter the name of this preset:"
 msgstr ""
 
 #: src/assets/view/widgets/buttonparamwidget.cpp:212
@@ -3562,7 +3549,7 @@ msgstr "Podaci za uvoz"
 #: src/assets/view/widgets/keyframeimport.cpp:149
 #, fuzzy, kde-format
 #| msgid "Time"
-msgid "Time offset"
+msgid "Time offset:"
 msgstr "Vrijeme"
 
 #: src/assets/view/widgets/keyframeimport.cpp:163
@@ -3646,7 +3633,7 @@ msgstr ""
 
 #: src/assets/view/widgets/keyframeimport.cpp:261
 #, fuzzy, kde-format
-msgid "Position offset"
+msgid "Position offset:"
 msgstr "Položaj"
 
 #: src/assets/view/widgets/keyframeimport.cpp:269
@@ -3667,7 +3654,7 @@ msgstr "Ime za sačuvanu grupu "
 #: src/assets/view/widgets/keyframeimport.cpp:278
 #, fuzzy, kde-format
 #| msgid "Destination"
-msgid "Destination range"
+msgid "Destination range:"
 msgstr "Odredište"
 
 #: src/assets/view/widgets/keyframeimport.cpp:286
@@ -3681,12 +3668,9 @@ msgstr ""
 msgid "Limit keyframe number"
 msgstr "Ograniči broj glavnih okvira"
 
-#. i18n: ectx: property (text), widget (QLabel, position_label)
 #. i18n: ectx: property (text), widget (QLabel, clip_filesize_2)
 #: src/assets/view/widgets/keyframeimport.cpp:361
-#: src/transitions/view/mixstackview.cpp:26 src/ui/clipdurationdialog_ui.ui:20
-#: src/ui/editsub_ui.ui:127 src/ui/keyframedialog_ui.ui:20
-#: src/ui/markerdialog_ui.ui:41
+#: src/transitions/view/mixstackview.cpp:26 src/ui/markerdialog_ui.ui:41
 #, kde-format
 msgid "Position"
 msgstr "Položaj"
@@ -3703,16 +3687,13 @@ msgstr "Smjesa"
 msgid "Offset Position"
 msgstr "Pozicija %1"
 
-#. i18n: ectx: property (text), widget (QLabel, label_rotateX)
-#: src/assets/view/widgets/keyframeimport.cpp:364 src/ui/titlewidget_ui.ui:549
+#: src/assets/view/widgets/keyframeimport.cpp:364
 #, kde-format
 msgid "X"
 msgstr "X"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbY)
-#. i18n: ectx: property (text), widget (QLabel, label_rotateY)
 #: src/assets/view/widgets/keyframeimport.cpp:365 src/ui/histogram_ui.ui:50
-#: src/ui/titlewidget_ui.ui:572
 #, kde-format
 msgid "Y"
 msgstr "Y"
@@ -3754,7 +3735,6 @@ msgid "Y"
 msgstr "Y"
 
 #: src/assets/view/widgets/keyframeimport.cpp:1055
-#: src/assets/view/widgets/keyframewidget.cpp:153
 #, fuzzy, kde-format
 #| msgid "Import keyframes from clip"
 msgid "Import keyframes from clipboard"
@@ -3820,31 +3800,37 @@ msgstr ""
 #: src/assets/view/widgets/keyframewidget.cpp:142
 #, fuzzy, kde-format
 #| msgid "Seek to active keyframe"
-msgid "Seek to keyframe on select"
+msgid "Seek to Keyframe on Select"
 msgstr "Zatraži aktivaciju ključnog okvira"
 
 #: src/assets/view/widgets/keyframewidget.cpp:149
 #, fuzzy, kde-format
 #| msgid "Import keyframes from clip"
-msgid "Copy keyframes to clipboard"
+msgid "Copy Keyframes to Clipboard"
 msgstr "Unesi glavne okvire iz isječka"
 
 #: src/assets/view/widgets/keyframewidget.cpp:151
 #, fuzzy, kde-format
 #| msgid "Import keyframes from clip"
-msgid "Copy value at cursor position to clipboard"
+msgid "Copy Value at Cursor Position to Clipboard"
+msgstr "Unesi glavne okvire iz isječka"
+
+#: src/assets/view/widgets/keyframewidget.cpp:153
+#, fuzzy, kde-format
+#| msgid "Import keyframes from clip"
+msgid "Import Keyframes from Clipboard…"
 msgstr "Unesi glavne okvire iz isječka"
 
 #: src/assets/view/widgets/keyframewidget.cpp:162
 #, fuzzy, kde-format
 #| msgid "Reset keyframes after cursor"
-msgid "Remove all keyframes after cursor"
+msgid "Remove all Keyframes After Cursor"
 msgstr "Ponovo postavi glavne okvire nakon kursora"
 
 #: src/assets/view/widgets/keyframewidget.cpp:166
 #, fuzzy, kde-format
 #| msgid "Delete keyframe"
-msgid "Default keyframe type"
+msgid "Default Keyframe Type"
 msgstr "Izbriši glavni okvir"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
@@ -3861,8 +3847,9 @@ msgid "Select parameters to copy"
 msgstr "Parametri"
 
 #: src/assets/view/widgets/keywordparamwidget.cpp:32
-#, kde-format
-msgid "<select a keyword>"
+#, fuzzy, kde-format
+#| msgid "<select a keyword>"
+msgid "<Select a Keyword>"
 msgstr "<izaberi ključnu riječ>"
 
 #: src/assets/view/widgets/listdependencyparamwidget.cpp:175
@@ -3936,7 +3923,7 @@ msgstr "Snimaj"
 
 #: src/audiomixer/mixerwidget.cpp:299
 #, fuzzy, kde-format
-msgid "Show Channels"
+msgid "Show channels"
 msgstr "Zvučni kanali"
 
 #: src/audiomixer/mixerwidget.cpp:312
@@ -3989,11 +3976,10 @@ msgstr[0] "%1 posao u toku"
 msgstr[1] "%1 posla u toku"
 msgstr[2] "%1 poslova u toku"
 
-#. i18n: ectx: property (placeholderText), widget (KLineEdit, search_text)
-#: src/bin/bin.cpp:1019 src/ui/resourcewidget_ui.ui:36
+#: src/bin/bin.cpp:1019
 #, fuzzy, kde-format
 #| msgid "Search"
-msgid "Search..."
+msgid "Search…"
 msgstr "Pretraživanje"
 
 #: src/bin/bin.cpp:1063
@@ -4037,11 +4023,9 @@ msgstr ""
 msgid "Date"
 msgstr "Datum"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, label_description)
 #: src/bin/bin.cpp:1112 src/bin/projectitemmodel.cpp:256
-#: src/ui/clipproperties_ui.ui:41 src/ui/configtranscode_ui.ui:52
-#: src/ui/profiledialog_ui.ui:60
+#: src/ui/clipproperties_ui.ui:41
 #, kde-format
 msgid "Description"
 msgstr "Opis"
@@ -4075,7 +4059,7 @@ msgstr "Onemogući efekt"
 #: src/bin/bin.cpp:1160
 #, fuzzy, kde-format
 #| msgid "Show video thumbnails"
-msgid "Show video preview in thumbnails"
+msgid "Show Video Preview in Thumbnails"
 msgstr "Prikaži sličice na videu"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
@@ -4087,19 +4071,19 @@ msgstr "Postavke"
 #: src/bin/bin.cpp:1180
 #, fuzzy, kde-format
 #| msgid "Show path"
-msgid "Show date"
+msgid "Show Date"
 msgstr "Prikaži put"
 
 #: src/bin/bin.cpp:1184
 #, fuzzy, kde-format
 #| msgid "Description"
-msgid "Show description"
+msgid "Show Description"
 msgstr "Opis"
 
 #: src/bin/bin.cpp:1188
 #, fuzzy, kde-format
 #| msgid "Show path"
-msgid "Show rating"
+msgid "Show Rating"
 msgstr "Prikaži put"
 
 #: src/bin/bin.cpp:1206
@@ -4167,9 +4151,11 @@ msgstr ""
 "podataka."
 
 #: src/bin/bin.cpp:1731
-#, kde-format
-msgid "Open replacement file"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Open Backup File"
+msgctxt "@title:window"
+msgid "Open Replacement File"
+msgstr "Otvori rezernu kopiju"
 
 #: src/bin/bin.cpp:1755
 #, kde-format
@@ -4206,27 +4192,28 @@ msgstr "Obriši snimak"
 #: src/bin/bin.cpp:1933
 #, fuzzy, kde-format
 #| msgid "Captured files"
-msgid "Clear filters"
+msgid "Clear Filters"
 msgstr "Spremljene datoteke"
 
 #: src/bin/bin.cpp:1948
-#, kde-format
-msgid "%1 star"
-msgid_plural "%1 stars"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+#, fuzzy, kde-format
+#| msgid "Start"
+msgid "%1 Star"
+msgid_plural "%1 Stars"
+msgstr[0] "Početak"
+msgstr[1] "Početak"
+msgstr[2] "Početak"
 
 #: src/bin/bin.cpp:1955
 #, fuzzy, kde-format
 #| msgid "Unused clips:"
-msgid "Unused clips"
+msgid "Unused Clips"
 msgstr "Neiskorišteni isječci:"
 
 #: src/bin/bin.cpp:1962
 #, fuzzy, kde-format
 #| msgid "Filter %1"
-msgid "Filter by type"
+msgid "Filter by Type"
 msgstr "Filter %1"
 
 #: src/bin/bin.cpp:1965
@@ -4302,10 +4289,8 @@ msgstr "Šablon"
 msgid "Color"
 msgstr "Boja"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QTreeWidget, listWidget)
 #: src/bin/bin.cpp:2051 src/ui/managecache_ui.ui:288
-#: src/ui/slideshowclip_ui.ui:60
 #, kde-format
 msgid "Folder"
 msgstr "Direktorij"
@@ -4351,28 +4336,31 @@ msgstr "Nije moguće obraditi trajanje više detalja"
 
 #: src/bin/bin.cpp:3073
 #, fuzzy, kde-format
-msgid "Add Clip or Folder"
+msgid "Add Clip or Folder…"
 msgstr "Dodaj folder"
 
 #: src/bin/bin.cpp:3077
-#, kde-format
-msgid "Add Color Clip"
+#, fuzzy, kde-format
+#| msgid "Add Color Clip"
+msgid "Add Color Clip…"
 msgstr "Dodaj boju isječka"
 
-#: src/bin/bin.cpp:3078 src/project/dialogs/slideshowclip.cpp:30
+#: src/bin/bin.cpp:3078
 #, fuzzy, kde-format
 #| msgid "Image sequence"
-msgid "Add Image Sequence"
+msgid "Add Image Sequence…"
 msgstr "Sekvenca slike"
 
 #: src/bin/bin.cpp:3079
-#, kde-format
-msgid "Add Title Clip"
+#, fuzzy, kde-format
+#| msgid "Add Title Clip"
+msgid "Add Title Clip…"
 msgstr "Dodaj naziv isječka"
 
 #: src/bin/bin.cpp:3080
-#, kde-format
-msgid "Add Template Title"
+#, fuzzy, kde-format
+#| msgid "Add Template Title"
+msgid "Add Template Title…"
 msgstr "Dodaj uzorak naziva"
 
 #: src/bin/bin.cpp:3083 src/mainwindow.cpp:373
@@ -4383,7 +4371,7 @@ msgstr "Online resursi"
 #: src/bin/bin.cpp:3088
 #, fuzzy, kde-format
 #| msgid "Delete Clip"
-msgid "Locate Clip..."
+msgid "Locate Clip…"
 msgstr "Obriši snimak"
 
 #: src/bin/bin.cpp:3094
@@ -4394,7 +4382,7 @@ msgstr "Ponovo učitaj Snimak"
 #: src/bin/bin.cpp:3100
 #, fuzzy, kde-format
 #| msgid "Reload Clip"
-msgid "Replace Clip"
+msgid "Replace Clip…"
 msgstr "Ponovo učitaj Snimak"
 
 #: src/bin/bin.cpp:3106
@@ -4554,8 +4542,9 @@ msgstr "Izbriši proxies"
 msgid "Rebuild proxies"
 msgstr "Ponovo izgradi Grupu"
 
-#: src/bin/bin.cpp:4651 src/mainwindow.cpp:365
+#: src/bin/bin.cpp:4651
 #, fuzzy, kde-format
+msgctxt "@title:window"
 msgid "Project Bin"
 msgstr "Projektne datoteke"
 
@@ -4717,10 +4706,25 @@ msgstr[0] "Dodaj snimak"
 msgstr[1] "Dodaj snimke"
 msgstr[2] "Dodaj snimke"
 
-#: src/bin/generators/generators.cpp:163
+#. i18n: ectx: property (text), widget (QLabel, duration_label)
+#. i18n: ectx: property (text), widget (QLabel, clip_filesize_2)
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, label_duration)
+#. i18n: ectx: property (text), widget (QLabel, duration_label_2)
+#: src/bin/generators/generators.cpp:56
+#: src/mltcontroller/clippropertiescontroller.cpp:324
+#: src/transitions/view/mixstackview.cpp:31 src/ui/clipdurationdialog_ui.ui:40
+#: src/ui/colorclip_ui.ui:37 src/ui/editsub_ui.ui:81
+#: src/ui/spacerdialog_ui.ui:43 src/ui/titlewidget_ui.ui:626
 #, kde-format
-msgid "MLT playlist (*.mlt)"
-msgstr ""
+msgid "Duration:"
+msgstr "Trajanje:"
+
+#: src/bin/generators/generators.cpp:163
+#, fuzzy, kde-format
+#| msgid "Playlist clip"
+msgid "MLT Playlist (*.mlt)"
+msgstr "Snimak liste izvođenja"
 
 #: src/bin/model/markerlistmodel.cpp:125 src/bin/model/markerlistmodel.cpp:143
 #, fuzzy, kde-format
@@ -4734,16 +4738,15 @@ msgid "Rename marker"
 msgstr "Izbriši obilježivač"
 
 #: src/bin/model/markerlistmodel.cpp:127 src/bin/model/markerlistmodel.cpp:145
-#: src/mltcontroller/clippropertiescontroller.cpp:265
+#, kde-format
+msgid "Add guide"
+msgstr "Dodaj vodiča"
+
+#: src/bin/model/markerlistmodel.cpp:127 src/bin/model/markerlistmodel.cpp:145
 #, fuzzy, kde-format
 #| msgid "Add marker"
 msgid "Add marker"
 msgstr "Dodaj obilježivač"
-
-#: src/bin/model/markerlistmodel.cpp:127 src/bin/model/markerlistmodel.cpp:145
-#, kde-format
-msgid "Add guide"
-msgstr "Dodaj vodiča"
 
 #: src/bin/model/markerlistmodel.cpp:175
 #: src/mltcontroller/clippropertiescontroller.cpp:266
@@ -4757,28 +4760,26 @@ msgstr "Izbriši obilježivač"
 msgid "Delete guide"
 msgstr "Izbriši Vodič"
 
-#: src/bin/model/markerlistmodel.cpp:199 src/bin/model/markerlistmodel.cpp:641
-#: src/mltcontroller/clippropertiescontroller.cpp:267
-#, kde-format
-msgid "Edit marker"
-msgstr "Uredi obilježivač"
-
-#: src/bin/model/markerlistmodel.cpp:199 src/bin/model/markerlistmodel.cpp:641
+#: src/bin/model/markerlistmodel.cpp:199
 #, kde-format
 msgid "Edit guide"
 msgstr "Uredi vodiča"
 
-#: src/bin/model/markerlistmodel.cpp:542
-#: src/mltcontroller/clippropertiescontroller.cpp:269
-#, fuzzy, kde-format
-#| msgid "Load markers"
-msgid "Import markers"
-msgstr "Učitaj markere"
+#: src/bin/model/markerlistmodel.cpp:199
+#, kde-format
+msgid "Edit marker"
+msgstr "Uredi obilježivač"
 
 #: src/bin/model/markerlistmodel.cpp:542
 #, fuzzy, kde-format
 #| msgid "Load markers"
 msgid "Import guides"
+msgstr "Učitaj markere"
+
+#: src/bin/model/markerlistmodel.cpp:542
+#, fuzzy, kde-format
+#| msgid "Load markers"
+msgid "Import markers"
 msgstr "Učitaj markere"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, MarkerDialog_UI)
@@ -4813,6 +4814,16 @@ msgstr "Bez vodiča za vrijeme pokazivača"
 #| msgid "Guide"
 msgid "guide"
 msgstr "Navod"
+
+#: src/bin/model/markerlistmodel.cpp:641
+#, kde-format
+msgid "Edit Guide"
+msgstr "Uredi vodic"
+
+#: src/bin/model/markerlistmodel.cpp:641
+#, kde-format
+msgid "Edit Marker"
+msgstr "Uredi obilježivač"
 
 #: src/bin/model/subtitlemodel.cpp:263 src/bin/model/subtitlemodel.cpp:472
 #: src/timeline2/view/timelinecontroller.cpp:4709
@@ -4973,7 +4984,7 @@ msgstr "Očisti projekat"
 #: src/bin/projectitemmodel.cpp:1017
 #, fuzzy, kde-format
 #| msgid "Loading project"
-msgid "Loading project clips..."
+msgid "Loading project clips…"
 msgstr "Učitavam projekat"
 
 #: src/bin/projectsubclip.cpp:42 src/doc/documentvalidator.cpp:2110
@@ -5022,10 +5033,12 @@ msgstr ""
 #: src/core.cpp:204
 #, fuzzy, kde-format
 #| msgid "Default Profile"
+msgctxt "@title:window"
 msgid "Select Default Profile"
 msgstr "Zadani profil"
 
-#: src/core.cpp:204
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/core.cpp:204 src/ui/profiledialog_ui.ui:40
 #, fuzzy, kde-format
 #| msgid "Profile"
 msgid "Profile:"
@@ -5041,7 +5054,7 @@ msgstr ""
 #: src/core.cpp:229
 #, fuzzy, kde-format
 #| msgid "Loading project"
-msgid "Loading project..."
+msgid "Loading project…"
 msgstr "Učitavam projekat"
 
 #: src/core.cpp:256
@@ -5299,9 +5312,8 @@ msgstr ""
 "Datoteka dokumenta projekta je neispravna, namještanje na standardni: %1"
 
 #. i18n: ectx: Menu (subtitles)
-#. i18n: ectx: property (text), widget (QLabel, label_9)
 #: src/core.cpp:552 src/kdenliveui.rc:28 src/mainwindow.cpp:284
-#: src/timeline2/view/qml/timeline.qml:939 src/ui/configmisc_ui.ui:144
+#: src/timeline2/view/qml/timeline.qml:939
 #, fuzzy, kde-format
 #| msgid "untitled"
 msgid "Subtitles"
@@ -5315,12 +5327,24 @@ msgid "All Supported Files"
 msgstr "Svi podržani tipovi datoteka"
 
 #: src/dialogs/clipcreationdialog.cpp:121
+#, fuzzy, kde-format
+#| msgid "Color Clip"
+msgctxt "@title:window"
+msgid "Color Clip"
+msgstr "Boja isječka"
+
 #: src/dialogs/clipcreationdialog.cpp:122
 #, kde-format
 msgid "Color Clip"
 msgstr "Boja isječka"
 
 #: src/dialogs/clipcreationdialog.cpp:147
+#, fuzzy, kde-format
+#| msgid "Text clip"
+msgctxt "@title:window"
+msgid "Text Clip"
+msgstr "Tekstualni isječak"
+
 #: src/dialogs/clipcreationdialog.cpp:165
 #, fuzzy, kde-format
 #| msgid "Text clip"
@@ -5360,36 +5384,45 @@ msgid "Ignore subfolder structure"
 msgstr ""
 
 #: src/dialogs/encodingprofilesdialog.cpp:46
-#: src/dialogs/encodingprofilesdialog.cpp:201
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Manage Encoding Profiles"
+msgctxt "@title:window"
 msgid "Manage Encoding Profiles"
 msgstr "Profili upravljačkog kodiranja"
 
 #: src/dialogs/encodingprofilesdialog.cpp:47
+#: src/dialogs/kdenlivesettingsdialog.cpp:299
 #: src/project/dialogs/archivewidget.cpp:92
-#, kde-format
-msgid "Proxy clips"
-msgstr "Proxy isječci"
+#, fuzzy, kde-format
+#| msgid "Proxy Clip"
+msgid "Proxy Clips"
+msgstr "Proxy isječak"
 
-#: src/dialogs/encodingprofilesdialog.cpp:48
+#. i18n: ectx: Menu (timeline_preview)
+#. i18n: ectx: property (text), widget (QLabel, label_25)
+#: src/dialogs/encodingprofilesdialog.cpp:48 src/kdenliveui.rc:115
+#: src/mainwindow.cpp:561 src/ui/configproject_ui.ui:128
 #, fuzzy, kde-format
 #| msgid "Image preview"
-msgid "Timeline preview"
+msgid "Timeline Preview"
 msgstr "Pregled slike"
 
 #: src/dialogs/encodingprofilesdialog.cpp:49
-#, kde-format
-msgid "Video4Linux capture"
+#, fuzzy, kde-format
+#| msgid "Video4Linux capture"
+msgid "Video4Linux Capture"
 msgstr "Video4Linux snimanje"
 
 #: src/dialogs/encodingprofilesdialog.cpp:50
-#, kde-format
-msgid "Screen capture"
+#, fuzzy, kde-format
+#| msgid "Screen capture"
+msgid "Screen Capture"
 msgstr "Snimi trenutni prikaz na ekranu"
 
 #: src/dialogs/encodingprofilesdialog.cpp:51
-#, kde-format
-msgid "Decklink capture"
+#, fuzzy, kde-format
+#| msgid "Decklink capture"
+msgid "Decklink Capture"
 msgstr "Decklink snimanje"
 
 #: src/dialogs/encodingprofilesdialog.cpp:122
@@ -5415,6 +5448,11 @@ msgstr "Ekstenzija dokumenta:"
 #| msgid "Configure job"
 msgid "Configure profiles"
 msgstr "Konfiguriši posao"
+
+#: src/dialogs/encodingprofilesdialog.cpp:201
+#, kde-format
+msgid "Manage Encoding Profiles"
+msgstr "Profili upravljačkog kodiranja"
 
 #: src/dialogs/encodingprofilesdialog.cpp:205
 #, fuzzy, kde-format
@@ -5469,20 +5507,13 @@ msgstr "Razno"
 #: src/dialogs/kdenlivesettingsdialog.cpp:266
 #, fuzzy, kde-format
 #| msgid "Select default video player"
-msgid "Select the default profile (preset)"
+msgid "Select the Default Profile (preset)"
 msgstr "Odaberi standardni program za Video reprodukciju"
 
 #: src/dialogs/kdenlivesettingsdialog.cpp:290
 #, kde-format
 msgid "Project Defaults"
 msgstr "Podrazumjevana podešenja projekta"
-
-#. i18n: ectx: property (text), widget (QLabel, proxyLabel)
-#: src/dialogs/kdenlivesettingsdialog.cpp:299 src/ui/managecache_ui.ui:82
-#, fuzzy, kde-format
-#| msgid "Proxy Clip"
-msgid "Proxy Clips"
-msgstr "Proxy isječak"
 
 #: src/dialogs/kdenlivesettingsdialog.cpp:350
 #, kde-format
@@ -5551,13 +5582,15 @@ msgstr "OSS"
 
 #. i18n("OSS with DMA access"), "dma");
 #: src/dialogs/kdenlivesettingsdialog.cpp:667
-#, kde-format
-msgid "Esound daemon"
+#, fuzzy, kde-format
+#| msgid "Esound daemon"
+msgid "Esound Daemon"
 msgstr "Esound daemon"
 
 #: src/dialogs/kdenlivesettingsdialog.cpp:668
-#, kde-format
-msgid "ARTS daemon"
+#, fuzzy, kde-format
+#| msgid "ARTS daemon"
+msgid "ARTS Daemon"
 msgstr "ARTS daemon"
 
 #: src/dialogs/kdenlivesettingsdialog.cpp:680
@@ -5658,7 +5691,7 @@ msgstr ""
 #: src/dialogs/kdenlivesettingsdialog.cpp:1686
 #, fuzzy, kde-format
 #| msgid "Download New Wipes..."
-msgid "Downloading model..."
+msgid "Downloading model…"
 msgstr "Skini nove obrise..."
 
 #: src/dialogs/kdenlivesettingsdialog.cpp:1697
@@ -5696,7 +5729,7 @@ msgstr "Skini nove obrise..."
 #: src/dialogs/kdenlivesettingsdialog.cpp:1768
 #, fuzzy, kde-format
 #| msgid "Extracting..."
-msgid "Extracting archive..."
+msgid "Extracting archive…"
 msgstr "Raspakujem..."
 
 #: src/dialogs/kdenlivesettingsdialog.cpp:1775
@@ -5756,13 +5789,14 @@ msgstr ""
 #: src/dialogs/proxytest.cpp:31
 #, fuzzy, kde-format
 #| msgid "Manage Project Profiles"
-msgid "Compare proxy profile"
+msgctxt "@title:window"
+msgid "Compare Proxy Profile"
 msgstr "Upravljanje projektom profila"
 
 #: src/dialogs/proxytest.cpp:32
 #, fuzzy, kde-format
 #| msgid "Manage Project Profiles"
-msgid "Test Proxy profiles"
+msgid "Test Proxy Profiles"
 msgstr "Upravljanje projektom profila"
 
 #: src/dialogs/proxytest.cpp:35
@@ -5795,8 +5829,9 @@ msgstr "Dekodiranje tema"
 
 #: src/dialogs/renderwidget.cpp:109 src/dialogs/renderwidget.cpp:1626
 #: src/dialogs/renderwidget.cpp:2759
-#, kde-format
-msgid "Waiting..."
+#, fuzzy, kde-format
+#| msgid "Waiting..."
+msgid "Waiting…"
 msgstr "Čekam..."
 
 #: src/dialogs/renderwidget.cpp:112
@@ -5815,13 +5850,16 @@ msgid "Rendering aborted"
 msgstr "Obrada prekinuta"
 
 #: src/dialogs/renderwidget.cpp:154
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rendering"
+msgctxt "@title:window"
 msgid "Rendering"
 msgstr "Iscrtavanje"
 
 #: src/dialogs/renderwidget.cpp:166
-#, kde-format
-msgid "Edit profile"
+#, fuzzy, kde-format
+#| msgid "Edit profile"
+msgid "Edit profile…"
 msgstr "Izmijeni profil"
 
 #: src/dialogs/renderwidget.cpp:175
@@ -5830,8 +5868,9 @@ msgid "Copy profile to favorites"
 msgstr "Kopiraj profil u omiljene"
 
 #: src/dialogs/renderwidget.cpp:178
-#, kde-format
-msgid "Download New Render Profiles..."
+#, fuzzy, kde-format
+#| msgid "Download New Render Profiles..."
+msgid "Download New Render Profiles…"
 msgstr "Preuzmi novi profil vizualizacije..."
 
 #: src/dialogs/renderwidget.cpp:180
@@ -5849,13 +5888,13 @@ msgstr "Vrijeme"
 #: src/dialogs/renderwidget.cpp:206
 #, fuzzy, kde-format
 #| msgid "Real time (drop frames)"
-msgid "Timecode non drop frame"
+msgid "Timecode Non Drop Frame"
 msgstr "Stvarno vrijeme ( ispustiti okvire)"
 
 #: src/dialogs/renderwidget.cpp:207
 #, fuzzy, kde-format
 #| msgid "Limit keyframes number"
-msgid "Frame number"
+msgid "Frame Number"
 msgstr "Ograniči broj glavnih okvira"
 
 #: src/dialogs/renderwidget.cpp:214
@@ -5916,9 +5955,7 @@ msgid "Beginning"
 msgstr "Početak"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#. i18n: ectx: property (text), widget (QLabel, duration_label)
-#: src/dialogs/renderwidget.cpp:487 src/ui/editsub_ui.ui:88
-#: src/ui/wipeval_ui.ui:167
+#: src/dialogs/renderwidget.cpp:487 src/ui/wipeval_ui.ui:167
 #, kde-format
 msgid "End"
 msgstr "Kraj"
@@ -5961,8 +5998,10 @@ msgid "Custom"
 msgstr "Podešeno"
 
 #: src/dialogs/renderwidget.cpp:696 src/dialogs/renderwidget.cpp:889
-#, kde-format
-msgid "Profile already exists"
+#, fuzzy, kde-format
+#| msgid "Profile already exists"
+msgctxt "@title:window"
+msgid "Profile Already Exists"
 msgstr "Profil već postoji"
 
 #: src/dialogs/renderwidget.cpp:697 src/dialogs/renderwidget.cpp:890
@@ -6006,7 +6045,9 @@ msgid "Custom"
 msgstr "Podešeno"
 
 #: src/dialogs/renderwidget.cpp:848
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Profile"
+msgctxt "@title:window"
 msgid "Edit Profile"
 msgstr "Uredi profil"
 
@@ -6044,7 +6085,8 @@ msgstr "ubaci"
 #: src/dialogs/renderwidget.cpp:1167
 #, fuzzy, kde-format
 #| msgid "File rendering"
-msgid "Delayed rendering"
+msgctxt "@title:window"
+msgid "Delayed Rendering"
 msgstr "Iscrtavanje dokumenata"
 
 #: src/dialogs/renderwidget.cpp:1167
@@ -6059,10 +6101,13 @@ msgid "Start"
 msgstr "Započni"
 
 #: src/dialogs/renderwidget.cpp:1615 src/dialogs/renderwidget.cpp:2746
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "There is already a job writing file:<br /><b>%1</b><br />Abort the job if "
+#| "you want to overwrite it..."
 msgid ""
 "There is already a job writing file:<br /><b>%1</b><br />Abort the job if "
-"you want to overwrite it..."
+"you want to overwrite it…"
 msgstr ""
 "Već postoji posao koji piše dokument:<br /><b>%1</b><br />Obustavite posao "
 "ako želite pisati preko..."
@@ -6478,6 +6523,7 @@ msgstr "Uredi glavni okvir"
 #: src/dialogs/wizard.cpp:70
 #, fuzzy, kde-format
 #| msgid "Required for Kdenlive"
+msgctxt "@title:window"
 msgid "Welcome to Kdenlive"
 msgstr "Potrebno za Kdenlive"
 
@@ -6669,24 +6715,35 @@ msgid ""
 msgstr ""
 
 #: src/dialogs/wizard.cpp:796
+#: src/mltcontroller/clippropertiescontroller.cpp:1343
 #, kde-format
 msgid "Frame size:"
 msgstr "Veličina okvira:"
 
+#. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: src/dialogs/wizard.cpp:797 src/ui/configcapture_ui.ui:96
+#: src/dialogs/wizard.cpp:797
+#: src/mltcontroller/clippropertiescontroller.cpp:524
+#: src/mltcontroller/clippropertiescontroller.cpp:1348
+#: src/mltcontroller/clippropertiescontroller.cpp:1353
+#: src/ui/configcapture_ui.ui:96 src/ui/profiledialog_ui.ui:103
 #, kde-format
 msgid "Frame rate:"
 msgstr "Protok kadrova:"
 
+#. i18n: ectx: property (text), widget (QLabel, label_9)
 #. i18n: ectx: property (text), widget (QLabel, label_23)
-#: src/dialogs/wizard.cpp:798 src/ui/configcapture_ui.ui:184
+#: src/dialogs/wizard.cpp:798
+#: src/mltcontroller/clippropertiescontroller.cpp:1371
+#: src/ui/configcapture_ui.ui:184 src/ui/profiledialog_ui.ui:143
 #, kde-format
 msgid "Pixel aspect ratio:"
 msgstr "Omjer piksela:"
 
+#. i18n: ectx: property (text), widget (QLabel, label_10)
 #. i18n: ectx: property (text), widget (QLabel, label_31)
 #: src/dialogs/wizard.cpp:800 src/ui/configcapture_ui.ui:143
+#: src/ui/profiledialog_ui.ui:183
 #, kde-format
 msgid "Display aspect ratio:"
 msgstr "Prikaz omjera:"
@@ -6876,8 +6933,10 @@ msgid "%1 missing source clips, you can only use the proxies"
 msgstr "%1 nedostaje izvor isječka, ali možete koristiti proxies"
 
 #: src/doc/documentchecker.cpp:862
-#, kde-format
-msgid "Clips folder"
+#, fuzzy, kde-format
+#| msgid "Clips folder"
+msgctxt "@title:window"
+msgid "Clips Folder"
 msgstr "Datoteka snimaka"
 
 #: src/doc/documentchecker.cpp:893 src/doc/documentchecker.cpp:917
@@ -7159,7 +7218,9 @@ msgid "Moving proxy clips failed: %1"
 msgstr "Upravljanje projektom profila"
 
 #: src/doc/kdenlivedoc.cpp:845
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enter Template Path"
+msgctxt "@title:window"
 msgid "Enter Template Path"
 msgstr "Unesi put šablona"
 
@@ -7371,6 +7432,7 @@ msgstr ""
 #: src/effects/effectlist/view/effectlistwidget.cpp:149
 #, fuzzy, kde-format
 #| msgid "Delete effect"
+msgctxt "@title:window"
 msgid "Export Custom Effect"
 msgstr "Izbriši efekat"
 
@@ -7524,8 +7586,15 @@ msgid "Presets"
 msgstr "Resetuj"
 
 #: src/effects/effectstack/view/collapsibleeffectview.cpp:228
+#, fuzzy, kde-format
+#| msgid "Save Effect"
+msgid "Save effect"
+msgstr "Sačuvaj efekat"
+
 #: src/effects/effectstack/view/collapsibleeffectview.cpp:473
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Effect"
+msgctxt "@title:window"
 msgid "Save Effect"
 msgstr "Sačuvaj efekat"
 
@@ -7539,6 +7608,13 @@ msgstr ""
 #| msgid "No available clip selected"
 msgid "No effect selected."
 msgstr "Nema dostupnih  selektovanih isječaka"
+
+#: src/effects/effectstack/view/effectstackview.cpp:465
+#, fuzzy, kde-format
+#| msgid "Effect Stack"
+msgctxt "@title:window"
+msgid "Save Effect Stack"
+msgstr "Stek Efekata"
 
 #: src/effects/effectstack/view/effectstackview.cpp:465
 #, fuzzy, kde-format
@@ -7705,7 +7781,8 @@ msgstr "Nije uspjelo da se kreiraj proxy isječak."
 
 #: src/jobs/scenesplittask.cpp:57
 #, fuzzy, kde-format
-msgid "Scene detection"
+msgctxt "@title:window"
+msgid "Scene Detection"
 msgstr "Prepoznavanje ivica"
 
 #: src/jobs/scenesplittask.cpp:116
@@ -7732,9 +7809,10 @@ msgstr "Rezanje prizora"
 msgid "Failed to analyse clip."
 msgstr "Nije uspjelo da se kreiraj proxy isječak."
 
-#: src/jobs/speedtask.cpp:43 src/timeline2/view/dialogs/speeddialog.cpp:25
+#: src/jobs/speedtask.cpp:43
 #, fuzzy, kde-format
 #| msgid "Clip Properties"
+msgctxt "@title:window"
 msgid "Clip Speed"
 msgstr "Video karakteristike"
 
@@ -7879,16 +7957,6 @@ msgstr "Interpolacija"
 msgid "Removal"
 msgstr "Ukloni datoteku"
 
-#. i18n: ectx: Menu (timeline_preview)
-#. i18n: ectx: property (text), widget (QLabel, label_25)
-#. i18n: ectx: property (text), widget (QLabel, previewLabel)
-#: src/kdenliveui.rc:115 src/mainwindow.cpp:561 src/ui/configproject_ui.ui:128
-#: src/ui/managecache_ui.ui:178
-#, fuzzy, kde-format
-#| msgid "Image preview"
-msgid "Timeline Preview"
-msgstr "Pregled slike"
-
 #. i18n: ectx: Menu (current_clip)
 #: src/kdenliveui.rc:124
 #, fuzzy, kde-format
@@ -7959,7 +8027,7 @@ msgstr "Video rezolucija"
 #. i18n: ectx: Menu (monitor_config)
 #: src/kdenliveui.rc:237
 #, fuzzy, kde-format
-msgid "Monitor config"
+msgid "Monitor Config"
 msgstr "Isječak monitora"
 
 #. i18n: ectx: Menu (view)
@@ -8017,20 +8085,21 @@ msgstr "Efekti"
 msgid "Layouts"
 msgstr "Okruženja"
 
-#: src/layoutmanagement.cpp:40 src/layoutmanagement.cpp:428
+#: src/layoutmanagement.cpp:40
 #, kde-format
 msgid "Load Layout"
 msgstr "Učitaj Okruženje"
 
-#: src/layoutmanagement.cpp:47 src/layoutmanagement.cpp:258
-#, kde-format
-msgid "Save Layout"
+#: src/layoutmanagement.cpp:47
+#, fuzzy, kde-format
+#| msgid "Save Layout"
+msgid "Save Layout…"
 msgstr "Spremi raspored"
 
 #: src/layoutmanagement.cpp:51
 #, fuzzy, kde-format
 #| msgid "Save Layout"
-msgid "Manage Layouts"
+msgid "Manage Layouts…"
 msgstr "Spremi raspored"
 
 #: src/layoutmanagement.cpp:61
@@ -8048,6 +8117,13 @@ msgstr ""
 #| msgid "Layout %1"
 msgid "Layout %1: %2"
 msgstr "Okruženje %1"
+
+#: src/layoutmanagement.cpp:258
+#, fuzzy, kde-format
+#| msgid "Save Layout"
+msgctxt "@title:window"
+msgid "Save Layout"
+msgstr "Spremi raspored"
 
 #: src/layoutmanagement.cpp:258
 #, kde-format
@@ -8073,7 +8149,7 @@ msgstr "Očisti projekat"
 #: src/layoutmanagement.cpp:345
 #, fuzzy, kde-format
 #| msgid "Delete data"
-msgid "Delete Layout"
+msgid "Delete the layout."
 msgstr "Obriši podatke"
 
 #: src/layoutmanagement.cpp:381
@@ -8081,6 +8157,13 @@ msgstr "Obriši podatke"
 #, kde-format
 msgid "Reset"
 msgstr "Resetuj"
+
+#: src/layoutmanagement.cpp:428
+#, fuzzy, kde-format
+#| msgid "Load Layout"
+msgctxt "@title:window"
+msgid "Load Layout"
+msgstr "Učitaj Okruženje"
 
 #: src/layoutmanagement.cpp:467
 #, fuzzy, kde-format
@@ -8103,6 +8186,7 @@ msgstr "Nije moguć pronalazak snimka za rezanje"
 #: src/layoutmanagement.cpp:487
 #, fuzzy, kde-format
 #| msgid "Export audio"
+msgctxt "@title:window"
 msgid "Export Layout"
 msgstr "Zvučni izvoz"
 
@@ -8216,6 +8300,7 @@ msgstr "Greška prilikom brisnja snimka na %1 na zapisu %2"
 #, fuzzy, kde-format
 #| msgid "Add clip to project"
 #| msgid_plural "Add clips to project"
+msgctxt "@title:window"
 msgid "Add Folder to Library"
 msgstr "Dodaj snimak u projekat"
 
@@ -8258,176 +8343,176 @@ msgstr "Ne mogu pisati za put: %1"
 msgid "Version %1"
 msgstr "Trajanje: "
 
-#: src/main.cpp:183
+#: src/main.cpp:185
 #, kde-format
 msgid "Please report bugs to <a href=\"%1\">%2</a>"
 msgstr ""
 
-#: src/main.cpp:185
+#: src/main.cpp:187
 #, kde-format
 msgid "You are using the %1 package.<br>"
 msgstr ""
 
-#: src/main.cpp:187
+#: src/main.cpp:189
 #, kde-format
 msgid "Kdenlive"
 msgstr "Kdenlive"
 
-#: src/main.cpp:187
+#: src/main.cpp:189
 #, kde-format
 msgid "An open source video editor."
 msgstr "Otvoreni izvor video editora."
 
-#: src/main.cpp:188
+#: src/main.cpp:190
 #, fuzzy, kde-format
 #| msgid "Copyright © 2007–2014 Kdenlive authors"
 msgid "Copyright © 2007–2022 Kdenlive authors"
 msgstr "Autorska prava © 2007–2014 Kdenlive autori"
 
-#: src/main.cpp:191
+#: src/main.cpp:193
 #, kde-format
 msgid "Jean-Baptiste Mardelle"
 msgstr "Jean-Baptiste Mardelle"
 
-#: src/main.cpp:191
+#: src/main.cpp:193
 #, fuzzy, kde-format
 #| msgid "MLT and KDE SC 4 porting, main developer and maintainer"
 msgid "MLT and KDE SC 4 / KF5 port, main developer and maintainer"
 msgstr "MLT i KDE SC 4 prenos, razvoj i održavanje"
 
-#: src/main.cpp:193
+#: src/main.cpp:195
 #, kde-format
 msgid "Nicolas Carion"
 msgstr ""
 
-#: src/main.cpp:193
+#: src/main.cpp:195
 #, kde-format
 msgid "Code re-architecture & timeline rewrite"
 msgstr ""
 
-#: src/main.cpp:194
+#: src/main.cpp:196
 #, kde-format
 msgid "Simon A. Eugster"
 msgstr "Simon A.Eugster"
 
-#: src/main.cpp:194
+#: src/main.cpp:196
 #, kde-format
 msgid "Color scopes, bug fixing, etc."
 msgstr "Paleta boja, ispravljanje bugova, itd."
 
-#: src/main.cpp:195
+#: src/main.cpp:197
 #, kde-format
 msgid "Vincent Pinon"
 msgstr "Vincent Pinon"
 
-#: src/main.cpp:195
+#: src/main.cpp:197
 #, kde-format
 msgid "KF5 port, Windows cross-build, packaging, bug fixing"
 msgstr ""
 
-#: src/main.cpp:197
+#: src/main.cpp:199
 #, kde-format
 msgid "Dan Dennedy"
 msgstr "Dan Dennedy"
 
-#: src/main.cpp:197
+#: src/main.cpp:199
 #, fuzzy, kde-format
 #| msgid "Bug fixing, etc."
 msgid "MLT, Bug fixing, etc."
 msgstr "Popravljanje grešaka, etc."
 
-#: src/main.cpp:198
+#: src/main.cpp:200
 #, kde-format
 msgid "Julius Künzel"
 msgstr ""
 
-#: src/main.cpp:198
+#: src/main.cpp:200
 #, kde-format
 msgid "Bug fixing, etc."
 msgstr "Popravljanje grešaka, etc."
 
-#: src/main.cpp:199
+#: src/main.cpp:201
 #, kde-format
 msgid "Sashmita Raghav"
 msgstr ""
 
-#: src/main.cpp:199
+#: src/main.cpp:201
 #, kde-format
 msgid "Subtitle feature (GSoC), timeline colours"
 msgstr ""
 
-#: src/main.cpp:201
+#: src/main.cpp:203
 #, kde-format
 msgid "Jason Wood"
 msgstr "Jason Wood"
 
-#: src/main.cpp:201
+#: src/main.cpp:203
 #, kde-format
 msgid "Original KDE 3 version author (not active anymore)"
 msgstr "Orginalana KDE 3 verzija autora (nije aktivan više)"
 
-#: src/main.cpp:203
+#: src/main.cpp:205
 #, kde-format
 msgid "Farid Abdelnour"
 msgstr ""
 
-#: src/main.cpp:203
+#: src/main.cpp:205
 #, kde-format
 msgid "Logo, Promotion, testing"
 msgstr ""
 
-#: src/main.cpp:204
+#: src/main.cpp:206
 #, kde-format
 msgid "Eugen Mohr"
 msgstr ""
 
-#: src/main.cpp:204
+#: src/main.cpp:206
 #, kde-format
 msgid "Bug triage, testing"
 msgstr ""
 
-#: src/main.cpp:205
+#: src/main.cpp:207
 #, kde-format
 msgid "Nara Oliveira"
 msgstr ""
 
-#: src/main.cpp:205
+#: src/main.cpp:207
 #, kde-format
 msgid "Logo"
 msgstr ""
 
-#: src/main.cpp:206
+#: src/main.cpp:208
 #, kde-format
 msgid "Bruno Santos"
 msgstr ""
 
-#: src/main.cpp:206
+#: src/main.cpp:208
 #, fuzzy, kde-format
 #| msgid "Settings"
 msgid "Testing"
 msgstr "Postavke"
 
-#: src/main.cpp:207
+#: src/main.cpp:209
 #, kde-format
 msgid "Massimo Stella"
 msgstr ""
 
-#: src/main.cpp:207
+#: src/main.cpp:209
 #, kde-format
 msgid "Expert advice, testing"
 msgstr ""
 
-#: src/main.cpp:209
+#: src/main.cpp:211
 #, kde-format
 msgid "NAME OF TRANSLATORS"
 msgstr "IMENA PREVODITELJA"
 
-#: src/main.cpp:209
+#: src/main.cpp:211
 #, kde-format
 msgid "EMAIL OF TRANSLATORS"
 msgstr "EMAIL-OVI PREVODITELJA"
 
-#: src/main.cpp:213
+#: src/main.cpp:215
 #, kde-format
 msgid ""
 "Using:\n"
@@ -8435,12 +8520,12 @@ msgid ""
 "<a href=\"https://ffmpeg.org\">FFmpeg</a> libraries"
 msgstr ""
 
-#: src/main.cpp:217
+#: src/main.cpp:219
 #, kde-format
 msgid "MLT"
 msgstr ""
 
-#: src/main.cpp:217
+#: src/main.cpp:219
 #, kde-format
 msgid "Open source multimedia framework."
 msgstr ""
@@ -8448,41 +8533,40 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (KComboBox, device_selector)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_defaultcapture)
 #. i18n: ectx: attribute (title), widget (QWidget, ffmpeg_tab)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: src/main.cpp:218 src/ui/configcapture_ui.ui:37 src/ui/configcapture_ui.ui:60
-#: src/ui/configenv_ui.ui:118 src/ui/recmonitor_ui.ui:139
+#: src/main.cpp:220 src/ui/configcapture_ui.ui:37 src/ui/configcapture_ui.ui:60
+#: src/ui/recmonitor_ui.ui:139
 #, kde-format
 msgid "FFmpeg"
 msgstr "FFmpeg"
 
-#: src/main.cpp:218
+#: src/main.cpp:220
 #, kde-format
 msgid ""
 "A complete, cross-platform solution to record, convert and stream audio and "
 "video."
 msgstr ""
 
-#: src/main.cpp:239
+#: src/main.cpp:241
 #, kde-format
 msgid "Set a custom config file name"
 msgstr ""
 
-#: src/main.cpp:240
+#: src/main.cpp:242
 #, kde-format
 msgid "Set the path for MLT environment"
 msgstr "Postavi put za MLT okruženje"
 
-#: src/main.cpp:241
+#: src/main.cpp:243
 #, kde-format
 msgid "MLT log level"
 msgstr ""
 
-#: src/main.cpp:242
+#: src/main.cpp:244
 #, kde-format
 msgid "Comma separated list of clips to add"
 msgstr "Lista isječaka za dodavanje"
 
-#: src/main.cpp:243
+#: src/main.cpp:245
 #, kde-format
 msgid "Document to open"
 msgstr "Dokument za otvaranje"
@@ -8554,6 +8638,11 @@ msgstr "Hvatanje ekrana"
 msgid "Audio Spectrum"
 msgstr "ZvučniSpektrum"
 
+#: src/mainwindow.cpp:365
+#, fuzzy, kde-format
+msgid "Project Bin"
+msgstr "Projektne datoteke"
+
 #: src/mainwindow.cpp:368
 #, fuzzy, kde-format
 #| msgid "Media players"
@@ -8610,10 +8699,9 @@ msgid "Add Transition"
 msgstr "Dodaj prelaz"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_raisepropstransitions)
-#. i18n: ectx: property (text), widget (QLabel, label_5)
 #: src/mainwindow.cpp:506 src/mainwindow.cpp:1902
 #: src/transitions/transitionlist/model/transitiontreemodel.cpp:30
-#: src/ui/configmisc_ui.ui:85 src/ui/configtimeline_ui.ui:30
+#: src/ui/configtimeline_ui.ui:30
 #, kde-format
 msgid "Transitions"
 msgstr "Prijelazi"
@@ -8626,8 +8714,9 @@ msgid "Favorite Effects"
 msgstr "Zalijepi efekte"
 
 #: src/mainwindow.cpp:545 src/mainwindow.cpp:1399
-#, kde-format
-msgid "Render"
+#, fuzzy, kde-format
+#| msgid "Render"
+msgid "Render…"
 msgstr "Sijenčenje"
 
 #: src/mainwindow.cpp:550
@@ -8642,10 +8731,10 @@ msgstr "Vizualiziraj u datoteku"
 msgid "Rendering preview"
 msgstr "Snimanje Prikaza"
 
-#: src/mainwindow.cpp:632
+#: src/mainwindow.cpp:632 src/monitor/monitor.cpp:366
 #, fuzzy, kde-format
 #| msgid "Go to marker..."
-msgid "Go to Guide..."
+msgid "Go to Guide…"
 msgstr "Idi na marker..."
 
 #: src/mainwindow.cpp:655
@@ -8737,18 +8826,21 @@ msgid "Select a clip to compare effect"
 msgstr "Odabrati snimak ako želite primijeniti efekt"
 
 #: src/mainwindow.cpp:1062
-#, kde-format
-msgid "Normal mode"
+#, fuzzy, kde-format
+#| msgid "Normal mode"
+msgid "Normal Mode"
 msgstr "Normalan režim"
 
 #: src/mainwindow.cpp:1066
-#, kde-format
-msgid "Overwrite mode"
+#, fuzzy, kde-format
+#| msgid "Overwrite mode"
+msgid "Overwrite Mode"
 msgstr "Režim prepisivanja preko"
 
 #: src/mainwindow.cpp:1070
-#, kde-format
-msgid "Insert mode"
+#, fuzzy, kde-format
+#| msgid "Insert mode"
+msgid "Insert Mode"
 msgstr "Režim umetanja"
 
 #: src/mainwindow.cpp:1074
@@ -8769,7 +8861,13 @@ msgstr "Vremenska osa"
 msgid "Use Timeline Zone for Insert"
 msgstr "Vremenska osa"
 
-#: src/mainwindow.cpp:1090 src/mainwindow.cpp:1091
+#: src/mainwindow.cpp:1090
+#, fuzzy, kde-format
+#| msgid "Composite"
+msgid "Track Compositing"
+msgstr "Smjesa"
+
+#: src/mainwindow.cpp:1091
 #, fuzzy, kde-format
 #| msgid "Composite"
 msgid "Track compositing"
@@ -8822,41 +8920,45 @@ msgid "Frames"
 msgstr "Okviri"
 
 #: src/mainwindow.cpp:1168
-#, kde-format
-msgid "Edit Subtitle tool"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Add guide"
+msgid "Edit Subtitle Tool"
+msgstr "Dodaj vodiča"
 
-#: src/mainwindow.cpp:1177
+#: src/mainwindow.cpp:1177 src/titler/titlewidget.cpp:377
+#: src/titler/titlewidget.cpp:380
 #, kde-format
-msgid "Selection tool"
-msgstr "Alat za biranje"
+msgid "Selection Tool"
+msgstr "Alat selekcije"
 
 #: src/mainwindow.cpp:1182
-#, kde-format
-msgid "Razor tool"
+#, fuzzy, kde-format
+#| msgid "Razor tool"
+msgid "Razor Tool"
 msgstr "Alat oštrine"
 
 #: src/mainwindow.cpp:1187
-#, kde-format
-msgid "Spacer tool"
+#, fuzzy, kde-format
+#| msgid "Spacer tool"
+msgid "Spacer Tool"
 msgstr "Spacer alat"
 
 #: src/mainwindow.cpp:1193 src/mainwindow.cpp:1195
 #, fuzzy, kde-format
 #| msgid "File extension:"
-msgid "Ripple tool"
+msgid "Ripple Tool"
 msgstr "Ekstenzija dokumenta:"
 
 #: src/mainwindow.cpp:1208 src/mainwindow.cpp:1210
 #, fuzzy, kde-format
 #| msgid "Spacer tool"
-msgid "Slip tool"
+msgid "Slip Tool"
 msgstr "Spacer alat"
 
 #: src/mainwindow.cpp:1215
 #, fuzzy, kde-format
 #| msgid "Spacer tool"
-msgid "Multicam tool"
+msgid "Multicam Tool"
 msgstr "Spacer alat"
 
 #: src/mainwindow.cpp:1237
@@ -8870,21 +8972,22 @@ msgstr ""
 msgid "Mix Clips"
 msgstr "Snimak"
 
-#. i18n: ectx: property (text), widget (QCheckBox, videothumbs)
-#: src/mainwindow.cpp:1251 src/ui/wizardextra_ui.ui:35
-#, kde-format
-msgid "Show video thumbnails"
+#: src/mainwindow.cpp:1251
+#, fuzzy, kde-format
+#| msgid "Show video thumbnails"
+msgid "Show Video Thumbnails"
 msgstr "Prikaži sličice na videu"
 
-#. i18n: ectx: property (text), widget (QCheckBox, audiothumbs)
-#: src/mainwindow.cpp:1257 src/ui/wizardextra_ui.ui:42
-#, kde-format
-msgid "Show audio thumbnails"
+#: src/mainwindow.cpp:1257
+#, fuzzy, kde-format
+#| msgid "Show audio thumbnails"
+msgid "Show Audio Thumbnails"
 msgstr "Prikaži audio ikonice"
 
 #: src/mainwindow.cpp:1263
-#, kde-format
-msgid "Show markers comments"
+#, fuzzy, kde-format
+#| msgid "Show markers comments"
+msgid "Show Markers Comments"
 msgstr "Prikaži komentare markera"
 
 #: src/mainwindow.cpp:1269
@@ -8895,12 +8998,13 @@ msgstr "Prijanjanje"
 #: src/mainwindow.cpp:1275
 #, fuzzy, kde-format
 #| msgid "Show %1 in timeline"
-msgid "Show color tags in timeline"
+msgid "Show Color Tags in Timeline"
 msgstr "Prikaži %1 na vremenskoj osi"
 
 #: src/mainwindow.cpp:1281
-#, kde-format
-msgid "Fit zoom to project"
+#, fuzzy, kde-format
+#| msgid "Fit zoom to project"
+msgid "Fit Zoom to Project"
 msgstr "Podesi zumiranje za projekat"
 
 #: src/mainwindow.cpp:1306
@@ -8942,14 +9046,15 @@ msgid "Software OpenGL"
 msgstr ""
 
 #: src/mainwindow.cpp:1395
-#, kde-format
-msgid "Run Config Wizard"
+#, fuzzy, kde-format
+#| msgid "Run Config Wizard"
+msgid "Run Config Wizard…"
 msgstr "Pokreni konfiguracijskog čarobnjaka"
 
-#. i18n: ectx: property (windowTitle), widget (QDialog, ProjectSettings_UI)
-#: src/mainwindow.cpp:1396 src/ui/projectsettings_ui.ui:14
-#, kde-format
-msgid "Project Settings"
+#: src/mainwindow.cpp:1396
+#, fuzzy, kde-format
+#| msgid "Project Settings"
+msgid "Project Settings…"
 msgstr "Postavke projekta"
 
 #: src/mainwindow.cpp:1402
@@ -8961,7 +9066,7 @@ msgstr "Prikaži sekvencu"
 #: src/mainwindow.cpp:1407
 #, fuzzy, kde-format
 #| msgid "Device configuration"
-msgid "Reset configuration"
+msgid "Reset Configuration…"
 msgstr "Konfiguracija uređaja"
 
 #: src/mainwindow.cpp:1413
@@ -8975,35 +9080,39 @@ msgid "Loop Zone"
 msgstr "Zona petlji"
 
 #: src/mainwindow.cpp:1417
-#, kde-format
-msgid "Loop selected clip"
+#, fuzzy, kde-format
+#| msgid "Loop selected clip"
+msgid "Loop Selected Clip"
 msgstr "Selektovani isječak petlji"
 
 #: src/mainwindow.cpp:1421
-#, kde-format
-msgid "Transcode Clips"
+#, fuzzy, kde-format
+#| msgid "Transcode Clips"
+msgid "Transcode Clips…"
 msgstr "Dekodiraj isječke"
 
 #: src/mainwindow.cpp:1422
 #, fuzzy, kde-format
 #| msgid "Timeline"
-msgid "OpenTimelineIO E&xport"
+msgid "OpenTimelineIO E&xport…"
 msgstr "Vremenska osa"
 
 #: src/mainwindow.cpp:1425
 #, fuzzy, kde-format
 #| msgid "Timeline"
-msgid "OpenTimelineIO &Import"
+msgid "OpenTimelineIO &Import…"
 msgstr "Vremenska osa"
 
-#: src/mainwindow.cpp:1429 src/project/dialogs/archivewidget.cpp:47
-#, kde-format
-msgid "Archive Project"
+#: src/mainwindow.cpp:1429
+#, fuzzy, kde-format
+#| msgid "Archive Project"
+msgid "Archive Project…"
 msgstr "Arhiviraj projekat"
 
 #: src/mainwindow.cpp:1431
-#, kde-format
-msgid "Switch monitor"
+#, fuzzy, kde-format
+#| msgid "Switch monitor"
+msgid "Switch Monitor"
 msgstr "Promjeni ekran"
 
 #: src/mainwindow.cpp:1432
@@ -9214,8 +9323,9 @@ msgid "Deselect Clip"
 msgstr "Ukini Odabiranje snimka"
 
 #: src/mainwindow.cpp:1589
-#, kde-format
-msgid "Add Clip To Selection"
+#, fuzzy, kde-format
+#| msgid "Add Clip To Selection"
+msgid "Add Clip to Selection"
 msgstr "Dodaj isječak za selekciju"
 
 #: src/mainwindow.cpp:1591
@@ -9229,8 +9339,9 @@ msgid "Deselect Transition"
 msgstr "Ne odaberi prijelaz"
 
 #: src/mainwindow.cpp:1595
-#, kde-format
-msgid "Add Transition To Selection"
+#, fuzzy, kde-format
+#| msgid "Add Transition To Selection"
+msgid "Add Transition to Selection"
 msgstr "Dodaj prelaz na selekciju"
 
 #: src/mainwindow.cpp:1598
@@ -9260,8 +9371,9 @@ msgid "Delete Marker"
 msgstr "Obriši Marker"
 
 #: src/mainwindow.cpp:1612
-#, kde-format
-msgid "Edit Marker"
+#, fuzzy, kde-format
+#| msgid "Edit Marker"
+msgid "Edit Marker…"
 msgstr "Uredi obilježivač"
 
 #: src/mainwindow.cpp:1617 src/timeline2/model/timelinefunctions.cpp:1013
@@ -9381,8 +9493,9 @@ msgid "Add/Remove Keyframe"
 msgstr "Izbriši glavni okvir"
 
 #: src/mainwindow.cpp:1742
-#, kde-format
-msgid "Insert Space"
+#, fuzzy, kde-format
+#| msgid "Insert Space"
+msgid "Insert Space…"
 msgstr "Ubaci Prostor"
 
 #: src/mainwindow.cpp:1743
@@ -9393,15 +9506,14 @@ msgstr "Izbaci prostor"
 #: src/mainwindow.cpp:1744
 #, fuzzy, kde-format
 #| msgid "Remove Space"
-msgid "Remove Space In All Tracks"
+msgid "Remove Space in All Tracks"
 msgstr "Izbaci prostor"
 
-#: src/mainwindow.cpp:1747 src/timeline2/model/timelinemodel.cpp:3968
-#: src/timeline2/view/timelinecontroller.cpp:711
+#: src/mainwindow.cpp:1747
 #, fuzzy, kde-format
 #| msgid "Insert Track"
 msgctxt "@action"
-msgid "Insert Track"
+msgid "Insert Track…"
 msgstr "Ubaci Zapis"
 
 #: src/mainwindow.cpp:1751 src/timeline2/view/timelinecontroller.cpp:4521
@@ -9435,7 +9547,7 @@ msgstr "Selektuj sve u trenutnu traku"
 
 #: src/mainwindow.cpp:1791
 #, kde-format
-msgid "Manage Cached Data"
+msgid "Manage Cached Data…"
 msgstr ""
 
 #: src/mainwindow.cpp:1794
@@ -9456,8 +9568,9 @@ msgid "Delete Guide"
 msgstr "Izbriši vodic"
 
 #: src/mainwindow.cpp:1800
-#, kde-format
-msgid "Edit Guide"
+#, fuzzy, kde-format
+#| msgid "Edit Guide"
+msgid "Edit Guide…"
 msgstr "Uredi vodic"
 
 #: src/mainwindow.cpp:1802
@@ -9490,13 +9603,13 @@ msgstr "bez naslova"
 #: src/mainwindow.cpp:1812
 #, fuzzy, kde-format
 #| msgid "Load markers"
-msgid "Import Subtitle File"
+msgid "Import Subtitle File…"
 msgstr "Učitaj markere"
 
 #: src/mainwindow.cpp:1813
 #, fuzzy, kde-format
 #| msgid "Add guide"
-msgid "Export Subtitle File"
+msgid "Export Subtitle File…"
 msgstr "Dodaj vodiča"
 
 #: src/mainwindow.cpp:1814 src/timeline2/model/timelinemodel.cpp:1983
@@ -9507,7 +9620,7 @@ msgstr "Izbriši snimak"
 #: src/mainwindow.cpp:1815
 #, fuzzy, kde-format
 #| msgid "Show/Hide options"
-msgid "Speech Recognition"
+msgid "Speech Recognition…"
 msgstr "Pokaži/sakrij opcije"
 
 #: src/mainwindow.cpp:1820
@@ -9602,13 +9715,13 @@ msgstr "Izbriši efekat"
 #: src/mainwindow.cpp:1913
 #, fuzzy, kde-format
 #| msgid "Extract frame"
-msgid "Extract frame..."
+msgid "Extract Frame…"
 msgstr "Ekstraktuj okvir"
 
 #: src/mainwindow.cpp:1916
 #, fuzzy, kde-format
 #| msgid "Extract frame"
-msgid "Extract frame to project..."
+msgid "Extract Frame to Project…"
 msgstr "Ekstraktuj okvir"
 
 #: src/mainwindow.cpp:2025 src/mainwindow.cpp:2035
@@ -9672,7 +9785,7 @@ msgstr "Pokaži/sakrij opcije"
 #: src/mainwindow.cpp:2375
 #, fuzzy, kde-format
 #| msgid "Download New Title Templates..."
-msgid "Download New Keyboard Schemes..."
+msgid "Download New Keyboard Schemes…"
 msgstr "Skini nove nazive uzoraka..."
 
 #: src/mainwindow.cpp:2382
@@ -9806,8 +9919,7 @@ msgid ""
 "a lift of all tracks except active one"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: src/mainwindow.cpp:3186 src/ui/addtrack_ui.ui:71
+#: src/mainwindow.cpp:3186
 #, fuzzy, kde-format
 #| msgid "Interpolation"
 msgid "Insert"
@@ -9826,14 +9938,15 @@ msgid "Stabilize"
 msgstr "Stabilizacija"
 
 #: src/mainwindow.cpp:3485
-#, kde-format
-msgid "Automatic scene split"
+#, fuzzy, kde-format
+#| msgid "Automatic scene split"
+msgid "Automatic Scene Split…"
 msgstr "Automatski podijeli prizore"
 
 #: src/mainwindow.cpp:3492
 #, fuzzy, kde-format
 #| msgid "Cannot find clip for speed change"
-msgid "Duplicate clip with speed change"
+msgid "Duplicate Clip with Speed Change…"
 msgstr "Nije moguće naći snimak za promjenu brzine"
 
 #: src/mainwindow.cpp:3509
@@ -9856,7 +9969,8 @@ msgstr "Onemogući efekt"
 
 #: src/mainwindow.cpp:3637
 #, fuzzy, kde-format
-msgid "Files to transcode"
+msgctxt "@title:window"
+msgid "Files to Transcode"
 msgstr "Nema isječka za dekodiranje"
 
 #: src/mainwindow.cpp:3786
@@ -9954,11 +10068,29 @@ msgctxt "Kilobytes per seconds"
 msgid "kb/s"
 msgstr ""
 
+#: src/mltcontroller/clippropertiescontroller.cpp:265
+#, fuzzy, kde-format
+#| msgid "Add marker"
+msgid "Add marker…"
+msgstr "Dodaj obilježivač"
+
+#: src/mltcontroller/clippropertiescontroller.cpp:267
+#, fuzzy, kde-format
+#| msgid "Edit marker"
+msgid "Edit marker…"
+msgstr "Uredi obilježivač"
+
 #: src/mltcontroller/clippropertiescontroller.cpp:268
 #, fuzzy, kde-format
 #| msgid "Edit marker"
-msgid "Export markers"
+msgid "Export markers…"
 msgstr "Uredi obilježivač"
+
+#: src/mltcontroller/clippropertiescontroller.cpp:269
+#, fuzzy, kde-format
+#| msgid "Load markers"
+msgid "Import markers…"
+msgstr "Učitaj markere"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:291
 #, fuzzy, kde-format
@@ -9975,13 +10107,13 @@ msgstr "Izbriši podatke analize"
 #: src/mltcontroller/clippropertiescontroller.cpp:295
 #, fuzzy, kde-format
 #| msgid "Export audio"
-msgid "Export analysis"
+msgid "Export analysis…"
 msgstr "Zvučni izvoz"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:296
 #, fuzzy, kde-format
 #| msgid "Load analysis data"
-msgid "Import analysis"
+msgid "Import analysis…"
 msgstr "Učitaj podatke analize"
 
 #. i18n: ectx: property (text), widget (QCheckBox, autorotate)
@@ -10004,8 +10136,8 @@ msgid "Apply"
 msgstr ""
 
 #: src/mltcontroller/clippropertiescontroller.cpp:388
-#, fuzzy, kde-format
-msgid "Aspect ratio"
+#, kde-format
+msgid "Aspect ratio:"
 msgstr "Razmjera:"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:484
@@ -10023,7 +10155,7 @@ msgstr "Pokaži/sakrij opcije"
 #: src/mltcontroller/clippropertiescontroller.cpp:495
 #, fuzzy, kde-format
 #| msgid "Rename folder"
-msgid "Open folder"
+msgid "Open folder…"
 msgstr "Preimenuj folder"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:501
@@ -10038,22 +10170,13 @@ msgstr "Proxy isječak"
 msgid "Copy file location to clipboard"
 msgstr "Unesi glavne okvire iz isječka"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#. i18n: ectx: property (text), widget (QLabel, label_18)
-#: src/mltcontroller/clippropertiescontroller.cpp:524
-#: src/mltcontroller/clippropertiescontroller.cpp:1348
-#: src/mltcontroller/clippropertiescontroller.cpp:1353
-#: src/ui/configcapture_ui.ui:344 src/ui/profiledialog_ui.ui:103
-#, kde-format
-msgid "Frame rate"
-msgstr "Protok kadrova"
-
 #. i18n: ectx: property (text), widget (QLabel, scanningLabel)
 #: src/mltcontroller/clippropertiescontroller.cpp:548
 #: src/mltcontroller/clippropertiescontroller.cpp:1363
 #: src/project/dialogs/profilewidget.cpp:39 src/ui/renderwidget_ui.ui:535
-#, kde-format
-msgid "Scanning"
+#, fuzzy, kde-format
+#| msgid "Scanning"
+msgid "Scanning:"
 msgstr "Skeniranje"
 
 #. i18n: ectx: property (text), widget (QLabel, p_progressive)
@@ -10067,17 +10190,19 @@ msgstr "Isprepleteno"
 #: src/mltcontroller/clippropertiescontroller.cpp:570
 #, fuzzy, kde-format
 #| msgid "Force field order"
-msgid "Field order"
+msgid "Field order:"
 msgstr "Prisili redoslijed polja"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:574
-#, kde-format
-msgid "Bottom first"
+#, fuzzy, kde-format
+#| msgid "Bottom first"
+msgid "Bottom First"
 msgstr "Dno prvo"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:575
-#, kde-format
-msgid "Top first"
+#, fuzzy, kde-format
+#| msgid "Top first"
+msgid "Top First"
 msgstr "Vrh prvo"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:606
@@ -10109,7 +10234,7 @@ msgstr ""
 #: src/mltcontroller/clippropertiescontroller.cpp:630
 #, fuzzy, kde-format
 #| msgid "Threshold"
-msgid "Threads"
+msgid "Threads:"
 msgstr "Prag"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:651
@@ -10149,7 +10274,6 @@ msgid "Enable audio"
 msgstr "Razdvoji zvuk"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:717
-#: src/mltcontroller/clippropertiescontroller.cpp:1382
 #, fuzzy, kde-format
 #| msgid "Audio stream %1"
 msgid "Audio streams"
@@ -10166,14 +10290,9 @@ msgstr ""
 msgid "Normalize"
 msgstr "Normalno"
 
-#: src/mltcontroller/clippropertiescontroller.cpp:863
-#, fuzzy, kde-format
-msgid "Swap Channels"
-msgstr "Zvučni kanali"
-
 #: src/mltcontroller/clippropertiescontroller.cpp:881
 #, fuzzy, kde-format
-msgid "Copy Channel"
+msgid "Copy channel:"
 msgstr "Kanali"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, programList)
@@ -10201,10 +10320,15 @@ msgstr "1"
 msgid "2"
 msgstr "2"
 
+#: src/mltcontroller/clippropertiescontroller.cpp:912
+#, fuzzy, kde-format
+msgid "Gain:"
+msgstr "Zelena"
+
 #: src/mltcontroller/clippropertiescontroller.cpp:939
 #, fuzzy, kde-format
 #| msgid "Audio only"
-msgid "Audio sync"
+msgid "Audio sync:"
 msgstr "Video samo"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:941
@@ -10215,12 +10339,12 @@ msgid "ms"
 msgstr "s"
 
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#. i18n: ectx: property (text), widget (QLabel, label_32)
 #: src/mltcontroller/clippropertiescontroller.cpp:960
 #: src/mltcontroller/clippropertiescontroller.cpp:1376
-#: src/ui/configcapture_ui.ui:232 src/ui/profiledialog_ui.ui:257
-#, kde-format
-msgid "Colorspace"
+#: src/ui/profiledialog_ui.ui:257
+#, fuzzy, kde-format
+#| msgid "Colorspace"
+msgid "Colorspace:"
 msgstr "Prostor boja"
 
 #. i18n: ectx: property (text), widget (QCheckBox, clip_full_luma)
@@ -10270,49 +10394,38 @@ msgstr "Metapodaci"
 msgid "Analysis"
 msgstr "Snimi podatke analize"
 
-#. i18n: ectx: property (text), widget (QLabel, label_16)
 #: src/mltcontroller/clippropertiescontroller.cpp:1312
-#: src/ui/clipproperties_ui.ui:365
-#, kde-format
-msgid "Image size"
+#, fuzzy, kde-format
+#| msgid "Image size"
+msgid "Image size:"
 msgstr "Veličina slike"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:1339
-#, kde-format
-msgid "Video codec"
+#, fuzzy, kde-format
+#| msgid "Video codec"
+msgid "Video codec:"
 msgstr "Video kodek"
-
-#: src/mltcontroller/clippropertiescontroller.cpp:1343
-#, kde-format
-msgid "Frame size"
-msgstr "Veličina okvira"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:1359
 #, fuzzy, kde-format
 #| msgid ""
 #| "Video\n"
 #| "bitrate"
-msgid "Video bitrate"
+msgid "Video bitrate:"
 msgstr ""
 "Video\n"
 "brzina prijenosa"
 
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: src/mltcontroller/clippropertiescontroller.cpp:1371
-#: src/ui/profiledialog_ui.ui:143
-#, kde-format
-msgid "Pixel aspect ratio"
-msgstr "Omjer piksela"
-
 #: src/mltcontroller/clippropertiescontroller.cpp:1373
-#, kde-format
-msgid "Pixel format"
+#, fuzzy, kde-format
+#| msgid "Pixel format"
+msgid "Pixel format:"
 msgstr "Format piksela"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:1379
 #, fuzzy, kde-format
 #| msgid " frames"
-msgid "B frames"
+msgid "B frames:"
 msgstr " kadrovi"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:1379
@@ -10326,22 +10439,30 @@ msgstr ""
 msgid "No"
 msgstr "N"
 
+#: src/mltcontroller/clippropertiescontroller.cpp:1382
+#, fuzzy, kde-format
+#| msgid "Audio stream %1"
+msgid "Audio streams:"
+msgstr "Zvučni slijed %1"
+
 #: src/mltcontroller/clippropertiescontroller.cpp:1388
-#, kde-format
-msgid "Audio codec"
+#, fuzzy, kde-format
+#| msgid "Audio codec"
+msgid "Audio codec:"
 msgstr "Zvučni kodek"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/mltcontroller/clippropertiescontroller.cpp:1392
 #: src/ui/configproject_ui.ui:33 src/ui/projectsettings_ui.ui:82
-#, kde-format
-msgid "Audio channels"
+#, fuzzy, kde-format
+#| msgid "Audio channels"
+msgid "Audio channels:"
 msgstr "Zvučni kanali"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:1396
 #, fuzzy, kde-format
 #| msgid "Frequency"
-msgid "Audio frequency"
+msgid "Audio frequency:"
 msgstr "Učestalost"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:1396
@@ -10356,26 +10477,26 @@ msgstr "Hz"
 #| msgid ""
 #| "Audio\n"
 #| "bitrate"
-msgid "Audio bitrate"
+msgid "Audio bitrate:"
 msgstr ""
 "Audio\n"
 "brzina prijenosa"
 
-#. i18n: ectx: property (text), widget (QTreeWidget, resultList)
-#. i18n: ectx: property (text), widget (QLabel, clip_filesize)
 #: src/mltcontroller/clippropertiescontroller.cpp:1409
-#: src/ui/clipproperties_ui.ui:65 src/ui/testproxy_ui.ui:59
-#, kde-format
-msgid "File size"
+#, fuzzy, kde-format
+#| msgid "File size"
+msgid "File size:"
 msgstr "Veličina datoteke"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:1472
 #, fuzzy, kde-format
+msgctxt "@title:window"
 msgid "Save Clip Markers"
 msgstr "Sačuvaj obilježivač"
 
 #: src/mltcontroller/clippropertiescontroller.cpp:1498
 #, fuzzy, kde-format
+msgctxt "@title:window"
 msgid "Load Clip Markers"
 msgstr "Učitaj markere"
 
@@ -10398,7 +10519,9 @@ msgid "Magic Lantern"
 msgstr ""
 
 #: src/mltcontroller/clippropertiescontroller.cpp:1691
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Analysis Data"
+msgctxt "@title:window"
 msgid "Save Analysis Data"
 msgstr "Snimi podatke analize"
 
@@ -10409,7 +10532,9 @@ msgid "Text File (*.txt)"
 msgstr ""
 
 #: src/mltcontroller/clippropertiescontroller.cpp:1704
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Analysis Data"
+msgctxt "@title:window"
 msgid "Open Analysis Data"
 msgstr "Otvori analizu podataka"
 
@@ -10468,12 +10593,8 @@ msgstr "Postavi petlju van"
 msgid "Rewind"
 msgstr "Premotaj"
 
-#: src/monitor/monitor.cpp:330
-#, kde-format
-msgid "Play..."
-msgstr "Pusti.."
-
-#: src/monitor/monitor.cpp:333 src/monitor/monitormanager.cpp:463
+#: src/monitor/monitor.cpp:330 src/monitor/monitor.cpp:333
+#: src/monitor/monitormanager.cpp:463
 #, kde-format
 msgid "Play"
 msgstr "Pokreni"
@@ -10490,19 +10611,15 @@ msgid "Forward"
 msgstr "Naprijed"
 
 #: src/monitor/monitor.cpp:360
-#, kde-format
-msgid "Misc..."
-msgstr "Misc..."
+#, fuzzy, kde-format
+#| msgid "Misc"
+msgid "Misc…"
+msgstr "Razno"
 
 #: src/monitor/monitor.cpp:364
-#, kde-format
-msgid "Go to marker..."
-msgstr "Idi na marker..."
-
-#: src/monitor/monitor.cpp:366
 #, fuzzy, kde-format
 #| msgid "Go to marker..."
-msgid "Go to guide..."
+msgid "Go to Marker…"
 msgstr "Idi na marker..."
 
 #: src/monitor/monitor.cpp:371
@@ -10617,12 +10734,14 @@ msgstr "Postavi petlju u"
 
 #: src/monitor/monitor.cpp:1224
 #, fuzzy, kde-format
+msgctxt "@title:window"
 msgid "Save Image"
 msgstr "Sačuvaj obilježivač"
 
 #: src/monitor/monitor.cpp:1224
 #, fuzzy, kde-format
 #| msgid "Save DVD Project"
+msgctxt "@title:window"
 msgid "Save Image to Project"
 msgstr "Sačuvaj DVD projekat"
 
@@ -10703,20 +10822,21 @@ msgid ""
 msgstr ""
 
 #: src/monitor/monitormanager.cpp:473
-#, kde-format
-msgid "Switch monitor fullscreen"
+#, fuzzy, kde-format
+#| msgid "Switch monitor fullscreen"
+msgid "Switch Monitor Fullscreen"
 msgstr "Postavi sliku preko cijelog ekrana"
 
 #: src/monitor/monitormanager.cpp:478
 #, fuzzy, kde-format
 #| msgid "Switch monitor"
-msgid "Zoom in monitor"
+msgid "Zoom In Monitor"
 msgstr "Promjeni ekran"
 
 #: src/monitor/monitormanager.cpp:483
 #, fuzzy, kde-format
 #| msgid "Switch monitor"
-msgid "Zoom out monitor"
+msgid "Zoom Out Monitor"
 msgstr "Promjeni ekran"
 
 #: src/monitor/monitormanager.cpp:492
@@ -10752,7 +10872,7 @@ msgstr "Naprijed 1 sekundu"
 #: src/monitor/monitormanager.cpp:524
 #, fuzzy, kde-format
 #| msgid "Split view"
-msgid "Multitrack view"
+msgid "Multitrack View"
 msgstr "Razdvojeni prikaz"
 
 #: src/monitor/monitormanager.cpp:533
@@ -10823,13 +10943,13 @@ msgstr "Progresivno"
 
 #: src/monitor/monitormanager.cpp:593
 #, fuzzy, kde-format
-msgid "Mute monitor"
+msgid "Mute Monitor"
 msgstr "Isječak monitora"
 
 #: src/monitor/monitormanager.cpp:593
 #, fuzzy, kde-format
 #| msgid "Switch monitor"
-msgid "Unmute monitor"
+msgid "Unmute Monitor"
 msgstr "Promjeni ekran"
 
 #: src/monitor/monitormanager.cpp:599
@@ -11103,7 +11223,7 @@ msgstr "Pretraži rucno"
 #, fuzzy, kde-format
 #| msgid "Search"
 msgctxt "@info:status"
-msgid "Search pending..."
+msgid "Search pending…"
 msgstr "Pretraživanje"
 
 #: src/onlineresources/resourcewidget.cpp:249
@@ -11116,7 +11236,7 @@ msgstr "Slika nije pronađena"
 #: src/onlineresources/resourcewidget.cpp:260
 #, kde-format
 msgctxt "@info:progress"
-msgid "Parsing item %1 of %2..."
+msgid "Parsing item %1 of %2…"
 msgstr ""
 
 #: src/onlineresources/resourcewidget.cpp:262
@@ -11297,6 +11417,7 @@ msgstr "Online resursi"
 
 #: src/onlineresources/resourcewidget.cpp:489
 #, kde-format
+msgctxt "@title:window"
 msgid "Choose File Version"
 msgstr ""
 
@@ -11425,7 +11546,9 @@ msgid "SD/DVD Widescreen"
 msgstr ""
 
 #: src/project/clipstabilize.cpp:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Stabilize Clip"
+msgctxt "@title:window"
 msgid "Stabilize Clip"
 msgstr "Stabiliziraj snimak"
 
@@ -11464,7 +11587,9 @@ msgid "The stabilize job will overwrite the following files:"
 msgstr "Uravnoteženi posao će prepisati sljedeće datoteke:"
 
 #: src/project/cliptranscode.cpp:35 src/project/transcodeseek.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Transcode Clip"
+msgctxt "@title:window"
 msgid "Transcode Clip"
 msgstr "Dekodirajte isječak"
 
@@ -11479,52 +11604,59 @@ msgstr "Dekodiranje je završeno."
 msgid "Transcoding failed"
 msgstr "Dekodiranje nije uspjelo!"
 
+#: src/project/dialogs/archivewidget.cpp:47
+#, fuzzy, kde-format
+#| msgid "Archive Project"
+msgctxt "@title:window"
+msgid "Archive Project"
+msgstr "Arhiviraj projekat"
+
 #: src/project/dialogs/archivewidget.cpp:59
-#: src/project/dialogs/projectsettings.cpp:359
-#, kde-format
-msgid "Video clips"
+#, fuzzy, kde-format
+#| msgid "Video clips"
+msgid "Video Clips"
 msgstr "Video isječci"
 
 #: src/project/dialogs/archivewidget.cpp:63
-#: src/project/dialogs/projectsettings.cpp:362
-#, kde-format
-msgid "Audio clips"
+#, fuzzy, kde-format
+#| msgid "Audio clips"
+msgid "Audio Clips"
 msgstr "Audio isječci"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
 #: src/project/dialogs/archivewidget.cpp:67
-#: src/project/dialogs/projectsettings.cpp:365 src/ui/configmisc_ui.ui:95
-#, kde-format
-msgid "Image clips"
+#, fuzzy, kde-format
+#| msgid "Image clips"
+msgid "Image Clips"
 msgstr "Snimci slika"
 
 #: src/project/dialogs/archivewidget.cpp:71
-#: src/project/dialogs/projectsettings.cpp:368
-#, kde-format
-msgid "Slideshow clips"
-msgstr "Snimci pomičnog prikaza"
+#, fuzzy, kde-format
+#| msgid "Slideshow Clip"
+msgid "Slideshow Clips"
+msgstr "Isječak Prezentacije"
 
 #: src/project/dialogs/archivewidget.cpp:75
-#: src/project/dialogs/projectsettings.cpp:371
-#, kde-format
-msgid "Text clips"
-msgstr "Tekstulani isječci"
+#, fuzzy, kde-format
+#| msgid "Text clip"
+msgid "Text Clips"
+msgstr "Tekstualni isječak"
 
 #: src/project/dialogs/archivewidget.cpp:79
-#: src/project/dialogs/projectsettings.cpp:374
-#, kde-format
-msgid "Playlist clips"
+#, fuzzy, kde-format
+#| msgid "Playlist clips"
+msgid "Playlist Clips"
 msgstr "Snimci liste zvukova"
 
 #: src/project/dialogs/archivewidget.cpp:83
-#: src/project/dialogs/projectsettings.cpp:377
-#, kde-format
-msgid "Other clips"
+#, fuzzy, kde-format
+#| msgid "Other clips"
+msgid "Other Clips"
 msgstr "Drugi isječci"
 
 #: src/project/dialogs/archivewidget.cpp:87
-#, kde-format
-msgid "Luma files"
+#, fuzzy, kde-format
+#| msgid "Luma files"
+msgid "Luma Files"
 msgstr "Luma dokumenti"
 
 #: src/project/dialogs/archivewidget.cpp:169
@@ -11574,7 +11706,9 @@ msgid "Extract to"
 msgstr "Raspakuj u"
 
 #: src/project/dialogs/archivewidget.cpp:247
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Archived Project"
+msgctxt "@title:window"
 msgid "Open Archived Project"
 msgstr "Otvori arhiviran projekat"
 
@@ -11584,8 +11718,9 @@ msgid "Extract"
 msgstr "Raspakivanje"
 
 #: src/project/dialogs/archivewidget.cpp:284
-#, kde-format
-msgid "Opening archive..."
+#, fuzzy, kde-format
+#| msgid "Opening archive..."
+msgid "Opening archive…"
 msgstr "Otvaranje arhive..."
 
 #: src/project/dialogs/archivewidget.cpp:294
@@ -11638,8 +11773,9 @@ msgid "Starting archive job"
 msgstr ""
 
 #: src/project/dialogs/archivewidget.cpp:573
-#, kde-format
-msgid "Archiving..."
+#, fuzzy, kde-format
+#| msgid "Archiving..."
+msgid "Archiving…"
 msgstr "Arhiviranje.."
 
 #: src/project/dialogs/archivewidget.cpp:603
@@ -11688,8 +11824,9 @@ msgid ""
 msgstr "Projekat je uspješno arhiviran."
 
 #: src/project/dialogs/archivewidget.cpp:1141
-#, kde-format
-msgid "Extracting..."
+#, fuzzy, kde-format
+#| msgid "Extracting..."
+msgid "Extracting…"
 msgstr "Raspakujem..."
 
 #: src/project/dialogs/archivewidget.cpp:1203
@@ -11703,7 +11840,9 @@ msgid "Cannot open file"
 msgstr "Ne mogu otvoriti datoteku"
 
 #: src/project/dialogs/backupwidget.cpp:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restore Backup File"
+msgctxt "@title:window"
 msgid "Restore Backup File"
 msgstr "Obnovi datoteku rezervne kopije"
 
@@ -11720,7 +11859,8 @@ msgstr "Prikazivanje rezervnih kopija za %1"
 #: src/project/dialogs/clipspeed.cpp:20
 #, fuzzy, kde-format
 #| msgid "Change clip type"
-msgid "Create clip with speed"
+msgctxt "@title:window"
+msgid "Create Clip with Speed"
 msgstr "Izmjeni tip snimka"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox)
@@ -11783,7 +11923,7 @@ msgstr ""
 
 #: src/project/dialogs/profilewidget.cpp:33
 #, kde-format
-msgid "Fps"
+msgid "Fps:"
 msgstr ""
 
 #: src/project/dialogs/profilewidget.cpp:49
@@ -11823,13 +11963,13 @@ msgstr "Protok kadrova:"
 #: src/project/dialogs/profilewidget.cpp:195
 #, fuzzy, kde-format
 #| msgid "Pixel aspect ratio:"
-msgid "Pixel Aspect Ratio: %1<br/>"
+msgid "Pixel aspect ratio: %1<br/>"
 msgstr "Omjer piksela:"
 
 #: src/project/dialogs/profilewidget.cpp:196
 #, fuzzy, kde-format
 #| msgid "Color Space"
-msgid "Color Space: %1<br/>"
+msgid "Color space: %1<br/>"
 msgstr "Opseg boja"
 
 #: src/project/dialogs/profilewidget.cpp:197
@@ -11936,6 +12076,41 @@ msgstr ""
 msgid "Delete unused clips"
 msgstr "Obriši snimke koji se ne koriste"
 
+#: src/project/dialogs/projectsettings.cpp:359
+#, kde-format
+msgid "Video clips"
+msgstr "Video isječci"
+
+#: src/project/dialogs/projectsettings.cpp:362
+#, kde-format
+msgid "Audio clips"
+msgstr "Audio isječci"
+
+#: src/project/dialogs/projectsettings.cpp:365
+#, kde-format
+msgid "Image clips"
+msgstr "Snimci slika"
+
+#: src/project/dialogs/projectsettings.cpp:368
+#, kde-format
+msgid "Slideshow clips"
+msgstr "Snimci pomičnog prikaza"
+
+#: src/project/dialogs/projectsettings.cpp:371
+#, kde-format
+msgid "Text clips"
+msgstr "Tekstulani isječci"
+
+#: src/project/dialogs/projectsettings.cpp:374
+#, kde-format
+msgid "Playlist clips"
+msgstr "Snimci liste zvukova"
+
+#: src/project/dialogs/projectsettings.cpp:377
+#, kde-format
+msgid "Other clips"
+msgstr "Drugi isječci"
+
 #: src/project/dialogs/projectsettings.cpp:475
 #, kde-format
 msgid ""
@@ -11993,6 +12168,13 @@ msgstr "Profil projekta: %1"
 msgid "Total clips: %1 (%2 used in timeline)."
 msgstr "Ukupno isječaka: %1 (%2 korišteno na vremeplovu)."
 
+#: src/project/dialogs/projectsettings.cpp:801
+#, fuzzy, kde-format
+#| msgid "Metadata"
+msgctxt "@title:window"
+msgid "Metadata"
+msgstr "Metapodaci"
+
 #: src/project/dialogs/projectsettings.cpp:875
 #: src/project/dialogs/projectsettings.cpp:906
 #: src/project/dialogs/projectsettings.cpp:950
@@ -12000,6 +12182,13 @@ msgstr "Ukupno isječaka: %1 (%2 korišteno na vremeplovu)."
 #, kde-format
 msgid "Current Settings"
 msgstr "Trenutna Podešenja"
+
+#: src/project/dialogs/slideshowclip.cpp:30
+#, fuzzy, kde-format
+#| msgid "Image sequence"
+msgctxt "@title:window"
+msgid "Add Image Sequence"
+msgstr "Sekvenca slike"
 
 #: src/project/dialogs/slideshowclip.cpp:35
 #, fuzzy, kde-format
@@ -12147,8 +12336,7 @@ msgstr ""
 msgid "Clear current cache"
 msgstr "Obriši predmemoriju"
 
-#. i18n: ectx: property (toolTip), widget (QToolButton, gDelete)
-#: src/project/dialogs/temporarydata.cpp:614 src/ui/managecache_ui.ui:356
+#: src/project/dialogs/temporarydata.cpp:614
 #, fuzzy, kde-format
 #| msgid "Delete selected clip"
 #| msgid_plural "Delete selected clips"
@@ -12198,8 +12386,9 @@ msgid "Split compare"
 msgstr "Razdvojeni prikaz"
 
 #: src/project/notesplugin.cpp:36
-#, kde-format
-msgid "Enter your project notes here ..."
+#, fuzzy, kde-format
+#| msgid "Enter your project notes here ..."
+msgid "Enter your project notes here …"
 msgstr "Unesite zabilješke projekta ovdje ..."
 
 #: src/project/notesplugin.cpp:37
@@ -12256,14 +12445,13 @@ msgid "Rename folder"
 msgstr "Preimenuj folder"
 
 #: src/project/projectmanager.cpp:52
-#: src/pythoninterfaces/otioconvertions.cpp:155
 #, kde-format
-msgid "Kdenlive project (*.kdenlive)"
+msgid "Kdenlive Project (*.kdenlive)"
 msgstr ""
 
 #: src/project/projectmanager.cpp:54
 #, fuzzy, kde-format
-msgid "Archived project (*.tar.gz *.zip)"
+msgid "Archived Project (*.tar.gz *.zip)"
 msgstr "Arhiviraj projekat"
 
 #: src/project/projectmanager.cpp:76
@@ -12273,8 +12461,9 @@ msgid "Save Copy…"
 msgstr "Sačuvaj grupu"
 
 #: src/project/projectmanager.cpp:80
-#, kde-format
-msgid "Open Backup File"
+#, fuzzy, kde-format
+#| msgid "Open Backup File"
+msgid "Open Backup File…"
 msgstr "Otvori rezernu kopiju"
 
 #: src/project/projectmanager.cpp:289
@@ -12302,6 +12491,7 @@ msgstr ""
 #: src/project/projectmanager.cpp:432
 #, fuzzy, kde-format
 #| msgid "Save to"
+msgctxt "@title:window"
 msgid "Save Copy"
 msgstr "Spremiti"
 
@@ -12327,7 +12517,14 @@ msgstr "Ne obnavljaj"
 msgid "Opening file %1"
 msgstr "Otvaranje fajla %1"
 
-#: src/project/projectmanager.cpp:602 src/project/projectmanager.cpp:604
+#: src/project/projectmanager.cpp:602
+#, fuzzy, kde-format
+#| msgid "Loading project"
+msgctxt "@title:window"
+msgid "Loading Project"
+msgstr "Učitavam projekat"
+
+#: src/project/projectmanager.cpp:604
 #, kde-format
 msgid "Loading project"
 msgstr "Učitavam projekat"
@@ -12421,19 +12618,19 @@ msgstr "Direktno ažuriranje"
 #: src/pythoninterfaces/abstractpythoninterface.cpp:76
 #, fuzzy, kde-format
 #| msgid "Installed modules"
-msgid "Installing modules..."
+msgid "Installing modules…"
 msgstr "Instalirani moduli"
 
 #: src/pythoninterfaces/abstractpythoninterface.cpp:88
 #, fuzzy, kde-format
 #| msgid "Installed modules"
-msgid "Updating modules..."
+msgid "Updating modules…"
 msgstr "Instalirani moduli"
 
 #: src/pythoninterfaces/abstractpythoninterface.cpp:92
 #, fuzzy, kde-format
 #| msgid "Device configuration"
-msgid "Checking configuration..."
+msgid "Checking configuration…"
 msgstr "Konfiguracija uređaja"
 
 #: src/pythoninterfaces/abstractpythoninterface.cpp:136
@@ -12582,6 +12779,11 @@ msgstr "Projekt monitor"
 #| msgid "Render Project"
 msgid "Imported Project"
 msgstr "Izraziti projekat"
+
+#: src/pythoninterfaces/otioconvertions.cpp:155
+#, kde-format
+msgid "Kdenlive project (*.kdenlive)"
+msgstr ""
 
 #: src/pythoninterfaces/otioconvertions.cpp:165
 #, kde-format
@@ -13512,6 +13714,14 @@ msgstr "Grupiši snimke"
 msgid "Ungroup clips"
 msgstr "Razgrupiši snimke"
 
+#: src/timeline2/model/timelinemodel.cpp:3968
+#: src/timeline2/view/timelinecontroller.cpp:711
+#, fuzzy, kde-format
+#| msgid "Insert Track"
+msgctxt "@action"
+msgid "Insert Track"
+msgstr "Ubaci Zapis"
+
 #: src/timeline2/model/timelinemodel.cpp:4087
 #, fuzzy, kde-format
 #| msgid "Cannot insert clip in timeline"
@@ -13631,6 +13841,12 @@ msgstr "Ne mogu promjeniti velicinu prelaza"
 #| msgid "Resize clip"
 msgid "Resize mix"
 msgstr "Promjeni veličinu snimka"
+
+#: src/timeline2/view/dialogs/speeddialog.cpp:25
+#, fuzzy, kde-format
+#| msgid "Clip Properties"
+msgid "Clip Speed"
+msgstr "Video karakteristike"
 
 #: src/timeline2/view/dialogs/speeddialog.cpp:43
 #, kde-format
@@ -14370,7 +14586,8 @@ msgstr "Rotacija oko Y ose"
 msgid "Rotation around the Z axis"
 msgstr "Rotacija oko Z ose"
 
-#: src/titler/titlewidget.cpp:155
+#. i18n: ectx: property (text), widget (QLabel, label_borderWidth)
+#: src/titler/titlewidget.cpp:155 src/ui/titlewidget_ui.ui:1347
 #, kde-format
 msgid "Border width"
 msgstr "Širina granice"
@@ -14545,11 +14762,6 @@ msgstr "Odaberite slike stavki u trenutnom odabiru"
 #, kde-format
 msgid "Unselect all"
 msgstr "Poništi sve"
-
-#: src/titler/titlewidget.cpp:377 src/titler/titlewidget.cpp:380
-#, kde-format
-msgid "Selection Tool"
-msgstr "Alat selekcije"
 
 #: src/titler/titlewidget.cpp:383 src/titler/titlewidget.cpp:386
 #, kde-format
@@ -15040,22 +15252,12 @@ msgstr "<small>Nema dodatne informacije dostupne za ovaj znak.</small>"
 msgid "Some of your favorite compositions are invalid and were removed: %1"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, clip_filesize_2)
-#: src/transitions/view/mixstackview.cpp:31 src/ui/spacerdialog_ui.ui:43
-#, kde-format
-msgid "Duration:"
-msgstr "Trajanje:"
-
-#. i18n: ectx: property (toolTip), widget (QToolButton, buttonAlignLeft)
-#: src/transitions/view/mixstackview.cpp:35 src/ui/titlewidget_ui.ui:1166
-#: src/widgets/geometrywidget.cpp:97
+#: src/transitions/view/mixstackview.cpp:35 src/widgets/geometrywidget.cpp:97
 #, kde-format
 msgid "Align left"
 msgstr "Lijevo poravnanje"
 
-#. i18n: ectx: property (toolTip), widget (QToolButton, buttonAlignRight)
-#: src/transitions/view/mixstackview.cpp:41 src/ui/titlewidget_ui.ui:1143
-#: src/widgets/geometrywidget.cpp:101
+#: src/transitions/view/mixstackview.cpp:41 src/widgets/geometrywidget.cpp:101
 #, kde-format
 msgid "Align right"
 msgstr "Desno poravnanje"
@@ -15067,10 +15269,9 @@ msgid "Properties of transition %1"
 msgstr "Uredi tranziciju %1"
 
 #. i18n: ectx: property (text), widget (QLabel, bgLabel)
-#. i18n: ectx: property (text), widget (QLabel, lblBackground)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_background)
 #: src/transitions/view/transitionstackview.cpp:46 src/ui/qtextclip_ui.ui:104
-#: src/ui/titlewidget_ui.ui:1409 src/ui/vectorscope_ui.ui:46
+#: src/ui/titlewidget_ui.ui:1409
 #, kde-format
 msgid "Background"
 msgstr "Pozadina"
@@ -15098,7 +15299,7 @@ msgstr "Sijenčenje"
 #: src/ui/addtrack_ui.ui:46
 #, fuzzy, kde-format
 #| msgid "Track mouse"
-msgid "Track name"
+msgid "Track name:"
 msgstr "Prati miš"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, tracks_count)
@@ -15107,6 +15308,13 @@ msgstr "Prati miš"
 #| msgid "Track"
 msgid " track"
 msgstr "Numera"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/ui/addtrack_ui.ui:71
+#, fuzzy, kde-format
+#| msgid "Interpolation"
+msgid "Insert:"
+msgstr "Interpolacija"
 
 #. i18n: ectx: property (text), widget (QRadioButton, video_track)
 #: src/ui/addtrack_ui.ui:93
@@ -15138,14 +15346,16 @@ msgstr "Audio traka"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/ui/archivewidget_ui.ui:29
-#, kde-format
-msgid "Archive folder"
+#, fuzzy, kde-format
+#| msgid "Archive folder"
+msgid "Archive folder:"
 msgstr "Arhiva dokumenata"
 
 #. i18n: ectx: property (text), widget (QCheckBox, compressed_archive)
 #: src/ui/archivewidget_ui.ui:48
-#, kde-format
-msgid "Compressed archive"
+#, fuzzy, kde-format
+#| msgid "Compressed archive"
+msgid "Compressed archive:"
 msgstr "Komprimirana arhiva"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, compression_type)
@@ -15183,7 +15393,7 @@ msgstr "Stvarna FTT veličina: "
 #: src/ui/bezierspline_ui.ui:62
 #, fuzzy, kde-format
 #| msgid "Delete current button"
-msgid "Delete current point"
+msgid "Delete current point."
 msgstr "Dodaj trenutno dugme"
 
 #. i18n: ectx: property (text), widget (QToolButton, rec_options)
@@ -15372,8 +15582,9 @@ msgstr "Poveži položaje pokazivača..<br />Kao rezultat daje prirodnu krivulju
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, buttonResetSpline)
 #: src/ui/bezierspline_ui.ui:106
-#, kde-format
-msgid "Reset the selected spline"
+#, fuzzy, kde-format
+#| msgid "Reset the selected spline"
+msgid "Reset the selected spline."
 msgstr "Vrati označenu krivu u početno stanje"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, buttonShowPixmap)
@@ -15394,8 +15605,9 @@ msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, buttonShowAllHandles)
 #: src/ui/bezierspline_ui.ui:177
-#, kde-format
-msgid "Show handles for all points or only for the selected one"
+#, fuzzy, kde-format
+#| msgid "Show handles for all points or only for the selected one"
+msgid "Show handles for all points or only for the selected one."
 msgstr "Prikaži pokazivače za sve tačke ili samo za odabranu"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -15411,16 +15623,27 @@ msgstr "Prikaži pokazivače za sve tačke ili samo za odabranu"
 msgid "TextLabel"
 msgstr "TextLabel"
 
+#. i18n: ectx: property (text), widget (QLabel, position_label)
+#. i18n: ectx: property (text), widget (QLabel, clip_filesize_2)
+#: src/ui/clipdurationdialog_ui.ui:20 src/ui/editsub_ui.ui:127
+#: src/ui/keyframedialog_ui.ui:20
+#, fuzzy, kde-format
+#| msgid " Position:"
+msgid "Position:"
+msgstr " Pozicija:"
+
 #. i18n: ectx: property (text), widget (QLabel, crop_label)
 #: src/ui/clipdurationdialog_ui.ui:30
-#, kde-format
-msgid "Crop start"
+#, fuzzy, kde-format
+#| msgid "Crop start"
+msgid "Crop start:"
 msgstr "Rez početka"
 
 #. i18n: ectx: property (text), widget (QLabel, end_label)
 #: src/ui/clipdurationdialog_ui.ui:50
-#, kde-format
-msgid "Crop end"
+#, fuzzy, kde-format
+#| msgid "Crop end"
+msgid "Crop end:"
 msgstr "Rez kraja"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, treeWidget)
@@ -15430,12 +15653,20 @@ msgstr "Rez kraja"
 msgid "Path"
 msgstr "Putanja"
 
+#. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, label_size)
 #: src/ui/clipproperties_ui.ui:51 src/ui/configcapture_ui.ui:218
+#: src/ui/profiledialog_ui.ui:236
 #, kde-format
 msgid "Size:"
 msgstr "Veličina:"
+
+#. i18n: ectx: property (text), widget (QLabel, clip_filesize)
+#: src/ui/clipproperties_ui.ui:65
+#, kde-format
+msgid "File size"
+msgstr "Veličina datoteke"
 
 #. i18n: ectx: property (text), widget (QLabel, slide_type_label)
 #: src/ui/clipproperties_ui.ui:212
@@ -15458,14 +15689,13 @@ msgid "Loop"
 msgstr "Petlja"
 
 #. i18n: ectx: property (text), widget (QCheckBox, slide_fade)
-#: src/ui/clipproperties_ui.ui:262 src/ui/slideshowclip_ui.ui:167
+#: src/ui/clipproperties_ui.ui:262
 #, kde-format
 msgid "Dissolve"
 msgstr "Rastopi"
 
-#. i18n: ectx: property (text), widget (QCheckBox, luma_fade)
 #. i18n: ectx: property (text), widget (QCheckBox, slide_luma)
-#: src/ui/clipproperties_ui.ui:292 src/ui/slideshowclip_ui.ui:203
+#: src/ui/clipproperties_ui.ui:292
 #, kde-format
 msgid "Wipe"
 msgstr "Čisti"
@@ -15476,14 +15706,18 @@ msgstr "Čisti"
 msgid "Center crop"
 msgstr "Centralni rez"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_animation)
 #. i18n: ectx: property (text), widget (QLabel, label_animation)
-#: src/ui/clipproperties_ui.ui:346 src/ui/slideshowclip_ui.ui:291
-#: src/ui/titlewidget_ui.ui:1467
+#: src/ui/clipproperties_ui.ui:346 src/ui/titlewidget_ui.ui:1467
 #, kde-format
 msgid "Animation"
 msgstr "Animacija"
+
+#. i18n: ectx: property (text), widget (QLabel, label_16)
+#: src/ui/clipproperties_ui.ui:365
+#, kde-format
+msgid "Image size"
+msgstr "Veličina slike"
 
 #. i18n: ectx: property (text), widget (QCheckBox, image_transparency)
 #: src/ui/clipproperties_ui.ui:381
@@ -15664,18 +15898,24 @@ msgid "Start"
 msgstr "Započni"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, resultList)
-#. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, label_profile)
-#: src/ui/cliptranscode_ui.ui:150 src/ui/profiledialog_ui.ui:40
-#: src/ui/testproxy_ui.ui:49
+#: src/ui/cliptranscode_ui.ui:150 src/ui/testproxy_ui.ui:49
 #, kde-format
 msgid "Profile"
 msgstr "Profil"
 
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: src/ui/colorclip_ui.ui:20 src/ui/slideshowclip_ui.ui:20
+#, fuzzy, kde-format
+#| msgid "Name"
+msgid "Name:"
+msgstr "Naziv"
+
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/ui/colorclip_ui.ui:30
-#, kde-format
-msgid "Clip Color"
+#, fuzzy, kde-format
+#| msgid "Clip Color"
+msgid "Clip color:"
 msgstr "Isječak boje"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ColorPlaneExport_UI)
@@ -15698,8 +15938,9 @@ msgstr "Varijanta"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, sliderScaling)
 #: src/ui/colorplaneexport_ui.ui:81
-#, kde-format
-msgid "How much to zoom in"
+#, fuzzy, kde-format
+#| msgid "How much to zoom in"
+msgid "How much to zoom in."
 msgstr "Koliko da uvećam"
 
 #. i18n: ectx: property (text), widget (QLabel, lblRes)
@@ -15737,8 +15978,7 @@ msgstr "Uhvati format"
 #. i18n: ectx: property (text), widget (QLabel, label_screengrab)
 #. i18n: ectx: property (text), widget (QLabel, label_16)
 #: src/ui/configcapture_ui.ui:89 src/ui/configcapture_ui.ui:320
-#: src/ui/configcapture_ui.ui:502 src/ui/configproxy_ui.ui:106
-#: src/ui/projectsettings_ui.ui:474
+#: src/ui/configcapture_ui.ui:502
 #, kde-format
 msgid "Encoding profile"
 msgstr "Kodiranje profila"
@@ -15780,6 +16020,12 @@ msgstr "Snimanje zvuka (ALSA)"
 msgid "Capture video (Video4Linux2)"
 msgstr "Uhvati video (Video4Linux2)"
 
+#. i18n: ectx: property (text), widget (QLabel, label_32)
+#: src/ui/configcapture_ui.ui:232
+#, kde-format
+msgid "Colorspace"
+msgstr "Prostor boja"
+
 #. i18n: ectx: property (text), widget (QLabel, p_size)
 #: src/ui/configcapture_ui.ui:239
 #, kde-format
@@ -15806,15 +16052,23 @@ msgstr "Sakrij pokazivač"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_grab_capture_type)
 #: src/ui/configcapture_ui.ui:328
-#, kde-format
-msgid "Full screen capture"
+#, fuzzy, kde-format
+#| msgid "Full screen capture"
+msgid "Full Screen Capture"
 msgstr "Hvatanje cjelog ekrana"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_grab_capture_type)
 #: src/ui/configcapture_ui.ui:333
-#, kde-format
-msgid "Region capture"
+#, fuzzy, kde-format
+#| msgid "Region capture"
+msgid "Region Capture"
 msgstr "Regija hvatanja"
+
+#. i18n: ectx: property (text), widget (QLabel, label_18)
+#: src/ui/configcapture_ui.ui:344
+#, kde-format
+msgid "Frame rate"
+msgstr "Protok kadrova"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_grab_follow_mouse)
 #: src/ui/configcapture_ui.ui:362
@@ -15829,19 +16083,17 @@ msgid "Hide frame"
 msgstr "Sakrij okvir"
 
 #. i18n: ectx: property (text), widget (QLabel, label_19)
-#. i18n: ectx: property (text), widget (QLabel, label_offset)
-#: src/ui/configcapture_ui.ui:391 src/ui/titlewidget_ui.ui:790
+#: src/ui/configcapture_ui.ui:391
 #, kde-format
 msgid "Offset"
 msgstr "Pomak"
 
 #. i18n: Filesize
 #. i18n: Filesize
-#. i18n: ectx: property (text), widget (QLabel, label_5)
 #. i18n: ectx: property (text), widget (QLabel, label_20)
 #. i18n: ectx: property (text), widget (QTreeWidget, listWidget)
 #: src/ui/configcapture_ui.ui:430 src/ui/managecache_ui.ui:293
-#: src/ui/profiledialog_ui.ui:236 src/widgets/geometrywidget.cpp:71
+#: src/widgets/geometrywidget.cpp:71
 #, kde-format
 msgid "Size"
 msgstr "Veličina"
@@ -15854,29 +16106,38 @@ msgstr "Crna magija"
 
 #. i18n: ectx: property (text), widget (QLabel, label_29)
 #: src/ui/configcapture_ui.ui:509
-#, kde-format
-msgid "Capture file name"
+#, fuzzy, kde-format
+#| msgid "Capture file name"
+msgid "Capture file name:"
 msgstr "Uhvati ime datoteke"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: src/ui/configcapture_ui.ui:550
 #, fuzzy, kde-format
 #| msgid "Samplerate"
-msgid "Sample Rate"
+msgid "Sample rate:"
 msgstr "Učestanost uzorkovanja"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: src/ui/configcapture_ui.ui:557
 #, fuzzy, kde-format
 #| msgid "Audio volume"
-msgid "Capture Volume "
+msgid "Capture volume:"
 msgstr "Jačina zvuka"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: src/ui/configcapture_ui.ui:577
+#, fuzzy, kde-format
+#| msgid "Channels"
+msgid "Channels:"
+msgstr "Kanali"
 
 #. i18n: ectx: property (text), widget (QLabel, label_17)
 #. i18n: ectx: property (text), widget (QLabel, label_33)
 #: src/ui/configcapture_ui.ui:618 src/ui/configjogshuttle_ui.ui:101
-#, kde-format
-msgid "Device"
+#, fuzzy, kde-format
+#| msgid "Device"
+msgid "Device:"
 msgstr "Uređaj"
 
 #. i18n: ectx: property (text), widget (QLabel, labelNoAudioDevices)
@@ -15889,73 +16150,88 @@ msgstr ""
 #: src/ui/configcolors_ui.ui:17
 #, fuzzy, kde-format
 #| msgid "Show audio thumbnails"
-msgid "Audio thumbnail colors"
+msgid "Audio thumbnail colors:"
 msgstr "Prikaži audio ikonice"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: src/ui/configenv_ui.ui:23
 #, kde-format
-msgid "Proxy and transcode jobs"
+msgid "Proxy and Transcode Jobs"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: src/ui/configenv_ui.ui:42
-#, kde-format
-msgid "Concurrent threads"
+#, fuzzy, kde-format
+#| msgid "Concurrent threads"
+msgid "Concurrent threads:"
 msgstr "Istovremene teme"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: src/ui/configenv_ui.ui:56
-#, kde-format
-msgid "MLT environment"
+#, fuzzy, kde-format
+#| msgid "MLT environment"
+msgid "MLT Environment"
 msgstr "MLT okruženje"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/ui/configenv_ui.ui:78
-#, kde-format
-msgid "MLT profiles folder"
+#, fuzzy, kde-format
+#| msgid "MLT profiles folder"
+msgid "MLT profiles folder:"
 msgstr "Folder MLT profila"
 
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #: src/ui/configenv_ui.ui:88
 #, kde-format
-msgid "FFprobe"
+msgid "FFprobe:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #: src/ui/configenv_ui.ui:98
-#, kde-format
-msgid "FFplay"
+#, fuzzy, kde-format
+#| msgid "FFplay"
+msgid "FFplay:"
 msgstr "FF pusti"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: src/ui/configenv_ui.ui:111
-#, kde-format
-msgid "Melt path"
+#, fuzzy, kde-format
+#| msgid "Melt path"
+msgid "Melt path:"
 msgstr "Istopljeni put"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/configenv_ui.ui:118
+#, fuzzy, kde-format
+#| msgid "FFmpeg"
+msgid "FFmpeg:"
+msgstr "FFmpeg"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: src/ui/configenv_ui.ui:125
 #, fuzzy, kde-format
-msgid "MediaInfo"
+msgid "MediaInfo:"
 msgstr "Medijski reproduktor"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: src/ui/configenv_ui.ui:136
-#, kde-format
-msgid "Default folders"
+#, fuzzy, kde-format
+#| msgid "Default folders"
+msgid "Default Folders"
 msgstr "Zadani folderi"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: src/ui/configenv_ui.ui:142
-#, kde-format
-msgid "Temporary files"
+#, fuzzy, kde-format
+#| msgid "Temporary files"
+msgid "Temporary files:"
 msgstr "Privremene datoteke"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: src/ui/configenv_ui.ui:152
-#, kde-format
-msgid "Capture folder"
+#, fuzzy, kde-format
+#| msgid "Capture folder"
+msgid "Capture folder:"
 msgstr "Snimanje foldera"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_capturetoprojectfolder)
@@ -15968,7 +16244,7 @@ msgstr "Koristi projekat mape"
 #: src/ui/configenv_ui.ui:169
 #, fuzzy, kde-format
 #| msgid "Capture folder"
-msgid "Library folder"
+msgid "Library folder:"
 msgstr "Snimanje foldera"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_librarytodefaultfolder)
@@ -15983,32 +16259,36 @@ msgstr "Zadani folderi"
 #: src/ui/configenv_ui.ui:186
 #, fuzzy, kde-format
 #| msgid "No producer for this clip."
-msgid "Folder for titles, scripts"
+msgid "Folder for titles, scripts:"
 msgstr "Nema producenta za ovaj isječak."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: src/ui/configenv_ui.ui:217
-#, kde-format
-msgid "Default apps"
+#, fuzzy, kde-format
+#| msgid "Default apps"
+msgid "Default Apps"
 msgstr "Zadane aplikacije"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: src/ui/configenv_ui.ui:223
-#, kde-format
-msgid "Image editing"
+#, fuzzy, kde-format
+#| msgid "Image editing"
+msgid "Image editing:"
 msgstr "Uređivanje slike"
 
 #. i18n: ectx: property (text), widget (QPushButton, kp_image)
 #. i18n: ectx: property (text), widget (QPushButton, kp_audio)
 #: src/ui/configenv_ui.ui:237 src/ui/configenv_ui.ui:258
-#, kde-format
-msgid "Change"
+#, fuzzy, kde-format
+#| msgid "Change"
+msgid "Change…"
 msgstr "Promijeni"
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #: src/ui/configenv_ui.ui:244
-#, kde-format
-msgid "Audio editing"
+#, fuzzy, kde-format
+#| msgid "Audio editing"
+msgid "Audio editing:"
 msgstr "Audio uređivanje"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
@@ -16044,8 +16324,9 @@ msgstr "Jog Shuttle uređaj isključen."
 
 #. i18n: ectx: property (title), widget (QGroupBox, config_group)
 #: src/ui/configjogshuttle_ui.ui:53
-#, kde-format
-msgid "Device configuration"
+#, fuzzy, kde-format
+#| msgid "Device configuration"
+msgid "Device Configuration"
 msgstr "Konfiguracija uređaja"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -16080,8 +16361,9 @@ msgstr "Dugme 4"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/ui/configjogshuttle_ui.ui:182
-#, kde-format
-msgid "Device name"
+#, fuzzy, kde-format
+#| msgid "Device name"
+msgid "Device name:"
 msgstr "Naziv uređaja"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
@@ -16171,7 +16453,7 @@ msgstr "Provjeri da li se prvi dodani snimak podudara sa profilom projekta"
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: src/ui/configmisc_ui.ui:45
 #, fuzzy, kde-format
-msgid "Tab position"
+msgid "Tab position:"
 msgstr " Pozicija:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
@@ -16182,34 +16464,58 @@ msgstr "Standardno Trajanje"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/ui/configmisc_ui.ui:71
-#, kde-format
-msgid "Color clips"
+#, fuzzy, kde-format
+#| msgid "Color clips"
+msgid "Color clips:"
 msgstr "Obojeni isječci"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: src/ui/configmisc_ui.ui:78
-#, kde-format
-msgid "Title clips"
+#, fuzzy, kde-format
+#| msgid "Title clips"
+msgid "Title clips:"
 msgstr "Nazivi isječaka"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: src/ui/configmisc_ui.ui:85
+#, fuzzy, kde-format
+#| msgid "Transitions"
+msgid "Transitions:"
+msgstr "Prijelazi"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: src/ui/configmisc_ui.ui:95
+#, fuzzy, kde-format
+#| msgid "Image clips"
+msgid "Image clips:"
+msgstr "Snimci slika"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: src/ui/configmisc_ui.ui:105
 #, fuzzy, kde-format
 #| msgid "Fade"
-msgid "Fades"
+msgid "Fades:"
 msgstr "Izblijediti"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: src/ui/configmisc_ui.ui:115
-#, kde-format
-msgid "Image sequence"
+#, fuzzy, kde-format
+#| msgid "Image sequence"
+msgid "Image sequence:"
 msgstr "Sekvenca slike"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: src/ui/configmisc_ui.ui:131
 #, kde-format
-msgid "Mixes"
+msgid "Mixes:"
 msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: src/ui/configmisc_ui.ui:144
+#, fuzzy, kde-format
+#| msgid "untitled"
+msgid "Subtitles:"
+msgstr "bez naslova"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_use_exiftool)
 #: src/ui/configmisc_ui.ui:154
@@ -16258,7 +16564,7 @@ msgstr "Automatski prenosi redoslijed slika"
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: src/ui/configmisc_ui.ui:240
 #, kde-format
-msgid "Preferred track compositing composition"
+msgid "Preferred track compositing composition:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, same_folder)
@@ -16268,37 +16574,32 @@ msgstr ""
 msgid "Use parent folder of the project file as project folder"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: src/ui/configproject_ui.ui:50 src/ui/projectsettings_ui.ui:72
+#: src/ui/configproject_ui.ui:50
 #, kde-format
 msgid "Audio tracks"
 msgstr "Audio trake"
 
-#. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, label_6)
-#: src/ui/configproject_ui.ui:57 src/ui/projectsettings_ui.ui:62
+#: src/ui/configproject_ui.ui:57
 #, kde-format
 msgid "Video tracks"
 msgstr "Video trake"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, audio_channels)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_audio_channels)
-#: src/ui/configproject_ui.ui:71 src/ui/projectsettings_ui.ui:96
+#: src/ui/configproject_ui.ui:71
 #, fuzzy, kde-format
 msgid "2 channels (stereo)"
 msgstr "Zvučni kanali"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, audio_channels)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_audio_channels)
-#: src/ui/configproject_ui.ui:76 src/ui/projectsettings_ui.ui:101
+#: src/ui/configproject_ui.ui:76
 #, fuzzy, kde-format
 msgid "4 channels"
 msgstr "Zvučni kanali"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, audio_channels)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_audio_channels)
-#: src/ui/configproject_ui.ui:81 src/ui/projectsettings_ui.ui:106
+#: src/ui/configproject_ui.ui:81
 #, fuzzy, kde-format
 msgid "6 channels"
 msgstr "Zvučni kanali"
@@ -16308,7 +16609,7 @@ msgstr "Zvučni kanali"
 #: src/ui/configproject_ui.ui:104 src/ui/projectsettings_ui.ui:202
 #, fuzzy, kde-format
 #| msgid "Use project folder"
-msgid "Custom project folder"
+msgid "Custom project folder:"
 msgstr "Koristi projekat mape"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableproxy)
@@ -16350,6 +16651,13 @@ msgstr "Izrazi pomoću proxy isječaka"
 msgid "Proxy image size"
 msgstr "Veličina slike"
 
+#. i18n: ectx: property (text), widget (QLabel, label_24)
+#: src/ui/configproxy_ui.ui:106 src/ui/projectsettings_ui.ui:474
+#, fuzzy, kde-format
+#| msgid "Encoding profile"
+msgid "Encoding profile:"
+msgstr "Kodiranje profila"
+
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_generateimageproxy)
 #. i18n: ectx: property (text), widget (QCheckBox, generate_imageproxy)
 #: src/ui/configproxy_ui.ui:126 src/ui/projectsettings_ui.ui:332
@@ -16365,11 +16673,10 @@ msgid "Generate for videos larger than"
 msgstr "Generiraj za video veći od"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: src/ui/configproxy_ui.ui:172 src/ui/projectsettings_ui.ui:400
+#: src/ui/configproxy_ui.ui:172
 #, fuzzy, kde-format
 #| msgid "Image size"
-msgid "Proxy video resize (width)"
+msgid "Proxy video resize (width):"
 msgstr "Veličina slike"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -16403,15 +16710,16 @@ msgstr "Postavi sliku preko cijelog ekrana"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: src/ui/configsdl_ui.ui:82
-#, kde-format
-msgid "Output device"
+#, fuzzy, kde-format
+#| msgid "Output device"
+msgid "Output device:"
 msgstr "Izlazni uređaj"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: src/ui/configsdl_ui.ui:92
 #, fuzzy, kde-format
 #| msgid "Audio tracks"
-msgid "Audio backend"
+msgid "Audio Backend"
 msgstr "Audio trake"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_gpu_accel)
@@ -16432,7 +16740,7 @@ msgstr "Jačina zvuka pred-pregleda:"
 #: src/ui/configsdl_ui.ui:139
 #, fuzzy, kde-format
 #| msgid "AudioSpectrum"
-msgid "Enable Audio Scrubbing"
+msgid "Enable audio scrubbing:"
 msgstr "ZvučniSpektrum"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_external_display)
@@ -16490,7 +16798,7 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: src/ui/configtimeline_ui.ui:17
 #, kde-format
-msgid "Raise properties pane when selecting in timeline"
+msgid "Raise Properties Pane when Selecting in Timeline"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_raisepropsclips)
@@ -16540,34 +16848,34 @@ msgstr ""
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: src/ui/configtimeline_ui.ui:154
 #, kde-format
-msgid "Multi stream audio clips"
+msgid "Multi Stream Audio Clips"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_multistream)
 #: src/ui/configtimeline_ui.ui:167
 #, fuzzy, kde-format
 #| msgid "Audio stream %1"
-msgid "All audio streams"
+msgid "All Audio Streams"
 msgstr "Zvučni slijed %1"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_multistream)
 #: src/ui/configtimeline_ui.ui:172
 #, fuzzy, kde-format
 #| msgid "First frame"
-msgid "First audio stream"
+msgid "First Audio Stream"
 msgstr "Prvi kadar"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_multistream)
 #: src/ui/configtimeline_ui.ui:177
 #, fuzzy, kde-format
 #| msgid "First frame"
-msgid "First 2 audio streams"
+msgid "First 2 Audio Streams"
 msgstr "Prvi kadar"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: src/ui/configtimeline_ui.ui:185
 #, kde-format
-msgid "On import, enable"
+msgid "On import, enable:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_multistream_checktrack)
@@ -16584,8 +16892,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/ui/configtimeline_ui.ui:211
-#, kde-format
-msgid "Track height"
+#, fuzzy, kde-format
+#| msgid "Track height"
+msgid "Track height:"
 msgstr "Traka visine"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_jumptostart)
@@ -16594,11 +16903,17 @@ msgstr "Traka visine"
 msgid "Jump to timeline start if playback is started on last frame in timeline"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, extensionLabel)
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: src/ui/configtranscode_ui.ui:65 src/ui/saveprofile_ui.ui:131
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: src/ui/configtranscode_ui.ui:52 src/ui/profiledialog_ui.ui:60
 #, kde-format
-msgid "Extension"
+msgid "Description:"
+msgstr "Opis:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: src/ui/configtranscode_ui.ui:65
+#, fuzzy, kde-format
+#| msgid "Extension"
+msgid "Extension:"
 msgstr "Nastavak"
 
 #. i18n: ectx: property (text), widget (QCheckBox, profile_audioonly)
@@ -16615,8 +16930,9 @@ msgstr "Parametri"
 
 #. i18n: ectx: property (text), widget (QPushButton, button_add)
 #: src/ui/configtranscode_ui.ui:89
-#, kde-format
-msgid "Add Profile"
+#, fuzzy, kde-format
+#| msgid "Add Profile"
+msgid "Add Profile…"
 msgstr "Dodaj profil"
 
 #. i18n: ectx: property (text), widget (QPushButton, button_update)
@@ -16633,9 +16949,16 @@ msgstr "Izbriši profil"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, button_more)
 #: src/ui/cutjobdialog_ui.ui:77
-#, kde-format
-msgid "Configure job"
+#, fuzzy, kde-format
+#| msgid "Configure job"
+msgid "Configure the job."
 msgstr "Konfiguriši posao"
+
+#. i18n: ectx: property (text), widget (QLabel, duration_label)
+#: src/ui/editsub_ui.ui:88
+#, kde-format
+msgid "End:"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: src/ui/gradientedit_ui.ui:20
@@ -16651,14 +16974,16 @@ msgstr "Boja"
 
 #. i18n: ectx: property (text), widget (QLabel, lblComponents)
 #: src/ui/histogram_ui.ui:27
-#, kde-format
-msgid "Components"
+#, fuzzy, kde-format
+#| msgid "Components"
+msgid "Components:"
 msgstr "Komponente"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, cbS)
 #: src/ui/histogram_ui.ui:34
-#, kde-format
-msgid "RGB summed up"
+#, fuzzy, kde-format
+#| msgid "RGB summed up"
+msgid "RGB summed up."
 msgstr "Sumirani RGB"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbS)
@@ -16669,8 +16994,9 @@ msgstr "Suma"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, cbY)
 #: src/ui/histogram_ui.ui:44
-#, kde-format
-msgid "Luma value"
+#, fuzzy, kde-format
+#| msgid "Luma value"
+msgid "Luma value."
 msgstr "Luma vrijednost"
 
 #. i18n: ectx: property (text), widget (QCheckBox, cbR)
@@ -16691,6 +17017,12 @@ msgstr "G"
 #, kde-format
 msgid "B"
 msgstr "B"
+
+#. i18n: ectx: property (text), widget (QLabel, lblScale)
+#: src/ui/histogram_ui.ui:101
+#, fuzzy, kde-format
+msgid "Scale:"
+msgstr "Razmjera"
 
 #. i18n: ectx: property (text), widget (QRadioButton, rbLogarithmic)
 #: src/ui/histogram_ui.ui:118
@@ -16725,8 +17057,9 @@ msgstr "Uredi Keyframe"
 
 #. i18n: ectx: property (text), widget (QLabel, clip_filesize_3)
 #: src/ui/keyframedialog_ui.ui:27
-#, kde-format
-msgid "Value"
+#, fuzzy, kde-format
+#| msgid "Value"
+msgid "Value:"
 msgstr "Vrijednost"
 
 #. i18n: ectx: property (text), widget (QToolButton, buttonSelectAll)
@@ -16738,44 +17071,51 @@ msgstr "A"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, buttonResetKeyframe)
 #: src/ui/keyframeeditor_ui.ui:88
-#, kde-format
-msgid "Reset the parameters to their default values"
+#, fuzzy, kde-format
+#| msgid "Reset the parameters to their default values"
+msgid "Reset the parameters to their default values."
 msgstr "Resetuj parametre na njihove standardne vrijednosti"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, buttonSeek)
 #: src/ui/keyframeeditor_ui.ui:98
-#, kde-format
-msgid "Seek to active keyframe"
+#, fuzzy, kde-format
+#| msgid "Seek to active keyframe"
+msgid "Seek to active keyframe."
 msgstr "Zatraži aktivaciju ključnog okvira"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, buttonKeyframes)
 #: src/ui/keyframeeditor_ui.ui:114
-#, kde-format
-msgid "Add keyframes"
+#, fuzzy, kde-format
+#| msgid "Add keyframes"
+msgid "Add keyframes."
 msgstr "Dodaj keyframes"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, buttonLeftRight)
 #: src/ui/keyframewidget_ui.ui:43
-#, kde-format
-msgid "move on X axis"
+#, fuzzy, kde-format
+#| msgid "move on X axis"
+msgid "Move on X axis."
 msgstr "pomjeri na x osi"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, buttonUpDown)
 #: src/ui/keyframewidget_ui.ui:56
-#, kde-format
-msgid "move on Y axis"
+#, fuzzy, kde-format
+#| msgid "move on Y axis"
+msgid "Move on Y axis."
 msgstr "pomjeri na y osi"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, buttonShowInTimeline)
 #: src/ui/keyframewidget_ui.ui:69
-#, kde-format
-msgid "update values in timeline"
+#, fuzzy, kde-format
+#| msgid "update values in timeline"
+msgid "Update values in timeline."
 msgstr "ažuriraj vrijednosti na vremenskoj osi"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, buttonNewPoints)
 #: src/ui/keyframewidget_ui.ui:82
-#, kde-format
-msgid "create new points"
+#, fuzzy, kde-format
+#| msgid "create new points"
+msgid "Create new points."
 msgstr "kreiraj nove tačke"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox)
@@ -16786,8 +17126,9 @@ msgstr "GraphView"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, buttonHelp)
 #: src/ui/keyframewidget_ui.ui:121
-#, kde-format
-msgid "parameter description"
+#, fuzzy, kde-format
+#| msgid "parameter description"
+msgid "Parameter description."
 msgstr "opis parametra"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -16825,31 +17166,46 @@ msgstr "Očisti projekat"
 msgid "0 B"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, proxyLabel)
+#: src/ui/managecache_ui.ui:82
+#, fuzzy, kde-format
+#| msgid "Proxy clips"
+msgid "Proxy clips:"
+msgstr "Proxy isječci"
+
 #. i18n: ectx: property (text), widget (QLabel, audioLabel)
 #: src/ui/managecache_ui.ui:154
 #, fuzzy, kde-format
 #| msgid "Show audio thumbnails"
-msgid "Audio Thumbnails"
+msgid "Audio thumbnails:"
 msgstr "Prikaži audio ikonice"
+
+#. i18n: ectx: property (text), widget (QLabel, previewLabel)
+#: src/ui/managecache_ui.ui:178
+#, fuzzy, kde-format
+#| msgid "Image preview"
+msgid "Timeline preview:"
+msgstr "Pregled slike"
 
 #. i18n: ectx: property (text), widget (QLabel, currentLabel)
 #: src/ui/managecache_ui.ui:188
-#, kde-format
-msgid "Project total cache data"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Project profile: %1"
+msgid "Project total cache data:"
+msgstr "Profil projekta: %1"
 
 #. i18n: ectx: property (text), widget (QLabel, thumbLabel)
 #: src/ui/managecache_ui.ui:209
 #, fuzzy, kde-format
 #| msgid "Thumbnails"
-msgid "Video Thumbnails"
+msgid "Video thumbnails:"
 msgstr "Sličice"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, currentPath)
 #: src/ui/managecache_ui.ui:216
 #, fuzzy, kde-format
 #| msgid "Copy file to project folder"
-msgid "Click to open cache folder"
+msgid "Click to open cache folder."
 msgstr "Kopiraj fajl u folder projekta"
 
 #. i18n: ectx: property (text), widget (QLabel, currentPath)
@@ -16868,20 +17224,21 @@ msgstr "Projektne datoteke"
 #: src/ui/managecache_ui.ui:262
 #, fuzzy, kde-format
 #| msgid "Delete profile"
-msgid "Cleanup old proxy file"
+msgid "Cleanup old proxy file."
 msgstr "Obriši profil"
 
 #. i18n: ectx: property (text), widget (QLabel, gTotalLabel)
 #: src/ui/managecache_ui.ui:325
 #, kde-format
-msgid "Total Cached Data"
+msgid "Total cached data:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, gBackupLabel)
 #: src/ui/managecache_ui.ui:342
-#, kde-format
-msgid "Total Backup Data"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Delete All Guides"
+msgid "Total backup data:"
+msgstr "Izbriši sve vodiče"
 
 #. i18n: ectx: property (text), widget (QLabel, gProxySize)
 #. i18n: ectx: property (text), widget (QLabel, gBackupSize)
@@ -16894,17 +17251,25 @@ msgstr ""
 msgid "Calculating..."
 msgstr "Čekam..."
 
+#. i18n: ectx: property (toolTip), widget (QToolButton, gDelete)
+#: src/ui/managecache_ui.ui:356
+#, fuzzy, kde-format
+#| msgid "Delete selected clip"
+#| msgid_plural "Delete selected clips"
+msgid "Delete selected cache."
+msgstr "Obriši odabrani snimak"
+
 #. i18n: ectx: property (toolTip), widget (QToolButton, gBackupDelete)
 #: src/ui/managecache_ui.ui:367
 #, fuzzy, kde-format
 #| msgid "Delete All Guides"
-msgid "Delete all backup data"
+msgid "Delete all backup data."
 msgstr "Izbriši sve vodiče"
 
 #. i18n: ectx: property (text), widget (QLabel, gCleanupLabel)
 #: src/ui/managecache_ui.ui:380
 #, kde-format
-msgid "Cleanup will delete data older than"
+msgid "Cleanup will delete data older than:"
 msgstr ""
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, gCleanupSpin)
@@ -16917,27 +17282,28 @@ msgstr ""
 #: src/ui/managecache_ui.ui:405
 #, fuzzy, kde-format
 #| msgid "Render using proxy clips"
-msgid "Delete all proxy clips"
+msgid "Delete all proxy clips."
 msgstr "Izrazi pomoću proxy isječaka"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, gClean)
 #: src/ui/managecache_ui.ui:416
 #, fuzzy, kde-format
 #| msgid "Clear cache"
-msgid "Cleanup unused cache"
+msgid "Cleanup unused cache."
 msgstr "Obriši predmemoriju"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, gBackupClean)
 #: src/ui/managecache_ui.ui:427
-#, kde-format
-msgid "Cleanup old backups"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Delete profile"
+msgid "Cleanup old backups."
+msgstr "Obriši profil"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, gProxyPath)
 #: src/ui/managecache_ui.ui:462
 #, fuzzy, kde-format
 #| msgid "Copy file to project folder"
-msgid "Click to open proxy folder"
+msgid "Click to open proxy folder."
 msgstr "Kopiraj fajl u folder projekta"
 
 #. i18n: ectx: property (text), widget (QLabel, gProxyPath)
@@ -16949,14 +17315,14 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, gProxyLabel)
 #: src/ui/managecache_ui.ui:472
 #, kde-format
-msgid "Total Proxy Data"
+msgid "Total proxy data:"
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, gBackupPath)
 #: src/ui/managecache_ui.ui:479
 #, fuzzy, kde-format
 #| msgid "Copy file to project folder"
-msgid "Click to open backup folder"
+msgid "Click to open backup folder."
 msgstr "Kopiraj fajl u folder projekta"
 
 #. i18n: ectx: property (text), widget (QLabel, gBackupPath)
@@ -16967,9 +17333,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, qSelectedLabel)
 #: src/ui/managecache_ui.ui:496
-#, kde-format
-msgid "Selected Cached Data"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Delete selected clip"
+#| msgid_plural "Delete selected clips"
+msgid "Selected cached data:"
+msgstr "Obriši odabrani snimak"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, ManageCaptures_UI)
 #: src/ui/managecaptures_ui.ui:13
@@ -17005,8 +17373,9 @@ msgstr "Toggle selekcija"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/ui/manageencodingprofile_ui.ui:20
-#, kde-format
-msgid "Editing profiles for"
+#, fuzzy, kde-format
+#| msgid "Editing profiles for"
+msgid "Editing profiles for:"
 msgstr "Uređivanje profila za"
 
 #. i18n: ectx: property (text), widget (QLabel, clip_thumb)
@@ -17086,16 +17455,11 @@ msgstr "C"
 msgid "/"
 msgstr "/"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: src/ui/profiledialog_ui.ui:183
-#, kde-format
-msgid "Display aspect ratio"
-msgstr "Prikaz omjera"
-
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #: src/ui/profiledialog_ui.ui:243
-#, kde-format
-msgid "Fields per second"
+#, fuzzy, kde-format
+#| msgid "Fields per second"
+msgid "Fields per second:"
 msgstr "Polja po sekundi"
 
 #. i18n: ectx: property (text), widget (QPushButton, button_default)
@@ -17104,11 +17468,49 @@ msgstr "Polja po sekundi"
 msgid "Use as default"
 msgstr "Koristi kao početnu"
 
+#. i18n: ectx: property (windowTitle), widget (QDialog, ProjectSettings_UI)
+#: src/ui/projectsettings_ui.ui:14
+#, kde-format
+msgid "Project Settings"
+msgstr "Postavke projekta"
+
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: src/ui/projectsettings_ui.ui:46
 #, kde-format
 msgid "Thumbnails:"
 msgstr "Sličice:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: src/ui/projectsettings_ui.ui:62
+#, fuzzy, kde-format
+#| msgid "Video tracks"
+msgid "Video tracks:"
+msgstr "Video trake"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: src/ui/projectsettings_ui.ui:72
+#, fuzzy, kde-format
+#| msgid "Audio tracks"
+msgid "Audio tracks:"
+msgstr "Audio trake"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, audio_channels)
+#: src/ui/projectsettings_ui.ui:96
+#, fuzzy, kde-format
+msgid "2 Channels (Stereo)"
+msgstr "Zvučni kanali"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, audio_channels)
+#: src/ui/projectsettings_ui.ui:101
+#, fuzzy, kde-format
+msgid "4 Channels"
+msgstr "Zvučni kanali"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, audio_channels)
+#: src/ui/projectsettings_ui.ui:106
+#, fuzzy, kde-format
+msgid "6 Channels"
+msgstr "Zvučni kanali"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: src/ui/projectsettings_ui.ui:142
@@ -17120,7 +17522,7 @@ msgstr ""
 #: src/ui/projectsettings_ui.ui:164
 #, fuzzy, kde-format
 #| msgid "Save profile"
-msgid "Preview profile"
+msgid "Preview profile:"
 msgstr "Sačuvaj profil"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
@@ -17149,6 +17551,13 @@ msgstr ""
 #| msgid "Audio clip"
 msgid "Suffix of clip:"
 msgstr "Zvučni snimak"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: src/ui/projectsettings_ui.ui:400
+#, fuzzy, kde-format
+#| msgid "Image size"
+msgid "Proxy video resize (width)"
+msgstr "Veličina slike"
 
 #. i18n: ectx: property (text), widget (QLabel, l_suffix_proxy)
 #: src/ui/projectsettings_ui.ui:407
@@ -17195,8 +17604,9 @@ msgstr "Brisanje datoteka"
 
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #: src/ui/projectsettings_ui.ui:682
-#, kde-format
-msgid "Project files"
+#, fuzzy, kde-format
+#| msgid "Project files"
+msgid "Project files:"
 msgstr "Projektne datoteke"
 
 #. i18n: ectx: property (text), widget (QLabel, label_fonts)
@@ -17207,8 +17617,9 @@ msgstr "Fontovi"
 
 #. i18n: ectx: property (text), widget (QPushButton, button_export)
 #: src/ui/projectsettings_ui.ui:696
-#, kde-format
-msgid "Plain text export"
+#, fuzzy, kde-format
+#| msgid "Plain text export"
+msgid "Plain Text Export..."
 msgstr "Izvoz nešifriranog teksta"
 
 #. i18n: ectx: property (text), widget (QLabel, weightLabel)
@@ -17219,8 +17630,7 @@ msgid "Weight:"
 msgstr "Visina"
 
 #. i18n: ectx: property (text), widget (QLabel, outlineLabel)
-#. i18n: ectx: property (text), widget (QLabel, label_outline)
-#: src/ui/qtextclip_ui.ui:175 src/ui/titlewidget_ui.ui:915
+#: src/ui/qtextclip_ui.ui:175
 #, kde-format
 msgid "Outline"
 msgstr "Kontura"
@@ -17308,19 +17718,19 @@ msgstr "Kvalitete"
 #. i18n: ectx: property (toolTip), widget (QSlider, quality)
 #: src/ui/renderwidget_ui.ui:220
 #, kde-format
-msgid "Compromise file size versus quality"
+msgid "Compromise file size versus quality."
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, video)
 #: src/ui/renderwidget_ui.ui:246
 #, kde-format
-msgid "Video quality parameter (depends on codec)"
+msgid "Video quality parameter (depends on codec)."
 msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, audio)
 #: src/ui/renderwidget_ui.ui:260
 #, kde-format
-msgid "Audio quality parameter or bitrate"
+msgid "Audio quality parameter or bitrate."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, formatLabel)
@@ -17384,21 +17794,21 @@ msgstr "Pokaži/sakrij opcije"
 #, kde-format
 msgid ""
 "For a given quality, tune the compromise between encoding time and output "
-"file size (faster encoding ends with larger file)"
+"file size (faster encoding ends with larger file)."
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, speedLabel)
 #: src/ui/renderwidget_ui.ui:449
 #, fuzzy, kde-format
 #| msgid "Encoder threads"
-msgid "Encoder speed"
+msgid "Encoder speed:"
 msgstr "Koder niti"
 
 #. i18n: ectx: property (text), widget (QLabel, threadsLabel)
 #: src/ui/renderwidget_ui.ui:481
 #, fuzzy, kde-format
 #| msgid "Encoder threads"
-msgid "Encoder threads"
+msgid "Encoder threads:"
 msgstr "Koder niti"
 
 #. i18n: ectx: property (text), widget (QCheckBox, parallel_process)
@@ -17429,7 +17839,7 @@ msgstr "Prisili preplitavanje"
 #: src/ui/renderwidget_ui.ui:561
 #, fuzzy, kde-format
 #| msgid "Force field order"
-msgid "Field"
+msgid "Field:"
 msgstr "Prisili redoslijed polja"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, field_order)
@@ -17448,8 +17858,9 @@ msgstr "Vrh prvo"
 
 #. i18n: ectx: property (text), widget (QCheckBox, rescale)
 #: src/ui/renderwidget_ui.ui:599
-#, kde-format
-msgid "Rescale"
+#, fuzzy, kde-format
+#| msgid "Rescale"
+msgid "Rescale:"
 msgstr "Promijeni razmjeru"
 
 #. i18n: ectx: property (text), widget (QCheckBox, stemAudioExport)
@@ -17542,6 +17953,13 @@ msgstr "Započni skriptu"
 msgid "Delete Script"
 msgstr "Obriši skriptu"
 
+#. i18n: ectx: property (placeholderText), widget (KLineEdit, search_text)
+#: src/ui/resourcewidget_ui.ui:36
+#, fuzzy, kde-format
+#| msgid "Search"
+msgid "Search..."
+msgstr "Pretraživanje"
+
 #. i18n: ectx: property (prefix), widget (QSpinBox, page_number)
 #: src/ui/resourcewidget_ui.ui:104
 #, kde-format
@@ -17556,16 +17974,18 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: src/ui/resourcewidget_ui.ui:331
-#, kde-format
-msgid "Service"
+#, fuzzy, kde-format
+#| msgid "Service"
+msgid "Service:"
 msgstr "Usluga"
 
 #. i18n: ectx: property (text), widget (QLabel, lblPaintMode)
 #. i18n: ectx: property (text), widget (QLabel, lblPaintmode)
 #: src/ui/rgbparade_ui.ui:33 src/ui/vectorscope_ui.ui:29
 #: src/ui/waveform_ui.ui:30
-#, kde-format
-msgid "Paint mode"
+#, fuzzy, kde-format
+#| msgid "Paint mode"
+msgid "Paint mode:"
 msgstr "Mod boje"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, SaveProfile_UI)
@@ -17584,8 +18004,9 @@ msgstr "Pokaži/sakrij opcije"
 #. i18n: ectx: property (toolTip), widget (QLineEdit, vbitrates_list)
 #. i18n: ectx: property (toolTip), widget (QLineEdit, abitrates_list)
 #: src/ui/saveprofile_ui.ui:46 src/ui/saveprofile_ui.ui:100
-#, kde-format
-msgid "Best to worst quality"
+#, fuzzy, kde-format
+#| msgid "Best to worst quality"
+msgid "Best to worst quality."
 msgstr "Najbolje do najgore kvalitet"
 
 #. i18n: ectx: property (text), widget (QLabel, groupLabel)
@@ -17599,6 +18020,12 @@ msgstr "Grupa"
 #, kde-format
 msgid "Profile name"
 msgstr "Ime profila"
+
+#. i18n: ectx: property (text), widget (QLabel, extensionLabel)
+#: src/ui/saveprofile_ui.ui:131
+#, kde-format
+msgid "Extension"
+msgstr "Nastavak"
 
 #. i18n: ectx: property (text), widget (QLabel, parametersLabel)
 #: src/ui/saveprofile_ui.ui:145
@@ -17616,7 +18043,7 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QTextEdit, speeds_list)
 #: src/ui/saveprofile_ui.ui:168
 #, kde-format
-msgid "One line of options per speedup step, from slowest to fastest"
+msgid "One line of options per speedup step, from slowest to fastest."
 msgstr ""
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, SceneCutDialog_UI)
@@ -17628,7 +18055,7 @@ msgstr "Rezanje prizora"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/ui/scenecutdialog_ui.ui:20
 #, kde-format
-msgid "Minimum scene length"
+msgid "Minimum scene length:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
@@ -17652,8 +18079,9 @@ msgstr " kadrovi"
 
 #. i18n: ectx: property (text), widget (QCheckBox, add_markers)
 #: src/ui/scenecutdialog_ui.ui:100
-#, kde-format
-msgid "Add clip markers"
+#, fuzzy, kde-format
+#| msgid "Add clip markers"
+msgid "Add clip markers:"
 msgstr "Dodaj oznake isječka"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
@@ -17697,8 +18125,9 @@ msgstr "Isječak Prezentacije"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: src/ui/slideshowclip_ui.ui:30
-#, kde-format
-msgid "Image selection method"
+#, fuzzy, kde-format
+#| msgid "Image selection method"
+msgid "Image Selection Method"
 msgstr "Metoda izbora slika"
 
 #. i18n: ectx: property (text), widget (QRadioButton, method_mime)
@@ -17713,10 +18142,18 @@ msgstr "Vrsta slike"
 msgid "Fi&lename pattern"
 msgstr "Naziv uzorka"
 
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: src/ui/slideshowclip_ui.ui:60
+#, fuzzy, kde-format
+#| msgid "Folder"
+msgid "Folder:"
+msgstr "Direktorij"
+
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: src/ui/slideshowclip_ui.ui:70
-#, kde-format
-msgid "Image Type"
+#, fuzzy, kde-format
+#| msgid "Image type"
+msgid "Image type:"
 msgstr "Vrsta slike"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
@@ -17727,15 +18164,44 @@ msgstr "Prvi kadar"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: src/ui/slideshowclip_ui.ui:127
-#, kde-format
-msgid "Frame Duration"
+#, fuzzy, kde-format
+#| msgid "Frame duration"
+msgid "Frame duration:"
 msgstr "Trajanje kadra"
+
+#. i18n: ectx: property (text), widget (QCheckBox, slide_fade)
+#: src/ui/slideshowclip_ui.ui:167
+#, fuzzy, kde-format
+#| msgid "Dissolve"
+msgid "Dissolve:"
+msgstr "Rastopi"
+
+#. i18n: ectx: property (text), widget (QCheckBox, luma_fade)
+#: src/ui/slideshowclip_ui.ui:203
+#, fuzzy, kde-format
+#| msgid "Wipe"
+msgid "Wipe:"
+msgstr "Čisti"
+
+#. i18n: ectx: property (text), widget (QLabel, label_softness)
+#: src/ui/slideshowclip_ui.ui:220
+#, fuzzy, kde-format
+#| msgid "Softness"
+msgid "Softness:"
+msgstr "Mekoća"
 
 #. i18n: ectx: property (text), widget (QCheckBox, show_thumbs)
 #: src/ui/slideshowclip_ui.ui:245
 #, kde-format
 msgid "Show thumbnails"
 msgstr "Prikaži sličice"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: src/ui/slideshowclip_ui.ui:291
+#, fuzzy, kde-format
+#| msgid "Animation"
+msgid "Animation:"
+msgstr "Animacija"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: src/ui/smconfig_ui.ui:33
@@ -17763,8 +18229,9 @@ msgstr "Obavijesti prije snimanja"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, SpacerDialog_UI)
 #: src/ui/spacerdialog_ui.ui:14
-#, kde-format
-msgid "Add space"
+#, fuzzy, kde-format
+#| msgid "Add space"
+msgid "Add Space"
 msgstr "Dodaj razmak"
 
 #. i18n: ectx: property (text), widget (QCheckBox, insert_all_tracks)
@@ -17783,7 +18250,7 @@ msgstr "Ispravna FFT veličina:"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: src/ui/speechdialog_ui.ui:20
 #, kde-format
-msgid "Language"
+msgid "Language:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, timeline_zone)
@@ -17806,17 +18273,25 @@ msgstr "Obriši odabrani snimak"
 msgid "Selected clips"
 msgstr "Izbriši snimak"
 
+#. i18n: ectx: property (text), widget (QLabel, label_template)
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: src/ui/templateclip_ui.ui:17
+#: src/ui/templateclip_ui.ui:17 src/ui/titlewidget_ui.ui:147
 #, kde-format
-msgid "Template"
-msgstr "Šablon"
+msgid "Template:"
+msgstr "Šablon:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, resultList)
 #: src/ui/testproxy_ui.ui:54
 #, fuzzy, kde-format
-msgid "Render time"
+msgid "Render Time"
 msgstr "Obrni"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, resultList)
+#: src/ui/testproxy_ui.ui:59
+#, fuzzy, kde-format
+#| msgid "File size"
+msgid "File Size"
+msgstr "Veličina datoteke"
 
 #. i18n: ectx: property (text), widget (QCheckBox, speech_zone)
 #: src/ui/textbasededit_ui.ui:67
@@ -17918,12 +18393,6 @@ msgstr "Prikaži pozadinu"
 msgid "Checkered"
 msgstr "Provjeri"
 
-#. i18n: ectx: property (text), widget (QLabel, label_template)
-#: src/ui/titlewidget_ui.ui:147
-#, kde-format
-msgid "Template:"
-msgstr "Šablon:"
-
 #. i18n: ectx: property (text), widget (QToolButton, createButton)
 #: src/ui/titlewidget_ui.ui:174
 #, fuzzy, kde-format
@@ -17939,15 +18408,17 @@ msgstr "Z- Indeks:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_height)
 #: src/ui/titlewidget_ui.ui:309
-#, kde-format
-msgid "H"
-msgstr "H"
+#, fuzzy, kde-format
+#| msgid ":"
+msgid "H:"
+msgstr ":"
 
 #. i18n: ectx: property (text), widget (QLabel, label_width)
 #: src/ui/titlewidget_ui.ui:347
-#, kde-format
-msgid "W"
-msgstr "W"
+#, fuzzy, kde-format
+#| msgid ":"
+msgid "W:"
+msgstr ":"
 
 #. i18n: ectx: property (text), widget (QCheckBox, use_grid)
 #: src/ui/titlewidget_ui.ui:377
@@ -17970,20 +18441,20 @@ msgstr "T"
 #. i18n: ectx: property (toolTip), widget (QSpinBox, hguides)
 #: src/ui/titlewidget_ui.ui:417
 #, fuzzy, kde-format
-msgid "Horizontal guides"
+msgid "Horizontal guides."
 msgstr "Centriraj horizontalno"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, vguides)
 #: src/ui/titlewidget_ui.ui:430
 #, fuzzy, kde-format
-msgid "Vertical guides"
+msgid "Vertical guides."
 msgstr "Bez poravnanja"
 
 #. i18n: ectx: property (text), widget (QCheckBox, show_guides)
 #: src/ui/titlewidget_ui.ui:476
 #, fuzzy, kde-format
 #| msgid "Show path"
-msgid "Show guides"
+msgid "Show guides:"
 msgstr "Prikaži put"
 
 #. i18n: ectx: property (whatsThis), widget (QToolButton, buttonSelectAll)
@@ -17999,11 +18470,32 @@ msgstr "Odabire sve stavke na platnu."
 msgid "Rotate"
 msgstr "Rotiraj X"
 
+#. i18n: ectx: property (text), widget (QLabel, label_rotateX)
+#: src/ui/titlewidget_ui.ui:549
+#, fuzzy, kde-format
+#| msgid "X"
+msgid "X:"
+msgstr "X"
+
+#. i18n: ectx: property (text), widget (QLabel, label_rotateY)
+#: src/ui/titlewidget_ui.ui:572
+#, fuzzy, kde-format
+#| msgid "Y"
+msgid "Y:"
+msgstr "Y"
+
 #. i18n: ectx: property (text), widget (QLabel, label_rotateZ)
 #: src/ui/titlewidget_ui.ui:598
+#, fuzzy, kde-format
+#| msgid ":"
+msgid "Z:"
+msgstr ":"
+
+#. i18n: ectx: property (text), widget (QLabel, label_itemzoom)
+#: src/ui/titlewidget_ui.ui:633
 #, kde-format
-msgid "Z"
-msgstr ""
+msgid "Zoom:"
+msgstr "Uvećanje:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, shadowBox)
 #: src/ui/titlewidget_ui.ui:729
@@ -18011,32 +18503,55 @@ msgstr ""
 msgid "Sha&dow"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, label_blur)
+#: src/ui/titlewidget_ui.ui:750
+#, fuzzy, kde-format
+#| msgid "Blur"
+msgid "Blur:"
+msgstr "Zamagli"
+
+#. i18n: ectx: property (text), widget (QLabel, label_offset)
+#: src/ui/titlewidget_ui.ui:790
+#, fuzzy, kde-format
+#| msgid "Offset"
+msgid "Offset:"
+msgstr "Pomak"
+
 #. i18n: ectx: property (toolTip), widget (QToolButton, buttonAlignCenter)
 #: src/ui/titlewidget_ui.ui:833
-#, kde-format
-msgid "Align center"
+#, fuzzy, kde-format
+#| msgid "Align center"
+msgid "Align center."
 msgstr "Poravnaj sredinu"
 
 #. i18n: ectx: property (text), widget (QLabel, label_lineSpacing)
 #: src/ui/titlewidget_ui.ui:853
-#, kde-format
-msgid "Line Spacing"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "File extension:"
+msgid "Line spacing:"
+msgstr "Ekstenzija dokumenta:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, gradient_color)
 #. i18n: ectx: property (text), widget (QRadioButton, gradient_rect)
 #: src/ui/titlewidget_ui.ui:876 src/ui/titlewidget_ui.ui:1278
-#, kde-format
-msgid "&Gradient"
-msgstr ""
+#, fuzzy, kde-format
+msgid "&Gradient:"
+msgstr "Učitavam"
 
 #. i18n: ectx: property (text), widget (QRadioButton, plain_color)
 #. i18n: ectx: property (text), widget (QRadioButton, plain_rect)
 #: src/ui/titlewidget_ui.ui:892 src/ui/titlewidget_ui.ui:1244
 #, fuzzy, kde-format
 #| msgid "Clip Color"
-msgid "So&lid Color"
+msgid "So&lid color:"
 msgstr "Isječak boje"
+
+#. i18n: ectx: property (text), widget (QLabel, label_outline)
+#: src/ui/titlewidget_ui.ui:915
+#, fuzzy, kde-format
+#| msgid "Outline"
+msgid "Outline:"
+msgstr "Kontura"
 
 #. i18n: ectx: property (title), widget (QGroupBox, typewriterBox)
 #: src/ui/titlewidget_ui.ui:922
@@ -18049,70 +18564,86 @@ msgstr "Izbriši efekat"
 #: src/ui/titlewidget_ui.ui:934
 #, fuzzy, kde-format
 #| msgid "Variant"
-msgid "Variation"
+msgid "Variation:"
 msgstr "Varijanta"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: src/ui/titlewidget_ui.ui:941
 #, fuzzy, kde-format
 #| msgid "Paint mode"
-msgid "Expansion mode"
+msgid "Expansion Mode"
 msgstr "Mod boje"
 
 #. i18n: ectx: property (text), widget (QRadioButton, tw_rd_char)
 #: src/ui/titlewidget_ui.ui:953
 #, kde-format
-msgid "by &char"
+msgid "By &char"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, tw_rd_word)
 #: src/ui/titlewidget_ui.ui:963
 #, kde-format
-msgid "by &word"
+msgid "By &word"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, tw_rd_line)
 #: src/ui/titlewidget_ui.ui:970
 #, kde-format
-msgid "by &line"
+msgid "By &line"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, tw_rd_custom)
 #: src/ui/titlewidget_ui.ui:977
 #, fuzzy, kde-format
 #| msgid "Custom"
-msgid "custo&m"
+msgid "Custo&m"
 msgstr "Podešen"
 
 #. i18n: ectx: property (text), widget (QLabel, label_frameStep)
 #: src/ui/titlewidget_ui.ui:987
 #, fuzzy, kde-format
 #| msgid "Frame rate"
-msgid "Frame step"
+msgid "Frame step:"
 msgstr "Protok kadrova"
 
 #. i18n: ectx: property (text), widget (QLabel, label_seed)
 #: src/ui/titlewidget_ui.ui:1001
 #, kde-format
-msgid "Seed"
+msgid "Seed:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_letterSpacing)
 #: src/ui/titlewidget_ui.ui:1110
-#, kde-format
-msgid "Letter Spacing"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Interpolation"
+msgid "Letter spacing:"
+msgstr "Interpolacija"
+
+#. i18n: ectx: property (text), widget (QLabel, label_textAlign)
+#: src/ui/titlewidget_ui.ui:1136
+#, fuzzy, kde-format
+#| msgid "Align"
+msgid "Align:"
+msgstr "Poravnanje"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, buttonAlignRight)
+#: src/ui/titlewidget_ui.ui:1143
+#, fuzzy, kde-format
+#| msgid "Align right"
+msgid "Align right."
+msgstr "Desno poravnanje"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, buttonAlignLeft)
+#: src/ui/titlewidget_ui.ui:1166
+#, fuzzy, kde-format
+#| msgid "Align left"
+msgid "Align left."
+msgstr "Lijevo poravnanje"
 
 #. i18n: ectx: property (text), widget (QLabel, label_border)
 #: src/ui/titlewidget_ui.ui:1316
 #, fuzzy, kde-format
 msgid "Border "
-msgstr "Širina granice"
-
-#. i18n: ectx: property (text), widget (QLabel, label_borderWidth)
-#: src/ui/titlewidget_ui.ui:1347
-#, fuzzy, kde-format
-msgid "Border Width"
 msgstr "Širina granice"
 
 #. i18n: ectx: property (text), widget (QToolButton, anim_start)
@@ -18157,57 +18688,63 @@ msgstr ""
 #: src/ui/titlewidget_ui.ui:1587
 #, fuzzy, kde-format
 #| msgid "Add chapter"
-msgid "Add pattern"
+msgid "Add pattern."
 msgstr "Dodaj poglavlje"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, btn_remove)
 #: src/ui/titlewidget_ui.ui:1604
 #, fuzzy, kde-format
 #| msgid "Delete marker"
-msgid "Delete pattern"
+msgid "Delete pattern."
 msgstr "Izbriši obilježivač"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, btn_removeAll)
 #: src/ui/titlewidget_ui.ui:1618
 #, fuzzy, kde-format
 #| msgid "Delete All Markers"
-msgid "Delete all patterns"
+msgid "Delete all patterns."
 msgstr "Obriši Sve Markere"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, itemleft)
 #: src/ui/titlewidget_ui.ui:1685
-#, kde-format
-msgid "Align item to left"
+#, fuzzy, kde-format
+#| msgid "Align item to left"
+msgid "Align item to left."
 msgstr "Centriraj detalje na lijevo"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, itemhcenter)
 #: src/ui/titlewidget_ui.ui:1699
-#, kde-format
-msgid "Align item horizontally"
+#, fuzzy, kde-format
+#| msgid "Align item horizontally"
+msgid "Align item horizontally."
 msgstr "Centriraj detalj horizontalno"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, itemright)
 #: src/ui/titlewidget_ui.ui:1713
-#, kde-format
-msgid "Align item to right"
+#, fuzzy, kde-format
+#| msgid "Align item to right"
+msgid "Align item to right."
 msgstr "Centriraj detalje na desno"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, itemtop)
 #: src/ui/titlewidget_ui.ui:1727
-#, kde-format
-msgid "Align item to top"
+#, fuzzy, kde-format
+#| msgid "Align item to top"
+msgid "Align item to top."
 msgstr "Centriraj detalje na vrh"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, itemvcenter)
 #: src/ui/titlewidget_ui.ui:1741
-#, kde-format
-msgid "Align item vertically"
+#, fuzzy, kde-format
+#| msgid "Align item vertically"
+msgid "Align item vertically."
 msgstr "Centriraj detalj vertikalno"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, itembottom)
 #: src/ui/titlewidget_ui.ui:1755
-#, kde-format
-msgid "Align item to bottom"
+#, fuzzy, kde-format
+#| msgid "Align item to bottom"
+msgid "Align item to bottom."
 msgstr "Centriraj detalje na dno"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, TracksConfigDialog_UI)
@@ -18250,6 +18787,13 @@ msgstr "Unesi Unicode vrijednost"
 msgid "Additional Information"
 msgstr "Dodatne informacije"
 
+#. i18n: ectx: property (text), widget (QLabel, lblBackground)
+#: src/ui/vectorscope_ui.ui:46
+#, fuzzy, kde-format
+#| msgid "Background"
+msgid "Background:"
+msgstr "Pozadina"
+
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: src/ui/wipeval_ui.ui:22
 #, kde-format
@@ -18259,8 +18803,9 @@ msgstr "Početak"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: src/ui/wipeval_ui.ui:136 src/ui/wipeval_ui.ui:281
-#, kde-format
-msgid "Transparency"
+#, fuzzy, kde-format
+#| msgid "Transparency"
+msgid "Transparency:"
 msgstr "Transparentnost"
 
 #. i18n: ectx: property (text), widget (QPushButton, button_reload)
@@ -18280,6 +18825,18 @@ msgstr "Uhvati format:"
 #, kde-format
 msgid "Default folder for project files"
 msgstr "Zadani folder za projektne datoteke"
+
+#. i18n: ectx: property (text), widget (QCheckBox, videothumbs)
+#: src/ui/wizardextra_ui.ui:35
+#, kde-format
+msgid "Show video thumbnails"
+msgstr "Prikaži sličice na videu"
+
+#. i18n: ectx: property (text), widget (QCheckBox, audiothumbs)
+#: src/ui/wizardextra_ui.ui:42
+#, kde-format
+msgid "Show audio thumbnails"
+msgstr "Prikaži audio ikonice"
 
 #. i18n: ectx: property (text), widget (QCheckBox, installmimes)
 #: src/ui/wizardextra_ui.ui:66
@@ -18482,6 +19039,71 @@ msgstr ""
 msgctxt "h as hours"
 msgid "%1h"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Loading project"
+#~ msgid "Loading project..."
+#~ msgstr "Učitavam projekat"
+
+#~ msgid "Selection tool"
+#~ msgstr "Alat za biranje"
+
+#, fuzzy
+#~ msgid "Aspect ratio"
+#~ msgstr "Razmjera:"
+
+#, fuzzy
+#~ msgid "Swap Channels"
+#~ msgstr "Zvučni kanali"
+
+#~ msgid "Frame size"
+#~ msgstr "Veličina okvira"
+
+#~ msgid "Pixel aspect ratio"
+#~ msgstr "Omjer piksela"
+
+#~ msgid "Play..."
+#~ msgstr "Pusti.."
+
+#~ msgid "Misc..."
+#~ msgstr "Misc..."
+
+#, fuzzy
+#~| msgid "Go to marker..."
+#~ msgid "Go to guide..."
+#~ msgstr "Idi na marker..."
+
+#, fuzzy
+#~| msgid "Samplerate"
+#~ msgid "Sample Rate"
+#~ msgstr "Učestanost uzorkovanja"
+
+#~ msgid "Display aspect ratio"
+#~ msgstr "Prikaz omjera"
+
+#~ msgid "Image Type"
+#~ msgstr "Vrsta slike"
+
+#~ msgid "Frame Duration"
+#~ msgstr "Trajanje kadra"
+
+#~ msgid "Template"
+#~ msgstr "Šablon"
+
+#~ msgid "H"
+#~ msgstr "H"
+
+#~ msgid "W"
+#~ msgstr "W"
+
+#, fuzzy
+#~| msgid "Custom"
+#~ msgid "custo&m"
+#~ msgstr "Podešen"
+
+#, fuzzy
+#~ msgid "Border Width"
+#~ msgstr "Širina granice"
 
 #, fuzzy
 #~| msgid "Delete profile"
@@ -19925,9 +20547,6 @@ msgstr ""
 #~ msgid "Duration (s)"
 #~ msgstr "Trajanje: "
 
-#~ msgid "Samplerate"
-#~ msgstr "Učestanost uzorkovanja"
-
 #~ msgid "Freesound Audio Library"
 #~ msgstr "Freesound audio biblioteka"
 
@@ -20173,9 +20792,6 @@ msgstr ""
 
 #~ msgid "Rotate Z:"
 #~ msgstr "Rotiraj Z:"
-
-#~ msgid "Zoom:"
-#~ msgstr "Uvećanje:"
 
 #~ msgid "Rotate X:"
 #~ msgstr "Rotiraj X:"
@@ -21095,9 +21711,6 @@ msgstr ""
 #~ msgid "Move transition"
 #~ msgstr "Pomjeri prijelaz"
 
-#~ msgid " Position:"
-#~ msgstr " Pozicija:"
-
 #~ msgid " Selection duration:"
 #~ msgstr " Izaberi trajanje:"
 
@@ -21412,9 +22025,6 @@ msgstr ""
 
 #~ msgid "Manage Project Profiles"
 #~ msgstr "Upravljanje projektom profila"
-
-#~ msgid "Aspect ratio:"
-#~ msgstr "Razmjera:"
 
 #~ msgid "Display ratio:"
 #~ msgstr "Prikaži omjer:"
@@ -22016,9 +22626,6 @@ msgstr ""
 
 #~ msgid "Save clip zone as:"
 #~ msgstr "Spasi snimak  zonu kao:"
-
-#~ msgid "Description:"
-#~ msgstr "Opis:"
 
 #~ msgid ""
 #~ "Cannot start MLT's renderer:\n"
