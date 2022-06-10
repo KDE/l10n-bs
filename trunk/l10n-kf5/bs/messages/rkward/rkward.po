@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde4.14\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-07 00:42+0000\n"
+"POT-Creation-Date: 2022-06-10 00:41+0000\n"
 "PO-Revision-Date: 2015-02-22 23:06+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -140,7 +140,7 @@ msgid ""
 msgstr ""
 
 #: rkward/agents/showedittextfileagent.cpp:30
-#: rkward/misc/rkprogresscontrol.cpp:356
+#: rkward/misc/rkprogresscontrol.cpp:361
 #: rkward/plugin/rkstandardcomponentgui.cpp:586
 #, kde-format
 msgid "Done"
@@ -171,30 +171,12 @@ msgstr ""
 msgid "Edit file(s)"
 msgstr "Uredi &datoteku"
 
-#: rkward/core/renvironmentobject.cpp:42
+#: rkward/core/renvironmentobject.cpp:40
 #, kde-format
 msgid ""
 "This section contains data in your \"workspace\". This is data that you "
 "created or imported, in contrast to data contained in a loaded R package. "
 "Technically, this corresponds to the <i>.GlobalEnv</i> environment."
-msgstr ""
-
-#: rkward/core/renvironmentobject.cpp:97
-#, kde-format
-msgid ""
-"The package '%1' (probably you just loaded it) is currently blacklisted for "
-"retrieving structure information. Practically this means, the objects in "
-"this package will not appear in the object browser, and there will be no "
-"object name completion or function argument hinting for objects in this "
-"package.\n"
-"Packages will typically be blacklisted, if they contain huge amount of data, "
-"that would take too long to load. To unlist the package, visit Settings-"
-">Configure RKWard->Workspace."
-msgstr ""
-
-#: rkward/core/renvironmentobject.cpp:97
-#, kde-format
-msgid "Package blacklisted"
 msgstr ""
 
 #: rkward/core/rkmodificationtracker.cpp:59
@@ -281,82 +263,100 @@ msgstr ""
 msgid "new.row"
 msgstr "Nova vrsta"
 
-#: rkward/core/robject.cpp:124
+#: rkward/core/robject.cpp:163
 #, kde-format
 msgid "Full location:"
 msgstr ""
 
-#: rkward/core/robject.cpp:126
+#: rkward/core/robject.cpp:165
 #, kde-format
 msgid "Label:"
 msgstr "Oznaka:"
 
-#: rkward/core/robject.cpp:127
+#: rkward/core/robject.cpp:166
 #, kde-format
 msgid "Type:"
 msgstr "Tip:"
 
-#: rkward/core/robject.cpp:130
+#: rkward/core/robject.cpp:169
 #, fuzzy, kde-format
 msgid "Function"
 msgstr "X"
 
-#: rkward/core/robject.cpp:131
+#: rkward/core/robject.cpp:170
 #, kde-format
 msgid "Usage: "
 msgstr "upotreba"
 
-#: rkward/core/robject.cpp:133
+#: rkward/core/robject.cpp:172
 #, kde-format
 msgid "Data frame"
 msgstr ""
 
-#: rkward/core/robject.cpp:135
+#: rkward/core/robject.cpp:174
 #, kde-format
 msgid "Array"
 msgstr "Niz"
 
-#: rkward/core/robject.cpp:137 rkward/misc/rkspecialactions.cpp:90
+#: rkward/core/robject.cpp:176 rkward/misc/rkspecialactions.cpp:90
 #, kde-format
 msgid "Matrix"
 msgstr "Matrica"
 
-#: rkward/core/robject.cpp:139
+#: rkward/core/robject.cpp:178
 #, kde-format
 msgid "List"
 msgstr "Lista"
 
-#: rkward/core/robject.cpp:141
+#: rkward/core/robject.cpp:180
 #, kde-format
 msgid "Variable"
 msgstr "Promjenljiva"
 
-#: rkward/core/robject.cpp:142
+#: rkward/core/robject.cpp:181
 #, fuzzy, kde-format
 msgid "Data Type:"
 msgstr "Tip podatka:"
 
-#: rkward/core/robject.cpp:144
+#: rkward/core/robject.cpp:183
 #, kde-format
 msgid "Environment"
 msgstr "Okruženje"
 
-#: rkward/core/robject.cpp:149
+#: rkward/core/robject.cpp:188
 #, kde-format
 msgid "Length: "
 msgstr "Dužina: "
 
-#: rkward/core/robject.cpp:151
+#: rkward/core/robject.cpp:190
 #, kde-format
 msgid "Dimensions: "
 msgstr "Dimenzije: "
 
-#: rkward/core/robject.cpp:159
+#: rkward/core/robject.cpp:198
 #, kde-format
 msgid "Class(es):"
 msgstr ""
 
-#: rkward/core/robjectlist.cpp:78
+#: rkward/core/robject.cpp:278
+#, kde-format
+msgid ""
+"The package '%1' (probably you just loaded it) is currently blacklisted for "
+"retrieving structure information. Practically this means, the objects in "
+"this package will not appear in the object browser, and there will be no "
+"object name completion or function argument hinting for objects in this "
+"package.\n"
+"Packages will typically be blacklisted, if they contain huge amount of data, "
+"that would take too long to load. To unlist the package, visit Settings-"
+">Configure RKWard->Workspace."
+msgstr ""
+
+#: rkward/core/robject.cpp:278
+#, kde-format
+msgid "Package blacklisted"
+msgstr ""
+
+#: rkward/core/robjectlist.cpp:75
 #, kde-format
 msgid ""
 "This section contains environments that are not part of <i>.GlobalEnv</i> / "
@@ -364,14 +364,14 @@ msgid ""
 "also objects added to R's <i>search()<i>-path using <i>attach()</i>."
 msgstr ""
 
-#: rkward/core/robjectlist.cpp:90
+#: rkward/core/robjectlist.cpp:87
 #, kde-format
 msgid ""
 "Did not unload package %1. It is required in RKWard. If you really want to "
 "do this, do so on the R Console."
 msgstr ""
 
-#: rkward/core/robjectlist.cpp:93
+#: rkward/core/robjectlist.cpp:90
 #, kde-format
 msgid "Package %1 appears not to have been loaded"
 msgstr ""
@@ -2397,78 +2397,78 @@ msgstr ""
 msgid "Unhandled output command '%1'"
 msgstr ""
 
-#: rkward/misc/rkprogresscontrol.cpp:240
+#: rkward/misc/rkprogresscontrol.cpp:245
 #, kde-format
 msgid ""
 "<b>There have been errors and / or warnings. See below for a transcript</b>"
 msgstr ""
 
-#: rkward/misc/rkprogresscontrol.cpp:253
+#: rkward/misc/rkprogresscontrol.cpp:258
 #: rkward/settings/rksettingsmoduleoutput.cpp:185
 #, fuzzy, kde-format
 msgid "Output"
 msgstr "Izlaz"
 
-#: rkward/misc/rkprogresscontrol.cpp:254
+#: rkward/misc/rkprogresscontrol.cpp:259
 #, fuzzy, kde-format
 msgid "Output:"
 msgstr "Izlaz:"
 
-#: rkward/misc/rkprogresscontrol.cpp:256
+#: rkward/misc/rkprogresscontrol.cpp:261
 #, fuzzy, kde-format
 msgid "Errors / Warnings"
 msgstr "Greške i Upozorenja"
 
-#: rkward/misc/rkprogresscontrol.cpp:257
+#: rkward/misc/rkprogresscontrol.cpp:262
 #, fuzzy, kde-format
 msgid "Errors / Warnings:"
 msgstr "Greške i Upozorenja"
 
-#: rkward/misc/rkprogresscontrol.cpp:277 rkward/misc/rkprogresscontrol.cpp:404
-#: rkward/plugin/rkstandardcomponentgui.cpp:494 rkward/robjectviewer.cpp:166
+#: rkward/misc/rkprogresscontrol.cpp:282 rkward/misc/rkprogresscontrol.cpp:415
+#: rkward/plugin/rkstandardcomponentgui.cpp:494
 #: rkward/windows/rkdebugconsole.cpp:54
 #, fuzzy, kde-format
 msgid "Cancel"
 msgstr "Otkaži"
 
-#: rkward/misc/rkprogresscontrol.cpp:471
+#: rkward/misc/rkprogresscontrol.cpp:482
 #, kde-format
 msgid "<b>An error occurred</b> (see below for details)"
 msgstr ""
 
-#: rkward/misc/rkprogresscontrol.cpp:471
+#: rkward/misc/rkprogresscontrol.cpp:482
 #, kde-format
 msgid "<b>Done</b>"
 msgstr ""
 
-#: rkward/misc/rkprogresscontrol.cpp:474
+#: rkward/misc/rkprogresscontrol.cpp:485
 #: rkward/plugin/rkstandardcomponentgui.cpp:189
 #: rkward/plugin/rkstandardcomponentgui.cpp:594
 #, fuzzy, kde-format
 msgid "Close"
 msgstr "Zatvori"
 
-#: rkward/misc/rkprogresscontrol.cpp:521 rkward/windows/rkwindowcatcher.cpp:383
+#: rkward/misc/rkprogresscontrol.cpp:532 rkward/windows/rkwindowcatcher.cpp:383
 #, kde-format
 msgid "Keep waiting"
 msgstr ""
 
-#: rkward/misc/rkprogresscontrol.cpp:521
+#: rkward/misc/rkprogresscontrol.cpp:532
 #, kde-format
 msgid "Closing this window will cancel the current operation. Are you sure?"
 msgstr ""
 
-#: rkward/misc/rkprogresscontrol.cpp:521
+#: rkward/misc/rkprogresscontrol.cpp:532
 #, kde-format
 msgid "Cancel operation"
 msgstr ""
 
-#: rkward/misc/rkprogresscontrol.cpp:521
+#: rkward/misc/rkprogresscontrol.cpp:532
 #, fuzzy, kde-format
 msgid "Cancel && Close"
 msgstr "Otkazano"
 
-#: rkward/misc/rkprogresscontrol.cpp:533
+#: rkward/misc/rkprogresscontrol.cpp:544
 #, kde-format
 msgid "An operation is still running, please wait."
 msgstr ""
@@ -2669,7 +2669,7 @@ msgstr ""
 msgid "&Function reference"
 msgstr ""
 
-#: rkward/misc/rkstandardactions.cpp:154
+#: rkward/misc/rkstandardactions.cpp:155
 #, kde-format
 msgid "Search online"
 msgstr ""
@@ -3407,36 +3407,36 @@ msgstr ""
 msgid "Ok"
 msgstr ""
 
-#: rkward/rbackend/rkrinterface.cpp:91
+#: rkward/rbackend/rkrinterface.cpp:88
 #, fuzzy, kde-format
 msgid "R Startup"
 msgstr "Pokretanje"
 
-#: rkward/rbackend/rkrinterface.cpp:343
+#: rkward/rbackend/rkrinterface.cpp:91
 #, kde-format
 msgid ""
 "<p>\t-An unspecified error occurred that is not yet handled by RKWard. "
 "Likely RKWard will not function properly. Please check your setup.</p>\n"
 msgstr ""
 
-#: rkward/rbackend/rkrinterface.cpp:345
+#: rkward/rbackend/rkrinterface.cpp:93
 #, kde-format
 msgid ""
 "<p>There was a problem starting the R backend. The following error(s) "
 "occurred:</p>\n"
 msgstr ""
 
-#: rkward/rbackend/rkrinterface.cpp:353
+#: rkward/rbackend/rkrinterface.cpp:101
 #, kde-format
 msgid "Error starting R"
 msgstr ""
 
-#: rkward/rbackend/rkrinterface.cpp:576
+#: rkward/rbackend/rkrinterface.cpp:575
 #, kde-format
 msgid "Quitting was canceled"
 msgstr ""
 
-#: rkward/rbackend/rkrinterface.cpp:578
+#: rkward/rbackend/rkrinterface.cpp:577
 #, kde-format
 msgid ""
 "A command in the R backend is trying to change the character encoding. While "
@@ -3450,32 +3450,32 @@ msgid ""
 "windows, save, and retry."
 msgstr ""
 
-#: rkward/rbackend/rkrinterface.cpp:578
+#: rkward/rbackend/rkrinterface.cpp:577
 #, kde-format
 msgid "Locale change"
 msgstr ""
 
-#: rkward/rbackend/rkrinterface.cpp:579
+#: rkward/rbackend/rkrinterface.cpp:578
 #, kde-format
 msgid "Changing the locale was canceled by user"
 msgstr ""
 
-#: rkward/rbackend/rkrinterface.cpp:651
+#: rkward/rbackend/rkrinterface.cpp:650
 #, kde-format
 msgid "Attempt to start recording, while already recording commands. Ignoring."
 msgstr ""
 
-#: rkward/rbackend/rkrinterface.cpp:659
+#: rkward/rbackend/rkrinterface.cpp:658
 #, fuzzy, kde-format
 msgid "Could not open file for writing. Not recording commands"
 msgstr "Nije u mogućnosti da otvori datoteku \"%1\" za čitanje"
 
-#: rkward/rbackend/rkrinterface.cpp:670
+#: rkward/rbackend/rkrinterface.cpp:669
 #, kde-format
 msgid "Error: unrecognized request '%1'"
 msgstr ""
 
-#: rkward/rbackend/rkrinterface.cpp:743
+#: rkward/rbackend/rkrinterface.cpp:742
 #, kde-format
 msgid ""
 "The R-backend has indicated that in order to carry out the current task it "
@@ -3484,22 +3484,22 @@ msgid ""
 "needed package."
 msgstr ""
 
-#: rkward/rbackend/rkrinterface.cpp:743
+#: rkward/rbackend/rkrinterface.cpp:742
 #, kde-format
 msgid "Require package '%1'"
 msgstr ""
 
-#: rkward/rbackend/rkrinterface.cpp:763
+#: rkward/rbackend/rkrinterface.cpp:762
 #, kde-format
 msgid "Unrecognized call '%1'"
 msgstr ""
 
-#: rkward/rbackend/rkrinterface.cpp:843
+#: rkward/rbackend/rkrinterface.cpp:842
 #, kde-format
 msgid "R backend requests information"
 msgstr ""
 
-#: rkward/rbackend/rkrinterface.cpp:870
+#: rkward/rbackend/rkrinterface.cpp:869
 #, kde-format
 msgid ""
 "\n"
@@ -3510,7 +3510,7 @@ msgid ""
 "out of open data editors. Quit RKWard after that. Sorry!"
 msgstr ""
 
-#: rkward/rbackend/rkrinterface.cpp:871
+#: rkward/rbackend/rkrinterface.cpp:870
 #, kde-format
 msgid "R engine has died"
 msgstr ""
@@ -3567,89 +3567,89 @@ msgstr ""
 msgid "Error while connection graphics backend"
 msgstr ""
 
-#: rkward/rkconsole.cpp:92
+#: rkward/rkconsole.cpp:91
 #, kde-format
 msgid ""
 "The 'katepart' component could not be loaded. RKWard cannot run without "
 "katepart, and will exit, now. Please install katepart, and try again."
 msgstr ""
 
-#: rkward/rkconsole.cpp:92
+#: rkward/rkconsole.cpp:91
 #, kde-format
 msgid "'katepart' component could not be found"
 msgstr ""
 
-#: rkward/rkconsole.cpp:132 rkward/windows/rkcommandeditorwindow.cpp:384
+#: rkward/rkconsole.cpp:131 rkward/windows/rkcommandeditorwindow.cpp:384
 #, fuzzy, kde-format
 msgid "R Console"
 msgstr "Konzola"
 
-#: rkward/rkconsole.cpp:140
+#: rkward/rkconsole.cpp:139
 #, kde-format
 msgid "Scrollbar minimap"
 msgstr ""
 
-#: rkward/rkconsole.cpp:142
+#: rkward/rkconsole.cpp:141
 #, kde-format
 msgid "Dynamic word wrap"
 msgstr ""
 
-#: rkward/rkconsole.cpp:521
+#: rkward/rkconsole.cpp:497
 #, fuzzy, kde-format
 msgid "Syntax error\n"
 msgstr "Sintaksna greška"
 
-#: rkward/rkconsole.cpp:694
+#: rkward/rkconsole.cpp:692
 #, kde-format
 msgid "Select command history file to load"
 msgstr ""
 
-#: rkward/rkconsole.cpp:694
+#: rkward/rkconsole.cpp:692
 #, kde-format
 msgid "R history files [*.Rhistory](*.Rhistory);;All files [*](*)"
 msgstr ""
 
-#: rkward/rkconsole.cpp:727
+#: rkward/rkconsole.cpp:725
 #, kde-format
 msgid "Select filename to save command history"
 msgstr ""
 
-#: rkward/rkconsole.cpp:727
+#: rkward/rkconsole.cpp:725
 #, kde-format
 msgid "R history files [*.Rhistory] (*.Rhistory);;All files [*] (*)"
 msgstr ""
 
-#: rkward/rkconsole.cpp:848
+#: rkward/rkconsole.cpp:846
 #, kde-format
 msgid "Interrupt running command"
 msgstr ""
 
-#: rkward/rkconsole.cpp:855
+#: rkward/rkconsole.cpp:853
 #, kde-format
 msgid "Copy selection literally"
 msgstr ""
 
-#: rkward/rkconsole.cpp:858
+#: rkward/rkconsole.cpp:856
 #, kde-format
 msgid "Copy commands, only"
 msgstr ""
 
-#: rkward/rkconsole.cpp:865
+#: rkward/rkconsole.cpp:863
 #, kde-format
 msgid "Print Console"
 msgstr ""
 
-#: rkward/rkconsole.cpp:871
+#: rkward/rkconsole.cpp:869
 #, kde-format
 msgid "Import command history..."
 msgstr ""
 
-#: rkward/rkconsole.cpp:873
+#: rkward/rkconsole.cpp:871
 #, kde-format
 msgid "Export command history..."
 msgstr ""
 
-#: rkward/rkconsole.cpp:892
+#: rkward/rkconsole.cpp:890
 #, kde-format
 msgid ""
 "You have configured RKWard to pipe script editor commands through the R "
@@ -3658,17 +3658,17 @@ msgid ""
 "console, first? Press cancel if you do not wish to run the new command, now."
 msgstr ""
 
-#: rkward/rkconsole.cpp:892
+#: rkward/rkconsole.cpp:890
 #, kde-format
 msgid "R Console is busy"
 msgstr ""
 
-#: rkward/rkconsole.cpp:892
+#: rkward/rkconsole.cpp:890
 #, fuzzy, kde-format
 msgid "Append"
 msgstr "Dodavanje"
 
-#: rkward/rkconsole.cpp:892
+#: rkward/rkconsole.cpp:890
 #, kde-format
 msgid "Reset, then submit"
 msgstr ""
@@ -4176,55 +4176,45 @@ msgstr "&Postavke"
 msgid "&Help"
 msgstr "&Pomoć"
 
-#: rkward/robjectviewer.cpp:48
+#: rkward/robjectviewer.cpp:49
 #, fuzzy, kde-format
 msgid "summary (x)"
 msgstr "Rezime"
 
-#: rkward/robjectviewer.cpp:49
+#: rkward/robjectviewer.cpp:50
 #, fuzzy, kde-format
 msgid "print (x)"
 msgstr "Štampa..."
 
-#: rkward/robjectviewer.cpp:50
+#: rkward/robjectviewer.cpp:51
 #, kde-format
 msgid "str (x)"
 msgstr ""
 
-#: rkward/robjectviewer.cpp:78
+#: rkward/robjectviewer.cpp:79
 #, kde-format
 msgid "<b>Object was deleted</b>"
 msgstr ""
 
-#: rkward/robjectviewer.cpp:121
+#: rkward/robjectviewer.cpp:122
 #, kde-format
 msgid "Object Viewer: %1"
 msgstr ""
 
-#: rkward/robjectviewer.cpp:125
+#: rkward/robjectviewer.cpp:126
 #, kde-format
 msgid "The object was changed. You may want to click \"Update\""
 msgstr ""
 
-#: rkward/robjectviewer.cpp:162 rkward/windows/robjectbrowser.cpp:110
+#: rkward/robjectviewer.cpp:163 rkward/windows/robjectbrowser.cpp:110
 #, fuzzy, kde-format
 msgid "Update"
 msgstr "Ažuriraj"
 
-#: rkward/robjectviewer.cpp:210
+#: rkward/robjectviewer.cpp:211
 #, kde-format
-msgid "Fetching information. Please wait."
+msgid "Fetching information"
 msgstr ""
-
-#: rkward/robjectviewer.cpp:220
-#, kde-format
-msgid "Click \"Update\" to fetch information"
-msgstr ""
-
-#: rkward/robjectviewer.cpp:241
-#, fuzzy, kde-format
-msgid "Ready"
-msgstr "Spreman"
 
 #: rkward/scriptbackends/qtscriptbackend.cpp:139
 #, kde-format
@@ -6380,198 +6370,198 @@ msgstr "Širina"
 msgid "Height"
 msgstr "Visina"
 
-#: rkward/windows/rkwindowcatcher.cpp:556
+#: rkward/windows/rkwindowcatcher.cpp:561
 #, kde-format
 msgid "Activate graphics device number %1"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:562
+#: rkward/windows/rkwindowcatcher.cpp:567
 #, kde-format
 msgid "Copy contents of graphics device number %1 to output"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:570
+#: rkward/windows/rkwindowcatcher.cpp:575
 #, kde-format
 msgid "Print contents of graphics device number %1"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:578
+#: rkward/windows/rkwindowcatcher.cpp:583
 #, kde-format
 msgid "Specify R object"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:582
+#: rkward/windows/rkwindowcatcher.cpp:587
 #, kde-format
 msgid "Specify the R object name, you want to save the graph to"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:602
+#: rkward/windows/rkwindowcatcher.cpp:607
 #, kde-format
 msgid "Save contents of graphics device number %1 to object '%2'"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:611
+#: rkward/windows/rkwindowcatcher.cpp:616
 #, kde-format
 msgid "Duplicate graphics device number %1"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:617
+#: rkward/windows/rkwindowcatcher.cpp:622
 #, kde-format
 msgid "Load next plot in device number %1"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:618
-#: rkward/windows/rkwindowcatcher.cpp:626
-#: rkward/windows/rkwindowcatcher.cpp:634
-#: rkward/windows/rkwindowcatcher.cpp:642
-#: rkward/windows/rkwindowcatcher.cpp:650
+#: rkward/windows/rkwindowcatcher.cpp:623
+#: rkward/windows/rkwindowcatcher.cpp:631
+#: rkward/windows/rkwindowcatcher.cpp:639
+#: rkward/windows/rkwindowcatcher.cpp:647
+#: rkward/windows/rkwindowcatcher.cpp:655
 #, kde-format
 msgid "Loading plot from history"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:625
+#: rkward/windows/rkwindowcatcher.cpp:630
 #, kde-format
 msgid "Load previous plot in device number %1"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:633
+#: rkward/windows/rkwindowcatcher.cpp:638
 #, kde-format
 msgid "Load first plot in device number %1"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:641
+#: rkward/windows/rkwindowcatcher.cpp:646
 #, kde-format
 msgid "Load last plot in device number %1"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:649
+#: rkward/windows/rkwindowcatcher.cpp:654
 #, kde-format
 msgid "Load plot %1 in device number %2"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:657
+#: rkward/windows/rkwindowcatcher.cpp:662
 #, kde-format
 msgid "Append this plot to history (device number %1)"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:663
+#: rkward/windows/rkwindowcatcher.cpp:668
 #, kde-format
 msgid "Remove current plot from history (device number %1)"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:669
+#: rkward/windows/rkwindowcatcher.cpp:674
 #, kde-format
 msgid ""
 "This will clear the plot history for all device windows, not just this one. "
 "If this is not your intent, press cancel, below."
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:671
+#: rkward/windows/rkwindowcatcher.cpp:676
 #, kde-format
 msgid "Clear plot history"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:677
+#: rkward/windows/rkwindowcatcher.cpp:682
 #, kde-format
 msgid "Plot properties (device number %1)"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:691
+#: rkward/windows/rkwindowcatcher.cpp:696
 #, kde-format
 msgid "<Unsaved plot>"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:718
+#: rkward/windows/rkwindowcatcher.cpp:723
 #, kde-format
 msgid "Draw area follows size of window"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:725
+#: rkward/windows/rkwindowcatcher.cpp:730
 #, kde-format
 msgid "Set fixed size 500x500"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:728
+#: rkward/windows/rkwindowcatcher.cpp:733
 #, kde-format
 msgid "Set fixed size 1000x1000"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:731
+#: rkward/windows/rkwindowcatcher.cpp:736
 #, kde-format
 msgid "Set fixed size 2000x2000"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:734
+#: rkward/windows/rkwindowcatcher.cpp:739
 #, kde-format
 msgid "Set specified fixed size..."
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:739
+#: rkward/windows/rkwindowcatcher.cpp:744
 #, kde-format
 msgid "Previous plot"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:744
+#: rkward/windows/rkwindowcatcher.cpp:749
 #, kde-format
 msgid "First plot"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:749
+#: rkward/windows/rkwindowcatcher.cpp:754
 #, kde-format
 msgid "Next plot"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:754
+#: rkward/windows/rkwindowcatcher.cpp:759
 #, kde-format
 msgid "Last plot"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:757
+#: rkward/windows/rkwindowcatcher.cpp:762
 #, kde-format
 msgid "Go to plot"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:766
+#: rkward/windows/rkwindowcatcher.cpp:771
 #, kde-format
 msgid "Append this plot"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:771
+#: rkward/windows/rkwindowcatcher.cpp:776
 #, kde-format
 msgid "Remove this plot"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:777
+#: rkward/windows/rkwindowcatcher.cpp:782
 #, fuzzy, kde-format
 msgid "Clear history"
 msgstr "Očisti historiju"
 
-#: rkward/windows/rkwindowcatcher.cpp:783
+#: rkward/windows/rkwindowcatcher.cpp:788
 #, fuzzy, kde-format
 msgid "Plot properties"
 msgstr "Svojstva nacrta"
 
-#: rkward/windows/rkwindowcatcher.cpp:788
+#: rkward/windows/rkwindowcatcher.cpp:793
 #, fuzzy, kde-format
 msgid "Make active"
 msgstr "Napravi aktivnim"
 
-#: rkward/windows/rkwindowcatcher.cpp:792
+#: rkward/windows/rkwindowcatcher.cpp:797
 #, kde-format
 msgid "Copy to output"
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:796
+#: rkward/windows/rkwindowcatcher.cpp:801
 #, kde-format
 msgid "Store as R object..."
 msgstr ""
 
-#: rkward/windows/rkwindowcatcher.cpp:798
+#: rkward/windows/rkwindowcatcher.cpp:803
 #, fuzzy, kde-format
 msgid "Duplicate"
 msgstr "Dupliciraj"
 
-#: rkward/windows/rkwindowcatcher.cpp:802
+#: rkward/windows/rkwindowcatcher.cpp:807
 #, kde-format
 msgid "Stop interaction"
 msgstr ""
@@ -6740,6 +6730,10 @@ msgstr "Unesite novo ime"
 #, kde-format
 msgid "View in editor (read-only)"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Ready"
+#~ msgstr "Spreman"
 
 #, fuzzy
 #~ msgid "Next"
