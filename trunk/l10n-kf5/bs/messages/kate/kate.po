@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kate\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-02 00:53+0000\n"
+"POT-Creation-Date: 2022-07-03 00:51+0000\n"
 "PO-Revision-Date: 2014-01-31 19:52+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -1251,12 +1251,12 @@ msgstr "&Sačuvaj sesiju"
 msgid "Save Session &As..."
 msgstr "Sačuvati sesiju &kao..."
 
-#: lib/katemainwindow.cpp:486 lib/kateviewspace.cpp:60
+#: lib/katemainwindow.cpp:486 lib/kateviewspace.cpp:61
 #, kde-format
 msgid "Go to Previous Location"
 msgstr ""
 
-#: lib/katemainwindow.cpp:494 lib/kateviewspace.cpp:73
+#: lib/katemainwindow.cpp:494 lib/kateviewspace.cpp:74
 #, kde-format
 msgid "Go to Next Location"
 msgstr ""
@@ -1304,21 +1304,29 @@ msgstr ""
 #: lib/katemainwindow.cpp:837
 #, kde-format
 msgid ""
-"You dropped the directory %1 into Kate. Do you want to load all files "
-"contained in it ?"
+"You dropped the directory %1 into Kate. Do you want to open all files "
+"contained in it?"
 msgstr ""
 
 #: lib/katemainwindow.cpp:840
 #, kde-format
-msgid "Load files recursively?"
+msgctxt "@title:window"
+msgid "Open Files Recursively"
 msgstr ""
 
-#: lib/katemainwindow.cpp:968
+#: lib/katemainwindow.cpp:841
+#, fuzzy, kde-format
+#| msgid "Open File"
+msgctxt "@action:button"
+msgid "Open All Files"
+msgstr "Otvaranje datoteke"
+
+#: lib/katemainwindow.cpp:970
 #, kde-format
 msgid "&Other..."
 msgstr "&Drugi..."
 
-#: lib/katemainwindow.cpp:1083
+#: lib/katemainwindow.cpp:1085
 #, kde-format
 msgid " [read only]"
 msgstr " [samo za čitanje]"
@@ -1797,28 +1805,28 @@ msgstr ""
 msgid "Opening Large File"
 msgstr "Otvaranje velike datoteke"
 
-#: lib/kateviewmanager.cpp:990
+#: lib/kateviewmanager.cpp:991
 #, kde-format
 msgid "This view may have unsaved work. Do you really want to close it?"
 msgstr ""
 
-#: lib/kateviewspace.cpp:100
+#: lib/kateviewspace.cpp:101
 #, kde-format
 msgctxt "indicator for more documents"
 msgid "+%1"
 msgstr ""
 
-#: lib/kateviewspace.cpp:105 lib/kateviewspace.cpp:209
+#: lib/kateviewspace.cpp:106 lib/kateviewspace.cpp:210
 #, kde-format
 msgid "Click here to switch to the Quick Open view."
 msgstr ""
 
-#: lib/kateviewspace.cpp:120
+#: lib/kateviewspace.cpp:121
 #, kde-format
 msgid "Control view space splitting"
 msgstr ""
 
-#: lib/kateviewspace.cpp:210
+#: lib/kateviewspace.cpp:211
 #, kde-format
 msgid ""
 "Currently, there is one more document open. To see all open documents, "
@@ -1830,36 +1838,36 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: lib/kateviewspace.cpp:883
+#: lib/kateviewspace.cpp:885
 #, fuzzy, kde-format
 #| msgid "Close"
 msgid "Close Tab"
 msgstr "Zatvori"
 
-#: lib/kateviewspace.cpp:897
+#: lib/kateviewspace.cpp:902
 #, fuzzy, kde-format
 #| msgid "Close Document"
 msgid "&Close Document"
 msgstr "Zatvori dokument"
 
-#: lib/kateviewspace.cpp:898
+#: lib/kateviewspace.cpp:903
 #, fuzzy, kde-format
 #| msgid "Close Document"
 msgid "Close Other &Documents"
 msgstr "Zatvori dokument"
 
-#: lib/kateviewspace.cpp:907
+#: lib/kateviewspace.cpp:912
 #, fuzzy, kde-format
 #| msgid "Close the current document."
 msgid "Compare with active document"
 msgstr "Zatvori tekući dokument."
 
-#: lib/kateviewspace.cpp:966
+#: lib/kateviewspace.cpp:974
 #, kde-format
 msgid "Could not start program"
 msgstr ""
 
-#: lib/kateviewspace.cpp:967
+#: lib/kateviewspace.cpp:975
 #, kde-format
 msgid "The selected program could not be started. Maybe it is not installed."
 msgstr ""
@@ -1981,16 +1989,31 @@ msgid ""
 "Internal error: there is more than one instance open for a given session."
 msgstr "Unutrašnja greška: više od jednog otvorenog primjerka za datu sesiju."
 
-#: lib/session/katesessionmanager.cpp:111
-#, kde-format
+#: lib/session/katesessionmanager.cpp:112
+#, fuzzy, kde-format
+#| msgid ""
+#| "Session '%1' is already opened in another kate instance, change there "
+#| "instead of reopening?"
 msgid ""
-"Session '%1' is already opened in another kate instance, change there "
-"instead of reopening?"
+"Session '%1' is already opened in another Kate instance. Switch to that or "
+"reopen in this instance?"
 msgstr ""
 "Sesija „%1“ je već otvorena u drugom primjerku Kate — da prebacim na njega "
 "umjesto otvaranja novog?"
 
-#: lib/session/katesessionmanager.cpp:302
+#: lib/session/katesessionmanager.cpp:114
+#, kde-format
+msgctxt "@action:button"
+msgid "Switch to Instance"
+msgstr ""
+
+#: lib/session/katesessionmanager.cpp:115
+#, kde-format
+msgctxt "@action:button"
+msgid "Reopen"
+msgstr ""
+
+#: lib/session/katesessionmanager.cpp:303
 #, fuzzy, kde-format
 #| msgid ""
 #| "The session could not be renamed to \"%1\", there already exists another "
@@ -1998,17 +2021,17 @@ msgstr ""
 msgid "The session could not be renamed to \"%1\". Failed to write to \"%2\""
 msgstr "Sesija se ne može preimenovati u „%1“, jer istoimena već postoji."
 
-#: lib/session/katesessionmanager.cpp:303
+#: lib/session/katesessionmanager.cpp:304
 #, kde-format
 msgid "Session Renaming"
 msgstr "Preimenovanje sesije"
 
-#: lib/session/katesessionmanager.cpp:450
+#: lib/session/katesessionmanager.cpp:451
 #, kde-format
 msgid "Session name:"
 msgstr "Ime sesije:"
 
-#: lib/session/katesessionmanager.cpp:452
+#: lib/session/katesessionmanager.cpp:453
 #, fuzzy, kde-format
 #| msgid ""
 #| "There is already an existing session with your chosen name.\n"
@@ -2022,18 +2045,18 @@ msgstr ""
 "Izaberite neko drugo.\n"
 "Ime sesije:"
 
-#: lib/session/katesessionmanager.cpp:454
+#: lib/session/katesessionmanager.cpp:455
 #, kde-format
 msgid "To save a session, you must specify a name."
 msgstr "Morate navesti ime da biste sačuvali sesiju."
 
-#: lib/session/katesessionmanager.cpp:481
+#: lib/session/katesessionmanager.cpp:482
 #, fuzzy, kde-format
 #| msgid "Specify New Name for Session"
 msgid "Specify a name for this session"
 msgstr "Navedite novo ime za sesiju"
 
-#: lib/session/katesessionmanager.cpp:483
+#: lib/session/katesessionmanager.cpp:484
 #, fuzzy, kde-format
 #| msgid "Specify New Name for Session"
 msgid "Specify a new name for session: %1"
