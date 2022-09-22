@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-20 00:46+0000\n"
+"POT-Creation-Date: 2022-09-22 00:45+0000\n"
 "PO-Revision-Date: 2015-02-04 14:43+0000\n"
 "Last-Translator: Samir Ribic <Unknown>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -776,7 +776,7 @@ msgid "Could not match work duration. Want: %1 got: %2"
 msgstr "Ne može se složiti dužina posla. Željeno: %1 dobijeno: %2"
 
 #: kernel/kptwbsdefinition.cpp:28
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:189
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:227
 #, kde-format
 msgid "Number"
 msgstr "Broj"
@@ -2036,7 +2036,6 @@ msgstr[2] "Ima %1 raspoloživih resursa u ovoj grupi"
 #: models/reportgenerator/ReportGeneratorOdt.cpp:179
 #: models/ResourceGroupModel.cpp:190 models/ResourceModel.cpp:418
 #: ui/projectview/ProjectView.cpp:40
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:208
 #, kde-format
 msgid "Name"
 msgstr "Naziv"
@@ -2344,7 +2343,8 @@ msgstr "Izmjeni dan kalendara"
 
 #: models/kptcalendarmodel.cpp:532 models/kptnodeitemmodel.cpp:2315
 #: models/kptnodeitemmodel.cpp:5250
-#, kde-kuit-format
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:252
+#, kde-format, kde-kuit-format
 msgctxt "@title:column"
 msgid "Name"
 msgstr "Ime"
@@ -6503,7 +6503,7 @@ msgstr "Početak projekta"
 #: ui/kptaccountsviewconfigurepanelbase.ui:114
 #: ui/kptaccountsviewconfigurepanelbase.ui:144 ui/kptprintingheaderfooter.ui:46
 #: ui/kptprintingheaderfooter.ui:86 ui/kptusedefforteditor.cpp:395
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:189
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:227
 #, kde-format
 msgid "Date"
 msgstr "Datum"
@@ -7079,7 +7079,6 @@ msgstr "Dužina"
 
 #. i18n: ectx: property (text), widget (QPushButton, bAddInterval)
 #: ui/kptintervaleditbase.ui:70
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:208
 #, kde-format
 msgid "Add"
 msgstr "Dodaj"
@@ -9612,38 +9611,53 @@ msgstr "Poslije podnožja"
 msgid "Before header"
 msgstr "Prije zaglavlja"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:189
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:227
 #, kde-format
 msgid "Nothing"
 msgstr ""
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:208
-#, fuzzy, kde-format
-#| msgid "Report Footer"
-msgid "Report File"
-msgstr "Podnožje izvještaja"
-
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:208
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:253
 #, fuzzy, kde-format
 #| msgid "Report Header"
+msgctxt "@title:column"
 msgid "Report Template"
 msgstr "Podnožje izvještaja"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:209
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:254
+#, fuzzy, kde-format
+#| msgid "Add"
+msgctxt "@title:column"
+msgid "Add"
+msgstr "Dodaj"
+
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:255
+#, fuzzy, kde-format
+#| msgid "Report Footer"
+msgctxt "@title:column"
+msgid "Report File"
+msgstr "Podnožje izvještaja"
+
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:258
 #, fuzzy, kde-kuit-format
 #| msgid "Report Header"
 msgctxt "@info:tooltip"
 msgid "Report name"
 msgstr "Podnožje izvještaja"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:210
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:259
 #, fuzzy, kde-kuit-format
 #| msgid "Report Header"
 msgctxt "@info:tooltip"
 msgid "Report template file name"
 msgstr "Podnožje izvještaja"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:211
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:260
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid "Information added to filename"
+msgstr ""
+
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:261
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid "Failed to export to <filename>%1</filename>"
@@ -9651,13 +9665,7 @@ msgctxt "@info:tooltip"
 msgid "Name of the generated report file"
 msgstr "Neuspjeh izvoza u <filename>%1</filename>"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:212
-#, kde-kuit-format
-msgctxt "@info:tooltip"
-msgid "Information added to filename"
-msgstr ""
-
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:248
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:287
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -9667,34 +9675,41 @@ msgid ""
 "url='%1'>More...</link></para>"
 msgstr ""
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:323
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:378
 #, fuzzy, kde-format
 #| msgid "Edit Report"
 msgid "Add Report"
 msgstr "Izmijeni izvještaj"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:328
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:383
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Remove document"
 msgid "Remove Report"
 msgstr "Ukloni dokument"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:333
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:388
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Export Report"
 msgid "Generate Report"
 msgstr "Izvoz izvještaja"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:360
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:393
+#, fuzzy, kde-format
+#| msgid "Open"
+msgid "Open..."
+msgstr "Otvori"
+
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:429
 #, fuzzy, kde-format
 #| msgid "View report"
 msgid "New report"
 msgstr "Pregled izvještaja"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:401
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:408
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:470
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:476
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:483
 #, fuzzy, kde-kuit-format
 #| msgctxt "@title:window"
 #| msgid "Export Report"
@@ -9702,21 +9717,28 @@ msgctxt "@title:window"
 msgid "Generate Report"
 msgstr "Izvoz izvještaja"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:402
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:471
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid "Failed to export to <filename>%1</filename>"
 msgid "Failed to generate %1.<nl/>Template file name is empty."
 msgstr "Neuspjeh izvoza u <filename>%1</filename>"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:409
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:477
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid "Failed to export to <filename>%1</filename>"
+msgid "Failed to generate %1.<nl/>Template file does not exist:<nl/>%2"
+msgstr "Neuspjeh izvoza u <filename>%1</filename>"
+
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:484
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid "Failed to export to <filename>%1</filename>"
 msgid "Failed to generate %1.<nl/>Report file name is empty."
 msgstr "Neuspjeh izvoza u <filename>%1</filename>"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:432
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:507
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:tooltip 1=list of resources"
 #| msgid "Assigned resources:<nl/>%1"
@@ -9724,8 +9746,8 @@ msgctxt "@info"
 msgid "File exists:<nl/>%1"
 msgstr "Dodijeljenih resursa:<nl/>%1"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:432
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:458
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:507
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:533
 #, fuzzy, kde-format, kde-kuit-format
 #| msgctxt "@title:window"
 #| msgid "Report Designer"
@@ -9733,21 +9755,21 @@ msgctxt "@title:window"
 msgid "Report Generation"
 msgstr "Dizajner izvještaja"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:451
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:526
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Failed to export to <filename>%1</filename>"
 msgid "Failed to open report generator"
 msgstr "Neuspjeh izvoza u <filename>%1</filename>"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:455
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:530
 #, fuzzy, kde-format
 #| msgctxt "1=type of constraint"
 #| msgid "%1: Failed to meet constraint"
 msgid "Failed to create report"
 msgstr "%1: Neuspjelo zadovoljavanje ograničenja"
 
-#: ui/reportsgenerator/ReportsGeneratorView.cpp:458
+#: ui/reportsgenerator/ReportsGeneratorView.cpp:533
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid "Cannot open file:<br/><filename>%1</filename>"
