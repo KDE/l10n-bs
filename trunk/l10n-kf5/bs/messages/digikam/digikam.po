@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: digikam\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:42+0000\n"
+"POT-Creation-Date: 2022-09-23 00:42+0000\n"
 "PO-Revision-Date: 2015-02-26 21:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -7145,6 +7145,33 @@ msgctxt "@info"
 msgid ""
 "<para>This Batch Queue Manager tool can apply metadata template over images."
 "</para>"
+msgstr "Ova slika nije upravljana bojom."
+
+#: core/dplugins/bqm/metadata/qualitysort/qualitysortplugin.cpp:46
+#, fuzzy, kde-format
+#| msgid "Image Quality Sorter"
+msgctxt "@title"
+msgid "Image Quality Sort"
+msgstr "Razvrstavač slika po kvaliteti"
+
+#: core/dplugins/bqm/metadata/qualitysort/qualitysortplugin.cpp:61
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enable this option to assign automatically Pick Labels based on image "
+#| "quality."
+msgctxt "@info"
+msgid "A tool to assign pick label metadata by image quality"
+msgstr ""
+"Omogućite ovu opciju da biste automatski dodijelili naljepnice izbora na "
+"osnovu kvaliteta slike."
+
+#: core/dplugins/bqm/metadata/qualitysort/qualitysortplugin.cpp:66
+#, fuzzy, kde-kuit-format
+#| msgid "This image is not color managed."
+msgctxt "@info"
+msgid ""
+"<para>This Batch Queue Manager tool will assign a pick label metadata value "
+"by parsing image and estimate the quality.</para>"
 msgstr "Ova slika nije upravljana bojom."
 
 #: core/dplugins/bqm/metadata/removemetadata/removemetadata.cpp:103
@@ -23570,7 +23597,7 @@ msgstr "Mrlje"
 msgid "Slideshow"
 msgstr "Slajd-šou"
 
-#: core/dplugins/generic/view/slideshow/common/slideshowloader.cpp:664
+#: core/dplugins/generic/view/slideshow/common/slideshowloader.cpp:665
 #, kde-format
 msgctxt ""
 "Reason for inhibiting the screensaver activation, when the presentation mode "
@@ -37459,11 +37486,13 @@ msgid "Detect the amount of blur in the images passed to it"
 msgstr "Otkrij količinu zamagljenja primijenjenog na slikama"
 
 #: core/libs/imgqsort/imagequalitysettings.cpp:208
+#: core/libs/imgqsort/imagequalitysettings.cpp:218
+#: core/libs/imgqsort/imagequalitysettings.cpp:228
 #, fuzzy, kde-format
-#| msgid "Blur Weight:"
+#| msgid "Height:"
 msgctxt "@label"
-msgid "Blur Weight:"
-msgstr "Težina zamagljenja:"
+msgid "Weight:"
+msgstr "Visina:"
 
 #: core/libs/imgqsort/imagequalitysettings.cpp:213
 #, fuzzy, kde-format
@@ -37486,13 +37515,6 @@ msgctxt "@info:tooltip"
 msgid "Detect the amount of noise in the images passed to it"
 msgstr "Otkrij količinu šumova primijenjenih na slikama"
 
-#: core/libs/imgqsort/imagequalitysettings.cpp:218
-#, fuzzy, kde-format
-#| msgid "Noise Weight:"
-msgctxt "@label"
-msgid "Noise Weight:"
-msgstr "Značaj buke:"
-
 #: core/libs/imgqsort/imagequalitysettings.cpp:223
 #, fuzzy, kde-format
 #| msgid "Weight to assign to Noise Algorithm"
@@ -37513,13 +37535,6 @@ msgstr "Otkrij kompresiju"
 msgctxt "@info:tooltip"
 msgid "Detect the amount of compression in the images passed to it"
 msgstr "Otkrij nivo kompresije koji je primijenjen na slikama"
-
-#: core/libs/imgqsort/imagequalitysettings.cpp:228
-#, fuzzy, kde-format
-#| msgid "Compression Weight:"
-msgctxt "@label"
-msgid "Compression Weight:"
-msgstr "Težina kompresije:"
 
 #: core/libs/imgqsort/imagequalitysettings.cpp:233
 #, fuzzy, kde-format
@@ -67611,18 +67626,18 @@ msgstr ""
 msgctxt "@label"
 msgid ""
 "These settings determines the quality of an image and convert it into a "
-"score, stored in database. This property can be evaluated by two ways: using "
-"four basic factors sabotaging the images (blur, noise, exposure, and "
-"compression), or using a deep learning neural network engine. The first one "
-"helps to determine whether images are distorted by the basic factors, "
-"however it demands some drawbacks as fine-tuning from the user’s side and it "
-"cannot work along the aesthetic image processing. The second one uses an IA "
-"approach based on %1 model to predict the score. As deep learning is an end-"
-"to-end solution, it doesn’t require hyper-parameter settings, and make this "
-"feature easier to use."
+"score, stored in database as Pick Label property. This information can be "
+"evaluated by two ways: using four basic factors sabotaging the images (blur, "
+"noise, exposure, and compression), or using a deep learning neural network "
+"engine. The first one helps to determine whether images are distorted by the "
+"basic factors, however it demands some drawbacks as fine-tuning from the "
+"user’s side and it cannot work along the aesthetic image processing. The "
+"second one uses an IA approach based on %1 model to predict the score. As "
+"deep learning is an end-to-end solution, it doesn’t require hyper-parameter "
+"settings, and make this feature easier to use."
 msgstr ""
 
-#: core/utilities/setup/setupimagequalitysorter.cpp:63
+#: core/utilities/setup/setupimagequalitysorter.cpp:64
 #, fuzzy, kde-format
 #| msgid "Image Quality Sorter"
 msgctxt "@label"
@@ -68187,6 +68202,24 @@ msgctxt "@info"
 msgid "Do you want to reset all video settings to the default value?"
 msgstr "Resetujte sve postavke na njihove zadane vrijednosti."
 
+#, fuzzy
+#~| msgid "Blur Weight:"
+#~ msgctxt "@label"
+#~ msgid "Blur Weight:"
+#~ msgstr "Težina zamagljenja:"
+
+#, fuzzy
+#~| msgid "Noise Weight:"
+#~ msgctxt "@label"
+#~ msgid "Noise Weight:"
+#~ msgstr "Značaj buke:"
+
+#, fuzzy
+#~| msgid "Compression Weight:"
+#~ msgctxt "@label"
+#~ msgid "Compression Weight:"
+#~ msgstr "Težina kompresije:"
+
 #~ msgid "Check quality sorter setup panel for details: "
 #~ msgstr "Provjeri ploču postavki razvrstavača po kvaliteti za detalje: "
 
@@ -68195,18 +68228,6 @@ msgstr "Resetujte sve postavke na njihove zadane vrijednosti."
 #~ msgctxt "@option:check"
 #~ msgid "Enable Image Quality Sorting"
 #~ msgstr "Dozvoli sortiranje po kvalitetu slike (eksperimentalno)"
-
-#, fuzzy
-#~| msgid ""
-#~| "Enable this option to assign automatically Pick Labels based on image "
-#~| "quality."
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Enable this option to assign automatically Pick Labels based on image "
-#~ "quality."
-#~ msgstr ""
-#~ "Omogućite ovu opciju da biste automatski dodijelili naljepnice izbora na "
-#~ "osnovu kvaliteta slike."
 
 #~ msgid "Speed:"
 #~ msgstr "Brzina:"
