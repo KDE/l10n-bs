@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: skrooge.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-02 00:47+0000\n"
+"POT-Creation-Date: 2022-10-03 00:48+0000\n"
 "PO-Revision-Date: 2015-02-26 23:39+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: bs <bs@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "Izmijeni"
 #: plugins/skrooge/skrooge_operation/skrooge_operation.rc:38
 #: plugins/skrooge/skrooge_payee/skrooge_payee.rc:15
 #: plugins/skrooge/skrooge_report/skrooge_report.rc:12
-#: plugins/skrooge/skrooge_scheduled/skrooge_scheduled.rc:9
+#: plugins/skrooge/skrooge_scheduled/skrooge_scheduled.rc:10
 #: plugins/skrooge/skrooge_search/skrooge_search.rc:9
 #: plugins/skrooge/skrooge_tracker/skrooge_tracker.rc:6
 #: plugins/skrooge/skrooge_unit/skrooge_unit.rc:12
@@ -6257,7 +6257,7 @@ msgid "CSV Files"
 msgstr "CSV datoteke"
 
 #: plugins/skrooge/skrooge_importexport/skgimportexportplugin.cpp:518
-#: skgbankmodeler/skgimportexportmanager.cpp:613
+#: skgbankmodeler/skgimportexportmanager.cpp:616
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Import with codec %1"
@@ -7607,6 +7607,7 @@ msgid "Apply template"
 msgstr "Primijeni predložak"
 
 #: plugins/skrooge/skrooge_operation/skgoperationplugin.cpp:327
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:103
 #, kde-format
 msgctxt "More items in a menu"
 msgid "More"
@@ -10214,7 +10215,7 @@ msgid "Color of font for disabled schedule"
 msgstr "Boja slova za onemogućeni raspored"
 
 #: plugins/skrooge/skrooge_scheduled/skgscheduledboardwidget.cpp:29
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:103
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:186
 #, kde-format
 msgctxt "Noun, the title of a section"
 msgid "Scheduled operations"
@@ -10258,38 +10259,70 @@ msgctxt "Item in a combo box"
 msgid "For 90 next days"
 msgstr ""
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:59
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:64
 #, kde-format
 msgctxt "Verb, create a scheduled operation"
 msgid "Schedule"
 msgstr "Rasporedi"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:64
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:69
 #, kde-format
 msgctxt "Verb, skip scheduled operations"
 msgid "Skip"
 msgstr ""
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:85
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:73
+#, fuzzy, kde-format
+#| msgctxt "Noun, name of the user action"
+#| msgid "Conversion schedule"
+msgctxt "Verb, action to assign a schedule"
+msgid "Assign schedule"
+msgstr "Raspored konverzije"
+
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:132
+#, fuzzy, kde-format
+#| msgctxt "Noun, name of the user action"
+#| msgid "Conversion schedule"
+msgctxt "Noun, name of the user action"
+msgid "Assign schedule"
+msgstr "Raspored konverzije"
+
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:144
+#, fuzzy, kde-format
+#| msgctxt "Error message"
+#| msgid "Schedule failed"
+msgctxt "Successful message after an user action"
+msgid "Schedule assigned."
+msgstr "Raspoređivanje neuspjelo"
+
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:146
+#, fuzzy, kde-format
+#| msgctxt "Error message"
+#| msgid "Schedule failed"
+msgctxt "Error message"
+msgid "Schedule assignement failed"
+msgstr "Raspoređivanje neuspjelo"
+
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:168
 #: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget.cpp:317
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Insert recurrent operations"
 msgstr "Umetanje povratnih operacija"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:139
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:222
 #, kde-format
 msgctxt "Noun"
 msgid "Scheduled operations"
 msgstr "Raspoređene operacije"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:149
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:232
 #, kde-format
 msgctxt "Noun"
 msgid "Operations scheduled management"
 msgstr "Upravljanje raspoređenim operacijama"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:160
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:243
 #, fuzzy, kde-format
 #| msgctxt "Description of a tips"
 #| msgid "<p>... you can schedule operations or templates.</p>"
@@ -10299,31 +10332,31 @@ msgid ""
 "operations or templates.</p>"
 msgstr "<p>... možete rasporediti operacije ili predloške.</p>"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:179
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:262
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Conversion schedule"
 msgstr "Raspored konverzije"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:199
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:282
 #, kde-format
 msgctxt "An information message"
 msgid "All scheduled operations have been converted in template"
 msgstr "Sve raspoređene operacije su konvertovane u predložak"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:217
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:300
 #, kde-format
 msgctxt "An information message"
 msgid "A template has been created"
 msgstr "Predložak je kreiran"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:256
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:339
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Operation schedule"
 msgstr "Raspored operacije"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:263
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:346
 #, fuzzy, kde-format
 #| msgctxt "An information message"
 #| msgid "Operation '%1' has been inserted"
@@ -10331,20 +10364,20 @@ msgctxt "An information to the user"
 msgid "The operation '%1' has been scheduled"
 msgstr "Operacija '%1' je ubačena"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:276
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:545
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:359
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:628
 #, kde-format
 msgctxt "Successful message after an user action"
 msgid "Operation scheduled."
 msgstr "Operacija raspoređena."
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:278
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:361
 #, kde-format
 msgctxt "Error message"
 msgid "Operation schedule failed"
 msgstr "Raspoređivanje operacije neuspjelo"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:303
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:386
 #, fuzzy, kde-format
 #| msgctxt "Noun, the title of a section"
 #| msgid "Scheduled operations"
@@ -10352,7 +10385,7 @@ msgctxt "Noun, name of the user action"
 msgid "Skip scheduled operations"
 msgstr "Raspoređene operacije"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:318
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:401
 #, fuzzy, kde-format
 #| msgctxt "Successful message after an user action"
 #| msgid "Scheduled operation updated."
@@ -10360,7 +10393,7 @@ msgctxt "Successful message after an user action"
 msgid "Scheduled operations skipped."
 msgstr "Raspoređena operacija ažurirana."
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:320
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:403
 #, fuzzy, kde-format
 #| msgctxt "Name of a collection akonadi"
 #| msgid "Skrooge scheduled operations"
@@ -10368,14 +10401,14 @@ msgctxt "Error message"
 msgid "Skip of scheduled operation failed"
 msgstr "Skrooge raspoređene operacije"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:354
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:392
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:437
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:475
 #, kde-format
 msgctxt "Advice on making the best (short)"
 msgid "Scheduled operation '%1' not uptodate"
 msgstr "Raspoređena operacija '%1' nije ažurirana"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:355
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:438
 #, kde-format
 msgctxt "Advice on making the best (long)"
 msgid ""
@@ -10384,13 +10417,13 @@ msgid ""
 msgstr ""
 "Raspoređena operacija '%1' nema iznos poslednje umetnute operacije (%2)"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:359
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:442
 #, kde-format
 msgctxt "Advice on making the best (action)"
 msgid "Update the next scheduled operation amount (%1)"
 msgstr "Ažurirajte iznos sljedeće zakazane operacije (%1)"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:393
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:476
 #, kde-format
 msgctxt "Advice on making the best (long)"
 msgid ""
@@ -10400,38 +10433,38 @@ msgstr ""
 "Raspoređena operacija '%1' nema datum poravnat s posljednjom umetnutom "
 "operacijom (%2)"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:397
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:480
 #, kde-format
 msgctxt "Advice on making the best (action)"
 msgid "Update the next scheduled operation date (%1)"
 msgstr "Ažuriranje sljedećeg datuma raspoređene operacije (%1)"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:430
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:513
 #, kde-format
 msgctxt "Advice on making the best (short)"
 msgid "Possible schedule '%1'"
 msgstr "Mogući raspored '%1'"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:431
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:514
 #, kde-format
 msgctxt "Advice on making the best (long)"
 msgid "The operation '%1' seems to be regularly created and could be scheduled"
 msgstr "Operacija '%1' izgleda regularno kreirana i može biti raspoređena"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:435
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:518
 #, kde-format
 msgctxt "Advice on making the best (action)"
 msgid "Monthly schedule the operation '%1'"
 msgstr "Mjesečni raspored operacije '%1'"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:460
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:502
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:543
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:585
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Update scheduled operation"
 msgstr "Ažuriranje raspoređene operacije"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:479
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:562
 #, fuzzy, kde-format
 #| msgctxt "Advice on making the best (short)"
 #| msgid "Scheduled operation '%1' not uptodate"
@@ -10439,22 +10472,22 @@ msgctxt "An information to the user"
 msgid "The amount of the scheduled operation of '%1' have been updated"
 msgstr "Raspoređena operacija '%1' nije ažurirana"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:483
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:512
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:566
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:595
 #, kde-format
 msgctxt "Successful message after an user action"
 msgid "Scheduled operation updated."
 msgstr "Raspoređena operacija ažurirana."
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:485
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:514
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:568
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:597
 #: plugins/skrooge/skrooge_scheduled/skgscheduledpluginwidget.cpp:294
 #, kde-format
 msgctxt "Error message"
 msgid "Update failed"
 msgstr "Ažuriranje neuspjelo"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:508
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:591
 #, fuzzy, kde-format
 #| msgctxt "Advice on making the best (short)"
 #| msgid "Scheduled operation '%1' not uptodate"
@@ -10462,20 +10495,20 @@ msgctxt "An information to the user"
 msgid "The date of the scheduled operation of '%1' have been updated"
 msgstr "Raspoređena operacija '%1' nije ažurirana"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:528
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:611
 #, kde-format
 msgctxt "Noun, name of the user action"
 msgid "Scheduled operation"
 msgstr "Raspoređena operacija"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:539
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:622
 #, fuzzy, kde-format
 #| msgid "Check scheduled operations on open"
 msgctxt "An information to the user"
 msgid "The scheduled operation of '%1' have been added"
 msgstr "Provjeri raspoređene operacije pri otvaranju"
 
-#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:547
+#: plugins/skrooge/skrooge_scheduled/skgscheduledplugin.cpp:630
 #, kde-format
 msgctxt "Error message"
 msgid "Schedule failed"
@@ -13952,14 +13985,14 @@ msgctxt "Information message"
 msgid "The balance of account '%1' is aligned with import balance %2"
 msgstr ""
 
-#: skgbankmodeler/skgimportexportmanager.cpp:526
-#: skgbankmodeler/skgimportexportmanager.cpp:564
+#: skgbankmodeler/skgimportexportmanager.cpp:527
+#: skgbankmodeler/skgimportexportmanager.cpp:565
 #, kde-format
 msgctxt "A file format"
 msgid "All supported formats"
 msgstr "Svi podržani formati"
 
-#: skgbankmodeler/skgimportexportmanager.cpp:632
+#: skgbankmodeler/skgimportexportmanager.cpp:635
 #, fuzzy, kde-format
 #| msgctxt "Error message"
 #| msgid "This import mode is not yet implemented"
@@ -13967,31 +14000,31 @@ msgctxt "Error message"
 msgid "The import mode %1 is not yet implemented"
 msgstr "Ovaj način uvoza još nije implementiran"
 
-#: skgbankmodeler/skgimportexportmanager.cpp:663
+#: skgbankmodeler/skgimportexportmanager.cpp:666
 #, kde-format
 msgctxt "Error message"
 msgid "This export mode is not yet implemented"
 msgstr "Ovaj način izvoza još nije implementiran"
 
-#: skgbankmodeler/skgimportexportmanager.cpp:678
+#: skgbankmodeler/skgimportexportmanager.cpp:681
 #, kde-format
 msgctxt "Progression step"
 msgid "Clean import"
 msgstr "Čist uvoz"
 
-#: skgbankmodeler/skgimportexportmanager.cpp:770
+#: skgbankmodeler/skgimportexportmanager.cpp:773
 #, kde-format
 msgctxt "An information message"
 msgid "The document must be saved to be anonymized."
 msgstr "Dokument mora biti spremljen da bi bio anonimiziran."
 
-#: skgbankmodeler/skgimportexportmanager.cpp:802
+#: skgbankmodeler/skgimportexportmanager.cpp:805
 #, kde-format
 msgctxt "Progression step"
 msgid "Anonymize"
 msgstr "Anonimiziraj"
 
-#: skgbankmodeler/skgimportexportmanager.cpp:809
+#: skgbankmodeler/skgimportexportmanager.cpp:812
 #, fuzzy, kde-format
 #| msgctxt "Question"
 #| msgid ""
@@ -14003,7 +14036,7 @@ msgstr ""
 "Dokument je izmjenjen.\n"
 "Da li ga želite sačuvati prije zatvaranja?"
 
-#: skgbankmodeler/skgimportexportmanager.cpp:811
+#: skgbankmodeler/skgimportexportmanager.cpp:814
 #, kde-format
 msgctxt "An information message"
 msgid ""
@@ -14011,8 +14044,8 @@ msgid ""
 "the key if you want to reverse it."
 msgstr ""
 
-#: skgbankmodeler/skgimportexportmanager.cpp:838
-#: skgbankmodeler/skgimportexportmanager.cpp:882
+#: skgbankmodeler/skgimportexportmanager.cpp:841
+#: skgbankmodeler/skgimportexportmanager.cpp:885
 #, kde-format
 msgctxt "Progression step"
 msgid "Find and group transfers"
