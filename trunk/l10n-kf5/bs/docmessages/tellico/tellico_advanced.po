@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-04 01:45+0000\n"
+"POT-Creation-Date: 2024-03-15 02:06+0000\n"
 "PO-Revision-Date: 2015-01-06 14:35+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -38,7 +38,9 @@ msgstr "Redak komandnih opcija"
 msgid ""
 "When running &appname; from the command line, there are several options for "
 "opening data files. They may be seen by running <userinput>tellico --help</"
-"userinput>."
+"userinput>. Diagnostic logging can also be enabled, which will make a <link "
+"linkend=\"settings-help-menu\">menu item</link> to show the diagnostic log. "
+"The <userinput>--logfile</userinput> option redirects the log to a file."
 msgstr ""
 
 #. Tag: programlisting
@@ -68,6 +70,8 @@ msgid ""
 "  --mods                    Import &lt;filename&gt; as a MODS file\n"
 "  --ris                     Import &lt;filename&gt; as a RIS file\n"
 "  --pdf                     Import &lt;filename&gt; as a PDF file\n"
+"  --log                     Log diagnostic output\n"
+"  --logfile &lt;logfile&gt;       Write log output to &lt;filename&gt;\n"
 "\n"
 "Arguments:\n"
 "  [filename]                File to open"
@@ -190,11 +194,20 @@ msgid ""
 "the second is the import action. Three actions are available: "
 "<emphasis>replace</emphasis>, <emphasis>append</emphasis>, and "
 "<emphasis>merge</emphasis>. Four file formats are supported for importing: "
-"Tellico &XML; files, Bibtex files, MODS files, and RIS files."
+"Tellico &XML; files, Bibtex files, MODS files, and RIS files. Metadata from "
+"<link linkend=\"importing-pdf\">&PDF;</link> files can also be imported."
 msgstr ""
 
 #. Tag: para
 #: advanced.docbook:38
+#, no-c-format
+msgid ""
+"For any of the commands to export text, a file name of <filename>--</"
+"filename> will pipe to the standard output."
+msgstr ""
+
+#. Tag: para
+#: advanced.docbook:42
 #, no-c-format
 msgid ""
 "The current open collection in &appname; may be exported to a file, in "
@@ -205,7 +218,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:42
+#: advanced.docbook:46
 #, no-c-format
 msgid ""
 "A list of the entry IDs currently selected or being filtered is able to "
@@ -213,7 +226,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:44
+#: advanced.docbook:48
 #, no-c-format
 msgid ""
 "A new data file may be opened by using the <command>openFile()</command> "
@@ -221,7 +234,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:46
+#: advanced.docbook:50
 #, no-c-format
 msgid ""
 "A new filter may be set using the <command>setFilter()</command> command, "
@@ -229,7 +242,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:48
+#: advanced.docbook:52
 #, no-c-format
 msgid ""
 "Given an entry ID, <command>showEntry()</command> will select that entry and "
@@ -237,13 +250,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: advanced.docbook:52
+#: advanced.docbook:56
 #, no-c-format
 msgid "The <constant>Collections</constant> Object"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:54
+#: advanced.docbook:58
 #, no-c-format
 msgid ""
 "The full list of &DBus; commands in the <constant>Collections</constant> "
@@ -251,7 +264,7 @@ msgid ""
 msgstr ""
 
 #. Tag: programlisting
-#: advanced.docbook:56
+#: advanced.docbook:60
 #, no-c-format
 msgid ""
 "int addEntry()\n"
@@ -273,7 +286,7 @@ msgstr ""
 "bool addEntryValue(int entryID, QString fieldName, QString value)"
 
 #. Tag: para
-#: advanced.docbook:58
+#: advanced.docbook:62
 #, no-c-format
 msgid ""
 "A new empty entry may be created in the current collection using the "
@@ -283,7 +296,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:62
+#: advanced.docbook:66
 #, no-c-format
 msgid ""
 "Calling <command>allValues()</command> using just a field name will return "
@@ -293,7 +306,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:66
+#: advanced.docbook:70
 #, no-c-format
 msgid ""
 "If the current collection is a bibliography, calling "
@@ -303,7 +316,7 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:70
+#: advanced.docbook:74
 #, no-c-format
 msgid ""
 "Entries can be edited directly with the &DBus; interface. Given an entry ID, "
@@ -314,13 +327,13 @@ msgid ""
 msgstr ""
 
 #. Tag: title
-#: advanced.docbook:78
+#: advanced.docbook:82
 #, no-c-format
 msgid "&DBus; Examples"
 msgstr ""
 
 #. Tag: para
-#: advanced.docbook:80
+#: advanced.docbook:84
 #, no-c-format
 msgid ""
 "Here are some examples for scripting &appname; using the &DBus; interface. "
@@ -329,7 +342,7 @@ msgid ""
 msgstr ""
 
 #. Tag: screen
-#: advanced.docbook:84
+#: advanced.docbook:88
 #, no-c-format
 msgid ""
 "<emphasis>Open a Bibtex file</emphasis>\n"
@@ -339,7 +352,7 @@ msgid ""
 msgstr ""
 
 #. Tag: screen
-#: advanced.docbook:86
+#: advanced.docbook:90
 #, no-c-format
 msgid ""
 "<emphasis>Export a Bibtex file</emphasis>\n"
@@ -349,7 +362,7 @@ msgid ""
 msgstr ""
 
 #. Tag: screen
-#: advanced.docbook:88
+#: advanced.docbook:92
 #, no-c-format
 msgid ""
 "<emphasis>Export a Bibtex file using the current filter</emphasis>\n"
@@ -359,7 +372,7 @@ msgid ""
 msgstr ""
 
 #. Tag: screen
-#: advanced.docbook:90
+#: advanced.docbook:94
 #, no-c-format
 msgid ""
 "<emphasis>Echo the citation key of the current selection</emphasis>\n"
@@ -369,7 +382,7 @@ msgid ""
 msgstr ""
 
 #. Tag: screen
-#: advanced.docbook:92
+#: advanced.docbook:96
 #, no-c-format
 msgid ""
 "<emphasis>Add a new entry and set the title</emphasis>\n"
