@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-03-28 16:23+0000\n"
+"POT-Creation-Date: 2024-12-05 01:58+0000\n"
 "PO-Revision-Date: 2015-02-24 11:14+0100\n"
 "Last-Translator: Samir Ribic <sribic@etf.unsa.ba>\n"
 "Language-Team: Bosnian <kde-i18n-doc@kde.org>\n"
@@ -24,11 +24,17 @@ msgstr ""
 #. Tag: author
 #: details-impexp-csv.docbook:3
 #, no-c-format
-msgid "&Allan.Anderson; &Allan.Anderson.mail;"
-msgstr "&Allan.Anderson; &Allan.Anderson.mail;"
+msgid "&Allan.Anderson;"
+msgstr ""
+
+#. Tag: author
+#: details-impexp-csv.docbook:4
+#, no-c-format
+msgid "&Jack.H.Ostroff; &Jack.H.Ostroff.mail;"
+msgstr ""
 
 #. Tag: title
-#: details-impexp-csv.docbook:5
+#: details-impexp-csv.docbook:6
 #, no-c-format
 msgid "CSV Importer Plugin"
 msgstr "CSV Importer dodatak"
@@ -40,7 +46,7 @@ msgid "Reasons for importing CSV Files"
 msgstr "Razlozi za unos CSV datoteka"
 
 #. Tag: para
-#: details-impexp-csv.docbook:10
+#: details-impexp-csv.docbook:9
 #, no-c-format
 msgid ""
 "In general, it is preferable to import OFX. However, not all institutions "
@@ -56,7 +62,7 @@ msgstr ""
 "podataka koje želite unijeti, kao u tekst datoteci, i ručno ih editovati."
 
 #. Tag: para
-#: details-impexp-csv.docbook:18
+#: details-impexp-csv.docbook:17
 #, fuzzy, no-c-format
 #| msgid ""
 #| "The primary focus of the plugin is on importing data from bank "
@@ -69,14 +75,16 @@ msgstr ""
 #| "files</link>, so there is no real reason to produce a QIF file from a CSV "
 #| "file."
 msgid ""
-"The primary focus of the plugin is on importing data from bank statements, "
-"but there is also a capability to import some investment statements. This "
-"plugin was initially created, before becoming a CSV importer, to produce QIF "
-"files from CSV, which could then be imported. This functionality is still "
-"present, but is likely to be removed, as the plugin now focuses on directly "
-"importing CSV files. Also, &kmymoney; has the native ability to <link "
-"linkend=\"details.impexp.qifexp\">export QIF files</link>, so there is no "
-"real reason to produce a QIF file from a CSV file."
+"The initial focus of the CSV Importer was on handling data from bank "
+"statements, but the ability to also import some investment statements was "
+"added. In addition, it has been further enhanced to import both currency and "
+"stock prices. The original code for this was initially created, before "
+"becoming a CSV importer, to produce QIF files from CSV files, which could "
+"then be imported. This ability is still present, but is likely to be "
+"removed, as focus is now on directly importing CSV files. Also, &kmymoney; "
+"has the native ability to <link linkend=\"details.impexp.qifexp\">export QIF "
+"files</link>, so there is no longer a real reason to produce a QIF file from "
+"a CSV file."
 msgstr ""
 "Primarni fokus dodatka je unos podataka bankovnih izjava, ali postoji u "
 "mogućnost unosa nekih investicionih izjava. Ovaj dodatak je inicijalno "
@@ -88,13 +96,13 @@ msgstr ""
 "nema razloga za pretvaranjem iz QIF u CSV datoteku."
 
 #. Tag: title
-#: details-impexp-csv.docbook:31
+#: details-impexp-csv.docbook:30
 #, no-c-format
 msgid "Getting the plugin"
 msgstr "Kako doći do dodatka"
 
 #. Tag: para
-#: details-impexp-csv.docbook:33
+#: details-impexp-csv.docbook:31
 #, fuzzy, no-c-format
 #| msgid ""
 #| "&kappname; will import CSV files. This functionality is provided as a "
@@ -104,12 +112,14 @@ msgstr "Kako doći do dodatka"
 #| "CSV files will automatically show up under the <menuchoice><guimenu>File</"
 #| "guimenu><guimenuitem>Import</guimenuitem></menuchoice> menu."
 msgid ""
-"&kmymoney; will import CSV files. This functionality is provided as a "
-"plugin, and it is now built into the core program, both in distro packages "
-"and in the source files. Once the distro package is installed, or the source "
-"files are compiled and installed, the menu choice to import CSV files will "
-"automatically show up under the <menuchoice><guimenu>File</"
-"guimenu><guisubmenu>Import</guisubmenu></menuchoice> submenu."
+"The CSV importer is one of the newer features to have been added to "
+"&kmymoney; in the form of a plugin. However, as with other plugins, the CSV "
+"Importer is included with the core &kmymoney; source code, so it should be "
+"available in all &Linux; distribution versions, as well as the versions for "
+"other platforms made available through the &kmymoney; web site. The menu "
+"choice to import CSV files should automatically show up under the "
+"<menuchoice> <guimenu>File</guimenu> <guisubmenu>Import</guisubmenu> </"
+"menuchoice> submenu."
 msgstr ""
 "&kappname; će unijeti CSV datoteke. Ova funkcionalnost je pružena kao "
 "dodatak, i sada je ugrađena u jezgro programa, i u distro pakete i u izvorne "
@@ -119,7 +129,7 @@ msgstr ""
 "guimenu><guimenuitem>Import</guimenuitem></menuchoice> meniju."
 
 #. Tag: para
-#: details-impexp-csv.docbook:43
+#: details-impexp-csv.docbook:41
 #, fuzzy, no-c-format
 #| msgid ""
 #| "The CSV importer plugin is much newer than the OFX plugin, but most "
@@ -133,16 +143,14 @@ msgstr ""
 #| "See if a later version is available, or if the importer is available as a "
 #| "separate package."
 msgid ""
-"The CSV importer plugin is much newer than the OFX plugin, but most "
-"distributions are now built with the CSV importer already included or "
-"available as a separate package. Ensure that it is enabled within "
-"&kmymoney;. Check the <menuchoice><guimenu>Settings</"
-"guimenu><guimenuitem>Configure &kmymoney;...</"
-"guimenuitem><guimenuitem>Plugins</guimenuitem></menuchoice> menu item. If "
-"the CSV importer does not seem to be installed in your version, the first "
-"place to check is in the same place you got your base &kmymoney; package. "
-"See if a later version is available, or if the importer is available as a "
-"separate package."
+"To ensure that it is enabled within &kmymoney;, check the <menuchoice> "
+"<guimenu>Settings</guimenu> <guimenuitem>Configure &kmymoney;...</"
+"guimenuitem> </menuchoice> menu item, select <guilabel>Plugins</guilabel> on "
+"the left pane, and look for the <guilabel>CSV Importer</guilabel> in the "
+"displayed list of plugins. If the CSV importer does not seem to be installed "
+"in your version, the first place to check is in the same place you got your "
+"base &kmymoney; package. See if a later version is available, or if the "
+"importer is available as a separate package."
 msgstr ""
 "CSV importer dodatak je mnogo noviji nego OFX dodatak, ali većina "
 "distribucija sada ima ugrađen CSV importer ili omogućen u vidu odvojenog "
@@ -155,32 +163,23 @@ msgstr ""
 "zasebnom paketu."
 
 #. Tag: para
-#: details-impexp-csv.docbook:55
-#, fuzzy, no-c-format
-#| msgid ""
-#| "If you have installed from RPM or Deb, the CSV Importer Plugin should be "
-#| "contained within the &kappname; package. If you have built from source, "
-#| "there should be no additional requirements. The &kappname; build process "
-#| "should detect the plugin source and compile the plugin."
+#: details-impexp-csv.docbook:51
+#, no-c-format
 msgid ""
-"If you have installed from RPM or Deb, the CSV Importer Plugin should be "
-"contained within the kmymoney package. If you have built from source, there "
-"should be no additional requirements. The &kmymoney; build process should "
-"detect the plugin source and compile the plugin."
+"If you have built from source, there should be no additional requirements. "
+"The &kmymoney; build process should detect the plugin source and compile the "
+"plugin. There are comfiguration settings which can be used to exclude this "
+"or other plugins from being built, but these should rarely be needed."
 msgstr ""
-"Ukoliko ste instalirali iz RPM ili Deb, CSV importer dodatak bi trebao biti "
-"uključen unutar &kappname; paketa. Ukoliko ste to uradili iz izvora, ne bi "
-"trebali postojati nikakvi dodatni zahtjevi. &kappname; početni proces bi "
-"trebao detektovati izvor dodatka i kompajlirati dodatak."
 
 #. Tag: title
-#: details-impexp-csv.docbook:64
+#: details-impexp-csv.docbook:59
 #, no-c-format
 msgid "Importing a CSV file"
 msgstr "Unos CSV datoteke"
 
 #. Tag: para
-#: details-impexp-csv.docbook:66
+#: details-impexp-csv.docbook:60
 #, fuzzy, no-c-format
 #| msgid ""
 #| "To import a CSV file, choose the importer from the menu bar: "
@@ -189,11 +188,11 @@ msgstr "Unos CSV datoteke"
 #| "not show up under Import, you do not have the CSV Importer Plugin "
 #| "installed correctly. Please see the previous section."
 msgid ""
-"To import a CSV file, choose the importer from the menu bar: "
-"<menuchoice><guimenu>File</guimenu><guisubmenu>Import</guisubmenu> "
-"<guimenuitem>CSV...</guimenuitem></menuchoice>. If CSV does not show up "
-"under Import, you do not have the CSV Importer Plugin installed correctly. "
-"Please see the previous section."
+"To import a CSV file, choose the importer from the main menu: <menuchoice> "
+"<guimenu>File</guimenu> <guisubmenu>Import</guisubmenu> <guimenuitem>CSV...</"
+"guimenuitem> </menuchoice>. If CSV does not show up under Import, the CSV "
+"Importer Plugin is not installed correctly or is not enabled. Please see the "
+"previous section."
 msgstr ""
 "Da biste unijeli CSV datoteku, odaberite importer iz meni bara: "
 "<menuchoice><guimenu>Datoteka</guimenu><guimenuitem>Import</"
@@ -202,69 +201,130 @@ msgstr ""
 "Molimo vas pogledajte prethodnu sekciju."
 
 #. Tag: para
-#: details-impexp-csv.docbook:73
+#: details-impexp-csv.docbook:68
 #, no-c-format
 msgid ""
-"The CSV Importer is in the form of a wizard, with a separate page for each "
-"individual step of the process. There may be some minor differences between "
-"the text in this handbook, the labels in the screenshots, and the labels you "
-"actually see in the wizard. In such cases, the handbook describes what the "
-"wizard will look like in the next release."
+"The CSV Importer is presented in the form of a wizard, with a separate page "
+"for each individual step of the process."
 msgstr ""
-"CSV importer je u formi čarobnjaka sa odvojenim stranama za svaki "
-"individualni korak procesa. Moguće su male razlike između teksta u ovom "
-"priručniku, labela na slici ekrana i labela koje ustvari vidite u "
-"čarobnjaku. U takvim slučajevima, priručnik opisuje kako će čarobnjak "
-"izgledati u sljedećem izdanju."
 
 #. Tag: title
-#: details-impexp-csv.docbook:82
+#: details-impexp-csv.docbook:73
 #, no-c-format
 msgid "CSV Import Wizard: Start"
 msgstr "CSV Import čarobnjak: Poćetak"
 
 #. Tag: para
-#: details-impexp-csv.docbook:84
+#: details-impexp-csv.docbook:74
 #, no-c-format
 msgid ""
-"When started, the CSV Importer displays the <guilabel>Start</guilabel> page. "
-"The upper area, where data will be displayed, is initially empty. Below "
-"that, on the left, is a list of the steps of the import process, with the "
-"current one highlighted. To the right of that are some brief instructions "
-"and two radio buttons, allowing the choice of either <guilabel>Banking</"
-"guilabel> or <guilabel>Investment</guilabel>. Next there is a profile "
-"selector box, which is enabled once one of the radio buttons has been "
-"selected. At the bottom of the display are buttons to move on to the next "
-"step of the wizard, go <guibutton>Back</guibutton> to the previous step, or "
-"<guibutton>Cancel</guibutton> the import. At the initial step, there is also "
-"a button <guilabel>Select File</guilabel> to initially select the file to "
-"import."
+"When launched, the CSV Importer displays the <guilabel>Start</guilabel> or "
+"<guilabel>File</guilabel> page. On the left is a list of the steps of the "
+"import process, with the current one highlighted. The upper right area is "
+"where data to be imported will be displayed; before that it shows some brief "
+"instructions relevant to the current stage of the wizard. Below that is a "
+"set of radiobuttons for selection of the type of data to be imported. That "
+"list currently includes <guilabel>Banking</guilabel>, <guilabel>Investment</"
+"guilabel>, <guilabel>Currency prices</guilabel>, and <guilabel>Stock prices</"
+"guilabel>. Next, there is a profile selector dropdown, which is enabled if "
+"once the radio button has been selected for one of the import file types."
 msgstr ""
-"Kada se pokrene, CSV Importet prikazuje <guilabel>Start</guilabel> stranicu. "
-"Gornje područje, gdje će podaci biti prikazani je inicijalno prazno. Ispod "
-"toga, na lijevoj strani je lista koraka procesa unosa, sa trenutnim korakom "
-"naglašenim. Desno od toga se nalaze neke osnovne instrukcije i dva radio "
-"dugmeta, koja omogućavaju odabir ili <guilabel>Bankarstvo</guilabel> ili "
-"<guilabel>Investicije</guilabel>. Zatim je tu prostor za odabir profila, "
-"koji je omogućen nakon što je jedan od radio dugmadi odabran. Na dnu prikaza "
-"su dugmag za prelazak na sljedeći korak čarobnjaka, vraćanje "
-"<guibutton>Nazad</guibutton> na prethodni korak ili prekid "
-"<guibutton>Otkaži</guibutton> unosa. Na početnom koraku postoji i "
-"<guilabel>Izaberi datoteku</guilabel> dugme za odabir datoteke za unos."
+
+#. Tag: screeninfo
+#: details-impexp-csv.docbook:88
+#, no-c-format
+msgid "<screeninfo>csv import wizard: start</screeninfo>"
+msgstr ""
+
+#. Tag: phrase
+#: details-impexp-csv.docbook:94
+#, no-c-format
+msgid "<phrase>csv import wizard: start</phrase>"
+msgstr ""
+
+#. Tag: title
+#: details-impexp-csv.docbook:100
+#, fuzzy, no-c-format
+#| msgid "CSV Import Wizard: Lines"
+msgid "CSV Import Profiles"
+msgstr "CSV Import Čarobnjak: Linije"
 
 #. Tag: para
-#: details-impexp-csv.docbook:107
+#: details-impexp-csv.docbook:101
 #, no-c-format
 msgid ""
-"Also, note the <guilabel>Skip setup</guilabel> checkbox next to the profile "
-"selector. Initially, you should not select this check-box. Once you have set "
-"up a profile and finished the wizard, those parameters are saved in the "
-"resource file. Next time you use that same profile, the parameters will be "
-"loaded into the UI (User Interface). The wizard would then plod through the "
-"following pages of parameters that you won't need to change. So, instead, "
-"once you are happy with a profile, it may be helpful to check this box. The "
-"wizard will then move directly to the final page, and, assuming no problems "
-"are found, you just have to click <guilabel>Import</guilabel>."
+"Each type of CSV file to be imported requires sepcification of several "
+"details regarding the expected formatting of the data, as described in the "
+"following sections. Not only do the details differ for the different types "
+"of data files imported, it is possilbe to need different configurations for "
+"the same type of data from different sources. So you do not need to enter "
+"all those details each time you import a file, the CSV Importer allows you "
+"to specify the details once, and save them in a named profile."
+msgstr ""
+
+#. Tag: para
+#: details-impexp-csv.docbook:111
+#, no-c-format
+msgid ""
+"The name of a CSV import profile is completely arbitrary, but will be easier "
+"to remember if it reflects both the type of data being imported (bank, "
+"credit card, investment, ...) and the source of the data. There is no need "
+"to reference the account into which the data is imported, and it is possible "
+"to use the same profile for importing into more than one account, such as "
+"two checking accounts at the same bank."
+msgstr ""
+
+#. Tag: para
+#: details-impexp-csv.docbook:120
+#, no-c-format
+msgid ""
+"The profile selecter dropdown includes the names of all CSV Importer "
+"profiles you have previusly created, and it also lets you type the name of a "
+"new profile. Below the profile selecter dropdown, there are three buttons. "
+"When you click <guilabel>Add</guilabel>, which is always enabled, a new "
+"profile will be created with the name entered in the dropdown. Nothing will "
+"happen if that field is empty or if it displays the name of an existing "
+"profile. As you proceed through the rest of the CSV import wizard, the "
+"various configuration settings you enter or modify will be saved in the "
+"selected provfile."
+msgstr ""
+
+#. Tag: para
+#: details-impexp-csv.docbook:131
+#, no-c-format
+msgid ""
+"If you have previously created one or more profiles, the other two buttons "
+"will be enabled. If you click <guilabel>Remove</guilabel>, the profile named "
+"in the dropdown will be deleted. If you click <guilabel>Rename</guilabel>, "
+"then alter the name displayed in the dropdown, and click <guilabel>Rename</"
+"guilabel> again, the profile will be renamed accordingly."
+msgstr ""
+
+#. Tag: para
+#: details-impexp-csv.docbook:139
+#, fuzzy, no-c-format
+#| msgid ""
+#| "Also, note the <guilabel>Skip setup</guilabel> checkbox next to the "
+#| "profile selector. Initially, you should not select this check-box. Once "
+#| "you have set up a profile and finished the wizard, those parameters are "
+#| "saved in the resource file. Next time you use that same profile, the "
+#| "parameters will be loaded into the UI (User Interface). The wizard would "
+#| "then plod through the following pages of parameters that you won't need "
+#| "to change. So, instead, once you are happy with a profile, it may be "
+#| "helpful to check this box. The wizard will then move directly to the "
+#| "final page, and, assuming no problems are found, you just have to click "
+#| "<guilabel>Import</guilabel>."
+msgid ""
+"Next to the profile selector, there is a <guilabel>Skip setup</guilabel> "
+"checkbox. Initially, you should not select this checkbox. Once you have set "
+"up a profile and finished the wizard, all the configuration parameters you "
+"enetered are saved in the resource file under the profile name. The next "
+"time you use that same profile, the parameters will be loaded into the UI "
+"(User Interface). The wizard would then plod through the following pages of "
+"parameters that you won't need to change. So, once you are happy with a "
+"profile, it may be helpful to check this box. The wizard will then move "
+"directly to the final page, and, assuming no problems are found, you just "
+"have to click <guilabel>Import</guilabel>."
 msgstr ""
 "Također imajte na umu da postoji i <guilabel>Preskoči postavku</guilabel> "
 "checkbox pored selektora profila. Inicijalno, ne biste trebali selektovati "
@@ -278,17 +338,37 @@ msgstr ""
 "problema, samo morate kliknuti na <guilabel>Uvoz</guilabel>."
 
 #. Tag: para
-#: details-impexp-csv.docbook:119
+#: details-impexp-csv.docbook:151
 #, no-c-format
 msgid ""
-"First select either <guilabel>Banking</guilabel> or <guilabel>Investment</"
-"guilabel>, then click in the selector box, which displays \"Add New Profile."
-"\" If you have previously created any profiles, you can select one of them, "
-"otherwise enter a new profile name, possibly the name of the account into "
-"which you wish to import. If you enter a new profile name, hit &Enter; to "
-"create it. Then, click on <guilabel>Select File</guilabel>, and a standard "
-"file selector box will open, from which you should select the CSV file you "
-"wish to import."
+"At the bottom there is a <guilabel>Select File</guilabel> button. Clicking "
+"this will bring up a file selector dialog to let you choose the file to "
+"import. At the bottom of the remaining pages of the wizartd are buttons to "
+"go <guibutton>&lt; Back</guibutton> to the previous step of the wizard, move "
+"on to the <guilabel>Next &gt;</guilabel> step, or <guibutton>Cancel</"
+"guibutton> the import."
+msgstr ""
+
+#. Tag: para
+#: details-impexp-csv.docbook:159
+#, fuzzy, no-c-format
+#| msgid ""
+#| "First select either <guilabel>Banking</guilabel> or <guilabel>Investment</"
+#| "guilabel>, then click in the selector box, which displays \"Add New "
+#| "Profile.\" If you have previously created any profiles, you can select "
+#| "one of them, otherwise enter a new profile name, possibly the name of the "
+#| "account into which you wish to import. If you enter a new profile name, "
+#| "hit &Enter; to create it. Then, click on <guilabel>Select File</"
+#| "guilabel>, and a standard file selector box will open, from which you "
+#| "should select the CSV file you wish to import."
+msgid ""
+"To review, on the Start page of the wizard, first select the checkbox for "
+"the type of data you are importing. In the profile selector dropdown, you "
+"can select the name of a previously created CSV Importer profile, or enter a "
+"new name, possibly the name of the account into which you wish to import, "
+"and click <guilabel>Add</guilabel>. Finally, click <guilabel>Select File</"
+"guilabel>, and a file selector dialog will open, where you ` select the CSV "
+"file you wish to import."
 msgstr ""
 "Prvo odaberite ili <guilabel>Bankarstvo</guilabel> ili "
 "<guilabel>Investicije</guilabel>, zatim kliknite na selektor prostor koji "
@@ -300,31 +380,56 @@ msgstr ""
 "biti otvoren, iz kojeg možete izabrati CSV datoteku koju želite unijeti."
 
 #. Tag: title
-#: details-impexp-csv.docbook:132
+#: details-impexp-csv.docbook:169
 #, no-c-format
 msgid "CSV Import Wizard: Separators"
 msgstr "CSV Import Čarobnjak: Razdvajači"
 
 #. Tag: para
-#: details-impexp-csv.docbook:133
-#, no-c-format
+#: details-impexp-csv.docbook:170
+#, fuzzy, no-c-format
+#| msgid ""
+#| "The wizard will now have advanced to the <guilabel>Separators</guilabel> "
+#| "page, and you should now see your data."
 msgid ""
-"The wizard will now have advanced to the <guilabel>Separators</guilabel> "
-"page, and you should now see your data."
+"After opening your selected data file, the wizard will advance to the "
+"<guilabel>Separators</guilabel> page, and you should now see your data."
 msgstr ""
 "Čarobnjak će sada nastaviti dalje sa <guilabel>Separators</guilabel> "
 "stranicom i sada biste trebali vidjeti svoje podatke."
 
-#. Tag: para
-#: details-impexp-csv.docbook:147
+#. Tag: screeninfo
+#: details-impexp-csv.docbook:176
 #, no-c-format
+msgid "<screeninfo>csv import wizard: separators</screeninfo>"
+msgstr ""
+
+#. Tag: phrase
+#: details-impexp-csv.docbook:182
+#, fuzzy, no-c-format
+#| msgid "CSV Import Wizard: Separators"
+msgid "<phrase>csv import wizard: separators</phrase>"
+msgstr "CSV Import Čarobnjak: Razdvajači"
+
+#. Tag: para
+#: details-impexp-csv.docbook:188
+#, fuzzy, no-c-format
+#| msgid ""
+#| "It may appear that the displayed entries in the upper section of the "
+#| "plugin window may be edited, and in fact they may, but any edits are not "
+#| "kept. The table is purely for display, not for editing. The input file is "
+#| "never altered by the plugin, and the data actually imported comes from "
+#| "the input file, not from the display. The one exception to this is "
+#| "covered in <link linkend=\"details.impexp.csv.secsym\">Securities and "
+#| "Symbols</link> below."
 msgid ""
-"It may appear that the displayed entries in the upper section of the plugin "
+"It may appear that the data displayed in the upper section of the plugin "
 "window may be edited, and in fact they may, but any edits are not kept. The "
 "table is purely for display, not for editing. The input file is never "
-"altered by the plugin, and the data actually imported comes from the input "
-"file, not from the display. The one exception to this is covered in <link "
-"linkend=\"details.impexp.csv.secsym\">Securities and Symbols</link> below."
+"altered by the CSV Importer, and the data actually imported comes from the "
+"input file, not from the display. The one exception to this is covered in "
+"<link linkend=\"details.impexp.csv.secsym\">Securities and Symbols</link> "
+"below."
 msgstr ""
 "Možda će izgledati kao da prikazani unosi u gornjoj sekciji prozora dodatka "
 "mogu biti editovane, što je i ustvari moguće, ali nikakve promjene neće biti "
@@ -335,64 +440,176 @@ msgstr ""
 "and Symbols</link> ispod."
 
 #. Tag: para
-#: details-impexp-csv.docbook:158
-#, fuzzy, no-c-format
-#| msgid ""
-#| "The plugin should have detected the appropriate <guilabel>Field "
-#| "Separator</guilabel> to use, and it is not usually possible to select a "
-#| "different one. In fact, attempting to do so will reset any field choices "
-#| "you may already have made. There is also a selector for the "
-#| "<guilabel>Text Delimiter</guilabel>, but generally the quote (\") is "
-#| "correct. Now click on the <guilabel>Next</guilabel> button. Depending "
-#| "upon the earlier selection you made, you will now be on either the "
-#| "Banking page or the Investment page."
+#: details-impexp-csv.docbook:198
+#, no-c-format
 msgid ""
-"The plugin should have detected the appropriate <guilabel>Field Separator</"
-"guilabel> to use, and it is not usually possible to select a different one. "
-"In fact, attempting to do so will reset any field choices you may already "
-"have made. There is also a selector for the <guilabel>Text Delimiter</"
-"guilabel>, but generally the quote (\") is correct. Now click on the "
-"<guibutton>Next</guibutton> button. Depending upon the earlier selection you "
-"made, you will now be on either the Banking page or the Investment page."
+"The CSV Importer should have detected the appropriate <guilabel>Encoding</"
+"guilabel>, <guilabel>Field Delimiter</guilabel>, and <guilabel>Text "
+"Delimiter</guilabel>. You can change the encoding if the program did not "
+"choose correctly. If you need to change the Field Delimiter, such as if your "
+"data is actually tab delimited, and not a comma delimited, be aware that "
+"doing so will reset any field choices you may already have made. Generally "
+"the quote (&quot;) is the correct text delimiter, but you may change it as "
+"necessary. Click <guibutton>Next</guibutton> to proceed."
 msgstr ""
-"Dodatak bi trebao detektovati odgovarajući <guilabel>Razdvajač poljar</"
-"guilabel> za upotrebu i u većini slučajeva nije moguće odabrati drugačiji. "
-"Ustvari, pokušaj toga će poništiti sve odabire polja koje ste dosad "
-"napravili. Također postoji i selektor za <guilabel>Razdvajač teksta</"
-"guilabel>, ali generalno navod (\") je korektan. Sada kliknite na "
-"<guilabel>Dalje</guilabel> dugme. U ovisnosti od prethodnog odabira koji ste "
-"napravili, sada ćete ili biti na Bankarstvo stranici ili na Investicije "
-"stranici."
 
 #. Tag: title
-#: details-impexp-csv.docbook:170
+#: details-impexp-csv.docbook:210
+#, fuzzy, no-c-format
+#| msgid "CSV Import Wizard: Lines"
+msgid "CSV Import Wizard: Rows"
+msgstr "CSV Import Čarobnjak: Linije"
+
+#. Tag: para
+#: details-impexp-csv.docbook:211
+#, no-c-format
+msgid ""
+"You will now be on the <guilabel>Rows</guilabel> or <guilabel>Lines</"
+"guilabel> page. Here, you indicate if any lines should be ignored at the "
+"beginning or end of the file."
+msgstr ""
+
+#. Tag: screeninfo
+#: details-impexp-csv.docbook:218
+#, no-c-format
+msgid "<screeninfo>csv import wizard: rows</screeninfo>"
+msgstr ""
+
+#. Tag: phrase
+#: details-impexp-csv.docbook:224
+#, no-c-format
+msgid "<phrase>csv import wizard: rows</phrase>"
+msgstr ""
+
+#. Tag: para
+#: details-impexp-csv.docbook:229
+#, no-c-format
+msgid ""
+"This page allows you to adjust the import to ignore header and footer rows "
+"at the beginning or end of the file, which do not actually contain data to "
+"be imported."
+msgstr ""
+
+#. Tag: title
+#: details-impexp-csv.docbook:234
+#, no-c-format
+msgid "Start line"
+msgstr "Početna linija"
+
+#. Tag: para
+#: details-impexp-csv.docbook:235
+#, fuzzy, no-c-format
+#| msgid ""
+#| "Set this so the importer skips any header lines in the file. Your choice "
+#| "will be saved in this profile for future use. The start and end lines "
+#| "interact, and the start line may not be higher than the end line. If the "
+#| "<guilabel>Start line</guilabel> selector does not respond, check the end "
+#| "line setting."
+msgid ""
+"Set this so the importer skips any header lines in the file. Your choice "
+"will be saved in this profile for future use. The start and end lines "
+"interact, and the start line may not be higher than the end line, nor may it "
+"be higher then the actual number of lines in the file. If the "
+"<guilabel>Start line</guilabel> selector does not respond, check the end "
+"line setting."
+msgstr ""
+"Ovo postavite tako da importer preskače bilo koje header linije u vašoj "
+"datoteci. Vaš izbor će biti sačuvan u ovom profilu za buduću upotrebu. "
+"Poćetne i zadnje linije međusobno dejstvuju i početna linija možda neće biti "
+"viša od zadnje linije. Ukoliko <guilabel>Start line</guilabel> selektor ne "
+"reaguje, provjerite opcije zadnje linije."
+
+#. Tag: title
+#: details-impexp-csv.docbook:244
+#, no-c-format
+msgid "End line"
+msgstr "Zadnja linija"
+
+#. Tag: para
+#: details-impexp-csv.docbook:245
+#, no-c-format
+msgid ""
+"The importer will automatically set this to the last line in the file, or to "
+"the setting last saved. You will only need to adjust it if there are footer "
+"lines in the file the importer should ignore. Otherwise, you are likely to "
+"get a data error warning when the plugin attempts to parse incorrect data. "
+"Again, if the <guilabel>End line</guilabel> selector does not respond, check "
+"the <guilabel>Start line</guilabel> setting."
+msgstr ""
+"Importer će automatski postaviti ovu liniju da bude zadnja u datoteci ili na "
+"postavke koje su zadnje spašene. Samo je morate namjestiti ukoliko postoje "
+"footer linije u datoteci koje bio importer trebao ignorisati. U suprotnom, "
+"vjerovatno ćete dobiti upozorenje na grešku kada dodatak pokuša da raščlani "
+"netačne podatke. Opet, ukoliko <guilabel>Krajnja linija</guilabel> selektor "
+"ne reaguje, provjerite <guilabel>Početna linija</guilabel> postavke."
+
+#. Tag: para
+#: details-impexp-csv.docbook:255
+#, no-c-format
+msgid ""
+"Above these two fields is a <guilabel>Header contains account name or "
+"number</guilabel> checkbox. If checked, the importer will look in the lines "
+"above the start line for the name of number of the account to use for the "
+"import. If not, you will be prompted for that information."
+msgstr ""
+
+#. Tag: para
+#: details-impexp-csv.docbook:262
+#, no-c-format
+msgid ""
+"When you are ready, click <guilabel>Next</guilabel> to proceed to the next "
+"step."
+msgstr ""
+
+#. Tag: title
+#: details-impexp-csv.docbook:267
+#, fuzzy, no-c-format
+#| msgid "CSV Import Wizard: Lines"
+msgid "CSV Import Wizard: Columns"
+msgstr "CSV Import Čarobnjak: Linije"
+
+#. Tag: para
+#: details-impexp-csv.docbook:268
+#, no-c-format
+msgid ""
+"You should now be on the <guilabel>Columns</guilabel> page. This is where "
+"you tell the importer which columns in the file contain the data which maps "
+"to the specific fields needed to create a meaningful record or transaction, "
+"depending on the type of data being imported. There is a different version "
+"of this page for each type of data, as each requires a different combination "
+"of items."
+msgstr ""
+
+#. Tag: title
+#: details-impexp-csv.docbook:276
 #, no-c-format
 msgid "CSV Import Wizard: Banking"
 msgstr "CSV Import Čarobnjak: Bankarenje"
 
-#. Tag: para
-#: details-impexp-csv.docbook:171
+#. Tag: screeninfo
+#: details-impexp-csv.docbook:278
 #, no-c-format
-msgid ""
-"On this page, you select the column numbers from which to import the "
-"relevant fields."
+msgid "<screeninfo>csv import wizard: banking</screeninfo>"
 msgstr ""
-"Na ovoj stranici odabirete brojeve kolona sa kojih ćete unijeti relevantna "
-"polja."
+
+#. Tag: phrase
+#: details-impexp-csv.docbook:284
+#, no-c-format
+msgid "<phrase>csv import wizard: banking</phrase>"
+msgstr ""
 
 #. Tag: para
-#: details-impexp-csv.docbook:183
+#: details-impexp-csv.docbook:289
 #, no-c-format
 msgid ""
-"For most fields, you just need to use the appropriate dropdown to select the "
-"appropriate column. However, there are a few special considerations."
+"For most fields, you just need to use the dropdown to select the appropriate "
+"column. Note that many fields have an <quote>x</quote> button to the right. "
+"Clicking it will clear whatever value has been entered or selected in the "
+"field to the left. In addition, there are some special considerations."
 msgstr ""
-"Za večinu polja, samo morate iskoristiti odgovarajuće opadajuće liste kako "
-"biste odabrali odgovarajuće kolone. Ipak, postoje neka specijalna "
-"razmatranja."
 
 #. Tag: para
-#: details-impexp-csv.docbook:190
+#: details-impexp-csv.docbook:298
 #, fuzzy, no-c-format
 #| msgid ""
 #| "In the center are two radio buttons. If your file has a single column for "
@@ -402,12 +619,10 @@ msgstr ""
 #| "guilabel> selector or the <guilabel>Debit column</guilabel> and "
 #| "<guilabel>Credit column</guilabel> selectors."
 msgid ""
-"In the center are two radio buttons. If your file has a single column for "
-"all values, select <guilabel>Amount</guilabel> column. However, if there are "
-"separate columns for debits and credits, select <guilabel>Debit/credit</"
-"guilabel> column. This will enable either the <guilabel>Amount</guilabel> "
-"column selector or the <guilabel>Debit</guilabel> and <guilabel>Credit</"
-"guilabel> column selectors."
+"To the right is an area with two tabs. If your file has a single column for "
+"all values, select the <guilabel>Amount</guilabel> tab. However, if there "
+"are separate columns for debits and credits, select the <guilabel>Debit/"
+"credit</guilabel> tab."
 msgstr ""
 "U centru se nalaze dva radio dugmeta. Ukoliko vaša datoteka ima samo jednu "
 "kolonu za sve vrijednosti, odaberite <guilabel>Kolona iznosa</guilabel>. "
@@ -417,13 +632,41 @@ msgstr ""
 "guilabel> i <guilabel>Potražnu kolonu</guilabel> selektore."
 
 #. Tag: para
-#: details-impexp-csv.docbook:200
+#: details-impexp-csv.docbook:305
 #, no-c-format
 msgid ""
-"It is possible to select more than one column for the Memo field, by "
-"consecutive selections. Memo columns already selected are marked in the drop-"
-"down with an asterisk (*). If you select multiple columns in this way, their "
-"contents will be concatenated in the Memo field."
+"On the Amount tab, start by selecting the column which contains the amount "
+"of the transaction. If there is a column which contains <quote>Credit</"
+"quote> or <quote>Debit</quote> to indicate which the amount is, select that "
+"column as the <guilabel>Debid/Credit Indicator</guilabel>. Separately, if "
+"there is a string included in the amount field which indicates the amount is "
+"either a credit or a debit, enter that string in the appropriate "
+"<guilabel>Indicator</guilabel> field. Finally, if despite setting all the "
+"above values correctly, the amount imported is reversed from what it should "
+"be, check the <guilabel>Opposite signs</guilabel> checkbox."
+msgstr ""
+
+#. Tag: para
+#: details-impexp-csv.docbook:317
+#, no-c-format
+msgid ""
+"On the Debit/credit tab, simply enter the numbers of the columns with those "
+"values in the appropriate fields."
+msgstr ""
+
+#. Tag: para
+#: details-impexp-csv.docbook:324
+#, fuzzy, no-c-format
+#| msgid ""
+#| "It is possible to select more than one column for the Memo field, by "
+#| "consecutive selections. Memo columns already selected are marked in the "
+#| "drop-down with an asterisk (*). If you select multiple columns in this "
+#| "way, their contents will be concatenated in the Memo field."
+msgid ""
+"It is possible to select more than one column for the Memo field, by making "
+"consecutive selections. Memo columns already selected are indicated in the "
+"<guilabel>Memo columns:</guilabel> field. If you select multiple columns in "
+"this way, their contents will be concatenated in the Memo field."
 msgstr ""
 "Moguće je odabrati više od jedne kolone za Memo polje, uzastopnim odabirima. "
 "Memo kolone su već selektirane i označene u opadajućoj listi sa zvjezdicom "
@@ -431,17 +674,28 @@ msgstr ""
 "postavljen i u Memo polje."
 
 #. Tag: para
-#: details-impexp-csv.docbook:209
-#, no-c-format
+#: details-impexp-csv.docbook:333
+#, fuzzy, no-c-format
+#| msgid ""
+#| "If you attempt to choose the same column number for two fields, the "
+#| "plugin will alert you and clear both selections. However, it is possible, "
+#| "if desired, to use the same column in both the <guilabel>Payee/"
+#| "Description</guilabel> and <guilabel>Memo</guilabel> fields. If you "
+#| "select a column for the <guilabel>Payee/Description</guilabel> field, and "
+#| "then select the same field for the <guilabel>Memo</guilabel> field, you "
+#| "will receive a warning that duplicate columns have been selected, but "
+#| "asking if you wish to proceed. If you do, click <guibutton>Yes</"
+#| "guibutton>."
 msgid ""
-"If you attempt to choose the same column number for two fields, the plugin "
+"If you attempt to choose the same column number for two fields, the importer "
 "will alert you and clear both selections. However, it is possible, if "
 "desired, to use the same column in both the <guilabel>Payee/Description</"
 "guilabel> and <guilabel>Memo</guilabel> fields. If you select a column for "
 "the <guilabel>Payee/Description</guilabel> field, and then select the same "
-"field for the <guilabel>Memo</guilabel> field, you will receive a warning "
+"column for the <guilabel>Memo</guilabel> field, you will receive a warning "
 "that duplicate columns have been selected, but asking if you wish to "
-"proceed. If you do, click <guibutton>Yes</guibutton>."
+"proceed. If you do, click <guibutton>Yes</guibutton>, and the column will be "
+"used for both fields."
 msgstr ""
 "Ukoliko pokušate da odaberete istu kolonu za dva polja, dodatak će vas "
 "upozoriti i očistiti obje selekcije. Ipak, moguće je, ukoliko želite, "
@@ -453,7 +707,7 @@ msgstr ""
 "kliknite na <guibutton>Da</guibutton>."
 
 #. Tag: para
-#: details-impexp-csv.docbook:222
+#: details-impexp-csv.docbook:346
 #, fuzzy, no-c-format
 #| msgid ""
 #| "One particular reason to also capture the Payee/Descriptor field in the "
@@ -473,19 +727,23 @@ msgstr ""
 "Memo polja će sačuvati podatke, koji bi u suprotnom bili izgubljeni."
 
 #. Tag: para
-#: details-impexp-csv.docbook:231
-#, no-c-format
+#: details-impexp-csv.docbook:355
+#, fuzzy, no-c-format
+#| msgid ""
+#| "If you notice you have made an incorrect choice, just change that "
+#| "selection. If several changes need to be made, click the <guilabel>Clear</"
+#| "guilabel> button."
 msgid ""
 "If you notice you have made an incorrect choice, just change that selection. "
-"If several changes need to be made, click the <guilabel>Clear</guilabel> "
-"button."
+"If several changes need to be made, you can click <guilabel>Clear all</"
+"guilabel> and start over."
 msgstr ""
 "Ukoliko primijetite da ste napravili pogrešan izbor, samo promijenite "
 "odabir. Ukoliko morate napraviti više izmjena, kliknite <guilabel>Očisti</"
 "guilabel> dugme."
 
 #. Tag: para
-#: details-impexp-csv.docbook:237
+#: details-impexp-csv.docbook:361
 #, no-c-format
 msgid ""
 "Once columns have been chosen for all the necessary fields, the "
@@ -496,13 +754,99 @@ msgstr ""
 "dugme će biti omogućeno, i klikom na njega će čarobnjak nastaviti dalje."
 
 #. Tag: title
-#: details-impexp-csv.docbook:245
+#: details-impexp-csv.docbook:368
+#, fuzzy, no-c-format
+#| msgid "CSV Import Wizard: Start"
+msgid "CSV Import Wizard: Format"
+msgstr "CSV Import čarobnjak: Poćetak"
+
+#. Tag: para
+#: details-impexp-csv.docbook:369
+#, no-c-format
+msgid ""
+"The next page of the wizart still shows the data to be imported on the top, "
+"but the lower section provides three dropdowns. The initial values are set "
+"by &kmymoney; based on examining the actual data."
+msgstr ""
+
+#. Tag: screeninfo
+#: details-impexp-csv.docbook:376 details-impexp-csv.docbook:425
+#, no-c-format
+msgid "<screeninfo>csv import wizard: investment</screeninfo>"
+msgstr ""
+
+#. Tag: phrase
+#: details-impexp-csv.docbook:382 details-impexp-csv.docbook:431
+#, fuzzy, no-c-format
+#| msgid "CSV Import Wizard: Investment"
+msgid "<phrase>csv import wizard: investment</phrase>"
+msgstr "CSV Import Čarobnjak: Investicije"
+
+#. Tag: para
+#: details-impexp-csv.docbook:387
+#, no-c-format
+msgid ""
+"The <guilabel>Decimal Symbol</guilabel> defaults to <quote>auto,</quote> "
+"which usually produces the correct results. If not, you can explicitly "
+"specify the <quote>dot</quote> or <quote>comma.</quote>"
+msgstr ""
+
+#. Tag: para
+#: details-impexp-csv.docbook:393
+#, no-c-format
+msgid ""
+"The <guilabel>Thousands Symbol</guilabel> is set automatically, and the "
+"field may be disabled if it will not affect the results."
+msgstr ""
+
+#. Tag: para
+#: details-impexp-csv.docbook:398
+#, fuzzy, no-c-format
+#| msgid ""
+#| "This needs to be set according to the order of year, month, and day in "
+#| "the dates in the file. If the plugin finds data incompatible with this "
+#| "setting, it will complain when you try to import. However, if the setting "
+#| "is wrong, but does not produce invalid results (such as data with no days "
+#| "higher than 12, so month and day could be switched) you will simply get "
+#| "incorrect data, because the plugin cannot know you made a mistake. In "
+#| "this case, the error will be obvious in the ledger after import."
+msgid ""
+"This needs to be set according to the order of year, month, and day in the "
+"dates in the file. If the plugin finds data incompatible with this setting, "
+"it will complain when you try to import. However, if the setting is wrong, "
+"but it produce invalid results not detected (such as data with no days "
+"higher than 12, so month and day could be switched) you will simply get "
+"incorrect data, because the plugin cannot know you made a mistake. In this "
+"case, the error will be obvious in the ledger after import."
+msgstr ""
+"Ovo mora biti postavljeno u skladu sa redoslijedom godine, mjeseca i dana u "
+"datumima u vašoj datoteci. Ukoliko dodatak primijeti da su podaci "
+"neuskladivi, žaliće se prilikom pokušaja unosa. Ipak, ukoliko su postavke "
+"pogrešne, ali ne daju pogrešan rezultat (podaci sa datumima u kojima se ne "
+"nalaze dani veći od broja 12, pa prilikom zamjene dana i mjeseci ne dolazi "
+"do problema) samo ćete dobiti pogrešne podatke, zato što dodatak ne može "
+"znati da li ste vi napravili grešku. U tom slučaju, greška će biti očigledna "
+"u glavnom pregledniku nakon unosa."
+
+#. Tag: para
+#: details-impexp-csv.docbook:408
+#, no-c-format
+msgid ""
+"The <guilabel>Date format</guilabel> specifies the order of day, month, and "
+"year, and is also set automatically. However, in some cases, such as data "
+"with no day higher than 12, you will notice the problem after the import. In "
+"such cases, you will need to repeat the import, and choose the actual order "
+"of the date components."
+msgstr ""
+
+#. Tag: title
+#: details-impexp-csv.docbook:416
 #, no-c-format
 msgid "CSV Import Wizard: Investment"
 msgstr "CSV Import Čarobnjak: Investicije"
 
 #. Tag: para
-#: details-impexp-csv.docbook:246
+#: details-impexp-csv.docbook:417
 #, no-c-format
 msgid ""
 "This page is similar to the <guilabel>Banking</guilabel> page, although it "
@@ -516,7 +860,7 @@ msgstr ""
 "puta."
 
 #. Tag: para
-#: details-impexp-csv.docbook:264
+#: details-impexp-csv.docbook:439
 #, no-c-format
 msgid ""
 "As on the <guilabel>Banking</guilabel> page, you may select more than one "
@@ -526,7 +870,7 @@ msgstr ""
 "jedne kolone za Memo polje"
 
 #. Tag: para
-#: details-impexp-csv.docbook:271
+#: details-impexp-csv.docbook:446
 #, fuzzy, no-c-format
 #| msgid ""
 #| "The <guilabel>Type/Action</guilabel> selector is to identify the column "
@@ -539,7 +883,7 @@ msgstr ""
 "sadrže akcijske tipove, kao što su Kupovina, Prodaja, Dividenda, itd."
 
 #. Tag: para
-#: details-impexp-csv.docbook:278
+#: details-impexp-csv.docbook:453
 #, fuzzy, no-c-format
 #| msgid ""
 #| "The <guilabel>Price Fraction</guilabel> selector is to indicate the "
@@ -564,16 +908,23 @@ msgstr ""
 "koja se unosi, onda <guilabel>Dijelovi cijena</guilabel> postavite na 1.0."
 
 #. Tag: para
-#: details-impexp-csv.docbook:289
-#, no-c-format
+#: details-impexp-csv.docbook:464
+#, fuzzy, no-c-format
+#| msgid ""
+#| "Use the <guilabel>Fee Column</guilabel> selector if your file has a "
+#| "distinct column for fees. Beware, though, that the fee might have been "
+#| "taken into account in the price. If there is a fee, and it is a "
+#| "percentage figure, rather than a value, click the <guilabel>Fee is "
+#| "percentage</guilabel> check box. Note that on this page, this is the only "
+#| "field to explicitly include \"column\" in the label, to emphasize that it "
+#| "is for the fee column, not for any actual fee."
 msgid ""
-"Use the <guilabel>Fee Column</guilabel> selector if your file has a distinct "
-"column for fees. Beware, though, that the fee might have been taken into "
-"account in the price. If there is a fee, and it is a percentage figure, "
-"rather than a value, click the <guilabel>Fee is percentage</guilabel> check "
-"box. Note that on this page, this is the only field to explicitly include "
-"\"column\" in the label, to emphasize that it is for the fee column, not for "
-"any actual fee."
+"There are two ways to specify fees for transactions. If your file has a "
+"distinct column for fees, use the <guilabel>Fee Column</guilabel> selector. "
+"Note that on this page, this is the only field to explicitly include \"column"
+"\" in the label, to emphasize that it is for the fee column, not for any "
+"actual fee. Beware, though, that the fee might have been taken into account "
+"in the price."
 msgstr ""
 "Koristite <guilabel>Kolona naknada</guilabel> selektor ukoliko vaša datoteka "
 "ima različite kolone za naknade. Imajte na umu da naknade mogu biti "
@@ -584,7 +935,30 @@ msgstr ""
 "kolonu nadoknada, a ne za stvarne nadoknade."
 
 #. Tag: para
-#: details-impexp-csv.docbook:301
+#: details-impexp-csv.docbook:472
+#, no-c-format
+msgid ""
+"If there is a fee, but it is a percentage figure, rather than a specified "
+"value, click the <guilabel>Fee is percentage</guilabel> check box, and enter "
+"the percentage rate into the <guilabel>Fee rate</guilabel> field. In "
+"addition, if there is a minimum fee, specify it in the <guilabel>Minimal "
+"Fee</guilabel> field, which becomes enabled when you enter the Fee rate "
+"(with a decimal point.) At this point, clicking <guibutton>Calculate Fees</"
+"guibutton> will add a column at the right of the table above, and will "
+"indicate the calculated fee for each transaction."
+msgstr ""
+
+#. Tag: para
+#: details-impexp-csv.docbook:483
+#, no-c-format
+msgid ""
+"If you made a mistake in entering the fee information, clicking "
+"<guibutton>Clear Fee</guibutton> will reset all the fee related fields to "
+"their initial values."
+msgstr ""
+
+#. Tag: para
+#: details-impexp-csv.docbook:490
 #, no-c-format
 msgid ""
 "Below the column selectors are two areas for the security identity. "
@@ -596,7 +970,7 @@ msgstr ""
 "sadržavati unose za samo jedan ili za više sigurnosti."
 
 #. Tag: para
-#: details-impexp-csv.docbook:308
+#: details-impexp-csv.docbook:497
 #, fuzzy, no-c-format
 #| msgid ""
 #| "If the file contains transactions for just a single security, with the "
@@ -610,10 +984,10 @@ msgid ""
 "If the file contains transactions for just a single security, with the name "
 "possibly in a header row, the name should be entered into the "
 "<guilabel>Security Name</guilabel> box. The name you enter will be added to "
-"the drop-down list for future use. You may subsequently wish to remove that "
-"name from the list. If so, select it, then click the <guilabel>Hide "
-"security</guilabel> button. This removes it only from this list, and has no "
-"effect on your main &kmymoney; file."
+"the dropdown list for future use. You may subsequently wish to remove that "
+"name from the list. If so, select it, then click <guilabel>Hide security</"
+"guilabel>. This removes it only from this list, and has no effect on your "
+"main &kmymoney; file."
 msgstr ""
 "Ukoliko datoteka sadrži transakcije za samo jednu sigurnost, sa nazivom "
 "možda u header redu, ime se treba unijeti u <guilabel>Security Name</"
@@ -624,7 +998,7 @@ msgstr ""
 "datoteku."
 
 #. Tag: para
-#: details-impexp-csv.docbook:320
+#: details-impexp-csv.docbook:509
 #, fuzzy, no-c-format
 #| msgid ""
 #| "If the file includes transactions for several securities, each will be "
@@ -662,7 +1036,7 @@ msgstr ""
 "quote> uključujući prostor iza."
 
 #. Tag: para
-#: details-impexp-csv.docbook:339
+#: details-impexp-csv.docbook:528
 #, no-c-format
 msgid ""
 "When all required fields are selected, the <guilabel>Next</guilabel> button "
@@ -672,121 +1046,13 @@ msgstr ""
 "će biti omogućeno i klikom na njega nastavljate dalje sa čarobnjakom."
 
 #. Tag: title
-#: details-impexp-csv.docbook:347
-#, no-c-format
-msgid "CSV Import Wizard: Lines"
-msgstr "CSV Import Čarobnjak: Linije"
-
-#. Tag: para
-#: details-impexp-csv.docbook:348
-#, no-c-format
-msgid ""
-"On this page, you indicate if any lines should be ignored at the beginning "
-"or end of the file. You also indicate the format of any date column."
-msgstr ""
-"Na ovoj stranici indicirate da li se neka linija treba ignosrisati na "
-"početku ili na kraju datoteke. Također ukazujete na format bilo koje kolone "
-"datuma."
-
-#. Tag: title
-#: details-impexp-csv.docbook:361
-#, no-c-format
-msgid "Start line"
-msgstr "Početna linija"
-
-#. Tag: para
-#: details-impexp-csv.docbook:362
-#, no-c-format
-msgid ""
-"Set this so the importer skips any header lines in the file. Your choice "
-"will be saved in this profile for future use. The start and end lines "
-"interact, and the start line may not be higher than the end line. If the "
-"<guilabel>Start line</guilabel> selector does not respond, check the end "
-"line setting."
-msgstr ""
-"Ovo postavite tako da importer preskače bilo koje header linije u vašoj "
-"datoteci. Vaš izbor će biti sačuvan u ovom profilu za buduću upotrebu. "
-"Poćetne i zadnje linije međusobno dejstvuju i početna linija možda neće biti "
-"viša od zadnje linije. Ukoliko <guilabel>Start line</guilabel> selektor ne "
-"reaguje, provjerite opcije zadnje linije."
-
-#. Tag: title
-#: details-impexp-csv.docbook:370
-#, no-c-format
-msgid "End line"
-msgstr "Zadnja linija"
-
-#. Tag: para
-#: details-impexp-csv.docbook:371
-#, no-c-format
-msgid ""
-"The importer will automatically set this to the last line in the file, or to "
-"the setting last saved. You will only need to adjust it if there are footer "
-"lines in the file the importer should ignore. Otherwise, you are likely to "
-"get a data error warning when the plugin attempts to parse incorrect data. "
-"Again, if the <guilabel>End line</guilabel> selector does not respond, check "
-"the <guilabel>Start line</guilabel> setting."
-msgstr ""
-"Importer će automatski postaviti ovu liniju da bude zadnja u datoteci ili na "
-"postavke koje su zadnje spašene. Samo je morate namjestiti ukoliko postoje "
-"footer linije u datoteci koje bio importer trebao ignorisati. U suprotnom, "
-"vjerovatno ćete dobiti upozorenje na grešku kada dodatak pokuša da raščlani "
-"netačne podatke. Opet, ukoliko <guilabel>Krajnja linija</guilabel> selektor "
-"ne reaguje, provjerite <guilabel>Početna linija</guilabel> postavke."
-
-#. Tag: title
-#: details-impexp-csv.docbook:381
-#, no-c-format
-msgid "Date format"
-msgstr "Format datuma"
-
-#. Tag: para
-#: details-impexp-csv.docbook:382
-#, fuzzy, no-c-format
-#| msgid ""
-#| "This needs to be set according to the order of year, month, and day in "
-#| "the dates in the file. If the plugin finds data incompatible with this "
-#| "setting, it will complain when you try to import. However, if the setting "
-#| "is wrong, but does not produce invalid results (such as data with no days "
-#| "higher than 12, so month and day could be switched) you will simply get "
-#| "incorrect data, because the plugin cannot know you made a mistake. In "
-#| "this case, the error will be obvious in the ledger after import."
-msgid ""
-"This needs to be set according to the order of year, month, and day in the "
-"dates in the file. If the plugin finds data incompatible with this setting, "
-"it will complain when you try to import. However, if the setting is wrong, "
-"but it produce invalid results not detected (such as data with no days "
-"higher than 12, so month and day could be switched) you will simply get "
-"incorrect data, because the plugin cannot know you made a mistake. In this "
-"case, the error will be obvious in the ledger after import."
-msgstr ""
-"Ovo mora biti postavljeno u skladu sa redoslijedom godine, mjeseca i dana u "
-"datumima u vašoj datoteci. Ukoliko dodatak primijeti da su podaci "
-"neuskladivi, žaliće se prilikom pokušaja unosa. Ipak, ukoliko su postavke "
-"pogrešne, ali ne daju pogrešan rezultat (podaci sa datumima u kojima se ne "
-"nalaze dani veći od broja 12, pa prilikom zamjene dana i mjeseci ne dolazi "
-"do problema) samo ćete dobiti pogrešne podatke, zato što dodatak ne može "
-"znati da li ste vi napravili grešku. U tom slučaju, greška će biti očigledna "
-"u glavnom pregledniku nakon unosa."
-
-#. Tag: para
-#: details-impexp-csv.docbook:393
-#, no-c-format
-msgid ""
-"Once ready, the <guilabel>Next</guilabel> button will be enabled, and "
-"clicking it will advance the wizard."
-msgstr ""
-"Kada ste spremni, <guilabel>Next</guilabel> dugme će biti omogućeno i klikom "
-"ćete nastaviti dalje sa čarobnjakom."
-
-#. Tag: title
-#: details-impexp-csv.docbook:400
+#: details-impexp-csv.docbook:534
 #, no-c-format
 msgid "CSV Import Wizard: Securities and Symbols"
 msgstr "CSV Import Čarobnjak: Sigurnosti i simboli"
 
 #. Tag: para
-#: details-impexp-csv.docbook:402
+#: details-impexp-csv.docbook:535
 #, fuzzy, no-c-format
 #| msgid ""
 #| "For an Investment file, after the <guilabel>Lines</guilabel> page has "
@@ -797,7 +1063,7 @@ msgstr "CSV Import Čarobnjak: Sigurnosti i simboli"
 #| "data display in the main wizard windows, the changes you make on this "
 #| "page <emphasis>are</emphasis> imported."
 msgid ""
-"For an Investment file, after the <guilabel>Lines</guilabel> page has been "
+"For an Investment file, after the <guilabel>Columns</guilabel> page has been "
 "accepted, you need to assure that each security in the file is matched to "
 "the correct security in your &kmymoney; file, before import can proceed. At "
 "this point, another window will open, showing the securities and symbols "
@@ -815,7 +1081,7 @@ msgstr ""
 "emphasis> unesne."
 
 #. Tag: para
-#: details-impexp-csv.docbook:411
+#: details-impexp-csv.docbook:544
 #, no-c-format
 msgid "Completing this page is straightforward, if you consider these items:"
 msgstr ""
@@ -823,7 +1089,7 @@ msgstr ""
 "sljedeće stvari:"
 
 #. Tag: para
-#: details-impexp-csv.docbook:415
+#: details-impexp-csv.docbook:548
 #, no-c-format
 msgid ""
 "Each row represents one transaction, and so it may appear there are "
@@ -833,7 +1099,7 @@ msgstr ""
 "redove. To je UREDU."
 
 #. Tag: para
-#: details-impexp-csv.docbook:422
+#: details-impexp-csv.docbook:555
 #, fuzzy, no-c-format
 #| msgid ""
 #| "Each security name must match exactly the existing security as specified "
@@ -852,13 +1118,13 @@ msgstr ""
 "sigurnosti."
 
 #. Tag: para
-#: details-impexp-csv.docbook:431
+#: details-impexp-csv.docbook:564
 #, no-c-format
 msgid "A symbol must be shown for each security."
 msgstr "Simbol mora biti prikazan za svaku sgurnost."
 
 #. Tag: para
-#: details-impexp-csv.docbook:437
+#: details-impexp-csv.docbook:570
 #, no-c-format
 msgid ""
 "The <emphasis>only</emphasis> information on this page should be the "
@@ -872,7 +1138,7 @@ msgstr ""
 "datoteci unosa, ali ne treba biti prikazano tu."
 
 #. Tag: para
-#: details-impexp-csv.docbook:447
+#: details-impexp-csv.docbook:580
 #, fuzzy, no-c-format
 #| msgid ""
 #| "You can edit a symbol or security name by double clicking the cell. For "
@@ -882,9 +1148,9 @@ msgstr ""
 #| "variation or abbreviation within &kappname;. If you edit a security name, "
 #| "that edit will be applied to all rows with the same symbol."
 msgid ""
-"You can edit a symbol or security name by double clicking the cell. For each "
+"You can edit a symbol or security name by double=clicking the cell. For each "
 "security, if necessary, edit the name in one of its rows, If the correct "
-"security name appears in the imported file, double click on it to select it, "
+"security name appears in the imported file, double-click it to select it, "
 "then copy and paste/edit, taking care if you have used a variation or "
 "abbreviation within &kmymoney;. If you edit a security name, that edit will "
 "be applied to all rows with the same symbol."
@@ -898,7 +1164,7 @@ msgstr ""
 "simbolom."
 
 #. Tag: para
-#: details-impexp-csv.docbook:456
+#: details-impexp-csv.docbook:589
 #, fuzzy, no-c-format
 #| msgid ""
 #| "Any line without a symbol will be treated as a brokerage-type checking "
@@ -948,7 +1214,7 @@ msgstr ""
 "završili. Proces unosa se potom predaje u ruke &kappname;."
 
 #. Tag: para
-#: details-impexp-csv.docbook:473
+#: details-impexp-csv.docbook:606
 #, fuzzy, no-c-format
 #| msgid ""
 #| "If you have more that one transaction referring to the same security, you "
@@ -968,10 +1234,10 @@ msgid ""
 "can edit all of them at once, using multi-select. For instance, to add a "
 "symbol for several lines, press and hold the &Ctrl; key, and in the symbol "
 "column, select each transaction. While still holding the &Ctrl; key, all "
-"those symbol cells should still be selected, so click on one and enter the "
+"those symbol cells should still be selected, so click one and enter the "
 "symbol. Click inside the window but outside that column, or hit &Enter; (not "
 "<guibutton>OK</guibutton>). Now that those transactions all have the same "
-"symbol, double click one detail entry and edit the security name as you "
+"symbol, double-click one detail entry and edit the security name as you "
 "wish. Click elsewhere on the window (or &Enter;) to accept the edit, which "
 "will then change all those entries. The remaining entries will show the "
 "symbols picked up from the transactions in the import file."
@@ -990,7 +1256,7 @@ msgstr ""
 "transakcija prilikom unosa datoteke."
 
 #. Tag: para
-#: details-impexp-csv.docbook:488
+#: details-impexp-csv.docbook:619
 #, fuzzy, no-c-format
 #| msgid ""
 #| "Now click <guilabel>OK</guilabel>, then <guilabel>Import</guilabel>. In "
@@ -1016,7 +1282,7 @@ msgid ""
 "containing that detail. Now, on the <guilabel>Invalid transaction</guilabel> "
 "box you may get a few entries because the activity type does not match the "
 "qty/price/amount combination. On each message, click <guilabel>Select "
-"Transaction Type</guilabel>, and a drop down will appear indicating valid "
+"Transaction Type</guilabel>, and a dropdown will appear indicating valid "
 "activity types for that combination of values."
 msgstr ""
 "Sada kliknite na <guilabel>U redu</guilabel>, a potom na <guilabel>Uvoz</"
@@ -1033,7 +1299,7 @@ msgstr ""
 "kombinacije vrijednsti."
 
 #. Tag: para
-#: details-impexp-csv.docbook:503
+#: details-impexp-csv.docbook:634
 #, fuzzy, no-c-format
 #| msgid ""
 #| "Now the import has occurred and you're into KMM to select the investment "
@@ -1049,13 +1315,39 @@ msgstr ""
 "transakcija brokerskog tipa."
 
 #. Tag: title
-#: details-impexp-csv.docbook:511
+#: details-impexp-csv.docbook:641
+#, fuzzy, no-c-format
+#| msgid "CSV Import Wizard: Lines"
+msgid "CSV Import Wizard: Currency Prices"
+msgstr "CSV Import Čarobnjak: Linije"
+
+#. Tag: para
+#: details-impexp-csv.docbook:642
+#, no-c-format
+msgid "something about importing currency prices"
+msgstr ""
+
+#. Tag: title
+#: details-impexp-csv.docbook:647
+#, fuzzy, no-c-format
+#| msgid "CSV Import Wizard: Start"
+msgid "CSV Import Wizard: Stock prices"
+msgstr "CSV Import čarobnjak: Poćetak"
+
+#. Tag: para
+#: details-impexp-csv.docbook:648
+#, no-c-format
+msgid "`something about imporing stock prices"
+msgstr ""
+
+#. Tag: title
+#: details-impexp-csv.docbook:654
 #, no-c-format
 msgid "CSV Import Wizard: Finish"
 msgstr "CSV Import Čarobnjak: Kraj"
 
 #. Tag: para
-#: details-impexp-csv.docbook:512
+#: details-impexp-csv.docbook:655
 #, fuzzy, no-c-format
 #| msgid ""
 #| "On reaching the Final page, the plugin automatically validates the "
@@ -1089,7 +1381,7 @@ msgstr ""
 "odgovarajuće stranice i prepravio grešku."
 
 #. Tag: para
-#: details-impexp-csv.docbook:523
+#: details-impexp-csv.docbook:666
 #, fuzzy, no-c-format
 #| msgid ""
 #| "It might also be that if debit and credit columns are in use, one of "
@@ -1113,13 +1405,13 @@ msgstr ""
 "guilabel>.)"
 
 #. Tag: title
-#: details-impexp-csv.docbook:531
+#: details-impexp-csv.docbook:674
 #, no-c-format
 msgid "Decimal Symbol"
 msgstr "Decimalni simbol"
 
 #. Tag: para
-#: details-impexp-csv.docbook:532
+#: details-impexp-csv.docbook:675
 #, no-c-format
 msgid ""
 "Another possible problem might be that the selected decimal symbol is "
@@ -1148,13 +1440,13 @@ msgstr ""
 "simbol."
 
 #. Tag: title
-#: details-impexp-csv.docbook:547
+#: details-impexp-csv.docbook:690
 #, no-c-format
 msgid "Thousands Symbol"
 msgstr "Simbol za oznaku hiljade"
 
 #. Tag: para
-#: details-impexp-csv.docbook:548
+#: details-impexp-csv.docbook:691
 #, no-c-format
 msgid ""
 "This does not need to be selected, as it is set automatically based on the "
@@ -1167,13 +1459,13 @@ msgstr ""
 "neće biti aktivan, ukoliko su sve vrijednosti koje se unose manje od 1000."
 
 #. Tag: title
-#: details-impexp-csv.docbook:556
+#: details-impexp-csv.docbook:699
 #, no-c-format
 msgid "Import CSV"
 msgstr "Unos CSV"
 
 #. Tag: para
-#: details-impexp-csv.docbook:557
+#: details-impexp-csv.docbook:700
 #, fuzzy, no-c-format
 #| msgid ""
 #| "Clicking this button tells the plugin to actually import the data from "
@@ -1189,13 +1481,13 @@ msgstr ""
 "odgovarajući račun za koji će se unijeti podaci."
 
 #. Tag: title
-#: details-impexp-csv.docbook:566
+#: details-impexp-csv.docbook:708
 #, no-c-format
 msgid "Make QIF File"
 msgstr "Napravi QIF Datoteku"
 
 #. Tag: para
-#: details-impexp-csv.docbook:567
+#: details-impexp-csv.docbook:709
 #, fuzzy, no-c-format
 #| msgid ""
 #| "This button gives you the ability, after the import has been completed, "
@@ -1220,13 +1512,13 @@ msgstr ""
 "budućnosti u potpunosti izbaciti iz upotrebe."
 
 #. Tag: title
-#: details-impexp-csv.docbook:578
+#: details-impexp-csv.docbook:719
 #, no-c-format
 msgid "Finishing up"
 msgstr "Završavanje"
 
 #. Tag: para
-#: details-impexp-csv.docbook:579
+#: details-impexp-csv.docbook:720
 #, fuzzy, no-c-format
 #| msgid ""
 #| "For a <guilabel>Banking</guilabel> import, the plugin has finished, and "
@@ -1268,26 +1560,26 @@ msgstr ""
 "količine i cijene pretpostavlja se Dividenda itd.."
 
 #. Tag: para
-#: details-impexp-csv.docbook:593
+#: details-impexp-csv.docbook:734
 #, fuzzy, no-c-format
 #| msgid ""
 #| "If you wish to save your settings, remember to click the "
 #| "<guilabel>Finish</guilabel> button, and the plugin will then close."
 msgid ""
-"If you wish to save your settings, remember to click the <guibutton>Finish</"
-"guibutton> button, and the plugin will then close."
+"If you wish to save your settings, remember to click <guibutton>Finish</"
+"guibutton>, and the plugin will then close."
 msgstr ""
 "Ukoliko želite spasiti svoje postavke, upamtite da morate kliknuti na "
 "<guilabel>Završi</guilabel> dugme te će se dodatak potom zatvoriti."
 
 #. Tag: title
-#: details-impexp-csv.docbook:600
+#: details-impexp-csv.docbook:740
 #, no-c-format
 msgid "Adding Investment Activity Types"
 msgstr "Dodavanje investicionih tipova aktivnosti"
 
 #. Tag: para
-#: details-impexp-csv.docbook:601
+#: details-impexp-csv.docbook:741
 #, fuzzy, no-c-format
 #| msgid ""
 #| "If you find that your investment statements keep including activity types "
@@ -1341,13 +1633,13 @@ msgstr ""
 "moguće, možda morate editovati svoju datoteku prije unosa."
 
 #. Tag: title
-#: details-impexp-csv.docbook:622
+#: details-impexp-csv.docbook:761
 #, no-c-format
 msgid "Configuration of CSV importer plugin"
 msgstr "Konfiguracija CSV importer dodatka"
 
 #. Tag: para
-#: details-impexp-csv.docbook:624
+#: details-impexp-csv.docbook:762
 #, fuzzy, no-c-format
 #| msgid ""
 #| "A well-known drawback of QIF format is that it is a fairly loose format. "
@@ -1369,16 +1661,16 @@ msgid ""
 "much more scope for variation in specifying the different types of "
 "activities represented in the data. The plugin handles this by listing these "
 "activity types in a resource file, called <filename>csvimporterrc</"
-"filename>. The location of this file depends on your distribution. On a "
-"&Linux; system, this will be in <filename class=\"directory\">$KDEHOME/share/"
-"config</filename> where <envar>$KDEHOME</envar> is usually <quote>.config</"
-"quote> within your home folder. If you are migrating from a version of "
-"&kmymoney; prior to 5.0 or later, the old location of <envar>$KDEHOME</"
-"envar> was <filename class=\"directory\">.kde4</filename>. Using this "
-"resource file allows the user to add an activity type that the developer had "
-"not encountered. If the file does not exist when the importer first runs, "
-"the plugin will create a default version, containing a few of the more "
-"obvious descriptions."
+"filename>. The location of this file depends on your opearintg system or "
+"distribution. On a &Linux; system, this will be <filename class=\"directory"
+"\">$KDEHOME/share/config</filename> where <envar>$KDEHOME</envar> is usually "
+"<filename class=\"directory\">.config</filename> within your home folder. If "
+"you are migrating from a version of &kmymoney; prior to 5.0, the old "
+"location of <envar>$KDEHOME</envar> was <filename class=\"directory\">.kde4</"
+"filename>, also within your home folder. Using this resource file allows the "
+"user to add an activity type that the developer had not encountered. If the "
+"file does not exist when the importer first runs, it will create a default "
+"version, containing a few of the more obvious descriptions."
 msgstr ""
 "Veoma poznata mana QIF formata je da je veoma labav format. Sa CSV "
 "datotekama, postoji isti problem, s tim što uopšte ne postoji dogovoreni "
@@ -1393,7 +1685,7 @@ msgstr ""
 "definisanu verziju, koja će sadržavati par očitih opisa."
 
 #. Tag: para
-#: details-impexp-csv.docbook:642
+#: details-impexp-csv.docbook:780
 #, fuzzy, no-c-format
 #| msgid ""
 #| "A number of sample csv files are provided (in the kmymoney/contrib/"
@@ -1430,7 +1722,7 @@ msgstr ""
 "količinu, što je potrebno da bi bila tretirana kao Add Shares ili Shrsin."
 
 #. Tag: para
-#: details-impexp-csv.docbook:656
+#: details-impexp-csv.docbook:794
 #, fuzzy, no-c-format
 #| msgid ""
 #| "When this plugin was created, only a few investment formats had been seen "
@@ -1454,3 +1746,145 @@ msgstr ""
 "bilo kakve lične podatke) u &kappname; korisničku listu &userlist; ili "
 "developersku listu &devlist;, developer će uraditi najbolje što može kako bi "
 "modificirao dodatak da radi i sa takvim tipom."
+
+#. Tag: title
+#: details-impexp-csv.docbook:803
+#, fuzzy, no-c-format
+#| msgid "CSV Importer Plugin"
+msgid "CSV Importer configuration dialog"
+msgstr "CSV Importer dodatak"
+
+#. Tag: para
+#: details-impexp-csv.docbook:804
+#, no-c-format
+msgid ""
+"Finally, there are a few other items which may be configured in a dialog "
+"invoked through the <link linkend=\"details.settings.plugins.csvimporter"
+"\">CSV Importer configuration dialog</link>, which can be invoked from the "
+"Plugins page of the main KMyMoney configuration dialog. This includes which "
+"items will be autodetected by the importer and which profile will be used if "
+"you do have the importer export a QIF file, as mentioned above."
+msgstr ""
+
+#~ msgid "&Allan.Anderson; &Allan.Anderson.mail;"
+#~ msgstr "&Allan.Anderson; &Allan.Anderson.mail;"
+
+#, fuzzy
+#~| msgid ""
+#~| "If you have installed from RPM or Deb, the CSV Importer Plugin should be "
+#~| "contained within the &kappname; package. If you have built from source, "
+#~| "there should be no additional requirements. The &kappname; build process "
+#~| "should detect the plugin source and compile the plugin."
+#~ msgid ""
+#~ "If you have installed from RPM or Deb, the CSV Importer Plugin should be "
+#~ "contained within the kmymoney package. If you have built from source, "
+#~ "there should be no additional requirements. The &kmymoney; build process "
+#~ "should detect the plugin source and compile the plugin."
+#~ msgstr ""
+#~ "Ukoliko ste instalirali iz RPM ili Deb, CSV importer dodatak bi trebao "
+#~ "biti uključen unutar &kappname; paketa. Ukoliko ste to uradili iz izvora, "
+#~ "ne bi trebali postojati nikakvi dodatni zahtjevi. &kappname; početni "
+#~ "proces bi trebao detektovati izvor dodatka i kompajlirati dodatak."
+
+#~ msgid ""
+#~ "The CSV Importer is in the form of a wizard, with a separate page for "
+#~ "each individual step of the process. There may be some minor differences "
+#~ "between the text in this handbook, the labels in the screenshots, and the "
+#~ "labels you actually see in the wizard. In such cases, the handbook "
+#~ "describes what the wizard will look like in the next release."
+#~ msgstr ""
+#~ "CSV importer je u formi čarobnjaka sa odvojenim stranama za svaki "
+#~ "individualni korak procesa. Moguće su male razlike između teksta u ovom "
+#~ "priručniku, labela na slici ekrana i labela koje ustvari vidite u "
+#~ "čarobnjaku. U takvim slučajevima, priručnik opisuje kako će čarobnjak "
+#~ "izgledati u sljedećem izdanju."
+
+#~ msgid ""
+#~ "When started, the CSV Importer displays the <guilabel>Start</guilabel> "
+#~ "page. The upper area, where data will be displayed, is initially empty. "
+#~ "Below that, on the left, is a list of the steps of the import process, "
+#~ "with the current one highlighted. To the right of that are some brief "
+#~ "instructions and two radio buttons, allowing the choice of either "
+#~ "<guilabel>Banking</guilabel> or <guilabel>Investment</guilabel>. Next "
+#~ "there is a profile selector box, which is enabled once one of the radio "
+#~ "buttons has been selected. At the bottom of the display are buttons to "
+#~ "move on to the next step of the wizard, go <guibutton>Back</guibutton> to "
+#~ "the previous step, or <guibutton>Cancel</guibutton> the import. At the "
+#~ "initial step, there is also a button <guilabel>Select File</guilabel> to "
+#~ "initially select the file to import."
+#~ msgstr ""
+#~ "Kada se pokrene, CSV Importet prikazuje <guilabel>Start</guilabel> "
+#~ "stranicu. Gornje područje, gdje će podaci biti prikazani je inicijalno "
+#~ "prazno. Ispod toga, na lijevoj strani je lista koraka procesa unosa, sa "
+#~ "trenutnim korakom naglašenim. Desno od toga se nalaze neke osnovne "
+#~ "instrukcije i dva radio dugmeta, koja omogućavaju odabir ili "
+#~ "<guilabel>Bankarstvo</guilabel> ili <guilabel>Investicije</guilabel>. "
+#~ "Zatim je tu prostor za odabir profila, koji je omogućen nakon što je "
+#~ "jedan od radio dugmadi odabran. Na dnu prikaza su dugmag za prelazak na "
+#~ "sljedeći korak čarobnjaka, vraćanje <guibutton>Nazad</guibutton> na "
+#~ "prethodni korak ili prekid <guibutton>Otkaži</guibutton> unosa. Na "
+#~ "početnom koraku postoji i <guilabel>Izaberi datoteku</guilabel> dugme za "
+#~ "odabir datoteke za unos."
+
+#, fuzzy
+#~| msgid ""
+#~| "The plugin should have detected the appropriate <guilabel>Field "
+#~| "Separator</guilabel> to use, and it is not usually possible to select a "
+#~| "different one. In fact, attempting to do so will reset any field choices "
+#~| "you may already have made. There is also a selector for the "
+#~| "<guilabel>Text Delimiter</guilabel>, but generally the quote (\") is "
+#~| "correct. Now click on the <guilabel>Next</guilabel> button. Depending "
+#~| "upon the earlier selection you made, you will now be on either the "
+#~| "Banking page or the Investment page."
+#~ msgid ""
+#~ "The plugin should have detected the appropriate <guilabel>Field "
+#~ "Separator</guilabel> to use, and it is not usually possible to select a "
+#~ "different one. In fact, attempting to do so will reset any field choices "
+#~ "you may already have made. There is also a selector for the "
+#~ "<guilabel>Text Delimiter</guilabel>, but generally the quote (\") is "
+#~ "correct. Now click on the <guibutton>Next</guibutton> button. Depending "
+#~ "upon the earlier selection you made, you will now be on either the "
+#~ "Banking page or the Investment page."
+#~ msgstr ""
+#~ "Dodatak bi trebao detektovati odgovarajući <guilabel>Razdvajač poljar</"
+#~ "guilabel> za upotrebu i u većini slučajeva nije moguće odabrati "
+#~ "drugačiji. Ustvari, pokušaj toga će poništiti sve odabire polja koje ste "
+#~ "dosad napravili. Također postoji i selektor za <guilabel>Razdvajač "
+#~ "teksta</guilabel>, ali generalno navod (\") je korektan. Sada kliknite na "
+#~ "<guilabel>Dalje</guilabel> dugme. U ovisnosti od prethodnog odabira koji "
+#~ "ste napravili, sada ćete ili biti na Bankarstvo stranici ili na "
+#~ "Investicije stranici."
+
+#~ msgid ""
+#~ "On this page, you select the column numbers from which to import the "
+#~ "relevant fields."
+#~ msgstr ""
+#~ "Na ovoj stranici odabirete brojeve kolona sa kojih ćete unijeti "
+#~ "relevantna polja."
+
+#~ msgid ""
+#~ "For most fields, you just need to use the appropriate dropdown to select "
+#~ "the appropriate column. However, there are a few special considerations."
+#~ msgstr ""
+#~ "Za večinu polja, samo morate iskoristiti odgovarajuće opadajuće liste "
+#~ "kako biste odabrali odgovarajuće kolone. Ipak, postoje neka specijalna "
+#~ "razmatranja."
+
+#~ msgid ""
+#~ "On this page, you indicate if any lines should be ignored at the "
+#~ "beginning or end of the file. You also indicate the format of any date "
+#~ "column."
+#~ msgstr ""
+#~ "Na ovoj stranici indicirate da li se neka linija treba ignosrisati na "
+#~ "početku ili na kraju datoteke. Također ukazujete na format bilo koje "
+#~ "kolone datuma."
+
+#~ msgid "Date format"
+#~ msgstr "Format datuma"
+
+#~ msgid ""
+#~ "Once ready, the <guilabel>Next</guilabel> button will be enabled, and "
+#~ "clicking it will advance the wizard."
+#~ msgstr ""
+#~ "Kada ste spremni, <guilabel>Next</guilabel> dugme će biti omogućeno i "
+#~ "klikom ćete nastaviti dalje sa čarobnjakom."
