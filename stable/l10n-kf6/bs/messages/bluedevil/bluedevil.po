@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bluedevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-28 02:38+0000\n"
+"POT-Creation-Date: 2025-08-10 00:44+0000\n"
 "PO-Revision-Date: 2014-11-11 13:36+0000\n"
 "Last-Translator: Naida Čongo <ncongo1@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -31,6 +31,27 @@ msgid "Your emails"
 msgstr ""
 "Markolalic@etf.unsa.ba,samir.ribic@etf.unsa.ba,ncongo1@etf.unsa.ba,"
 "vljubovic@smartnet.ba"
+
+#: applet/devicesproxymodel.cpp:51
+#, fuzzy, kde-format
+#| msgctxt "Device is blocked"
+#| msgid "Blocked"
+msgctxt "@title:column Blocked Bluetooth devices"
+msgid "Blocked"
+msgstr "Blokiran"
+
+#: applet/devicesproxymodel.cpp:54
+#, fuzzy, kde-format
+#| msgid "Connect"
+msgctxt "@title:column Connected Bluetooth devices"
+msgid "Connected"
+msgstr "Povezati"
+
+#: applet/devicesproxymodel.cpp:56
+#, kde-format
+msgctxt "@title:column Available but not connected Bluetooth devices"
+msgid "Available"
+msgstr ""
 
 #: applet/devicesstateproxymodel.cpp:273
 #, fuzzy, kde-format
@@ -60,13 +81,20 @@ msgctxt "Notification when the connection failed due to NotReady"
 msgid "The device is not ready"
 msgstr ""
 
-#: kcm/bluetooth.cpp:104
+#: kcm/bluetooth.cpp:129
 #, fuzzy, kde-format
 #| msgctxt "This device is of type Network"
 #| msgid "Network"
 msgctxt "DeviceName Network (Service)"
 msgid "%1 Network (%2)"
 msgstr "Mreža"
+
+#: kcm/bluetoothmoduledata.cpp:20
+#, fuzzy, kde-format
+#| msgid "Enable KDE Bluetooth Integration"
+msgctxt "@info:tooltip"
+msgid "Enable Bluetooth"
+msgstr "Omogući KDE bluetooth integraciju"
 
 #: kded/bluedevildaemon.cpp:68 kded/bluedevildaemon.cpp:70
 #, kde-format
@@ -327,13 +355,13 @@ msgstr ""
 msgid "External memory"
 msgstr ""
 
-#: sendfile/discoverwidget.cpp:134 wizard/pages/discover.cpp:353
+#: sendfile/discoverwidget.cpp:134 wizard/pages/discover.cpp:378
 #, fuzzy, kde-format
 #| msgid "Bluetooth is not enabled"
 msgid "Bluetooth is disabled."
 msgstr "Bluetooth nije omogućen"
 
-#: sendfile/discoverwidget.cpp:135 wizard/pages/discover.cpp:354
+#: sendfile/discoverwidget.cpp:135 wizard/pages/discover.cpp:379
 #, fuzzy, kde-format
 #| msgctxt "This device is a Tablet"
 #| msgid "Tablet"
@@ -482,24 +510,24 @@ msgstr "Završi"
 msgid "Add Bluetooth Device"
 msgstr "Bluetooth Uređaji"
 
-#: wizard/pages/discover.cpp:147
+#: wizard/pages/discover.cpp:170
 #, kde-format
 msgid "Select a device"
 msgstr "Izbor uređaja"
 
-#: wizard/pages/discover.cpp:346
+#: wizard/pages/discover.cpp:371
 #, kde-format
 msgctxt "Action to fix a problem"
 msgid "Fix it"
 msgstr "Popravi to"
 
-#: wizard/pages/discover.cpp:356
+#: wizard/pages/discover.cpp:381
 #, fuzzy, kde-format
 #| msgid "Your default Bluetooth adapter is not visible for remote devices."
 msgid "Your Bluetooth adapter is not pairable."
 msgstr "Vaš podrazumijevani Bluetooth adapter nije vidljiv drugim uređajima."
 
-#: wizard/pages/discover.cpp:357
+#: wizard/pages/discover.cpp:382
 #, fuzzy, kde-format
 #| msgid "Discoverable"
 msgctxt "Action to make Bluetooth adapter pairable"
@@ -512,21 +540,28 @@ msgstr "Za otkrivanje"
 msgid "Search…"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QCheckBox, showUnnamedDevicesCheckBox)
+#: wizard/pages/discover.ui:42
+#, fuzzy, kde-format
+#| msgid "Browse devices"
+msgid "Show unnamed devices"
+msgstr "Pregledaj uređaje"
+
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: wizard/pages/discover.ui:64
+#: wizard/pages/discover.ui:71
 #, fuzzy, kde-format
 #| msgid "Scanning"
 msgid "Scanning…"
 msgstr "Skeniranje"
 
 #. i18n: ectx: property (text), widget (QCheckBox, manualPin)
-#: wizard/pages/discover.ui:84
+#: wizard/pages/discover.ui:91
 #, kde-format
 msgid "Manual PIN:"
 msgstr "Ručni PIN:"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, pinText)
-#: wizard/pages/discover.ui:112
+#: wizard/pages/discover.ui:119
 #, kde-format
 msgid "0000"
 msgstr "0000"
@@ -716,9 +751,6 @@ msgstr ""
 #~ msgid "Disconnect"
 #~ msgstr "Prekini vezu"
 
-#~ msgid "Connect"
-#~ msgstr "Povezati"
-
 #~ msgctxt "This device is a Phone"
 #~ msgid "Phone"
 #~ msgstr "Telefon"
@@ -822,12 +854,6 @@ msgstr ""
 #~ msgstr "Povjerljiv"
 
 #, fuzzy
-#~| msgctxt "Device is blocked"
-#~| msgid "Blocked"
-#~ msgid "Blocked:"
-#~ msgstr "Blokiran"
-
-#, fuzzy
 #~| msgid "Adapter: %1 (%2)"
 #~ msgid "Adapter:"
 #~ msgstr "Adapter: %1 (%2)"
@@ -929,11 +955,6 @@ msgstr ""
 
 #~ msgid "Enable or disable the global KDE Bluetooth integration"
 #~ msgstr "Omogućavanje ili onemogućavanje globalne KDE Bluetooth-integracije"
-
-#, fuzzy
-#~| msgid "Enable KDE Bluetooth Integration"
-#~ msgid "Enable Bluetooth integration"
-#~ msgstr "Omogući KDE bluetooth integraciju"
 
 #, fuzzy
 #~| msgctxt "This string is shown when the wizard fail"
@@ -1048,9 +1069,6 @@ msgstr ""
 
 #~ msgid "Turn Bluetooth On"
 #~ msgstr "Uključi Bluetooth"
-
-#~ msgid "Browse devices"
-#~ msgstr "Pregledaj uređaje"
 
 #~ msgid "Known Devices"
 #~ msgstr "Poznati uređaji"
